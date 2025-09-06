@@ -18,12 +18,17 @@ import {
   Shield,
   Clock,;
   TrendingUp,;
+} from 'lucide-react';
 
 
 export default function CodeQualityCheckerPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
+
+
+
+
 
   const pricing = [
     {
@@ -377,6 +382,10 @@ export default function CodeQualityCheckerPage() {;
               <Card
                 key={index}
                 className="card-hover group border-gradient-teal"
+                    </p>
+                  </div>
+                </div>
+              </Card>
             ))}
 
 
@@ -653,8 +662,20 @@ export default function CodeQualityCheckerPage() {;
                       ) : (;
                         <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />;
                       )}
-              {/* Quality Metrics */}
 
+
+
+              {/* Quality Metrics */}
+              <Card className='border-gradient-teal'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Quality Metrics
+                </h3>
+                <div className='space-y-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Complexity</span>
+                    <span className='text-orange-400 font-bold'>
+                      {analysisResults.metrics.complexity}
+                    </span>
 
 
 
@@ -704,6 +725,8 @@ export default function CodeQualityCheckerPage() {;
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
+
+
 
                 ))}
               </div>
@@ -927,6 +950,7 @@ export default function CodeQualityCheckerPage() {;
                       {plan.price}
 
 
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -979,6 +1003,13 @@ export default function CodeQualityCheckerPage() {;
                 </ul>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+              </Card>
+            ))}
 
           </div>;
         </div>;
@@ -1013,5 +1044,11 @@ export default function CodeQualityCheckerPage() {;
       </section>;
 
 
+  );
+}
+}
+  );
+}
+}
     </>);
 }

@@ -21,6 +21,13 @@ import {
   ExternalLink,
   Play,
   BookOpen,
+  Code;
+  Database
+  Globe
+  Shield
+  Zap
+  Bot
+  BarChart3
 
 
 
@@ -39,6 +46,22 @@ import {
   Play;
   BookOpen;
   Github;
+        free: '1,000 operations/month'
+        pro: '$119/month'
+        enterprise: 'Custom'
+      }
+      category: 'Security',      color: 'bg-gradient-to-br from-gray-500 to-slate-600',      gradient: 'from-gray-400 to-slate-500'
+      website: 'https://encrypt.api'
+      docs: 'https://docs.encrypt.api'
+      github: 'https://github.com/encrypt-api'
+      status: 'Live'
+      users: '4,200+'
+      responseTime: '<20ms'
+    }
+
+
+
+
         free: '1,000 operations/month',
         pro: '$119/month',
         enterprise: 'Custom',
@@ -581,6 +604,15 @@ function ApiToolsPage() {
                 }`}
               >;
                 {category}
+      {/* API Tools Grid */}
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+              {selectedCategory === 'All'
+                ? 'All API Tools'
+                : `${selectedCategory} APIs`}
+
 
 
 
@@ -659,6 +691,9 @@ variant="ghost"
                 </div>
               </Card>
             ))}
+
+
+
       {/* Developer Resources */}
 
 
@@ -786,6 +821,7 @@ variant="ghost"
 }
 }
   );
+}
 }
     </>);
 }

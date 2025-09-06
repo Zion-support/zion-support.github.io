@@ -13,6 +13,12 @@ declare module 'path' {export function resolve(...paths: string[]): string;
   export function join(...paths: string[]): string;
   export function dirname(path: string): string;
 }
+  }
+}
+
+
+
+
 declare let __dirname: string,
 declare let process: {
   env: {

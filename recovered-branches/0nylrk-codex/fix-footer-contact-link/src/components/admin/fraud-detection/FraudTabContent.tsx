@@ -1,4 +1,12 @@
 
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
+
 interface FraudTabContentProps {
   tab_value: string;
 }
@@ -44,6 +52,13 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       )
     default:
       return null
+  }
+}
+
+
+
+
+
 import React from "react",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
 interface FraudTabContentProps {;
@@ -120,6 +135,10 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({ tab_value })
         </div>),
     default:;
       return null;
+
+
+
+
   }
 }
 ;

@@ -1,4 +1,44 @@
 
+import { Button } from "./ui/button",
+import { Twitter, Facebook, Linkedin, Link } from "@/components/icons";
+import { toast } from "./ui/use-toast";
+export function SocialShareSection() {
+  // Current URL and text to share
+
+
+
+  const shareUrl = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace");
+  // Social sharing functions
+  const shareToTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
+  }
+  const shareToFacebook = () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
+  }
+  const shareToLinkedIn = () => {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
+  }
+import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",
+import { toast } from "./ui/use-toast",
+export function SocialShareSection() {
+  // Current URL and text to share
+  const shareUrl = encodeURIComponent(window.location.href),
+  const shareText = encodeURIComponent("Check out Zion - The Future of AI & Tech Marketplace"),
+  
+  // Social sharing functions
+  const shareToTwitter = () => {
+    window.open(`https://twitter.com/intent/tweet?url=${shareUrl}&text=${shareText}`, "_blank")
+  },
+  
+  const shareToFacebook = () => {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`, "_blank")
+  },
+  
+  const shareToLinkedIn = () => {
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`, "_blank")
+  },
+  
   const copyLinkToClipboard = () => {
     navigator.clipboard.writeText(window.location.href)
       .then(() => {
@@ -50,6 +90,9 @@
                 key={index}
                 className={`${link.color} text-white`}
                 size="sm"
+}
+
+
 import { Button } from "./ui/button",;
 import { Twitter, Facebook, Linkedin, Link } from "@/components/icons",;
 import { toast } from "./ui/use-toast",;
@@ -160,6 +203,9 @@ function SocialShareSection() {
 
             {shareLinks.map((link, index) => (;
               <Button;
+
+
+
 }
           </div>;
         </div>;

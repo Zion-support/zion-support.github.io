@@ -218,6 +218,13 @@ export const advancedMicroSaasExpansion2025V2 = [
     ],
   },
   {
+      'Real-time monitoring'
+      'Threat intelligence'
+      'Automated response'
+      'Incident management'
+    ]
+  }
+      'Real-time monitoring',
     name: 'AI Threat Detection',
     description: 'Advanced AI threat detection system',
     category: 'Cybersecurity',
@@ -228,6 +235,10 @@ export const advancedMicroSaasExpansion2025V2 = [
       'Automated response',
       'Incident management',
     ],
+];      'Real-time monitoringThreat intelligenceAutomated responseIncident management'
+    ]
+  }
+];
   },
 
 ];      'Real - time monitoring_threat intelligence_automated response_incident management';

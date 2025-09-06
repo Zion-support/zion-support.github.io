@@ -1,3 +1,9 @@
+import {
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle;
+  DialogDescription;
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -6,6 +12,8 @@ import {useMessaging} from "@/context/MessagingContext";
 import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
+
+
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -27,6 +35,15 @@ export interface MessageTalentModalProps {
 
   jobTitle?: string
 }
+
+export function MessageTalentModal({;
+  talent;
+  isOpen;
+  onClose;
+export function MessageTalentModal({
+  talent,
+  isOpen,
+  onClose,
 
 
 
@@ -102,6 +119,9 @@ export interface MessageTalentModalProps {
           <DialogTitle className="text-white flex items-center gap-3">;
             <Avatar className="h-8 w-8 border border-zion-purple/20">;
               <AvatarFallback className="bg-zion-blue-dark text-white">;
+
+
+
                 {talent.full_name.charAt(0).toUpperCase()}
               </AvatarFallback>
             </Avatar>

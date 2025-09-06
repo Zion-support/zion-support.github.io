@@ -77,19 +77,16 @@ export function ReferralLink(): any ({;
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!;
             <p className="text-sm text-green-600 dark:text-green-500">;
 
-  const handleCopy = () => {;
-    onCopy();
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
-
-  return (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
             </p>
           )}
         </div>
       </CardContent>
+            >
+              <Twitter className="h-4 w-4" />
+              Twitter
+            </Button>
             <Button 
               variant="outline" 
               size="sm"
@@ -102,3 +99,45 @@ export function ReferralLink(): any ({;
             </Button>
           </div>
         </div>
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
+interface ReferralLinkProps {;
+  referralLink: string,;
+  onCopy: () => void,;
+  onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void;
+}
+;
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {;
+  const [copied, setCopied] = useState(false),;
+  const handleCopy = () => {;
+    onCopy();
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+    <Card className="mt - 6">;
+      <CardHeader>;
+        <CardTitle className="flex items - center gap - 2">;
+          <Link className="h - 5 w - 5" />;
+
+          Your Referral Link;
+        </CardTitle>;
+        <CardDescription>;
+          Share this link with others to earn rewards when they join and complete onboarding;
+        </CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+
+
+            <Input
+              value={referralLink}
+              readOnly
+              className="font-mono text-sm"
+
+
+          )}
+        </div>
+      </CardContent>

@@ -30,12 +30,24 @@ export interface IntegrationProviderMeta {
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
+
+
+
+;
+export interface IntegrationProviderMeta {
+  category: IntegrationCategory, description?: string,  oauthScopes?: string[];
+  icon?: string
+}
 export interface SyncRules {
   // CRM rules;
   autoCreateContacts?: boolean;
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
+  providerId: IntegrationProviderId;
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
+
+
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
@@ -76,6 +88,20 @@ export interface ZapierEvent {;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
+  connections: ProviderConnection[];
+  logs: SyncLogEntry[];
+  overrides: ManualOverride[];
+  events: ZapierEvent[];  events: ZapierEvent[]
+}
+
+}
+}
+}
+}
+}
+
+export interface IntegrationsState {;
+
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];

@@ -351,6 +351,8 @@ export default function ContactPage() {
         </div>;
       </div>;
       {/* CTA section */}
+
+
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

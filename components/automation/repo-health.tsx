@@ -1,3 +1,16 @@
+import fs from 'fs',
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface Report {
+  generatedAt: string;
+  commits: { last7d: number, last30d: number },
+  changes: { last7dFiles: string[] },
+  largestFiles: { file: string, bytes: number }[],
+  stalePages: { file: string, lastCommitAt: string }[]
+}
+ 
+
+
 
 
 }
@@ -25,7 +38,9 @@ export default function RepoHealth(): any ({ report }: Props) {;
 
 };
 
-
+export default function RepoHealth({ report }: Props) {
+export default function RepoHealth({ report }: Props) {;
+  if (!report) return <div>No report yet. Check back soon.</div>;
   return (
           ))}
         </ul>;

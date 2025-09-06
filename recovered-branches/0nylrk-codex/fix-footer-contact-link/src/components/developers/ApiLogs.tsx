@@ -4,6 +4,33 @@ import {format} from "date-fns";
 import {List, RefreshCw} from "lucide-react";
 import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
 
+
+export function ApiLogs() {
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+  // Load logs on mount and when pagination changes
+  useEffect(() => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  }, [pageSize, currentPage]);
+
+  const handleRefresh = () => {
+    fetchApiLogs(pageSize, currentPage * pageSize)
+  }
+  // Helper to format the timestamp
+  const formatTimestamp = (timestamp: string) => {
+    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
+  }
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+
+export function ApiLogs() {;
+  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
+  const [pageSize, setPageSize] = useState(25);
+  const [currentPage, setCurrentPage] = useState(0);
+
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
 import { List, RefreshCw } from "lucide-react",
@@ -105,6 +132,8 @@ export function ApiLogs() {;
                 setPageSize(Number(value));
 
                 setCurrentPage(0), // Reset to first page when changing page size;
+
+
               }}
             >
               <SelectTrigger className="w-20 bg-zinc-800 border-zinc-700">

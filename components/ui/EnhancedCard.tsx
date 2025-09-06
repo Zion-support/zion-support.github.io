@@ -2,6 +2,8 @@ export default function EnhancedCard(): any ({;
   children,;
   className = "",;
 }: {;
+  children: React.ReactNode;
+  children: React && React.ReactNode;
   className?: string;
 }) {;
   return (

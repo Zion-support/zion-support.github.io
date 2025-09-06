@@ -21,6 +21,8 @@ import {
   DollarSign,
   BookOpen,
 
+
+
 import {
   Phone,
   Mail,
@@ -49,8 +51,6 @@ import {
   Cpu, Target, Microscope, Shield, Zap, Sparkles;
   Menu, X, Search, ChevronDown, Home, Briefcase, 
   DollarSign, BookOpen, Users, MessageCircle
-
-
 
 import {
   Phone
@@ -157,7 +157,6 @@ const contactInfo = {
 }<motion.div whileHover= {  {  website: 'https://ziontechgroup.com'
 }
 const serviceCategories = [
-    title: ' Revolutionary AI',
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
     services: [
@@ -218,6 +217,9 @@ const serviceCategories = [
 
 export default function UltraFuturisticNavigation2033() {
   const [isOpen, setIsOpen] = useState(false)
+
+
+export default function UltraFuturisticNavigation2033() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
@@ -269,6 +271,17 @@ export default function UltraFuturisticNavigation2033() {
                 </button>
 
                 {/* Mega Menu */}
+                <AnimatePresence>
+                  {activeCategory === 'services' && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      onMouseEnter={() => setActiveCategory('services')}
+                      onMouseLeave={() => setActiveCategory(null)}
+                      className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
+                {/* Mega Menu */}
                 <AnimatePresence>;
                   {activeCategory === 'services' && (;
                     <motion&& motion.div
@@ -278,6 +291,7 @@ export default function UltraFuturisticNavigation2033() {
                       transition={{ duration: 0 && 0.2 }}
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
+
 
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -339,11 +353,26 @@ export default function UltraFuturisticNavigation2033() {
                 <Link
 
 
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
+                  {link.name}
+                </Link>
+              ))}
+
+
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
 
                 >
@@ -383,6 +412,15 @@ export default function UltraFuturisticNavigation2033() {
                 className="text-gray-300 hover:text-white transition-colors duration-200 p-2"
               >
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+
+
+
+
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;
@@ -390,6 +428,7 @@ export default function UltraFuturisticNavigation2033() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
+              <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Services */}
                 <div className='space-y-4'>;
                   <h3 className='text-lg font-semibold text-white'>Services</h3>;
@@ -558,3 +597,6 @@ export default function UltraFuturisticNavigation2033() {
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+}</AnimatePresence> </nav> </>) }
+}</AnimatePresence> </nav> </>)
+

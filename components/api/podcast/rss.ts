@@ -9,6 +9,11 @@ function ensureStorage() {
 
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+
+  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
+  const siteUrl = process.env.SITE_URL |'http://localhost:3000';
+
+  const siteUrl = process.env.SITE_URL || 'http://localhost:3000';
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const siteUrl = process && process.env.SITE_URL || 'http://localhost:3000';
@@ -135,3 +140,5 @@ fs.writeFileSync (RSS_PATH, xml, 'utf8');
 }</channel> </rss>`;
 
   items 
+}</channel> </rss>`;
+

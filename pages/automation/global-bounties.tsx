@@ -1,3 +1,11 @@
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Labels: {(it.labels || []).join(', ')}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
   );
 };
 

@@ -1,3 +1,12 @@
+import { ChevronDown, ChevronUp } from "lucide-react",
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
+
+import { Checkbox } from "@/components/ui/checkbox",
+import { AvailabilityFilterProps } from "@/types/filters",
+
+
+
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -63,6 +72,8 @@ const AVAILABILITY_OPTIONS = [;
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple";
               />;
               <label
+
+
                 {option.label}
               </label>
             </div>

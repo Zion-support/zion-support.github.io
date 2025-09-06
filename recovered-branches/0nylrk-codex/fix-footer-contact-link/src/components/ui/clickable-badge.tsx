@@ -3,6 +3,26 @@ import React from "react";
 import {X} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {badgeVariants} from "@/components/ui/badge-variants";
+import React from "react",
+import { X } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { badgeVariants } from "@/components/ui/badge-variants";
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  onRemove?: () => void;
+import { cn } from "@/lib/utils",
+import { badgeVariants } from "@/components/ui/badge-variants",
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {
+  onRemove?: () => void,
+  ...props;
+}: ClickableBadgeProps) {;
+
+
+  variant?: "default" | "secondary" | "destructive" | "outline"
+}
+export function ClickableBadge({
+  children;
+  className;
+  variant;
   children,
   className,
   variant = "default",
@@ -25,6 +45,13 @@ import {badgeVariants} from "@/components/ui/badge-variants";
         >
           <X className="h-3 w-3" />
         </button>
+}
+import React from "react",;
+import { X } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { badgeVariants } from "@/components/ui/badge-variants",;
+export interface ClickableBadgeProps extends React.HTMLAttributes<HTMLDivElement> {;
+  onRemove?: () => void,;
 
 
 import React from './react';
@@ -56,4 +83,7 @@ function ClickableBadge() {
             e.stop_propagation ();
             on_remove ();
           }}
+
+
+
 }

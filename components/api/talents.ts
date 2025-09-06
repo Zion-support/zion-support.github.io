@@ -3,6 +3,17 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+} from '../../utils/api/partnerAuth';
+import { v4 as uuidv4 } from 'uuid';
+
+
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+
+} from '../../utils/api/partnerAuth';
+import { v4 as uuidv4 } from 'uuid';
+
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -70,6 +81,10 @@ if ( {) {
     certificationStatus: certificationStatus || 'pending',
 
     partnerId: auth.partner.id,
+createdAt: now,
+    createdAt: now,
+
+
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });

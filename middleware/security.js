@@ -48,26 +48,8 @@ export function securityHeaders(req, res, next) {
   });
   next();
 }
-// Security middleware;
-import { NextResponse } from 'next / server';
-import { getSecurityHeaders } from '../utils / security - headers';
-;
-export /**
- * security_middleware - Function description
- */
-function security_middleware() {
-  const response = NextResponse.next ();
-;
-  // Add security headers;
-  const headers = getSecurityHeaders ();
-  headers.for_each (({ key, value }) => {
-    response.headers.set (key, value);
-  });
-;
-  // Add HSTS header for HTTPS;
-  // Check condition
-if ( {) {
-  $2
+}
+
 }
     response.headers.set (
       'Strict - Transport - Security',
@@ -90,7 +72,4 @@ function security_headers() {
   });
 ;
   next ();
-}
-}
-
 }

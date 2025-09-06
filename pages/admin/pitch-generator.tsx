@@ -1,7 +1,59 @@
+import React, { useState } from 'react';
+import Head from 'next/head';
+interface Slide {
+  id: string;
+  title: string;
+  content: string;
+  chart?: {
+    type: string;
+    data: Array<{ label: string; value: number }>;
+  }
+function SlidePreview({
+  slide
+  isActive
+  onClick
+}: {
+  slide: Slide;
+  isActive: boolean;
+  onClick: () => void;
+}) {
+    >
+      <div className='font-semibold text-sm line-clamp-2'>
+        {slide.title |'Untitled'}
+      </div>
+      <div className='text-xs text-gray-500 dark:text-gray-400 line-clamp-3 mt-1 whitespace-pre-wrap'>
+        {slide.content |'—'}
+      </div>
+    </button>
+  );
+export const getServerSideProps: GetServerSideProps = async ctx => {
+
+export const getServerSideProps: GetServerSideProps = async ctx => {;
+
+
   const result = await requireAdminRole(ctx);
   // @ts-ignore;
   if ('redirect' in result) return result;
   return result;
+    mission: ''
+    fundingStage: ''
+    vision: ''
+    roundType: ''
+    targetRaise: ''
+    assets: []
+
+};
+
+export default function PitchGenerator() {;
+  const [builder, setBuilder] = useState<BuilderState>({;
+    mission: '',;
+    fundingStage: '',;
+    vision: '',;
+    roundType: '',;
+    targetRaise: '',;
+    assets: [],;
+
+
     mission: '',
     fundingStage: '',
     vision: '',
@@ -12,6 +64,17 @@
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
   const [versionTag, setVersionTag] = useState<string | null>(null);
+    setLoading(true);
+    try {
+      const res = await fetch('/api/admin/pitch/metrics');
+      const data = await res.json();
+      return data;
+    } catch (e) {
+      return {}
+    } finally {
+      setLoading(false);    }
+    const files = Array.from(e.dataTransfer.files || []);
+    setBuilder((b) => ({ ...b, assets: [...b.assets, ...files] }))
   }, []);
 
   const prevent = (e: React.DragEvent) => {
@@ -165,6 +228,13 @@ if (return result) {
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
+
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
     } finally {;
       setLoading(false);
       } catch (error) {
@@ -222,6 +292,8 @@ if (return result) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -234,6 +306,8 @@ if (return result) {
     )
   };
 
+
+
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -245,6 +319,9 @@ if (return result) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
         </div>
       </div>
     )
@@ -274,6 +351,9 @@ if (return result) {
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
+
+
+
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -281,6 +361,11 @@ if (return result) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
+
+
+                Version: {versionTag || '—'}
+
+
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -391,6 +476,12 @@ if (return result) {
                     Timeline;
                   </button>;
                 </div>              </div>;
+
+
+}
+}
+}
+
 
 }
 }

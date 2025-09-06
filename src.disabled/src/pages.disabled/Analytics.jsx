@@ -32,4 +32,3 @@ export default function Analytics({ }: AnalyticsProps) {
     </div>
   );
 }
-}

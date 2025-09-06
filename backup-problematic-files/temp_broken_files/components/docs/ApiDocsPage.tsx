@@ -15,11 +15,6 @@ export default function ApiDocsPage() {
         selectedVersion={selectedVersion}
         onChangeVersion={(v) => { setSelectedVersion(v), setActiveEndpointId(undefined) }}
         visibilityFilter={visibility}
-
-        onChangeVisibility={setVisibility}      />
-      <main className=&quot;p-6 space-y-6&quot;>
-        <header className=&quot;flex items-center justify-between&quot;>
-
           <div>
             <div className="text-2xl font-bold">Zion OS API Documentation</div>
             <div className="text-sm text-high-contrast-muted">Developer-friendly API docs with live testing</div>

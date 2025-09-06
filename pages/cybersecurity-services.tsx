@@ -25,6 +25,15 @@ const serviceHighlights = [
     icon: BarChart3
     color: 'text-purple-400'
   },];
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud, CheckCircle, ArrowRight, Star, Clock, Target, Zap, Users, BarChart3, Settings, Database,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
 
     title: 'Zero Trust Security',
     description: 'Never trust, always verify - Advanced zero trust implementation',
@@ -89,6 +98,16 @@ const benefits = [
   }
 ];
 
+import { motion } from 'framer-motion';
+import {;
+  Shield, Lock, Eye, AlertTriangle, Cpu, Globe, Cloud,;
+  CheckCircle, ArrowRight, Star, Clock, Target,;
+  Zap, Users, BarChart3, Settings, Database;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services';
+
+export default function CybersecurityServices() {
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -179,6 +198,11 @@ const benefits = [;
     title: 'Compliance Automation',;
     description: 'Automated compliance reporting and audit preparation',;
     icon: BarChart3,;
+export default function CybersecurityServices() {
+    color: 'text-purple-400',;
+  },];
+
+export default function CybersecurityServices() {;
   return (
     <Layout>
       <Head>
@@ -242,6 +266,9 @@ const benefits = [;
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+
+
+
           >
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8'>
               <Shield className='w-5 h-5 text-red-400' />
@@ -249,6 +276,8 @@ const benefits = [;
                 Cybersecurity Services
               </span>
             </div>
+
+
                 Next-Generation
               </span>
               <br />
@@ -269,10 +298,16 @@ const benefits = [;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
+
+
+
+
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+
+
                   <span>Get Protected</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -301,6 +336,7 @@ const benefits = [;
           <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
         </div>
       </section>
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -315,6 +351,8 @@ const benefits = [;
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
                 Services;
               </span>;
@@ -340,6 +378,9 @@ const benefits = [;
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 
                 <ul className="space-y-2">
+
+
+
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
@@ -370,6 +411,13 @@ const benefits = [;
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Security</span> Portfolio
@@ -380,6 +428,9 @@ const benefits = [;
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
+
               Portfolio;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -432,6 +483,18 @@ const benefits = [;
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className="bg-red-500/20 text-red-400 px-3 py-1 rounded-full text-sm">
+
+
+
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link
+                      href='/contact'
+                      className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+                    >                      Get Protected
+                    <Link href="/contact" className="bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
+                      Get Protected
                     </Link>
                   </div>
                 </div>
@@ -455,6 +518,13 @@ const benefits = [;
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
@@ -464,6 +534,9 @@ const benefits = [;
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
+
               <span className='bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>;
                 Our Security;
               </span>;
@@ -493,6 +566,13 @@ const benefits = [;
       <section className="py-20 bg-gradient-to-r from-red-900/20 via-pink-900/20 to-purple-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
@@ -501,15 +581,21 @@ const benefits = [;
               Don't wait for a breach to happen. Protect your business today with our advanced cybersecurity solutions 
               and stay one step ahead of evolving threats.
             </p>
+
+
                   <span>Start Your Security Journey</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
                 </button>
               </Link>
+
+
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
+
+
               <div>
                 <div className="text-3xl font-bold text-red-400 mb-2">24/7</div>
                 <div className="text-gray-300">Security Monitoring</div>
@@ -526,6 +612,18 @@ const benefits = [;
           </motion.div>
         </div>
       </section>
+    </Layout>;
+);
+
+}
+    </Layout>
+  )
+            className="max-w-4xl mx-auto";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?;
+
+              Your Business?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
                 </p>              </motion.div>))}
@@ -629,5 +727,7 @@ const benefits = [;
           </motion.div>;
         </div>;
       </section>;
+    </Layout>);
+;
 
 

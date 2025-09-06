@@ -1,3 +1,13 @@
+import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
+import { useAuth  } from '@/hooks/useAuth';
+import { MilestoneCard  } from './MilestoneCard';
+import { AddMilestoneForm  } from './AddMilestoneForm';
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+// lucide-react doesn't export PlusIcon, use our icon wrapper
+import { Plus  } from '@/components/icons';
+import { EmptyState } from '@/components/ui/empty-state';
+interface MilestonesListProps {
 import {Milestone, MilestoneStatus, MilestoneActivity} from '@/hooks/useMilestones';
 import {useAuth} from '@/hooks/useAuth';
 import {MilestoneCard} from './MilestoneCard';
@@ -31,6 +41,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
+
 import React, { useState } from 'react',;
 import { Milestone, MilestoneStatus, MilestoneActivity } from '@/hooks/useMilestones',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -149,6 +160,22 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
       <div className="space-y-4">;
         {milestones && milestones.map((milestone) => (;
           <MilestoneCard
+}
+
+      </div>;
+    </div>;
+  );
+
+
+
+
+      </div>;
+    </div>;
+  );
+
+
+
+
 };
   is_submitting;
   on_approve,

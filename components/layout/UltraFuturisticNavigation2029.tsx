@@ -113,6 +113,14 @@ import {
   Menu, X, ChevronDown, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Briefcase, ;
+
+  Eye,;
+  Timer,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Briefcase, ;
+
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -149,6 +157,9 @@ const mainNavItems = [
   { name: 'News', href: '/news', icon: TrendingUp }
   { name: 'Support', href: '/support', icon: MessageCircle }
   { name: 'Contact', href: '/contact', icon: Phone },];  { name: 'Contact', href: '/contact', icon: Phone }
+];
+
+const mainNavItems = [
     services: [;
       {
         name: 'Enterprise AI Operations Center',
@@ -258,6 +269,8 @@ export default function UltraFuturisticNavigation2029() {;
               <span>{contactInfo.address}</span>
             </div>
           </div>
+
+
             </a>
           </div>
         </div>
@@ -389,6 +402,7 @@ export default function UltraFuturisticNavigation2029() {;
               {/* Services Dropdown */}
 
 
+
                     {serviceCategories.map((category, index) => (
                       <motion.div
                         key={category.title}
@@ -396,6 +410,7 @@ export default function UltraFuturisticNavigation2029() {;
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                         className='group'
+
 
                       >
                         <div
@@ -457,11 +472,17 @@ export default function UltraFuturisticNavigation2029() {;
                         initial={{ opacity: 0, coordinate_y: 20 }}
                         animate={{ opacity: 1, coordinate_y: 0 }}
                         transition={{ delay: index * 0.1 }}
+
+
+
                             ))}
                           </div>;
                         </div>;
                       </motion && motion.div>;
                     ))}
+
+
+
               {/* CTA Button */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -470,6 +491,14 @@ export default function UltraFuturisticNavigation2029() {;
                 Get Started
               </motion.button>
             </div>
+
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
 
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
 
@@ -519,6 +548,7 @@ export default function UltraFuturisticNavigation2029() {;
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
+
 
           >
             <div
@@ -620,6 +650,8 @@ export default function UltraFuturisticNavigation2029() {;
   );      <div className="h-20" />;
     </>;
   );
+}
+
       {/* Mobile Menu */}
       <AnimatePresence>;
         {is_open && (

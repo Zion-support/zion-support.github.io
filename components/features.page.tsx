@@ -37,3 +37,4 @@ export default function FeaturesPage() {
           <p className="mt-1 text-sm opacity-80">Track deliverables and approvals anywhere.</p>
       </div>
     </EnhancedLayout>
+

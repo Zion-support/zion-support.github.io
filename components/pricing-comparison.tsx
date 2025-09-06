@@ -370,6 +370,9 @@ export default function PricingComparisonPage() {
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
                     {insight.insight}
+
+
+
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -505,6 +508,7 @@ export default function PricingComparisonPage() {
                                 }`}
                               />;
                             ))}
+
 
                           </div>
                           <div className='mb-4'>
@@ -775,3 +779,4 @@ export default function PricingComparisonPage() {
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
+

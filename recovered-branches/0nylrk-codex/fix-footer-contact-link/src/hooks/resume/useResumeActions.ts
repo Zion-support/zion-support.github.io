@@ -1,4 +1,11 @@
 
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume, ResumeBasicInfo  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useResumeActions() {
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume, ResumeBasicInfo} from '@/types/resume';
@@ -13,6 +20,9 @@ export function useResumeActions() {;
     if (!user) {
       setError('You must be logged in to create a resume')
       return null
+
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Resume, ResumeBasicInfo } from '@/types/resume',;
@@ -26,6 +36,9 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to create a resume'),;
       return null;
+
+
+
     }
     
     setIsLoading(true),
@@ -42,6 +55,11 @@ export function useResumeActions() {;
       showSuccessToast("Resume created", "Your resume has been created successfully");
     }
   }
+    }
+    setIsLoading(true);
+    setError(null);
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -69,6 +87,9 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to update a resume'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -83,6 +104,9 @@ export function useResumeActions() {;
     } finally {
 
       setIsLoading(false)
+    }
+    setIsLoading(true);
+    setError(null);
 
 
 ;
@@ -110,6 +134,9 @@ export function useResumeActions() {;
     if (!user) {;
       setError('You must be logged in to set active resume'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),

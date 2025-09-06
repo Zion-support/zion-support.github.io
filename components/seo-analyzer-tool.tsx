@@ -18,6 +18,7 @@ import {
   Globe,
   Smartphone,;
   Zap,;
+} from 'lucide-react';
 
 
 export default function SEOAnalyzerToolPage() {;
@@ -575,6 +576,10 @@ export default function SEOAnalyzerToolPage() {;
               <Card
                 key={index}
                 className="card-hover group border-gradient-green"
+                    </p>
+                  </div>
+                </div>
+              </Card>
             ))}
 
 
@@ -864,6 +869,8 @@ export default function SEOAnalyzerToolPage() {;
 
                       </div>
 
+
+
                     </div>
                   ))}
                 </div>
@@ -1031,6 +1038,7 @@ export default function SEOAnalyzerToolPage() {;
                       {plan.price}
 
 
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -1083,6 +1091,13 @@ export default function SEOAnalyzerToolPage() {;
                 </ul>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+              </Card>
+            ))}
 
           </div>;
         </div>;
@@ -1110,6 +1125,13 @@ export default function SEOAnalyzerToolPage() {;
               href='/contact'
               variant='outline'
               size='lg'
+  );
+}
+}
+  );
+}
+
+
               Schedule Demo;
             </Button>;
           </div>;

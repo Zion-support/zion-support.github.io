@@ -1,3 +1,24 @@
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { ThumbsUp, ThumbsDown } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+import { HELP_CATEGORIES } from "./help-content";
+interface HelpArticleViewProps {
+import { HELP_CATEGORIES } from "./help-content",
+import React, { useState } from './react';
+import { Button  } from '@/components / ui / button';
+import { Card  } from '@/components / ui / card';
+import { ThumbsUp, ThumbsDown  } from './lucide-react';
+import { toast  } from '@/components / ui / use - toast';
+import { HELP_CATEGORIES  } from './help - content';
+
+interface HelpArticleViewProps {
+  article_id: string;
+}
+
+
+
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -10,6 +31,15 @@ interface HelpArticleViewProps {
     if (found) {
       article = found,
       break
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { ThumbsUp, ThumbsDown } from "lucide-react",;
+import { toast } from "@/components/ui/use-toast",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleViewProps {;
+
+
   articleId: string;
 }
 
@@ -43,6 +73,10 @@ if ( {) {
 }
       article = found;
       break;
+
+
+
+
     }
   }
   const handleFeedback = (type: "helpful" | "not-helpful") => {
@@ -88,6 +122,12 @@ if ( {) {
               </Button>;
             </div>;
           )}
+        </div>
+      </Card>
+    </div>
+  );
+}
+          )}
         </div>;
       </Card>;
     </div>;
@@ -102,3 +142,13 @@ function formatDate(date: string): string {
 
   })
   })
+;
+function formatDate(date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric";
+    month: "long";
+    day: "numeric";
+  });
+}
+;
+

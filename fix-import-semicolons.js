@@ -1,7 +1,8 @@
-  try {
-    const filePath = path && path.join(process && process.cwd(), file);
-    let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
+
+
+    // Fix import statements missing semicolons;
+
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);

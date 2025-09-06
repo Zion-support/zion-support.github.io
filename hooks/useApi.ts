@@ -20,6 +20,24 @@ interface ApiState < T> {
   error: string | null;
 }
 
+    data: null
+    loading: true
+    error: null
+    data: null,
+    loading: true,
+    error: null,;
+  });
+export function use_api < T>(url: string, options?: RequestInit) {
+  const [state, set_state] = useState < ApiState < T>>({
+    data: null,
+    loading: true,
+    error: null,
+
+
+    data: null,
+    loading: true,
+    error: null,;
+
   });
 ;
   useEffect (() => {
@@ -81,6 +99,16 @@ export default function UseApi({ }: UseApiProps) {
       <p>This component is currently under development.</p>
     </div>;
   );
+}
+}
+}
+ursor/add-new-services-and-deploy-updates-0462
+interface ApiState<T> {
+  data: T | null, loading: boolean,
+  error: string | null,
+origin/automation-improvements-final
+
+
 }
 }
 export function useApi<T>(

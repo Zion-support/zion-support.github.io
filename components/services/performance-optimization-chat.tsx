@@ -26,6 +26,12 @@ const PerformanceOptimizationChat: NextPage = () => {
     <div>
       <Head>
 
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+
+        <title>PerformanceOptimizationChat - Zion Tech Solutions</title>
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';

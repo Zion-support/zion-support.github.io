@@ -147,20 +147,6 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
                 ))}
               </div>
                 {item.location && (
-                  <div className='flex items-center gap-1'>
-                    <MapPin className='h-3 w-3' />
-                    <span>{item.location}</span>
-                  </div>
-                )}
-                {item.price && (
-                  <div className='flex items-center gap-1'>
-                    <DollarSign className='h-3 w-3' />
-                    <span>{item.price}</span>
-                  </div>
-                )}
-                {item.timePosted && (
-                  <div className='flex items-center gap-1'>
-                    <Clock className='h-3 w-3' />
                     <span>{item.timePosted}</span>
                   </div>
                 )}
@@ -388,6 +374,9 @@ function BrowseCards() {
         </Card>))}
     </div>);
 }
+
+
+      ))}
     </div>;
   );
 };

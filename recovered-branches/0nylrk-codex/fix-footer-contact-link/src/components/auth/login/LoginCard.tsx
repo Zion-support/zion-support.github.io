@@ -1,3 +1,23 @@
+
+import { Link } from "react-router-dom",
+import { LoginForm } from "./LoginForm";
+import { SocialLogin } from "./SocialLogin";
+import { LoginForm } from "./LoginForm",
+import { SocialLogin } from "./SocialLogin",
+export function LoginCard() {
+  return (
+  );
+}
+  )
+import { Link } from "react-router-dom",;
+import { LoginForm } from "./LoginForm",;
+import { SocialLogin } from "./SocialLogin";
+export function LoginCard() {;
+  return (;
+
+
+
+
 export function LoginCard() {
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">;

@@ -2,6 +2,12 @@ export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 }
 export const announceToScreenReader = (message: string): void => {
+export const generateId = (prefix: string = 'id'): string => {;
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+};
+
+export const announceToScreenReader = (message: string): void => {;
+
 
   if (typeof window === 'undefined') return;
   const announcement = document.createElement('div');
@@ -81,6 +87,11 @@ if ( {) {
       }
     }
   }
+}
+export const isHighContrast = (color1: string, color2: string): boolean => {
+  return getContrastRatio(color1, color2) >= 4.5;
+}
+export const validateAriaLabel = (element: HTMLElement): boolean => {
 };
 
 export const isHighContrast = (color1: string, color2: string): boolean => {;
@@ -103,6 +114,17 @@ export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
     '[tabindex]:not([tabindex="-1"])';
   const rect = element.getBoundingClientRect();
   return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight |document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth |document.documentElement.clientWidth)
+  );
+}
+export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
+  element.scrollIntoView({ behavior, block: 'start' });
+}
+export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
+  return (
 
 
 };
@@ -124,6 +146,15 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
       scrollToElement(target);
     }
   });
+  
+
+  return skipLink;
+}
+
+
+  
+
+
 
   return skipLink;
 

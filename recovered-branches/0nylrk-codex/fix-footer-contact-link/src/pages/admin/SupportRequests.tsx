@@ -1,4 +1,20 @@
 
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
+import { Search, Filter } from "lucide-react",
+import { AppLayout } from "@/layout/AppLayout";
+import { SEO } from "@/components/SEO";
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+
+
+
 // Mock data for support requests
 
 const MOCK_SUPPORT_REQUESTS = [
@@ -155,6 +171,8 @@ const MOCK_SUPPORT_REQUESTS = [;
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&;
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {;
       return false;
+
+
     }
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
@@ -325,6 +343,11 @@ const MOCK_SUPPORT_REQUESTS = [;
                 <Input
                   placeholder="Search by ID, user or issue..."
                   value={searchQuery}
+
+
+              <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
+
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Status" />
                 </SelectTrigger>
@@ -335,6 +358,11 @@ const MOCK_SUPPORT_REQUESTS = [;
                   <SelectItem value="resolved">Resolved</SelectItem>
                 </SelectContent>
               </Select>
+
+
+              <Select value={priorityFilter || ""} onValueChange={value => setPriorityFilter(value || null)}>
+
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Priority" />
                 </SelectTrigger>
@@ -345,6 +373,11 @@ const MOCK_SUPPORT_REQUESTS = [;
                   <SelectItem value="low">Low</SelectItem>
                 </SelectContent>
               </Select>
+
+
+              <Select value={categoryFilter || ""} onValueChange={value => setCategoryFilter(value || null)}>
+
+
                 <SelectTrigger className="w-[180px]">
                   <SelectValue placeholder="Category" />
                 </SelectTrigger>
@@ -393,6 +426,8 @@ const MOCK_SUPPORT_REQUESTS = [;
                               ? 'secondary'
                               : 'outline'
                           }>
+
+
                             {request.status}
                           </Badge>
                         </TableCell>

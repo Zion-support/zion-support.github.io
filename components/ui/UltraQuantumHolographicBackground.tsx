@@ -89,6 +89,12 @@ export default function UltraQuantumHolographicBackground({;
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+            this.vy = Math.random() * 2 + 1
+
+          }
+        }
+      }
+
             this.vy = Math.random() * 2 + 1;          }
 
           }
@@ -141,6 +147,10 @@ export default function UltraQuantumHolographicBackground({;
             ctx.fillStyle = this.color;
             ctx.font = `${this.size * 2}px monospace`;
             ctx.fillText('01', this.x, this.y);
+          }
+        }
+      }
+
             ctx.stroke();          }
 
           }
@@ -184,6 +194,41 @@ export default function UltraQuantumHolographicBackground({;
       {/* Quantum Holographic Canvas Background */}
       <canvas
         ref={canvasRef}
+
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+        />
+      </div>
+
+      {/* Content Layer */}
+      <div className='relative z-20'>{children}</div>
+
+      {/* Quantum Noise Effect */}
+      <div className='fixed inset-0 z-30 pointer-events-none opacity-5'>
+
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+
+      {/* Holographic Overlay Effects */}
+      <div className='fixed inset-0 z-10 pointer-events-none'>
+        <motion.div
+          className='absolute inset-0'
+          animate={{
+            background: [
+              `radial-gradient(circle at 20% 20%, ${colors.primary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 80%, ${colors.secondary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`
+              `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`
+
+
             ],          }}
           transition={{
             duration: 8
@@ -293,6 +338,9 @@ export default function UltraQuantumHolographicBackground({;
 
           }}
 
+
+
+
         />
       </div>
       {/* Content Layer */}
@@ -311,3 +359,12 @@ export default function UltraQuantumHolographicBackground({;
             ]
           }}
           transition={{
+
+          }}
+        />
+      </div>
+    </div>
+);  )
+}
+    </div>
+

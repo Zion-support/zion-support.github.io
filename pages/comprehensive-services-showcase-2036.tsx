@@ -1,3 +1,9 @@
+import Layout from '../components/layout/Layout';
+
+import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
+import {real2036ITServices} from '../data/real-2036-it-services';
+import {real2036AIServices} from '../data/real-2036-ai-services';
+import Layout from '../components/layout/Layout';
 
 
 class ErrorBoundary extends React.Component {
@@ -24,15 +30,23 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
-import {real2036InnovativeServices} from '../data/real-2036-innovative-services';
-import {real2036ITServices} from '../data/real-2036-it-services';
-import {real2036AIServices} from '../data/real-2036-ai-services';
-import SEO from '../components / SEO';
-import Layout from '../components / layout / Layout';
-import {real2036InnovativeServices} from '../data / real - 2036 - innovative - services';
-import {real2036ITServices} from '../data / real - 2036 - it - services';
-import {real2036AIServices} from '../data / real - 2036 - ai - services';
 import {motion} from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services',
+import { real2036ITServices } from '../data/real-2036-it-services',
+import { real2036AIServices } from '../data/real-2036-ai-services',
+import { motion } from 'framer-motion',
+
+  const categories = [...new Set(allServices.map(service => service.category))]
+import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
+import { real2036ITServices } from '../data/real-2036-it-services';
+import { real2036AIServices } from '../data/real-2036-ai-services';
+import { motion } from 'framer-motion';
+
+
+
 const ComprehensiveServicesShowcase2036: React.FC = () => {
   const allServices = [
     ...real2036InnovativeServices;
@@ -41,25 +55,6 @@ const ComprehensiveServicesShowcase2036: React.FC = () => {
 
   const categories = [...new Set(allServices && allServices.map(service => service && service.category))],;
   return (
-
-
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"
-            >
-              2036 Services Showcase
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto"
-            >
-              Experience the future of technology with our revolutionary portfolio of AI, Quantum Computing, Space Technology, and cutting-edge IT solutions
-            </motion.p>
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-className="flex flex-col sm:flex-row gap-4 justify-center"
             <motion.h1
               initial={{ opacity: 0, y: 50 }  } catch (error) {
     console.error("Error:", error);
@@ -87,6 +82,24 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
             </motion.div>
           </div>
         </section>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
             {/* Category Cards */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {categories && categories.map((category, index) => (;
                 <motion&& motion.div
@@ -157,6 +170,8 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
   }
 }
                   className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+
+
                 >
                   <h3 className="text-2xl font-bold mb-4 text-cyan-400">{category}</h3>
                   <p className="text-gray-300 mb-4">
@@ -217,6 +232,8 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
+
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Complete Service Portfolio
@@ -228,6 +245,8 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
                 key={category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+
+
               >
                 <h3 className="text-3xl font-bold mb-8 text-center text-cyan-400">{category}</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -256,6 +275,8 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
   }
 }
                         className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 backdrop-blur-sm border border-gray-700 rounded-lg p-4 hover:border-cyan-400 transition-all duration-300 hover:transform hover:scale-105"
+
+
                       >
                         <div className="flex items-center justify-between mb-3">
                           <span className="text-2xl">{service.icon}</span>
@@ -292,6 +313,8 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
                           View Details
                         </button>
                       </motion.div>
+
+
             >
               <h2 className='text-4xl font-bold mb-6 text-white'>
                 Ready to Transform Your Business?
@@ -307,6 +330,19 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
         </section>
       </div>
     </Layout>
+  )
+}
+export default ComprehensiveServicesShowcase2036;
+
+},
+export default ComprehensiveServicesShowcase2036,
+              className="text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20";
+            >;
+              <h2 className="text-4xl font-bold mb-6 text-white">;
+
+              transition={{ duration: 0 && 0.8 }}
+              className='text-center py-16 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 rounded-2xl border border-cyan-400/20'>;
+              <h2 className='text-4xl font-bold mb-6 text-white'>;
                 Ready to Transform Your Business?;
               </h2>;
               <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
@@ -332,4 +368,9 @@ className="flex flex-col sm:flex-row gap-4 justify-center"
             </motion.div>;
           </div>;
         </section>;
+    </Layout>),
+}
+;
+
+
 export default ComprehensiveServicesShowcase2036;

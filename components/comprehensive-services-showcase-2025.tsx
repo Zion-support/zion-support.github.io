@@ -88,6 +88,9 @@ import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services
 
 
 
+
+
+
 ];
 const sortOptions = [
 
@@ -283,6 +286,8 @@ export default function ComprehensiveServicesShowcase2025() {;
         default: return 0
       }
     });
+
+    setFilteredServices(filtered)
     switch (category) {
 
     setFilteredServices(filtered);  }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
@@ -334,6 +339,12 @@ export default function ComprehensiveServicesShowcase2025() {;
         return <Globe className='w-5 h-5' />;    }      case 'Micro SAAS': return <Rocket className="w-5 h-5" />;
       case 'AI & Consciousness': return <Brain className="w-5 h-5" />;
       case 'Enterprise IT': return <Shield className="w-5 h-5" />;
+
+      case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,;
+      default: return <Globe className="w-5 h-5" />;
+  };
+
+
   return (
     <Layout>;
       <Head>;
@@ -352,6 +363,11 @@ export default function ComprehensiveServicesShowcase2025() {;
               key={i}
               className='absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20'
               animate={{
+
+
+  };
+
+
 
           ))}
         </div>
@@ -448,6 +464,7 @@ export default function ComprehensiveServicesShowcase2025() {;
                   key={stat && stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full mb-3 text-cyan-400'>
                     {stat.icon}
@@ -466,6 +483,7 @@ export default function ComprehensiveServicesShowcase2025() {;
             <div className='max-w-2xl mx-auto'>
               <div className='relative'>
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+
 
                 <input
                   type='text'
@@ -558,6 +576,49 @@ export default function ComprehensiveServicesShowcase2025() {;
 
                 <button
 
+                  onClick={() => setViewMode('grid')}
+                  className={`p-2 rounded-md transition-all duration-200 ${
+                    viewMode === 'grid'
+                      ? 'bg-cyan-500 text-white'
+                      : 'text-gray-400 hover:text-white'
+                  }`}
+                >
+                  <Grid3X3 className='w-4 h-4' />                </button>                  <Grid3X3 className="w-4 h-4" />
+                </button>
+                <button
+                  onClick={() => setViewMode('list')}
+                  className={`p-2 rounded-md transition-all duration-200 ${
+                    viewMode === 'list'
+                      ? 'bg-cyan-500 text-white'
+                      : 'text-white'
+                  }`}
+                >
+                  <List className='w-4 h-4' />                </button>                  <List className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Services Grid/List */}
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+        {/* Results Count */}
+        <div className='mb-8'>
+          <p className='text-gray-400'>            Showing {filteredServices.length} of {allServices.length} services      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Results Count */}
+        <div className="mb-8">
+          <p className="text-gray-400">
+          </p>
+        </div>
+        {viewMode === 'grid' ? (
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {filteredServices.map((service, index) => (          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredServices.map((service, index) => (
+              <motion.div
+                key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='group relative bg-gradient-to-br from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-md transition-all duration-200 ${;
                     viewMode === 'grid';
@@ -732,6 +793,14 @@ export default function ComprehensiveServicesShowcase2025() {;
                     <span>Growth: {service.growthRate}</span>
                   </div>
                 </div>
+                key={service.id}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className='group bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-lg border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300'
+
+
+
               >
                 <div className="flex items-start space-x-6">
                   {/* Service Icon */}
@@ -790,10 +859,14 @@ export default function ComprehensiveServicesShowcase2025() {;
                         <div className="text-3xl font-bold text-cyan-400 mb-2">{service.price}</div>
                         <div className="text-gray-500 text-sm">/month</div>
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white mt-2`}>
+
+
+
                         </span>
                       </div>
                     </div>
                     {/* Stats Row */}
+
                       <div className='flex items-center space-x-1 text-gray-400'>
                         <Users className='w-4 h-4' />
                         <span className='text-white font-medium'>
@@ -868,6 +941,8 @@ export default function ComprehensiveServicesShowcase2025() {;
 
                     {/* Features */}
                         ))}
+
+
                     {/* CTA */}
 
 
@@ -1043,6 +1118,15 @@ export default function ComprehensiveServicesShowcase2025() {;
                 setSelectedCategory ('All Services');
                 setSelectedPriceRange ('all');
               }}
+      {/* CTA Section */}
+      <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center'>          <motion.div      <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-t border-cyan-500/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <motion.div
+
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1095,6 +1179,12 @@ top: `$ {
   opacity: 1, y: 0
 }transition= {
   {
+  once: true 
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion && motion.div> </div> </div> </Layout>)   );
+
+  once: true 
+
+}> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>)   )
 }
       <div className='bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20'>;
         <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 20 text - center'>          <motion.div      <div className="bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 border - t border - cyan - 500 / 20">;

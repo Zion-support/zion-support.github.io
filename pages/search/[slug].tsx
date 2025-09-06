@@ -2,6 +2,18 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
+import ProductCard from '@/components/ProductCard';
+import { TalentCard  } from '@/components/talent/TalentCard';
+import { CategoryCard  } from '@/components/CategoryCard';
+import { SearchEmptyState  } from '@/components/marketplace/EmptyState';
+import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
+import { TALENT_PROFILES  } from '@/data/talentData';
+import { BLOG_POSTS  } from '@/data/blog-posts';
+import { useDebounce  } from '@/hooks/useDebounce';
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+interface BaseSearchResult {
+
+
   id: string;
   title: string;
   description?: string;
@@ -72,6 +84,13 @@ interface OfflineFilters {
           const bPrice = b && b.type === 'product' ? (b && b.price ?? 0) : 0;
           return bPrice - aPrice;        });
         break;
+            b.type === 'product' |b.type === 'talent' ? (b.rating ?? 0) : 0;
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+
+
+
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -242,6 +261,14 @@ function offlineSearch(;
         break;
     }
   } else {;
+  return { results: paginated, totalCount: all.length }
+export default function SearchResultsPage({
+  initialResults
+  query
+  slug
+  totalCount
+  return { results: paginated, totalCount: all.length };
+    all && all.sort((a, b) => a && a.title.localeCompare(b && b.title));
 
           return aPrice - bPrice
         });
@@ -261,6 +288,7 @@ export default function SearchResultsPage(): any ({;
   query,;
   slug,;
   totalCount,;
+}: SearchResultsPageProps) {  const router = useRouter();
 
 
 }: SearchResultsPageProps) {  const router = useRouter();
@@ -352,6 +380,45 @@ export default function SearchResultsPage(req, res) {
     }
     return true;  });
 
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (maxPrice && r.type === 'product') {;
+      if ((r.price ?? 0) > Number(maxPrice)) {;
+        return false;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (minRating && (r.type === 'product' || r.type === 'talent')) {;
+      if ((r.rating ?? 0) < Number(minRating)) {;
+        return false;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return true
+  }),
+
   // Group results by type for better display
   const groupedResults = filteredResults.reduce(
     (acc, result) => {
@@ -405,6 +472,72 @@ export default function SearchResultsPage(req, res) {
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
+                availability_type: 'available'}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onViewProfile={(id: string) => {;
+                router.push(`/talent/${id}`);
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onRequestHire={(talent) => {;
+                router.push(`/talent/${talent.id}?action=hire`);
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              isAuthenticated={isAuthenticated  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            />
+          </div>
+        ),
+      case 'category':
+        return (
+          <div key={result.id} data-testid='result-card'>            <CategoryCard
+              title={result.title}
+              description={result.description |''}
+              icon={result.image |'📁'}
+            />
+          </div>
+        );
+      default:
+          >
+            <h3 className='font-semibold'>{result.title}</h3>
+            <p className='text-gray-600 dark:text-gray-200'>
+              {result.description}
+            </p>
+          </div>
+        );    }
+  }
+  };
+
+          <div key={result.id} data-testid="result-card">
+            <CategoryCard
+              title={result.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              description={result.description || ''  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              icon={result.image || '📁'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
             />;
           </div>;
         );
@@ -421,6 +554,9 @@ export default function SearchResultsPage(req, res) {
 
 }
   },
+
+
+
   return (
     <>;
       <SEO
@@ -447,6 +583,10 @@ export default function SearchResultsPage(req, res) {
       />
       <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+
+
         <div
           className="container mx-auto px-4 py-8"
           data-testid="search-results"
@@ -463,9 +603,8 @@ export default function SearchResultsPage(req, res) {
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
-                <Input
-                  type='text'
-                  value={searchQuery}
+
+
                 <Input
                   type="text"
                   value={searchQuery  } catch (error) {
@@ -504,6 +643,12 @@ export default function SearchResultsPage(req, res) {
                 >
                 </Button>
                 <select
+
+
+                  data-testid='filter-button'>;
+                  <Filter className='h-4 w-4' />                  Filters;
+                </Button>;
+
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e && e.target.value)}
@@ -596,6 +741,8 @@ export default function SearchResultsPage(req, res) {
                   <option value='price_asc'>Price: Low to High</option>;
                   <option value='price_desc'>Price: High to Low</option>;
                   <option value='rating'>Highest Rated</option>                </select>;
+
+
                   <input
                     type="number"
                     placeholder="Min $"
@@ -648,60 +795,6 @@ export default function SearchResultsPage(req, res) {
                 </select>;
               </div>;
 
-
-                <Button
-                  variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('grid')}
-                  data-testid='view-mode-grid';
-                  className={viewMode === 'grid' ? 'active' : ''}
-                >;
-                  <Grid className='h-4 w-4' />;
-                </Button>;
-                <Button
-                  variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size='sm'
-                  onClick={() => setViewMode('list')}
-                  data-testid='view-mode-list';
-                  className={viewMode === 'list' ? 'active' : ''}
-
-
-
-              <div className="flex items-center gap-2">
-                <Button
-                  variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  size="sm"
-                  onClick={() => setViewMode('grid')  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                  data-testid="view-mode-grid"
-                  className={viewMode === 'grid' ? 'active' : ''  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                >
-                >;
-                  <List className='h-4 w-4' />                </Button>;
-              </div>;
-            </div>;
-          </div>;
-          {!loading && filteredResults.length === 0 && (
-            <div data-testid="search-empty-state">
-              <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
-            </div>
-          {filteredResults && filteredResults.length > 0 && (;
-            <div className='space-y-8'>;
-              {Object && Object.entries(groupedResults).map(([type, typeResults]) => (;
-                <div key={type}>;
-                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>                    {type}s ({typeResults && typeResults.length});
-                  </h2>;
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'  } catch (error) {
     console.error("Error:", error);
@@ -724,6 +817,18 @@ export default function SearchResultsPage(req, res) {
                   <Grid className="h-4 w-4" />
                 </Button>
                 <Button
+                >;
+                  <List className='h-4 w-4' />                </Button>;
+              </div>;
+            </div>;
+          </div>;
+          {/* Loading State */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {loading && results.length === 0 && (
+
           {!loading && filteredResults.length === 0 && (
             <div data-testid="search-empty-state">
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
@@ -761,6 +866,34 @@ export default function SearchResultsPage(req, res) {
         `Search API error: ${response.status} ${response.status_text}`);
       const offline = offline_search (query, 1, 12, { sort_by: 'relevance' });
       results = offline.results;
+      results = data.results || [];
+      totalCount = data.totalCount || results.length;
+      logInfo(`Server-side fetch successful: ${results.length} results`)
+    } else {
+      logErrorToProduction(`Search API error: ${response.status} ${response.statusText}`),
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+      results = offline.results;
+      totalCount = offline.totalCount
+    }
+
+    return {
+      props: {
+        initialResults: results,
+        query;
+        slug;
+        totalCount}}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error }),
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' }),
+    return {
+      props: {
+        initialResults: offline.results,
+        query;
+        slug;
+        totalCount: offline.totalCount}}
+  }
+
+};
       total_count = offline.total_count;    }
     return {
       props: {
@@ -904,3 +1037,46 @@ export const getServerSideProps: GetServerSideProps<;
       results = data.results || [];
       totalCount = data.totalCount || results.length;
       logInfo(`Server-side fetch successful: ${results.length} results`);
+    } else {;
+      logErrorToProduction(;
+        `Search API error: ${response.status} ${response.statusText}`);
+      const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+      results = offline.results;
+      totalCount = offline.totalCount;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    return {;
+      props: {;
+        initialResults: results;
+        query,;
+        slug,;
+        totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    logErrorToProduction('Error fetching search results:', { data: error });
+    const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
+    return {;
+      props: {;
+        initialResults: offline.results,;
+        query,;
+        slug;
+        totalCount: offline.totalCount}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+
+

@@ -11,6 +11,12 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage();
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')
 }
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { persona, invitee, topic, operatorPrompt } = req.body |{}
+
+
+
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
   const id = uuidv4();
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce:
 1) 7-10 concise interview questions mixing visionary and technical angles

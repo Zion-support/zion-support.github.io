@@ -1,3 +1,9 @@
+
+
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
+
 import React from 'react',;
 import { format } from 'date-fns',;
 import { cn } from '@/lib/utils',;
@@ -8,6 +14,10 @@ interface ConversationItemProps {;
   isActive: boolean,;
   onClick: () => void;
 
+
+
+}
+
   conversation: Conversation
   isActive: boolean
 
@@ -15,6 +25,21 @@ interface ConversationItemProps {;
 }
 export function ConversationItem({ conversation, isActive, onClick }: ConversationItemProps) {
   return (
+    <div 
+      className={cn(;
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
+      className={cn(
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
+
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
+
+
+    <div 
+
+
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}

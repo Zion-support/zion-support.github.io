@@ -1,3 +1,7 @@
+
+import { ServiceVariant } from '../types / service - variants';
+;
+
 export interface EnterpriseITBreakthroughService2029 {
 
 export interface EnterpriseITBreakthroughService2029 {;

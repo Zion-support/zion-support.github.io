@@ -1,3 +1,48 @@
+  Mail,
+  Phone,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,;
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Facebook,;
+  Twitter,;
+  Linkedin,;
+  Instagram,;
+  Github,;
+
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -96,6 +141,10 @@ import Link from 'next/link';
                   </li>;
                 ))}
 
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+origin/automation-improvements-final
+
               </ul>;
 
               <h3 className="text-lg font-semibold mb-6">Legal</h3>;
@@ -115,6 +164,12 @@ import Link from 'next/link';
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+
+
+
+
+
+
             <motion.div
             <motion.div
               transition={{ duration: 0 && 0.8 }}

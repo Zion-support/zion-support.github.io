@@ -1,4 +1,19 @@
 
+import React, { useState } from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",
+import { Loader2, ShieldCheck, Download } from "lucide-react";
+import { toast } from "sonner";
+import { Loader2, ShieldCheck, Download } from "lucide-react",
+import { toast } from "sonner",
+
+
+
 interface SmartContractDeploymentProps {
 
   solidityCode: string
@@ -6,6 +21,10 @@ interface SmartContractDeploymentProps {
 
   isDeploying: boolean
 }
+
+
+
+
   isDeploying
 }: SmartContractDeploymentProps) {
   const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions>({
@@ -41,6 +60,33 @@ if ( {) {
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center space-x-2">
+              checked={deploymentOptions.deployToChain}
+              onCheckedChange={(checked) => setDeploymentOptions({
+                ...deploymentOptions;
+                deployToChain: checked
+            <Switch 
+              id="deploy-blockchain"
+import React, { useState } from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group",;
+import { Label } from "@/components/ui/label",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+import { BlockchainNetwork, DeploymentOptions } from "@/types/smart-contracts",;
+import { Loader2, ShieldCheck, Download } from "lucide-react",;
+import { toast } from "sonner",;
+
+import React, { useState } from "react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Label} from "@/components/ui/label";
+import {Input} from "@/components/ui/input";
+import {Switch} from "@/components/ui/switch";
+import {BlockchainNetwork, DeploymentOptions} from "@/types/smart-contracts";
+import {Loader2, ShieldCheck, Download} from "lucide-react";
+import {toast} from "sonner";
 interface SmartContractDeploymentProps {;
   solidityCode: string,;
   onDeploy: (options: DeploymentOptions) => Promise<void>,;
@@ -63,6 +109,40 @@ interface SmartContractDeploymentProps {;
           Deploy your agreement as a smart contract for enhanced security and automation;
         </CardDescription>;
       </CardHeader>;
+
+
+
+
+              })}
+            />
+            <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>
+          </div>
+          {deploymentOptions.deployToChain && (
+            <>
+              <div className="space-y-2">
+                <Label>Select blockchain network</Label>
+                <RadioGroup
+                  onValueChange={(value) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    network: value as BlockchainNetwork
+                <RadioGroup 
+                  defaultValue={deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  onValueChange={(value) => setDeploymentOptions({;
+                    ...deploymentOptions,;
+                    network: value as BlockchainNetwork;
+                  defaultValue={deploymentOptions && deploymentOptions.network}
+                  onValueChange={(value) => setDeploymentOptions({;
+
+                    ...deploymentOptions;
+                    network: value as BlockchainNetwork;
+
+
                   })}
 
                   className="flex flex-col space-y-1";
@@ -93,6 +173,13 @@ interface SmartContractDeploymentProps {;
                   id="wallet-address" 
                   placeholder="0x..." 
                   value={deploymentOptions.walletAddress || ''}
+                  onChange={(e) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    walletAddress: e.target.value
+                  onChange={(e) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    walletAddress: e.target.value;
+
                   })}
 
                 />;
@@ -106,12 +193,33 @@ interface SmartContractDeploymentProps {;
                   onCheckedChange={(checked) => setDeploymentOptions({;
                     ...deploymentOptions;
 
+                  onCheckedChange={(checked) => setDeploymentOptions({
+                    ...deploymentOptions;
+                    useEscrow: checked
+                  onCheckedChange={(checked) => setDeploymentOptions({;
+                    ...deploymentOptions;
+                    useEscrow: checked;
+
                   })}
                 />;
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>;
               </div>;
             </>;
           )}
+}
+        </Button>;
+      </CardFooter>;
+    </Card>;
+  );
+
+
+          <div className="rounded-md bg-muted p-4">;
+            <h4 className="text-sm font-medium mb-2">Smart Contract Preview</h4>;
+            <div className="max-h-52 overflow-y-auto bg-background p-3 rounded text-xs font-mono">;
+              <pre>{solidityCode && solidityCode.slice(0, 500)}...</pre>;
+
+
+
       <CardContent className="space - y-6">;
         <div className="space - y-4">;
           <div className="flex items - center space - x-2">;
@@ -187,3 +295,5 @@ interface SmartContractDeploymentProps {;
             <>;
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
               Deploying...;
+}
+;

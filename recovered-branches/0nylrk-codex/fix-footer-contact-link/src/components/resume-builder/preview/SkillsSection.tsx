@@ -1,3 +1,7 @@
+
+import {Skill} from '@/types/resume';
+
+
 interface SkillsSectionProps {
   skills: Skill[];
 }
@@ -32,6 +36,7 @@ if ( {) {
       acc[category] = []
     }
     acc[category].push(skill);
+
 import { Skill } from '@/types/resume',;
 interface SkillsSectionProps {;
   skills: Skill[];
@@ -45,6 +50,9 @@ export function SkillsSection({ skills }: SkillsSectionProps) {;
       acc[category] = [];
     }
     acc[category].push(skill),
+
+
+
     return acc
   }, {} as Record<string Skill[]>),
 

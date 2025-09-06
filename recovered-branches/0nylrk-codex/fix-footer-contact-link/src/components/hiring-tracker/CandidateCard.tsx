@@ -26,13 +26,56 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge";
 
+interface CandidateCardProps {;
+import { useState  } from './react';
+import { Draggable  } from './react - beautiful - dnd';
+import { formatDistanceToNow  } from './date - fns';
+import { Link  } from './react-router-dom';
+import { JobApplication  } from '@/types / jobs';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Avatar  } from '@/components / ui / avatar';
+import { Button  } from '@/components / ui / button';
+import { Textarea  } from '@/components / ui / textarea';
+import {
+
+
+  MessageSquare,
+  User,
+  FileText,
+  MoreVertical,
+  Calendar,
+  AlertTriangle,
+  BriefcaseIcon,;
+} from "lucide-react";
+  BriefcaseIcon
+} from "lucide-react",
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  application: JobApplication;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
+import { toast } from "@/hooks/use-toast",
+import { HireConfirmationModal } from "./HireConfirmationModal",
+
+
+
+
+interface CandidateCardProps {
+  application: JobApplication,
   index: number
 }
+
+export function CandidateCard({ application, index }: CandidateCardProps) {;
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes || "");
+  const [showHireModal, setShowHireModal] = useState(false);
+
+export function CandidateCard({ application, index }: CandidateCardProps) {
+  const [showNotes, setShowNotes] = useState(false);
+  const [notes, setNotes] = useState(application.notes |"");
+  const [showHireModal, setShowHireModal] = useState(false);
+  // Check if application is stalled (no activity for 7 days)
 
 
 
@@ -52,6 +95,8 @@ import {
 
           <Card;
             className="mb-2 p-0 shadow-sm border";
+
+
             ref={provided.innerRef}
             {...provided.draggableProps}
             {...provided.dragHandleProps}
@@ -122,6 +167,26 @@ import {
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
+                  </Avatar>;
+                  <div>;
+                    <h4 className="font-medium text-sm">;
+                      {application && application.talent_profile?.full_name || "Candidate"}
+                    </h4>;
+                    <p className="text-xs text-muted-foreground">;
+                      {application && application.talent_profile?.professional_title ||;
+                        "Applicant"}
+                    </p>;
+                  </div>;
+                </div>;
+
+                <DropdownMenu>;
+                  <DropdownMenuTrigger asChild>;
+                    <Button variant="ghost" className="h-8 w-8 p-0">;
+                      <MoreVertical className="h-4 w-4" />;
+                    </Button>;
+                  </DropdownMenuTrigger>;
+                  <DropdownMenuContent align="end">;
+                    <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>;
                       {showNotes ? "Hide notes" : "Add notes"}
                     </DropdownMenuItem>;
                     <DropdownMenuItem onClick={() => setShowHireModal(true)}>;
@@ -161,6 +226,9 @@ import {
                 </div>;
               )}
 ;
+
+
+
               {/* Notes Section */}
               {showNotes && (;
                 <div className="mt-2">;
@@ -178,6 +246,13 @@ import {
                 </div>;
               )}
 
+
+
+
+
+              {/* Action Buttons */}
+              <div className="flex justify-between mt-2 gap-1">
+                <Button variant="outline" size="sm" className="flex-1" asChild>
 ;
               {/* Action Buttons */}
               <div className="flex justify-between mt-2 gap-1">
@@ -187,6 +262,9 @@ import {
                   className="flex-1"
                   asChild
                 >
+
+
+
                   <Link to={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
@@ -198,6 +276,8 @@ import {
                   className="flex-1"
                   asChild
                 >
+
+
                   {application.resume?.file_url ? (
               <div className="flex justify-between mt-2 gap-1">;
                 <Button variant="outline" size="sm" className="flex-1" asChild>;
@@ -240,6 +320,8 @@ import {
         is_open={showHireModal}
         on_close={() => setShowHireModal (false)}
         application={application}
+
+
   );
         on_confirm={handleHireConfirmed}
       />;

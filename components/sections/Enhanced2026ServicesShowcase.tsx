@@ -1,3 +1,25 @@
+  ArrowRight
+  Brain
+  Zap
+  Shield
+  Rocket
+  Sparkles
+  Star
+  TrendingUp
+  Globe
+  Cpu
+  Lock
+  Cloud;
+
+
+import Link from 'next/link';
+const Enhanced2026ServicesShowcase = () => {
+  const featuredServices = [
+    {
+
+      id: 'ai-business-intelligence-elite-2026',
+      name: 'AI Business Intelligence Elite 2026',
+      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
   ArrowRight,
   Brain,
   Zap,
@@ -270,6 +292,7 @@ const Enhanced2026ServicesShowcase = () => {;
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
 
+
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -316,6 +339,7 @@ const Enhanced2026ServicesShowcase = () => {;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
           viewport={{ once: true }}
+
 
         >
           {categories.map((category, index) => (
@@ -380,6 +404,8 @@ const Enhanced2026ServicesShowcase = () => {;
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
+
+
             >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category && category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>;
@@ -400,6 +426,8 @@ const Enhanced2026ServicesShowcase = () => {;
           ))}
         </motion.div>
         {/* Featured Services Grid */}
+
+
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -410,6 +438,8 @@ const Enhanced2026ServicesShowcase = () => {;
 
               whileHover={{ scale: 1.02, y: -5 }}
               className='group relative'
+
+
 
             >
               <div
@@ -494,11 +524,12 @@ const Enhanced2026ServicesShowcase = () => {;
 
                         {feature}
 
+
+
                       </li>
                     ))}
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
-
 
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
@@ -550,6 +581,7 @@ const Enhanced2026ServicesShowcase = () => {;
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
 
+
         >
           <div className="bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
@@ -579,6 +611,15 @@ const Enhanced2026ServicesShowcase = () => {;
                 transition={{ duration: 0 && 0.2, delay: 0 && 0.1 }}>;
                 <Link
   );
+export default Enhanced2026ServicesShowcase;  )
+}
+export default Enhanced2026ServicesShowcase;
+
+export default Enhanced2026ServicesShowcase;
+
+}
+}
+export default Enhanced2026ServicesShowcase;
 
 };
 

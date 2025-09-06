@@ -16,17 +16,18 @@ import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/qu
 export default function QuoteManager() {
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
-    quotes;
-    is_loading;
-    error;
-    status_filter;
-    setStatusFilter;
-    archive_filter;
-    setArchiveFilter;
-    search_query;
-    setSearchQuery;
-    date_range;
-    setDateRange;
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAdminQuotes } from "@/hooks/useAdminQuotes";
+import { useAuth } from "@/hooks/useAuth";
+import { 
+  Card;
+  CardContent
+} from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Navigate } from "react-router-dom",
+import type { QuoteRequest } from "@/types/quotes";
 
 
 
@@ -194,6 +195,9 @@ export default function QuoteManager() {;
               </div>;
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />;
             </div>;
+
+
+
             {/* Status Summary Cards */}
             <QuoteStatusCards statusCounts={statusCounts} />
             {/* Filters */}
@@ -213,10 +217,23 @@ export default function QuoteManager() {;
                     deleteQuote={deleteQuote}
                     onViewDetails={handleViewDetails}
 
+
+                  />;
+                </Card>;
+              </TabsContent>;
+            </Tabs>;
+          </div>;
+        </div>;
+
+
+
+
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+
+
           }}
         />
         <Footer />

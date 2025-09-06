@@ -1,4 +1,19 @@
 
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { Button  } from '@/components/ui/button';
+import { Form  } from '@/components/ui/form';
+import { Certification  } from '@/types/resume';
+import { Loader2  } from 'lucide-react';
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { format  } from 'date-fns';
+import { CertificationsList  } from './CertificationsList';
+import { CertificationFormFields  } from './CertificationFormFields';
+import { CertificationFormValues, certificationSchema } from './types';
+
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {Button} from '@/components/ui/button';
@@ -52,6 +67,21 @@ function CertificationsForm() {
 ;
   // Helper function to format dates as strings for form inputs;
       }
+      if (success) {
+        form.reset({
+          name: ''
+          issuing_organization: ''
+          issue_date: ''
+          expiration_date: ''
+          credential_id: ''
+          credential_url: ''})
+        setEditingId(null)
+      }
+    } catch (err: any) {
+      setError(err.message |'An error occurred')
+    }
+
+      }
 
 
   };
@@ -68,6 +98,63 @@ function CertificationsForm() {
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)
+
+
+  // Helper function to format dates as strings for form inputs;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;
+    if (!dateValue) return '';
+    if (typeof dateValue === 'string') return dateValue,;
+    return format(dateValue, 'yyyy-MM-dd');
+  };
+
+  const form = useForm<CertificationFormValues>({;
+    resolver: zodResolver(certificationSchema),;
+    defaultValues: {;
+      name: '',;
+      issuing_organization: '',;
+      issue_date: '',;
+      expiration_date: '',;
+      credential_id: '',;
+      credential_url: ''}}),;
+
+  const handleAddOrUpdate = async (data: CertificationFormValues) => {;
+    try {;
+      setError(null);
+      let success,;
+
+      const certData: Certification = {;
+        name: data && data.name,;
+        issuing_organization: data && data.issuing_organization,;
+        issue_date: data && data.issue_date || undefined,;
+        expiration_date: data && data.expiration_date || undefined,;
+        credential_id: data && data.credential_id,;
+        credential_url: data && data.credential_url},;
+
+      if (editingId) {;
+        success = await updateCertification(editingId, certData);
+      } else {;
+        success = await addCertification(resumeId, certData);
+      }
+
+      if (success) {;
+        form && form.reset({;
+          name: '',;
+          issuing_organization: '',;
+          issue_date: '',;
+          expiration_date: '',;
+          credential_id: '',;
+          credential_url: ''}),;
+        setEditingId(null);
+      }
+    } catch (err: any) {;
+      setError(err && err.message || 'An error occurred');
+    }
+  };
+
+    }
+
+  };
+
   },;
 
   const handleEdit = (cert: Certification) => {;
@@ -84,6 +171,10 @@ function CertificationsForm() {
     }
 
   },
+
+
+
+
   return (
     <div className="space-y-6">
       <div>

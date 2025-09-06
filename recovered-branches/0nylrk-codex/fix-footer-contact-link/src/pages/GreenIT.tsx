@@ -1,4 +1,15 @@
 
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Leaf, Server, Cloud } from "lucide-react",
+import { Link } from "react-router-dom";
+import { AppLayout } from "@/layout/AppLayout";
+import { Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+
+
+
 export default function GreenIT() {
 
   const greenITSolutions = [
@@ -135,6 +146,10 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
+}
+
+
+
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -200,6 +215,10 @@ export default function GreenIT() {;
           </div>;
         </div>;
       </main>;
+
+
+
+
 }
     </AppLayout>);
 }

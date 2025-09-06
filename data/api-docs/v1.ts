@@ -1,6 +1,12 @@
 import { ApiDocsSpec } from './types';
 
         }
+  ]
+}
+export default v1;
+
+  ];
+
         }
       ];
     }

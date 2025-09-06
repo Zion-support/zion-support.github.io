@@ -1,8 +1,13 @@
+import { useRouter  } from 'next/router';
+import { useEffect, useState } from 'react';
+export default function WhitepaperPreview() {
 
 import {useRouter} from 'next/router';
 import {useEffect, useState} from 'react';
 
 export default function WhitepaperPreview() {;
+
+
 import { useRouter } from 'next/router',
 import { useEffect, useState } from 'react',
 export default function WhitepaperPreview() {
@@ -11,11 +16,19 @@ export default function WhitepaperPreview() {
   const [markdown, setMarkdown] = useState<string>(''),
   const [notFound, setNotFound] = useState(false),
 
+  const router = useRouter();
+  const { id } = router.query;
+  const [markdown, setMarkdown] = useState<string>('');
+  const [notFound, setNotFound] = useState(false);
+
   useEffect(() => {
     if (!id |Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query)
     // In a production app, this would fetch from a real DB.
     fetch(`/api/whitepaper/get?id=${id}`)
+
+}
+
   useEffect(() => {;
     if (!id || Array && Array.isArray(id)) return;
     // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query);
@@ -43,3 +56,7 @@ if (
     return () {
   $2
 }
+
+
+
+

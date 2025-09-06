@@ -4,6 +4,7 @@
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -26,6 +27,9 @@ export default function ComprehensivePricingPage() {
     const categoryData = categories.find(cat => cat.id === category)
     return categoryData?.icon |''
   }
+    { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
+
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -96,6 +100,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
@@ -142,6 +148,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
                 <button
@@ -175,6 +183,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
@@ -226,6 +236,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="flex flex-wrap justify-center gap-3"
             >
               {categories.map((category) => (
@@ -240,6 +252,8 @@ export default function ComprehensivePricingPage(req, res) {
                 >;
                   <span>{category.icon}</span>;
                   {category.name}
+
+
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
@@ -251,6 +265,8 @@ export default function ComprehensivePricingPage(req, res) {
                     animate={{ opacity: 1, coordinate_y: 0 }}
                     exit={{ opacity: 0, coordinate_y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
+
+
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
                     {/* Popular Badge */}
@@ -266,6 +282,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
@@ -276,9 +294,13 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                           </div>
                         </div>
                       </div>
+
+
 
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 4).map((feature, idx) => (
@@ -286,6 +308,8 @@ export default function ComprehensivePricingPage(req, res) {
                             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="line-clamp-2">{feature}</span>
                           </div>
+
+
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                         <div>
                           <div className="text-lg font-bold text-blue-400">{service.rating}</div>
@@ -311,6 +335,8 @@ export default function ComprehensivePricingPage(req, res) {
                       </button>;
                       {/* CTA Button */}
                       <a;
+
+
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
@@ -325,6 +351,7 @@ export default function ComprehensivePricingPage(req, res) {
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
                           transition={{ duration: 0.3 }}
+
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
                               <p className="text-white/70 text-sm">{service.marketPosition}</p>
@@ -335,6 +362,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
                               <div className="flex flex-wrap gap-2">
@@ -364,6 +393,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                               <div className="space-y-1">
@@ -388,6 +419,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
                               <p className="text-white/70 text-sm mb-3">{service.roi}</p>
@@ -449,6 +482,8 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -465,6 +500,8 @@ export default function ComprehensivePricingPage(req, res) {
                   >
                     Contact Sales Team
                     <ArrowRight className="w-5 h-5" />
+
+
                   <a
                     href="tel:+13024640950"
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
@@ -478,6 +515,12 @@ export default function ComprehensivePricingPage(req, res) {
         </section>
       </div>
     </>
+  )
+              className="text-center";
+
+}
+
+              className="text - center";
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
                 <h2 className="text - 3xl font - bold text - white mb - 4">;
@@ -506,5 +549,8 @@ export default function ComprehensivePricingPage(req, res) {
           </div>;
         </section>;
       </div>;
+}
+    </>);
+}
 
 

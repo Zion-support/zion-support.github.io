@@ -2,6 +2,28 @@ return (
     <>;
       <TooltipProvider>;
         <Tooltip>;
+  return (
+    <>
+      <TooltipProvider>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+              )}
+              onClick={handleClick}
+              aria-label={
+                active ? 'Remove from favorites' : 'Save to favorites'
+              }            >
+              <Heart
+                className = {cn(
+                  'h-4 w-4 transition-transform duration-200'
+                  active
+                    ? 'fill-red-500 text-red-500 scale-110'
+                    : 'text-zion-slate'
+                )}              />
+
+                )}              />;
+            </button>;
+          </TooltipTrigger>;
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>
       </TooltipProvider>

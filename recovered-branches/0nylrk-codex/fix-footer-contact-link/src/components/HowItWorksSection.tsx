@@ -1,9 +1,27 @@
 
+
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
 const steps = [
   {
     title: "Post"
     description: "Publish your service, job, or equipment in minutes with our AI-powered form.";
     icon: Send}
+import {GradientHeading} from "./GradientHeading";
+import {Check, Handshake, Search, Send} from "lucide-react";
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
+
+import { GradientHeading } from './GradientHeading';
+import { Check, Handshake, Search, Send } from './lucide-react';
+const steps = [;
+
+import { GradientHeading } from "./GradientHeading",
+import { Check, Handshake, Search, Send } from "lucide-react",
+
+
+
+
 const steps = [
   {
     title: "Post",
@@ -78,6 +96,8 @@ export function HowItWorksSection() {;
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${;
                   index % 2 === 0 ? "md:flex-row-reverse" : "";
+
+
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -92,6 +112,14 @@ export function HowItWorksSection() {;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
                       <p className="text-zion-slate-light">{step && step.description}</p>;
                     </div>;
+
+          </div>;
+        </div>;
+      </div>;
+    </section>;
+  );
+}
+
     title: "Hire / Buy",
     description: "Connect directly with matched providers and complete your transaction securely.",
     icon: Handshake},
@@ -149,3 +177,4 @@ function HowItWorksSection() {
 
 };
 ;
+

@@ -1,5 +1,9 @@
 
 
+
+const ScrollToTop: React.FC = () => {
+
+
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
 
@@ -62,6 +66,7 @@ const ScrollToTop: React.FC = () => {
       {isVisible && (;
         <button
           onClick={scrollToTop}
+        >
           <svg
             className='w-6 h-6 transform group-hover:-translate-y-1 transition-transform duration-300'
             fill='none'
@@ -91,6 +96,15 @@ const ScrollToTop: React.FC = () => {
       )}
     </>
   );
+}
+}
+export default ScrollToTop;
+  )
+};
+
+export default ScrollToTop;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
 export default ScrollToTop;  )
@@ -180,4 +194,6 @@ export default ScrollToTop;
 
 export default ScrollToTop;
 
+export default ScrollToTop;
+export default ScrollToTop;
 

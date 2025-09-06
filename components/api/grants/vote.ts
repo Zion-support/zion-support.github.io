@@ -25,6 +25,7 @@ function writeGrant(record: GrantApplication) {
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
     res.status(400).json({ error: 'Missing fields' });
     return
   }
@@ -115,4 +116,11 @@ if ( {) {
   res.status (200).json ({ record: g });
 
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+
+}
+}
+}
+}
+}
+    res.status(400).json({ error: 'Missing fields' });
 

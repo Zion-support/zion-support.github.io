@@ -1,4 +1,19 @@
 
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+
+
 export function ReferralGuide() {
 
   const steps = [
@@ -12,6 +27,18 @@ function ReferralGuide() {
       title: "Share your referral link"
       description: "Copy your unique referral link and share it with potential clients or talent"}
     {
+      title: "They sign up"
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"}
+    {
+      title: "They complete onboarding"
+      description: "Once they complete their profile setup, your referral is confirmed"}
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+
+
+      title: "They sign up",;
+      description: "When someone clicks your link and creates an account, they're tagged as your referral"};
+
       title: "They sign up",
       description: "When someone clicks your link and creates an account, they're tagged as your referral"},
     {
@@ -41,6 +68,9 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
                 <p className="text-sm text-muted-foreground">{step.description}</p>
               </div>
             </div>
+}
+
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 
 export function ReferralGuide() {;
@@ -57,6 +87,10 @@ export function ReferralGuide() {;
       </CardHeader>;
       <CardContent>;
         <div className="space-y-4">;
+
+
+
+
 }
         </div>;
       </CardContent>;

@@ -1,4 +1,14 @@
 
+  method
+  path
+  requiresAuth
+}: TryItProps) {
+  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
+
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+
+
   method,
   path,
   requiresAuth,
@@ -33,9 +43,23 @@ export default function TryItConsole(): any ({;
         'Content-Type': 'application/json'
       }
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {
         method;
         headers;
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
+      const text = await res && res.text();
+      setResponse(text);
+    } catch (e: any) {;
+      setResponse(String(e?.message || e));
+    } finally {;
+      setLoading(false);
+
     }
   }
   return (
@@ -155,8 +179,6 @@ export default function TryItConsole(): any ({;
   )
 
 }
-    <div className='space-y-2'>
-
 
     }
   }
@@ -165,3 +187,5 @@ export default function TryItConsole(): any ({;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+        <div>
+

@@ -252,6 +252,9 @@ export default function UltraFuturisticBackground2029() {;
         }}
       />
 
+
+
+
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -259,6 +262,8 @@ export default function UltraFuturisticBackground2029() {;
         style={{ filter: 'blur(0.5px)' }}
       />
       {/* Additional visual layers */}
+            duration: 4
+            repeat: Infinity
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -270,6 +275,16 @@ export default function UltraFuturisticBackground2029() {;
         {/* Quantum field ripples */}
         <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
+
+        style={{ filter: 'blur(0 && 0.5px)' }}
+      />;
+
+
+      {/* Additional visual layers */}
+      <div className="absolute inset-0">;
+        {/* Quantum field ripples */}
+        <motion&& motion.div
+          className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
       <canvas;
         ref={canvas_ref}
         className="absolute inset - 0 w - full h - full";
@@ -280,6 +295,11 @@ export default function UltraFuturisticBackground2029() {;
         {/* Quantum field ripples */}
         <motion.div;
           className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
+          }}
+        />
+        {/* Holographic matrix */}
+        <motion.div
+          className='absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20'
           animate={{
             scale: [1.2, 1, 1.2]
             opacity: [0.3, 0.1, 0.3],          }}
@@ -304,12 +324,31 @@ export default function UltraFuturisticBackground2029() {;
           transition={{
             duration: 5
             repeat: Infinity
+
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
+        <motion.div;
+          className="absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20";
+
+          animate={{
+
+            scale: [1.2, 1, 1.2];
+            opacity: [0.3, 0.1, 0.3];
+
           }}
-        />
+          transition={{
+            duration: 5,
+            repeat: Infinity,
+
+
+            ease: 'easeInOut'
+          }}
+
+        />;
+
+
         {/* Neural network nodes */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
@@ -334,6 +373,12 @@ export default function UltraFuturisticBackground2029() {;
           className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
           }}
           transition={{
+            duration: 6
+            repeat: Infinity
+            ease: 'easeInOut'
+
+          }}
+          transition={{
             duration: 6,
             repeat: Infinity,
           }}
@@ -355,6 +400,12 @@ export default function UltraFuturisticBackground2029() {;
               boxShadow: '0 0 20px rgba(0, 255, 255, 0.6)'
             }}
             animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],          }}
+          transition={{
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut',
 
           }}
           transition={{
@@ -370,6 +421,7 @@ export default function UltraFuturisticBackground2029() {;
           ease: 'easeInOut'
         }}
       />
+
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}

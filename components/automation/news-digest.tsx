@@ -8,6 +8,9 @@ import path from 'path';
  </div> </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
+
+</div> </div>) )
+ </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] }
@@ -58,6 +61,10 @@ export default function NewsDigestPage({ items, generatedAt }: { items: NewsItem
           </div>;
         ))}
       </div>
+
+    </div>;
+
+
 );
 }
   );

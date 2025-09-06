@@ -213,6 +213,15 @@
               }}
 
 
+              transition={{
+                duration: 3
+                delay: i * 0.1
+                repeat: Infinity
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+
+
+
 
 
 
@@ -254,6 +263,7 @@
 };
 export default UltraFuturisticBackground2035;  );
 };
+
 export default UltraFuturisticBackground2035;
 
 
@@ -271,3 +281,8 @@ export default UltraFuturisticBackground2035);
 export default UltraFuturisticBackground2035;
 ;
   );
+export default UltraFuturisticBackground2035;  )
+}
+export default UltraFuturisticBackground2035;
+
+export default UltraFuturisticBackground2035;

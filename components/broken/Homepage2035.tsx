@@ -3,6 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
+
+  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
+  Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
+ } from 'lucide-react';
+import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -60,6 +66,18 @@ const LoadingFallback = () => (;
             );
           return true;
         });
+    : allServices.filter(service => {
+        if (activeCategory === 'ai') return service.category.includes('AI') |service.category.includes('Machine Learning');
+        if (activeCategory === 'it') return service.category.includes('IT') |service.category.includes('Enterprise');
+        if (activeCategory === 'quantum') return service.name.includes('Quantum');
+        if (activeCategory === 'space') return service.category.includes('Space');
+        if (activeCategory === 'cyber') return service.category.includes('Security') |service.category.includes('Cybersecurity');
+        if (activeCategory === 'cloud') return service.category.includes('Cloud') |service.category.includes('DevOps');
+        if (activeCategory === 'fintech') return service.category.includes('Financial') |service.category.includes('Trading');
+        return true
+      });
+  if (isLoading) {
+    return <LoadingFallback />
   if (isLoading) {;
     return <LoadingFallback />;  }      opacity: 1,;
       scale: 1,;
@@ -273,6 +291,7 @@ if ( {) {
 }
   }
   }
+  }
 
   return (
     <Layout>;
@@ -368,6 +387,8 @@ if ( {) {
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
 
+
+
               ))}
 
             </motion && motion.div>;
@@ -387,6 +408,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
@@ -418,12 +440,15 @@ if ( {) {
             </motion && motion.div>;
 
 
+
+
             {/* Category Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+
 
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
@@ -466,6 +491,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
               viewport={{ once: true }}
+
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -510,6 +536,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
@@ -572,6 +599,7 @@ if ( {) {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
 
 
@@ -607,6 +635,7 @@ if ( {) {
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -655,6 +684,8 @@ if ( {) {
       </UltraFuturisticBackground2035>;
     </Layout>;
   );
+
+
 };
 
 animate: {

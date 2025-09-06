@@ -16,6 +16,11 @@
     emoji: string;
   }>;
 }
+export interface Conversation {
+
+
+export interface Conversation {;
+
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -40,6 +45,10 @@ export interface MessageThread {;
   rootMessageId: string;
   messages: string[]; // message IDs;
   createdAtIso: string;
+
+
+export interface MessageSearchResult {;
+
   message: Message;
   conversation: Conversation;
   highlights: string[];
@@ -608,6 +617,10 @@ export const messagingStorage = new MessagingStorage();
 // Main functions for external use
 }
 }
+
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+
   return messagingStorage.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -666,14 +679,46 @@ export async function getConversationsByUser(userId: string, includeArchived?: b
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
 
+}
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
 export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.getUnreadMessageCount(userId)
 }
+
+
+export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
+
   return messagingStorage.searchMessages(query, userId, limit);
 }
 // Utility functions
+    conversationId
+    senderId
+    recipientId
+    body
+    ...additionalData
+  }
+    conversationId,
+    senderId,
+    recipientId,
+    body,
+    ...additionalData;
+  };
+}
+export function createConversationData(
+  participants: string[]
+  additionalData?: Partial<Conversation>
+): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
+  return {
+    participants
+    lastMessageAtIso: new Date().toISOString()
+    isArchived: false
+    isMuted: false
+    ...additionalData
+  }
+}
+
+
 export function generateMessageId(): string {
   return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
@@ -743,6 +788,7 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
+
 
   }
 

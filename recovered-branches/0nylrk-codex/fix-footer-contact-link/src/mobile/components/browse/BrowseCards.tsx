@@ -44,6 +44,11 @@ interface BrowseItem {
 
 
 
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
+  const [savedItems, setSavedItems] = useState<string[]>([]);
+export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
+  const [savedItems, setSavedItems] = useState<string[]>([]);
+
 
 
   const [savedItems, setSavedItems] = useState<string[]>([]),
@@ -73,6 +78,10 @@ interface BrowseItem {
                       <span className="text-primary font-semibold">JOB</span>;
                     </div>;
                   )}
+                <button
+
+                <button 
+
                   className="h-8 w-8 flex items-center justify-center"
                   onClick={() => toggleSaved(item && item.id)}
                 >;
@@ -158,6 +167,8 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {;
                     variant="outline";
                     className="text-xs font-normal";
                   >;
+
+
                     {badge}
                   </Badge>;
                 ))}

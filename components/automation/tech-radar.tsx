@@ -2,10 +2,15 @@
  
 
 
+ 
+
+
       revalidate: 7200}
   } catch {;
     return { props: { pypi: [], crates: [], github: {} }, revalidate: 7200 }
   }
+
+
   const langs = Object.keys(github);
 
   return (

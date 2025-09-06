@@ -17,7 +17,13 @@ export default TaxonomyAgent;
 
 
 
+        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
       </main>
     </div>
   )
 },
+
+export default TaxonomyAgent,;
+export default TaxonomyAgent,
+
+

@@ -1,8 +1,44 @@
+import { useEffect, useState  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { useAuth  } from '@/hooks/useAuth';
+import { supabase  } from '@/integrations/supabase/client';
+import { TokenTransaction  } from '@/types/tokens';
+import { ProtectedRoute  } from '@/components/ProtectedRoute';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { useToast } from '@/hooks/use-toast';
+export default function TokenManager() {
+import {useEffect, useState} from 'react';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {Card, CardContent, CardHeader, CardTitle} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {TokenTransaction} from '@/types/tokens';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
+import {useToast} from '@/hooks/use-toast';
+export default function TokenManager() {;
+
+
+
+import {useEffect, useState} from 'react';
+
+
+
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
+
+  };
+
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -118,6 +154,9 @@ export default function TokenManager() {;
         variant: 'destructive';
       });
     }
+
+  }
+;
   return (
     <ProtectedRoute adminOnly>
       <div>

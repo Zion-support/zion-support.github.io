@@ -1,4 +1,14 @@
 
+import { Droppable } from "react-beautiful-dnd",
+import { JobApplication } from "@/types/jobs",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge";
+import { CandidateCard } from "./CandidateCard";
+import { Badge } from "@/components/ui/badge",
+import { CandidateCard } from "./CandidateCard",
+
+
+
 interface KanbanColumnProps {
 
   id: string
@@ -9,12 +19,36 @@ interface KanbanColumnProps {
   count: number
 }
 
+import {Droppable} from "react-beautiful-dnd";
+import {JobApplication} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {CandidateCard} from "./CandidateCard";
+interface KanbanColumnProps {;
+  id: string,;
+  title: string,;
+  description: string,;
+  applications: JobApplication[],;
+  count: number;
+}
+
+export function KanbanColumn(): any ({;
 
 export function KanbanColumn({;
   id;
   title;
   description;
   applications;
+export function KanbanColumn({
+  id,
+  title,
+  description,
+  applications,
+
+
+
+
+
   count
 }: KanbanColumnProps) {
   // Add color based on column type
@@ -62,6 +96,37 @@ function KanbanColumn() {
               className="min-h-full space-y-2"
             >
               {applications.map((application, index) => (
+import { Droppable } from "react-beautiful-dnd",;
+import { JobApplication } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { CandidateCard } from "./CandidateCard",;
+interface KanbanColumnProps {;
+  id: string,;
+  title: string,;
+  description: string,;
+  applications: JobApplication[],;
+  count: number;
+}
+;
+export function KanbanColumn({;
+  id,;
+  title,;
+  description,;
+  applications,;
+  count;
+}: KanbanColumnProps) {;
+  // Add color based on column type;
+  const getBadgeVariant = (columnId: string) => {;
+    switch (columnId) {;
+      case "new": return "secondary",;
+      case "shortlisted":;
+        return "outline",;
+      case "interview":;
+        return "default",;
+      case "hired":;
+        return "success",;
+
       case "rejected":;
         return "destructive",
       default:;
@@ -110,6 +175,10 @@ return (<Card className= {
 }</Droppable> </CardContent> </Card>) 
 }
                 <CandidateCard;
+
+
+                <CandidateCard 
+
                   key={application.id}
               ref={provided && provided.innerRef}
               {...provided && provided.droppableProps}

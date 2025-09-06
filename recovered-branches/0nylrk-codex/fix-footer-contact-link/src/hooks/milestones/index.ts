@@ -4,6 +4,9 @@ export const Index = () => {
   return null;
 };
 
+export * from './useMilestones';
+
+
 export * from './types',;
 export * from './useLoadMilestones',;
 export * from './useCreateMilestone',;

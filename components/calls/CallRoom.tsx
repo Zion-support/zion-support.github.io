@@ -1,3 +1,11 @@
+  Room
+  RoomEvent
+  RemoteParticipant
+  LocalParticipant
+  createLocalTracks
+  VideoPresets;
+
+
   Room,
   RoomEvent,
   RemoteParticipant,
@@ -49,12 +57,29 @@ export default function CallRoom(): any ({;
   onLeave,
 }: Props) {;
 
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {;
+
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
     Array<RemoteParticipant | LocalParticipant>;
   >([]);  const [connectedAt, setConnectedAt] = useState<number | null>(null);import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
+
+
+};
+
+export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
+
+
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);

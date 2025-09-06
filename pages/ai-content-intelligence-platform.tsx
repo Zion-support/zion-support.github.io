@@ -38,6 +38,71 @@ const useCases = [
     description:
       'Optimize your content strategy based on real-time performance data and AI insights'
     icon: Target
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award, Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code, ShoppingCart,} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+const features = [
+  {
+    title: 'Real-time Content Analytics',
+    description:
+      'Monitor content performance across all channels with live dashboards and insights',
+    icon: BarChart3,
+    color: 'from-blue-500 to-cyan-500',
+  },
+  {
+    title: 'AI-Powered Optimization',
+    description:
+      'Get intelligent suggestions for content improvement based on performance data',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+  },
+  {
+    title: 'Predictive Performance Modeling',
+    description:
+      'Forecast content success before publishing using advanced AI algorithms',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+  },  {
+    title: 'Multi-Channel Strategy',
+    description: 'Optimize content across all digital platforms simultaneously',
+    icon: Globe,
+    color: 'from-orange-500 to-red-500',
+  },
+  {
+    title: 'Competitor Analysis',
+    description:
+      'Track competitor content performance and identify opportunities',
+    icon: Target,
+    color: 'from-indigo-500 to-blue-500',
+  },  {
+    title: 'SEO Content Intelligence',
+    description: 'AI-powered SEO optimization and keyword gap identification',
+    icon: Zap,
+    color: 'from-yellow-500 to-orange-500',
+  },];
+
+const pricingPlans = [
+  {
+    name: 'Starter',
+    price: '$2,500',
+    period: '/month',
+    description: 'Perfect for small businesses and content creators',
+    features: [
+      'Real-time content analytics',
+      'AI optimization suggestions',
+      'Basic performance tracking',
+      'SEO content insights',
+      'Email support',
+      'Up to 100 content pieces/month',
+    ],
+      'Real-time content analyticsAI optimization suggestionsBasic performance trackingSEO content insightsEmail supportUp to 100 content pieces/month'
+    ];
     popular: false,
     color: 'from-gray-500 to-gray-600'
   };
@@ -64,6 +129,14 @@ const useCases = [
     price: '$10, 000',
     period: '/month',
     description: 'For large organizations with complex content needs',
+import { motion } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,;
+  Brain, BarChart3, Target, Zap, Shield, Globe, Users, Award,;
+  Clock, DollarSign, Check, ArrowUpRight, Play, BookOpen, Code,;
+  ShoppingCart;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -154,7 +227,8 @@ const useCases = [;
     description:;
       'Optimize product descriptions and marketing content for better conversions',;
     icon: ShoppingCart,;
-];
+    color: 'from-orange-500 to-red-500',;
+  },;
 
 const integrations = [;
   'WordPress',;
@@ -173,7 +247,11 @@ const integrations = [;
   'Zapier',;
   'API Access',];
 
-export default function AIContentIntelligencePlatform() {;
+const integrations = [
+
+  'WordPressShopifyHubSpotMailchimpGoogle AnalyticsFacebook AdsGoogle AdsLinkedIn', 'TwitterInstagramYouTubeTikTokSlackZapierAPI Access'
+],
+export default function AIContentIntelligencePlatform() {
   return (
 
           href='https://ziontechgroup && ziontechgroup.com/ai-content-intelligence-platform'
@@ -197,6 +275,8 @@ export default function AIContentIntelligencePlatform() {;
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-content-intelligence-platform" />
       </Head>
+
+
             >
               <div className="flex items-center space-x-2 mb-6">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -231,6 +311,7 @@ export default function AIContentIntelligencePlatform() {;
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -246,6 +327,8 @@ export default function AIContentIntelligencePlatform() {;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
+
+
               >
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-6 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -270,6 +353,13 @@ export default function AIContentIntelligencePlatform() {;
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Perfect For Every Content Need
@@ -281,6 +371,8 @@ export default function AIContentIntelligencePlatform() {;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
               <motion.div
+
+
               >
                 <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-blue-500/50 transition-all duration-300">
                   <div className={`w-16 h-16 bg-gradient-to-r ${useCase.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -305,6 +397,13 @@ export default function AIContentIntelligencePlatform() {;
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Flexible Pricing Plans
@@ -316,6 +415,8 @@ export default function AIContentIntelligencePlatform() {;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <motion.div
+
+
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -343,6 +444,9 @@ export default function AIContentIntelligencePlatform() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+                  </ul>
                   <Link
 
                   </ul>
@@ -364,6 +468,7 @@ export default function AIContentIntelligencePlatform() {;
 }
 
           </div>;
+
       {/* Integrations Section */}
 
 
@@ -440,6 +545,130 @@ export default function AIContentIntelligencePlatform() {;
           </div>;
         </div>;
       </section>;
+      {/* Use Cases Section */}
+      <section className='py - 20 bg - gradient - to - r from - gray - 900 / 50 to - gray - 800 / 50'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
+              Perfect For Every Content Need;
+            </h2>;
+            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+              Whether you're a content creator, marketing team, or enterprise;
+              organization, our platform adapts to your specific requirements.;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>            {use_cases.map ((use_case, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, coordinate_x: index % 2 === 0 ? -30 : 30 }}
+                whileInView={{ opacity: 1, coordinate_x: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className='group';
+              >;
+                <div className='bg - gradient - to - r from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border border - gray - 700 rounded - 2xl p - 8 hover:border - blue - 500 / 50 transition - all duration - 300'>;
+                  <div;
+                    className={`w - 16 h - 16 bg - gradient - to - r ${use_case.color} rounded - xl flex items - center justify - center mb - 6 group - hover:scale - 110 transition - transform duration - 300`}
+                  >;
+                    <use_case.icon className='w - 8 h - 8 text - white' />;
+                  </div>;
+                  <h3 className='text - 2xl font - bold text - white mb - 4'>;
+                    {use_case.title}
+                  </h3>;
+                  <p className='text - gray - 400 text - lg'>{use_case.description}</p>                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Pricing Section */}
+      <section className='py - 20'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
+              Flexible Pricing Plans;
+            </h2>;
+            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+              Choose the plan that best fits your content needs and scale as you;
+              grow.;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            {pricing_plans.map ((plan, index) => (
+              <motion.div;
+                key={index}
+                initial={{ opacity: 0, coordinate_y: 30 }}
+                whileInView={{ opacity: 1, coordinate_y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className={`relative ${plan.popular ? 'scale - 105' : ''}`}
+              >;
+                {plan.popular && (
+                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
+                    <span className='bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - sm font - bold px - 4 py - 2 rounded - full'>                      MOST POPULAR;
+                    </span>;
+                  </div>)}
+                <div;
+                  className={`bg - gradient - to - br from - gray - 800 / 50 to - gray - 900 / 50 backdrop - blur - sm border ${plan.popular ? 'border - blue - 500' : 'border - gray - 700'} rounded - 2xl p - 8 h - full`}
+                >;
+                  <div className='text - center mb - 8'>;
+                    <h3 className='text - 2xl font - bold text - white mb - 2'>;
+                      {plan.name}
+                    </h3>;
+                    <div className='text - 4xl font - bold text - blue - 400 mb - 2'>;
+                      {plan.price}
+                    </div>;
+                    <div className='text - gray - 400 mb - 4'>{plan.period}</div>;
+                    <p className='text - gray - 300'>{plan.description}</p>;
+                  </div>;
+                  <ul className='space - y-4 mb - 8'>;
+                    {plan.features.map ((feature, feature_index) => (
+                      <li;
+                        key={feature_index}
+                        className='flex items - center text - gray - 300';
+                      >;
+                        <Check className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                        {feature}
+                      </li>))}
+                  </ul>;
+                  <Link;
+                    href='/contact';
+                    className={`w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r ${plan.color} text - white font - semibold rounded - lg hover:scale - 105 transition - all duration - 200`}
+                  >;
+                    Get Started;
+                    <ArrowRight className='w - 4 h - 4 ml - 2' />                  </Link>;
+                </div>;
+              </motion.div>))}
+          </div>;
+        </div>;
+      </section>;
+      {/* Integrations Section */}
+      <section className='py - 20 bg - gradient - to - r from - gray - 900 / 50 to - gray - 800 / 50'>;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 30 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='text - center mb - 16';
+          >;
+            <h2 className='text - 3xl lg:text - 4xl font - bold text - white mb - 6'>;
+              Seamless Integrations;
+            </h2>;
+            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
+              Connect with your existing tools and platforms for a unified;
+              content management experience.;
+            </p>;
+          </motion.div>;
+          <div className='grid grid - cols - 2 md:grid - cols - 5 gap - 6'>            {integrations.map ((integration, index) => (
+              <motion.div;
+
                 key={index}
                 initial={{ opacity: 0, scale: 0 && 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -500,19 +729,6 @@ export default function AIContentIntelligencePlatform() {;
                 href='/2025-innovative-new-services-showcase'
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              Seamless Integrations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your existing tools and platforms for a unified content management experience.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
-              <motion.div
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Content Strategy?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -564,6 +780,24 @@ export default function AIContentIntelligencePlatform() {;
           </motion.div>
         </div>
       </section>
+    </Layout>;
+);
+
+}
+    </Layout>
+
+
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-sm border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-200'>;
+                View All Services;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+
+
   )
 }
                 className='bg - white / 10 backdrop - blur - sm border border - gray - 600 rounded - lg p - 4 text - center hover:bg - white / 20 transition - colors duration - 300';
@@ -682,5 +916,7 @@ export default function AIContentIntelligencePlatform() {;
             </div>;
           </motion.div>;
         </div>;
+    </Layout>);
+;
 
 

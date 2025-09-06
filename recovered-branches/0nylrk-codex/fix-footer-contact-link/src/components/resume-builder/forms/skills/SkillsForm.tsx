@@ -1,4 +1,17 @@
 
+import { useState  } from 'react';
+import { Skill  } from '@/types/resume';
+import { Button  } from '@/components/ui/button';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { useResume  } from '@/hooks/useResume';
+import { SkillsFormProps  } from './types';
+import { SkillsList  } from './SkillsList';
+import { AddSkillForm  } from './AddSkillForm';
+import { BulkAddSkills } from './BulkAddSkills';
+export function SkillsForm({ resumeId, skills, onComplete, onBack }: SkillsFormProps) {
+
+
+
 import {useState} from 'react';
 import {Skill} from '@/types / resume';
 import {Button} from '@/components / ui / button';
@@ -12,6 +25,16 @@ import {BulkAddSkills} from './BulkAddSkills';
 
   const [error, setError] = useState<string | null>(null);
   const [localSkills, setLocalSkills] = useState<Skill[]>(skills);
+      }
+      return success
+    } catch (err: any) {
+      setError(err.message |'An error occurred')
+      return false
+    }
+
+
+
+
       }
 
 
@@ -43,6 +66,14 @@ import {BulkAddSkills} from './BulkAddSkills';
       setError(err && err.message || 'Failed to refresh skills');
 
     }
+  }
+  },
+  };
+  },
+
+
+  },
+
   };
   },
 

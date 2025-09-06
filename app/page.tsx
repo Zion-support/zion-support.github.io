@@ -1,9 +1,17 @@
 
-
-          <Link 
-            href="/services" 
-
-
+      <section className="text-center py-12 md:py-20">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          Build and scale with{' '}
+          <span className="text-blue-600">AI</span>,{' '}
+          <span className="text-green-600">Micro SaaS</span>{' '}
+          and{' '}
+          <span className="text-purple-600">Enterprise IT</span>
+        </h1>
+        <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href="/services"
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
@@ -20,20 +28,6 @@
             href="/services/micro-saas"
             description="End-to-end product engineering with billing, auth, analytics and growth."
           />
-          <Card 
-            title="AI Services" 
-            href="/services/ai-services" 
-            description="LLM apps, RAG, agents, fine-tuning, evals, data pipelines and MLOps." 
-            icon="🤖" 
-          />
-          <Card 
-            title="IT Services" 
-            href="/services/it-services" 
-            description="Cloud migration, DevOps, SRE, security hardening and cost optimization." 
-            icon="⚙️" 
-
-
-          />
           <Card
             title="Business Automation"
             href="/services/automation-tools"
@@ -41,10 +35,6 @@
             icon="⚡"
           />
           <Card
-            title="AI Copilots"
-            href="/services/ai-copilots"
-            description="Intelligent assistants that enhance productivity and automate complex tasks."
-            icon="🧠"
           />
           <Card
             title="Data Analytics"

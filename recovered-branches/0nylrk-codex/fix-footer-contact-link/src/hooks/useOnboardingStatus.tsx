@@ -1,4 +1,12 @@
 
+import { useState, useEffect } from "react",
+import { useAuth } from "./useAuth";
+import { supabase } from "@/integrations/supabase/client";
+import { useAuth } from "./useAuth",
+import { supabase } from "@/integrations/supabase/client",
+
+
+
 interface OnboardingStatus {
 
   profileCompleted: boolean
@@ -10,6 +18,16 @@ interface OnboardingStatus {
 
   responseReceived: boolean
 }
+
+export function useOnboardingStatus() {;
+  const { user } = useAuth();
+export function useOnboardingStatus() {
+  const { user } = useAuth(),
+
+
+
+
+
   const [status, setStatus] = useState<OnboardingStatus>({
 
     profileCompleted: false
@@ -26,6 +44,8 @@ interface OnboardingStatus {
           .from('user_onboarding')
           .select('*')
           .eq('user_id', user.id)
+
+
         }
         if (data) {
           setStatus({

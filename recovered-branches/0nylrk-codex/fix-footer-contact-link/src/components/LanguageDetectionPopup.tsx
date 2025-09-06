@@ -10,6 +10,15 @@ import {
   AlertDialogFooter
   AlertDialogHeader
   AlertDialogTitle
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+
+
+
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -55,6 +64,14 @@ export function LanguageDetectionPopup() {;
     }
   }, []);
   if (!detectedLanguage) return null;
+
+  const handleAccept = async () => {;
+
+    await changeLanguage(detectedLanguage);
+    setOpen(false);
+  }
+
+
 import { useState, useEffect } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import {;
@@ -107,6 +124,14 @@ export function LanguageDetectionPopup() {;
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel className="bg-transparent text-white border border-zion-purple/20 hover:bg-zion-purple/10">
+  );
+}
+);
+            className="bg-zion-purple text-white hover:bg-zion-purple-dark">;
+            {t("general && general.yes")}
+
+);
+
             {t('general.no')}
           </AlertDialogCancel>;
           <AlertDialogAction;
@@ -118,6 +143,7 @@ export function LanguageDetectionPopup() {;
         </AlertDialogFooter>;
       </AlertDialogContent>;
     </AlertDialog>;
+
 import { useState, useEffect  } from './react';
 import { use_translation  } from './react - i18next';
 import {
@@ -152,5 +178,4 @@ function LanguageDetectionPopup() {
     // Check condition
 if (return) {
   $2
-}
 }

@@ -4,6 +4,7 @@
 
 
 
+
 export default function ServicesShowcase2026V3() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -40,10 +41,20 @@ export default function ServicesShowcase2026V3() {;
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
 
+
+
+        {/* Navigation */}
+        <UltraAdvancedNavigation2026 />
+
+
+
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
+
+
+
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -150,6 +161,7 @@ export default function ServicesShowcase2026V3() {;
                 >
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
+
 
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}>;
@@ -278,6 +290,7 @@ function ServicesShowcase2026V3() {
                 revolutionary 2026 services to achieve unprecedented growth and;
                 innovation.;
               </p>;
+}
 }
               <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>                <motion.a;
                   href={`tel:${contact_info.mobile}`}

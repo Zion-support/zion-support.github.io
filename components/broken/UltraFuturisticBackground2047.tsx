@@ -17,6 +17,13 @@ const UltraFuturisticBackground2047: React.FC = () => {;
 
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
+
+  return (
+    <>
+      {/* Background Gradient */}
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
+
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
         {/* Animated Hexagons */}
@@ -313,8 +320,17 @@ ease: 'linear',
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,
+                  ease: 'easeInOut',                  ease: "easeInOut"
+                }}
+
+                }}
+
+
               />
             ))}
+
+
+
         {/* Neon Glow Effects */}
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
@@ -527,4 +543,13 @@ export default UltraFuturisticBackground2047;
 
 };
 
+export default UltraFuturisticBackground2047;        }
+      `}</style>
+    </>
+  )
+}
+export default UltraFuturisticBackground2047;
 
+export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047;
+export default UltraFuturisticBackground2047;

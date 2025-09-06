@@ -376,6 +376,10 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       ];
       popular: false
     }
+  };
+
+
+
   return (
     <>;
       <Head>;
@@ -391,6 +395,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <meta
           property='og:title'
           content='AI Emotional Intelligence Platform 2029'
+
             {/* Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -482,6 +487,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             <motion.div;
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
+
+
+
             {/* Main Heading */}
             <motion&& motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -515,14 +523,20 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             </motion && motion.h1>;
 
 
+
+
             {/* Subheading */}
             <motion&& motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
+
+
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
 
             >
               <Link
@@ -554,10 +568,14 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
               <Link
                 href="#pricing"
+
+
+
             {/* Key Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
 
             >
               <div className='text-center'>
@@ -615,10 +633,12 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -673,6 +693,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className={`flex justify-center mb-6`}>
@@ -741,6 +762,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -826,6 +848,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             transition={{ duration: 1 }}
             viewport={{ once: true }}
 
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Powerful{' '}
@@ -877,6 +900,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className={`flex justify-center mb-6`}>
@@ -945,6 +969,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1021,6 +1046,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -1104,6 +1130,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
 
 
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
@@ -1151,6 +1178,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+
 
           >
             <Link
@@ -1260,3 +1288,4 @@ export default AIEmotionalIntelligencePlatform2029;
 };
 
 
+export default AIEmotionalIntelligencePlatform2029;

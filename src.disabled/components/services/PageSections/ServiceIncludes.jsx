@@ -32,4 +32,3 @@ export default function ServiceIncludes({ }: ServiceIncludesProps) {
     </div>
   );
 }
-}

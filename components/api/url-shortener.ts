@@ -79,3 +79,10 @@ export default async function handler(
       destination: shortUrl.originalUrl,
       permanent: false,
     },
+  };      destination: shortUrl.originalUrl;
+      permanent: false
+    }
+};
+}
+  };
+

@@ -1,9 +1,61 @@
+export type Real2036SpecializedService = {
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string, price: string,
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: string;
+  period?: string;
+  features: string[];
+  link: string;  launchDate?: string;  rating?: number;
+
+
+
   marketSize?: string;
   targetAudience?: string;
   competitiveAdvantage?: string;
   integration?: string[];
   useCases?: string[];
   {
+      'Space systems'
+      'Safety protocols'
+      'Training technology'
+      'Customer management'
+    ]
+  }
+      'Space systems',
+      'Safety protocols',
+      'Training technology',
+      'Customer management',
+    ],
+  },;
+];    id: 'neuromorphic-computing-platform';
+    name: 'Neuromorphic Computing Platform';
+    tagline: 'Brain-inspired computing for next-generation AI applications'
+    description: 'Revolutionary platform that leverages neuromorphic computing architecture to process information like the human brain, enabling ultra-efficient AI applications and edge computing.';
+    category: 'Emerging Technology'
+    price: '$3,999';
+    period: '/month';
+    features: [
+      'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesAdaptive processing algorithmsEdge computing optimizationCustom neural modelsPerformance benchmarkingExpert consultation'
+    ];
+    link: 'https://ziontechgroup.com/services/neuromorphic-computing-platform';
+    launchDate: '2036-04-01';
+    rating: 4.9;
+    marketSize: '$1.8B'
+    targetAudience: 'Research institutions, AI companies, Semiconductor firms';
+    competitiveAdvantage: 'Brain-inspired architecture, Ultra-efficiency, Real-time learning';
+    integration: ['AI frameworksEdge devicesIoT platformsCloud services'];
+    useCases: ['Edge AI processingAutonomous systemsCognitive computingEnergy-efficient AI']
+    technology: ['Neuromorphic chipsSpiking neural networksAnalog computingBio-inspired algorithms']
+  }
+  // Synthetic Biology Platform
+  {
+    id: 'synthetic-biology-platform';
+    id: 'synthetic - biology - platform';
     name: 'Synthetic Biology Platform';
     tagline: 'Design and engineer biological systems with AI'
     description: 'Advanced platform that combines synthetic biology with artificial intelligence to design, engineer, and optimize biological systems for various applications.';

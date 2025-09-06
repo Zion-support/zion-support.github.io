@@ -1,4 +1,7 @@
 
+
+
+
 import {Link} from "react-router-dom";
 import {GradientHeading} from "./GradientHeading";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -27,14 +30,18 @@ export function FeaturesGuideSection() {
       title: "AI Matcher"
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system."
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />
+
+
+
+
 export function FeaturesGuideSection() {
   const features = [
     {
-
       id: "ai-matcher",
       title: "AI Matcher",
       description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
       icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
+
         "Connect with matched talents or services directly"
       ]
       link: "/match"
@@ -333,6 +340,13 @@ export function FeaturesGuideSection() {;
             the world of AI and tech services;
           </p>;
         </div>;
+                {feature.title}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 bg-zion-blue rounded-lg p-1">
+            {features.slice(4).map(feature => (
+              <TabsTrigger
                 key={feature.id}
                 value={feature.id}
 
@@ -432,6 +446,10 @@ export function FeaturesGuideSection() {;
       </div>
     </section>
   )
+
+};
+
+
         </Tabs>;
 
         <div className="mt-12 text-center">;
@@ -489,6 +507,11 @@ export function FeaturesGuideSection() {;
           </Button>;
         </div>;
       </div>;
+}
+}
+
+    </section>);
+
 }
 
 }

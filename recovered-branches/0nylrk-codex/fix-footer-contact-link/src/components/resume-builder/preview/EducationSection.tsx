@@ -1,4 +1,17 @@
 
+import { Education  } from '@/types/resume';
+import { format } from 'date-fns';
+import {Education} from '@/types/resume';
+import {format} from 'date-fns';
+interface EducationSectionProps {
+  education: Education[]
+}
+export function EducationSection({ education }: EducationSectionProps) {
+  // Sort education by date (newest first)
+import {Education} from '@/types / resume';
+import {format} from 'date - fns';
+
+
 
 
 interface EducationSectionProps {
@@ -18,6 +31,9 @@ interface EducationSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+
+
+
 import { Education } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface EducationSectionProps {;
@@ -37,6 +53,9 @@ export function EducationSection({ education }: EducationSectionProps) {;
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+
+
+
     }
     return format(date, 'MMM yyyy')
   }

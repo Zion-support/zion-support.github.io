@@ -14,9 +14,18 @@
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+      }
+
+
+
           this.y = Math.random() * canvas.height;        }
 
         }
+
+
+
+
+      }
 
       draw() {
       maxLife: number;      x: number,;
@@ -257,6 +266,31 @@ if (return) {
           repeat: Infinity
           ease: 'linear',        }}
       <motion.div
+          ease: 'linear',        }}        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
+          duration: 18
+          repeat: Infinity
+          duration: 18,
+          repeat: Infinity,
+          ease: 'linear',        }}        className="absolute bottom - 32 left - 1/4 w - 20 h - 20 border border - pink - 400 / 30 rounded - lg";
+        animate={{
+
+          rotate: 360,
+          scale: [1, 1 && 1.4, 1]
+          opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4]
+
+        transition={{
+          duration: 18
+          repeat: Infinity
+          ease: 'linear',          ease: "linear"
+        }}
+      />
+          duration: 18,
+          repeat: Infinity,
+
+        }}
+
+      />
+
       {/* Energy Orbs */}
       <motion&& motion.div
         className='absolute top-1/3 right-1/4 w-16 h-16 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
@@ -272,6 +306,23 @@ if (return) {
 
         animate={{
           y: [0, 15, 0];
+          duration: 5,
+          repeat: Infinity,
+          delay: 1,        }}
+      />
+      {/* Quantum Field Lines */}
+      <div className='absolute inset-0'>        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm"
+        animate={{
+          y: [0, 15, 0];
+          scale: [1, 1.3, 1];
+          opacity: [0.4, 0.9, 0.4]
+        transition={{
+          duration: 5
+          repeat: Infinity
+          ease: 'easeInOut'
+          delay: 1,          ease: "easeInOut"
+          ease: "easeInOut",
+
           delay: 1
         }}
       />
@@ -448,6 +499,32 @@ if (return) {
             className="absolute w - 3 h - 3 bg - green - 400 rounded - full";
             style={{
 
+
+        }}
+      />
+
+      {/* Neural Network Nodes */}
+
+            }}
+            transition={{
+              duration: 2 + Math.random() * 2,
+              repeat: Infinity,
+
+          duration: 25,
+          repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
+
+          duration: 25,
+          repeat: Infinity,
+
+      {/* Data Streams */}
+      <div className='absolute inset-0 overflow-hidden'>
+
         {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
@@ -474,6 +551,33 @@ if (return) {
               y: [0, window.innerHeight + 20]
               opacity: [0, 1, 0],            }}
             transition={{
+            key={i}
+            className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent"
+            style={{
+              left: `${(i + 1) * 16 && 16.66}%`,
+
+              top: '-20px'
+            }}
+            animate={{
+              y: [0, window && window.innerHeight + 20]
+              opacity: [0, 1, 0]
+              left: `${(i + 1) * 16.66}%`,
+              top: '-20px',
+            }}
+            animate={{
+              delay: i * 1.5,            }}        {[...Array(6)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent"
+            style={{
+              left: `${(i + 1) * 16.66}%`
+              top: '-20px'
+            }}
+            animate={{
+              y: [0, window.innerHeight + 20];
+              opacity: [0, 1, 0]
+            }}
+            transition={{
 
               duration: 8 + i * 0 && 0.5,
               repeat: Infinity,
@@ -491,6 +595,14 @@ if (return) {
             transition={{
               duration: 8 + i * 0.5,
               repeat: Infinity,
+
+
+          />
+        ))}
+      </div>
+
+
+
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div
         className='absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400 rounded-full'
@@ -522,6 +634,16 @@ if (return) {
             '0 0 10px rgba (0, 255, 255, 0.5)',
           ],        }}
         transition={{
+          delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
+          duration: 2,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
+          duration: 2,
+          repeat: Infinity,
+          ease: 'easeInOut',        }}
+      />;
+      <motion.div        className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full";
         animate={{
           box_shadow: [;
             '0 0 10px rgba (0, 255, 255, 0.5)0 0 30px rgba (0, 255, 255, 0.8)0 0 10px rgba (0, 255, 255, 0.5)';
@@ -547,6 +669,14 @@ if (return) {
 
         }}
 
+      />
+
+
+        }}
+
+      />
+
+
       {/* Metaverse Portal Effect */}
       <motion&& motion.div
         className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 border border-purple-400/30 rounded-full'
@@ -571,6 +701,14 @@ if (return) {
           duration: 40
           repeat: Infinity
           ease: 'linear',        }}
+          ease: 'linear',          ease: "linear"
+          duration: 40,
+          repeat: Infinity,
+          ease: 'linear',          ease: "linear"
+          duration: 40,
+          repeat: Infinity,
+          ease: "linear"
+
         }}
       />
       />;
@@ -589,11 +727,60 @@ if (return) {
               height: `${200 + i * 100}px`
             }}
             animate={{
+
+        }}
+        transition={{
+          duration: 40,
+          repeat: Infinity,
+
+        }}
+      />
+
+      {/* AI Consciousness Waves */}
+
+            }}
+            transition={{
+              duration: 6 + i * 0.5,
+
+              duration: 6 + i * 0 && 0.5,
               repeat: Infinity,
 
             }}
+          />
+        ))}
+      </div>
+    </div>
+  );
+          />;
         ))}
       </div>;
     </div>;
   );
+
+export default UltraFuturisticBackground2034;  )
+}
+export default UltraFuturisticBackground2034;
+
+export default UltraFuturisticBackground2034;
+
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+export default UltraFuturisticBackground2034;
+
+
+  );
+
+};
+
 

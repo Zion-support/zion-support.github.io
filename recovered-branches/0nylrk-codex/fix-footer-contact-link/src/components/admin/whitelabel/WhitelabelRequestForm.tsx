@@ -1,4 +1,8 @@
 
+          headline: values.headline
+          subtitle: values.subtitle
+          cta: values.cta}
+      }
           headline: values.headline,
           subtitle: values.subtitle,
           cta: values.cta};
@@ -21,6 +25,9 @@
         variant: 'destructive'
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
+
+  };
+
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
 import { z } from 'zod',;
@@ -57,6 +64,8 @@ export function WhitelabelRequestForm() {;
     }
 
   },
+
+
 
 
   return (

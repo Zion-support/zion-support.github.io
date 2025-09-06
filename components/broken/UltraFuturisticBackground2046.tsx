@@ -50,9 +50,18 @@ if (return) {
           case 'energy':;
             this && this.color = `hsl(${40 + Math && Math.random() * 60}, 100%, 70%)`;
             break;        }            break;
+      }
+
+
+
             break;        }
 
         }
+
+
+
+
+      }
 
       update() {
         this.x += this.vx;
@@ -540,6 +549,11 @@ if ( {) {
   );
   );
 };
+
+
+    </div>
+    </div>
+
               duration: Math.random () * 6 + 4,
               repeat: Infinity,
               ease: 'easeInOut',

@@ -1,5 +1,17 @@
 import React from 'react';
 
+import { useState } from "react",
+import { BookOpen, Code, Copy, Terminal } from "lucide-react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { Badge } from "@/components/ui/badge";
+import CodeBlock from "./CodeBlock";
+import { Badge } from "@/components/ui/badge",
+import CodeBlock from "./CodeBlock",
+
+
+
 export function ApiDocumentation() {
   return (
 
@@ -59,6 +71,10 @@ function ApiDocumentation() {
           <TabsContent value="jobs" className="space - y-6">;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
+    'https: //api.ziontechgroup.com/v1/jobs',;
+    params={'limit': 10, 'category': 'development'};
+
     headers=headers
 )
 data = response.json()
@@ -152,6 +168,9 @@ print(data)`;
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
+  ];
+  ],
+
   "meta": {
     "total": 42
     "page": 1
@@ -316,12 +335,19 @@ const data = await response.json(),
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
+
+
+payload = {;
+
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
         'currency': 'USD';
     }
     'deadline': '2025 - 06 - 30T23:59:59Z';
 }
+
+
+
               }}
               response_examples={{
                 success: `{
@@ -359,6 +385,10 @@ headers = {
 
 const data = await response.json(),
 // // // console.log(data),`,
+
+    'https: //api.ziontechgroup.com/v1/talent',;
+    params={'skills': 'react,typescript'};
+
     headers=headers
 )
 data = response.json()
@@ -431,6 +461,9 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
+  ];
+  ],
+
   "meta": {
     "total": 28
     "page": 1
@@ -521,6 +554,11 @@ print(data)`;
         "image_url": "https://example.com / portfolio / 123.jpg";
       }
     ];
+    "certifications": [;
+      {
+        "name": "AWS Certified Developer";
+        "issuing_organization": "Amazon Web Services";
+        "issue_date": "2024 - 01 - 15";
       }
     ];
 
@@ -994,6 +1032,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               </table>
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
               <p className="text-zinc-400 mb-2">
+
+
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1029,6 +1069,10 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
+payload = {
+payload = {;
+
+
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -1517,6 +1561,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
     <div className="border border-zinc-800 rounded-md">;
       <div className="p-4">;
         <div className="flex items-center">;
+
             }
           >
             {method}
@@ -1565,6 +1610,7 @@ app.post ('/webhook', express.raw ({type: 'application / json'}), (req, res) => 
                   {lang === "curl" ? "cURL" : lang === "javascript" ? "JavaScript" : "Python"}
                 </button>;
               ))}
+
                     {param.required && <span className="text - red - 500">*</span>}
                   </td>;
                   <td className="py - 2 text - sm text - zinc - 400">{param.type}</td>;

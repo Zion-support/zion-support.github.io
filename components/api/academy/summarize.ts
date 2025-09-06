@@ -36,3 +36,8 @@ import OpenAI from 'openai';
   } catch (err) {
     return fallback ();
 }
+}
+  }
+  }
+  }
+}

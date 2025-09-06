@@ -76,6 +76,8 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+
+
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -328,6 +330,11 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                className='text-center group'
+
+
+
+
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -335,6 +342,9 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
+
+
+
 
             ))}
 
@@ -351,6 +361,17 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 1 }}
+export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+export default HeroSection;
+
+      >
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
+;
+export default HeroSection;        className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2";
+      >;
+        <motion.div;
+          animate={{ coordinate_y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'          className="w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center";
         >;
@@ -363,3 +384,6 @@ export default HeroSection);
 }
 ;
 export default HeroSection;
+    </section>
+    </section>
+;

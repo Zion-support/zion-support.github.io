@@ -1,14 +1,22 @@
+import type { NextApiRequest, NextApiResponse } from "next",
+import axios from "axios",
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import axios from "axios";
+
 import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";
 import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
 import { SyncEvent } from "../../../utils/sync/types";
 function isAllowedByScope(stateType: string, scope: string): boolean {
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import axios from "axios";
 import {readState, writeState, upsertEvent, getEntityId} from "../../../utils/sync/storage";
 import {verifySignature} from "../../../utils/sync/signature";
 import {computeMerkleRootFromVotes} from "../../../utils/sync/merkle";
 import {SyncEvent} from "../../../utils/sync/types";
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -25,13 +33,16 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
   if (scope === "marketplace") return stateType === "token_transfer" || stateType === "talent_mobility" || stateType === "leaderboard_entry",
   return true
 }
-
-
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  const state = readState();
+  if (!state.config.optIn |state.config.paused) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -70,8 +81,36 @@ export default async function handler(req, res) {
   }
 
 
-  const signature = req.headers["x-zion-signature"];
-  const payload = req.body;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (!isAllowedByScope(event.type, state.config.scope)) {;
+    return res.status(403).json({ error: "Event type not allowed by current scope" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
   if (event.type === "proposal") {
     const votes = (event as any).payload?.votes,
     const providedRoot = event.merkleRoot,
@@ -169,6 +208,27 @@ export default async function handler(req, res) {
 
           const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
           try {
+};
+;
+  if (event.type === "proposal") {;
+
+
+  const event = payload as SyncEvent & { propagate?: boolean }
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (400).json ({ error: "Invalid event" });
+  }
+  if () {) {
+  $2
+}
+    return res.status (403).json ({ error: "Event type not allowed by current scope" });
+  }
+  // Check condition
+if ( {) {
+  $2
+}
     const votes = (event as any).payload?.votes;
     const provided_root = event.merkle_root;
     // Check condition
@@ -219,5 +279,7 @@ if (headers["x - zion - signature"] = sig) {
   return res.status (200).json ({ status: "accepted", entity_id });
 }
 
+}
+}
 }
 

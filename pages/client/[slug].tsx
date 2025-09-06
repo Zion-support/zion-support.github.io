@@ -6,6 +6,8 @@ import type { PublicReview, ReviewsSummary } from '../../types/reviews',;
 ;
 type Props = { clientId: string },
 
+
+
 import React, { useEffect, useState } from 'react';
 
 import React, { useEffect, useState } from 'react';
@@ -32,6 +34,7 @@ const ClientPage: NextPage<Props> = ({ clientId }) => {;
       if (res.ok) { setSummary(data.summary), setReviews(data.reviews)   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
   }, [client_id]),
@@ -61,6 +64,18 @@ export default ClientPage,
       <header className="enhanced-card">
         <h1 className="text-3xl font-bold">Client: {clientId}</h1>
       </header>
+      </section>
+    </main>
+  )
+}
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { slug } = ctx.query as { slug: string }
+  return { props: { clientId: slug } }
+}
+export default ClientPage;
+
+
+
       {summary && <ReviewSummary summary={summary} />  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -83,3 +98,12 @@ export default ClientPage,
 },
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const { slug } = ctx.query as { slug: string },
+  return { props: { clientId: slug }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+export default ClientPage;
+
+

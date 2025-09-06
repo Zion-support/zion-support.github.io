@@ -1,3 +1,7 @@
+export interface ModerationFlag {
+export interface ModerationFlag {;
+
+
   id: string;
   contentId: string;
   contentType: string;
@@ -33,6 +37,16 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
   flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
   flag && flag.updatedAt = new Date().toISOString();
 
+}
+
+// Moderation database utilities
+export interface ModerationFlag {
+  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
+  content: string, reporterId: string,
+  reportedUserId?: string;
+  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
+  updatedAt: Date, moderatorId?: string,
+  notes?: string;
 }
 
 

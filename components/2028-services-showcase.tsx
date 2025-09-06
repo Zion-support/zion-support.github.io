@@ -55,8 +55,6 @@ import {
   Factory,
   Camera,
   Video,
-
-
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2
@@ -168,6 +166,9 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
+
+
                     <Link
 
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
@@ -240,6 +241,32 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
                       <Link
             ))}
       {/* Market Analysis */}
+      <section className='py-20 bg-black/50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Market{' '}
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                Insights
+              </span>
+            </h2>
+            <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
+              Understand the market dynamics and growth potential of our
+              futuristic services.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div            </h2>
+            <p className="text-xl text-purple-200 max-w-3xl mx-auto">
+              Understand the market dynamics and growth potential of our futuristic services.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+
 
 
 
@@ -268,6 +295,7 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -293,6 +321,19 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
               </Link>;
               <Link
                 href='/case-studies'
+    </>
+);
+  );
+    </>;
+);
+}
+
+}
+
+
+  );
+}
+}
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
             <p className="text - xl text - purple - 200 max - w-3xl mx - auto">;
               Understand the market dynamics and growth potential of our futuristic services.;

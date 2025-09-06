@@ -1,5 +1,12 @@
 
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
 
 const ApiDevelopmentChat: NextPage = () => {
   return (
@@ -16,6 +23,11 @@ const ApiDevelopmentChat: NextPage = () => {
   );
 }
 export default ApiDevelopmentChat;
+
+
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
+        <title>ApiDevelopmentChat - Zion Tech Solutions</title>
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';

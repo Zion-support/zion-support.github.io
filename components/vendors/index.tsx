@@ -19,6 +19,23 @@
                   <div className="w-12 h-12 rounded bg-gray-100 dark:bg-gray-900" />;
                 )}
         ))}
+    </div>
+    </div>;
+  );
+export const getServerSideProps: GetServerSideProps<Props> = async () => {;
+const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+  return { props: { vendors } }
+};      <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
+    </div>
+      </div>;
+      <div className='text-center text-xs text-gray-500'>;
+        Powered by Zion • Co-brand available;
+      </div>;
+    </div>;
+  );
+
+
   );
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {;
@@ -27,6 +44,16 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
 
   return { props: { vendors } }
 };  return { props: { vendors } }
+};
+
+}
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const { listVendors } = await import('../../utils/vendor-store');
+  const vendors = listVendors();
+
       {vendors.length === 0 && (
         <p className='text - gray - 500'>No vendors yet. Be the first to apply.</p>)}
       <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6'>;

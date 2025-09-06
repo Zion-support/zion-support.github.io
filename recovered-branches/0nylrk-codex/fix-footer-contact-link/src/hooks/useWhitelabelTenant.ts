@@ -3,6 +3,7 @@ export interface WhitelabelTenant {
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface WhitelabelTenant {;
+
   id: string;
   brand_name: string;
   subdomain: string;
@@ -20,6 +21,11 @@ export interface WhitelabelTenant {;
   account_manager_id: string | null;
 
   dns_verified: boolean
+
+
+export function useWhitelabelTenant(externalSubdomain?: string) {;
+  const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
+
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -77,6 +83,9 @@ if ( {) {
           console.warn('No tenant data received'),;
           setTenant(null),;
           return;
+
+
+
         }
         if (data.tenant) {
           setTenant(data.tenant)
@@ -215,5 +224,7 @@ if ( {) {
     };
     checkAdminStatus();
   }, [tenantId]);
+
+
   return { isAdmin, isLoading }
 }

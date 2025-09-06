@@ -265,6 +265,20 @@ export default function ListingDetail() {
                   </div>
                 )}
                 {/* Price */}
+                {/* Action Buttons */}
+                <div className="space-y-3 mb-8">
+                  {listing.price !== null ? (
+                    <PaymentButton
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={() => {
+                        toast({
+                          title: "Payment Processing",
+                          description: "Redirecting to secure checkout..."
+                        })
+                <div className="space-y-3 mb-8">;
+                  {listing && listing.price !== null ? (;
+                    <PaymentButton
                       amount={listing.price}
                       serviceId={listing.id}
                       providerId={listing.author.id}

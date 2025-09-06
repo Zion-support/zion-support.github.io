@@ -1,5 +1,8 @@
 
 
+    }
+  }
+})
 
 import {define_config} from 'vite';
 import { defineConfig } from 'vite';

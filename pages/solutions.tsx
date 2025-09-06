@@ -11,6 +11,11 @@ import {
   Video, Headphones, Code, Database, Network, Server
   Monitor, Smartphone, Camera, Gamepad2, Palette
   Music, Film, BookOpenCheck, Building, MessageCircle
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
+} from 'lucide-react'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+
 import React from 'react',;
 import Layout from '../components/layout/Layout',;
 import SEO from '../components/SEO',;
@@ -23,6 +28,7 @@ import {
   Video, Headphones, Code, Database, Network, Server, 
   Monitor, Smartphone, Camera, Gamepad2, Palette, 
   Music, Film, BookOpenCheck, Building, MessageCircle, 
+
 import React from 'react',
 import Layout from '../components / layout / Layout',
 import SEO from '../components / SEO',
@@ -39,9 +45,19 @@ import {
   Monitor, Smartphone, Camera, Gamepad2, Palette,
   Music, Film, BookOpenCheck, Building, MessageCircle,
   Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
+} from 'lucide-react'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services';
+
+
+
+  Sparkles, ArrowRight, CheckCircle, Star, Globe, Briefcase, BarChart3
 } from 'lucide-react',;
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
 import { expandedMicroSaasServices } from '../data/expanded-micro-saas-services',;
+const Solutions: NextPage = () => {
+  const industrySolutions = [
+    {
 const Solutions: NextPage = () => {
   const industry_solutions = [;
     {
@@ -105,6 +121,13 @@ const Solutions: NextPage = () => {
       period: 'month'
       popular: false
       icon: <BookOpenCheck className="w-8 h-8" />
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
   ],
   const solutionCapabilities = [
     {
@@ -136,6 +159,14 @@ const Solutions: NextPage = () => {
       title: 'Analytics & Insights',
       description: 'Data-driven decision making',
       icon: <BarChart3 className="w-6 h-6" />
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
   ],
   const caseStudies = [
     {
@@ -170,6 +201,15 @@ const Solutions: NextPage = () => {
         "Predictive maintenance cost savings"
       ],
       technologies: ["Python", "TensorFlow", "AWS IoT", "React Native"]
+    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+  ],
   return (
     <UltraAdvancedFuturisticBackground>
       <div className="min-h-screen">
@@ -211,44 +251,8 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-  ],
-  const solutionCapabilities = [
-    {
-      title: 'Industry Expertise',
-      description: 'Deep domain knowledge across sectors',
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      title: 'Custom Development',
-      description: 'Tailored solutions for unique needs',
-    },
-    {
-      title: 'Integration Services',
-      description: 'Seamless system integration',
-    },
-    {
-      title: 'AI & Automation',
-      description: 'Intelligent automation solutions',
-    },
-    {
-      title: 'Cloud & Security',
-      description: 'Secure cloud infrastructure',
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ],
-  const caseStudies = [
-    {
-      title: "Healthcare Provider Digital Transformation",
-      industry: "Healthcare",
-      description: "Implemented a comprehensive EHR system for a regional hospital network, improving patient care and operational efficiency.",
-    },
-    {
-      title: "Manufacturing IoT Integration",
-      industry: "Manufacturing",
-      description: "Implemented IoT sensors and predictive maintenance systems for a manufacturing facility, reducing downtime and improving efficiency.",
+
+
         <section className="min-h-[60vh] flex items-center justify-center px-4 py-20">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
@@ -265,6 +269,28 @@ const Solutions: NextPage = () => {
                 Tailored technology solutions designed for your industry's unique challenges and opportunities
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                </Link>
+                <a
+                  href="/contact"
+
+
+
+                <a
+                  href="/contact"
+
+
+
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Demo
@@ -281,6 +307,8 @@ const Solutions: NextPage = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -298,6 +326,8 @@ const Solutions: NextPage = () => {
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
+
+
                   className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-gray-700 hover:border-orange-500 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
@@ -320,6 +350,8 @@ const Solutions: NextPage = () => {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
+
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
@@ -360,6 +392,8 @@ const Solutions: NextPage = () => {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{solution.name}</h3>
                     <p className="text-gray-300 mb-4">{solution.description}</p>
@@ -376,6 +410,12 @@ const Solutions: NextPage = () => {
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
+
+
+                  </ul>
+                  <a 
+                    href="/contact" 
+
                         {feature  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -418,6 +458,8 @@ const Solutions: NextPage = () => {
           </motion.div>
         </div>
       </section>
+
+
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -449,6 +491,28 @@ const Solutions: NextPage = () => {
                 Partner with us to build industry-specific solutions that drive your business forward
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
+                </a>
+                <a 
+                  href="/contact" 
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-700 transition-all duration-300 transform hover:scale-105"
+                >
+                  Start Your Transformation
+                </Link>
+                <a
+                  href="/contact"
+
+
+
+                <a
+                  href="/contact"
+
+
+
                   className="px-8 py-4 border-2 border-orange-400 text-orange-400 font-semibold rounded-lg hover:bg-orange-400 hover:text-black transition-all duration-300 transform hover:scale-105"
                 >
                   Schedule Consultation
@@ -460,6 +524,10 @@ const Solutions: NextPage = () => {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+
+export default Solutions,;
+;
+export default Solutions,
             >;
               <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - orange - 400 to - red - 500 bg - clip - text text - transparent">;
                 Ready for Industry Transformation?;

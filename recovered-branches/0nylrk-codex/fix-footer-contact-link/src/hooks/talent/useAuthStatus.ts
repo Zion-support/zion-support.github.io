@@ -1,4 +1,8 @@
 
+
+import {useState} from 'react';
+
+
 export function useAuthStatus() {
   // Mock authenticated status
 
@@ -40,11 +44,14 @@ export function useAuthStatus() {
     userDetails;
     savedTalents;
     handleToggleSave;
+
 import {useState} from 'react';
 export /**
  * useAuthStatus - Function description
  */
 function useAuthStatus() {
+
+
 import { useState } from 'react',;
 export function useAuthStatus() {;
 
@@ -80,6 +87,9 @@ if ( {) {
       // In a real app, we might show a login prompt;
       console.log ('User needs to log in to save talents');
     }
+
+
+
   }
 ;
   // For demo purposes, let's provide a login / logout toggle;

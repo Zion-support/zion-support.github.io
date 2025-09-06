@@ -1,6 +1,5 @@
 
 
-
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import Link from 'next/link',;
@@ -233,6 +232,7 @@ const serviceCategories = [;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
 const serviceCategories = [
@@ -254,6 +254,8 @@ const serviceCategories = [
         <link rel="canonical" href="https://ziontechgroup.com/revolutionary-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+
+
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
@@ -274,6 +276,8 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
@@ -308,6 +312,8 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               <div className="relative flex-1 max-w-md">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
@@ -356,6 +362,8 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="all">All Categories</option>
@@ -384,6 +392,8 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     className="appearance-none bg-gray-800/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent pr-10"
                   >
                     <option value="popularity">Most Popular</option>
@@ -394,6 +404,8 @@ const serviceCategories = [
                   </select>
                   <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
                 </div>
+
+
                 <div className="flex bg-gray-800/50 border border-gray-700 rounded-lg p-1">
                   <button
                     onClick={() => setViewMode('grid')}
@@ -432,6 +444,8 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             <div className="mb-8">
               <p className="text-gray-400">
                 Showing <span className="text-white font-semibold">{filteredServices.length}</span> revolutionary services
@@ -573,6 +587,8 @@ const serviceCategories = [
                               <li key={feature_index} className="flex items - center text - xs text - gray - 300">;
                                 <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0" />;
                                 {feature}
+
+
                         <div className="space-y-2 mb-6">
                           <h4 className="text-sm font-semibold text-purple-400">Key Features</h4>
                           <ul className="space-y-1">
@@ -607,6 +623,8 @@ const serviceCategories = [
                             <div className="text-sm text-gray-200">{service.growthRate}</div>
                           </div>
                         </div>
+
+
                         <div className="flex space-x-3 mb-4">
                           <Link href={service.link} target="_blank" rel="noopener noreferrer">
                             <button className="flex-1 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-all duration-300 text-sm">
@@ -729,6 +747,8 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                               </ul>
                             </div>
                             <div>
@@ -798,6 +818,8 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                           <div className="space-y-3">
                             <Link href={service.link} target="_blank" rel="noopener noreferrer">
                               <button className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white py-3 px-4 rounded-lg font-semibold transition-all duration-300">
@@ -816,19 +838,27 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
                               <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
+
+
                             </div>
                             <div className="flex items-center gap-2 text-blue-400">
                               <Mail className="w-3 h-3" />
                               <a href={`mailto:${service.contactInfo.email}`} className="hover:text-white">
+
+
                             </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
+
+
             {filteredServices.length === 0 && (
               <div className="text-center py-16">
                 <div className="text-6xl mb-4"></div>
@@ -839,11 +869,15 @@ const serviceCategories = [
                     setSearchTerm('')
 
                     setSelectedCategory('all')
+
+
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
                   Clear Filters
                 </button>
               </div>
+
+
         <section className="py-20 px-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20">
           <div className="container mx-auto text-center">
             <motion.div
@@ -917,6 +951,10 @@ const serviceCategories = [
         </section>
       </div>
     </>
+  )
+
+}
+
             >;
               <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
                 Ready to Transform Your Business?;
@@ -970,6 +1008,7 @@ const serviceCategories = [
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+    </>);
 }
 
 

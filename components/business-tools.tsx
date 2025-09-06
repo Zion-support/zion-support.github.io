@@ -1,3 +1,52 @@
+} from 'lucide-react';
+
+import {
+  ExternalLink
+  Check
+  Star
+  Zap
+  Users
+  Globe
+  BarChart3
+  Bot
+  Cloud
+  Lock
+  Database
+  Code
+  Palette
+  Search
+  Mail
+  Calendar
+  CreditCard
+  FileText
+  Video
+  Music
+  Image
+  Globe2
+  Smartphone
+  Monitor
+  Server
+  Cpu
+  HardDrive
+  Brain
+  Target
+  TrendingUp
+  Shield
+  Rocket
+  Briefcase
+  Cog
+  Lightbulb
+  ChartBar
+  Clock
+  CheckCircle
+  AlertCircle
+  MessageSquare;
+} from 'lucide-react';import { ExternalLink, Check, Star, Zap, Users, Globe, BarChart3, Bot, Cloud, Lock, Database, Code, Palette, Search, Mail, Calendar, CreditCard, FileText, Video, Music, Image, Globe2, Smartphone, Monitor, Server, Cpu, HardDrive, Brain, Target, TrendingUp, Shield, Rocket, Briefcase, Cog, Lightbulb, ChartBar, Clock, CheckCircle, AlertCircle, MessageSquare } from 'lucide-react';
+
+
+
+
+
 export default function BusinessToolsPage() {
   const businessTools = [
     {
@@ -51,6 +100,16 @@ export default function BusinessToolsPage() {
           icon: <Calendar className='w-6 h-6' />
           color: 'bg-gradient-to-br from-red-500 to-pink-600'
         }
+      ];
+    };
+      category: 'Communication & Collaboration',
+
+
+      ];
+    };
+      category: 'Communication & Collaboration',
+
+
       tools: [
         {
           name: 'Slack'
@@ -324,10 +383,38 @@ export default function BusinessToolsPage() {
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'
         }
       ]
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
       category: 'Analytics & Business Intelligence',
       tools: [;
         {
           name: 'Google Analytics',
+
+
 
 
   const businessInsights = [
@@ -453,6 +540,14 @@ export default function BusinessToolsPage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-blue text-center"
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
+
       {/* Business Tools */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -510,6 +605,29 @@ export default function BusinessToolsPage() {
                           </li>;
                         ))}
                     <Button
+                      href={tool.website}
+                      variant='primary'
+                      size='sm'
+                      className='w-full group-hover:scale-105 transition-transform duration-300'
+                      external
+                    >
+                      Visit Website
+                      <ExternalLink className='w-4 h-4 ml-2' />                    </Button>                      variant="primary"
+                      size="sm"
+                      className="w-full group-hover:scale-105 transition-transform duration-300"
+                      external
+                    >
+                      Visit Website
+                      <ExternalLink className="w-4 h-4 ml-2" />
+                  </Card>
+                      </ul>;
+                    </div>;
+
+
+
+
+
+                    <Button
 
 
                 ))}
@@ -550,6 +668,11 @@ export default function BusinessToolsPage() {
 
 
               </Card>
+
+            ))}
+          </div>
+        </div>
+      </section>
 
             ))}
           </div>
@@ -652,3 +775,4 @@ href="/contact"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
               Explore Micro SaaS
             </Button>
+

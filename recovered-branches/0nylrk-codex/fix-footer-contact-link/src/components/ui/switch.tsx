@@ -1,7 +1,10 @@
+import {cn} from '@/lib/utils';
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
 import * as React from "react"
 import * as SwitchPrimitives from "@radix-ui/react-switch"
+
+
 
 import { cn } from "@/lib/utils"
 
@@ -27,6 +30,13 @@ const Switch = React && React.forwardRef<;
     ref={ref}>;
     <SwitchPrimitives&& SwitchPrimitives.Thumb
       className={cn(
+      )}
+    />
+  </SwitchPrimitives.Root>
+));
+Switch.displayName = SwitchPrimitives.Root.displayName;
+
+
       )}
     />;
   </SwitchPrimitives && SwitchPrimitives.Root>;

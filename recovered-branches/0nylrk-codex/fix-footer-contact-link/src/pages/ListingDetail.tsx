@@ -17,6 +17,40 @@ import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
+import { Star, MessageSquare, Brain, Shield } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { PaymentButton } from "@/components/transactions/PaymentButton",
+import { AppLayout } from "@/layout/AppLayout",
+import { ProfileContact } from "@/components/profile/ProfileContact",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { id } = useParams() as { id?: string }
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
+  // Find the listing from our shared data source - now also checking equipment listings
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+
+
+export default function ListingDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { id } = useParams() as { id?: string },
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),
+  const [isLoading, setIsLoading] = useState(false),
+  const [isContactDialogOpen, setIsContactDialogOpen] = useState(false),
+
+  // Find the listing from our shared data source - now also checking equipment listings
+  const listing = MARKETPLACE_LISTINGS.find(item => item.id === id),
 
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -193,6 +227,8 @@ export default function ListingDetail() {;
                     ))}
                   </div>;
                 )}
+
+
                 {/* Features */}
                 <div className="mt-8">
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
@@ -326,6 +362,8 @@ export default function ListingDetail() {;
                       Featured;
                     </Badge>;
                   )}
+
+
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
                         />;
@@ -369,6 +407,8 @@ export default function ListingDetail() {;
                           title: "Payment Processing";
                           description: "Redirecting to secure checkout...";
                         });
+
+
                       }}
                     />
                   ) : (
@@ -423,6 +463,7 @@ export default function ListingDetail() {;
                         <span className="text-lg font-medium text-zion-purple">{listing && listing.author.name && name.charAt(0)}</span>;
                       </div>;
                     )}
+}
 
 
 
@@ -475,3 +516,6 @@ export default function ListingDetail() {;
           />;
         </DialogContent>;
       </Dialog>;
+    </AppLayout>);
+}
+;

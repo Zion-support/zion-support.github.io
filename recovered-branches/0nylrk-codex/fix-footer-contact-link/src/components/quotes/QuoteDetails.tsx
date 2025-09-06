@@ -1,4 +1,9 @@
 
+import { format } from "date-fns";
+import {format} from "date-fns";
+
+import {format} from "date-fns";
+
 import React from "react",
 import { 
   Dialog,
@@ -14,10 +19,19 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
+
+
+
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
+  }
+  };
+import {format} from "date-fns";
+
+  };
+
 import React from "react",;
 import {;
   Dialog,;
@@ -38,6 +52,10 @@ interface QuoteDetailsProps {;
   isOpen: boolean,;
   onClose: () => void;
 }
+
+
+
+
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -85,16 +103,8 @@ interface QuoteDetailsProps {;
             </CardContent>
           </Card>
         </div>
-        <Card className="mt-6">
-          <CardContent className="pt-6">
-            <h3 className="text-lg font-medium mb-3">Project Details</h3>
-            <p className="mb-4">{quote.project_summary}</p>
-            {quote.project_description && (
-              <>
-                <h4 className="font-medium mt-4">Additional Details</h4>
-                <p>{quote.project_description}</p>
-              </>
-            )}
+};
+
       return date_string;
     }
   }

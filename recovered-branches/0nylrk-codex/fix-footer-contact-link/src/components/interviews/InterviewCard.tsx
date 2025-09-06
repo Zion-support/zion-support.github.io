@@ -119,6 +119,10 @@ function InterviewCard() {
     } else {
       return `Starts in ${formatDistanceToNow (interview_date)}`;
     }
+  }
+
+
+
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -189,6 +193,11 @@ if ( {) {
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
       default:
         return <Badge>{interview.status}</Badge>
+  }
+  };
+
+  };
+
   },;
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {;
@@ -243,6 +252,54 @@ if ( {) {
                   <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>;
       return interview.client_name || 'Client';
     }
+
+  }
+;
+  return (
+    <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">
+      <CardHeader className="pb-2 relative">
+        <div className="absolute right-4 top-4">
+          {getStatusBadge()}
+        </div>
+        <CardTitle className="text-lg">{interview.title}</CardTitle>
+        <p className="text-sm text-muted-foreground">
+          with {getOtherPartyName()}
+        </p>
+      </CardHeader>
+      <CardContent className="pt-2">
+        <div className="space-y-3">
+          <div className="flex items-start gap-3">
+            <Clock className="h-4 w-4 mt-0.5 text-muted-foreground" />
+            <div>
+              <p className="font-medium">{formattedDate}</p>
+              <p className="text-sm text-muted-foreground">
+                {formattedTime} - {formattedEndTime} ({interview.duration_minutes} minutes)
+              </p>
+              <p className="text-xs text-muted-foreground mt-1">
+                {getRelativeTime()}
+              </p>
+            </div>
+          </div>
+          {interview.meeting_platform && (
+            <div className="flex items-center gap-3">
+              <Video className="h-4 w-4 text-muted-foreground" />
+              <div>
+                <p className="font-medium capitalize">{interview.meeting_platform}</p>
+              </div>
+            </div>
+          )}
+          {interview.notes && (
+            <div className="flex items-start gap-3">
+              <MessageSquare className="h-4 w-4 mt-0.5 text-muted-foreground" />
+              <p className="text-sm line-clamp-2">{interview.notes}</p>
+            </div>
+          )}
+        </div>
+      </CardContent>
+      <CardFooter className="pt-2">
+        <div className="grid grid-cols-1 gap-2 w-full">
+          {/* For clients with pending requests */}
+;
                   <AlertDialogDescription>;
                     Are you sure you want to cancel this interview request? This action cannot be undone.;
                   </AlertDialogDescription>;
@@ -252,6 +309,8 @@ if ( {) {
                   </AlertDialogAction>;
                 </AlertDialogFooter>;
               </AlertDialogContent>;
+          
+;
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;

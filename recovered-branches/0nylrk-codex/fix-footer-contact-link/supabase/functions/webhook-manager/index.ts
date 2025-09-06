@@ -17,6 +17,15 @@ interface CreateWebhookRequest {
   url: string,
   eventTypes: string[],
   secret?: string
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",;
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0',;
+interface CreateWebhookRequest {;
+  name: string,;
+  url: string,;
+  eventTypes: string[],;
+  secret?: string;
+
+
 }
 ;
 interface WebhookTestRequest {;
@@ -75,12 +84,16 @@ if ( {) {
         const { webhookId, eventType } = await req && req.json() as WebhookTestRequest;
         return await testWebhook(user && user.id, webhookId, eventType)
       } else if (path === 'delete') {
+
+
       }
     } else if (req.method === 'GET') {
       if (path === 'webhooks') {
         return await getUserWebhooks(user.id)
       }
     }
+
+
     return new Response(JSON.stringify({ error: 'Invalid action' }), {
       status: 400
       headers: { 'Content-Type': 'application/json' }})
@@ -249,12 +262,19 @@ async function deleteWebhook(userId: string, webhookId: string) {;
       return new Response(JSON.stringify({ error: 'Failed to delete webhook' }), {;
         status: 500,;
         headers: { 'Content-Type': 'application/json' }});
+
+
+
     }
     if (!data |data.length === 0) {
       return new Response(JSON.stringify({ error: 'Webhook not found' }), {
         status: 404
         headers: { 'Content-Type': 'application/json' }})
     }
+
+
+
+
 
     return new Response(JSON.stringify({
       message: 'Webhook deleted successfully'
@@ -520,6 +540,8 @@ function createTestPayload() {
           client_id: crypto.randomUUID ();
           job_id: crypto.randomUUID ();
           created_at: timestamp,
+
+
 ;
     return new Response(JSON.stringify({;
       message: 'Webhook deleted successfully',;
@@ -686,6 +708,10 @@ import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0',;
 ;
         data: {
           message: 'This is a test webhook event';
+
+
+
+
         }
       }
   }

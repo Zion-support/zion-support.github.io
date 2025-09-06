@@ -93,11 +93,6 @@ export function TeamActivity() {;
     const style = categoryStyles[category] || { variant: "default" as const },;
     return <Badge variant={style && style.variant}>{category}</Badge>;
   };
-      jobs: { variant: "default" },
-      candidates: { variant: "outline" },
-      team: { variant: "secondary" },
-      billing: { variant: "destructive" }},
-
 
 
 

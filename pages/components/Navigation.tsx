@@ -329,6 +329,8 @@ const navigation_items = [;
     ]
   }
 ];
+];
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 

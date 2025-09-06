@@ -432,6 +432,9 @@ interface AuthConfigurationErrorProps {;
 
               onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
 
+
+              onClick = {() => window && window.open('/AUTH0_SETUP_GUIDE_ISSUE_1 && AUTH0_SETUP_GUIDE_ISSUE_1.md_blank'),}
+
 export default AuthConfigurationError };
 ;
 export default AuthConfigurationError;

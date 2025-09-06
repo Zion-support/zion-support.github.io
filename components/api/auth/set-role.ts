@@ -1,3 +1,6 @@
+
+  const { role = "guest", talent } = req.query as {;
+
     role?: string;
     talent?: string;
   }

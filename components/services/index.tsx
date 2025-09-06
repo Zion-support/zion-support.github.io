@@ -1,9 +1,19 @@
+export default function ServicesIndexPage () {
+ export default function ServicesIndexPage () {
+
+
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
   const next = services.filter ( (s) => {
   //Category const handle_submit = async (values: QuoteFormValues) => {
   const res = await fetch ('/api / quote - request', {
   method: 'POST', headers: {
+
+
+  'Content-Type': 'application/json' ;
+};
+
+
 body: JSON.stringify ({
   service: values.serviceTitle, description: values.projectDescription, timeline: {
   start: values.timelineStart, end: values.timelineEnd
@@ -264,11 +274,9 @@ if ( {) {
         service={selected}
         onSubmit={handleSubmit}
 
-      <QuoteRequestModal;
-        open={modal_open}
-        on_close={() => setModalOpen (false)}
-        service={selected}
-        on_submit={handle_submit}
+}
+}
+}
       />;
     </div>);
 }

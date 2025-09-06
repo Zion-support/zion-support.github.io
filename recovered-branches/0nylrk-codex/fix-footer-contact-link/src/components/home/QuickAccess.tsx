@@ -17,6 +17,19 @@ import {
 export function QuickAccess() {
   const quickLinks = [
     {
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      link: "/match";
+    };
+      link: "/match"
+    }
+    },
+
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+
     {
       title: "Talent Directory"
       description: "Browse verified tech specialists"
@@ -167,6 +180,8 @@ export function QuickAccess() {;
                 <ArrowRight className="ml-1 h-3 w-3" />
               </div>
             </Link>
+
+
           ))}
         </div>;
       </div>;

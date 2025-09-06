@@ -1,3 +1,4 @@
+
 export const checkSignupPatterns = async (
 
 
@@ -51,6 +52,9 @@ export const checkSignupPatterns = async (;
         .order('created_at', { ascending: false }),;
       if (!error && recentSignups && recentSignups.length >= 3) {;
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
+
+
+
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)

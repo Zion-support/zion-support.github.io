@@ -1,4 +1,7 @@
 
+
+
+
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -19,6 +22,12 @@ export type FilterType =
   | 'all'
   | 'unread'
   | 'messages'
+
+import {Notification, as, BaseNotification} from '@/types / notifications';
+
+
+export interface NotificationContextType {;
+
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;

@@ -11,6 +11,62 @@ import React from 'react';
     } else if (!strongPasswordRegex.test(formData.password)) {
       errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.'
     }
+  const [is_loading, setIsLoading] = useState (false);
+  const [signup_mode, setSignupMode] = useState (true);
+  const [error, set_error] = useState ("");
+  const [field_errors, setFieldErrors] = useState<{ email?: string, password?: string, name?: string }>({});
+  const [showVerificationMessage, setShowVerificationMessage] = useState (false);
+  const handleInputChange = (e: React.ChangeEvent < HTMLInputElement>) =>: any {
+    const { name, value } = e.target;
+    setFormData (prev => ({ ...prev, [name]: value }));
+    set_error ("");    setFieldErrors (prev => ({ ...prev, [name]: "" }));
+  }
+  const handle_submit = async (e: React.FormEvent) => {
+    e.prevent_default ();
+    set_error (""),
+    setFieldErrors ({});
+    setIsLoading (true);
+
+    const errors: { email?: string, password?: string, name?: string } = {}
+    const email_regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const strongPasswordRegex = /^(?=.*[a - z])(?=.*[A - Z])(?=.*\d).{8}$/;
+    if () {) {
+  $2
+}
+      errors.name = 'Full name is required';
+
+
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { useAuth } from "@/context/auth/AuthProvider",
+import { AlertCircle } from 'lucide-react'
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
+import {logErrorToProduction} from '@/utils/productionLogger',
+export function SignUpForm() {
+
+  const router = useRouter(),
+  const { signUp, login, loginWithGoogle } = useAuth(),
+  
+
+
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+    name: ""}),
+
+
+    }
+
+
+
+
+
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors)
       setIsLoading(false)

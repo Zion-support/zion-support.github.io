@@ -7,17 +7,76 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {BarChart3, BriefcaseIcon, Monitor, User} from "@/components/icons";
 import {Skeleton} from "@/components/ui/skeleton";
 import {cn} from "@/lib/utils";
+import { useState } from "react",
+import { MatchResultItem } from "@/lib/ai-matchmaking",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { BarChart3, BriefcaseIcon, Monitor, User } from "@/components/icons",
+import { Skeleton } from "@/components/ui/skeleton";
+import { cn } from "@/lib/utils";
+interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
 
   isLoading?: boolean;
   projectDescription?: string;
+interface AIMatchingResultsProps {;
+  matches: MatchResultItem[],;
+  onSelectMatch?: (match: MatchResultItem) => void,;
+
+  isLoading?: boolean;
+  projectDescription?: string;
+  serviceType?: string;
+}
+
+
+export function AIMatchingResults(): any ({;
+
+  matches;
+  onSelectMatch;
+
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = "";
+}: AIMatchingResultsProps) {;
+  const [activeTab, setActiveTab] = useState("all");
+
+
+
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
   isLoading?: boolean,
   projectDescription?: string,
+
+export function AIMatchingResults({;
+  matches;
+  onSelectMatch;
+  isLoading = false;
+  projectDescription = "";
+export function AIMatchingResults({
+  matches;
+  onSelectMatch;
+
+  isLoading = false;
+  projectDescription = "";
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all");
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
+  serviceType: _serviceType = ""
+}: AIMatchingResultsProps) {
+  const [activeTab, setActiveTab] = useState("all"),
+  
+
+
+
   // Group matches by category
   const categories = {
     all: matches
@@ -60,6 +119,9 @@ interface AIMatchingResultsProps {
               <p className="text-xs text-zion-slate-light">Your search:</p>;
               <p className="text-sm text-white">{projectDescription}</p>;
             </div>;
+
+
+
           )}
         </CardContent>;
       </Card>;

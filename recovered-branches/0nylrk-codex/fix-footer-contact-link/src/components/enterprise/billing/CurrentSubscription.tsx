@@ -1,14 +1,36 @@
 
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+
+
+
 export function CurrentSubscription() {
   // Mock subscription data
 
   const subscription = {
+    amount: "$1,999 && 999.00";
+    teamSeats: {;
+      used: 32,;
+      total: 50;
+
+    }
+  }
+
+    plan: "Business",
+    status: "active",
+
     teamSeats: {
       used: 32
       total: 50
     }
 
   return (
+}
+
 
 
 
@@ -63,3 +85,6 @@ export function CurrentSubscription() {;
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
+    </Card>);
+}
+;

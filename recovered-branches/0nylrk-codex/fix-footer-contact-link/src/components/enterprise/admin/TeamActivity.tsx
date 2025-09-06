@@ -1,4 +1,12 @@
 
+
+  Table
+  TableBody
+  TableCell
+  TableHead
+  TableHeader
+  TableRow
+
   Table,
   TableBody,
   TableCell,
@@ -14,7 +22,22 @@ import { Input } from "@/components/ui/input";
 export function TeamActivity() {
   // Mock activity data
 
+      id: 6
+      user: "Jamie Smith"
+      action: "Updated budget"
+      target: "Monthly spending cap"
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
+      category: "billing"
+    }
+
+      id: 6,
+      user: "Jamie Smith",
+      action: "Updated budget",
+      target: "Monthly spending cap",
+      timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
+      category: "billing",
     },;
+  ];
   ];
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {

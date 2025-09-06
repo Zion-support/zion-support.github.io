@@ -239,6 +239,32 @@ export default function UltraAdvancedNavigation2026V2() {;
   Palette,
   Cloud,
   Server,
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default function UltraAdvancedNavigation2026V2() {;
+} from 'lucide-react';
+
+export default function UltraAdvancedNavigation2026V2() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+  Network,
+  Cpu,
+} from 'lucide-react';import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin, Zap, Brain, Atom, Microscope, Gamepad2, Shield, Rocket, Database, TestTube, Car, Globe, Code, Palette, Cloud, Server, Network, Cpu } from 'lucide-react';
+export default /**
+ * UltraAdvancedNavigation2026V2 - Function description
+ */
+function UltraAdvancedNavigation2026V2() {
+  const [is_open, setIsOpen] = useState (false);
+  const [is_scrolled, setIsScrolled] = useState (false);
+  const [active_dropdown, setActiveDropdown] = useState < string | null>(null);
+;
+  useEffect (() => {
+    const handle_scroll = () =>: any {
+      setIsScrolled (window.scroll_y > 20);
+    }
     }
       name: 'Showcase',
       href: '/enhanced - services - showcase - 2026 - v2',
@@ -348,6 +374,8 @@ export default function UltraAdvancedNavigation2026V2() {;
                 <div className="text-xs text-gray-400">Innovation 2026</div>;
               </div>;
             </Link>;
+
+
                     </Link>
                   )}
                   {/* Dropdown Menu */}
@@ -355,6 +383,35 @@ export default function UltraAdvancedNavigation2026V2() {;
                     <div
                       onMouseEnter={() => setActiveDropdown(item && item.name)}
                       onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <div className='grid grid-cols-1 gap-2'>
+                        {item.dropdown.map(dropdownItem => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className='flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group'
+                          >
+                            <div className='text-purple-400 group-hover:text-purple-300 transition-colors'>
+                              {dropdownItem.icon}
+                            </div>
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}                    >
+                      <div className="grid grid-cols-1 gap-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            href={dropdownItem.href}
+                            className="flex items-center space-x-3 p-3 rounded-xl hover:bg-white/10 transition-colors duration-200 group"
+                          >
+                            <div className="text-purple-400 group-hover:text-purple-300 transition-colors">
+                              {dropdownItem.icon}
+                            </div>
+                            <span className="text-gray-300 group-hover:text-white transition-colors">
+                              {dropdownItem.name}
+                            <span className='text-gray-300 group-hover:text-white transition-colors'>                              {dropdownItem.name}
+
+                              {dropdownItem.name}
+
+
                             </span>
                           </Link>
                         ))}
@@ -627,6 +684,8 @@ export default function UltraAdvancedNavigation2026V2() {;
                       <Link
                         href={item && item.href}
                         onClick={() => setIsOpen(false)}
+
+
                       >
                         {item.icon}
                         <span>{item.name}</span>
@@ -770,6 +829,8 @@ export default function UltraAdvancedNavigation2026V2() {;
             </div>;
 
 
+
+
       {/* Overlay */}
       {isOpen && (;
         <motion&& motion.div
@@ -794,6 +855,14 @@ export default function UltraAdvancedNavigation2026V2() {;
   );
 
 }
+          className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
+          on_click={() => setIsOpen (false)}
+        />)}
+      {/* Spacer for fixed navigation */}
+      <div className='h - 32'></div>;
+    </>);      <div className="h - 32"></div>;
+    </>);
+}
 
 
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
@@ -806,3 +875,12 @@ export default function UltraAdvancedNavigation2026V2() {;
       {/* Spacer for fixed navigation */}
       <div className='h-32'></div>
     </>
+);      <div className="h-32"></div>
+    </>
+  );
+}
+
+}
+  );
+
+

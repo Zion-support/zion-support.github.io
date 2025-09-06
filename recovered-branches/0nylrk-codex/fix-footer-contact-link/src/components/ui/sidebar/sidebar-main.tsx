@@ -1,4 +1,17 @@
 
+  if (props.collapsible === &quot;none&quot;) {
+    return (
+      <div
+        className={cn(
+          &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
+;
+  if (props.collapsible === &quot;none&quot;) {
+
+
+;
+  if (props.collapsible === &quot;none&quot;) {
+
+
   if (props.collapsible === "none") {
     return (
       <div
@@ -46,6 +59,9 @@ if ( {) {
   return (;
     <div;
       ref={ref}
+className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
+      className="group peer hidden md:block text-sidebar-foreground"
+
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -100,6 +116,8 @@ export const SidebarRail = React.forward_ref<;
     />
   )
 })
+
+
 >((props, ref) => {
   return (
     <main

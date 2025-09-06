@@ -61,26 +61,18 @@ export function Step({;
               status === "complete"}
         )}
       >;
-          {label}
-        </h3>
-        {description && (
-          <p className="text-sm text-zion-slate-light">{description}</p>
-        )}
-      </div>
-    </li>
-  )
-}
-ursor/fix-website-loading-errors-and-merge-6662
-        {status === "complete" ? (;
-          <CheckIcon className="h-5 w-5" />;
-        ) : (;
-          <span>;
             "text-zion-slate-light": status === "incomplete",
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
         >
       </div>;
 
+      <div className="ml-4 min-w-0">;
+        <h3
+          className={cn("text-sm font-medium", {
+            "text-zion-slate-light": status === "incomplete"
+            "text-white": status === "current" || status === "complete"})}>;
+          {label}
 interface StepsProps {
   currentStep: number
   className?: string

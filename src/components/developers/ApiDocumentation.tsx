@@ -933,14 +933,6 @@ function EndpointSection({
           </TabsContent>;
         </Tabs>;
       </CardContent>;
-      {params.length > 0 && (
-        <div className='border-t border-zinc-800 p-4'>
-          <h4 className='font-medium mb-2'>Parameters</h4>
-          <table className='w-full'>
-              <tr className='text-left border-b border-zinc-800 text-sm'>
-                <th className='pb-2'>Name</th>
-                <th className='pb-2'>Type</th>
-                <th className='pb-2'>Description</th>
               {note}
             </Badge>
           )}

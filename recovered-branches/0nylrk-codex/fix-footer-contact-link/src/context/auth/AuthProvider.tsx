@@ -1,4 +1,7 @@
 
+
+
+
 import React, { useEffect } from "react";
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";
 import {useAuthOperations} from "../../hooks/useAuthOperations";
@@ -21,6 +24,9 @@ import {mapProfileToUser} from "./profileMapper";
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
+
+
+
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -30,6 +36,9 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
+
+
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
@@ -90,6 +99,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
           // Show logout toast when user logs out;
           if (event === 'SIGNED_OUT') {;
             handleSignedOut();
+
           }
         }
         setIsLoading(false);
@@ -152,9 +162,6 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
       {children}
     </AuthContext.Provider>
   )
-}
-
-};
     ),;
     // Initial session check;
     supabase.auth.getSession().then(({ data: { session } }) => {;

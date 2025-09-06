@@ -1,4 +1,17 @@
 
+import { Resume  } from '@/types/resume';
+import { jsPDF  } from 'jspdf';
+import 'jspdf-autotable';
+import { getPdfThemeColors  } from './themeConfig';
+import { loadCustomFonts, FontFamily  } from './fontConfig';
+import { addBasicInfoSection  } from './sections/basicInfoSection';
+import { addSkillsSection  } from './sections/skillsSection';
+import { addWorkExperienceSection  } from './sections/workExperienceSection';
+import { addEducationSection  } from './sections/educationSection';
+import { addCertificationsSection  } from './sections/certificationsSection';
+import { addPortfolioSection } from './sections/portfolioSection';
+export interface ExportOptions {
+
 import {Resume} from '@/types/resume';
 import {jsPDF} from 'jspdf';
 import 'jspdf-autotable';
@@ -26,6 +39,12 @@ const defaultOptions: ExportOptions = {
 export async function exportResumeToPDF(
   resume: Resume
   options: Partial<ExportOptions> = {}
+
+
+): Promise<Blob> {;
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+
+
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions;
   // Create new PDF document (A4)
   const doc = new jsPDF({
@@ -74,6 +93,9 @@ export async function exportResumeToPDF (
   current_y = addCertificationsSection (doc, resume.certifications, colors, current_y);
 ;
   // Add portfolio projects if needed;
+
+
+
   }
   return doc.output ('blob');
 }

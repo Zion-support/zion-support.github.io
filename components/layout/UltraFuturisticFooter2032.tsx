@@ -74,6 +74,12 @@ import {
   Users as UsersIcon,
   Briefcase as BriefcaseIcon,
   BookOpen as BookOpenIcon,
+
+  MessageCircle as MessageCircleIcon,;
+  Star as StarIcon,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom, ;
+
+
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -762,10 +768,28 @@ export default function UltraFuturisticFooter2032() {
             {/* Company Info */}
 
 
+
+
+};
+
+export default function UltraFuturisticFooter2032() {
+  return (
+
+                    {contactInfo.website}
+
+
+                    {contactInfo.website}
+
+
+
+
+
                   </a>
                 </div>
               </div>
             </motion.div>
+
+
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -780,6 +804,8 @@ export default function UltraFuturisticFooter2032() {
                     </ul>;
                   </div>;
                 ))}
+
+
                 Quick Access
               </h3>
               </div>;
@@ -856,6 +882,27 @@ export default function UltraFuturisticFooter2032() {
                       </Link>;
                     </li>;
                   ))}
+
+
+              {/* Company Info */}
+              <div className='mb-8'>
+                <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
+                <ul className='space-y-2'>                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                  {companyInfo.map((item, index) => (
+                    <li key={index}>
+                      <Link
+                        href={item.href}
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
 
               {/* Social Links */}
@@ -953,6 +1000,8 @@ export default function UltraFuturisticFooter2032() {
         </motion && motion.button>;
       </div>;
     </footer>;
+  );
+
   );
 
   );

@@ -2,6 +2,36 @@ import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Layout from './layout / Layout';
+import { motion, AnimatePresence } from 'framer-motion';
+
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -117,14 +147,29 @@ const LoadingFallback = () => (;
               }}
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles;
 } from 'lucide-react';
-import Link from 'next / link';
-import { innovative2040FuturisticServices } from '../data / innovative - 2040 - futuristic - services';
-import { innovative2040ITServices } from '../data / innovative - 2040 - it - services';
-import { revolutionary2043AdvancedServices } from '../data / revolutionary - 2043 - advanced - services';
-import { revolutionary2044FuturisticServices } from '../data / revolutionary - 2044 - futuristic - services';
-// Loading fallback component;
-const LoadingFallback = () =>: any (
-  <div className='min - h-screen flex items - center justify - center bg - gray - 900'>    <motion.div;
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
+ } from 'lucide-react';
+import Link from 'next/link';
+
+// Import our new innovative services
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+
+
+import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
+import { innovative2040ITServices } from '../data/innovative-2040-it-services';
+import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
+
+import { revolutionary2044FuturisticServices } from '../data/revolutionary-2044-futuristic-services';
+// Loading fallback component
+
+const LoadingFallback = () => (
+  <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
@@ -222,6 +267,28 @@ if ( {) {
   const stagger_container = {
     animate: {
       transition: {
+
+  return (
+    <Layout>
+      <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
+        {/* Hero Section */}
+        <section
+          id='hero'
+          className='relative min-h-screen flex items-center justify-center overflow-hidden'
+        >
+          {/* Animated Background Elements */}
+          <div className='absolute inset-0 pointer-events-none'>
+            <motion.div
+              className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg'
+              animate={{
+                rotate: [0, 360]
+                scale: [1, 1.1, 1]
+                opacity: [0.3, 0.6, 0.3]
+              }}
+              transition={{
+                duration: 8
+                repeat: Infinity
+
                 ease: 'easeInOut',              }}
             />;
             <motion.div;
@@ -232,6 +299,14 @@ if ( {) {
                 opacity: [0.3, 0.7, 0.3],
 
               }}
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },  };
+
+  };
+
+  const backgroundVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: 'ease_out' },  }
@@ -257,6 +332,10 @@ if ( {) {
 }
     return (
 
+              }}
+              }}
+
+
                 duration: 6,
                 repeat: Infinity,
                 ease: "easeInOut"
@@ -273,6 +352,8 @@ if ( {) {
           <div className='relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -313,10 +394,15 @@ if ( {) {
             </motion && motion.div>;
 
 
+
+
             {/* CTA Buttons */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
+
+
             {/* Stats */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -364,6 +450,7 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
@@ -693,6 +780,8 @@ if ( {) {
         <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -720,6 +809,8 @@ if ( {) {
       </div>
     </Layout>
 };
+
+};
   /* CTA Buttons */ 
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
   /* Stats */
@@ -744,7 +835,18 @@ if ( {) {
 
 export default Homepage2045;
 
+
+  once: true
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>)
+};export default Homepage2045;export default Homepage2045;
+
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
 };export default Homepage2045;
 
 export default Homepage2045;
+  once: true 
+
+}> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+};export default Homepage2045;export default Homepage2045;
+};export default Homepage2045;
+

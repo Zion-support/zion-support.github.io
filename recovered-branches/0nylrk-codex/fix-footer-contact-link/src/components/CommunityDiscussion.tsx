@@ -1,3 +1,20 @@
+import React, { useState } from "react",
+import { MessageCircle } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",
+import { Card, CardContent } from "@/components/ui/card";
+import { Separator } from "@/components/ui/separator";
+
+import React, { useState } from './react';
+import { MessageCircle  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { Input  } from '@/components / ui / input';
+import { Textarea  } from '@/components / ui / textarea';
+import { Avatar, AvatarFallback  } from '@/components / ui / avatar';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Separator  } from '@/components / ui / separator';
 interface DiscussionPost {
 
   id: number;
@@ -5,6 +22,8 @@ interface DiscussionPost {
   avatar?: string;
   time: string;
   title: string;
+
+
 interface DiscussionPost {
   id: number,
   author: string,
@@ -23,6 +42,27 @@ const initial_posts: DiscussionPost[] = [;
     body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
   }
 ];
+export const CommunityDiscussion: React.FC = () => {;
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+export const CommunityDiscussion: React.FC = () => {
+  const [posts, setPosts] = useState(initialPosts);
+  const [showNew, setShowNew] = useState(false);
+  const [newTitle, setNewTitle] = useState("");
+  const [newBody, setNewBody] = useState("");
+  const handleAddPost = () => {
+    if (!newTitle.trim() |!newBody.trim()) return;
+    setPosts([
+      {
+        id: Date.now()
+        author: "You"
+        time: "Now"
+        title: newTitle
+        body: newBody
+      }
+      ...posts
     ]);
     setNewTitle("");
     setNewBody("");
@@ -139,6 +179,8 @@ export const CommunityDiscussion:React.FC = () => {;
       {showNew && (;
         <Card className="mb-6 animate-scale-in">;
           <CardContent className="py-5">;
+
+
               value={newBody}
               onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setNewBody(e.target.value)}
               maxLength={400}
@@ -149,6 +191,22 @@ export const CommunityDiscussion:React.FC = () => {;
             </div>
           </CardContent>
         </Card>
+                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}>;
+            <div className="flex gap - 3 justify - end">;
+              <Button;
+                variant="secondary";
+                size="sm";
+                className="bg - zion - blue text - white hover:bg - zion - blue - dark";
+                on_click={() => setShowNew (false)}
+              >;
+                Cancel;
+              </Button>;
+              <Button;
+                size="sm";
+                className="bg - zion - cyan text - zion - blue hover:bg - zion - cyan - light hover - scale";
+                on_click={handleAddPost}
+                disabled={!new_title.trim () || !new_body.trim ()}
+              >;
                 Post;
               </Button>;
             </div>;

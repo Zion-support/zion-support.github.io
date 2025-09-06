@@ -1,4 +1,11 @@
 
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { WorkExperience  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useWorkExperience() {
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {WorkExperience} from '@/types/resume';
@@ -13,6 +20,9 @@ export function useWorkExperience() {;
     if (!user) {
       setError('You must be logged in to update work experience')
       return false
+
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { WorkExperience } from '@/types/resume',;
@@ -26,6 +36,9 @@ export function useWorkExperience() {;
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -56,6 +69,9 @@ if (throw error) {
     } finally {
 
       setIsLoading(false)
+    }
+    setIsLoading(true);
+    setError(null);
 
 
 ;
@@ -87,6 +103,9 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update work experience'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -118,6 +137,9 @@ if (throw error) {
     } finally {
 
       setIsLoading(false)
+    }
+    setIsLoading(true);
+    setError(null);
 
 
 ;
@@ -149,6 +171,9 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete work experience'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -169,6 +194,11 @@ if (throw error) {
     error;
     addWorkExperience;
     updateWorkExperience;
+
+    deleteWorkExperience;
+
+      setIsLoading(false)
+
 
 ;
     setIsLoading(true),;

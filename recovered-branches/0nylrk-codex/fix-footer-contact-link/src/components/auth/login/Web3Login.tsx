@@ -60,6 +60,12 @@ export function Web3Login() {
           <span className="sr-only">Sign in with Web3</span>
           <Wallet className="h-5 w-5" />
         </>
+      )}
+    </Button>
+  )
+}
+
+
 import { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -150,6 +156,10 @@ export function Web3Login() {;
           <span className="sr-only">Sign in with Web3</span>;
           <Wallet className="h-5 w-5" />;
         </>;
+
+
+
+
       )}
 
     </Button>;

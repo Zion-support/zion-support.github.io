@@ -1,4 +1,11 @@
 
+import { useState, useCallback  } from 'react';
+import { PortfolioProject  } from '@/types/resume';
+import { supabase  } from '@/integrations/supabase/client';
+import { useAuth  } from '@/hooks/useAuth';
+import { toast } from '@/hooks/use-toast';
+export function usePortfolio() {
+
 import {useState, useCallback} from 'react';
 import {PortfolioProject} from '@/types/resume';
 import {supabase} from '@/integrations/supabase/client';
@@ -84,6 +91,10 @@ if (throw error) {
     
     setIsLoading(true),
     setError(null),
+
+
+
+    
     try {
       const { data, error } = await supabase
         .from('portfolio_projects')
@@ -112,6 +123,9 @@ if (throw error) {
     } finally {
 
       setIsLoading(false)
+    }
+    setIsLoading(true);
+    setError(null);
 
 
 ;
@@ -156,6 +170,9 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to update a portfolio project'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -175,6 +192,9 @@ if (throw error) {
     } finally {
 
       setIsLoading(false)
+    }
+    setIsLoading(true);
+    setError(null);
 
 
 ;
@@ -218,6 +238,9 @@ if (throw error) {
     if (!user) {;
       setError('You must be logged in to delete a portfolio project'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),

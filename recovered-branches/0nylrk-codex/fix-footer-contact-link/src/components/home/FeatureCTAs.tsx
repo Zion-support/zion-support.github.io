@@ -1,4 +1,8 @@
 
+
+
+
+
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -20,6 +24,9 @@ import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Smartphone, Cal
     {
       title: "Services Marketplace"
       description: "Discover professional tech and AI services for your business needs, from development to consulting.";
+
+
+
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -245,6 +252,8 @@ export function FeatureCTAs() {;
             Explore our comprehensive suite of tools designed to transform how you connect, collaborate, and create in the tech ecosystem.;
           </p>;
         </div>;
+
+
                     <Badge variant="secondary" className="bg-primary/20 text-primary">
                       {feature.badge}
                     </Badge>

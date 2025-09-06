@@ -186,6 +186,11 @@ function resolveConflicts(filePath) {
 conflictFiles.forEach(resolveConflicts);
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const { execSync } = require('child_process');
@@ -247,8 +252,12 @@ conflictFiles.forEach(resolveConflicts);
 <<<<<<< HEAD
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+<<<<<<< HEAD
 =======
 >>>>>>> pr-12166
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+>>>>>>> origin/main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/main
 

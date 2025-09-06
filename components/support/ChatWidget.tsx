@@ -16,6 +16,10 @@ function generateSessionId(): string {
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
+
+    } catch {}
+  }
+
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
@@ -23,6 +27,13 @@ function generateSessionId(): string {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
+    } catch {}
+  }
+      setShowEscalation(true)
+      setShowEscalation(true);    } catch {}
+
+
+      setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
 
@@ -88,6 +99,7 @@ function generateSessionId(): string {
 
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
+
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
 
@@ -121,6 +133,9 @@ function generateSessionId(): string {
                     m && m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+
+
+
                   }
                 >
                   {m.content}
@@ -136,6 +151,13 @@ function generateSessionId(): string {
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
+
+                    {q}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
 
                     {q}
                   </button>;
@@ -178,6 +200,11 @@ function generateSessionId(): string {
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
+
+
+          <div className="border-t border-gray-200 dark:border-gray-800 p-2">
+            {!showEscalation ? (
               <div className="flex gap-2">
                 <input
                   value={input}
@@ -185,6 +212,9 @@ function generateSessionId(): string {
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' && !e.shiftKey) {
                       e.preventDefault();
+
+
+
 
                 />
                 <button
@@ -194,6 +224,10 @@ function generateSessionId(): string {
           </div>;
         </div>;
       )}
+}
+}
+  );
+}
 useEffect ( () => {
   // Check condition
 if ( {) {

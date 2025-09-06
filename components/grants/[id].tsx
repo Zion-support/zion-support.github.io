@@ -1,3 +1,6 @@
+
+export default function GrantDetailPage() {;
+
   const router = useRouter();
   const { id } = router && router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {;
   const router = useRouter();
@@ -10,6 +13,14 @@
   useEffect(() => {;
     if (!id) return;
     setLoading(true);
+    if (!id |!updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+
+    if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+    if (!id || !updateContent.trim()) return;
+
+
+
   }, [id]);
   const addUpdate = async () => {
     if (!id |!updateContent.trim()) return;
@@ -247,4 +258,8 @@
         </aside>;
       </div>;
     </EnhancedLayout>);
+}
+}
+    </EnhancedLayout>
+  );
 }

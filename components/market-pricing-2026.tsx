@@ -49,6 +49,8 @@ export default function MarketPricing2026() {;
     ...comprehensiveIT2026Services;
   ];
 
+
+
     >
       <div className='min-h-screen'>
         <Head>
@@ -74,6 +76,8 @@ export default function MarketPricing2026() {;
           <link rel="canonical" href="https://ziontechgroup.com / market - pricing - 2026" />;
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div
+
+
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -194,6 +198,9 @@ export default function MarketPricing2026() {;
                             ? 'bg-cyan-500 text-black';
                             : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50';
                         }`}
+
+
+
                     ))}
                   </div>
                 </div>
@@ -362,6 +369,7 @@ export default function MarketPricing2026() {;
           <div className="max-w-7xl mx-auto">
             <motion.div
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
         {/* Market Analysis Section */}
@@ -382,6 +390,9 @@ export default function MarketPricing2026() {;
               <motion&& motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
+
+
+
               >
                 <div className='text-4xl mb-4'>📊</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -409,6 +420,9 @@ export default function MarketPricing2026() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
+
+
+
               >
                 <div className='text-4xl mb-4'>🎯</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -435,6 +449,9 @@ export default function MarketPricing2026() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
+
+
+
               >
                 <div className='text-4xl mb-4'>🚀</div>
                 <h3 className='text-xl font-bold text-white mb-3'>
@@ -459,6 +476,7 @@ export default function MarketPricing2026() {;
             </div>
           </div>
         </section>
+
 
 
               initial={{ opacity: 0, y: 30 }}
@@ -562,6 +580,32 @@ export default function MarketPricing2026() {;
               <p className="text-xl text-gray-300">
               </p>
             </motion.div>
+                >
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+                    {/* Service Header */}
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      {service.popular && (
+                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
+                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                    {/* Service Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="text-4xl">{service.icon}</div>
+                      {service.popular && (
+                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular
+
+                          Popular
+
+                        </span>
+                      )}
+                    </div>
+
+
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -621,6 +665,30 @@ export default function MarketPricing2026() {;
                       </div>
                     </div>
                     {/* Market Position */}
+                    <div className='mb-4'>
+                      <h4 className='text-white font-semibold mb-2 text-sm'>
+                        Market Position
+                      </h4>
+                      <p className='text-gray-400 text-xs leading-relaxed'>                        {service.marketPosition}                    <div className="mb-4">
+                      <h4 className="text-white font-semibold mb-2 text-sm">Market Position</h4>
+                      <p className="text-gray-400 text-xs leading-relaxed">
+                        {service.marketPosition}
+
+
+                      {service.name}
+                    </h3>
+
+                    {/* Tagline */}
+
+                      {service.tagline}
+                    </p>
+
+                    {/* Pricing Section */}
+
+
+                      </div>
+                    </div>
+                    {/* Market Position */}
 
 
                         {service.marketPosition}
@@ -628,7 +696,9 @@ export default function MarketPricing2026() {;
                       </p>
                     </div>
                     {/* ROI & Customers */}
-
+                    <div className='grid grid-cols-2 gap-4 mb-4'>
+                      <div className='text-center p-3 bg-gray-700/30 rounded-lg'>
+                        <div className='text-lg font-bold text-green-400 mb-1'>
 
 
 
@@ -762,11 +832,19 @@ export default function MarketPricing2026() {;
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
                           </li>
                         ))}
+                      </ul>
+                    </div>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
                     {/* Technology Stack */}
 
 
                           </span>
                         )}
+
                     >
                       View Details
                     </a>
@@ -799,6 +877,7 @@ export default function MarketPricing2026() {;
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -933,6 +1012,9 @@ export default function MarketPricing2026() {;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               viewport={{ once: true }}
+
+
+
             >
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Ready to Get Started?
@@ -1056,4 +1138,5 @@ export default function MarketPricing2026() {;
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
+}
 }

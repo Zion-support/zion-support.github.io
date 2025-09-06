@@ -16,6 +16,8 @@ import {format} from "date-fns";
 import {CalendarIcon, Loader2} from "lucide-react";
 import {AIEnhancementButton} from "@/components/ai-enhancement/AIEnhancementButton";
 import {AIEnhancementDialog} from "@/components/ai-enhancement/AIEnhancementDialog";
+
+
 import { useState } from 'react',
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -37,6 +39,13 @@ const formSchema = z.object({
   company_name: z.string().min(1, "Company name is required");
   role_title: z.string().min(1, "Role title is required");
   start_date: z.date({
+
+export function WorkExperienceItemForm({;
+  initialData;
+  onSubmit;
+export function WorkExperienceItemForm({
+  initialData,
+  onSubmit,
 
 
 
@@ -159,6 +168,10 @@ function WorkExperienceItemForm() {
               control={form.control}
               name="company_name";
               render={({ field }) => (
+              )}
+            />
+            <FormField
+
               control={form.control}
               name="role_title";
               render={({ field }) => (

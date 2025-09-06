@@ -1,3 +1,21 @@
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormDescription
+  FormMessage
+
+
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormDescription,;
+  FormMessage,;
+
+
+
   FormField,
   FormItem,
   FormLabel,
@@ -13,7 +31,6 @@ interface DescriptionFieldsProps {
   handleEditorChange: (content: string) => void;
   editorContent: string
 }
-
 
         control={control}
         name="description"
@@ -48,12 +65,19 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
+
+
+
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
+              <Textarea
+              <Textarea 
+
+
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e && e.target.value);
@@ -160,6 +184,8 @@ function DescriptionFields() {
               Provide instructions on how to apply for this job.;
             </FormDescription>;
             <FormMessage />;
+
+
   );
           </FormItem>)}
       />;

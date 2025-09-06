@@ -1,3 +1,5 @@
+ 
+
 
  
 
@@ -32,7 +34,9 @@ export default function SiteValidator(): any ({ report }: Props) {;
 
 };
 
-
+export default function SiteValidator({ report }: Props) {
+export default function SiteValidator({ report }: Props) {;
+  if (!report) return <div>No validation report yet.</div>;
   return (
     <div className="space-y-6">;
       <header className="space-y-1">;

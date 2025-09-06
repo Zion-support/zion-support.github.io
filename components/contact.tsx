@@ -1,3 +1,7 @@
+const [isSubmitting, setIsSubmitting] = useState (false);
+ const [isSubmitting, setIsSubmitting] = useState (false);
+
+
 const [submitSuccess, setSubmitSuccess] = useState (false);
 //Get popular services for showcase const popularServices = [ ...innovativeAIServices2029 && innovativeAIServices2029.filter (s => s && s.popular);
 ...quantumSpaceInnovations2029 && quantumSpaceInnovations2029.filter (s => s && s.popular);
@@ -231,6 +235,9 @@ setSubmitSuccess (true);
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
+
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {popularServices.map((service, index) => (
                 <motion.div
@@ -430,6 +437,7 @@ setSubmitSuccess (true);
                     {/* Service Title and Tagline */}
                     <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                     <p className="text-sm text-cyan-400 mb-3">{service.tagline}</p>
+
                     {/* Description */}
                     <p className="text - gray - 300 leading - relaxed mb - 4 line - clamp - 3">;
                       {service.description}
@@ -459,6 +467,8 @@ setSubmitSuccess (true);
                       </span>;
                       <span className="text-gray-400 text-sm">{service && service.period}</span>;
                     </div>;
+
+
 
 
                     {/* CTA */}

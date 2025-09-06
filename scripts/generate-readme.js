@@ -117,6 +117,9 @@ function generateReadme() {
   }
 
   fs.writeFileSync(outputPath, README_TEMPLATE),
+  // // // console.log(`✅ README generated at: ${outputPath}`)
+
+
 #!/usr/bin/env node;
 /**;
  * Generate README;

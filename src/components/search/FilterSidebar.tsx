@@ -1,12 +1,4 @@
 }
-import React from 'react';
-interface FilterSidebarProps {;
-  className?: string;
-  children?: React && React.ReactNode;
-interface FilterSidebarProps {;
-  className?: string;
-  children?: React && React.ReactNode;
-}
 
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   className

@@ -96,8 +96,6 @@ interface HealthData {
         </CardContent>
       </Card>
     )
-  if (!healthData) return null,
-
 
   if (!healthData) return null
   if (!healthData) return null,

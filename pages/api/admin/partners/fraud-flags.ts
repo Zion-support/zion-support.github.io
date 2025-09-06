@@ -1,3 +1,4 @@
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   const code = (req.query.code as string)?.toLowerCase()
@@ -24,6 +25,11 @@
     const flags: any[] = []
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
+
+    return res.status(500).json({ error: e?.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 

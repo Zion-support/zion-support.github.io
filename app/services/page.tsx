@@ -3,7 +3,6 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
-    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 };
 
 export default function ServicesOverviewPage() {
@@ -21,24 +20,68 @@ export default function ServicesOverviewPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
-          title="Micro SaaS"
-          description="End-to-end product development with billing, auth, and analytics"
+          title="Micro SaaS Solutions"
+          description="Complete micro SaaS development from concept to scale with proven revenue models"
           bullets={[
           ]}
           icon="🚀"
         />
         <ServiceCard
           href="/services/ai-services"
-          title="AI Services"
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
-          title="IT Services"
+          icon="⚙️"
+        />
+        <ServiceCard
+          href="/services/blockchain"
         />
         <ServiceCard
           href="/services/data-analytics"
           title="Data Analytics"
+          icon="📊"
+        />
+        <ServiceCard
+          href="/contact"
+          title="Custom Solutions"
+          description="Tailored technology solutions for unique business challenges"
+          bullets={["Custom development", "System integration", "Digital transformation", "Consulting"]}
+          icon="💡"
+        />
+        <ServiceCard
+          href="/services/digital-transformation"
+          title="Digital Transformation"
+          description="Complete digital transformation solutions and legacy modernization"
+          bullets={["Process automation", "Legacy modernization", "Digital strategy"]}
+          icon="🔄"
+        />
+        <ServiceCard
+          href="/services/cybersecurity"
+          title="Cybersecurity"
+          description="Comprehensive security solutions and compliance management"
+          bullets={["Security assessment", "Threat detection", "Compliance"]}
+          icon="🔒"
+        />
+        <ServiceCard
+          href="/services/cloud-services"
+          title="Cloud Services"
+          description="Cloud migration, architecture, and optimization solutions"
+          bullets={["Cloud migration", "Multi-cloud", "Cost optimization"]}
+          icon="☁️"
+        />
+      </div>
+      <CTA />{" "}
+    </div>
+  );
+}
+function ServiceCard({
+  href,
+  title,
+  description,
+  bullets,
+  icon
+}: {
   href: string;
   title: string;
   description: string;

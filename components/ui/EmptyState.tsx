@@ -1,3 +1,7 @@
+import React from "react";
+import Link from "next/link";
+
+
 import EnhancedButton from "./EnhancedButton";
 export type EmptyStateProps = {;
   title: string;
@@ -20,6 +24,9 @@ export default function EmptyState(): any ({;
   secondaryAction?: { label: string; href: string };
 };
 
+  primaryAction?: { label: string; href: string };
+  secondaryAction?: { label: string; href: string };
+};
 import React from 'react';
 
 interface EmptyStateProps {
@@ -108,4 +115,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
 
     </div>
   );
+};
+
+export default EmptyState;
 

@@ -214,24 +214,6 @@ export default function ZionHireAI() {
                   <PenTool className='h-10 w-10 text-zion-purple mb-2' />
                   <CardTitle>Resume Screener</CardTitle>
                   <CardDescription>
-                    Automatically evaluate and score candidate resumes against
-                    job requirements.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <ul className='space-y-2 text-sm'>
-                    <li className='flex items-center'>
-                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        AI
-                      </span>
-                      <span>Identify skill matches</span>
-                    </li>
-                    <li className='flex items-center'>
-                      <span className='bg-green-100 text-green-800 text-xs font-medium mr-2 px-2 py-0.5 rounded'>
-                        AI
-                      </span>
-                      <span>Experience verification</span>
-                    </li>
                   <Users className="h-10 w-10 text-zion-purple mb-2" />
                   <CardTitle>Candidate Matchmaker</CardTitle>
                   <CardDescription>
@@ -328,6 +310,7 @@ export default function ZionHireAI() {
         </section>
 
         {/* CTA Section */}
+            </p>
             <Button 
               size="lg" 
               className="bg-zion-purple hover: bg-zion-purple-light text-white"

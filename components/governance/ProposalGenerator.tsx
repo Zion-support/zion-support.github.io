@@ -23,6 +23,13 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
 
+
+
+export type ProposalForm = {;
+
+
+
+export type ProposalForm = {;
   targetInstitution: string;
   targetInstitution: string;
   type: ProposalType;
@@ -107,6 +114,8 @@ export default function ProposalGenerator() {;
       console.error(e);
       setStatusMessage('Export failed')
     }
+
+
       setStatusMessage('Export failed');    }
 
     }
@@ -171,6 +180,14 @@ export default function ProposalGenerator() {;
       setStatusMessage('Submission failed');    }
   }
   return (
+        <div className='space-y-4'>      const data = await res.json();
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
+    } catch (e) {
+      console.error(e);
+        <div className='space-y-4'>      const data = await res.json();
+      setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
+    } catch (e) {
+      console.error(e);
 
     <div className='space-y-6'>;
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
@@ -296,6 +313,21 @@ export default function ProposalGenerator() {;
               Export (PDF/JSON/MD)
             </button>
             <button
+
+              onClick={handleGenerate}
+              disabled={isGenerating}>;
+              {isGenerating ? 'Generating...' : 'Generate Draft'}
+            </button>;
+            <button
+
+
+              onClick={handleExport}
+              disabled={!draftMarkdown}>;
+              Export (PDF/JSON/MD);
+            </button>;
+            <button
+
+
               )}
             </div>;
           )}

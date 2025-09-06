@@ -19,11 +19,31 @@ import {
   Cloud,
   ArrowRight,
   Star,
+  Zap;
+  Shield
+  BarChart3
+  Globe
+  Users
+  Lock
+  TrendingUp
+  Code
+  Database
 
   Cloud;
   ArrowRight;
   Star;
   Check;
+
+        'Lightning fast'
+        'Beautiful design'
+        'Great keyboard shortcuts'
+        'Git integration'
+      ]
+      cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
+    }
+
+
+
 
         'Lightning fast',
         'Beautiful design',
@@ -129,6 +149,9 @@ import {
             </div>
           </div>
           {/* Stats */}
+
+
+
                 {microSaasServices.length}+
               </div>
               <div className='text-gray-400 text-sm'>Curated Services</div>
@@ -203,6 +226,35 @@ import {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => (
+                      {service.icon}
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <div className='flex items-center justify-between mb-2'>
+                      <h3 className='text-2xl font-bold text-white group-hover:text-blue-400 transition-colors duration-300'>
+                        {service.name}
+                      </h3>
+                      <div className='flex items-center space-x-2'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                        <span className='text-sm text-gray-300'>
+                          {service.rating}
+                        </span>
+                      </div>
+                    </div>
+                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
+                        {service.category}
+                      </span>
+                      <span>{service.users} users</span>
+                      <span className='text-green-400'>{service.pricing}</span>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed mb-4'>
+                      {service.description}
+                    </p>
+
+
+
+
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -300,6 +352,7 @@ import {
 }
 }
   );
+}
 }
     </>);
 }

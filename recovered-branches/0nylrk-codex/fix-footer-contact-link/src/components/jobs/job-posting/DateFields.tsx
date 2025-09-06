@@ -1,8 +1,42 @@
+import React from "react";
+import { format } from "date-fns";
+import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import {
+
+
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger,;
+
+
+
+  Popover,
+  PopoverContent,
+  PopoverTrigger,;
+
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 
 import { FormControl } from "@/components/ui/form";
 import { cn } from "@/lib/utils";
+interface DateFieldsProps {
+  startDate: Date | undefined;
+  setStartDate: (date: Date | undefined) => void;
+  endDate: Date | undefined;
+  setEndDate: (date: Date | undefined) => void
+}
+export function DateFields({
+  startDate
+  setStartDate
+  endDate
+  setEndDate
+}: DateFieldsProps) {
+
+
+
+
 
 import React from 'react',
 import { format } from 'date-fns',
@@ -12,6 +46,9 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Calendar } from "@/components/ui/calendar",
 import { FormControl } from "@/components/ui/form",
 import { cn } from "@/lib/utils",
+
+
+
 interface DateFieldsProps {
   startDate: Date | undefined,
   setStartDate: (date: Date | undefined) => void,
@@ -42,6 +79,8 @@ interface DateFieldsProps {
               disabled={(date) =>;
                 date > new Date();
               }
+
+
               initialFocus
             />
           </PopoverContent>
@@ -67,6 +106,9 @@ interface DateFieldsProps {
               mode="single"
               selected={endDate}
               onSelect={setEndDate}
+    </div>
+
+
               disabled={(date) =>;
                 date < new Date();
               }
@@ -76,6 +118,8 @@ interface DateFieldsProps {
           </PopoverContent>;
         </Popover>;
       </div>;
+
+
   );
     </div>);
 }

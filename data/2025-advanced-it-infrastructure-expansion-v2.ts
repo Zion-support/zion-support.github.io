@@ -17,9 +17,9 @@ export const advancedITInfrastructureExpansion2025V2 = [
     category: 'Cloud & FinOps'
     pricing: '$499/month'
     features: [
-      'Incident automation'
-      'Predictive maintenance'
-      'Resource optimization'
+      'Identity verification'
+      'Access control'
+      'Threat detection'
       'Performance monitoring'
     ]
   }

@@ -23,6 +23,20 @@ class ErrorBoundary extends React.Component {
 }
 
 
+
+export default function SecretsRotationAutomationPage() {
+
+  const features = [
+    "Automated key and secret rotation"
+    "JIT credentials with expirations"
+    "Policy approvals and audit trails"
+    "CI/CD integration (GitHub Actions, CircleCI)"
+    "Cloud KMS and Vault support"
+  ];
+  return (
+
+export default function SecretsRotationAutomationPage() {
+  const features = [
     "Automated key and secret rotation",
     "JIT credentials with expirations",
     "Policy approvals and audit trails",

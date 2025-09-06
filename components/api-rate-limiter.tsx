@@ -1,3 +1,22 @@
+  Shield
+  Zap
+  BarChart3
+  Code
+  ArrowRight
+  Copy
+  RefreshCw
+  CheckCircle
+  AlertTriangle;
+} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
+
+export default function APIRateLimiterPage() {
+  Shield,
+  Zap,
+  BarChart3,
+  Code,
+  ArrowRight,
+  Copy,
+  RefreshCw,
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -40,6 +59,18 @@ export default function APIRateLimiterPage() {;
   const [apiKey, setApiKey] = useState('');
 
   ];
+    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+
+
+    { value: '10', label: '10 requests', description: 'Very strict' },
+    { value: '100', label: '100 requests', description: 'Standard' },
+    { value: '1000', label: '1000 requests', description: 'High volume' },
+
+    { value: '10000', label: '10000 requests', description: 'Enterprise' }
+  ];
+
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
@@ -196,9 +227,17 @@ if (break) {
 ;
   const getStatusIcon = (status: string) =>: any {
     switch (status) {
+  }
+
+
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
+
+
+
+
+  };
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -496,18 +535,6 @@ if (break) {
                       onClick={generateApiKey}
 
 
-            {/* Test Results */}
-            <Card className='p-8 bg-gray-800 border border-gray-700'>;
-              <div className='flex items-center justify-between mb-6'>;
-                <h3 className='text-2xl font-bold text-white flex items-center'>;
-                  <BarChart3 className='w-6 h-6 mr-3 text-blue-400' />                  Test Results            <Card className="p-8 bg-gray-800 border border-gray-700">;
-              <div className="flex items-center justify-between mb-6">;
-                <h3 className="text-2xl font-bold text-white flex items-center">;
-                  <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />;
-                </h3>;
-                {testResults && testResults.length > 0 && (;
-
-
 
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -774,8 +801,6 @@ if (break) {
 
 
 
-
-
       {/* Features */}
 
 
@@ -904,6 +929,7 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }
 
+
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
@@ -939,6 +965,10 @@ console.log('Rate Limit Info:', {
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
+
+
+response = requests.get(;
+
     f'https://api.zion.tech{endpoint}';
 
     headers=headers

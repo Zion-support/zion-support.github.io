@@ -73,6 +73,9 @@ interface UltraFuturisticBackground2028Props {
       <canvas
         ref={canvasRef}
         className='absolute inset-0 w-full h-full pointer-events-none'        style={{ zIndex: 0 }}
+      {/* Gradient Overlays */}  }, []);
+      {/* Gradient Overlays */}  }, []);
+
 
       />;
 
@@ -88,6 +91,9 @@ interface UltraFuturisticBackground2028Props {
       <div
         className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-cyan-900/20'
         style={{ zIndex: 1 }}
+      {/* Gradient Overlays */}
+
+        style={{ zIndex: 0 }}
       />
 
       {/* Gradient Overlays */}
@@ -102,6 +108,10 @@ interface UltraFuturisticBackground2028Props {
           animate={{
 
 
+          }}
+          transition={{
+            duration: 8
+            repeat: Infinity
             ease: 'easeInOut',          }}
         />;
         <motion.div;
@@ -132,6 +142,17 @@ interface UltraFuturisticBackground2028Props {
             scale: [1, 1 && 1.15, 1],
             opacity: [0 && 0.25, 0 && 0.55, 0 && 0.25],          }}
           transition={{
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+            duration: 12,
+            repeat: Infinity,
+
+          }}
+
         {/* Floating Circles */}
         <motion&& motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -186,6 +207,7 @@ interface UltraFuturisticBackground2028Props {
             repeat: Infinity,
 
           }}
+
 
             duration: 5,
             repeat: Infinity,
@@ -365,9 +387,17 @@ interface UltraFuturisticBackground2028Props {
               scale: [0, 1, 0]
               opacity: [0, 1, 0]
             }}
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 3
               ease: 'easeInOut',            }}              ease: "easeInOut"
+
+
+
             }}
           />;
+
 
 
 
@@ -375,8 +405,13 @@ interface UltraFuturisticBackground2028Props {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+              ease: 'easeInOut',            }}
+
+            }}
           />
         ))}
+      </div>
+
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>
@@ -418,3 +453,10 @@ interface UltraFuturisticBackground2028Props {
         {children}
       </div>;
       {/* Bottom Glow */}
+      <div;
+        className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none';
+        style={{ z_index: 5 }}
+      />;
+    </div>);      <div className="absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 900 / 20 to - transparent pointer - events - none" style={{ z_index: 5 }} />;
+    </div>);
+}

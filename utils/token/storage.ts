@@ -64,9 +64,6 @@ class TokenStore {
     redeemRate: 1.0
     minIssueAmount: 1
     maxIssueAmount: 10000
-
-  }
-export interface TokenStoreData {
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -76,5 +73,17 @@ function readFromDisk(): TokenStoreData | null {
     ensureDataDir();
   }
 }
+}
+
+
+}
+
+
+  set_config (new_config: Partial < TokenConfig>): void {
+    this.config = { ...this.config, ...new_config }
+  }
+}
+export const token_store = new TokenStore ();
+;
 
 

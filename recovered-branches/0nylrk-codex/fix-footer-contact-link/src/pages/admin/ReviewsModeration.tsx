@@ -9,9 +9,25 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Star, AlertTriangle} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useState, useEffect } from "react",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Star, AlertTriangle } from "lucide-react";
+import { toast } from "@/components/ui/use-toast";
+function ReviewsModerationContent() {
+function ReviewsModerationContent() {;
+
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+
+
 
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
@@ -33,6 +49,17 @@ function ReviewsModerationContent() {
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
+}
+export default function ReviewsModeration() {
+  return (
+    <ProtectedRoute>
+      <ReviewsModerationContent />
+    </ProtectedRoute>
+  )
+}
+
+
+
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -100,6 +127,26 @@ function ReviewsModerationContent() {;
         </Card>;
       </main>;
       <Footer />;
+
+import { AppHeader } from '@/layout / AppHeader';
+import { Footer } from '@/components / Footer';
+import { SEO } from '@/components / SEO';
+import { ReviewsModerationTable } from '@/components / admin / reviews / ReviewsModerationTable';
+import { ProtectedRoute } from '@/components / ProtectedRoute';
+import { useState, useEffect } from './react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
+import { Star, AlertTriangle } from './lucide-react';
+import { toast } from '@/components / ui / use - toast';
+/**
+ * ReviewsModerationContent - Function description
+ */
+function ReviewsModerationContent() {
+  const [active_tab, setActiveTab] = useState ("pending");
+  const [reviews, set_reviews] = useState ([]);
+  const [is_loading, setIsLoading] = useState (true);
+
+
 }
 
 export default function ReviewsModeration() {

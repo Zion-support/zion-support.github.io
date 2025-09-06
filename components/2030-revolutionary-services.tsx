@@ -1,4 +1,22 @@
 
+  ArrowRight
+  Star
+  Zap
+  TrendingUp
+  Users
+  Award
+  Phone
+  Mail
+  MapPin;
+
+
+} from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
+import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
+import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
+import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
+
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
@@ -229,6 +247,9 @@ export default function Revolutionary2030ServicesPage() {
                 "https://github && github.com/Zion-Holdings"
               ]
             })
+
+
+
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
@@ -314,6 +335,7 @@ export default function Revolutionary2030ServicesPage() {
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="max-w-7xl mx-auto">
           <motion.div
+
 
 
 
@@ -415,12 +437,15 @@ export default function Revolutionary2030ServicesPage() {
             ))}
 
 
+
+
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
 
 

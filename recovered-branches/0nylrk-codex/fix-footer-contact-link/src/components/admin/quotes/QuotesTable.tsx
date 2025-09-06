@@ -1,4 +1,8 @@
 
+import { formatDate } from "@/utils/dateUtils";
+interface QuotesTableProps {
+
+  quotes: QuoteRequest[]
 import {formatDate} from "@/utils/dateUtils";
 interface QuotesTableProps {;
   quotes: QuoteRequest[],;
@@ -7,6 +11,7 @@ interface QuotesTableProps {;
   updateStatus: (id: string, status: QuoteStatus) => void
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
+
 
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
@@ -28,6 +33,9 @@ import {
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
+
+
+
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -35,6 +43,30 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
+
+export const QuotesTable: React.FC<QuotesTableProps> = ({;
+  quotes;
+  isArchived = false;
+  isLoading;
+  updateStatus;
+  toggleArchive;
+export const QuotesTable: React.FC<QuotesTableProps> = ({
+  quotes;
+
+  isArchived = false;
+  isLoading;
+  updateStatus;
+  toggleArchive;
+  deleteQuote
+  quotes,
+  isArchived = false,
+  isLoading,
+  updateStatus,
+  toggleArchive,
+  deleteQuote,
+
+
+
   onViewDetails
 }) => {
   return (
@@ -161,6 +193,21 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                     )}
+                  </div>
+                </TableCell>
+              </TableRow>
+            ))
+          )}
+        </TableBody>
+      </Table>
+    </div>
+  )
+}
+
+
+
+
+                    )}
                   </div>;
                 </TableCell>;
               </TableRow>;
@@ -170,6 +217,10 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
       </Table>;
     </div>;
   );
+
+
+
+
 };
                   </div>;
                 </TableCell>;

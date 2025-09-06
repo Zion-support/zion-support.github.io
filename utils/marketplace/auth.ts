@@ -1,3 +1,9 @@
+  req: NextApiRequest
+  offer: { clientId: string; talentSlug: string }
+  req: NextApiRequest,;
+  offer: { clientId: string; talentSlug: string },
+
+
   talentSlugHeader?: string
 ): DemoUser {
   const u = getDemoUser(req);
@@ -7,6 +13,7 @@
     return u;
   const err = new Error('Not authorized for this offer');
   // @ts-ignore
+
 
 
 

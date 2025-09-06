@@ -3,10 +3,18 @@ export default function GovernanceTrustPage() {
     <>
       <Head>
         <title>Zion Governance & Trust</title>
+
+
+
+
               </div>
             ))}
           </div>
         </section>
+
+
+                Appointed via DAO ratification, accountable to publish roadmaps,
+
                 risk registers, and post-mortems.
               </div>
         <section className="space-y-4">
@@ -15,6 +23,9 @@ export default function GovernanceTrustPage() {
             <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <div className="font-medium mb-1">Core Stewards</div>
               <div className="text-sm text-gray-600 dark:text-gray-400">Appointed via DAO ratification, accountable to publish roadmaps, risk registers, and post-mortems.</div>
+
+
+
             </div>
             <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
               <div className='font-medium mb-1'>Delegated Voting</div>

@@ -124,6 +124,10 @@ import {
         </div>;
       </div>;
       {/* Service Process */}
+            How We Deliver Results
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our proven methodology ensures successful project delivery and maximum value
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
@@ -255,6 +259,8 @@ import {
         </div>;
       </div>;
       {/* CTA section */}
+
+
             Ready to get started?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

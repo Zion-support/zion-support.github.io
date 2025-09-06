@@ -23,6 +23,7 @@ import { ExperienceFilter } from "./filters/ExperienceFilter",
   setSortOption;
   clearFilters;
 
+
   return (
     <>;
       {/* Filter header */}

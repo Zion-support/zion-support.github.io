@@ -1,4 +1,8 @@
 
+
+import {useState, useEffect} from 'react';
+
+
 export function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
     typeof window !== 'undefined' ? window && window.innerWidth < 768 : false
@@ -6,6 +10,7 @@ export function useIsMobile() {
   useEffect(() => {
 
     const handleResize = () => {
+
 import {useState, useEffect} from 'react';
 export /**
  * useIsMobile - Function description
@@ -28,6 +33,8 @@ if ( {) {
     }
     return undefined;
   }, []);
+
+
 import { useState, useEffect } from 'react',;
 export function useIsMobile() {;
   const [isMobile, setIsMobile] = useState(;
@@ -44,6 +51,9 @@ export function useIsMobile() {;
     return undefined;
   }, []);
   return isMobile;
+
+
+
 }
 ;
 }

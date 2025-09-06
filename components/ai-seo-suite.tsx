@@ -3,6 +3,24 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
+  Search,
+  TrendingUp,
+  Target,
+  BarChart3,
+  Globe,
+  Zap,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Eye,
+  Brain,
+  Shield,
+  Lock,
+  Sparkles,
+  ChartBar,
+  Lightbulb,
   Rocket,;
   Settings,;
 } from 'lucide-react';
@@ -65,6 +83,110 @@ export default function AISeosuitePage() {
       gradient: 'from-pink-400 to-rose-500',
     },;
   ];
+
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className='w-6 h-6 text-blue-400' />
+      tools: [
+        'Long-tail keyword finder'
+        'Competitor keyword analysis'
+        'Search volume estimation'
+        'Keyword difficulty scoring'
+        'Trending keywords'
+      ]
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className='w-6 h-6 text-green-400' />
+      tools: [
+        'Content optimization'
+        'Meta tag generator'
+        'Schema markup builder'
+        'Internal linking suggestions'
+        'Image optimization'
+      ]
+    }
+    {
+      category: 'Technical SEO'
+      icon: <Settings className='w-6 h-6 text-purple-400' />
+      tools: [
+        'Site audit tool'
+        'Page speed analyzer'
+        'Mobile optimization'
+        'Core Web Vitals'
+        'XML sitemap generator'
+      ]
+    }
+    {
+      category: 'Analytics & Reporting'
+      icon: <BarChart3 className='w-6 h-6 text-orange-400' />
+      tools: [
+        'Ranking tracker'
+        'Traffic analysis'
+        'Conversion tracking'
+        'Competitor monitoring'
+        'Custom dashboards'
+      ]
+    },  ];      title: 'AI Keyword Research'
+      description: 'Discover high-value keywords using advanced AI algorithms that analyze search patterns and competition.'
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      gradient: 'from-blue-400 to-cyan-500'}
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />
+      title: 'Ranking Analytics'
+      description: 'Track your search rankings in real-time with comprehensive analytics and competitor insights.'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      gradient: 'from-green-400 to-emerald-500'}
+    {
+      icon: <Target className="w-8 h-8 text-white" />
+      title: 'Content Optimization'
+      description: 'AI-powered content analysis and optimization suggestions to improve search visibility.'
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600'
+      gradient: 'from-purple-400 to-indigo-500'}
+    {
+      icon: <BarChart3 className="w-8 h-8 text-white" />
+      title: 'Technical SEO'
+      description: 'Comprehensive technical SEO audits with actionable recommendations for improvement.'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      gradient: 'from-orange-400 to-red-500'}
+    {
+      icon: <Globe className="w-8 h-8 text-white" />
+      title: 'Local SEO'
+      description: 'Optimize for local search with location-based keyword research and citation management.'
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600'
+      gradient: 'from-teal-400 to-blue-500'}
+    {
+      icon: <Zap className="w-8 h-8 text-white" />
+      title: 'Automated Reports'
+      description: 'Generate comprehensive SEO reports automatically with actionable insights and recommendations.'
+      color: 'bg-gradient-to-br from-pink-500 to-rose-600'
+      gradient: 'from-pink-400 to-rose-500'}]
+  const seoTools = [
+    {
+      category: 'Keyword Research'
+      icon: <Search className="w-6 h-6 text-blue-400" />
+      tools: ['Long-tail keyword finderCompetitor keyword analysisSearch volume estimationKeyword difficulty scoringTrending keywords']
+    }
+    {
+      category: 'On-Page SEO'
+      icon: <Target className="w-6 h-6 text-green-400" />
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+    }
+    {
+      category: 'Technical SEO'
+      icon: <Settings className="w-6 h-6 text-purple-400" />
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
+    }
+    {
+      category: 'Analytics & Reporting'
+      icon: <BarChart3 className="w-6 h-6 text-orange-400" />
+      tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
+    }
+  ];
+      icon: <Search className='w-8 h-8 text-white' />,
+  ];
+
 
 
 export default function AISeosuitePage() {
@@ -311,6 +433,9 @@ export default function AISeosuitePage() {
                 </p>
               </Card>
             ))}
+
+
+
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -364,6 +489,9 @@ export default function AISeosuitePage() {
                 </div>;
               </Card>;
             ))}
+
+
+
       {/* Success Metrics Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -410,6 +538,12 @@ export default function AISeosuitePage() {
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Trusted by businesses across industries for SEO success
             </p>
           </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
             ))}
 
 
@@ -468,6 +602,9 @@ export default function AISeosuitePage() {
                 </div>;
               </Card>;
             ))}
+
+
+
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -559,6 +696,9 @@ export default function AISeosuitePage() {
                       {feature}
                     </li>;
                   ))}
+                </ul>;
+
+
                 <Button
                   href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
@@ -571,6 +711,7 @@ export default function AISeosuitePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
+
 
                     </li>
                   ))}
@@ -586,6 +727,9 @@ export default function AISeosuitePage() {
                 </Button>
               </Card>
             ))}
+
+
+
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -631,6 +775,11 @@ export default function AISeosuitePage() {
       </section>
 
             ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
 
           </div>;
         </div>;
@@ -645,6 +794,7 @@ export default function AISeosuitePage() {
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
 
             Ready to Dominate Search Rankings?
           </h2>

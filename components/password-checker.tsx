@@ -22,6 +22,15 @@ import React, { useState, useEffect } from 'react';
   XCircle
   AlertTriangle
   ArrowRight;
+  Lock,
+  Shield,
+  Eye,
+  EyeOff,
+  Copy,
+  RefreshCw,
+  CheckCircle,
+  XCircle,
+
   AlertTriangle,;
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
@@ -151,6 +160,9 @@ export default function PasswordCheckerPage() {;
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
+
+
+
 
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
@@ -398,6 +410,9 @@ if (return 'bg - orange - 400') {
                   </label>;
                   <div className="relative">;
 
+
+
+
                 {/* Generate Password */}
                 <div>;
                   <Button
@@ -466,6 +481,10 @@ if (return 'bg - orange - 400') {
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">;
                   {/* Strength Score */}
 
+                      <div
+
+                      <div 
+
 
 
 
@@ -515,6 +534,28 @@ if (return 'bg - orange - 400') {
                             </span>                          </div>
 
                           </div>
+
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
+                  <div className='text-6xl mb-4'>🔒</div>
+                  <p className='text-gray-400'>
+                    Enter a password above to see the security analysis and get
+                    personalized suggestions.                  </p>                <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
+                  <div className="text-6xl mb-4">🔒</div>
+                  <p className="text-gray-400">
+                    Enter a password above to see the security analysis and get personalized suggestions.
+                </div>
+              )}
+            </Card>
+          </div>
+        </div>
+      </section>
+
 
                         ))}
                       </div>;
@@ -685,6 +726,7 @@ if (return 'bg - orange - 400') {
           </div>;
         </div>;
       </section>;
+
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -698,6 +740,13 @@ if (return 'bg - orange - 400') {
               href='/pricing'
               variant='outline'
               size='lg'
+  );
+}
+}
+  );
+}
+
+
               View Pricing;
             </Button>;
           </div>;

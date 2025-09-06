@@ -927,6 +927,11 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     tagline: 'Track models, datasets, policies and approvals for AI features',
     price: '$129',
     period: '/month',
+reviews: 6,
+  },;
+];
+    reviews: 6
+
   }
 ];
 

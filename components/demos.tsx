@@ -1,3 +1,21 @@
+} from 'lucide-react';
+
+import {
+  Mail
+  Lock
+  Link
+  FileText
+  CheckCircle
+  Zap
+  BarChart3
+  Code
+  Play;
+} from 'lucide-react';import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+
+
+
+
+
 export default function DemosPage() {
   const [activeDemo, setActiveDemo] = useState<string>('email-validator');
   const demos = [
@@ -100,6 +118,7 @@ export default function DemosPage() {;
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
+
               Each demo showcases a different micro SaaS service with full;
               functionality;
             </p>;
@@ -316,6 +335,7 @@ export default function DemosPage() {;
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <BarChart3 className='w-8 h-8 text-orange-400' />              <p className="text-gray-400 leading-relaxed">
 
+
                 See exact request/response formats for easy integration
               </p>
             </Card>
@@ -415,3 +435,5 @@ export default function DemosPage() {;
 }
     </>);
 }
+
+  );

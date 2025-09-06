@@ -9,11 +9,26 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function EnterpriseBilling() {;
   const { user } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { SEO } from "@/components/SEO";
+import { ProtectedRoute } from "@/components/ProtectedRoute";
+export default function EnterpriseBilling() {
+  const { user } = useAuth();
+  // Check if user has billing permissions
 
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />
   }
   return (
+}
+
+
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -43,6 +58,10 @@ export default function EnterpriseBilling() {;
       </main>;
       <Footer />;
     </ProtectedRoute>;
+
+
+
+
 }
 import React from './react';
 import { Header } from '@/components / Header';

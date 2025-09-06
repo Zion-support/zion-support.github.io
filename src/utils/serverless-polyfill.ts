@@ -7,8 +7,6 @@
   var __rest: any
   var __decorate: any
   var __awaiter: any
-// CRITICAL: Self polyfill - must be first
-
 if (typeof self === 'undefined') {
   if (typeof global !== 'undefined') {
     (global as any).self = global

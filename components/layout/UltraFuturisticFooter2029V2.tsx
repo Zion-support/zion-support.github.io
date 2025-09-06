@@ -107,6 +107,13 @@ import {
   Infinity,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, 
   Brain, Rocket, Target, Shield, Cpu, ;
+
+  Crown,;
+  Infinity,;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, 
+  Brain, Rocket, Target, Shield, Cpu, ;
+
+
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -254,11 +261,29 @@ export default /**
  * UltraFuturisticFooter2029V2 - Function description
  */
 function UltraFuturisticFooter2029V2() {
+  },];
+
+export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg - black / 90 backdrop - blur - xl border - t border - cyan - 500 / 20'>      { name: 'Research', href: '/research' }
     ];
   }
 ];
+
+
+export default function UltraFuturisticFooter2029V2() {
+  return (
+    <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
+      {/* Main Footer Content */}
+      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>
+          {/* Company Info */}
+          <div className='lg:col-span-2 xl:col-span-1'>            <motion.div      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12">
+          {/* Company Info */}
+          <div className="lg:col-span-2 xl:col-span-1">
+            <motion.div
 
 ];
 
@@ -394,6 +419,7 @@ export default function UltraFuturisticFooter2029V2() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
           viewport={{ once: true }}
+
 
         >
           <h3 className="text-2xl font-bold text-white text-center mb-8">
@@ -541,11 +567,19 @@ export default function UltraFuturisticFooter2029V2() {
             </motion.div>
 
             {/* Social Links */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className='flex items-center space-x-4'
+            {/* Social Links */}
             <motion&& motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
+
 
             >
               {socialLinks.map(social => (
@@ -582,6 +616,7 @@ export default function UltraFuturisticFooter2029V2() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
         viewport={{ once: true }}
+
 
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>

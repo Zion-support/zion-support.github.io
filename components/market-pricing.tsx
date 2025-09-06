@@ -5,6 +5,19 @@ import { TrendingUp, TrendingDown, DollarSign, Target;
   Globe, Zap, Shield, Crown, Brain, Atom
  } from 'lucide-react';
 import Link from 'next/link';
+import React, { useState } from 'react';
+import {motion} from 'framer-motion';
+import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
+import Link from 'next/link';
+export default function MarketPricing() {;
+  const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
+
+  const markets = [
+    { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
+    { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+
   ];
 
   const marketData = {
@@ -300,6 +313,18 @@ import Link from 'next/link';
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+      {/* Competitive Analysis Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+
+            className="text-center">;
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">;
+              {currentMarket && currentMarket.description}
+            </p>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
 
 
 
@@ -478,6 +503,15 @@ import Link from 'next/link';
                   <p className="text-sm text-gray-300">{advantage && advantage.description}</p>;
                 </div>;
               ))}
+      {/* Market Trends Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.h2
+
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
 
 
 
@@ -540,6 +574,59 @@ pricingAnalysis: {
   marketSize: '$1.2T', growthRate: '+12.3%', growthTrend: 'up', description: 'Enterprise IT market continues steady growth with digital transformation initiatives.', competitors: [ {
   ];
 pricingAnalysis: {
+  lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
+
+};
+
+};
+
+};
+export default MarketPricing;export default MarketPricing;
+
+}
+}
+}
+}
+}
+}
+}
+};
+
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className="text-4xl md: text-5xl font-bold mb-6">;
+              Ready to Compete in the Market?;
+            </h2>;
+            <p className="text-xl text-gray-300 mb-8">;
+              Our competitive pricing and unique AI consciousness features give you the edge ;
+              you need to succeed in today's rapidly evolving technology landscape.;
+            </p>;
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
+              <Link
+                href="/pricing"
+                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">;
+                View Our Pricing;
+                <ArrowRight className="w-5 h-5 ml-2" />;
+              </Link>;
+              <Link
+                href="/contact"
+                className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300">;
+                Get Custom Quote;
+              </Link>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </div>;
+  );
+};
+
+
+export default MarketPricing;export default MarketPricing;
+
+
+export default MarketPricing;
+
 ];
   'ai - consciousness': {
   market_size: '$45.2B', growth_rate: '+28.4%', growth_trend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {

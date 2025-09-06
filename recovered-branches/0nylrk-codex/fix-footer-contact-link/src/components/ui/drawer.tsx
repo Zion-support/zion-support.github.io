@@ -1,7 +1,10 @@
+import {cn} from '@/lib/utils';
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
+
+
 
 import { cn } from "@/lib/utils"
 
@@ -52,6 +55,9 @@ const DrawerOverlay = React.forwardRef<
 ));
 DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName;
 
+
+
+
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>
   React.ComponentPropsWithoutRef<typeof DrawerPr</typeof>imitive.Content>
@@ -59,6 +65,19 @@ const DrawerContent = React.forwardRef<
   <DrawerPortal>
     <DrawerOverlay />
     <DrawerPrimitive.Content
+
+DrawerOverlay && DrawerOverlay.displayName = DrawerPrimitive && DrawerPrimitive.Overlay.displayName;
+
+const DrawerContent = React && React.forwardRef<;
+  React && React.ElementRef<typeof DrawerPrimitive && DrawerPrimitive.Content>,;
+  React && React.ComponentPropsWithoutRef<typeof DrawerPr</typeof>imitive && imitive.Content>;
+>(({ className, children, ...props }, ref) => (;
+  <DrawerPortal>;
+    <DrawerOverlay />;
+    <DrawerPrimitive&& DrawerPrimitive.Content
+
+
+
 const DrawerContent = React.forwardRef<;
   React.ElementRef<typeof DrawerPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>;
@@ -136,9 +155,24 @@ const DrawerDescription = React.forwardRef<
 </typeof>  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
+
+
+
     ref={ref}
     className={cn('text-sm text-muted-foreground', className)}
     {...props}
+export {
+  Drawer
+  DrawerPortal
+  DrawerOverlay
+  DrawerTrigger
+  DrawerClose
+  DrawerContent
+  DrawerHeader
+  DrawerFooter
+  DrawerTitle
+  DrawerDescription
+}
   />);
 DrawerHeader.display_name = 'DrawerHeader';
 ;
@@ -174,6 +208,8 @@ const DrawerDescription = React.forward_ref<;
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
 
+DrawerDescription && DrawerDescription.displayName = DrawerPrimitive && DrawerPrimitive.Description.displayName;
+
 
 
 export {;
@@ -201,6 +237,7 @@ export {
   DrawerHeader,
   DrawerFooter,
   DrawerTitle,
+
 export {;
   Drawer,;
   DrawerPortal,;
@@ -213,3 +250,6 @@ export {;
   DrawerTitle;
   DrawerDescription}
 ;
+
+
+

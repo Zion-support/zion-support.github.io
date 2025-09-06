@@ -53,6 +53,7 @@ export default function ComprehensivePricing2029() {
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -126,6 +127,7 @@ export default function ComprehensivePricing2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   },
   return (
     <div className="min-h-screen bg-black text-white relative">
@@ -142,6 +144,44 @@ export default function ComprehensivePricing2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+      <section className="relative overflow-hidden py-32">
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
+              2029 Comprehensive Pricing
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan 
+              for your business transformation journey.
+            </p>
+            {/* Billing Toggle */}
+              Transparent pricing for our revolutionary 2029 services. Choose the perfect plan
+              for your business transformation journey.
+            </p>
+            {/* Billing Toggle */}
+            {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
       <section className="relative overflow-hidden py-32">
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
@@ -205,6 +245,8 @@ export default function ComprehensivePricing2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
       <section className="py-12 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap justify-center gap-4">
@@ -270,6 +312,12 @@ export default function ComprehensivePricing2029() {
               Service Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {filteredServices.length} cutting-edge services available to transform your business. 
+              {filteredServices.length} cutting-edge services available to transform your business.
+
+
+
+
               Each service includes comprehensive features, support, and implementation.
             </p>
           </motion.div>
@@ -281,6 +329,8 @@ export default function ComprehensivePricing2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   <div className="text-center mb-6">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mb-4">
                       <Brain className="w-8 h-8 text-white" />
@@ -300,6 +350,8 @@ export default function ComprehensivePricing2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     </div>
                     <div className="text-sm text-gray-400">
                       {billingCycle === 'annual' && (
@@ -316,6 +368,8 @@ export default function ComprehensivePricing2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   <div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
@@ -362,6 +416,8 @@ export default function ComprehensivePricing2029() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   <div className="mb-6">
                     <h4 className="text-lg font-semibold text-white mb-3">Key Benefits</h4>
                     <ul className="space-y-2">
@@ -370,6 +426,8 @@ export default function ComprehensivePricing2029() {
                           <Star className="w-4 h-4 text-yellow-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
+
+
                   <div className="grid grid-cols-2 gap-4 mb-6 text-center">
                     <div>
                       <div className="text-gray-400 text-xs mb-1">Market Size</div>
@@ -380,6 +438,8 @@ export default function ComprehensivePricing2029() {
                       <div className="text-sm font-semibold text-green-400">{service.roi}</div>
                     </div>
                   </div>
+
+
                   <div className="flex gap-3">
                     <Link
                       href={`/services/${service.id}`} className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">
@@ -433,6 +493,10 @@ export default function ComprehensivePricing2029() {
               Enterprise Solutions
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Need a custom solution or enterprise package? We offer tailored solutions 
+              Need a custom solution or enterprise package? We offer tailored solutions
+
+
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
@@ -555,6 +619,38 @@ export default function ComprehensivePricing2029() {
       <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              Contact our team to discuss your specific needs and get a personalized quote 
+              Contact our team to discuss your specific needs and get a personalized quote
+
+
+      <section className="py-20 bg-gradient-to-br from-purple-900/20 via-black to-blue-900/20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -612,6 +708,7 @@ export default function ComprehensivePricing2029() {
         </div>
       </section>
     </div>
+  )
 
 }
 
@@ -661,5 +758,8 @@ export default function ComprehensivePricing2029() {
           </motion.div>;
         </div>;
       </section>;
+}
+    </div>);
+}
 
 

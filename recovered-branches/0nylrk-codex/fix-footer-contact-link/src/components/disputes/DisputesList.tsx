@@ -1,4 +1,8 @@
 
+
+
+
+
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -23,6 +27,29 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
+
+
+
+type DisputesListProps = {
+  disputes: Dispute[]
+  isLoading: boolean
+}
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+  const filteredDisputes = statusFilter === "all"
+    ? disputes
+    : disputes.filter(dispute => dispute.status === statusFilter);
+},
+
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {;
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
+export function DisputesList({ disputes, isLoading }: DisputesListProps) {
+  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all"),
+
+  const filteredDisputes = statusFilter === "all" 
+    ? disputes 
+    : disputes.filter(dispute => dispute.status === statusFilter),
+
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
@@ -70,6 +97,16 @@ function DisputesList() {
       default:;
         return "default";
     }
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+    )
+  }
+
+
+
               ))}
             </TableBody>;
           </Table>;

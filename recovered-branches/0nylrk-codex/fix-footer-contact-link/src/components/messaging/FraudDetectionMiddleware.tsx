@@ -1,3 +1,13 @@
+}
+// Interface for the context
+interface FraudDetectionContextType {
+  scanMessageContent: (
+  children: React.ReactNode;
+}
+
+
+
+
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -5,6 +15,9 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
+
+
+
 }
 ;
 // Interface for the context;
@@ -66,6 +79,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           };
       }
+
+
+      
+
+
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -80,15 +98,30 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
+      
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
+;
+      if (data.classification === 'dangerous') {;
+        toast({;
+          title: "Message Blocked",;
+          description: data.explanation || "This message contains prohibited content.",;
+          variant: "destructive";
+        }),;
+        return {;
+          isSafe: false,;
+          explanation: data.explanation;
+
+
         }
       }
       */
       // Message is considered safe
+}
+
 
         // If it's dangerous, show a warning to the user;
         if (quickCheck && quickCheck.severity === 'dangerous') {;
@@ -169,6 +202,10 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;
+
+
+
+
 };
 // Interface for the context;
 interface FraudDetectionContextType {

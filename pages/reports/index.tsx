@@ -1,3 +1,10 @@
+import { useEffect, useState  } from 'react';
+import { useEffect, useState } from 'react';
+
+
+import { useEffect, useState } from 'react';
+
+
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -16,6 +23,12 @@ export default function Reports() {
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
+  const [pagespeed, setPagespeed] = useState<any>({});
+  useEffect(() => {
+    Promise.all([
+
+
+
 
       fetch('/api/reports/uptime')
         .then(r => r.json())
@@ -62,6 +75,21 @@ export default function Reports() {
           ) : (;
             <div className='text-sm text-gray-500'>No data</div>;
           )}
+
+
+}
+      fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime),
+      fetch('/api/reports/seo').then((r) => r.json()).then(setSeo),
+      fetch('/api/reports/links').then((r) => r.json()).then(setLinks),
+      fetch('/api/reports/deps').then((r) => r.json()).then(setDeps),
+      fetch('/api/reports/changelog').then((r) => r.json()).then(setChangelog),
+
+        </div>;
+
+
+}
+
+
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
       fetch('/api/reports/links').then((r) => r.json()).then(setLinks);
@@ -203,5 +231,7 @@ function Reports() {
           <div className="font-medium mb-1">Changelog (weekly)</div>
           <div className="text-sm text-gray-600">Commits: {changelog?.totalCommits || 0}</div>
         </div>
+
+
 
 

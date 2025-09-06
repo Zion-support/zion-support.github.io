@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -7,6 +11,12 @@ interface TranslationResponse {
   translations: Record < SupportedLanguage, string>;
   error?: string;
 }
+
+
+
+export function useTranslationService() {;
+
+
   const [isTranslating, setIsTranslating] = useState(false);
   const { currentLanguage } = useLanguage();
   const translateContent = async (
@@ -115,6 +125,8 @@ export function useTranslationService() {;
         error: err instanceof Error ? err.message : 'Unknown translation error';
       }
     }
+
+
   }
 ;
   const get_translation = (translations: Record < SupportedLanguage, string>, fallback: string = '') =>: any {

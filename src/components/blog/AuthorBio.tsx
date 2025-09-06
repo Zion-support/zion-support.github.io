@@ -176,9 +176,3 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
   author.bio;
 }</p>;
 }'"}
-import React from 'react',;
-import type { BlogAuthor } from '@/types/blog',;
-;
-interface AuthorBioProps {;
-  author:BlogAuthor;
-}

@@ -1,9 +1,47 @@
-
+import { useRouter  } from 'next/router';
+import useSWR from 'swr',
+import React, { useMemo, useState } from 'react',
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import {useCurrentUser} from '../../utils/auth';
+export default function DisputeDetailPage() {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import {useRouter} from 'next/router';
+import useSWR from 'swr';
+import React, { useMemo, useState } from 'react';
+
+
+import {useRouter} from 'next/router';
+import useSWR from 'swr';
+import React, { useMemo, useState } from 'react';
+
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
 
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
 export default function DisputeDetailPage() {;
@@ -12,6 +50,15 @@ export default function DisputeDetailPage() {;
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
   const dispute = data?.dispute;
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
+import React, { useMemo, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import { useCurrentUser } from '../../utils/auth';
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export default function DisputeDetailPage(req, res) {
+  try {
+
     });
     setResolutionSummary ('');
     mutate ();  }
@@ -21,6 +68,53 @@ export default function DisputeDetailPage() {;
   const { id } = router.query as { id?: string };
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher);
   const user = useCurrentUser();
+
+
+  async function sendMessage() {
+    if (!message.trim() || !id) return;
+    await fetch(`/api/disputes/${id}/message`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ body: message }),
+    });
+    setMessage('');
+    mutate();  }
+
+  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {
+    if (!id) return;
+    await fetch(`/api/disputes/${id}/resolve`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ resolutionSummary, status }),
+    });
+    setResolutionSummary('');
+    mutate();  }
+
+  const dispute = data?.dispute;
+  const [activeTab, setActiveTab] = useState<'Overview' | 'Messages' | 'Attachments' | 'Admin Notes'>('Overview');
+  const [message, setMessage] = useState('');
+  const [resolutionSummary, setResolutionSummary] = useState('');
+  async function sendMessage() {;
+    if (!message.trim() || !id) return,;
+    await fetch(`/api/disputes/${id}/message`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ body: message }) }),;
+    setMessage('');
+    mutate();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  async function resolve(status?: 'Resolved' | 'Under Review' | 'Open') {;
+    if (!id) return,;
+    await fetch(`/api/disputes/${id}/resolve`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ resolutionSummary, status }) });
+    setResolutionSummary('');
+    mutate();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 
   return (
@@ -37,6 +131,9 @@ export default function DisputeDetailPage() {;
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Project</div>
               <div className="mt-1">{dispute.projectId}</div>
+
+
+
             </div>
             <div className="p-3 border rounded">
               <div className="font-medium text-gray-500">Client</div>
@@ -47,6 +144,8 @@ export default function DisputeDetailPage() {;
               <div className="mt-1">{dispute.talentUserId}</div>
             </div>
           </div>
+
+
           </div>
 
           {activeTab === 'Overview' && (
@@ -73,11 +172,15 @@ export default function DisputeDetailPage() {;
                       <div className="text-sm">{m.authorRole} messaged</div>
                     </li>
 
+
                     <li className="mb-6 ml-4">
                       <div className="absolute w-3 h-3 bg-green-600 rounded-full -left-1.5 border border-white" />
                       <time className="text-xs text-gray-500">{new Date(dispute.resolvedAt).toLocaleString()}</time>
                       <div className="text-sm">Case resolved</div>
                     </li>
+
+
+
 
           {activeTab === 'Messages' && (
             <div className="space-y-4">
@@ -87,6 +190,7 @@ export default function DisputeDetailPage() {;
                 ) : (
                   <ul className="space-y-3">
                     {dispute.messages.map((m: any) => (
+
 
                       <li key={m.id} className="text-sm">
                         <div className="text-gray-500 text-xs">{m.authorRole} • {new Date(m.createdAt).toLocaleString()}</div>
@@ -146,6 +250,9 @@ export default function DisputeDetailPage() {;
                         href={`/api/disputes/${encodeURIComponent(dispute && dispute.id)}/download?fileName=${encodeURIComponent(a && a.fileName)}`}>;
                         Download;
                       </a>                    </li>;
+
+
+
           {activeTab === 'Attachments' && (
             <div className="space-y-3">
               {dispute.attachments.length === 0 ? (
@@ -158,6 +265,18 @@ export default function DisputeDetailPage() {;
                         <div className="font-medium">{a.fileName}</div>
                         <div className="text-xs text-gray-500">{a.mimeType} • {(a.fileSize / 1024).toFixed(1)} KB</div>
                       </div>
+
+
+
+          {activeTab === 'Admin Notes' && (;
+            <div className='space-y-4'>;
+              {user && user.role !== 'admin' ? (;
+                <div className='text-sm text-gray-500'>;
+                  Admin access required;
+                </div>;
+              ) : (;
+                <div className='space-y-3'>;
+
                   <textarea
                     value={resolutionSummary}
                     onChange={e => setResolutionSummary(e && e.target.value)}
@@ -179,6 +298,10 @@ export default function DisputeDetailPage() {;
                       Resolve;
                     </button>                  </div>;
                 </div>;
+
+
+
+
                       <a className="text-blue-600 hover:underline" href={`/api/disputes/${encodeURIComponent(dispute.id)}/download?fileName=${encodeURIComponent(a.fileName)}`}>Download</Link>
                     </li>
                   ))  } catch (error) {
@@ -198,6 +321,9 @@ export default function DisputeDetailPage() {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
           {activeTab === 'Admin Notes' && (
             <div className="space-y-4">
               {user.role !== 'admin' ? (
@@ -210,6 +336,11 @@ export default function DisputeDetailPage() {;
                     <button onClick={() => resolve('Resolved')} className="px-3 py-2 rounded bg-green-600 text-white">Resolve</button>
                   </div>
                 </div>
+
+
+
+}
+
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

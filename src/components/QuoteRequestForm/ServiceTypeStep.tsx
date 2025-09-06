@@ -1,15 +1,3 @@
-}
-  )
-}
-;
-const listingsSchema = z.array(listingSchema),
-
-interface ServiceTypeStepProps {
-  formData: QuoteFormData,
-  updateFormData: (data: Partial<QuoteFormData>) => void
-}
-  );
-}
 const listing_schema = z.object ({
   id: z.string (),
   title: z.string (),

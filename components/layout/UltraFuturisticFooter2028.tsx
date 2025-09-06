@@ -1,3 +1,44 @@
+  Phone
+  Mail
+  MapPin
+  Globe
+  Rocket
+  Brain
+  Atom
+  Shield
+  Users
+  Briefcase
+  BookOpen
+  MessageCircle
+  Star
+  TrendingUp
+  Target
+  Layers
+  Cpu
+  Database
+  Cloud
+  Lock
+  ShieldCheck
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Sun
+  Moon
+  Wind
+  Droplets
+  Code;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom
+  Shield, Users, Briefcase, BookOpen, MessageCircle
+  Star, TrendingUp, Target, Layers, Cpu, Database
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car
 import { 
   Phone, Mail, MapPin, Globe, Rocket, Brain, Atom, 
   Shield, Users, Briefcase, BookOpen, MessageCircle, 
@@ -111,6 +152,12 @@ import {
   Sun,
   Moon,
   Wind,
+  Droplets,
+  Code,} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Rocket, Brain, Atom,
+  Shield, Users, Briefcase, BookOpen, MessageCircle,
+  Star, TrendingUp, Target, Layers, Cpu, Database,
+  Cloud, Lock, ShieldCheck, Heart, Leaf, Car,
   GraduationCap, Scale, Building, Factory, Camera;
   Video, Music, Gamepad2, Sun, Moon, Wind, Droplets;
   Code;
@@ -370,6 +417,28 @@ export default function UltraFuturisticFooter2028() {;
                     </Link>
                   </li>
                 ))}
+            {/* Resource Links */}
+            <div className='mb-6'>
+              <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
+              <ul className='space-y-2'>
+                {resourceLinks.map(link => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className='text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2'
+                    >
+                      <link.icon className='w-4 h-4' />                      <span>{link.name}</span>                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-sm text-purple-200 hover:text-white transition-colors hover:underline flex items-center space-x-2"
+                    >
+                      <link.icon className="w-4 h-4" />
+                      <span>{link.name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
               </ul>;
             </div>;
 
@@ -378,6 +447,7 @@ export default function UltraFuturisticFooter2028() {;
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>
               <p className='text-sm text-purple-200 mb-3'>
+
 
                 Get the latest insights on future technology and AI innovations.
               </p>
@@ -460,5 +530,25 @@ export default function UltraFuturisticFooter2028() {;
           <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />;
         </Link>;
       </div>;
+      {/* Background Effects */}
+
+}
+}
+}
+      <div className='absolute inset-0 pointer-events-none'>;
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl'></div>;
+      </div>;
+    </footer>;
+  );      <div className="absolute inset-0 pointer-events-none">;
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>;
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>;
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-full blur-2xl"></div>;
+      </div>;
+    </footer>;
+  );
+}
+
       {/* Background Effects */}
 }

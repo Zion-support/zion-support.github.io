@@ -32,4 +32,3 @@ export default function CommunityProfilePage({ }: CommunityProfilePageProps) {
     </div>
   );
 }
-}

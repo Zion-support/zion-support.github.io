@@ -1,7 +1,14 @@
+export interface TokenSet {
+
+export interface TokenSet {;
   colors: Record<string, string>;
   typography: Record<string, any>;
   spacing: Record<string, number>;
 }
+  components: Record<string, any>;
+export interface UIKit {
+
+export interface UIKit {;
   components: Record<string, any>;
 
 
@@ -178,3 +185,11 @@ export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < U
           padding: tokens.spacing.md;
         }
       }
+}
+  };
+
+}
+    },
+    tokens;
+  }
+}

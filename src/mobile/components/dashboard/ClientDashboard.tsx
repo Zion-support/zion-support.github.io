@@ -22,10 +22,6 @@ export function ClientDashboard() {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="font-medium">Website Redesign</h3>
-                  <div className="text-sm text-muted-foreground">In Progress  Due in 12 days</div>
-                </div>
-                <Badge>3 Milestones</Badge>
-              </div>
                   <span className="font-medium">60%</span>
                 </div>
                 <div className="h-2 bg-primary/20 rounded-full overflow-hidden">
@@ -66,27 +62,6 @@ export function ClientDashboard() {
                   Figma
                 </Badge>
                 <Badge variant='outline' className='text-xs'>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className='p-4'>
-              <div className='flex justify-between'>
-                <div className='flex items-center gap-3'>
-                  <div className='w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center'>
-                    <UserCheck className='h-6 w-6 text-primary' />
-                  </div>
-                  <div>
-                    <h3 className='font-medium'>Michael Chen</h3>
-                    <p className='text-sm text-muted-foreground'>
-                      Full Stack Dev  8 years exp
-                    </p>
-                  </div>
-                </div>
-                <div className='bg-primary/10 text-primary font-medium self-start rounded-full px-2 py-1 text-xs'>
-                  89% match
-                </div>
-              </div>
                 <Badge variant="outline" className="text-xs">React</Badge>
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>

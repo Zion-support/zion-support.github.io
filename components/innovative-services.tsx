@@ -216,6 +216,22 @@ import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBac
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+export default function InnovativeServicesPage() {;
+
+  innovativeMicroSaasServices,
+  getInnovativeServicesByCategory,
+  getPopularInnovativeServices,
+  getInnovativeServicesByPriceRange,;
+  getInnovativeServiceCategories,;
+} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+export default function InnovativeServicesPage() {;
+
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -412,16 +428,52 @@ if ( {) {
 
                         <option key={category.name} value={category.name}>
 
+
+
                           {category.name} ({category.count})
                         </option>
                       ))}
                   {/* Price Range Filter */}
 
 
+                    <select
+                      value={priceRange}
+                      onChange={e => setPriceRange(e.target.value)}
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    >
+                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>                    <select
+                      value={priceRange}
+                      onChange={(e) => setPriceRange(e.target.value)}
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      {priceRanges.map((range) => (
+                        <option key={range.value} value={range.value}>
+                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
+
+                        <option key={range.value} value={range.value}>
+
+
                           {range.label}
                         </option>
                       ))}
                   {/* Sort Options */}
+
+
+                    <select
+                      value={sortBy}
+                      onChange={e => setSortBy(e.target.value)}
+                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
+                    >
+                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>                    <select
+                      value={sortBy}
+                      onChange={(e) => setSortBy(e.target.value)}
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      {sortOptions.map((option) => (
+                        <option key={option.value} value={option.value}>
+                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
+
+                        <option key={option.value} value={option.value}>
 
 
                           {option.value}
@@ -454,6 +506,7 @@ if ( {) {
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
+
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -518,6 +571,8 @@ if ( {) {
                             <div className="text-xs text-gray-400">average ROI</div>;
                         </div>;
                             )}
+
+
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -648,6 +703,9 @@ if ( {) {
                   <Button
                     href={`tel:${contactInfo && contactInfo.mobile}`}
                     variant="primary"
+
+
+
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -899,4 +957,5 @@ if ( {) {
   );
 
     </>);
+}
 }

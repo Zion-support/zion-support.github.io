@@ -2,6 +2,7 @@
     <div>;
       <h1 className="text - 2xl font - semibold mb - 4">SEO Landing Pages</h1>;
       {slugs.length === 0 ? (
+
 }
         <div className="text - sm text - gray - 500">Generated pages will appear once deployed.</div>) : (
         <ul className="list - disc ml - 5">;

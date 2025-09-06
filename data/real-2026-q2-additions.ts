@@ -1,6 +1,32 @@
 
 export const real2026Q2Additions = [
   {
+
+
+      'Jira',
+      'ServiceNow',
+      'Slack',
+      'GitHub',
+      'Azure OpenAI',
+      'Vertex AI',
+      'Datadog',
+    ],
+    competitors: ['Monitaur', 'CalypsoAI', 'Credo AI'],
+    price: '$2, 500',
+    period: '/month',
+
+    trial_days: 14,
+    setup_time: 'Fast',
+    market_position: 'Strong enterprise traction with compliance - led buyers',
+    roi: 'Reduce audit prep by 60% and non - compliance risk by 40%',
+    link: 'https://ziontechgroup.com / services / ai - governance - compliance - hub',
+
+  },
+export const real2026Q2Additions = [
+  {
+
+export const real2026Q2Additions = [
+  {
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
@@ -338,6 +364,12 @@ export const real2026Q2Additions = [
     integrations: ['Azure AD', 'Okta', 'Slack', 'ServiceNow'],
     competitors: ['Atera', 'NinjaOne'],
     price: '$4',
+
+    roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',;
+    link: 'https://ziontechgroup.com/services/msp-remote-device-ops',;
+  },;
+
+
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
 
     id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
@@ -369,6 +401,9 @@ export const real2026Q2Additions = [
     marketPosition: 'Cost-effective RMM for partners and IT teams';
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%'
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops'
+  }
+];
+
     period: '/device / month';
     trial_days: 14;
     setup_time: 'Fast';
@@ -577,8 +612,6 @@ export const real2026Q2Additions = [;
     marketPosition: 'Cost-effective RMM for partners and IT teams',;
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%';
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops';
-
-
   }
 ];
 export const real2026Q2Additions = [;

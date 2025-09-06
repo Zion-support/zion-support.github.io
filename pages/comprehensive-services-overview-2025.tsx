@@ -4,6 +4,7 @@
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
+
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -51,6 +52,20 @@ export default function ComprehensiveServicesOverviewPage() {
     })
     .sort((a, b) => {
       switch (sortBy) {
+
+
+    return sum + (marketSize ? parseFloat(marketSize[1]) : 0)
+  }, 0)
+  const averageROI = allServices.reduce((sum, service) => {
+    const roi = service.roi.match(/(\d+)%/)
+    return sum + (roi ? parseInt(roi[1]) : 0)
+
+  }, 0) / allServices.length;
+
+  const totalCustomers = allServices.reduce((sum, service) => sum + service.customers, 0);
+
+
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -141,6 +156,8 @@ export default function ComprehensiveServicesOverviewPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
@@ -603,6 +620,8 @@ function ComprehensiveServicesOverviewPage() {
                 >;
                   <span>{category.icon}</span>;
                   {category.name}
+
+
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             {viewMode === 'grid' ? (
@@ -640,6 +659,8 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     >
                       {/* Popular Badge */}
@@ -655,6 +676,8 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                       <div className="p-6">
                         <div className="flex items-start justify-between mb-4">
                           <div className="text-4xl">{service.icon}</div>
@@ -665,6 +688,8 @@ function ComprehensiveServicesOverviewPage() {
                         </div>
                         <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                         <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
+
+
                         <div className="space-y-2 mb-6">
                           {service.features.slice(0, 3).map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
@@ -686,6 +711,8 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
                             <div className="text-lg font-bold text-blue-400">{service.rating}</div>
@@ -711,12 +738,16 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                           target="_blank"
                           rel="noopener noreferrer"
                           className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                         >
                           Learn More
                           <ExternalLink className="w-4 h-4" />
+
+
                       </div>
                     </motion.div>
                   ))}
@@ -736,6 +767,8 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                         <div className="flex-shrink-0">
                           <div className="text-6xl mb-4">{service.icon}</div>
                           {service.popular && (
@@ -756,6 +789,8 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-4">
                             <div>
@@ -773,12 +808,16 @@ function ComprehensiveServicesOverviewPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                           <div className="grid grid-cols-2 gap-2 mb-4">
                             {service.features.slice(0, 6).map((feature, idx) => (
                               <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                 <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                                 <span className="truncate">{feature}</span>
                               </div>
+
+
                           <div className="flex items-center gap-6 text-sm text-white/60">
                             <div className="flex items-center gap-2">
                               <Star className="w-4 h-4 text-yellow-400" />
@@ -794,6 +833,8 @@ function ComprehensiveServicesOverviewPage() {
                             </div>
                           </div>
                         </div>
+
+
                         <div className="flex-shrink-0 flex flex-col items-end gap-4">
                           <div className="text-right">
                             <div className="text-sm text-white/60 mb-1">Category</div>
@@ -803,6 +844,8 @@ function ComprehensiveServicesOverviewPage() {
                             </div>
                           </div>
                           <a
+
+
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-6 rounded-xl font-medium hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2"
@@ -814,6 +857,8 @@ function ComprehensiveServicesOverviewPage() {
               <motion.div;
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+
+
                 className="text-center py-20"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -828,6 +873,8 @@ function ComprehensiveServicesOverviewPage() {
               whileInView={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+
+
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -844,6 +891,8 @@ function ComprehensiveServicesOverviewPage() {
                   >
                     Contact Sales Team
                     <ArrowRight className="w-5 h-5" />
+
+
                   <a
                     href="tel:+13024640950"
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
@@ -857,6 +906,12 @@ function ComprehensiveServicesOverviewPage() {
         </section>
       </div>
     </>
+  )
+              className="text-center";
+
+}
+
+              className="text - center";
             >;
               <div className="bg - gradient - to - r from - blue - 600 / 20 to - cyan - 600 / 20 rounded - 3xl p - 12 border border - blue - 500 / 30">;
                 <h2 className="text - 3xl font - bold text - white mb - 4">;
@@ -891,6 +946,8 @@ function ComprehensiveServicesOverviewPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+    </>);
 }
 
 

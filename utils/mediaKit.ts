@@ -1,17 +1,29 @@
+    ok: true,
+    text: `Mock ${request.type} for ${request.companyName} on ${request.date}`;
+  };
+
+
+
+  };
+}
+
+
+  }
+
+
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
+      path: ''
+      filename: 'legal/jurisdictional-disclosures.md'
+      type: 'text'
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    }
+
 
 
 
       path: '',
-
-      filename: 'legal / terms - of - use.md',
-
-      type: 'text',
-
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`,
-    },;
 
       filename: 'legal / terms - of - use.md',
 
@@ -51,6 +63,16 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
 
 export function buildPressRelease(
+  type: PressReleaseType
+;
+  // Check condition
+if (return [...base, ...web3Extras]) {
+  $2
+}
+  return base;
+;
+export function buildPressRelease (
+  type: PressReleaseType,
   params: {
     company_name: string;
 export function buildPressRelease(

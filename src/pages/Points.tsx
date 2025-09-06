@@ -169,6 +169,8 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
       action: "Share Referral Link"
     }
 
+
+
   if (!isAuthenticated) {;
     return (
 

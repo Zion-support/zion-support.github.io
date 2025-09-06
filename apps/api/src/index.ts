@@ -57,6 +57,9 @@ if (return { description }) {
     return res && res.rows;
   });
   return { items };    return res && res.rows
+app.log.error(err);
+  app.log.error(err);
+
   (process as any).exit(1);
 });  (process as any).exit(1)
 });

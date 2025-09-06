@@ -232,6 +232,9 @@ import Link from 'next/link';
                             animate={{ opacity: 1, y: 0, scale: 1 }}
                             exit={{ opacity: 0, y: 10, scale: 0.95 }}
                             transition={{ duration: 0.2 }}
+
+
+
                           >
                             <div className='grid grid-cols-1 gap-3'>
                               {item.dropdown.map(dropdownItem => {
@@ -411,6 +414,8 @@ import Link from 'next/link';
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={() => setIsOpen(false)}
             />
+            
+
 
             {/* Mobile Menu */}
             <motion&& motion.div
@@ -548,6 +553,9 @@ import Link from 'next/link';
                   <div className='space-y-2 text-sm'>
                     <div className='flex items-center space-x-2 text-gray-300'>
                       <Phone className='w-4 h-4 text-cyan-400' />
+
+
+
                       <span>{contactInfo.mobile}</span>
                     </div>
                     <div className='flex items-center space-x-2 text-gray-300'>
@@ -598,6 +606,7 @@ import Link from 'next/link';
                     </div>;
                   </div>;
                 </div>;
+
 export default Navigation;
 
 
@@ -691,3 +700,8 @@ export default Navigation);
 export default Navigation;
 ;
   );
+export default Navigation;  )
+}
+export default Navigation;
+
+export default Navigation;

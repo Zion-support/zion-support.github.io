@@ -3,6 +3,74 @@ import { motion } from 'framer-motion';
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
+import {
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Phone
+  Zap
+  DollarSign
+  Shield
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Sparkles
+  Globe
+  Atom
+  Heart
+  Leaf
+  Car
+  GraduationCap
+  Scale
+  Building
+  Factory
+  Camera
+  Video
+  Music
+  Gamepad2
+  Crown
+  Award
+  Target
+  Users
+  Clock
+  Globe2;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
+
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Crown,
+  Award,
+  Target,
+  Users,
+  Clock,;
+  Globe2,;} from 'lucide-react';import {
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
@@ -347,6 +415,7 @@ const service_pricing = [;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
                     <Link
                       href={tier && tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
@@ -391,6 +460,17 @@ const service_pricing = [;
                     viewport={{ once: true }}
 
 
+                          <Link
+                            href={service.link}
+                            className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
+                          >
+                            Learn More
+                          </Link>
+                          <div className="text-right">
+                            <div className="text-xs text-purple-300">Trial</div>
+                            <div className="text-white font-medium">{service.trialDays} days</div>
+
+
                           </div>
                         </div>
                       </div>
@@ -400,6 +480,16 @@ const service_pricing = [;
               </div>;
             </div>;
           ))}
+      {/* Value Proposition */}
+      <section className='py-20 bg-black/50'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-16'>
+            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              Why Choose{' '}
+              <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                Our Pricing
+              </span>
+
 
 
 
@@ -520,10 +610,12 @@ const service_pricing = [;
 
 
 
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
               viewport={{ once: true }}
+
 
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
@@ -572,6 +664,7 @@ const service_pricing = [;
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+
 
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
@@ -622,6 +715,7 @@ const service_pricing = [;
               transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
+
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -653,6 +747,7 @@ const service_pricing = [;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -792,6 +887,48 @@ const service_pricing = [;
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
 }
+    </>;
+);
+}
+            <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
+              Join hundreds of companies already leveraging our futuristic;
+              services to gain competitive advantages and drive innovation.;
+            </p>;
+            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - xl hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - purple - 500 / 25 flex items - center space - x-2';
+              >;
+                <span > Start Free Trial</span>;
+                <ArrowRight className='w - 5 h - 5' />;
+              </Link>;
+              <Link;
+                href='/contact';
+                className='px - 8 py - 4 border border - purple - 500 / 30 text - purple - 300 rounded - xl hover:bg - purple - 900 / 30 transition - all duration - 300 flex items - center space - x-2';
+              >;
+                <span > Schedule Demo</span>;
+                <Clock className='w - 5 h - 5' />;
+              </Link>;
+            </div>;
+            <div className='flex items - center justify - center space - x-8 text - purple - 300'>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 30 - Day Free Trial</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
+                <span > No Credit Card Required</span>;
+              </div>;
+              <div className='flex items - center space - x-2'>;
+                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > Cancel Anytime</span>              <div className="flex items - center space - x-2">;
+                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
+                <span > Cancel Anytime</span>;
+              </div>;
+            </div>;
+          </motion.div>;
+        </div>;
+      </section>;
+      <UltraFuturisticFooter2028 />;
+    </>);
 
   );
 

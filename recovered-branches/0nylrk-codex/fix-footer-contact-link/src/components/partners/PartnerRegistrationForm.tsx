@@ -1,4 +1,7 @@
 
+
+
+
 import {useState} from "react";
 import {z} from "zod";
 import {useForm} from "react-hook-form";
@@ -12,6 +15,9 @@ import {Textarea} from "@/components/ui/textarea";
 import {toast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
+
+
+
 import { useState } from "react",
 import { z } from "zod",
 import { useForm } from "react-hook-form",
@@ -25,6 +31,9 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
 import { supabase } from "@/integrations/supabase/client",
+
+
+
 const partnerFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   website: z.string().url({ message: "Please enter a valid URL." }).optional().or(z.literal("")),
@@ -68,6 +77,12 @@ export function PartnerRegistrationForm() {
         description: "You must be logged in to register as a partner."
         variant: "destructive"})
       return
+          }
+        ])
+        .select();
+      if (error) throw error;
+
+
 import { useState } from "react",;
 import { z } from "zod",;
 import { useForm } from "react-hook-form",;
@@ -155,6 +170,7 @@ export function PartnerRegistrationForm() {;
         .from('partner_profiles');
         .insert([;
           {;
+
           }
         ]);
         .select();
@@ -175,6 +191,64 @@ export function PartnerRegistrationForm() {;
       if (error) throw error,;
 
     }
+
+              twitter: data.twitter || null,
+              instagram: data.instagram || null,
+              youtube: data.youtube || null,
+              linkedin: data.linkedin || null},
+            niche: data.niche,
+            audience_size: data.audience_size,
+            payout_method: data.payout_method,
+            bio: data.bio,
+            status: 'pending', // Partners need approval;
+          }
+        ]);
+        .select ();
+;
+      // Check condition
+if (throw error) {
+  $2
+}
+      toast ({
+        title: "Application submitted!",
+        description: "Your partner application has been submitted for review.",
+        variant: "default"}),
+      // Create a referral code if they don't have one already;
+      const { data: existing_code } = await supabase;
+        .from ('referral_codes');
+        .select ('code');
+        .eq ('user_id', user.id);
+        .single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        await supabase.rpc ('generate_referral_code', { user_id: user.id });
+      }
+    } catch (error: any) {
+      console.error ('Error submitting partner application:', error);
+      toast ({
+        title: "Submission failed",
+        description: error.message || "There was a problem submitting your application.",
+        variant: "destructive"});
+    } finally {
+      setIsSubmitting (false);
+    }
+  }
+  return (
+    <Card className="bg - zion - blue - dark border - zion - blue - light">;
+      <CardHeader>;
+        <CardTitle > Partner Registration</CardTitle>;
+        <CardDescription > Register to become a Zion AI partner and start earning rewards</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <form on_submit={form.handle_submit (on_submit)} className="space - y-6">;
+            <div className="space - y-4">;
+              <FormField;
+
+
                 control={form.control}
                 name="name";
                 render={({ field }) => (
@@ -366,12 +440,15 @@ export function PartnerRegistrationForm() {;
                         placeholder="Tell us about yourself and how you plan to promote Zion AI";
                         rows={4}
                         {...field}
+
                       />;
                     </FormControl>;
                     <FormDescription>;
                       Limit: 500 characters;
                     </FormDescription>;
                     <FormMessage />;
+
+
               className="w-full bg-zion-purple hover:bg-zion-purple-dark"
               disabled={isSubmitting}>;
               {isSubmitting ? "Submitting..." : "Submit Application"}
@@ -395,3 +472,7 @@ export function PartnerRegistrationForm() {;
       </CardContent>
     </Card>
   )
+};
+}
+
+

@@ -568,6 +568,10 @@ export const advancedEmergingTechServices2025 = [
     targetAudience:
       'Gaming companies, virtual reality firms, entertainment companies, technology startups'
     competitiveAdvantage:
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
+  }
+      'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration',
+  },;
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }

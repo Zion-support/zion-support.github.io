@@ -1,3 +1,19 @@
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+
+import { Award } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Award } from "lucide-react",
+
   Card,
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
@@ -25,6 +41,11 @@ interface LeaderboardEntry {
           {leaderboard_data.map ((entry) => (
             <div;
               key={entry.rank}
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Award } from "lucide-react",;
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Award} from "lucide-react";
 interface LeaderboardEntry {;
   rank: number,;
   name: string,;
@@ -70,6 +91,22 @@ export function ReferralLeaderboard() {;
                     entry.rank === 1;
                       ? "bg - yellow - 200 text - yellow - 800";
                       : entry.rank === 2;
+                        ? "bg - slate - 200 text - slate - 800";
+                        : entry.rank === 3;
+                          ? "bg - amber - 200 text - amber - 800";
+                          : "bg - muted text - muted - foreground";
+
+                <div
+                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
+                    entry.rank === 1
+                      ? "bg-yellow-200 text-yellow-800"
+                      : entry.rank === 2
+
+                      ? "bg-slate-200 text-slate-800"
+                      : entry.rank === 3
+                      ? "bg-amber-200 text-amber-800"
+                      : "bg-muted text-muted-foreground"
+
                   }`}
                 >;
                   {entry.rank}
@@ -94,6 +131,12 @@ export function ReferralLeaderboard() {;
               </span>;
             </div>;
           ))}
+        </div>;
+      </CardContent>;
+    </Card>;
+  );
+}
+
               </span>;
             </div>))}
         </div>;
@@ -104,3 +147,4 @@ export function ReferralLeaderboard() {;
   )
 }
 ;
+

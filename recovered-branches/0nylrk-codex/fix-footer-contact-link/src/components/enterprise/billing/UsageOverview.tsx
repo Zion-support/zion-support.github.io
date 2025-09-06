@@ -1,9 +1,32 @@
 
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Progress } from "@/components/ui/progress",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+
+
+
 export function UsageOverview() {
   // Mock usage data
 
   const usage = {
     jobPosts: {
+      used: 32,
+      total: 100,
+      percentage: 32;
+    };
+      percentage: 32
+    }
+    },
+
+
+      used: 32,
+      total: 100,
+
+
     interviews: {
       used: 45
       total: 150
@@ -18,6 +41,8 @@ export function UsageOverview() {
       percentage: 24
 
   return (
+}
+
 
 
 
@@ -89,6 +114,10 @@ export function UsageOverview() {;
           </TabsContent>;
         </Tabs>;
       </CardContent>;
+
+
+
+
 }
     </Card>);
 }

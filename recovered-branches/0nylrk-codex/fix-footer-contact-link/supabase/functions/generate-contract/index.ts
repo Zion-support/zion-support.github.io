@@ -1,6 +1,5 @@
 
 
-
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts"
 const corsHeaders = {
@@ -10,10 +9,13 @@ interface Milestone {
   description: string;
   dueDate: string
   estimatedHours: number
+
+
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -24,12 +26,27 @@ interface Milestone {
   description: string,
   dueDate: string,
   estimatedHours: number
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'},;
+interface Milestone {;
+  title: string,;
+  description: string,;
+  dueDate: string,;
+  estimatedHours: number;
+
+
 }
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
   }
+
+
+
+
 
   try {
     // Get the OpenAI API key from environment variables
@@ -49,6 +66,9 @@ serve(async (req) => {
       paymentAmount;
       additionalClauses;
       milestones
+
+
+
 ;
   try {;
     // Get the OpenAI API key from environment variables;
@@ -73,6 +93,9 @@ serve(async (req) => {
     // Create the contract prompt for OpenAI;
     let prompt = `;
     Please generate a professional contractual agreement between ${clientName} (Client) and ${talentName} (Talent) for the following project:;
+
+
+
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
@@ -101,6 +124,7 @@ serve(async (req) => {
         messages: [
           {
             role: 'system'
+;
         Milestone ${index + 1}: ${milestone.title}
         - Description: ${milestone.description}
         - Due Date: ${new Date(milestone.dueDate).toLocaleDateString()}

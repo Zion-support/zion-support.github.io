@@ -1,4 +1,10 @@
 
+
+import {useState, useMemo} from 'react';
+import {TalentProfile} from '@/types/talent';
+export function useFilterTalents(talents: TalentProfile[]) {;
+
+
   const [searchTerm, setSearchTerm] = useState('');
 
   const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
@@ -33,6 +39,9 @@
     let result = [...talents];
     // Filter by search term
     if (searchTerm) {
+
+
+
     }
     // Filter by selected skills
     if (selectedSkills.length > 0) {
@@ -48,12 +57,23 @@
         )
       )
     }
+
+
+    
+
+
     // Filter by price range
       return years >= experienceRange[0] && years <= experienceRange[1]
     });
     // Sort talents
     switch (sortOption) {
       case 'price-low':
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+
+        result && result.sort((a, b) => (a && a.hourly_rate || 0) - (b && b.hourly_rate || 0));
+
+        result.sort((a, b) => (a.hourly_rate || 0) - (b.hourly_rate || 0));
+
 ;
     // Filter by price range;
     result = result.filter(talent => {;
@@ -80,6 +100,9 @@
         result.sort((a, b) => (b.years_experience || 0) - (a.years_experience || 0)),;
         break,;
       default: // Default sorting by relevance (no specific order);
+
+
+
         break;
       case 'price-high':
         result && result.sort((a, b) => (b && b.hourly_rate || 0) - (a && a.hourly_rate || 0));
@@ -92,6 +115,11 @@
       default: // Default sorting by relevance (no specific order)
         break
     }
+
+
+    
+
+
     return result
   }, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]);
   return {
@@ -108,6 +136,9 @@
     sortOption;
     setSortOption;
     toggleSkill;
+
+
+
     toggleAvailability;
     toggleRegion;
 

@@ -1,8 +1,17 @@
+export interface MarketTrend {
+export interface MarketTrend {;
+  id: string;
+  keyword: string;
+  searchVolume: number;
+  trendDirection: 'rising' | 'falling' | 'stable';
+  growthRate: number;
+  relatedKeywords: string[];
 
   marketOpportunity: 'high' | 'medium' | 'low'
 
   timestamp: Date
 }
+export interface CompetitorAnalysis {
   id: string;
   competitor_name: string;
   website: string;
@@ -16,6 +25,7 @@
   socialMediaPresence: Record < string, number>;
   last_updated: Date;
 }
+export interface MarketSegment {
   id: string;
   name: string;
   size: number;
@@ -26,20 +36,32 @@
   pain_points: string[],
   solutions: string[];
 }
+export interface MarketReport {
   id: string;
   title: string;
   industry: string;
   summary: string;
+export interface MarketResearchRequest {
   industry: string;
   target_market: string;
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive';
   timeframe: '7d' | '30d' | '90d' | '1y';
 
+export interface MarketResearchResponse {
   success: boolean;
   data: {
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
 
+export class AIMarketResearchService {
+
+export class AIMarketResearchService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
   }
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
@@ -127,6 +149,76 @@
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key');
 
+  id: string,;
+  keyword: string,;
+  searchVolume: number,;
+  trendDirection: 'rising' | 'falling' | 'stable',;
+  growthRate: number,;
+  relatedKeywords: string[],;
+  marketOpportunity: 'high' | 'medium' | 'low',;
+  timestamp: Date;
+}
+;
+export interface CompetitorAnalysis {;
+  id: string,;
+  competitorName: string,;
+  website: string,;
+  marketShare: number,;
+  strengths: string[],;
+  weaknesses: string[],;
+  opportunities: string[],;
+  threats: string[],;
+  pricingStrategy: string,;
+  featureComparison: Record<string boolean>,;
+  socialMediaPresence: Record<string number>,;
+  lastUpdated: Date;
+}
+;
+export interface MarketSegment {;
+  id: string,;
+  name: string,;
+  size: number,;
+  growthRate: number,;
+  demographics: Record<string any>,;
+  psychographics: Record<string any>,;
+  buyingBehavior: Record<string any>,;
+  painPoints: string[],;
+  solutions: string[];
+}
+;
+export interface MarketReport {;
+  id: string,;
+  title: string,;
+  industry: string,;
+  summary: string,;
+  keyFindings: string[],;
+  marketSize: number,;
+  growthProjection: number,;
+  recommendations: string[],;
+  dataSources: string[],;
+  generatedAt: Date,;
+  expiresAt: Date;
+}
+;
+export interface MarketResearchRequest {;
+  industry: string,;
+  targetMarket: string,;
+  researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive',;
+  timeframe: '7d' | '30d' | '90d' | '1y',;
+  includeHistoricalData: boolean,;
+  customMetrics?: string[];
+}
+;
+export interface MarketResearchResponse {;
+  success: boolean,;
+  data: {;
+    trends?: MarketTrend[],;
+    competitors?: CompetitorAnalysis[],;
+    segments?: MarketSegment[],;
+
+export const aiMarketResearchService = new AIMarketResearchService(process && process.env.MARKET_RESEARCH_API_KEY || 'demo-key');
+
+    segments?: MarketSegment[],
     report?: MarketReport;
   }
   insights: string[];

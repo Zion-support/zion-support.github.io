@@ -426,6 +426,7 @@ if ( {) {
           y2;
       }
 
+
   // Mouse move handler for interactive effects
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -537,10 +538,33 @@ if ( {) {
           animate={{
           }}
           transition={{
+            rotate: [0, 180, 360];
+            opacity: [0.2, 0.5, 0.2];
+
+          }}
+          transition={{
+            duration: 12,
+            repeat: -1,
+
+
+          }}
+
+        />;
+      </div>;
+
+
+      {/* Energy waves */}
+
+
+            duration: 6,
+            repeat: -1,
+
           }}
         />
       </div>
       {/* Energy waves */}
+
+
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
@@ -604,6 +628,8 @@ if ( {) {
           }}
             duration: 20,
             repeat: -1,
+            duration: 20,
+            repeat: -1,
         />
       </div>
         />;
@@ -625,6 +651,22 @@ if ( {) {
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
 
+            transition={{
+              duration: 3
+              delay: i * 0.1
+              repeat: -1
+
+            transition={{
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
 
 
             transition={{
@@ -705,15 +747,28 @@ export default UltraFuturisticBackground2034;        <motion.div;
 
 };
 
+export default UltraFuturisticBackground2034;        <motion.div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
+export default UltraFuturisticBackground2034;        <motion&& motion.div
+          className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0 && 0.1)_1px,transparent_1px)]"
+
           style={{
             backgroundSize: '50px 50px'
           }}
           animate={{
+            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           }}
           transition={{
 
             duration: 4
             repeat: -1
+export default UltraFuturisticBackground2034;
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: -1,
+
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />;
@@ -723,4 +778,15 @@ export default UltraFuturisticBackground2034;        <motion.div;
 
 
 };
+
+
+          }}
+          transition={{
+            duration: 4,
+            repeat: -1,
+
+          }}
+        />
+      </div>
+    </div>
 

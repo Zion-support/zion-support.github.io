@@ -1,3 +1,7 @@
+import {cn} from '@/lib/utils';
+
+"use client"
+"use client"
 
 import * as React from "react"
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox"
@@ -31,3 +35,7 @@ const Checkbox = React && React.forwardRef<;
       <Check className="h-3 w-3" />
     </CheckboxPrimitive.Indicator>
   </CheckboxPrimitive.Root>
+export { Checkbox };
+export { Checkbox }
+;
+

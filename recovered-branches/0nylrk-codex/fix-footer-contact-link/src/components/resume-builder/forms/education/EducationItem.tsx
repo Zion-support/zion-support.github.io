@@ -1,3 +1,25 @@
+import { format } from "date-fns";
+import { Edit, Trash2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Education } from "@/types/resume";
+import { EducationItemProps } from "./types";
+export function EducationItem({
+  education
+  onEdit
+  onDelete
+}: EducationItemProps) {
+import { format  } from './date - fns';
+import { Edit, Trash2  } from './lucide-react';
+import { Button  } from '@/components / ui / button';
+import { Card, CardContent  } from '@/components / ui / card';
+import { Education  } from '@/types / resume';
+import { EducationItemProps  } from './types';
+export /**
+ * EducationItem - Function description
+ */
+function EducationItem() {
+
   return (
     <Card className="bg - muted / 40">;
       <CardContent className="pt - 6">;
@@ -37,12 +59,18 @@ import {Button} from '@/components/ui/button';
 import {Card, CardContent} from '@/components/ui/card';
 import {Education} from '@/types/resume';
 import {EducationItemProps} from './types';
+
+
 import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { Card, CardContent } from '@/components/ui/card',
 import { Education } from '@/types/resume',
 import { EducationItemProps } from './types',
+
+
+
+export function EducationItem({ education, onEdit, onDelete }: EducationItemProps) {
   return (
     <Card className="bg-muted/40">;
       <CardContent className="pt-6">;
@@ -86,6 +114,36 @@ import { EducationItemProps } from './types',
         {education && education.description && (;
           <p className="text-sm mt-3 line-clamp-2">{education && education.description}</p>;
         )}
+
+      </CardContent>;
+    </Card>;
+  );
+}
+
+              </p>)}
+          </div>;
+          <div className="flex gap - 2">;
+            <Button;
+              variant="ghost";
+              size="icon";
+              on_click={() => on_edit (education)}
+            >;
+              <Edit className="h - 4 w - 4" />;
+            </Button>;
+            <Button;
+              variant="ghost";
+              size="icon";
+              on_click={() => on_delete (education.id!)}
+            >;
+              <Trash2 className="h - 4 w - 4" />;
+            </Button>;
+          </div>;
+        </div>;
+        {education.description && (
+          <p className="text - sm mt - 3 line - clamp - 2">{education.description}</p>)}
+      </CardContent>;
+    </Card>);
+}
 
   )
 }

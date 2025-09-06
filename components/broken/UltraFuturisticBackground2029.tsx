@@ -174,6 +174,30 @@ if ( {) {
 
           }}
           transition={{
+            duration: 20
+            repeat: Infinity
+            duration: 20,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut";
+          }}
+        />
+      </div>
+            duration: 20,
+            repeat: Infinity,
+
+          }}
+
+        />
+      </div>
+
+
+            duration: 20,
+            repeat: Infinity,
+
+
+            duration: 20,
+            repeat: Infinity,
+
       {/* Floating geometric shapes */}
       <motion&& motion.div
         className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
@@ -199,6 +223,13 @@ if ( {) {
       <motion.div
         className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
         animate={{
+          duration: 12
+          repeat: Infinity
+          duration: 12,
+          repeat: Infinity,
+          rotate: [0, 360];
+          scale: [1, 1.1, 1];
+
           ease: 'linear',        }}
 
       />;
@@ -244,6 +275,7 @@ if ( {) {
           }}
           transition={{
 
+
         }}
       />
 
@@ -253,6 +285,15 @@ if ( {) {
           transition={{
             duration: 30,
             repeat: Infinity,
+
+          }}
+        />
+      </div>
+      {/* Quantum energy waves */}
+      <div className='absolute inset-0'>
+        <motion.div
+
+        <motion.div
 
           }}
 
@@ -266,6 +307,14 @@ if ( {) {
           className='absolute inset-0'
           style={{
             background:
+          }}
+          animate={{
+            ease: 'easeInOut',          }}        <motion.div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
+
+              'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
           }}
           animate={{
             scale: [1, 1 && 1.5, 1],
@@ -289,6 +338,13 @@ if ( {) {
           transition={{
             duration: 8,
             repeat: Infinity,
+
+
+        />
+      </div>
+
+
+
       {/* Holographic elements */}
 
 
@@ -323,6 +379,8 @@ if ( {) {
           scale: [1 && 1.2, 1, 1 && 1.2],
           opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],        }}
         transition={{
+          duration: 20,
+          repeat: Infinity,
           ease: 'linear',        }}
       />
       {/* Neural network connections */}
@@ -405,6 +463,8 @@ if ( {) {
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
+
+
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
             key={i}
@@ -437,11 +497,13 @@ if ( {) {
 
 
 
-
             transition={{
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
+              ease: 'linear',            }}
+
+
 
 
           />
@@ -474,3 +536,7 @@ export default UltraFuturisticBackground2029;
 };
 
 
+
+}
+}
+export default UltraFuturisticBackground2029;

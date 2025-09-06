@@ -1,4 +1,3 @@
-
 import React from "react";
 import Head from "next/head";
 import {
@@ -105,5 +104,3 @@ export default function QuantumInternetSecurityPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
-;

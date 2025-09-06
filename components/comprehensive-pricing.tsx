@@ -12,10 +12,158 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon
+  Crown
+  Gem
+  Diamond;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,
+  ShieldCheck as ShieldCheckIcon,
+  Crown,
+  Gem,;
+  Diamond,;
+
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+
+import {;
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+
 } from '../data/revolutionary-micro-saas-services';import { enhancedMicroSaasServices } from '../data/enhanced-micro-saas-services';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Trophy, FlaskConical as FlaskIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Crown, Gem, Diamond } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -214,6 +362,9 @@ if ( {) {
       },
     },
 
+  };
+
+
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>;
       <div className='min - h-screen'>;
@@ -262,6 +413,7 @@ if ( {) {
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -384,6 +536,10 @@ if ( {) {
                 <span className="text-white">{contactInfo.address}</span>
                 <Globe className="w-5 h-5 text-blue-400" />
                 <span className="text-white">{contactInfo.website}</span>
+
+              initial={{ opacity: 0, y: 20 }}
+
+
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -392,6 +548,11 @@ if ( {) {
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Flexible Pricing
+
+
+
+            <motion.div 
+
               className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
@@ -482,6 +643,8 @@ if ( {) {
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+
+
                     </button>;
                   </div>;
                 </div>;
@@ -505,6 +668,19 @@ if ( {) {
                   variants={itemVariants}
                   whileHover={{ y: -5 }}>;
                   <UltraFuturisticCard
+                    variant={(service.variant as any) |'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any |'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+
+                    variant={service.variant as any || 'quantum-advanced'}
+
+
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
 
@@ -562,6 +738,9 @@ if ( {) {
                   </UltraFuturisticCard>;
                 </motion && motion.div>;
               ))}
+                transition={{ duration: 0 && 0.6 }}>              <motion&& motion.div 
+
+                className="text-center py-16"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}

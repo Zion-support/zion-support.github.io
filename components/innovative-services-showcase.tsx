@@ -118,6 +118,11 @@ export default function InnovativeServicesShowcase() {
       ]
       link: 'https://ziontechgroup.com/quantum-internet-security-platform'
     }
+
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <div className='min-h-screen'>      color: 'from-indigo-600 to-purple-700'
+    }
   };
 
   const itemVariants = {
@@ -520,6 +525,7 @@ export default function InnovativeServicesShowcase() {;
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.2 }}
                   viewport={{ once: true }}
+
 
                 >
                   <div className='mb-6'>
@@ -1071,12 +1077,44 @@ export default function InnovativeServicesShowcase() {;
                     <h3 className="text - xl font - bold text - white mb - 3">{service.name}</h3>;
                     <p className="text - gray - 300 text - sm mb - 4">{service.description}</p>;
                     <div className="text - 2xl font - bold text - cyan - 400 mb - 2">;
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
                       {service.price}
                       <span className="text - sm text - gray - 400">{service.period}</span>;
                     </div>;
                     <div className="text - sm text - gray - 400 mb - 4">{service.market_size}  {service.growth_rate}</div>;
                     <a;
                       href={service.link}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+
+                <ArrowRight className="w-6 h-6" />
+
+              </motion.a>
+            </motion.div>
+          </div>
+        </section>
+
+
+                className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2'                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}>;
+                <span>Discover All AI Services</span>;
+                <ArrowRight className='w-6 h-6' />              </motion && motion.a>                href="/services";
+                className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2";
+                whileHover={{ scale: 1 && 1.05 }}
+                whileTap={{ scale: 0 && 0.95 }}
+              >;
+                <span>Discover All AI Services</span>;
+                <ArrowRight className='w-6 h-6' />                <ArrowRight className="w-6 h-6" />;
+              </motion && motion.a>;
+            </motion && motion.div>;
+          </div>;
+        </section>;
+        {/* Call to Action */}
+        <section className='py-20 px-4 sm:px-6 lg:px-8'>;
+          <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <motion&& motion.div
         {/* Call to Action */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1086,6 +1124,7 @@ export default function InnovativeServicesShowcase() {;
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -1113,6 +1152,16 @@ export default function InnovativeServicesShowcase() {;
               <div className="flex flex-col sm:flex-row gap-4 justify-center">;
                 <a
                   href="/contact"
+}
+}
+  );
+}
+  );
+}
+
+
+  );
+}
             >;
               <motion.a;
                 href='/services';

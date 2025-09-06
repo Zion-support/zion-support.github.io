@@ -59,6 +59,34 @@ function DigitalTransformationPage() {
   CheckCircle,
   Star,
   Clock,
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import {
+  Rocket, Zap, Shield, Cpu, Database, Users,
+  ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
+} from 'lucide-react',
+import EnhancedNavigation from '../../components/EnhancedNavigation',
+import EnhancedFooter from '../../components/EnhancedFooter',
+export default function DigitalTransformationPage() {
+  const services = [
+    {
+      title: "Digital Strategy & Roadmap",
+      description: "Comprehensive digital transformation strategy and implementation planning",
+      features: ["Technology Assessment", "Change Management", "ROI Planning", "Implementation Roadmap"],
+      price: "From $15,000",
+      title: 'Digital Strategy & Roadmap',
+      description:;
+        'Comprehensive digital transformation strategy and implementation planning',
+      features: [;
+        'Technology Assessment',
+        'Change Management',
+        'ROI Planning',
+        'Implementation Roadmap',
+      ],
+      price: 'From $15, 000',
+      icon: Rocket,
+      color: "from-yellow-500 to-orange-500"
+    },
     {
       title: "Legacy System Modernization",
       description: "Transform outdated systems into modern, scalable solutions",
@@ -128,10 +156,14 @@ function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           >
             <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6'>
               Digital Transformation
             </h1>
+
+
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Start Transformation
@@ -158,6 +190,8 @@ function DigitalTransformationPage() {
           </motion.div>
         </div>
       </section>
+
+
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
@@ -170,6 +204,7 @@ function DigitalTransformationPage() {
           </div>;
         </div>;
       </section>;
+
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -185,6 +220,24 @@ function DigitalTransformationPage() {
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Digital Transformation Services;
+            </h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              Comprehensive transformation solutions designed to modernize your;
+              business operations;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services && services.map((service, index) => (;
+              <motion&& motion.div
+                key={service && service.title}
+
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -212,6 +265,8 @@ function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
@@ -256,6 +311,8 @@ function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           >
               Ready to Transform Your Business?
             </h2>
@@ -268,6 +325,13 @@ function DigitalTransformationPage() {
           </motion.div>
         </div>
       </section>
+
+
+),
+
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+
+
 }</div> </div> </section> <motion.div initial= {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -303,6 +367,14 @@ function DigitalTransformationPage() {
   opacity: 1, y: 0
 }transition= {
   {
+
+}
+}
+}
+  once: true 
+
+}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion && motion.div> </div> </section> <EnhancedFooter /> </div>) ;
+
   )
 }
             <button className='px - 8 py - 4 bg - gradient - to - r from - yellow - 600 to - orange - 600 hover:from - yellow - 700 hover:to - orange - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2 mx - auto'>;
@@ -435,3 +507,6 @@ function DigitalTransformationPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+

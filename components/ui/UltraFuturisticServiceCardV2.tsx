@@ -1,3 +1,21 @@
+  ArrowRight
+  Star
+  Users
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Rocket;
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,;
+  Rocket,;
+
+
 } from 'lucide-react';
 interface ServiceCardProps {
   service: {
@@ -39,9 +57,18 @@ interface ServiceCardProps {
 
 
     }
+
+      default:
+
+
         return <Zap className='w-5 h-5' />;    }
 
     }
+
+
+
+
+  };
 
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
@@ -101,6 +128,8 @@ interface ServiceCardProps {
                   {getCategoryIcon (service.category)}
                   <span className="text - xs font - medium text - gray - 400 uppercase tracking - wider">;
                     {service.category}
+
+
                   </span>
                 </div>
               </div>
@@ -147,6 +176,47 @@ interface ServiceCardProps {
         </div>
         {/* Stats */}
                 {service.rating}
+              </div>
+              <div className='text-xs text-gray-400'>Rating</div>
+
+          </p>
+        </div>
+        {/* Stats */}
+
+                  </span>;
+                </div>;
+              </div>;
+            </div>;
+            {service.popular && (
+              <motion.div;
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ delay: 0.5, type: 'spring', stiffness: 200 }}
+                className='flex items - center space - x-1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 2 py - 1 rounded - full';
+              >;
+                <Star className='w - 3 h - 3 fill - current' />                <span > POPULAR</span>                transition={{ delay: 0.5, type: "spring", stiffness: 200 }}
+                className="flex items - center space - x-1 bg - gradient - to - r from - yellow - 500 to - orange - 500 text - black text - xs font - bold px - 2 py - 1 rounded - full";
+              >;
+                <Star className="w - 3 h - 3 fill - current" />;
+              </motion.div>)}
+          </div>;
+          <h3 className='text - xl font - bold text - white mb - 2 group - hover:text - transparent group - hover:bg - clip - text group - hover:bg - gradient - to - r from - cyan - 400 to - purple - 400 transition - all duration - 300'>;
+            {service.name}
+          </h3>;
+          <p className='text - gray - 300 text - sm leading - relaxed'>            {service.tagline}          <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - transparent group - hover:bg - clip - text group - hover:bg - gradient - to - r from - cyan - 400 to - purple - 400 transition - all duration - 300">;
+            {service.name}
+          </h3>;
+          <p className="text - gray - 300 text - sm leading - relaxed">;
+          </p>;
+        </div>;
+        {/* Stats */}
+        <div className='relative z - 10 mb - 6'>;
+          <div className='grid grid - cols - 3 gap - 4'>;
+            <div className='text - center'>;
+              <div className='text - 2xl font - bold text - cyan - 400'>;
+
+                {service.rating}
+
               </div>
               <div className='text-xs text-gray-400'>Rating</div>
 
@@ -340,7 +410,6 @@ interface ServiceCardProps {
 
 
 
-
         {/* Market info */}
 
         {service.marketSize && service.growthRate && (
@@ -442,6 +511,86 @@ interface ServiceCardProps {
         <motion&& motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
+export default UltraFuturisticServiceCardV2;
+
+
+                className='flex items - center space - x-2 text - sm';
+              >;
+                <div className='w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full'></div>;
+                <span className='text - gray - 300'>{benefit}</span>              </motion.div>                className="flex items - center space - x-2 text - sm";
+              >;
+                <div className="w - 2 h - 2 bg - gradient - to - r from - green - 400 to - emerald - 400 rounded - full"></div>;
+                <span className="text - gray - 300">{benefit}</span>))}
+          </div>;
+        </div>;
+        {/* Market info */}
+        {service.market_size && service.growth_rate && (
+          <div className='relative z - 10 mb - 6'>;
+            <div className='bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20'>;
+              <div className='flex items - center justify - between text - xs'>;
+                <span className='text - gray - 400'>Market Size</span>;
+                <span className='text - cyan - 400 font - medium'>;
+                  {service.market_size}
+                </span>;
+              </div>;
+              <div className='flex items - center justify - between text - xs mt - 1'>;
+                <span className='text - gray - 400'>Growth Rate</span>;
+                <span className='text - green - 400 font - medium'>;
+                  {service.growth_rate}
+                </span>              </div>          <div className="relative z - 10 mb - 6">;
+            <div className="bg - gray - 800 / 30 rounded - lg p - 3 border border - gray - 600 / 20">;
+              <div className="flex items - center justify - between text - xs">;
+                <span className="text - gray - 400">Market Size</span>;
+                <span className="text - cyan - 400 font - medium">{service.market_size}</span>;
+              </div>;
+              <div className="flex items - center justify - between text - xs mt - 1">;
+                <span className="text - gray - 400">Growth Rate</span>;
+                <span className="text - green - 400 font - medium">{service.growth_rate}</span>;
+            </div>;
+          </div>)}
+        {/* CTA Button */}
+        <div className='relative z - 10'>          <motion.a;
+            href={service.link}
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25'        <div className="relative z - 10">;
+          <motion.a;
+            href={service.link}
+            while_hover={{ scale: 1.05 }}
+            while_tap={{ scale: 0.95 }}
+            className='group / btn relative w - full inline - flex items - center justify - center px - 6 py - 3 bg - gradient - to - r from - cyan - 500 to - purple - 500 text - white font - semibold rounded - xl overflow - hidden transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 500 / 25';
+          >;
+            <span className='relative z - 10 flex items - center space - x-2'>;
+              <span > Learn More</span>;
+              <ArrowRight className='w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200' />;
+            </span>;
+            {/* Button glow effect */}
+            <div className='absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300'></div>          </motion.a>          >;
+            <span className="relative z - 10 flex items - center space - x-2">;
+              <span > Learn More</span>;
+              <ArrowRight className="w - 4 h - 4 group - hover / btn:translate - x-1 transition - transform duration - 200" />;
+            </span>;
+            {/* Button glow effect */}
+            <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 400 to - purple - 400 opacity - 0 group - hover / btn:opacity - 100 transition - opacity duration - 300"></div>;
+          </motion.a>;
+        </div>;
+        {/* Hover overlay */}
+        <motion.div;
+          initial={{ opacity: 0 }}
+          while_hover={{ opacity: 1 }}
+          className='absolute inset - 0 bg - gradient - to - br from - cyan - 500 / 10 to - purple - 500 / 10 rounded - 2xl pointer - events - none';
+        />;
+      </div>;
+    </motion.div>);
+}
+;
+export default UltraFuturisticServiceCardV2;        />;
+      </div>;
+    </motion.div>);
+}
+;
+export default UltraFuturisticServiceCardV2;
+;
 
 
 
@@ -449,3 +598,16 @@ interface ServiceCardProps {
       </div>
     </motion.div>
   );
+export default UltraFuturisticServiceCardV2;        />
+      </div>
+    </motion.div>
+  )
+}
+export default UltraFuturisticServiceCardV2;
+
+export default UltraFuturisticServiceCardV2;
+export default UltraFuturisticServiceCardV2;
+
+};
+
+

@@ -59,7 +59,95 @@ function RoleManagement() {
       email: "taylor@example.com"
       role: "Viewer"
       permissions: {
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`});
+  };
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})
+  }
+  const roleDescriptions: Record<string, string> = {
+    "Admin": "Full access to all features and settings";
+    "Recruiter": "Can manage candidates and job postings";
+    "Manager": "Can view candidates and create jobs";
+    "Viewer": "Read-only access to candidates"}
+  },
 
+  const roleDescriptions: Record<string string> = {
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
+
+                  <Switch
+                    checked={member.permissions.viewCandidates}
+                  <Switch 
+                    checked={member.permissions.viewCandidates} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    checked={member.permissions.editCandidates}
+                  <Switch 
+                    checked={member.permissions.editCandidates} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "editCandidates", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    checked={member.permissions.createJobs}
+                  <Switch 
+                    checked={member.permissions.createJobs} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "createJobs", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    checked={member.permissions.manageTeam}
+                  <Switch 
+                    checked={member.permissions.manageTeam} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "manageTeam", checked)
+                    }
+                  />
+                </TableCell>
+                <TableCell className="text-center">
+                  <Switch
+                    checked={member.permissions.viewBilling}
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) =>
+                      handlePermissionChange(member.id, "viewBilling", checked)
+                    }
+                  />
+                </TableCell>
+              </TableRow>
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+                    onCheckedChange={(checked) => 
+                      handlePermissionChange(member.id, "viewBilling", checked)
+import React from "react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+import { Switch } from "@/components/ui/switch",;
+import { toast } from "@/hooks/use-toast",;
+import { InfoIcon } from "lucide-react",;
+import {;
+  Tooltip,;
+  TooltipContent,;
+  TooltipProvider,;
+  TooltipTrigger} from "@/components/ui/tooltip",;
 export function RoleManagement() {;
   // Mock team members data;
   const teamMembers = [;
@@ -338,6 +426,10 @@ export function RoleManagement() {;
                   />;
                 </TableCell>;
               </TableRow>;
+
+                  <Switch 
+                    checked={member.permissions.viewBilling} 
+
             ))}
 
           </TableBody>;

@@ -1,3 +1,25 @@
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import {
+  Select
+  SelectContent
+  SelectItem
+  SelectTrigger
+  SelectValue
+} from "@/components/ui/select";
+
+import { UseFormReturn } from "react-hook-form";
+import { FormValues } from "./useHireRequestForm";
+import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {UseFormReturn} from "react-hook-form";
+import {FormValues} from "./useHireRequestForm";
+
   FormField,
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -8,6 +30,10 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { UseFormReturn } from "react-hook-form",
 import { FormValues } from "./useHireRequestForm",
+interface TimelineFieldProps {
+  form: UseFormReturn<FormValues>;
+}
+export function TimelineField({ form }: TimelineFieldProps) {
 
   const timelineOptions = [
     { value: "Less than 1 week", label: "Less than 1 week" }
@@ -31,6 +57,9 @@ import {FormValues} from "./useHireRequestForm";
     { value: "1-2 months", label: "1-2 months" },
     { value: "3-6 months", label: "3-6 months" },
     { value: "6+ months", label: "6+ months" },
+    { value: "Ongoing", label: "Ongoing" }
+  ],
+
 
   return (
     <FormField
@@ -86,6 +115,7 @@ function TimelineField() {
         <FormItem>;
           <FormLabel className="text - white">Project Timeline</FormLabel>;
           <FormControl>;
+
                     {option.label}
                   </SelectItem>
                 ))}

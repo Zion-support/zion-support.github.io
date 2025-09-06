@@ -1,4 +1,14 @@
 
+} from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+const ClientOnlyBridge = dynamic(
+  () => import('../../components/ui/BridgeForm')
+  { ssr: false }
+);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+import { CHAINS } from '../../utils/chains';
+
+
+
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
 export default function TokenIntegrationsPage() {;
 
@@ -13,6 +23,10 @@ export default function TokenIntegrationsPage() {;
     const acts = await fetchDepinActivities(account);
     const r = calculateRewards(acts);
     setRewards(r);
+
+
+
+
 
 
 
@@ -51,6 +65,7 @@ export default function TokenIntegrationsPage() {;
               Connect Wallet;
             </button>;
           )}
+
 
 
     setSuggestion(data)
@@ -123,6 +138,20 @@ export default function TokenIntegrationsPage() {;
             </div>;
             {suggestion && suggestion.alternatives && (;
               <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
+  return (
+    <div className="space-y-8">
+      <section className="space-y-2">
+        <h1 className="text-2xl font-bold">ZION$ Integrations</h1>
+        <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>
+      </section>
+      <section className="space-y-4">
+        <ClientOnlyBridge />
+      </section>
+      <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
+        <h2 className="text-lg font-semibold">DePIN Hook</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>
+        <div className="flex gap-2">
+          <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
         {rewards && (
@@ -174,6 +203,10 @@ export default function TokenIntegrationsPage() {;
     </div>;
   );
 }
+  );
+;
+  );
+
 import dynamic from 'next / dynamic';
 import React, { useEffect, useState } from 'react';
 import { use_wallet } from '../../hooks / use_wallet';

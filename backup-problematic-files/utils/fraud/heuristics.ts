@@ -104,22 +104,6 @@ export async function evaluateHeuristics(
       if (severity === 'low') severity = 'medium';
     }
   }
-  // Check condition
-if ( {) {
-  $2
-}
-    const vague = containsVagueJobClaims (event.content);
-    // Check condition
-if ( {) {
-  $2
-}
-      reasons.push (...vague);
-      // Check condition
-if (severity = 'medium') {
-  $2
-}
-    }
-  }
 export function run_heuristics (data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics;
   const flags = new Set < string>();
@@ -158,6 +142,7 @@ export function runHeuristics(data: any): HeuristicResult {
   const label = flags.size > 0 ? 'SUSPICIOUS' : 'SAFE';
   return {
   }
+
 }
 ;
   return {;

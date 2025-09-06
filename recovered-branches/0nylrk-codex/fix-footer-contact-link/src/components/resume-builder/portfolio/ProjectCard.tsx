@@ -1,3 +1,11 @@
+import { useState } from "react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { useState  } from './react';
+import { Card, CardContent, CardFooter  } from '@/components / ui / card';
+import { Button  } from '@/components / ui / button';
+import { Badge  } from '@/components / ui / badge';
 import {
   AlertDialog,
   AlertDialogAction,
@@ -52,10 +60,18 @@ interface ProjectCardProps {
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void
 }
+
+
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
   const handleDelete = () => {
     if (project.id) {
+      onDelete(project.id)
+
+      onDelete(project.id)
+
 import { useState } from 'react',;
 import { Card, CardContent, CardFooter } from '@/components/ui/card',;
 import { Button } from '@/components/ui/button',;
@@ -75,6 +91,9 @@ export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardPr
 
     if (project.id) {;
       onDelete(project.id);
+
+
+
     }
     setDeleteDialogOpen(false);
   };

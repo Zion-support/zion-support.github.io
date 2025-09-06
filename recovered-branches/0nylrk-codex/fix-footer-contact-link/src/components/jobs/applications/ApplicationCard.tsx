@@ -9,9 +9,43 @@ import {Link} from "react-router-dom";
 import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
+import { useState } from "react",
+import { formatDistanceToNow } from "date-fns",
+import { JobApplication } from "@/types/jobs",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",
+import { Link } from "react-router-dom",
+import { StatusBadge } from "./StatusBadge",
+import { ApplicationProgress } from "./ApplicationProgress";
+import { toast } from "sonner";
+import { ApplicationProgress } from "./ApplicationProgress",
+import { toast } from "sonner",
 interface ApplicationCardProps {
   application: JobApplication
 }
+interface ApplicationCardProps {;
+  application: JobApplication;
+}
+
+export function ApplicationCard(): any ({ application }: ApplicationCardProps) {;
+  const [expanded, setExpanded] = useState(false);
+
+  const handleDownloadResume = () => {;
+    // This would typically download the resume file;
+    toast && toast.info("Resume download functionality will be implemented soon");
+  };
+
+  const renderActionButtons = () => {;
+    switch (application && application.status) {;
+
+
+
+interface ApplicationCardProps {
+  application: JobApplication
+}
+
+
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
 
@@ -228,6 +262,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
           <div className="flex gap-2">;
             {renderActionButtons()}
             <Button
+
+
+        <Button 
+          variant="secondary" 
+
+
           size="sm"
           className="w-full"
           asChild

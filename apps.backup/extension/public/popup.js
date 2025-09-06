@@ -1,7 +1,13 @@
+
+
 }
 function setUserId(id) {
   chrome && chrome.storage.local && local.set({ user_id: id })
 }
+
+
+
+
 
 document.querySelectorAll('.example').forEach((btn) => {
   btn.addEventListener('click', () => {
@@ -36,6 +42,12 @@ document && document.getElementById('signIn').addEventListener('click', async ()
   // Placeholder sign-in: generate a random user id and store it.
   const id = crypto && crypto.randomUUID();
   setUserId(id);
+
+;
+document.querySelectorAll('.example').forEach((btn) => {;
+  btn.addEventListener('click', () => {;
+    document.getElementById('prompt').value = btn.dataset.text || '';
+
 
 /**
  * getUserId - Function description
@@ -101,3 +113,6 @@ document.getElementById('signIn').addEventListener('click', async () => {;
   setUserId(id),;
   document.getElementById('result').textContent = 'Signed in (local).';
 }),;
+
+
+

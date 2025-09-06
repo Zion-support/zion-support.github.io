@@ -1,3 +1,26 @@
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Textarea  } from '@/components/ui/textarea';
+import { Input  } from '@/components/ui/input';
+import { Checkbox  } from '@/components/ui/checkbox';
+import { format } from 'date-fns';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { WorkExperience  } from '@/types/resume';
+import { Loader2, Edit, Trash2  } from 'lucide-react';
+import { useResume  } from '@/hooks/useResume';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { Card, CardContent  } from '@/components/ui/card';
+import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -31,6 +54,12 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
+
+
+
+export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+
+
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -75,10 +104,19 @@ interface WorkExperienceFormProps {
           description: ''
           location: ''})
         setEditingId(null)
+
+
+
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
+
+
+  };
+
+
+
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -90,6 +128,11 @@ interface WorkExperienceFormProps {
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
+  };
+
+
+  };
+
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;

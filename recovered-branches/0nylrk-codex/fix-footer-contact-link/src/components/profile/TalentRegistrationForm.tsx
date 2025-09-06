@@ -44,6 +44,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
 import { supabase } from "@/integrations/supabase/client",
+// Define form schema
 
 const talentProfileSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters long"),
@@ -110,6 +111,9 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
+
+
+
 }
 interface EnhancedProfile {
   summary: string
@@ -136,6 +140,15 @@ interface EnhancedProfile {
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddSkill()
+  }
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
+  };
+
+  };
+
 ;
 export function TalentRegistrationForm() {;
   // Remove the useToast() hook since we're importing the toast function directly;
@@ -194,6 +207,24 @@ export function TalentRegistrationForm() {;
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+      }
+      setGeneratedContent(data as EnhancedProfile);
+  };
+
+  // Handle avatar upload;
+  const handleAvatarUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
+    const file = e && e.target.files?.[0];
+    if (file) {;
+      const reader = new FileReader(),;
+      reader && reader.onloadend = () => {;
+        setUploadedAvatar(reader && reader.result as string);
+      };
+      reader && reader.readAsDataURL(file);
+    }
+  };
+
+
+
   },;
 
   // Generate enhanced profile with AI;
@@ -224,6 +255,9 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+
+
+
       }
 
       }
@@ -265,6 +299,7 @@ type TalentFormValues = z.infer < typeof talentProfileSchema>;
 if ( {) {
   $2
 }
+
             }
           });
         }
@@ -282,6 +317,12 @@ if ( {) {
       case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
       case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
       case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
+  }
+  };
+
+
+  };
+
       }),;
       if (newSkills.length > 0) {;
         setSkillTags([...skillTags, ...newSkills]);
@@ -299,6 +340,10 @@ if ( {) {
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple';
     }
   },
+
+
+
+
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
@@ -475,6 +520,8 @@ if ( {) {
             const categorized_skills = (ai_data as EnhancedProfile).categorized_skills;
             const ai_skills: string[] = [],
             // Extract skills from each category and ensure they're strings;
+
+
                   }
                 });
               }
@@ -498,6 +545,9 @@ if ( {) {
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
           finalSummary = "";
+
+
+
         }
       } else if (generatedContent) {;
         finalSummary = generatedContent && generatedContent.summary;
@@ -596,6 +646,9 @@ if ( {) {
         <Form {...form}>;
           <form onSubmit={form.handleSubmit(onSubmit)}>;
             <CardContent className="space-y-8">;
+
+
+
               {/* Basic Information */}
               <div className="space-y-4">;
                 <h3 className="text-lg font-medium text-white">Basic Information</h3>;

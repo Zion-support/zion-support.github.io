@@ -1,4 +1,9 @@
 
+import { jsPDF  } from 'jspdf';
+import { Skill  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addSkillsSection(
+
 import {jsPDF} from 'jspdf';
 import {Skill} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -15,6 +20,7 @@ export function addSkillsSection(;
     acc[category].push(skill);
     return acc
   }, {} as Record<string, typeof skills>);
+
   }
   return yPos + 5
 import {jsPDF} from 'jspdf';

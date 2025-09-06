@@ -1,3 +1,34 @@
+      'Intent classification + prioritization'
+      'On-brand response drafting'
+      'Automatic polite follow-ups'
+      'Lead/contact enrichment'
+      'Analytics and response SLAs'
+    ]
+    popular: true
+    icon: '📧'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-300'
+    link: 'https://ziontechgroup.com/services/ai-email-responder'
+    marketPosition: 'Competes with Superhuman/Front add-ons; turnkey for SMBs'
+    targetAudience: 'Sales, support, founder-led teams'
+    trialDays: 14
+    setupTime: '30 minutes'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Gmail/Outlook APIs', 'LLM', 'Webhook']
+    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack']
+    useCases: ['Inbound triage', 'Nurture sequences', 'SLA reporting']
+    roi: 'Cuts manual email time by 60–80%'
+    competitors: ['Superhuman AI', 'Front AI', 'Gmail add-ons']
+    marketSize: '$10B+ email productivity'
+    growthRate: '15% CAGR'
+    variant: 'network-futuristic'
+    contactInfo: contact
+    realImplementation: true
+      'Intent classification + prioritization',
+      'On-brand response drafting',
+      'Automatic polite follow-ups',
+      'Lead/contact enrichment',
 
       'Intent classification + prioritization',
       'On - brand response drafting',
@@ -22,6 +53,26 @@
     integrations: ['Gmail', 'Outlook', 'HubSpot', 'Pipedrive', 'Slack'],
     use_cases: ['Inbound triage', 'Nurture sequences', 'SLA reporting'],
     roi: 'Cuts manual email time by 60–80%',
+    implementationDetails:
+      'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard'
+    launchDate: '2025-08-20'
+    customers: 48
+    rating: 4.7
+    reviews: 12
+  }
+    competitors: ['Superhuman AI', 'Front AI', 'Gmail add - ons'],
+    market_size: '$10B+ email productivity',
+    growth_rate: '15% CAGR',
+    variant: 'network - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details:;
+      'OAuth + mailbox sync + policy rules + reply generator + SLA dashboard',
+    launch_date: '2025 - 08 - 20',
+    customers: 48,
+    rating: 4 && 4.7,
+    reviews: 12,
+  },
   {
 
       'Branching logic + A/B prompts',
@@ -608,12 +659,185 @@
   },
   {
 
+  {
+    id: 'postgres-index-advisor-pro'
+    name: 'Postgres Index Advisor Pro'
+    tagline: 'Index recommendations and controlled PR rollouts'
+    price: '$79'
+    period: '/month'
+    description:
+      'Capture slow queries, recommend indexes, and open controlled rollout PRs with safety checks.'
+    features: [
+      'Slow query capture'
+      'Index suggestions'
+      'Risk scoring'
+      'PR generation'
+      'Rollback assist'
+    ]
+    popular: true
+    icon: '🗄️'
+    color: 'from-blue-700 to-indigo-800'
+    textColor: 'text-blue-300'
+    link: 'https://ziontechgroup.com/services/postgres-index-advisor-pro'
+    marketPosition: 'Productized tuning for small teams'
+    targetAudience: 'Data + platform teams'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['pg_stat_statements', 'Advisor']
+    integrations: ['GitHub Actions']
+    useCases: ['DB tuning', 'Perf boosts']
+    roi: 'Cut query costs 20–50%'
+    competitors: ['pganalyze (adjacent)']
+    marketSize: '$2B DB tuning'
+    growthRate: '9% CAGR'
+    variant: 'network-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Collector + advisor + PRs'
+    launchDate: '2025-08-20'
+    customers: 15
+    rating: 4.6
+    reviews: 5
+  }
+  {
+    id: 's3-lifecycle-optimizer'
+    name: 'S3 Lifecycle Optimizer'
+    tagline: 'Move objects between storage classes to cut costs'
+    price: '$59'
+    period: '/month'
+    description:
+      'Analyze S3 usage and generate lifecycle rules to lower storage bills without risking access latency.'
+    features: [
+      'Usage analysis'
+      'Rule suggestions'
+      'Cost simulator'
+      'Change sets'
+      'Alerting'
+    ]
+    popular: false
+    icon: '🗂️'
+    color: 'from-emerald-700 to-teal-800'
+    textColor: 'text-emerald-300'
+    link: 'https://ziontechgroup.com/services/s3-lifecycle-optimizer'
+    marketPosition: 'No-friction cost hygiene'
+    targetAudience: 'Cloud + finops'
+    trialDays: 7
+    setupTime: '1 hour'
+    category: 'Cloud & FinOps'
+    realService: true
+    technology: ['AWS S3', 'Cost models']
+    integrations: ['AWS']
+    useCases: ['Storage hygiene', 'Cost cuts']
+    roi: 'Save 10–30% storage spend'
+    competitors: ['Kubecost (adjacent)']
+    marketSize: '$3B cloud cost'
+    growthRate: '12% CAGR'
+    variant: 'holographic-matrix'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Analyzer + simulator + rule export'
+    launchDate: '2025-08-20'
+    customers: 17
+    rating: 4.5
+    reviews: 4
+  }
+  {
+    id: 'pii-discovery-scanner'
+    name: 'PII Discovery Scanner'
+    tagline: 'Scan buckets and DBs for PII/PHI with evidence exports'
+    price: '$89'
+    period: '/month'
+    description:
+      'Find PII in cloud storage and databases, redact samples, and export auditor-friendly evidence.'
+    features: [
+      'Connectors'
+      'Sensitive entity detection'
+      'Sampling with redaction'
+      'Findings export'
+      'Alerting'
+    ]
+    popular: true
+    icon: '🕵️'
+    color: 'from-red-700 to-rose-800'
+    textColor: 'text-red-300'
+    link: 'https://ziontechgroup.com/services/pii-discovery-scanner'
+    marketPosition: 'Compliance-first discovery'
+    targetAudience: 'Security, compliance'
+    trialDays: 7
+    setupTime: '1–2 days'
+    category: 'Quality & Monitoring'
+    realService: true
+    technology: ['DLP', 'Connectors']
+    integrations: ['AWS', 'GCP', 'Snowflake']
+    useCases: ['Compliance audits', 'Risk reduction']
+    roi: 'Avoid incidents and fines'
+    competitors: ['Google DLP', 'AWS Macie']
+    marketSize: '$5B data security'
+    growthRate: '15% CAGR'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Connectors + scan jobs + exports'
+    launchDate: '2025-08-20'
+    customers: 13
+    rating: 4.6
+    reviews: 5
+  }
+  {
     id: 'synthetic - journey - monitor',
     name: 'Synthetic Journey Monitor',
     tagline: 'Record and replay user flows with SLO alerts',
     price: '$39',
     period: '/month',
     description:;
+    features: [
+      'Schema registry'
+      'Diff rules'
+      'Owner mapping'
+      'CI checks'
+      'Changelog hints'
+    ]
+    popular: false
+    icon: '🧭'
+    color: 'from-indigo-700 to-violet-800'
+    textColor: 'text-indigo-300'
+    link: 'https://ziontechgroup.com/services/api-breaking-change-watcher'
+    marketPosition: 'Operationalize API hygiene'
+    targetAudience: 'Platform + API teams'
+    trialDays: 7
+    setupTime: '1 hour'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['OpenAPI', 'GraphQL']
+    integrations: ['GitHub', 'Slack']
+    useCases: ['Schema governance', 'Release safety']
+    roi: 'Fewer incidents; faster integration'
+    competitors: ['Stoplight (adjacent)']
+    marketSize: '$1B API tooling'
+    growthRate: '9% CAGR'
+    variant: 'network-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Registry + diff engine + CI'
+    launchDate: '2025-08-20'
+    customers: 12
+    rating: 4.5
+    reviews: 3
+  }
+  {
+
+    id: 'iam - permission - analyzer',
+    name: 'IAM Permission Analyzer',
+    tagline:;
+      'Detect over - privileged access and propose least - privilege policies',
+    price: '$79',
+    period: '/month',
+    description:;
+      'Continuously analyze IAM policies / usage to propose safe permission reductions and open PRs.',
+    features: [;
+
       'Policy inventory',
       'Usage analysis',
       'Recommendations',
@@ -1636,6 +1860,8 @@
 		implementationDetails: 'Transcribe + extract + tickets';
 		launchDate: '2025-08-20';
 		customers: 24;
+];
+;
 
 	}
 ];

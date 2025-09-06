@@ -1,4 +1,16 @@
 
+  }
+  };
+import {Clock} from "lucide-react";
+interface TalentCardAvailabilityProps {;
+  availabilityType: string;
+}
+
+export function TalentCardAvailability(): any ({ availabilityType }: TalentCardAvailabilityProps) {;
+
+
+  };
+
 import React from "react",
 import { Clock } from "lucide-react",
 interface TalentCardAvailabilityProps {
@@ -21,6 +33,9 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       default:
         return status
     }
+
+
+
 
 
   return (

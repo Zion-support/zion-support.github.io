@@ -1,4 +1,24 @@
 
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { UseFormReturn } from "react-hook-form";
+import { CertificationFormValues } from "./types";
+
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { CertificationFormValues  } from './types';
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn < CertificationFormValues>;
@@ -10,12 +30,16 @@ import {CertificationFormValues} from './types';
 
 interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>
+
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
 import { Input } from '@/components/ui/input',;
 import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
+
+
+
 }
 
 export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
@@ -111,6 +135,26 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>;
           )}
+        />;
+      </div>;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+
+        <FormField
+          control={form && form.control}
+          name="credential_id"
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Credential ID (Optional)</FormLabel>;
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+      </div>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <FormField;
+          control={form.control}
           name="issue_date";
           render={({ field }) => (
             <FormItem>;
@@ -160,3 +204,4 @@ function CertificationFormFields() {
   )
 }
 ;
+

@@ -1,5 +1,16 @@
 
 
+export default function FavoritesPage() {
+
+export default function FavoritesPage() {;
+  const { favorites, remove } = useFavorites();
+  const profiles = useMemo(
+    () => TALENT_PROFILES.filter(t => favorites.includes(t.slug))
+    [favorites]
+  );  const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
+
+
+
   return (
     <div>
       <Head>

@@ -32,12 +32,6 @@ export function InvoiceHistory() {
   const invoices = [
     {
     {
-      id: "INV-1233"
-      date: "Apr 1, 2025"
-      amount: "$1,999.00"
-      status: "paid"
-      period: "Apr 2025"}
-    {
       id: "INV-1232"
       date: "Mar 1, 2025"
       amount: "$1,999.00"

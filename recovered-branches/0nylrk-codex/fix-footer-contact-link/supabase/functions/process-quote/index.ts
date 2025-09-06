@@ -31,6 +31,8 @@ interface QuoteDetails {;
   timeframe: string,;
   startDate?: string,;
   endDate?: string;
+
+
 }
 interface RequestBody {
   service: Service | null
@@ -38,6 +40,10 @@ interface RequestBody {
 }
 serve(async (req) => {
   // Handle CORS preflight requests
+
+
+
+
 
   try {
 
@@ -69,6 +75,9 @@ serve(async (req) => {
         const { data: { user }, error } = await supabase.auth.getUser(token),;
         if (!error && user) {;
           userId = user.id;
+
+
+
         }
       }
     } catch (authError) {
@@ -86,6 +95,10 @@ serve(async (req) => {
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
                 3. An estimated complexity level (Low, Medium, High)
+
+
+                
+
     } catch (authError) {;
       // // // console.log("Auth error:", authError),;
       // Continue without user identity;
@@ -113,6 +126,11 @@ serve(async (req) => {
                 1. A concise summary (max 100 words);
                 2. 3-5 relevant tags for categorization;
                 3. An estimated complexity level (Low, Medium, High);
+
+
+
+                Service: ${service?.title || 'Custom Service'}
+                Category: ${service?.category || 'N/A'}
                 Description: ${quoteDetails.description}
                 Budget Range: ${quoteDetails.budget}
                 Timeframe: ${quoteDetails.timeframe}

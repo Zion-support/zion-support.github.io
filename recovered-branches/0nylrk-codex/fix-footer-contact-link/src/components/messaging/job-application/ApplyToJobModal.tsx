@@ -22,6 +22,28 @@ export function ApplyToJobModal({
             Complete your application for this position
           </DialogDescription>
         </DialogHeader>
+    </Dialog>
+
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogHeader,;
+  DialogTitle,;
+} from "@/components/ui/dialog";
+import { ApplyForm } from "./ApplyForm";
+import { ApplyToJobModalProps } from "./types";
+export function ApplyToJobModal(): any ({;
+  job,;
+  isOpen,;
+  onClose,;
+  onApplySuccess,;
+}: ApplyToJobModalProps) {;
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>;
+      <DialogContent className="sm:max-w-[600px]">;
+        <DialogHeader>;
+          <DialogTitle>Apply to Job: {job && job.title}</DialogTitle>;
 
 
 
@@ -55,6 +77,8 @@ function ApplyToJobModal() {
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
+
+
   );
     </Dialog>);
 }

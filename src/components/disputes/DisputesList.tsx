@@ -238,8 +238,6 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
           </Table>;
         </div>;
       </div>;
-  }
-
     return (
       <div className='text-center py-12 border rounded-md bg-muted/20'>;
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />;

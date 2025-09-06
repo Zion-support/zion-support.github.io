@@ -1,3 +1,30 @@
+import React from "react";
+import { UseFormReturn } from "react-hook-form";
+import { AppMetadataValues } from "./MetadataManager";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import {
+  Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+
+
+import {;
+  Form,;
+  FormControl,;
+  FormDescription,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage,;
+
+
+
   Form,
   FormControl,
   FormDescription,
@@ -15,6 +42,7 @@ import { X } from "lucide-react";
   const platform = watch("platform");
 
 
+
 import React from "react",
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -24,10 +52,14 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { Badge } from "@/components/ui/badge",
 import { X } from "lucide-react",
+
+
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 }
 
+
+export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
@@ -193,6 +225,8 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormDescription>;
+
+
               control={control}
               name="shortDescription"
               render={({ field }) => (
@@ -239,6 +273,8 @@ if ( {) {
                 placeholder="Add keywords (press Enter or comma to add)"
                 onKeyDown={addKeyword}
                 className="mb-2"
+
+
               <div className="flex flex-wrap gap-2 mt-2">
                 {keywords.map((keyword, index) => (
               />;
@@ -249,6 +285,8 @@ if ( {) {
                     key={index}
                     className="bg-zion-purple/60 hover:bg-zion-purple">;
                     {keyword}
+
+
                       type="button"
                       onClick={() => removeKeyword(keyword)}
                       className="ml-1 hover:text-red-300";
@@ -257,6 +295,8 @@ if ( {) {
                     </button>;
                   </Badge>;
                 ))}
+
+
             <FormField
               control={control}
               name="version"
@@ -264,6 +304,13 @@ if ( {) {
                 <FormItem>
                   <FormLabel>App Version</FormLabel>
                   <FormControl>
+  );
+}
+
+);
+
+);
+
                     <Input 
                       placeholder="e.g., 1.0.0"
                       {...field}
@@ -285,4 +332,11 @@ if ( {) {
           </div>;
         </Form>;
       </CardContent>;
+
+    </Card>);
+}
+;
+
+
+
 };

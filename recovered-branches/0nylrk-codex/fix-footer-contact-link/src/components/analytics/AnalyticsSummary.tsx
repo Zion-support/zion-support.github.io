@@ -1,5 +1,15 @@
 import React from 'react';
 
+import { Card, CardContent } from "@/components/ui/card",
+import { useQuery } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { Skeleton } from "@/components/ui/skeleton";
+import { formatDistanceToNow } from "date-fns";
+import { Skeleton } from "@/components/ui/skeleton",
+import { formatDistanceToNow } from "date-fns",
+
+
+
 export function AnalyticsSummary() {
   const { data: stats, isLoading } = useQuery({
 
@@ -58,6 +68,12 @@ export function AnalyticsSummary() {
         title="Last Updated"
         value={
           isLoading ? (
+}
+interface StatCardProps {
+  title: string
+  value: React.ReactNode
+
+
 import { Card, CardContent } from "@/components/ui/card",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -183,6 +199,10 @@ if (throw lastEventError) {
       />;
     </div>;
   );
+
+
+
+
 }
 ;
 interface StatCardProps {;

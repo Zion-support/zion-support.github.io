@@ -276,6 +276,8 @@ const SEO: React.FC<SEOProps> = ({
 
 
 
+
+
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -326,6 +328,11 @@ export default SEO;  );
 }
 export default SEO;            __html: JSON.stringify(structuredData)
 };
+
+
+    </Head>
+    </Head>
+
           __html: JSON.stringify ({
             '@context': 'https://schema.org',
             '@type': 'Organization',

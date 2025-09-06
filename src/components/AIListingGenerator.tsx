@@ -2,7 +2,6 @@
 if ( {) {
   $2
 }
-        throw new Error (error.message);
       }
       setGeneratedContent ((data as any)?.generated || null);
       toast ({
@@ -268,15 +267,6 @@ if ( {) {
                 Description
               </h3>
               <p className='text-white'>{generatedContent.description}</p>
-            </div>
-            <div>
-              <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
-                Tags
-              </h3>
-              <div className='flex flex-wrap gap-2'>
-                {generatedContent.tags.map((tag, index) => (                  <Badge key={index}>{tag}</Badge>
-                ))}
-              </div>
             </div>
                 ))}
         </Card>)}

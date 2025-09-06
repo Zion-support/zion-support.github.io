@@ -1,3 +1,33 @@
+export type InnovativeMicroSaas = {
+      'Multi-speaker diarization',
+  launch_date?: string;
+  id: string;
+  name: string;
+  description: string;
+  tagline?: string;
+  category:
+    | 'Content Marketing'
+    | 'Business Operations'
+    | 'Marketing Automation'
+    | 'Customer Success'
+    | 'Sales Automation'
+    | 'Financial Technology'
+    | 'Human Resources'
+    | 'Supply Chain Management'
+    | 'Customer Support';
+  pricing: { starter: string; professional?: string; enterprise?: string }
+  features: string[];
+  integrations?: string[];
+  useCases?: string[];
+  link: string;
+  realService?: boolean;
+  rating?: number;
+  launchDate?: string;
+}
+export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
+
+
+
   {
 
       'OCR ingestion',
@@ -6,6 +36,16 @@
       'Export to ERP',
     ],
     integrations: ['QuickBooks', 'Xero', 'Stripe'],
+      'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
+    category: 'Human Resources'
+    pricing: { starter: '$69/mo' }
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync']
+    integrations: ['Greenhouse', 'Lever']
+    useCases: ['Faster hiring', 'Bias reduction']
+    link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
+    realService: true
+  }
+
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
     id: 'candidate - screening - copilot',
     name: 'Candidate Screening Copilot',
@@ -15,6 +55,17 @@
     pricing: { starter: '$69/mo' },
     features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
     integrations: ['Greenhouse', 'Lever'],
+
+    category: 'Human Resources',
+    pricing: { starter: '$69 / mo' },
+    features: ['Resume parsing', 'JD matching', 'Question sets', 'ATS sync'],
+    integrations: ['Greenhouse', 'Lever'],
+
+    use_cases: ['Faster hiring', 'Bias reduction'],
+    link: 'https://ziontechgroup.com / services / candidate - screening - copilot',
+    real_service: true,
+
+  },
 ];	id: string;
 
 	id: string, name: string,
@@ -89,6 +140,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 ];
 
 export type InnovativeMicroSaas = {;
+	}
 ];
 ;
 

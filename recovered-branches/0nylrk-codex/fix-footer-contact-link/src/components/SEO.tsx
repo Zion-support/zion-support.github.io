@@ -1,3 +1,6 @@
+import { Helmet } from "react-helmet-async";
+import { Helmet } from './react - helmet - async';
+
 interface SEOProps {
 
   title: string
@@ -19,6 +22,18 @@ interface SEOProps {
   canonical?: string,
   noindex?: boolean
 }
+
+export function SEO({;
+  title;
+  description;
+  keywords;
+export function SEO({
+  title,
+  description,
+  keywords,
+
+
+
   // Default to the Google Drive image URL
 
   ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
@@ -51,6 +66,11 @@ interface SEOProps {
       {canonical && <link rel="canonical" href={canonical} />}
       {/* No index directive for search engines if needed */}
       {noindex && <meta name="robots" content="noindex" />}
+}
+
+
+
+
 import { Helmet } from "react-helmet-async",;
 interface SEOProps {;
   title: string,;
@@ -96,6 +116,10 @@ export function SEO({;
       {noindex && <meta name="robots" content="noindex" />}
     </Helmet>;
   );
+
+
+
+
 }
     </Helmet>);
 }

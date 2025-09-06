@@ -1,3 +1,11 @@
+  Phone
+  Mail
+  MapPin
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  ArrowRight
   Phone,
   Mail,
   MapPin,
@@ -42,6 +50,8 @@ import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram, ArrowRight } from 'lucide-react';
 origin/automation-improvements-final
 
+export default function Footer() {
+export default function Footer() {;
 export default function Footer() {
 export default function Footer() {;
   const currentYear = new Date().getFullYear();
@@ -127,6 +137,7 @@ export default function Footer() {;
       <div className="container mx-auto px-4 py-12">;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">;
           {/* Company Info */}
+
 
               Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, 
               quantum computing, blockchain, IoT, and digital transformation services.
@@ -385,6 +396,7 @@ const Footer: React.FC = () => {
                 </li>
               ))}
             </ul>
+
 
 
             <h3 className="text-lg font-semibold mb-4">Resources</h3>

@@ -7,6 +7,86 @@
   headline?: string;
   profileComplete?: boolean;
   role?: string;
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import { AuthContext } from "@/context/auth/AuthContext";
+import type { UserDetails as AuthUserDetails } from "@/types/auth";
+// Define types for our context
+export interface UserDetails {
+  id?: string;
+  name?: string;
+  email?: string;
+  userType?: string;
+  displayName?: string;
+  avatarUrl?: string;
+  headline?: string;
+  profileComplete?: boolean;
+  role?: string;
+  permissions?: string[],
+  companyId?: string;
+  bio?: string;
+  createdAt?: string;
+  updatedAt?: string
+}
+export interface AuthContextType {
+import { AuthContext } from "@/context/auth/AuthContext",
+import type { UserDetails as AuthUserDetails } from "@/types/auth",
+// Define types for our context
+export interface UserDetails {
+  id?: string,
+  name?: string,
+  email?: string,
+  userType?: string,
+  displayName?: string,
+  avatarUrl?: string,
+  headline?: string,
+  profileComplete?: boolean,
+  role?: string,
+  permissions?: string[],
+  companyId?: string,
+  bio?: string,
+  createdAt?: string,
+  updatedAt?: string
+import React, { createContext, useContext, useState, useEffect, ReactNode } from "react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { AuthContext } from "@/context/auth/AuthContext",;
+import type { UserDetails as AuthUserDetails } from "@/types/auth",;
+// Define types for our context;
+export interface UserDetails {;
+  id?: string,;
+  name?: string,;
+  email?: string,;
+  userType?: string,;
+  displayName?: string,;
+  avatarUrl?: string,;
+  headline?: string,;
+  profileComplete?: boolean,;
+  role?: string,;
+  permissions?: string[],;
+  companyId?: string,;
+  bio?: string,;
+  createdAt?: string,;
+  updatedAt?: string;
+
+import React, { create_context, useContext, useState, useEffect, ReactNode } from './react';
+import { supabase } from '@/integrations / supabase / client';
+import { AuthContext } from '@/context / auth / AuthContext';
+import type { UserDetails as AuthUserDetails } from "@/types / auth";
+// Define types for our context;
+export interface UserDetails {
+
+  id?: string;
+  name?: string;
+  email?: string;
+  user_type?: string;
+  display_name?: string;
+  avatar_url?: string;
+  headline?: string;
+  profile_complete?: boolean;
+  role?: string;
+
+
+
 }
 ;
 export interface AuthContextType {;
@@ -134,6 +214,9 @@ export interface AuthContextType {;
       name: "Twitter User"
       profileComplete: true
     })
+// Custom hook to use the auth context
+export function useAuth(): AuthContextType {
+  const context = useContext(AuthContext);
 
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
@@ -146,6 +229,14 @@ export function useAuth(): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
+
+
+// Custom hook to use the auth context
+export function useAuth(): AuthContextType {;
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error("useAuth must be used within an AuthProvider")
+
       console.warn("No wallet detected"),
       return
 ;
@@ -400,6 +491,7 @@ export function useAuth(): any (): AuthContextType {;
   const context = useContext(AuthContext);
   if (context === undefined) {;
     throw new Error("useAuth must be used within an AuthProvider");
+
   }
   return context;
 }

@@ -1,6 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
+
+
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');

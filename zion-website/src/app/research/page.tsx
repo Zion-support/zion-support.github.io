@@ -209,6 +209,10 @@ const researchImpact = [
         </div>;
       </div>;
       {/* Research Impact */}
+            Research Influence
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our research has made significant contributions to the field
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Impact</h2>
@@ -272,6 +276,10 @@ const researchImpact = [
         </div>;
       </div>;
       {/* Academic Collaborations */}
+            Academic Partnerships
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            We collaborate with leading academic institutions worldwide to advance
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Collaborations</h2>
@@ -341,6 +349,10 @@ const researchImpact = [
         </div>;
       </div>;
       {/* CTA section */}
+            Join our research community
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Interested in collaborating on cutting-edge AI research?
             Join our research community
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

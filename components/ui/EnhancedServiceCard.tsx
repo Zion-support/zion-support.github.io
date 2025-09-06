@@ -5,6 +5,24 @@
   }
 }
 import React from 'react';
+  Star
+  ExternalLink
+  ArrowRight
+  TrendingUp
+  Users
+  Clock
+  Shield
+  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,;
+  Zap,;
+
+
 } from 'lucide-react';
 
 interface EnhancedServiceCardProps {
@@ -67,6 +85,12 @@ interface EnhancedServiceCardProps {;
       />;
       {/* Popular Badge */}
 
+
+      )}
+
+
+
+
       {/* Card Content */}
       <div className='relative p-6'>
 
@@ -74,6 +98,9 @@ interface EnhancedServiceCardProps {;
       <div className='relative p-6'>
 
         {/* Header */}
+
+
+
         <div className='flex items-start justify-between mb-4'>
           <motion.div
             className={`text-4xl ${service.textColor}`}
@@ -84,6 +111,11 @@ interface EnhancedServiceCardProps {;
           >
             {service.icon}
           </motion.div>
+
+
+        {/* Key Metrics */}          
+
+
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
@@ -97,6 +129,8 @@ interface EnhancedServiceCardProps {;
           {service.name}
         </h3>
         <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+
+
           </div>
           <div className='text-center p-3 bg-white/5 rounded-lg border border-white/10'>
             <div className='text-purple-400 text-lg font-bold'>
@@ -185,8 +219,16 @@ interface EnhancedServiceCardProps {;
               </div>
 
             )}
-        {/* Market Info */}
 
+
+
+        {/* Market Info */}
+        <div className='mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10'>
+          <div className='flex items-center justify-between mb-2'>
+            <span className='text-xs font-semibold text-white'>
+              Market Size
+            </span>
+            <span className='text-xs text-cyan-400'>{service.marketSize}</span>
 
 
 
@@ -280,6 +322,7 @@ interface EnhancedServiceCardProps {;
         {/* Action Buttons */}
         <div className='flex gap-3'>
 
+
           <motion.a
             href={service.link}
             className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2'
@@ -311,6 +354,22 @@ interface EnhancedServiceCardProps {;
           </div>
         </div>
       </div>
+}
+};
+
+export default EnhancedServiceCard;    </motion.div>
+  )
+}
+export default EnhancedServiceCard;
+
+};
+export default EnhancedServiceCard;
+export default EnhancedServiceCard;
+
+};
+
+export default EnhancedServiceCard;
+export default EnhancedServiceCard;
         ease: 'easeInOut' as const,
       },
     },

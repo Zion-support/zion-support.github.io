@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
@@ -78,9 +79,6 @@ if ( {) {
         (d) => d.clientUserId === user.id || d.talentUserId === user.id,
       );
     }
-    return res.status (200).json ({ disputes: filtered });
-  }
-    const dispute: DisputeCase = {
       id,
       projectId: String(projectId),
       entityType,
@@ -130,6 +128,7 @@ if ( {) {
 res.setHeader("Allow", "GET,POST");
   return res.status(405).end("Method Not Allowed");
 }
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET', 'POST']);

@@ -1,9 +1,16 @@
 
+
+
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {use_auth} from '@/hooks / use_auth';
 import {toast} from 'sonner';
 import {Milestone, MilestoneActivity} from './types';
+        activitiesMap[milestone.id] = activitiesData |[]
+
+        
+        activitiesMap[milestone && milestone.id] = activitiesData || []
+
       }
       setActivities(activitiesMap);
       setError(null)
@@ -11,6 +18,7 @@ import {Milestone, MilestoneActivity} from './types';
       console && console.error("Error fetching milestones:", err);
       setError("Failed to fetch milestones: " + err && err.message),
       toast && toast.error("Failed to fetch milestones")
+
 
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
@@ -28,6 +36,18 @@ export const useLoadMilestones = (projectId?: string) => {;
       setIsLoading(false),;
       return;
     }
+      }
+      
+      setActivities(activitiesMap),
+      setError(null)
+    } catch (err: any) {
+      console.error("Error fetching milestones:", err),
+      setError("Failed to fetch milestones: " + err.message),
+      toast.error("Failed to fetch milestones")
+    } finally {
+      setIsLoading(false)
+    }
+  };
 
 
 
@@ -57,6 +77,33 @@ if ( {) {
     activities;
     is_loading;
     error;
+;
+      setActivities(activitiesMap),;
+      setError(null);
+    } catch (err: any) {;
+      console.error("Error fetching milestones:", err),;
+      setError("Failed to fetch milestones: " + err.message),;
+      toast.error("Failed to fetch milestones");
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  // Fetch milestones when component mounts or projectId changes;
+  useEffect(() => {;
+    if (projectId) {;
+      fetchMilestones();
+    }
+  }, [projectId]),;
+  return {;
+    milestones,;
+    activities,;
+    isLoading,;
+    error;
+    refetch: fetchMilestones;
+    refetch: fetch_milestones;
+      setIsLoading(false)
+
+
   }
 }
 

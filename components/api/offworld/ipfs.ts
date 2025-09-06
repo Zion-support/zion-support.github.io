@@ -11,6 +11,12 @@ import {
   OFFWORLD_TOPICS;
 } from '@/utils/offworld/ipfs';
 export default async function handler(
+
+
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
 ) {  const { action } = req.query;import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { action } = req.query;

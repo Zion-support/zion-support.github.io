@@ -1,5 +1,6 @@
 
 
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -273,6 +274,8 @@ if ( {) {
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{
+            ease: 'easeInOut',            ease: "easeInOut"
+
           }}
         />
         {/* Neon Glow Effects */}
@@ -348,6 +351,15 @@ if ( {) {
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 2
+
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2,
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
               duration: 3 + Math.random() * 2,
@@ -363,6 +375,9 @@ if ( {) {
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+              ease: 'easeInOut',            }}
+
+
 
 
           />
@@ -433,6 +448,10 @@ if ( {) {
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
           transition={{
+            ease: 'easeInOut',          }}            ease: "easeInOut"
+          }}
+        />
+            ease: 'easeInOut',          }}
 
         />;
 
@@ -462,10 +481,20 @@ if ( {) {
               opacity: [0, 0 && 0.8, 0]
               rotate: [0, 360]
             }}
+            transition={{
+              duration: 5 + Math.random() * 3
+              repeat: Infinity
+              delay: Math.random() * 5
 
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
+              ease: 'easeInOut',            }}              ease: "easeInOut"
+            }}
+          />
+        ))}
+        {/* Neural Network Connections */}
+        <svg className='absolute inset-0 w-full h-full opacity-20'>
 
             }}
           />;
@@ -582,6 +611,18 @@ rotate: [0, 360],            }}            style={{
 
               }}
               transition={{
+                duration: 4,
+                repeat: Infinity,
+                delay: i * 0.5,
+                ease: 'easeInOut',              }}                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </svg>
+        {/* Holographic Effects */}
+        <div className='absolute inset-0'>
+                r: [3, 6, 3],
+                opacity: [0.3, 0.8, 0.3],              }}
 
               }}
             />;
@@ -754,10 +795,22 @@ rotate: [0, 360],            }}            style={{
 
   );
 
+
+
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+                ease: 'easeInOut',              }}
+
+              }}
+
+
+
+              }}
+
+
+
             />
           ))}
 

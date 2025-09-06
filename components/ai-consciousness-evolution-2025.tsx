@@ -1,3 +1,61 @@
+  Brain
+  Star
+  Users
+  TrendingUp
+  Zap
+  Shield
+  CheckCircle
+  Clock
+  Award
+  Target
+  Globe
+  Sparkles
+  Cpu
+  Lock
+  Cloud
+  BarChart3
+  Eye
+  Heart
+  Lightbulb
+  ArrowRight
+  Phone
+  Mail
+  MapPin
+  Globe as GlobeIcon;} from 'lucide-react';import {
+  Brain, Star, Users, TrendingUp, Zap, Shield
+  Brain,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Shield,
+  CheckCircle,
+  Clock,
+  Award,
+  Target,
+  Globe,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Eye,
+  Heart,
+  Lightbulb,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,;
+  Globe as GlobeIcon,;} from 'lucide-react';import { 
+  Brain, Star, Users, TrendingUp, Zap, Shield, ;
+  CheckCircle, Clock, Award, Target, Globe, Sparkles;
+  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
+  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+
   website: 'https://ziontechgroup.com'
 }
 const features = [
@@ -140,10 +198,21 @@ const features = [;
   'Emotional intelligence training modulesConsciousness expansion exercisesSelf-awareness development toolsEmpathy and compassion trainingMindfulness and meditation guidanceCognitive enhancement techniquesSocial intelligence developmentCreative consciousness exploration';
   'Spiritual growth pathwaysPersonal transformation tracking';
 ];
+
 const integrations = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
+    content:
+      "This is the most advanced consciousness development tool I've ever encountered. The AI integration makes personal growth accessible to everyone.",
+    rating: 5,
+    avatar: '👩‍🔬',
+  },];    content: 'This is the most advanced consciousness development tool I\'ve ever encountered. The AI integration makes personal growth accessible to everyone.',
+    rating: 5,
+    avatar: '👩‍🔬'
+  }
+
+const integrations = [;
   'Wearable devicesMobile applicationsWeb platformsSmart home systemsHealthcare platformsEducational systemsCorporate wellness platformsSocial media networks';
   'Fitness trackersMeditation apps';
 ];
@@ -195,6 +264,8 @@ const features = [;
   'Spiritual growth pathways',
   'Personal transformation tracking',
 ];
+
+export default function AIConsciousnessEvolution2025() {
   return (
 
 
@@ -245,6 +316,7 @@ const features = [;
 
 
           <motion.div
+
 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -340,6 +412,9 @@ const features = [;
                   key={stat && stat.label}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
+                  className='text-center'
+
                 >
                   <div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>
                     {stat.icon}
@@ -353,6 +428,12 @@ const features = [;
 
               ))}
             </div>
+
+            {/* CTA Buttons */}
+            <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>              <motion.button
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
 
             {/* CTA Buttons */}
 
@@ -438,6 +519,7 @@ label: 'Success Rate',
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               Revolutionary Features for
@@ -494,6 +576,30 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+              >
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
+                  <Brain className='w-8 h-8 text-purple-400' />
+                </div>
+                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
+                  {feature}
+                </h3>
+                <p className='text-gray-400'>
+                  Advanced AI algorithms guide you through personalized
+                  consciousness development exercises.                </p>              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Brain className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200">
+                  {feature}
+                </h3>
+                <p className="text-gray-400">
+                  Advanced AI algorithms guide you through personalized consciousness development exercises.
+                </p>
+                  consciousness development exercises.                </p>
+
+                </p>
+
+
               </motion.div>
             ))}
 
@@ -515,6 +621,7 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -619,6 +726,7 @@ label: 'Success Rate',
                 icon: <TrendingUp className="w-12 h-12" />
               }
 
+
             ].map((step, index) => (
               <motion.div
                 key={step.step}
@@ -690,6 +798,18 @@ label: 'Success Rate',
           <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
             {[;
               {
+            ].map((step, index) => (
+              <motion.div
+                key={step.step}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                className='text-center'
+
+                key={step.step}
+
+
                 className='text-center'
 
 
@@ -738,6 +858,7 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -793,6 +914,30 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+              >
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>
+                  <Lightbulb className='w-8 h-8 text-purple-400' />
+                </div>
+                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200'>
+                  {useCase}
+                </h3>
+                <p className='text-gray-400'>
+                  Leverage AI-powered consciousness development for enhanced
+                  personal and professional growth.                </p>              >
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Lightbulb className="w-8 h-8 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors duration-200">
+                  {useCase}
+                </h3>
+                <p className="text-gray-400">
+                  Leverage AI-powered consciousness development for enhanced personal and professional growth.
+                </p>
+                  personal and professional growth.                </p>
+
+                </p>
+
+
               </motion.div>
             ))}
 
@@ -814,6 +959,7 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -900,6 +1046,7 @@ label: 'Success Rate',
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
 
+
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
               What Our Users
@@ -954,6 +1101,7 @@ label: 'Success Rate',
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.2 }}
                 viewport={{ once: true }}
 
+
               >
                 <div className='flex items-center mb-4'>
                   <div className='text-3xl mr-3'>{testimonial.avatar}</div>
@@ -1007,6 +1155,7 @@ label: 'Success Rate',
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl font-bold text-white mb-6'>
@@ -1078,6 +1227,19 @@ label: 'Success Rate',
               }
 
 
+                description:
+                  'Advanced features for serious consciousness development'
+                features: [
+                  'Advanced AI assessment'
+                  'Unlimited exercises'
+                  'Personalized coaching'
+                  'Priority support'
+                  'Advanced analytics'
+                  'Integration with wearables'
+                  'Group sessions'
+                ]
+                popular: true
+              },              {                  'Advanced AI assessmentUnlimited exercisesPersonalized coachingPriority supportAdvanced analyticsIntegration with wearablesGroup sessions'
                 ];
                 popular: true
                 key={plan.name}
@@ -1085,6 +1247,21 @@ label: 'Success Rate',
                 whileInView={{ opacity: 1, coordinate_y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
+              };
+
+              {
+                name: 'Professional',
+                price: '$299',
+                period: '/month',
+
+                    : 'border-purple-500/20'
+
+                    : 'border-purple-500/20'
+
+                    : 'border-purple-500/20'
+                className={`relative bg - gradient - to - br from - gray - 900 / 50 to - black / 50 backdrop - blur - lg border rounded - 2xl p - 8 ${
+                  plan.popular;
+                    ? 'border - purple - 500 / 50 shadow - 2xl shadow - purple - 500 / 20'                    : 'border - purple - 500 / 20';
                 }`}
               >;
                 {plan.popular && (
@@ -1113,6 +1290,7 @@ label: 'Success Rate',
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
+                      {feature}
 
                       {feature}
                     </li>;
@@ -1186,6 +1364,13 @@ label: 'Success Rate',
               </button>
             </div>
             {/* Contact Info */}
+                  icon: <MapPin className='w-6 h-6' />
+                  label: 'Visit Us'
+                  value: contactInfo.address
+                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
+                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
               {[
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
@@ -1195,6 +1380,16 @@ label: 'Success Rate',
                   icon: <MapPin className='w-6 h-6' />,
                   label: 'Visit Us',
                   value: contactInfo.address,
+                },              ].map((contact, index) => (            <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile },
+                { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email },
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
+                },              ].map((contact, index) => (
+
+                { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
+              ].map((contact, index) => (
+
                 <motion.div
                   key={contact.label}
                 Consciousness?;
@@ -1255,6 +1450,7 @@ label: 'Success Rate',
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.4 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
+
 
                 >
                   <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full mb-3 text-purple-400'>

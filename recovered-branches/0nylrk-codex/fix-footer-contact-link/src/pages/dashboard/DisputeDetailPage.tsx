@@ -1,15 +1,26 @@
 
+import { SEO  } from '@/components/SEO';
+import { AppHeader  } from '@/layout/AppHeader';
+import { Footer  } from '@/components/Footer';
+import { DisputeDetail  } from '@/components/disputes';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
+
+
 import {SEO} from '@/components/SEO';
 import {AppHeader} from '@/layout/AppHeader';
 import {Footer} from '@/components/Footer';
 import {DisputeDetail} from '@/components/disputes';
 import {ProtectedRoute} from '@/components/ProtectedRoute';
+
 import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppHeader } from '@/layout/AppHeader',
 import { Footer } from '@/components/Footer',
 import { DisputeDetail } from '@/components/disputes',
 import { ProtectedRoute } from '@/components/ProtectedRoute',
+
+
+
 function DisputeDetailPage() {
   return (
     <ProtectedRoute>
@@ -27,4 +38,9 @@ export default DisputeDetailPage;
 
     </ProtectedRoute>);
 }
+
+;
+export default DisputeDetailPage;
+
+;
 export default DisputeDetailPage;

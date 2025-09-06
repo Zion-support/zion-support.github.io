@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -8,6 +12,11 @@ export interface ApiKey {
 
 
 export interface ApiKey {;
+export interface ApiKey {
+
+
+export interface ApiKey {;
+
   id: string;
   name: string;
   key_prefix: string;
@@ -49,6 +58,9 @@ export function useApiKeys() {;
     if (!user) return;
     setLoading(true);
     setError(null);
+      setKeys(result.keys |[])
+
+
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -123,6 +135,10 @@ if ( {) {
   $2
 }
         throw new Error (result.error || 'Failed to fetch API keys');
+
+
+
+
       setKeys(result.keys || [])
     } catch (err) {
       console.error('Error fetching API keys:', err),
@@ -256,6 +272,9 @@ if ( {) {
       if (!session) {
         setError("Authentication required");
         return
+
+        };
+        body: JSON && JSON.stringify({ keyId })
       });
 
       const result = await response && response.json();
@@ -358,6 +377,9 @@ if ( {) {
       if (!session) {
         setError("Authentication required"),
         return
+
+        };
+        body: JSON && JSON.stringify({ keyId })
       });
 
       const result = await response && response.json();
@@ -551,6 +573,7 @@ if ( {) {
 
       setLogs(result.logs || []);
       setTotalLogs(result.count || 0);
+
 ;
       // Update the key's active status in the list;
       setKeys(prev => prev.map(key =>;
@@ -597,6 +620,9 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to fetch API logs')
       }
+
+
+
       
       return result
     } catch (err) {
@@ -620,3 +646,47 @@ if ( {) {
     revokeApiKey;
     fetchApiLogs;
 
+  }
+}
+        variant: "destructive",
+        title: "Error fetching API logs",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+;
+      setLogs(result.logs || []),;
+      setTotalLogs(result.count || 0),;
+      return result;
+    } catch (err) {;
+      console.error('Error fetching API logs:', err),;
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
+      toast({;
+        variant: "destructive",;
+        title: "Error fetching API logs",;
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {;
+      setLoading(false);
+    }
+  },;
+  return {;
+    keys,;
+    logs,;
+    totalLogs,;
+    loading,;
+    error,;
+    newApiKey,;
+    fetchApiKeys,;
+    createApiKey,;
+    regenerateApiKey,;
+    revokeApiKey;
+    fetchApiLogs;
+    clearNewApiKey: () => setNewApiKey(null);
+    clearNewApiKey: () => setNewApiKey (null);
+
+  }
+}
+
+
+  }
+}
+;

@@ -1,14 +1,36 @@
+import { Moon, Sun } from "lucide-react"
+import { Button } from "@/components/ui/button"
+
 });
 
 export function ModeToggle() {;
 
   const { theme, setTheme } = useTheme();
+// Create a simplified theme hook for offline mode
+
+const useTheme = () => ({
+  theme: "dark"
+  setTheme: (theme: string) => console.log(`Theme would change to: ${theme}`)
+});
+  theme: "dark",
+  setTheme: (theme: string) => // // // console.log(`Theme would change to: ${theme}`)
+}),
+
+
+
+export function ModeToggle() {
+  const { theme, setTheme } = useTheme(),
 
   return (
     <Button
       variant="ghost"
       size="icon"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+}
+import { Moon, Sun } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+
 }
 import { Moon, Sun  } from './lucide-react';
 import { Button  } from '@/components / ui / button';

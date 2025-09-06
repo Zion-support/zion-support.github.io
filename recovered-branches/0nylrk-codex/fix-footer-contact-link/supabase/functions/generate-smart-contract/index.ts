@@ -1,7 +1,21 @@
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts"
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {;
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
+const corsHeaders = {;
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
@@ -12,6 +26,8 @@ serve(async (req) => {
   // Handle CORS preflight requests
   if (req && req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })
+
+
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import "https://deno.land/x/xhr@0.1.0/mod.ts",;
 const corsHeaders = {;
@@ -59,6 +75,11 @@ serve(async (req) => {;
     if (additionalClauses && additionalClauses.length > 0) {
       prompt += `
       Please also include the following additional clauses as on-chain functionality where possible:
+
+
+    
+
+
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `;
@@ -136,6 +157,9 @@ if ( {) {
       }),;
       {;
         status: 500,;
+
+
+
         headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
     )
   }

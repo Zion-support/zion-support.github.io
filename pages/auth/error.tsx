@@ -1,3 +1,18 @@
+const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+}
+export default function AuthErrorPage() {
+  const { query } = useRouter()
+  const message = errorMessages[query.error as string] |errorMessages.default
+const errorMessages: Record<string string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+
+
+const errorMessages: Record<string string> = {;
+  OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
+  default: 'There was an issue with your authentication request.';
+
 const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
@@ -5,6 +20,9 @@ const errorMessages: Record<string, string> = {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
+
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()

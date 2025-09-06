@@ -29,6 +29,12 @@ export default function Web3LoginButton() {;
     chain: 'evm' | 'sol';
   } | null>(null);  const [displayName, setDisplayName] = useState<string | null>(null);
   const [displayWeb3, setDisplayWeb3] = useState<boolean>(false);
+  useEffect(() => {    return did.lens |did.ens |null
+  } catch { return null }
+}
+export default function Web3LoginButton() {
+
+export default function Web3LoginButton() {;
   const [open, setOpen] = useState(false);
 
   const [user, setUser] = useState<{ address: string, chain: 'evm' | 'sol' } | null>(null),

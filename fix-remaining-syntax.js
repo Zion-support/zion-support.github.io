@@ -1,7 +1,14 @@
+
+
+
+
 }});
   }
 });
 console.log(`Fixed ${fixedCount} files`);
+
+
+
 }});
 
 ;
@@ -86,7 +93,6 @@ errorFiles && errorFiles.forEach(file => {
     fixedCount++;
   }
   
-
 
   console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);
   console && console.log(`\nProcessed ${totalFiles} files, fixed ${fixedFiles} files`);

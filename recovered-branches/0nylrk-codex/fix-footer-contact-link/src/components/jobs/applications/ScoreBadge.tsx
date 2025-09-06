@@ -3,6 +3,9 @@ import { JobApplication } from "@/types/jobs";
 interface ScoreBadgeProps {;
   application: JobApplication;
 }
+
+
+
   // Determine color based on score
   let className = "text-gray-700 bg-gray-100",
   if (score >= 80) className = "text-green-700 bg-green-100",

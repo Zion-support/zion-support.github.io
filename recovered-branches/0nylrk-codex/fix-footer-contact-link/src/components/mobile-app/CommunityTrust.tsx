@@ -1,10 +1,21 @@
 
+import { Star } from "lucide-react";
+
+import React from "react",
+import { Star } from "lucide-react",
+
+
+import React from "react",
+import { Star } from "lucide-react",
+
+
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
     { value: "4.8", label: "App Store Rating" }
     { value: "50K+", label: "Downloads" }
     { value: "96%", label: "User Satisfaction" }
+import {Star} from "lucide-react";
 import React from "react",
 import { Star } from "lucide-react",
 export const CommunityTrust: React.FC = () => {
@@ -13,6 +24,10 @@ export const CommunityTrust: React.FC = () => {
     { value: "4.8", label: "App Store Rating" },
     { value: "50K+", label: "Downloads" },
     { value: "96%", label: "User Satisfaction" },
+    { value: "12M+", label: "Matches Made" }
+  ];
+  ],
+
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -63,6 +78,8 @@ export const CommunityTrust: React.FC = () => {;
               <div className="text-3xl md:text-4xl font-bold text-zion-cyan mb-2">{stat.value}</div>;
               <div className="text-zion-slate-light">{stat.label}</div>;
             </div>;
+
+
           ))}
         </div>
         {/* Rating display */}
@@ -71,6 +88,8 @@ export const CommunityTrust: React.FC = () => {;
             {[1, 2, 3, 4, 5].map ((star) => (
               <Star;
                 key={star}
+};
+
                 className="w - 6 h - 6 text - zion - cyan";
                 fill="current_color";
               />))}

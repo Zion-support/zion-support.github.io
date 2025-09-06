@@ -1,7 +1,14 @@
+import {cn} from '@/lib/utils';
+import {buttonVariants} from '@/components/ui/button';
+const AlertDialog = AlertDialogPrimitive.Root;
+const AlertDialogTrigger = AlertDialogPrimitive.Trigger;
+const AlertDialogPortal = AlertDialogPrimitive.Portal;
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
 import * as React from "react"
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog"
+
+
 
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
@@ -35,6 +42,19 @@ const AlertDialogContent = React.forwardRef<
   <AlertDialogPortal>
     <AlertDialogOverlay />
     <AlertDialogPrimitive.Content
+
+AlertDialogOverlay && AlertDialogOverlay.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Overlay.displayName;
+
+const AlertDialogContent = React && React.forwardRef<;
+  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Content>,;
+  React && React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.C</typeof>ontent>;
+>(({ className, ...props }, ref) => (;
+  <AlertDialogPortal>;
+    <AlertDialogOverlay />;
+    <AlertDialogPrimitive&& AlertDialogPrimitive.Content
+
+
+
 const AlertDialogContent = React.forwardRef<;
   React.ElementRef<typeof AlertDialogPrimitive.Content>,;
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Content>;
@@ -94,11 +114,19 @@ const AlertDialogTitle = React.forwardRef<
 ));
 AlertDialogTitle.displayName = AlertDialogPrimitive.Title.displayName;
 
+
+
+
 const AlertDialogDescription = React.forwardRef<
   React.ElementRef<typeof AlertDialogPrimitive.Description>
   React.Compon</typeof>entPropsWithoutRef<typeof AlertDialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Description
+AlertDialogTitle && AlertDialogTitle.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Title.displayName;
+
+const AlertDialogDescription = React && React.forwardRef<;
+  React && React.ElementRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Description>,;
+  React && React.Compon</typeof>entPropsWithoutRef<typeof AlertDialogPrimitive && AlertDialogPrimitive.Description>;
 >(({ className, ...props }, ref) => (;
 
   />));
@@ -109,6 +137,13 @@ const AlertDialogDescription = React.forward_ref<;
   React.Compon</typeof > entPropsWithoutRef < typeof AlertDialogPrimitive.Description>;
 >(({ class_name, ...props }, ref) => (
   <AlertDialogPrimitive.Description;
+    ref={ref}
+    className={cn('text-sm text-muted-foreground', className)}
+    {...props}
+  />
+));
+AlertDialogDescription.displayName =
+  AlertDialogPrimitive.Description.displayName;
     ref={ref}
     className={cn ('text - sm text - muted - foreground', class_name)}
     {...props}
@@ -164,11 +199,32 @@ const AlertDialogCancel = React.forwardRef<;
 >(({ className, ...props }, ref) => (;
   <AlertDialogPrimitive.Cancel;
     ref={ref}
+
+
+
+    className={cn(
+      buttonVariants({ variant: "outline" }),
+      "mt-2 sm:mt-0",
       className
     )}
     {...props}
   />;
 ));
+export {
+  AlertDialog
+  AlertDialogPortal
+  AlertDialogOverlay
+  AlertDialogTrigger
+  AlertDialogContent
+  AlertDialogHeader
+  AlertDialogFooter
+  AlertDialogTitle
+  AlertDialogDescription
+  AlertDialogAction
+  AlertDialogCancel
+}
+
+AlertDialogCancel && AlertDialogCancel.displayName = AlertDialogPrimitive && AlertDialogPrimitive.Cancel.displayName;
 
 
 
@@ -213,6 +269,7 @@ export {
   AlertDialogTitle,
   AlertDialogDescription,
   AlertDialogAction,
+
 export {;
   AlertDialog,;
   AlertDialogPortal,;
@@ -226,3 +283,6 @@ export {;
   AlertDialogAction;
   AlertDialogCancel}
 ;
+
+
+

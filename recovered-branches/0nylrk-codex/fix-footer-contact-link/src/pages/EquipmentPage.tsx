@@ -1,3 +1,12 @@
+
+import React from 'react',
+import React from 'react',
+
+
+import React from 'react',
+
+import React from 'react',
+
 const EquipmentPage = () => {
 const EquipmentPage = () => {;
   return (
@@ -8,4 +17,6 @@ const EquipmentPage = () => {;
 
 },
 
+export default EquipmentPage;
+export default EquipmentPage,
 

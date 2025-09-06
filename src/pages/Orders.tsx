@@ -89,7 +89,6 @@ export default function OrdersPage() {;
                   </Link>
                 </TableCell>
               </TableRow>
-
           </TableBody>;
         </Table>;
       )}

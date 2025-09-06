@@ -12,6 +12,12 @@ export async function createNotification({;
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
+import { supabase } from "@/integrations/supabase/client",
+import { CreateNotificationParams, CreateNotificationResult } from './types',
+
+
+
+
 /**
  * Creates a notification for a user and optionally sends an email notification
  */
@@ -21,16 +27,22 @@ export async function createNotification({
   message;
   type;
 
+
+
   actionText = null
 }: CreateNotificationParams): Promise<CreateNotificationResult> {
   void actionUrl,
   void actionText,
   try {
     // Call the create_notification database function
+
+
         body: { user_id: userId, notification_id: notificationId }
       })
     }
     return { success: true, notificationId: data }
+
+
     console.error('Error creating notification:', error);
 
 import { supabase } from '@/integrations / supabase / client';

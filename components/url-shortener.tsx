@@ -1,3 +1,24 @@
+  Link
+  Copy
+  BarChart3
+  ArrowRight
+  RefreshCw
+  CheckCircle
+  ExternalLink
+  QrCode
+  Settings
+  Trash2;
+} from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+
+export default function URLShortenerPage() {
+  Link,
+  Copy,
+  BarChart3,
+  ArrowRight,
+  RefreshCw,
+  CheckCircle,
+  ExternalLink,
+  QrCode,
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -271,8 +292,6 @@ import {
                     ))}
                   </div>;
                 )}
-
-
 
 
 
@@ -692,3 +711,5 @@ import {
 }
     </>);
 }
+
+  );

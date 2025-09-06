@@ -2,6 +2,65 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  Clock,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Zap,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Palette,
+  Target,
+  CheckCircle,;
+  Sparkles,;} from 'lucide-react';import {
+  ArrowRight, Star, Users, Award, Clock, ;
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+import Layout from './layout / Layout';
+import UltraFuturisticServiceCard2026 from './ui / UltraFuturisticServiceCard2026';
+import Link from 'next / link';
+import { motion } from 'framer-motion';
+
+  CheckCircle,;
+  Sparkles,;} from 'lucide-react';import { ;
+  ArrowRight, Star, Users, Award, Clock, ;
+
+import { 
+  ArrowRight, Star, Users, Award, Clock, 
+
+
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles;
@@ -15,6 +74,7 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}>;
               {/* Main heading with enhanced typography */}
+
 
                   Zion Tech Group
                 </h1>
@@ -79,6 +139,7 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
                 Trusted by Industry Leaders
@@ -123,10 +184,12 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
 
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className='text-5xl font-bold text-cyan-400 mb-3'>50+</div>
@@ -157,6 +220,7 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className='text-5xl font-bold text-blue-400 mb-3'>
@@ -191,6 +255,7 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className='text-5xl font-bold text-purple-400 mb-3'>
@@ -242,6 +307,7 @@ import { realAIServices2025 } from '../data/real-ai-services-2025';
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
@@ -596,6 +662,11 @@ const Homepage2037: React.FC = () => {
 
 
                     service={{
+                      icon: service.icon
+                    }}
+                    variant="ai"
+            </div>
+
 
 
                     }}
@@ -626,6 +697,7 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+
 
             >
               <Link href='/ai-services'>
@@ -670,6 +742,7 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
@@ -775,6 +848,7 @@ const Homepage2037: React.FC = () => {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+
             >
               <Link href='/it-services'>
                 <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-blue-500/25'>
@@ -818,6 +892,7 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <div className='flex items-center justify-center space-x-3 mb-6'>
@@ -923,6 +998,7 @@ const Homepage2037: React.FC = () => {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               viewport={{ once: true }}
 
+
             >
               <Link href='/micro-saas'>
                 <button className='px-8 py-4 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-teal-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto shadow-lg shadow-green-500/25'>
@@ -966,6 +1042,7 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
@@ -1011,10 +1088,12 @@ const Homepage2037: React.FC = () => {
 
 
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
@@ -1060,6 +1139,7 @@ const Homepage2037: React.FC = () => {
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
 
+
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Atom className='w-10 h-10 text-white' />
@@ -1103,6 +1183,7 @@ const Homepage2037: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
@@ -1148,6 +1229,7 @@ const Homepage2037: React.FC = () => {
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
 
+
               >
                 <div className='w-20 h-20 bg-gradient-to-r from-green-500 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300'>
                   <Zap className='w-10 h-10 text-white' />
@@ -1176,6 +1258,7 @@ const Homepage2037: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               {/* Background decoration */}
@@ -1248,3 +1331,4 @@ export default Homepage2037;
 };
 
 
+export default Homepage2037;

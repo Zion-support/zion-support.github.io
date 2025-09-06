@@ -1,5 +1,30 @@
 import { motion } from 'framer-motion';
 
+  Phone
+  Mail
+  MapPin
+  Globe
+  Zap
+  Brain
+  Atom
+  Rocket
+  Shield
+  Cpu
+  Target
+  Microscope
+  Users
+  Facebook
+  Twitter
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  ArrowRight
+  Heart
+  Star
+  Award
+  CheckCircle;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, Zap, Brain, Atom
 
   Phone,
   Mail,
@@ -250,6 +275,8 @@ const socialLinks = [;
               </div>;
             </div>;
 
+
+
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -449,5 +476,6 @@ const socialLinks = [;
   );
 }
 ;
+}
 }
 }

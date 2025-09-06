@@ -42,7 +42,6 @@ import {
         </ul>;
       </div>;
 
-
 } from 'lucide-react';
 
 export default function APIDocumentation() {

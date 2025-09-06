@@ -1,11 +1,79 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+  Star
+  Clock
+  Users
+  TrendingUp
+  CheckCircle
+  ExternalLink
+  ChevronRight
+  Shield
+  Zap
+  Globe
+  Rocket
+  Brain
+  Atom
+  Search
+  Filter
+  Grid
+  List
+  ArrowRight
+  Award
+  Target;
+} from 'lucide-react';
+import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import {
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink
 
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ExternalLink,
+  ChevronRight,
+  Shield,
+  Zap,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+
+import {;
+  Star,;
+  Clock,;
+  Users,;
+  TrendingUp,;
+  CheckCircle,;
+  ExternalLink,;
+  ChevronRight,;
+  Shield,;
+  Zap,;
+  Globe,;
+  Rocket,;
+  Brain,;
+  Atom,;
+  Search,;
+  Filter,;
+  Grid,;
+  List,;
+  ArrowRight,;
   Award,;
   Target,;
 } from 'lucide-react';
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
+import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';import { ;
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, ;
+
+import { 
+  Star, Clock, Users, TrendingUp, CheckCircle, ExternalLink, 
+
   ChevronRight, Shield, Zap, Globe, Rocket, Brain, Atom;
   Search, Filter, Grid, List, ArrowRight, Award, Target;
 } from 'lucide-react';
@@ -122,6 +190,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             </div>
           </div>
         </motion.div>
+          className='text-center mb-16'>;
           <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
             Revolutionary Micro SAAS Services 2025;
           </h2>;
@@ -205,12 +274,15 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
         </motion && motion.div>;
 
 
+
+
         {/* Search and Filters */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+
 
         >
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
@@ -250,11 +322,14 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             </div>
           </div>
         </motion.div>
+                >;
                   <List className="w-5 h-5" />;
               </div>;
             </div>;
           </div>;
         </motion && motion.div>;
+
+
 
 
         {/* Category Filter */}
@@ -316,12 +391,34 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   exit={{ opacity: 0, coordinate_y: -30 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                    </div>
+                  )}
+
+
                       <Star className='w-3 h-3' />                      Popular
 
                       Popular
 
+
+
+
                     </div>
                   )}
+                  {/* Service Content */}
+                  <div className='p-6'>
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      <div className='text-right'>
+                        <div className='text-2xl font-bold text-white'>
+                          {service.price}
+                        </div>
+                        <div className='text-xs text-white/60'>
+                          {service.period}
+                        </div>
+
+
+
+
                       </div>
                     </div>
                     <h3 className='text-xl font-bold text-white mb-2'>
@@ -426,6 +523,10 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                       {service.popular && (
                       )}
                     </div>
+                      )}
+                    </div>
+
+
                         <div>
                           <h3 className='text-2xl font-bold text-white mb-2'>
                             {service.name}
@@ -590,16 +691,19 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
             </h3>
             <p className='text-white/60'>
               Try adjusting your search or filter criteria
-            </p>          </motion.div>
-
-          </motion.div>
-
-
-
         )}
             </p>          </motion.div>
 
           </motion.div>
+
+        )}
+
+
+            </p>          </motion.div>
+
+          </motion.div>
+
+
 
         )}
 
@@ -609,6 +713,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
           viewport={{ once: true }}
+
 
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30'>
@@ -650,6 +755,7 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
 }
   );
 }
+}
         </motion.div>;
       </div>;
     </section>);
@@ -680,4 +786,5 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
         </motion.div>
       </div>
     </section>
+}
 }

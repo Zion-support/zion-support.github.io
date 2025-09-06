@@ -205,10 +205,25 @@
     competitors: ['Bentley SystemsAutodeskSiemens'], marketSize: '$30B smart city market',
     growthRate: '90% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+    
     },
     realImplementation: true, implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.',
     launchDate: '2026-05-15', customers: 30,
     rating: 4.8,
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    reviews: 25;
+
+    realImplementation: true;
+    implementationDetails: 'Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.';
+    launchDate: '2026-05-15';
+    customers: 30;
+
+  }
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV4 {;
   id: string,;

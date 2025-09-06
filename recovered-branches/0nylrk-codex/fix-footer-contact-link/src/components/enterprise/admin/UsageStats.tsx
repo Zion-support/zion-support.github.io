@@ -1,4 +1,12 @@
 
+
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
+
   Card,
   CardContent,
   CardDescription,
@@ -11,10 +19,33 @@ import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
   const handleSaveChanges = () => {
     toast({
+
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle,;
+} from "@/components/ui/card";
+import { Sparkles } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+export function UsageStats() {;
+  const handleSaveChanges = () => {;
+    toast({;
+      title: "Limits updated",;
+      description: "The new usage limits have been saved successfully.",;
+
+
+      title: "Limits updated",
+      description: "The new usage limits have been saved successfully.",;
+
     });
   }
 
   return (
+
+
 
 
         <Card>
@@ -115,6 +146,8 @@ export function UsageStats() {
           </CardFooter>
         </Card>
       </div>
+
+
       <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
         <div className="flex items-center gap-4">
           <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
@@ -130,6 +163,11 @@ export function UsageStats() {
         <Button>Contact Us</Button>
       </div>
     </div>
+  );
+}
+
+
+
   )
 import React from "react",;
 import { Slider } from "@/components/ui/slider",;
@@ -212,6 +250,10 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
+
+
+
+
   );
         <Button > Contact Us</Button>;
       </div>;

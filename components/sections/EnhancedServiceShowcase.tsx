@@ -1,4 +1,40 @@
 
+  Star
+  Users
+  TrendingUp
+  DollarSign
+  Clock
+  CheckCircle
+  ArrowRight
+  Zap
+  Shield
+  Rocket
+  Brain
+  Globe
+  Lock
+  Code
+  Database
+  Cloud;
+
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Shield,
+  Rocket,
+  Brain,
+  Globe,
+  Lock,
+  Code,
+  Database,;
+  Cloud,;
+import Button from '../ui/Button';
+
+interface Service {
 import {;
   Star,;
   Users,;
@@ -395,6 +431,7 @@ interface Service {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
+
           >
             {stats.map((stat, index) => (
           </motion.h2>
@@ -435,6 +472,7 @@ interface Service {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+
 
           >
             <div className='bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50'>
@@ -497,6 +535,7 @@ interface Service {;
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
+
         >
           <AnimatePresence>
             {filteredServices.map((service, index) => (
@@ -516,10 +555,16 @@ interface Service {;
                 initial={{ opacity: 0, coordinate_y: 30, scale: 0.9 }}
                 whileInView={{ opacity: 1, coordinate_y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
+
+
               >
                 <div className='relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full'>
                   {/* Popular Badge */}
                   {service.popular && (
+                    </div>
+                  )}
+
+
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>                      ⭐ Most Popular
 
                       ⭐ Most Popular
@@ -593,6 +638,8 @@ interface Service {;
 
                   {/* Stats */}
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
+
+
 
                     <div>
                       <div className='text-lg font-bold text-white'>
@@ -758,6 +805,17 @@ interface Service {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          <div className='bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Ready to Transform Your Business?
+            </h3>
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+              Join thousands of companies already achieving breakthrough results
+              with our cutting-edge AI, quantum, and blockchain solutions. Get
+              started today and see the future of business technology.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+
               <Button
                 href='/contact'
                 variant='primary'
@@ -984,3 +1042,11 @@ export default EnhancedServiceShowcase;
 };
 
 
+
+}
+}
+}
+}
+}
+}
+export default EnhancedServiceShowcase;

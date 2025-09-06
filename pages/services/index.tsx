@@ -1,6 +1,5 @@
 
 
-
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',;
@@ -250,6 +249,12 @@ const sampleServices: Service[] = [;
       realServicesQ42025 as unknown[]
     )
     return acc
+  }, {} as Record<string, Service[]>)
+  }, {} as Record<string Service[]>),
+
+  }, {} as Record<string, Service[]>),
+
+  }, {} as Record<string Service[]>),
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
@@ -267,6 +272,11 @@ const sampleServices: Service[] = [;
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {filtered.map((service) => (
+
+
+                <EnhancedMarketplaceCard key={service.slug || service.id} service={service} onRequestQuote={handleRequestQuote} />
+
+
             {featuredServices.length > 0 && (
               <section className="mb-20">
                 <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -275,6 +285,22 @@ const sampleServices: Service[] = [;
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
+                      key={`${service.id |service.name}-${index}`}
+                      service={service}
+                      variant="quantum"
+                    />
+                  ))}
+                </div>
+              </section>
+            )}
+            {/* Latest Services */}
+                      key={`${service.id || service.name}-${index}`}
+                      service={service}
+
+
+                      key={`${service.id || service.name}-${index}`}
+                      service={service}
+
                       key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -285,6 +311,9 @@ const sampleServices: Service[] = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                       variant="quantum"
                     />
                   ))  } catch (error) {
@@ -313,6 +342,11 @@ const sampleServices: Service[] = [;
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {latestServices.map((service: Service, index: number) => (
                     <UltraFuturisticServiceCard2026
+
+
+                      key={`${service.id || service.name}-${index}`}
+
+
                       service={service}
                       variant="ai"
                     />
@@ -321,12 +355,17 @@ const sampleServices: Service[] = [;
               </section>
             )}
             {/* Services by Category */}
+
+
+
             <section className="mb-20">
               <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Services by Category
               </h2>
               <div className="space-y-12">
                 {categories.map((category) => {
+
+
                         <span className="px-3 py-1 bg-gradient-to-r from-gray-700 to-gray-800 rounded-full text-sm text-gray-300">
                           {categoryServices.length} services
                         </span>
@@ -334,7 +373,17 @@ const sampleServices: Service[] = [;
                       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                           <UltraFuturisticServiceCard2026
+                            key={`${service.id |service.name}-${index}`}
+
+                        <span className="px - 3 py - 1 bg - gradient - to - r from - gray - 700 to - gray - 800 rounded - full text - sm text - gray - 300">;
+                          {category_services.length} services;
+                        </span>;
+                      </h3>;
+                      <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
+                        {category_services.slice (0, 6).map ((service: Service, index: number) => (
+                          <UltraFuturisticServiceCard2026;
                             key={`${service.id || service.name}-${index}`}
+                            service={service}
                             service={service}
                             key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
@@ -346,6 +395,9 @@ const sampleServices: Service[] = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                             variant="default"
                           />
                         ))  } catch (error) {
@@ -395,6 +447,12 @@ const sampleServices: Service[] = [;
                   Need a Custom Solution?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Our team of experts can help you build custom solutions tailored to your specific needs. 
+                  Our team of experts can help you build custom solutions tailored to your specific needs.
+
+
+
+
                   Let's discuss how we can transform your business with cutting-edge technology.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -427,6 +485,8 @@ const sampleServices: Service[] = [;
                     <p className="text-gray-300/90 line-clamp-3 mb-3">{service.tagline |service.description}</p>
                     <div className="text-gray-100 font-bold mb-4">{service.price}<span className="text-sm text-gray-400 font-medium">{service.period}</span></div>
                     <div className="flex gap-3">
+
+
           {featuredServices.length > 0 && (
             <section className="mb-20">
               <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -435,6 +495,22 @@ const sampleServices: Service[] = [;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {featuredServices.map((service: Service, index: number) => (
                   <UltraFuturisticServiceCard2026
+                    key={`${service.id |service.name}-${index}`}
+                    service={service}
+                    variant="quantum"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+          {/* Latest Services */}
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+
+
+                    key={`${service.id || service.name}-${index}`}
+                    service={service}
+
                     key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -445,6 +521,9 @@ const sampleServices: Service[] = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                     variant="quantum"
                   />
                 ))  } catch (error) {
@@ -473,6 +552,11 @@ const sampleServices: Service[] = [;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {latestServices.map((service: Service, index: number) => (
                   <UltraFuturisticServiceCard2026
+
+
+                    key={`${service.id || service.name}-${index}`}
+
+
                     service={service}
                     variant="ai"
                   />
@@ -511,6 +595,9 @@ const sampleServices: Service[] = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
           <section className="mb-20">
             <h2 className="text-3xl md: text-4xl font-bold mb-12 text-center bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
               Services by Category
@@ -530,6 +617,8 @@ const sampleServices: Service[] = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                       <span className="text-sm text-gray-400 bg-gray-800 px-3 py-1 rounded-full">
                         {categoryServices.length} services
                       </span>
@@ -537,6 +626,10 @@ const sampleServices: Service[] = [;
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                       {categoryServices.slice(0, 6).map((service: Service, index: number) => (
                         <UltraFuturisticServiceCard2026
+
+
+                          key={`${service.id || service.name}-${index}`}
+
                           service={service}
                           key={`${service.id || service.name}-${index}`  } catch (error) {
     console.error("Error:", error);
@@ -548,6 +641,9 @@ const sampleServices: Service[] = [;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                           variant="default"
                         />
                       ))}
@@ -555,30 +651,23 @@ const sampleServices: Service[] = [;
                     {categoryServices.length > 6 && (
                       <div className="text-center mt-6">
                         <Link
+
+
                           className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
                         >
                           View All {category} Services ({categoryServices.length})
                         </Link>
                       </div>
+
+
+
+
+
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
-                        <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
-                          <span className="text-2xl font-bold">{service.name.charAt(0)}</span>
-                        </div>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-gray-500 group-hover:text-cyan-400 transition-colors duration-300" />
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                    </p>
-                    <div className="space-y-2 mb-6">
-                      {service.features.slice(0, 3).map((feature, featureIndex) => (
-                        <div key={featureIndex} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
 
                       <span className="text - sm text - gray - 400 bg - gray - 800 px - 3 py - 1 rounded - full">;
                         {category_services.length} services;
@@ -652,37 +741,6 @@ const sampleServices: Service[] = [;
                         <UltraFuturisticServiceCard2026
                           service={service}
 
-                          key={`${service.id || service.name}-${index}`  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          service={service  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                          variant="default"
-                        />
-                      ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    </div>
-                    {categoryServices.length > 6 && (
-                      <div className="text-center mt-6">
-                        <Link
-                          className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all"
-                        >
-                          View All {category} Services ({categoryServices.length})
-                        </Link>
-                      </div>
-                    )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
                     <div className="flex items-center justify-between mb-6">
                       <div className="text-cyan-400 group-hover:text-blue-400 transition-colors duration-300">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl flex items-center justify-center">
@@ -698,6 +756,8 @@ const sampleServices: Service[] = [;
                       {service.tagline}
                     </p>
                     <p className="text-gray-300 mb-6 leading-relaxed">
+
+
                     </p>
                     <div className="space-y-2 mb-6">
                       {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -847,6 +907,10 @@ const sampleServices: Service[] = [;
     </UltraAdvancedFuturisticBackground>);
 }
 
+
+
+
+
       <QuoteRequestModal
         open={modalOpen}
         onClose={() => setModalOpen(false)}
@@ -856,6 +920,9 @@ const sampleServices: Service[] = [;
     </div>
   )
 }
+
+}
+
       <QuoteRequestModal;
         open={modal_open}
         on_close={() => setModalOpen (false)}

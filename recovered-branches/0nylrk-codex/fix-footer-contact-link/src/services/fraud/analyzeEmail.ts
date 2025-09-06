@@ -1,4 +1,9 @@
 
+
+
+export const analyzeEmail = (email: string): EmailAnalysisResult => {;
+
+
   const domain = email.split('@')[1]?.toLowerCase();
   const reasons: string[] = []
   if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] }
@@ -12,6 +17,9 @@
     if (domain && domain.includes(suspiciousDomain)) {
       reasons && reasons.push(`Suspicious email domain: ${domain}`);
       break
+
+
+
     }
   }
   return {

@@ -2,12 +2,32 @@ import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+
+
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
+  AuthError
+  User
+  AuthChangeEvent
+  Session;
+} from '@supabase/supabase-js';
+import {
+  logInfo
+  logWarn
+  logErrorToProduction;
+
+import type {;
+  AuthError,;
+  User,;
+
   AuthError,
   User,
 
@@ -563,6 +583,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 
 
 
+
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -640,6 +661,55 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Checking authentication...</p>
+
+    )
+    return undefined, // Explicitly return undefined if condition is not met;
+  }, [isEmailUnverified, verificationEmailSent, email, router]),;
+  // --- Rendering Logic ---;
+  // 1. Primary Loading State: During initial session check;
+  if (isCheckingSession) {;
+    logInfo('LoginPage: Rendering "Checking authentication..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <p className="text-gray-600">Checking authentication...</p>;
+          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  if (sessionChecked && user && !isLoading) {;
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>;
+          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading);
+  // This also covers the case where a user was present but a login attempt failed, clearing the user.;
+  logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
+
+
+  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
   // This is a safeguard against the component's content persisting on other auth routes.;
 
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
@@ -650,6 +720,20 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  return (
+    <>
+      <Head>
+        <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
+        <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
+      </Head>
+      <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
+        <Card className='w-full max-w-md'>          <CardHeader>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <Card className="w-full max-w-md">
+          <CardHeader>
+
+
+
   return (
     );
     return null; // Or a minimal loader/empty div  }
@@ -681,6 +765,65 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                   id='password'
                   type='password'
                   value={password}
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className='space-y-2'>
+                <label htmlFor='password' className='text-sm font-medium'>
+                  Password
+                </label>
+                <Input
+                  id='password'
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading || isEmailUnverified}
+              >
+                {isLoading
+                  ? 'Signing in...'
+                  : isEmailUnverified
+                    ? t('auth.email_verification_required')
+                    : t('auth.sign_in')}
+              </Button>
+            </form>
+            <div className='mt-6 text-center'>
+              <p className='text-sm text-gray-600'>
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'
+                >                  Sign up
+                  id="email"
+                  type="email"
+                  value={email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setEmail(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  required;
+                  disabled={isLoading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                />
+              </div>
+              
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
                   Password
@@ -693,6 +836,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
                   required
 
                   disabled={isLoading}
+
+
                 </Link>
               </p>
             </div>
@@ -700,6 +845,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
         </Card>
       </div>
     </>
+
+
+
+
+
   )
 },
 export default LoginPage,

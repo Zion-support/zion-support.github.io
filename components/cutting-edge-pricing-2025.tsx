@@ -34,6 +34,30 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+  Check,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Target,
+  Rocket,
+  Star,
+  TrendingUp,
+  Award,
+  Users,
+  ArrowRight,
+  ExternalLink,
+  Phone,
+  Mail,;
+  MapPin,;} from 'lucide-react';import { 
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin;
+} from 'lucide-react';
+import Layout from '../components/layout/Layout';
+import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services';
+import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
+import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
+import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
+
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -96,6 +120,12 @@ const pricingTiers = [
   }
 const serviceCategories = [
   {
+    name: 'AI & Consciousness Services'
+    icon: <Brain className='w-8 h-8' />
+    services: cuttingEdgeAIServices2025.slice(0, 6)
+    description:
+      'Revolutionary AI platforms with consciousness and emotional intelligence'
+  }
   {
     name: 'Quantum & Emerging Tech'
     icon: <Atom className='w-8 h-8' />
@@ -119,7 +149,6 @@ const serviceCategories = [
     description: 'Innovative business solutions for modern enterprises'
   }
 ];
-
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -252,6 +281,11 @@ const stats = [
   { number: '$500B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-400' }
   { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-400' }
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-400' }
+export default function CuttingEdgePricing2025() {
+
+
+export default function CuttingEdgePricing2025() {;
+
   const [selectedCategory, setSelectedCategory] = useState('all');
   const allServices = [
 
@@ -413,6 +447,11 @@ export default function CuttingEdgePricing2025() {;
                   Pricing 2025
                 </span>
               </motion.h1>
+
+
+              <motion.p 
+
+
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
@@ -548,6 +587,12 @@ export default function CuttingEdgePricing2025() {;
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className={`relative group ${
+                        </li>
+
+                      ))}
+                    </ul>
+
+
 
                     <a
                       href={tier && tier.ctaLink}
@@ -556,6 +601,10 @@ export default function CuttingEdgePricing2025() {;
                           ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                           : 'border-2 border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10'
 
+
+                    </a>
+                  </div>
+                </motion.div>
               ))}
 
             </div>;
@@ -597,12 +646,20 @@ export default function CuttingEdgePricing2025() {;
             <div className='flex flex-wrap justify-center gap-4 mb-12'>            <div className="flex flex-wrap justify-center gap-4 mb-12">
               <button
 
+
                 onClick={() => setSelectedCategory('all')}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
                     ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white';
                     : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10';
                 }`}
+
+                <button
+
+
+
+
+
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -744,6 +801,7 @@ export default function CuttingEdgePricing2025() {;
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                 </motion.div>
 
+
               ))}
             </motion.div>
           </div>
@@ -758,6 +816,9 @@ export default function CuttingEdgePricing2025() {;
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 

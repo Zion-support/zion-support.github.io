@@ -1,4 +1,5 @@
 
+
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -8,6 +9,19 @@ export default function ServicesAdvertisingPage() {
   const benefits = [
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling'
     'Flexible deployment: SaaS or self-hosted options'
+  ],
+
+  ],
+				{/* New: Core micro SaaS and AI additions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+  ],
+  ],
+
 
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
@@ -15,6 +29,8 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20$80/mo</li>
 						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
+
+
 					</ul>
 				</section>
   const pricingRefs = [
@@ -22,12 +38,15 @@ export default function ServicesAdvertisingPage() {
       title: 'AI Platforms'
       links: [
 
+
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10$30/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.pinecone.io/pricing/')}</li>
+
+
 					</ul>
 				</section>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -49,6 +68,16 @@ export default function ServicesAdvertisingPage() {
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] }
+                { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] }
+                { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] }
+                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizingBudgets'] }
+                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map'] }
+              {[ 
+              {[
+
+
+
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
                 { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },
@@ -64,6 +93,8 @@ export default function ServicesAdvertisingPage() {
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
+
+
             </div>
           </section>
           <section>
@@ -85,6 +116,8 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $40$200/mo</li>
 						<li>References: {ext('https://apify.com/pricing')}, {ext('https://www.browserless.io/pricing')}</li>
+
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -93,6 +126,8 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $30$150/mo</li>
 						<li>References: {ext('https://k6.io/pricing')}, {ext('https://jmeter.apache.org/')}</li>
+
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -101,6 +136,8 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $15$60/mo</li>
 						<li>References: {ext('https://dmarc.org/overview/')}, {ext('https://postmarkapp.com/support/category/dmarc')}</li>
+
+
 					</ul>
 				</section>
 				<section className="space-y-6">
@@ -109,6 +146,8 @@ export default function ServicesAdvertisingPage() {
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical budget: $10$60/mo + usage</li>
 						<li>References: {ext('https://openai.com/api/pricing')}, {ext('https://www.descript.com/pricing')}</li>
+
+
 					</ul>
 				</section>
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
@@ -189,11 +228,18 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             </div>
           </section>
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[ 
+              {[
+
+
+
                 { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' }
                   { name: 'Humanloop', href: 'https://humanloop.com/pricing' }
@@ -302,6 +348,8 @@ export default function ServicesAdvertisingPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
@@ -312,6 +360,8 @@ export default function ServicesAdvertisingPage() {
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
+
+
             </div>
           </section>
           <section>
@@ -327,6 +377,8 @@ export default function ServicesAdvertisingPage() {
               <a href={`https://maps.google.com/?q=${encodeURIComponent(contact.address)}`} target="_blank" rel="noopener noreferrer" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-emerald-500/40 flex items-center gap-3">
                 <MapPin className="w-5 h-5 text-emerald-400" />
                 <span className="text-gray-200 text-sm">{contact.address}</span>
+
+
             </div>
           </section>
           <section>
@@ -339,11 +391,31 @@ export default function ServicesAdvertisingPage() {
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
+                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
+                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
+}
+};
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+};
+
+
 }
 import React from 'react',
 import SEO from '../components / SEO',
@@ -731,3 +803,8 @@ return (
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
+
+
+
+;
+

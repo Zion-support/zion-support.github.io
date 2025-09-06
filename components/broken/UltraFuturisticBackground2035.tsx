@@ -1,4 +1,6 @@
 
+if (ctx) {
+export default function UltraFuturisticBackground2035({
 
 }
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
@@ -584,6 +586,12 @@ if ( {) {
         />;
 
         <motion&& motion.div
+            duration: 8,
+            repeat: Infinity,
+
+            duration: 8
+            repeat: Infinity
+
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
         {/* Quantum energy waves */}
@@ -625,6 +633,4 @@ if ( {) {
       {children}
     </>);
 }
-
-      </div>
 

@@ -2,6 +2,13 @@ export type OnboardingStep = {;
   id: string;
   label: string;
   completed: boolean;
+
+
+};
+
+export type OnboardingProgressCardProps = {;
+
+
   title: string;
   steps: OnboardingStep[];
   highlightColorClass?: string;}
@@ -254,6 +261,7 @@ function computePercentage(steps: OnboardingStep[]): number {
           </li>
         ))}
       </ul>
+      {/* Primary CTA for next step */}
       {!allDone && firstIncomplete ? (
         <div className="mt-5">
           <Link href={firstIncomplete.ctaHref!}>
@@ -264,3 +272,12 @@ function computePercentage(steps: OnboardingStep[]): number {
         </div>
       ) : null}
     </div>
+}
+}
+  );
+}
+  )
+
+}
+  );
+}

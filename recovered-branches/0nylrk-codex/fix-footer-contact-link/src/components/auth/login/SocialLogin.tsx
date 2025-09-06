@@ -1,4 +1,8 @@
 
+
+  const { loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading } =;
+
+
     useAuth();
 
   return (
@@ -14,6 +18,10 @@
         </div>
       </div>
       <div className="mt-6 grid grid-cols-4 gap-3">
+  );
+}
+
+
   )
 import { Facebook, Twitter } from "lucide-react",;
 import { Button } from "@/components/ui/button",;
@@ -54,3 +62,7 @@ function SocialLogin() {
         <Button;
           type="button";
           variant="outline";
+
+  );
+}
+;

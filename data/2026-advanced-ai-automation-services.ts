@@ -35,6 +35,23 @@
   rating: number;
 
   reviews: number;
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [;
+
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -45,6 +62,32 @@
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   {
+      'Autonomous process discovery and mapping'
+      'Real-time optimization algorithms'
+      'Cross-departmental coordination'
+      'Predictive maintenance scheduling'
+      'Resource allocation optimization'
+      'Performance analytics dashboard'
+      'Automated decision making'
+      'Process improvement suggestions'
+      'Integration with existing systems'
+      '24/7 autonomous operation'
+    ]
+    popular: true
+    icon: '🤖'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-400'
+    link: 'https://ziontechgroup.com/ai-autonomous-business-processor'
+    marketPosition:
+      'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.'
+      'Autonomous process discovery and mapping',
+      'Real-time optimization algorithms',
+      'Cross-departmental coordination',
+
+
+      'Autonomous process discovery and mapping',
+      'Real - time optimization algorithms',
+      'Cross - departmental coordination',
       'Predictive maintenance scheduling',
       'Resource allocation optimization',
       'Performance analytics dashboard',
@@ -66,6 +109,12 @@
     ],
     popular: true,
     icon: '🤖',
+
+    link: 'https://ziontechgroup.com/ai-autonomous-business-processor',
+    marketPosition:;
+      'First autonomous business processor; competes with traditional BPM tools like Pega and Appian.',
+
+
     targetAudience: [
       'Enterprise companies'
       'manufacturing'
@@ -249,7 +298,6 @@
     implementationDetails: 'Multi-tenant SaaS with AI sales intelligence, lead scoring, and nurturing automation.';
     launchDate: '2026-01-25';
     customers: 198;
-
 ];      'Automatic lead scoring_behavioral analysis_predictive lead qualification_personalized nurturing sequences_sales forecasting AIPipeline optimization_competitor intelligence_market opportunity detection';
       'ROI trackingCRM integration';
     ];

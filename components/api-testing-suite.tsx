@@ -6,6 +6,12 @@
   ArrowRight,
   Play,
   AlertTriangle,
+} from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
+export default function APITestingSuitePage() {;
+} from 'lucide-react';
+
 
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
@@ -269,6 +275,61 @@ function APITestingSuitePage() {
         </title>;
 
 
+
+        recommendations: [
+          'Consider implementing response caching for better performance'
+          'Monitor response times during peak usage'
+          'Implement rate limiting headers for better API documentation'
+        ]
+      });
+      setIsTesting(false);
+    }, 3000);  };        recommendations: [
+          'Consider implementing response caching for better performanceMonitor response times during peak usageImplement rate limiting headers for better API documentation'
+        ]
+      });
+      setIsTesting(false)
+    }, 3000)
+  }
+  return (
+    <>
+      <Head>
+        <title>
+          API Testing Suite - Zion Tech Group | Comprehensive API Testing &
+          Monitoring Tool
+        </title>
+        <meta
+          name='description'
+          content='Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs.'
+        />
+        <meta
+          property='og:title'
+          content='API Testing Suite - Zion Tech Group'
+        />
+        <meta
+          property='og:description'
+          content='Comprehensive API testing tool with functional, performance, and security testing capabilities.'
+        />
+        <meta name='twitter:card' content='summary_large_image' />
+      </Head>
+      {/* Hero Section */}
+      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.08),transparent_50%)]' />
+        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(99,102,241,0.06),transparent_50%)]' />
+        <div className='absolute inset-0 bg-grid opacity-10' />
+        <div className='relative z-10 container-cursor text-center'>
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-6'>
+            <Code className='w-4 h-4 mr-2' />
+            Professional API Testing
+          </div>
+          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>
+            API Testing Suite
+          </h1>
+          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>
+            Test, monitor, and optimize your APIs with our comprehensive testing
+            suite. Functional, performance, and security testing for REST
+            GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and
+            secure.
+
           </p>
           {/* API Testing Form */}
           <div className='max-w-3xl mx-auto mb-8'>;
@@ -474,6 +535,10 @@ function APITestingSuitePage() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-indigo"
+                    </p>
+                  </div>
+                </div>
+              </Card>
             ))}
 
 
@@ -580,6 +645,19 @@ function APITestingSuitePage() {
               <Card
                 key={index}
                 className="card-hover border-gradient-indigo"
+                      {test}
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
+
       {/* Demo Test Results */}
       {testResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -725,8 +803,28 @@ function APITestingSuitePage() {
 
                     </div>
                   ))}
-              {/* Performance Metrics */}
+                </div>
+              </Card>
+                    </div>
+                  ))}
+                </div>
+              </Card>
 
+
+
+
+
+              {/* Performance Metrics */}
+              <Card className='border-gradient-indigo'>
+                <h3 className='text-2xl font-bold mb-6 text-white'>
+                  Performance Metrics
+                </h3>
+                <div className='space-y-4'>
+                  <div className='flex justify-between items-center'>
+                    <span className='text-gray-400'>Response Time</span>
+                    <span className='text-indigo-400 font-bold'>
+                      {testResults.responseTime}
+                    </span>
 
 
 
@@ -770,6 +868,8 @@ function APITestingSuitePage() {
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
+
+
 
                 ))}
               </div>
@@ -1039,6 +1139,7 @@ function APITestingSuitePage() {
                       {plan.price}
 
 
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -1091,6 +1192,13 @@ function APITestingSuitePage() {
                 </ul>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+              </Card>
+            ))}
 
           </div>;
         </div>;
@@ -1128,4 +1236,18 @@ function APITestingSuitePage() {
   );
 }
     </>);
+}
+              className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'            >              href="/contact"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
+              Schedule Demo
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+}
+
+  );
 }

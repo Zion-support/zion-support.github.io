@@ -1,4 +1,20 @@
 import React, { useEffect, useState, useCallback } from 'react';
+  Zap
+  Clock
+  TrendingUp
+  Activity
+  Gauge
+  Cpu
+  Database
+  Network;
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,;
+  Network,;
 
 
 } from 'lucide-react';
@@ -281,6 +297,23 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>
             <div className="text-xs text-white/60">FID</div>
+      <div className='space-y-3'>        <button      <div className="space-y-3">
+        <button
+
+
+      {/* Optimization Controls */}
+      <div className='space-y-3'>        <button      <div className="space-y-3">
+        <button
+      <div className='space-y-3'>        <button
+
+        <button
+
+
+        <button
+
+
+      {/* Optimization Controls */}
+
           onClick={runAllOptimizations}
           disabled={isOptimizing}
           className={`w-full px-4 py-3 rounded-lg font-semibold text-white transition-all duration-300 ${
@@ -639,6 +672,7 @@ interface PerformanceOptimizerProps {
     } else {;
       window && window.addEventListener('load', measureWebVitals);
     }
+;
   );
 
 

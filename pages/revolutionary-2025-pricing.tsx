@@ -1,3 +1,10 @@
+import {
+
+
+} from 'lucide-react';
+import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
+
+
   Star,
   Zap,
   Shield,
@@ -112,6 +119,8 @@
   MessageCircle,
   Share,
   Users as UsersIcon2,
+  Target as TargetIcon,
+  Zap as ZapIcon2,
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components / ui / UltraQuantumHolographicBackground';
 import UltraAdvancedNavigation from '../components / layout / UltraAdvancedNavigation';
@@ -243,6 +252,9 @@ export default function Revolutionary2025Pricing() {;
             );
           if (selectedCategory === 'saas');
             return (
+    return basePrice;  }
+    return basePrice;  };
+
 import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2 } from 'lucide-react';
 
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
@@ -291,6 +303,11 @@ export default function Revolutionary2025Pricing() {
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8); // 20% discount for yearly
     }
+  };
+
+
+
+
   // Pricing tiers for comparison
   const pricingTiers = [
     {
@@ -581,6 +598,8 @@ if ( {) {
           <div className='max-w-7xl mx-auto text-center'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
+
+
             >
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Revolutionary 2025 Pricing
@@ -634,6 +653,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   />
                 </button>
                 <span className='text-gray-400'>Yearly (Save 20%)</span>
@@ -648,6 +669,8 @@ if ( {) {
   }
 }
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12">
+
+
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -714,6 +737,8 @@ if ( {) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
+
                 Choose Your Transformation Plan
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -721,6 +746,8 @@ if ( {) {
                 include our revolutionary AI and quantum computing services.
               </p>
             </motion.div>
+
+
               className='text-center mb-16'>;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
                 Choose Your Transformation Plan;
@@ -756,6 +783,8 @@ if ( {) {
                       </span>
                       <span className='text-gray-400'>{tier.period}</span>
                     </div>
+
+
                     {tier.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start gap-3">
                         <Check className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
@@ -800,6 +829,7 @@ if ( {) {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+
                 Individual Service Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -910,6 +940,25 @@ if ( {) {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="text-3xl">{service.icon}</div>
+                  <div className='flex items-start justify-between mb-4'>;
+                    <div className='flex items-center gap-3'>;
+                      <div className='text-3xl'>{service && service.icon}</div>;
+                      <div>;
+                        <h3 className='text-xl font-bold text-white group-hover:text-blue-400 transition-colors'>;
+                          {service && service.name}
+                        </h3>;
+                        <p className='text-gray-400 text-sm'>;
+                          {service && service.tagline}
+                        </p>;
+                      </div>;
+                    </div>;
+                    {service && service.popular && (;
+                      <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1'>;
+                        <Star className='w-3 h-3' />                        Popular;
+                      </div>;
+
+                    )}
+
                       <div>
                         <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
                           {service.name}
@@ -939,6 +988,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                       </span>
                       <span className='text-gray-400'>{service.period}</span>
                     </div>
@@ -948,6 +999,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                       {service.features.length > 3 && (
                         <div className="text-xs text-gray-500 mt-1">
                           +{service.features.length - 3} more features
@@ -991,6 +1044,7 @@ if ( {) {
                       <Phone className='w-4 h-4' />                    </button>;
                   </div>;
 
+
                       Learn More
                     </button>
                     <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -1030,6 +1084,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             >
               </p>
                 </div>
@@ -1050,6 +1106,9 @@ if ( {) {
                   </p>
                 </div>
               </div>
+
+
+
                   Get Custom Quote
                 </button>
                 <button className="border-blue-500 text-blue-400 hover:bg-blue-500/20">
@@ -1062,6 +1121,17 @@ if ( {) {
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+
+
+}
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
+
+
+}
+
   )
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
@@ -1225,3 +1295,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+

@@ -10,6 +10,15 @@ import {
   CheckCircle,
   XCircle,
   AlertTriangle;
+    necessary: true
+    analytics: false
+    marketing: false
+    functional: false
+
+} from 'lucide-react';
+export default function CookiePolicyPage() {
+  const [cookiePreferences, setCookiePreferences] = useState({
+
     necessary: true,
     analytics: false,
     marketing: false,
@@ -243,6 +252,46 @@ export default function CookiePolicyPage() {;
             </div>;
           </div>;
         </section>;
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import Layout from '../components/Layout';
+
+origin/automation-improvements-final
+            >;
+              <h2 className="text - 3xl md:text - 4xl font - bold text - gray - 900 mb - 6">;
+                Questions About Our Cookie Policy?;
+              </h2>;
+              <p className="text - lg text - gray - 600 max - w-3xl mx - auto">;
+                If you have any questions about our use of cookies or this policy,
+                please don't hesitate to contact us.;
+              </p>;
+            </motion.div>;
+            <div className="max - w-2xl mx - auto text - center">;
+              <div className="bg - white rounded - lg shadow - lg p - 8">;
+                <div className="space - y-4">;
+                  <div className="flex items - center justify - center">;
+                    <Shield className="w - 6 h - 6 text - indigo - 600 mr - 3" />;
+                    <span className="text - lg font - semibold text - gray - 900">Privacy Team</span>;
+                  </div>;
+                  <p className="text - gray - 600">;
+                    Email: <a href="mailto:privacy@ziontechgroup.com" className="text - indigo - 600 hover:text - indigo - 700">privacy@ziontechgroup.com</a>;
+                  </p>;
+                  <p className="text - gray - 600">;
+                    Phone: <a href="tel:+13024640950" className="text - indigo - 600 hover:text - indigo - 700">+1 302 464 0950</a>;
+                  </p>;
+                  <p className="text - sm text - gray - 500">;
+                    Last updated: {new Date ().toLocaleDateString ()}
+
+                  </p>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+        </section>;
+      </div>;
+
+
+export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>;
       <SEO
@@ -262,6 +311,19 @@ export default function CookiesPage() {
             <li>Retention: session or shortterm</li>
             <li>Optout: browser settings and extensions</li>
           </ul>
+      </Layout>
+    </>
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+  );
+      </Layout>
+    </>;
+  );
+
+
+
+  );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
           <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
         </div>
@@ -271,6 +333,15 @@ export default function CookiesPage() {
 }
 }
 }
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
     </>);
 ;
 <li > Purpose: performance and security</li> <li > Retention: session or short‑term</li> <li > Opt‑out: browser settings and extensions</li> </ul> <p className="text - gray - 400 text - sm" >Questions? <a className="text - cyan - 400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>;

@@ -1,3 +1,13 @@
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Referral, ReferralStatus } from "@/types/referrals",
+import { Badge } from "@/components/ui/badge";
+import { formatDate } from "@/utils/referralUtils";
+import { Badge } from "@/components/ui/badge",
+import { formatDate } from "@/utils/referralUtils",
+
+
+
+
 interface ReferralTableProps {
 
   referrals: Referral[]
@@ -24,6 +34,14 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </p>
       </div>
     )
+              {referral.referred_user_type
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1)
+              {referral.referred_user_type 
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+
+              {referral.referred_user_type 
+                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
+
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Referral, ReferralStatus } from "@/types/referrals",;
 import { Badge } from "@/components/ui/badge",;
@@ -61,6 +79,9 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
       </div>;
     );
   }
+
+
+
                 : '-'}
             </TableCell>;
             <TableCell>{referral && referral.completed_at ? formatDate(referral && referral.completed_at) : '-'}</TableCell>;

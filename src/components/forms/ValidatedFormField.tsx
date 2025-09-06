@@ -79,7 +79,6 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
-
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">

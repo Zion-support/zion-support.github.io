@@ -1,4 +1,12 @@
 
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer";
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+import { Footer } from "@/components/Footer",
+import { QuoteRequestForm } from "@/components/QuoteRequestForm",
+
+
+
 export default function RequestQuote() {
   return (
     <>
@@ -9,6 +17,13 @@ export default function RequestQuote() {
       <Footer />
     </>
   )
+}
+
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {QuoteRequestForm} from "@/components/QuoteRequestForm";
+
+
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { QuoteRequestForm } from "@/components/QuoteRequestForm";
@@ -24,3 +39,5 @@ export default function RequestQuote() {;
     </>;
   );
 }
+
+

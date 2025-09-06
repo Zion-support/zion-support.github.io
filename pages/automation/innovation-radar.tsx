@@ -1,3 +1,13 @@
+                {it.source} · {it.author || 'unknown'} · {new Date(it.created_at).toLocaleString()}
+              </div>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Query: {it.query}</div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </EnhancedLayout>
+  );
+};
   );
 };
 

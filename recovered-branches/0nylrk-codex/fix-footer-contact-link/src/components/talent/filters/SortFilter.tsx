@@ -1,3 +1,12 @@
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue} from "@/components/ui/select",
+import { SortFilterProps } from "@/types/filters",
+
+
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -17,6 +26,20 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { SortFilterProps } from "@/types/filters";
+export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
+  return (;
+
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {SortFilterProps} from "@/types/filters";
+export function SortFilter(): any ({ sortOption, setSortOption }: SortFilterProps) {;
+  return (
     <div className="mb-6">;
       <label className="text-sm font-medium text-zion-slate-light mb-2 block">;
         Sort by;
@@ -29,6 +52,8 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
           <SelectItem value="relevance">Relevance</SelectItem>;
           <SelectItem value="rating">Highest Rating</SelectItem>;
           <SelectItem value="experience">Most Experienced</SelectItem>;
+}
+
   Select,
   SelectContent,
   SelectItem,

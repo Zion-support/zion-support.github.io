@@ -37,6 +37,10 @@ files.for_each ((file) => {
     );
     // Fix import statements missing semicolons
     content = content.replace(
+
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
+      (match) => {;
+
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
         }

@@ -27,6 +27,14 @@ import {
   DollarSign
   Users
 
+  Globe,;
+  Rocket,;} from 'lucide-react';import { ;
+  Search;
+  Filter
+  TrendingUp
+  DollarSign
+  Users
+
   Star;
   Check;
   X;
@@ -35,6 +43,12 @@ import {
   Zap;
   Brain;
   Globe;
+
+
+
+export default function ToolComparisonPage() {
+
+export default function ToolComparisonPage() {;
 
   const [searchTerm, setSearchTerm] = React.useState('');
   const [selectedCategory, setSelectedCategory] = React.useState('All');
@@ -578,6 +592,9 @@ function ToolComparisonPage() {
             </div>
           </div>
           {/* Stats */}
+
+
+
                 {allTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>Tools Analyzed</div>
@@ -937,6 +954,8 @@ function ToolComparisonPage() {
                   </span>
                   <Button
                     href={tool.website}
+
+
                 </div>
               </Card>
             ))}
@@ -979,4 +998,18 @@ function ToolComparisonPage() {
 
   );
 }
+}
+              className='border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl'            >              href="/saas-marketplace"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-purple-600 shadow-2xl"
+              Explore All Tools
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>
+}
+
+  );
 }

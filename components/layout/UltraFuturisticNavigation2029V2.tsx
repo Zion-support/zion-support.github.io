@@ -102,7 +102,8 @@ const quickLinks = [
 
 export default function UltraFuturisticNavigation2029V2() {
   const [isOpen, setIsOpen] = useState(false)
-
+export default function UltraFuturisticNavigation2029V2() {
+export default function UltraFuturisticNavigation2029V2() {;
 
 
   const [isOpen, setIsOpen] = useState(false);
@@ -112,6 +113,7 @@ export default function UltraFuturisticNavigation2029V2() {
   const closeMenu = () => setIsOpen(false);
 
   return (
+
 
           >
             <Link href='/' className='flex items-center space-x-3 group'>
@@ -179,6 +181,7 @@ export default function UltraFuturisticNavigation2029V2() {
             ))}
           </div>
           {/* Right side - Contact & Search */}
+          <div className="hidden lg:flex items-center space-x-4">
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400' />
@@ -210,6 +213,15 @@ export default function UltraFuturisticNavigation2029V2() {
               onClick={toggleMenu}
               className="p-2 rounded-lg text-gray-300 hover:text-cyan-400 hover:bg-gray-800 transition-colors duration-300">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+
       {/* Mobile Navigation Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -217,6 +229,7 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+
 
           >
             <div className='px-4 py-6 space-y-4'>
@@ -258,6 +271,7 @@ export default function UltraFuturisticNavigation2029V2() {
                   <div className='flex items-center space-x-3 text-gray-400'>
                     <Phone className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.mobile}</span>
+
 
                   </div>
                   <div className="flex items-center space-x-3 text-gray-400">
@@ -341,6 +355,7 @@ export default function UltraFuturisticNavigation2029V2() {
                             <span className="text-sm font-semibold text-cyan-400">{service && service.price}</span>;
                           </div>;
                         </Link>;
+
 
                         </Link>
                       ))}

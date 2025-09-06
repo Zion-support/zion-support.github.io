@@ -1,9 +1,54 @@
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 import Head from 'next / head';
 import UltraAdvancedFuturisticBackground from '../components / ui / UltraAdvancedFuturisticBackground';
 import Button from '../components / ui / Button';
 import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
 
+import React from 'react',
+import Head from 'next/head',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button';
+import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
+export default function QuantumServicesPage() {
+
+  const features = [
+    'Quantum-inspired optimization & annealing strategies'
+    'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable'
+    'Quantum-safe cryptography assessments and roadmaps'
+    'R&D ideation for quantum-ready workloads'
+export default /**
+ * QuantumServicesPage - Function description
+ */
+function QuantumServicesPage() {
+  const features = [;
+    'Quantum - inspired optimization & annealing strategies',
+    'Hybrid quantum - classical pipelines (QAOA, VQE) where applicable',
+    'Quantum - safe cryptography assessments and roadmaps',
+    'R & D ideation for quantum - ready workloads',
   ];
 ;
   const solutions = [;
@@ -35,6 +80,8 @@ import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="flex items-center gap-3 text-cyan-300 mb-2"><Sparkles className="w-5 h-5" /><span className="font-semibold">{s.name}</span></div>
                   <p className="text-gray-300 text-sm">Learn more</p>
+                </a>
+
               ))}
 
 
@@ -43,6 +90,21 @@ import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
+
+}
+  )
+}
+
+            </div>;
+          </section>;
+
+
+          <section className='text-center'>;
+            <div className='inline-flex items-center justify-center gap-3 text-gray-300'>;
+              <Shield className='w-5 h-5 text-purple-400' />;
+              <span>;
+                Post-quantum readiness assessments and migration planning;
+
     <UltraAdvancedFuturisticBackground color_scheme='quantum' intensity='high'>;
       <Head>;
         <title > Quantum Services | Zion Tech Group</title>;
@@ -122,6 +184,12 @@ import {Atom, CheckCircle, Shield, Sparkles} from 'lucide-react';
         </div>;
       </div>;
 
+
+  )
+}
+
+    </UltraAdvancedFuturisticBackground>);
+;
 
 
 

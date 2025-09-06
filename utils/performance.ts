@@ -1,3 +1,5 @@
+  if (typeof window === 'undefined' |!('performance' in window)) {
+  if (typeof window === 'undefined' || !('performance' in window)) {;
 
 ;
 export const measure_performance = (): PerformanceMetrics | null => {
@@ -27,6 +29,9 @@ export const measure_performance = (): PerformanceMetrics | null => {
     console.warn ('Error measuring performance:', error);
     return null;
   }
+
+}
+;
 
 export const getPerformanceScore = (metrics: PerformanceMetrics): {
   overall: 'good' | 'needs - improvement' | 'poor';
@@ -156,4 +161,26 @@ import { PerformanceMetrics } from '../types'; export const measurePerformance =
 
 };
   return { overall, scores }
+}
+};
+
+;
+export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Performance Metrics') =>: any {
+  console.group (`🚀 ${label}`);
+  if (console.log ('First Contentful Paint:', `${metrics.fcp.to_fixed (2)}ms`)) {
+  $2
+}
+  if (console.log ('Largest Contentful Paint:', `${metrics.lcp.to_fixed (2)}ms`)) {
+  $2
+}
+  if (console.log ('First Input Delay:', `${metrics.fid.to_fixed (2)}ms`)) {
+  $2
+}
+  if (console.log ('Cumulative Layout Shift:', metrics.cls.to_fixed (4))) {
+  $2
+}
+  if (console.log ('Time to First Byte:', `${metrics.ttfb.to_fixed (2)}ms`)) {
+  $2
+}
+  console.group_end ();
 }

@@ -140,6 +140,21 @@ export type Database = {
         }
         Relationships: [;
           {
+            foreignKeyName: "api_logs_api_key_id_fkey"
+            columns: ["api_key_id"]
+            isOneToOne: false
+            referencedRelation: "api_keys"
+            referencedColumns: ["id"];
+          };
+            referencedColumns: ["id"]
+          }
+          },
+
+
+
+        }
+        Relationships: [;
+          {
 
             foreignKeyName: "api_logs_api_key_id_fkey";
             columns: ["api_key_id"];
@@ -147,6 +162,9 @@ export type Database = {
             referenced_relation: "api_keys";
             referenced_columns: ["id"];
           }
+
+            referencedColumns: ["id"]
+
           {
             foreignKeyName: "api_logs_user_id_fkey";
             columns: ["user_id"];
@@ -1025,6 +1043,9 @@ export type Database = {
           id?: string;
           updated_at?: string;
           user_id?: string;
+
+
+
         }
         Relationships: [;
           {
@@ -1185,6 +1206,9 @@ export type Database = {
           reminder_type?: string;
           sent_at?: string | null;
           user_id?: string;
+
+
+
         }
         Relationships: [;
           {
@@ -1781,6 +1805,9 @@ export type Database = {
           days_since_login: number;
           onboarding_status: Json;
         }[];
+
+
+
       }
       complete_referral: {
         Args: { _referred_id: string, _user_type: string }
@@ -1796,6 +1823,8 @@ export type Database = {
         }
         Returns: string;
       }
+
+
       }
       flag_suspicious_content: {
         Args: {
@@ -1824,6 +1853,8 @@ export type Database = {
       }
       get_api_key_user_id: {
         Args: { key_prefix: string, provided_key: string }
+
+
       }
       get_event_distribution: {
         Args: { days_back?: number }
@@ -1833,6 +1864,42 @@ export type Database = {
         Args: { api_key: string }
         Returns: string;
       }
+      }
+      trigger_resume_scoring: {
+        Args: { application_id: string }
+        Returns: undefined
+      }
+      update_onboarding_milestone: {
+        Args: { _user_id: string, _milestone: string, _status: boolean }
+        Returns: undefined
+      }
+      verify_api_key: {
+        Args: { provided_key: string, stored_hash: string }
+        Returns: boolean
+      }
+    }
+    Enums: {
+      api_key_scope:
+        | "jobs:read"
+        | "jobs:write"
+        | "talent:read"
+        | "quotes:write"
+        | "webhooks:manage"
+      fraud_severity: "safe" | "suspicious" | "dangerous"
+      quote_request_status:
+        | "new"
+        | "in_review"
+        | "accepted"
+        | "responded"
+        | "closed"
+        | "archived"
+      referral_status: "pending" | "completed" | "expired"
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
+  }
+}
       }
       trigger_resume_scoring: {
         Args: { application_id: string }
@@ -1869,6 +1936,8 @@ export type Database = {
     }
   }
 }
+
+
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -1892,6 +1961,28 @@ export type Database = {
     : never
 export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Insert: infer I;
+    }
+    ? I;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Insert: infer I;
+      }
+
+
+    | keyof DefaultSchema["Tables"]
+
+
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -1911,6 +2002,28 @@ export type TablesInsert<
     : never
 export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
+
+    | { schema: keyof Database }
+  TableName extends DefaultSchemaTableNameOrOptions extends {
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never;
+> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {
+      Update: infer U;
+    }
+    ? U;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {
+        Update: infer U;
+      }
+
+
+    | keyof DefaultSchema["Tables"]
+
+
   TableName extends DefaultSchemaTableNameOrOptions extends {
     schema: keyof Database
   }
@@ -1930,6 +2043,145 @@ export type TablesUpdate<
     : never
 export type Enums<
   DefaultSchemaEnumNameOrOptions extends
+  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
+    : never = never> = DefaultSchemaEnumNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"][EnumName]
+  : DefaultSchemaEnumNameOrOptions extends keyof DefaultSchema["Enums"]
+    ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
+    : never
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+    | keyof DefaultSchema["CompositeTypes"];
+    | { schema: keyof Database };
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof Database }
+    | { schema: keyof Database },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof Database
+  }
+    ? keyof Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never> = PublicCompositeTypeNameOrOptions extends { schema: keyof Database }
+  ? Database[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never
+export const Constants = {
+  public: {
+    Enums: {
+      api_key_scope: [;
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+      api_key_scope: [
+        "jobs:read";
+        "jobs:write";
+        "talent:read";
+        "quotes:write";
+        "webhooks:manage"]
+      fraud_severity: ["safe", "suspicious", "dangerous"];
+      quote_request_status: [
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"]
+
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+        "jobs:read",
+        "jobs:write",
+        "talent:read",
+        "quotes:write",
+        "webhooks:manage"],
+      fraud_severity: ["safe", "suspicious", "dangerous"],
+      quote_request_status: [
+        "new";
+        "in_review";
+        "accepted";
+        "responded";
+        "closed";
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+        "new",
+        "in_review",
+        "accepted",
+        "responded",
+        "closed",
+        "archived"],
+      referral_status: ["pending", "completed", "expired"]}}} as const
+;
+type DefaultSchema = Database[Extract<keyof Database, "public">];
+export type Tables<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"]);
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+        Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"]);
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? (Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &;
+      Database[DefaultSchemaTableNameOrOptions["schema"]]["Views"])[TableName] extends {;
+      Row: infer R;
+    }
+    ? R;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"]);
+    ? (DefaultSchema["Tables"] &;
+        DefaultSchema["Views"])[DefaultSchemaTableNameOrOptions] extends {;
+        Row: infer R;
+      }
+      ? R;
+      : never;
+    : never;
+export type TablesInsert<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Insert: infer I;
+    }
+    ? I;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Insert: infer I;
+      }
+      ? I;
+      : never;
+    : never;
+export type TablesUpdate<;
+  DefaultSchemaTableNameOrOptions extends;
+    | keyof DefaultSchema["Tables"];
+    | { schema: keyof Database },;
+  TableName extends DefaultSchemaTableNameOrOptions extends {;
+    schema: keyof Database;
+  }
+    ? keyof Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"];
+    : never = never> = DefaultSchemaTableNameOrOptions extends { schema: keyof Database }
+  ? Database[DefaultSchemaTableNameOrOptions["schema"]]["Tables"][TableName] extends {;
+      Update: infer U;
+    }
+    ? U;
+    : never;
+  : DefaultSchemaTableNameOrOptions extends keyof DefaultSchema["Tables"];
+    ? DefaultSchema["Tables"][DefaultSchemaTableNameOrOptions] extends {;
+        Update: infer U;
+      }
+
       ? U;
       : never;
     : never;
@@ -1952,3 +2204,11 @@ export const Constants = {
         "accepted";
         "responded";
         "closed";
+
+;
+export const Constants = {
+  public: {
+    Enums: {
+
+      api_key_scope: [
+

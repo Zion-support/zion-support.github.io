@@ -1,3 +1,9 @@
+import { ChatMessage  } from './ChatMessage';
+import { ChatInput  } from './ChatInput';
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+export interface Message {
 import {ChatMessage} from './ChatMessage';
 import {ChatInput} from './ChatInput';
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
@@ -22,6 +28,11 @@ export interface Message {
 }
 export interface ChatAssistantProps {
 
+
+    id: string,
+    name: string,;
+
+
     avatarUrl?: string;
     role?: string
   }
@@ -31,6 +42,10 @@ export interface ChatAssistantProps {
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
   contextHeader?: ReactNode
 }
+
+import {ChatMessage} from './ChatMessage';
+import {ChatInput} from './ChatInput';
+
   isOpen;
   onClose;
   recipient;
@@ -38,6 +53,60 @@ export interface ChatAssistantProps {
 
   initialMessages = [];
   onSendMessage;
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+import React, { useState, useEffect, useRef, ReactNode } from 'react',
+import { ChatMessage } from './ChatMessage',
+import { ChatInput } from './ChatInput',
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { X } from "lucide-react",
+export interface Message {
+  id: string,
+  role: 'user' | 'assistant',
+  message: string,
+  timestamp: Date,
+  read?: boolean
+import React, { useState, useEffect, useRef, ReactNode } from 'react',;
+import { ChatMessage } from './ChatMessage',;
+import { ChatInput } from './ChatInput',;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { X } from "lucide-react",;
+export interface Message {;
+  id: string,;
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+}
+;
+export interface ChatAssistantProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  recipient: {;
+    id: string,;
+    name: string,;
+    avatarUrl?: string,;
+    role?: string;
+  },;
+  conversationId?: string,;
+  initialMessages?: Message[],;
+  onSendMessage: (message: string, conversationId?: string) => Promise<void>,;
+  contextHeader?: ReactNode;
+}
+;
+export function ChatAssistant({;
+  isOpen,;
+  onClose,;
+  recipient,;
+  conversationId,;
+  initialMessages = [],;
+  onSendMessage,;
   contextHeader;
 }: ChatAssistantProps) {;
 
@@ -118,3 +187,7 @@ export interface ChatAssistantProps {
       </div>
     </div>
   )
+};
+}
+
+

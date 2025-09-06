@@ -64,6 +64,20 @@
             Menu;
           </button>        </nav>    onScroll();
     return () => window && window.removeEventListener('scroll', onScroll);
+  Cpu
+  Gauge
+  GitBranch
+  Rocket
+  ShieldCheck
+  Zap
+  Activity
+  Globe
+  Layers
+  BarChart3
+  Search
+  Link2
+  Palette
+  LineChart;
   const progressX = useSpring(scrollYProgress, { stiffness: 90, damping: 20, mass: 0.2 }),
   const [showToTop, setShowToTop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -92,6 +106,9 @@ import {
   BarChart3,
   Search,
   Link2,
+} from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
+import { motion, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useState } from 'react';
 } from 'lucide-react';import { motion, useScroll, useSpring } from 'framer-motion';import { Cpu, Gauge, GitBranch, Rocket, ShieldCheck, Zap, Activity, Globe, Layers, BarChart3, Search, Link2, Palette, LineChart } from 'lucide-react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { useEffect, useState } from 'react';
@@ -340,6 +357,8 @@ export default function MainFrontIndex() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
+      {/* Hero */}
+      <div role="main" className="relative z-10">
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -414,6 +433,11 @@ export default function MainFrontIndex() {
                 ['SEO Audit/reports/seo'];
                 ['AI Trends/reports/ai-trends'];
                 ['Newsroom/newsroom'];
+              ))}
+            </div>
+          </div>
+        </motion.section>
+        {/* Showcase */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -901,7 +925,6 @@ export default function MainFrontIndex() {
                 Optimizes metadata, changelogs, and docs; commits results every;
                 3m.;
               </p>;
-              <div className='mt-3 text-xs text-cyan-300/90'>Run now </div>;
             </a>;
             <a
               href='/.netlify/functions/rapid-sync'
@@ -1016,6 +1039,22 @@ export default function MainFrontIndex() {
                   <a href={card && card.href} target="_blank" rel="noopener noreferrer" className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a>;
                 ) : (;
                   <Link href={card && card.href as string}><a className="mt-3 inline-block text-sm text-cyan-300 hover:text-cyan-200 underline">Open</a></Link>;
+
+              </article>
+            ))}
+          </div>
+        </section>
+
+        {/* Netlify Automations */}
+        <motion.section
+          id='netlify-automations'          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}          id="netlify-automations"
+          transition={{ duration: 0.5 }}
+
+
+
 
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -1264,6 +1303,8 @@ export default function MainFrontIndex() {
             ))}
           </div>;
         </motion && motion.section>;
+
+
 
 
         {/* AUTO-GENERATED: FRONT_ADS_START */}
@@ -1538,6 +1579,9 @@ export default function MainFrontIndex() {
                   <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                   <span className="text-sm text-white/80"><span className="font-semibold text-white">{b.label}</span>  {b.desc} <span className="ml-1 text-cyan-300/90"></span></span>
                 </a>
+
+
+
               </Link>
             ))}
           </div>
@@ -1799,6 +1843,20 @@ export default function MainFrontIndex() {
           </div>
         </motion.section>
 
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Get Started */}
+        <motion.section
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+        >
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>;
             Superpowers;
           </h2>;
           <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-3'>;
@@ -1932,6 +1990,13 @@ export default function MainFrontIndex() {
           </div>;
               </Link>
             ))}
+          </div>
+        </motion.section>
+              </Link>
+            ))}
+          </div>
+        </motion.section>
+
         {/* Outcomes */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
@@ -1966,6 +2031,9 @@ export default function MainFrontIndex() {
             </div>
           </div>
         </motion.section>
+
+
+
         {/* Feature Map */}
         <motion.section
           id="feature-map"
@@ -2004,6 +2072,13 @@ export default function MainFrontIndex() {
                   href={item && item.href as string}
                   target='_blank'
                   rel='noopener'
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-16'
+
+          className="mx-auto max-w-7xl px-6 pb-14"
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Platform Modules
@@ -2585,11 +2660,16 @@ export default function MainFrontIndex() {
         </motion.section>
 
 
+          </div>
+        </motion.section>
+
+
 
         {/* Extended Feature Directory */}
         <motion&& motion.section
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
+
 
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
@@ -2740,6 +2820,7 @@ export default function MainFrontIndex() {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
+
         >
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Capability Deep Links
@@ -2886,6 +2967,11 @@ export default function MainFrontIndex() {
         <motion&& motion.section
           id='use-cases'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
+
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-14'          id="use-cases"
+          className='mx-auto max-w-7xl px-6 pb-14'
 
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -3062,11 +3148,20 @@ export default function MainFrontIndex() {
         </motion.section>
 
 
-
         {/* Capabilities */}
         <motion&& motion.section
           id='capabilities'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-14'          id="capabilities"
+          className='mx-auto max-w-7xl px-6 pb-14'
+
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-14'
 
 
         {/* Capabilities */}
@@ -3553,6 +3648,10 @@ export default function MainFrontIndex() {
         <motion&& motion.section
           id='benefits'          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
+
+        {/* Benefits */}
+        <motion.section
+          id="benefits"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3741,6 +3840,18 @@ export default function MainFrontIndex() {
               </div>
               <p className="mt-1 text-sm text-white/75">Futuristic micro‑interactions and motion design system.</p>
               <div className="mt-3 text-xs text-cyan-300/90">Docs →</div>
+            </a>
+          </div>
+        </motion.section>
+        {/* Quality Gates & Guardrails */}
+        <motion.section
+          id='guardrails'          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5 }}
+          className='mx-auto max-w-7xl px-6 pb-16'          id="guardrails"
+
+
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -3897,6 +4008,8 @@ export default function MainFrontIndex() {
                   <div className="mt-1 text-xs text-white/70">{desc as string}</div>;
                 </a>;
               </Link>;
+
+
 
               </Link>
             ))}
@@ -4608,6 +4721,7 @@ export default function MainFrontIndex() {
           </div>
         </footer>
         <motion.section
+          id="agents"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
 
@@ -5104,6 +5218,14 @@ export default function MainFrontIndex() {
             ))}
           </div>
         </motion.section>
+        {/* AUTO-GENERATED: FRONT_ADS_START */}
+
+
+
+
+
+        {/* AUTO-GENERATED: FRONT_ADS_START */}
+
         <section id='auto-ads' className='mx-auto max-w-7xl px-6 pb-16'>
           <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
             Autoadvertised Highlights
@@ -6111,3 +6233,5 @@ export default function MainFrontIndex() {
 }</div> </motion.section> </a>) ) 
 }</div> </section> </div> > ↑ Top </button>) 
 }</div>) 
+}/* AUTO-GENERATED: FRONT ACTIONS START */ </a> </div> </section> /* AUTO-GENERATED: FRONT ACTIONS END */
+

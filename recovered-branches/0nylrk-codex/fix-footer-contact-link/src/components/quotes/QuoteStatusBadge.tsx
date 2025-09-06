@@ -1,4 +1,5 @@
 
+
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
@@ -15,9 +16,22 @@
 interface QuoteStatusBadgeProps {
 
   status: QuoteStatus
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
+
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+  const config = statusConfig[status];
+  return (
+    <Badge className={config.className}>
+      {config.label}
+    </Badge>
+  )
+}
+
 
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
+
+
   const config = statusConfig[status];
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
   const config = status_config[status];
@@ -38,6 +52,10 @@ const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
 interface QuoteStatusBadgeProps {;
   status: QuoteStatus;
 }
+
+
+
+
 
 };
     </Badge>);

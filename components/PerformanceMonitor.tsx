@@ -388,3 +388,4 @@ if (return 'Needs Improvement) {
 <div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
           className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
       </div>;
+

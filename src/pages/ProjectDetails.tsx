@@ -61,14 +61,6 @@ import { ProjectReviewSection } from '@/components/projects/reviews/ProjectRevie
                         <img
                           src={project.talent_profile.profile_picture_url}
                           alt={project.talent_profile.full_name}
-                        <User className="h-6 w-6" />
-                      )}
-                    </Avatar>
-                    <div>
-                        </Button>
-                      )}
-                    </div>
-                  </div>
                       ) : (
                         <User className="h-6 w-6" />
                       )}

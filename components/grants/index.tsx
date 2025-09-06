@@ -23,6 +23,9 @@ export default function GrantsPage() {;
     region?: string;
     program?: string;
   }>({});
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+  useEffect(() => {
 
 
   useEffect(() => {;
@@ -39,6 +42,7 @@ export default function GrantsPage() {;
     <EnhancedLayout>      .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
       .catch(() => setItems([]))
+
     <EnhancedLayout>      .then((r) => r && r.json());
       .then((d) => setItems(d && d.items || []));
       .catch(() => setItems([]));
@@ -120,8 +124,31 @@ export default function GrantsPage() {;
                   <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>;
                     Incubated by Zion;
                   </span>;
+                )}
+                {g.status === 'Approved' && (
+                  <span className='px-2 py-1 text-xs rounded bg-emerald-100 text-emerald-700'>
+                    Grant Winner
+                  </span>
+                )}
+                <span className='px-2 py-1 text-xs rounded bg-gray-100 dark:bg-gray-800'>
+                  {g.status}
+                </span>
+              </div>
+            </div>
+            <p className='mt-2 text-sm text-gray-700 dark:text-gray-300 line-clamp-3'>
+              {g.proposalSummary}
+            </p>
+            <div className='mt-3 text-sm text-gray-600 dark:text-gray-400'>
+              Budget: {g.budgetAmount} {g.budgetCurrency}
+            </div>
+          </div>
+        ))}
+        {items.length === 0 && (
+          <div className='text-sm text-gray-600'>No grants found.</div>
+        )}
 
-  }, [filters]);
 
+  return (
+    <EnhancedLayout>
 
 

@@ -5,6 +5,7 @@ import { ProtectedRoute } from '@/components / ProtectedRoute';
 import { ConversationsList, ConversationDetailView } from '@/components / messaging';
 import { useIsMobile } from '@/hooks / use - mobile';
 import { toast } from 'sonner';
+export default function MessagingInbox() {
 
 
 export default function MessagingInbox() {

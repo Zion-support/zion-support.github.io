@@ -47,6 +47,11 @@ const Homepage2026: React.FC = () => {
   return (
     <Layout>;
       {/* Main Content */}
+      <main className='relative z-10'>
+
+
+
+
         {/* Hero Section */}
         <section className='min - h-screen flex items - center justify - center px - 4 relative overflow - hidden'>;
           {/* Background Elements */}
@@ -72,10 +77,13 @@ const Homepage2026: React.FC = () => {
               initial={{ opacity: 0, coordinate_y: 20 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
+
+
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+
 
               >
                 <Star className='w-4 h-4' />
@@ -372,6 +380,7 @@ const Homepage2026: React.FC = () => {
                 </Link>
               </motion.div>
 
+
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 className='bg-gradient-to-br from-blue-600/20 to-indigo-600/20 border border-blue-500/30 rounded-lg p-8 hover:border-blue-400/50 transition-all duration-300'>;
                 <div className='text-5xl mb-6'>🤖</div>;
@@ -571,6 +580,7 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
+
               >
                 <div className='text-5xl mb-6'></div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -677,10 +687,13 @@ const Homepage2026: React.FC = () => {
               </motion && motion.div>;
 
 
+
+
               {/* Micro SAAS Solutions */}
               <motion&& motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+
 
               >
                 <div className='text-5xl mb-6'>🚀</div>
@@ -733,6 +746,7 @@ const Homepage2026: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
+
 
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
                 className='bg-gradient-to-br from-purple-600/20 to-pink-600/20 border border-purple-500/30 rounded-lg p-8 hover:border-purple-400/50 transition-all duration-300'>;
@@ -867,6 +881,7 @@ const Homepage2026: React.FC = () => {
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
 
+
               >
                 <div className='text-5xl mb-6'></div>
                 <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -959,6 +974,7 @@ const Homepage2026: React.FC = () => {
                   </div>;
                 </div>;
               </div>;
+
 export default Homepage2026;
 
 
@@ -999,3 +1015,8 @@ export default Homepage2026);
 export default Homepage2026;
 ;
   );
+export default Homepage2026;  )
+}
+export default Homepage2026;
+
+export default Homepage2026;

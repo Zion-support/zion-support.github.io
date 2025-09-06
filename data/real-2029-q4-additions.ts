@@ -1,3 +1,32 @@
+      'Intent classification and priority scoring'
+      'One-click reply drafts with tone controls'
+      'Auto-tagging and routing to teams'
+      'PII redaction and allowlist domains'
+      'SLA-aware escalations and summaries'
+      'Analytics: response time, CSAT impact, volume by topic'
+    ]
+    popular: true
+    icon: '✉️'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-300'
+    link: 'https://ziontechgroup.com/services/ai-email-triage-copilot'
+    marketPosition:
+      'Alternative to basic autoresponders; focuses on triage quality and CRM integration.'
+    targetAudience: 'Support teams, sales ops, founders'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Next.js', 'TypeScript', 'OpenAI', 'PostgreSQL']
+    integrations: ['Zendesk', 'Freshdesk', 'HubSpot', 'Gmail', 'Microsoft 365']
+    useCases: ['Customer support triage', 'Lead routing', 'Internal helpdesk']
+    roi: 'Reduce manual triage time by 60–80% and improve first-response SLAs.'
+    competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI']
+    marketSize: 'Helpdesk software $20B+'
+    growthRate: '25% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
@@ -28,6 +57,13 @@
     use_cases: ['Customer support triage', 'Lead routing', 'Internal helpdesk'],
     roi: 'Reduce manual triage time by 6080% and improve first - response SLAs.',
     competitors: ['Superhuman AI', 'Zendesk AI', 'HubSpot AI'],
+    implementationDetails:
+      'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.'
+    launchDate: '2029-10-12'
+    customers: 120
+    rating: 4.8
+    reviews: 74
+  }
     market_size: 'Helpdesk software $20B+',
     growth_rate: '25% YoY',
     variant: 'ai - futuristic',
@@ -40,6 +76,29 @@
     rating: 4 && 4.8,
     reviews: 74,
   },
+  {
+      'Branching logic and progress-save'
+      'Question bank: CSAT, NPS, PMF, churn'
+      'Anonymous or identified responses'
+      'Webhooks and Zapier integration'
+      'Real-time charts and cohort filters'
+      'GDPR/CCPA consent and deletion tools'
+    ]
+    popular: false
+    icon: '📱'
+    color: 'from-emerald-600 to-teal-700'
+    textColor: 'text-emerald-300'
+    link: 'https://ziontechgroup.com/services/mobile-survey-studio'
+    marketPosition:
+      'Lightweight alternative to enterprise survey suites; optimized for mobile.'
+    targetAudience: 'Growth teams, product managers, agencies'
+    trialDays: 7
+    setupTime: 'Same day'
+    category: 'Developer Tools'
+    realService: true
+    technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
+    integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
+      'Branching logic and progress-save',
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
       'Webhooks and Zapier integration',
@@ -52,6 +111,13 @@
     text_color: 'text - emerald - 300',
     link: 'https://ziontechgroup.com / services / mobile - survey - studio',
     market_position:;
+
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / mobile - survey - studio',
+    market_position:;
+
 
     useCases: [
       'Landing page surveys'
@@ -254,6 +320,51 @@
     reviews: 12,
   },
   {
+      'Goal trees and KPI ownership'
+      'Weekly executive summaries'
+      'Alerting on thresholds and trends'
+      'Warehouse connectors'
+      'Shareable links with permissions'
+      'Annotations and change logs'
+    ]
+    popular: false
+    icon: '📊'
+    color: 'from-green-600 to-emerald-700'
+    textColor: 'text-green-300'
+    link: 'https://ziontechgroup.com/services/kpi-scorecards-studio'
+    marketPosition: 'Simple executive dashboards without BI bloat.'
+    targetAudience: 'Founders, execs, ops'
+    trialDays: 7
+    setupTime: 'Same day'
+    category: 'Business Intelligence'
+    realService: true
+    technology: ['Next.js', 'Supabase', 'BigQuery']
+    integrations: ['Google Sheets', 'BigQuery', 'Snowflake (export)']
+    useCases: ['OKRs/scorecards', 'Exec reporting']
+    roi: 'Improve visibility and accountability.'
+    competitors: ['Grid', 'Grow']
+    marketSize: 'BI $30B+'
+    growthRate: '11% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails: 'Metrics ingestion and templated reporting.'
+    launchDate: '2029-10-20'
+    customers: 36
+    rating: 4.4
+    reviews: 16
+  }
+
+    id: 'kpi - scorecards - studio',
+    name: 'KPI Scorecards Studio',
+    tagline: 'OKR / KPI dashboards with goals, alerts, and executive summaries',
+    price: '$69',
+    period: '/month',
+    description:;
+      'Define goals, attach metrics, and get auto - generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.',
+    features: [;
+
+
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -684,6 +795,8 @@ export const real2029Q4Additions: RealMarketService[] = [
 		implementationDetails: 'Metrics ingestion and templated reporting.';
 		launchDate: '2029-10-20';
 		customers: 36;
+];
+;
 
 	}
 ];

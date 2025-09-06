@@ -77,6 +77,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       p => p && p.status === 'active'
     ).length;
 
+    usersData.forEach(u => {
+      geoCounts[u.country |'Unknown'] =
+        (geoCounts[u.country |'Unknown'] |0) + 1;
     });
   } catch (e: any) {
 
@@ -147,6 +150,9 @@ res.status(200).json({
       ],
     });
   }}
+
+}
+    const geoCounts: Record<string, number> = {};
 
 
 

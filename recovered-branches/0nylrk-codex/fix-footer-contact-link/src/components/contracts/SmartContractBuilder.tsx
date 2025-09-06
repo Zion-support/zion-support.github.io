@@ -77,6 +77,21 @@ export function SmartContractBuilder({;
   talent;
   clientName;
   onContractGenerated;
+export function SmartContractBuilder({
+  isOpen,
+  onClose,
+  talent,
+  clientName,
+  onContractGenerated,
+  onDeploy;
+}: SmartContractBuilderProps) {;
+  const [activeTab, setActiveTab] = useState<string>("form");
+  const [generatedContract, setGeneratedContract] = useState<string | null>(null);
+
+}
+
+
+
   onDeploy
 }: SmartContractBuilderProps) {
   const [activeTab, setActiveTab] = useState<string>("form"),
@@ -184,6 +199,12 @@ if ( {) {
         setDeployStatus ('deployed');
         toast.success ("Smart contract deployed successfully!");
       } else {
+  }
+  };
+
+
+  };
+
       console.error("Error deploying contract:", error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")
@@ -258,6 +279,9 @@ export function SmartContractBuilder({;
     setGeneratedContract(contract);
     setActiveTab("preview")
 
+
+
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -280,6 +304,42 @@ export function SmartContractBuilder({;
             </div>
           </div>
           <TabsContent value="form" className="pt-4">
+
+    } catch (error) {;
+      console && console.error("Error generating contract:", error);
+      toast && toast.error("Failed to generate smart contract");
+    }
+  };
+
+  const handleDeployContract = async () => {;
+    if (!generatedContract) return;
+
+    try {;
+      setDeployStatus('deploying');
+      const contractInfo = await deploySmartContract(generatedContract, deployOptions);
+
+      if (contractInfo) {;
+        setDeploymentInfo(contractInfo);
+        setDeployStatus('deployed');
+        toast && toast.success("Smart contract deployed successfully!");
+      } else {;
+        setDeployStatus('error');
+        toast && toast.error("Failed to deploy smart contract");
+      }
+    } catch (error) {;
+      console && console.error("Error deploying contract:", error);
+      setDeployStatus('error');
+      toast && toast.error("Failed to deploy smart contract");
+    }
+  };
+
+  // Modified to match the expected interface;
+  const handleFormSubmit = (contract: string) => {;
+    // This should be a function that takes a string (contract content);
+    // Since we need to adapt the interface, we'll implement the simplest solution that works;
+    if (onContractGenerated) {;
+      onContractGenerated(contract);
+    }
     setGeneratedContract(contract);
     setActiveTab("preview");
   };
@@ -302,6 +362,10 @@ export function SmartContractBuilder({;
           </div>;
 
             <ContractForm;
+
+
+            <ContractForm 
+
               talent={talent}
               client_name={client_name}
               initial_values={form_values}

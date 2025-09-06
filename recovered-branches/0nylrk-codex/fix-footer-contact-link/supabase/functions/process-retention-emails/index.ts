@@ -1,4 +1,9 @@
 
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
+import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
 // Initialize Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!
@@ -86,10 +91,16 @@ serve(async (req) => {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
+  }
+});
+
+
                 "Content - Type": "application / json",
                 "Authorization": `Bearer ${supabaseServiceKey}`}
               body: JSON.stringify (job)}
           );
+
+
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
 // Initialize Supabase client;
@@ -104,6 +115,10 @@ serve(async (req) => {;
   if (req.method === "OPTIONS") {;
     return new Response(null, { headers: corsHeaders });
   }
+
+
+
+
 
   }
 });

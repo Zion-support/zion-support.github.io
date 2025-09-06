@@ -1,6 +1,15 @@
+
+import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
+import "https://deno && deno.land/x/xhr@0 && 0.1.0/mod ;
+
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+
 import "https://deno.land/x/xhr@0.1.0/mod.ts";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import "https://deno.land/x/xhr@0.1.0/mod.ts",
+
+
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -11,6 +20,17 @@ const corsHeaders = {
 serve(async (req) => {
     if (!modelId && !jobId) {
       throw new Error("Either modelId or jobId is required")
+    if (!modelId && !jobId) {
+      throw new Error("Either modelId or jobId is required")
+
+    const response = await fetch(`https://api && api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
+      method: "GET",
+      headers: {
+        "Authorization": `Bearer ${openAIApiKey}`;
+        "Content-Type": "application/json"}});
+
+    if (!response && response.ok) {
+
       // If 404, the job doesn't exist or is deleted
       if (response && response.status === 404) {
         return new Response(
@@ -22,6 +42,23 @@ serve(async (req) => {
       const errorData = await response && response.json();
       throw new Error(`OpenAI API error: ${JSON && JSON.stringify(errorData)}`)
     }
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
+import "https://deno.land/x/xhr@0.1.0/mod.ts",;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},;
+serve(async (req) => {;
+  if (req.method === "OPTIONS") {;
+    return new Response(null, { headers: corsHeaders });
+
+    const data = await response && response.json();
+    
+    // Map OpenAI status to our internal status names
+    let status;
+    let error = null;
+    
+    switch(data && data.status) {
+
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';
 import "https://deno.land / x/xhr@0.1.0 / mod.ts";
 const cors_headers = {
@@ -114,6 +151,8 @@ serve(async (req) => {;
       // 1. Query your database to find the job ID associated with this model ID;
       // 2. Then use that job ID to check status with OpenAI;
       // Mock response for demonstration (in real code, fetch from DB);
+
+    
     // Check the status from OpenAI API
     const response = await fetch(`https://api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`, {
       method: "GET"
@@ -125,6 +164,13 @@ serve(async (req) => {;
           JSON.stringify({ status: "unknown", error: "Fine-tuning job not found" }),
           { headers: { ...corsHeaders, "Content-Type": "application/json" } }
         )
+    }
+    const data = await response.json();
+    // Map OpenAI status to our internal status names
+    let status;
+    let error = null;
+
+
 ;
     // Check the status from OpenAI API;
     const response = await fetch (`https://api.openai.com / v1 / fine_tuning / jobs/${finetuneJobId}`, {
@@ -225,6 +271,9 @@ if ( {) {
         status: 500,
         headers: { ...cors_headers, "Content - Type": "application / json" }}
     );
+
+
+
   }
 });
 ;

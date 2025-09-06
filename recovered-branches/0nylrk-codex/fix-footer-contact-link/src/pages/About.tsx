@@ -1,4 +1,13 @@
 
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+
+
+
 export default function About() {
   return (
     <>
@@ -109,6 +118,14 @@ export default function About() {
       <Footer />
     </>
   )
+}
+
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+
+
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -172,6 +189,12 @@ import { GradientHeading } from "@/components/GradientHeading";
         </div>;
       </main>;
       <Footer />;
+}
+;
+}
+;
+
+    </>);
 
 
 

@@ -43,6 +43,16 @@ export function PriceFilter({ priceRange, setPriceRange, expanded, toggleSection
             max={200}
             step={5}
             onValueChange={handleChange}
+}
+
+            className="mt-6"
+          />
+        </div>
+      )}
+  );
+};
+}
+
         <div className="mt - 6">;
           <div className="flex justify - between text - sm text - zion - slate - light mb - 2">;
             <span>${price_range[0]}/hr</span>;

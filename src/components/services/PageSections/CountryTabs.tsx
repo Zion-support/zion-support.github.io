@@ -28,17 +28,6 @@ export function CountryTabs(): any ({;
   const [currentPage, setCurrentPage] = useState(1),
   const countriesPerPage = 50,
 
-  popularCountries
-  filteredCountries
-  handleCountrySelect
-  onQuote
-  searchQuery
-  setSearchQuery
-}: CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1)
-  const countriesPerPage = 50
-  useEffect(() => {
-    setCurrentPage(1)
   return (
     <Tabs defaultValue="featured" className="w-full">
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">
@@ -101,14 +90,6 @@ export function CountryTabs(): any ({;
               onQuote={onQuote}
               isPopular={popularCountries.includes(country.country)}
             />;
-        </div>
-        {totalPages > 1 && (
-          <div className='mt-8'>
-            <Pagination className='justify-center'>
-              <PaginationContent>
-                <PaginationItem>
-                  <PaginationPrevious
-                    href={`?page=${currentPage - 1}`}
                     }}
                   />;
                 </PaginationItem>;

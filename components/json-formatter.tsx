@@ -161,6 +161,10 @@ export default function JSONFormatterPage() {;
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
                     }`}
+
+                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+                <div className='flex space-x-3'>
+
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
@@ -215,6 +219,9 @@ export default function JSONFormatterPage() {;
           </div>
         </div>
       </section>
+
+
+
       {/* Features */}
 
 

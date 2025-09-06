@@ -107,8 +107,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         Skip to main content
       </a>
       {/* Screen reader only content */}
+}
 export default AccessibilityEnhancer;
 
           </div>;
         </div>;
       </div>;
+};
+
+
+      {/* Skip to main content link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50">;
+        Skip to main content;
+      </a>;
+      {/* Screen reader only content */}
+      <div className="sr-only">;
+        <h1>Zion Tech Group - Technology Solutions Provider</h1>;
+        <p>;
+          Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum;
+          computing, blockchain infrastructure, and innovative development services.;
+        </p>;
+      </div>;
+      {/* Main content */}
+      <div id="main-content">{children}</div>;
+    </>;
+  );
+}
+export default AccessibilityEnhancer;
+export default AccessibilityEnhancer;

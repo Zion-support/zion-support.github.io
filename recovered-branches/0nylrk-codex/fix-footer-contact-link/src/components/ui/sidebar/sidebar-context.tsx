@@ -3,6 +3,8 @@ import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
 import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
 
+
+
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -17,6 +19,11 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
+
+export const SidebarProvider = React.forwardRef<;
+  HTMLDivElement;
+export const SidebarProvider = React.forwardRef<
+  HTMLDivElement,
 
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
@@ -90,6 +97,9 @@ if ( {) {
         ) {
           event.preventDefault()
           toggleSidebar()
+
+
+
 ;
         // This sets the cookie to keep the sidebar state.;
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
@@ -111,6 +121,12 @@ if ( {) {
         ) {;
           event.preventDefault();
           toggleSidebar();
+
+
+
+        }
+      }
+
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])

@@ -1,3 +1,8 @@
+
+
+import {format} from 'date-fns';
+
+
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -16,6 +21,12 @@ export function formatDate(date: Date | string | undefined): string {
   }
 }
 /**;
+  }
+  return localStorage.getItem('referral_code')
+}
+
+
+
   }
   return localStorage.getItem('referral_code')
 }
@@ -58,6 +69,9 @@ export async function trackReferral(userId: string, email: string) {;
     if (response.ok) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
+
+
+
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)

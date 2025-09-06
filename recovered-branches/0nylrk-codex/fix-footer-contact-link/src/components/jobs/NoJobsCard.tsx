@@ -4,6 +4,11 @@ import { Button } from "@/components/ui/button";
 interface NoJobsCardProps {;
   onUpdateProfile?: () => void;
 }
+export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
+export /**
+ * NoJobsCard - Function description
+ */
+function NoJobsCard() {
   return (
     <Card className="bg - muted / 30 border border - dashed">;
       <CardContent className="p - 6 text - center">;
@@ -12,7 +17,15 @@ interface NoJobsCardProps {;
           AI - matched jobs.;
         </p>;
         {onUpdateProfile && (
+    </Card>
+  );
 }
+
+
+
+
+
+    </Card>;
 
 
 
@@ -25,4 +38,6 @@ import { Button } from "@/components/ui/button",
 interface NoJobsCardProps {
   onUpdateProfile?: () => void
 }
+
+
 

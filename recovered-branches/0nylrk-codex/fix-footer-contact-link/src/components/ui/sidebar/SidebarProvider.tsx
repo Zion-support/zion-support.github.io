@@ -16,6 +16,7 @@ export function SidebarProvider({
 
 
 
+
 export function SidebarProvider({ 
   children, 
   defaultOpen = true 
@@ -27,6 +28,9 @@ export function SidebarProvider({
 
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+
 import React, { createContext, useContext, useState } from "react",;
 
 interface SidebarContextType {;
@@ -44,11 +48,14 @@ const SidebarContext = createContext<SidebarContextType>({;
   return (;
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
       <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
+
+
+
         {children}
       </div>
     </SidebarContext.Provider>
   );
-
+;
 
 }
 

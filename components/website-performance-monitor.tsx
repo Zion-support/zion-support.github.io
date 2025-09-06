@@ -1,3 +1,22 @@
+} from 'lucide-react';
+
+import {
+  Activity
+  Zap
+  TrendingUp
+  AlertTriangle
+  CheckCircle
+  ArrowRight
+  Monitor
+  Gauge
+  BarChart3
+  Clock;
+} from 'lucide-react';import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
+
+
+
+
+
 export default function WebsitePerformanceMonitorPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -116,6 +135,28 @@ export default function WebsitePerformanceMonitorPage() {
       popular: true
       ];
       popular: false;
+    }
+
+    };
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description:
+        'For large organizations with critical performance requirements'
+      features: [
+        'Unlimited websites'
+        'Enterprise-grade monitoring'
+        'Custom alerting rules'
+        '24/7 support'
+        'Custom integrations'
+        'White-label reporting'
+        'SLA guarantees'
+        'On-premise options'
+      ]
+      popular: false
+    },  ];        'Unlimited websitesEnterprise-grade monitoringCustom alerting rules24/7 supportCustom integrationsWhite-label reportingSLA guaranteesOn-premise options'
+      ];
+      popular: false
     }
 
   const handleAnalyzeWebsite = async () => {
@@ -382,6 +423,12 @@ export default function WebsitePerformanceMonitorPage() {
               </Card>
 
             ))}
+          </div>
+        </div>
+      </section>
+
+
+            ))}
 
 
 
@@ -528,6 +575,8 @@ export default function WebsitePerformanceMonitorPage() {
                     <span className='text-gray-300'>{rec}</span>                  </div>
 
                   </div>
+
+
 
                 ))}
               </div>
@@ -776,6 +825,7 @@ export default function WebsitePerformanceMonitorPage() {
                       {plan.price}
 
 
+
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-4'>;
                     {plan && plan.name}
@@ -828,6 +878,13 @@ export default function WebsitePerformanceMonitorPage() {
                 </ul>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+
+              </Card>
+            ))}
 
           </div>;
         </div>;
@@ -855,6 +912,13 @@ export default function WebsitePerformanceMonitorPage() {
               href='/contact'
               variant='outline'
               size='lg'
+  );
+}
+}
+  );
+}
+
+
               Schedule Demo;
             </Button>;
           </div>;

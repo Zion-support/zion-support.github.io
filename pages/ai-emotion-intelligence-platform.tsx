@@ -22,6 +22,7 @@ const features = [
     title: 'Real-time Emotion Detection',
     description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time'
     description: 'Get instant notifications for negative emotions requiring immediate attention'
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -96,6 +97,7 @@ const pricing = [
     popular: false
     cta: 'Contact Sales'
   }
+
   }
 }
 ],;
@@ -186,6 +188,8 @@ export default function AIEmotionIntelligencePlatform() {
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+
+
                 transition={{ duration: 0.8, delay: 0.2 }} className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6">
                 <Sparkles className="w-4 h-4 mr-2" />
                 AI & Customer Experience
@@ -201,6 +205,8 @@ export default function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                 transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                   AI Emotion Intelligence Platform
@@ -217,6 +223,8 @@ export default function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                 transition={{ duration: 0.8, delay: 0.6 }} className="text-2xl md:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Real-time emotion analysis and response for customer interactions
               </motion.p>
@@ -231,6 +239,8 @@ export default function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                 transition={{ duration: 0.8, delay: 0.8 }} className="text-lg md:text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
                 Advanced AI platform that analyzes customer emotions in real-time across voice, video, and text interactions, providing intelligent responses and sentiment-driven insights for better customer experience.
               </motion.p>
@@ -251,6 +261,8 @@ export default function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               transition={{ duration: 0.8, delay: 1.0 }} className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
               <Link
                 href="/contact" className="group relative px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white font-semibold rounded-2xl text-lg hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-pink-500/25">
@@ -277,12 +289,15 @@ export default function AIEmotionIntelligencePlatform() {
                 <div className="text-gray-400 text-sm">Accuracy Rate</div>
               </div>
               <div className="text-center">
+
+
                 <div className="text-3xl md:text-4xl font-bold text-emerald-400 mb-2">35%</div>
                 <div className="text-gray-400 text-sm">Satisfaction Increase</div>
               </div>
             </motion.div>
           </div>
         </section>
+
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Powerful Features for Emotion Intelligence
@@ -349,6 +364,8 @@ export default function AIEmotionIntelligencePlatform() {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
               {features.map ((feature, index) => (
                 <motion.div;
+
+
                   viewport={{ once: true }} className="group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10">
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -356,6 +373,16 @@ export default function AIEmotionIntelligencePlatform() {
                   <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-400">{feature.description}</p>
                 </motion.div>
+
+        {/* Use Cases Section */}
+
+        <section className="py - 20 bg - gradient - to - r from - pink - 500 / 5 to - purple - 500 / 5">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Transform Your Business with Emotion AI
@@ -371,6 +398,8 @@ export default function AIEmotionIntelligencePlatform() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
+
+
                   viewport={{ once: true }} className="p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                     <useCase.icon className="w-8 h-8 text-white" />
@@ -378,6 +407,16 @@ export default function AIEmotionIntelligencePlatform() {
                   <h3 className="text-2xl font-semibold text-white mb-4">{useCase.title}</h3>
                   <p className="text-gray-400 text-lg">{useCase.description}</p>
                 </motion.div>
+
+        {/* Pricing Section */}
+
+        <section id="pricing" className="py - 20">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+            <motion.div;
+              initial={{ opacity: 0, coordinate_y: 30 }}
+              whileInView={{ opacity: 1, coordinate_y: 0 }}
+              transition={{ duration: 0.8 }}
+
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Choose Your Plan
@@ -413,6 +452,12 @@ export default function AIEmotionIntelligencePlatform() {
                   }`}
                 >;
                   {plan.popular && (
+
+
+
+
+
+
                   )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -482,6 +527,8 @@ export default function AIEmotionIntelligencePlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
         <section className="py-20 bg-gradient-to-r from-pink-500/5 to-purple-500/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
@@ -490,16 +537,22 @@ export default function AIEmotionIntelligencePlatform() {
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
                   <span className="text-gray-300 text-sm">Call Us</span>
                   <a href={`tel:${contactInfo.mobile}`} className="text-white font-semibold hover:text-pink-400 transition-colors">
+
+
                 </div>
                 <div className="flex flex-col items-center">
                   <Mail className="w-8 h-8 text-purple-400 mb-4" />
                   <span className="text-gray-300 text-sm">Email Us</span>
                   <a href={`mailto:${contactInfo.email}`} className="text-white font-semibold hover:text-purple-400 transition-colors">
+
+
                 </div>
                 <div className="flex flex-col items-center">
                   <Globe className="w-8 h-8 text-cyan-400 mb-4" />
                   <span className="text-gray-300 text-sm">Visit Us</span>
                   <a href={contactInfo.website} className="text-white font-semibold hover:text-cyan-400 transition-colors">
+
+
                 </div>
               </div>
             </motion.div>
@@ -508,5 +561,68 @@ export default function AIEmotionIntelligencePlatform() {
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2030>
     </>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+
+            >;
+              <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">;
+                Ready to Get Started?;
+              </h2>;
+              <p className="text - xl text - gray - 400 mb - 8 max - w-3xl mx - auto">;
+                Join hundreds of companies already using our AI Emotion Intelligence Platform to transform their customer experience;
+              </p>;
+              <div className="flex flex - col sm:flex - row items - center justify - center gap - 6 mb - 12">;
+                <Link;
+                  href="/contact" className="group relative px - 8 py - 4 bg - gradient - to - r from - pink - 500 to - purple - 500 text - white font - semibold rounded - 2xl text - lg hover:from - pink - 600 hover:to - purple - 600 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - pink - 500 / 25">;
+                  <span className="relative z - 10 flex items - center">;
+                    Start Free Trial;
+                    <ArrowRight className="ml - 2 w - 5 h - 5 group - hover:translate - x-1 transition - transform duration - 200" />;
+                  </span>;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - pink - 600 to - purple - 600 rounded - 2xl opacity - 0 group - hover:opacity - 100 transition - opacity duration - 300"></div>;
+                </Link>;
+                <Link;
+                  href="/contact" className="group px - 8 py - 4 border - 2 border - pink - 500 / 30 text - pink - 300 font - semibold rounded - 2xl text - lg hover:bg - pink - 500 / 10 hover:border - pink - 500 / 50 transition - all duration - 300 transform hover:scale - 105">;
+                  <span className="flex items - center">;
+                    Schedule Demo;
+                    <MessageCircle className="ml - 2 w - 5 h - 5 group - hover:scale - 110 transition - transform duration - 200" />;
+                  </span>;
+                </Link>;
+              </div>;
+              <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+                <div className="flex flex - col items - center">;
+                  <Phone className="w - 8 h - 8 text - pink - 400 mb - 4" />;
+                  <span className="text - gray - 300 text - sm">Call Us</span>;
+                  <a href={`tel:${contact_info.mobile}`} className="text - white font - semibold hover:text - pink - 400 transition - colors">;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className="flex flex - col items - center">;
+                  <Mail className="w - 8 h - 8 text - purple - 400 mb - 4" />;
+                  <span className="text - gray - 300 text - sm">Email Us</span>;
+                  <a href={`mailto:${contact_info.email}`} className="text - white font - semibold hover:text - purple - 400 transition - colors">;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className="flex flex - col items - center">;
+                  <Globe className="w - 8 h - 8 text - cyan - 400 mb - 4" />;
+                  <span className="text - gray - 300 text - sm">Visit Us</span>;
+                  <a href={contact_info.website} className="text - white font - semibold hover:text - cyan - 400 transition - colors">;
+                    {contact_info.website.replace ('https://', '')}
+                  </a>;
+                </div>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </section>;
+        <UltraFuturisticFooter2030 />;
+      </UltraFuturisticBackground2030>;
+    </>);
+}
 
 

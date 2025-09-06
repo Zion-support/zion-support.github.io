@@ -1,4 +1,18 @@
 
+export function ConversationsList({
+  conversations;
+
+  activeConversation
+  setActiveConversation
+  markAsRead
+
+export function ConversationsList({ ;
+  conversations;
+
+
+export function ConversationsList({ ;
+  conversations;
+
 import React from 'react',;
 import { User } from 'lucide-react',;
 import { Conversation } from '@/types/messaging',;

@@ -69,17 +69,31 @@
     growthRate: '450% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-
-      website: 'https://ziontechgroup.com';
-    }
-    real_implementation: true,
-    implementation_details: 'Production - ready quantum internet platform with quantum networking, communication protocols, and research tools.';
-    launch_date: '2026 - 06 - 15';
-    customers: 65;
+      'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.'
+    launchDate: '2026-06-15'
+    customers: 65
+    rating: 4.9
+    reviews: 45
+  }
+      'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.',
+    launchDate: '2026-06-15',
+    customers: 65,
     rating: 4.9,
-    reviews: 45;
+    reviews: 45,
+  },;
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.';
+    launchDate: '2026-06-15';
+    customers: 65;
+    rating: 4.9
 
+    reviews: 45
+  }
 ];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EmergingTech2026ServiceV2 {;

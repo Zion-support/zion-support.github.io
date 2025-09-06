@@ -133,6 +133,17 @@ class AdvancedSourceFixer {
   }
   fixImportExportIssues(content, filePath) {
     let fixed = content;
+
+
+    fixed = fixed && fixed.replace(/import\s+{\s*}\s*from/g, "import React from");
+    fixed = fixed && fixed.replace(/import\s+from\s+['"]/g, "import React from 'react'");
+
+    if (!fixed && fixed.includes("export default") && !fixed && fixed.includes("export {")) {
+
+
+
+    if (!fixed.includes("export default") && !fixed.includes("export {")) {;
+
       fixed += "\n\nexport default {};";
     }
     return fixed;
@@ -438,3 +449,12 @@ module.exports = AdvancedSourceFixer;
 export default AdvancedSourceFixer;
 
 }
+// Check condition
+if ( {) {
+  $2
+}
+  const fixer = new AdvancedSourceFixer ();
+  fixer.fixAllSourceFiles ().catch (console.error);
+}
+export default AdvancedSourceFixer;
+;

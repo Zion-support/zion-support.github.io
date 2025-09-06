@@ -8,6 +8,57 @@ import {Check, ArrowDown, X} from "lucide-react";
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {DisputeStatusBadge} from '@/components/disputes/DisputeStatusBadge';
 import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+  id;
+  projectId;
+
+  title
+  description
+  amount
+  status
+
+  dueDate;
+  onApprove;
+  onReject
+}: MilestoneCardProps) {
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+  function getStatusBadgeColor() {
+    switch (status) {
+      case 'completed':
+        return 'bg-green-500';
+      case 'in_progress':
+        return 'bg-blue-500';
+      case 'pending':
+        return 'bg-yellow-500';
+      case 'rejected':
+        return 'bg-red-500';
+      default: return 'bg-gray-500'
+    }
+  }
+import { Button } from "@/components/ui/button",
+import { format } from 'date-fns',
+import { Check, ArrowDown, X } from "lucide-react",
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
+interface MilestoneCardProps {
+  id: string,
+  projectId: string,
+  title: string,
+  description?: string,
+  amount: number,
+  status: string,
+  dueDate?: string,
+  onApprove?: (id: string) => Promise<void>,
+  onReject?: (id: string) => Promise<void>
+import React from 'react',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { format } from 'date-fns',;
+import { Check, ArrowDown, X } from "lucide-react",;
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 interface MilestoneCardProps {;
   id: string,;
   projectId: string,;
@@ -92,6 +143,10 @@ export function MilestoneCard(): any ({ ;
               size="sm"
             />;
           )}
+}
+
+
+
           </div>;
           <div className="flex gap-2">;
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>;
@@ -129,6 +184,10 @@ export function MilestoneCard(): any ({ ;
         </div>;
       </CardFooter>;
     </Card>;
+
+
+
+
 }
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';

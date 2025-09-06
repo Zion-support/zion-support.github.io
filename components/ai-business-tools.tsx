@@ -20,6 +20,13 @@ import {
   Check,
   ExternalLink,
   TrendingUp,
+  Brain;
+  MessageSquare
+  Image
+  Video
+  FileText
+  BarChart3
+  Users
 
 
 
@@ -215,6 +222,77 @@ function AIBusinessToolsPage() {
       pricing: '$30 - $89 / month',
       rating: 4.5,
       users: '50K+',
+        'Data-driven insights'
+        'Content optimization'
+        'Competitor analysis'
+        'Good support'
+      ]
+      cons: ['Expensive', 'Complex interface', 'Steep learning curve']
+      bestFor: 'SEO specialists, content marketers, businesses'
+    }
+      name: 'Copy.ai',
+      description:;
+        'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.',
+      category: 'AI Copywriting',
+      pricing: 'Free - $49 / month',
+      rating: 4.4,
+      users: '200K+',
+      icon: <MessageSquare className='w - 8 h - 8 text - orange - 400' />,
+      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
+      features: [;
+        'Marketing copy generation',
+        'Product descriptions',
+        'Social media posts',
+        'Email campaigns',
+        'Blog content',
+        'Free tier available',
+      ],
+      website: 'https://copy.ai',
+      use_case:;
+        'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
+      pros: ['Free tier', 'Easy to use', 'Good templates', 'Affordable'],
+      cons: ['Limited customization', 'Quality varies', 'Basic features'],
+      best_for: 'Small businesses, entrepreneurs, marketers',
+    },
+    {
+      name: 'Grammarly',
+      description:;
+        'AI - powered writing assistant that checks grammar, spelling, tone, and style to improve your writing.',
+      category: 'AI Writing',
+      pricing: 'Free - $12 / month',
+      rating: 4.7,
+      users: '30M+',
+      icon: <Check className='w - 8 h - 8 text - green - 400' />,
+      color: 'bg - gradient - to - br from - green - 500 to - teal - 600',
+      features: [;
+        'Grammar & spelling check',
+        'Tone analysis',
+        'Style suggestions',
+        'Plagiarism detection',
+        'Browser extension',
+        'Mobile apps',
+      ],
+      website: 'https://grammarly.com',
+      use_case:;
+        'Essential for anyone who writes professionally, including students, professionals, and content creators.',
+      pros: [;
+        'Excellent accuracy',
+        'Multiple platforms',
+        'Free tier',
+        'User - friendly',
+      ],
+      cons: ['Limited free features', 'Privacy concerns', 'Can be overzealous'],
+      best_for: 'Students, professionals, content creators',
+    },
+    {
+      name: 'Lumen5',
+      description:;
+        'AI video maker that transforms text content into engaging videos for social media and marketing.',      category: 'AI Video',
+      pricing: 'Free - $79 / month',
+      rating: 4.3,
+      users: '100K+',
+      icon: <Video className='w - 8 h - 8 text - blue - 400' />,      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
+
       category: 'AI Video',
       pricing: 'Free - $79 / month',
       rating: 4.3,
@@ -545,6 +623,9 @@ export default function AIBusinessToolsPage() {;
             </div>
           </div>
           {/* Stats */}
+
+
+
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -616,6 +697,35 @@ export default function AIBusinessToolsPage() {;
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
+                      {tool.icon}
+                    </div>
+                  </div>
+                  <div className='flex-1'>
+                    <div className='flex items-center justify-between mb-2'>
+                      <h3 className='text-2xl font-bold text-white group-hover:text-green-400 transition-colors duration-300'>
+                        {tool.name}
+                      </h3>
+                      <div className='flex items-center space-x-2'>
+                        <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                        <span className='text-sm text-gray-300'>
+                          {tool.rating}
+                        </span>
+                      </div>
+                    </div>
+                    <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>
+                      <span className='px-2 py-1 bg-gray-800 rounded-full'>
+                        {tool.category}
+                      </span>
+                      <span>{tool.users} users</span>
+                      <span className='text-green-400'>{tool.pricing}</span>
+                    </div>
+                    <p className='text-gray-400 leading-relaxed mb-4'>
+                      {tool.description}
+                    </p>
+
+
+
+
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -669,6 +779,16 @@ export default function AIBusinessToolsPage() {;
                         href={tool && tool.website}
                         variant='outline'
                         size='sm'
+
+
+      {/* AI Benefits Section */}
+      <section className='py-24 bg-gray-900'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+
+
+
 
               Why Choose AI Tools?
             </h2>
@@ -940,6 +1060,7 @@ export default function AIBusinessToolsPage() {;
 }
 }
   );
+}
 }
     </>);
 }

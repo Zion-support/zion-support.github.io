@@ -1,4 +1,8 @@
 
+
+
+
+
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -7,6 +11,9 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
+
+
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -30,6 +37,37 @@ export function MobileResumeBuilder() {
   
   const renderStepContent = () => {
     switch (currentStep) {
+          <Textarea
+            id="summary"
+            placeholder="Write a brief summary about yourself"
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+            rows={4}
+          />
+        </div>
+      </CardContent>
+    </Card>
+  )
+}
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue} from "@/components/ui/select",;
+import { Label } from "@/components/ui/label",;
+import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
+type ResumeStep = "basics" | "experience" | "education" | "skills",;
+
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
@@ -383,6 +421,7 @@ function SkillsStep() {
                 <Input;
                   placeholder="Skill (e.g. JavaScript, Figma)";
                   value={skill.name}
+                  onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
                 >;
                   <SelectTrigger className="w-[130px]">;
                     <SelectValue placeholder="Level" />;
@@ -432,3 +471,4 @@ function SkillsStep() {
       </Card>
     </div>
   )
+

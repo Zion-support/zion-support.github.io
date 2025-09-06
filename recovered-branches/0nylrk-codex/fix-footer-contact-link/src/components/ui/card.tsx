@@ -3,6 +3,12 @@ import * as React from "react"
 
 import { cn } from "@/lib/utils"
 
+import {cn} from '@/lib/utils';
+import * as React from "react"
+
+import { cn } from "@/lib/utils"
+
+
 const Card = React.forwardRef<
   HTMLDivElement
   React.HTMLAttributes<HTMLDivElement>
@@ -141,3 +147,14 @@ const CardFooter = React.forwardRef<
     className={cn('flex items-center p-6 pt-0', className)}
     {...props}
   />
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardDescription,
+  CardContent,;
+};
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+;
+

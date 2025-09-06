@@ -1,6 +1,36 @@
 import React from 'react';
+import {
 
 import { motion } from 'framer-motion';
+import {
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Brain
+  Globe
+  Rocket;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,;
+  Rocket,;
+
+
+
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,;
+  Rocket,;
+
 } from 'lucide-react';
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services';
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure';
@@ -255,6 +285,8 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
               className='flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'
             >
               <span>Learn More</span>
+
+
           </div>
           {/* Market info */}
           <div className='mt-4 pt-4 border-t border-slate-700/50'>
@@ -282,6 +314,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+
+
+
         >
           <div className='flex items-center justify-center space-x-2 mb-4'>
             <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -327,7 +362,6 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
 
       <div className="container mx-auto px-4 relative z-10">;
         <motion&& motion.div
-
 
 
 
@@ -465,6 +499,7 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
+
         >
           <div className='flex items-center space-x-3 mb-8'>
             <Globe className='w-6 h-6 text-purple-400' />
@@ -534,6 +569,10 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
+        {/* CTA Section */}
+        <motion.div
+
+
 
 
 
@@ -541,6 +580,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+
+
+
         {/* CTA Section */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}

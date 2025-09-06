@@ -1,3 +1,16 @@
+import {cn} from '@/lib/utils';
+import {Label} from '@/components/ui/label';
+const Form = FormProvider;
+type FormFieldContextValue = {
+  name: string
+}
+const FormFieldContext = React.createContext<FormFieldContextValue>({
+  name: ''
+});
+const FormField = ({ ...props }: any) =></FormFieldContextValue> {
+
+
+
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -29,6 +42,14 @@ const useFormField = () => {;
     FormItemContext;
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
+const FormItem = React.forwardRef<
+  HTMLDivElement
+  React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  const id = useReactId();
+
+
+
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -158,6 +179,13 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<
   const body = error ? String(error?.message) : children;
   if (!body) {
     return null;
+  return (
+    <Label
+      ref={ref}
+      className={cn(error && "text-destructive", className)}
+      htmlFor={formItemId}
+      {...props}
+
     />
   )
 })
@@ -169,6 +197,19 @@ const FormControl = React.forwardRef<
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
+  return (
+    <Slot
+      ref={ref}
+      id={formItemId}
+      aria-describedby={;
+        !error;
+          ? `${formDescriptionId}`;
+          : `${formDescriptionId} ${formMessageId}`;
+      }
+      aria-invalid={!!error}
+      {...props}
+
+
     />
   )
 })
@@ -179,6 +220,14 @@ const FormDescription = React.forwardRef<
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => {
   const { formDescriptionId } = useFormField()
+
+  return (
+    <p
+      ref={ref}
+      id={formDescriptionId}
+      className={cn("text-sm text-muted-foreground", className)}
+      {...props}
+
 
     />
   )
@@ -193,6 +242,10 @@ const FormMessage = React.forwardRef<
   const body = error ? String(error?.message) : children
 
   if (!body) {
+    return null;
+    return null
+
+
   }
     >
       {body}
@@ -332,3 +385,10 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
+  FormField,;
+};
+  FormField}
+;
+
+
+

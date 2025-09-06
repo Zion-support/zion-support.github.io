@@ -29,6 +29,7 @@ import RiskIndicator from '../components/ui/RiskIndicator';
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
 
+
     form && form.reset();
 
   }
@@ -69,6 +70,9 @@ import RiskIndicator from '../components/ui/RiskIndicator';
 
                       </li>
 
+
+                      </li>
+
                     ))}
                   </ul>;
                 </div>;
@@ -77,9 +81,6 @@ import RiskIndicator from '../components/ui/RiskIndicator';
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data && data.reasonSummary}
                 </div>;
               )}
-
-
-                      </li>
 
                     ))}
                   </ul>

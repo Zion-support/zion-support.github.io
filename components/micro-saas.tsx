@@ -4121,6 +4121,17 @@ export default function MicroSaasPage() {;
               meeting transcription, invoice automation, churn prediction, lead scoring, real-time analytics, content optimization
               predictive maintenance, email security, dynamic pricing, customer segmentation, sales intelligence, content calendar optimization
               email deliverability, landing page building, customer journey mapping, contract analysis, sales forecasting, customer service analytics;
+                      target="_blank";
+                      rel="noopener noreferrer";
+                      className="text - green - 400 text - sm text - center hover:text - green - 300 transition - colors";
+                    >;
+                      Visit {service.link.replace ('https://', '')}
+                    </a>;
+                  </div>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>;
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
@@ -4151,6 +4162,9 @@ export default function MicroSaasPage() {;
                 </div>;
               </Card>;
             ))}
+
+
+
       {/* Detailed Services */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -4239,6 +4253,9 @@ export default function MicroSaasPage() {;
                           </ul>;
                         </div>;
                       ))}
+
+
+
                 {/* Market Data */}
                 <div className="mt-8 bg-blue-900/20 border border-blue-500/20 rounded-lg p-6">
                   <h4 className="text-xl font-bold text-blue-400 mb-4 flex items-center">
@@ -4446,6 +4463,8 @@ export default function MicroSaasPage() {;
           </div>;
         </div>;
       </section>;
+}
+  );
 }
   );
 }

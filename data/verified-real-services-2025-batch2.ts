@@ -10,6 +10,9 @@
   contact_info: {
     mobile: string;
     email: string;
+}
+
+
 
     address: string;
   }

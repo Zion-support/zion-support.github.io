@@ -63,6 +63,7 @@ interface ApplyToJobFormProps {;
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
+export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const navigate = useNavigate();
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
   const [selectedResumeId, setSelectedResumeId] = useState<string>("");
@@ -178,6 +179,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {;
       </div>;
 
       <div className="flex justify-end gap-2">;
+
           disabled={isSubmitting}
           onClick={() => {;
             if (onSuccess) onSuccess();

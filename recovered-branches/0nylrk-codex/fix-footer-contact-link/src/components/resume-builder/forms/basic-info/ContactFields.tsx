@@ -1,13 +1,30 @@
+import {
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
+
   FormField,
 
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+
+
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Control } from "react-hook-form",
 import { BasicInfoFormData } from "./schema",
+
+
+
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>;
 }
@@ -39,6 +56,8 @@ function ContactFields() {
               <Input placeholder="San Francisco, CA" {...field} />;
             </FormControl>;
             <FormMessage />;
+
+
         )}
 
       />;
@@ -65,6 +84,12 @@ function ContactFields() {
               <Input;
                 placeholder="https://linkedin.com / in / username";
                 {...field}
+
+      />;
+    </div>;
+  );
+}
+
               />;
             </FormControl>;
             <FormMessage />;
@@ -88,3 +113,4 @@ function ContactFields() {
   )
 }
 ;
+

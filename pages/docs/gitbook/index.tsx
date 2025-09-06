@@ -1,3 +1,13 @@
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
+
+
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
+
+
 function list(dir: string, baseDir: string) {
   return items.map((name) => {
     const full = path.join(dir, name)
@@ -12,6 +22,8 @@ function list(dir: string, baseDir: string) {
     : []
 
   return { props: { sections }, revalidate: 600 }
+
+
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';

@@ -8,6 +8,9 @@ export type AdminNotesPanelProps = {;
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
   target_id: string; // unique identifier for the target;
+import React, { useEffect, useMemo, useState } from 'react';
+  targetType: string; // e.g., 'user' | 'listing'
+  targetId: string; // unique identifier for the target
 }
 ;
 type Note = {
@@ -26,6 +29,10 @@ type Note = {
   text: string
   authorId: string
   createdAt: number
+
+};
+
+
 
 };
 
@@ -75,18 +82,20 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
           'X-Admin-User': adminId
         }
         body: JSON.stringify({ targetType, targetId, text })
-      const data = await res && res.json();
-      setNotes(data && data.notes || []);
-    } finally {;
-      setLoading(false);
-    }
-  }
-
+      if (!res.ok) {
+    } finally {
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return;
       }
       setText('');
+      setAdding(false);    }
+
+
+    }
+  }
+
+  if (!isAdmin) {
     return (
 
 
@@ -324,3 +333,10 @@ if ( {) {
         )}
       </div>
     </div>
+}
+}
+  );
+}
+  )
+
+}

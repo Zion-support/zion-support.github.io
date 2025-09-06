@@ -1,4 +1,3 @@
-
 import {
   Brain,
   Shield,
@@ -16,6 +15,22 @@ import {
   Award,;
 } from 'lucide-react';
 
+import {
+  Brain,
+  Shield,
+  Code,
+  CheckCircle,
+  Zap,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Lock,
+  Eye,
+  BarChart3,
+  Globe,;
+  Award,;
+} from 'lucide-react';
 
 import {
   Brain
@@ -148,11 +163,19 @@ import {
         </section>;
 
 
+
+
+
         {/* Pricing Section */}
         <section className='py-20'>;
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+
+
+        {/* Pricing Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -418,12 +441,11 @@ import {
                     title: "Improve Code Quality & Maintainability",;
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health.";
 
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center text-white mr-6 flex-shrink-0">
-                      {benefit.icon}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                      <p className="text-gray-300">{benefit.description}</p>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+                  }
                     </div>
                   </motion.div>
                 ))}
@@ -441,10 +463,6 @@ import {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
         {/* Benefits Section */}
         <section className="py-20 bg-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -599,6 +617,7 @@ import {
                 </motion.div>
 
 
+
               ))}
             </div>
           </div>
@@ -694,3 +713,4 @@ export default AICodeReviewSecurityScanner;
 };
 
 
+export default AICodeReviewSecurityScanner;

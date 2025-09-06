@@ -1,9 +1,20 @@
 import React, { useState } from 'react';
 
+    voice: 'Visionary'
+    language: 'English'
+    voice: 'Visionary',
+    language: 'English',;
+
+
   });
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');
+
+
+
+  const [persona, setPersona] = useState<PersonaConfig>({ voice: 'Visionary', language: 'English' }),;
+
   const [inviteeName, setInviteeName] = useState('');
   const [inviteeBio, setInviteeBio] = useState('');
   const [topic, setTopic] = useState('');

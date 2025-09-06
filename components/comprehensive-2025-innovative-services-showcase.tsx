@@ -18,6 +18,10 @@ import {
   Cpu,
   Eye,
   Target,
+
+  Users,;
+  BarChart3,;
+
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch';
 
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
@@ -27,46 +31,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
       icon: Brain
       color: 'from-purple-500 to-pink-500'
     }
-    {
-      name: 'Quantum & Finance'
-      icon: Atom
-      color: 'from-cyan-500 to-blue-500'
-    }
-    {
-      name: 'Space Technology'
-      icon: Rocket
-      color: 'from-indigo-500 to-purple-500'
-    }
-    {
-      name: 'Metaverse & AI'
-      icon: Globe
-      color: 'from-green-500 to-teal-500'
-    }
-    {
-      name: 'Cybersecurity'
-      icon: Shield
-      color: 'from-red-500 to-orange-500'
-    }
-    {
-      name: 'Supply Chain & AI'
-      icon: Factory
-      color: 'from-yellow-500 to-orange-500'
-    }
-    {
-      name: 'Quantum & Healthcare'
-      icon: Cpu
-      color: 'from-violet-500 to-purple-500'
-    }
-    {
-      name: 'AI & Creativity'
-      icon: Palette
-      color: 'from-pink-500 to-rose-500'
-    }
-    {
-      name: 'AI & Robotics'
-      icon: Database
-      color: 'from-emerald-500 to-green-500'
-    },  ];
+  ];
+
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category);
     return cat ? cat.icon : Star;  }
@@ -128,16 +94,15 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         </div>
         
         <div className="text-center max-w-6xl mx-auto relative z-10">
-  return (
-    <Layout>
-
-
 
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+
+
+
             {/* Enhanced Company Badge */}
             <motion&& motion.div
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -302,6 +267,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
 
+
             >
               <div className='p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20'>
                 <div className='text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors'>
@@ -359,6 +325,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
@@ -594,6 +561,40 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+                <motion.div;
+                  key={category.name}
+                  initial={{ opacity: 0, coordinate_y: 20 }}
+                  whileInView={{ opacity: 1, coordinate_y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group relative";
+                >;
+                  <div className={`p - 8 rounded - 2xl bg - gradient - to - br ${category.color} bg - opacity - 10 border border - white / 10 hover:border - white / 20 transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl`}>;
+                    <div className="text - center">;
+                      <div className={`w - 16 h - 16 mx - auto mb - 6 rounded - full bg - gradient - to - br ${category.color} bg - opacity - 20 flex items - center justify - center border border - white / 20`}>;
+                        <IconComponent className="w - 8 h - 8 text - white" />;
+                      </div>;
+                      <h3 className="text - 2xl font - bold text - white mb - 4">{category.name}</h3>;
+                      <div className="text - gray - 300 text - sm">;
+                        {innovative2025MicroSaasBatch.filter (service => service.category === category.name).length} Services;
+                      </div>;
+                    </div>;
+                  </div>;
+                </motion.div>);
+            })}
+          </div>;
+        </div>;
+      </section>;
+      {/* Featured Services */}
+      <section className='py - 20 px - 4'>;
+        <div className='max - w-7xl mx - auto'>          <motion.div;
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
@@ -698,8 +699,14 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className='space-y-8'
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -748,6 +755,8 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
         </div>;
       </section>;
       {/* Contact CTA */}
+export default Comprehensive2025InnovativeServicesShowcase;
+
 export default Comprehensive2025InnovativeServicesShowcase;
 
 }

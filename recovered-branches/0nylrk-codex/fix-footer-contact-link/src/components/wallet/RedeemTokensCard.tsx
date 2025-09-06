@@ -1,4 +1,8 @@
 
+
+
+
+
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -17,6 +21,10 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
+
+
+
+
 type RewardOption = {
   id: string
   title: string
@@ -100,6 +108,9 @@ const REWARD_OPTIONS: RewardOption[] = [
       </CardContent>
     </Card>
   )
+}
+
+
 import React, { useState } from "react",;
 import { useWallet } from "@/hooks/useWallet",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -171,6 +182,10 @@ const REWARD_OPTIONS: RewardOption[] = [;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
+
+
+
+
 }
     </Card>);
 }

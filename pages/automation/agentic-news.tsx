@@ -1,3 +1,17 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/agentic-news.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/agentic-news.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/agentic-news.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/agentic-news.json',
+
+
 export default function AgenticNewsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -25,6 +39,7 @@ export default function AgenticNewsPage() {
           ))}
         </ul>
       </div>
+              <a className="font-medium underline" href={it.url} target="_blank" rel="noreferrer">{it.title}</Link>
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">

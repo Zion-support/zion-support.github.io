@@ -169,6 +169,16 @@ async function main() {
   const status = writeStatus(automations, { note: 'Cloud autonomous run executed' })
   // Feedback analysis
   try {
+  // Generate automation ideas if key present
+  try {
+    await generateIdeasIfPossible()
+  } catch {}
+  console.log('Cloud autonomous run complete:', status.updatedAt)
+}
+
+main().catch((e) => { console.error(e), process.exit(1) }),;
+;
+
 async /**
  * generateIdeasIfPossible - Function description
  */
@@ -216,6 +226,13 @@ if ( {) {
   try {
     await generateIdeasIfPossible ();
   } catch {}
+
+  console && console.log('Cloud autonomous run complete:', status && status.updatedAt)
+}
+;
+main().catch((e) => { console.error(e), process.exit(1) }),;
+
+
 
 
 

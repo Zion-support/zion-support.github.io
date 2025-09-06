@@ -1,6 +1,5 @@
 
 
-
 import React from 'react',;
 import ReactMarkdown from 'react-markdown',;
 import { useRouter } from 'next/router',;
@@ -57,6 +56,7 @@ function parseMarkdown(filePath: string): BlogPost | null {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 
 }
@@ -101,6 +101,8 @@ if ( {) {
           <img;
             src={post.author.avatar_url}
             alt={post.author.name}
+
+
             className="w-10 h-10 rounded-full"
             onError={(e) => {
               const target = e.currentTarget as HTMLImageElement
@@ -116,6 +118,8 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           </div>
         </div>
         {post.featuredImage && (
@@ -153,3 +157,66 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+        <ReactMarkdown>{body}</ReactMarkdown>;
+        <AuthorBio author={post.author} />;
+        <SocialShareButtons title={post.title} />;
+        <CommentsSection slug={post.slug} />;
+      </main>;
+    </>;
+  );
+};
+export default BlogPostPage,;
+export const getStaticPaths: GetStaticPaths = async () => {;
+  const dir = path.join(process.cwd(), 'contentblog'),;
+  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
+  const paths = files.map((f) => ({;
+    params: { slug: f.replace(/\.md$/, '') }})),;
+  // Use `blocking` so new posts added after build can be generated on demand;
+  return { paths, fallback: 'blocking'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},;
+export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({;
+  params}: {;
+  params?: { slug?: string   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}) => {;
+  const slug = params?.slug as string;
+  // Validate slug to prevent malformed paths;
+  if (!/^[a-z0-9-]+$/.test(slug)) {;
+    return { notFound: true   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const filePath = path.join(process.cwd(), 'contentblog', `${slug}.md`),;
+  const post = parseMarkdown(filePath);
+  if (!post) {;
+    return { notFound: true   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { initialPost: post }, revalidate: 60   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+

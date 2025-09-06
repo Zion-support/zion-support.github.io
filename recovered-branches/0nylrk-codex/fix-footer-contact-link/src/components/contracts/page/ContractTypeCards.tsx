@@ -4,8 +4,11 @@
   CardDescription,
   CardFooter,
   CardHeader,
+} from "@/components/ui/card";
+import { FileText, ShieldCheck } from "lucide-react";
 
 
+interface ContractTypeCardsProps {
   onStandardClick: () => void;
   onSmartClick: () => void
 }
@@ -35,6 +38,8 @@
           </Button>
         </CardFooter>
       </Card>
+
+
       <Card>
         <CardHeader className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-t-lg">
           <div className="flex justify-between items-center">
@@ -60,6 +65,18 @@
           </ul>
         </CardContent>
         <CardFooter>
+    </div>
+  );
+}
+
+
+export function ContractTypeCards(): any ({;
+  onStandardClick,;
+  onSmartClick,;
+}: ContractTypeCardsProps) {;
+  return (
+
+
           <Button 
             className="w-full bg-gradient-to-r from-blue-600 to-indigo-600" 
 import { Button } from "@/components/ui/button",;
@@ -105,3 +122,6 @@ export function ContractTypeCards({ onStandardClick, onSmartClick }: ContractTyp
           </Button>;
         </CardFooter>;
       </Card>;
+}
+
+

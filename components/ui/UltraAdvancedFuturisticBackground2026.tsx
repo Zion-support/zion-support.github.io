@@ -206,6 +206,9 @@ if ( {) {
       y: number;
       connections: NeuralNode[];
       activation: number;
+    }
+
+
         ctx.restore();      }
 
       }
@@ -240,6 +243,48 @@ if ( {) {
         });
         ctx && ctx.restore();
     }
+
+
+    // Quantum field class;
+    class QuantumField {;
+
+    // Quantum field class
+    class QuantumField {
+      x: number;
+      y: number;
+      radius: number;
+      intensity: number;
+
+      x: number,
+      y: number,
+      radius: number,
+      intensity: number,
+      phase: number,
+      constructor(x: number, y: number) {
+
+        this.x = x;
+        this.y = y;
+        this.radius = Math.random() * 100 + 50;
+        this.intensity = Math.random() * 0.8 + 0.2;
+
+        this.phase = Math.random() * Math.PI * 2
+
+      }
+      update() {
+        this.phase += 0.02 * animationSpeed
+
+      }
+
+      draw() {
+        ctx.save();
+        ctx.globalAlpha = 0.1;
+        for (let i = 0, i < 3, i++) {
+          const waveRadius = this.radius + Math.sin(this.phase + i * Math.PI / 3) * 20;
+          const alpha = this.intensity * (1 - i / 3);
+          ctx.strokeStyle = `rgba(0, 255, 255, ${alpha})`;
+          ctx.lineWidth = 2;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, waveRadius, 0, Math.PI * 2);
           ctx.stroke()
 
         }
@@ -440,10 +485,13 @@ if ( {) {
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         
+        ctx.restore();      }
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         ctx.restore()
+    }
+
     }
 
     // Get color based on scheme
@@ -916,12 +964,36 @@ if ( {) {
           <motion.div;
             className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
             animate={{
+              ease: 'easeInOut',              ease: "easeInOut"
+            }}
+          />
+        </div>
+      )}
+      {children}
+    </div>
+  );
+}
+export default UltraAdvancedFuturisticBackground2026;      {children}
+    </div>
+  )
+}
+export default UltraAdvancedFuturisticBackground2026;
+
+
+            animate={{
+
+
             }}
           />;
         </div>;
       )}
 
 export default UltraAdvancedFuturisticBackground2026;
+
+            }}
+          />
+        </div>
+      )}
               ease: 'easeInOut',              ease: "easeInOut";
             }}
           />;

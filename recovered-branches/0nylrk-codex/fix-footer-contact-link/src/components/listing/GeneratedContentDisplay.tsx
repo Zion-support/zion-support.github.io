@@ -3,6 +3,7 @@
   CardContent,
   CardFooter,
   CardHeader,
+} from "@/components/ui/card";
   CardTitle,;
 } from "@/components/ui/card";
 
@@ -50,6 +51,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       </CardHeader>
       <CardContent className="space-y-4">
         <div>
+
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Tags
@@ -73,6 +76,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
             {content.suggestedPrice.max.toFixed(2)}
           </p>
         </div>
+
+
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">
             Key Selling Points
@@ -140,6 +145,13 @@ function GeneratedContentDisplay() {
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       </CardFooter>
+  )
+          className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white";
+        >;
+          Apply to My Listing;
+          <ArrowRight className="ml-2 h-4 w-4" />;
+        </Button>;
+      </CardFooter>;
 
 
     </Card>;

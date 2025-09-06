@@ -1,4 +1,33 @@
 
+  Brain
+  Atom
+  Shield
+  Rocket
+  Star
+  Award
+  TrendingUp
+  CheckCircle
+  ArrowRight
+  Zap
+  Target
+  Microscope
+  Lock
+  Cloud
+  BarChart3
+  Settings
+  Eye
+  Code
+  Palette
+  Search
+  Filter
+  Grid
+  List
+  ExternalLink
+  Phone
+  Mail
+  MapPin;} from 'lucide-react';import {
+
+
   Brain,
   Atom,
   Shield,
@@ -49,6 +78,8 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
     description: 'Innovative business solutions for modern enterprises',
     services: cuttingEdgeMicroSaasServices2025,
     icon: Rocket,
+
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
@@ -248,6 +279,11 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   Showcase 2025
                 </span>
               </motion.h1>
+
+
+              <motion.p 
+
+
                 className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto mb-12 leading-relaxed"
 
                 initial={{ opacity: 0, y: 20 }}
@@ -309,6 +345,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
                     <div className='text-2xl md:text-3xl font-bold text-white mb-1'>
                       {stat.value}
                     </div>
+
+                className='flex flex-col sm:flex-row gap-4 justify-center'                initial={{ opacity: 0, y: 20 }}              <motion.div 
+
                 className="flex flex-col sm:flex-row gap-4 justify-center"
                     <div className='text-sm text-white/70'>{stat.label}</div>                  </div>
 
@@ -337,6 +376,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
               className='flex flex-col lg:flex-row gap-6 items-center justify-between'              initial={{ opacity: 0, y: 20 }}        <section className="py-12 bg-black/50 backdrop-blur-sm border-t border-cyan-500/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <motion&& motion.div 
+
+
+              initial={{ opacity: 0, y: 20 }}
+
 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6 }}
@@ -388,6 +431,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
                   </button>;
                 ))}
                 <button
+
+
+
 
 
 
@@ -521,6 +567,8 @@ export default function CuttingEdgeServicesShowcase2025() {;
 
 
                   {/* Hover Effect Overlay */}
+
+                  {/* Hover Effect Overlay */}
                   <div className='absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none' />                </motion && motion.div>                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />;
                 </motion && motion.div>;
               ))}
@@ -535,6 +583,7 @@ export default function CuttingEdgeServicesShowcase2025() {;
               <motion&& motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
+
 
               >
                 <div className='text-6xl mb-4'>🔍</div>
@@ -568,6 +617,9 @@ export default function CuttingEdgeServicesShowcase2025() {;
         <section className="py-20 bg-gradient-to-br from-black via-purple-900/20 to-black">
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <motion.div
+
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -640,6 +692,10 @@ export default function CuttingEdgeServicesShowcase2025() {;
         </section>
       </Layout>
     </>
+
+
+
+  const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const containerVariants = {
   hidden: {
   opacity: 0
 }
@@ -860,4 +916,7 @@ const item_variants = {
 }
 
   duration: 0.5 
+
+};}
+};
 

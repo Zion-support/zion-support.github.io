@@ -52,23 +52,3 @@ if ( {) {
   );
   useEffect(() => {
 
-}
-
-}
-
-
-
-}
-
-      }
-    },
-    [on_message, on_error],
-  );
-;
-  useEffect (() => {
-    window.addEventListener ("message", handle_message);
-    return () => {
-      window.removeEventListener ("message", handle_message);
-    }
-  }, [handle_message]);
-}

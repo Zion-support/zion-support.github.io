@@ -1,3 +1,13 @@
+import React, { ReactNode } from "react",
+import { cn } from "@/lib/utils",
+import { slugify } from "@/lib/slugify";
+import { Link } from "react-router-dom";
+import { slugify } from "@/lib/slugify",
+import { Link } from "react-router-dom",
+
+
+
+
 interface CategoryCardProps {
 
   title: string
@@ -9,6 +19,8 @@ interface CategoryCardProps {
    * accent colour is used. Previously this prop was ignored which meant
    * callers could not customise the icon colour as intended.
    */
+
+
 
 
   const slug = slugify(title);
@@ -49,6 +61,8 @@ export function CategoryCard(): any ({ title, description, icon, color, count, c
       <div
         className={cn(
         )}
+
+
         )}
         style={color ? { color } : undefined}
       >;

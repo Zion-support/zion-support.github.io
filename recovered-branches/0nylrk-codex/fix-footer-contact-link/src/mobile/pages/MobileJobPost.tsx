@@ -1,4 +1,8 @@
 
+
+
+
+
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -10,6 +14,9 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
+
+
+
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -51,6 +58,45 @@ export function MobileJobPost() {
     } else if (currentStep === "preview") {
       setCurrentStep("budget")
     }
+        <Textarea
+          id="description"
+          placeholder="Describe the job role and responsibilities"
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+          rows={5}
+        />
+      </div>
+    </div>
+  )
+}
+function RequirementsStep() {
+  const [skills, setSkills] = useState<string[]>([
+    "React", "TypeScript", "Node.js"
+  ]);
+  const [newSkill, setNewSkill] = useState("");
+        <Textarea 
+          id="description" 
+          placeholder="Describe the job role and responsibilities" 
+import React, { useState } from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Label } from "@/components/ui/label",;
+import {;
+  Select,;
+  SelectContent,;
+  SelectItem,;
+  SelectTrigger,;
+  SelectValue;
+} from "@/components/ui/select",;
+import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
+import { Badge } from "@/components/ui/badge",;
+import { Card, CardContent } from "@/components/ui/card",;
+type JobPostStep = "details" | "requirements" | "budget" | "preview",;
+
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
@@ -349,6 +395,18 @@ function RequirementsStep() {;
           {skills.map((skill) => (
             <Badge
               key={skill}
+;
+function RequirementsStep() {;
+  const [skills, setSkills] = useState<string[]>([;
+    "React", "TypeScript", "Node.js";
+  ]),;
+  const [newSkill, setNewSkill] = useState(""),;
+  const addSkill = () => {;
+    if (newSkill && !skills.includes(newSkill)) {;
+      setSkills([...skills, newSkill]),;
+      setNewSkill("");
+    }
+
   };
 
   const removeSkill = (skill: string) => {;
@@ -401,6 +459,16 @@ function RequirementsStep() {;
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
               {skill}
+              <button
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+              variant="secondary"
+              className="flex items-center gap-1 px-3 py-1"
+            >
+              {skill}
+
+              <button 
+                className="ml-1 rounded-full hover:bg-background/20 p-1"
+
                 onClick={() => removeSkill(skill)}
               >;
                 ;
@@ -424,7 +492,12 @@ function RequirementsStep() {;
           id="requirements"
           placeholder="List any specific requirements or qualifications"
           rows={4}
-        <Textarea
+        />
+      </div>
+    </div>
+  )
+}
+        <Textarea 
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
@@ -433,6 +506,8 @@ function RequirementsStep() {;
       </div>;
     </div>;
   );
+
+
 }
 
 
@@ -615,7 +690,44 @@ function PreviewStep() {
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
   )
-
+;
+/**
+ * PreviewStep - Function description
+ */
+function PreviewStep() {
+  return (
+    <div className="space - y-4">;
+      <h2 className="text - lg font - medium mb - 2">Job Preview</h2>;
+      <Card>;
+        <CardContent className="p - 4">;
+          <h3 className="font - bold text - lg">Senior React Developer</h3>;
+          <p className="text - muted - foreground">TechCorp Inc. • Remote • Full - time</p>;
+          <div className="flex gap - 2 my - 3">;
+            <Badge variant="outline">React</Badge>;
+            <Badge variant="outline">TypeScript</Badge>;
+            <Badge variant="outline">Node.js</Badge>;
+          </div>;
+          <div className="space - y-1 text - sm mt - 4">;
+            <p className="font - medium">Salary Range:</p>;
+            <p>$80, 000 - $120, 000 USD / year</p>;
+          </div>;
+          <div className="space - y-1 text - sm mt - 3">;
+            <p className="font - medium">Experience Level:</p>;
+            <p > Senior</p>;
+          </div>;
+          <div className="space - y-1 text - sm mt - 3">;
+            <p className="font - medium">Application Deadline:</p>;
+            <p > December 15, 2023</p>;
+          </div>;
+          <div className="mt - 4 pt - 3 border - t border - border">;
+            <h4 className="font - medium mb - 2">Description</h4>;
+            <p className="text - sm">We are looking for a skilled React developer to help us build out our new customer - facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p>;
+          </div>;
+        </CardContent>;
+      </Card>;
+      <Button variant="outline" className="w - full">Edit Job Post</Button>;
+    </div>);
+}
 
 }
 

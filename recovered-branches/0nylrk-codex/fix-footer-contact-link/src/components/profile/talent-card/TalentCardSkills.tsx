@@ -1,9 +1,26 @@
 
+import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import {Badge} from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+
+
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+
+import {Badge} from "@/components/ui/badge";
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+
 interface TalentCardSkillsProps {
   skills: string[] | undefined;
 }
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
+
+
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
@@ -25,6 +42,8 @@ export function TalentCardSkills(): any ({ skills = [] }: TalentCardSkillsProps)
 
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
+
+
           {skill}
         </Badge>;
       ))}

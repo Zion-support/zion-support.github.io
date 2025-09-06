@@ -45,16 +45,6 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>        <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
-    }
-  }
-  return (
-
-
-        <StarRating value={rating} onChange={setRating} />
-      </div>
-      <div>
-
-
       >
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>

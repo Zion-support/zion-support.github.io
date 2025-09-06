@@ -1,3 +1,110 @@
+import {
+  Menu
+  X
+  ChevronDown
+  ChevronRight
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Sparkles
+  Brain
+  Atom
+  Shield
+  DollarSign
+  FileText
+  BarChart3
+  MessageSquare
+  Truck
+  Users
+  Database
+  Cpu
+  Cloud
+  Play
+  Search
+  ShieldCheck
+  TrendingUp
+  Rocket
+  Zap
+  Check
+  Star
+  Clock
+  Target
+  Building
+  Award
+  ChartBar
+  Lock
+  Smartphone
+  Palette
+  Calendar
+  CreditCard
+  Settings
+  Code
+  BookOpen
+  Activity
+  Bot
+  ChevronRight as ChevronRightIcon
+  Eye
+  FlaskConical
+  Link as LinkIcon;
+import Button from '../ui/Button';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  DollarSign,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Truck,
+  Users,
+  Database,
+  Cpu,
+  Cloud,
+  Play,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  Rocket,
+  Zap,
+  Check,
+  Star,
+  Clock,
+  Target,
+  Building,
+  Award,
+  ChartBar,
+  Lock,
+  Smartphone,
+  Palette,
+  Calendar,
+  CreditCard,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Bot,
+  ChevronRight as ChevronRightIcon,
+  Eye,
+  FlaskConical,;
+  Link as LinkIcon,;
+import Button from '../ui/Button';
+export default function NeoFuturisticNavigation() {;
+
+export default function NeoFuturisticNavigation() {
+
+export default function NeoFuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);

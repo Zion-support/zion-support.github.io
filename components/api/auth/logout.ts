@@ -8,6 +8,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })
 }
+
+}
+
+
   const cookie = clearSessionCookie();
   res.setHeader('Set-Cookie', cookie);
   res.status(200).json({ ok: true })

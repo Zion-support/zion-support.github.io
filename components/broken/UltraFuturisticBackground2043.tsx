@@ -278,6 +278,48 @@ if ( {) {
             delay: 4,
 
 
+        {/* Additional orbs */}
+        <motion.div
+          className='absolute top-3/4 left-1/3 w-48 h-48 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl'
+          animate={{
+            scale: [1.3, 1, 1.3]
+            opacity: [0.3, 0.6, 0.3]
+          animate={{
+            scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}}
+          transition={{
+            duration: 9
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 1,          }}
+          transition={{
+            duration: 9
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 1,          }}
+        />
+        <motion.div
+          className='absolute top-1/3 right-1/3 w-56 h-56 bg-gradient-to-r from-red-500/10 to-pink-500/10 rounded-full blur-3xl'
+          animate={{
+            scale: [1, 1.4, 1]
+            opacity: [0.4, 0.7, 0.4]
+          animate={{
+            scale: [1.3, 1, 1.3];
+            opacity: [0.3, 0.6, 0.3]}}
+          transition={{
+            duration: 9
+            repeat: Infinity
+            ease: "easeInOut"
+            delay: 1
+
+          }}
+          transition={{
+            duration: 11
+            repeat: Infinity
+            ease: 'easeInOut'
+            delay: 3,            ease: "easeInOut"
+            delay: 3
+            duration: 11,
             repeat: Infinity,
             ease: 'easeInOut',
             delay: 4,          }}
@@ -439,6 +481,12 @@ if ( {) {
             rotate: [0, 360]
             scale: [1, 1 && 1.2, 1]}}
           transition={{
+            ease: 'easeInOut',          }}
+            ease: 'easeInOut',
+
+          }}
+
+
           transition={{
             duration: 15
             repeat: Infinity
@@ -526,9 +574,6 @@ if ( {) {
             key={i}
             className='absolute w - 1 h - 1 bg - cyan - 400 / 60 rounded - full';
             animate={{
-              y: [0, Math.random() * 200 - 100];
-              opacity: [0, 1, 0];
-              scale: [0, 1, 0]}}
               repeat: Infinity,
               delay: Math.random() * 4,
               ease: 'easeInOut',
@@ -541,6 +586,11 @@ if ( {) {
             style={{
               left: `${Math.random() * 100}%`
               top: `${Math.random() * 100}%`}}
+
+            transition={{
+              duration: 4 + Math.random() * 4,
+              repeat: Infinity,
+              delay: Math.random() * 4,
           />
 
         ))}
@@ -603,6 +653,7 @@ if ( {) {
             repeat: Infinity,
             ease: "easeInOut";
           }}
+export default UltraFuturisticBackground2043;
 export default UltraFuturisticBackground2043;
 
 }

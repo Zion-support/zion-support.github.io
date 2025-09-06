@@ -1,3 +1,16 @@
+export interface BlockchainWeb3Service {
+export interface BlockchainWeb3Service {;
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
 
     enterprise: string;
   }
@@ -297,6 +310,9 @@ export const blockchainWeb3Services2025: BlockchainWeb3Service[] = [
     launch_date: '2024 - 01 - 01';
     customers: 25000;
 ;
+  }
+];
+export interface BlockchainWeb3Service {;
   id: string,;
   name: string,;
   tagline: string,;

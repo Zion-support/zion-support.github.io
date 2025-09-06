@@ -215,6 +215,14 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+
+  Youtube,;
+  Github,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -283,6 +291,12 @@ const quickLinks = [
   { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
 ];
+
+
+
+export default function UltraFuturisticNavigation2034() {;
+
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -393,6 +407,7 @@ export default function UltraFuturisticNavigation2034() {;
     <>;
       {/* Top Contact Bar */}
 
+
                 {contactInfo.mobile}
               </span>
             </div>
@@ -497,6 +512,9 @@ export default function UltraFuturisticNavigation2034() {;
         isScrolled 
           ? 'bg-black/90 backdrop-blur-xl border-b border-cyan-500/20' 
           : 'bg-transparent'
+
+
+
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -568,6 +586,10 @@ export default function UltraFuturisticNavigation2034() {;
                 </Link>
               ))}
 
+                >
+                  {link.name}
+                </Link>
+              ))}
               {/* Services Dropdown */}
               <div className="relative group">
                 <button className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium">
@@ -810,6 +832,8 @@ function UltraFuturisticNavigation2034() {
                         <p className='text-xs text-gray-400 mb-2'>;
                           {category && category.description}
                         </p>;
+
+
                               className='block text - xs text - gray - 300 hover:text - cyan - 400 transition - colors'                            >              {/* Services Dropdown */}
               <div className="relative group">;
                 <button className="flex items - center space - x-1 text - gray - 300 hover:text - cyan - 400 transition - colors duration - 200 font - medium">;
@@ -875,6 +899,15 @@ function UltraFuturisticNavigation2034() {
                 className="text-gray-300 hover:text-cyan-400 transition-colors";
               >;
                 {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              </button>;
+            </div>;
+          </div>;
+        </div>;
+
+
+
+
+
         {/* Mobile Menu */}
         <AnimatePresence>;
           {isOpen && (;

@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -6,11 +7,29 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
+
+    (process && process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
+
+
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
+
       "placeholder-key";
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
         leaders: [
+
+
+
+      });
+
+          { code: 'aihub', profile_completions: 9 },
+          { code: 'modelmasters', profile_completions: 7 },
+          { code: 'promptpro', profile_completions: 5 }
+        ]})
+
     }
 
     for (const row of data || []) {

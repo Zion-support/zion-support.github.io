@@ -45,6 +45,18 @@ app.command('/zion', async ({ command, ack, respond }) => {
     }
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
+    await respond ({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` });
+  }
+}),
+(async () => {
+  const port = Number (process.env.SLACK_PORT || 3001),
+  await app.start (port),
+  // eslint - disable - next - line no - console;
+  console.log (`⚡️ Zion Slack bot running on port ${port}`);
+})(),
+
+
+
 import { App } from '@slack/bolt',;
 import dotenv from 'dotenv',;
 import fetch from 'node-fetch',;
@@ -113,3 +125,13 @@ app.command('/zion', async ({ command, ack, respond }) => {;
   }
 })
 (async () => {
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})(),
+}),;
+(async () => {;
+  const port = Number(process.env.SLACK_PORT || 3001),;
+  await app.start(port),;
+  // eslint-disable-next-line no-console;
+  // // // console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
+

@@ -139,6 +139,79 @@
         'Mobile security management'
       ]
       popular: true
+        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.'
+      launchDate: '2024-09-25'
+      customers: 43
+      rating: 4.7
+      reviews: 21
+    }
+        'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
+      launchDate: '2024-09-25',
+      customers: 43,
+      rating: 4.7,
+      reviews: 21,
+
+    },;
+      id: 'iot - security - platform',
+      name: 'IoT Security Platform',
+      tagline: 'Secure your IoT ecosystem with comprehensive protection',
+      price: '$199',
+      period: '/month',
+      description:;
+        'Advanced IoT security platform that provides device authentication, network monitoring, threat detection, and automated response for connected IoT devices and networks.',
+      features: [;
+
+        'IoT device authentication and management',
+        'Network traffic monitoring and analysis',
+        'Threat detection and response',
+        'Device vulnerability assessment',
+        'Secure firmware updates',
+        'Data encryption and protection',
+        'Compliance monitoring and reporting',
+        'Real - time security alerts',
+        'Integration with IoT platforms',
+        'Mobile security management',
+      ],
+      popular: true,
+      icon: '📱',
+
+      color: 'from - purple - 600 to - violet - 600',
+      text_color: 'text - purple - 400',
+      link: 'https://ziontechgroup.com / iot - security - platform',
+      market_position:;
+        'Competes with Armis ($25 / month), Claroty ($50 / month), Nozomi Networks ($50 / month). Our advantage: Comprehensive IoT protection, automated response, and affordable pricing.',
+      target_audience:;
+
+        'IoT manufacturers, Smart city operators, Industrial IoT companies, Healthcare IoT, Consumer IoT companies',
+      trial_days: 14,
+      setup_time: '1 - 2 weeks',
+      category: 'IoT Security & Protection',
+
+      real_service: true,
+      technology: ['Python, C++, React, Node.js, MQTT, CoAP, Zigbee, Z - Wave'],
+      integrations: [;
+        'AWS IoT, Azure IoT, Google Cloud IoT, MQTT brokers, IoT platforms',
+      ],
+      use_cases: [;
+
+        'Smart city security, Industrial IoT protection, Healthcare IoT security, Consumer IoT protection, IoT compliance',
+      ],
+      roi: 'IoT companies report 300% ROI through improved security and reduced breach risks.',
+      competitors: ['Armis, Claroty, Nozomi Networks, CyberX, Dragos'],
+
+      market_size: '$14.2B IoT security market',
+      growth_rate: '30% annual growth',
+      variant: 'iot - security - enterprise',
+      contact_info: {
+
+        mobile: '+1 302 464 0950',
+        email: 'kleber@ziontechgroup && ziontechgroup.com',
+        address: '364 E Main St STE 1008 Middletown DE 19709',
+        website: 'https://ziontechgroup && ziontechgroup.com',
+      },
+      real_implementation: true,
+      implementation_details:;
+
         'Comprehensive IoT security platform with device authentication, network monitoring, and automated threat response.',
       launch_date: '2024 - 09 - 25',
       customers: 43,

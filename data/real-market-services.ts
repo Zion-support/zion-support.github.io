@@ -2,6 +2,23 @@
   rating: number;
 
   reviews: number;
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+export const realMarketServices: RealMarketService[] = [;
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const realMarketServices: RealMarketService[] = [;
+
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -12,6 +29,31 @@
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
   {
+      'Unified API for multiple LLM providers'
+      'Spend caps, rate limits, and usage alerts'
+      'PII redaction and secrets filtering'
+      'Prompt templates and versioning'
+      'Latency and cost-aware routing'
+      'Batch and streaming inference'
+      'Audit logs and RBAC'
+      'LangChain/LlamaIndex SDK support'
+      'Export to data warehouse'
+    ]
+    popular: true
+    icon: '🧠'
+    color: 'from-cyan-600 to-blue-700'
+    textColor: 'text-cyan-400'
+    link: 'https://ziontechgroup.com/llm-gateway'
+    marketPosition:
+      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.'
+    targetAudience: 'Product teams, platform engineering, data/AI teams'
+    trialDays: 14
+    setupTime: '1 day'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
+
+
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
       'PII redaction and secrets filtering',
@@ -24,6 +66,10 @@
     ],
     popular: true,
     icon: '🧠',
+
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
+
+
     integrations: [
       'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
     ]
@@ -214,6 +260,49 @@
     reviews: 37,
   },
   {
+      'Provider selection guide'
+      'Schema and index templates'
+      'ETL/ingestion pipelines'
+      'Embeddings and chunking best practices'
+      'Latency and cost tuning'
+      'Sample RAG app integration'
+    ]
+    popular: false
+    icon: '🧭'
+    color: 'from-sky-600 to-indigo-700'
+    textColor: 'text-sky-400'
+    link: 'https://ziontechgroup.com/vector-search-starter'
+    marketPosition:
+      'Accelerator vs DIY; complements vendor docs with turnkey wiring.'
+    targetAudience: 'Data engineers, ML engineers, startups'
+    trialDays: 7
+    setupTime: '1–2 days'
+    category: 'AI & Data'
+    realService: true
+    technology: ['Pinecone, Weaviate, Elastic, OpenAI']
+    integrations: ['Airbyte, Fivetran, Kafka']
+    useCases: ['RAG prototypes, Semantic search, Personalization']
+    roi: 'Ship POCs 3–5x faster.'
+    competitors: ['Native vendor setup, Consultants']
+    marketSize: '$5B vector DB'
+    growthRate: '40% YoY'
+    variant: 'data-futuristic'
+    contactInfo: contact
+    realImplementation: true
+
+    id: 'vector - search - starter',
+    name: 'Vector Search Starter',
+    tagline: 'Production vector DB setup with ingestion pipelines in a day',
+    price: '$249',
+    period: '/month',
+    description:;
+      'Ready - to - run vector database setup (Pinecone / Weaviate / Elastic) with embeddings pipelines, schema, and example retrieval for your data.',
+    features: [;
+
+      'Provider selection guide',
+      'Schema and index templates',
+      'ETL / ingestion pipelines',
+
       'Provider selection guide',
       'Schema and index templates',
       'ETL/ingestion pipelines',
@@ -244,6 +333,13 @@
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
+    implementationDetails:
+      'Terraform and IaC modules, ETL pipelines, sample notebooks.'
+    launchDate: '2024-08-20'
+    customers: 58
+    rating: 4.6
+    reviews: 41
+  }
   {
       'Public status pages',
       'Weekly compliance reports',
@@ -655,6 +751,24 @@
     reviews: 11,
   },
   {
+      'Bridges the gap between brittle webhook flows and reliable data pipelines.'
+    targetAudience: 'Data engineers, platform teams, RevOps'
+    trialDays: 14
+    setupTime: '2 days'
+    category: 'Integration'
+    realService: true
+    technology: ['Node.js, Postgres, Redis, Airflow']
+    integrations: ['Salesforce, HubSpot, Stripe, Shopify']
+    useCases: ['Fix data gaps, Ensure CRM/Warehouse parity, Improve trust']
+    roi: 'Save weeks of manual cleanup; maintain accurate reporting and billing.'
+    competitors: ['Fivetran (log-based), custom scripts']
+    marketSize: '$4B data integration'
+    growthRate: '20% YoY'
+    variant: 'integration-futuristic'
+    contactInfo: contact
+    realImplementation: true
+
+
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
@@ -1178,6 +1292,35 @@
     reviews: 64,
   },
   {
+      'Contacts and notes'
+      'Reminders and tasks'
+      'Simple pipeline stages'
+      'Email/SMS nudges'
+      'Import/export and tags'
+      'Mobile‑friendly UI'
+    ]
+    popular: true
+    icon: '📇'
+    color: 'from-amber-600 to-orange-700'
+    textColor: 'text-amber-300'
+    link: 'https://ziontechgroup.com/local-micro-crm'
+    marketPosition:
+      'Tooled for simplicity; avoids enterprise CRM bloat and costs.'
+    targetAudience: 'Local service businesses'
+    trialDays: 14
+    setupTime: 'Same day'
+    category: 'CRM'
+    realService: true
+    technology: ['Next.js', 'SQLite/Postgres']
+    integrations: ['Gmail/Outlook', 'Twilio']
+    useCases: ['Track customers', 'Follow‑ups', 'Close more deals']
+    roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.'
+    competitors: ['HubSpot Starter', 'Pipedrive Essentials']
+    marketSize: '$20B SMB CRM'
+    growthRate: '10% YoY'
+    variant: 'analytics-futuristic' as any
+
+
       'Contacts and notes',
       'Reminders and tasks',
       'Simple pipeline stages',

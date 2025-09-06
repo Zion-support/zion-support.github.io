@@ -1,3 +1,37 @@
+  Search
+  Filter
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Atom
+  Sparkles
+  Target;
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Cpu,
+  Shield,
+  Rocket,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  Atom,
+  Sparkles,;
+  Target,;
+
+
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -193,6 +227,59 @@ export default function ServicesShowcase2026() {;
                       </option>;
                     ))}
                 {/* Sort By */}
+                <div className='relative'>
+                  <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+                    value={sortBy}
+                    onChange={e => setSortBy(e.target.value)}
+                    className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'
+                  >
+                    <option value='name'>Sort by Name</option>
+                    <option value='price'>Sort by Price</option>
+                    <option value='rating'>Sort by Rating</option>
+                    <option value='customers'>Sort by Customers</option>                  </select>                    <option value="name">Sort by Name</option>
+                    <option value="price">Sort by Price</option>
+                    <option value="rating">Sort by Rating</option>
+                    <option value="customers">Sort by Customers</option>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* Services Grid */}
+        <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
+          <div className='max-w-7xl mx-auto'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {filteredServices.map((service, index) => (        <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service, index) => (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='group'
+                >
+                  <div className='bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>
+                    {/* Service Header */}
+                    <div className='flex items-start justify-between mb-4'>
+                      <div className='text-4xl'>{service.icon}</div>
+                      {service.popular && (
+                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
+                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                    {/* Service Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="text-4xl">{service.icon}</div>
+                      {service.popular && (
+                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
+                          Popular
+                        </span>
+                      )}
+                    </div>
+
+
+
+
+                {/* Sort By */}
 
 
                     {/* Service Title */}
@@ -308,6 +395,13 @@ export default function ServicesShowcase2026() {;
 
                           </li>
                         ))}
+                      </ul>
+                    </div>
+
+
+
+                          </li>
+                        ))}
 
 
 
@@ -347,6 +441,8 @@ export default function ServicesShowcase2026() {;
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
 
+
+
                     >
                       Learn More
                     </a>
@@ -374,6 +470,7 @@ export default function ServicesShowcase2026() {;
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -570,4 +667,5 @@ export default function ServicesShowcase2026() {;
         </section>;
       </div>;
     </UltraAdvancedFuturisticBackground>);
+}
 }

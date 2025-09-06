@@ -91,6 +91,9 @@ export function ProductListingCard({
 
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>;
+
+
+
       {/* Image */}
       <div className={isGrid ? 'block w-full' : 'block w-1/3'} onClick={handleViewListing}>
         <div className={`relative ${isGrid ? 'h-48' : 'h-full'}`}>
@@ -122,6 +125,53 @@ export function ProductListingCard({
                 )}
               </div>;
             )}
+          {/* Title & Description */}
+          <div onClick={handleViewListing} className="block">
+            <h3 className="text-lg font-semibold text-white mb-2 hover:text-zion-cyan transition-colors">
+              {listing.title}
+            </h3>
+          </div>
+          <p className="text-sm text-zion-slate line-clamp-2 mb-4">
+            {listing.description}
+          </p>
+          {/* Tags */}
+          {listing.tags && listing.tags.length > 0 && (
+            <div className="flex flex-wrap gap-1 mb-4">
+              {listing.tags.map((tag, idx) => (
+                <span
+                  key={idx}
+                  className="text-xs text-zion-slate bg-zion-blue-light/20 px-2 py-1 rounded-full"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+        {/* Footer with price and button */}
+        <div className="flex items-center justify-between mt-auto pt-3 border-t border-zion-blue-light">
+          <div className="text-sm font-medium">
+            {listing.price !== null ? (
+              <div className="flex items-center text-zion-purple">
+                <DollarSign className="h-4 w-4 mr-1" />
+                {formatPrice()}
+              </div>
+            ) : (
+              <span className="text-zion-slate-light">
+                {formatPrice()}
+              </span>
+              </span>;
+            )}
+          </div>
+          <div className="flex gap-2">
+            <Button
+              size="sm"
+              onClick={(e) => {
+                e.stopPropagation();
+
+
+          </div>;
+
           {/* Title & Description */}
           <div on_click={handleViewListing} className="block">;
             <h3 className="text - lg font - semibold text - white mb - 2 hover:text - zion - cyan transition - colors">;

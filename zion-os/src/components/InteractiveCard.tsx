@@ -43,15 +43,24 @@ export default function InteractiveCard({;
           className={`absolute inset - 0 bg - gradient - to - r ${color} rounded - xl opacity - 0 group - hover:opacity - 10 transition - opacity duration - 500 blur - xl`}
         />;
         {/* Icon */}
+
+
             {title}
           </h3>;
           <p className=&quot;text - gray - 400 leading - relaxed text - lg mb - 6&quot;>;
             {description}
           </p>;
           {/* Custom children or default arrow */}
+
+
+{children || (
+
             <div className=&quot;flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300&quot;>
           {children || (
             <div className="flex items-center text-purple-400 font-medium group-hover:text-purple-300 transition-colors duration-300">
+
+
+
               <span>Learn More</span>
               <svg
                 className={`ml-2 w-5 h-5 transition-all duration-300 ${
@@ -82,6 +91,10 @@ export default function InteractiveCard({;
         </div>)}
     </InteractiveCard>);
 }
+<div className=&quot;text-4xl mb-4&quot;>💬</div>
+      <div className="text-4xl mb-4">💬</div>
+      
+
       {/* Rating */}
       <div className="flex mb-4">
         {Array.from({ length: rating }).map((_, i) => (

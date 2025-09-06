@@ -1,7 +1,32 @@
 
+
+
 interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
+
+    { id: "service", label: "Service" }
+    { id: "details", label: "Details" }
+    { id: "timeline", label: "Timeline" }
+    { id: "budget", label: "Budget" }
+    { id: "service", label: "Service" },
+    { id: "details", label: "Details" },
+    { id: "timeline", label: "Timeline" },
+    { id: "budget", label: "Budget" },
+    { id: "summary", label: "Summary" };
+  ];
+    { id: "summary", label: "Summary" }
+  ];
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId);
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
+    if (stepOrder < currentStepOrder) return "complete";
+    if (stepOrder === currentStepOrder) return "current"
+    return "upcoming"
+  }
+  ],
+
+    { id: "summary", label: "Summary" }
 
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
@@ -26,6 +51,21 @@ interface StepProgressProps {
             <div key={step.id} className="flex flex-col items-center relative">
               <div
                 className={cn(
+}
+                  "text-xs mt-2 font-medium",
+                  status === "complete" ? "text-zion-cyan" : 
+                  status === "current" ? "text-white" : 
+                  "text-zion-slate-light"
+import { QuoteRequestSteps } from "../QuoteRequestForm",;
+import { CheckIcon } from "@/components/icons",;
+import { cn } from "@/lib/utils",;
+interface StepProgressProps {;
+  currentStep: QuoteRequestSteps;
+}
+;
+export function StepProgress({ currentStep }: StepProgressProps) {;
+
+export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
   const steps: { id: QuoteRequestSteps, label: string }[] = [;
     { id: "service", label: "Service" },;
     { id: "details", label: "Details" },;
@@ -84,6 +124,7 @@ interface StepProgressProps {
             </div>;
           );
         })}
+
 }
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from '@/components / icons';

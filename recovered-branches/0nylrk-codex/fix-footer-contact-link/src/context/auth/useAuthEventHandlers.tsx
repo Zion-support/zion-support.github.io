@@ -1,5 +1,15 @@
 import React from 'react';
 
+import { toast } from "@/hooks/use-toast",
+import type { UserProfile } from "@/types/auth";
+import { checkNewRegistration } from "@/utils/authUtils";
+import { useNavigate } from 'react-router-dom';
+import type { UserProfile } from "@/types/auth",
+import { checkNewRegistration } from "@/utils/authUtils",
+import { useNavigate } from 'react-router-dom',
+
+
+
 /**
  * Custom hook for auth event handling
  */
@@ -36,6 +46,12 @@ export function useAuthEventHandlers(
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
+import { toast } from "@/hooks/use-toast",;
+import type { UserProfile } from "@/types/auth",;
+import { checkNewRegistration } from "@/utils/authUtils",;
+import { useNavigate } from 'react-router-dom',;
+import {checkNewRegistration} from "@/utils/authUtils";
+import {useNavigate} from 'react-router-dom';
 /**;
  * Custom hook for auth event handling;
  */;
@@ -79,6 +95,7 @@ export function useAuthEventHandlers(): any (;
   return {;
     handleSignedIn;
     handleSignedOut;
+
 import { toast } from '@/hooks / use - toast';
 import type { UserProfile } from "@/types / auth";
 import { checkNewRegistration } from '@/utils / auth_utils';

@@ -108,6 +108,16 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
   BookOpen,
   Sparkles as SparklesIcon,
   Zap as ZapIcon,
+  Brain as BrainIcon,
+  Play as PlayIcon,
+} from 'lucide-react';
+
+import Layout from '../components/layout/Layout';
+import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';import {
+  Star, TrendingUp, Users, Award, Clock, Heart, 
+  Brain, Atom, Shield, Rocket, Zap, Globe, ;
+
+
   CheckCircle, ArrowRight, Search, Filter;
   ChevronDown, ChevronUp, Eye, Play, Sparkles;
   Target, Microscope, Lock, Cloud, BarChart3;
@@ -122,6 +132,11 @@ import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic
 import Layout from '../components/layout/Layout';
 import { ultimateFuturisticServices2025 } from '../data/2025-ultimate-futuristic-services';
 
+export default function UltimateFuturisticServicesShowcase2025() {
+
+export default function UltimateFuturisticServicesShowcase2025() {;
+
+export default function UltimateFuturisticServicesShowcase2025() {;
 
 
 export default function UltimateFuturisticServicesShowcase2025() {;
@@ -242,6 +257,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
 
+
             {/* Search */}
             <div className='relative flex-1 max-w-md'>;
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
@@ -290,6 +306,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
             {/* Category Filter */}
 
                   <option key={category.title} value={category.title}>
+
+
 
                     {category.title} ({category.count})
                   </option>
@@ -486,8 +504,15 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     )}
                   </div>
                 </div>
-                {/* Service Details */}
 
+
+                {/* Service Details */}
+                <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
+                  <div className='text-gray-400'>
+                    <span className='block'>Setup Time</span>
+                    <span className='text-white font-medium'>
+                      {service.setupTime}
+                    </span>
 
 
 
@@ -575,6 +600,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               </motion.div>
             ))}
           </motion.div>
+
+
+
+
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <div className='text-center py-16'>;
@@ -636,6 +665,8 @@ export default function UltimateFuturisticServicesShowcase2025() {;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
+  );
+}
 }
   );
 }

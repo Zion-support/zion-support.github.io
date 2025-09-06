@@ -1,5 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+      `${req.headers['x-forwarded-proto'] |'http'}://${req.headers.host}/api/metrics`
+      `${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`;
+
     );
     const metrics = await r && r.json();
     const jobs24 =

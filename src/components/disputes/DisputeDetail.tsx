@@ -525,7 +525,6 @@ import {;
                           placeholder='Add an admin note (only visible to administrators)...'
                           value={adminNote}
                           onChange={e => setAdminNote(e && e.target.value)}                        />;
-                              }) }
                           onClick={() => {;
                             if (adminNote && adminNote.trim()) {;
                               addDisputeMessage(;

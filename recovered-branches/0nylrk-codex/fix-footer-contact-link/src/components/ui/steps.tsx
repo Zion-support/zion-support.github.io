@@ -1,4 +1,26 @@
 
+import React from "react",
+import { cn } from "@/lib/utils";
+import { CheckIcon } from "lucide-react";
+interface StepProps {
+
+  status: "incomplete" | "current" | "complete"
+  label: string
+
+  description?: string;
+import { cn } from "@/lib/utils",
+import { CheckIcon } from "lucide-react",
+
+
+
+
+import React from "react";
+import {cn} from "@/lib/utils";
+import {CheckIcon} from "lucide-react";
+interface StepProps {;
+  status: "incomplete" | "current" | "complete",;
+  label: string,;
+
   description?: string;
   className?: string;
 }
@@ -12,6 +34,18 @@ interface StepProps {
   description?: string,
   className?: string
 }
+
+export function Step({;
+  status;
+  label;
+  description;
+export function Step({
+  status,
+  label,
+  description,
+
+
+
   className}: StepProps) {
   return (
     <li
@@ -34,6 +68,9 @@ interface StepProps {
           <CheckIcon className="h-5 w-5" />;
         ) : (;
           <span>;
+
+
+
             {/* Step number would go here */}
           </span>;
         )}
@@ -41,6 +78,17 @@ interface StepProps {
 
             "text-zion-slate-light": status === "incomplete",
             "text-white": status === "current" || status === "complete"})}
+
+interface StepsProps {
+  currentStep: number
+  className?: string;
+  children: React.ReactNode
+}
+export function Steps({ currentStep, className, children }: StepsProps) {
+
+export function Steps({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React.Children.toArray(children);
+;
 
 
         >
@@ -91,6 +139,21 @@ interface StepsProps {;
           <div
             className="h-full bg-zion-purple transition-all"
             style={{
+              width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
+          />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+export function Steps(): any ({ currentStep, className, children }: StepsProps) {;
+  const childrenArray = React && React.Children.toArray(children);
+
+  return (
+
+
 ;
 export function Steps({ currentStep, className, children }: StepsProps) {;
   const childrenArray = React.Children.toArray(children),;
@@ -99,6 +162,9 @@ export function Steps({ currentStep, className, children }: StepsProps) {;
           <div;
             className="h-full bg-zion-purple transition-all";
             style={{;
+
+
+
               width: `${(currentStep / (childrenArray.length - 1)) * 100}%`}}
           />;
         </div>;

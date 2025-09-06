@@ -1,3 +1,12 @@
+//Enhanced animation variants for better performance const containerVariants = {
+  hidden: {
+  opacity: 0 
+
+
+
+
+  opacity: 0 
+
 import React from 'react';
 
 interface Homepage2040Props {
@@ -11,6 +20,10 @@ const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
       <p>This component is under development.</p>
     </div>
   );
+
+
+
+};
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2
@@ -253,17 +266,32 @@ const Homepage2040: React.FC = () => {
                 variants={itemVariants}
                 className="inline-flex items-center space-x-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 border border-cyan-400/30 rounded-full text-cyan-400 text-lg font-medium backdrop-blur-sm"
                 role="banner"
+
+
+              <motion.h1 
+
+
                 variants={itemVariants}
                 id="hero-heading"
                 className="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-cyan-400 via-blue-500 via-purple-600 to-pink-500 bg-clip-text text-transparent leading-tight"
               >
                 Zion Tech Group
               </motion.h1>
+
+
+              <motion.p 
+
+
                 variants={itemVariants}
                 className="text-2xl md:text-3xl text-gray-300 mb-10 max-w-4xl mx-auto leading-relaxed"
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
+              {/* Enhanced CTA Section */}
+              <motion.div
+
+
+
               
               {/* Enhanced CTA Section */}
               <motion.div 
@@ -289,6 +317,8 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
+
+
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -486,6 +516,15 @@ const Homepage2040: React.FC = () => {
                       <div className="mb - 6">;
                         <span className="text - 2xl font - bold text - cyan - 400">;
                           {service.price}
+                      {/* CTA Button */}
+                      <Link
+
+
+
+
+
+                      {/* CTA Button */}
+                      <Link 
                         href={service.link}
                         className="inline-flex items-center justify-center w-full px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-xl hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 group-hover:shadow-lg group-hover:shadow-cyan-400/25"
                       >
@@ -533,6 +572,11 @@ const Homepage2040: React.FC = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
+
+
+              <motion.div 
+
+
                 variants={itemVariants}
                 className="flex flex-col sm:flex-row gap-6 justify-center"
               >

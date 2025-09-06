@@ -17,6 +17,10 @@ jest.mock("next/router", () => ({
       events: {
         on: jest.fn(),
         off: jest.fn(),
+    };
+  },
+}));
+
 // Mock Next.js Image component
 jest.mock("next/image", () => {
   return function MockedImage({ src, alt, ...props }) {
@@ -24,6 +28,16 @@ jest.mock("next/image", () => {
   };
 });
 
+// Mock Next.js Link component
+jest.mock("next/link", () => {
+  return function MockedLink({ children, href, ...props }) {
+    return (
+      <a href={href} {...props}>
+        {children}
+      </a>
+    );
+  };
+});
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {

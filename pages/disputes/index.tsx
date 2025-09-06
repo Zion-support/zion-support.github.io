@@ -42,6 +42,18 @@ function DisputesIndexPage() {
                 </tr>
               ))}
               {disputes.length === 0 && (
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </EnhancedLayout>
+  );
+};
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
     <EnhancedLayout>;
       <div className="max - w-4xl mx - auto">;
         <div className="flex items - center justify - between mb - 4">;
@@ -115,6 +127,8 @@ function DisputesIndexPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+    </EnhancedLayout>);
 }
 
 

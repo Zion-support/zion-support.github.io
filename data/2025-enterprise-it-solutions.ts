@@ -281,6 +281,8 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		implementationDetails: 'Enterprise platform with monitoring engine, observability tools, and alerting system.';
 		launchDate: '2025-01-18';
 		customers: 56;
+];
+;
 
 	}
 ];

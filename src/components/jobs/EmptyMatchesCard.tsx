@@ -13,8 +13,12 @@
           </>
         ) : (
           <>
-import { Sparkles, RefreshCcw } from 'lucide-react';
-export interface EmptyMatchesCardProps {;
-  onRefresh: () => void;
-  isProcessing: boolean;
+            <Sparkles className="mr-2 h-4 w-4" />
+            Find AI Matches
+          </>
+        )}
+
+      </Button>;
+    </Card>;
+  );
 }

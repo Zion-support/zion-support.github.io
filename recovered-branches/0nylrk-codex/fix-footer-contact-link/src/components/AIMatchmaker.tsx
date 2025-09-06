@@ -6,12 +6,58 @@ import {AIMatchingResults} from "@/components/AIMatchingResults";
 import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
 import {Textarea} from "@/components/ui/textarea";
 import {Sparkles, Search} from "lucide-react";
+import { useState } from "react",
+import { toast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { AIMatchingResults } from "@/components/AIMatchingResults",
+import { findMatches, MatchResult } from "@/lib/ai-matchmaking",
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles, Search } from "lucide-react";
+interface AIMatchmakerProps {
+
+interface AIMatchmakerProps {;
+  serviceType?: string;
+  onMatchSelect?: (match: any) => void,;
+  className?: string;
+}
+
+export function AIMatchmaker(): any ({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+
+
+  onMatchSelect?: (match: any) => void
+import { Textarea } from "@/components/ui/textarea",
+import { Sparkles, Search } from "lucide-react",
 
 interface AIMatchmakerProps {
   serviceType?: string,
   onMatchSelect?: (match: any) => void,
   className?: string
 }
+
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {;
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+  const [query, setQuery] = useState("");
+  const [isMatchmaking, setIsMatchmaking] = useState(false);
+  const [matches, setMatches] = useState([] as MatchResult[]);
+  const [hasSearched, setHasSearched] = useState(false);
+  const [query, setQuery] = useState(""),
+  const [isMatchmaking, setIsMatchmaking] = useState(false),
+  const [matches, setMatches] = useState([] as MatchResult[]),
+  const [hasSearched, setHasSearched] = useState(false),
+
+
+
+
   const handleSearch = async () => {
     if (!query.trim()) {
       toast({
@@ -49,6 +95,11 @@ interface AIMatchmakerProps {
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
+  }
+  // Extract just the items from each MatchResult
+  const matchItems = matches.map(match => match.item);
+
+  };
 
       setIsMatchmaking(false)
 
@@ -90,6 +141,9 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         onMatchSelect(matchResult)
       }
     }
+
+
+
   
   // Extract just the items from each MatchResult
   const matchItems = matches.map(match => match.item),

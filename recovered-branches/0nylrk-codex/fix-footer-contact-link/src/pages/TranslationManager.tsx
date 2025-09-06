@@ -15,6 +15,23 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
+import React, { useState, useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast",
+import { useTranslation } from "react-i18next",
+import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
+import { useIsMobile } from "@/hooks/use-mobile",
+import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
+import { useTranslationService } from "@/hooks/useTranslationService";
+export default function TranslationManager() {
+
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
@@ -57,6 +74,13 @@ if ( {) {
             if (typeof obj[key] === 'object' && obj[key] !== null) {;
               Object && Object.assign(acc, flattenObject(obj[key], `${pre}${key}`));
               acc[`${pre}${key}`] = obj[key]
+          updatedTranslations[lang.code] = {}
+        }
+        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
+      });
+      setTranslations(updatedTranslations);
+      setEditingKey(null);
+      setIsSaving(false);
 
 
 import React, { useState, useEffect } from 'react',;
@@ -116,6 +140,9 @@ export default function TranslationManager() {;
         }
       })
     });
+
+
+
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -153,6 +180,14 @@ export default function TranslationManager() {;
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
+      <SEO
+        title={t('translation.manager_title')}
+      <SEO 
+        title={t('translation.manager_title')} 
+
+      <SEO 
+        title={t('translation.manager_title')} 
+
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -185,6 +220,9 @@ export default function TranslationManager() {;
         ...editedTranslations[key]
         [lang]: value
       }
+
+
+
         description={t('translation.manager_description')}
       />
       <Header />
@@ -241,6 +279,8 @@ export default function TranslationManager() {;
                     placeholder={t('translation && translation.search_placeholder')}
                     className="pl-8"
                     value={searchQuery}
+
+
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">

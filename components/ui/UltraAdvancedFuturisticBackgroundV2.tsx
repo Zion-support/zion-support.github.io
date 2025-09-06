@@ -57,6 +57,7 @@ if (return) {
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
 
+
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
         />;
         <motion.div;
@@ -147,6 +148,15 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
+            transition={{
+              duration: 3 + Math.random() * 2
+              repeat: Infinity
+              delay: Math.random() * 2
+
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2,
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
               duration: 3 + Math.random() * 2,
@@ -160,10 +170,21 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
       </div>
 
 
+
+
+
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+              ease: 'easeInOut',            }}
+
+
+          />
+        ))}
+      </div>
+
+
 
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>;
@@ -209,9 +230,28 @@ scale: [0, 1, 0],            }}        {[...Array(20)].map((_, i) => (;
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+                ease: 'easeInOut',              }}
+
+              }}
+
+                ease: 'easeInOut',              }}
+
+              }}
+
 
             />
           ))}
+
+      {/* Content */}
+      <div className='relative z-40'>{children}</div>
+    </div>
+  );
+        </svg>;
+      </div>;
+
+
+
+
 
       {/* Content */}
 

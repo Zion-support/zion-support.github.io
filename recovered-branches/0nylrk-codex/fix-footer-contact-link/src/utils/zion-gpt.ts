@@ -3,6 +3,8 @@ export type ZionGPTUsage = {
 
 export type ZionGPTUsage = {
 
+export type ZionGPTUsage = {
+
 
 
 export type ZionGPTUsage = {;
@@ -10,6 +12,13 @@ export type ZionGPTUsage = {;
   tokensUsed: number;
   cost: number
   timestamp: Date
+
+
+};
+
+export interface ModelConfig {;
+
+
   id: ModelVersion;
   version: number;
   createdAt: string;
@@ -58,11 +67,17 @@ export async function logModelUsage(;
   } catch (error) {
     console && console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
+
+
+
   }
 }
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
+// Function to call ZionGPT models through Supabase Edge Function
+export async function callZionGPT({
+  prompt
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
@@ -221,6 +236,10 @@ if ( {) {
   } catch (error) {
     console.error ('Error calling ZionGPT:', error);
     throw error;
+
+
+
+
   }
 }
 ;

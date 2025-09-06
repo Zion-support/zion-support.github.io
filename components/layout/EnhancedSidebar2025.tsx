@@ -1,3 +1,7 @@
+] 
+ ] 
+
+
 }];
 ];</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge
@@ -1143,6 +1147,13 @@ const supportLinks = [
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
+                                </span>)}
+                            </Link>))}
+                        </motion.div>)}
+                    </AnimatePresence>;
+                  </div>))}
+              </div>;
+            </div>;
             {/* Quick Links */}
             <div className="p - 6 border - b border - cyan - 500 / 30">;
               <h3 className="text - lg font - semibold text - white mb - 4 flex items - center space - x-2">;

@@ -1,3 +1,12 @@
+import { QuoteFormData } from "@/types/quotes",
+import { Label } from "@/components/ui/label";
+import { Slider } from "@/components/ui/slider";
+import { Label } from "@/components/ui/label",
+import { Slider } from "@/components/ui/slider",
+
+
+
+
 interface BudgetStepProps {
 
   formData: QuoteFormData
@@ -14,6 +23,12 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
     } else {
       updateFormData ({
         budget: {
+        }
+      })
+    } else {
+      updateFormData({
+          maxAmount: formData && formData.budget.amount + 5000;
+
         budget: {
 
 
@@ -27,11 +42,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
         }
       });
     }
-
-
+  }
   },
   };
   },
+
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {
       style: 'currency'
@@ -55,6 +70,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <h4 className="font-medium text-white">Fixed Budget</h4>
               <p className="text-sm text-zion-slate-light">I have a set amount</p>
             </div>
+
+
+            <div 
+
+
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "hourly"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -65,6 +85,11 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <h4 className="font-medium text-white">Hourly Rate</h4>
               <p className="text-sm text-zion-slate-light">Pay per hour of work</p>
             </div>
+
+
+            <div 
+
+
               className={`p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.budget.type === "range"
                   ? "bg-zion-purple/20 border-zion-purple"
@@ -76,6 +101,8 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
               <p className="text-sm text-zion-slate-light">I have a min and max</p>
             </div>
           </div>
+
+
           {formData.budget.type === "fixed" && (
             <div className="mt-6">
               <Label className="text-zion-slate-light mb-4 block">
@@ -153,6 +180,9 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                   defaultValue={[formData && formData.budget.amount]}
                   max={50000}
                   step={500}
+
+
+
                       }
                     });
                   }}

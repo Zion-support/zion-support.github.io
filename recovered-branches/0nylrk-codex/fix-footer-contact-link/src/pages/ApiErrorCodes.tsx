@@ -1,11 +1,22 @@
 
-  "error": "validation_error";
-  "message": "The request was invalid";
-  "details": [;
-    {;
-      "field": "title";
+import React from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
 
 
+
+export function ApiErrorCodes() {
+
+  const errorExample = `{
+  "error": "validation_error",
+  "message": "The request was invalid",
+  "details": [
+    {
+      "field": "title",
+      "error": "Title is required"
+    }
     },
 
 

@@ -287,6 +287,74 @@ export default function DynamicServicePage() {;
         </div>;
       </div>;
 
+// Static export support: generate root-level pages for service slugs;
+
+
+// Static export support: generate root-level pages for service slugs;
+
+// Static export support: generate root-level pages for service slugs
+type Svc = (typeof enhancedRealMicroSaasServices)[number];
+function collectAllServices(): Svc[] {
+  return enhancedRealMicroSaasServices.concat(
+    extraServices as Svc[]
+    additionalEnhancedServices as Svc[]
+    innovativeAIServices as Svc[]
+    quantumSpaceServices as Svc[]
+    enterpriseITServices as Svc[]
+    newRealServices as Svc[]
+    marketReadyServices as Svc[]
+    nextGenerationAIServices as Svc[]
+    emergingTechnologyServices as Svc[]
+    comprehensiveITSolutions as Svc[]
+    marketValidatedServices as Svc[]
+    newRealInnovations as Svc[]
+    realMarketServices as Svc[]
+    realVerifiedServices as unknown as Svc[]
+  );
+function normalizeSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
+  if (!link) return null;
+  try {
+    const url = new URL(link);
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
+    if (path && !path.includes('/')) return path;
+    return null
+  } catch {
+    return null
+  }
+}
+  };
+}
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+
+export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {;
+}
+
+
+function collectAllServices(): any (): Svc[] {;
+  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
+    extraServices as Svc[],;
+    additionalEnhancedServices as Svc[],;
+    innovativeAIServices as Svc[],;
+    quantumSpaceServices as Svc[],;
+    enterpriseITServices as Svc[],;
+    newRealServices as Svc[],;
+    marketReadyServices as Svc[],;
+    nextGenerationAIServices as Svc[],;
+    emergingTechnologyServices as Svc[],;
+    comprehensiveITSolutions as Svc[],;
+    marketValidatedServices as Svc[],;
+    newRealInnovations as Svc[],;
+    realMarketServices as Svc[],;
+    realVerifiedServices as unknown as Svc[];
+  );
+
 function normalizeSlug(): any (value: string): string {;
   return value;
     .toLowerCase();
@@ -486,3 +554,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client - side.;
   return { props: {} }
 }
+  return { props: {} };
+};
+
+};
+;

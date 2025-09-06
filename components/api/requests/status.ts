@@ -8,8 +8,6 @@ export default async function handler(
 ) {
 }
 
-
-
 ;
 const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json');
 ;

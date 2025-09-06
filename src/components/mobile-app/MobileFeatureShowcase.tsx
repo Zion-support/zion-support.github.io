@@ -1,5 +1,3 @@
-
-
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
@@ -33,7 +31,6 @@
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
     }
   ];
-  return (
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (

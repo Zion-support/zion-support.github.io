@@ -1,4 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+  if (req.method === 'GET') {
+
+  if (req.method === 'GET') {;
+
     const { status, topic, tag, author, limit, offset } = req.query;
   if (req && req.method === 'GET') {
     const { status, topic, tag, author, limit, offset } = req && req.query;
@@ -95,3 +100,12 @@ if ( {) {
     write_posts (posts);
     return res.status (201).json (post);
   }
+return res.status(405).end();
+}
+
+}
+}
+  return res.status(405).end();
+
+
+

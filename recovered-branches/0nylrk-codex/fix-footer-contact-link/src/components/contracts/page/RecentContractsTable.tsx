@@ -1,3 +1,7 @@
+import { Button } from "@/components/ui/button";
+
+
+import { Button  } from '@/components / ui / button';
 interface Contract {
 
   id: string;
@@ -7,6 +11,25 @@ interface Contract {
   date: string;
   isSmartContract: boolean
 }
+import { Button } from "@/components/ui/button",
+interface Contract {
+  id: string,
+  title: string,
+  client: string,
+  talent: string,
+  date: string,
+  isSmartContract: boolean
+import { Button } from "@/components/ui/button",;
+interface Contract {;
+  id: string,;
+  title: string,;
+  client: string,;
+  talent: string,;
+  date: string,;
+  isSmartContract: boolean;
+}
+;
+interface RecentContractsTableProps {;
 
 
 interface RecentContractsTableProps {;
@@ -87,6 +110,7 @@ export function RecentContractsTable({ contracts, onViewContract }: RecentContra
                   <Button
                     variant="ghost"
                     size="sm"
+    </>
                     onClick={() => onViewContract(contract && contract.id)}
 interface RecentContractsTableProps {
   contracts: Contract[];
@@ -179,6 +203,10 @@ function RecentContractsTable() {
         </table>;
       </div>;
     </>;
+
+
+
+
   );
               </tr>))}
           </tbody>;

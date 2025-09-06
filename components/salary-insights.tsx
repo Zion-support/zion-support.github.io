@@ -1,3 +1,5 @@
+} from '../components/salary/InsightCharts';
+
 type InsightResponse = {
 import {;
   LineChart,;
@@ -26,6 +28,7 @@ type InsightResponse = {
   minHourlyUsd: number,
   maxHourlyUsd: number,
   confidence: number,
+
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
   const [region, setRegion] = useState('Remote, Global');
@@ -47,6 +50,18 @@ type InsightResponse = {
       setError(e.message |'Unexpected error')
     } finally {
       setLoading(false)
+
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
+      const json = (await res && res.json()) as InsightResponse;
+      setData(json);
+    } catch (e: any) {;
+      setError(e && e.message || 'Unexpected error');
+    } finally {;
+      setLoading(false);
+
     }
   }
 
@@ -167,6 +182,10 @@ if ( {) {
       } catch {;
         // fall back;
       }
+
+
+
+
 
 
       } catch {}
@@ -404,6 +423,7 @@ if (return [] as { label: string, value: number }[], ) {
                 {data.gptRecommendation}
               </p>            </div>
           )}
+          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               )}
 
 
@@ -433,6 +453,7 @@ if (return [] as { label: string, value: number }[], ) {
                   <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
               </div>;
             </div>;
+
           )}
 
         </div>;
@@ -478,6 +499,8 @@ if (return [] as { label: string, value: number }[], ) {
             </div>)}
           {data && (
 
+            </div>
+          )}
 
 
 

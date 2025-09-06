@@ -9,11 +9,49 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
   Dialog,
+
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
+} from '@/components/ui/dialog'
+import { Textarea } from '@/components/ui/textarea'
+interface ReviewCardProps {
+  review: Review
+onReport: (reviewId: string, reason: string) => Promise<boolean>
+}export function ReviewCard ({
+  review, onReport
+}: ReviewCardProps) {
+  const handleReport = async () => {
+  if (!reportReason.trim () ) return;
+setIsReporting (true)
+const success = await onReport (review.id, reportReason)
+setIsReporting (false)
+if (success) {
+export function ReviewCard({ review, onReport }: ReviewCardProps) {
+  const [reportReason, setReportReason] = useState('')
+  const [isReporting, setIsReporting] = useState(false)
+  const [isReportDialogOpen, setIsReportDialogOpen] = useState(false)
+  const handleReport = async () => {
+    if (!reportReason.trim()) return;
+    setIsReporting(true)
+    const success = await onReport(review.id, reportReason)
+    setIsReporting(false)
+    if (success) {
+      setReportReason('')
+      setIsReportDialogOpen(false)
+    }
+  }
+  const renderStars = (rating?: number) => {
+    if (!rating) return null
+    return (
+      <div className='flex'>
+        {[1, 2, 3, 4, 5].map(star => (
+          <Star
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
+
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -29,7 +67,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-          />
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
               </AvatarFallback>

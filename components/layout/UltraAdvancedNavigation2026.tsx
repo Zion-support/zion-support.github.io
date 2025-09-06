@@ -254,6 +254,44 @@ const serviceCategories = [
     ]
   }
 
+];
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security-gateway', description: 'Unbreakable encryption', price: '$3,999/month' };
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-algorithm-platform', description: 'Quantum trading algorithms', price: '$12,999/month' };
+      { name: 'Quantum Internet Infrastructure', href: '/quantum-internet-infrastructure-platform', description: 'Build the quantum internet', price: '$15,999/month' }
+    ];
+  };
+
+
+      { name: 'Space Debris Management', href: '/space-debris-management-ai-platform', description: 'AI space safety', price: '$5,999/month' };
+      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-platform', description: 'Climate change prediction', price: '$1,999/month' };
+      { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing-ai-platform', description: 'Self-optimizing manufacturing', price: '$3,499/month' }
+    ];
+  };
+
+
+    title: 'Healthcare & Life Sciences',
+    icon: Microscope,
+    color: 'from - teal - 600 to - cyan - 600',
+    description: 'Healthcare innovation',
+
+
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'About Us', href: '/about', icon: Users }
@@ -709,6 +747,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
 
               {/* Quick Links */}
 
+                  All Services
+                </Link>
 
                 <Link
                   href='/pricing'
@@ -818,6 +858,8 @@ const UltraAdvancedNavigation2026 = () =>: any {
               </Link>
             </div>
 
+
+
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -827,6 +869,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
           </div>;
         </div>;
       </nav>;
+
+
+
 
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>;
@@ -935,6 +980,9 @@ const UltraAdvancedNavigation2026 = () =>: any {
                 </div>;
               </div>;
 
+      <div className="h-20"></div>
+    </>
+
   );
 }
 export default UltraAdvancedNavigation2026;
@@ -958,3 +1006,14 @@ export default UltraAdvancedNavigation2026;
       <div className='h-20'></div>
     </>
   );
+export default UltraAdvancedNavigation2026;    </>
+  );
+}
+export default UltraAdvancedNavigation2026;
+
+export default UltraAdvancedNavigation2026;
+export default UltraAdvancedNavigation2026;
+
+};
+
+

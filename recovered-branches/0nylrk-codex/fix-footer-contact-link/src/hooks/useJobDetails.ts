@@ -1,4 +1,10 @@
 
+
+import {useState, useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+export function useJobDetails(jobId: string | undefined) {;
+
+
   const [job, setJob] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -27,6 +33,8 @@
     loadJobDetails
   }
 }
+
+
 import { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 export function useJobDetails(jobId: string | undefined) {;
@@ -68,6 +76,9 @@ export function useJobDetails(jobId: string | undefined) {;
     loadJobDetails;
   }
 }
+
+
+
 export default useJobDetails;
 export default useJobDetails;
 ;

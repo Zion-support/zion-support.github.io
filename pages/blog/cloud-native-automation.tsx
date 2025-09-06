@@ -170,6 +170,8 @@ export default function CloudNativeAutomation() {
                 </h2>
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
+
+
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li> Serverless computing for event-driven automation</li>

@@ -27,6 +27,18 @@ import MainLayout from '../components/layout/MainLayout';
 import Link from 'next / link';
 import MainLayout from '../components / layout / MainLayout';
 import { motion } from 'framer-motion';
+  Eye
+  Ear
+  Hand
+  Brain
+  CheckCircle
+  AlertTriangle
+  Globe
+  Users
+  Shield
+  Zap
+  FileText
+  Settings
 
   Eye,
   Ear,

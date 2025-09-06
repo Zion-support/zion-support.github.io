@@ -1,4 +1,8 @@
 
+
+
+
+
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {TrustedBySection} from "@/components/TrustedBySection";
@@ -20,6 +24,58 @@ import {useTranslation} from "react-i18next";
 import {useLanguage} from "@/context/LanguageContext";
 import {ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone} from "lucide-react";
 
+
+
+export default function Index() {;
+
+
+  const { t } = useTranslation();
+  const { isRTL } = useLanguage();
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { TestimonialCarousel } from "@/components/TestimonialCarousel",
+import { FloatingCTA } from "@/components/FloatingCTA",
+import { HeroSection } from "@/components/HeroSection",
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { BenefitsSection } from "@/components/BenefitsSection",
+import { HowItWorksSection } from "@/components/HowItWorksSection",
+import { WaitlistSection } from "@/components/WaitlistSection",
+import { BlogSection } from "@/components/BlogSection",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { FeaturesGuideSection } from "@/components/FeaturesGuideSection",
+import { SocialShareSection } from "@/components/SocialShareSection",
+import { useTranslation } from "react-i18next",
+import { useLanguage } from "@/context/LanguageContext",
+import { 
+  ArrowRight,
+  Users, 
+  Zap, 
+  Settings, 
+  Search,
+  MessageSquare, 
+  Sparkles,
+  BarChart3,
+  Smartphone
+} from "lucide-react",
+
+export default function Index() {
+  const { t } = useTranslation(),
+  const { isRTL } = useLanguage(),
+  
+  // Tools and features showcase
+
+  const toolsFeatures = [
+    {
+      title: t("home.tool_ai_matcher")
+      description: t("home.tool_ai_matcher_desc")
+      icon: <Sparkles className="h-6 w-6 text-zion-cyan" />
+      link: "/match"
+    }
+    },
     {
       title: t("home.tool_talent")
       description: t("home.tool_talent_desc")
@@ -215,6 +271,8 @@ export default function Index() {;
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />;
                 </div>;
               </Link>;
+
+
             ))}
           </div>
         </div>

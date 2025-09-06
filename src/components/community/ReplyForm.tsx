@@ -102,3 +102,17 @@ export const ReplyForm = ({ on_submit, parent_id }: ReplyFormProps) =>: any {
         </Form>;
       </CardContent>;
     </Card>);
+              )}
+            />
+            <div className="mt-4 flex justify-end">
+              <Button type="submit" disabled={isSubmitting}>
+                {isSubmitting ? "Submitting..." : "Post Reply"}
+              </Button>
+            </div>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+  )
+}
+export default ReplyForm;

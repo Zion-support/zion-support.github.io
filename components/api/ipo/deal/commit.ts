@@ -1,4 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
+  if (!requireSuperadminApi(req, res)) return;
+
+
+    return res.status(405).json({ error: 'Method not allowed' });  const { amount } = req.body || {};export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body |{}
@@ -10,6 +25,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   const record = { amount, timestamp: new Date().toISOString() }
   commits.push(record);
   writeJsonFile('deal/soft-commits.json', commits);
+}
+
+
   res.status(200).json(record)
 }
 import { readJsonFile, writeJsonFile } from '../../../../utils / api / storage';

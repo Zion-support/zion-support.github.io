@@ -27,6 +27,8 @@ function useCounter(target: number, durationMs: number) {
   return value
 }
 
+
+
 export default function InteractiveStats() {;
   const hires = useCounter(1200, 1200);
   const experts = useCounter(450, 1200);
@@ -36,6 +38,8 @@ export default function InteractiveStats() {;
       <Stat label='AI Experts' value={experts} suffix='+' />;
       <Stat label='Partners' value={partners} suffix='+' />;
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />;
+
+
 function Stat({
   label
   value
@@ -69,3 +73,4 @@ function Stat() {
       </div>
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
+

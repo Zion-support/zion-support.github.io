@@ -1,4 +1,7 @@
 
+import { completeSitemap, SitemapItem } from "@/config/sitemap";
+import { completeSitemap, SitemapItem } from "@/config/sitemap",
+
 
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
@@ -15,12 +18,13 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-
-
   const route = findRouteByPath(path),
   return route?.requiredAuth === true;
 };
 
+  return route?.requiredAuth === true
+}
+},
 
   userType?: string | null
 ): boolean => {
@@ -46,6 +50,19 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
       })
     } else {
       // For dynamic routes that might not be in the static sitemap
+}
+
+import { complete_sitemap, SitemapItem } from '@/config / sitemap';
+
+  if (route.requiredAuth && !isAuthenticated) return false,
+  
+
+  // If route requires specific roles and user doesn't have one
+  if (route.requiredRoles && route.requiredRoles.length > 0) {
+    if (!userType) return false,
+    return route.requiredRoles.includes(userType as any)
+
+
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 ;
 // Find a route by path in the complete sitemap;
@@ -122,3 +139,8 @@ if ( {) {
     }
   }
   return breadcrumbs;
+
+
+
+
+};

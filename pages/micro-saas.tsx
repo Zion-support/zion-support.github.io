@@ -1,3 +1,10 @@
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/main
+
+
+
+
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -28,6 +35,33 @@ import {
     pricing: "$199/month"
     features: ["Threat detection", "Automated response", "Compliance reporting", "Security dashboard"]
     benefits: ["99.9% threat detection", "Automated response", "Compliance ready", "24/7 monitoring"]
+  }
+];
+;
+const categories = [;
+  'Voice Technology',
+  'IoT Management',
+  'Cybersecurity',
+  'Supply Chain',
+  'HR Technology',
+  'Environmental',
+  'Maintenance',
+  'Education',
+  'Fleet Management',
+  'Energy Management',
+  'Quality Assurance',
+  'Customer Analytics',
+  'Document Intelligence',
+  'API Management',
+  'Recommendation Engine',
+  'Data Engineering',
+  'Chat Analytics';
+];
+;
+export default /**
+ * MicroSaasPage - Function description
+ */
+function MicroSaasPage() {
   return (
 import Link from 'next/link';
 import Head from 'next/head';
@@ -206,6 +240,11 @@ export default function MicroSaaS(req, res) {
                 </Link>
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   View Demo
+                </Link>
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-242d
+</Link>
+origin/main
 </Link>;
 
 
@@ -261,48 +300,6 @@ import {
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-  }
-}
-  ],
-  const filteredProducts = selectedCategory === 'all'
-    ? products
-    : products.filter(product => product.category === selectedCategory),
-  return (
-    <Layout;
-      title="Micro SaaS Solutions - Zion Tech Group";
-      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools.";
-      keywords="micro saas, saas solutions, business tools, automation, productivity";
-    >;
-      <div className="min - h-screen">;
-        {/* Hero Section */}
-        <section className="bg - gradient - to - r from - blue - 600 to - purple - 700 text - white py - 20">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              animate={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text - center";
-            >;
-              <h1 className="text - 4xl md:text - 6xl font - bold mb - 6">;
-                Micro SaaS Solutions;
-              </h1>;
-              <p className="text - xl md:text - 2xl mb - 8 max - w-3xl mx - auto">;
-                Powerful, focused tools that solve specific business problems with precision and efficiency;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link href="/contact" className="bg - white text - blue - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - gray - 100 transition - colors">;
-                  Get Started;
-                </Link>;
-                <Link href="/demo" className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - blue - 600 transition - colors">;
-                  View Demo;
-
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
-export default function MicroSaaS(req, res) {
-  try {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {;
@@ -564,6 +561,15 @@ export default function MicroSaas() {
         <meta
           name='description'
           content='Explore our 150+ innovative micro SaaS products including AI-powered tools, analytics dashboards, automation solutions, and security services.'
+      <ErrorBoundary level='page'>
+        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
+
+        />;
+        <meta name='viewport' content='width=device-width, initial-scale=1 && 1.0' />;
+        <meta name='robots' content='index, follow' />;
+        <link rel='canonical' href={`${contact && contact.site}/micro-saas`} />;
+      </Head>;
+
           {/* Hero Section */}
 
 
@@ -578,6 +584,8 @@ export default function MicroSaas() {
                       selectedCategory === category && category.id;
                         ? 'bg-blue-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
+
+
 
 
           {/* Products Grid */}
@@ -659,6 +667,153 @@ export default function MicroSaas() {
                       <div className='absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
                         Popular
                       </div>
+                    )}
+
+                    <h3 className='text-xl font-bold mb-3'>{product.name}</h3>
+                    <p className='text-slate-300 mb-4 text-sm'>
+                      {product.description}
+                    </p>
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                        Key Features:
+                      </h4>
+                      <ul className='text-slate-400 text-sm space-y-1'>
+                        {product.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className='flex items-center'>
+                            <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
+                          </li>
+                        ))}
+                        {product.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className='flex items-center'>
+                            <span className='w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='text-2xl font-bold text-green-400'>
+                        {product.price}
+                      </span>
+                      <span className='text-xs text-slate-500 capitalize'>
+                        {product.category}
+                      </span>
+                    </div>
+                    <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+          {/* Features Section */}
+          <section className='py-16 px-4 bg-slate-900/40'>
+            <div className='max-w-6xl mx-auto'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
+                Why Choose Our Micro SaaS Products?
+              </h2>
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <svg
+                      className='w-8 h-8 text-white'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M13 10V3L4 14h7v7l9-11h-7z'
+                      />
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <h3 className="text-xl font-bold mb-3">{product.name}</h3>
+                    <p className="text-slate-300 mb-4 text-sm">{product.description}</p>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features:</h4>
+                      <ul className="text-slate-400 text-sm space-y-1">
+                        {product.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 flex-shrink-0"></span>
+                            {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </ul>
+                    </div>
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='text-2xl font-bold text-green-400'>
+                        {product.price}
+                      </span>
+                      <span className='text-xs text-slate-500 capitalize'>
+                        {product.category}
+                      </span>
+                    </div>
+                    <button className='w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>                      Learn More
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Features Section */}
+          <section className='py-16 px-4 bg-slate-900/40'>
+            <div className='max-w-6xl mx-auto'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
+                Why Choose Our Micro SaaS Products?
+              </h2>
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <svg
+                      className='w-8 h-8 text-white'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M13 10V3L4 14h7v7l9-11h-7z'
+                      />
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </div>;
+          </section>;
+          {/* Features Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4 bg-slate-900/40">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                Why Choose Our Micro SaaS Products?
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+
+
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Lightning Fast</h3>
@@ -666,6 +821,21 @@ export default function MicroSaas() {
                     Quick setup and deployment in minutes, not months
                   </p>
                 </div>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+
+                      />;
+                    </svg>;
+                  </div>;
+                  <h3 className='text-xl font-bold mb-2'>Lightning Fast</h3>;
+                  <p className='text-slate-400'>;
+                    Quick setup and deployment in minutes, not months;
+                  </p>;
+                </div>;
+
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -675,6 +845,14 @@ export default function MicroSaas() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+
+
+
+
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Cost Effective</h3>
@@ -683,6 +861,23 @@ export default function MicroSaas() {
                     contracts
                   </p>
                 </div>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+
+                        d='M12 8c-1 && 1.657 0-3 .895-3 2s1 && 2s1.343 2 3 2 3 .895 3 2-1 && 1.343 2-3 2m0-8c1 && 8c1.11 0 2 && 2.08.402 2 && 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1 && 1.11 0-2 && 2.08-.402-2 && 2.599-1'
+                      />;
+                    </svg>;
+                  </div>;
+                  <h3 className='text-xl font-bold mb-2'>Cost Effective</h3>;
+                  <p className='text-slate-400'>;
+                    Affordable pricing with no hidden costs or long-term;
+                    contracts;
+                  </p>;
+                </div>;
+
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -693,6 +888,14 @@ export default function MicroSaas() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+
+
+
+
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Focused Solutions</h3>
@@ -700,6 +903,21 @@ export default function MicroSaas() {
                     Specialized tools that solve specific business problems
                   </p>
                 </div>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+
+                      />;
+                    </svg>;
+                  </div>;
+                  <h3 className='text-xl font-bold mb-2'>Focused Solutions</h3>;
+                  <p className='text-slate-400'>;
+                    Specialized tools that solve specific business problems;
+                  </p>;
+                </div>;
+
+                <div className='text-center'>;
+                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
+
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -709,12 +927,50 @@ export default function MicroSaas() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                  <h3 className='text-xl font-bold mb-2'>Easy Integration</h3>
+                  <p className='text-slate-400'>
+                    Seamless integration with your existing tools and workflows
+                  </p>                </div>
+              </div>
+            </div>
+          </section>
+          {/* CTA Section */}
+          <section className='py-16 px-4'>
+            <div className='max-w-4xl mx-auto text-center'>
+              <h2 className='text-3xl md:text-4xl font-bold mb-8'>
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
+
+
+              </div>
+            </div>
+          </section>
+
+
+
+
                 Ready to Get Started?
               </h2>
               <p className='text-lg text-slate-300 mb-8'>
                 Contact our experts to discuss which micro SaaS products are
                 right for your business and get started with a free trial.
               </p>
+              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+
+
 
 
 
@@ -726,6 +982,11 @@ export default function MicroSaas() {
                   <ArrowRight className="ml-2 w-4 h-4" />;
                 </Link>;
                 <a
+                  href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
+                  className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
+                >
+                  Call {contact.phone}
+                </a>
                   href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'>;
                   Call {contact && contact.phone}
@@ -940,42 +1201,9 @@ origin/automation-improvements-final
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
-          <section className="py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg text-slate-300 mb-8">
-                Contact our experts to discuss which micro SaaS products are right for your business 
-                and get started with a free trial.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
-                  href="/contact" 
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                >
-                  Get Free Trial
-                </Link>
-                <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors"
-                >
-                  Call {contact.phone}
-                </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Email Us
-                </a>
-                >
-                  Email Us
-                </Link>
-
-              </div>
-
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/main
+}
             </div>
 
             </div>
@@ -985,6 +1213,17 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
       </ErrorBoundary>
     </>
   )
+}
+          <section className="py-16 px-4 bg-slate-900/40">;
+            <div className="max-w-6xl mx-auto">;
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
+                Why Choose Our Micro SaaS Products?;
+
+
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">;
+                Ready to Transform Your Business?;
               </h2>;
               <p className="text-xl mb-8 max-w-3xl mx-auto">;
                 Discover how our micro SaaS solutions can solve your specific business challenges;
@@ -1004,4 +1243,41 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+}
+                </a>;
+                <a;
+                  href={`mailto:${contact.email}`} ;
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors";
+                >;
+                  Email Us;
+                </a>;
+              </div>;
+            </div>;
+          </section>;
+        </main>;
+      </ErrorBoundary>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+            </motion && motion.div>;
+          </div>;
+        </section>;
+      </div>;
+    </Layout>;
+  );
+}
+
+
+
+
+}
+
+
+}
+ursor/fix-lint-push-and-merge-to-main-ae4e
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 }

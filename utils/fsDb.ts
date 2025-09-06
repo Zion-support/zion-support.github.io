@@ -1,8 +1,14 @@
+  read: (path: string) => null
+  write: (path: string, data: any) => null
+  exists: (path: string) => false
+  delete: (path: string) => null
   read: (path: string) => null,
   write: (path: string, data: any) => null,
   exists: (path: string) => false,
   delete: (path: string) => null;
 };
+
+
 
 
   read: (path: string) => null,
@@ -27,3 +33,5 @@ const DATA_DIR = path.join(process.cwd(), 'data');
 
 }
 
+}
+}

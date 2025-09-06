@@ -154,9 +154,12 @@ if ( {) {
         </CardHeader>;
         <CardContent>;
 
+  }
+
 
 
   }
+
   if (upcomingInterviews.length === 0) {
       <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>
         <CardHeader>

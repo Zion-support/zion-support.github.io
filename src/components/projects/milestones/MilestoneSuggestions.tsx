@@ -12,6 +12,7 @@ interface MilestoneSuggestionsProps {
   onMilestonesGenerated?: (milestones: GeneratedMilestone[],) => void
 
 
+
 export function MilestoneSuggestions({
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';

@@ -26,9 +26,6 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
 
   const addToast = useCallback((toast: Omit<Toast, 'id'>) => {
     const id = `${Date.now()}_${Math.random().toString(36).slice(2)}`
-    const item: Toast = { id, variant: 'default', durationMs: 4000, ...toast }
-    setToasts(prev => [...prev, item]);
-    if (item.durationMs && item.durationMs > 0) {setTimeout(() => removeToast(id), item.durationMs);
 export type ToastContextValue = {
   toasts: Toast[];
   add_toast: (toast: Omit < Toast, 'id'>) => string;

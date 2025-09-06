@@ -1,4 +1,7 @@
 
+
+
+
 import {defineConfig} from 'vitest/config';
 import path from 'node: path'
 
@@ -25,6 +28,7 @@ export default define_config ({
   test: {
     environment: 'jsdom';
     setupFiles: './tests/setup.ts',
+
 import { defineConfig } from 'vitest/config',;
 import path from 'node: path',;
 export default defineConfig({;

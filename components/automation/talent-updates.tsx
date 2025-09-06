@@ -9,6 +9,17 @@ import path from 'path';
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
+</div>) ) 
+ </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+type TalentSummary = { slug: string, summary: string },
+export async function getServerSideProps() {;
+  const file = path.join(process.cwd(), 'datatalent_ai.json');
+type TalentSummary = { slug: string, summary: string },;
+export async function getServerSideProps() {;
+  const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
@@ -25,6 +36,10 @@ import {TALENT_PROFILES} from '../../data/talent';
   } catch {}
   return { props: { generatedAt, summaries } }
 }
+
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
+
 
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 

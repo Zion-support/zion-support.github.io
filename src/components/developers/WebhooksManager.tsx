@@ -12,16 +12,27 @@
   useEffect(() => {
     fetchWebhooks()
   }
+  }
   const handleDeleteWebhook = async (webhookId: string,) => {
     await deleteWebhook(webhookId)
-    setShowDeleteConfirm(null);    setShowDeleteConfirm(null)
+    setShowDeleteConfirm(null)
   }
-  const handleTestWebhook = async (webhookId: string) => {
+  const handleTestWebhook = async (webhookId: string,) => {
     await testWebhook(webhookId, testEventType)
     setShowTestResult(true)
-  const handleToggleStatus = async (webhookId: string, currentStatus: boolean,) => {
-    await toggleWebhook(webhookId, !currentStatus)
   }
+  const resetWebhookForm = () => {
+    setWebhookName('')
+    setWebhookUrl('')
+    setWebhookSecret('')
+    setSelectedEvents([])
+  }
+  // Event type options
+  const eventOptions: {
+    value: WebhookEventType
+    label: string
+    description: string
+  }[] = [
     {
       value: 'new_application'
       label: 'New Application'
@@ -452,6 +463,10 @@ export function WebhooksManager() {;
         </Button>
       </CardFooter>
 
+              <DialogFooter>
+                <Button variant="outline" onClick={() => setShowTestDialog(null)}>
+                  Cancel
+                </Button>
                 <Button
                   variant='outline'
                   onClick={() => setShowTestDialog(null)}

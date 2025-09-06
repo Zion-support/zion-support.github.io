@@ -2,12 +2,34 @@
 
 
 
+
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Link} from "react-router-dom";
 
+
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Link } from "react-router-dom",
+// Form validation schema
+const loginSchema = z.object({
+  email: z.string().email("Please enter a valid email").min(1, "Email is required");
+  password: z.string().min(6, "Password must be at least 6 characters")});
+type LoginFormValues = z.infer<typeof loginSchema>;
+export function LoginForm() {
+  const { login, isLoading } = useAuth();
+  const [showPassword, setShowPassword] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   email: z.string().email("Please enter a valid email").min(1, "Email is required"),
   password: z.string().min(6, "Password must be at least 6 characters")}),
 
@@ -43,6 +65,9 @@ type LoginFormValues = z.infer<typeof loginSchema>,
                 </div>;
               </FormControl>;
               <FormMessage className="text-red-400" />;
+
+
+
           )}
 
         />;

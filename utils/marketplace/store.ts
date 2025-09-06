@@ -1,3 +1,11 @@
+
+// Marketplace data store utilities
+
+export interface Project {
+
+
+// Marketplace data store utilitiesexport interface Project {;
+
   id: string;
   title: string;
   summary: string;
@@ -21,6 +29,12 @@
   budget?: {
     total: number;
     currency: string;
+export interface Offer {
+}
+
+
+export interface Offer {;
+
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -40,12 +54,22 @@
   status: 'SENT' | 'ACCEPTED' | 'REJECTED' | 'EXPIRED' | 'CANCELLED';
   expiresAt?: string;
 }
+  notes?: string
+}
+
+
+export interface Application {;
+
   id: string;
   projectId: string;
   talentSlug: string;
   appliedAtIso: string;
   status: 'PENDING' | 'ACCEPTED' | 'REJECTED' | 'WITHDRAWN';
 }
+
+
+export interface Message {;
+
   id: string;
   conversation_id: string;
   sender_id: string;
@@ -58,6 +82,12 @@
   sentAtIso: string;
   readAtIso?: string;
 }
+  isRead: boolean
+}
+
+
+export interface Conversation {;
+
   id: string;
   participants: string[];
   lastMessageAtIso: string;
@@ -450,6 +480,10 @@ export async function getProject(id: string): Promise<Project | null> {
 
   return marketplaceStore && marketplaceStore.getProject(id),
 }
+
+
+export async function updateProject(id: string, updates: Partial<Project>): Promise<Project | null> {;
+
   return marketplaceStore.updateProject(id, updates);
 }
 export async function deleteProject(id: string): Promise<boolean> {
@@ -470,6 +504,10 @@ export async function getOffer(id: string): Promise<Offer | null> {
 
   return marketplaceStore && marketplaceStore.getOffer(id),
 }
+
+
+export async function updateOffer(id: string, updates: Partial<Offer>): Promise<Offer | null> {;
+
   return marketplaceStore.updateOffer(id, updates);
 }
 export async function deleteOffer(id: string): Promise<boolean> {
@@ -490,6 +528,10 @@ export async function getApplication(id: string): Promise<Application | null> {
 
   return marketplaceStore && marketplaceStore.getApplication(id),
 }
+
+
+export async function updateApplication(id: string, updates: Partial<Application>): Promise<Application | null> {;
+
   return marketplaceStore.updateApplication(id, updates);
 }
 export async function deleteApplication(id: string): Promise<boolean> {
@@ -510,6 +552,10 @@ export async function getMessage(id: string): Promise<Message | null> {
 
   return marketplaceStore && marketplaceStore.getMessage(id),
 }
+
+
+export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
+
   return marketplaceStore.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -517,6 +563,52 @@ export async function deleteMessage(id: string): Promise<boolean> {
   return marketplaceStore && marketplaceStore.deleteMessage(id),
 }
 // Utility functions
+    title
+    summary
+    clientId
+    startDateIso: new Date().toISOString()
+    status: 'DRAFT'
+    timeline: []
+    documents: []
+    ...additionalData
+  }
+    title,
+    summary,
+    clientId,
+    startDateIso: new Date().toISOString(),
+    status: 'DRAFT',
+    timeline: [],
+    documents: [],
+    ...additionalData;
+  };
+}
+export function createOfferData(
+  clientId: string
+  talentSlug: string
+  scopeSummary: string
+  paymentTerms: Offer['paymentTerms']
+  additionalData?: Partial<Offer>
+): Omit<Offer, 'id' | 'createdAtIso'> {
+  return {
+}
+export function createApplicationData(
+  projectId: string
+  talentSlug: string
+  additionalData?: Partial<Application>
+): Omit<Application, 'id' | 'appliedAtIso'> {
+  return {
+}
+export function createMessageData(
+  conversationId: string
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso'> {
+  return {
+
+
+
     conversationId,
     senderId,
     recipientId,
@@ -571,4 +663,9 @@ export function createMessageData (
     isRead: false,
     ...additionalData;
   };
+}
+}
+}
+export function generate_id (prefix: string = 'item'): string {
+  return `${prefix}_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
 }

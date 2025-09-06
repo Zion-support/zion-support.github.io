@@ -37,10 +37,6 @@ interface ActiveFiltersProps {
   
   if (!hasActiveFilters) return null,
 
-          ${priceRange[0]}-${priceRange[1]}/hr
-          <X className="h-3 w-3" />
-        </ClickableBadge>
-      )}
           {experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />
         </ClickableBadge>

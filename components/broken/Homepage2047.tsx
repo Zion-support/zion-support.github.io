@@ -1,3 +1,56 @@
+  ArrowRight
+  Play
+  TrendingUp
+  Brain
+  Shield
+  Rocket
+  Globe
+  Cpu
+  Database
+  Atom
+  Target
+  Star
+  Sparkles as SparklesIcon
+  Brain as BrainIcon
+  Atom as AtomIcon
+  Shield as ShieldIcon
+  Rocket as RocketIcon
+  Zap
+  Eye
+  Heart
+  Infinity
+  ChevronRight
+  ChevronLeft
+  ExternalLink
+  Users
+  Award
+  Clock
+  CheckCircle
+  Zap as ZapIcon
+  DollarSign
+  BarChart3
+  Palette
+  Cloud
+  Network
+  ShoppingCart
+  Settings
+  Building
+  Monitor
+  Layers
+  Globe2
+  Lock
+  Code
+  Server
+  Phone
+  Search
+  Filter
+  Grid
+  List
+  Eye as EyeIcon
+  ArrowUpRight
+  Star as StarIcon
+  Sparkles
+  Target as TargetIcon;} from 'lucide-react';import {
 import {motion, AnimatePresence} from 'framer-motion';
 import Link from 'next / link';
 import {
@@ -314,6 +367,9 @@ const Homepage2047: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">;
       {/* Futuristic Background */}
+
+
+
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>;
         <div className='max-w-7xl mx-auto w-full'>;
@@ -356,6 +412,9 @@ const Homepage2047: React.FC = () => {
 
                 <Link
                   href="/contact"
+
+
+
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
@@ -378,10 +437,15 @@ const Homepage2047: React.FC = () => {
             <motion&& motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
+
+
+
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.5 }}
+                  className='relative'
 
 
 
@@ -581,6 +645,8 @@ const Homepage2047: React.FC = () => {
         </div>
       </section>
       {/* Services Overview */}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
       <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
         <div className='max - w-7xl mx - auto'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
         <div className="max - w-7xl mx - auto">;
@@ -588,6 +654,12 @@ const Homepage2047: React.FC = () => {
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'
+
+
+
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -665,6 +737,14 @@ const Homepage2047: React.FC = () => {
                 <Link;
                   href={
       {/* Featured Services Grid */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
+        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
+        <div className="max-w-7xl mx-auto">;
+          <motion&& motion.div
+
+
+
+      {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -717,6 +797,12 @@ const Homepage2047: React.FC = () => {
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'
+
+
+
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -776,6 +862,13 @@ const Homepage2047: React.FC = () => {
           >
             <Link
               href="/2025-innovative-services-showcase-v2"
+
+
+      {/* CTA Section */}
+      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
 
 
             initial={{ opacity: 0, y: 30 }}
@@ -915,8 +1008,17 @@ export default Homepage2047;
 ;
 
 
-
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
+export default Homepage2047;  )
+}
+export default Homepage2047;
+
+export default Homepage2047;
+export default Homepage2047;
+
+};
+
+

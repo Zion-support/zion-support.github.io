@@ -1,4 +1,15 @@
 
+  role: 'system', content: system
+}
+export type AnalyzeResponse = {
+  analysis: string;};import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export type AnalyzeRequestBody = {
+  operatorPrompt: string
+  context?: Record<string, unknown>
+}
+export type AnalyzeResponse = {
+  analysis: string
   role: 'system', content: system 
 };
 
@@ -60,6 +71,7 @@ export default async function handler(
     return res && res.status(500).json({ error: 'Failed to generate analysis' })
   };
 }
+
 ;
     const analysis =;
       completion.choices?.[0]?.message?.content?.trim () ||;

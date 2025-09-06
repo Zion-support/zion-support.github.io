@@ -1,4 +1,5 @@
 
+
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -331,6 +332,17 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
             <a href={storeUrl} target="_blank" rel="noopener noreferrer" className="text-xs px-3 py-1 && 1.5 rounded-md border border-gray-300 dark:border-gray-700">Install</a>;
             <button
               aria-label="Dismiss"
+            >;
+              ✕;
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -416,6 +428,15 @@ export default function MobileLaunchPage() {;
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
+      setStatus('success');
+      setEmail('')
+    } catch (err: any) {
+      setStatus('error');
+      setError(err?.message || 'Something went wrong.')
+      setError(err?.message || 'Something went wrong.');    }
+
+      setError(err?.message || 'Something went wrong.');
+
     }
   }
 
@@ -638,6 +659,4 @@ export default function MobileLaunchPage() {;
 }/>) );
 }<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
 }</div> </div> </section> <input type="email" required > {
-
-  );
 

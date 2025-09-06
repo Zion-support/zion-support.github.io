@@ -16,6 +16,12 @@ interface Activity {
 
     display_name: string
 
+
+
+export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
+  const [activities, setActivities] = useState<Activity[]>([]);
+
+
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     async function fetchActivities() {
@@ -35,8 +41,25 @@ interface Activity {
         setActivities(data |[])
 
       } catch (err) {
+
       }
     }
+    if (projectId) {
+      fetchActivities()
+    }
+  }, [projectId]);
+  function getActivityDescription(activity: Activity): string {
+    switch (activity.action) {
+      case 'created':
+
+    }
+  }
+    if (projectId) {;
+      fetchActivities();
+    }
+
+
+
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
     switch (activity.action) {;

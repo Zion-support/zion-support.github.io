@@ -1,4 +1,12 @@
 
+import { Card } from "@/components/ui/card",
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton",
+import { Button } from "@/components/ui/button",
+
+
+
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -13,6 +21,14 @@ export function TalentPlaceholder() {
         Join as Talent
       </Button>
     </div>
+  )
+import { Card } from "@/components/ui/card",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { Button } from "@/components/ui/button";
+
+import {Card} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Button} from "@/components/ui/button";
 export function TalentPlaceholder() {;
   return (;
     <div className="p-8 text-center">;

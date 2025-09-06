@@ -176,6 +176,9 @@ function broadcast() {
     </div>
 );
 }
+    setStatus('Broadcasting manifesto...');
+
+
         <button;
           className='px - 3 py - 2 bg - black text - white rounded';
           on_click={cast_vote}
@@ -215,4 +218,5 @@ function broadcast() {
       </section>;
       {status && <p className='text - sm text - gray - 700'>{status}</p>}
     </div>);
+
 }

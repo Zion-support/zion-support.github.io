@@ -1,7 +1,52 @@
+export type CuttingEdgeAIService = {
+      'CBT-guided prompts',
+  launch_date?: string;
+  real_service?: boolean;
+  id: string;
+  name: string;
+  description: string;
+  category:
+    | 'AI Consciousness'
+    | 'AI Emotional Intelligence'
+    | 'AI Creativity'
+    | 'AI Psychology'
+    | 'AI Business Management'
+    | 'AI Healthcare'
+    | 'AI Neural Interfaces'
+    | 'AI Quantum Computing';
+  pricing: { starter: string; professional?: string; enterprise?: string }
+  features: string[];
+  integrations?: string[];
+  useCases?: string[];
+  link: string;
+  rating?: number;
+  launchDate?: string;
+  realService?: boolean;
+}
+export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 
 
 
   {
+
+      'Brand kit'
+      'Image & video gen'
+      'Review & approvals'
+      'Rights management'
+    ]
+    integrations: ['Canva', 'Figma']
+    useCases: ['Marketing velocity', 'Cost savings']
+    link: 'https://ziontechgroup.com/services/ai-creative-studio'
+    realService: true
+  }
+
+    id: 'ai - creative - studio',
+    name: 'AI Creative Studio',
+    description:;
+      'Generate brand - consistent images and short - form videos with approvals and rights management.',
+    category: 'AI Creativity',
+    pricing: { starter: '$149 / mo' },
+    features: [;
 
       'Brand kit',
       'Image & video gen',
@@ -73,6 +118,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 ];
 
 export type CuttingEdgeAIService = {;
+	}
 ];
 ;
 

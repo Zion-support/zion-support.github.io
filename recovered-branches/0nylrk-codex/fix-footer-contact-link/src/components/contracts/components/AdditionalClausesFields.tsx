@@ -3,6 +3,7 @@
   FormItem,
   FormLabel,
   FormControl,
+
 } from "@/components/ui/form";
 
 import { Checkbox } from "@/components/ui/checkbox";
@@ -10,6 +11,17 @@ import { ContractFormValues } from "./ContractForm";
 interface AdditionalClausesFieldsProps {;
   form: UseFormReturn<ContractFormValues>;
 }
+export function AdditionalClausesFields({
+  form
+}: AdditionalClausesFieldsProps) {
+  return (
+    <FormField
+
+
+
+
+
+
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField,
@@ -39,6 +51,9 @@ interface AdditionalClausesFieldsProps {;
 export function AdditionalClausesFields({ form }: AdditionalClausesFieldsProps) {;
   return (;
     <FormField;
+
+
+
       control={form.control}
 
 export function AdditionalClausesFields(): any ({;
@@ -95,6 +110,12 @@ function AdditionalClausesFields() {
               control={form.control}
               name="additional_clauses";
               render={({ field }) => (
+                      onCheckedChange={(checked) => {
+                        const currentValues = field.value |[];
+                        return checked
+                          ? field.onChange([...currentValues, "nda"])
+                          : field.onChange(
+                              currentValues.filter((value) => value !== "nda")
                 <FormItem className="flex flex - row items - start space - x-3 space - y-0">;
                   <FormControl>;
                     <Checkbox;
@@ -112,6 +133,7 @@ function AdditionalClausesFields() {
                           ? field.onChange([...currentValues, "nda"])
                           : field.onChange(
                               currentValues.filter((value) => value !== "nda"),
+
                       checked={field.value?.includes('nda')}
                       onCheckedChange={(checked) => {;
                         const currentValues = field.value || [],;
@@ -147,6 +169,13 @@ function AdditionalClausesFields() {
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+                              currentValues.filter((value) => value !== "ip")
+                              currentValues.filter((value) => value !== "ip"),
+
+                      checked={field && field.value?.includes("ip")}
+
+                              currentValues.filter((value) => value !== "ip"),
+
                       checked={field.value?.includes('ip')}
 
                       onCheckedChange={(checked) => {;
@@ -200,6 +229,17 @@ function AdditionalClausesFields() {
                   <FormControl>;
                     <Checkbox
                       onCheckedChange={(checked) => {
+                                (value) => value !== "termination"
+                              )
+                                (value) => value !== "termination",
+                              ),
+                        const current_values = field.value || [];
+                        return checked;
+                          ? field.on_change ([...current_values, "termination"]);
+                          : field.on_change (
+                              current_values.filter (
+                                (value) => value !== "termination",
+                              ),
 
                                 (value) => value !== "termination",
                               ),
@@ -239,6 +279,22 @@ function AdditionalClausesFields() {
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0">;
                   <FormControl>;
                     <Checkbox
+
+                                (value) => value !== "revisions"
+                              )
+                                (value) => value !== "revisions",
+                              ),
+
+
+                      checked={field && field.value?.includes("revisions")}
+                      onCheckedChange={(checked) => {;
+                        const currentValues = field && field.value || [];
+                        return checked;
+                          ? field && field.onChange([...currentValues, "revisions"]);
+                          : field && field.onChange(;
+                              currentValues && currentValues.filter(;
+                                (value) => value !== "revisions",;
+                              ),;
 
                 </FormItem>)}
             />;

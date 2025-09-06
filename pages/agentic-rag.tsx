@@ -1,7 +1,23 @@
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+;
+
+
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',;
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',;
+;
+
 import React from 'react'
 import Head from 'next/head'
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
 import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
+
+
+
 export default function AgenticRAGPage() {
 	const contactInfo = {
 		mobile: '+1 302 464 0950'
@@ -18,6 +34,8 @@ export default function AgenticRAGPage() {
 					<h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">Agentic RAG</h1>
 					<p className="text-xl text-gray-300">Ingest everything. Retrieve precisely. Answer confidently with sources and chain-of-thought.</p>
 					<div className="mt-6 flex justify-center gap-3">
+
+
 					</div>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
@@ -28,6 +46,8 @@ export default function AgenticRAGPage() {
 							<ul className="space-y-2 text-gray-300 text-sm">
 								{p.items.map((i) => (
 									<li key={i} className="flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400"><Check /> <span>{i}</span></li>
+
+
 				</div>
 				<div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 					<div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
@@ -62,6 +82,12 @@ export default function AgenticRAGPage() {
 				</div>
 			</div>
 		</UltraFuturisticMatrixBackground>
+	)
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
 }
 

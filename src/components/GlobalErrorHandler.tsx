@@ -4,3 +4,8 @@
   clearAllErrors: () => void
 
 
+
+
+// Helper function to convert technical errors to user-friendly messages
+function getErrorMessage(error: Error): string {
+  const message = error.message.toLowerCase(),

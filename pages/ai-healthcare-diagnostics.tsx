@@ -1,3 +1,13 @@
+import React from 'react';
+import SEO from '../components/SEO';
+import React from 'react'
+import SEO from '../components/SEO'
+import React from 'react',;
+import SEO from '../components/SEO',;
+import React from 'react'
+import SEO from '../components/SEO'
+
+
 export default function AIHealthcareDiagnosticsPage() {
   return (
     <div className="min-h-[60vh] px-6 py-24">

@@ -5,6 +5,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
+    sort;
+    order: (order as any) |'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
 
     filters
     format: (format as any) |undefined}
@@ -154,6 +158,8 @@ function toCsv(rows: any[]): string {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
+
+
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
           const av = (a as any)[params.sort!];
@@ -205,6 +211,11 @@ function toCsv(rows: any[]): string {
       return res.status(200).json({ item: updated });    }
 
     }
+
+
+
+
+  }
 
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';

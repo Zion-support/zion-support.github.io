@@ -1,4 +1,7 @@
 
+
+
+
 export const innovativeMicroSaasSolutions2025 = [
   {
 
@@ -469,6 +472,8 @@ export const innovativeMicroSaasSolutions2025 = [
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
+
+
 export const innovativeMicroSaasSolutions2025 = [;
   {;
     id: 'ai-powered-customer-feedback-analyzer',;

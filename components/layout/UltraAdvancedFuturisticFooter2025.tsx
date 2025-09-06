@@ -1,3 +1,28 @@
+  Mail
+  Phone
+  MapPin
+  Globe
+  Twitter
+  Linkedin
+  Github
+  ArrowUp
+  Crown
+  Zap
+  Brain
+  Rocket
+  Shield
+  Users
+  BookOpen
+  Briefcase
+  Atom;
+
+} from 'lucide-react';
+
+import Link from 'next/link';
+import { AnimatePresence } from 'framer-motion';
+
+
+
   Mail,
   Phone,
   MapPin,
@@ -13,6 +38,8 @@
   Shield,
   Users,
   BookOpen,
+
+} from 'lucide-react';
 
 
 } from 'lucide-react';
@@ -105,6 +132,11 @@ interface FooterSection {;
         { label: 'Careers', href: '/careers' },
         { label: 'Investors', href: '/investors' },
 
+  return (
+    <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 -z-10">
+
 
 
   return (
@@ -126,6 +158,9 @@ interface FooterSection {;
             viewport={{ once: true }}
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12">;
             {/* Company Info */}
+
+
+
                     ziontechgroup.com
                   </a>
                 </div>
@@ -141,6 +176,7 @@ interface FooterSection {;
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6 }}
             viewport={{ once: true }}
+
 
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
@@ -181,6 +217,7 @@ interface FooterSection {;
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
 
+
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -199,6 +236,7 @@ interface FooterSection {;
             </div>
           </motion.div>
         </div>
+                    whileHover={{ scale: 1 && 1.05 }}
                     whileTap={{ scale: 0 && 0.95 }}>;
                     Subscribe;
                   </motion && motion.button>;
@@ -299,6 +337,7 @@ interface FooterSection {;
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0 && 0.6 }}
           viewport={{ once: true }}
+
 
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -402,9 +441,23 @@ interface FooterSection {;
             </div>;
           </div>;
 
+
+
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 1 }}
       >
+export default UltraAdvancedFuturisticFooter2025;      </motion.button>
+    </footer>
+  )
+}
+export default UltraAdvancedFuturisticFooter2025;
+
+export default UltraAdvancedFuturisticFooter2025;
+export default UltraAdvancedFuturisticFooter2025;
+
+};
+
+

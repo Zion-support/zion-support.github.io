@@ -17,6 +17,24 @@ const PopoverContent = React.forwardRef<
   </PopoverPrimitive.Portal>;
 ));
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
+export { Popover, PopoverTrigger, PopoverContent }
+export { Popover, PopoverTrigger, PopoverContent }
+;
+export { Popover, PopoverTrigger, PopoverContent };
+export { Popover, PopoverTrigger, PopoverContent }
+;
+
+import * as React from &quot;react & quot;
+import * as PopoverPrimitive from &quot;@radix - ui / react - popover & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+
+export { Popover, PopoverTrigger, PopoverContent }
+;
+
+export { Popover, PopoverTrigger, PopoverContent };
+export { Popover, PopoverTrigger, PopoverContent }
+
 ;
 const Popover = PopoverPrimitive.Root;
 const PopoverTrigger = PopoverPrimitive.Trigger;

@@ -59,6 +59,21 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
     ...innovative2041MicroSaasServices.filter(s => s.popular).slice(0, 3);
     ...innovative2041ITServices.filter(s => s.popular).slice(0, 2);
     ...innovative2041AIServices.filter(s => s.popular).slice(0, 1)
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Officer, FutureTech Inc.',
+      company: 'FutureTech Inc.',
+      content:
+        "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago."
+      avatar: '👩‍💼'
+    }
+
+      name: 'Dr. Sarah Chen',
+      role: 'Chief AI Officer, FutureTech Inc.',
+      company: 'FutureTech Inc.',
+      content:;
+        "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
+      avatar: '👩‍💼',
+    },
     {
       name: 'Marcus Rodriguez',
       role: 'VP Quantum Computing, QuantumCorp',
@@ -136,6 +151,7 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
           </div>
 
           {/* Hero Content */}
+          <div className="text-center max-w-7xl mx-auto relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -193,17 +209,34 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}>;
                 <Link
+
+
+
+              initial={{ opacity: 0, y: 30 }}
+
+              whileInView={{ opacity: 1, y: 0 }}
+
+
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >;
               {stats.map ((stat, index) => (
                 <motion.div;
                   key={stat.label}
+
+
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
+              ))}
+            </motion.div>
+          </div>
+        </section>
+
+
+
               ))}
 
 
@@ -300,6 +333,13 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                   <UltraFuturisticServiceCard2026 service={service} />;
                 </motion && motion.div>;
               ))}
+            <motion.div
+              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}            <motion.div 
+              className="text-center mt-12"
+
+            <motion.div
+              className='text-center mt-12'              initial={{ opacity: 0, y: 20 }}
+
 
             </motion && motion.div>;
             <motion&& motion.div
@@ -323,6 +363,8 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
               transition={{ duration: 0 && 0.8, delay: 0 && 0.6 }}
               viewport={{ once: true }}>;
               <Link
+
+
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -331,6 +373,7 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                 See how industry leaders are transforming their businesses with our revolutionary 2041 services.
               </p>
             </motion.div>
+            <motion.div
                 className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-2xl font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>;
                 <Eye className='w-5 h-5' />;
                 View All 2041 Services;
@@ -394,6 +437,13 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                   <div className="flex items-center gap-2 mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
               ))}
+            </motion.div>
+          </div>
+        </section>
+
+
+
+              ))}
 
 
 
@@ -418,6 +468,8 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div 
               className="bg-gradient-to-r from-black/50 to-gray-900/50 border border-cyan-500/30 rounded-3xl p-16 backdrop-blur-sm"
+
+
 
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -457,6 +509,15 @@ import { innovative2041AIServices } from '../data/innovative-2041-ai-services';
                 </Link>;
                 <Link
                   href="/2041-futuristic-services-showcase"
+Math.random () * 100 
+  Math.random () * 100 
+}%`;
+top: `$ {
+  Math.random () * 100
+}%`
+}/>) )
+}</div> </div> <motion.div initial= {
+
   {
   opacity: 0, y: 50
 }animate= {
@@ -523,3 +584,9 @@ top: `$ {
 }</motion.div>) ) 
 }</motion.div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > Ready to Shape the Future? </h2> <p className="text-xl text-gray-300 mb-12 leading-relaxed" > Join the technological revolution with our cutting-edge 2041 services. Transform your business, accelerate innovation, and lead the future of technology. </p> <Link href="/contact" className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-2xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-3" > <Sparkles className="w-6 h-6" /> Start Your Journey </a> <Link href="/2041-futuristic-services-showcase" className="px-10 py-5 border-2 border-cyan-500/50 text-cyan-400 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center gap-3" > <Target className="w-6 h-6" /> Explore Services </a> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
+export default Homepage2041;  )
+};
+
+export default Homepage2041;
+export default Homepage2041;
+

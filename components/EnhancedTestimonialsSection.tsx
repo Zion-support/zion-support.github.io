@@ -1,3 +1,11 @@
+  Star
+  Quote
+  Users
+  Award
+  TrendingUp
+  CheckCircle;
+
+
   Star,
   Quote,
   Users,
@@ -169,6 +177,7 @@ interface Testimonial {;
           <div className='bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-8 border border-blue-500/20'>
             <h3 className='text-2xl font-bold text-white mb-4'>
 
+
               Ready to Join Our Success Stories?
             </h3>
             <p className='text-white/70 mb-6 max-w-2xl mx-auto'>
@@ -204,9 +213,6 @@ interface Testimonial {;
           </div>
         </div>
             </div>;
-            <div className="flex items-center gap-2">;
-              <TrendingUp className="w-4 h-4 text-blue-400" />;
-              <span>Proven ROI</span>;
             </div>;
             <div className='flex items-center gap-2'>;
               <TrendingUp className='w-4 h-4 text-blue-400' />;
@@ -216,6 +222,7 @@ interface Testimonial {;
           </div>;
         </div>;
       </div>;
+
 export default EnhancedTestimonialsSection;
 
 
@@ -228,3 +235,8 @@ export default EnhancedTestimonialsSection);
 export default EnhancedTestimonialsSection;
 ;
   );
+export default EnhancedTestimonialsSection;  )
+}
+export default EnhancedTestimonialsSection;
+
+export default EnhancedTestimonialsSection;

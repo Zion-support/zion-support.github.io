@@ -1,3 +1,8 @@
+export type ProjectParticipants = {
+
+export type ProjectParticipants = {;
+
+
   clientUserId: string;
   talentUserId: string;
 }
@@ -16,12 +21,21 @@ export type Project = {  id: string;
   url: string;
   type: string;
   size: number;
+
+
+export interface CreateMilestoneRequest {;
+
   title: string;
   description?: string;
 
   attachments?: MilestoneAttachment[]
 
 }
+export interface UpdateMilestoneRequest {
+
+
+export interface UpdateMilestoneRequest {;
+
   title?: string;
   description?: string;
   due_date?: string;

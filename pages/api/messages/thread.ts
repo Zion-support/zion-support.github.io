@@ -2,6 +2,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { requireUser } from "../../../utils/auth";
 import {
+import { NextApiRequest, NextApiResponse } from "next";
+import { requireUser } from "../../../utils/auth";
+import {
+  getConversationById,
+  getMessages,
+  sendMessage,;
 
   getConversationById,
   getMessages,
@@ -23,6 +29,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
     const { conversation, message } = sendMessage({
       conversationId,
+    res.status(405).json({ error: 'Method not allowed' })
+  }
+}
+    res.status(405).json({ error: "Method not allowed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import { NextApiRequest, NextApiResponse } from 'next';

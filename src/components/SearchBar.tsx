@@ -14,8 +14,6 @@ import { useOnClickOutside } from '@/hooks/useOnClickOutside';
  */
 interface SearchBarProps {
   /**
-
-
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])

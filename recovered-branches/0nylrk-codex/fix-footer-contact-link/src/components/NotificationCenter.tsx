@@ -1,4 +1,7 @@
 
+// Use the shared icon wrapper
+// Use the shared icon wrapper;
+
 import {Bell} from '@/components/icons';
 import {Button} from '@/components/ui/button';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components/ui/popover';
@@ -11,6 +14,7 @@ import {FilterType} from '@/components/notifications/NotificationFilter';
     setFilter;
     fetchNotifications;
   } = useNotifications();
+import React, { useState, useEffect } from 'react',
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -51,6 +55,7 @@ export const NotificationCenter: React.FC = () => {
           toast.error("Failed to load notifications");
         }
 
+
   const handleMarkAllAsRead = async () => {
     try {
       };
@@ -88,6 +93,8 @@ export const NotificationCenter: React.FC = () => {
         <Button variant="ghost" size="icon" className="relative">;
           <Bell className="h-5 w-5 text-zion-slate-light" />;
           {unreadCount > 0 && (;
+
+
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>;
           )}
@@ -97,6 +104,9 @@ export const NotificationCenter: React.FC = () => {
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
         <NotificationHeader
           onMarkAllAsRead={handleMarkAllAsRead}
+        <NotificationFilter
+        />;
+        <NotificationFilter;
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
         />
@@ -111,12 +121,22 @@ export const NotificationCenter: React.FC = () => {
           error={error}
           notifications={filtered_notifications}
           onMarkAsRead={markAsRead}
+}
+
+
+
+
+
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
+
+
+
+
 };
           on_dismiss={dismiss_notification}
           on_retry={fetch_notifications}

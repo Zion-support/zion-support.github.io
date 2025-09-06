@@ -184,6 +184,7 @@ if (return) {
   }
 }
       setStatus('Profile restored from backup');
+
   return (
 
                   className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>              </span>;
@@ -240,6 +241,7 @@ if (return) {
           <div className='mt-4 flex gap-2'>;
             <input
               value={restoreCid}
+      set_status (e?.message || 'Backup failed');    }
   }
 }
     } catch (e: any) {
@@ -400,12 +402,19 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           </div>
           <div className="mt-4 flex gap-2">
             <input value={restoreCid} onChange={(e) => setRestoreCid(e.target.value)} placeholder="Enter CID to restore" className="flex-1 rounded-md border px-3 py-2" />
             <button onClick={doRestore} className="rounded-md border px-4 py-2">Restore profile</button>
           </div>
         </section>
+
+
+
+}
+
         {status && <div className="text-sm text-gray-600">{status}</div>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -419,6 +428,5 @@ if (return) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
 

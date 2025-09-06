@@ -17,6 +17,24 @@ import {
   Star,
   TrendingUp,
   Award,
+
+import {;
+  ArrowRight,;
+  Users,;
+  Calendar,;
+  FileText,;
+  Video,;
+  Globe,;
+  Shield,;
+  Zap,;
+  CheckCircle,;
+  Mail,;
+  Send,;
+  Star,;
+  TrendingUp,;
+  Award,;
+  Clock,;
+
 } from "lucide-react";
   Clock
 } from 'lucide-react';
@@ -124,6 +142,12 @@ export default function NewsletterPage() {
   }
 ];
 
+
+
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+
+
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -154,7 +178,6 @@ export default function NewsletterPage() {
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
-
 
 
               {!isSubscribed ? (
@@ -588,7 +611,6 @@ function NewsletterPage() {
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
-
 
 
               {!isSubscribed && (

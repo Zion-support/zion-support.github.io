@@ -39,6 +39,9 @@
     rating: 4.6
     reviews: 21
   }
+      'Link shortener and branded domains',
+      'UTM builder and traffic quality scoring',
+      'Multi-touch attribution and deduplication',
 
     id: 'affiliate - analytics - hub',
     name: 'Affiliate Analytics Hub',
@@ -62,6 +65,30 @@
     rating: 4 && 4.6,
     reviews: 21,
   },
+
+    color: 'from - emerald - 600 to - teal - 700',
+    text_color: 'text - emerald - 300',
+    link: 'https://ziontechgroup.com / services / affiliate - analytics - hub',
+    market_position:;
+      'Easier than enterprise suites; purpose - built for small teams.',
+    target_audience: 'E - commerce, SaaS, Media',
+    trial_days: 14,
+    setup_time: '1 day',
+    category: 'Developer Tools',
+    real_service: true,
+    technology: ['Next.js', 'PostgreSQL', 'Workers / Edge'],
+    integrations: ['Stripe', 'Shopify', 'WooCommerce'],
+    use_cases: ['Partner programs', 'Influencer payouts'],
+    roi: 'Grow partner - attributed revenue by 10–30%',
+    competitors: ['Impact.com (complex)', 'Tune (enterprise)'],
+    market_size: '$15B+ affiliate tech',
+    growth_rate: '12% CAGR',
+    variant: 'network - futuristic',
+    contact_info: contact,
+    real_implementation: true,
+    implementation_details: 'Webhook ingestion, cookie - less heuristics',
+    launch_date: '2025 - 11 - 01',
+
 
     color: 'from - emerald - 600 to - teal - 700',
     text_color: 'text - emerald - 300',
@@ -343,6 +370,8 @@
 		implementationDetails: 'Lightweight script & edge collection';
 		launchDate: '2025-12-05';
 		customers: 9;
+];
+;
 
 	}
 ];

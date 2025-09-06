@@ -1,4 +1,16 @@
 
+import React, { useState } from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+import { CodeBlock } from "@/components/developers/CodeBlock",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+
+
+export function ApiReference() {
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 
   // Sample endpoint data
 
@@ -84,6 +96,45 @@ function ApiReference() {
         "201": {
           description: "Job created successfully"
           example: `{
+    }
+  ]
+}`
+        }
+      }
+      "field": "title",
+      "error": "Title is required"
+      };
+import React, { useState } from "react",;
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",;
+import { CodeBlock } from "@/components/developers/CodeBlock",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+export function ApiReference() {;
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),;
+  // Sample endpoint data;
+  const endpoints = [;
+    {;
+      id: "get-jobs",;
+      method: "GET",;
+      path: "/api/jobs",;
+      description: "Retrieve a list of job postings with optional filtering",;
+      parameters: [;
+        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },;
+        { name: "category", type: "string", description: "Filter by job category" },;
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },;
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],;
+      responses: {;
+        "200": {;
+          description: "A list of jobs",;
+          example: `{;
+  "jobs": [;
+    {;
+      "id": "job-123",;
+      "title": "Senior React Developer",;
+      "description": "We're looking for an experienced React developer...",;
+      "category": "development",;
+      "budget": {;
+        "min": 5000,;
+
         "max": 10000,;
         "currency": "USD";
       };
@@ -145,6 +196,32 @@ function ApiReference() {
   ];
 }`;
         }
+
+  "id": "job-456",
+  "title": "UX Designer",
+  "description": "Looking for a UX designer with 3+ years experience...",
+  "category": "design",
+  "budget": {
+
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"
+  },
+  "status": "open",
+  "created_at": "2023-05-15T10:12:00Z"
+}`
+        },
+
+        "400": {
+          description: "Bad request"
+          example: `{
+  "error": "validation_error",
+  "message": "Invalid input",
+  "details": [
+    {
+
+
+
       requestExample: `curl -X POST \\
   https://api.zionai.com/v1/api/jobs \\
   -H "Authorization: Bearer YOUR_API_KEY" \\
@@ -257,6 +334,9 @@ function ApiReference() {
                           <span className={`inline-block px-2 py-1 text-xs font-medium rounded mr-3 ${
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :
+                        <CodeBlock
+                          code={response.example}
+                        
 
                     <h4 className="text-lg font-medium text-white mb-3">Example Request</h4>;
                     <CodeBlock
@@ -274,6 +354,8 @@ function ApiReference() {
                             'bg-red-950 text-red-500'
                           }`}>;
                             {status}
+                        <CodeBlock 
+                          code={response.example} 
                           language="json"
                           showLineNumbers={true}
                         />;
@@ -299,4 +381,9 @@ export default ApiReference;
       </div>;
     </ApiDocsLayout>);
 }
+
+;
+export default ApiReference;
+
+;
 export default ApiReference;

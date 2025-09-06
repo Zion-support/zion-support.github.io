@@ -22,10 +22,166 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+  Check
+  Star
+  Zap
+  Shield
+  Users
+  Globe
+  ArrowRight
+  ExternalLink
+  TrendingUp
+  Clock
+  Target
+  Building
+  Rocket
+  Award
+  DollarSign
+  ChartBar
+  Lock
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Zap as ZapIcon
+  Code
+  BookOpen
+  Activity
+  Database as DatabaseIcon
+  Play
+  Mail
+  Phone
+  MapPin
+  Filter
+  Grid
+  List
+  ChevronDown
+  ChevronUp
+  Sparkles
+  FlaskConical
+  Dna
+  Car
+  Leaf
+  Factory
+  Truck
+  Microscope
+  GraduationCap
+  ShieldCheck
+  Brain
+  Atom
+  Globe2
+  Bot
+  Eye
+  Trophy
+  FlaskConical as FlaskIcon
+  Dna as DnaIcon
+  Car as CarIcon
+  Leaf as LeafIcon
+  Factory as FactoryIcon
+  Truck as TruckIcon
+  Microscope as MicroscopeIcon
+  GraduationCap as GraduationCapIcon
+  ShieldCheck as ShieldCheckIcon;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Zap as ZapIcon,
+  Code,
+  BookOpen,
+  Activity,
+  Database as DatabaseIcon,
+  Play,
+  Mail,
+  Phone,
+  MapPin,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
+  Sparkles,
+  FlaskConical,
+  Dna,
+  Car,
+  Leaf,
+  Factory,
+  Truck,
+  Microscope,
+  GraduationCap,
+  ShieldCheck,
+  Brain,
+  Atom,
+  Globe2,
+  Bot,
+  Eye,
+  Trophy,
+  FlaskConical as FlaskIcon,
+  Dna as DnaIcon,
+  Car as CarIcon,
+  Leaf as LeafIcon,
+  Factory as FactoryIcon,
+  Truck as TruckIcon,
+  Microscope as MicroscopeIcon,
+  GraduationCap as GraduationCapIcon,;
+  ShieldCheck as ShieldCheckIcon,;
+
+
 } from 'lucide-react';
 import Button from '../components/ui/Button';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+  revolutionaryMicroSaasServices
+  revolutionaryServiceCategories
+  getRevolutionaryServicesByCategory
+  getPopularRevolutionaryServices
+  getRevolutionaryServicesByPriceRange;
+  revolutionaryMicroSaasServices,
+  revolutionaryServiceCategories,
+  getRevolutionaryServicesByCategory,
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+
+import {;
+  revolutionaryMicroSaasServices,;
+  revolutionaryServiceCategories,;
+  getRevolutionaryServicesByCategory,;
+  getPopularRevolutionaryServices,;
+  getRevolutionaryServicesByPriceRange,;
+
 } from '../data/revolutionary-micro-saas-services';
 import { motion, AnimatePresence } from 'framer-motion';import Button from '../components/ui/Button';
 
@@ -140,6 +296,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
+
 
 
 
@@ -315,6 +472,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
               </motion.h1>
               <motion.p
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -433,8 +591,6 @@ import { Zap, Star, Calendar } from 'lucide-react';
 
 
 
-
-
         {/* Popular Services Showcase */}
         <section className='py-16'>
           <div className='container mx-auto px-4'>
@@ -456,10 +612,16 @@ import { Zap, Star, Calendar } from 'lucide-react';
               variants={containerVariants}
               initial='hidden'
               whileInView='visible'              viewport={{ once: true }}                  Most Popular
+
+
+
+            <motion.div 
+
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+
 
                     onClick={() => setSelectedService(service)}
 
@@ -518,6 +680,8 @@ import { Zap, Star, Calendar } from 'lucide-react';
                     <button
                       onClick={() => setViewMode('list')}
                       className={`px-3 py-2 ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'bg-slate-800 text-gray-400'}`}
+
+
                     </button>;
                   </div>;
                 </div>;
@@ -606,6 +770,7 @@ import { Zap, Star, Calendar } from 'lucide-react';
           {selectedService && (
             <motion.div
               className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'              initial={{ opacity: 0 }}              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+
 
 
 

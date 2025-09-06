@@ -77,6 +77,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   url;
   return (
 
+
   ogImage = '/og-image.jpg';
 }) => {return (;
 const MainLayout: React.FC<MainLayoutProps> = ({;
@@ -112,6 +113,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <meta name="twitter:title" content={title} />;
         <meta name="twitter:description" content={description} />;
         {image && <meta name="twitter:image" content={image} />}
+        <Header />
+        <main className="flex-1">
+          {children}
+        </main>
+        <Footer />
+      </div>
       </Head>;
         <Header />;
         <main className="flex-1">;
@@ -120,6 +127,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({;
         <Footer />;
       </div>;
     </>;
+
   );
 
 export default MainLayout;

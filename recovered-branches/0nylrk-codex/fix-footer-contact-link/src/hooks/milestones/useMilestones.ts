@@ -1,4 +1,6 @@
 
+
+
 import {useState} from 'react';
 import {useLoadMilestones} from './useLoadMilestones';
 import {useCreateMilestone} from './useCreateMilestone';
@@ -14,11 +16,16 @@ import {MilestoneStatus} from './types';
     is_submitting;
     create_milestone;
     updateMilestoneStatus;
+  }
+}
+
 
     update_milestone;
     delete_milestone;
     upload_deliverable: handleUploadDeliverable,
     refetch;
+
+
 import { useState } from 'react',;
 import { useLoadMilestones } from './useLoadMilestones',;
 import { useCreateMilestone } from './useCreateMilestone',;
@@ -51,6 +58,9 @@ export const useMilestones = (projectId?: string) => {;
     deleteMilestone,;
     uploadDeliverable: handleUploadDeliverable;
     refetch;
+
+
+
   }
 }
 ;

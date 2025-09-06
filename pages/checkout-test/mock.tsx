@@ -1,8 +1,18 @@
   const router = useRouter();
+  const router = useRouter();
+  if (!mock) {
+    router.push('/checkout');
+
+  const { mock } = router && router.query;
+
+  if (!mock) {;
+    router && router.push('/checkout');
+
     return <div>Redirecting...</div>;
 
   }
   return (
+  if (!mock) {;
     router.push('/checkout');
     return <div>Redirecting...</div>;
     } catch (error) {
@@ -46,6 +56,9 @@
               In production, users would be redirected to the actual Stripe checkout flow.
             </p>
           </div>
+              <li>• Checkout request received successfully</li>
+              <li>• Mock session ID generated: cs_test_mock_session_id_{Date.now()}</li>
+              <li>• Cart items would be processed</li>
 
 
               <li>• Payment would be handled by Stripe</li>
@@ -79,6 +92,9 @@
                   ← Back to Cart
                 </Link>
               </Button>
+
+
+
                   Continue Shopping
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
@@ -88,6 +104,21 @@
         </div>
       </div>
     </div>
+
+
+}
+
+    <div className='min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4'>;
+      <div className='container mx-auto max-w-2xl'>;
+        <div className='bg-zion-blue-light/80 backdrop-blur-md rounded-lg border border-zion-cyan/20 p-8 text-center'>;
+          <CheckCircle className='h-16 w-16 text-green-400 mx-auto mb-4' />;
+
+
+          <h1 className='text-3xl font-bold text-white mb-4'>;
+
+
+}
+
   )
   } catch (error) {
     console.error("Error:", error);

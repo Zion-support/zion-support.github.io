@@ -1,8 +1,21 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
+const FILE = path.join(DATA_DIR, 'profiles.json');
 
 
 
@@ -70,6 +83,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+
 }
 ;
 const DATA_DIR = path.join (process.cwd (), 'data', 'kyc');const FILE = path.join (DATA_DIR, 'profiles.json');

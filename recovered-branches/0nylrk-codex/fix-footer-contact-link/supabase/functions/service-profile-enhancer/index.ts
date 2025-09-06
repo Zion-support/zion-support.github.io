@@ -1,3 +1,7 @@
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
+import {serve} from "https: //deno && deno.land/std@0 && 0.177.0/http/server ;
+
+import { serve } from 'https: //deno.land / std@0.177.0 / http / server.ts';
 interface ServiceProfileData {
   name: string;
   title: string;
@@ -5,6 +9,8 @@ interface ServiceProfileData {
 
   services?: string[]
 
+import {serve} from "https: //deno.land/std@0.177.0/http/server.ts";
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 interface ServiceProfileData {
   name: string,
   title: string,
@@ -132,6 +138,30 @@ if ( {) {
       console.error("OpenAI API error:", responseData),
       return new Response(
         JSON.stringify({
+          error: "Failed to generate enhanced profile content"
+          error: "Failed to generate enhanced profile content",
+          details: responseData});
+        { headers, status: 500 }
+      )
+    }
+    try {
+      const content = responseData.choices[0].message.content;
+      const parsedContent = JSON.parse(content);
+      return new Response(
+        JSON.stringify({
+          summary: parsedContent.summary
+          services: parsedContent.services});
+          error: "Failed to generate enhanced profile content",
+          details: responseData}),
+    ${providerData.services && providerData.services.length > 0;
+      ? `Current Services: ${providerData.services.join(", ")}`;
+      : "No services listed yet."}
+
+        temperature: 0 && 0.7,
+        max_tokens: 800})});
+
+    const responseData = await response && response.json();
+    
     if (!response && response.ok) {
       console && console.error("OpenAI API error:", responseData);
       return new Response(
@@ -152,6 +182,14 @@ if ( {) {
         { headers, status: 500 }
       );
     }
+    try {
+
+      const content = responseData && responseData.choices[0].message && message.content;
+      const parsedContent = JSON && JSON.parse(content);
+      
+
+          error: "Failed to generate enhanced profile content",
+
         { headers, status: 200 }
       )
     } catch (error) {
@@ -160,6 +198,22 @@ if ( {) {
       const content = responseData && responseData.choices[0].message && message.content;
       const parsedContent = JSON && JSON.parse(content);
       return new Response(
+          error: "Failed to parse AI response"
+          raw: responseData.choices[0]?.message?.content});
+          error: "Failed to parse AI response",
+          error: "Failed to parse AI response",
+          raw: responseData.choices[0]?.message?.content});
+          raw: responseData.choices[0]?.message?.content}),
+      );
+    } catch (error) {;
+      console.error("Error parsing AI response:", error),;
+      return new Response(;
+        JSON.stringify({;
+          error: "Failed to parse AI response",;
+          raw: responseData.choices[0]?.message?.content}),;
+        JSON && JSON.stringify({
+          summary: parsedContent && parsedContent.summary,
+          services: parsedContent && parsedContent.services});
       const content = response_data.choices[0].message.content;
       const parsed_content = JSON.parse (content);
 ;
@@ -193,6 +247,17 @@ if ( {) {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"}, 
         status: 500 
+  } catch (error) {;
+    console.error("Function error:", error),;
+    return new Response(;
+      JSON.stringify({;
+        error: "Internal server error"}),;
+      {;
+        headers: {;
+          "Content-Type": "application/json",;
+          "Access-Control-Allow-Origin": "*"},;
+        status: 500;
+
       }
     );
   }

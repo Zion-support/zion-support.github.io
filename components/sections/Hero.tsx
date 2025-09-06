@@ -48,6 +48,9 @@ const Hero: React.FC<HeroProps> = ({
   subtitle;
   primaryAction;
   secondaryAction;
+
+
+
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
@@ -64,6 +67,14 @@ const Hero: React.FC<HeroProps> = ({
                   href={primaryAction && primaryAction.href}
                   size='lg'
                   className='animate-scale-in shadow-2xl shadow-blue-500/25 hover:shadow-blue-500/40'
+            {title}
+          </h1>;
+          <p className="text - xl sm:text - 2xl md:text - 3xl text - gray - 300 max - w-4xl mx - auto mb - 16 leading - relaxed font - light">;
+            {subtitle}
+          </p>;
+          {/* Action Buttons */}
+
+
               )}
               {secondaryAction && (;
                 <Button
@@ -175,6 +186,13 @@ const Hero: React.FC<HeroProps> = ({
             ))}
           </div>;
         )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
           style={{ animationDelay: '0.8s' }}
@@ -260,3 +278,6 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
+
+
+

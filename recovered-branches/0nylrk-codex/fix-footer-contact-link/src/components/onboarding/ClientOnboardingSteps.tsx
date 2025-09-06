@@ -1,4 +1,18 @@
 
+import React from "react",
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react";
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
+export function ClientOnboardingSteps() {
+
+
+  const onboardingStatus = useOnboardingStatus();
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",
+
+export function ClientOnboardingSteps() {
+  const onboardingStatus = useOnboardingStatus(),
+  
   const steps: OnboardingStep[] = [
     {
       id: "post-job"
@@ -15,6 +29,12 @@
       action: "Find Talent"
     }
     {
+import React from "react",;
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
+import { PlusCircle, SendIcon, InboxIcon } from "lucide-react",;
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
+export function ClientOnboardingSteps() {;
+  const onboardingStatus = useOnboardingStatus(),;
   const steps: OnboardingStep[] = [;
     {;
       id: "post-job",;
@@ -30,6 +50,10 @@
     {;
       id: "response",;
       label: "Receive your first application",;
+
+  return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
+
+
 }
 
 import React from './react';

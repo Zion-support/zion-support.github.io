@@ -22,6 +22,9 @@ import { useTalentDirectory } from "@/hooks/useTalentDirectory",
 import { SORT_OPTIONS } from "@/data/sortOptions",
 import { X } from "lucide-react",
 
+  // Use our custom hook to manage state;
+  const {;
+
   const navigate = useNavigate();
   // Use our custom hook to manage state
   const {

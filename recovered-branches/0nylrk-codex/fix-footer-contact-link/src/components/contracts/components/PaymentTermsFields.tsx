@@ -7,6 +7,7 @@ import {MilestoneSuggestions} from "@/components/projects/milestones/MilestoneSu
 import {TalentProfile} from "@/types/talent";
 import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
 import {ContractFormValues} from "./ContractForm";
+
 import { UseFormReturn } from "react-hook-form",
 import { 
   FormField;
@@ -25,6 +26,8 @@ import {
 } from "@/components/ui/select",
 import { MilestoneSuggestions } from "@/components/projects/milestones/MilestoneSuggestions",
 import { TalentProfile } from "@/types/talent",
+
+
 interface PaymentTermsFieldsProps {
 
   form: UseFormReturn<ContractFormValues>
@@ -83,6 +86,8 @@ function PaymentTermsFields() {
               </Select>
               <FormMessage />
             </FormItem>
+
+
           )}
 
         />;

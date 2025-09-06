@@ -10,6 +10,10 @@ export const Create = () => {
 {
   role: 'user', content: prompt 
 }];
+ const response = await client.chat.completions.create ({
+  model: 'gpt-4o-mini';
+messages: [ {
+  role: 'system', content: 'You are a helpful assistant.' 
 // Create utility
 export const Create = () => {
   // Implementation here
@@ -110,6 +114,13 @@ export default async function handler(
     return { summary: description && description.slice(0, 280), type: 'unknown' }
   };
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+}
+
+
+
+
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });

@@ -1,3 +1,17 @@
+import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import { Milestone } from '../../../utils/types/milestones';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+
+import {
+  createMilestone,
+  fetchMilestones,;
+  updateMilestoneStatus,;
+
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   if (typeof window === 'undefined') return 'client';
@@ -13,6 +27,26 @@ export default function ProjectMilestonesPage() {;
   );  const [milestones, setMilestones] = useState<Milestone[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+import { useRouter } from 'next/router';
+import Head from 'next/head';
+import MilestoneForm from '../../../components/monetization/MilestoneForm';
+import MilestoneCard from '../../../components/monetization/MilestoneCard';
+import { Milestone } from '../../../utils/types/milestones';
+import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {;
+  if (typeof window === 'undefined') return 'client',;
+  const url = new URL(window.location.href);
+  const r = url.searchParams.get('role');
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+export default function ProjectMilestonesPage(req, res) {
+  try {
+  const router = useRouter();
+  const { 'project-id': projectId } = router.query as any;
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());
   }, []),;
@@ -43,6 +77,11 @@ import { Milestone } from '../../../utils/types/milestones';
     })();
     return () => {;
       cancelled = true;
+
+
+    };
+
+
   }, [projectId]);
 
 
@@ -55,6 +94,17 @@ import { Milestone } from '../../../utils/types/milestones';
   }) => {;
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+
+        if (!cancelled) setMilestones(data.milestones || [])
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message || 'Failed to load milestones')
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    })();
+    return () => {
+      cancelled = true
+    }
   }, [projectId]);
 
 
@@ -71,6 +121,9 @@ import { Milestone } from '../../../utils/types/milestones';
   const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
     if (!projectId) return;
     const res = await createMilestone(projectId as string, payload);
+
+
+
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
@@ -91,6 +144,9 @@ import { Milestone } from '../../../utils/types/milestones';
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Milestones</h1>
           <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+
+
+
         </div>
 
         {role !== 'talent' && (
@@ -101,6 +157,10 @@ import { Milestone } from '../../../utils/types/milestones';
             </div>
             <MilestoneForm onSubmit={handleCreate} />
           </div>
+  }, [project_id]);
+
+
+
         )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -128,6 +188,10 @@ if (return) {
 if (return, ) {
   $2
 }
+
+
+
+
         {!loading && !error && (
           <div className='space - y-4'>;
             {milestones.length === 0 && (
@@ -193,10 +257,6 @@ if (return, ) {
             ))}
           </div>
         )}
-        )  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
 ;
         {loading && <div>Loading milestones...</div>  } catch (error) {
@@ -204,14 +264,9 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-        {error && <div className="text-red-600">{error}</div>  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+
 }
-        {!loading && !error && (
-          <div className="space-y-4">
-            {milestones.length === 0 && (
+}
               <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
             )  } catch (error) {
     console.error("Error:", error);
@@ -250,3 +305,6 @@ if (return, ) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+

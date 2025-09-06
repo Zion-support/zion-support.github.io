@@ -1,3 +1,6 @@
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+interface ChatMessageProps {
 
   role: 'user' | 'assistant'
   message: string
@@ -8,10 +11,26 @@ interface ChatMessageProps {;
   message: string,;
 
   timestamp?: Date;
+import { cn } from "@/lib/utils",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+
+
+
 interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
   timestamp?: Date,
+
+export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
+  const isUser = role === 'user';
+export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
+
+  const isUser = role === 'user';
+  const isUser = role === 'user',
+  
+
+
+
   return (
     <divclassName={cn(
       "flex items-start gap-2"
@@ -39,6 +58,9 @@ interface ChatMessageProps {
         <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && (
           <div className="text-xs text-zion-slate mt-1 text-right">
+
+};
+
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 interface ChatMessageProps {;

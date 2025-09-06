@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
@@ -31,6 +32,42 @@ export default async function handler(
       downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
     });
   } catch (error: any) {
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { buildPressRelease } from '../../../utils/mediaKit';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const { type = 'launch', companyName = 'Zion', date = new Date().toISOString().substring(0,10), raiseAmount, tokenName } = req.body || {};
+
+    const apiKey = process.env.OPENAI_API_KEY;
+    if (apiKey) {
+      try {
+        const { OpenAI } = await import('openai');
+        const client = new OpenAI({ apiKey });
+        const prompt = `Write a concise ${type} press release for ${companyName} (date ${date}) with clear headlines, 2 paragraphs, and one quote.`;
+        const completion = await client.chat.completions.create({
+          model: 'gpt-4o-mini',
+          messages: [
+            { role: 'system', content: 'You are a seasoned tech PR writer.' },
+            { role: 'user', content: prompt }
+          ],
+          temperature: 0.4,
+          max_tokens: 500
+        });
+        const text = completion.choices?.[0]?.message?.content?.trim();
+        if (text) {
+          res.status(200).json({ ok: true, text });
+          return;
+        }
+      } catch (_) {
+        // fall through to template
+      }
+    console && console.error("Press release generation error:", error);
+    return res && res.status(500).json({
       contact_email = "press@zion.com",
     } = req.body || {}
 ;
@@ -41,6 +78,18 @@ if ( {) {
       res.set_header ("Allow", "POST");
       return res.status (405).json ({ error: "Method not allowed" });
     }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {

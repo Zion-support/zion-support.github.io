@@ -1,3 +1,9 @@
+</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+import React from 'react';
+
+ </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+
+
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
 }</span>) )
@@ -170,6 +176,9 @@ const ReportsPage: React.FC = () => {
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;
 
                           {tag}
+
+
+
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -218,6 +227,9 @@ const ReportsPage: React.FC = () => {
                 >;
                   <div className={`w - 16 h - 16 bg - gradient - to - br ${report.color} rounded - xl flex items - center justify - center text - white mb - 6`}>;
                     {report.icon}
+
+
+
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;

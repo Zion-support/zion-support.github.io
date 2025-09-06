@@ -1,3 +1,13 @@
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
+  threshold = 0.1
+  width
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
+
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
+  threshold = 0.1,
+  width,
+  height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({;
+
   src;
   alt;
   className = ''
@@ -90,6 +100,7 @@ if ( {) {
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
+
       />
 
 
@@ -101,3 +112,27 @@ if ( {) {
           src={src}
           alt={alt}
           onLoad={handleLoad}
+    </div>
+
+    </div>
+    </div>
+
+
+          className='w - full h - full object - cover';
+          loading='lazy'          style={{ width, height }}
+        />)}
+    </div>);
+}
+;
+export default LazyImage;          className="w - full h - full object - cover";
+          loading="lazy";
+          style={{ width, height }}
+        />)}
+    </div>);
+}
+;
+export default LazyImage);
+}
+;
+export default LazyImage;
+;

@@ -13,6 +13,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
     <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>;
       <div className='max-w-7xl mx-auto'>;
         {/* Header */}
+  return (
+    <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
 
         <motion&& motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  }
@@ -343,6 +349,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   </div>;
                 </div>;
 
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion.div 
+        {visibleServices < filteredServices && filteredServices.length && (;
+          <motion&& motion.div
+            className='text-center'            initial={{ opacity: 0 }}          <motion && motion.div 
+
             className="text-center"
 
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
@@ -360,12 +372,17 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             viewport={{ once: true }}>;
             <button
               onClick={loadMore}
+
             >
               Load More Revolutionary Services
             </button>
           </motion.div>
         )}
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
+          className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
+
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8 }}
@@ -411,6 +428,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
       </div>
     </section>
 };
+export default RevolutionaryServicesShowcase;  );
 
   )
 
@@ -422,3 +440,4 @@ export default RevolutionaryServicesShowcase;
 };
 
 
+export default RevolutionaryServicesShowcase;

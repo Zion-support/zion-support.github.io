@@ -1,5 +1,10 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
+  currentLanguage: SupportedLanguage
+  changeLanguage: (lang: SupportedLanguage) => Promise<void>
+  isRTL: boolean
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
+}
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
@@ -21,6 +26,10 @@ const defaultLanguageContext: LanguageContextType = {
 
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({
+  children
+  authState = { isAuthenticated: false, user: null }
+}) => {
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
   children, 
@@ -75,11 +84,18 @@ if ( {) {
           const { error } = await supabase;
             .from('profiles');
 
+
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
         }
       }
+
+
+    };
+    
+
+
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -117,11 +133,20 @@ if ( {) {
           .from('profiles');
           .update({ preferred_language: lang });
           console.error('Error updating language preference:', error);
+
+
+
         }
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
+
+
+  };
+  
+
+
   return (
     <LanguageContext.Provider
       value={{
@@ -137,6 +162,13 @@ if ( {) {
         changeLanguage,;
         isRTL;
         supportedLanguages;
+      }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  )
+
+
       }}
     >
       {children}

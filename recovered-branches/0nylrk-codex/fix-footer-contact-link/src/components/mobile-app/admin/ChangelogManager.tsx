@@ -1,7 +1,24 @@
 
+import React, { useState } from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Plus, Trash2 } from "lucide-react";
+import { AppPlatform } from "./MetadataManager";
+import { Plus, Trash2 } from "lucide-react",
+import { AppPlatform } from "./MetadataManager",
+
+
+
+
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
+
+              onClick={handleAddEntry}
+              disabled={!newEntry.version |!newEntry.changes}
+
 
 import React, { useState } from "react",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -91,17 +108,10 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 onChange={handleInputChange}
               />;
             </div>;
+
+
+
               onClick={handleAddEntry}
-
-              disabled={!newEntry && newEntry.version || !newEntry && newEntry.changes}>;
-              <Plus className="mr-2 h-4 w-4" />;
-              Add;
-            </Button>;
-          </div>;
-
-
-
-          
 
           <Textarea
             placeholder="What's new in this version?"
@@ -109,6 +119,8 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
             value={newEntry && newEntry.changes}
             onChange={handleInputChange}
             rows={3}
+
+
           <div className="border-t border-zion-purple/20 pt-4 space-y-4">
             {entries.map((entry) => (
           />;
@@ -137,11 +149,35 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
                 <p className="text-sm whitespace-pre-wrap">{entry && entry.changes}</p>;
               </div>;
             ))}
+              <p className="text-center text-gray-400 py-4">
+                No changelog entries yet
+              </p>
+            )}
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+            
+            {entries.length === 0 && (
+);
+              <p className="text-center text-gray-400 py-4">No changelog entries yet</p>
+
+
+            {entries && entries.length === 0 && (;
+              <p className="text-center text-gray-400 py-4">;
+                No changelog entries yet;
+              </p>;
+
             )}
           </div>;
         </div>;
       </CardContent>;
     </Card>;
+}
+
       id: "1",
       version: "1.0.0",
       date: "2025 - 05 - 15",

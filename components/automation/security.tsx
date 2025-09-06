@@ -1,3 +1,14 @@
+ 
+};
+</pre> </div>) 
+
+
+export default function SecurityAudit({ report }: Props) {
+};
+</pre> </div>)
+ 
+};
+</pre> </div>) 
 
 
 export default function SecurityAudit({ report }: Props) {
@@ -11,6 +22,11 @@ export default function SecurityAudit({ report }: Props) {
       {report.generatedAt && (
         <div className="text-sm text-gray-500">Generated at: {new Date(report.generatedAt).toLocaleString()}</div>
       )}
+
+
+    </div>;
+
+
 );
 }
   );

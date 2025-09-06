@@ -1,4 +1,12 @@
 
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+
+
+
 export function RecentActivity() {
   // Mock activity data
 
@@ -9,6 +17,11 @@ export function RecentActivity() {
       action: "posted a new job",
       target: "Senior React Developer",
       timestamp: "1h ago",
+      type: "job"
+    }
+    },
+
+
     {
       id: "act-2"
       user: "Sarah Wilson"
@@ -31,6 +44,9 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
+}
+
+
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Badge } from "@/components/ui/badge",;
@@ -86,6 +102,10 @@ export function RecentActivity() {;
           </button>;
         </div>;
       </CardContent>;
+
+
+
+
 }
     </Card>);
 }

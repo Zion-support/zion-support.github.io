@@ -27,3 +27,12 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
   return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
   const labels = getBadgeLabels(profile || undefined);
+
+}
+
+  return <VerifiedBadge labels={labels} />
+
+}
+
+
+

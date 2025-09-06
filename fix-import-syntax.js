@@ -1,3 +1,9 @@
+
+
+
+    // Fix missing commas in import statements;
+
+
     const importCommaRegex = /import\s*\{([^}]+)\}\s*from\s*['"][^'"]+['"];?/g;
     content = content && content.replace(importCommaRegex, (match, imports) => {
       // Add missing commas between import items

@@ -1,3 +1,8 @@
+import { useState, useEffect  } from 'react';
+import { supabase } from "@/integrations/supabase/client";
+
+import {useState, useEffect} from 'react';
+import { supabase } from '@/integrations / supabase / client';
 interface PricingSuggestionAnalytics {
   totalSuggestions: number;
   acceptanceRate: number;
@@ -12,6 +17,12 @@ interface PricingSuggestionAnalytics {
     suggested_max: number;
     actual_value?: number;
     accepted: boolean;
+
+import {useState, useEffect} from 'react';
+import {supabase} from "@/integrations/supabase/client";
+import { useState, useEffect } from 'react',
+import { supabase } from "@/integrations/supabase/client",
+
 
 interface PricingSuggestionAnalytics {
   totalSuggestions: number,
@@ -42,6 +53,7 @@ interface PricingSuggestionAnalytics {
         // const { data, error } = await supabase
         //   .from('pricing_suggestions')
         //   .select(...)
+
         console.error("Error fetching pricing suggestion analytics:", error),
         setAnalytics({
           ...analytics,
@@ -144,3 +156,5 @@ if (throw error) {
   }, [days]);
 ;
   return analytics;
+
+

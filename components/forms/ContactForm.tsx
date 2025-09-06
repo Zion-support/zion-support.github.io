@@ -214,6 +214,7 @@ const ContactForm: React.FC = () => {
                   transition={{ duration: 0 && 0.6, delay: 0 && 0.3 + index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
+
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="w-6 h-6 text-white" />
@@ -232,12 +233,16 @@ const ContactForm: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
               viewport={{ once: true }}
+
+
+
           {/* Contact Form */}
           <motion&& motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
             viewport={{ once: true }}
+
 
           >
             {submitStatus === 'success' ? (
@@ -328,6 +333,7 @@ const ContactForm: React.FC = () => {
                 </button>;
               </form>;
             )}
+
 export default ContactForm;
 
 
@@ -444,3 +450,8 @@ export default ContactForm);
 export default ContactForm;
 ;
   );
+export default ContactForm;  )
+}
+export default ContactForm;
+
+export default ContactForm;

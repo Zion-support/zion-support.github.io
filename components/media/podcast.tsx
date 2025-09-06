@@ -338,6 +338,7 @@ if (return <div > Loading episodes…</div>) {
       </ul>;
     </div>);
 }
+}
 
 
 }

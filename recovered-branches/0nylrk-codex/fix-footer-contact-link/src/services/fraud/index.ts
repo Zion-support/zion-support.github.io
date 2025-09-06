@@ -4,6 +4,9 @@ export const Index = () => {
   return null;
 };
 
+export * from './signupCheck';
+
+
 // This file re-exports all fraud detection functionality;
 // to maintain backward compatibility;
 export * from './analyzeContent',;

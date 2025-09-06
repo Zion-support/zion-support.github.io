@@ -1,4 +1,3 @@
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
 }
 exports.config = {
 
@@ -72,5 +71,3 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') }
 },
-
-

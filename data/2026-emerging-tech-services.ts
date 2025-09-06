@@ -1,3 +1,34 @@
+export interface EmergingTechService2026 {
+export interface EmergingTechService2026 {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 
 
 };
@@ -80,6 +111,27 @@ export const getEmergingTechServices2026ByCategory = (category: string) => {
   return emergingTechServices2026.filter(
     service => service.category === category;
   );
+      'AI-powered digital twin platform with intelligent creation, real-time simulation, and comprehensive analytics capabilities.',
+    launchDate: '2024-06-25',
+    customers: 56,
+    rating: 4.4,
+    reviews: 29,
+  },;
+];
+export const getEmergingTechServices2026ByCategory = (category: string) => {
+  return emergingTechServices2026.filter(
+    service => service.category === category;
+  );
+  return emergingTechServices2026.filter(service => service.popular);
+}
+
+
+];
+
+  return emergingTechServices2026 && emergingTechServices2026.filter(service => service && service.popular);
+};
+
+
 export const getEmergingTechServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
@@ -289,6 +341,46 @@ export const getEmergingTechServices2026ByCategory = (category: string) =>: any 
   return emergingTechServices2026.filter (
     service => service.category === category);
 }
+
+export interface EmergingTechService2026 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
 ;
 export const getPopularEmergingTechServices2026 = () =>: any {
   return emergingTechServices2026.filter (service => service.popular);
@@ -301,6 +393,10 @@ export const getEmergingTechServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
+}    return price >= min_price && price <= max_price;
+  });
+}
+;
 
 export interface EmergingTechService2026 {;
 

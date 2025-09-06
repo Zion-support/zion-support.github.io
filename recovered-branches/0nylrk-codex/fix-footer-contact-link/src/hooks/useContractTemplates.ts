@@ -1,3 +1,26 @@
+import { useState } from "react",
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",
+import { supabase } from "@/integrations/supabase/client",
+import { useToast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { ContractTemplate } from "@/types/contracts";
+import { ContractFormValues } from "@/components/contracts/components/ContractForm";
+export function useContractTemplates() {
+  const { user, isAuthenticated } = useAuth();
+
+
+
+  const queryClient = useQueryClient();
+  const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+import { ContractTemplate } from "@/types/contracts",
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+export function useContractTemplates() {
+  const { user, isAuthenticated } = useAuth(),
+  const queryClient = useQueryClient(),
+  const { toast } = useToast(),
+  const [isLoading, setIsLoading] = useState(false),
+
   // Fetch templates for the current user
   const {
     data: templates = []
@@ -10,6 +33,14 @@
     queryFn: async () => {
       if (!isAuthenticated |!user) {
         return []
+      }
+      return data as ContractTemplate[]
+    }
+    enabled: isAuthenticated && !!user
+  });
+
+
+
 import { useState } from "react",;
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -41,6 +72,9 @@ export function useContractTemplates() {;
         .order('created_at', { ascending: false }),;
       if (error) {;
         throw error;
+
+
+
       }
       return data as ContractTemplate[]
     }
@@ -58,6 +92,13 @@ export function useContractTemplates() {;
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
+      const { data, error } = await supabase;
+        .from ('contract_templates');
+        .select ('*');
+        .order ('is_default', { ascending: false });
+        .order ('created_at', { ascending: false });
+
+    };
 ;
       // Check condition
 if ( {) {
@@ -109,6 +150,9 @@ if ( {) {
       }
 
     },
+
+
+
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -120,6 +164,19 @@ if ( {) {
           await supabase
             .from('contract_templates')
             .update({ is_default: false })
+    }
+    };
+
+      template_data: ContractFormValues,
+      is_default?: boolean;
+    }) => {
+      if (throw new Error ("User not authenticated")) {
+  $2
+}
+      setIsLoading (true);
+
+    };
+
     },;
     onSuccess: () => {;
       queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] }),;
@@ -165,6 +222,9 @@ if ( {) {
       }
 
     },
+
+
+
     onSuccess: () => {
       queryClient && queryClient.invalidateQueries({ queryKey: ['contractTemplates', user?.id] });
       toast({
@@ -241,6 +301,11 @@ if ( {) {
       toast({
         title: "Default template set"
         description: "Default contract template has been updated."})
+
+
+    };
+
+
     onError: (error: Error) => {
       console && console.error("Error setting default template:", error);
       toast({
@@ -277,6 +342,10 @@ if ( {) {
     update_template;
     delete_template,
     setDefaultTemplate;
+
+
+
+
   }
 }
 import { useState } from "react",;

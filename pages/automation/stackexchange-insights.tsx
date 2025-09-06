@@ -1,3 +1,17 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/stackexchange-insights.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/stackexchange-insights.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/stackexchange-insights.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/stackexchange-insights.json',
+
+
 export default function StackExchangeInsightsPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)

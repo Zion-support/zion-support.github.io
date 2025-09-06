@@ -1,3 +1,6 @@
+  children: React.ReactNode;
+}) {
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {

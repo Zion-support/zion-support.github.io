@@ -1,4 +1,14 @@
 
+
+
+import {Users, Shield, Briefcase, Award, Settings, Globe} from "lucide-react";
+
+import React from "react",
+import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",
+
+
+
+
 const features = [
 import React from './react';
 import { Users, Shield, Briefcase, Award, Settings, Globe } from './lucide-react';
@@ -44,6 +54,11 @@ const features = [;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div
+}
+};
+
+};
+
 import React from "react",;
 import { Users, Shield, Briefcase, Award, Settings, Globe } from "lucide-react",;
 

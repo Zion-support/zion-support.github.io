@@ -1,6 +1,12 @@
+
+import {supabase} from "@/integrations/supabase/client";
+
 import type { UserDetails } from "@/types/auth";
 import { supabase } from "@/integrations/supabase/client",
 import type { UserDetails } from "@/types/auth",
+
+
+
 /**
  * Utility function to clean up authentication state
  * This helps prevent auth state inconsistencies and "limbo" states
@@ -11,6 +17,19 @@ export const cleanupAuthState = () => {
   Object.keys(localStorage).forEach((key) => {
     if (key.startsWith('supabase.auth.') |key.includes('sb-')) {
       localStorage.removeItem(key)
+    }
+  })
+}
+
+  Object && Object.keys(sessionStorage || {}).forEach((key) => {
+    if (key && key.startsWith('supabase && supabase.auth.') || key && key.includes('sb-')) {
+      sessionStorage && sessionStorage.removeItem(key)
+
+    }
+  })
+}
+
+
 import { supabase } from "@/integrations/supabase/client",;
 import type { UserDetails } from "@/types/auth",;
 /**;
@@ -70,6 +89,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
           campaign_type: "welcome_series",
           template_name: "welcome_email",
           template_data: {
+  }
+}
+
+
+
             user_id: user.id,
             email_type: "welcome_series",
             user_type: user.userType || "unknown",
@@ -108,6 +132,9 @@ export const checkNewRegistration = async (user: UserDetails) => {;
         });
     }
   } catch (error) {
+
+
+
   }
 }
 

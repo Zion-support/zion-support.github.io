@@ -1,4 +1,17 @@
 
+export default function EpisodePage() {
+export default function EpisodePage() {;
+
+export default function EpisodePage() {
+  const router = useRouter();
+  const { id } = router.query as { id?: string };
+  const [episode, setEpisode] = useState<any>(null);
+
+export default function EpisodePage() {
+
+
+export default function EpisodePage() {
+
   const router = useRouter();
   const { id } = router.query as { id?: string }
   const [episode, setEpisode] = useState<any>(null);

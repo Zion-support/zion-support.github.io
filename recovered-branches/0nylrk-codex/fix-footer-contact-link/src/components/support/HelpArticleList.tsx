@@ -6,10 +6,43 @@ import {
   CardTitle
 } from "@/components/ui/card";
 
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+
+
 interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
   searchQuery: string
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleListProps {;
+  categoryId: string,;
+  onArticleSelect: (articleId: string) => void,;
+  searchQuery: string;
+}
+;
+export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),;
+  if (!category) {;
+    return <div>Category not found</div>;
+
+
+  }
+  
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -60,6 +93,24 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
+  })
+}
+;
+function formatDate(date: string): string {;
+
+    </div>;
+  );
+}
+
+function formatDate(): any (date: string): string {;
+  return new Date(date).toLocaleDateString("en-US", {;
+    year: "numeric",;
+    month: "long",;
+    day: "numeric";
+
+  });
+}
+
 import React from './react';
 import {
   Card,

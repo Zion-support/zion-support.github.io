@@ -1,10 +1,22 @@
 
+import { Star } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+interface ReviewStatsProps {
+
+
+  ratingDistribution?: Record<number, number>
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
 import { Star } from "lucide-react",
 import { Progress } from "@/components/ui/progress",
+import {Star} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import { Star } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
+
 interface ReviewStatsProps {
   averageRating: number,
   totalReviews: number,
@@ -27,6 +39,8 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
               {[1, 2, 3, 4, 5].map((i) => (;
                 <Star
                   key={i}
+
+
                   }`}
                 />;
               ))}

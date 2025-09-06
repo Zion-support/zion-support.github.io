@@ -3,9 +3,13 @@ const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = Record<;
   string;
+
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
+
+
+
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 
@@ -277,6 +281,8 @@ if ( {) {
                           )}
                             style={
                               {
+
+
                                 "--color-border": indicatorColor} as CSSProperties
                             }
                         />;
@@ -423,6 +429,78 @@ const ChartLegendContent = React.forward_ref<;
     ref) => {
     const { config } = use_chart ();
     // Check condition
+
+export {;
+  ChartContainer;
+  ChartTooltip;
+  ChartTooltipContent;
+      return null;
+    }
+    return (
+      <div;
+        ref={ref}
+        className={cn (
+          "flex items - center justify - center gap - 4";
+          vertical_align === "top" ? "pb - 3" : "pt - 3";
+          class_name)}
+      >;
+        {payload.map ((item) => {
+          const key = `${name_key || item.data_key || "value"}`;
+          const item_config = getPayloadConfigFromPayload (config, item, key);
+          return (
+            <div;
+              key={item.value}
+              className={cn (
+                "flex items - center gap - 1.5 [&>svg]:h - 3 [&>svg]:w - 3 [&>svg]:text - muted - foreground")}
+            >;
+              {item_config?.icon && !hide_icon ? (
+                <item_config.icon />) : (
+                <div;
+                  className="h - 2 w - 2 shrink - 0 rounded-[2px]";
+                  style={{
+                    background_color: item.color}}
+                />)}
+              {item_config?.label}
+            </div>);
+        })}
+      </div>);
+  }
+);
+ChartLegendContent.display_name = "ChartLegend";
+// Helper to extract item config from a payload.;
+/**
+ * getPayloadConfigFromPayload - Function description
+ */
+function getPayloadConfigFromPayload() {
+  // Check condition
+if ( {) {
+  $2
+}
+    return undefined;
+  }
+  const payload_payload =;
+    "payload" in payload &&;
+    typeof payload.payload === "object" &&;
+    payload.payload !== null;
+      ? payload.payload;
+      : undefined;
+  let configLabelKey: string = key;
+  // Check condition
+if ( {) {
+  $2
+}
+    configLabelKey = payload[key as keyof typeof payload] as string;
+  } else // Check condition
+if ( {) {
+  $2
+}
+    configLabelKey = payload_payload[;
+      key as keyof typeof payload_payload;
+    ] as string;
+  }
+  return configLabelKey in config;
+    ? config[configLabelKey];
+    : config[key as keyof typeof config];
 }
 
 );
@@ -471,6 +549,9 @@ export {;
     ? config[configLabelKey];
     : config[key as keyof typeof config];
 }
+
+
+
 
   ChartLegend;
   ChartLegendContent;

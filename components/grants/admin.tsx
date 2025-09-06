@@ -1,3 +1,8 @@
+export default function GrantsAdminPage() {;
+
+export default function GrantsAdminPage() {
+
+export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);

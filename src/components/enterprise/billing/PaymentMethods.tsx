@@ -131,6 +131,8 @@ export function PaymentMethods() {;
             </div>;
           </div>;
         ))}
+        <Button className="gap-1">
+
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>

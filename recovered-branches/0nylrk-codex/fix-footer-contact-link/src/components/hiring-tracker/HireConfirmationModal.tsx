@@ -1,3 +1,10 @@
+import {
+  Dialog;
+  DialogContent;
+  DialogDescription;
+  DialogHeader;
+
+
 import React, { useState } from 'react',
 import {
   Dialog,
@@ -23,6 +30,14 @@ import {supabase} from "@/integrations/supabase/client";
 import {TalentProfile} from "@/types/talent";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication} from "@/types/jobs";
+  isOpen;
+
+export function HireConfirmationModal({ ;
+
+
+  isOpen;
+  onClose, ;
+  candidateData, ;
   application;
   onConfirm;
   isSubmitting = false;
@@ -102,6 +117,9 @@ export function HireConfirmationModal({;
         description: 'Please fill in both project name and description.',;
         variant: 'destructive'}),;
       return;
+
+
+
     }
     if (!user) {
       toast({
@@ -116,6 +134,41 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
+
+
+
+  // Get talent information from either candidateData or application;
+  const talentData = candidateData || (application?.talent_profile as TalentProfile);
+
+  const handleHireCandidate = async () => {;
+    if (!projectName || !projectDescription) {;
+      toast({;
+        title: 'Required fields missing',;
+        description: 'Please fill in both project name and description.',;
+        variant: 'destructive'}),;
+      return;
+    }
+
+    if (!user) {;
+      toast({;
+        title: 'Not authenticated',;
+        description: 'You must be logged in to hire a candidate.',;
+        variant: 'destructive'}),;
+      return;
+    }
+
+    if (!talentData) {;
+      toast({;
+        title: 'Missing talent data',;
+        description: 'Talent information is missing.',;
+        variant: 'destructive'}),;
+      return;
+
+    }
+    }
+
+
+
     setIsLoading(true);
 
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
@@ -279,6 +332,9 @@ if ( {) {
           return;
         }
       }
+
+  };
+
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -357,6 +413,9 @@ if ( {) {
     }
 
   },
+
+
+
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>

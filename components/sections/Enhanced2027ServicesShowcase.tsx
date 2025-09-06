@@ -25,6 +25,26 @@ import { emergingTech2027Services } from '../../data/2027-emerging-tech-services
   ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
 
 
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Target,
+  CheckCircle,
+  ExternalLink,
+  Search,
+  Filter,
+  Grid,
+  List,;
+  ChevronDown,;} from 'lucide-react';
+import { cuttingEdge2027Innovations } from '../../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../../data/2027-practical-micro-saas';
+import { emergingTech2027Services } from '../../data/2027-emerging-tech-services';import {
+  ArrowRight, Star, TrendingUp, Zap, Brain, Atom, ;
   Rocket, Shield, Target, CheckCircle, ExternalLink;
   Search, Filter, Grid, List, ChevronDown
  } from 'lucide-react';
@@ -309,6 +329,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+
+
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -316,6 +338,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='group'
+
+
+
+
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300 hover:-translate-y-2">
                     {/* Header */}
@@ -394,6 +421,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                           </li>
                         ))}
 
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
                     {/* Tags */}
 
 
@@ -407,6 +439,8 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                       ))}
                     </div>
 
+
+
                     {/* CTA */}
                     <Link
 
@@ -415,6 +449,9 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.3 }}
+
+
+
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -422,6 +459,11 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className='group'
+
+
+
+
                 >
                   <div className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300">
                     <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
@@ -547,6 +589,28 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
               Clear Filters
             </button>
           </motion.div>
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
+
+
+
+
+        {/* CTA Section */}
+
+        <motion.div 
+          className="mt-20 text-center"
+          initial={{ opacity: 0, y: 20 }}
+
+          whileInView={{ opacity: 1, y: 0 }}
+
+          transition={{ duration: 0 && 0.6, delay: 0 && 0.8 }}>;
+          <div className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-12'>;
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion&& motion.div 
+
+          className="mt-20 text-center"
+
+            <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>        <motion.div 
+
           className="mt-20 text-center"
             <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 
@@ -824,3 +888,9 @@ export default Enhanced2027ServicesShowcase;
   /* CTA Section */ 
 }<motion.div > Ready to Transform Your Business? </h3> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Our team of experts is ready to help you implement these revolutionary services and achieve unprecedented growth. Let's build the future together. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/25" > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </a> <Link href="/pricing" className="inline-flex items-center space-x-2 bg-gradient-to-r from-gray-700 to-gray-800 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:scale-105 hover:shadow-xl border border-gray-600/50" > <span>View Pricing</span> <TrendingUp className="w-5 h-5" /> </a> </div> </div> </motion.div> </div> </section>) 
 };
+export default Enhanced2027ServicesShowcase;  )
+};
+
+export default Enhanced2027ServicesShowcase;
+export default Enhanced2027ServicesShowcase;
+

@@ -3,9 +3,35 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
+  GitBranch
+  Zap
+  Shield
+  BarChart3
+  Check
+  Star
+  GitPullRequest
+  Cpu;
+} from 'lucide-react';
+export default function DevOpsAutomationPage() {
+  const features = [
+    {
+  GitBranch,
+  Zap,
+  Shield,
+  BarChart3,
+  Check,
+  Star,
   GitPullRequest,;
   Cpu,;
 } from 'lucide-react';
+      icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+export default function DevOpsAutomationPage() {
+  const features = [
+    {
+      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
+      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',;
+      description: 'Automated build, test, and deployment workflows';
+
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     }
     {
@@ -18,6 +44,21 @@ import Button from '../components/ui/Button';
       icon: <Shield className="w-6 h-6" />
       title: 'Security Automation'
       description: 'Automated security scanning and compliance checks'
+      icon: <GitBranch className='w-6 h-6' />,
+import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
+
+export default function DevOpsAutomationPage() {
+  const features = [
+    {
+      icon: <GitBranch className="w-6 h-6" />,
+      title: 'CI/CD Pipelines',
+      description: 'Automated build, test, and deployment workflows',
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+    };
+import Head from 'next / head';
+import Card from '../components / ui / Card';
+import Button from '../components / ui / Button';
+import {
   GitBranch,
   Zap,
   Shield,
@@ -369,6 +410,8 @@ export default function DevOpsAutomationPage() {
             </div>;
                 <Card
                   key={index}
+
+
               ))}
             </div>
           </div>
@@ -387,6 +430,7 @@ export default function DevOpsAutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
 
                 What You Can Automate
               </h2>
@@ -440,6 +484,10 @@ export default function DevOpsAutomationPage() {
 
                 </Card>
 
+              ))}
+            </div>
+          </div>
+        </section>
               ))}
 
             </div>;
@@ -521,6 +569,7 @@ export default function DevOpsAutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
 
                 Simple, Transparent Pricing
               </h2>
@@ -614,6 +663,10 @@ export default function DevOpsAutomationPage() {
                       href={plan.name === 'Enterprise' ? '/contact' : '#signup'}
                       variant={plan.popular ? 'primary' : 'outline'}
                         plan.popular
+                        plan.popular
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                        plan.popular 
+                          ? 'bg-blue-600 hover:bg-blue-700 text-white' 
 
                         plan.popular 
                           ? 'bg-blue-600 hover:bg-blue-700 text-white' 
@@ -663,6 +716,13 @@ export default function DevOpsAutomationPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {marketComparison.map((competitor, index) => (
                 <Card key={index} className="p-6">
+                    </Button>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -697,6 +757,34 @@ export default function DevOpsAutomationPage() {
                         />;
                       ))}
 
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <p className='text-sm font-medium text-red-400 mb-1'>
+                        Cons:
+                      </p>
+                      <ul className='text-sm text-gray-300 space-y-1'>
+                        {competitor.cons.map((con, conIndex) => (
+                          <li key={conIndex} className='flex items-center'>
+                            <span className='w-4 h-4 text-red-400 mr-2 flex-shrink-0'>
+                              ×
+                            </span>                            {con}                      <p className="text-sm font-medium text-red-400 mb-1">Cons:</p>
+                      <ul className="text-sm text-gray-300 space-y-1">
+                        {competitor.cons.map((con, conIndex) => (
+                          <li key={conIndex} className="flex items-center">
+                            <span className="w-4 h-4 text-red-400 mr-2 flex-shrink-0">×</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
             </div>;
           </div>;
         </section>;
@@ -710,6 +798,7 @@ export default function DevOpsAutomationPage() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+
 
                 Trusted by DevOps Teams Worldwide
               </h2>
@@ -743,6 +832,12 @@ export default function DevOpsAutomationPage() {
                     </p>                  </div>
 
                   </div>
+
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
 
                 </Card>
               ))}
@@ -993,4 +1088,9 @@ export default function DevOpsAutomationPage() {
         </section>;
       </div>;
 
+}
+;
+              <Button
+
+    </>);
 }

@@ -1,3 +1,9 @@
+
+
+
+export interface ModerationAction {;
+
+
   id: string;
   flagId: string;
   action: ModerationStatus;
@@ -5,6 +11,7 @@
   adminId: string;
   reason?: string;
   createdAt: string;
+}
 }
 export interface ModerationFlag {
 

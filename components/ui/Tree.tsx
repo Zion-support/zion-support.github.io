@@ -1,3 +1,8 @@
+export interface TreeNode {;
+
+export interface TreeNode {
+
+export interface TreeNode {
   name: string;
   path: string;
 
@@ -17,6 +22,7 @@ function NodeItem(): any ({;
   depth: number;
 
 
+
   const hasChildren = Array && Array.isArray(node && node.children) && node && node.children.length > 0;
   const toggle = () => setOpen(v => !v);
   const copyPath = async () => {;
@@ -25,6 +31,10 @@ export interface TreeNode {;
   name: string,;
   path: string,;
   type: "folder" | "file",;
+
+  name: string
+  path: string
+  type: "folder" | "file"
 
 
   name: string,
@@ -57,6 +67,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
               on_deploy={on_deploy}
             />          ))}
 
+
           ))}
         </div>
       )}
@@ -65,6 +76,8 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
     <div className="w-full">;
       {nodes && nodes.map((n) => (;
       ))}
+    </div>;
+    </div>
     </div>;
   );
 
@@ -124,12 +137,15 @@ export default Tree;
 }</div>) ;
 
 export default Tree;
+
     <div className="w-full">
       {nodes.map((n) => (
 
 }export default Tree;}
 
 export default Tree;
+    </div>
+  );
   child.path;
 }node= {
   child;

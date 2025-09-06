@@ -118,12 +118,20 @@ export default function AutomationInsightsPage() {
 
                 ))}
 
+              </div>;
+            </div>;
+
+
+            {/* Automation Trends */}
+
+
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+
 
                 {automationTrends.map((trend, index) => (
                   <div
@@ -164,6 +172,40 @@ export default function AutomationInsightsPage() {
               </div>
             </div>
 
+            {/* Automation Tools & Frameworks */}
+            <div className='mb-16'>
+              <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
+                Our Automation Tools
+              </h2>
+              <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+                {automationTools.map((tool, index) => (
+                  <div
+                    key={index}
+                    className='bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center'
+                  >
+                    <div className='text-4xl mb-4'>🔧</div>
+                    <h3 className='text-xl font-bold mb-3 text-white'>
+                      {tool.title}
+                    </h3>
+                    <p className='text-white/70 mb-4'>{tool.description}</p>
+                    <div className='flex justify-center gap-2'>
+                      <span className='px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full'>
+                        {tool.type}
+                      </span>
+                      <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full'>
+                        {tool.complexity}
+                      </span>                    </div>                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 text-center">
+                    <div className="text-4xl mb-4">🔧</div>
+                    <h3 className="text-xl font-bold mb-3 text-white">{tool.title}</h3>
+                    <p className="text-white/70 mb-4">{tool.description}</p>
+                    <div className="flex justify-center gap-2">
+                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{tool.type}</span>
+                      <span className="px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full">{tool.complexity}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
 
 
             {/* Automation Tools & Frameworks */}
@@ -187,6 +229,7 @@ export default function AutomationInsightsPage() {
                 Let our experts help you build the automation systems of the
                 future
 
+
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
@@ -205,6 +248,7 @@ export default function AutomationInsightsPage() {
                 <Link
                   href="/case-studies"
 
+
                   View Case Studies;
                 </Link>;
               </div>;
@@ -214,6 +258,7 @@ export default function AutomationInsightsPage() {
       </div>;
 
 
+}
   );
 }
 }

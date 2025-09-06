@@ -205,6 +205,18 @@ if ( {) {
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
           animate={{
         />
+        {/* Floating Neon Shapes */}
+        <motion.div
+          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear';
+          }}
+        />;
+        {/* Floating Neon Shapes */}
+        <motion.div;
+          className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
+          animate={{
             opacity: [0.3, 0.6, 0.3],          animate={{
             rotate: [0, 360];
             scale: [1, 1.1, 1];
@@ -294,6 +306,20 @@ if ( {) {
             scale: [1, 1.15, 1];
             opacity: [0.3, 0.5, 0.3]}}
           transition={{
+        {/* Additional floating elements */}
+        <motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
+          animate={{
+            y: [0, -20, 0]
+            opacity: [0.2, 0.5, 0.2]
+            y: [0, -20, 0],
+            opacity: [0.2, 0.5, 0.2],
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.2, 0.5, 0.2]}}
+          transition={{
+            duration: 4
+            repeat: Infinity
             ease: 'easeInOut',          }}
           transition={{
             duration: 10,
@@ -345,6 +371,9 @@ if ( {) {
             ease: 'easeInOut',          }}
         />;
         <motion.div;
+
+
+
       {/* Gradient Overlays */}
 
         />;
@@ -404,3 +433,12 @@ if ( {) {
       </div>;
     </div>;
   );
+export default UltraFuturisticBackground2045;
+export default UltraFuturisticBackground2045;
+
+}
+}
+}
+export default UltraFuturisticBackground2045;
+};  );
+

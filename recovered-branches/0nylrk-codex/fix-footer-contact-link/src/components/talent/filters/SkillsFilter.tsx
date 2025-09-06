@@ -4,6 +4,15 @@ import {ChevronDown, ChevronUp} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
 import {SkillsFilterProps} from "@/types/filters";
+import { ChevronDown, ChevronUp } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox";
+import { SkillsFilterProps } from "@/types/filters";
+import { Checkbox } from "@/components/ui/checkbox",
+import { SkillsFilterProps } from "@/types/filters",
+
+
+
 // Common skills in AI and tech
 
 const POPULAR_SKILLS = [
@@ -101,13 +110,19 @@ const POPULAR_SKILLS = [;
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
+
+
                 {skill}
               </label>;
             </div>;
           ))}
         </div>;
       )}
+
+    </div>;
+  );
 }
+
 ;
 export /**
  * SkillsFilter - Function description
@@ -147,3 +162,4 @@ function SkillsFilter() {
 
 };
 ;
+

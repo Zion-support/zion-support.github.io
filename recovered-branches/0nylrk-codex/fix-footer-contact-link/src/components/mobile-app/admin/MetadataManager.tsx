@@ -1,4 +1,8 @@
 
+
+
+
+
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -33,6 +37,47 @@ export type AppMetadataValues = {
   longDescription: string,
   keywords: string[],
   version: string,
+  platform: AppPlatform
+}
+const defaultValues: AppMetadataValues = {
+  appTitle: "Zion AI Marketplace"
+  shortDescription: "Hire top AI talent or find global IT jobs on the go."
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.";
+  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"];
+  version: "1.0.0"
+  platform: "ios"
+}
+export const MetadataManager: React.FC = () => {
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+  // Separate form instances for each platform
+  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } })
+  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } })
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
+},
+
+const defaultValues: AppMetadataValues = {
+  appTitle: "Zion AI Marketplace",
+  shortDescription: "Hire top AI talent or find global IT jobs on the go.",
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunity, our app simplifies the process with AI-powered matching, secure messaging, and streamlined hiring.",
+  keywords: ["AI freelancer", "tech jobs", "hire developers", "IT marketplace", "artificial intelligence jobs"],
+  version: "1.0.0",
+  platform: "ios"
+},
+
+export const MetadataManager: React.FC = () => {;
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
+  const [isSaving, setIsSaving] = useState(false);
+export const MetadataManager: React.FC = () => {
+  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),
+  const [isSaving, setIsSaving] = useState(false),
+  
+  // Separate form instances for each platform
+  const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),
+  const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),
+  
+  const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
+  
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
@@ -49,6 +94,11 @@ export type AppMetadataValues = {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
+
+
+          <Button 
+
+
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
           >
@@ -82,6 +132,12 @@ export type AppMetadataValues = {
       </Tabs>
     </div>
   )
+}
+
+
+
+
+
 },
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
@@ -132,6 +188,10 @@ export type AppMetadataValues = {;
           </div>;
         </TabsContent>;
       </Tabs>;
+
+
+
+
 };
     </div>);
 }

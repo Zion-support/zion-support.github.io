@@ -1,4 +1,10 @@
 
+
+
+    () => `zion-nudge-${role}-${userId ?? 'anon'}`,
+    [role, userId];
+
+
   );  const [hidden, setHidden] = React.useState<boolean>(false);
   React.useEffect(() => {
     try {
@@ -35,6 +41,16 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
   if (hidden) return null;
 
   return (
+
+
+}
+  );
+  );
+
+
+  );
+
+
 
 }
 

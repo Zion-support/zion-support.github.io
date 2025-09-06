@@ -34,6 +34,63 @@ import {
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud
 
+  Search,
+  Star,
+  Users,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Eye,
+  Heart,
+  Share2,
+  Download,
+  Phone,
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState } from 'react';
+import Head from 'next / head';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
+import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
+import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 
@@ -359,6 +416,7 @@ export default function ServicesShowcase2027() {;
               <Link
                 href="/pricing"
 
+
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -374,6 +432,8 @@ export default function ServicesShowcase2027() {;
           </motion && motion.div>;
         </div>;
       </section>;
+
+
 
 
       {/* Search and Filters */}
@@ -432,6 +492,9 @@ export default function ServicesShowcase2027() {;
                   ))}
                 </select>
               </div>
+
+
+
 
               {/* Sort By */}
               <div>
@@ -549,6 +612,8 @@ export default function ServicesShowcase2027() {;
                       </Link>;
                       <Link
                         href='/contact'
+
+
                       >
                         Learn More
                       </Link>
@@ -580,6 +645,14 @@ export default function ServicesShowcase2027() {;
             <motion&& motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                  setSelectedPriceRange('all');
+                }}
+                className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
+
+                  setSelectedPriceRange('all')
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -587,8 +660,14 @@ export default function ServicesShowcase2027() {;
               </button>
             </motion.div>
           )}
-      {/* Contact Section */}
 
+
+
+      {/* Contact Section */}
+      <section className='px-4 sm:px-6 lg:px-8 mb-20'>
+        <div className='max-w-4xl mx-auto'>
+          <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
+            <h2 className='text-3xl font-bold text-white mb-4'>
 
 
 
@@ -645,3 +724,13 @@ export default function ServicesShowcase2027() {;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
+
+    </UltraFuturisticMatrixBackground2027>));
+}
+  );
+
+
+  )
+}
+    </UltraFuturisticMatrixBackground2027>));
+}

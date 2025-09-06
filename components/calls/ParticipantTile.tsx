@@ -1,4 +1,13 @@
 
+  RemoteParticipant
+  LocalParticipant
+  TrackPublication
+  Track;
+  RemoteParticipant,
+  LocalParticipant,
+  TrackPublication,;
+  Track,;
+
 import type {;
   RemoteParticipant,;
   LocalParticipant,;
@@ -10,6 +19,43 @@ type Props = {;
   participant: RemoteParticipant | LocalParticipant;
   isLocal?: boolean;
   displayName?: string;
+  participant
+  isLocal
+  displayName
+  participant,
+  isLocal,
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {
+  participant: RemoteParticipant | LocalParticipant
+  isLocal?: boolean;
+  displayName?: string
+}
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
+};
+
+export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  useEffect(() => {
+    const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
+      if (track.kind === 'video' && videoRef.current) {
+        track.attach(videoRef.current);
+};
+
+export default function ParticipantTile(): any ({;
+  participant,;
+  isLocal,;
+  displayName,;
+}: Props) {  const videoRef = useRef<HTMLVideoElement | null>(null);
+type Props = {;
+  participant: RemoteParticipant | LocalParticipant,;
+
+import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
+
+type Props = {
+  participant: RemoteParticipant | LocalParticipant,
+
   isLocal?: boolean;
   displayName?: string;
 };

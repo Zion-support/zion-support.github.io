@@ -17,7 +17,13 @@ export default ReleaseNotesAgent;
 
 
 
+        <Link href="/data/reports/release/latest.json"><a className="text-blue-600 underline">Latest Release Notes (JSON)</Link></Link>
       </main>
     </div>
   )
 },
+
+export default ReleaseNotesAgent,;
+export default ReleaseNotesAgent,
+
+

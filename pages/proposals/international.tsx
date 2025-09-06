@@ -1,3 +1,14 @@
+import React, { useEffect, useState } from 'react';
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+import React, { useEffect, useState } from 'react',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+import React, { useEffect, useState } from 'react',
+import EnhancedLayout from '../../components/layout/EnhancedLayout'
+
+
 type ProposalListItem = {
   id: string
   title: string
@@ -57,10 +68,21 @@ export default function InternationalProposalsPage() {
               </div>
               <div className="flex items-center gap-4 text-sm">
                 <span className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800">{i.status}</span>
+
+
         </div>
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+
   created_at: string;
 },
 export default /**
@@ -111,19 +133,5 @@ function InternationalProposalsPage() {
         <div className="text - sm text - gray - 600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>;
       </div>;
     </EnhancedLayout>);
-
-
-import React, { useEffect, useState } from 'react',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-import React, { useEffect, useState } from 'react',
-import EnhancedLayout from '../../components/layout/EnhancedLayout'
-type ProposalListItem = {
-  id: string
-  title: string
-  targetInstitution: string
-  regionalScope: string
-  type: string
-  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
-  createdAt: string
 
 

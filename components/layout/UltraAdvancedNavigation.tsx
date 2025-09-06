@@ -1,3 +1,34 @@
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Brain
+  Rocket
+  Dna
+  Globe
+  Shield
+  Wifi
+  Package
+  Bot
+  Car
+  Building2
+  DollarSign
+  Monitor
+  Users
+  Cpu
+  Zap
+  Atom
+  Database
+  Cloud
+  Lock
+  Code;
+} from 'lucide-react';
+import Link from 'next/link';import {
+
+
   Menu,
   X,
   ChevronDown,
@@ -23,6 +54,13 @@
   Atom,
   Database,
   Cloud,
+  Lock,
+  Code,
+} from 'lucide-react';
+
+import Link from 'next/link';import { ;
+
+
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
@@ -89,6 +127,7 @@ import Link from 'next/link';
       isScrolled 
         ? 'bg-black/90 backdrop-blur-xl border-b border-gray-800/50' 
         : 'bg-transparent'
+
 
           >
             <Link href='/' className='flex items-center space-x-3 group'>
@@ -215,6 +254,8 @@ import Link from 'next/link';
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
               <a
+
+
               </a>
             </div>
             <motion.a
@@ -373,3 +414,4 @@ export default UltraAdvancedNavigation;
 };
 
 
+export default UltraAdvancedNavigation;

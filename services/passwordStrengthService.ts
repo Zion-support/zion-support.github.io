@@ -21,6 +21,13 @@
 
     entropy: number
 
+export interface CommonPasswordData {
+
+export interface CommonPasswordData {;
+
+export interface CommonPasswordData {;
+
+
   commonPasswords: Set<string>;
 
   commonWords: Set<string>
@@ -64,11 +71,21 @@ class PasswordStrengthService {
     if (score >= 60) return 'medium';
     if (score >= 40) return 'weak'
     return 'very-weak'
+
+
+
   }
   /**
    * Check if password contains common words
    */
   private hasCommonWords(password: string): boolean {
+
+
+    const lowerPassword = password && password.toLowerCase(),
+    for (const word of this && this.commonWords) {
+      if (lowerPassword && lowerPassword.includes(word)) {
+
+        return true
         length: password.length;
         has_uppercase: /[A - Z]/.test (password);
         has_lowercase: /[a - z]/.test (password);
@@ -234,6 +251,9 @@ if (return 'weak', ) {
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`,;
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`,;
     return `${Math.ceil(seconds / 31536000)} years`;
+
+
+
   }
   /**
    * Generate feedback based on password analysis
@@ -277,11 +297,18 @@ if (return 'weak', ) {
     suggestions && suggestions.push('Consider a password manager for secure storage');
 
     return suggestions
+
+
+
   }
   /**
    * Generate security warnings
    */
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
+
+
+
+
 
   /**
    * Generate a strong password
@@ -306,10 +333,17 @@ if (return 'weak', ) {
     // Fill the rest randomly;
     for (let i = 4, i < length, i++) {;
       password += charset[Math.floor(Math.random() * charset.length)];
+
+
+
     }
     // Shuffle the password
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
+
+
+
+
 
   /**
    * Generate a memorable passphrase
@@ -322,6 +356,9 @@ if (return 'weak', ) {
     for (let i = 0, i < wordCount, i++) {
       const word = words[Math && Math.floor(Math && Math.random() * words && words.length)];
       passphrase += (i === 0 ? '' : '-') + word
+
+
+
     }
     return passphrase
   }
@@ -336,6 +373,10 @@ if (return 'weak', ) {
    */
   removeCommonPassword(password: string): void {
 
+
+
+
+
   /**
    * Get service statistics
    */
@@ -347,6 +388,9 @@ if (return 'weak', ) {
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
+
+
+
 ;
 
   /**;
@@ -570,3 +614,8 @@ if ( {) {
 export const passwordStrengthService = new PasswordStrengthService ();
 ;
 // Export the class for custom instances;
+
+
+
+
+export { PasswordStrengthService };

@@ -1,4 +1,12 @@
 
+  isOpen
+  onClose
+  serviceId
+  defaultType
+}: {
+
+
+
   isOpen,
   onClose,
   serviceId,
@@ -101,6 +109,10 @@
         </div>
       </div>
     </div>
+);
+  );
+}
+
 }
     </div>);
 }

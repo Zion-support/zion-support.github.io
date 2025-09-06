@@ -7,6 +7,11 @@
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+} from 'lucide-react';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+
 
 export default function AIEvalsPage() {
   const contactInfo = {
@@ -87,6 +92,32 @@ export default function AIEvalsPage() {;
             </p>;
           </div>;
 
+                      className='flex items - start gap - 2 text - gray - 200';
+                    >;
+                      <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
+                      <span>{f}</span>;
+                    </li>))}
+                </ul>;
+              </div>;
+            </Card>;
+            <Card className='bg - black / 30 border border - cyan - 500 / 30'>;
+              <div className='p - 6'>;
+                <div className='text - 3xl font - bold text - white'>;
+                  Starting at $99;
+                  <span className='text - base text - gray - 400'>/month</span>;
+                </div>;
+                <div className='text - sm text - gray - 400 mt - 1'>;
+                  14 - day trial • Setup: 45 minutes;
+                </div>;
+                <div className='flex items - center gap - 2 text - yellow - 400 mt - 3'>;
+                  <TrendingUp className='w - 4 h - 4' /> Reduce regressions 30–60%;
+                </div>;
+                <div className='mt - 4'>;
+                  <Button;
+                    href='/contact';
+                    className='w - full bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                  >;
+
                     Request Demo;
                   </Button>;
                 </div>;
@@ -100,6 +131,7 @@ export default function AIEvalsPage() {;
             </Card>;
           </div>;
 
+}
 	);
 }
 

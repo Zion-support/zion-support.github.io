@@ -12,6 +12,27 @@ import {Link} from "react-router-dom";
 export default function ZionHireAI() {;
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
   const { isAuthenticated } = useAuth();
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useWhitelabel } from "@/context/WhitelabelContext",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth";
+import { Link } from "react-router-dom";
+export default function ZionHireAI() {
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
+  const { isAuthenticated } = useAuth();
+import { useAuth } from "@/hooks/useAuth",
+import { Link } from "react-router-dom",
+export default function ZionHireAI() {
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
+  const { isAuthenticated } = useAuth(),
+  
+
+
   return (
     <>
 
@@ -83,10 +104,7 @@ function ZionHireAI() {
                       Request Demo;
                     </Link>;
                   </Button>;
-                </div>;
-              </div>;
-              <div className="relative hidden md:block">;
-
+}
 
 
 import React from "react",;
@@ -213,6 +231,10 @@ export default function ZionHireAI() {;
         </section>;
       </main>;
       <Footer />;
+
+
+
+
 }
     </>);
 }

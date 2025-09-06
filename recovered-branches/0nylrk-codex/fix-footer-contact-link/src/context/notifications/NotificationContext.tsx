@@ -1,3 +1,25 @@
+export const useNotifications = (): NotificationContextType => {
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+  }
+  return context
+}
+export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {
+  const { user } = useAuth();
+  const notificationOps = useNotificationOperations(user?.id);
+  // Load notifications when user changes
+  useEffect(() => {
+    notificationOps.fetchNotifications();
+
+export const useNotifications = (): NotificationContextType => {;
+  const context = useContext(NotificationContext) as NotificationContextType;
+  if (!context) {
+    throw new Error('useNotifications must be used within a NotificationProvider')
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {useNotificationOperations} from './useNotificationOperations';
+import {NotificationContextType} from './types';
 
 
 export const useNotifications = (): NotificationContextType => {;
@@ -26,6 +48,10 @@ const defaultContext: NotificationContextType = {;
   const context = useContext(NotificationContext) as NotificationContextType;
   if (!context) {;
     throw new Error('useNotifications must be used within a NotificationProvider');
+
+
+
+
   }
   return context
 },
@@ -50,6 +76,22 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
           (payload) => {
             // // // console.log('Notification change received:', payload),
             notificationOps.fetchNotifications()
+}
+
+};
+
+
+          },
+
+
+          (payload) => {
+            console.log('Notification change received:', payload);
+            notificationOps.fetchNotifications()
+
+
+};
+
+
   return context;
 },;
 export const NotificationProvider = ({ children }: { children: ReactNode }): JSX.Element => {;

@@ -121,6 +121,14 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+
+  Hexagon,;
+  Network,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -128,6 +136,13 @@ import {
   Leaf, Sun, Moon, Wind, Droplets, Mountain;
   Code, Wrench, Smartphone, BarChart3, Eye;
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$3,999/month' }
+
+];
+
+
+
+
+
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -149,6 +164,11 @@ export default function UltraFuturisticNavigation2030() {
 
 
 export default function UltraFuturisticNavigation2030() {;
+export default function UltraFuturisticNavigation2030() {
+
+
+export default function UltraFuturisticNavigation2030() {;
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<number | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -229,6 +249,7 @@ export default function UltraFuturisticNavigation2030() {;
   return (
     <>;
       {/* Top Contact Bar */}
+
 
               <span>{contactInfo.mobile}</span>
             </div>
@@ -418,11 +439,159 @@ export default function UltraFuturisticNavigation2030() {;
                 </Link>
               ))}
 
+
                               </Link>
                             ))}
                           </div>;
                         </div>;
                       ))}
+      {/* Main Navigation */}
+      <nav;
+        className={`fixed top - 0 left - 0 right - 0 z - 50 transition - all duration - 300 ${
+          is_scrolled;
+            ? 'bg - black / 90 backdrop - blur - xl border - b border - purple - 500 / 20 shadow - 2xl';
+            : 'bg - gradient - to - r from - black / 95 via - purple - 900 / 95 to - black / 95 backdrop - blur - sm';
+        }`}
+      >;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>;
+          <div className='flex items - center justify - between h - 20'>;
+            {/* Logo */}
+            <div className='flex items - center space - x-4'>;
+              <Link href='/' className='flex items - center space - x-3 group'>;
+                <div className='relative'>;
+                  <div className='w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300'>;
+                    <Zap className='w - 6 h - 6 text - white' />;
+                  </div>;
+                  <div className='absolute inset - 0 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300'></div>;
+                </div>;
+                <div className='flex flex - col'>;
+                  <span className='text - 2xl font - bold bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent'>;
+                    Zion Tech Group;
+                  </span>;
+                  <span className='text - xs text - gray - 400 font - mono'>;
+                    2030 Future Technology;
+                  </span>                </div>            {/* Logo */}
+            <div className="flex items - center space - x-4">;
+              <Link href="/" className="flex items - center space - x-3 group">;
+                <div className="relative">;
+                  <div className="w - 12 h - 12 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl flex items - center justify - center transform group - hover:shadow - lg hover:shadow - cyan - 400 / 40 transition - transform duration - 300">;
+                    <Zap className="w - 6 h - 6 text - white" />;
+                  </div>;
+                  <div className="absolute inset - 0 bg - gradient - to - r from - purple - 500 to - cyan - 500 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
+                </div>;
+                <div className="flex flex - col">;
+                  <span className="text - 2xl font - bold bg - gradient - to - r from - purple - 400 to - cyan - 400 bg - clip - text text - transparent">;
+                    Zion Tech Group;
+                  </span>;
+                  <span className="text - xs text - gray - 400 font - mono">2030 Future Technology</span>;
+                </div>;
+              </Link>;
+            </div>;
+            {/* Desktop Navigation */}
+            <div className='hidden lg:flex items - center space - x-8'>;
+              {main_navigation.map (item => (
+                <Link;
+                  key={item.name}
+                  href={item.href}
+                  className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 group';
+                >;
+                  <item.icon className='w - 4 h - 4 group - hover:text - purple - 400 transition - colors' />;
+                  <span>{item.name}</span>;
+                </Link>))}
+              {/* Services Dropdown */}
+              <div className='relative group'>;
+                <button className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200'>;
+                  <Briefcase className='w - 4 h - 4' />;
+                  <span > Services</span>;
+                  <ChevronDown className='w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 200' />;
+                </button>;
+                {/* Mega Menu */}
+                <div className='absolute top - full left - 0 w - screen max - w-6xl bg - black / 95 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform group - hover:translate - y-0 translate - y-4'>;
+                  <div className='p - 8'>;
+                    <div className='grid grid - cols - 2 gap - 8'>;
+                      {service_categories.map ((category, index) => (
+                        <div key={index} className='space - y-4'>;
+                          <div className='flex items - center space - x-3'>;
+                            <div;
+                              className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}
+                            >;
+                              <category.icon className='w - 5 h - 5 text - white' />;
+                            </div>;
+                            <div>;
+                              <h3 className='text - lg font - semibold text - white'>;
+                                {category.title}
+                              </h3>;
+                              <p className='text - sm text - gray - 400'>;
+                                {category.description}
+                              </p>;
+                            </div>;
+                          </div>;
+                          <div className='space - y-2'>                            {category.services.map ((service, service_index) => (
+                              <Link;
+                                key={service_index}
+                                href={service.href}
+                                className='block p - 3 rounded - lg hover:bg - purple - 500 / 10 transition - colors duration - 200 group'                <Link;
+                  key={item.name}
+                  href={item.href}
+                  className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 group";
+                >;
+                  <item.icon className="w - 4 h - 4 group - hover:text - purple - 400 transition - colors" />;
+                  <span>{item.name}</span>;
+                </Link>))}
+              {/* Services Dropdown */}
+              <div className="relative group">;
+                <button className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200">;
+                  <Briefcase className="w - 4 h - 4" />;
+                  <span > Services</span>;
+                  <ChevronDown className="w - 4 h - 4 group - hover:rotate - 180 transition - transform duration - 200" />;
+                </button>;
+                {/* Mega Menu */}
+                <div className="absolute top - full left - 0 w - screen max - w-6xl bg - black / 95 backdrop - blur - xl border border - purple - 500 / 20 rounded - 2xl shadow - 2xl opacity - 0 invisible group - hover:opacity - 100 group - hover:visible transition - all duration - 300 transform group - hover:translate - y-0 translate - y-4">;
+                  <div className="p - 8">;
+                    <div className="grid grid - cols - 2 gap - 8">;
+                      {service_categories.map ((category, index) => (
+                        <div key={index} className="space - y-4">;
+                          <div className="flex items - center space - x-3">;
+                            <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
+                              <category.icon className="w - 5 h - 5 text - white" />;
+                            </div>;
+                            <div>;
+                              <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
+                              <p className="text - sm text - gray - 400">{category.description}</p>;
+                            </div>;
+                          </div>;
+                          <div className="space - y-2">;
+                            {category.services.map ((service, service_index) => (
+                              <Link;
+                                key={service_index}
+                                href={service.href}
+                                className='block p - 3 rounded - lg hover:bg - purple - 500 / 10 transition - colors duration - 200 group';
+                              >;
+                                <div className='flex items - center justify - between'>;
+                                  <div>;
+                                    <h4 className='text - sm font - medium text - white group - hover:text - purple - 400 transition - colors'>;
+                                      {service.name}
+                                    </h4>;
+                                    <p className='text - xs text - gray - 400'>;
+                                      {service.description}
+                                    </p>;
+                                  </div>;
+                                  <span className='text - xs font - mono text - purple - 400'>;
+                                    {service.price}
+                                  </span>                                </div>                              >;
+                                <div className="flex items - center justify - between">;
+                                  <div>;
+                                    <h4 className="text - sm font - medium text - white group - hover:text - purple - 400 transition - colors">;
+                                      {service.name}
+                                    </h4>;
+                                    <p className="text - xs text - gray - 400">{service.description}</p>;
+                                  </div>;
+                                  <span className="text - xs font - mono text - purple - 400">{service.price}</span>;
+                                </div>;
+                              </Link>))}
+                          </div>;
+                        </div>))}
+
                     </div>;
                   </div>;
                 </div>;
@@ -558,6 +727,11 @@ export default function UltraFuturisticNavigation2030() {;
                         }`}
                       >
                         <link.icon className='w-6 h-6 mx-auto mb-2' />
+
+                        <span className='text-sm font-medium'>{link.name}</span>                      </Link>                          link.color.includes('from-') 
+                            ? `bg-gradient-to-r ${link.color} text-white` 
+
+
                             : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
                       >;
                         <link && link.icon className='w-6 h-6 mx-auto mb-2' />;
@@ -625,6 +799,9 @@ export default function UltraFuturisticNavigation2030() {;
     </>;
   );
 }
+
+;
+
 
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>

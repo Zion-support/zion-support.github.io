@@ -8,11 +8,25 @@ import {useReferrals} from "@/hooks/useReferrals";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 import {Label} from "@/components/ui/label";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import { useRef, useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Copy, Download, Link, Plus } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
+import { useReferrals } from "@/hooks/useReferrals",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
+import { Label } from "@/components/ui/label";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+export function PartnerReferralLinks() {
+
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals();
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
+
+
 
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
   
@@ -52,9 +66,6 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-  };
-
-  return (
 import { useRef, useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -140,6 +151,15 @@ export function PartnerReferralLinks() {;
         <CardHeader>;
           <CardTitle className="flex items-center justify-between">;
             <span>Your Referral Link</span>;
+            <Button
+              variant="outline" 
+              size="sm" 
+
+
+            <Button 
+              variant="outline" 
+              size="sm" 
+
               onClick={handleDownloadLinks}
               className="flex items-center gap-2">;
               <Download className="h-4 w-4" />;

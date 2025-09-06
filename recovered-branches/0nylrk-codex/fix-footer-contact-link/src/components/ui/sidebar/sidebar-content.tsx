@@ -19,6 +19,7 @@ export const SidebarInput = React.forward_ref<;
     />
   )
 })
+
 >((props, ref) => {
   return (
     <div;
@@ -26,6 +27,7 @@ export const SidebarInput = React.forward_ref<;
       data - sidebar=&quot;header & quot;
       className={cn (&quot;flex flex - col gap - 2 p - 2&quot;, props.class_name)}
       {...props}
+
 >((props, ref) => {
   return (
     <div;
@@ -41,6 +43,7 @@ export const SidebarSeparator = React.forward_ref<;
   HTMLDivElement,
 >((props, ref) => {
   return (
+
 >((props, ref) => {
   return (
     <div;
@@ -51,6 +54,7 @@ export const SidebarSeparator = React.forward_ref<;
     />
   )
 })
+
 >((props, ref) => {
   return (
     <div;

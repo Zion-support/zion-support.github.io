@@ -1,3 +1,51 @@
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Cpu, Network, Zap, Shield, Database, Globe;
+  ArrowRight, CheckCircle, Star, TrendingUp, Users
+ } from 'lucide-react';
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import {
+  Cpu, Network, Zap, Shield, Database, Globe,
+  ArrowRight, CheckCircle, Star, TrendingUp, Users
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+
+
+
+
 export default function EdgeComputingPage() {
 
   const features = [
@@ -26,6 +74,8 @@ export default function EdgeComputingPage() {
       period: "",
       description: "Full-scale solution for large organizations",
       features: [
+
+
           >
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
@@ -790,6 +840,32 @@ export default function EdgeComputingPage() {
           </div>;
         </div>;
       </section>;
+
+
+      {/* CTA */}
+      <section className='py-20 bg-gradient-to-r from-blue-600 to-cyan-600'>;
+        <div className='max-w-4xl mx-auto px-6 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.6 }}>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Ready to Deploy Edge Computing?;
+            </h2>;
+            <p className='text-xl text-blue-100 mb-8'>;
+              Join the edge computing revolution and transform your business;
+              with real-time processing capabilities.;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <a
+                href='/contact'
+                className='bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'>;
+                Start Free Trial;
+              </a>;
+              <a
+                href='/contact'
+
+
+
           >
             <h2 className="text-4xl font-bold text-white mb-6">Ready to Deploy Edge Computing?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -810,6 +886,23 @@ export default function EdgeComputingPage() {
           </motion.div>
         </div>
       </section>
+
+                className='border border-white/20 text-white hover:bg-white/10 px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200'>;
+                Schedule Demo;
+              </a>;
+            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+
+      <EnhancedFooter />;
+    </>;
+  );
+
+
+
+}
+
   )
 }
 
@@ -864,5 +957,6 @@ export default function EdgeComputingPage() {
       <EnhancedFooter />;
     </>);
 ;
+
 
 

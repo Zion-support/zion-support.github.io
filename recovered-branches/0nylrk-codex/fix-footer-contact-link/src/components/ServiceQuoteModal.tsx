@@ -16,6 +16,7 @@ import {cn} from "@/lib/utils";
 import {ProductListing} from "@/types/listings";
 import {toast} from '@/hooks/use-toast';
 import {supabase} from "@/integrations/supabase/client";
+
 import { useState } from 'react',
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -29,6 +30,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { format } from "date-fns",
 import { CalendarIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
+
+
 interface ServiceQuoteModalProps {
 
   open: boolean
@@ -166,6 +169,8 @@ if (throw error) {
                     <SelectValue placeholder="Select your budget range" />;
                   </SelectTrigger>;
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">;
+
+
                         {range.label}
                       </SelectItem>
                     ))}
@@ -229,6 +234,16 @@ if (throw error) {
                       <span className="text-white">{format(startDate, "PPP")}</span>
                     </div>
                   )}
+                </div>;
+              </div>;
+            </div>;
+          )}
+                </div>;
+              </div>;
+            </div>;
+
+
+
                 />;
               </div>;
                 <Input;

@@ -40,10 +40,19 @@ export interface EndpointSpec {;
   tags?: string[];
 export interface SectionSpec {
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
+
+
+export interface SectionSpec {;
+
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
+export interface ApiDocsSpec {
+
+
+export interface ApiDocsSpec {;
+
   product: 'Zion OS';
   versions: string[]; // available versions;
   default_version: string;
@@ -67,6 +76,14 @@ export interface ErrorCode {
   message: string;
 }
 export interface EndpointSpec {
+  id: string, title: string,
+  description: string, path: string,
+  method: HttpMethod, visibility: Visibility,
+  query?: Record<string, string>;
+  params?: Record<string, string>;
+  auth: Array<'jwt' | 'oauth' | 'wallet' | 'api_key' | 'none'>,
+  query?: Record < string, string>;
+  params?: Record < string, string>;
   requestBodySchema?: unknown;
   responseBodySchema?: unknown;
 
@@ -138,3 +155,7 @@ export interface ApiDocsSpec {;
   sections: SectionSpec[];
   lastUpdatedIso: string;
 }
+
+
+
+

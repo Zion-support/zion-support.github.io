@@ -8,7 +8,6 @@
                 />
               ))}
             </div>
-
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
             </span>
           </div>
@@ -78,7 +77,6 @@ if (return 0) {
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
-}"}
       {rating_distribution && (
         <div className='space - y-2'>;
           {[5, 4, 3, 2, 1].map (rating => (

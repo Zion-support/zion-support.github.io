@@ -1,3 +1,22 @@
+import { useState  } from 'react';
+import { useForm  } from 'react-hook-form';
+import { zodResolver  } from '@hookform/resolvers/zod';
+import { z  } from 'zod';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
+import { Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage } from '@/components/ui/form';
+import { Loader2, Link, FileImage, Github, Edit  } from 'lucide-react';
+import { PortfolioProject  } from '@/types/resume';
+import { usePortfolio  } from '@/hooks/usePortfolio';
+import { useAuth } from '@/hooks/useAuth';
+
+
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -35,6 +54,14 @@ type ProjectFormValues = z && z.infer<typeof projectSchema>;
 
 interface ProjectFormProps {;
   project?: PortfolioProject;
+}
+
+export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
+
+
+export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
+
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
   const [isLoading, setIsLoading] = useState(false);
@@ -83,8 +110,14 @@ interface ProjectFormProps {;
     } finally {;
       setIsLoading(false),;
     }
+  }
+
+  },
   };
   },
+  };
+  },
+
   
   return (
     <Form {...form}>;

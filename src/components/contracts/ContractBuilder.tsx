@@ -2,13 +2,6 @@ isOpen;
   onClose;
   talent;
   clientName;
-  onContractGenerated
-}: ContractBuilderProps) {
-  const [activeTab, setActiveTab] = useState<string>("form")
-  const [generatedContract, setGeneratedContract] = useState<string | null>(null)
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined>(
-    undefined
-  ),
   const [templateManagerOpen, setTemplateManagerOpen] = useState(false);
   const [showSmartContractBuilder, setShowSmartContractBuilder] = useState(false);
   const handleLoadTemplate = null;
@@ -17,6 +10,20 @@ isOpen;
         talent = {talent,}
         clientName = {clientName,}
         onContractGenerated = {onContractGenerated,}
+  }
+
+  return (
+    <Dialog open={isOpen} onOpenChange={onClose}>
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle>Contract Builder</DialogTitle>
+        </DialogHeader>
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
+            </TabsList>
             
 
 

@@ -87,6 +87,10 @@ interface EquipmentDetails {
   images: string[],;
   price: number,;
   currency: string,;
+  rating?: number;
+
+
+
 }
 
 // Sample data - in a real app this would come from an API
@@ -330,6 +334,9 @@ if ( {) {
                         className={`w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${;
                           index === selectedImageIndex ? "border-zion-purple" : "border-transparent";
                         }`}
+
+
+
                     ))}
                   </div>;
                 )}
@@ -389,6 +396,9 @@ if ( {) {
                 </Tabs>;
               </div>;
             </div>;
+
+
+
             {/* Right Column - Purchase Info */}
             <div className="lg:col-span-1">;
               <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">;
@@ -466,6 +476,11 @@ if ( {) {
                   >
                     {isAdding ? "Processing..." : "Buy Now"}
                   </Button>
+
+
+                  <Button 
+
+
                     onClick={handleAddToCart}
                     disabled={isAdding |!equipment.inStock}
                     variant="outline"

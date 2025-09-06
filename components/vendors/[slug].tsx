@@ -1,7 +1,17 @@
 import type { GetServerSideProps } from 'next';
 
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+type Props = { vendor: Vendor | null };
+
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+type Props = { vendor: Vendor | null };
 
 export default function VendorProfilePage({ vendor }: Props) {
+type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
+export default function VendorProfilePage({ vendor }: Props) {;
+type Props = { vendor: Vendor | null };
+
 export default function VendorProfilePage({ vendor }: Props) {
 
   const [message, setMessage] = useState<string | null>(null);
@@ -53,6 +63,30 @@ export default function VendorProfilePage({ vendor }: Props) {
                 ) : (;
                   <div className="w-full h-40 bg-gray-100 dark:bg-gray-900" />;
                 )}
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
 
             ))}
           </div>;
@@ -134,4 +168,40 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
+
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {
+  const slug = String(ctx.params?.slug |'');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};            {loading ? 'Submitting...' : 'Send'}
+          </button>
+          {message && <div className="text-sm">{message}</div>}
+        </form>
+      </div>
+      <div className="text-center text-xs text-gray-500">Powered by Zion</div>
+    </div>
+  );
+}
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
+  const slug = String(ctx.params?.slug |'');
+
+export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
+  const slug = String(ctx.params?.slug || '');
+  const { getVendorBySlug } = await import('../../utils/vendor-store');
+  const vendor = slug ? getVendorBySlug(slug) |null : null;
+  return { props: { vendor } }
+}
+
+  const vendor = slug ? getVendorBySlug(slug) || null : null;
+  return { props: { vendor } };
+};
+};
+};
+
 

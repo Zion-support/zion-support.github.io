@@ -1,5 +1,18 @@
 import { useState } from 'react';
 
+  isOpen
+  onClose
+  defaultContext
+  defaultKind = 'general'
+  userHeaders
+}: {
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
+  userHeaders,
+}: {;
+
   isOpen: boolean;
   onClose: (submitted: boolean) => void;
   defaultContext?: FeedbackContext;
@@ -21,6 +34,8 @@ export default function FeedbackModal({
   if (!isOpen) return null;
 
 
+    setLoading(false);
+    onClose(true);
 
 
         method: 'POST',
@@ -231,3 +246,6 @@ function submit() {
         </div>;
         <div className="flex justify - end gap - 2">;
           <button on_click={()=>on_close (false)} className="px - 3 py - 2 rounded border">Later</button>;
+
+}
+  );

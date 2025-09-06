@@ -330,19 +330,3 @@ export default function BlogPost() {;
                       <div className="p-4">
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Calendar className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">;
-                    {format_date (blog_post.date) }
-                  </span>;
-                </div>;
-                <div className="flex items - center space - x - 2">;
-                  <Clock className="w - 5 h - 5 text - cyan -400" />;
-                  <span className="text - gray -300">{blog_post.read_time}</span>;
-                </div>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;

@@ -1,4 +1,11 @@
 
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Education  } from '@/types/resume';
+import { useAuth  } from '@/hooks/useAuth';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+export function useEducation() {
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Education} from '@/types/resume';
@@ -13,6 +20,9 @@ export function useEducation() {;
     if (!user) {
       setError('You must be logged in to add education')
       return false
+
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Education } from '@/types/resume',;
@@ -26,6 +36,9 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to add education'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -40,6 +53,12 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not add education')
     } finally {
       setIsLoading(false)
+    }
+    setIsLoading(true);
+    setError(null);
+
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -70,6 +89,9 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to update education'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -84,6 +106,12 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not update education')
     } finally {
       setIsLoading(false)
+    }
+    setIsLoading(true);
+    setError(null);
+
+
+
 ;
     setIsLoading(true),;
     setError(null),;
@@ -114,6 +142,9 @@ export function useEducation() {;
     if (!user) {;
       setError('You must be logged in to delete education'),;
       return false;
+
+
+
     }
     
     setIsLoading(true),
@@ -128,12 +159,30 @@ export function useEducation() {;
       return handleResumeError(e, 'Could not delete education')
     } finally {
       setIsLoading(false)
+
+
+
+import {useState} from 'react';
+import {supabase} from '@/integrations / supabase / client';
+import {Education} from '@/types / resume';
+import {use_auth} from '@/hooks / use_auth';
+import {formatDateForDB, handleResumeError, showSuccessToast} from './useResumeUtils';
+export /**
+ * use_education - Function description
+ */
+function use_education() {
+  const { user } = use_auth ();
+  const [is_loading, setIsLoading] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
 ;
   const add_education = async (resume_id: string, education: Education): Promise < boolean> => {
     // Check condition
 if ( {) {
   $2
 }
+
+
+
   }
 }
 ;

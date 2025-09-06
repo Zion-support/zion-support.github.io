@@ -270,8 +270,6 @@ export function BundleAnalyzer() {;
                         className={getSizeColor(chunk.size)}
                         variant='outline'
                       >
-
-                      <Badge className={getSizeColor(chunk.size)} variant="outline">
                         {formatSize(chunk.size)}
                     </div>
                   ))}

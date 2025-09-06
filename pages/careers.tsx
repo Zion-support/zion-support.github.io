@@ -548,6 +548,13 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
+    </MainLayout>
+    </MainLayout>
+    </Layout>
+    </MainLayout>;
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     </MainLayout>;
   );
 }

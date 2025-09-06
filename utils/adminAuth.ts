@@ -1,6 +1,19 @@
+  userId: string;
+export interface Session {
+
+export interface Session {;
+  userId: string;
+
+
   email: string;
   role: 'admin' | 'user' | 'guest';
 }
+
+
+  // Check for internal agent headers or IPs;
+  const userAgent = req.headers['user-agent'] || '';
+
+
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   
   return internalAgents.some(agent => userAgentString.toLowerCase().includes(agent));
@@ -150,5 +163,8 @@ export function isInternalAgentRequest (req: NextApiRequest): boolean {
 export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
+
+
+
 };
 

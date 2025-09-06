@@ -20,6 +20,12 @@ interface ProfileHeroProps {
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
+  profileType: 'service' | 'talent';
+}
+
+
+export function ProfileHero(): any ({;
+
   name;
   title;
   avatarUrl;
@@ -41,9 +47,33 @@ interface ProfileHeroProps {
   aiScore?: number,
   profileType: 'service' | 'talent'
 }
+
+export function ProfileHero({;
+  name;
+  title;
+  avatarUrl;
+  coverImageUrl;
+  location;
+  rating;
+  reviewCount;
+  aiScore;
+export function ProfileHero({
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+
+
+
   profileType
 }: ProfileHeroProps) {
   return (
+
+
 
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
@@ -55,9 +85,20 @@ interface ProfileHeroProps {
                 <Badge
                   variant="outline"
                   className={cn(
+
+
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
+
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
                   )}>;
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
+
+
+
+                  </div>;
+                  </div>;
+
 
                 )}
                   </div>;

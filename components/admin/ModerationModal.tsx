@@ -1,4 +1,7 @@
+export type ModerationModalProps = {;
 
+
+export type ModerationModalProps = {
   flag: any | null;
 
   onAction: (;
@@ -11,6 +14,15 @@ export default function ModerationModal(): any ({;
   onAction,;
 }: ModerationModalProps) {;
 
+  flag
+  onClose
+  onAction
+}: ModerationModalProps) {
+
+  flag,
+  onClose,
+  onAction,
+}: ModerationModalProps) {;
 
   flag,
   onClose,

@@ -65,6 +65,8 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
   
 
 
+
+
   const talentSteps: WizardStep[] = [
     {
       title: "Complete your profile",

@@ -100,6 +100,13 @@ function BasicsStep() {
   );
 }
 
+
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+
+
+
 function ExperienceStep() {
   const addExperience = () => {
     const newId = (experiences.length + 1).toString()

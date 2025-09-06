@@ -1,3 +1,5 @@
+import Head from 'next/head',
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 export default function FrontLanding() {
   return (
@@ -30,6 +32,8 @@ export default function FrontLanding() {
             <Link href="/automation"><a className="text-white/80 hover:text-white">Automations</Link></Link>
             <Link href="/newsroom"><a className="text-white/80 hover:text-white">Newsroom</Link></Link>
             <Link href="/contact"><a className="text-white/80 hover:text-white">Contact</Link></Link>
+
+
           </div>
           <div className='hidden gap-6 md:flex'>
             <Link href='/'>
@@ -76,17 +80,93 @@ export default function FrontLanding() {
               <span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
               Autonomous agents running continuous improvements
             </motion.div>
+                ['24/7', 'Autonomous']
+                ['Main', 'Direct Sync']
+                ['0 Ops', 'Cloud‑Native']
+                ['Safety', 'Guardrails']
+
                 ['24/7', 'Autonomous'],
                 ['Main', 'Direct Sync'],
                 ['0 Ops', 'Cloud‑Native'],
                 ['Safety', 'Guardrails'],
               ].map(([k, v]) => (                <motion.div
                   key={k}
+                  initial={{ opacity: 0, y: 6 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5 }}
+                  className='glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left'
+                >
+                  <div className='text-lg font-bold text-white'>{k}</div>
+                  <div className='text-xs text-white/70'>{v}</div>                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+        {/* Features */}
+        <section className='mx-auto max-w-7xl px-6 pb-14'>
+          <h2 className='text-center text-2xl font-bold tracking-wide text-white/90'>
+            Features
+          </h2>
+          <div className='mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3'>
+            {[
+              {
+              ].map(([k, v]) => (                <motion.div
+                  key={k}
                   initial={{ opacity: 0, coordinate_y: 6 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   viewport={{ once: true }}
+
+
+              ))}
+
+                  className='glow - card rounded - xl border border - white / 10 bg - white / 5 px - 4 py - 3 text - left';
+                >;
+                  <div className='text - lg font - bold text - white'>{k}</div>;
+                  <div className='text - xs text - white / 70'>{v}</div>                </motion.div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* Features */}
+        <section className='mx - auto max - w-7xl px - 6 pb - 14'>;
+          <h2 className='text - center text - 2xl font - bold tracking - wide text - white / 90'>;
+            Features;
+          </h2>;
+          <div className='mt - 6 grid grid - cols - 1 gap - 5 md:grid - cols - 2 lg:grid - cols - 3'>;
+            {[;
+
+              {
+
+        <section className="mx-auto max-w-7xl px-6 pb-14">
+          <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>
+          <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {[
+                title: 'Self‑Improving'
                 desc: 'Agents continuously analyze, invent, and evolve automations.'
               }
+              {
+                title: 'Repo Sync'
+                desc: 'Changes are committed and pushed automatically to main.'
+              }
+              {
+                title: 'Zero Ops'
+                desc: 'Runs fully in the cloud—no servers or manual intervention.'
+              }
+              {
+                title: 'Safety‑First'
+                desc: 'Conservative edits with logs, reports, and guardrails.'
+              }
+              {
+                title: 'Scalable'
+                desc: 'Generates domain‑specific factories on demand.'
+              }
+              {
+                title: 'Observability'
+                desc: 'Dashboards, reports, and GitHub Actions artifacts.'
+              }
+                title: 'Self‑Improving',
+                desc: 'Agents continuously analyze, invent, and evolve automations.',
+              },
               {
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -135,6 +215,21 @@ export default function FrontLanding() {
                 desc: 'Curates content, updates promotions, and tunes metadata for reach.',
               },
             ].map(c => (              <motion.article
+
+
+                title: 'Code Quality & Refactors',
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
+              },
+              {
+                title: 'Performance & A11y',
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
+              },
+              {
+                title: 'Content & SEO',
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.',
+              },
+            ].map(c => (              <motion.article
+
                 key={c.title}
                 initial={{ opacity: 0, y: 8 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -523,6 +618,7 @@ export default function FrontLanding(req, res) {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="animated-border relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-fuchsia-600/20 via-violet-600/20 to-cyan-600/20 p-8 text-center backdrop-blur-xl"
+
           >
             <h3 className="text-2xl font-bold">Ready to build with autonomous cloud agents?</h3>
             <p className="mx-auto mt-2 max-w-2xl text-white/80">Scale development with a tireless fleet of self‑improving automations.</p>

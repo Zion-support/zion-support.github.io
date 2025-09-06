@@ -1,4 +1,10 @@
 
+export type PaginationProps = {;
+
+
+  page: number;
+  page_size: number;
+  total: number;
 
 export type PaginationProps = {
   on_change: (next_page: number) => void;
@@ -27,6 +33,38 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
   const canPrev = page > 1;
   const canNext = page < totalPages;
+  const goTo = (p: number) => {
+
+};
+
+export default function Pagination(): any ({;
+  page,;
+  pageSize,;
+  total,;
+  onChange,;
+}: PaginationProps) {  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));export type PaginationProps = {;
+  page: number,;
+  pageSize: number,;
+  total: number,;
+  onChange: (nextPage: number) => void;
+};
+export default function Pagination(): any ({ page, pageSize, total, onChange }: PaginationProps) {;
+  const totalPages = Math && Math.max(1, Math && Math.ceil(total / pageSize));
+import React from 'react';
+import EnhancedButton from './EnhancedButton';
+
+export type PaginationProps = {
+  page: number;
+  pageSize: number;
+  total: number;
+  onChange: (nextPage: number) => void;
+}
+export default function Pagination({
+  const totalPages = Math.max(1, Math.ceil(total / pageSize));
+  const canPrev = page > 1;
+  const canNext = page < totalPages;
+  const goTo = (p: number) => {;
+
     if (p >= 1 && p <= totalPages) onChange(p);
   }
   return (
@@ -219,6 +257,7 @@ if ( {) {
         </Link>) : (
         <span className="flex items - center px - 3 py - 2 text - sm font - medium text - gray - 300 bg - gray - 100 border border - gray - 200 rounded - lg cursor - not - allowed">;
           Next;
+}
 }
           <ChevronRight className="w - 4 h - 4 ml - 1" />;
         </span>)}

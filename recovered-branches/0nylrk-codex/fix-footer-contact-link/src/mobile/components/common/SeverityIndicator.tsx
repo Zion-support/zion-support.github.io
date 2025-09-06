@@ -35,6 +35,9 @@ export function SeverityIndicator({
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   )
+}
+
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",;
@@ -90,6 +93,7 @@ export function SeverityIndicator({ ;
     <div className={cn("flex items-center gap-1", className)}>;
       {showIcon && getSeverityIcon()}
       {showText && <span className="capitalize text-sm">{severity}</span>}
+
 }
 import React from './react';
 import { cn } from '@/lib / utils';

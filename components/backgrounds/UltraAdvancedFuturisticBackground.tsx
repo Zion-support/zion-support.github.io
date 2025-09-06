@@ -164,6 +164,11 @@ if (return) {
             ctx.lineWidth = 1;
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(partner.x, partner.y);
+            ctx.stroke()
+
+          }
+        }
+
             ctx.stroke();          }
 
           }
@@ -173,6 +178,8 @@ if (return) {
         if (particle.x <= 0 |particle.x >= canvas.width) {
           if (enableQuantumEffects && Math.random() < 0.1) {
             // Quantum tunneling effect
+
+
           }
         }
         if (particle.y <= 0 |particle.y >= canvas.height) {
@@ -192,6 +199,11 @@ if (< 0.1) {) {
           } else {
             particle.vy *= -1;          }            particle.coordinate_y = particle.y <= 0 ? canvas.height : 0;
           } else {
+            particle.vy *= -1;
+          }
+        }
+
+
             particle.vy *= -1;          }
 
           }
@@ -207,6 +219,17 @@ if (< 0.1) {) {
         ctx.globalAlpha = particle.opacity * (particle.life / particle.maxLife);
         ctx.translate(particle.x, particle.y);
         ctx.rotate(particle.rotation);
+          ctx.fillStyle = gradient;
+          ctx.fillRect(
+            -particle.size * 2
+            -particle.size * 2
+            particle.size * 4
+            particle.size * 4
+          );
+            }
+
+
+
           // Quantum wave rings
           if (enableQuantumEffects) {
             for (let i = 1; i <= 3; i++) {
@@ -580,6 +603,8 @@ if (< 0.1) {) {
           ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 + 0.05 * Math.sin(time * 2 + i)})`;
           ctx.lineWidth = 2;
           ctx.arc(x, y, 50 + 30 * Math.sin(time + i), 0, Math.PI * 2);
+
+
           ctx.stroke();        }
 
         }
@@ -713,6 +738,9 @@ if ( {) {
         </div>;
       )}
       )}
+  );      }
+    </div>;
+  );
 }
     <div className="relative min - h-screen">;
       <canvas;
@@ -733,5 +761,36 @@ if ( {) {
         </div>)}
       {children}
     </div>);
+    }
+  }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
+
+  return (
+    <div className=&quot;relative min-h-screen&quot;>
+      <canvas
+        ref={canvasRef}
+        className=&quot;fixed inset-0 w-full h-full pointer-events-none&quot;
+        style={{ zIndex: -1 }}
+      />
+      
+      {/* Additional futuristic overlay effects */}
+      {enableHolographic && (
+        <div className=&quot;fixed inset-0 pointer-events-none&quot; style={{ zIndex: -1 }}>
+          <div className=&quot;absolute inset-0 bg-gradient-to-br from-transparent via-cyan-500/5 to-purple-500/5&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,255,255,0.03),transparent_50%)]&quot; />
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.03),transparent_50%)]&quot; />
+        </div>
+      )}
+      
+      {enableQuantumEffects && (
+        <div className=&quot;fixed inset-0 pointer-events-none&quot; style={{ zIndex: -1 }}>
+          <div className=&quot;absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0.02),transparent_70%)]&quot; />
+        </div>
+      )}
+      
+      {_children}
+    </div>
+
+}
 
 
+  );

@@ -5,15 +5,25 @@ export type UserRole = 'client' | 'talent';
 
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 export type UserRole = 'client' | 'talent';
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+export type UserRole = 'client' | 'talent';
+
+export type User = {
   id: string;
   name: string;
   email: string;
   role: UserRole;
-  avatarUrl?: string;
-  onboardingCompleted: boolean;
-
+  avatar?: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
+export interface UserContextType {
+  user: User | null;
+  loading: boolean;
+  login: (email: string, password: string) => Promise<void>;
+  logout: () => void;
 export type UserContextValue = {;
 
   create_context,
@@ -56,6 +66,8 @@ export function useUser() {;
   const ctx = useContext(UserContext);
   if (!ctx) throw new Error('useUser must be used within UserProvider');
   return ctx;
+}
+  updateUser: (userData: Partial<User>) => Promise<void>;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);

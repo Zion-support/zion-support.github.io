@@ -17,6 +17,12 @@ import {
   ExternalLink,
   CheckCircle,
   TrendingUp,
+  Code;
+  GitBranch
+  Database
+  Cloud
+  Shield
+  Zap
 
 
 
@@ -290,8 +296,14 @@ export default function DeveloperToolsPage() {;
               </Card>
 
             ))}
-      {/* Developer Tools Grid */}
 
+
+
+      {/* Developer Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -387,8 +399,14 @@ export default function DeveloperToolsPage() {;
               </Card>
 
             ))}
-      {/* Developer Workflow */}
 
+
+
+      {/* Developer Workflow */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -538,3 +556,4 @@ export default function DeveloperToolsPage() {;
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
+

@@ -25,6 +25,15 @@
           "**/performance-*.md",
           "**/performance-*.txt",
           "**/apps/**"
+    // Exclude apps directory from compilation
+    config.module.rules.push({
+      test: /\.(ts|tsx|js|jsx)$/,
+      include: /apps\//,
+      use: "ignore-loader"
+    });
+
+    return config;
+  },
   async headers() {
     return [
       {

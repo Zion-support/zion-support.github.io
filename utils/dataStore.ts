@@ -1,3 +1,8 @@
+  getData: () => []
+  setData: (data: any) => null
+  updateData: (id: string, data: any) => null
+  deleteData: (id: string) => null
+}
   getData: () => [],
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
@@ -5,6 +10,11 @@
 };
 
 
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null;
+};
 interface Project {
   id: string;
   title: string;

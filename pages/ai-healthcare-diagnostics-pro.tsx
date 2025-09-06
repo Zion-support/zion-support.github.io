@@ -1,3 +1,40 @@
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import { Stethoscope, Brain, Eye, Heart;
+  Microscope, Shield, BarChart3;
+  TrendingUp, Target, Users, CheckCircle;
+  ArrowRight, Cpu, Network, Database;
+  Lock, Clock, DollarSign, PieChart;
+  Activity, Zap, Pill, Syringe, Hospital, Ambulance
+ } from 'lucide-react';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+
 import Link from 'next/link';
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {;
@@ -44,50 +81,14 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {;
         'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',;
       color: 'from-yellow-500 to-orange-500',;
     },  ];
-const AIHealthcareDiagnosticsPro: React.FC = () => {
-  const features = [;
-    {
-      icon: Brain
-      title: 'Advanced AI Diagnostics'
-      description:
-        'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.'
-      color: 'from-blue-500 to-cyan-500'
-    }
-    {
-      icon: Eye
-      title: 'Multi-Modal Imaging'
-      description:
-        'Process X-rays, CT scans, MRIs, ultrasounds, and pathology slides with specialized AI models for comprehensive analysis.'
-      color: 'from-purple-500 to-pink-500'
-    }
-    {
-      icon: Heart
-      title: 'Predictive Analytics'
-      description:
-        'AI-powered risk assessment and early warning systems for cardiovascular, cancer, and chronic disease prevention.'
-      color: 'from-red-500 to-orange-500'
-    }
-    {
-      icon: Shield
-      title: 'HIPAA Compliant'
-      description:
-        'Enterprise-grade security with end-to-end encryption, audit trails, and compliance with healthcare data regulations.'
-      color: 'from-green-500 to-emerald-500'
-    }
-    {
-      icon: BarChart3
-      title: 'Real-time Monitoring'
-      description:
-        'Continuous patient monitoring with instant alerts for critical changes and automated reporting to healthcare providers.'
-      color: 'from-indigo-500 to-blue-500'
-    }
-    {
-      icon: Zap
-      title: 'Automated Workflows'
-      description:
-        'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.'
-      color: 'from-yellow-500 to-orange-500'
-    },  ];
+import Head from 'next / head';
+import Layout from '../components / layout / Layout';
+import {motion} from 'framer-motion';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance, } from 'lucide-react';
+import Link from 'next / link';
+
+
+
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [;
     {
@@ -154,6 +155,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+
+
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -177,6 +181,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.4 }}
 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
+
+
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
     console.error("Error:", error);
@@ -241,6 +248,8 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
 }
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
               >
+
+
                 Schedule Demo
               </motion.button>
               <motion.button
@@ -259,6 +268,7 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -273,6 +283,8 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
               accuracy and speed.
             </p>
           </motion.div>
+
+
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -284,6 +296,13 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
       </section>
 
       {/* Medical Specialties Section */}
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -311,6 +330,8 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
+
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
@@ -334,6 +355,13 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
@@ -348,6 +376,8 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
+
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -368,6 +398,13 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
         </div>
       </section>
       {/* Pricing Section */}
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -383,6 +420,8 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
+
+
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -405,6 +444,13 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
       <section className='py-20 bg-gray-900 relative overflow-hidden'>;
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0 && 0.08),transparent_50%)]'></div>;
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion&& motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
@@ -439,11 +485,17 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
           </div>;
         </div>;
       </section>;
+          >
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+              Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
+
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Join leading healthcare institutions worldwide who have already
               revolutionized patient care with AI-powered diagnostics.
             </p>
+
+
                 Schedule Demo
               </button>
               <button className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'>
@@ -458,10 +510,20 @@ className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-5
                 </a>{' '}
                 or email{' '}
                 <a
+
+
           </motion.div>
         </div>
       </section>
     </Layout>
+  )
+}
+export default AIHealthcareDiagnosticsPro;
+
+},
+export default AIHealthcareDiagnosticsPro,
+
+
                   href='mailto: kleber@ziontechgroup && ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'>;
                   kleber@ziontechgroup && ziontechgroup.com;

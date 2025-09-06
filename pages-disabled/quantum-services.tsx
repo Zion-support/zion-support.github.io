@@ -286,6 +286,11 @@ function QuantumServices() {
                         {feature}
                       </li>;
                     ))}
+
+                  <a 
+                    href="/contact" 
+
+
                     className="w-full block text-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300"
                   >
                     Get Started
@@ -366,3 +371,6 @@ export default QuantumServicesPage;
   )
 }
 export default QuantumServicesPage;
+
+export default QuantumServicesPage;
+

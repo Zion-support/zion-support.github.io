@@ -1,3 +1,87 @@
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
+import {
+  Brain, Shield, Rocket, Globe, Cpu, Database
+  TrendingUp, Users, Star, Zap, Lock, Target
+  ArrowRight, Phone, Mail, MapPin, ExternalLink
+} from 'lucide-react'
+// Import our new innovative services
+import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
+const Innovative2025ServicesShowcase: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchTerm, setSearchTerm] = useState('')
+  // Combine all innovative services
+  const allInnovativeServices = [
+    ...innovativeMicroSaasExpansionV32025
+    ...innovativeITServicesExpansion2025V3
+    ...innovativeAIServicesExpansion2025V3
+  ]
+  const categories = [
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length }
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') |s.category.includes('Machine Learning')).length }
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure')).length }
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length }
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') |s.category.includes('FinOps')).length }
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length }
+  ]
+  const filteredServices = allInnovativeServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' |
+      service.category.toLowerCase().includes(selectedCategory) |
+      (selectedCategory === 'ai' && (service.category.includes('AI') |service.category.includes('Machine Learning'))) |
+      (selectedCategory === 'it' && (service.category.includes('IT') |service.category.includes('Infrastructure'))) |
+      (selectedCategory === 'cybersecurity' && service.category.includes('Security')) |
+      (selectedCategory === 'cloud' && (service.category.includes('Cloud') |service.category.includes('FinOps'))) |
+      (selectedCategory === 'developer' && service.category.includes('Developer'))
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase())
+    return matchesCategory && matchesSearch
+  })
+  const stats = [
+    { number: "15+", label: "Innovative Services", icon: Star }
+    { number: "99.9%", label: "Uptime Guarantee", icon: CheckCircle }
+    { number: "24/7", label: "AI Support Available", icon: Brain }
+    { number: "200+", label: "Countries Served", icon: Globe }
+  ]
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 }
+    animate: { opacity: 1, y: 0 }
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+import {;
+  Brain, Shield, Rocket, Globe, Cpu, Database,;
+  TrendingUp, Users, Star, Zap, Lock, Target,;
+  ArrowRight, Phone, Mail, MapPin, ExternalLink;
+} from 'lucide-react',;
+// Import our new innovative services;
+import { innovativeMicroSaasExpansionV32025 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import { innovativeITServicesExpansion2025V3 } from '../data/2025-innovative-it-services-expansion-v3';
+import { innovativeAIServicesExpansion2025V3 } from '../data/2025-innovative-ai-services-expansion-v3';
+const Innovative2025ServicesShowcase: React.FC = () => {;
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  // Combine all innovative services;
+  const allInnovativeServices = [;
+    ...innovativeMicroSaasExpansionV32025;
+    ...innovativeITServicesExpansion2025V3;
+    ...innovativeAIServicesExpansion2025V3;
+  ];
+  const categories = [;
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-500 to-pink-500', count: allInnovativeServices.length },;
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-500 to-blue-500', count: allInnovativeServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },;
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-500 to-orange-500', count: allInnovativeServices.filter(s => s.category.includes('Security')).length },;
+    { id: 'cloud', name: 'Cloud & FinOps', icon: Database, color: 'from-blue-500 to-indigo-500', count: allInnovativeServices.filter(s => s.category.includes('Cloud') || s.category.includes('FinOps')).length },;
+    { id: 'developer', name: 'Developer Tools', icon: Code, color: 'from-green-500 to-teal-500', count: allInnovativeServices.filter(s => s.category.includes('Developer')).length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
   ],
   const categories = [;
     { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from - purple - 500 to - pink - 500', count: allInnovativeServices.length },
@@ -28,6 +112,17 @@
   ],
 
 
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6, ease: "easeOut"   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+
+
 
   const staggerContainer = {
     animate: {
@@ -54,6 +149,8 @@
         <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" />
       </Head>
       <div className="min-h-screen bg-black text-white overflow-hidden">
+
+
         <div className="fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
@@ -220,6 +317,8 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           >
             <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Innovative 2025
@@ -229,6 +328,11 @@
           </motion.h1>
           <motion.p
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+          >
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions
+
+
+
             initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -244,6 +348,11 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
+          >
+            Experience the future of technology with our revolutionary AI platforms, quantum computing solutions,
             autonomous systems, and innovative micro SAAS services that are transforming industries worldwide.
           </motion.p>
           <motion.div
@@ -252,6 +361,8 @@
           >;
             <div className="max - w-7xl mx - auto">;
               {/* Search Bar */}
+
+
               <div className="mb-8">
                 <div className="relative max-w-2xl mx-auto">
                   <input
@@ -267,11 +378,15 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     className="w-full px-6 py-4 bg-gray-900/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   />
                   <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 </div>
               </div>
+
+
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
                   <button
@@ -340,6 +455,9 @@
                   >;
                     <div className="relative overflow - hidden rounded - 2xl bg - gradient - to - br from - gray - 900 / 50 to - gray - 800 / 30 border border - gray - 700 / 50 backdrop - blur - sm">;
                       {/* Service Icon and Header */}
+
+
+
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -368,6 +486,9 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                       <div className="p-8">
                         <div className="flex items-center justify-between mb-6">
                           <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${(service as any).color || 'from-blue-500 to-purple-500'} flex items-center justify-center text-3xl`}>
@@ -381,6 +502,11 @@
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
                               POPULAR
                             </div>
+                        <div className="flex items - baseline mb - 6">;
+                          <span className="text - 3xl font - bold text - white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>;
+                          <span className="text - gray - 400 ml - 2">{(service as any).period || ''}</span>;
+                        </div>;
+
                         {/* Features */}
                         <div className="space - y-3 mb - 8">;
                           {service.features.slice (0, 5).map ((feature, feature_index) => (
@@ -388,6 +514,8 @@
                               <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 0.5 flex - shrink - 0" />;
                               <span className="text - gray - 300 text - sm">{feature}</span>;
                             </div>))}
+
+
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -422,6 +550,14 @@
                           <span className="text-3xl font-bold text-white">{(service as any).price || (service as any).pricing?.starter || 'Contact Us'}</span>
                           <span className="text-gray-400 ml-2">{(service as any).period || ''}</span>
                         </div>
+                        {/* Features */}
+                        {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                         <div className="space-y-3 mb-8">
                           {service.features.slice(0, 5).map((feature, featureIndex) => (
                             <div key={featureIndex} className="flex items-start space-x-3">
@@ -434,6 +570,27 @@
   }
 }
                           {service.features.length > 5 && (
+                        <div className="grid grid - cols - 3 gap - 4 mb - 6 text - center">;
+                          <div>;
+                            <div className="text - lg font - bold text - white">{(service as any).customers || '1000'}+</div>;
+                            <div className="text - xs text - gray - 400">Customers</div>;
+                          </div>;
+                          <div>;
+                            <div className="text - lg font - bold text - white">{(service as any).rating || '4.8'}</div>;
+                            <div className="text - xs text - gray - 400">Rating</div>;
+                          </div>;
+                          <div>;
+                            <div className="text - lg font - bold text - white">{(service as any).reviews || '500'}</div>;
+                            <div className="text - xs text - gray - 400">Reviews</div>;
+                          </div>;
+                        </div>;
+
+                        {/* CTA Button */}
+                        <Link;
+                          href={`/services/${service.id}`}
+
+
+
                           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -445,6 +602,9 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                         <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                           <div>
                             <div className="text-lg font-bold text-white">{(service as any).customers || '1000'}+</div>
@@ -459,18 +619,51 @@
                             <div className="text-xs text-gray-400">Reviews</div>
                           </div>
                         </div>
+                        {/* CTA Button */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        <Link;
+                          href={`/services/${service.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
                           className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white py-3 px-6 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-5 h-5" />
                         </Link>
                       </div>
+
+
                       <div className="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </div>
                   </motion.div>
                 ))}
               </div>
               {filteredServices.length === 0 && (
+                <motion.div
+                  className="text-center py-20"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
+
                 >
                   <div className="text-6xl mb-6"></div>
                   <h3 className="text-2xl font-bold text-white mb-4">No services found</h3>
@@ -481,6 +674,8 @@
                     onClick={() => {
                       setSearchTerm('')
                       setSelectedCategory('all')
+
+
                     className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
                   >
                     Clear Filters
@@ -501,12 +696,20 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-8">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-12">
+                Get in touch with our team to learn more about our innovative 2025 services 
+                Get in touch with our team to learn more about our innovative 2025 services
+
+
+
+
                 and how they can revolutionize your operations.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -557,6 +760,8 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
@@ -603,6 +808,24 @@
               </div>
               <div className="mt-12 pt-8 border-t border-gray-800 text-center">
                 <p className="text-gray-400 text-sm">
+                  © 2025 Zion Tech Group. All rights reserved.
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link>
+                  © 2025 Zion Tech Group. All rights reserved. |
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
+                  © 2025 Zion Tech Group. All rights reserved. | 
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
+                  © 2025 Zion Tech Group. All rights reserved. |
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
+
+
+                  © 2025 Zion Tech Group. All rights reserved. |
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
+
+                  © 2025 Zion Tech Group. All rights reserved. | 
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> | 
+                  © 2025 Zion Tech Group. All rights reserved. |
+                  <Link href="/privacy" className="hover:text-white transition-colors ml-2">Privacy Policy</Link> |
+
                   <Link href="/terms" className="hover:text-white transition-colors ml-2">Terms of Service</Link>
                 </p>
               </div>
@@ -612,6 +835,10 @@
       </div>
     </>
   )
+
+export default Innovative2025ServicesShowcase,;
+;
+export default Innovative2025ServicesShowcase,
                           className="w - full bg - gradient - to - r from - purple - 500 to - pink - 500 text - white py - 3 px - 6 rounded - xl font - semibold hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 300 transform hover:scale - 105 flex items - center justify - center space - x-2";
                         >;
                           <span > Learn More</span>;

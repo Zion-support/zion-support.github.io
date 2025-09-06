@@ -28,6 +28,8 @@ export function AppSidebar() {;
   return (
 
 
+
+
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -51,6 +53,8 @@ export function AppSidebar() {;
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
+
+
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -75,6 +79,22 @@ export function AppSidebar() {;
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
+  );
+}
+  )
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
+import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
+  SidebarGroupContent} from "@/components/ui/sidebar";
+export function AppSidebar() {;
+  return (;
+
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;

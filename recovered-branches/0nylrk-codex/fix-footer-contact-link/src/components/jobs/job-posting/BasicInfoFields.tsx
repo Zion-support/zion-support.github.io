@@ -1,3 +1,16 @@
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
+import {;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormControl,;
+  FormMessage,;
+
+
   FormField,
   FormItem,
   FormLabel,
@@ -14,6 +27,10 @@ import {
   FormItem,
   FormLabel,
   FormControl,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { ClientBudgetRecommender } from "@/components/pricing/ClientBudgetRecommender";
+import { Card, CardContent } from "@/components/ui/card";
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -78,6 +95,8 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({;
       <FormField
         control={control}
         name="title"
+
+
         )}
 
       />;
@@ -159,6 +178,23 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormControl>;
                 <Input
                   type="number"
+                  value={minBudget |rest.value}
+                  onChange={(e) => {
+                    setMinBudget(e.target.value);
+                  value={minBudget || rest.value}
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+
+                  placeholder="e && e.g. 30"
+                  value={minBudget || rest && rest.value}
+                  onChange={(e) => {;
+                    setMinBudget(e && e.target.value);
+
+
+                  value={minBudget || rest.value}
+                  onChange={e => {;
+                    setMinBudget(e.target.value),;
+
                   value={minBudget || rest.value}
                   onChange={(e) => {
                     setMinBudget(e.target.value);
@@ -193,6 +229,12 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
               <FormControl>;
                 <Input
                   type="number"
+                  value={maxBudget |rest.value}
+                  onChange={(e) => {
+                  value={maxBudget || rest.value}
+                  onChange={e => {;
+
+
                   value={maxBudget || rest.value}
                   onChange={(e) => {
                   onChange={e => {;
@@ -223,6 +265,19 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
       <Card>
         <CardContent className="pt-4">
           <ClientBudgetRecommender
+            jobTitle={control._formValues.title |""}
+            category={control._formValues.category |""}
+            experienceLevel={control._formValues.experienceLevel |""}
+                />;
+              </FormControl>;
+              <FormMessage />;
+
+
+
+      
+      <Card>
+        <CardContent className="pt-4">
+          <ClientBudgetRecommender
             jobTitle={control._formValues.title || ""}
             category={control._formValues.category || ""}
             experienceLevel={control._formValues.experienceLevel || ""}
@@ -238,6 +293,11 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
           <FormItem>;
             <FormLabel>Location</FormLabel>;
             <FormControl>;
+          <FormItem>;
+            <FormLabel > Location</FormLabel>;
+            <FormControl>;
+              <Input;
+                placeholder="e.g. Remote, San Francisco, etc.";
                 {...field}
               />;
             </FormControl>;
@@ -250,4 +310,9 @@ export const BasicInfoFields: React.FC < BasicInfoFieldsProps> = ({
 ;
 
 );
+      />;
+    </div>;
+  );
+
+
 };

@@ -11,6 +11,24 @@ import {
   ArrowRight;
 } from 'lucide-react';
 
+import {
+  Mail
+  Phone
+  MapPin
+  Globe
+  Zap
+  Bot
+  Cloud
+  Shield
+  ArrowRight;
+} from 'lucide-react';
+
+export default function FuturisticFooter() {
+  const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
+export default function FuturisticFooter() {
+
+export default function FuturisticFooter() {;
+
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
 
@@ -169,6 +187,63 @@ export default function FuturisticFooter() {;
 
 
           {/* Quick Links */}
+          <div>
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <ArrowRight className='w-5 h-5 text-blue-400 mr-2' />
+              Quick Links
+            </h3>
+            <ul className='space-y-3'>
+              {quickLinks.map(link => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Quick Links
+            </h3>
+            <ul className="space-y-3">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <Cloud className='w-5 h-5 text-green-400 mr-2' />
+              Services
+            </h3>
+            <ul className='space-y-3'>
+              {serviceCategories.map(service => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className='text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block'                  >              Services
+            </h3>
+            <ul className="space-y-3">
+              {serviceCategories.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    href={service.href}
+                    className="text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 inline-block"
+                  >
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+
+
+
+          {/* Quick Links */}
 
 
           {/* Services */}
@@ -255,6 +330,7 @@ export default function FuturisticFooter() {;
       </div>
       {/* Floating elements */}
 
+
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
             <div className="flex space-x-6 text-sm">;
@@ -285,3 +361,6 @@ export default function FuturisticFooter() {;
 
 }
 }
+
+
+

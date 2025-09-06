@@ -38,7 +38,6 @@ if (scope) params.scope = scope
 if (experienceLevel) params.experienceLevel = experienceLevel
 //Track this suggestion application if (user && user.id) {
   trackPricingSuggestion ({
-}
 
 
 },

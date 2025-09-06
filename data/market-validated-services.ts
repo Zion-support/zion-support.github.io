@@ -199,6 +199,33 @@
     contact_info,
   },
   {
+      'Managed vector DB'
+      'Ingestion pipelines'
+      'Metadata filters'
+      'Access controls'
+    ]
+    category: 'AI & Search'
+    link: 'https://ziontechgroup.com/vector-search-starter'
+    variant: 'quantum'
+    rating: 4.6
+    customers: 410
+    trialDays: 14
+    setupTime: '2 hours'
+    contactInfo
+  }
+];import { ServiceVariant  } from "../types/service-variants";
+
+export interface MarketValidatedService {
+    id: 'vector - search - starter',
+    name: 'Vector Search Starter',
+    tagline: 'Deploy a production - grade vector database and APIs',
+    price: '$89',
+    period: '/month',
+    description:;
+      'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.',
+    features: [;
+
+
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -207,7 +234,6 @@
     category: 'AI & Search',
 export interface MarketValidatedService {
 export interface MarketValidatedService {;
-
 	id: string;
 	name: string;
 	tagline: string;

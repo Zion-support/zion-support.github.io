@@ -1,5 +1,41 @@
 import { motion, AnimatePresence } from 'framer-motion';
 
+  Menu
+  X
+  Zap
+  Sparkles
+  ChevronDown
+  ChevronRight
+  Brain
+  Atom
+  Globe
+  Shield
+  Cpu
+  Database
+  Cloud
+  Smartphone
+  Palette
+  Search
+  MessageSquare
+  FileText
+  Calendar
+  CreditCard
+  BarChart3
+  Settings
+  Rocket
+  Star
+  TrendingUp
+  Users
+  Target
+  Award
+  Phone
+  Mail
+  MapPin
+  ExternalLink
+  Building;} from 'lucide-react';import {
+  Menu, X, Zap, Sparkles, ChevronDown, ChevronRight
+  Brain, Atom, Globe, Shield, Cpu, Database
+  Cloud, Smartphone, Palette, Search, MessageSquare
 
   Menu,
   X,
@@ -146,6 +182,8 @@ const _serviceCategories = [
 
 
 
+export default function UltraFuturisticNavigation2027() {
+export default function UltraFuturisticNavigation2027() {;
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isClient, setIsClient] = useState(false);
@@ -691,6 +729,12 @@ export default function UltraFuturisticNavigation2027() {;
           href: '/cloud-platform',
           description: 'Scalable cloud infrastructure',
           price: 'Custom',
+
+  ];
+
+
+  ];
+
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -717,6 +761,13 @@ export default function UltraFuturisticNavigation2027() {;
   ];
   return (
 
+
+        : 'bg-transparent'
+    }`}>;
+      {/* Animated Background */}
+
+
+
                 Revolutionary Technology Solutions
               </div>
             </div>
@@ -732,6 +783,8 @@ export default function UltraFuturisticNavigation2027() {;
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}
 
                   onMouseEnter={() => setActiveDropdown(item.name)}
+
+
 
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
@@ -953,6 +1006,8 @@ export default function UltraFuturisticNavigation2027() {;
 
                 <div className='space-y-6'>
 
+
+
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
@@ -1035,6 +1090,7 @@ export default function UltraFuturisticNavigation2027() {;
   /* Mobile Menu */
 }<AnimatePresence> > <div className= {
   `p-2 rounded-lg bg-gradient-to-br $ {
+
           </motion.div>)}
       </AnimatePresence>;
     </header>);
@@ -1076,5 +1132,7 @@ export default function UltraFuturisticNavigation2027() {;
 }export default UltraFuturisticNavigation2027);
 }
 ;
+export default UltraFuturisticNavigation2027;
+export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;
 export default UltraFuturisticNavigation2027;

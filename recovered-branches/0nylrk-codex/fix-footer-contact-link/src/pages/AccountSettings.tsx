@@ -1,4 +1,21 @@
 
+import { useState, useEffect  } from 'react';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { useAuth  } from '@/hooks/useAuth';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Wallet, Database, Save } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Separator  } from '@/components/ui/separator';
+import { Switch  } from '@/components/ui/switch';
+import { Label  } from '@/components/ui/label';
+import { toast } from 'sonner';
+export default function AccountSettings() {
+
+
+
 import {useState, useEffect} from 'react';
 import {Header} from '@/components / Header';
 import {Footer} from '@/components / Footer';
@@ -12,11 +29,27 @@ import {Separator} from '@/components / ui / separator';
 import {Switch} from '@/components / ui / switch';
 import {Label} from '@/components / ui / label';
 import {toast} from 'sonner';
+
+
+
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+
+
+  useEffect(() => {;
+    try {;
+      const saved = localStorage && localStorage.getItem('account_settings');
+      if (saved) {;
+        const parsed = JSON && JSON.parse(saved);
+        setDisplayWeb3(!!parsed && parsed.displayWeb3);
+        setDidHandle(parsed && parsed.didHandle || '');
+        setEnableBackup(!!parsed && parsed.enableBackup);
+
+
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -46,12 +79,46 @@ export default function AccountSettings() {
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
+import { useState, useEffect } from 'react',;
+import { Header } from '@/components/Header',;
+import { Footer } from '@/components/Footer',;
+import { SEO } from '@/components/SEO',;
+import { useAuth } from '@/hooks/useAuth',;
+import { Button } from '@/components/ui/button',;
+import { Input } from '@/components/ui/input',;
+import { Wallet, Database, Save } from "lucide-react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Separator } from '@/components/ui/separator',;
+import { Switch } from '@/components/ui/switch',;
+import { Label } from '@/components/ui/label',;
+import { toast } from 'sonner',;
+export default function AccountSettings() {;
+  const { user } = useAuth(),;
+  const [displayWeb3, setDisplayWeb3] = useState(false),;
+  const [didHandle, setDidHandle] = useState(''),;
+  const [enableBackup, setEnableBackup] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  useEffect(() => {;
+    try {;
+      const saved = localStorage.getItem('account_settings'),;
+      if (saved) {;
+        const parsed = JSON.parse(saved),;
+        setDisplayWeb3(!!parsed.displayWeb3),;
+        setDidHandle(parsed.didHandle || ''),;
+        setEnableBackup(!!parsed.enableBackup);
+
+
       }
     } catch (e) {;
       console && console.error('Error loading account settings', e);
     }
+  const handleSave = () => {
+    setIsSubmitting(true);
   }, []),
   }, []),
+
+  const handleSave = () => {
+    setIsSubmitting(true),
 
     // Simulate API call
     setTimeout(() => {
@@ -79,10 +146,21 @@ export default function AccountSettings() {
         const ensName = await provider && provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
+
+
+
         }
       } catch (error) {;
         console && console.error('ENS lookup error:', error);
       }
+  }
+  },
+  };
+  },
+
+
+  },
+
   };
   },
 

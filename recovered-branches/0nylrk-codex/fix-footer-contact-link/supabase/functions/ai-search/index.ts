@@ -1,4 +1,5 @@
 
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
@@ -6,6 +7,11 @@ import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
 import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -19,6 +25,14 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
+        { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      )
+    }
+    const openAiKey = Deno.env.get("OPENAI_API_KEY");
+
+
+    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
+
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
@@ -39,11 +53,17 @@ serve(async (req) => {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
+  }
+});
+
+
 import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
 import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
 const cors_headers = {
   "Access - Control - Allow - Origin": "*",
   "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
+
+
       JSON.stringify({ filters }),
 
 ;
@@ -97,6 +117,10 @@ if ( {) {
       JSON.stringify ({ error: error.message });
       { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }
     );
+
+
+
+
   }
 });
 ;

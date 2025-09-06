@@ -1,4 +1,5 @@
 
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -14,6 +15,14 @@ import { motion } from "framer-motion";
   Users,
   Globe,
   Code,
+} from "lucide-react";
+import Layout from "../components/Layout";
+const teamMembers = [
+  {
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
+
+
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -523,6 +532,9 @@ const teamMembers = [;
             </Link>;
             <Link
               href="/contact"
+    </Layout>
+
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
 ;
 const stats = [;
   { number: "65+", label: "Team Members" },
@@ -553,6 +565,7 @@ function TeamPage() {
         </p>
       </div>
     </>
+    </Layout>;
   );
 }
 import Head from "next/head";
@@ -689,6 +702,10 @@ export default function TeamPage() {;
         title="Our Team | Zion Tech Group"
         description="Meet the leadership team at Zion Tech Group."
         canonical="/team"
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+    </>;
 
 
 

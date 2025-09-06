@@ -1,3 +1,17 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/remote-roles.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/remote-roles.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/remote-roles.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/remote-roles.json',
+
+
 export default function RemoteRolesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)

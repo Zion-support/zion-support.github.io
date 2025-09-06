@@ -9,6 +9,40 @@ import {Link} from "react-router-dom";
 import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
+import React, { useEffect, useState } from "react",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { format, isPast, parseISO } from "date-fns",
+import { Link } from "react-router-dom",
+import { Calendar, Clock, Video } from "lucide-react";
+import { Avatar } from "@/components/ui/avatar";
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+import { Calendar, Clock, Video } from "lucide-react",
+import { Avatar } from "@/components/ui/avatar",
+export function UpcomingInterviewsCard() {
+  const { fetchInterviews } = useInterviews(),
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
+  const [isLoading, setIsLoading] = useState(true);
+
+
+  useEffect(() => {;
+    const loadInterviews = async () => {;
+
+      setIsLoading(true);
+      try {;
+        const interviews = await fetchInterviews();
+        const now = new Date();
+
+
 
   useEffect(() => {
 
@@ -76,6 +110,12 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
             ))}
           </div>;
         </CardContent>;

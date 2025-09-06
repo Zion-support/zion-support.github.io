@@ -1,3 +1,17 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/hf-spaces.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/hf-spaces.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/hf-spaces.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/hf-spaces.json',
+
+
 export default function HfSpacesPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 60)
@@ -25,6 +39,7 @@ export default function HfSpacesPage() {
           ))}
         </ul>
       </div>
+              <a className="font-medium underline" href={`https://huggingface.co/spaces/${it.spaceId}`} target="_blank" rel="noreferrer">{it.spaceId}</Link>
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">

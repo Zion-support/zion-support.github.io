@@ -36,6 +36,8 @@ export default function CronJobSchedulerPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-blue-400 mt-0.5"><Check /><span>{feat}</span></li>
+
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit">
@@ -46,6 +48,8 @@ export default function CronJobSchedulerPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+
+
               </div>
             </div>
           </div>
@@ -59,4 +63,7 @@ export default function CronJobSchedulerPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+;
+;
+;
 

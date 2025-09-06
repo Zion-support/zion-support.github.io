@@ -1,3 +1,23 @@
+  CheckCircle
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Shield
+  Globe
+  Brain
+  Database
+  Cloud
+  Lock
+  Rocket
+  Users
+  DollarSign
+  Target
+  Award
+  Phone;
+
+
+
   CheckCircle,
   ArrowRight,
   Star,
@@ -54,6 +74,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
 
+
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
@@ -85,6 +106,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.;
           </p>;
         </motion && motion.div>;
+
+
 
 
         {/* Service Categories */}
@@ -134,6 +157,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 
                     {category.description}
 
+
+
                   </p>
                 </div>
               </div>
@@ -153,6 +178,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
               {/* Services Grid */}
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
+
+
 
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
@@ -219,6 +246,8 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                             +{service.features.length - 3} more features
                           </li>
                         )}
+                      </ul>
+                    </div>
 
 
 
@@ -310,6 +339,12 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                             {useCase}
                           </span>;
                         ))}
+                      </a>
+                    </div>
+                    {/* Hover Effect Overlay */}
+                    <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                  </motion.div>
+
                 ))}
               </div>;
             </motion && motion.div>;
@@ -318,6 +353,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+
 
         >
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
@@ -350,6 +386,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
 };
 export default ComprehensiveServicesShowcase2025;  );
 };
+
 export default ComprehensiveServicesShowcase2025;
 
 
@@ -543,3 +580,8 @@ export default ComprehensiveServicesShowcase2025);
 export default ComprehensiveServicesShowcase2025;
 ;
   );
+export default ComprehensiveServicesShowcase2025;  )
+}
+export default ComprehensiveServicesShowcase2025;
+
+export default ComprehensiveServicesShowcase2025;

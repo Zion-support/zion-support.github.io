@@ -15,6 +15,24 @@ const HoverCardContent = React.forwardRef<
   />;
 ));
 HoverCardContent.displayName = HoverCardPrimitive.Content.displayName;
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+;
+export { HoverCard, HoverCardTrigger, HoverCardContent };
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+;
+
+import * as React from &quot;react & quot;
+import * as HoverCardPrimitive from &quot;@radix - ui / react - hover - card & quot;
+;
+import { cn } from &quot;@/lib / utils & quot;
+
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+;
+
+export { HoverCard, HoverCardTrigger, HoverCardContent };
+export { HoverCard, HoverCardTrigger, HoverCardContent }
+
 ;
 const HoverCard = HoverCardPrimitive.Root;
 const HoverCardTrigger = HoverCardPrimitive.Trigger;

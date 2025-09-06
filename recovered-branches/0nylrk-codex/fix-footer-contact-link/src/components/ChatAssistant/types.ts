@@ -1,3 +1,8 @@
+
+
+export interface Message {;
+
+
   id: string;
   role: 'user' | 'assistant';
   message: string;
@@ -11,6 +16,7 @@ export interface Recipient {;
   avatarUrl?: string;
   role?: string;
 }
+
 
 export interface Message {;
   id: string,;

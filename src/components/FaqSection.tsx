@@ -194,6 +194,14 @@ const faqs = [
 
 export function FaqSection() {
   return (
+    <section className="py-20 bg-zion-blue" id="faq">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <GradientHeading>Frequently Asked Questions</GradientHeading>
+          <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">
+            Find answers to common questions about AI product listings, IT equipment rentals, and datacenter maintenance services
+          </p>
+        </div>
 
 
 

@@ -165,6 +165,55 @@ const formSchema = z.object({
   duration: z.string().min(1, "Please select the interview duration."),
   platform: z.string().min(1, "Please select a meeting platform."),
   meetingLink: z.string().optional(),
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
+  })
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!userDetails?.id) {
+      toast({
+        title: 'Authentication required'
+        description: 'Please log in to schedule an interview'
+        variant: 'destructive'
+      })
+      return;
+    }
+    setIsSubmitting(true)
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`
+      const scheduledDate = new Date(dateTimeString)
+      // Calculate end time based on duration
+      const durationMinutes = parseInt(values.duration)
+      duration: "30",
+      platform: "zoom",
+      notes: "",
+      meetingLink: ""}}),
+
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    if (!userDetails?.id) {
+      toast({
+        title: "Authentication required",
+        description: "Please log in to schedule an interview",
+        variant: "destructive"}),
+      return
+    }
+
+    setIsSubmitting(true),
+
+    try {
+      // Combine date and time
+      const dateTimeString = `${format(values.date, 'yyyy-MM-dd')}T${values.time}:00`,
+      const scheduledDate = new Date(dateTimeString),
+      
+      // Calculate end time based on duration
+      const durationMinutes = parseInt(values.duration),
+
+
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema)
+    defaultValues: {
 
       title: `Interview with ${talent.full_name}`,
 

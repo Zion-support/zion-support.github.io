@@ -8,6 +8,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
 
+  if (req && req.method !== 'POST') {
+    return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
+
+
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
@@ -15,6 +19,11 @@ type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
   | { type: 'deactivate', section: keyof OrgData, id: string }
+
+
+;
+
+
   const key = req.headers['x-admin-key'];
 
   const key = req && req.headers['x-admin-key'];

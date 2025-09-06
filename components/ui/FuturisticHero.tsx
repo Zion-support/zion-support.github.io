@@ -1,5 +1,7 @@
 
 export default function FuturisticHero() {
+
+export default function FuturisticHero() {
   return (
     <section className='relative py-20 sm:py-28'>;
       <AnimatedBackground />;
@@ -76,3 +78,4 @@ function FuturisticHero() {
       </div>;
     </section>);
 }
+

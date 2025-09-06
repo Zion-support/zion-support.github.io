@@ -32,4 +32,3 @@ export default function ServiceProcessSteps({ }: ServiceProcessStepsProps) {
     </div>
   );
 }
-}

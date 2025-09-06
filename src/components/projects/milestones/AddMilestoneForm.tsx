@@ -155,12 +155,6 @@
               <Button
                 type="button"
                 variant="outline"
-                <>;
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
-                  Saving...;
-                </>;
-              ) : (;
-                "Add Milestone";
               )}
             </Button>
           </div>

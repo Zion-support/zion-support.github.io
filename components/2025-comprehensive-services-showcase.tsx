@@ -1,4 +1,15 @@
 
+// All services combined const allServices = [ ...advancedAIMLServices;
+ // All services combined const allServices = [ ...advancedAIMLServices;
+// All services combined const allServices = [ ...advancedAIMLServices;
+ // All services combined const allServices = [ ...advancedAIMLServices;
+
+
+
+ // All services combined const allServices = [ ...advancedAIMLServices;
+
+// All services combined const allServices = [ ...advancedAIMLServices;
+ // All services combined const allServices = [ ...advancedAIMLServices;
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
 ...industrySpecificSolutions;
@@ -169,6 +180,30 @@
               </motion.div>
             ))}
           </div>
+          {/* Services Display */}
+          <AnimatePresence mode="wait">
+            {viewMode === 'grid' ? (
+              <motion.div
+
+                      href={`mailto:${(service as any).contact || 'kleber@ziontechgroup && ziontechgroup.com'}?subject=Inquiry about ${service && service.name}`}
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">;
+                      <Mail className="w-4 h-4" />;
+                      Get Started;
+                    </a>;
+                    <a
+                      href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
+                      className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2">;
+                      <Phone className="w-4 h-4" />;
+                      Call Now;
+                    </a>;
+                  </div>;
+                </div>;
+              </motion && motion.div>;
+            ))}
+          </div>;
+
+
+
 
           {/* Services Display */}
           <AnimatePresence mode="wait">;
@@ -199,6 +234,8 @@
                       <div className="mt-4">;
                         <span className="text-2xl font-bold">;
                           {getServicePricing(service)}
+
+
                       {/* Price */}
                       <div className="mt - 4">;
                         <span className="text - 2xl font - bold">;
@@ -223,6 +260,9 @@
                               {feature}
                             </li>;
                           ))}
+
+
+
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -230,6 +270,8 @@
                           <span className="ml-1">{service.category}</span>
                         </span>
                       </div>
+
+
                       {/* Service Info */}
                       <div className="grid grid-cols-2 gap-4 mb-4 text-sm text-gray-600">;
                         <div>;
@@ -250,6 +292,8 @@
                           <div className="text - right mb - 4">;
                             <span className="text - 3xl font - bold text - gray - 900">;
                               {typeof service.price === 'string' ? service.price : `$${service.price.monthly}/month`}
+
+
                           <div className="mb-4">
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
                             <ul className="space-y-1 text-sm text-gray-600">
@@ -294,6 +338,9 @@
                                   {feature}
                                 </li>
                               ))}
+
+
+
                           {/* Category and Action */}
                           <div className="flex flex-col items-end space-y-3">
                             <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${getCategoryColor(service.category)} text-white`}>
@@ -313,6 +360,24 @@
 
 
                             
+                            <a
+                              href={service.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium flex items-center"
+                            >
+                              Learn More
+                              <ArrowRight className="w-4 h-4 ml-2" />
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
                             <a
                               href={service && service.link}
                               target="_blank"
@@ -364,6 +429,9 @@
               <p className="text-gray-600">Try adjusting your search terms or category filters.</p>;
             </div>;
           )}
+
+
+
       {/* Why Choose Us */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -375,6 +443,9 @@
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth
             </p>
           </div>
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -390,6 +461,9 @@
                 Cutting-edge AI and machine learning solutions that deliver real business value
               </p>
             </motion.div>
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -404,6 +478,9 @@
                 Bank-grade security and compliance for mission-critical business applications
               </p>
             </motion.div>
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -421,6 +498,9 @@
           </div>
         </div>
       </section>
+
+
+
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -656,3 +736,23 @@
     </div>);
 }
 export default ComprehensiveServicesShowcase;
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+;

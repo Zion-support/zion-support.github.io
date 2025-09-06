@@ -1,8 +1,27 @@
 
+
+
+
+
 import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 import { supabase } from "@/integrations/supabase/client",
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system',
+
+
+
+
+/**
+ * Creates a notification for a user and optionally sends an email notification
+ */
+export async function createNotification({;
+  userId;
+  title;
+  message;
+  type;
+  relatedId = null;
+  sendEmail = false;
+  actionUrl = null;
 export async function createNotification({
   userId,
   title,
@@ -33,6 +52,8 @@ export async function createNotification({
   void actionText,
   try {
     // Call the create_notification database function
+
+
         body: { user_id: userId, notification_id: notificationId }
       })
     }
@@ -40,10 +61,73 @@ export async function createNotification({
     return { success: false, error }
   }
 }
+  } catch (error) {;
+    console.error('Error creating notification:', error),;
+  } catch (error) {;
+    console.error('Error creating notification:', error),;
+
+    return { success: false, error }
+  }
+}
 
 /**
  * Creates a hire request notification for admin and talent
  */
+;
+/**;
+ * Creates a hire request notification for admin and talent;
+ */;
+export async function createHireRequestNotifications({;
+  talentId,;
+  adminId,;
+  requesterName,;
+  requesterEmail,;
+  projectType,;
+  projectSummary,;
+  hireRequestId;
+}: {;
+  talentId: string,;
+  adminId?: string,;
+  requesterName: string,;
+  requesterEmail: string,;
+  projectType?: string,;
+  projectSummary?: string,;
+  hireRequestId: string;
+}) {;
+  const projectInfo = projectType;
+    ? `${projectType} project`;
+    : "project",;
+  const summaryText = projectSummary;
+    ? `: "${projectSummary}"`;
+    : "",;
+  // Create notification for talent;
+  const talentNotification = await createNotification({;
+    userId: talentId,;
+    title: `New Hire Request from ${requesterName}`,;
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,;
+    type: 'hire_request',;
+    relatedId: hireRequestId,;
+    sendEmail: true,;
+    actionUrl: '/dashboard',;
+    actionText: 'View Request';
+  }),;
+  // Create notification for admin if admin ID is provided;
+  if (adminId) {;
+    const adminNotification = await createNotification({;
+      userId: adminId,;
+      title: `New Hire Request for Talent`,;
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,;
+      type: 'hire_request',;
+      relatedId: hireRequestId,;
+      sendEmail: true,;
+      actionUrl: '/admin/hire-requests',;
+      actionText: 'Review Request';
+    }),;
+    return {;
+      success: talentNotification.success && adminNotification.success,;
+      talentNotification,;
+      adminNotification;
+
     }
   }
   return {
@@ -51,6 +135,10 @@ export async function createNotification({
     talentNotification
   }
 }
+
+
+
+
 
 /**
  * Creates an onboarding notification for a user
@@ -98,6 +186,10 @@ export async function createOnboardingNotification({;
     'onboarding': { url: '/profile', text: 'Complete Profile' }
     'system': { url: '/dashboard', text: 'Learn More' }
   }
+}
+
+
+
 ;
   return create_notification ({
     user_id;
@@ -180,3 +272,8 @@ export async function createTestNotification(userId: string) {;
     actionUrl: actions[randomType].url;
     actionText: actions[randomType].text;
   });
+
+
+
+}
+;

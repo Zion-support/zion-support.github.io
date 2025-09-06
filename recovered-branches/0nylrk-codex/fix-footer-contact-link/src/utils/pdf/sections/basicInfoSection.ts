@@ -1,4 +1,9 @@
 
+import { jsPDF  } from 'jspdf';
+import { ResumeBasicInfo  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addBasicInfoSection(
+
 import {jsPDF} from 'jspdf';
 import {ResumeBasicInfo} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -16,6 +21,7 @@ export function addBasicInfoSection(;
   doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
   // Add summary if available
+
   }
   return yPos
 import {jsPDF} from 'jspdf';

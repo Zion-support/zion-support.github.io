@@ -3,8 +3,6 @@ import { Card, CardContent } from "@/components/ui/card",
 
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-            ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
-            : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
           }
         </p>
       </CardContent>

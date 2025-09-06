@@ -60,6 +60,7 @@ const getIcon = (iconName?: string) => {
           <p className="text-zion-slate-light text-md">
             {t('home.no_categories_support')}
   }
+  }
 
 
 

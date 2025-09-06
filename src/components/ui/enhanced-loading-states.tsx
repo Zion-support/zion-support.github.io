@@ -138,6 +138,18 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({;
               </Button>
             )}
 
+            {action && (
+              <Button
+                onClick={action.onClick}
+                variant={canRetry ? 'outline' : 'default'}
+              >
+            
+            {action && (
+              <Button onClick={action.onClick} variant={canRetry ? "outline" : "default"}>
+                {action.label}
+              </Button>
+            )}
+
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
             

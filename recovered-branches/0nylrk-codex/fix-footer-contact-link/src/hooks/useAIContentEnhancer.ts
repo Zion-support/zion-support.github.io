@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -8,13 +12,11 @@ type EnhancementType =
   | 'job-post'
   | 'proposal'
   | 'general';
+  enhancementType: EnhancementType;
   content?: string;
   context?: string
   instructions?: string
 }
-export function useAIContentEnhancer() {
-
-export function useAIContentEnhancer() {;
 
 import {useState} from 'react';
 import {supabase} from '@/integrations / supabase / client';
@@ -35,6 +37,8 @@ export interface AIEnhancementOptions {;
 
   enhancementType: EnhancementType;
   content?: string;
+
+
   const [isEnhancing, setIsEnhancing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const enhanceContent = async ({
@@ -53,6 +57,11 @@ export interface AIEnhancementOptions {;
         }
       });
       if (error) {
+      }
+      return data.enhancedContent
+
+      
+      return data && data.enhancedContent
     } catch (err: any) {
       const errorMessage = err && err.message || 'Failed to enhance content';
 
@@ -60,6 +69,9 @@ export interface AIEnhancementOptions {;
       toast({
         title: "AI Enhancement Failed";
         description: errorMessage
+        throw new Error(error.message)
+
+
 import { useState } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { toast } from '@/hooks/use-toast',;
@@ -119,6 +131,18 @@ export function useAIContentEnhancer() {;
     enhanceContent;
     isEnhancing;
 
+  context?: string,
+  instructions?: string;
+}
+export /**
+ * useAIContentEnhancer - Function description
+ */
+function useAIContentEnhancer() {
+  const [is_enhancing, setIsEnhancing] = useState (false);
+  const [error, set_error] = useState < string | null>(null);
+
+
+
 ;
   const enhance_content = async ({
     enhancement_type;
@@ -159,6 +183,9 @@ if ( {) {
     } finally {
       setIsEnhancing (false);
     }
+
+
+
   }
 ;
   return {

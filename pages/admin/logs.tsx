@@ -1,9 +1,20 @@
+import { useState, useEffect  } from 'react';
+import { GetServerSideProps  } from 'next';
+import fs from 'fs',
+import path from 'path';
+
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import {useState, useEffect} from 'react';
 import {GetServerSideProps} from 'next';
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
+import {useState, useEffect} from 'react';
+import {GetServerSideProps} from 'next';
+import { useState, useEffect } from 'react';
+import { GetServerSideProps } from 'next';
+
+
 import fs from 'fs';
 import path from 'path';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -35,6 +46,9 @@ import {;
   Search,;
   Download,;
   RefreshCw,;
+  Select,
+  SelectContent,
+  SelectItem,
   SelectTrigger,;
   SelectValue,;
 } from '@/components/ui/select';
@@ -92,6 +106,47 @@ interface LogEntry {;
     name: string;
     message: string;
     stack?: string;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
+import { logErrorToProduction } from '@/utils/productionLogger';
+interface LogEntry {
+  id: string;
+  timestamp: string;
+  level: 'debug' | 'info' | 'warn' | 'error' | 'critical',;
+  message: string;
+  category: string;
+  context?: Record<string, unknown>,;
+  stack?: string,;
+  url?: string,;
+  userAgent?: string,;
+  userId?: string,;
+  sessionId: string;
+  source: 'client' | 'server' | 'middleware' | 'api',;
+  component?: string,;
+  feature?: string,;
+  error?: {;
+    name: string;
+    message: string;
+    stack?: string,;
+    cause?: unknown;
+  },;
+  performance?: {;
+    memory?: number,;
+    timing?: number,;
+    fps?: number;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+interface LogsPageProps {;
+interface LogsPageProps {;
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
@@ -101,6 +156,8 @@ interface LogEntry {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
     case 'debug':
@@ -112,11 +169,19 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
     case 'error':
       return <AlertCircle className="h-4 w-4 text-red-500" />,
     case 'critical':
+  logs: initialLogs
+  errorCount
+  warningCount
+  totalCount
+  lastUpdated
+
   logs: initialLogs,
   errorCount,
   warningCount,
   totalCount,
   lastUpdated,;
+}: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
+
 }: LogsPageProps) {  const [logs, setLogs] = useState<LogEntry[]>(initialLogs);
       return <XCircle className="h-4 w-4 text-red-700" />,
     default: return <Info className="h-4 w-4 text-gray-500" />
@@ -200,6 +265,10 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   const [sourceFilter, setSourceFilter] = useState<string>('all');
   const [isLoading, setIsLoading] = useState(false);
 
+
+
+
+
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(
     Boolean
 
@@ -220,8 +289,22 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
       case 'error': return 'bg-red-100 text-red-800';
       case 'critical': return 'bg-red-200 text-red-900';
       default: return 'bg-gray-100 text-gray-800';    }
+    const dataStr = JSON.stringify(filteredLogs, null, 2);
+    const dataUri =
       'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+
+  };
+
+  const exportLogs = () => {;
+    const dataStr = JSON && JSON.stringify(filteredLogs, null, 2);
+    const dataUri =;
+
+      'data:application/json;charset=utf-8,' + encodeURIComponent(dataStr);
+    const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
+
+
+
   const categories = Array.from(new Set(logs.map(log => log.category))).filter(Boolean);
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(Boolean);
   useEffect(() => {;
@@ -291,6 +374,9 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 }
   },;
   const exportLogs = () => {;
+
+
+
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`,;
@@ -298,6 +384,27 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     linkElement.setAttribute('href', dataUri);
     linkElement.setAttribute('download', exportFileDefaultName);
     linkElement.click();
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+  };
+
+  const formatTimestamp = (timestamp: string) => {
+    return new Date(timestamp).toLocaleString();  }
+  const formatPerformance = (performance?: LogEntry['performance']) => {
+
+
+    const linkElement = document && document.createElement('a');
+    linkElement && linkElement.setAttribute('href', dataUri);
+    linkElement && linkElement.setAttribute('download', exportFileDefaultName);
+    linkElement && linkElement.click();
+  };
+
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();  };
+
+  const formatPerformance = (performance?: LogEntry['performance']) => {;
+
     if (!performance) return null;
     const parts = [];
     if (performance && performance.memory) {;
@@ -343,6 +450,11 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     if (performance.fps) {
       parts.push(`FPS: ${performance.fps}`)
     }
+  },;
+  const formatTimestamp = (timestamp: string) => {;
+    return new Date(timestamp).toLocaleString();
+  };
+
   const formatPerformance = (performance?: LogEntry['performance']) => {;
     if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
       } catch (error) {
@@ -366,6 +478,9 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
             Export
           </Button>
         </div>
+
+
+
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Logs</CardTitle>
@@ -382,6 +497,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
       <Card>
         <CardHeader>
           <CardTitle>Filters</CardTitle>
@@ -396,6 +513,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               <SelectContent>
                 <SelectItem value='all'>All Categories</SelectItem>
                 {categories.map(category => (
+
+
               <SelectTrigger>
                 <SelectValue placeholder="All categories" />
               </SelectTrigger>
@@ -433,6 +552,39 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
               </SelectContent>;
             </Select>;
           </div>;
+
+      <Card>;
+        <CardHeader>;
+          <CardTitle > Log Entries ({filtered_logs.length})</CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+          <div className='space - y-4'>;
+            {filtered_logs.length > 0 ? (
+              filtered_logs.map (log => (
+                <div key={log.id} className='border rounded - lg p - 4 space - y-2'>;
+                  <div className='flex items - center justify - between'>;
+                    <div className='flex items - center space - x-2'>;
+                      <LogLevelIcon level={log.level} />;
+                      <LogLevelBadge level={log.level} />;
+                      <Badge variant='outline'>{log.category}</Badge>;
+                      <Badge variant='secondary'>{log.source}</Badge>;
+                      {log.component && (
+                        <Badge variant='outline'>{log.component}</Badge>)}
+                    </div>;
+                    <span className='text - sm text - muted - foreground'>;
+                      {format_timestamp (log.timestamp)}
+                    </span>;
+                  </div>;
+                  <div className='text - sm font - medium'>{log.message}</div>;
+                  {log.context && Object.keys (log.context).length > 0 && (
+                    <details className='text - xs'>;
+                      <summary className='cursor - pointer text - muted - foreground hover:text - foreground'>;
+                        View Context;
+                      </summary>;
+                      <pre className='mt - 2 p - 2 bg - muted rounded text - xs overflow - x-auto'>                        {JSON.stringify (log.context, null, 2)}
+                      </pre>;
+                    </details>)}
+
                   {log.error && (
                     <details className='text - xs'>;
                       <summary className='cursor - pointer text - red - 600 hover:text - red - 800'>;
@@ -469,11 +621,18 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                       <Badge variant="secondary">{log.source}</Badge>
                       {log.component && (
                         <Badge variant="outline">{log.component}</Badge>
+
+
                   {log.context && Object.keys(log.context).length > 0 && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
                         View Context
                       </summary>
+
+
+
+
+
                       <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-x-auto">
                         {JSON.stringify(log.context, null, 2)  } catch (error) {
     console.error("Error:", error);
@@ -487,6 +646,9 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                   {log.error && (
                     <details className="text-xs">
                       <summary className="cursor-pointer text-red-600 hover:text-red-800">
@@ -500,6 +662,8 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
                             <summary className="cursor-pointer">Stack Trace</summary>
                             <pre className="mt-1 text-xs overflow-x-auto">{log.error.stack}</pre>
                           </details>
+
+
                 </div>
               ))
             ) : (
@@ -591,6 +755,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
         lastUpdated: new Date().toISOString(),
       },
     };
+
             )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -686,6 +851,20 @@ export const getServerSideProps: GetServerSideProps = async () => {;
       },;
     };
   }
+  }
+}
+};
+
+        errorCount;
+        warningCount;
+        totalCount;
+        lastUpdated: new Date().toISOString()}}
+  } catch (error) {
+            logErrorToProduction('Error reading logs:', error);
+    return {
+      props: {
+        logs: [],
+
   }
 }
 ;

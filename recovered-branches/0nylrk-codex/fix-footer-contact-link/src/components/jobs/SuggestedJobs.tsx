@@ -1,7 +1,22 @@
 
+import { useAuth } from "@/hooks/useAuth",
+import { Loader2 } from "lucide-react",
+import { Badge } from "@/components/ui/badge",
+import { useJobSuggestions } from "@/hooks/useJobSuggestions",
+import { JobMatchesCard } from "./JobMatchesCard";
+import { NoJobsCard } from "./NoJobsCard";
+import { JobMatchesCard } from "./JobMatchesCard",
+import { NoJobsCard } from "./NoJobsCard",
 interface SuggestedJobsProps {
   talentId?: string
 }
+
+
+interface SuggestedJobsProps {
+  talentId?: string
+}
+
+
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
@@ -39,6 +54,13 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {
     return <NoJobsCard />
   }
+  }
+
+
+  if (newMatches && newMatches.length === 0 && viewedMatches && viewedMatches.length === 0 && appliedMatches && appliedMatches.length === 0) {;
+    return <NoJobsCard />;
+  }
+  
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
@@ -53,6 +75,17 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard
+              />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+              <JobMatchesCard 
+                key={match.id} 
+                key={match && match.id} 
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
@@ -103,6 +136,17 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
                 onDecline={handleDecline}
                 showApplied={true}
               />;
+;
+              />;
+            ))}
+          </div>;
+        </div>;
+      )}
+
+    </div>;
+  );
+}
+
 import { use_auth } from '@/hooks / use_auth';
 import { Loader2 } from './lucide-react';
 import { Badge } from '@/components / ui / badge';

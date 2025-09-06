@@ -4,6 +4,12 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
   ArrowRight, MapPin, Clock, DollarSign, Star, Zap
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+
+
+      title: "Senior AI Engineer",
+      department: "AI & Machine Learning",;
+
+
       location: "San Francisco, CA / Remote";
 
 export default function CareersPage() {;
@@ -128,6 +134,8 @@ export default function CareersPage() {;
           </div>;
         </div>;
       </section>;
+
+
       {/* Open Positions */}
       <section className="py-20 px-6">;
         <div className="max-w-7xl mx-auto">;

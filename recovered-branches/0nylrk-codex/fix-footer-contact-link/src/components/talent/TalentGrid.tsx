@@ -1,3 +1,10 @@
+import { TalentCard } from "@/components/talent/TalentCard";
+import { TalentProfile } from "@/types/talent";
+export interface TalentGridProps {
+
+  clearFilters?: () => void;
+import { TalentCard } from "@/components/talent/TalentCard",
+import { TalentProfile } from "@/types/talent",
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;
 
@@ -34,6 +41,8 @@ export function TalentGrid({
   savedTalentIds
   onToggleSave
 
+
+
   handleRequestHire
 }: TalentGridProps) {
 
@@ -41,6 +50,9 @@ export function TalentGrid({
     if (handleRequestHire) {
       handleRequestHire(talent)
     } else {
+  }
+
+  };
 
 ;
   const handleViewProfile = (id: string) =>: any {
@@ -99,6 +111,10 @@ export function TalentGrid({;
       onTalentClick(id);
     }
   },
+
+
+
+  
   if (isLoading) {
     return <div className="py-8 text-center">
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>
@@ -133,6 +149,11 @@ export function TalentGrid({;
         >
           Clear Filters
         </button>
+      )}
+    </div>
+  }
+
+
       )}
     </div>;
   }

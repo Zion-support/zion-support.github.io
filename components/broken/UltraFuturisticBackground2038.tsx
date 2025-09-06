@@ -2,6 +2,7 @@ export default function UltraFuturisticBackground2038(): any ({;
   intensity = 'medium',;
   theme = 'consciousness',;
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038(): any ({ ;
+
   intensity = 'medium',
   theme = 'consciousness',
   children,}: UltraFuturisticBackground2038Props) {export default function UltraFuturisticBackground2038({ ;
@@ -256,6 +257,21 @@ if ( {) {
         if (particle.type === 'particle') {
           ctx.fillStyle = `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`;
           ctx.beginPath();
+        // Boundary wrapping with quantum tunneling effect
+        if (
+          particle.x < 0 |
+          particle.x > canvas.width |
+          particle.y < 0 |
+          particle.y > canvas.height
+        ) {
+          if (Math.random() > 0.8) {
+            // Quantum tunneling
+            particle.x = Math.random() * canvas.width;
+            particle.y = Math.random() * canvas.height;
+          } else {
+            particle.x = (particle.x + canvas.width) % canvas.width;
+            particle.y = (particle.y + canvas.height) % canvas.height;          }          ctx.beginPath();
+
           ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
           ctx.fill()
         }
@@ -562,6 +578,23 @@ if ( {) {
                 key={i}
                 className='absolute w - px h - 32 bg - gradient - to - b from - transparent via - purple - 500 to - transparent opacity - 20';
                 style={{
+                  left: `${(i * 5) % 100}%`
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
+                animate={{
+                  height: [32, 64, 32];
+                  opacity: [0.2, 0.6, 0.2]}}
+                transition={{
+                  duration: 3 + i * 0.2
+                  repeat: Infinity
+                  ease: "easeInOut"
+                  left: `${(i * 5) % 100}%`,
+                  top: `${(i * 3) % 100}%`,
+
+                  top: `${(i * 3) % 100}%`,
+
+                  top: `${(i * 3) % 100}%`,
+
 
 
                   left: `${(i * 5) % 100}%`,
@@ -648,6 +681,8 @@ if ( {) {
                 animate={{
                   opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]}}
                 transition={{
+
+
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3]
@@ -682,6 +717,12 @@ if ( {) {
                 key={i}
                 className='absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full';
                 style={{
+                  left: `${(i * 12) % 100}%`
+                  left: `${(i * 12) % 100}%`,
+                  top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
+              <motion.div
+
+
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
               <motion&& motion.div
@@ -694,6 +735,20 @@ if ( {) {
                   left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`}}
                 animate={{
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                  top: `${(i * 8) % 100}%`,
+
+                  ease: "easeInOut"
+
+
+                  left: `${(i * 12) % 100}%`,
+
+
+
+
+
                 }}
                 animate={{
                   scale: [1, 1.5, 1]
@@ -793,3 +848,8 @@ animate ();
 }</div>) 
 }</div> {
   children 
+}</div>)   )
+}
+;
+}</div>)
+

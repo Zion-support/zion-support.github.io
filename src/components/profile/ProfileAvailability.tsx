@@ -102,6 +102,7 @@ interface ProfileAvailabilityProps {
                   <Clock className="h-4 w-4 text-zion-cyan" />
                   <span>{slot.hours}</span>
                 </div>
+                </div>
               </div>
             ))}
           </div>

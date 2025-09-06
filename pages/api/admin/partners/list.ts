@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -21,6 +22,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     if (usingPlaceholder) {
       return res && res.status(200).json({
         partners: [
+          {
           {
 
             code: "aihub",

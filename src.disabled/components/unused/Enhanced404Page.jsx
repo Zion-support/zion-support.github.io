@@ -32,4 +32,3 @@ export default function Enhanced404Page({ }: Enhanced404PageProps) {
     </div>
   );
 }
-}

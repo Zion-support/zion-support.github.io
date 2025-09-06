@@ -1,7 +1,24 @@
+  Project
+  Milestone
+  MilestoneStatus
+  isMilestoneStatus
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+export interface Milestone {
+  isMilestoneStatus,;
 } from '../types/milestones';
 import { CurrentUser } from './auth';
 
 export interface Milestone {;
+
+
+} from '../types/milestones';
+import { CurrentUser } from './auth';
+
+// Project management utilities
+import { v4 as uuidv4 } from 'uuid';
+
+export interface Project {
   id: string;
   title: string;
   summary: string;
@@ -102,10 +119,16 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
+
+
+
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
+  };
+
+
   };
   }
   project.milestones.push(newMilestone);
@@ -119,6 +142,12 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   
   return newMilestone;
 }
+
+
+
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
+
+
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
 
@@ -133,6 +162,12 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
   
   return milestone;
 }
+
+
+
+export function deleteMilestone(project: Project, milestoneId: string): boolean {;
+
+
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
 

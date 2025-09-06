@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
 
@@ -14,10 +15,16 @@ export default async function handler(
   }
   try {
 
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -69,6 +76,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await supabase.channel(`project_${projectId}_calls`).send({ type: 'broadcast', event: 'call_invite', payload: { projectId, roomName, inviterName } });
     return res.status(200).json({ ok: true });
   } catch (e) {
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    console.error (e);
+    return res.status (500).json ({ ok: false, error: "Failed to send invite" });
   }
 }
   } catch (error) {

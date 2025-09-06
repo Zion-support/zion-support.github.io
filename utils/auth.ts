@@ -1,10 +1,18 @@
 
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+// Authentication utilities
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+;
 export interface User {
   id: string;
   email: string;
   role: string;
   isAdmin: boolean;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
 export interface User {;
   id: string;
   email: string;
@@ -102,6 +110,12 @@ export async function ensureAdminFromApi (req: NextApiRequest): Promise<{ allowe
   role: 'admin' | 'user' | 'guest';
   email: string;
 }
+
+
+      { id: 'admin-1', name: 'Admin User', role: 'admin', email: 'admin@zion.os' },
+      { id: 'user-1', name: 'Regular User', role: 'user', email: 'user@zion.os' };
+
+
     );
   }
 }
@@ -136,6 +150,7 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   } catch {
     return null;
   }
+
 
 
 export function isAuthenticated(session: AuthSession | null): boolean {

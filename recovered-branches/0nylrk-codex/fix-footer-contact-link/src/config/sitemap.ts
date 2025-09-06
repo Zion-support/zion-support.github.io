@@ -1,3 +1,9 @@
+
+export type SitemapItem = {
+
+
+export type SitemapItem = {;
+
   path: string;
   label: string;
   description?: string;
@@ -193,6 +199,9 @@ export const getAccessibleRoutes = (
     // Add role-specific routes
     if (userType === 'creator' |userType === 'jobSeeker') {
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes]
+
+
+
     }
     ;
     if (userType === 'employer' || userType === 'buyer') {;
@@ -203,6 +212,15 @@ export const getAccessibleRoutes = (
       accessibleRoutes = [...accessibleRoutes, ...talentRoutes, ...clientRoutes, ...adminRoutes],;
     }
   }
+  return accessibleRoutes
+}
+
+    required_auth: true;
+    required_roles: ['admin'];
+    priority: 0.8;
+    change_freq: 'daily',
+    lastmod: current_date}];
+
 
 ;
   return accessibleRoutes;

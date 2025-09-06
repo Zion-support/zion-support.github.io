@@ -141,9 +141,6 @@ export default function GreenIT() {;
                 </div>;
                 <div className='rounded-lg overflow-hidden relative w-full h-full'>;
                 <div className="rounded-lg overflow-hidden relative w-full h-full">
-
-                <div className="rounded-lg overflow-hidden relative w-full h-full">
-
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()

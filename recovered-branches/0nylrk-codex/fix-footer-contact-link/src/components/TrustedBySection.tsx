@@ -1,4 +1,22 @@
 
+import { GradientHeading } from "./GradientHeading";
+import { useState } from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+
+
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
+import { GradientHeading } from "./GradientHeading",
+import { useState } from "react",
+
 // Real company logos for trusted partners - with more reliable image URLs
 
 const trustedCompanies = [
@@ -108,6 +126,11 @@ const trustedCompanies = [
                   {company.name}
                 </div>
               ) : (
+import { GradientHeading } from "./GradientHeading",;
+import { useState } from "react",;
+
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
 // Real company logos for trusted partners - with more reliable image URLs;
 const trustedCompanies = [;
   {;
@@ -118,6 +141,19 @@ const trustedCompanies = [;
           <GradientHeading className="mb-2">Trusted By Industry Leaders</GradientHeading>;
           <p className="text-zion-slate-light">Join the growing network of companies relying on Zion's marketplace</p>;
         </div>;
+                <img
+                  src={company && company.logo} 
+                  alt={company && company.alt} 
+
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+                  onError={() => handleImageError(company && company.name)}
+                />;
+
+                <img 
+                  src={company.logo} 
+                  alt={company.alt} 
+                  className="max-h-10 max-w-full opacity-70 group-hover:opacity-100 transition-opacity duration-300 filter invert"
+
                   onError={() => handleImageError(company.name)}
                 />
               )}

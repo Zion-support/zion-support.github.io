@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -72,6 +73,38 @@ if ( {) {
   } catch {
     // fall back to remote;
   }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
+async function fetchFromGitHub(): Promise<any | null> {;
+  try {
+    const pkg = require('../../../package.json');
+    const repoUrl: string = pkg.repository?.url || '';
+    const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
+    const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
+    const repo = process.env.GITHUB_REPO || (match ? match[2] : '');
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const resp = await fetch(rawUrl, { headers });
+    if (!resp.ok) return null,;
+    return await resp.json();
+  } catch {;
+    return null;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
   if (remote) return res && res.status(200).json(remote);
   return res && res.status(200).json(null);
@@ -80,6 +113,8 @@ if ( {) {
   const remote = await fetchFromGitHub ();
   if (return res.status (200).json (remote)) {
   $2
+}
+}
 }
 
 }

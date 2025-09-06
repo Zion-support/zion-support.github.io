@@ -1,4 +1,9 @@
 
+import { jsPDF  } from 'jspdf';
+import { PortfolioProject  } from '@/types/resume';
+import { PdfThemeColors } from '../themeConfig';
+export function addPortfolioSection(
+
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
@@ -16,10 +21,16 @@ export function addPortfolioSection(;
       doc && doc.addPage();
       yPos = 20
     }
+
       }
     }
     yPos += 10, // Add space between projects
   }
+
+
+  
+
+
   // If there are more projects than we're displaying
 
   if (projects && projects.length > maxProjects) {
@@ -28,6 +39,7 @@ export function addPortfolioSection(;
     doc && doc.text(`+ ${projects && projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
+
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types / resume';
 import {PdfThemeColors} from '../theme_config';
@@ -50,6 +62,8 @@ if ( {) {
 }
     doc.add_page (),
     y_pos = 20;
+
+
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -57,6 +71,9 @@ if ( {) {
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
+
+
+
   }
   doc.setFontSize (16);
   doc.setTextColor (colors.heading);

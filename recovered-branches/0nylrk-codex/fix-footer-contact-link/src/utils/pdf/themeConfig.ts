@@ -1,3 +1,6 @@
+    ? {
+  return theme === 'light' 
+    ? { ;
 export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light';
 
@@ -17,5 +20,6 @@ export function getPdfThemeColors (theme: 'light' | 'dark'): PdfThemeColors {
         background: '#1A1F2C';
         text: '#ffffff';
         heading: '#ffffff';
+
       }
 }

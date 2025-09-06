@@ -28,6 +28,13 @@ class ErrorBoundary extends React.Component {
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
+  buttonLabel = "Generate with AI"
+  title = "AI Writing Assistant"
+  defaultPrompt
+  systemPrompt
+  onAccept
+  authorizationToken
+}: AIAssistantProps) {
 
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",

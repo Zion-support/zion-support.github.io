@@ -115,10 +115,12 @@ const Homepage2038: React.FC = () => {
               className='space-y-8'              className="space-y-8"
             >
 
+
               {/* Company Badge */}
               <motion.div;
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
+
 
               >
                 <Star className='w-4 h-4' />
@@ -186,6 +188,8 @@ const Homepage2038: React.FC = () => {
 
 
 
+
+
               {/* Trust Indicators */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -199,6 +203,7 @@ const Homepage2038: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <motion.div
@@ -286,6 +291,7 @@ const Homepage2038: React.FC = () => {
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
 
+
             >
               <h2 className='text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
                 Revolutionary AI Services
@@ -336,6 +342,10 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
+
+              ))}
+
+                    variant="consciousness"
                   />
                 </motion.div>
 
@@ -689,6 +699,10 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
+
+              ))}
+
+                    variant="automation"
                   />
                 </motion.div>
 
@@ -839,6 +853,10 @@ const Homepage2038: React.FC = () => {
                   viewport={{ once: true }}>;
                   <UltraFuturisticServiceCard2038
                     service={service}
+
+              ))}
+
+                    variant="quantum"
                   />
                 </motion.div>
 
@@ -1028,8 +1046,6 @@ const Homepage2038: React.FC = () => {
 
 
 
-
-
                   whileHover={{ scale: 1.05 }}
                 >
                   <div
@@ -1063,6 +1079,7 @@ const Homepage2038: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
+
 
             >
               <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
@@ -1274,3 +1291,8 @@ export default Homepage2038;
 };
 
 
+
+}
+}
+}
+export default Homepage2038;

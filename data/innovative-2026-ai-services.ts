@@ -65,6 +65,36 @@
     growthRate: '220% annual growth',
     variant: 'ai-futuristic',
     contactInfo: {
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.'
+    launchDate: '2025-06-20'
+    customers: 1900
+    rating: 4.8
+    reviews: 950
+      'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.',
+    launchDate: '2025-06-20',
+    customers: 1900,
+    rating: 4.8,
+    reviews: 950,;
+  },];
+      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    realImplementation: true
+    implementationDetails: 'Enterprise-grade sales intelligence platform with AI-powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';
+    launchDate: '2025-06-20';
+    customers: 1900;
+    rating: 4.8
+
+    reviews: 950
+  }
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+
+      website: 'https://ziontechgroup.com';
     }
     real_implementation: true,
     implementation_details: 'Enterprise - grade sales intelligence platform with AI - powered insights, comprehensive data coverage, advanced analytics, and seamless CRM integrations. Includes mobile app and API access.';

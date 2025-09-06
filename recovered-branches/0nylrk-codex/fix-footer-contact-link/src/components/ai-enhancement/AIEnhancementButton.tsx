@@ -1,4 +1,11 @@
 
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
+import { Sparkles, Loader2, RefreshCw, Check, X  } from '@/components/icons';
+import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
+import { toast } from '@/hooks/use-toast';
+interface AIEnhancementButtonProps {
+
 
 
 import {useState} from 'react';
@@ -10,11 +17,30 @@ import {toast} from '@/hooks/use-toast';
   options: AIEnhancementOptions
   onEnhanced: (enhancedContent: string) => void
 
+export function AIEnhancementButton(): any ({;
+
+  options;
+  onEnhanced;
+
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+  contentLength = 10;
+}: AIEnhancementButtonProps) {;
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+  const [showActions, setShowActions] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+
+
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Sparkles, Loader2, RefreshCw, Check, X } from '@/components/icons',
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
 import { toast } from '@/hooks/use-toast',
+
+
+
 interface AIEnhancementButtonProps {
   options: AIEnhancementOptions,
   onEnhanced: (enhancedContent: string) => void,
@@ -24,6 +50,42 @@ interface AIEnhancementButtonProps {
   size?: "default" | "sm" | "lg" | "icon",
   contentLength?: number
 }
+
+export function AIEnhancementButton({;
+  options;
+  onEnhanced;
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+export function AIEnhancementButton({
+  options;
+  onEnhanced;
+
+  buttonText = "Enhance with AI";
+  className;
+  variant = "ghost";
+  size = "sm";
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer();
+  const [showActions, setShowActions] = useState(false);
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null);
+  options,
+  onEnhanced,
+  buttonText = "Enhance with AI",
+  className,
+  variant = "ghost",
+  size = "sm",
+  contentLength = 10
+}: AIEnhancementButtonProps) {
+  const { enhanceContent, isEnhancing } = useAIContentEnhancer(),
+  const [showActions, setShowActions] = useState(false),
+  const [generatedContent, setGeneratedContent] = useState<string | null>(null),
+  
+
+
+
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -31,6 +93,13 @@ interface AIEnhancementButtonProps {
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
+  }
+  };
+
+
+
+  };
+
       }),
       return
 import { useState } from 'react',;
@@ -84,6 +153,10 @@ export function AIEnhancementButton({;
     }
 
   },
+
+
+
+  
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent);
@@ -297,6 +370,9 @@ export function AIEnhancementButton({;
   return (
     <Button;
       type="button";
+
+
+
       variant={variant}
       size={size}
 

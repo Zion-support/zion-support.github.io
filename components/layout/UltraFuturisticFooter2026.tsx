@@ -465,11 +465,40 @@ const resource_links = [;
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
           {/* Company Info */}
+              </p>
+              {/* Contact Info */}
+              <div className='space-y-3'>
+                <div className='flex items-center text-gray-300'>
+                  <Phone className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <Mail className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <MapPin className='w-4 h-4 mr-3 text-cyan-400' />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className='flex items-center text-gray-300'>
+                  <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">
+                  <Globe className="w-4 h-4 mr-3 text-cyan-400" />
+                  <span>{contactInfo.website}</span>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+
+              transition={{ duration: 0 && 0.6 }}>;
+              <div className='flex items-center mb-6'>;
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>;
+                  <Zap className='w-6 h-6 text-white' />;
                 </div>;
                 <h3 className='text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>;
                   Zion Tech Group;
                 </h3>;
               </div>;
+
 
               </p>
               {/* Contact Info */}
@@ -606,6 +635,18 @@ const resource_links = [;
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+
+        >
+          <div className='text-center'>
+            <h3 className='text-2xl font-bold text-white mb-4'>
+              Stay Updated with Latest Innovations
+            </h3>
+            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
+              Get exclusive access to our latest AI, quantum computing, and
+              emerging technology insights. Be the first to know about
+              breakthrough solutions and industry trends.
+            </p>
+            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
 
               <input
                 type='email'
@@ -750,5 +791,6 @@ const resource_links = [;
 
     </footer>
   );
+}
 
 }

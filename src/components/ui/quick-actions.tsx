@@ -22,15 +22,6 @@ interface QuickAction {;
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
 
-  const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
-  const isAllowed = process.env.NODE_ENV !== 'production' |isAdmin
-  if (!isAllowed) {
-    return null
-  }
-  const [isVisible, setIsVisible] = useState(false)
-  const [isProcessing, setIsProcessing] = useState<string | null>(null)
-  const executeAction = async (actionId: string, action: () => void) => {
     setIsProcessing(actionId);    try {
       await action()
     } catch (error) {

@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 
+
 export default function InvestorsPage() {
 
 export default function InvestorsPage() {

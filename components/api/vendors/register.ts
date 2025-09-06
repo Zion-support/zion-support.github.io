@@ -1,4 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+  if (req.method !== 'POST')
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+
+
   const {
     slug
     name

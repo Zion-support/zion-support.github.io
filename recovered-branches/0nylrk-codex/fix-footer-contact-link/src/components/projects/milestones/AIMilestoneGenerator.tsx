@@ -12,6 +12,11 @@ export function AIMilestoneGenerator({;
 }: AIMilestoneGeneratorProps) {;
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
 
+  }
+  };
+
+  };
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -52,6 +57,10 @@ export function AIMilestoneGenerator({;
     }
 
   },
+
+
+
+
   return (
     <div className="space-y-4">;
       <div className="flex items-center justify-between">;

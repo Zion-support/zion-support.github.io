@@ -1,5 +1,6 @@
 
 
+
 export default function MarketResearchPage() {
 
   const marketSegments = [
@@ -106,6 +107,128 @@ export default function MarketResearchPage() {
       ],
       color: 'from-fuchsia-500 to-purple-600',
       icon: <Zap className='w-8 h-8 text-white' />,
+    },    {      opportunities: [
+        'AI content generation toolsPredictive analytics platformsAutomated customer serviceIntelligent process automation';
+      ];
+      color: 'from-fuchsia-500 to-purple-600',
+      icon: <Zap className="w-8 h-8 text-white" />
+    };
+    {
+
+      name: 'Database & Analytics',
+      marketSize: '$8.9B',
+      growthRate: '18.7% CAGR',
+      keyTrends: [
+        'Real-time analytics demand',
+        'Cloud database migration',
+        'Data privacy regulations',
+        'Performance optimization focus',
+      ],
+      topPlayers: ['DataDog', 'New Relic', 'SolarWinds', 'Splunk'],
+
+      opportunities: [
+        'Database performance monitoring',
+        'Real-time analytics dashboards',
+        'Data visualization tools',
+        'Query optimization platforms',
+      ],
+      color: 'from-cyan-500 to-blue-600',
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'Security & Identity',
+      marketSize: '$12.3B',
+      growthRate: '21.2% CAGR',
+      keyTrends: [
+        'Zero-trust security adoption',
+        'Multi-factor authentication growth',
+        'API security concerns',
+        'Compliance requirements increasing',
+      ],
+      topPlayers: ['Okta', 'Auth0', 'Ping Identity', 'OneLogin'],
+
+      opportunities: [
+        'Identity verification platforms',
+        'API security gateways',
+        'Compliance monitoring tools',
+        'Threat detection systems',
+      ],
+      color: 'from-green-500 to-emerald-600',
+      icon: <Target className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'Business Intelligence',
+      marketSize: '$22.1B',
+      growthRate: '19.8% CAGR',
+      keyTrends: [
+        'Self-service BI adoption',
+        'Real-time data integration',
+        'Mobile BI growth',
+        'Predictive analytics demand',
+      ],
+      topPlayers: ['Tableau', 'Power BI', 'Looker', 'Qlik'],
+
+      opportunities: [
+        'Custom dashboard builders',
+        'Data integration platforms',
+        'Mobile analytics solutions',
+        'Predictive modeling tools',
+      ],
+      color: 'from-orange-500 to-red-600',
+      icon: <Activity className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'API Management',
+      marketSize: '$6.8B',
+      growthRate: '24.1% CAGR',
+      keyTrends: [
+        'Microservices architecture growth',
+        'API-first development',
+        'Rate limiting importance',
+        'Developer experience focus',
+      ],
+      topPlayers: ['Kong', 'Tyk', 'AWS API Gateway', 'Azure API Management'],
+
+      opportunities: [
+        'API rate limiting services',
+        'Developer portal platforms',
+        'API analytics tools',
+        'Webhook management systems',
+      ],
+      color: 'from-indigo-500 to-purple-600',
+      icon: <Globe className='w-8 h-8 text-white' />,
+    },    {
+
+    {
+
+      name: 'User Experience Analytics',
+      marketSize: '$9.4B',
+      growthRate: '20.5% CAGR',
+      keyTrends: [
+        'Privacy-compliant tracking',
+        'Real-time user insights',
+        'Conversion optimization focus',
+        'Mobile app analytics growth',
+      ],
+      topPlayers: ['Hotjar', 'FullStory', 'Mixpanel', 'Amplitude'],
+
+      opportunities: [
+        'Heatmap and session recording',
+        'A/B testing platforms',
+        'User journey mapping tools',
+        'Conversion funnel analytics',
+      ],
+      color: 'from-teal-500 to-cyan-600',
+      icon: <Users className='w-8 h-8 text-white' />,
+    },  ];
+
+
   ];
   const competitiveAnalysis = [
     {
@@ -392,8 +515,14 @@ import { Zap } from 'lucide-react';
                 </div>
               </Card>
             ))}
-      {/* Competitive Analysis */}
 
+
+
+      {/* Competitive Analysis */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -545,6 +674,24 @@ import { Zap } from 'lucide-react';
                       ))}
 
                   {/* Weaknesses */}
+                  <div>
+                    <h4 className='text-sm font-semibold text-red-400 mb-2'>
+                      Weaknesses:
+                    </h4>
+                    <ul className='space-y-1 text-xs text-gray-300'>
+                      {analysis.weaknesses.map((weakness, weaknessIndex) => (
+                        <li key={weaknessIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {weakness}                    <h4 className="text-sm font-semibold text-red-400 mb-2">Weaknesses:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {analysis.weaknesses.map((weakness, weaknessIndex) => (
+                        <li key={weaknessIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Weaknesses */}
 
 
                       ))}
@@ -553,8 +700,14 @@ import { Zap } from 'lucide-react';
                 </div>;
               </Card>;
             ))}
-      {/* Market Trends */}
 
+
+
+      {/* Market Trends */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -614,8 +767,14 @@ import { Zap } from 'lucide-react';
           </div>
         </div>
       </section>
-      {/* Pricing Strategies */}
 
+
+
+      {/* Pricing Strategies */}
+      <section className='section-padding bg-gradient-cursor-accent'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -700,8 +859,25 @@ import { Zap } from 'lucide-react';
                     </ul>
                   </div>
 
-                  {/* Cons */}
 
+                  {/* Cons */}
+                  <div className='mb-4'>
+                    <h4 className='text-sm font-semibold text-red-400 mb-2'>
+                      Cons:
+                    </h4>
+                    <ul className='space-y-1 text-xs text-gray-300'>
+                      {strategy.cons.map((con, conIndex) => (
+                        <li key={conIndex} className='flex items-start'>
+                          <span className='w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0' />                          {con}                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-red-400 mb-2">Cons:</h4>
+                    <ul className="space-y-1 text-xs text-gray-300">
+                      {strategy.cons.map((con, conIndex) => (
+                        <li key={conIndex} className="flex items-start">
+                          <span className="w-1.5 h-1.5 bg-red-400 rounded-full mr-2 mt-1.5 flex-shrink-0" />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
 
 
 
@@ -806,6 +982,7 @@ import { Zap } from 'lucide-react';
         <div className='absolute inset-0 bg-dots opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+
 
             Ready to Apply This Market Intelligence?
           </h2>

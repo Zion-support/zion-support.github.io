@@ -1,5 +1,29 @@
 import { motion } from 'framer-motion';
 
+  Phone
+  Mail
+  MapPin
+  Globe
+  ArrowRight
+  Star
+  Rocket
+  Brain
+  Atom
+  Building
+  Briefcase
+  Microscope
+  Twitter
+  Facebook
+  Linkedin
+  Instagram
+  Youtube
+  Github
+  Zap
+  Sparkles
+  Shield
+  Cpu
+  Database;} from 'lucide-react';import {
+  Phone, Mail, MapPin, Globe, ArrowRight, Star
 
   Phone,
   Mail,
@@ -25,8 +49,6 @@ import { motion } from 'framer-motion';
   Cpu,;
   Database,;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, ;
-
-
   Rocket, Brain, Atom, Building, Briefcase, Microscope;
   Twitter, Facebook, Linkedin, Instagram, Youtube;
   Github, Zap, Sparkles, Shield, Cpu, Database
@@ -387,6 +409,86 @@ const footerSections = [
       { name: 'Cookie Policy', href: '/cookies' },
       { name: 'Data Protection', href: '/data - protection' },
       { name: 'Accessibility', href: '/accessibility' },
+            <p className='text-gray-400 mb-6 leading-relaxed'>
+              Leading the revolution in AI, quantum computing, and autonomous
+              technology solutions. Transforming businesses with cutting-edge
+              innovation.
+            </p>
+            {/* Contact Information */}
+            <div className='space-y-3 mb-6'>
+              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
+                <Phone className='w-4 h-4' />
+                <a href={`tel:${contactInfo.mobile}`} className='text-sm'>
+                  {contactInfo.mobile}
+                </a>
+              </div>
+              <div className='flex items-center space-x-3 text-gray-400 hover:text-white transition-colors'>
+                <Mail className='w-4 h-4' />
+                <a href={`mailto:${contactInfo.email}`} className='text-sm'>
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className='flex items-center space-x-3 text-gray-400'>
+                <MapPin className='w-4 h-4' />
+                <span className='text-sm'>{contactInfo.address}</span>              </div>            </div>
+            {/* Social Links */}
+            <div className='flex space-x-4'>
+              {socialLinks.map(social => (            {/* Contact Information */}
+            <div className="space-y-3 mb-6">
+              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                <Phone className="w-4 h-4" />
+                <a href={`tel:${contactInfo.mobile}`} className="text-sm">
+                  {contactInfo.mobile}
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400 hover:text-white transition-colors">
+                <Mail className="w-4 h-4" />
+                <a href={`mailto:${contactInfo.email}`} className="text-sm">
+                  {contactInfo.email}
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-gray-400">
+                <MapPin className="w-4 h-4" />
+                <span className="text-sm">{contactInfo.address}</span>
+              </div>
+            </div>
+            {/* Social Links */}
+            <div className='flex space-x-4'>
+              {socialLinks.map(social => (
+                <a
+                  key={social.name}
+                  href={social.href}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
+                >
+                  <social.icon className='w-5 h-5' />                </a>                <a
+                  key={social.name}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-2 bg-slate-800/50 rounded-lg text-gray-400 ${social.color} transition-all duration-200 hover:bg-slate-700/50`}
+                >
+                  <social.icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+];
+
+const UltraFuturisticFooter2029 = () => {
+  return (
+
+              </div>
+            </div>
+
+            {/* Social Links */}
+
+                </a>
+
+              ))}
+
 ];
 
 
@@ -736,3 +838,10 @@ export default UltraFuturisticFooter2029);
 export default UltraFuturisticFooter2029;
 ;
   );
+export default UltraFuturisticFooter2029;  )
+}
+export default UltraFuturisticFooter2029;
+
+
+}
+export default UltraFuturisticFooter2029;

@@ -23,8 +23,17 @@ export interface Review {;
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
+
+
+
+export interface ReviewReport {;
+
+
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
+  created_at: string,
+  resolved_at?: string;
+

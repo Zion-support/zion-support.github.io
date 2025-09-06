@@ -1,4 +1,7 @@
 
+const AIAssistant: React.FC = () => {
+import React from 'react',
+import Head from 'next/head';
 
   return (
     <Layout>;
@@ -80,6 +83,8 @@
       </main>;
 
 
+
+
   return (
     <>
       <Head>
@@ -108,6 +113,10 @@
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
+
+
+}
+
 import Button from '../components/ui/Button';
 export default function AIAssistantPage() {
   return (
@@ -138,6 +147,5 @@ export default function AIAssistantPage() {
     </>
   )
 }
-
 
 

@@ -1,6 +1,18 @@
 
+import { getBadgeMeta, BadgeKey } from "./badgeConfig";
+import React from './react';
+import { getBadgeMeta, BadgeKey } from './badge_config';
+
 interface BadgeEarnedProps {
   badge: BadgeKey
+import {getBadgeMeta, BadgeKey} from "./badgeConfig";
+import React from "react",
+import { getBadgeMeta, BadgeKey } from "./badgeConfig",
+
+
+
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
+
   show_name?: boolean;
   show_desc?: boolean;
   earned_date?: string;
@@ -33,12 +45,37 @@ interface BadgeEarnedProps {
   showDesc?: boolean,
   earnedDate?: string
 }
+
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({;
   badge;
+  size = 44;
+  showName = true;
+export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
+  badge;
+
+  size = 44;
+  showName = true;
+  showDesc = false
+  earnedDate}) => {
+  const meta = getBadgeMeta(badge);
+  if (!meta) return null;
+  const Icon = meta.icon;
+  badge,
+  size = 44,
+  showName = true,
+  showDesc = false,
+  earnedDate}) => {
+  const meta = getBadgeMeta(badge),
+  if (!meta) return null,
+  const Icon = meta.icon,
+
 
   return (
     <div className="flex flex-col items-center text-center gap-1 px-2">;
       <div
         style={{
+
+
           {meta.name}
         </span>
       )}
@@ -50,6 +87,14 @@ interface BadgeEarnedProps {
       {showDesc && (;
         <span className="text-xs text-zion-slate-light">{meta && meta.description}</span>;
       )}
+}
+
+    </div>;
+  );
+    </div>;
+  );
+
+
 };
   show_name = true;
   show_desc = false,

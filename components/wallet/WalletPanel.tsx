@@ -3,6 +3,7 @@
 
 
 
+
 type Tx = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -45,6 +46,12 @@ function getUserId(): any (): string {;
   const generated = 'demo-user';
   window && window.localStorage.setItem('zion_user_id', generated);
   return generated;
+
+
+
+export default function WalletPanel() {;
+
+
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
     'earnings'
@@ -75,6 +82,8 @@ type Summary = {;
   config: { usdPerToken: number, symbol: string }
 };
   if (typeof window === "undefined") return "demo-user";
+
+
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
   const [ethAddress, setEthAddress] = useState<string | null>(null);
@@ -345,3 +354,5 @@ if ( {) {
 );
 }
 
+}
+}

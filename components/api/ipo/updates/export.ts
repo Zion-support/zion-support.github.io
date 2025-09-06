@@ -1,3 +1,8 @@
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readJsonFile  } from '../../../../utils/api/storage';
+import { requireSuperadminApi } from '../../../../utils/api/auth';
+import PDFDocument from 'pdfkit';
+
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
@@ -63,4 +68,8 @@ function handler() {
   doc.end ();
 }
 
+
+  doc.fontSize(14).text('KPIs');
+  doc.fontSize(12).text(u.kpis || '');
+  doc.end();
   doc.end();

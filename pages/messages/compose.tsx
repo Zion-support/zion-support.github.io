@@ -1,3 +1,26 @@
+import { useRouter  } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage() {
+
+  const router = useRouter();
+  const {
+    type
+    recipientId
+    recipientName
+    jobId
+    jobTitle
+    talentId
+    talentName
+  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
+import {useRouter} from 'next/router';
+import {useCurrentUser} from '../../hooks/useCurrentUser';
+export default function ComposePage() {;
+import { useRouter } from 'next/router';
+import { useCurrentUser } from '../../hooks/useCurrentUser';
+export default function ComposePage(req, res) {
+  try {
+
+
   const router = useRouter();
   const { type, recipientId, recipientName, jobId, jobTitle, talentId, talentName } = router.query as Record<string, string>;
   const { user, loading } = useCurrentUser();
@@ -23,6 +46,22 @@
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message && message.trim() && !file && !linkUrl) return;
     setSending(true);
+      const mime = file.type || 'application/octet-stream';
+      attachmentBase64 = `data:${mime};base64,${base64}`;    }
+      attachmentBase64 = `data:${mime},base64,${base64}`;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      const mime = file.type || 'application/octet-stream';
+      attachmentBase64 = `data:${mime},base64,${base64}`
+    }
+
+
+      const mime = file.type || 'application/octet-stream';
+      const mime = file.type || 'application/octet-stream';
+
     const res = await fetch('/api/messages/compose', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -55,6 +94,19 @@
         </div>
       </div>
     </div>
+
+}
+  )
+}
+
+
+
+}
+
+
+  )
+}
+
 import {use_router} from 'next / router';
 import {useCurrentUser} from '../../hooks / useCurrentUser';
 export default /**

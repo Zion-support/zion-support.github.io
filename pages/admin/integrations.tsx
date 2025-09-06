@@ -1,3 +1,5 @@
+import { useEffect, useMemo, useState  } from 'react';
+import Head from 'next/head';
 
 
   id: string;
@@ -9,6 +11,17 @@
       {label}
     </span>;
   );
+import Head from 'next/head';
+interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
+interface ConnectionMap { [providerId: string]: any }
+
+
+interface ConnectionMap {;
+  [key: string]: boolean,;
+
+
+
+import { useEffect, useMemo, useState } from 'react';
 import React, { useState } from 'react';
 import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
@@ -89,16 +102,92 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
+    } finally { setLoading(false);   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  async function disconnect(providerId: string) {
+    setLoading(true);
+    try {
+      await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
+      await refresh();
+    } finally { setLoading(false);   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  async function resync(providerId: string) {
+    setLoading(true);
+    try {
+      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) });
+      await refresh();
+    } finally { setLoading(false);   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const grouped = useMemo(() => ({
+    crm: providers.filter(p => p.category === 'crm'),
+    ats: providers.filter(p => p.category === 'ats')
+  }), [providers]);
 
 
 
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
+    return (
+      <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 flex flex-col gap-3 bg-white/60 dark:bg-black/40">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
+            <div>
+              <div className="font-semibold">{p.name}</div>
+              <div className="text-xs text-gray-500">{p.description}</div>
+            </div>
+          </div>
+          <StatusIcon status={conn.status} />
+        </div>
+        <div className="flex items-center gap-2">
+          {!isConnected && (
+            <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
             </>
+  function RulesModal() {
+    if (!selected) return null,
+    const provider = providers.find(p => p.id === selected)!,
+    const isCrm = provider.category === 'crm',
+
+  async function resync(providerId: string) {
+    setLoading(true);
+    try {
+      await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
+      await refresh()
+    } finally { setLoading(false) }
+  }
 
   const grouped = useMemo(;
     () => ({;
@@ -149,6 +238,8 @@ export default function AdminIntegrationsPage() {
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>          </ul>
+
+
         </section>
 
         </section>
@@ -174,7 +265,6 @@ function ManualOverrideForm() {;
   const [disableCrmSync, setDisableCrmSync] = useState(false);
   const [disableAtsSync, setDisableAtsSync] = useState(false);
   const [message, setMessage] = useState('');
-  }
   )
   } catch (error) {
     console.error("Error:", error);
@@ -195,6 +285,48 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  }
+  return (
+    <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>;
+      <div className='grid grid-cols-1 gap-3'>;
+        <label className='text-sm'>;
+          Job/Post ID;
+          <input
+            value={jobId}
+            onChange={e => setJobId(e && e.target.value)}
+            placeholder='job_123';
+            className='w-full mt-1 px-3 py-2 rounded border bg-transparent';
+          />;
+        </label>;
+        <label className='flex items-center gap-2 text-sm'>;
+          <input
+            type='checkbox'
+            checked={disableCrmSync}
+            onChange={e => setDisableCrmSync(e && e.target.checked)}
+          />{' '}
+          Disable CRM sync;
+        </label>;
+        <label className='flex items-center gap-2 text-sm'>;
+          <input
+            type='checkbox'
+            checked={disableAtsSync}
+            onChange={e => setDisableAtsSync(e && e.target.checked)}
+          />{' '}
+          Disable ATS sync;
+        </label>;
+        <div className='flex items-center gap-2'>;
+          <button
+            onClick={save}
+
+            className='px-3 py-1 && 1.5 rounded bg-black text-white text-sm'>;
+            Save Override;
+          </button>;
+          <div className='text-sm text-gray-500'>{message}</div>;
+        </div>;
+      </div>;
+    </div>;
+  );
+
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -329,6 +461,7 @@ function save() {
 }
 }
 }
+
   ),
   } catch (error) {
     console.error("Error:", error);

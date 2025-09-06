@@ -36,6 +36,8 @@ export default function CloudLandingZonePage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-2 00 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
+
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">
@@ -46,6 +48,8 @@ export default function CloudLandingZonePage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+
+
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-cyan-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -63,4 +67,7 @@ export default function CloudLandingZonePage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+;
+;
+;
 

@@ -27,6 +27,23 @@ import {FilterSidebarProps} from "@/types/filters";
   sortOption;
   setSortOption;
   clearFilters;
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Filter } from "lucide-react",
+import { SearchFilter } from "./filters/SearchFilter",
+import { SortFilter } from "./filters/SortFilter",
+import { SkillsFilter } from "./filters/SkillsFilter",
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",
+import { RegionFilter } from "./filters/RegionFilter",
+import { ExperienceFilter } from "./filters/ExperienceFilter",
+import { PriceFilter } from "./filters/PriceFilter";
+import { FilterSidebarProps } from "@/types/filters";
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+  isMobileFilterOpen;
+}: FilterSidebarProps) {;
+
+
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -56,6 +73,8 @@ export function FilterSidebar({
           Clear All;
         </Button>;
       </div>;
+
+
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}

@@ -2,6 +2,9 @@
 import React from 'react'
 
 import React from 'react',
+
+
+import React from 'react',
 export default function PerformanceOptimization() {
   return (
     <>
@@ -29,6 +32,11 @@ export default function PerformanceOptimization() {
             <nav className='mb-8'>
               <Link
                 href='/blog'
+}
+import Head from 'next/head';
+import Link from 'next/link';
+};
+;
 import React from 'react';
 export default function PerformanceOptimization(req, res) {
   try {

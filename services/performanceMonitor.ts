@@ -1,3 +1,17 @@
+export interface PerformanceMetrics {
+export interface PerformanceMetrics {;
+  url: string;
+  timestamp: Date;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  timeToInteractive: number;
+  totalBlockingTime: number;
+  speedIndex: number;
+  performanceScore: number;
+  accessibilityScore: number;
 
   speed_index: number;
   performance_score: number;
@@ -5,22 +19,102 @@
   bestPracticesScore: number,
   seo_score: number;
 }
+export interface PerformanceAlert {
   id: string;
   url: string;
   type: 'critical' | 'warning' | 'info';
   message: string;
   metric: string;
   threshold: number;
+export interface MonitoringConfig {
   urls: string[];
   frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily';
   thresholds: {
     load_time: number;
     firstContentfulPaint: number;
 
+export class PerformanceMonitorService {
+
+export class PerformanceMonitorService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
   }
   async monitorWebsite(url: string): Promise<PerformanceMetrics> {
     try {
       // In a real implementation, this would use Lighthouse, WebPageTest, or similar
+export interface PerformanceMetrics {;
+  url: string,;
+  timestamp: Date,;
+  loadTime: number,;
+  firstContentfulPaint: number,;
+  largestContentfulPaint: number,;
+  cumulativeLayoutShift: number,;
+  firstInputDelay: number,;
+  timeToInteractive: number,;
+  totalBlockingTime: number,;
+  speedIndex: number,;
+  performanceScore: number,;
+  accessibilityScore: number,;
+  bestPracticesScore: number,;
+  seoScore: number;
+}
+;
+export interface PerformanceAlert {;
+  id: string,;
+  url: string,;
+  type: 'critical' | 'warning' | 'info',;
+  message: string,;
+  metric: string,;
+  threshold: number,;
+  currentValue: number,;
+  timestamp: Date,;
+  resolved: boolean;
+}
+;
+export interface MonitoringConfig {;
+  urls: string[],;
+  frequency: '1min' | '5min' | '15min' | '1hour' | '6hours' | 'daily',;
+  thresholds: {;
+    loadTime: number,;
+    firstContentfulPaint: number,;
+    largestContentfulPaint: number,;
+    cumulativeLayoutShift: number;
+  },;
+  notifications: {;
+    email: boolean,;
+    slack: boolean,;
+    webhook: boolean;
+  }
+}
+;
+export class PerformanceMonitorService {;
+  private apiKey: string,;
+  private baseUrl: string,;
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {;
+    this.apiKey = apiKey,;
+    this.baseUrl = baseUrl;
+  }
+;
+  async monitorWebsite(url: string): Promise<PerformanceMetrics> {;
+    try {;
+      // In a real implementation, this would use Lighthouse, WebPageTest, or similar;
+      const response = await fetch(`${this.baseUrl}/performance/monitor`, {;
+        method: 'POST',;
+        headers: {;
+          'Authorization': `Bearer ${this.apiKey}`,;
+          'Content-Type': 'application/json'},;
+        body: JSON.stringify({ url })}),;
+      if (!response.ok) {;
+        throw new Error(`Performance monitoring failed: ${response.statusText}`);
+
+
+export interface PerformanceMetrics {;
+
+
       }
       return await response.json()
       const response = await fetch(`${this && this.baseUrl}/performance/monitor`, {
@@ -41,6 +135,10 @@
     }
   }
 
+
+
+
+
   async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
@@ -53,6 +151,9 @@
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+
+
+
       }
       return await response.json()
           'Authorization': `Bearer ${this && this.apiKey}`}});
@@ -67,6 +168,10 @@
       return this && this.generateMockHistoricalData(url, days)
     }
   }
+
+
+
+
 
   async setMonitoringConfig(config: MonitoringConfig): Promise<void> {
     try {
@@ -116,6 +221,9 @@
           'Authorization': `Bearer ${this.apiKey}`}}),;
       if (!response.ok) {;
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
+
+
+
       }
       return await response.json()
           'Authorization': `Bearer ${this && this.apiKey}`}});
@@ -130,6 +238,10 @@
       return this && this.generateMockAlerts(url)
     }
   }
+
+
+
+
 
   async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
     summary: {
@@ -166,6 +278,12 @@
     const now = new Date()
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
+    }
+    return data
+  }
+
+
+
     }
     return data
   }
@@ -358,6 +476,12 @@ if ( {) {
         message: 'Performance score improved';
         metric: 'performance_score';
         threshold: 80;
+    ];
+    return url ? alerts.filter(a => a.url === url) : alerts
+
+
+    return url ? alerts && alerts.filter(a => a && a.url === url) : alerts
+
   }
 }
 // Pricing tiers for the Performance Monitor
@@ -374,6 +498,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Enterprise';
     price: 149;
     period: '/month';
+
+
 ;
   private generateMockAlerts(url?: string): PerformanceAlert[] {;
     const alerts: PerformanceAlert[] = [;
@@ -403,6 +529,11 @@ export const PERFORMANCE_MONITOR_PRICING = {
     return url ? alerts.filter(a => a.url === url) : alerts;
   }
 }
+    ];
+
+
+
+
     ];
   }
 }

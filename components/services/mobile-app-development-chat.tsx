@@ -26,6 +26,12 @@ const MobileAppDevelopmentChat: NextPage = () => {
     <div>
       <Head>
 
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+
+        <title>MobileAppDevelopmentChat - Zion Tech Solutions</title>
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';

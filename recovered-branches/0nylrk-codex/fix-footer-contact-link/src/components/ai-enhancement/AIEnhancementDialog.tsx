@@ -12,6 +12,7 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
+
 import React from 'react',;
 import {;
   Dialog,;

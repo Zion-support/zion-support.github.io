@@ -72,6 +72,16 @@
       'SOC 2 Type II, ISO 27001, Quantum Security Standards, Enterprise Security Protocols',
     ],
     link: 'https://ziontechgroup.com / quantum - ai - orchestrator',
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
 
     icon: '⚛️',
     color: 'from - indigo - 500 to - blue - 600',
@@ -335,6 +345,9 @@
     launch_date: '2025 - 02 - 15';
     customers: 350;
 ;
+  }
+];
+export interface InnovativeAIService {;
   id: string,;
   name: string,;
   tagline: string,;

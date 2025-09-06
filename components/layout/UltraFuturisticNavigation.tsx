@@ -1,3 +1,32 @@
+
+  className = '',;
+
+  Menu
+  X
+  ChevronDown
+  Search
+  Phone
+  Mail
+  MapPin
+  Rocket
+  Brain
+  Atom
+  Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,;
+  Shield,;
+} from 'lucide-react';
+interface UltraFuturisticNavigationProps {
+  className?: string;
+export default function UltraFuturisticNavigation({
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false);
 interface UltraFuturisticNavigationProps {;
   className?: string;
@@ -12,6 +41,7 @@ interface UltraFuturisticNavigationProps {
 
 
 export default function UltraFuturisticNavigation({ className = '' }: UltraFuturisticNavigationProps) {;
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -55,6 +85,24 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
           color: 'from-green-500 to-emerald-600'
         }
         {
+    { name: 'Pricing', href: '/pricing' },  ];        { name: 'AI & Machine Learning', href: '/services/ai-ml', icon: Brain, color: 'from-purple-500 to-pink-600' },
+        { name: 'Quantum Computing', href: '/services/quantum', icon: Atom, color: 'from-cyan-500 to-blue-600' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, color: 'from-red-500 to-pink-600' },
+        { name: 'IT Solutions', href: '/services/it-solutions', icon: Rocket, color: 'from-green-500 to-emerald-600' },
+        { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
+      ]
+    };
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' }
+    { name: 'Pricing', href: '/pricing' },  ];
+
+  ];
+
+
+
+
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -245,6 +293,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                                     </div>;
                                     {dropdownItem && dropdownItem.name === 'View All Services' && (;
                                       <div className="text-xs text-gray-400">Explore our complete portfolio</div>;
+
+
+
                                 </Link>
                               ))}
                             </div>
@@ -255,6 +306,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
                   </div>
                 ) : (
                   <Link
+
+
                   >
                     {item.name}
                   </Link>
@@ -262,6 +315,9 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               </div>;
             ))}
 
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors duration-300 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                  >
                           className='absolute top - full left - 0 mt - 2 w - 80 bg - gray - 900 / 95 backdrop - blur - xl border border - gray - 700 / 50 rounded - 2xl shadow - 2xl overflow - hidden';
                         >;
                           <div className='p - 4'>;
@@ -329,6 +385,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
 
+
+
               <Link
                 href='/contact'
                 className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-medium hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-cyan-500/30'>;
@@ -352,6 +410,15 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
               className="text-gray-300 hover:text-white transition-colors duration-300 p-2 rounded-lg hover:bg-gray-800/50"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -369,6 +436,8 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
                           transition={{ duration: 0.2 }}
                           className='ml-4 mt-2 space-y-2'
+
+
 
                         >
                           {item.dropdownItems?.map(dropdownItem => (
@@ -398,6 +467,10 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 
                       onClick={() => setIsOpen(false)}
 
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                     >
                       {item.name}
                     </Link>
@@ -574,6 +647,7 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
 }
 
   );
+}
 }
 
   );

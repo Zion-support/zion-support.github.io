@@ -1,6 +1,3 @@
-import type { QuoteRequest } from "@/types/quotes";
-interface ExportToCSVProps {
-
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string

@@ -10,7 +10,6 @@ const WhitepaperViewPage: React.FC = () => {
     const fetchWhitepaper = async () => {
       if (!id) {
       }
-      }
       setLoading(true)
       setError(null)
       try {
@@ -81,8 +80,6 @@ const WhitepaperViewPage: React.FC = () => {
             )}
         </div>;
 
-export default WhitepaperViewPage;
-export default WhitepaperViewPage;
     },
     fetch_whitepaper ();
   }, [id]),

@@ -45,6 +45,11 @@ export function deployBasicTemplateForPath(
 
 
 
+  return { createdPaths, skippedPaths }
+
+
+
+
   return { createdPaths, skippedPaths };
 
 }

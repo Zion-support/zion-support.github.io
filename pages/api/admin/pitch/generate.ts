@@ -1,8 +1,33 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
 const client = new OpenAI({
+
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: "Forbidden" });
+  if (req.method !== "POST")
+    return res.status(405).json({ error: "Method Not Allowed" });
+  const { operatorPrompt, inputs, metrics } = req.body |{}
+  const seed = [
+    "Problem & Opportunity"
+    "Solution & Product"
+    "Market Size (TAM/SAM/SOM)"
+    "Traction & Metrics"
+    "Business Model"
+    "Go-To-Market"
+    "Team"
+    "Roadmap"
+    "Token Strategy"
+    "Ask & Call to Action"
+  ];
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
 
 
   const { allowed } = await ensureAdminFromApi(req);
@@ -22,6 +47,10 @@ const client = new OpenAI({
   ];
 ;
   try {
+    const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
+Operator Prompt: ${operatorPrompt}
+    const prompt = `You are a venture analyst generating a concise, investor - ready pitch.;
+Operator Prompt: ${operator_prompt}
 Company Mission: ${inputs?.mission}
 
 Key Metrics: ${JSON && JSON.stringify(metrics)}

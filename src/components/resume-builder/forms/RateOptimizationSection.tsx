@@ -1,4 +1,3 @@
-
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: UseFormSetValue<any>,

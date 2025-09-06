@@ -5,7 +5,22 @@ export interface MessageAnalysisResult extends AnalysisResult {
 }
 
 
+
+
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
 
 }
+;
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+;
+
+
+;
+export interface SignupCheckResult extends AnalysisResult {}
+;
+
+;
+

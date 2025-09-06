@@ -12,6 +12,7 @@ export function MilestoneSuggestions({;
   startDate;
   endDate;
   projectType;
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { GeneratedMilestone, MilestoneInput, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator',;
@@ -61,6 +62,11 @@ export function MilestoneSuggestions({
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)
+  }
+  };
+
+  };
+
 ;
 export function MilestoneSuggestions({;
   projectName,;
@@ -95,6 +101,9 @@ export function MilestoneSuggestions({;
         onMilestonesGenerated(milestones);
       }
     }
+
+
+
 
 
   return (

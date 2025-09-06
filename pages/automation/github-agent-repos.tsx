@@ -1,3 +1,17 @@
+import EnhancedLayout from '../../components/layout/EnhancedLayout';
+// @ts-ignore
+import data from '../../data/github-agent-repos.json';
+import EnhancedLayout from '../../components/layout/EnhancedLayout',;
+// @ts-ignore
+import data from '../../data/github-agent-repos.json',;
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-agent-repos.json',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-agent-repos.json',
+
+
 export default function GithubAgentReposPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
@@ -25,6 +39,8 @@ export default function GithubAgentReposPage() {
           ))}
         </ul>
       </div>
+              <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.full_name}</Link>
+              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">★ {it.stargazers_count} · Forks {it.forks_count} · {it.language || '—'}</div>
 
         <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">Updated at {data?.generatedAt || '—'}</p>
         <ul className="mt-6 space-y-4">

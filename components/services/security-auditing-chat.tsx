@@ -1,5 +1,12 @@
 
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
 
 const SecurityAuditingChat: NextPage = () => {
   return (
@@ -16,6 +23,11 @@ const SecurityAuditingChat: NextPage = () => {
   );
 }
 export default SecurityAuditingChat;
+
+
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';

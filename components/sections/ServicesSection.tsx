@@ -1,3 +1,21 @@
+  Brain
+  Cloud
+  RefreshCw
+  Wifi
+  Shield
+  BarChart3
+  ArrowRight
+  Zap;} from 'lucide-react';import {
+  Brain,
+  Cloud,
+  RefreshCw,
+  Wifi,
+  Shield,
+  BarChart3,
+  ArrowRight,;
+  Zap,;} from 'lucide-react';import { ;
+
+
   Brain;
   Cloud
   RefreshCw
@@ -33,6 +51,7 @@ const ServicesSection: React.FC = () => {
     }
   const container_variants = {
     hidden: { opacity: 0 },
+
 
 
 import {;
@@ -281,6 +300,7 @@ const ServicesSection: React.FC = () => {;
     hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },
   }
+    hidden: { opacity: 0, y: 20 },
   };
 
   const cardVariants = {
@@ -291,8 +311,25 @@ const ServicesSection: React.FC = () => {;
   return (
     <section className='py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden'>;
       {/* Background Elements */}
+
+  return (
+    <section className="py - 20 bg - gradient - to - b from - gray - 900 to - black relative overflow - hidden">;
+      {/* Background Elements */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className='inline-flex items-center space-x-2 bg-blue-600/20 border border-blue-500/30 rounded-full px-6 py-3 mb-6'
+
+          >
+
             <Zap className='w-5 h-5 text-blue-400' />
             <span className='text-blue-400 font-medium'>Our Services</span>
           </motion.div>
@@ -422,6 +459,8 @@ const ServicesSection: React.FC = () => {;
                   <ArrowRight className='w-4 h-4' />;
                 </Link>;
 
+
+
               </div>
             </motion.div>
           ))}
@@ -433,6 +472,7 @@ const ServicesSection: React.FC = () => {;
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.8, delay: 0 && 0.4 }}
           viewport={{ once: true }}
+
 
         >
           <div className='bg-gradient-to-r from-blue-600/20 to-purple-600/20 border border-blue-500/30 rounded-2xl p-8 max-w-2xl mx-auto'>
@@ -477,3 +517,4 @@ export default ServicesSection;
 };
 
 
+export default ServicesSection;

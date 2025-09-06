@@ -1,3 +1,10 @@
+import { useState  } from 'react';
+import { supabase  } from '@/integrations/supabase/client';
+import { Resume  } from '@/types/resume';
+import { useAuth } from '@/hooks/useAuth';
+export function useFetchResume() {
+
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Resume} from '@/types/resume';
@@ -50,6 +57,36 @@ export function useFetchResume() {;
         }
         throw resumeError
       }
+      // Check condition
+if ( {) {
+  $2
+}
+        resume_query = resume_query.eq ('id', resume_id);
+      } else {
+        resume_query = resume_query;
+          .eq ('user_id', user.id);
+          .order ('is_active', { ascending: false });
+          .order ('created_at', { ascending: false });
+          .limit (1);
+      }
+      const { data: resume_data, error: resume_error } = await resume_query.single ();
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        // Check condition
+if ( {) {
+  $2
+}
+          // No resume found, this is not a critical error for a new user;
+          set_resume (null);
+          setIsLoading (false);
+          return null;
+
+
+
+
         }
         throw resume_error;
       }
@@ -164,6 +201,7 @@ if (throw cert_error) {
       setIsLoading (false);
     }
   }
+
     error;
     resume;
 

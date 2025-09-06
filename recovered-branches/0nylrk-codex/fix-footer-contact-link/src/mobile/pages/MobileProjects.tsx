@@ -1,4 +1,13 @@
 
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation";
+import { MobileProjectView } from "../components/projects/MobileProjectView";
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { MobileProjectView } from "../components/projects/MobileProjectView",
+
+
+
 // Mock data
 
 const projectData = {
@@ -7,6 +16,10 @@ const projectData = {
   client: {
     name: "TechCorp Inc."
     avatar: ""
+import React from "react",;
+import { MobileHeader } from "../components/common/MobileHeader",;
+import { BottomNavigation } from "../components/common/BottomNavigation",;
+import { MobileProjectView } from "../components/projects/MobileProjectView",;
 // Mock data;
 const projectData = {;
   id: "project-123",;
@@ -18,6 +31,8 @@ const milestonesData = [;
   {;
     id: "milestone-1",;
     title: "Initial Design Concepts",;
+
+
           milestones={milestonesData}
         />
       </main>
@@ -25,6 +40,21 @@ const milestonesData = [;
     </div>
   )
 }
+
+      />;
+
+      <main className="py-4">;
+        <MobileProjectView
+          project={projectData} 
+          milestones={milestonesData}
+        />;
+      </main>;
+
+      <BottomNavigation />;
+    </div>;
+  );
+}
+
 import React from './react';
 import { MobileHeader } from '../components / common / MobileHeader';
 import { BottomNavigation } from '../components / common / BottomNavigation';

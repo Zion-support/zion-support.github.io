@@ -1,3 +1,17 @@
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+
+
+import {useState} from 'react';
+import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
+import {quoteRequestService} from '@/services/quoteRequestService';
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
+import { useToast } from '@/components/ui/use-toast';
+import type { DateRange } from '@/types/dateRange';
+
+export const useAdminQuotes = () => {
+export const useAdminQuotes = () => {;
   const { toast } = useToast();
   const queryClient = useQueryClient();
   const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');
@@ -13,6 +27,9 @@
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+
+
+
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -21,6 +38,11 @@
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
+
+
+    
+
+
     // Search filter
     if (searchQuery) {
       const query = searchQuery && searchQuery.toLowerCase();
@@ -48,6 +70,11 @@
         return false
       }
     }
+    
+
+
+    
+
 ;
     // Search filter;
     if (searchQuery) {;
@@ -79,6 +106,9 @@
       }
     }
     
+
+
+
     return true
   });
   // Update quote status mutation
@@ -111,6 +141,12 @@
       toast({
         title: "Quote deleted"
         description: "The quote request has been permanently deleted"
+      });
+
+
+    };
+
+
     onError: (error: Error) => {
       toast({
         title: "Error";
@@ -135,6 +171,8 @@
     setArchiveFilter;
     search_query;
     setSearchQuery;
+    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
@@ -222,6 +260,9 @@
     updateStatus: (id: string, status: QuoteStatus) =>;
       updateStatusMutation.mutate({ id, status }),;
     toggleArchive: (id: string, isArchived: boolean) =>;
+
+
+
       toggleArchiveMutation.mutate({ id, isArchived });
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
 }

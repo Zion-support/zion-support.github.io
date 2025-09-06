@@ -15,6 +15,12 @@ type CarouselContextProps = {
   scrollNext: () => void
   canScrollPrev: boolean
   canScrollNext: boolean
+  }
+
+
+
+
+
   orientation: "horizontal" | "vertical"
 } & Omit<CarouselProps "orientation">
 
@@ -55,6 +61,11 @@ function useCarousel(): CarouselContextProps {;
   const context = React.useContext(CarouselContext) as CarouselContextProps | null;
   if (!context) {;
     throw new Error("useCarousel must be used within a <Carousel />");
+
+
+
+  }
+;
   return context as CarouselContextProps;
 }
 const Carousel = React.forwardRef<
@@ -96,6 +107,13 @@ const Carousel = React.forwardRef<
           scrollNext()
         }
 
+      onSelect(api)
+      api.on("reInit", onSelect)
+      api.on("select", onSelect)
+
+
+
+
       return () => {
         api?.off("select", onSelect)
       }
@@ -125,6 +143,8 @@ on_select (api);
         <div;
           ref={ref}
           onKeyDownCapture={handleKeyDown}
+
+
           {...props}
         >;
           {children}
@@ -214,6 +234,13 @@ const CarouselPrevious = React.forward_ref<;
       disabled={!canScrollPrev}
       on_click={scroll_prev}
       {...props}
+    </Button>
+  )
+})
+CarouselPrevious.displayName = &quot;CarouselPrevious&quot;
+    >
+      <ArrowLeft className="h-4 w-4" />
+      <span className="sr-only">Previous slide</span>
 
 
 
@@ -254,6 +281,20 @@ const CarouselNext = React.forward_ref<;
       disabled={!canScrollNext}
       on_click={scroll_next}
       {...props}
+    </Button>
+  )
+})
+CarouselNext.displayName = &quot;CarouselNext&quot;
+export {
+  type CarouselApi
+  Carousel
+  CarouselContent
+  CarouselItem
+  CarouselPrevious
+  CarouselNext}
+    >
+      <ArrowRight className="h-4 w-4" />
+      <span className="sr-only">Next slide</span>
 
 >;
       <ArrowRight className=&quot;h - 4 w - 4&quot; />;
@@ -281,3 +322,6 @@ export {
   CarouselContent,
   CarouselItem,
   CarouselPrevious,
+
+;
+

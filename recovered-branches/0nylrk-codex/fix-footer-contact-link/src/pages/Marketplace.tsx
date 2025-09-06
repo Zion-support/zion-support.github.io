@@ -15,6 +15,22 @@ import {useNavigate} from "react-router-dom";
 import {SearchSuggestion} from "@/types/search";
 import {AppLayout} from "@/layout/AppLayout";
 export default function Marketplace() {;
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Grid3X3, ListFilter } from "lucide-react",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { FilterSidebar } from "@/components/search/FilterSidebar",
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { useNavigate } from "react-router-dom",
+import { SearchSuggestion } from "@/types/search";
+import { AppLayout } from "@/layout/AppLayout";
+export default function Marketplace() {
 
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,6 +38,9 @@ export default function Marketplace() {;
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+
+
+
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
@@ -33,6 +52,8 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
+
+
     }
     // Product type filter
     if (selectedProductTypes.length > 0 && !selectedProductTypes.includes(listing.category)) {
@@ -218,11 +239,11 @@ if ( {) {
         }
       });
     }
-
-
+  }
   },
   };
   },
+
   return (
     <AppLayout>
       <main className="flex-grow container mx-auto px-4 py-8">
@@ -252,6 +273,8 @@ if ( {) {
               <p className="text-zion-slate-light">;
                 Showing {filteredListings && filteredListings.length} results;
                 {searchQuery && ` for "${searchQuery}"`}
+
+
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (

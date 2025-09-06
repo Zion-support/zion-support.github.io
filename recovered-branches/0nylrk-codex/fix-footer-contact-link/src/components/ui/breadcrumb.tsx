@@ -4,14 +4,19 @@ import * as React from "react"
 import {Slot} from "@radix-ui/react-slot"
 import {ChevronRight} from "lucide-react"
 
+
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
  
-  HTMLElement;
-  React && React.ComponentPropsWithoutRef<"nav"> & {;
-    separator?: React && React.ReactNode;
+
+
+
+const Breadcrumb = React.forwardRef<
+  HTMLElement,
+  React.ComponentPropsWithoutRef<"nav"> & {
+    separator?: React.ReactNode
   }
 >(({ className, separator, ...props }, ref) => (;
   <nav
@@ -105,6 +110,25 @@ const BreadcrumbLink = React.forward_ref<;
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
+  >;
+    {children || <ChevronRight className="h - 4 w - 4" />}
+  </li>);
+BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
+const BreadcrumbEllipsis = ({
+  class_name;
+  ...props;
+}: React.ComponentProps<"span">) =>: any (
+  <span;
+    role="presentation";
+    aria - hidden="true";
+    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
+    {...props}
+  >;
+    &#8230,
+  </span>);
+BreadcrumbEllipsis.display_name = "BreadcrumbElipssis";
+
+export {
     {...props}>;
     &#8230,;
   </span>;
@@ -116,3 +140,15 @@ export {;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+
+
+ 
+
+
+  BreadcrumbEllipsis}
+;

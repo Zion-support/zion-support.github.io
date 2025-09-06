@@ -170,6 +170,17 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             scale: [1, 1 && 1.1, 1],
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
           transition={{
+            duration: 25
+            repeat: Infinity
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',          }}          }}
+
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+
         />
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
@@ -183,6 +194,28 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             rotate: -360,
             scale: [1, 0 && 0.9, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
+
+          }}
+          transition={{
+            duration: 25
+            repeat: Infinity
+            ease: 'linear',            ease: "linear"
+          }}
+        />
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear',          }}
+
+            ease: 'linear',          }}
+
+          }}
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+
+          }}
+
+        />
 
         {/* Floating Circles */}
         <motion&& motion.div
@@ -217,6 +250,26 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
             y: [0, 20, 0]
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+            duration: 10
+            repeat: Infinity
+            duration: 10,
+            repeat: Infinity,
+            ease: 'easeInOut',            ease: "easeInOut"
+          }}
+        />
+            duration: 10,
+            repeat: Infinity,
+
+          }}
+
+        />
+
+
+          }}
+
         {/* Animated Lines */}
         <motion&& motion.div
           className='absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-400 to-transparent'
@@ -383,6 +436,15 @@ const UltraFuturisticBackground2030: React.FC<UltraFuturisticBackground2030Props
               opacity: [0, 1, 0]
               scale: [0, 1, 0]
             }}
+            transition={{
+              duration: Math.random() * 10 + 10
+              repeat: Infinity
+              delay: Math.random() * 10
+
+              duration: Math && Math.random() * 10 + 10,
+              repeat: Infinity,
+              delay: Math && Math.random() * 10,
+
               ease: 'easeInOut',            }}              ease: "easeInOut"
 
               duration: Math.random() * 10 + 10,
@@ -448,14 +510,38 @@ export default UltraFuturisticBackground2030;
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
+              ease: 'easeInOut',            }}
+
+
+          />
+        ))}
+      </div>
+
+
+
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
         <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
 
+
+
       </div>
     </div>
   );
 };
+
+export default UltraFuturisticBackground2030;      </div>
+    </div>
+  )
+}
+export default UltraFuturisticBackground2030;
+
+export default UltraFuturisticBackground2030;
+
+}
+export default UltraFuturisticBackground2030;
+
+export default UltraFuturisticBackground2030;
 

@@ -1,4 +1,13 @@
 
+
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+const categories = [
+import { GradientHeading } from './GradientHeading';
+import { Link } from './react-router-dom';
+import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
+const categories = [;
   {
     title: "Services"
     description: "On-demand IT support, consulting, development, and more";
@@ -14,9 +23,17 @@
   {
     title: "Equipment"
     description: "Rent or buy specialized hardware, servers, and devices";
+import {GradientHeading} from "./GradientHeading";
+import {Link} from "react-router-dom";
+import {Briefcase, HardDrive, Lightbulb, Users} from "lucide-react";
+
+
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
+
+
+
 
 const categories = [
   {
@@ -45,10 +62,25 @@ const categories = [
     color: "from-emerald-500 to-green-600"}]
 const specialServices = [
   {
+  }
+];
+
+interface CategoriesSectionProps {
+  showTitle?: boolean
+}
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
+
+
 const categories = [;
   {;
     title: "Services",;
     description: "On-demand IT support, consulting, development, and more";
+
+
 }
 
 
@@ -128,6 +160,9 @@ function CategoriesSection() {
                 className="px - 6 py - 3 bg - zion - blue - light hover:bg - zion - blue - dark border border - zion - purple / 20 hover:border - zion - purple / 50 rounded - full text - zion - cyan transition - all duration - 300";
               >;
                 {service.title}
+}
+
+};
           </div>;
         </div>;
 

@@ -123,26 +123,14 @@ export default function BookBuilder() {
           <h2 className="font-semibold flex items-center gap-2">
             <BookOpen className="w-4 h-4" /> Cover & Branding
           </h2>
-                value={project.meta.title}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, title: e.target.value } })}              />
-            </label>
-
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Subtitle</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
-                value={project.meta.subtitle}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, subtitle: e.target.value } })}              />
-            </label>
-
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>Author</div>
               <input,
 className=&quot;w-full border rounded px-3 py-2&quot;
-                value={project.meta.author}
-                onChange={(e) => setProject({ ...project, meta: { ...project.meta, author: e.target.value } })}              />
-            </label>
-
             <label className=&quot;space-y-1&quot;>
               <div className=&quot;text-xs uppercase opacity-60&quot;>ISBN (optional)</div>
               <input,

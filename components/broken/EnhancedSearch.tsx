@@ -1,3 +1,8 @@
+//Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+ //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
+  
+
+
 }];
 setIsSearching (true);
 //Simulate API call delay setTimeout ( () => {
@@ -313,3 +318,5 @@ function debounce < T extends (...args: any[]) => any>(
     timeout = set_timeout (() => func (...args), wait);
   }
 }
+export default EnhancedSearch;
+;

@@ -1,3 +1,4 @@
+export default function Placeholder() {
 
 
 
@@ -48,6 +49,12 @@ export default function Placeholder() {
       </div>;
     </main>;
   );
+}
+
+}
+
+}
+
 import Head from 'next / head';
 import Link from 'next / link';
 export default /**

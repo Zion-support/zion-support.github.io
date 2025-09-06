@@ -13,6 +13,12 @@ interface AccessibilityContextType {
   toggleLargeText: () => void;
   toggleReducedMotion: () => void;
 }
+
+
+
+export const useAccessibility = () => {;
+
+
   const context = useContext(AccessibilityContext);
   if (context === undefined) {
     throw new Error(

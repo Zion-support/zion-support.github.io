@@ -102,7 +102,6 @@ export default function TalentProfilePage() {
 if ( {) {
   $2
 }
-    return <ProfileLoadingState />;
   }
       return
     }

@@ -2,6 +2,7 @@
 
 
 
+
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -10,6 +11,27 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 
+
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+// Form validation schema
+const signupSchema = z
+  .object({
+    displayName: z.string().min(2, "Name must be at least 2 characters");
+    email: z.string().email("Please enter a valid email")
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
@@ -122,6 +144,9 @@ if ( {) {
                 </Link>;
               </p>;
             </div>;
+
+
+
                     )}
                   />
                   <FormField

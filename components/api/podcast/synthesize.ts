@@ -3,6 +3,9 @@ import fs from 'fs';
 import path from 'path';
 import axios from 'axios';
 
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+
   const { episodeId } = req && req.body || {};
   const episodes = JSON && JSON.parse(fs && fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const idx = episodes && episodes.findIndex(e => e && e.id === episodeId);  if (idx === -1) return res && res.status(404).json({ error: 'Episode not found' });  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8');
@@ -61,6 +64,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     episode && episode.audio = {      fs && fs.writeFileSync(mp4Path, fs && fs.readFileSync(mp3Path))
     }
     const publicBase = '/podcast/' + baseFilename;
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    return res.status(200).json({ episode });
+  } catch (error: any) {
+    console.error(error);
+    return res
+      .status(500)
+      .json({ error: error?.message |'Synthesis failed' });
+  }    return res.status(200).json({ episode })
+  } catch (error: any) {
+    console.error(error)
+    return res.status(500).json({ error: error?.message |'Synthesis failed' })
+
+  } catch (error: any) {
+    console.error(error)
+    return res.status(500).json({ error: error?.message |'Synthesis failed' })
+
       .json({ error: error?.message || 'Synthesis failed' });
   }    return res && res.status(200).json({ episode })
   } catch (error: any) {
@@ -130,5 +149,5 @@ if ( {) {
   }
 
 }
-
-
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');

@@ -1,5 +1,27 @@
 import { motion } from 'framer-motion';
 
+  Phone
+  Mail
+  MapPin
+  Star
+  ArrowRight
+  Brain
+  Atom
+  Shield
+  Rocket
+  Target
+  Microscope
+  Zap
+  Globe
+  Database
+  Lock
+  Cloud
+  BarChart3
+  Twitter
+  Linkedin
+  Github
+  Youtube
+  Instagram;} from 'lucide-react';import {
 import { 
 
 
@@ -25,7 +47,6 @@ import {
   Github,
   Youtube,;
   Instagram,;} from 'lucide-react';import { ;
-
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
   Zap, Globe, Database, Lock, Cloud, BarChart3;
@@ -351,6 +372,7 @@ const socialLinks = [
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
 
+
               >
                 <div className='flex items-center space-x-3'>
                   <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -407,6 +429,14 @@ const socialLinks = [
                       key={service.name}
                       href={service.href}
                       {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+                      {service.name}
 
           </div>;
 
@@ -448,6 +478,12 @@ const socialLinks = [
                   >
 
                     {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+                    {link.name}
 
               </div>;
             </div>;
@@ -461,6 +497,18 @@ const socialLinks = [
                   </Link>
                 ))}
             {/* Social Links */}
+            <div>
+              <h4 className='text-white font-semibold mb-4'>Follow Us</h4>
+              <div className='flex space-x-4'>
+                {socialLinks.map(social => (                  <a              <h4 className="text-white font-semibold mb-4">Follow Us</h4>
+              <div className="flex space-x-4">
+                {socialLinks.map((social) => (
+                  <a
+
+
+
+
+            {/* Social Links */}
 
 
                     key={social.name}
@@ -468,6 +516,9 @@ const socialLinks = [
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
                     aria-label={social.name}
                   >
+
+
+
 
                 ))}
 
@@ -519,7 +570,12 @@ const socialLinks = [
 
 
         {/* Newsletter Section */}
-
+        <div className='border-t border-gray-800/50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+            <div className='text-center'>              <motion.h3        <div className="border-t border-gray-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div className="text-center">
+              <motion.h3
 
 
 
@@ -529,6 +585,7 @@ const socialLinks = [
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
 
+
               >
                 Stay Ahead of the Future
               </motion.h3>
@@ -537,6 +594,7 @@ const socialLinks = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
+
 
               >
                 Get the latest insights on AI, quantum computing, and emerging
@@ -557,6 +615,7 @@ const socialLinks = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
                 viewport={{ once: true }}
+
 
               >
                 <input
@@ -597,4 +656,11 @@ export default EnhancedFooter2025;
 
 };
 
+export default EnhancedFooter2025;  )
+}
+export default EnhancedFooter2025;
+
+
+}
+export default EnhancedFooter2025;
 

@@ -1,3 +1,13 @@
+import Head from 'next/head';
+
+import {
+  Phone
+  Mail
+  MapPin
+  Check
+  ArrowRight
+  Star
+  Search;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
@@ -63,6 +73,16 @@ export default function AIMarketResearchPage() {
               </div>;
               <a
                 href='/contact'
+import Head from 'next / head';
+import {
+
+import React from 'react';
+
+import Head from 'next/head';
+
+import {
+
+
   Phone,
   Mail,
   MapPin,
@@ -174,12 +194,30 @@ if (return null) {
       </main>;
 
 
+export default function AIMarketResearchPage() {
+  const service = enhancedRealMicroSaasServices.find(s =>
+    s.link.endsWith('/ai-market-research');
+  );  if (!service) return null;
+
+
+
+
+export default function AIMarketResearchPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'));
+  if (!service) return null;
+
+
 
 import React from 'react'
 import Head from 'next/head'
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Search } from 'lucide-react',
 import Layout from '../components/layout/Layout'
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+
+
+export default function AIMarketResearchPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-market-research'))
+  if (!service) return null,
   return (
     <Layout>
       <Head>
@@ -198,10 +236,15 @@ import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-
               <p className="text-slate-300 mb-6">{service.description}</p>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
+
+
+
+}
+
+
       </div>
     </Layout>
   )
 }
-
 
 

@@ -62,6 +62,10 @@ if (return) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math.sqrt(dx * dx + dy * dy);
+        }
+      }
+
+
             ctx.stroke();          }
 
           }
@@ -117,6 +121,9 @@ if (return) {
             ctx && ctx.lineTo(x, y);
           }
         }
+
+
+
       {/* Floating Elements */}
       <div className='absolute inset-0'>;
         {/* Animated Grid Pattern */}
@@ -304,6 +311,68 @@ if (return) {
         <motion.div;
           className="absolute bottom - 1/3 right - 1/3 w - 20 h - 20 border border - green - 400 / 20 rounded - full";
           animate={{
+          }}
+        />
+        {/* Additional Floating Elements */}
+        <motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12'
+          animate={{
+            rotate: [12, 372]
+            scale: [1, 1.1, 1]
+            opacity: [0.15, 0.25, 0.15],          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear',          }}
+        />
+        {/* Additional Floating Elements */}
+        <motion.div
+          className="absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 transform rotate-12"
+          animate={{
+            rotate: [12, 372];
+            scale: [1, 1.1, 1];
+            opacity: [0.15, 0.25, 0.15]
+          }}
+          transition={{
+            duration: 15
+            repeat: Infinity
+            ease: 'linear'
+          }}
+          }}
+          transition={{
+            duration: 15,
+            repeat: Infinity,
+            ease: 'linear',
+          }}
+        />
+        <motion.div
+          className='absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full'
+          animate={{
+            rotate: [0, 360]
+            scale: [1, 1.2, 1]
+            opacity: [0.15, 0.3, 0.15],          }}
+          transition={{
+            duration: 18
+            repeat: Infinity
+            ease: 'linear',          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 right-1/3 w-20 h-20 border border-green-400/20 rounded-full"
+          animate={{
+            rotate: [0, 360];
+            scale: [1, 1.2, 1];
+            opacity: [0.15, 0.3, 0.15]
+          }}
+          transition={{
+            duration: 18,
+            repeat: Infinity,
+            ease: 'linear',
+
+          }}
+
+        />;
+
+
         {/* Particle Effects */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full'
@@ -321,6 +390,15 @@ if (return) {
             repeat: Infinity,
 
 
+
+
+
+          }}
+          transition={{
+
+            duration: 3
+            repeat: Infinity
+            ease: 'easeInOut'
 
           }}
           transition={{
@@ -423,6 +501,7 @@ if (return) {
         }
 export default UltraFuturisticBackground2040;
 
+
       `}</style>;
     </div>);
 }export default UltraFuturisticBackground2040;            opacity: 0.5;
@@ -433,5 +512,7 @@ export default UltraFuturisticBackground2040;
 }  );
 }
 ;
+export default UltraFuturisticBackground2040;
+export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;
 export default UltraFuturisticBackground2040;

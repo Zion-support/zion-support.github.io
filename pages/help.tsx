@@ -18,6 +18,10 @@ import { motion, AnimatePresence } from 'framer-motion';
   ExternalLink
   ChevronDown
   Cloud
+
+
+import {
+
   Search,
   HelpCircle,
   BookOpen,
@@ -94,10 +98,20 @@ const helpArticles = [
     ]
   }
 ];
+];
+export default function HelpPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+];
+
+
+
     color: 'blue',
     articles: helpArticles
   }
 ];
+
+export default function HelpPage() {;
 
 import {;
   Search,;

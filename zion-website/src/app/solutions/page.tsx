@@ -109,6 +109,8 @@ const industryApplications = [
                 </div>;
                 <a;
                   href={solution.href}
+
+
                 >
                   Learn more <span aria-hidden="true">→</span>
                 </Link>
@@ -118,6 +120,10 @@ const industryApplications = [
         </div>;
       </div>;
       {/* Industry Applications */}
+            Transforming Every Sector
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            Our AI solutions are designed to adapt and excel across diverse industries
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
@@ -183,6 +189,10 @@ const industryApplications = [
         </div>;
       </div>;
       {/* Implementation Process */}
+            Our Proven Process
+          </p>
+          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
+            From initial assessment to ongoing optimization, we guide you through every step
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
@@ -269,6 +279,10 @@ const industryApplications = [
         </div>;
       </div>;
       {/* CTA section */}
+            Ready to transform your business?
+          </h2>
+          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
+            Let's discuss how our AI solutions can accelerate your growth and give you a
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">

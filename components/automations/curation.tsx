@@ -3,6 +3,7 @@
 
 
 
+
 type Experiment = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,6 +48,7 @@ type Experiment = {
 
   title: string,;
 
+
   hypothesis?: string;
   metric?: string;
   effort?: number;
@@ -69,6 +71,36 @@ type Props = {;
   updatedAt: string | null,;
   items: Experiment[];
 };
+
+      <div className='mt-6 space-y-4'>
+        {items.map((exp, idx) => (
+          <div
+            key={idx}
+            className='rounded-xl border border-gray-200 bg-white p-5 shadow-sm'
+          >
+            <div className='text-base font-semibold text-gray-900'>
+              {exp.title}
+            </div>
+            {(exp.hypothesis |exp.metric) && (
+              <div className='mt-2 text-sm text-gray-700'>
+                {exp.hypothesis && (
+                  <div>
+                    <span className='font-medium'>Hypothesis:</span>{' '}
+                    {exp.hypothesis}
+                  </div>
+                )}
+                {exp.metric && (
+                  <div>
+                    <span className='font-medium'>Metric:</span> {exp.metric}
+                  </div>
+                )}
+              </div>
+            )}
+            {(exp.effort |exp.impact) && (
+              <div className='mt-2 text-xs text-gray-500'>
+                {exp.effort ? `Effort: ${exp.effort}/5` : null}
+                {exp.effort && exp.impact ? ' · ' : null}                {exp.impact ? `Impact: ${exp.impact}/5` : null}                {exp.effort && exp.impact ? " · " : null}
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
   return (
     <main className='mx-auto max-w-4xl px-4 py-12'>;
       <h1 className='text-2xl font-bold text-gray-900'>;
@@ -308,3 +340,5 @@ export async function getStaticProps() {;
       revalidate: 300}
 }
 }
+        updatedAt: null,
+        updatedAt: null,

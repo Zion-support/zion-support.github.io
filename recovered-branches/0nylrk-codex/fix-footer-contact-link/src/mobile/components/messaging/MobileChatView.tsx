@@ -7,6 +7,20 @@ import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from "luci
 import {cn} from "@/lib/utils";
 import {useNavigate} from "react-router-dom";
 import {toast} from "sonner";
+import React, { useState } from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
+import { cn } from "@/lib/utils",
+import { useNavigate } from "react-router-dom";
+import { toast } from "sonner";
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -27,10 +41,47 @@ interface MobileChatViewProps {
     id: string
     name: string
     avatar?: string;
+interface Message {
+  id: string,
+  content: string,
+  timestamp: string,
+
   isMe: boolean,
   sender?: string,
   avatar?: string,
   status?: 'sent' | 'delivered' | 'read'
+import React, { useState } from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { useNavigate } from "react-router-dom",;
+import { toast } from "sonner",;
+interface Message {;
+  id: string,;
+  content: string,;
+  timestamp: string,;
+  isMe: boolean,;
+  sender?: string,;
+  avatar?: string,;
+  status?: 'sent' | 'delivered' | 'read';
+}
+;
+interface MobileChatViewProps {;
+  contact: {;
+    id: string,;
+    name: string,;
+    avatar?: string,;
+    status?: string;
+  },;
+  messages: Message[],;
+  onBack: () => void,;
+  onSendMessage: (content: string) => void;
+}
+
+
+
 
   onSendMessage: (content: string) => void
 }
@@ -42,6 +93,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       handleSend();
     }
   },
+
   
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
@@ -101,6 +153,46 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               <div className={cn(
                 "text-xs mt-1 flex justify-end";
 
+  },;
+  const startVideoCall = () => {;
+    const roomId = `mobile-${contact.id}`,;
+    toast.success("Starting video call", {;
+    status?: string;
+  }
+  messages: Message[],
+  on_back: () => void,
+  onSendMessage: (content: string) => void;
+}
+export /**
+ * MobileChatView - Function description
+ */
+function MobileChatView() {
+  const [new_message, setNewMessage] = useState ("");
+  const navigate = use_navigate ();
+;
+  const handle_send = () =>: any {
+    // Check condition
+if (!== "") {) {
+  $2
+}
+      onSendMessage (new_message);
+      setNewMessage ("");
+    }
+  }
+;
+  const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {
+    // Check condition
+if ( {) {
+  $2
+}
+      e.prevent_default (),
+      handle_send ();
+    }
+  }
+;
+  const startVideoCall = () =>: any {
+    const room_id = `mobile-${contact.id}`;
+    toast.success ("Starting video call", {
       description: `Connecting with ${contact.name}...`;
     });
 ;
@@ -318,6 +410,22 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage } Mobi
         </div>;
       </header>;
               )}>;
+              <p>{message && message.content}</p>;
+              <divclassName={cn(
+                "text-xs mt-1 flex justify-end"
+                message && message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>;
+                {message && message.timestamp}
+                {message && message.isMe && message && message.status && (;
+                  <span className="ml-1">;
+                    {message && message.status === 'read' ? '✓✓' : '✓'}
+                  </span>;
+
+
+                "text-xs mt-1 flex justify-end",
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className="ml-1">

@@ -1,4 +1,10 @@
 
+
+
+export function ProjectMilestonesContent() {;
+  const { projectId } = useParams() as { projectId?: string };
+
+
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -28,6 +34,10 @@
       try {;
         const projectData = await getProjectById(projectId),;
         if (projectData) {;
+
+
+
+
         }
       } catch (error) {;
         console.error("Error loading project:", error),;
@@ -38,6 +48,23 @@
           setProject(projectData)}
       } catch (error) {} finally {setIsLoading(false)}
     }
+      <ProjectHeader title={project.job?.title |"Untitled Project"} />
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+      <div className="flex justify-between items-center my-6">
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
+        <ProjectActions
+          projectId={projectId |''}
+        <ProjectActions 
+      } catch (error) {;
+        console.error("Error loading project:", error);
+      } finally {;
+        setIsLoading(false);
+      }
+    }
+;
+    loadProject(),;
+    refetch();
+  }, [projectId, getProjectById, refetch]),;
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -56,6 +83,28 @@
       </div>;
     );
   }
+        <ProjectActions
+
+    },
+    
+    await createMilestone(milestoneData),
+    setActiveTab('milestones'),
+    await handleMilestoneCreated()
+  },
+
+
+  return (
+    <div className="container mx-auto py-8 px-4">
+
+      <ProjectHeader title={project.job?.title || "Untitled Project"} />
+
+      <div className="flex justify-between items-center my-6">
+        <h2 className="text-2xl font-bold">Payment Milestones</h2>
+
+        <ProjectActions 
+
+
+          projectId={projectId || ''}
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}

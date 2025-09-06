@@ -4,6 +4,12 @@ export default function AISolutionsPage() {
 
   const aiSolutions = [
     {
+        'Predictive Analytics'
+        'Pattern Recognition'
+        'Anomaly Detection'
+        'Recommendation Systems'
+      ],      icon: '🧠'
+      category: 'Core AI'
       complexity: 'Advanced'
     }
         'Predictive Analytics',
@@ -162,6 +168,9 @@ export default function AISolutionsPage() {
           </section>
           <section className="mx-auto max-w-7xl">
             {/* AI Solutions Grid */}
+                          {feature}
+                        </li>
+                      ))}
             <div className="mb-16">;
               <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Our AI Solutions</h2>;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -229,6 +238,7 @@ export default function AISolutionsPage() {
                 Industry Applications
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
+
 
                 {useCases.map((useCase, index) => (
                   <div

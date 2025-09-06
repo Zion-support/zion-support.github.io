@@ -25,6 +25,12 @@ import Link from "next/link";
 interface EnhancedNavigationProps {
   className?: string;
 }
+} from "lucide-react";
+import Link from "next/link";
+interface EnhancedNavigationProps {;
+  className?: string;
+}
+
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""
 }) => {
@@ -458,6 +464,7 @@ export default EnhancedNavigation;
 };
 
 export default EnhancedNavigation;
+
 );
 };
 export default EnhancedNavigation;

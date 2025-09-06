@@ -1,7 +1,3 @@
-import { translateTextViaAI } from '../utils/translation';
-
-export type UseAutoTranslateResult = {;
-
   translations: Record<string, string>;
   loading: boolean;
   error?: string;

@@ -1,4 +1,31 @@
 
+import { useParams, Link } from "react-router-dom",
+import { Header } from "@/components/header/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { useState, useEffect } from "react",
+import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from "lucide-react",
+import { MARKETPLACE_LISTINGS } from "@/data/listingData",
+import { useNavigate } from "react-router-dom",
+import { toast } from "@/hooks/use-toast";
+export default function CategoryDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped
+
+  const { slug } = useParams() as { slug?: string }
+  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS);
+import { toast } from "@/hooks/use-toast",
+export default function CategoryDetail() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { slug } = useParams() as { slug?: string },
+  const navigate = useNavigate(),
+  const [isLoading, setIsLoading] = useState(true),
+  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
+
+
+
   const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
     title: ""
     description: ""
@@ -245,6 +272,14 @@ if ( {) {
         }
       });
     }
+  }
+  },
+  };
+  },
+
+
+  },
+
   };
   },
 

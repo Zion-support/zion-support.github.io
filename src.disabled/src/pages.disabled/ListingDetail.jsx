@@ -32,4 +32,3 @@ export default function ListingDetail({ }: ListingDetailProps) {
     </div>
   );
 }
-}

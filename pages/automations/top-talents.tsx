@@ -1,4 +1,5 @@
 
+
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -6,6 +7,25 @@ import Link from "next/link";
 };
 
 type Props = { items: TalentItem[] };
+
+import type { NextPage, GetServerSideProps } from 'next',
+import fs from 'fs',
+import path from 'path',
+import Link from 'next/link',
+type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
+type Props = { items: TalentItem[] },
+
+
+
+import type { NextPage, GetServerSideProps } from 'next';
+import fs from 'fs';
+import path from 'path';
+import Link from 'next/link';
+type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
+type Props = { items: TalentItem[] },
+
+
+
 
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
@@ -42,11 +62,29 @@ export default TopTalentsPage;
   );
   let items: TalentItem[] = [];
   try {
+    const raw = fs.readFileSync(p, "utf8");
+    const data = JSON.parse(raw);
+    const raw = fs.readFileSync (p, "utf8");
+    const data = JSON.parse (raw);
     items = data.items || [];
   } catch {}
   return { props: { items } }
 }
 ;
+    const raw = fs.readFileSync(p, 'utf8'),
+    const data = JSON.parse(raw),
+    items = data.items || []
+  } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { items }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
   )
 },
 export const getServerSideProps: GetServerSideProps = async () => {

@@ -7,6 +7,12 @@ import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function QuantumCybersecurityPage() {
 
+      icon: Shield
+      title: "Quantum-Resistant Encryption"
+      description: "Advanced cryptographic algorithms that remain secure even against quantum computers."
+      color: "from-blue-500 to-cyan-500"
+    }
+
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
@@ -213,6 +219,9 @@ function QuantumCybersecurityPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -256,6 +265,9 @@ function QuantumCybersecurityPage() {
                     <span className="text-slate-700">{benefit}</span>;
                   </motion && motion.div>;
                 ))}
+
+
+
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -288,6 +300,9 @@ function QuantumCybersecurityPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {threats.map((threat, index) => (
               <motion.div
@@ -311,6 +326,9 @@ function QuantumCybersecurityPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -324,6 +342,9 @@ function QuantumCybersecurityPage() {
               <h3 className="text-xl font-bold text-white mb-2">SOC 2 Type II</h3>
               <p className="text-white/70 text-sm">Service Organization Control compliance for security, availability, and confidentiality</p>
             </motion.div>
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -336,6 +357,9 @@ function QuantumCybersecurityPage() {
               <h3 className="text-xl font-bold text-white mb-2">GDPR</h3>
               <p className="text-white/70 text-sm">General Data Protection Regulation compliance for EU data privacy</p>
             </motion.div>
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -348,6 +372,9 @@ function QuantumCybersecurityPage() {
               <h3 className="text-xl font-bold text-white mb-2">ISO 27001</h3>
               <p className="text-white/70 text-sm">Information security management system certification</p>
             </motion.div>
+
+
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -369,6 +396,9 @@ function QuantumCybersecurityPage() {
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
@@ -441,6 +471,9 @@ function QuantumCybersecurityPage() {
           </div>
         </div>
       </section>
+
+
+
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;

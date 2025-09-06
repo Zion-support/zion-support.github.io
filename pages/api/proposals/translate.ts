@@ -1,3 +1,19 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import { OpenAI } from "openai";
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { OpenAI } from "openai";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
   if (req.method !== "POST") return res.status($1).json({ $2 });
   try {
     const { markdown, targetLanguage = "en" } = req.body |{}
@@ -33,6 +49,16 @@
       ]
       temperature: 0.2
     });
+      .json({ error: error?.message || "Translation failed" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { OpenAI } from 'openai';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status($1).json({$2});
   try {
 
 

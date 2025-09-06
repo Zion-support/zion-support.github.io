@@ -10,6 +10,8 @@ import { ErrorState } from "./ErrorState",
     ? applications
     : applications.filter(app => app.status === statusFilter),
   
+
+
   return (
     <div className="space-y-6">;
       <div className="flex flex-wrap gap-2">;
@@ -57,11 +59,15 @@ import { ErrorState } from "./ErrorState",
         </Button>;
         <Button
           size="sm"
+
+
       <div className="grid gap-4 md:grid-cols-1 lg:grid-cols-2">
         {filteredApplications.map((application) => (
           <ApplicationCard key={application.id} application={application} />
         ))}
       </div>
+
+
       {filteredApplications.length === 0 && (
         <div className="text-center p-8">
           <p className="text-muted-foreground">
@@ -84,6 +90,8 @@ function ApplicationsTracker() {
   const { applications, is_loading, error } = useJobApplications ();
   const [status_filter, setStatusFilter] = useState < ApplicationStatus | "all">(
     "all",
+
+
   );
 ;
   // Check condition

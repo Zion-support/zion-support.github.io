@@ -1,3 +1,9 @@
+      if (stored === 'talent' |stored === 'client') {
+        setRoleState(stored);      }        setRoleState(stored)
+      if (stored === 'talent' || stored === 'client') {
+        setRoleState(stored);      }
+
+
       if (stored === 'talent' || stored === 'client') {
         setRoleState(stored);      }        setRoleState(stored)
         setRoleState(stored);      }
@@ -39,6 +45,7 @@ export function useAuth() {;
       {children}
     </AuthContext.Provider>
   );
+
 
 
 export function useAuth() {;

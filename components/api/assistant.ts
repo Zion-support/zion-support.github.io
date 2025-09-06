@@ -10,6 +10,18 @@ const SYSTEM_PROMPT = `You are the Zion Assistant for the Zion AI Marketplace. Y
 Context about Zion AI Marketplace:
 - Zion is a marketplace to discover, evaluate, and integrate AI models, agents, and services
 - Users can browse categories, view product pages, compare features, and connect via APIs
+  }
+}
+
+  }
+  };
+}
+  }
+    console && console.error('Assistant API error:', error?.message || error);
+    return res && res.status(500).json({ error: 'Assistant request failed' });
+  }    return res && res.status(500).json({ error: 'Assistant request failed' })
+
+  };
 }
 
 

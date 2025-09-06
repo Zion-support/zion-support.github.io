@@ -1,3 +1,8 @@
+
+
+export default function OfflinePage() {;
+
+
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
@@ -48,6 +53,10 @@
       available: true
     }
     {
+
+
+  };
+
   ];
 
 
@@ -241,6 +250,9 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
   return (
     <>
       <Head>
@@ -319,6 +331,8 @@ export default function OfflinePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
               {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : "No internet connection detected. Don't worry - you can still access cached content and use offline features."}
@@ -523,6 +537,8 @@ export default function OfflinePage(req, res) {
           </motion.div>;
           {/* Tips Section */}
           <motion.div;
+
+
           >
             <Card className='max-w-2xl mx-auto'>
               <CardHeader>
@@ -579,6 +595,8 @@ export default function OfflinePage(req, res) {
   }
 }
               className="fixed bottom-6 right-6 z-50"
+
+
             >
               <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
                 <CardContent className="p-4">
@@ -602,6 +620,10 @@ export default function OfflinePage(req, res) {
                 </CardContent>
               </Card>
             </motion.div>
+
+
+}
+
           )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

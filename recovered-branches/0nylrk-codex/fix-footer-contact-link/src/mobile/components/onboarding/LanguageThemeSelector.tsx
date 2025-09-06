@@ -1,4 +1,15 @@
 
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { useTheme } from "@/hooks/useTheme",
+import { Moon, Sun, Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Moon, Sun, Check } from "lucide-react",
+import { Card, CardContent } from "@/components/ui/card",
+
+
+
+
 interface Language {
 
   code: string
@@ -13,6 +24,12 @@ const languages: Language[] = [
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "zh", name: "中文", flag: "🇨🇳" }],
 
+export function LanguageThemeSelector() {
+  const { theme, setTheme } = useTheme();
+
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
+  const { theme, setTheme } = useTheme(),
+  const [selectedLanguage, setSelectedLanguage] = useState<string>("en"),
 
 
   return (
@@ -72,6 +89,8 @@ export function LanguageThemeSelector() {;
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
+
+
                   <Check className="h-4 w-4 text-primary" />
                 )}
               </CardContent>;
@@ -107,8 +126,7 @@ export function LanguageThemeSelector() {;
           </Card>;
 
 
-            </CardContent>;
-          </Card>;
+          <Card
 
           <Card 
 
@@ -131,6 +149,11 @@ export function LanguageThemeSelector() {;
               {theme === 'dark' && (;
                 <Check className="h-4 w-4 text-primary mt-2" />;
               )}
+}
+
+
+
+
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { use_theme } from '@/hooks / use_theme';
@@ -145,6 +168,10 @@ interface Language {
           </Card>;
         </div>;
       </div>;
+
+
+
+
 }
     </div>);
 }

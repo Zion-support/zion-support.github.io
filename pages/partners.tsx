@@ -59,6 +59,39 @@ function PartnersPage() {
   ExternalLink,
   Star,
   Users,
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import {
+  Handshake, Globe, Rocket, Brain, Atom, Shield,
+  ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
+} from 'lucide-react',
+import EnhancedNavigation from '../components/EnhancedNavigation',
+import EnhancedFooter from '../components/EnhancedFooter',
+export default function PartnersPage() {
+  const partners = [
+    {
+      name: "Microsoft Azure",
+      category: "Cloud Infrastructure",
+      description: "Strategic partnership for enterprise cloud solutions and AI services",
+      logo: "/api/placeholder/200/100",
+      website: "https://azure.microsoft.com",
+      partnership: "Technology Alliance",
+      benefits: ["Joint go-to-market", "Technical integration", "Co-selling opportunities"],
+      name: 'Microsoft Azure',
+      category: 'Cloud Infrastructure',
+      description:;
+        'Strategic partnership for enterprise cloud solutions and AI services',
+      logo: '/api / placeholder / 200 / 100',
+      website: 'https://azure.microsoft.com',
+      partnership: 'Technology Alliance',
+      benefits: [;
+        'Joint go - to - market',
+        'Technical integration',
+        'Co - selling opportunities',
+      ],
+      icon: Globe,
+      color: "from-blue-500 to-cyan-500"
+    },
     {
       name: "NVIDIA",
       category: "AI & Computing",
@@ -244,6 +277,30 @@ function PartnersPage() {
         <div className='max-w-7xl mx-auto text-center'>          <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
+
+
+          >
+            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+              Strategic Partners
+            </h1>
+            <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
+              Building the future of technology through strategic partnerships
+              and collaboration            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='mb-12'
+          >
+            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+              Join our ecosystem of technology leaders, innovators, and industry
+              experts to create transformative solutions that shape the future
+              of computing.
+            <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+              Building the future of technology through strategic partnerships and collaboration
+
+
             </p>
             <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto'>
               Become a Partner
@@ -366,6 +423,8 @@ function PartnersPage() {
           </motion.div>
         </div>
       </section>
+
+
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
@@ -378,6 +437,7 @@ function PartnersPage() {
           </div>;
         </div>;
       </section>;
+
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -393,6 +453,24 @@ function PartnersPage() {
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>;
+              Partnership Types;
+            </h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              We offer various partnership models to meet your business;
+              objectives and growth goals;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {partnershipTypes && partnershipTypes.map((type, index) => (;
+              <motion&& motion.div
+                key={type && type.title}
+
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -431,6 +509,13 @@ function PartnersPage() {
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className='text-4xl font-bold text-white mb-6'>Our Partners</h2>
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>
@@ -439,6 +524,22 @@ function PartnersPage() {
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
+
+            className='text-center mb-16'>;
+            <h2 className='text-4xl font-bold text-white mb-6'>Our Partners</h2>;
+            <p className='text-xl text-white/70 max-w-3xl mx-auto'>;
+              Leading technology companies and organizations that trust us to;
+              deliver innovative solutions;
+            </p>;
+          </motion && motion.div>;
+
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {partners && partners.map((partner, index) => (;
+              <motion&& motion.div
+                key={partner && partner.name}
+
+
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
@@ -511,6 +612,8 @@ function PartnersPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           >
               Ready to Partner with Us?
             </h2>
@@ -525,6 +628,13 @@ function PartnersPage() {
       </section>
       <EnhancedFooter />
     </div>
+)
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) )
+}</ul> </motion.div>) )
+}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) )
+}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) )
+
+
 ),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
@@ -594,3 +704,6 @@ function PartnersPage() {
   }
 }
 ;
+
+
+

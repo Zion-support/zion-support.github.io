@@ -1,3 +1,11 @@
+    credentials: 'include'});
+  if (!res.ok) throw new Error('Failed to load milestones');
+  return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
 ;
 export async function createMilestone(projectId: string, payload: any) {;
@@ -30,3 +38,12 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     body: JSON.stringify(body)}),;
   if (!res.ok) throw new Error(await res.text());
   return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+
+
+}

@@ -1,7 +1,17 @@
 
+
+
+
+
+import React from "react";
+import {Brain, Clock, Award, Zap} from "lucide-react";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import React from "react",
 import { Brain, Clock, Award, Zap } from "lucide-react",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+
+
+
 
 const features = [
   {
@@ -42,6 +52,13 @@ export const AppFeatures: React.FC = () => {
                 <CardDescription className="text-gray-300">{feature.description}</CardDescription>
               </CardContent>
             </Card>
+  )
+}
+
+
+
+
+
 import React from "react",;
 import { Brain, Clock, Award, Zap } from "lucide-react",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;

@@ -1,4 +1,7 @@
 
+
+
+
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
@@ -12,6 +15,28 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 
 import CodeBlock from "./CodeBlock",
 export function ApiKeysManager() {
+  const {
+    keys;
+
+    loading
+    newApiKey;
+    fetchApiKeys
+    createApiKey
+    regenerateApiKey
+
+    revokeApiKey;
+    clearNewApiKey
+  } = useApiKeys();
+  const [showCreateDialog, setShowCreateDialog] = useState(false);
+
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null);
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null);
+  const { ;
+    keys;
+
+  const { ;
+    keys;
+
   const { 
     keys,
     loading, 
@@ -109,6 +134,43 @@ export function ApiKeysManager() {
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (
                       <div key={scope.value} className="flex items-center space-x-2">
+import { useState } from "react",;
+import { Check, Clock, Key, MoreVertical, RefreshCw, X } from "lucide-react",;
+import { format } from "date-fns",;
+import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Label } from "@/components/ui/label",;
+import { Badge } from "@/components/ui/badge",;
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",;
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",;
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",;
+import CodeBlock from "./CodeBlock",;
+export function ApiKeysManager() {;
+  const {;
+    keys,;
+    loading,;
+    newApiKey,;
+    fetchApiKeys,;
+    createApiKey,;
+    regenerateApiKey,;
+    revokeApiKey,;
+    clearNewApiKey;
+  } = useApiKeys(),;
+  const [showCreateDialog, setShowCreateDialog] = useState(false),;
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),;
+  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),;
+  // Create key form state;
+  const [keyName, setKeyName] = useState(""),;
+  const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),;
+  // Load keys on mount;
+  useState(() => {;
+    fetchApiKeys();
+  }),;
+
   const handleCreateKey = async () => {;
     if (keyName && keyName.trim() === "" || selectedScopes && selectedScopes.length === 0) return;
     await createApiKey(keyName, selectedScopes);
@@ -151,6 +213,18 @@ export function ApiKeysManager() {
                   Generate a new API key for accessing the Zion APIs.;
                 </DialogDescription>;
               </DialogHeader>;
+                    {scopeOptions && scopeOptions.map((scope) => (;
+                      <div key={scope && scope.value} className="flex items-center space-x-2">;
+                        <Checkbox
+                          id={scope && scope.value} 
+                          checked={selectedScopes && selectedScopes.includes(scope && scope.value)}
+                          onCheckedChange={() => toggleScope(scope && scope.value)}
+                        />;
+
+
+                        <Checkbox 
+                          id={scope.value} 
+
                           checked={selectedScopes.includes(scope.value)}
                           onCheckedChange={() => toggleScope(scope.value)}
                         />
@@ -187,11 +261,6 @@ export function ApiKeysManager() {
                     <DropdownMenuTrigger as_child>;
 
                           : 'This API key has never been used'}
-                      </p>;
-                    </PopoverContent>;
-                  </Popover>;
-
-
 
 
 

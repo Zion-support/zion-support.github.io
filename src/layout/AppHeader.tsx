@@ -92,6 +92,22 @@ import React from 'react';
             />;
           </div>;
         </div>;
+              unreadCount = {unreadCount,}
+              onClose = {() => setMobileMenuOpen(false),}
+              openLoginModal = {openLoginModal,}
+            />;
+          </div>;
+        </div>;
+      )}
+      {/* Mobile Bottom Navigation */}
+      {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
+      <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
+    </>
+      setActiveNav(null)
+      setServicesDropdownOpen(false)
+      setSolutionsDropdownOpen(false)
+      setCompanyDropdownOpen(false)
+      setResourcesDropdownOpen(false)}
   }
   const closeAllDropdowns = (...args: unknown[]): unknown => {
                 )}

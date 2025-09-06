@@ -7,6 +7,11 @@
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+} from 'lucide-react';
+import Card from '../components/ui/Card';
+import Button from '../components/ui/Button';
+
+
 
 export default function AIGuardrailsPage() {
   const contactInfo = {
@@ -75,6 +80,29 @@ export default function AIGuardrailsPage() {;
             </p>;
           </div>;
 
+                      className='flex items - start gap - 2 text - gray - 200';
+                    >;
+                      <Check className='w - 5 h - 5 text - emerald - 400 mt - 0.5' />{' '}
+                      <span>{f}</span>;
+                    </li>))}
+                </ul>;
+              </div>;
+            </Card>;
+            <Card className='bg - black / 30 border border - rose - 500 / 30'>;
+              <div className='p - 6'>;
+                <div className='text - 3xl font - bold text - white'>;
+                  Starting at $199;
+                  <span className='text - base text - gray - 400'>/month</span>;
+                </div>;
+                <div className='text - sm text - gray - 400 mt - 1'>;
+                  14 - day trial • Setup: 30 minutes;
+                </div>;
+                <div className='mt - 4'>;
+                  <Button;
+                    href='/contact';
+                    className='w - full bg - gradient - to - r from - rose - 500 to - orange - 600 text - white';
+                  >;
+
                     Request Demo;
                   </Button>;
                 </div>;
@@ -88,6 +116,7 @@ export default function AIGuardrailsPage() {;
             </Card>;
           </div>;
 
+}
 	);
 }
 

@@ -11,12 +11,23 @@
   Smartphone,
   Monitor,
   Award,
+  MessageCircle,;
+  Calculator,;} from 'lucide-react';import {
+  MessageCircle,
+  Calculator,;} from 'lucide-react';import { 
+
   DollarSign, TrendingUp, Shield, Zap, Target, BarChart3, 
   CheckCircle, Star, Globe, Lock, Smartphone, Monitor, 
   Award, MessageCircle, Calculator
 export default function AIFinancialPlanningPlatform() {
   const features = [
     {
+
+
+        'Live financial data, market analysis, and personalized recommendations updated in real-time.',;
+    },;
+
+
   ];
   const benefits = [
     'Increase investment returns by 25%'
@@ -267,6 +278,9 @@ function AIFinancialPlanningPlatform() {
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
 
+
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -347,6 +361,9 @@ function AIFinancialPlanningPlatform() {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+
+
+            <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
 
@@ -557,4 +574,5 @@ function AIFinancialPlanningPlatform() {
         </section>;
       </div>;
     </>);
+}
 }

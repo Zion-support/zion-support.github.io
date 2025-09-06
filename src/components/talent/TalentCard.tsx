@@ -50,6 +50,50 @@ onst TalentCardComponent = ({
     if (onRequestHire) {
       onRequestHire(talent)
     }
+  }
+  },
+
+
+  // Extract skills - limit to 5 for display
+  const skills = talent.skills?.slice(0, 5) |[]
+export interface TalentCardProps {;
+  talent: TalentProfile,;
+  onViewProfile: (id: string,) => void,;
+  onRequestHire: (talent: TalentProfile,) => void,;
+  isAuthenticated: boolean;
+}
+
+const TalentCardComponent = ({;
+  talent,;
+  onViewProfile,;
+  onRequestHire,;
+  isAuthenticated;
+}: TalentCardProps,) => {;
+  const router = useRouter(),;
+
+  const handleViewProfile = () => {;
+    // Navigate directly to the talent profile;
+    router && router.push(`/talent/${talent && talent.id}`),;
+
+    // Also call the onViewProfile callback if provided;
+    if (onViewProfile) {;
+      onViewProfile(talent && talent.id);
+    }
+  },;
+  const handleRequestHire = (e: React.MouseEvent) => {;
+    e.preventDefault(),;
+    e.stopPropagation(),;
+    if (onRequestHire) {;
+      onRequestHire(talent);
+    }
+  },
+
+  const handleRequestHire = (e: React.MouseEvent,) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (onRequestHire) {
+      onRequestHire(talent)
+    }
       <div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}

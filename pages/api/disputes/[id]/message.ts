@@ -2,6 +2,19 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import {
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
+import {
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
 
   parseUserFromRequest,
   ensureInvolvedOrAdmin,;
@@ -79,6 +92,7 @@ export default async function handler(
 res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 }
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);

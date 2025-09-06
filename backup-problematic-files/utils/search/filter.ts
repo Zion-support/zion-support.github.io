@@ -1,4 +1,3 @@
-
 export type AccessLevel = 'public' | 'private' | 'admin';
 
 export interface SearchResult {

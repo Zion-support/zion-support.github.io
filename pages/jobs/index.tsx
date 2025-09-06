@@ -1,3 +1,6 @@
+import Link from 'next / link';
+import EnhancedMarketplaceCard from '../../components / ui / EnhancedMarketplaceCard';
+import EnhancedLoading from '../../components / ui / EnhancedLoading';
 import {useEffect, useState} from 'react';
 import InteractiveSearch from '../../components / ui / InteractiveSearch';
 export default /**
@@ -9,6 +12,21 @@ function JobsListPage() {
     const t = set_timeout (() => set_loading (false), 500);
     return () => clear_timeout (t);
   }, []);
+import Link from 'next/link',
+import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard',
+import EnhancedLoading from '../../components/ui/EnhancedLoading';
+import { useEffect, useState  } from 'react';
+import InteractiveSearch from '../../components/ui/InteractiveSearch';
+export default function JobsListPage() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const t = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(t);
+  }, []);
+  const jobs = [
+;
+  const jobs = [;
     {
       slug: 'senior - ai - engineer',
       title: 'Senior AI Engineer',
@@ -44,6 +62,8 @@ export default function JobsListPage() {
           {jobs.map((j) => (
             <Link key={j.slug} href={`/jobs/${j.slug}`}>
               <a>
+  )
+}
     <div className='space - y-4'>;
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />;
       {loading ? (

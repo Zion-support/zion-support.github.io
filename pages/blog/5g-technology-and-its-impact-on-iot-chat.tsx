@@ -17,7 +17,13 @@ export default Chat5gTechnologyAndItsImpactOnIotChat;
 
 
 
+        <Link href="/blog"><a>Back to Blog</Link></Link>
       </main>
     </div>
   )
 },
+
+export default Chat5gTechnologyAndItsImpactOnIotChat,;
+export default Chat5gTechnologyAndItsImpactOnIotChat,
+
+

@@ -71,6 +71,20 @@ export function DynamicListingPage(): any ({;
   description;
   categorySlug;
   listings: allListings,;
+
+  categoryFilters;
+  initialPrice = { min: 0, max: 10000 }
+}: DynamicListingPageProps) {;
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [view, setView] = useState<ListingView>("grid");
+  const [isLoading, setIsLoading] = useState(false);
+  const [priceRange, setPriceRange] = useState<PriceRange>(initialPrice);
+  const [selectedRating, setSelectedRating] = useState<number | null>(null);
+
+
+
   initialPrice = { min: 0, max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -230,6 +244,9 @@ if ( {) {
         <div className="text-center mb-12">;
           <GradientHeading>{title}</GradientHeading>;
           <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+
+
+
             {description}
 
                   }}
@@ -270,6 +287,8 @@ if ( {) {
 
                     {categoryFilters.map((filter) => (;
                       <SelectItem key={filter.value} value={filter.value} className="text-white">;
+
+
                         {filter.label}
                       </SelectItem>
                     ))}
@@ -296,6 +315,8 @@ if ( {) {
                   </div>
                 </div>
               </div>
+
+
                     className="mb-4"
                   />
                   <div className="flex justify-between text-sm text-zion-slate-light">
@@ -520,6 +541,14 @@ value={selectedCategory}
                       )}
                     </Button>;
                   ))}
+                </div>
+              </div>
+
+
+
+                      )}
+                    </Button>;
+                  ))}
 
                 </div>;
               </div>;
@@ -531,6 +560,13 @@ value={selectedCategory}
                 onClick={() => {;
                   console && console.log("Resetting filters");
                   setSearchQuery("");
+
+                className="w-full border-zion-purple text-zion-purple hover: bg-zion-purple/10"
+                onClick={() => {
+                  console.log("Resetting filters");
+                  setSearchQuery("");
+                  setSelectedCategory("all")
+                  setCurrentPriceFilter([priceRange.min, priceRange.max]);
                   // // // console.log("Resetting filters"),
                   setSearchQuery(""),
                   setSelectedCategory("all"),
@@ -547,6 +583,23 @@ value={selectedCategory}
               <div className="flex flex-col md:flex-row gap-4">
                 <div className="relative flex-grow">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  setSelectedCategory("all"),;
+                  setCurrentPriceFilter([priceRange && priceRange.min, priceRange && priceRange.max]);
+                  setSelectedRating(null);
+                }}
+                        selected_rating === rating;
+                          ? "bg - zion - purple / 20 border - zion - purple text - zion - purple";
+                          : "border - zion - blue - light text - zion - slate - light";
+                      }`}
+                    >;
+                      {rating === null ? (
+                        "Any") : (
+                        <div className="flex items - center">;
+                          {[...Array (rating)].map ((_, i) => (
+                            <Star key={i} className="h - 3 w - 3 fill - zion - cyan text - zion - cyan" />))}
+                          <span className="ml - 1">& Up</span>;
+                        </div>)}
+                    </Button>))}
                 </div>;
               </div>;
               <Button;
@@ -607,6 +660,9 @@ value={selectedCategory}
                   </div>;
                 ))}
               </div>;
+                {filteredListings && filteredListings.map((listing) => (;
+                  <ProductListingCard
+                    key={listing && listing.id}
 
                   <ProductListingCard 
 
@@ -621,6 +677,8 @@ value={selectedCategory}
                 </Button>;
               </div>;
             )}
+
+
                   }}
                   className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
                 >;

@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState} from "react";
 import {useParams, Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -10,6 +14,13 @@ import {ForumPost, ForumCategoryInfo} from "@/types/community";
 import {Badge} from "@/components/ui/badge";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone, Search} from "@/components/icons";
+    adminOnly: false
+
+    icon: "Briefcase"
+  }
+
+
+
 import { useState } from "react",
 import { useParams, Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -32,6 +43,12 @@ import {
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
+
+
+
+    adminOnly: false,
+    icon: "Briefcase"
+  },
   "project-help": {
 
     id: "project-help"
@@ -207,6 +224,8 @@ const postsByCategory: Record<string, ForumPost[]> = {
             <Input
               placeholder="Search posts in this category..."
               className="pl-10"
+
+
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
             />

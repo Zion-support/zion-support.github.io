@@ -1,4 +1,31 @@
 
+  Atom
+  Brain
+  Zap
+  Shield
+  Users
+  Target
+  ArrowRight
+  Check
+  Star
+  Globe
+  Cpu
+  Network;
+  Atom,
+  Brain,
+  Zap,
+  Shield,
+  Users,
+  Target,
+  ArrowRight,
+  Check,
+  Star,
+  Globe,
+  Cpu,;
+  Network,;
+} from 'lucide-react';
+
+
 
 
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
@@ -120,6 +147,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gray-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -251,6 +279,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             initial={{ opacity: 0, coordinate_y: 20 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
+
+
+
           >
             <h2 className='text-4xl md:text-5xl font-bold mb-6'>
               Quantum-Powered Features
@@ -295,6 +326,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             {features && features.map((feature, index) => (;
               <motion&& motion.div
                 key={index}
+
 
               >
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
@@ -396,6 +428,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
 
+
               >
                 <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>
                   <Star className='w-8 h-8 text-white' />
@@ -406,6 +439,9 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{benefit}</h3>
               </motion.div>
+
+
+
 
             ))}
 
@@ -428,10 +464,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-
+            transition={{ duration: 0.8 }}
+            className='text-center mb-16'
 
 
 
@@ -548,10 +586,15 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
                 viewport={{ once: true }}
 
 
+
+
       {/* CTA Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+
+
+
 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -575,6 +618,12 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
       </section>
     </div>
   );
+export default QuantumAINeuralNetworkPlatform;  )
+}
+export default QuantumAINeuralNetworkPlatform;
+
+export default QuantumAINeuralNetworkPlatform;
+export default QuantumAINeuralNetworkPlatform;
 
 };
 

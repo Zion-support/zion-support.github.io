@@ -1,4 +1,13 @@
 
+
+type RequestsHeaderProps = {
+  unreadCount: number,
+  statusFilter: QuoteStatus | 'all',
+  setStatusFilter: (value: QuoteStatus | 'all') => void,
+  archiveFilter: 'active' | 'archived' | 'all',
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void
+},
+
 type RequestsHeaderProps = {
   unreadCount: number
   statusFilter: QuoteStatus | 'all'
@@ -40,6 +49,10 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
   unreadCount;
   statusFilter;
   setStatusFilter;
+export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
+  archiveFilter,;
+  setArchiveFilter;
+}) => {;
   return (
 
 
@@ -61,6 +74,10 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({;
       </div>
     </div>
   )
+
+
+};
+
 },
 import React from "react",;
 import { Badge } from "@/components/ui/badge",;

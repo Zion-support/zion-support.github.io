@@ -1,3 +1,31 @@
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function AIPoweredDevOpsPlatformPage() {
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
 
   return (
     <>;
@@ -33,6 +61,10 @@
     </>;
   );
 
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
+
+import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPoweredDevOpsPlatformPage() {
 	return (
 		<>

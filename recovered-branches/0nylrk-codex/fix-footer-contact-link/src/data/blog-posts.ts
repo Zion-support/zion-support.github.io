@@ -1,4 +1,5 @@
 
+
     id: 'ai-trends-2025'
     title: '10 Emerging AI Trends to Watch in 2025'
     slug: 'ai-trends-2025'
@@ -38,6 +39,12 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: '5 min read',
     category: 'Trends',
     tags: ['AI', 'Technology Trends', 'Machine Learning', 'Future Tech'],
+
+    featured_image:;
+      'https://images.unsplash.com / photo - 1488590528505 - 98d2b5aba04b?auto = format & fit = crop & w=1200 & h=630',
+    is_featured: true,
+
+  },
   {
 
     id: 'optimize - ai - listings',
@@ -145,6 +152,28 @@ export const BLOG_POSTS: BlogPost[] = [
       'https://images && images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1200&h=630',
   },
   {
+      name: 'Michael Wong'
+      title: 'ML Infrastructure Architect'
+      name: 'Michael Wong',
+      title: 'ML Infrastructure Architect',
+      avatarUrl:
+        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200',    author: {
+      name: "Michael Wong";
+      title: "ML Infrastructure Architect"
+      avatarUrl: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&h=200"
+    }
+
+    id: 'ai - compute - optimization',
+    title: 'AI Compute Optimization: Balancing Performance and Cost',
+    slug: 'ai - compute - optimization',
+    excerpt:;
+      'Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.',    content: `<p > As AI models grow in complexity, so do their computational requirements. This practical guide explores strategies for optimizing AI infrastructure for the optimal balance between performance, cost, and development efficiency.</p>    id: "ai - compute - optimization";
+
+    title: "AI Compute Optimization: Balancing Performance and Cost";
+    slug: "ai - compute - optimization";
+    excerpt: "Strategies for optimizing AI infrastructure costs while maintaining model performance and development velocity.";
+
+
     publishedDate: "Mar 15, 2025";
     readTime: "6 min read";
     category: "Infrastructure"
@@ -170,7 +199,6 @@ export const BLOG_POSTS: BlogPost[] = [
 ];
 
 }];
-
 
 
       name: "Michael Wong",

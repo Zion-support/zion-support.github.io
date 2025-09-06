@@ -1,4 +1,26 @@
 
+import { Link } from "react-router-dom",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { useAuth } from "@/hooks/useAuth";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth",
+import {
+  MessageSquare;
+  Briefcase;
+  Code;
+  FileText;
+  Megaphone
+} from "@/components/icons",
+import { ForumCategory, ForumCategoryInfo } from "@/types/community";
+const categories: ForumCategoryInfo[] = [
+  {
+
+
+    icon: "Briefcase"
+  }
+import { ForumCategory, ForumCategoryInfo } from "@/types/community",
+
+
 
 const categories: ForumCategoryInfo[] = [
   {
@@ -122,4 +144,6 @@ export const ForumCategories = () => {;
           </Link>;
         );
       })}
+
+
 export default ForumCategories;

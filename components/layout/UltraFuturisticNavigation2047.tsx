@@ -180,6 +180,34 @@ import {
 } from 'lucide-react';
 interface NavigationItem {
   name: string;
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React, { useState, useEffect } from 'react';
+import Link from 'next / link';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   Menu,
   ChevronDown,
@@ -260,6 +288,12 @@ interface NavigationItem {
   title?: string;
   featured?: boolean;
   category?: string;
+  color?: string
+}
+  color?: string;
+  color?: string;  color?: string
+}
+  color?: string;
 
 const navigationItems: NavigationItem[] = [
   {
@@ -344,6 +378,44 @@ const navigation_items: NavigationItem[] = [;
     category: 'company',
     color: 'from-gray-500 to-slate-500',
     children: [
+      {
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Info className='w-4 h-4' />,
+        featured: true,
+      },
+      {
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-500 to-emerald-500',
+      },
+      {
+        name: 'Support',
+        href: '/support',
+        description: 'Get help and support',
+        icon: <MessageCircle className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500',
+      },
+      {
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-500 to-pink-500',
+      },
+    ],
+  },];        icon: <Shield className="w-4 h-4" />,
+        color: 'from-red-500 to-pink-500'
+    name: 'AI & Technology Services',
+    href: '/services',
+    icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
+        href: '/',
+        description: 'Main homepage',
+        icon: <Home className="w - 4 h - 4" />,
+        color: 'from - emerald - 500 to - cyan - 500',
+        featured: true;
       }
       {
         name: 'About Us',
@@ -467,6 +539,7 @@ const navigation_items: NavigationItem[] = [;
             <div className="flex items-center space-x-4 text-sm text-gray-400">
               <a href={`tel:${contactInfo.mobile}`} className="flex items-center space-x-1 hover:text-white transition-colors">
                 <Phone className="w-4 h-4" />
+
 
               </a>
             </div>
@@ -814,6 +887,7 @@ const navigation_items: NavigationItem[] = [;
                 </div>;
               </div>;
             </div>;
+
 export default UltraFuturisticNavigation2047;
 
 
@@ -828,3 +902,8 @@ export default UltraFuturisticNavigation2047);
 export default UltraFuturisticNavigation2047;
 ;
   );
+export default UltraFuturisticNavigation2047;  )
+}
+export default UltraFuturisticNavigation2047;
+
+export default UltraFuturisticNavigation2047;

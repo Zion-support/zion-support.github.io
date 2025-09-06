@@ -106,6 +106,12 @@ import {
   Palette,
   Video,
   LockIcon,
+
+  GlobeIcon,;
+  CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
+
+
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -169,6 +175,13 @@ const stats = [;
   { label: 'Services Delivered', value: '200+', icon: Rocket },;
   { label: 'Countries Served', value: '45+', icon: Globe },;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
+
+
+export default function UltraFuturisticFooter2034() {;
+
+  return (
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>;
       {/* Animated Background Elements */}
 
       <div className='absolute inset-0 overflow-hidden'>;
@@ -196,12 +209,21 @@ const stats = [;
             {/* Company Info */}
 
 
+export default function UltraFuturisticFooter2034() {
+  return (
+
+              <motion.div
+
+
+
+
 
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
+
 
               >
                 <div className='flex items-center space-x-3'>
@@ -313,6 +335,7 @@ const stats = [;
             <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
               <motion.div
 
+
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -321,6 +344,45 @@ const stats = [;
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
+                    >
+                      <div className='flex items-center space-x-2'>
+                        <category.icon className='w-5 h-5 text-cyan-400' />
+                        <h4 className='font-semibold text-white'>
+                          {category.title}
+                        </h4>
+                      </div>
+                      <div className='space-y-2'>
+                        {category.services.map(service => (
+                          <Link
+                            key={service.name}
+                            href={service.href}
+                            className='flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200'
+                          >
+                            <span className='text-gray-300 group-hover:text-cyan-400 transition-colors text-sm'>
+                              {service.name}
+                            </span>
+                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}                    >
+                      <div className="flex items-center space-x-2">
+                        <category.icon className="w-5 h-5 text-cyan-400" />
+                        <h4 className="font-semibold text-white">{category.title}</h4>
+                      </div>
+                      <div className="space-y-2">
+                        {category.services.map((service) => (
+                          <Link
+                            key={service.name}
+                            href={service.href}
+                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200"
+                          >
+                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
+                              {service.name}
+                            </span>
+                            <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
+                              {service.price}
+                            <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>                              {service.price}
+
+                              {service.price}
+
+
                             </span>
                           </Link>
                         ))}
@@ -340,8 +402,14 @@ const stats = [;
 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className='space-y-8'
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
+
 
               >
                 {/* Quick Links */}
@@ -414,6 +482,11 @@ const stats = [;
         </div>
 
               ))}
+            </div>
+          </motion.div>
+        </div>
+
+              ))}
 
             </div>;
           </motion && motion.div>;
@@ -435,6 +508,19 @@ const stats = [;
                 </Link>;
                 <Link
                   href='/terms'
+
+
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+;
+export default function UltraFuturisticFooter2034() {;
+  return (";
+
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;

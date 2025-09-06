@@ -16,6 +16,66 @@ import {toast} from "@/components/ui/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {AspectRatio} from "@/components/ui/aspect-ratio";
 import {useAuth} from "@/hooks/useAuth";
+import React, { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Switch } from "@/components/ui/switch",
+import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
+import {
+  Form;
+  FormControl;
+  FormDescription;
+  FormField;
+  FormItem;
+  FormLabel;
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from "lucide-react",
+import { toast } from "@/components/ui/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { useAuth } from "@/hooks/useAuth";
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { useAuth } from "@/hooks/useAuth",
+// Define form schema;
+const serviceProfileSchema = z && z.object({;
+  name: z && z.string().min(2, "Name must be at least 2 characters long");
+  title: z && z.string().min(5, "Business name/title is required");
+  bio: z && z.string().min(50, "Bio must be at least 50 characters long").max(1000, "Bio cannot exceed 1000 characters");
+  location: z && z.string().min(2, "Location is required");
+  services: z && z.string().min(2, "Enter at least one service");
+  hourlyRate: z && z.string().refine((val) => !isNaN(Number(val)), {;
+    message: "Rate must be a number"}),;
+  availability: z && z.enum(["available", "limited", "unavailable"]);
+  enhancedProfile: z && z.boolean().default(true),;
+  website: z && z.string().url("Please enter a valid URL").or(z && z.string().length(0)).optional()}),;
+
+type ServiceFormValues = z && z.infer<typeof serviceProfileSchema>;
+
+export function ServiceProviderRegistrationForm() {;
+
+  const { user } = useAuth();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [serviceTags, setServiceTags] = useState<string[]>([]);
+  const [isGenerating, setIsGenerating] = useState(false);
+
+
+
+
 // Define form schema
 
 const serviceProfileSchema = z.object({
@@ -54,6 +114,15 @@ type ServiceFormValues = z.infer<typeof serviceProfileSchema>,
     if (e.key === "Enter") {
       e.preventDefault()
       handleAddService()
+  }
+  // Generate enhanced profile with AI
+  const generateEnhancedProfile = async () => {
+    const formData = form.getValues();
+    if (!formData.bio |formData.bio.length < 20) {
+  };
+
+  };
+
 import React, { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -152,6 +221,11 @@ export function ServiceProviderRegistrationForm() {;
         title: "More information needed"
         description: "Please provide at least a detailed bio before generating enhanced content."})
       return
+      }
+      setGeneratedContent(data as { summary: string, services: string[] })
+
+
+
   },;
   // Generate enhanced profile with AI;
   const generateEnhancedProfile = async () => {;
@@ -179,6 +253,9 @@ export function ServiceProviderRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
+
+
+
       }
 
       setGeneratedContent(data as { summary: string, services: string[] }),
@@ -239,10 +316,19 @@ if ( {) {
             // Merge AI suggested services with user-provided services;
             const aiServices = (aiData as any).services || [];
             finalServices = [...new Set([...serviceTags, ...aiServices])];
+
+
+
           }
         } catch (error) {
           console.error("Error enhancing profile:", error),
           // Continue with submission even if enhancement fails
+      }
+      // Get user email for notification
+      const { data: userData } = await supabase.auth.getUser()
+      const userEmail = userData.user?.email;
+
+
         } catch (error) {;
           console && console.error("Error enhancing profile:", error);
           // Continue with submission even if enhancement fails;
@@ -251,6 +337,9 @@ if ( {) {
 
         finalSummary = generatedContent.summary,;
         finalServices = [...new Set([...serviceTags, ...generatedContent.services])];
+
+
+
       }
 
 
@@ -773,6 +862,8 @@ if ( {) {
                     />;
                   </div>;
                 </div>;
+
+
                 {/* Upload Avatar */}
                 <div className="space-y-2">;
                   <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel>;
@@ -1012,6 +1103,9 @@ if ( {) {
                     {serviceTags && serviceTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No services added yet</p>;
                     )}
+
+
+
                 {/* Pricing and Availability Section */}
                 <div className="space-y-4">;
                   <h3 className="text-lg font-medium text-white">Pricing & Availability</h3>;

@@ -1,6 +1,17 @@
+export default function ServiceDescriptionGeneratorPage() {
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
 export default function ServiceDescriptionGeneratorPage() {;
 export default function ServiceDescriptionGeneratorPage(req, res) {
   try {
+
+
+
+export default function ServiceDescriptionGeneratorPage(req, res) {
+  try {
+
+
+export default function ServiceDescriptionGeneratorPage() {;
   const [title, setTitle] = useState('');
   const [targetAudience, setTargetAudience] = useState('');
   const [featuresInput, setFeaturesInput] = useState('');
@@ -13,8 +24,55 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
   >('professional');
 
 
+
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null),
+  const [generated, setGenerated] = useState('');
+  const [accepted, setAccepted] = useState(false);
+
+  const keyFeatures = useMemo(() => {
+    return featuresInput
+      .split('\n')
+      .map(f => f.trim())
+      .filter(Boolean);  }, [featuresInput]);
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    setAccepted(false)
+    try {
+      const response = await fetch('/api/generate-service-description', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({
+          title
+          keyFeatures
+          targetAudience
+          additionalNotes: additionalNotes |undefined
+          tone
+        })
+      });
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error |'Failed to generate');
+      }
+      const data = (await response.json()) as { description: string }
+      setGenerated(data.description |'');
+    } catch (err: any) {
+      setError(err.message |'Something went wrong');
+    } finally {
+      setLoading(false);    }
+  }
+  function handleAccept() {
+    setAccepted(true);  }
+  function handleCopy() {
+    if (!generated) return;
+    navigator.clipboard.writeText(generated).catch(() => {});
+
+  }
+  const [tone, setTone] = useState<'professional' | 'friendly' | 'persuasive' | 'technical'>('professional');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [generated, setGenerated] = useState('');
   const [accepted, setAccepted] = useState(false);
   const keyFeatures = useMemo(() => {;
@@ -48,6 +106,13 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+
+
+
   }
   return (
 
@@ -104,6 +169,11 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
               'e && e.g.\nCore Web Vitals deep-dive\nActionable prioritised recommendations\nHands-on fixes or step-by-step guidance'
             }
             value={featuresInput}
+            className='w-full min-h-[80px] rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500'
+            placeholder='Constraints, deliverables, timeline, pricing preferences, compliance, etc.'
+            value={additionalNotes}
+
+
           <button
             type='submit'
             disabled={loading}
@@ -159,6 +229,14 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
         </div>
       )}
     </div>
+            <div className="text-emerald-700 dark:text-emerald-400 text-sm">Accepted. You can copy and paste this into your CMS.</div>
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  )
+}
 
 
 }
@@ -186,3 +264,6 @@ export default function ServiceDescriptionGeneratorPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+

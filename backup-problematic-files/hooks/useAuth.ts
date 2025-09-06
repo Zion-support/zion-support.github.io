@@ -16,13 +16,6 @@ export const use_auth = () =>: any {
   useEffect (() => {
     // Simulate auth check;
     set_loading (false);
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-  useEffect(() => {
-    // Simulate auth check
-    setLoading(false);
-  }, []);
-;
   return {
     user
     loading

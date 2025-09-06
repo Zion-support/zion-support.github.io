@@ -151,3 +151,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   if (method === 'PATCH') {
+    return res.status(200).json({ tenant: result })
+  }
+return res.status(405).json({ error: 'Method not allowed' });
+}
+
+  if (method === 'PATCH') {
+    const { tenantId, rotateKey } = req.body || {};
+    const { tenantId, rotateKey } = req.body || {};

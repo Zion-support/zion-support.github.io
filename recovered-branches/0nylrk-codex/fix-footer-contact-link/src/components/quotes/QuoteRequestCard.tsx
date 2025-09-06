@@ -5,6 +5,7 @@ import {Button} from "@/components/ui/button";
 import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
 import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
 import type { QuoteRequest } from "@/types/quotes";
+
 import React from "react",
 import { format } from "date-fns",
 import { 
@@ -16,10 +17,23 @@ import {
 } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
+  quote;
+  onViewDetails;
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
+  quote;
+  onViewDetails;
+  onMarkAsResponded
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
+
+
   onToggleArchive
 }) => {
   // Format date for display
@@ -77,6 +91,10 @@ type QuoteRequestCardProps = {
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
+}
+
+
+
 import React from "react",;
 import { format } from "date-fns",;
 import {;
@@ -171,6 +189,10 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           </div>;
         </div>;
       </CardContent>;
+
+
+
+
 };
     </Card>);
 }

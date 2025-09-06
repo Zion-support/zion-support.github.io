@@ -1,3 +1,9 @@
+export interface InnovativeMicroSaas2029 {
+  id: string;
+export interface InnovativeMicroSaas2029 {  id: string;
+
+export interface InnovativeMicroSaas2029 {
+
   name: string;
   tagline: string;
   price: string;
@@ -9,6 +15,11 @@
   contact_info: {
     mobile: string;
     email: string;
+
+
+    address: string;
+  };
+
 export interface InnovativeMicroSaas2029 {;
   id: string,;
   name: string,;
@@ -22,6 +33,9 @@ export interface InnovativeMicroSaas2029 {;
   contactInfo: {;
     mobile: string,;
     email: string,;
+
+
+
 
     address: string;
   }

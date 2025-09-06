@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -8,6 +12,11 @@ export interface Webhook {
 
 
 export interface Webhook {;
+export interface Webhook {
+
+
+export interface Webhook {;
+
   id: string;
   name: string;
   url: string;
@@ -36,6 +45,9 @@ export function useWebhooks() {;
     if (!user) return;
     setLoading(true);
     setError(null);
+      setWebhooks(result.webhooks |[])
+
+
     try {
       const { data: { session } } = await supabase && supabase.auth.getSession();
       if (!session) {
@@ -113,6 +125,10 @@ if ( {) {
   $2
 }
         throw new Error (result.error || 'Failed to fetch webhooks');
+
+
+
+
       setWebhooks(result.webhooks || [])
     } catch (err) {
       console.error('Error fetching webhooks:', err),
@@ -158,6 +174,9 @@ if ( {) {
       toast({
         title: "Webhook Created"
         description: "Your webhook has been created successfully."});
+
+
+
 ;
   // Create new webhook;
   const create_webhook = async (name: string, url: string, event_types: WebhookEventType[], secret?: string) => {
@@ -200,6 +219,10 @@ if ( {) {
         throw new Error (result.error || 'Failed to create webhook');
       }
 
+
+
+
+
       // Add the new webhook to the list
       setWebhooks(prev => [result.webhook, ...prev]),
       
@@ -220,6 +243,9 @@ if ( {) {
       if (!session) {
         setError("Authentication required");
         return
+
+        };
+        body: JSON && JSON.stringify({ webhookId, isActive })
       });
 
       const result = await response && response.json();
@@ -379,11 +405,6 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to delete webhook')
       }
-    try {
-      const { data: { session } } = await supabase.auth.getSession(),
-      if (!session) {
-        setError("Authentication required"),
-        return
       // Remove the webhook from the list
 
       setWebhooks(prev => prev && prev.filter(webhook => webhook && webhook.id !== webhookId));
@@ -491,11 +512,6 @@ if ( {) {
       if (!response.ok) {
         throw new Error(result.error |'Failed to test webhook')
       }
-    try {
-      const { data: { session } } = await supabase.auth.getSession(),
-      if (!session) {
-        setError("Authentication required"),
-        return
       // Store test result
       setTestResult({
 
@@ -585,3 +601,62 @@ if ( {) {
     webhooks;
     loading;
     error;
+  }
+}
+        variant: "destructive",
+        title: "Error testing webhook",
+        description: err instanceof Error ? err.message : 'An unknown error occurred'})
+    } finally {
+      setLoading(false)
+;
+      // Store test result;
+      setTestResult({;
+        status: result.status,;
+        statusText: result.statusText,;
+        responseBody: result.responseBody;
+      }),;
+      // Update last triggered timestamp;
+      setWebhooks(prev => prev.map(webhook =>;
+        webhook.id === webhookId ? { ...webhook, last_triggered_at: new Date().toISOString() } : webhook;
+      )),;
+      toast({;
+        title: "Webhook Test Sent",;
+        description: `Test completed with status: ${result.status} ${result.statusText}`}),;
+      return result;
+    } catch (err) {;
+      console.error('Error testing webhook:', err),;
+      setError(err instanceof Error ? err.message : 'An unknown error occurred'),;
+      toast({;
+        variant: "destructive",;
+        title: "Error testing webhook",;
+        description: err instanceof Error ? err.message : 'An unknown error occurred'});
+    } finally {;
+      setLoading(false);
+    }
+  },;
+  return {;
+    webhooks,;
+    loading,;
+    error,;
+    testResult,;
+    fetchWebhooks,;
+    createWebhook,;
+    toggleWebhook,;
+    deleteWebhook;
+    testWebhook;
+    clearTestResult: () => setTestResult(null);
+    test_result;
+    fetch_webhooks;
+    create_webhook;
+    toggle_webhook;
+    delete_webhook;
+    test_webhook;
+    clearTestResult: () => setTestResult (null);
+
+  }
+}
+
+
+  }
+}
+;

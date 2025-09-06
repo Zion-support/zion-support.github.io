@@ -1,4 +1,16 @@
 
+
+
+import { ServiceVariant } from '../types/service-variants',
+
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution'
+}
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+};
+
+marketAdvantage: 'First platform to combine content creation, optimization, and distribution in one AI-powered solution' 
+};
+
 //Healthcare AI Services {
   id: 'ai - healthcare - diagnostics - platform';
 name: 'AI Healthcare Diagnostics Platform';
@@ -162,6 +174,8 @@ integrations: ['Autonomous vehicles, Drones, Robotics platforms, Traffic systems
 use_cases: ['Fleet management_route optimization', 'Safety monitoring_maintenance planning'];
 roi: 'Average 450% ROI through operational efficiency and safety improvements';
 competitors: ['Waymo, Cruise, Argo AI, Aurora'];
+
+
 
 
 import { ServiceVariant } from '../types/service-variants',

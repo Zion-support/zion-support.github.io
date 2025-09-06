@@ -1,7 +1,15 @@
+
+import TryItConsole from './TryItConsole';
+
+
+  endpoint,
+}: {;
+
   endpoint: EndpointSpec;
 }) {
 
   return (
+
     <div className='space-y-4'>
 
       <div>
@@ -109,6 +117,12 @@
         </div>
       )}
 
+            ))}
+
+          </ul>
+        </div>
+      )}
+
       {endpoint.errors && endpoint.errors.length > 0 && (
         <div>
           <div className='font-medium mb-2'>Error Codes</div>
@@ -123,6 +137,7 @@
 
             ))}
 
+            ))}
           </ul>
         </div>
       )}
@@ -187,6 +202,7 @@
     </div>);
   );
 
+}
 }
 
 }

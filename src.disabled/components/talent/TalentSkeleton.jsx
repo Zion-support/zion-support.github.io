@@ -32,4 +32,3 @@ export default function TalentSkeleton({ }: TalentSkeletonProps) {
     </div>
   );
 }
-}

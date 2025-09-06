@@ -39,6 +39,46 @@
                 onClick={() => toggleDropdown('services')}
               {activeDropdown === 'services' && (
                 <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 10 }}
+                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
+                >
+                  <div className="grid grid-cols-2 gap-4 px-6">
+                    {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                        onClick={closeAllDropdowns}
+                      >
+                        <div className="flex items-start space-x-3">
+                          <service.icon className="w-6 h-6 text-blue-600 mt-1" />
+                          <div>
+                            <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
+                              {service.name}
+                            </h3>
+                            <p className="text-sm text-gray-600">{service.description}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </div>
+            {/* Company Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => toggleDropdown('company')}
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
+              >
+                <span>Company</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+              </button>
+              {activeDropdown === 'company' && (
+              {activeDropdown === 'services' && (
+                <motion.div
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Services</span>;
@@ -110,6 +150,9 @@
             {/* CTA Button */}
             <Link
               href="/contact"
+
+
+
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -377,5 +420,6 @@ const EnhancedNavigation: React.FC = () => {
                 </Link>;
               </div>;
             </div>;
+export default EnhancedNavigation;
 export default EnhancedNavigation;
 export default EnhancedNavigation;

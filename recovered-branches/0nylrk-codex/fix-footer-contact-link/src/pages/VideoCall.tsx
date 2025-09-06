@@ -1,4 +1,14 @@
 
+import { useState, useEffect  } from 'react';
+import { useParams, useNavigate  } from 'react-router-dom';
+import { Header  } from '@/components/Header';
+import { Footer  } from '@/components/Footer';
+import { SEO  } from '@/components/SEO';
+import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
+import { Button  } from '@/components/ui/button';
+import { toast } from 'sonner';
+
+
 import {useState, useEffect} from 'react';
 import {useParams, useNavigate} from 'react-router-dom';
 import {Header} from '@/components/Header';
@@ -37,6 +47,8 @@ function VideoCall() {
     is_muted?: boolean;
     isVideoEnabled?: boolean;
     isScreenSharing?: boolean;
+
+
   const handleJoinCall = () => {;
     setIsJoining(true);
     // Simulate connection delay;
@@ -56,6 +68,23 @@ function VideoCall() {
     setTimeout(() => {
       navigate(-1)
     }, 1500)
+  ]),;
+  const handleJoinCall = () => {;
+    setIsJoining(true),;
+    // Simulate connection delay;
+    setTimeout(() => {;
+      setHasJoined(true),;
+      setIsJoining(false),;
+      toast.success("Call joined", {;
+        description: `You have joined meeting room ${roomId}`;
+      });
+    }, 1500);
+  },;
+  const handleLeaveCall = () => {;
+    setHasJoined(false),;
+    toast.info("Call ended", {;
+      description: "You have left the meeting";
+    }),;
     // Navigate back after a short delay;
     setTimeout(() => {;
       navigate(-1);
@@ -66,6 +95,7 @@ function VideoCall() {
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },;
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },;
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
+
 
   return (
     <>
@@ -90,9 +120,6 @@ function VideoCall() {
             </div>;
           </div>;
         )}
-
-
-
       </main>;
       <Footer />;
     </>;

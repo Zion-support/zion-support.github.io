@@ -649,14 +649,31 @@
       customers: 24,
       rating: 4.3,
       reviews: 18,
+  ];
+export const getInnovativeMicroSaasServices2026ByCategory = (
+  category: string
+) => {
+  return innovativeMicroSaasServices2026.filter(
+    service => service.category === category;
+  );
+  return innovativeMicroSaasServices2026.filter(service => service.popular);
+}
+};
+
+export const getPopularInnovativeMicroSaasServices2026 = () => {;
   return innovativeMicroSaasServices2026.filter(service => service.popular);
 }
 export const getInnovativeMicroSaasServices2026ByPriceRange = (
   minPrice: number
   maxPrice: number
 ) => {
-
+  return innovativeMicroSaasServices2026.filter(service => {
+    const price = parseInt(service.price.replace('$', ''));
+    return price >= minPrice && price <= maxPrice;
+  });
+};    return price >= minPrice && price <= maxPrice
   })
+}
 export interface InnovativeMicroSaasService2026 {
   id: string, name: string,
   tagline: string, price: string,
@@ -960,6 +977,8 @@ export const getInnovativeMicroSaasServices2026ByPriceRange = (
     const price = parse_int (service.price.replace ('$', ''));
     return price >= min_price && price <= max_price;
   });
+};    return price >= minPrice && price <= maxPrice
+  })
 
 
 

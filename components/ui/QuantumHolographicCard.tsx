@@ -1,3 +1,25 @@
+  Star
+  Zap
+  Shield
+  TrendingUp
+  ArrowRight
+  ExternalLink
+  Check
+  Users
+  Clock
+  DollarSign;
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+  Clock,;
+  DollarSign,;
+
+
 } from 'lucide-react';
 interface QuantumHolographicCardProps {
   service: {
@@ -244,6 +266,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 
                 </motion.div>
               ))}
+
+
+
           {/* Market data */}
 
           <div className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-lg p-4 mb-6 border border-blue-700/30">
@@ -411,7 +436,9 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           </div>
 
           {/* CTA Button */}
-
+          <motion.a
+            href={service.link}
+            className='group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25'
 
 
 
@@ -431,3 +458,17 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             {/* Button glow effect */}
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300" />
           </motion.a>
+export default QuantumHolographicCard;  )
+}
+export default QuantumHolographicCard;
+
+export default QuantumHolographicCard;
+export default QuantumHolographicCard;
+
+
+
+  );
+
+};
+
+

@@ -1,4 +1,23 @@
 
+export default function Partners() {
+  const [form, setForm] = useState({
+
+export default function Partners() {
+  const [form, setForm] = useState({
+    name: '',
+    entityType: '',
+    pocName: '',
+    pocEmail: '',
+    useCaseType: 'Education Partnership',;
+  });  const [result, setResult] = useState<any>(null);    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
+    useCaseType: "Education Partnership"}),
+  const [loading, setLoading] = useState(false);
+
+
+
     name: ''
     entityType: ''
     pocName: ''
@@ -176,6 +195,7 @@ export default function Partners() {;
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+}
 
         )}
 

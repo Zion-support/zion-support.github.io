@@ -29,6 +29,27 @@ interface ErrorBoundaryProps {
   showReportButton?: boolean;
   context?: string;
 }
+export class GlobalErrorBoundary extends Component<
+  ErrorBoundaryProps
+  ErrorBoundaryState
+> {
+  private retryTimeouts: NodeJS.Timeout[] = []
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  private retryTimeouts: NodeJS.Timeout[] = []
+  constructor(props: ErrorBoundaryProps) {
+    super(props)
+
+    this.state = {
+      hasError: false
+      error: null
+      errorInfo: null
+      errorId: null
+      retryCount: 0
+      userFeedback: ''
+      showDetails: false
+    } }    ,}
       showDetails: false
     }
   }
@@ -44,33 +65,6 @@ interface ErrorBoundaryProps {
     const errorId = this.generateErrorId()
     // Enhanced error logging
     const enhancedError = {
-    })
-    // Custom error handler
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo)
-    }
-    this.setState({
-      errorInfo
-      errorId
-    }) }
-  componentWillUnmount() {
-    // Clear any pending retry timeouts
-      errorInfo
-      errorId
-    })
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.group(' Error Boundary Caught Error')
-      logErrorToProduction('Error:', { data: error })
-      logErrorToProduction('Error Info:', { data: errorInfo })
-      logErrorToProduction('Enhanced Error:', { data: enhancedError })
-      console.groupEnd()
-    }
-    // Report to Sentry
-    Sentry.withScope((scope) => {
-      scope.setTag('errorBoundary', this.props.context |'GlobalErrorBoundary')
-      scope.setLevel('error')
-      scope.setContext('errorInfo', {
         componentStack: errorInfo.componentStack
         retryCount: this.state.retryCount
       })
@@ -396,6 +390,14 @@ if (return) {
                             Copy Details
                           </Button>
                           {this.props.showReportButton !== false && (
+
+
+
+                            Copy Details
+                          </Button>
+                          {this.props.showReportButton !== false && (
+
+
                             <Button onClick={this.reportError} variant="outline" size="sm">
                               Report Issue
                             </Button>

@@ -1,4 +1,9 @@
 
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
 import React from './react';
 import { use_theme } from '@/hooks / use_theme';
 

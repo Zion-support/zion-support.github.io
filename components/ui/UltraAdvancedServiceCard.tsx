@@ -1,4 +1,21 @@
 
+import {
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,;
+  Globe,;} from 'lucide-react';
+
 
 import {
   ArrowRight
@@ -16,6 +33,8 @@ import {
   DollarSign
   Lock
   Globe;} from 'lucide-react';
+  Users, Zap, Shield, Clock, Check, Brain;
+  Rocket, Dna, DollarSign, Lock, Globe
 
 
 import {;
@@ -59,6 +78,8 @@ interface UltraAdvancedServiceCardProps {;
       website: string;
     }
 
+    reviews: number;
+  };
 
     reviews: number;
   };
@@ -227,6 +248,47 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       },
     },
   };
+
+        onHoverStart={() => setIsHovered(true)}
+      onHoverEnd={() => setIsHovered(false)}
+    >
+      {/* Glow Effect */}
+      <div  return (
+    <motion.div
+      className="relative group"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+      whileHover="hover"
+      onHoverEnd={() => setIsHovered(false)}
+    >
+      {/* Glow Effect */}
+      <div
+        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
+          isHovered ? 'opacity-100' : 'opacity-50'
+        }`}
+        style={{
+          background: `linear-gradient(135deg, ${service.color})`
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'
+        }}
+      />
+      {/* Main Card */}
+      <div        className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
+          isHovered ? 'shadow-2xl' : 'shadow-lg'
+        }`}
+      >
+        <div className='bg-gray-900/90 backdrop-blur-xl rounded-2xl p-6 h-full'>        className={`absolute inset-0 rounded-2xl blur-xl transition-all duration-500 ${
+          isHovered ? 'opacity-100' : 'opacity-50';
+        }`}
+        style={{
+          background: `linear-gradient(135deg, ${service.color})`;
+          transform: isHovered ? 'scale(1.05)' : 'scale(1)'}}
+      />
+      {/* Main Card */}
+      <div
+    hidden: { opacity: 0, height: 0 },
+
+      <div 
 
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'
@@ -494,7 +556,9 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
 
 
                 {/* ROI */}
-
+                <div className='bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg p-3'>
+                  <h4 className='text-white font-semibold mb-2'>ROI Promise</h4>
+                  <p className='text-gray-300 text-sm'>{service.roi}</p>
 
 
 
@@ -524,6 +588,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
                         {service.contactInfo.address}
                       </span>                    </div>                </div>
                 {/* Contact Info */}
+
           {/* Action Buttons */}
           <div className='flex space-x-3 mt-6'>;
             <motion&& motion.button
@@ -725,6 +790,28 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
               {isExpanded ? 'Show Less' : 'Details'}
 
           {/* Expand/Collapse Indicator */}
+          <motion.div
+            className='flex justify-center mt-4'
+            animate={{ rotate: isExpanded ? 180 : 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <ArrowRight className='w-5 h-5 text-gray-400' />          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+};
+
+export default UltraAdvancedServiceCard;            className="flex justify-center mt-4"
+            </motion && motion.button>;
+          </div>;
+
+
+
+
+
+          {/* Expand/Collapse Indicator */}
 
 
 };
@@ -788,6 +875,12 @@ export default UltraAdvancedServiceCard;
 }
 }
 export default UltraAdvancedServiceCard;
+
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
+;
 
 };
 

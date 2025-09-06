@@ -1,4 +1,13 @@
 
+import { Button  } from '@/components/ui/button';
+import { ArrowLeft, FileText, Link  } from 'lucide-react';
+import { PdfExportButton  } from '../PdfExportButton';
+import { Resume  } from '@/types/resume';
+import { useState  } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
+
+
+
 import {Button} from '@/components/ui/button';
 import {ArrowLeft, FileText, Link} from 'lucide-react';
 import {PdfExportButton} from '../PdfExportButton';
@@ -9,6 +18,37 @@ interface PreviewHeaderProps {
   resume: Resume;
   onBack: () => void
 }
+
+
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+
+
+  const [isPrinting, setIsPrinting] = useState(false);
+
+  const isMobile = useIsMobile();
+  const handleBrowserPrint = () => {
+    setIsPrinting(true);
+    // Inject print-specific CSS only for the duration of printing
+    const style = document.createElement("style");
+    style.innerHTML = `
+      @media print {
+        body * {
+          visibility: hidden
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft, FileText, Link } from 'lucide-react',;
+import { PdfExportButton } from '../PdfExportButton',;
+import { Resume } from '@/types/resume',;
+import { useState } from 'react',;
+import { useIsMobile } from '@/hooks/use-mobile',;
+interface PreviewHeaderProps {;
+  resume: Resume,;
+  onBack: () => void;
+}
+;
+export function PreviewHeader({ resume, onBack }: PreviewHeaderProps) {;
+  const [isPrinting, setIsPrinting] = useState(false),;
+  const isMobile = useIsMobile(),;
+  const handleBrowserPrint = () => {;
     setIsPrinting(true);
 
     // Inject print-specific CSS only for the duration of printing;
@@ -17,6 +57,11 @@ interface PreviewHeaderProps {
       @media print {;
         body * {;
           visibility: hidden;
+        }
+        .print-section, .print-section * {
+          visibility: visible
+        }
+
         .print-section {
           position: absolute
           left: 0
@@ -67,6 +112,20 @@ function PreviewHeader() {
         }
         .no - print {
           display: none !important;
+    // Trigger print dialog
+    window.print();
+    // Remove the temporary style element after printing
+    setTimeout(() => {
+      document.head.removeChild(style);
+      setIsPrinting(false);
+    }, 1000);
+  }
+    `,
+    document.head.appendChild(style),
+    `,
+    document.head.appendChild(style),
+
+
     
     // Trigger print dialog
     window.print(),

@@ -1,7 +1,5 @@
         }
         // Fail silently and fall back to local data
-        logErrorToProduction('Error fetching product', { data: err });
-      }
     }
   }, [id]), // id is now from router && router.query;
 

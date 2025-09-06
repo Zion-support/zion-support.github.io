@@ -1,8 +1,16 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PDFDocument, StandardFonts } from "pdf-lib";
 import crypto from "crypto";
 import {
+
+
+  updateArtifacts,
+  getProposal,
+  savePdf,;
+
+
 } from "../../../utils/data/proposals";
 import { create as createIpfsClient } from "ipfs-http-client";
 import { ethers } from "ethers";
@@ -23,6 +31,22 @@ function buildIpfsClient() {
 
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { PDFDocument, StandardFonts } from 'pdf-lib';
+import crypto from 'crypto';
+import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
+import { create as createIpfsClient } from 'ipfs-http-client';
+import { ethers } from 'ethers';
+import fs from 'fs';
+import path from 'path';
+function buildIpfsClient() {
+  const projectId = process.env.IPFS_PROJECT_ID;
+  const projectSecret = process.env.IPFS_PROJECT_SECRET;
+  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
+  if (!projectId || !projectSecret) return null;
+  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+  return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -67,6 +91,45 @@ export default async function handler(
     page.drawText(line, { x: margin, y, size: fontSize, font });
     y -= 14
   }
+}
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  if (req.method !== "POST") return res.status($1).json({ $2 });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return pdfDoc.save();
+}
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") return res.status($1).json({ $2 });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+export default async function handler(req, res) {
+  try {
+    const { id } = req.body |{}
+    if (!id) return res.status($1).json({ $2 });
+    const meta = getProposal(id);
+    if (!meta) return res.status($1).json({ $2 });
+    const markdownPath = path.join(
+      process.cwd()
+      "public"
+      meta.artifacts.markdownPath |""
+    );
+    const markdown = fs.existsSync(markdownPath)
+      ? fs.readFileSync(markdownPath, "utf8")
+      : "# Proposal";
 
   try {
 
@@ -88,6 +151,12 @@ export default async function handler(
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
+
+        ipfsCid = cid.toString();
+
+  }
+
+
 }
     // Check condition
 if ( {) {
@@ -157,11 +226,8 @@ if ( {) {
     });
     return res.status (200).json ({ meta: updated });
   } catch (error: any) {
-    const updated = updateArtifacts(id, { pdfPath: pdfUrl, signature, ipfsCid });
-    return res.status(200).json({ meta: updated })
-  } catch (error: any) {
-    return res.status(500).json({ error: error?.message || 'Export failed' })
-  }
+    return res.status(500).json({ error: error?.message || "Export failed" });
+      } catch {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
@@ -193,6 +259,23 @@ if ( {) {
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Export failed' })
   }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

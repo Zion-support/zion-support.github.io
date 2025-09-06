@@ -1,6 +1,3 @@
-
-import {useEffect, useRef, useState} from 'react';
-
 interface UseIntersectionObserverProps {
   threshold?: number;
   root?: Element | null;
@@ -63,5 +60,3 @@ export function useIntersectionObserver({;
   }, [node]);
   return [setNode, entry] as const
 }
-
-

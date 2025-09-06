@@ -1,11 +1,10 @@
+import { Check, Pencil } from 'lucide-react'
 interface GeneratedDescriptionDisplayProps {;
   description: string;
   onSave: (editedDescription: string) => void;interface GeneratedDescriptionDisplayProps {;
   description: string,;
   onSave: (editedDescription: string,) => void;
 }
-
-
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>

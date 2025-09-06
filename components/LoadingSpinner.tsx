@@ -81,6 +81,8 @@ const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 }
 export default LoadingSpinner;
+export default LoadingSpinner;
+;
 
 
 export default function LoadingSpinner() {
@@ -97,3 +99,5 @@ export default function LoadingSpinner() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+

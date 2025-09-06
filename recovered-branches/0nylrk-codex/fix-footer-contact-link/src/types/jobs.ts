@@ -1,4 +1,5 @@
 
+
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 ;
 export type JobCategory =;
@@ -27,6 +28,10 @@ export interface JobBudget {;
   max: number
   currency: string
 }
+
+
+export interface Job {;
+
   id: string;
   client_id: string;
   title: string;
@@ -36,6 +41,12 @@ export interface JobBudget {;
   budget: JobBudget;
   deadline: string;
   status: JobStatus;
+  created_at: string
+  updated_at: string
+}
+export interface JobFormData {
+
+export interface JobFormData {;
   title: string;
   description: string;
   category: JobCategory;
@@ -61,11 +72,22 @@ export interface JobBudget {;
     key_projects: any[];
     skills: string[];
     location?: string;
+
+
+
+export interface ResumeAttachment {;
+
+
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
   file_url?: string;
   resume_id?: string;
+
+export interface JobApplication {
+
+
+export interface JobApplication {;
 
   id: string;
   job_id: string;
@@ -91,6 +113,9 @@ export interface JobBudget {;
   match_breakdown?: {
     skills_match?: {
       score: number;
+      matching: string[],
+
+
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
   | 'development';
@@ -198,3 +223,9 @@ export interface JobApplication {;
       score: number,;
       matching: string[],;
 
+
+
+
+
+}
+;

@@ -1,3 +1,63 @@
+  Star
+  CheckCircle
+  ArrowRight
+  TrendingUp
+  Users
+  Award
+  Clock
+  Zap
+  Shield
+  Brain
+  Atom
+  Rocket
+  ShoppingCart
+  Cpu
+  Globe
+  Lock
+  Video
+  Palette
+  BarChart
+  UserCheck
+  FileText
+  Heart
+  Eye
+  Search
+  Phone;
+} from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
+  Star, CheckCircle, ArrowRight, TrendingUp, Users
+
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,;
+  Phone,;
+} from 'lucide-react';
+import { realMarketServices } from '../../data/2024-real-market-services';
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services';import {
+  Star, CheckCircle, ArrowRight, TrendingUp, Users, ;
+
   Award, Clock, Zap, Shield, Brain, Atom, Rocket;
   ShoppingCart, Cpu, Globe, Lock, Video, Palette;
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone
@@ -110,6 +170,29 @@ const serviceCategories = [
   }
 ];
 
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const allServices = [...realMarketServices, ...aiEmergingTechServices];
+    const matchesCategory =
+      selectedCategory === 'all' |
+      serviceCategories.some(cat => cat.services.includes(service));
+    const matchesSearch =
+      service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+      service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;  });    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch
+  const containerVariants = {
+    hidden: { opacity: 0 }
+    visible: {
+      opacity: 1
+      transition: {
+        staggerChildren: 0.1
+      }
+    },  }
+  const itemVariants = {
 
 import {;
   Star,;
@@ -239,6 +322,11 @@ const service_categories = [;
     visible: { opacity: 1, y: 0 },        staggerChildren: 0 && 0.1;
       }
     }
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 }
+    visible: { opacity: 1, y: 0 }
+  }
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   const itemVariants = {;
@@ -336,6 +424,51 @@ const service_categories = [;
             computing, and emerging technology solutions. Each service is
             designed to transform your business and propel you into the future.
           </p>
+      }
+    }
+  }
+;
+  const item_variants = {
+    hidden: { opacity: 0, coordinate_y: 20 },
+    visible: { opacity: 1, coordinate_y: 0 },
+  }
+    hidden: { opacity: 0, y: 20 },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  };
+
+  return (
+    <section className='py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden'>;
+      {/* Animated Background */}
+
+  return (
+    <section className="py - 20 bg - gradient - to - br from - black via - gray - 900 to - black relative overflow - hidden">;
+      {/* Animated Background */}
+      <div className="absolute inset - 0 overflow - hidden">;
+        <div className="absolute -top - 40 -right - 40 w - 80 h - 80 bg - gradient - to - br from - cyan - 500 / 20 to - blue - 500 / 20 rounded - full blur - 3xl animate - pulse"></div>;
+        <div className="absolute -bottom - 40 -left - 40 w - 80 h - 80 bg - gradient - to - tr from - purple - 500 / 20 to - pink - 500 / 20 rounded - full blur - 3xl animate - pulse delay - 1000"></div>;
+        <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 96 h - 96 bg - gradient - to - r from - green - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500"></div>;
+      </div>;
+      <div className="relative z - 10 max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        {/* Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className='text-center mb-16'
+        >
+          <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6'>
+            Revolutionary Technology Services
+          </h2>
+          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
+            Discover our comprehensive suite of cutting-edge AI, quantum
+            computing, and emerging technology solutions. Each service is
+            designed to transform your business and propel you into the future.
+          </p>
           {/* Stats */}
           <div className='grid grid - cols - 2 md:grid - cols - 4 gap - 6 mt - 12'>;
             {[;
@@ -412,6 +545,7 @@ const service_categories = [;
           transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
           viewport={{ once: true }}
 
+
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             {/* Search */}
@@ -444,9 +578,36 @@ const service_categories = [;
                 viewport={{ once: true }}
                 className={`p-6 rounded-xl border transition-all duration-300 hover:scale-105 cursor-pointer ${
 
+        {/* Services Grid */}
+        <motion&& motion.div
+          variants={containerVariants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true }}
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          {filteredServices.map((service, index) => (
+            <motion.div
+              key={service.id}
+              variants={itemVariants}
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
+            >
+              {/* Popular Badge */}
+              {service.popular && (
+                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                </div>
               )}
                 <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
 
+
+                </div>
+              )}
 
           </div>;
         </motion && motion.div>;
@@ -679,6 +840,24 @@ const service_categories = [;
               </h3>;
               <p className="text-gray-300 mb-4 leading-relaxed">;
               </p>;
+                  </div>
+                ))}
+                {service.features.length > 3 && (
+                  <div className='text-sm text-cyan-400'>                    +{service.features.length - 3} more features              <div className="space-y-2 mb-4">
+                {service.features.slice(0, 3).map((feature, idx) => (
+                  <div key={idx} className="flex items-center space-x-2 text-sm text-gray-400">
+                    <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                  </div>
+                ))}
+                {service.features.length > 3 && (
+                  <div className='text-sm text-cyan-400'>                  <div className="text-sm text-cyan-400">
+                    +{service.features.length - 3} more features
+                  </div>
+                )}
+              </div>
+                )}
+              </div>
+
               {/* Service Meta */}
               <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                 <div className='flex items-center space-x-2 text-gray-400'>
@@ -835,6 +1014,7 @@ const service_categories = [;
           transition={{ duration: 0 && 0.6, delay: 0 && 0.6 }}
           viewport={{ once: true }}
 
+
         >
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-2xl p-12 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -879,6 +1059,8 @@ const service_categories = [;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <a
                 href="/contact"
+  );
+}
 }
   );
 }

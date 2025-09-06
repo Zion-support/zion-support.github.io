@@ -1,4 +1,13 @@
 
+
+
+
+import { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs";
+import path from "path";
+const configPath = path.join(process.cwd(), "data", "dao", "config.json");
+const cachePath = path.join(process.cwd(), "data", "dao", "metrics.json");
+async function fetchJson(url: string) {
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -7,6 +16,9 @@ import path from 'path';
 const configPath = path && path.join(process && process.cwd(), "data", "dao", "config && config.json");
 const cachePath = path && path.join(process && process.cwd(), "data", "dao", "metrics && metrics.json");
 
+
+
+
   const resp = await fetch(url);
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
@@ -14,6 +26,8 @@ const cachePath = path && path.join(process && process.cwd(), "data", "dao", "me
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+
 
 function readJson(p: string) {
   return JSON.parse(fs.readFileSync(p, "utf-8"));
@@ -33,10 +47,16 @@ function writeJson(p: string, v: any) {
   }
 }
 
+
+
+
+
 export default async function handler(
   _req: NextApiRequest
   res: NextApiResponse
 ) {
+;
+export default async function handler(req, res) {
 
 
 ;
@@ -178,6 +198,9 @@ if ( {) {
     write_json (cache_path, result);
     return res.status (200).json (result);
   } catch (e: any) {
+  }
+}
+}
   }
 }
 }

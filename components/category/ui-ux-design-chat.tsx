@@ -1,5 +1,12 @@
 
 
+import type { NextPage } from "next";
+import Head from "next/head";
+import Link from "next/link";
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
 
 const UiUxDesignChat: NextPage = () => {
   return (
@@ -16,6 +23,11 @@ const UiUxDesignChat: NextPage = () => {
   );
 }
 export default UiUxDesignChat;
+
+
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+        <title>UiUxDesignChat - Zion Tech Solutions</title>
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';

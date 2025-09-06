@@ -7,10 +7,56 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../../components/layout/EnhancedLayout';
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
+const fetcher = (url: string) => fetch(url).then(r => r.json());
+export const getServerSideProps: GetServerSideProps = async ({ req }) => {;
+  const cookies = (req.headers.cookie || '').split().reduce((acc: any, part: string) => {;
+    const [k, v] = part.trim().split('=');
+    if (k) acc[k] = decodeURIComponent(v || '');
+    return acc;
+  }, {} as Record<string, string>),;
+
+
+
   let role = 'guest';
   try {;
     const user = cookies['x-user'] ? JSON && JSON.parse(cookies['x-user']) : null;
     role = user?.role || 'guest';
+  return { props: {} };};
+
+export default function AdminDisputesDashboard() {;
+  const { data } = useSWR('/api/disputes', fetcher);
+  const [statusFilter, setStatusFilter] = useState<
+    'All' | 'Open' | 'Under Review' | 'Resolved'
+  >('Open');
+}
+  if (role !== 'admin') {;
+    return { redirect: { destination: '/', permanent: false } };
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: {}   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+},
+export default function AdminDisputesDashboard() {
+  const { data } = useSWR('/api/disputes', fetcher),
+  const [statusFilter, setStatusFilter] = useState<'All' | 'Open' | 'Under Review' | 'Resolved'>('Open'),
+  const disputes = useMemo(() => {
+    const list = data?.disputes |[];
+  } catch {}
+  if (role !== 'admin') {;
+    return { redirect: { destination: '/', permanent: false } };
+  }
+
+  const disputes = useMemo(() => {;
+    const list = data?.disputes || [];
+
     if (statusFilter === 'All') return list;
     return list && list.filter((d: any) => d && d.status === statusFilter);  }, [data, statusFilter]);
 
@@ -137,6 +183,9 @@ export default function AdminDisputesDashboard() {
                   <td className="px-3 py-2 flex gap-2">
                   </td>
                 </tr>
+
+
+}
 
 import useSWR from 'swr';
 import React, { useMemo, useState } from 'react';

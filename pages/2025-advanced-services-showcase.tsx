@@ -1,3 +1,8 @@
+import React, { useState, useEffect } from 'react',;
+import Head from 'next/head',;
+import { motion, AnimatePresence } from 'framer-motion',;
+
+
 import { 
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
@@ -66,6 +71,7 @@ export default function AdvancedServicesShowcase2025() {
         staggerChildren: 0.1
       }
     }
+
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -104,6 +110,12 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     }
 
   const getCategoryIcon = (category: string) => {
+  },
+  const getCategoryIcon = (category: string) => {
+    const categoryData = categories.find(cat => cat.id === category),
+    const categoryData = categories.find(cat => cat.id === category);
+    return categoryData?.icon || '🚀'
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -118,6 +130,31 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+              2025 Advanced Services Showcase
+            </h1>
+            <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
+
+
+      <section className="relative py-20 px-6">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -127,6 +164,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
+
 
 
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
@@ -140,6 +178,9 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}+</div>
@@ -161,6 +202,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
           </motion.div>
         </div>
       </section>
+
             <div className="mb-6">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -177,6 +219,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 />
               </div>
@@ -193,6 +237,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 >
                   {categories.map((category) => (
@@ -224,6 +270,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                   className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                 >
                   <option value="popularity">Popularity</option>
@@ -232,12 +280,20 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                   <option value="newest">Newest</option>
                 </select>
               </div>
+
+
               <div className="flex-1">
                 <label className="block text-sm font-medium text-white/70 mb-3">Price Range</label>
                 <div className="flex gap-2">
                   <input
                     type="number"
                     placeholder="Min"
+                    onChange={(e) => setPriceRange([parseInt(e.target.value) |0, priceRange[1]])}
+                    onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
+
+
+                    onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])}
+
                     value={priceRange[0]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -248,11 +304,20 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                     className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                   />
                   <input
                     type="number"
                     placeholder="Max"
+                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) |10000])}
+                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 10000])}
+
+
+                    onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 10000])}
+
                     value={priceRange[1]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -263,10 +328,15 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
+
                     className="flex-1 bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
                   />
                 </div>
               </div>
+
+
               <div className="flex items-end">
                 <div className="flex bg-white/10 rounded-xl p-1">
                   <button
@@ -283,6 +353,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
+
+
             className="mb-8"
           >
             <p className="text-white/70">
@@ -295,6 +367,7 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
             }
+
           {/* Services Display */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -311,6 +384,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
             className={viewMode === 'grid'
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
+
+
           >
             <AnimatePresence mode="wait">
               {filteredServices.map((service, index) => (
@@ -361,6 +436,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
@@ -384,6 +461,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                     <div className="mb-6">
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <div className="grid grid-cols-1 gap-2">
@@ -516,6 +595,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
                         Learn More
                       </a>
                       <a
+
+
                         className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
                       >
                         <ZapIcon className="w-4 h-4" />
@@ -528,6 +609,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
           {/* No Results */}
           {filtered_services.length === 0 && (
             <motion.div;
+
+
               className="text-center py-20"
             >
               <div className="text-6xl mb-4"></div>
@@ -535,6 +618,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
               <button
                 onClick={() => {
+
+
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Clear Filters
@@ -545,6 +630,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
       <section className="px-6 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
@@ -595,6 +682,10 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
       </section>
       <EnhancedFooter />
     </div>
+  )
+
+}
+
           >;
             <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - cyan - 100 bg - clip - text text - transparent">;
               Ready to Transform Your Business?;
@@ -627,6 +718,8 @@ import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations'
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+}
+    </div>);
 }
 
 

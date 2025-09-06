@@ -1,4 +1,15 @@
 
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea";
+import { Sparkles } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea",
+import { Sparkles } from "lucide-react",
+
+
+
 interface AIListingFormProps {
   onSubmit: (formData: {
 
@@ -6,6 +17,13 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
+      <Button
+        onClick={handleSubmit}
+        disabled={isLoading |!title |!category}
+      <Button 
+
+      <Button 
+
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { Button } from "@/components/ui/button",;
@@ -57,6 +75,9 @@ interface AIListingFormProps {;
         <Input
           id="targetAudience"
           value={targetAudience}
+
+
+
         onClick={handleSubmit}
         disabled={isLoading |!title |!category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"

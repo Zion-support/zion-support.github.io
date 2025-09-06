@@ -384,7 +384,6 @@ export function ApiKeysManager() {;
                           {scope.label}
                           <span className="block text-xs text-zinc-400 mt-1">{scope.description}</span>
                         </Label>
-                </Button>
             </DialogContent>
           </Dialog>
         </div>

@@ -1,4 +1,22 @@
 
+import { Card } from "@/components/ui/card";
+import {
+  Table;
+  TableBody;
+  TableCell;
+  TableHead;
+  TableHeader;
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge";
+import {Card} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+
+
+import {Card} from "@/components/ui/card";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+
 import React from "react",
 import { Card } from "@/components/ui/card",
 import {
@@ -9,6 +27,9 @@ import {
   TableHeader,
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge",
+
+
+
 // Sample data for integration sync logs
 
 const syncLogs = [
@@ -77,6 +98,15 @@ const syncLogs = [
                 <TableCell>{new Date(log.timestamp).toLocaleString()}</TableCell>
                 <TableCell className="hidden md:table-cell">{log.details}</TableCell>
               </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+    </Card>
+  )
+}
+
+
 import React from "react",;
 import { Card } from "@/components/ui/card",;
 import {;
@@ -147,6 +177,10 @@ const syncLogs = [;
                 <TableCell>{new Date(log && log.timestamp).toLocaleString()}</TableCell>;
                 <TableCell className="hidden md:table-cell">{log && log.details}</TableCell>;
               </TableRow>;
+
+
+
+
             ))}
 
           </TableBody>;

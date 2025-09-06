@@ -1,4 +1,13 @@
 
+
+import {GradientHeading} from "./GradientHeading";
+import {FeatureCard} from "./FeatureCard";
+import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
+const benefits = [
+import { GradientHeading } from './GradientHeading';
+import { FeatureCard } from './FeatureCard';
+import { Bot, Clock, Globe, TrendingDown } from './lucide-react';
+const benefits = [;
   {
     title: "AI-Powered Matchmaking"
     description: "Our advanced algorithms match your needs with the perfect service providers or products, saving you time and ensuring optimal results.";
@@ -6,9 +15,17 @@
   {
     title: "Global Availability"
     description: "Access a worldwide network of tech talents, products, and services to find the best solutions regardless of geographic limitations.";
+import {GradientHeading} from "./GradientHeading";
+import {FeatureCard} from "./FeatureCard";
+import {Bot, Clock, Globe, TrendingDown} from "lucide-react";
+
+
 import { GradientHeading } from "./GradientHeading",
 import { FeatureCard } from "./FeatureCard",
 import { Bot, Clock, Globe, TrendingDown } from "lucide-react",
+
+
+
 
 const benefits = [
   {
@@ -32,6 +49,8 @@ export function BenefitsSection() {;
   return (
 
             <FeatureCard
+}
+};
 
 };
 

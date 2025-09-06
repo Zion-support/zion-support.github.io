@@ -1,3 +1,13 @@
+import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
+import React from "react",
+import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
+
+import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
+export const MobileFeatureShowcase: React.FC = () => {
+  const features = [
+    {
+      icon: <Users className="h-8 w-8 text-zion-cyan" />
+      title: "Hire from Anywhere"
 import React from './react';
 import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';
 
@@ -12,6 +22,8 @@ export const MobileFeatureShowcase: React.FC = () => {
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
+
+
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
     },
@@ -33,6 +45,9 @@ export const MobileFeatureShowcase: React.FC = () => {
       description: "Login quickly and securely with Face ID or Touch ID on supported devices."
     }
   ],
+
+}
+
 
   return (
 
@@ -82,6 +97,10 @@ export const MobileFeatureShowcase: React.FC = () => {;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">;
           {features && features.map((feature, index) => (;
             <div
+
+
+
+
 };
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
       title: "Hire from Anywhere",

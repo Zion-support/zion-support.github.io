@@ -82,6 +82,12 @@ import {
   Satellite,
   Dna,
   Battery,
+
+  Gamepad,;
+  Cpu as CpuIcon,;} from 'lucide-react';import {
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
+
+
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -345,6 +351,7 @@ import {
         <meta name="twitter:description" content="Revolutionary 2029 technology services including AI Consciousness Evolution, Quantum Time Manipulation, and autonomous AI systems." />;
       </Head>;
 
+
               >
                 Get Started Today
               </Link>
@@ -354,6 +361,9 @@ import {
               >
                 View Pricing
               </Link>
+
+
+
             {/* Stats */}
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
@@ -438,6 +448,7 @@ import {
               {categories.map(category => (            <div className="flex flex-wrap items-center space-x-2">
               {categories.map((category) => (
                 <button
+
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
@@ -458,6 +469,17 @@ import {
                 </button>;
               ))}
             {/* Price Filter */}
+            <div className='flex items-center space-x-2'>
+              {priceRanges.map(range => (                <button            <div className="flex items-center space-x-2">
+              {priceRanges.map((range) => (
+                <button
+            </div>;
+
+
+
+
+
+            {/* Price Filter */}
 
 
                   }`}
@@ -465,6 +487,22 @@ import {
                   {range && range.name}
                 </button>;
               ))}
+
+                  key={range.id}
+                  onClick={() => setSelectedPriceRange(range.id)}
+                  className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                    selectedPriceRange === range.id
+                      ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
+                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'                  }`}                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
+                  }`}
+                >
+                  {range.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
             </div>;
           </div>;
@@ -509,6 +547,33 @@ import {
                           +{service.category.length - 3}
                         </span>
 
+                  {/* Features Preview */}
+                  <div className='mb-6'>
+                    <h4 className='text-sm font-semibold text-white mb-2'>
+                      Key Features:
+                    </h4>
+                    <ul className='space-y-1'>
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li
+                          key={idx}
+                          className='flex items-center space-x-2 text-sm text-gray-300'
+                        >
+                          <CheckCircle className='h-3 w-3 text-cyan-400 flex-shrink-0' />                          <span>{feature}</span>
+                        </li>
+                      ))}
+                      {service.features.length > 3 && (
+                        <li className='text-xs text-gray-500'>                          +{service.features.length - 3} more features                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <li key={idx} className="flex items-center space-x-2 text-sm text-gray-300">
+                          <CheckCircle className="h-3 w-3 text-cyan-400 flex-shrink-0" />
+                        </li>
+                      ))}
+                      {service.features.length > 3 && (
+                        <li className='text-xs text-gray-500'>                        <li className="text-xs text-gray-500">
+                          +{service.features.length - 3} more features
+                        </li>
                       )}
 
                     </div>;
@@ -583,6 +648,19 @@ import {
                 </div>
               </motion.div>
             ))}
+          </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          </motion && motion.div>;
+                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
+
+
+
+
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
             <div className='text-center py-20'>;
@@ -600,6 +678,8 @@ import {
                   setSearchTerm('');
                   setSelectedPriceRange('all');
                 }}
+
+
                 onClick={() => {
                   setSelectedCategory('all');
                   setSearchTerm('');
@@ -621,6 +701,9 @@ import {
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-t border-cyan-500/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
+
+
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 

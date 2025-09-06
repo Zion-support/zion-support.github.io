@@ -33,6 +33,10 @@ const ToastViewport = React.forward_ref<;
 >(({ class_name, ...props }, ref, ) => (
   <ToastPrimitives.Viewport;
     ref={ref}
+    {...props}
+  />
+))
+ToastViewport.displayName = ToastPrimitives.Viewport.displayName
 
 
     {...props}

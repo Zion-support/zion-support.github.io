@@ -1,4 +1,5 @@
 
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -13,6 +14,20 @@ export default async function handler(
   res: NextApiResponse,
 ) {;
   const { id, fileName } = req.query as { id?: string; fileName?: string };
+
+  const { id, fileName } = req && req.query as { id?: string; fileName?: string };
+
+
+  parseUserFromRequest,
+  ensureInvolvedOrAdmin,;
+} from "../../../../utils/auth";
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { id, fileName } = req.query as { id?: string; fileName?: string };
+
   if (
     !id |
     !fileName |
@@ -39,6 +54,12 @@ export default async function handler(
     `attachment; filename="${path.basename(att.fileName)}"`
   );
 import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'Download endpoint' });
+
+
+
+import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { getDisputeById } from '../../../../utils/fsdb';
@@ -52,3 +73,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const user = parseUserFromRequest(req);
   const dispute = await getDisputeById(id);
+  if (!dispute) return res && res.status($1).json({ $2 });
+  try {
+
+

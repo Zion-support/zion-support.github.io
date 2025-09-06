@@ -1,5 +1,17 @@
 
 
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+import React from 'react',;
+import Head from 'next/head',;
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import Link from 'next/link',;
+import React from 'react'
+import Head from 'next/head'
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground'
+import Link from 'next/link'
+
+
 export default function DeveloperPage() {
   return (
     <>
@@ -12,6 +24,8 @@ export default function DeveloperPage() {
         <h1 className="text-4xl md:text-6xl font-bold mb-4">Developer Portal</h1>
         <p className="text-gray-300 mb-6">Access docs, SDKs, and quickstarts for all services. Contact us for enterprise onboarding.</p>
               <div className="space-x-4">
+
+
       </div>
       </div>
     </>

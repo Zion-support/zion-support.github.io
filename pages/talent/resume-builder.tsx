@@ -48,11 +48,17 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
             />
             <AIAssistant
               buttonLabel="Improve with AI"
               title="Improve Resume Summary"
+              defaultPrompt={improveSectionPrompt('summary', summary |'No content provided. Generate a summary based on role, years, and skills.')}
+
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')}
+              onAccept={setSummary}
+              authorizationToken={operatorToken}
               onAccept={setSummary}
               authorizationToken={operatorToken}
               defaultPrompt={improveSectionPrompt('summary', summary || 'No content provided. Generate a summary based on role, years, and skills.')  } catch (error) {
@@ -81,7 +87,11 @@
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Experience"
+            defaultPrompt={improveSectionPrompt('experience section', experience |'Add experience details to improve.')}
+
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')}
+            onAccept={setExperience}
+            authorizationToken={operatorToken}
             onAccept={setExperience}
             authorizationToken={operatorToken}
             defaultPrompt={improveSectionPrompt('experience section', experience || 'Add experience details to improve.')  } catch (error) {
@@ -109,7 +119,11 @@
           <AIAssistant
             buttonLabel="Improve with AI"
             title="Improve Skills"
+            defaultPrompt={improveSectionPrompt('skills list', skillsText |`Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)}
+            onAccept={setSkillsText}
+            authorizationToken={operatorToken}
             onAccept={setSkillsText}
             authorizationToken={operatorToken}
             defaultPrompt={improveSectionPrompt('skills list', skillsText || `Create a professional skills list for ${role} with ${experienceYears} years in ${skills}.`)  } catch (error) {
@@ -133,10 +147,6 @@
       </section>
     </div>
   )
-
-
-},
-export default ResumeBuilder,
 
 },
 export default ResumeBuilder,

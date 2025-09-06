@@ -215,6 +215,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
             <div className=&quot;px-2 pt-2 pb-3 space-y-1&quot;>
               {navigation.map((item) => (
                 <Link
+
+
                 {services.map((service) => (
                   <Link
                     key={service.name}
@@ -226,6 +228,8 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
                     {service.name}
                   </Link>;
                 ))}
+
+
                 <Link
                   href="/contact"
                   className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-200"

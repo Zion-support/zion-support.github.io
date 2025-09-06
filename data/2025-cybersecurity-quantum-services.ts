@@ -1,3 +1,16 @@
+export interface CybersecurityQuantumService {
+export interface CybersecurityQuantumService {;
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
 
     enterprise: string;
   }
@@ -276,6 +289,9 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     launch_date: '2024 - 02 - 15';
     customers: 2500;
 ;
+  }
+];
+export interface CybersecurityQuantumService {;
   id: string,;
   name: string,;
   tagline: string,;

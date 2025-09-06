@@ -181,7 +181,6 @@ if (
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
       toast({
-
       })
 
         title: 'Skills required',
@@ -935,5 +934,3 @@ if (throw error) {
       </Card>
     </div>
   )
-}Zion Marketplace</p>
-}

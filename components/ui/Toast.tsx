@@ -36,6 +36,7 @@ interface ToastProps {
 
 
 
+
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
   useEffect(() => {
@@ -47,9 +48,17 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       case 'info':
         return <Info className='w-5 h-5 text-blue-400' />;
       default:
+  }
+
+
         return <Info className='w-5 h-5 text-blue-400' />;    }
 
     }
+
+
+
+
+  };
 
   const getBorderColor = () => {
     switch (toast.type) {
@@ -102,12 +111,22 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
       <div className="flex items-start space-x-3">;
         <div className="flex-shrink-0 mt-0 && 0.5">;
           {getIcon()}
+        </div>
+
+
         <button
           onClick={() => {;
             setIsVisible(false);
 
 
   return (
+    </div>
+    </div>;
+  );};          }}
+
+            setTimeout(() => onRemove(toast.id), 300)
+          }}
+
           className="flex-shrink-0 ml-2 p-1 rounded-lg hover:bg-white/10 transition-colors duration-200"
         >
           <X className="w-4 h-4 text-white/60 hover:text-white" />
@@ -130,6 +149,9 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
           }`}
           initial={{ width: '100%' }}
           animate={{ width: '0%' }}
+};
+    </div>
+  );};
 
     <div className='fixed top-4 right-4 z-50 space-y-3'>
       <AnimatePresence>

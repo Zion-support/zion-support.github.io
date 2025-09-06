@@ -1,12 +1,3 @@
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
-  CardHeader,;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';

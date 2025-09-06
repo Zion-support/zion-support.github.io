@@ -51,3 +51,6 @@ export const supabase = {
     "delete": () => Promise.resolve({ data: null, "error": null })
   })
 }
+
+
+;

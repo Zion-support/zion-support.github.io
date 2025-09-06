@@ -3,17 +3,25 @@
 <<<<<<< HEAD
 =======
 =======
+>>>>>>> origin/main
+<<<<<<< HEAD
+=======
+=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> origin/main
 
 /* eslint - env node */;
 =======
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> origin/main
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
 >>>>>>> origin/main
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1043,6 +1051,16 @@ origin/automation-improvements-final
 >>>>>>> origin/main
   ],
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+>>>>>>> origin/main
 };
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
@@ -1053,6 +1071,17 @@ origin/automation-improvements-final
     "commit-and-push.js"
   ]
 };
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+>>>>>>> origin/main
 };
 =======
   ],
@@ -1100,6 +1129,13 @@ module.exports = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
+>>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 =======
 >>>>>>> origin/main
 
@@ -1125,6 +1161,10 @@ module.exports = {;
 >>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 =======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> pr-12166
+=======
+>>>>>>> 6ec30c26c0294cd39ef2c2dddb0e1600b3891ed1
+>>>>>>> origin/main

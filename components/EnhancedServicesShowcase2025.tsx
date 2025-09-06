@@ -1,3 +1,34 @@
+  FaRocket
+  FaBrain
+  FaCloud
+  FaShieldAlt
+  FaChartLine
+  FaCogs
+  FaLightbulb
+  FaGlobe
+  FaMobile
+  FaDatabase
+  FaNetworkWired
+  FaRobot
+  FaSearch;
+import {
+  SiNextdotjs
+  SiReact
+  SiTypescript
+  SiTailwindcss
+  SiPrisma
+  SiSupabase
+  SiVercel
+  SiDocker
+  SiKubernetes
+  SiAws
+  SiGooglecloud
+  SiMicrosoftazure;
+
+} from 'react-icons/si';
+
+interface Service {;
+
   FaRocket,
   FaBrain,
   FaCloud,
@@ -22,6 +53,10 @@ import {
   SiDocker,
   SiKubernetes,
   SiAws,
+
+  SiGooglecloud,;
+  SiMicrosoftazure,;
+
 } from 'react-icons/si';
 
 
@@ -43,6 +78,37 @@ interface ServiceCategory {
   name: string;
   description: string;
 
+import { 
+  FaRocket;
+  FaBrain, 
+  FaCloud, 
+  FaShieldAlt, 
+  FaChartLine, 
+  FaCogs;
+  FaLightbulb;
+  FaGlobe;
+  FaMobile;
+  FaDatabase;
+  FaNetworkWired;
+  FaRobot;
+  FaSearch
+} from 'react-icons/fa';
+import { 
+  SiNextdotjs;
+  SiReact, 
+  SiTypescript, 
+  SiTailwindcss;
+  SiPrisma;
+  SiSupabase;
+  SiVercel;
+  SiDocker;
+  SiKubernetes;
+  SiAws;
+  SiGooglecloud;
+  SiMicrosoftazure
+} from 'react-icons/si';
+
+
   color: string;  id: string
   name: string
   description: string
@@ -50,6 +116,15 @@ interface ServiceCategory {
 
   color: string
 }
+
+  color: string;  id: string,
+  name: string,
+  description: string,
+  icon: React.ReactNode,
+  color: string
+}
+
+
 const serviceCategories: ServiceCategory[] = [
   {
 
@@ -519,6 +594,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
   const filteredServices = useMemo(() => {
     let filtered = services;
     if (selectedCategory !== 'all') {
+    
+
+
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -577,6 +655,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
 
+
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -620,6 +699,17 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </div>;
 
         {/* Category Tabs */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className='mb-12'
+        >
+          <div className='flex flex-wrap justify-center gap-4'>            <button          className="mb-12"
+        >
+          <div className="flex flex-wrap justify-center gap-4">
+            <button
+        {/* Category Tabs */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -628,12 +718,23 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           <div className='flex flex-wrap justify-center gap-4'>            <buttonclassName="mb-12">;
           <div className="flex flex-wrap justify-center gap-4">;
             <button
+
+
+
+
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
                   ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white shadow-lg';
                   : 'bg-white/10 backdrop-blur-sm border border-white/20 text-gray-300 hover:bg-white/20';
               }`}
+
+              <button
+
+
+
+
+
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -652,6 +753,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
 
+
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -661,6 +763,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
               whileHover={{ y: -5, scale: 1 && 1.02 }}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
+
+
+
               onClick={() => handleServiceSelect(service)}
             >;
               <div className='flex items-center gap-3 mb-4'>;
@@ -764,6 +869,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
+              onClick={e => e.stopPropagation()}
+
+
+
+
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -836,6 +946,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     >
 
                       {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+                      {tech}
                     </span>;
                   ))}
 
@@ -864,3 +979,4 @@ export default EnhancedServicesShowcase2025;
 };
 
 
+export default EnhancedServicesShowcase2025;

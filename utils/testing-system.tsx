@@ -1,3 +1,7 @@
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here
+};
 
 import "@testing-library/jest-dom";
 // Type definition for HTMLElement
@@ -74,5 +78,8 @@ export class TestingSystem {,
 },;
 // Testing system utilities
 export const testingSystem = {
+  // Add testing utilities here;
+// Testing system utilities;
+export const testing_system = {
   // Add testing utilities here;
 }

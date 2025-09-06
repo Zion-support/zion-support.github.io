@@ -1,3 +1,9 @@
+export interface EmergingTechService2028 {
+  id: string;
+export interface EmergingTechService2028 {  id: string;
+
+export interface EmergingTechService2028 {
+
   name: string;
   tagline: string;
   price: string;
@@ -9,6 +15,11 @@
   contact_info: {
     mobile: string;
     email: string;
+
+
+    address: string;
+  };
+
 export interface EmergingTechService2028 {;
   id: string,;
   name: string,;
@@ -22,6 +33,9 @@ export interface EmergingTechService2028 {;
   contactInfo: {;
     mobile: string,;
     email: string,;
+
+
+
 
     address: string;
   }

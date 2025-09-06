@@ -1,4 +1,5 @@
 
+
 import React, { useState, useEffect } from 'react';
 
 import Head from 'next / head';
@@ -21,6 +22,8 @@ interface Partner {;
   const [statusFilter, setStatusFilter] = useState('all');
     const json = await res.json();
     setFlags(json.flags |[]);
+
+
 
 import { useEffect, useState } from 'react';
 
@@ -54,12 +57,78 @@ export default function AdminPartners() {
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
+
+
+
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
+}
+  return (
+    <div className="space-y-6">
+      <h1 className="text-2xl font-semibold">Admin • Partners</h1>
+      <div className="overflow-auto">
+        <table className="min-w-full text-sm">
+          <thead>
+            <tr className="text-left border-b">
+              <th className="py-2 pr-4">Code</th>
+              <th className="py-2 pr-4">Name</th>
+              <th className="py-2 pr-4">Status</th>
+              <th className="py-2 pr-4">Commission</th>
+              <th className="py-2 pr-4">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {partners.map((p) => (
+              <tr key={p.code} className="border-b">
+                <td className="py-2 pr-4">{p.code}</td>
+                <td className="py-2 pr-4">{p.name}</td>
+                <td className="py-2 pr-4">{p.status}</td>
+                <td className="py-2 pr-4">
+                  <input
+                    type='number'                    defaultValue={p.commission_rate}
+                    min={0}
+                    max={1}
+                    step={0.01}
+                    onBlur={e =>
+                      updatePartner(p.code, {
+                        commission_rate: Number(e.target.value)
+                      })
+                    }
+                    className='w-24 border rounded px-2 py-1'
+                    type="number"
+                    defaultValue={p.commission_rate  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    min={0  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    max={1  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    step={0.01  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    className="w-24 border rounded px-2 py-1"
+
+
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
@@ -289,6 +358,7 @@ export default function AdminPartners() {
 }
 }
 }
+
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

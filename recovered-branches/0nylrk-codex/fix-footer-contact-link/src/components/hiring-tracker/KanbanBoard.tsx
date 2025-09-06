@@ -1,4 +1,35 @@
 
+import { useState, useEffect } from "react",
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
+import { toast } from "@/hooks/use-toast",
+import { KanbanColumn } from "./KanbanColumn";
+import { useIsMobile } from "@/hooks/use-mobile";
+interface DnDLocation {
+import { KanbanColumn } from "./KanbanColumn",
+import { useIsMobile } from "@/hooks/use-mobile",
+interface DnDLocation {
+  droppableId: string,
+  index: number
+import { useState, useEffect } from "react",;
+import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Skeleton } from "@/components/ui/skeleton",;
+import { toast } from "@/hooks/use-toast",;
+import { KanbanColumn } from "./KanbanColumn",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+interface DnDLocation {;
+  droppableId: string,;
+  index: number;
+
+
 }
 ;
 interface DropResult {;
@@ -43,6 +74,12 @@ const COLUMNS = [
     description: "Not moving forward"}]
 interface KanbanBoardProps {
   jobId?: string
+
+
+
+export function KanbanBoard({ jobId }: KanbanBoardProps) {;
+
+
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -66,6 +103,30 @@ interface KanbanBoardProps {
          destination.index === source.index)) {
       return
     }
+
+import {useState, useEffect} from "react";
+import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {JobApplication, ApplicationStatus} from "@/types/jobs";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Skeleton} from "@/components/ui/skeleton";
+import {toast} from "@/hooks/use-toast";
+import {KanbanColumn} from "./KanbanColumn";
+import {useIsMobile} from "@/hooks/use-mobile";
+interface DnDLocation {;
+  droppableId: string,;
+  index: number;
+}
+
+interface DropResult {;
+  draggableId: string,;
+  source: DnDLocation,;
+  destination?: DnDLocation | null;
+}
+
+
+
 ;
 
 // Define the kanban board columns based on application statuses;
@@ -100,6 +161,10 @@ interface KanbanBoardProps {;
       // Group applications by status;
       return;
     }
+
+
+
+
     
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId);
@@ -177,6 +242,9 @@ interface KanbanBoardProps {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
+
+
+
         ))}
       </div>;
     );

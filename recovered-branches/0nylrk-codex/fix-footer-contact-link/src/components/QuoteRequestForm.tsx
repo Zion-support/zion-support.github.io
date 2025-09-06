@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -14,6 +18,12 @@ import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep";
 import {QuoteFormData} from "@/types/quotes";
 import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
+
+
+export function QuoteRequestForm() {;
+
+
+
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
@@ -39,6 +49,10 @@ export function QuoteRequestForm() {
   const { toast } = useToast(),
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
+
+
+
+  
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -140,6 +154,9 @@ export function QuoteRequestForm() {
                 <Button
                   onClick={handleSubmit}
                   disabled={isSubmitting}
+}
+
+
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
 import { useNavigate } from "react-router-dom",;
@@ -436,6 +453,10 @@ export function QuoteRequestForm() {;
           </CardContent>;
         </Card>;
       </div>;
+
+
+
+
 }
     </div>);
 }

@@ -1,4 +1,12 @@
 
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+
+
+
 export function SharedInbox() {
   // Mock messages
 
@@ -9,6 +17,11 @@ export function SharedInbox() {
       subject: "Interview Scheduled",
       preview: "Your interview with senior developer candidate has been scheduled for Tuesday at 2pm.",
       timestamp: "2h ago",
+      unread: true
+    }
+    },
+
+
     {
       id: "msg-2"
       from: "Talent Support"
@@ -59,6 +72,8 @@ function SharedInbox() {
   ];
 ;
   return (
+}
+
 
 
 
@@ -109,6 +124,10 @@ export function SharedInbox() {;
           </button>;
         </div>;
       </CardContent>;
+
+
+
+
 }
     </Card>);
 }

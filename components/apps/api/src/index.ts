@@ -102,3 +102,6 @@ app.get ('/talent / search', async (req, reply) => {
   });
   return { results: rows }
 });
+    );
+    );
+;

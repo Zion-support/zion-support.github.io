@@ -14,6 +14,17 @@ export function WaitlistSection() {;
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { useToast } from "@/hooks/use-toast";
+import { Checkbox } from "@/components/ui/checkbox";
+import { useToast } from "@/hooks/use-toast",
+import { Checkbox } from "@/components/ui/checkbox",
+
+
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
   const [name, setName] = useState(""),
@@ -68,6 +79,13 @@ export function WaitlistSection() {
               />;
               <Label
                 htmlFor="terms"
+
+
+            <Button 
+              type="submit" 
+              disabled={isSubmitting} 
+
+
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
               {isSubmitting ? "Processing..." : "Complete Registration"}
@@ -77,6 +95,44 @@ export function WaitlistSection() {
       </div>
     </section>
   )
+}
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { useToast } from "@/hooks/use-toast",;
+import { Checkbox } from "@/components/ui/checkbox",;
+export function WaitlistSection() {;
+  const [email, setEmail] = useState(""),;
+  const [name, setName] = useState(""),;
+  const [role, setRole] = useState(""),;
+  const [agreeTerms, setAgreeTerms] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { toast } = useToast(),;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    if (!email || !name || !role || !agreeTerms) {;
+      toast({;
+        variant: "destructive",;
+        title: "Missing information",;
+        description: "Please fill all fields and agree to the terms."}),;
+      return;
+    }
+
+                className="text-sm text-zion-slate font-normal">;
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
+              </Label>;
+            </div>;
+
+            <Button
+              type="submit" 
+              disabled={isSubmitting} 
+              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+              {isSubmitting ? "Processing..." : "Complete Registration"}
+
+
+
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -115,6 +171,10 @@ export function WaitlistSection() {
           </form>;
         </div>;
       </div>;
+
+
+
+
 }
     </section>);
 }

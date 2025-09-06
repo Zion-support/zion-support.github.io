@@ -1,3 +1,5 @@
+
+
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;

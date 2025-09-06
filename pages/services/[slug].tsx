@@ -1,3 +1,39 @@
+
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {extraServices} from '../../data/extra-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {newRealServices} from '../../data/new-real-services';
+import {marketReadyServices} from '../../data/market-ready-services';
+type Service = (typeof enhancedRealMicroSaasServices)[number];
+const contactInfo = {
+  mobile: '+1 302 464 0950'
+  email: 'kleber@ziontechgroup.com'
+  address: '364 E Main St STE 1008 Middletown DE 19709'
+  website: 'https://ziontechgroup.com'
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
 }
 ;
 function getAllServices (): Service[] {
@@ -37,6 +73,18 @@ export async function getStaticPaths() {;
     if (s && s.id) slugs && slugs.add(toSlug(s && s.id));
     else if (s && s.name) slugs && slugs.add(toSlug(s && s.name));
   }
+    paths: Array.from(slugs).map(slug => ({ params: { slug } })),
+    fallback: false,
+  };
+
+export async function getStaticProps({ params }: { params: { slug: string } }) {;
+
+  return {;
+    paths: Array && Array.from(slugs).map(slug => ({ params: { slug } })),;
+    fallback: false,;
+  };
+
+export async function getStaticProps(): any ({ params }: { params: { slug: string } }) {;
   const services = getAllServices();
   const incomingSlug = (params?.slug || '').replace(/^\/+|\/+$/g, '');
 
@@ -105,6 +153,82 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                     href={`https://maps && maps.google.com/?q=${encodeURIComponent(contactInfo && contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
+import Button from '../../components/ui/Button';
+import Card from '../../components/ui/Card';
+
+}
+}
+}
+}
+}
+
+                    className='text-xs hover:underline'>;
+                    {contactInfo && contactInfo.address}
+                </span>;
+              </div>;
+              <div className='text - sm text - gray - 400 mt - 2'>;
+                Trial: {service.trial_days || 14} days • Setup:{' '}
+                {service.setup_time || 'Fast'}
+              </div>;
+              <div className='mt - 6 flex gap - 3'>;
+                <Button;
+                  href='/contact';
+                  className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
+                >;
+                  Contact Sales;
+                </Button>;
+                <Button;
+                  href={service.link}
+                  variant='outline';
+                  className='flex - 1 border border - gray - 600 text - gray - 200';
+                >;
+                  <ExternalLink className='w - 4 h - 4 mr - 2' /> Learn More;
+                </Button>;
+              </div>;
+            </Card>;
+<Card className='p - 6 bg - black / 40 border border - gray - 700 / 50'>;
+              <h3 className='text - white font - semibold mb - 3'>Contact</h3>;
+              <div className='space - y-3 text - sm'>;
+                <div className='flex items - center gap - 2 text - cyan - 400'>;
+                  <Phone className='w - 4 h - 4' />;
+                  <a;
+                    href={`tel:${contact_info.mobile.replace (/[^+\\d]/g, '')}`}
+                    className='hover:underline';
+                  >;
+                    {contact_info.mobile}
+                  </a>;
+                </div>;
+                <div className='flex items - center gap - 2 text - purple - 400'>;
+                  <Mail className='w - 4 h - 4' />;
+                  <a;
+                    href={`mailto:${contact_info.email}`}
+                    className='hover:underline';
+                  >;
+                    {contact_info.email}
+                  </a>;
+                </div>;
+                <div className='flex items - center gap - 2 text - green - 400'>;
+                  <MapPin className='w - 4 h - 4' />;
+                  <a;
+                    href={`https://maps.google.com/?q=${encodeURIComponent (contact_info.address)}`}
+                    target='_blank';
+                    rel='noopener noreferrer';
+                    className='text - xs hover:underline';
+                  >;
+                    {contact_info.address}
+
+                  </a>;
+                </div>;
+              </div>;
+            </Card>;
+          </div>;
+        </div>;
+      </div>;
+
+
 import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
 import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
 import { extraServices } from '../../data/extra-services';

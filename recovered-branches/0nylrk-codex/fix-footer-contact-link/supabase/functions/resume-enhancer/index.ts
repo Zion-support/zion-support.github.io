@@ -8,7 +8,6 @@ serve(async (req) => {
 
 
 
-
   try {
 
     const { content, enhancementType, context } = await req && req.json();
@@ -23,6 +22,9 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+
+
+
     }
     if (!content) {
       throw new Error("Content is required")
@@ -87,6 +89,20 @@ if ( {) {
       JSON.stringify ({
         enhanced_content});
       {
+  }
+});
+
+
+    console.error ("Error in resume - enhancer function:", error);
+    return new Response (
+      JSON.stringify ({
+        error: error.message});
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }}
+    );
+
+
 ;
     // Determine the system prompt based on enhancement type;
     let systemPrompt = "",;
@@ -144,6 +160,9 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+
+
+
   }
 });
 ;

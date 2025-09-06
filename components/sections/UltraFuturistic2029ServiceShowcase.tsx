@@ -1,3 +1,27 @@
+  ChevronDown
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Eye
+  Timer
+  Sparkles;
+
+
+} from 'lucide-react';
+import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard';
+import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovations';
+type Service = CuttingEdgeInnovation2029 | any;
+
+
+
   ChevronDown,
   Star,
   TrendingUp,
@@ -153,6 +177,21 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
       opacity: 1
       y: 0
       transition: {
+
+      <div className='absolute inset-0 pointer-events-none'>;
+        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl'></div>;
+        <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>;
+      </div>;
+        duration: 0.6,
+        ease: "easeOut" as const
+      }
+    }
+  };
+
+
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
+
   return (
     <section className="py-20 relative overflow-hidden">;
       {/* Background Elements */}
@@ -169,6 +208,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
+
+
+
             {title}
           </motion && motion.h2>;
           <motion&& motion.p
@@ -368,6 +410,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /
                   services.length
+
               <motion.div
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>;
             {[;
@@ -412,6 +455,8 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='text-center'
 
+
+
               >
                 <div
 
@@ -422,6 +467,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
       </div>
     </section>
   );
+export default UltraFuturistic2029ServiceShowcase;  )
+}
+export default UltraFuturistic2029ServiceShowcase;
+
+export default UltraFuturistic2029ServiceShowcase;
+export default UltraFuturistic2029ServiceShowcase;
 
 };
 

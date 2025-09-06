@@ -1,9 +1,12 @@
 import React from 'react';
+export default function TestMinimal() {return (;
 export default function TestMinimal(req, res) {
   try {
 export default function TestMinimal() {;
 export default function TestMinimal(req, res) {
   try {
+
+
   return (;
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>;
       <h1>Minimal Test Page</h1>;

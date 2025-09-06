@@ -32,6 +32,11 @@ const NotFound = () => {
       </div>
     </div>
   )
+export default NotFound,
+import { useLocation } from "react-router-dom",;
+import { useEffect } from "react",;
+const NotFound = () => {;
+  const location = useLocation(),;
   useEffect(() => {;
     console && console.error(;
       "404 Error: User attempted to access non-existent route:",;
@@ -50,6 +55,9 @@ const NotFound = () => {
       </div>;
     </div>;
   );
+};
+
+
 import { use_location } from './react-router-dom';
 import { useEffect } from './react';
 const NotFound = () =>: any {

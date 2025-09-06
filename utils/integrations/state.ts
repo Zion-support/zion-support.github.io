@@ -4,6 +4,11 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
+}
+export function getState(): IntegrationState {
+  return { ...state }
+}
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
 };
 
 export function getState(): IntegrationState {;
@@ -39,3 +44,4 @@ export function reset_state (): void {
     logs: [],
     overrides: [];
   };
+}

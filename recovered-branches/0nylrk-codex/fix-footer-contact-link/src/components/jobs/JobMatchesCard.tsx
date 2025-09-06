@@ -1,3 +1,30 @@
+
+import { useState } from "react";
+import {
+  Card
+  CardContent
+  CardHeader
+  CardTitle
+  CardDescription
+  CardFooter
+import { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardFooter,;
+
+
+import {;
+  Card,;
+  CardContent,;
+  CardHeader,;
+  CardTitle,;
+  CardDescription,;
+  CardFooter,;
+
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -11,6 +38,19 @@ import { JobMatch } from "@/types/jobs";
   onDecline: (matchId: string) => void;
   showApplied?: boolean
 }
+
+
+export function JobMatchesCard(): any ({;
+  match,;
+  onApply,;
+  onDecline,;
+  showApplied = false,;
+}: JobMatchCardProps) {;
+  const job = match && match.job;
+
+
+  if (!job) return null;
+
 
 interface JobMatchCardProps {
   match: JobMatch,
@@ -30,6 +70,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardHeader className="p-4 pb-2">;
         <div className="flex justify-between items-start">;
           <div>;
+
+
         {match.matched_skills?.length > 0 && (
           <div className="mb-3">
             <p className="text-xs text-muted-foreground mb-1">
@@ -77,6 +119,29 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
       <CardContent className="p-4 pt-0">;
         <p className="text-sm text-muted-foreground line-clamp-2 mb-3">;
                   {skill}
+                </Badge>
+              ))}
+              {match.matched_skills.length > 5 && (
+                <Badge variant="secondary" className="text-xs">
+                  +{match.matched_skills.length - 5}
+                </Badge>
+              )}
+            </div>
+          </div>
+        )}
+
+        {match && match.matched_skills?.length > 0 && (;
+          <div className="mb-3">;
+            <p className="text-xs text-muted-foreground mb-1">;
+              Matched skills:;
+            </p>;
+            <div className="flex flex-wrap gap-1">;
+              {match && match.matched_skills.slice(0, 5).map((skill, i) => (;
+                <Badge key={i} variant="secondary" className="text-xs">;
+
+
+
+                  {skill}
                 </Badge>;
               ))}
               {match && match.matched_skills.length > 5 && (;
@@ -88,10 +153,14 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>;
         )}
 
+
         <div className="grid grid-cols-2 gap-2 mb-2 mt-3">
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />$
             {job.budget.min} - ${job.budget.max}
+
+
+
           </div>
           <div className="flex items-center text-sm">
             <Calendar className="h-4 w-4 mr-1 text-muted-foreground" />
@@ -132,6 +201,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             </Button>;
           </div>;
         )}
+
+
   );
 import { useState  } from './react';
 import {

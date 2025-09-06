@@ -1,3 +1,14 @@
+import fs from "fs",;
+import path from "path",;
+import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
+import fs from "fs";
+import path from "path";
+import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
+
+
+
+function toSlug(name: string): string {;
+  return name;
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
@@ -6,6 +17,7 @@
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`),;
+
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -196,6 +208,18 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       null;
       2;
     );
+  assets.push({ kind: "event", path: summitEventPath, description: "Launch stream scheduled" });
+  // 4. Activate Public Pages (record intent);
+  const pagesActivationPath = path.join(baseDir, "pages.json");
+  const defaultNationRoute = `/nation/${toSlug(input.defaultLanguage || "default")}`;
+  writeTextFile(;
+    pagesActivationPath;
+    JSON.stringify(;
+      {;
+        activate: [;
+          "/about";
+          "/manifesto";
+
           "/constitution",;
           "/partners",;
           "/academy",;
@@ -206,3 +230,63 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
       2;
     );
   ),;
+  assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" }),;
+  assets.push({ kind: "config", path: pagesActivationPath, description: "Public pages activation record" });
+  // Optional modules markers;
+  const optionalModules = Object.entries(input.modules);
+    .filter(([key, val]) => val && ["globalMap", "franchiseOnboarding", "referralAmbassadors", "grantPortal", "trailer", "bookStore"].includes(key));
+    .map(([key]) => key),;
+  if (optionalModules.length > 0) {;
+    const optionalPath = path.join(baseDir, "optional-modules.json"),;
+    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
+    assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
+  }
+  const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
+    .filter(([ v]) => v);
+    .map(([k]) => k);
+    .join(", ")}.`;
+  logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } });
+  return {success: true;
+    instanceSlug;
+    configPath;
+    assets;
+    logs;
+    summary;
+    version}
+    .map(([key]) => key),;
+  if (optionalModules.length > 0) {;
+    const optionalPath = path.join(baseDir, "optional-modules.json");
+    writeTextFile(optionalPath, JSON.stringify({ enabled: optionalModules }, null, 2)),;
+    assets.push({ kind: "config", path: optionalPath, description: "Enabled optional modules" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const summary = `Initialized ${input.instanceName} (${instanceSlug}) with modules: ${Object.entries(input.modules);
+    .filter(([ v]) => v);
+    .map(([k]) => k);
+    .join(", ")}.`,;
+  logs.push({ timestamp: nowIso(), level: "info", action: "deploy_complete", details: { instanceSlug } }),;
+  return {;
+    success: true,;
+    instanceSlug,;
+    configPath,;
+    assets,;
+    logs;
+    summary;
+    version  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}
+
+
+}

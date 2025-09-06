@@ -35,6 +35,8 @@ export default function AISEOOptimizationPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-emerald-400 mt-0.5"><Check /><span>{feat}</span></li>
+
+
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit">
@@ -45,6 +47,8 @@ export default function AISEOOptimizationPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
+
+
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-emerald-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -55,6 +59,23 @@ export default function AISEOOptimizationPage() {
         </div>
       </div>
     </Layout>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+}
+
 import React from 'react',
 import Head from 'next / head',
 import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-react',

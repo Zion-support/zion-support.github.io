@@ -30,6 +30,7 @@ import {;
   Rocket,;
   Cpu,;
   Lock,;
+import {
 } from 'lucide-react';
 interface Homepage2025Props {;
   showInternalNav?: boolean;
@@ -249,6 +250,36 @@ if ( {) {
                   {navigation_sections.map ((section) => (
                     <button;
 
+                  {navigationSections.map(section => (                    <button  };
+
+  return (
+    <UltraFuturisticBackground2026 intensity="medium" theme="quantum">
+      {showInternalNav && (
+        <>
+          {/* Navigation */}
+          <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-xl border-b border-white/10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between items-center h-16">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  className="flex items-center space-x-2"
+                >
+                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg"></div>
+                  <span className="text-white font-bold text-xl">ZionTech Group</span>
+                </motion.div>
+                {/* Desktop Navigation */}
+                <div className="hidden lg:flex space-x-8">
+                  {navigationSections.map((section) => (
+                    <button
+                  {navigationSections.map(section => (                    <button
+
+                    <button
+
+                    <button
+
+                    <button
+
                       key={section.id}
                       on_click={() => scrollToSection (section.id)}
                       className={`flex items - center space - x-2 text - sm font - medium transition - all duration - 300 ${
@@ -283,6 +314,7 @@ if ( {) {
           </nav>;
         </>;
       )}
+
 
 
           <motion.div
@@ -436,6 +468,29 @@ if ( {) {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
 
+              {/* Enhanced CTA Section */}
+              <motion.div
+                variants={itemVariants}
+                className='flex flex-col sm:flex-row gap-4 justify-center mb-8'
+              >
+                <Link href='/comprehensive-services-showcase-2026'>
+                  <button className='group px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25'>
+                    <span className='flex items-center gap-2'>
+                      Explore 2026 Services
+                      <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                    </span>
+                  </button>
+                </Link>
+                <Link href='/comprehensive-services-showcase-2025'>
+                  <button className='px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-black transition-all duration-300 transform hover:scale-105'>
+                    2025 Services Showcase
+                  </button>
+                </Link>
+                <Link href='/get-started'>
+                  <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105'>                    Get Started
+                  </button>
+                </Link>
+              </motion.div>              >
                 <Star className="w-5 h-5" />
                 <span>Innovation Leader 2025-2026</span>
               </motion.div>
@@ -469,6 +524,9 @@ if ( {) {
                   </button>
                 </Link>
               </motion.div>
+
+
+
 
 
 
@@ -513,6 +571,7 @@ if ( {) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
+
 
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
@@ -915,6 +974,45 @@ if ( {) {
                 className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-sm border border-white/10 cursor-pointer"
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -10, scale: 1.02 }}
+                onClick={() => (window.location.href = service.link)}
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                />
+                <div className='relative p-6'>
+                  <div
+                    className={`w-12 h-12 rounded-lg bg-gradient-to-br ${service.gradient} p-3 mb-4`}
+                  >
+                    <service.icon className='w-full h-full text-white' />
+                  </div>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
+                    {service.title}
+                  </h3>
+                  <p className='text-gray-300 leading-relaxed mb-4'>
+                    {service.description}
+                  </p>
+                  <a
+                    href={service.link}
+                    className='flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors'
+                  >
+                    <span className='text-sm font-medium'>Explore Service</span>
+                    <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />                  </a>                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-4">{service.description}</p>
+                  <a href={service.link} className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Explore Service</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          {/* Call to Action for Services Showcase */}
+          <motion.div
+            className='text-center mt-16'            initial={{ opacity: 0, y: 40 }}            className="text-center mt-16"
+
+
+
+
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}
@@ -1011,6 +1109,9 @@ if ( {) {
             </div>
           </div>
           <motion.div
+
+
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -1042,6 +1143,16 @@ if ( {) {
 
 };
 
+export default Homepage2025;
+
+export default Homepage2025;
+;
+
 };
 
+export default Homepage2025;  )
+}
+export default Homepage2025;
+
+export default Homepage2025;
 

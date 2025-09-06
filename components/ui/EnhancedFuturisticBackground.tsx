@@ -60,6 +60,11 @@ const EnhancedFuturisticBackground: React.FC<;
         if (this.y > canvas.height) this.y = 0;
         // Fade out near end of life
         if (this.life < 20) {
+          this.opacity *= 0.95
+
+        }
+      }
+
           this.opacity *= 0.95;        }
 
         }
@@ -88,9 +93,8 @@ const EnhancedFuturisticBackground: React.FC<;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        ctx.restore()
-        return this.life <= 0 || this.opacity < 0.01;      }
-
+      }
+      isDead() {
       }
       isDead() {
 
@@ -297,6 +301,22 @@ if (> 0.975) {) {
         }
       }
 
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]));          }          const distance = Math.sqrt(
+            Math.pow(particles[i].x - particles[j].x, 2) +
+            Math.pow(particles[i].y - particles[j].y, 2)
+          );
+          if (distance < 150) {
+            connections.push(new Connection(particles[i], particles[j]))
+
+      }
+
 
 
 
@@ -361,6 +381,15 @@ if (> 0.975) {) {
     </div>;
   );
 }
+export default EnhancedFuturisticBackground;
+
+export default EnhancedFuturisticBackground;
+export default EnhancedFuturisticBackground;
+export default EnhancedFuturisticBackground;
+export default EnhancedFuturisticBackground;
+export default EnhancedFuturisticBackground;
+
+
 export default EnhancedFuturisticBackground;
 
           background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,

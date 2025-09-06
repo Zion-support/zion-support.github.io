@@ -3,11 +3,46 @@ import Layout from "../components/Layout";
 import React from 'react';
 import Layout from '../components/Layout';
 import Layout from '../components/Layout';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+
+
+import React from "react";
+import Layout from "../components/Layout";
+import React from 'react';
+import Layout from '../components/Layout';
+import Layout from '../components/Layout';
 origin/automation-improvements-final
 
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
+
+
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',

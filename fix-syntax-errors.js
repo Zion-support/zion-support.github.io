@@ -18,6 +18,7 @@
 console.log(`\nTotal files fixed: ${totalFixed}`);
   }
 }},
+}},
 ,
 // Run all fixes,
 fixFooter();

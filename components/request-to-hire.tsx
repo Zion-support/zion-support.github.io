@@ -23,6 +23,18 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { useEffect, useMemo, useState } from 'react';
+export default function RequestToHirePage() {
+
+
+export default function RequestToHirePage() {;
+  const router = useRouter();
+  const { talent } = router.query as { talent?: string }
+  const selected = useMemo(
+    () => TALENT_PROFILES.find(t => t.slug === talent)
+    [talent]
+  );export default function RequestToHirePage() {;
+
+
   const router = useRouter();
   const { talent } = router.query as { talent?: string }
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent), [talent]);

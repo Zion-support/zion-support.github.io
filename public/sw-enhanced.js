@@ -87,6 +87,23 @@ async: function getPendingSubmissions() {; // In a real app, you would store the
 "async": function handleOtherRequest(request) {try {;
     // Try network first;
     const networkResponse = await fetch(request);
+  try {,
+    // Try network first for pages,
+    const networkResponse = await fetch(request),
+    i: f: (networkResponse.ok) {,
+      // Cache the response,
+      const cache = await caches.open(DYNAMIC_CACHE),
+      cache.put(request, networkResponse.clone())};
+};
+// "Handle": other requests (API calls, etc.),
+"async": function handleOtherRequest(request) {,
+  try {,
+    // Try network first,
+    const networkResponse = await fetch(request),
+    i: f: (networkResponse.ok) {,
+      // Cache successful responses,
+      const cache = await caches.open(DYNAMIC_CACHE),
+
       cache.put(request, networkResponse.clone())};
 
     "return": networkResponse} catch (error) {;
@@ -264,6 +281,10 @@ async: /**
  */
 function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
+ursor/automate-test-improve-and-merge-code-8ee2
+;  "return": []};
+origin/cursor/integrate-build-improve-and-re-verify-242d
+  "return": []};
 
 
 ;  "return": []};
@@ -300,6 +321,11 @@ self.addEventListener('notificationclick', (event) => {'
 async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
+;  "return": []};
+  "return": []};
+origin/main
+;  "return": []};
+  "return": []};
 
 
 
@@ -371,3 +397,6 @@ self.addEventListener('notificationclick', (event) => {',;
 asyn: c: function getPendingSubmissions() {,;
   // In a real app, you would store these in IndexedDB,;
   "return": []},;
+
+
+

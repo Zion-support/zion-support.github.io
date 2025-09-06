@@ -20,6 +20,8 @@ export function IntegrationsHub() {
           <Button>Connect New Integration</Button>
         </div>
       </div>
+
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -45,6 +47,8 @@ export function IntegrationsHub() {
             </div>
           </CardContent>
         </Card>
+
+
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -85,10 +89,14 @@ export function IntegrationsHub() {
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
+
+
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
+
+
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -101,6 +109,8 @@ export function IntegrationsHub() {
                 <WebhookManager />
               </CardContent>
             </Card>
+
+
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -116,6 +126,11 @@ export function IntegrationsHub() {
         </div>
       </Tabs>
     </div>
+  );
+}
+
+
+
   )
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -196,6 +211,9 @@ export function IntegrationsHub() {;
           </TabsContent>;
         </div>;
       </Tabs>;
+
+
+
   );
     </div>);
 }

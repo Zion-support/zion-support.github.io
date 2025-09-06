@@ -10,6 +10,7 @@ export function SelectResumeSection({;
   selectedResume;
   handleResumeSelect;
   handleDownloadResume;
+
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;

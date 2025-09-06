@@ -193,6 +193,135 @@ const benefits = [;
 ];
 export default function ServicesOverviewPage() {
 
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {;
+  Brain,;
+  Network,;
+  Cloud,;
+  Shield,;
+  Zap,;
+  Target,;
+  Users,;
+  BarChart3,;
+  ArrowRight,;
+  CheckCircle,;
+  Star,;
+  Award,;
+  Clock,;
+  Globe,;
+} from "lucide-react";
+import Layout from "../components/Layout";
+
+const serviceCategories = [;
+  {;
+    title: "AI Services",;
+    description:;
+      "Cutting-edge artificial intelligence solutions for modern businesses",;
+    icon: Brain,;
+    services: [;
+      "AI Analytics",;
+      "Machine Learning",;
+      "Natural Language Processing",;
+      "Computer Vision",;
+    ],;
+    link: "/ai-services",;
+    color: "from-blue-500 to-purple-600",;
+  },;
+  {;
+    title: "IT Services",;
+    description: "Comprehensive IT solutions and infrastructure management",;
+    icon: Network,;
+    services: [;
+      "Cloud Migration",;
+      "System Integration",;
+      "Network Security",;
+      "Data Management",;
+    ],;
+    link: "/it-services",;
+    color: "from-green-500 to-blue-600",;
+  },;
+  {;
+    title: "Micro SAAS",;
+    description:;
+      "Innovative micro software solutions for specific business needs",;
+    icon: Cloud,;
+    services: [;
+      "Workflow Automation",;
+      "Project Management",;
+      "Customer Analytics",;
+      "API Integration",;
+    ],;
+    link: "/micro-saas",;
+    color: "from-purple-500 to-pink-600",;
+  },;
+  {;
+    title: "Security",;
+    description: "Advanced cybersecurity and data protection solutions",;
+    icon: Shield,;
+    services: [;
+      "Threat Detection",;
+      "Data Encryption",;
+      "Access Control",;
+      "Compliance Management",;
+    ],;
+    link: "/security",;
+    color: "from-red-500 to-orange-600",;
+  },;
+  {;
+    title: "Automation",;
+    description: "Intelligent automation solutions to streamline operations",;
+    icon: Zap,;
+    services: [;
+      "Process Automation",;
+      "Workflow Optimization",;
+      "Task Scheduling",;
+      "Integration Hub",;
+    ],;
+    link: "/automation",;
+    color: "from-yellow-500 to-red-600",;
+  },;
+  {;
+    title: "Analytics",;
+    description: "Data-driven insights and business intelligence solutions",;
+    icon: BarChart3,;
+    services: [;
+      "Business Intelligence",;
+      "Predictive Analytics",;
+      "Data Visualization",;
+      "Reporting",;
+    ],;
+    link: "/analytics",;
+    color: "from-indigo-500 to-purple-600",;
+  },;
+];
+
+          
+
+
 
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
@@ -332,11 +461,20 @@ function ServicesOverviewPage() {
                   animate={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
 
+                  <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                    <category.icon className="w-16 h-16 text-white" />
+                  </div>
+                  
+
 
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
+
+
+
+
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -359,7 +497,6 @@ function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
-                            <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
               transition={{ duration: 0 && 0.8 }}
               className="text-center mb-12">;

@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -82,6 +86,8 @@ export default function ProfilePage() {;
           .from("talent_profiles");
           .select("*");
           .eq("id", profileId);
+
+  if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <span className="loading loading-ring loading-lg"></span>;
@@ -224,6 +230,8 @@ export default function ProfilePage() {;
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Github className="h-6 w-6" />
+
+
                 )}
                 {profileData && profileData.twitter_link && (;
                   <a
@@ -233,6 +241,8 @@ export default function ProfilePage() {;
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Twitter className="h-6 w-6" />
+
+
                 )}
                 {profileData && profileData.linkedin_link && (;
                   <a
@@ -242,6 +252,8 @@ export default function ProfilePage() {;
                     className="text-zion-cyan hover:text-white transition-colors"
                   >
                     <Linkedin className="h-6 w-6" />
+
+
                 )}
               </div>
             </div>

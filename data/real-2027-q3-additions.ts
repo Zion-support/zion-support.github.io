@@ -320,12 +320,29 @@ export const real2027Q3Additions = [
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
+      'Discovery via traffic/specs',
+      'OWASP API Top 10 checks',
+      'PR annotations and CI gating',
+      'Change detection and drift alerts',
+    ],
+    category: 'Security & Identity',
+    link: '/api-security-scanner',
+    realService: true,
+    roi: 'Prevent high-severity API incidents and cut MTTR.',
+  },;
 ];      'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
     realService: true
     roi: 'Prevent high-severity API incidents and cut MTTR.'
+  }
+];
+
+export const real2027Q3Additions = [
+  {
+
+
 export const real2027Q3Additions = [;
   {
     id: 'it - asset - discovery - agent',

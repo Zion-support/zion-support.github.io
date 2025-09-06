@@ -202,10 +202,25 @@
     competitors: ['AWS S3Azure BlobGoogle Cloud Storage'], marketSize: '$80B cloud storage market',
     growthRate: '65% annual growth', variant: 'quantum-futuristic',
     contactInfo: {
+    
     },
     realImplementation: true, implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.',
     launchDate: '2026-05-01', customers: 40,
     rating: 4.9,
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    reviews: 32;
+
+    realImplementation: true;
+    implementationDetails: 'Quantum-safe cloud storage platform with quantum-resistant encryption and distributed storage.';
+    launchDate: '2026-05-01';
+    customers: 40;
+
+  }
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface EnterpriseIT2026ServiceV4 {;
   id: string,;

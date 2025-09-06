@@ -1,3 +1,100 @@
+  // Initialize the form
+  const form = useForm<ProductFormValues>({
+    resolver: zodResolver(productSchema)
+    defaultValues: {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('image', file)
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('video', file)
+    }
+  }
+  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('model', file)
+    }
+  }
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue('description', content.description)
+    form.setValue('tags', content.tags.join(', '))
+    // Set a default price as the middle of the suggested range
+    const averagePrice = (
+      (content.suggestedPrice.min + content.suggestedPrice.max) /
+      2
+    ).toFixed(2)
+    form.setValue('price', averagePrice)
+    // Switch to the manual tab to show applied content
+    setActiveTab('manual')
+  }
+      tags: ""}}),
+  
+  // Handle image upload preview
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (file) {
+      form.setValue("image", file),
+      const reader = new FileReader(),
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+      },
+      reader.readAsDataURL(file)
+    }
+  },
+
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (file) {
+      form.setValue("video", file)
+    }
+  },
+
+  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (file) {
+      form.setValue("model", file)
+    }
+  },
+
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue("description", content.description),
+    form.setValue("tags", content.tags.join(", ")),
+    
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
+    form.setValue("price", averagePrice),
+    
+    // Switch to the manual tab to show applied content
+    setActiveTab("manual")
+  },
+
+  // Handle form submission
+  const onSubmit = async (values: ProductFormValues) => {
+    if (!user) {
+      toast({
+      })
+      return;
+    }
+    setIsSubmitting(true)
+        title: "Authentication Required",
+        description: "You must be logged in to publish products",
+        variant: "destructive"}),
+      return
+    }
+
+    setIsSubmitting(true),
+    
+    try {
+      // Create the product listing
+      const productData = {
         title: values.title,
         description: values.description,
         price: parse_float (values.price),

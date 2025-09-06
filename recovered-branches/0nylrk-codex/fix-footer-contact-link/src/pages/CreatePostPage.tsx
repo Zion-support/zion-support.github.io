@@ -1,4 +1,17 @@
 
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
+import { useToast } from "@/hooks/use-toast";
+import { ForumCategory } from "@/types/community";
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
+
+
+
 interface PostFormValues {
 
   title: string
@@ -8,6 +21,33 @@ interface PostFormValues {
   tags: string
 }
 
+export default function CreatePostPage() {;
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+export default function CreatePostPage() {
+
+
+
+
+  const navigate = useNavigate();
+  const { toast } = useToast();
+  const [searchParams] = useSearchParams();
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory |"project-help"
+  }
+  const navigate = useNavigate(),
+  const { toast } = useToast(),
+  const [searchParams] = useSearchParams(),
+  
+  // Get category from URL query params if available
+  const initialCategory = searchParams.get("category") as ForumCategory | null,
+  
+  const initialValues: Partial<PostFormValues> = {
+    categoryId: initialCategory || "project-help"
+  },
 
   const handleSubmit = async (values: PostFormValues) => {
     try {

@@ -113,6 +113,14 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
   Microscope, DollarSign, Home, Users, Briefcase, ;
+
+  Smartphone,;
+  BarChart3,;} from 'lucide-react';import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin, 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, DollarSign, Home, Users, Briefcase, ;
+
+
   BookOpen, MessageCircle, Star, TrendingUp, Target;
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
   Earth, Factory, Car, Building, GraduationCap, Scale;
@@ -168,6 +176,14 @@ const companyLinks = [
   { name: '🔒 Support', href: '/support', icon: ShieldCheck }
 ];
 
+export default function UltraFuturisticNavigation2028() {
+export default function UltraFuturisticNavigation2028() {;
+
+const companyLinks = [;
+  { name: '🏠 Home', href: '/', icon: Home },;
+  { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket },;
+  {;
+    name: '⭐ Ultimate 2028',;
     href: '/ultimate-2028-services-showcase',;
     icon: Star,;
   },;
@@ -199,6 +215,10 @@ const companyLinks = [
         service && service.description.toLowerCase().includes(searchQuery && searchQuery.toLowerCase())    );
   );
   return (
+
+    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  }
+
+
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
 
@@ -250,6 +270,7 @@ const companyLinks = [
       {/* Main Navigation */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+
           {/* Logo */}
           <div className='flex items-center'>;
             <Link href='/' className='flex items-center space-x-3 group'>;
@@ -369,6 +390,15 @@ const companyLinks = [
               onClick={toggleMenu}
               className="text-purple-200 hover:text-white transition-colors p-2">;
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>;
+          </div>;
+        </div>;
+      </div>;
+
+
+
+
+
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -376,6 +406,7 @@ const companyLinks = [
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
+
 
           >
             <div className='px-4 py-6 space-y-6'>
@@ -405,6 +436,11 @@ const companyLinks = [
 
                         </Link>
 
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
                       ))}
                     </div>;
                   </div>;
@@ -444,12 +480,52 @@ const companyLinks = [
 
 
       {/* Search Results Dropdown */}
+      {searchQuery && filteredServices.length > 0 && (
+        <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
+          <div className='p-4'>
+            <div className='space-y-2'>
+              {filteredServices.slice(0, 8).map(service => (
+                <Link
+                  key={service.name}
+                  href={service.href}
+                  className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
+                >
+                  <div className='flex items-center justify-between'>
+                    <div>
+                      <h4 className='text-sm font-medium text-white'>
+                        {service.name}
+                      </h4>
+                      <p className='text-xs text-purple-300'>
+                        {service.description}
+                      </p>
+                    </div>
+                    <span className='text-xs text-purple-400 font-medium'>
+                      {service.price}
+                    </span>                  </div>                <Link
+                  key={service.name}
+                  href={service.href}
+                  className="block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <h4 className="text-sm font-medium text-white">{service.name}</h4>
+                      <p className="text-xs text-purple-300">{service.description}</p>
+                    </div>
+                    <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+                  </div>
+                    </span>                  </div>
+
+
                 </Link>
               ))}
             </div>;
           </div>;
         </div>;
       )}
+}
+}
+  );
+}
           </motion.div>)}
       </AnimatePresence>;
       {/* Search Results Dropdown */}

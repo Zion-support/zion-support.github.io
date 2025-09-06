@@ -1,3 +1,20 @@
+  SERVICE_CATEGORIES
+  ALL_SERVICES
+  AI_SERVICES
+  IT_SERVICES
+  MICRO_SAAS_SERVICES
+  CYBERSECURITY_SERVICES
+  DATA_ANALYTICS_SERVICES
+  CLOUD_SOLUTIONS;} from '@/data/servicesData';import {
+  SERVICE_CATEGORIES,
+  ALL_SERVICES,
+  AI_SERVICES,
+  IT_SERVICES,
+  MICRO_SAAS_SERVICES,
+  CYBERSECURITY_SERVICES,
+  DATA_ANALYTICS_SERVICES,;
+  CLOUD_SOLUTIONS,;} from '@/data/servicesData';import { ;
+
   SERVICE_CATEGORIES;
   ALL_SERVICES
   AI_SERVICES
@@ -7,10 +24,21 @@
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS
+
+} from '@/data/servicesData';
+import { ServiceCategory, ServiceSolution } from '@/types/services';
+
+
+export function ServicesPage() {
+
+import { ServiceCategory, ServiceSolution } from '@/types/services';
+export function ServicesPage() {;
+
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredServices = ALL_SERVICES.filter(service => {
+
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
@@ -36,6 +64,7 @@
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
+
 import React, { useState } from 'react',;
 import {;
   SERVICE_CATEGORIES,;
@@ -102,6 +131,9 @@ export function ServicesPage() {;
       ? filteredServices;
       : getServicesByCategory(selectedCategory);
   return (
+
+
+
                 ✉️ Email Us
               </a>
             </div>
@@ -111,6 +143,9 @@ export function ServicesPage() {;
   return (
     <div className="min - h-screen bg - gradient - to - br from - gray - 50 to - gray - 100">;
       {/* Hero Section */}
+
+
+
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
             </div>
             <div className="flex items-center gap-2">
@@ -121,10 +156,16 @@ export function ServicesPage() {;
               <span className="text-blue-600">✉️</span>
               <span>kleber@ziontechgroup.com</span>
             </div>
+
+
+
+
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
+
+
             </div>
           </div>
         </div>
@@ -184,6 +225,9 @@ export function ServicesPage() {;
           </div>;
         </div>;
       </div>;
+
+
+
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
@@ -205,6 +249,8 @@ export function ServicesPage() {;
                   {category && category.icon} {category && category.name}
                 </button>;
               ))}
+
+
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
           ))}
@@ -241,14 +287,20 @@ export function ServicesPage() {;
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
+
+
               </div>
               <h3 className="text-xl font-semibold mb-2">Innovation First</h3>
               <p className="text-gray-600">Cutting-edge AI and technology solutions</p>
             </div>
+
+
               </div>
               <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
               <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
             </div>
+
+
               </div>
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
               <p className="text-gray-600">Quick setup and implementation</p>
@@ -284,6 +336,13 @@ export function ServicesPage() {;
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
+            <div className="text-center">
+              <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+
+
+
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
             </div>
@@ -712,6 +771,7 @@ interface ServiceCardProps {;
 
 interface ServiceCardProps {;
   service: ServiceSolution;
+}
 
 
 
@@ -738,6 +798,11 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     if (service && service.pricing.enterprise && enterprise.popular) return service && service.pricing.enterprise;
     return service && service.pricing.professional;
   return (
+    if (service.pricing.professional.popular) return service.pricing.professional,
+    if (service.pricing.basic.popular) return service.pricing.basic,
+    if (service.pricing.enterprise.popular) return service.pricing.enterprise,
+    return service.pricing.professional
+  },
 
 
             </span>;
@@ -835,6 +900,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
         <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
 
         {/* Provider Info */}
+
+
+
         <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-semibold text-sm">
@@ -890,6 +958,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           {service && service.provider.verified && (;
             <span className="text-blue-600 text-sm"> Verified</span>;
         </div>;
+
                 Most Popular
               </span>
             )}
@@ -899,6 +968,26 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
         {/* Features Preview */}
+            {service.features.slice(0, 3).map((feature, index) => (
+              <span 
+                key={index}
+                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'              >            {service.features.slice(0, 3).map((feature, index) => (
+              <span
+                key={index}
+                className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
+              >
+                {feature}
+              </span>
+            ))}
+            {service.features.length > 3 && (
+              <span className='text-gray-500 text-xs'>                +{service.features.length - 3} more              <span className="text-gray-500 text-xs">
+                +{service.features.length - 3} more
+              </span>
+                className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs"
+              >
+                {feature}
+
+
               </span>;
             </div>;
             {popular_plan.popular && (
@@ -930,6 +1019,9 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                 {feature}
               </span>))}
             {service.features.length > 3 && (
+
+
+
             )}
 
           </div>;
@@ -942,10 +1034,15 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             className='flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors'          >        <div className="flex gap-2">;
           <button
             onClick={() => setShowDetails(!showDetails)}
+
+
+
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>;
           <a
             href={`tel:+13024640950`}
+
+
           >
             Call Now
           </Link>
@@ -997,6 +1094,14 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
               {/* Use Cases */}
+                  {service.useCases.slice(0, 3).map((useCase, index) => (
+                    <span 
+                      key={index}
+                      className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'                    >                  {service.useCases.slice(0, 3).map((useCase, index) => (
+                    <span
+                      key={index}
+
+
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
                       {useCase}
@@ -1008,6 +1113,14 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
               {/* Technologies */}
+                  {service.technologies.slice(0, 4).map((tech, index) => (
+                    <span 
+                      key={index}
+                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
+                    <span
+                      key={index}
+
+
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
                       {tech}
@@ -1025,6 +1138,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   <p className="text-gray-600">{service.deploymentTime}</p>
                 </div>
                 <div>
+
+
                   <span className="font-medium text-gray-900">Support:</span>
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
@@ -1051,6 +1166,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                   <p className="text-gray-600">{service && service.support.slice(0, 2).join(', ')}</p>;
                 </div>;
               </div>;
+
                   ))}
 
                 </div>;
@@ -1058,17 +1174,25 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 
 
               {/* Contact CTA */}
+
+
                   Ready to get started with {service.title}?
                 </p>
                 <div className="flex gap-2 justify-center">
                   <a
                     href={`tel:+13024640950`}
+
+
+
+
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
                   </Link>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
+
+
                   >
                     ✉️ Email Inquiry
                   </Link>
@@ -1112,6 +1236,8 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
 }
 }
 }
+
+
       </div>;
     </div>;
   );  );

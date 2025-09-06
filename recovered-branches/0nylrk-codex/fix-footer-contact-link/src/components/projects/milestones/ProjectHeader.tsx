@@ -30,13 +30,20 @@ interface ProjectHeaderProps {
 }
 export function ProjectHeader({ title }: ProjectHeaderProps) {
 
-  const navigate = useNavigate();
-
   title: string
 }
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {;
   const navigate = useNavigate();
+import React from 'react',;
+import { useNavigate } from 'react-router-dom',;
+import { Button } from '@/components/ui/button',;
+import { ArrowLeft } from 'lucide-react',;
+
+
+import {useNavigate} from 'react-router-dom';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react';
 interface ProjectHeaderProps {;
   title: string;
 }

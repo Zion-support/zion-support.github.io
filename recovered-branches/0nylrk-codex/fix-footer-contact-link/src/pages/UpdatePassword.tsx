@@ -13,6 +13,65 @@ import {toast} from "@/hooks/use-toast";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {cleanupAuthState} from "@/utils/authUtils";
+import { useState, useEffect } from "react",
+import { useNavigate, useLocation } from "react-router-dom",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { LockKeyhole } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Form;
+  FormControl;
+  FormField;
+  FormItem;
+  FormLabel;
+  FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer";
+import { cleanupAuthState } from "@/utils/authUtils";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { toast } from "@/hooks/use-toast",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { cleanupAuthState } from "@/utils/authUtils",
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object({;
+    password: z;
+      .string();
+      .min(8, "Password must be at least 8 characters");
+      .max(64, "Password must be less than 64 characters");
+    confirmPassword: z && z.string()});
+  .refine((data) => data && data.password === data && data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
+
+type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
+
+export default function UpdatePassword() {;
+
+  const [isLoading, setIsLoading] = useState(false);
+  const [accessToken, setAccessToken] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
+  const [success, setSuccess] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+
+
 // Form validation schema
 
 const updatePasswordSchema = z
@@ -77,6 +136,72 @@ const updatePasswordSchema = z
     } finally {
       setIsLoading(false)
 
+import { useState, useEffect } from "react",;
+import { useNavigate, useLocation } from "react-router-dom",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { LockKeyhole } from "lucide-react",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { toast } from "@/hooks/use-toast",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { cleanupAuthState } from "@/utils/authUtils",;
+// Form validation schema;
+const updatePasswordSchema = z;
+  .object({;
+    password: z;
+      .string();
+      .min(8, "Password must be at least 8 characters");
+      .max(64, "Password must be less than 64 characters"),;
+    confirmPassword: z.string()});
+  .refine((data) => data.password === data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
+type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>,;
+export default function UpdatePassword() {;
+  const [isLoading, setIsLoading] = useState(false),;
+  const [accessToken, setAccessToken] = useState<string | null>(null),;
+  const [error, setError] = useState<string | null>(null),;
+  const [success, setSuccess] = useState(false),;
+  const navigate = useNavigate(),;
+  const location = useLocation(),;
+  // Initialize react-hook-form;
+  const form = useForm<UpdatePasswordFormValues>({;
+    resolver: zodResolver(updatePasswordSchema),;
+    defaultValues: {;
+      password: "",;
+      confirmPassword: ""}}),;
+  useEffect(() => {;
+    // Extract access token from URL hash;
+    const hashParams = new URLSearchParams(location.hash.substring(1)),;
+    const token = hashParams.get("access_token"),;
+    if (token) {;
+      setAccessToken(token);
+    } else {;
+      setError("No access token found. Please request a new password reset link.");
+    }
+;
+    // Clean up auth state to prevent issues;
+    cleanupAuthState();
+  }, [location]),;
+  // Form submission handler;
+  const onSubmit = async (data: UpdatePasswordFormValues) => {;
+    if (!accessToken) {;
+      setError("No access token found. Please request a new password reset link."),;
+      return;
+    }
+;
+    setIsLoading(true),;
     try {;
       // Set the session with the access token;
       await supabase && supabase.auth.setSession({;
@@ -139,6 +264,21 @@ const updatePasswordSchema = z
               {error && (;
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white">;
                   <p className="text-sm">{error}</p>;
+                    onClick={() => navigate('/forgot-password')}
+                  >
+                    Request new reset link
+                  </Button>
+                </div>
+              )}
+
+                  <Button
+                    className="mt-3 text-xs"
+                    variant="outline"
+
+                  <Button 
+                    className="mt-3 text-xs"
+                    variant="outline"
+
                     onClick={() => navigate('/forgot-password')}
                   >;
                     Request new reset link;
@@ -217,6 +357,7 @@ const updatePasswordSchema = z
                         variant="link"
                         className="text-sm font-medium text-zion-cyan hover:text-zion-cyan-light p-0"
                         onClick={() => navigate("/login")}
+}
     // Clean up auth state to prevent issues;
     cleanupAuthState ();
   }, [location]);
@@ -393,6 +534,10 @@ if ( {) {
         </div>;
       </div>;
       <Footer />;
+
+
+
+
 }
     </>);
 }

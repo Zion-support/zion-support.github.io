@@ -1,3 +1,4 @@
+import type { NextApiRequest, NextApiResponse } from "next";
 
 
 function summarizeModules(
@@ -209,10 +210,6 @@ if ( {) {
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
     return res.status(200).json({ outputActions, deployLog, access, operator })
   } catch (err: any) {
-    return res.status(500).json({ error: err.message || 'Internal error' })
-  }
-}
-    return res.status (500).json ({ error: err.message || "Internal error" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -451,6 +448,13 @@ export default async function handler(req, res) {
       export: {;
         type: 'application/json';
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }
 }
   } catch (error) {

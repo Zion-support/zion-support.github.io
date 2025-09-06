@@ -26,6 +26,12 @@ const DevopsAutomationChat: NextPage = () => {
     <div>
       <Head>
 
+        <title>DevopsAutomationChat - Zion Tech Solutions</title>
+        <title>DevopsAutomationChat - Zion Tech Solutions</title>
+        <title>DevopsAutomationChat - Zion Tech Solutions</title>
+
+        <title>DevopsAutomationChat - Zion Tech Solutions</title>
+
 import type { NextPage } from './next';
 import Head from './next / head';
 import Link from './next / link';

@@ -1,4 +1,17 @@
 
+import { useState, useEffect } from "react",
+import { supabase } from "@/integrations/supabase/client",
+import type { UserProfile } from "@/types/auth";
+import { toast } from "@/hooks/use-toast";
+import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
+import { cleanupAuthState } from "@/utils/authUtils";
+import type { UserProfile } from "@/types/auth",
+import { toast } from "@/hooks/use-toast",
+import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils",
+import { cleanupAuthState } from "@/utils/authUtils",
+
+
+
 export function useAuthOperations(
 
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
@@ -83,6 +96,12 @@ if ( {) {
         toast({
           variant: "destructive",
           title: "Error during signup",
+          description: error.message}),
+        return { data: null, error: error.message }
+          variant: "destructive",
+          title: "Error during signup",
+
+
           description: error.message});
       }
       // Add this after successful signup
@@ -176,6 +195,14 @@ if ( {) {
       // Optimistically update the local user state
       setUser((prevUser) => {
         if (prevUser) {
+        return { error: error.message };
+      }
+;
+      // Optimistically update the local user state;
+      setUser((prevUser) => {;
+        if (prevUser) {;
+
+
           return { ...prevUser, ...profileData }
       // Optimistically update the local user state;
       set_user ((prev_user) => {
@@ -226,6 +253,41 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+        return prevUser;
+      }),;
+      toast({;
+        title: "Profile updated!",;
+        description: "Your profile has been successfully updated."}),;
+      return { error: null }
+    } catch (error) {;
+      console.error("Profile update failed:", error),;
+      toast({;
+        variant: "destructive",;
+        title: "Profile update failed",;
+        description: "There was an issue updating your profile. Please try again."}),;
+      return { error: "Failed to update profile." }
+    } finally {;
+      setIsLoading(false);
+    }
+  },;
+  const loginWithGoogle = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "google"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+      }
+    } finally {;
+      setIsLoading(false);
+    }
+  },
+
+
+
   const loginWithFacebook = async () => {
     setIsLoading (true);
     try {
@@ -258,10 +320,24 @@ if ( {) {
           variant: "destructive",
           title: "Oh no! Something went wrong.",
           description: error.message})
+  },;
+  const loginWithFacebook = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "facebook"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+
       }
     } finally {
       setIsLoading (false);
     }
+  }
+  },
       const { data, error } = await supabase.auth.signInWithOAuth ({
         provider: "twitter"});
 ;
@@ -278,15 +354,30 @@ if ( {) {
   };
   },
 
-
   const loginWithTwitter = async () => {
     setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
+  },;
+  const loginWithTwitter = async () => {;
+    setIsLoading(true),;
+    try {;
+      const { data, error } = await supabase.auth.signInWithOAuth({;
+        provider: "twitter"}),;
+      if (error) {;
+        toast({;
+          variant: "destructive",;
+          title: "Oh no! Something went wrong.",;
+          description: error.message});
+
       }
     } finally {
       setIsLoading (false);
     }
+  }
+  },
+  };
+  },
 
       }
         params: [address, address]

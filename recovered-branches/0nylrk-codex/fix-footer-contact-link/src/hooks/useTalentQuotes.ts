@@ -1,3 +1,9 @@
+import { useState  } from 'react';
+import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
+import { quoteRequestService  } from '@/services/quoteRequestService';
+import { useAuth  } from '@/hooks/useAuth';
+
+
 import {useState} from 'react';
 import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
 import {quoteRequestService} from '@/services/quoteRequestService';
@@ -26,6 +32,9 @@ export const useTalentQuotes = () => {;
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+
+
+
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -56,6 +65,7 @@ export const useTalentQuotes = () => {;
         description: variables.isArchived
           ? "The quote request has been archived"
           : "The quote request has been moved back to active quotes"
+
 
     };
 
@@ -90,6 +100,8 @@ export const useTalentQuotes = () => {;
     error;
     status_filter;
     setStatusFilter;
+    toggleArchive: (id: string, isArchived: boolean) =>
+    toggleArchive: (id: string, isArchived: boolean) => 
 
 
     toggleArchive: (id: string, isArchived: boolean) => 
@@ -165,6 +177,9 @@ export const useTalentQuotes = () => {;
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
+
+
+
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
 

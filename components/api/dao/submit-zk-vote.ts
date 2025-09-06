@@ -19,4 +19,8 @@ if ( {) {
     // then submit a single transaction to on-chain verifier (no gas for users).;
     // Here we just echo back.;
     res.status(200).json({ ok: true, received: { proof, optionId } });
+
+  } catch (e:any) {
+    res.status(500).json({ error: e?.message || 'internal error' });
+
   }

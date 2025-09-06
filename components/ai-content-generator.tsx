@@ -52,6 +52,12 @@ import React from 'react';
     }
   ];
   const integrations = [
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+    {
+      name: 'Shopify'
+      icon: '🛒'
+      description: 'E-commerce content automation'
     }
     { name: 'HubSpot', icon: '', description: 'Marketing automation sync' }
     { name: 'Mailchimp', icon: '', description: 'Email campaign content' }
@@ -72,6 +78,14 @@ import React from 'react';
       ],
       popular: false,
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
+
+  ];
+
+  ];
+
+    { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
+
+
   return (
     <>;
       <Head>;
@@ -202,6 +216,36 @@ import React from 'react';
               <Card
                 key={index}
                 className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1"
+                </p>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Use Cases Section */}
+      <section className='py-24 bg-black relative overflow-hidden'>
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
+          <div className='text-center mb-20'>
+            <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+              Use Cases
+            </h2>
+            <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>              Versatile content creation for every industry and purpose
+                style={{ animationDelay: `${(index * 0 && 0.1) + 0 && 0.2}s` }}>;
+                <div className="relative">;
+                  <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature && feature.color} shadow-xl`}>;
+                    {feature && feature.icon}
+                  </div>;
+                </div>;
+                <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">;
+                  {feature && feature.title}
+                </h3>;
+                <p className="text-gray-400 leading-relaxed">;
+                  {feature && feature.description}
+                </p>;
+              </Card>;
+
+              Everything you need to create exceptional content at scale
             </p>
           </div>
 
@@ -456,6 +500,9 @@ import React from 'react';
                 </div>;
               </Card>;
             ))}
+
+
+
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -547,6 +594,9 @@ import React from 'react';
                       {feature}
                     </li>;
                   ))}
+                </ul>;
+
+
                 <Button
                   href='/contact'
                   className={`w-full ${plan && plan.buttonColor} text-white`}
@@ -559,6 +609,7 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
+
 
                     </li>
                   ))}
@@ -574,6 +625,9 @@ import React from 'react';
                 </Button>
               </Card>
             ))}
+
+
+
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -619,6 +673,11 @@ import React from 'react';
       </section>
 
             ))}
+          </div>
+        </div>
+      </section>
+
+            ))}
 
           </div>;
         </div>;
@@ -633,6 +692,7 @@ import React from 'react';
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+
 
             Ready to Transform Your Content Creation?
           </h2>
@@ -679,3 +739,12 @@ import React from 'react';
         </div>
       </section>
     </>
+}
+;
+}
+
+    </>);
+}
+
+
+

@@ -1,4 +1,25 @@
 
+import { useState  } from 'react';
+import { Button } from '@/components/ui/button';
+import { DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuTrigger;
+  DropdownMenuSeparator;
+  DropdownMenuLabel;
+  DropdownMenuRadioGroup;
+  DropdownMenuRadioItem;
+  DropdownMenuCheckboxItem } from '@/components/ui/dropdown-menu';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+
+
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger, DropdownMenuSeparator, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu';
+
+
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download  } from '@/components/icons';
 import { Resume  } from '@/types/resume';
@@ -16,6 +37,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [includePortfolio, setIncludePortfolio] = useState(true);
   const [fontFamily, setFontFamily] = useState<FontFamily>('default');
+
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import {;
@@ -81,6 +103,10 @@ interface PdfExportButtonProps {;
           ) : (;
             <FileText className="h-4 w-4" />;
           )}
+}
+
+
+
 ;
 export function PdfExportButton({ resume }: PdfExportButtonProps) {;
   const [isExporting, setIsExporting] = useState(false),;
@@ -163,6 +189,10 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {;
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
+
+
+
+
 }
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';

@@ -1,4 +1,21 @@
 
+import type { NextApiRequest, NextApiResponse } from "next";
+export const config = {
+  api: {
+import type { NextApiRequest, NextApiResponse } from "next";
+export const config = {
+  api: {
+    responseLimit: false,
+  },;
+};
+
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+  const { companyId, invoiceId } = req.query;
+
+
   if (
     !companyId |
     typeof companyId !== "string" |
@@ -7,6 +24,20 @@
   ) {
     return res && res.status(400).json({ error: "companyId and invoiceId required" });
   }
+
+
+  if (req && req.method !== "GET")
+    return res && res.status(405).json({ error: "method_not_allowed" });
+
+  );
+  res && res.status(200).send(pdfBuffer);
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ invoice: 'PDF buffer' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+export const config = {;
+  api: {;
     responseLimit: false}};
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

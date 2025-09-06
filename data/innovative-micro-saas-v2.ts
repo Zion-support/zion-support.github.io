@@ -51,6 +51,19 @@
       '24 / 7 contract management',
     ],
     popular: true,
+    color: 'from - green - 600 to - emerald - 700',
+    text_color: 'text - green - 400',
+    link: 'https://ziontechgroup.com / smart - contract - automation - platform',
+    market_position:;
+      'Competitive with OpenZeppelin ($free), ConsenSys ($500+/month). Our advantage: No - code interface, business templates, and automated execution.',
+    target_audience:;
+      'Small businesses, Legal firms, Real estate companies, Supply chain companies, Financial services, Healthcare providers',
+    trial_days: 21,
+    setup_time: '1 week',
+    category: 'Innovative Micro SaaS & Blockchain',
+    real_service: true,
+    technology: [;
+
       'Blockchain',
       'Smart Contracts',
       'React',
@@ -183,6 +196,46 @@
 
 
     reviews: 912
+import { ServiceVariant } from '../types/service-variants',;
+export interface InnovativeMicroSaasV2 {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
   }
 ];
 
@@ -330,4 +383,7 @@ export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
     variant: 'business-futuristic',
     contactInfo: {
       address: '364 E Main St STE 1008 Middletown DE 19709',
+
+  }
+    }
 

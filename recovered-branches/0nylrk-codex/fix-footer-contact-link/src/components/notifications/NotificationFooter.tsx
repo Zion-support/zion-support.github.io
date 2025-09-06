@@ -3,6 +3,19 @@
 
 export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
   const navigate = useNavigate();
+  on_close: () => void;
+}
+
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+
+
+  onClose: () => void
+}
+
+export const NotificationFooter: React.FC<NotificationFooterProps> = ({ onClose }) => {;
+  const navigate = useNavigate();
+
 import React from 'react',;
 import { Button } from '@/components/ui/button',;
 import { useNavigate } from 'react-router-dom',;
@@ -25,6 +38,10 @@ interface NotificationFooterProps {;
       </Button>;
     </div>;
   );
+
+
+
+
 };
 export const NotificationFooter: React.FC < NotificationFooterProps> = ({
   on_close,

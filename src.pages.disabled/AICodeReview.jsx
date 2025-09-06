@@ -31,3 +31,16 @@ export default function AICodeReview({ }: AICodeReviewProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+
+:src.pages.disabled/AICodeReview.jsx
+}
+}
+}
+}
+}
+}
+
+
+

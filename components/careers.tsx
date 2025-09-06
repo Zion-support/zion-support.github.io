@@ -1,3 +1,7 @@
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+
+
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -27,6 +31,12 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
+
+
+
+export default function Careers() {;
+
+
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
     { id: 'all', name: 'All Departments' }
@@ -109,6 +119,13 @@ import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckC
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
+      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <motion.div
+
+
+
+
 
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
@@ -277,6 +294,11 @@ export default function Careers() {;
                 <p className="text-gray-300 text-sm">{value && value.description}</p>;
               </div>;
             ))}
+        {/* Benefits */}
+        <motion.div
+
+          </div>;
+        </motion && motion.div>;
 
 
 
@@ -295,6 +317,15 @@ export default function Careers() {;
                   <span className="text-gray-300">{benefit}</span>;
                 </div>;
               ))}
+        {/* Job Openings */}
+        <motion.div
+
+
+
+
+
+        {/* Job Openings */}
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -316,6 +347,7 @@ export default function Careers() {;
                 {dept && dept.name}
               </button>;
             ))}
+
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -343,6 +375,15 @@ export default function Careers() {;
                     </div>;
                   </div>;
                   <a
+        {/* General Application */}
+        <motion.div
+
+
+
+
+
+        {/* General Application */}
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}

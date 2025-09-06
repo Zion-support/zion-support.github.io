@@ -3,6 +3,27 @@ import {Link, useLocation} from "react-router-dom";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare} from "lucide-react";
+import { Link, useLocation } from "react-router-dom",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth",
+import { MessageSquare } from "lucide-react",
+interface MainNavigationProps {;
+
+  isAdmin?: boolean;
+  unreadCount?: number;
+  className?: string;
+}
+
+export function MainNavigation(): any ({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {;
+  const { user } = useAuth();
+  const isAuthenticated = !!user;
+  const location = useLocation();
+
+
+
+
 interface MainNavigationProps {
   isAdmin?: boolean,
   unreadCount?: number,
@@ -71,6 +92,8 @@ interface MainNavigationProps {
                 link.matches(location.pathname);
                   ? "bg-zion-purple/20 text-zion-cyan";
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan";
+
+
               )}
             >
               {link.name}
@@ -90,6 +113,9 @@ interface MainNavigationProps {
               {unreadCount > 0 && (;
                 <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">;
                   {unreadCount}
+
+
+
         )}
 
       </ul>;

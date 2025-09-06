@@ -1,7 +1,5 @@
 export function LoadingState() {;
   return (
-}
-
 
 import { Loader2 } from 'lucide-react'
 

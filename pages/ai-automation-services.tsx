@@ -112,6 +112,14 @@ const benefits = [;
     description: 'Automate repetitive tasks and focus on high - value activities',
     icon: Zap,
 
+import { motion } from 'framer-motion';
+import {;
+  Zap, Brain, Code, Shield, Users, TrendingUp,;
+  CheckCircle, ArrowRight, Star, Clock, Target,;
+  Cpu, Rocket, Globe, BarChart3, Settings;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -207,6 +215,12 @@ const benefits = [;
     title: 'Real-time Insights',;
     description: 'Instant analytics and decision-making support',;
     icon: BarChart3,;
+export default function AIAutomationServices() {
+    color: 'text-pink-400',;
+  },];
+
+export default function AIAutomationServices() {;
+
   return (
     <Layout>
       <Head>
@@ -232,6 +246,8 @@ const benefits = [;
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
         <div className="relative z-10 container mx-auto px-4 text-center">
           <motion.div
+
+
           >
             <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>
               <Zap className='w-5 h-5 text-emerald-400' />
@@ -319,6 +335,7 @@ const benefits = [;
               automation. From code generation to customer support, automate
               everything with intelligent AI that learns and adapts to your
               needs.
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Link href='#services' className='group'>
@@ -331,10 +348,16 @@ const benefits = [;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="#services" className="group">
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
+
+
+
+
                   <span>Explore Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+
+
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -342,6 +365,35 @@ const benefits = [;
             </div>
           </motion.div>
         </div>
+
+        />;
+        <meta name='contact:website' content='https://ziontechgroup && ziontechgroup.com' />;
+      </Head>;
+      <main className="max-w-7xl mx-auto px-4 py-8">;
+        <div className="text-center mb-12">;
+          <h1 className="text-4xl font-bold mb-4">AI Automation Services</h1>;
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">;
+            Transform your business with our advanced AI automation solutions designed to streamline operations and boost productivity.;
+          </p>;
+        </div>;
+
+      {/* Hero Section */}
+      <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>;
+        <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>;
+
+        <div className='relative z-10 container mx-auto px-4 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            className='max-w-4xl mx-auto'>;
+            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8'>;
+              <Zap className='w-5 h-5 text-emerald-400' />;
+              <span className='text-emerald-400 font-medium'>;
+                AI Automation Services;
+              </span>;
+            </div>;
+
+
             <h1 className='text-5xl md:text-7xl font-bold mb-6 neon-text text-white'>;
               <span className='bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>;
                 AI Automation;
@@ -364,6 +416,7 @@ const benefits = [;
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
         </div>
       </section>
+
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -378,6 +431,8 @@ const benefits = [;
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                 Services;
               </span>;
@@ -399,6 +454,9 @@ const benefits = [;
                 <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                 
                 <ul className="space-y-2">
+
+
+
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
@@ -435,6 +493,9 @@ const benefits = [;
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
+
               Portfolio;
             </h2>;
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
@@ -487,6 +548,18 @@ const benefits = [;
                   <div className="flex flex-wrap gap-2 mb-6">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
                       <span key={featureIndex} className="bg-emerald-500/20 text-emerald-400 px-3 py-1 rounded-full text-sm">
+
+
+
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                    <Link
+                      href='/contact'
+                      className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
+                    >                      Get Started
+                    <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
+                      Get Started
                     </Link>
                   </div>
                 </div>
@@ -510,6 +583,13 @@ const benefits = [;
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
           <motion.div
+
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
@@ -520,6 +600,8 @@ const benefits = [;
             </p>
           </motion.div>
               <motion.div
+              <motion.div
+
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>;
                 AI Automation;
               </span>;
@@ -571,11 +653,27 @@ const benefits = [;
                 <button className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center space-x-2">
                   <span>Start Your Automation Journey</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </Link>
+              <Link
+                href='/comprehensive-services-showcase-2025'
+                className='group'
+              >
+                <button className='border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2'>
+              <Link href="/comprehensive-services-showcase-2025" className="group">
+                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
+
+              <Link href="/comprehensive-services-showcase-2025" className="group">
+                <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
+
+
                   <span>View All Services</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
             </div>
+
+
               <div>
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   24/7
@@ -593,6 +691,18 @@ const benefits = [;
           </motion.div>
         </div>
       </section>
+    </Layout>;
+);
+
+}
+    </Layout>
+  )
+            className="max-w-4xl mx-auto";
+          >;
+            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">;
+              Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?;
+
+              Your Business?;
             </h2>;
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>;
                 </p>              </motion.div>))}
@@ -700,5 +810,7 @@ const benefits = [;
           </motion.div>;
         </div>;
       </section>;
+    </Layout>);
+;
 
 

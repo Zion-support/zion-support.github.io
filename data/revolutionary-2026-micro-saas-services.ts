@@ -1,3 +1,17 @@
+export interface Revolutionary2026MicroSaasService {
+export interface Revolutionary2026MicroSaasService {;
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  description: string;
+  features: string[];
+  link: string;
+  category: string;
+  realImplementation: boolean;
+  contactInfo: {
+    mobile: string;
+    email: string;
 
     address: string;
   }

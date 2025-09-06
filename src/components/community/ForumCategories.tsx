@@ -52,5 +52,3 @@ const categories: ForumCategoryInfo[] = [;
     </div>;
   );
 };
-export default ForumCategories;
-

@@ -32,4 +32,3 @@ export default function DisputeDashboard({ }: DisputeDashboardProps) {
     </div>
   );
 }
-}

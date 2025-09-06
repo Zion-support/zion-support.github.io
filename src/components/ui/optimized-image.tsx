@@ -267,16 +267,12 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 
 
-
 export const ImageGallery: React.FC<ImageGalleryProps> = ({
   images,
   columns = 3,
   aspectRatio = '16/9',
   className,
 
-  const handleImageLoad = () => {
-    setLoadedCount(prev => prev + 1)
-  },
 
   return (
     <div className={cn('space-y-4', className)}>
@@ -314,11 +310,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
             </div>;
           </motion && motion.div>;
         ))}
-
-  const initials = null;
-    fallback ||
-
-
       .split(' ')
       .map(n => n[0])
       .join('')

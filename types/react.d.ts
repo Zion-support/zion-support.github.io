@@ -11,6 +11,8 @@ declare module "react" {
     type: T,
     props: P,
     key: React.Key | null;
+
+
   the code-base.  If you have `@types/react` available in `node_modules`,;
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
@@ -54,8 +56,25 @@ declare module "react" {;
   } & Record<string, unknown>;
   export default React;
 }
+
+
+
 declare namespace React {;
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
     [elemName: string]: any;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+  }
+}

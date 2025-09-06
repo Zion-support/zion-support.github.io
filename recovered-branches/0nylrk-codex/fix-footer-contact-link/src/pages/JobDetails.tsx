@@ -1,4 +1,10 @@
 
+import { ApplyToJobModal  } from '@/components/messaging/job-application';
+import { SEO  } from '@/components/SEO';
+import { useWhitelabel  } from '@/context/WhitelabelContext';
+export default function JobDetails() {
+  // Cast to specify the expected route param type since useParams may be untyped
+  const { jobId } = useParams() as { jobId?: string }
 
 
 
@@ -13,6 +19,12 @@ export default function JobDetails() {;
 
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
+import {ApplyToJobModal} from '@/components/messaging/job-application';
+import {SEO} from '@/components/SEO';
+import {useWhitelabel} from '@/context/WhitelabelContext';
+export default function JobDetails() {;
+  // Cast to specify the expected route param type since useParams may be untyped;
+  const { jobId } = useParams() as { jobId?: string };
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
 
@@ -196,6 +208,9 @@ export default function JobDetails() {;
                   <h3 className="font-semibold text-lg mb-3">Job Description</h3>;
                   <div className="whitespace-pre-wrap">;
                       <Badge key={i} variant="secondary">;
+
+
+
                         {skill}
                       </Badge>;
                     ))}

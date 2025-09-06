@@ -49,6 +49,7 @@ export default function VerifyStatus() {
     setError(''),
     setMessage(''),
 
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
@@ -215,6 +216,7 @@ export default function VerifyStatus() {
     setIsResending(true);
     setError('');
     setMessage('');
+
     try {
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
@@ -245,6 +247,8 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           <div className="text-center">
             <div className="mx-auto h-12 w-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
               <Mail className="h-6 w-6 text-blue-600" />
@@ -259,6 +263,8 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           {message && (
             <Alert className="border-green-500 bg-green-50 text-green-900">
               <CheckCircle className="h-4 w-4" />
@@ -280,6 +286,8 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           <div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
               Email Address
@@ -324,6 +332,13 @@ export default function VerifyStatus() {
               <div className="text-sm text-slate-700 dark:text-slate-300 space-y-1">
               </div>
               {lastSentTime && (
+              disabled={!email |isCheckingStatus}
+              disabled={!email || isCheckingStatus}
+
+
+
+              disabled={!email || isCheckingStatus}
+
                   Last email sent: {lastSentTime.toLocaleTimeString()  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -377,6 +392,13 @@ export default function VerifyStatus() {
                   <Eye className="h-4 w-4 mr-2" />
                   Check Verification Status
                 </>
+              disabled={!email |isResending |countdown > 0}
+              disabled={!email || isResending || countdown > 0}
+
+
+
+              disabled={!email || isResending || countdown > 0}
+
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -414,6 +436,43 @@ export default function VerifyStatus() {
                 </>
               ) : (
                 <>
+              on_click={handleCheckStatus}
+              disabled={!email || isCheckingStatus}
+              className="w - full";
+              variant="outline";
+            >;
+              {isCheckingStatus ? (
+                <>;
+                  <RefreshCw className="h - 4 w - 4 mr - 2 animate - spin" />;
+                  Checking Status...;
+                </>) : (
+                <>;
+                  <Eye className="h - 4 w - 4 mr - 2" />;
+                  Check Verification Status;
+                </>)}
+            </Button>;
+            {/* Resend Email Button */}
+            <Button;
+              on_click={handleResendEmail}
+              disabled={!email || is_resending || countdown > 0}
+              className="w - full";
+              variant="secondary";
+            >;
+              {is_resending ? (
+                <>;
+                  <RefreshCw className="h - 4 w - 4 mr - 2 animate - spin" />;
+                  Sending Email...;
+                </>) : countdown > 0 ? (
+                <>;
+                  <Clock className="h - 4 w - 4 mr - 2" />;
+                  Resend in {countdown}s;
+                </>) : (
+                <>;
+                  <Mail className="h - 4 w - 4 mr - 2" />;
+                  Resend Verification Email;
+                </>)}
+            </Button>;
+
             {/* Try Login Button */}
             <Button;
               on_click={handleTryLogin}
@@ -428,11 +487,15 @@ export default function VerifyStatus() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
             </p>
             <Button
+
+
               variant="ghost"
               size="sm"
               className="text-blue-600 hover:text-blue-500"
@@ -441,12 +504,16 @@ export default function VerifyStatus() {
               Go Back
             </Button>
           </div>
+
+
               variant="ghost"
               className="w-full text-sm"
             >
               Use Different Email Address
             </Button>
             <Button
+
+
               variant="ghost"
               className="w-full text-sm"
             >
@@ -457,6 +524,8 @@ export default function VerifyStatus() {
       </div>
     </AuthLayout>
   )
+}
+};
 
 
 };

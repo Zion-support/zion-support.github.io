@@ -1,4 +1,21 @@
 
+import { jsPDF  } from 'jspdf';
+import { Education  } from '@/types/resume';
+import { PdfThemeColors  } from '../themeConfig';
+import { formatDate } from '../formatters';
+export function addEducationSection(
+import {jsPDF} from 'jspdf';
+import {Education} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+import {formatDate} from '../formatters';
+export function addEducationSection(;
+  doc: jsPDF;
+  education: Education[];
+  colors: PdfThemeColors;
+  startY: number
+): number {
+  if (education && education.length === 0) return startY;
+  
 
   let yPos = startY;
   // Check if we need to add a new page

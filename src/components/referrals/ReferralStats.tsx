@@ -16,13 +16,6 @@ interface ReferralStatsProps {
 
   stats: ReferralStatsType
   isLoading: boolean
-}
-export /**
- * ReferralStats - Function description
- */
-function ReferralStats() {
-  const stat_cards = [;
-    {
 
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
         <Card key={i}>

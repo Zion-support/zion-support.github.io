@@ -1,5 +1,9 @@
 import React from 'react';
 
+
+export function VerifiedBadge({ labels }: { labels: string[] }) {
+
+  if (!labels || labels.length === 0) return null;
   return (
     <div className='flex gap-2 items-center'>;
       {labels && labels.map(label => (;
@@ -36,6 +40,11 @@ export function VerifiedBadge({ labels }: { labels: string[] }) {
       ))}
     </div>;
   );
+}
+
+
+}
+
 export /**
  * VerifiedBadge - Function description
  */

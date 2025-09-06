@@ -1,3 +1,9 @@
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+
+
+
+
 
 
 origin/main
@@ -369,6 +375,9 @@ const aiServices: Service[] = [
     summary: 'Comprehensive AI solutions, intelligent decision making, and strategic insights.'
     link: 'https://ziontechgroup.com/ai-services'}
 ];
+export default function Services(): React.JSX.Element {
+
+export default function Services(): React.JSX.Element {;
   const Section = ({ title, items, color }: { title: string; items: Service[]; color: string }) => (
     <section style={{ maxWidth: 1400, margin: '0 auto', padding: '32px 20px', }}>
       <div style={{
@@ -415,7 +424,58 @@ const aiServices: Service[] = [
     </section>;
   );
   return (
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
 
+export default function Services() {
+            </div>
+          </div>
+        </div>
+      </section>
+      <Section title="Micro SaaS Products" items={microSaaS} color="#3b82f6" />
+      <Section title="AI Services & Platforms" items={aiServices} color="#8b5cf6" />
+      <Section title="IT & Cloud Services" items={itServices} color="#22c55e" />
+      {/* CTA Section */}
+      <section style={{ 
+        maxWidth: 1400, margin: '0 auto', padding: '60px 20px',
+        textAlign: 'center', background: 'white', marginTop: 40,
+        borderRadius: 24, boxShadow: '0 4px 24px rgba(0,0,0,0.06)'
+      }}>
+        <h2 style={{ 
+          fontSize: 32, fontWeight: 700, marginBottom: 16,
+          color: '#1e293b'
+        }}>Ready to Get Started?</h2>
+        <p style={{ 
+          fontSize: 18, color: '#64748b', marginBottom: 32,
+          maxWidth: 600, margin: '0 auto 32px auto'
+        }}>
+          Contact our experts to discuss your project requirements and discover 
+          how our innovative solutions can drive your business forward.
+        </p>
+        <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
+          <Link href="/contact" style={{
+            display: 'inline-block', 
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', 
+            color: 'white', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            transition: 'all 0.3s ease'
+          }}>Request a Quote</Link>
+          <a href="tel:+13024640950" style={{
+            display: 'inline-block', 
+            background: 'rgba(34, 197, 94, 0.1)', 
+            color: '#22c55e', padding: '16px 32px', borderRadius: 12, 
+            fontWeight: 700, textDecoration: 'none', fontSize: 16,
+            border: '2px solid #22c55e', transition: 'all 0.3s ease'
+          }}>Call +1 302 464 0950</a>
+        </div>
+      </section>
+    </main>
+  );
+}
+    description: "80+ cutting-edge AI solutions including machine learning, computer vision, natural language processing, quantum AI, and advanced analytics",
+    icon: Brain,
+export default function Services() {;
+  const [isLoaded, setIsLoaded] = useState(false);
 
   }, []);
 
@@ -579,6 +639,8 @@ export default function Services() {
                   </p>;
                 </motion && motion.div>;
               ))}
+
+
 import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../components/Header';
@@ -651,10 +713,95 @@ import Footer from '../components/Footer';
     return colors[color as keyof typeof colors] || colors.blue
   };
 
+      id: 'micro-saas',
+      title: 'Micro SaaS Development',
+      description: 'Focused software solutions that address specific business needs with minimal complexity.',
+      category: 'Micro SaaS',
+      features: ['Rapid Development', 'User-friendly Design', 'API Integration', 'Scalable Architecture', 'Multi-tenant Support', 'Analytics Dashboard'],
+      pricing: {
+        basic: 2999,
+        pro: 7999,
+        enterprise: 19999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity Solutions',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      category: 'Security',
+      features: ['Threat Detection', 'Vulnerability Assessment', 'Penetration Testing', 'Security Audits', 'Compliance Management', 'Incident Response'],
+      pricing: {
+        basic: 1499,
+        pro: 3999,
+        enterprise: 9999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+      id: 'data-analytics',
+      title: 'Data Analytics & BI',
+      description: 'Transform your data into actionable insights with advanced analytics and business intelligence.',
+      category: 'Analytics',
+      features: ['Data Visualization', 'Predictive Modeling', 'Real-time Dashboards', 'ETL Processes', 'Machine Learning', 'Custom Reports'],
+      pricing: {
+        basic: 2499,
+        pro: 5999,
+        enterprise: 12999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    },
+    {
+      id: 'blockchain',
+      title: 'Blockchain Solutions',
+      description: 'Cutting-edge blockchain technology for secure, transparent, and decentralized applications.',
+      category: 'Blockchain',
+      features: ['Smart Contracts', 'DeFi Protocols', 'NFT Marketplaces', 'Token Development', 'DApp Development', 'Blockchain Consulting'],
+      pricing: {
+        basic: 4999,
+        pro: 12999,
+        enterprise: 29999
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
+  const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
+
   return (
     <>
       <Head>
         <title>Our Services - Zion Tech Group</title>
+      <div className="min-h-screen bg-slate-950 text-white flex flex-col items-center justify-center py-12">
+        <main className="text-center max-w-4xl px-4">
+          <h1 className="text-5xl font-bold mb-6 gradient-text">Our Advanced Services</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            At Zion Tech Group, we offer a comprehensive suite of IT and AI services designed to propel your business forward.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="card">
+              <h3 className="text-2xl font-semibold mb-3">AI & Machine Learning</h3>
+              <p className="text-gray-400">
+                Harness the power of artificial intelligence for automation, data analysis, and intelligent decision-making.
+
+
+
+
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
 
@@ -785,6 +932,10 @@ export default function Services() {;
                 Scalable and secure cloud infrastructure, migration, and management services.
               </p>
             </div>
+
+
+
+
           </section>
           {/* Service Categories */}
           <section className='py-16 px-4' role='main'>
@@ -1111,6 +1262,98 @@ function Services() {
                   Get a Quote;
                 </Link>;
                 <a
+          </div>
+        </section>
+        {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                  <div className="mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4 flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">{index + 1}</span>
+                    </div>
+                    <h3 className="text-2xl font-semibold mb-3 text-white">{service.title}</h3>
+                    <p className="text-gray-300 mb-4">{service.description}</p>
+                    <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
+                      {service.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </span>
+                  </div>
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-blue-400 mb-3 uppercase tracking-wide">Key Features</h4>
+                    <ul className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center text-gray-300">
+                          <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                          {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </li>
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    </ul>
+                  </div>
+                  {service.pricing && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-green-400 mb-3 uppercase tracking-wide">Pricing</h4>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-300">Basic:</span>
+                          <span className="text-white">${service.pricing.basic.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-300">Pro:</span>
+                          <span className="text-white">${service.pricing.pro.toLocaleString()}</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-300">Enterprise:</span>
+                          <span className="text-white">${service.pricing.enterprise.toLocaleString()}</span>
+                        </div>
+                      </div>
+                    </div>
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                    Get Started
+                  </button>
+                </div>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="py-20 bg-slate-900/50">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              Let's discuss your project and find the perfect solution for your business needs.
+
+
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link href="/contact" className="btn-primary">
@@ -1126,6 +1369,8 @@ function Services() {
       <Footer />
     </>
   );
+}
+}
                       
                       <p className="text-slate-300 mb-6">
                         {category.description}
@@ -1264,6 +1509,9 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
         </main>
       </ErrorBoundary>
     </>
+}
+
+  )
 }
 
 

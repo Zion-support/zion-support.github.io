@@ -1,3 +1,18 @@
+export interface CustomerTicket {
+export interface CustomerTicket {;
+  id: string;
+  customerId: string;
+  subject: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'urgent';
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
+  category: string;
+  assignedTo?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  resolvedAt?: Date;
+  customerSatisfaction?: number;
+  tags: string[];
 
   attachments: string[],
   conversation_history: CustomerMessage[];
@@ -5,6 +20,7 @@
   attachments: string[],
   conversation_history: CustomerMessage[];
 }
+export interface CustomerMessage {
   id: string;
   ticket_id: string;
   sender_id: string;
@@ -16,6 +32,7 @@
   intent: string,
   confidence: number;
 }
+export interface CustomerProfile {
   id: string;
   email: string;
   name: string;
@@ -26,10 +43,21 @@
   customer_satisfaction: number;
   last_contact: Date;
   preferences: {
+  tags: string[];
+
+}
+export interface AIResponse {
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
+  totalTickets: number;
+  openTickets: number;
+  resolvedTickets: number;
+export interface CustomerServiceMetrics {
+  total_tickets: number;
+  open_tickets: number;
+  resolved_tickets: number;
   averageResolutionTime: number;
   customerSatisfaction: number;
 
@@ -42,7 +70,7 @@
     customerSatisfaction: number
   }>
 }
-export interface CustomerServiceRequest {
+  customerId: string;
   customer_id: string;
   subject: string;
   description: string;
@@ -51,10 +79,22 @@ export interface CustomerServiceRequest {
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
 }
+  ticketId: string;
+export interface CustomerServiceResponse {
+  ticket_id: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
 
+export class AICustomerServiceService {
+
+export class AICustomerServiceService {;
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
@@ -164,6 +204,26 @@ export interface CustomerServiceRequest {
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
+  id: string,;
+  customerId: string,;
+  subject: string,;
+  description: string,;
+  priority: 'low' | 'medium' | 'high' | 'urgent',;
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
+  category: string,;
+  assignedTo?: string,;
+  createdAt: Date,;
+  updatedAt: Date,;
+  resolvedAt?: Date,;
+  customerSatisfaction?: number,;
+  tags: string[],;
+  attachments: string[],;
+  conversationHistory: CustomerMessage[];
+
+export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
+
+  next_steps: string[],
+  assigned_agent?: string;
 }
 export class AICustomerServiceService {
   private api_key: string;

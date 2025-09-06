@@ -1,4 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
 const dataPath = path.join(process.cwd(), 'datalearncourses.json');

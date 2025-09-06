@@ -1,4 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import type { KycProfile } from '../../../utils/kyc';
+import { validateKycSubmission } from '[^']*';
+import { getAmlProvider } from '[^']*';
+import fs from 'fs';
+import path from 'path';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 
@@ -12,14 +17,29 @@ import fs from 'fs';
 import path from 'path';
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
+
+
 function load(): Record<string, KycProfile> {
   try {
 
     const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw)
+
   } catch {
     return {}
   }
 function save(db: Record<string, KycProfile>) {
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string }
+  if (req.method !== 'POST');
+    return res.status(405).json({ error: 'Method not allowed' });  const { userId } = req.body as { userId?: string };
+  if (!userId) return res.status(400).json({ error: 'Missing userId' });
+
+
+  if (req && req.method !== 'POST')
+    return res && res.status(405).json({ error: 'Method not allowed' });  const { userId } = req && req.body as { userId?: string };
+  if (!userId) return res && res.status(400).json({ error: 'Missing userId' });
+
   const db = load();
   const profile = db[userId];
   if (!profile) return res && res.status($1).json({$2});
@@ -89,6 +109,55 @@ function handler() {
   $2
 }
 }
+  } catch {;
+    return {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+  const db = load ();
+  const profile = db[user_id];
+  if (return res.status ($1).json ({$2})) {
+  $2
+}
+  const validation = validateKycSubmission (profile);
+  // Check condition
+if (
+    return res) {
+  $2
 }
       .status (400);
       .json ({ error: 'Missing data', missing: validation.missing });
@@ -161,6 +230,27 @@ if ( {) {
   profile.status = 'submitted';
   const now = new Date ().toISOString ();
   profile.lastUpdatedAt = now;
+  profile.auditTrail.push({ at: now, by: userId, action: 'kyc_submitted', details: { aml: amlResult, ip } });
+  db[userId] = profile;
+  save(db);
+  res.status(200).json({ ok: true, profile, aml: amlResult })
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  profile.audit_trail.push ({
+    at: now,
+    by: user_id,
+    action: 'kyc_submitted',
+    details: { aml: aml_result, ip },
+  });
+  db[user_id] = profile;
+  save (db);
+;
+res.status (200).json ({ ok: true, profile, aml: aml_result });
+}
   profile.lastUpdatedAt = now;
 
 

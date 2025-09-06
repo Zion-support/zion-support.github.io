@@ -21,6 +21,13 @@ import {
   Globe,
   Lock,
   BarChart3,
+  Brain;
+  Monitor
+  Search
+  Shield
+  Mail
+  Share2
+  Check
 
 
 
@@ -429,8 +436,14 @@ import {
                 className="card-hover border-gradient-blue text-center"
               </Card>
             ))}
-      {/* Services Grid */}
 
+
+
+      {/* Services Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -569,6 +582,7 @@ import {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
+
               </div>
             </Card>
           </div>

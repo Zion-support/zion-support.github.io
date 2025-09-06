@@ -1,6 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+} from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -34,9 +36,10 @@ function writeGrant(record: GrantApplication) {
   ensureDir(),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
   ensureDir()
-
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+
+
   if (!id) {
     res.status(400).json({ error: 'Missing id' });
     return

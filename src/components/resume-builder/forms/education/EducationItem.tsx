@@ -7,7 +7,3 @@ export function EducationItem({
   onDelete
 }: EducationItemProps) {
 
-            <Button
-              variant='ghost'
-              size='icon'
-              onClick={() => onEdit(education)}

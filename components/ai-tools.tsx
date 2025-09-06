@@ -8,11 +8,28 @@
   Star,
   ExternalLink,
   CheckCircle,
+  Brain;
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
 
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
+        'Advanced reasoning & analysis'
+        'Web browsing & real-time info'
+        'Plugin ecosystem access'
+        'Code generation & debugging'
+        'Professional writing assistance'
+      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
+
+
+
+
         'Advanced reasoning & analysis',
         'Web browsing & real-time info',
         'Plugin ecosystem access',
@@ -176,8 +193,14 @@
               </Card>
 
             ))}
-      {/* AI Tools Grid */}
 
+
+
+      {/* AI Tools Grid */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -429,8 +452,14 @@
               </Card>
 
             ))}
-      {/* AI Implementation Guide */}
 
+
+
+      {/* AI Implementation Guide */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
 
 
@@ -556,3 +585,4 @@
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
+

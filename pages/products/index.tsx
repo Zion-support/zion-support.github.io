@@ -1,3 +1,38 @@
+import type { NextPage } from 'next';
+
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+
+
+
+import React from 'react';
+import { NextPage } from 'next';
+import Head from 'next/head';
+ursor/integrate-build-improve-and-re-verify-8f7d
+
+origin/main
+origin/automation-improvements-final
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -288,6 +323,21 @@ const ProductsIndex: NextPage = () => {
                 </button>;
                 <Link
                   href="/contact"
+
+
+export default Index;
+import type { NextPage } from 'next',
+import Head from 'next/head',
+const Index: NextPage = () => {
+  return (
+
+
+
+
+    <div>
+      <Head>
+        <title>Index - Zion Tech Solutions</title>
+        <meta name='description' content='Index page' />
       </Head>
 ursor/integrate-build-improve-and-re-verify-8f7d
 
@@ -304,6 +354,14 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 };
 
 export default Index;
+}
+export default Index;
+
+},
+export default Index,
+
+
+
         {/* Products Grid */}
         <section className="py - 16">;
           <div className="container mx - auto px - 4">;
@@ -412,3 +470,6 @@ export default Index;
       </div>;
     </Layout>);
 }
+},
+export default Index,
+

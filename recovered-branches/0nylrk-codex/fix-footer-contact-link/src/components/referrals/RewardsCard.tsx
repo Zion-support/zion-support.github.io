@@ -1,8 +1,19 @@
 
+import {
+  Card
+  CardContent
+  CardDescription
+  CardHeader
+  CardTitle
+} from "@/components/ui/card";
+import { ReferralReward } from "@/types/referrals";
+
+
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {ReferralReward} from "@/types/referrals";
 import {formatDate} from "@/utils/referralUtils";
 import {BadgeDollarSign, Badge} from "lucide-react";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { ReferralReward } from "@/types/referrals",
 import { formatDate } from "@/utils/referralUtils",
@@ -50,6 +61,9 @@ interface RewardsCardProps {
               key={reward.id}
               className={`flex justify-between items-start ${
                 index !== rewards.length - 1 ? "border-b pb-3" : ""
+
+  )
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { ReferralReward } from "@/types/referrals",;
 import { formatDate } from "@/utils/referralUtils",;
@@ -167,3 +181,5 @@ if ( {) {
               </div>;
             </div>;
           ))}
+
+}

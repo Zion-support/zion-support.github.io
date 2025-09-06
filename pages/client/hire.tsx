@@ -20,6 +20,43 @@ export default function ClientHirePage() {;
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false);
+
+  async function sendOffer() {;
+    setLoading(true);
+    setResult(null);
+    const paymentTerms =;
+      termsType === 'hourly';
+
+        ? { type: 'hourly', hourlyRateUsd }
+        : termsType === 'fixed';
+          ? { type: 'fixed', fixedAmountUsd }
+
+          : { type: 'milestone', milestones: [] };
+
+    const res = await fetch('/api/marketplace/offers', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/json',;
+        'x-demo-user-role': 'client',;
+        'x-demo-user-id': 'client-1',;
+      },;
+      body: JSON && JSON.stringify({;
+        talentSlug,;
+        startDateIso,;
+        scopeSummary,;
+        paymentTerms,;
+        agreementUrl,;
+      }),;
+
+    });
+    const json = await res && res.json();
+    setLoading(false);
+
+    if (!json && json.ok) {;
+      alert(json && json.error || 'Failed to send offer');
+    } else {;
+      setResult(json && json.offer);
+
       setShowFeedback(true);    }
       termsType === "hourly"
         ? { type: "hourly", hourlyRateUsd }
@@ -50,10 +87,17 @@ export default function ClientHirePage() {
   const [loading, setLoading] = useState(false),
   const [result, setResult] = useState<any | null>(null),
   const [showFeedback, setShowFeedback] = useState(false),
+
   async function sendOffer() {
     setLoading(true),
     setResult(null),
     const paymentTerms =
+      termsType === "hourly"
+        ? { type: "hourly", hourlyRateUsd   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
   }
 }
         : termsType === "fixed";
@@ -85,6 +129,9 @@ export default function ClientHirePage() {
       <h1 className="text-xl font-semibold">Hire Talent</h1>
 
       <div className="space-y-4 border rounded p-4">
+
+
+
         <div>
           <label className='block text-sm font-medium'>
             Agreement URL (optional)
@@ -111,6 +158,9 @@ export default function ClientHirePage() {
             <option value="milestone">Milestone</option>
           </select>
         </div>
+
+
+
           <div>
             <label className="block text-sm font-medium">Hourly rate (USD)</label>
             <input type="number" value={hourlyRateUsd} onChange={(e) => setHourlyRateUsd(Number(e.target.value))} className="w-full border rounded px-3 py-2" />
@@ -172,6 +222,7 @@ export default function ClientHirePage() {
         </div>
       </div>
       {result && (
+
         <div className="border rounded p-4 bg-emerald-50">
           <div className="font-medium">Offer sent</div>
           <div className="text-sm">Offer ID: {result.id}</div>

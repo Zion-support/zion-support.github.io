@@ -49,6 +49,13 @@ export function EnhancedSearchInput({
   const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
     logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
     onChange(suggestionObj.text),
+      if (suggestionObj.id) {
+        router.push(`/marketplace/listing/${suggestionObj.id}`)
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {
+        router.push(suggestionObj.slug)
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {
+        router.push(`/blog/${suggestionObj.slug}`)
+      } else {
       }
     }
     document.addEventListener ("mousedown", handleClickOutside);

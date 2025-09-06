@@ -1,3 +1,8 @@
+
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
+
+
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -55,5 +60,8 @@ if (return, ) {
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
+
+
+
   }
 }

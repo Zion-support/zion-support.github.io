@@ -1,3 +1,15 @@
+export default function GlobalSearchBar() {
+
+export default function GlobalSearchBar() {;
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    if (!query) {
+      setSuggestions([]);
+      return;      return
 
 
 class ErrorBoundary extends React.Component {
@@ -260,6 +272,22 @@ export default function GlobalSearchBar() {
                   onClick={() => {
                     setQuery(s);
                     setOpen(false);
+
+
+                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >
+
+
+                >
+
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
+                >;
+                  {s}
+                </button>;
+              </li>;
+            ))}
+          </ul>;
+        </div>;
+      )}
 
 
                   {s}

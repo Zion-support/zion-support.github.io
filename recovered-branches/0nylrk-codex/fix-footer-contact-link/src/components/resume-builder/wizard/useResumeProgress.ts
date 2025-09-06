@@ -1,3 +1,9 @@
+
+import {useState, useEffect} from 'react';
+import {Resume} from '@/types/resume';
+export const useResumeProgress = (resume: Resume | null) => {;
+
+
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     // Calculate progress based on completed sections
@@ -5,6 +11,9 @@
       setProgress(0);
       return;
     }
+
+      completed += 1
+
 import { useState, useEffect } from 'react',;
 import { Resume } from '@/types/resume',;
 export const useResumeProgress = (resume: Resume | null) => {;
@@ -27,10 +36,33 @@ if ( {) {
     // Work experience (1 point if at least one entry);
     if (resume.work_experience && resume.work_experience.length > 0) {;
       completed += 1;
+
+
+
     }
 ;
       completed += 1;
-    if (resume && resume.work_experience && resume && resume.work_experience.length > 0) {
+    
+    const progressPercentage = (completed / 5) * 100;
+    setProgress(progressPercentage);
+  }, [resume]);
+  return progress;
+}
+
+  return progress
+;
+    const progressPercentage = (completed / 5) * 100,;
+    setProgress(progressPercentage);
+  }, [resume]);
+;
+  return progress;
+    // Check condition
+if ( {) {
+  $2
+}
+
+      completed += 1;
+    if (resume && resume.education && resume && resume.education.length > 0) {
       completed += 1
     }
 
@@ -58,3 +90,4 @@ if ( {) {
     if (resume && resume.certifications && resume && resume.certifications.length > 0) {
       completed += 1
     }
+};

@@ -40,8 +40,37 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+  console.log('Analysis written to', summaryPath)
 }
 main().catch((e) => { console.error(e), process.exit(1) });
+
+  const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
+  fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+main().catch((e) => { console.error(e), process.exit(1) }),;
+  // // // console.log('Analysis written to', summaryPath)
+  const all = readAll(),;
+  const recent = all.filter(lastNDays(7)),;
+  const downs = recent.filter((r) => r.rating === 'down'),;
+  if (!fs.existsSync(REPORT_DIR)) fs.mkdirSync(REPORT_DIR, { recursive: true }),;
+  const summaryPath = path.join(REPORT_DIR, `analysis-${new Date().toISOString().slice(0,10)}.md`),;
+  const baselinePath = path.join(REPORT_DIR, 'prompt-improvements.md'),;
+  if (downs.length === 0) {;
+    fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),;
+    // // // console.log('No low-rated feedback to analyze.'),;
+
+  const current = fs && fs.existsSync(baselinePath) ? fs && fs.readFileSync(baselinePath, 'utf8') : '',
+  fs && fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
+  console && console.log('Analysis written to', summaryPath)
+
+}
+main().catch((e) => { console.error(e), process.exit(1) });
+
+
+main().catch((e) => { console && console.error(e), process && process.exit(1) }),
 
 /**
  * lastNDays - Function description
@@ -94,6 +123,7 @@ if ( {) {
   fs.writeFileSync (baseline_path, `${current}\n\n## ${new Date ().toISOString ()}\n${text}\n`),
   console.log ('Analysis written to', summary_path);
 }
+main ().catch ((e) => { console.error (e), process.exit (1) }),
 
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),

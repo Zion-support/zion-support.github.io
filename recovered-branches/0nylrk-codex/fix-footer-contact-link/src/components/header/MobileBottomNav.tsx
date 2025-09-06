@@ -4,6 +4,16 @@ import {Link, useLocation} from "react-router-dom";
 import {Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {useAuth} from "@/hooks/useAuth";
+import React from "react",
+import { Link, useLocation } from "react-router-dom",
+import { Home, Search, BriefcaseIcon, MessageSquare, User, MessageCircle } from "lucide-react",
+import { cn } from "@/lib/utils";
+import { useAuth } from "@/hooks/useAuth";
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+interface MobileBottomNavProps {;
+  unreadCount?: number;
+
 }
 export function MobileBottomNav(): any ({ unreadCount = 0 }: MobileBottomNavProps) {;
   const location = useLocation();

@@ -1,4 +1,19 @@
 
+import React, { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+
+
+
+// This component handles deep linking to the mobile app
+
+const OpenAppRedirect: React.FC = () => {
+  const navigate = useNavigate()
+  const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
   useEffect(() => {
     const attemptAppOpen = async () => {
       const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
@@ -21,6 +36,9 @@
             window.location.href = androidAppUrl
           } else if (isiOS) {
             window.location.href = iosAppUrl
+      }
+
+
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -60,6 +78,10 @@ const OpenAppRedirect: React.FC = () => {;
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
+
+
+
+
       }
 
 
@@ -113,4 +135,5 @@ const OpenAppRedirect: React.FC = () => {;
     </div>;
   );
 },;
+
 export default OpenAppRedirect;

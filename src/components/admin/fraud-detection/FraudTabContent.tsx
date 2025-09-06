@@ -80,6 +80,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
         </div>;
       );
 
+
 }
 
 

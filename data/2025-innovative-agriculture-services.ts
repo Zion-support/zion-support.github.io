@@ -2,6 +2,23 @@
   rating: number;
 
   reviews: number;
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',};
+
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com', }
+;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+
+
+
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -29,6 +46,25 @@
       'Compliance management',
     ],
     popular: true,
+    color: 'from - red - 600 to - pink - 700',
+    text_color: 'text - red - 400',
+    link: 'https://ziontechgroup.com / ai - powered - food - safety - monitoring',
+    market_position:;
+      'Leading AI - powered food safety monitoring platform for contamination detection and quality control.',
+    target_audience:;
+      'Food producers, Food processors, Restaurants, Food safety inspectors',
+    trial_days: 30,
+    setup_time: '2 weeks',
+    category: 'Agriculture & Food Technology',
+    real_service: true,
+    technology: [;
+      'AI / ML, Food safety, Contamination detection, Quality monitoring, Machine learning',
+    ],
+    integrations: [;
+      'Food safety systems, Quality control tools, Compliance databases, Analytics platforms',
+    ],
+    use_cases: [;
+
       'Contamination detection, Quality monitoring, Safety compliance, Risk assessment',
     ],
     roi: 'Reduce food safety incidents by 80% and improve compliance by 90%',

@@ -1,4 +1,7 @@
 
+
+
+
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {format} from "date-fns";
@@ -29,6 +32,9 @@ import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSqu
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
+
+
+
 import { useState, useEffect } from "react",
 import { useParams, useNavigate, Link } from "react-router-dom",
 import { format } from "date-fns",
@@ -169,6 +175,9 @@ if (throw error) {
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+
+
+
       }
       setIsLoading(false)
     }
@@ -742,6 +751,7 @@ if ( {) {
                       )}
                     </div>;
                   </div>;
+
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>

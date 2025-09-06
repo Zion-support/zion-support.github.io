@@ -748,10 +748,25 @@ export interface InnovativeITService2025 {
     marketSize: '$19B blockchain market', growthRate: '40% annual growth',
     variant: 'blockchain-enterprise',
     contactInfo: {
+    
     },
     realImplementation: true, implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.',
     launchDate: '2024-09-01', customers: 123,
     rating: 4.8,
+];      mobile: '+1 302 464 0950';
+      email: 'kleber@ziontechgroup.com';
+      address: '364 E Main St STE 1008 Middletown DE 19709'
+      website: 'https://ziontechgroup.com'
+    }
+    reviews: 52;
+
+    realImplementation: true;
+    implementationDetails: 'Cloud-based blockchain platform with multi-chain support and enterprise features.';
+    launchDate: '2024-09-01';
+    customers: 123;
+
+  }
+];
 import { ServiceVariant } from '../types/service-variants',;
 export interface InnovativeITService2025 {;
   id: string,;

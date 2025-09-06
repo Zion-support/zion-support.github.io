@@ -31,3 +31,16 @@ export default function Accessibility({ }: AccessibilityProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+
+
+
+:src.pages.disabled/Accessibility.jsx
+}
+}
+}
+}
+}
+}
+
+
+

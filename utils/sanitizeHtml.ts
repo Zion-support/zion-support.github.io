@@ -1,3 +1,6 @@
+export function sanitizeHtml(html: string): string {
+export function sanitizeHtml(html: string): string {;
+  let sanitized = html.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '');
 
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
   sanitized = sanitized.replace(/javascript:/gi, '');

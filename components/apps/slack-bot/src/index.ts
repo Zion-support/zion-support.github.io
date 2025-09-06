@@ -81,6 +81,11 @@ function helpText(): string {
   // eslint-disable-next-line no-console
 })();
 
+  console.log(`⚡️ Zion Slack bot running on port ${port}`)
+})();
+
+  console.log(`⚡️ Zion Slack bot running on port ${port}`);
+})();
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
       const data = (await res.json ()) as any;

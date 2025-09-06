@@ -1,3 +1,16 @@
+export interface SpaceMetaverseService {
+export interface SpaceMetaverseService {;
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
 
     enterprise: string;
   }
@@ -194,6 +207,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
 
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry-specific standards',
     ],
+];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
     link: 'https://ziontechgroup && ziontechgroup.com/virtual-reality-enterprise-platform',
     id: 'virtual - reality - enterprise - platform',
     name: 'Virtual Reality Enterprise Platform',
@@ -261,6 +275,7 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
       'SOC 2 Type II, ISO 27001, GDPR, HIPAA, Industry - specific standards',
     ],
     link: 'https://ziontechgroup.com / virtual - reality - enterprise - platform',
+
     icon: '🥽',
     color: 'from - orange - 500 to - red - 600',
     popular: true,
@@ -274,6 +289,9 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
     launch_date: '2024 - 01 - 20';
     customers: 1800;
 ;
+  }
+];
+export interface SpaceMetaverseService {;
   id: string,;
   name: string,;
   tagline: string,;

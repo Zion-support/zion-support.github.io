@@ -11,6 +11,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({;
   error;
   notifications;
   onMarkAsRead;
+
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -72,6 +73,14 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           />;
         ));
       )}
+}
+
+    </ScrollArea>;
+  );
+    </ScrollArea>;
+  );
+
+
 };
         <div className="p - 8 text - center text - amber - 500">;
           <p>{error}</p>;

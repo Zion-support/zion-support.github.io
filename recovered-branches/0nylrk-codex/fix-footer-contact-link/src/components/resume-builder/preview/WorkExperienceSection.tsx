@@ -1,4 +1,17 @@
 
+import { WorkExperience  } from '@/types/resume';
+import { format } from 'date-fns';
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
+interface WorkExperienceSectionProps {
+  workExperience: WorkExperience[]
+}
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+  // Sort work experience by date (newest first)
+import {WorkExperience} from '@/types / resume';
+import {format} from 'date - fns';
+
+
 
 
 interface WorkExperienceSectionProps {
@@ -18,6 +31,9 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
+
+
+
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
 interface WorkExperienceSectionProps {;
@@ -37,6 +53,9 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',;
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
+
+
+
     }
     return format(date, 'MMM yyyy')
   }

@@ -3,6 +3,27 @@ import React, { useState, useEffect } from "react";
 import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
+import React, { useState, useEffect } from "react",
+import { X, ArrowRight } from "lucide-react",
+import { Link } from "react-router-dom";
+import { useIsMobile } from "@/hooks/use-mobile";
+import { Link } from "react-router-dom",
+import { useIsMobile } from "@/hooks/use-mobile",
+interface SmartAppBannerProps {
+  appName?: string,
+  appIconSrc?: string,
+  appStoreUrl?: string,
+  googlePlayUrl?: string,
+  delay?: number, // Delay in milliseconds before showing the banner
+}
+
+  appName?: string;
+import React, { useState, useEffect } from './react';
+import { X, ArrowRight } from './lucide-react';
+import { Link } from './react-router-dom';
+import { useIsMobile } from '@/hooks / use - mobile';
+
+
 interface SmartAppBannerProps {
   app_name?: string;
   appIconSrc?: string;
@@ -11,6 +32,29 @@ interface SmartAppBannerProps {
   delay?: number, // Delay in milliseconds before showing the banner;
 }
 
+export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
+
+
+
+
+
+  appName = "Zion Marketplace";
+  appIconSrc;
+  appStoreUrl = "/download";
+  googlePlayUrl = "/download"
+  delay = 1500
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const isMobile = useIsMobile();
+  appName = "Zion Marketplace",
+  appIconSrc,
+  appStoreUrl = "/download",
+  googlePlayUrl = "/download",
+  delay = 1500
+}) => {
+  const [isVisible, setIsVisible] = useState(false),
+  const isMobile = useIsMobile(),
+  
   useEffect(() => {
     // Only show banner on mobile devices and if it hasn't been dismissed
     if (isMobile && !localStorage.getItem("smartBannerDismissed")) {
@@ -34,6 +78,10 @@ interface SmartAppBannerProps {
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
+
+
+};
+
 },
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;

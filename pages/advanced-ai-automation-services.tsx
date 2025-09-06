@@ -1,3 +1,15 @@
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon
+ } from 'lucide-react';
+import Layout from '../components/layout/Layout';
 
 
 class ErrorBoundary extends React.Component {
@@ -14,6 +26,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+
+import Layout from '../components/layout/Layout';
+
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
 
   website: 'https://ziontechgroup.com'
 }
@@ -124,6 +144,146 @@ const testimonials = [
     name: 'David Kim',
     role: 'Security Manager, SecureNet Corp.',
     company: 'SecureNet Corp.',
+    features: ['Pipeline ManagementQuality AssuranceGovernance Automation']
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,;
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,;
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,;
+  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon,;
+  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon,;
+  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
+} from 'lucide-react',;
+import Layout from '../components/layout/Layout';
+import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
+const contactInfo = {;
+  mobile: '+1 302 464 0950';
+  email: 'kleber@ziontechgroup.com';
+  address: '364 E Main St STE 1008 Middletown DE 19709';
+  website: 'https://ziontechgroup.com';
+};
+const heroStats = [;
+  { label: 'AI Services Delivered', value: '200+', icon: <Brain className="w-5 h-5" /> },;
+  { label: 'Happy AI Clients', value: '500+', icon: <Users className="w-5 h-5" /> },;
+  { label: 'AI Success Rate', value: '99.8%', icon: <Award className="w-5 h-5" /> },;
+  { label: 'AI ROI Average', value: '500%', icon: <TrendingUp className="w-5 h-5" />   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const serviceCategories = [;
+  {;
+    title: 'AI Development Tools';
+    description: 'Advanced AI-powered development and testing automation';
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Development Tools');
+    icon: Code;
+    color: 'from-emerald-500 to-teal-600';
+    features: ['Code Review AutomationAI TestingDevOps Intelligence'];
+  },;
+  {;
+    title: 'AI Testing & Quality Assurance',;
+    description: 'Intelligent testing automation with AI-driven insights',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Testing & Quality Assurance');
+    icon: TestTube,;
+    color: 'from-purple-500 to-indigo-600',;
+    features: ['Test GenerationPerformance TestingQuality Assurance'];
+  },;
+  {;
+    title: 'AI DevOps & Infrastructure',;
+    description: 'Self-managing infrastructure with AI optimization',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI DevOps & Infrastructure');
+    icon: Server,;
+    color: 'from-blue-500 to-indigo-600',;
+    features: ['Infrastructure ManagementDeployment OptimizationPerformance Monitoring'];
+  },;
+  {;
+    title: 'AI Cybersecurity',;
+    description: 'Proactive threat detection and response with AI',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Cybersecurity');
+    icon: SecurityIcon,;
+    color: 'from-red-500 to-pink-600',;
+    features: ['Threat DetectionIncident ResponseSecurity Automation'];
+  },;
+  {;
+    title: 'AI Data Management',;
+    description: 'Intelligent data infrastructure with AI automation',;
+    services: advancedAIAutomationServices2025.filter(s => s.category === 'AI Data Management');
+    icon: Database,;
+    color: 'from-cyan-500 to-blue-600',;
+    features: ['Pipeline ManagementQuality AssuranceGovernance Automation'];
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const heroFeatures = [;
+  {;
+    title: 'AI-Powered Automation';
+    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',;
+    icon: Brain,;
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
+  },;
+  {;
+    title: 'Intelligent Optimization',;
+    description: 'AI-driven optimization that continuously improves performance, security, and efficiency.',;
+    icon: Sparkles,;
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600';
+  },;
+  {;
+    title: 'Autonomous Operations',;
+    description: 'Self-managing systems that operate independently with minimal human intervention.',;
+    icon: Settings,;
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600';
+  },;
+  {;
+    title: 'Predictive Analytics',;
+    description: 'AI-powered insights that predict issues before they occur and optimize window.window.window.performance.',;
+    icon: BarChart3,;
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],;
+const testimonials = [;
+  {;
+    name: 'Dr. Michael Chen';
+    role: 'CTO, TechFlow Solutions',;
+    company: 'TechFlow Solutions',;
+    content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',;
+    rating: 5,;
+    avatar: '👨‍💻';
+  },;
+  {;
+    name: 'Sarah Rodriguez',;
+    role: 'DevOps Director, CloudScale Inc.',;
+    company: 'CloudScale Inc.',;
+    content: 'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',;
+    rating: 5,;
+    avatar: '👩‍💼';
+  },;
+  {;
+    name: 'David Kim',;
+    role: 'Security Manager, SecureNet Corp.',;
+    company: 'SecureNet Corp.',;
+    content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',;
+    rating: 5,;
+    avatar: '👨‍🔒';
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+],
+    color: 'from-cyan-500 to-blue-600',
+
+
 export default function AdvancedAIAutomationServices() {
 
   return (
@@ -182,6 +342,8 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
               Advanced AI Automation Services
@@ -214,6 +376,8 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-cyan-500/30"
+
+
                 >
                   {stat.icon}
                   <span className="text-cyan-400 font-semibold">{stat.value}</span>
@@ -261,6 +425,51 @@ export default function AdvancedAIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className="relative group"
+              >
+                <div className={`${feature.gradient} p-1 rounded-xl`}>
+                  <div className="bg-gray-900 rounded-xl p-6 h-full">
+                    <div className="text-center">
+                      <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
+                        <feature.icon className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                      <p className="text-gray-300">{feature.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+
+
       {/* Services Section */}
 
       <section id="services" className="py-20 bg-black">
@@ -412,6 +621,8 @@ export default function AdvancedAIAutomationServices() {
   }
 }
                       className="relative group"
+
+
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -449,6 +660,8 @@ export default function AdvancedAIAutomationServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
+
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -496,6 +709,13 @@ export default function AdvancedAIAutomationServices() {
   }
 }
             className="text-center mb-16"
+
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}
+
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -511,6 +731,8 @@ export default function AdvancedAIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
+
+
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -524,6 +746,31 @@ export default function AdvancedAIAutomationServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
+
+
+      {/* CTA Section */}
+      <section className='py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20'>;
+        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion&& motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0 && 0.8 }}
+            viewport={{ once: true }}>;
+            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>;
+              Ready to Transform Your Operations with AI Automation?;
+            </h2>;
+            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
+              Join hundreds of organizations that have already revolutionized;
+              their technology operations with our AI automation services;
+            </p>;
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
+              <Link
+                href={`tel:${contactInfo && contactInfo.mobile}`}
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>;
+                <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo && contactInfo.mobile}
+              </Link>;
+              <Link
+
+
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Operations with AI Automation?
@@ -532,6 +779,8 @@ export default function AdvancedAIAutomationServices() {
               Join hundreds of organizations that have already revolutionized their technology operations with our AI automation services
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
+
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -540,6 +789,33 @@ export default function AdvancedAIAutomationServices() {
           </motion.div>
         </div>
       </section>
+    </Layout>;
+);
+
+}
+    </Layout>
+  )
+}
+
+
+                href={`mailto:${contactInfo && contactInfo.email}`}
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-cyan-500/30 hover:bg-white/20 transition-all duration-300'>;
+                <Mail className='mr-2 w-5 h-5' />;
+                Email Us;
+              </Link>;
+            </div>;
+            <div className='mt-8 text-center'>;
+              <p className='text-gray-300 mb-2'>📍 {contactInfo && contactInfo.address}</p>;
+              <p className='text-gray-300'>🌐 {contactInfo && contactInfo.website}</p>            </div>;
+          </motion && motion.div>;
+        </div>;
+      </section>;
+    </Layout>;
+  );
+
+
+  )
+}
                       className='relative group';
                     >;
                       <div className={`${service.color} p - 1 rounded - xl`}>;

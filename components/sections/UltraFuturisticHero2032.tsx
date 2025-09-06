@@ -202,6 +202,8 @@ function UltraFuturisticHero2032() {
               key={i}
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 30';
               style={{
+
+
         {/* Gradient Orbs */}
 
         <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse" />
@@ -241,6 +243,7 @@ function UltraFuturisticHero2032() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             The Future of
@@ -268,10 +271,16 @@ function UltraFuturisticHero2032() {
         </motion && motion.h1>;
 
 
+
+
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+
+          technologies that were once science fiction.
+
+        </motion.p>
 
 
 
@@ -307,6 +316,7 @@ function UltraFuturisticHero2032() {
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+
 
         >
           {heroStats.map((stat, index) => (
@@ -369,6 +379,9 @@ function UltraFuturisticHero2032() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
+        </motion && motion.div>;
+
+
               className='text-center group'
 
 
@@ -390,6 +403,7 @@ function UltraFuturisticHero2032() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
+
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
             Featured Revolutionary Services
@@ -406,11 +420,15 @@ function UltraFuturisticHero2032() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className='group'
+
               >
                 <Link
                   href={service && service.href}
                   className='block relative bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 h-full transform transition-all duration-500 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-500/50'>;
                   <div
+
+
+
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -524,6 +542,8 @@ function UltraFuturisticHero2032() {
           </div>;
         </motion && motion.div>;
       </div>;
+
+
 
 
       {/* Floating Action Button */}
@@ -667,6 +687,7 @@ function UltraFuturisticHero2032() {
 }
         className='fixed bottom-8 right-8 z-50'
 
+
       >
         <Link
           href={`tel:${contactInfo.mobile}`}
@@ -675,3 +696,21 @@ function UltraFuturisticHero2032() {
           <Phone className='w-7 h-7 text-white group-hover:rotate-12 transition-transform' />
         </Link>
       </motion.div>
+  );      >
+        <Link
+          href={`tel:${contactInfo.mobile}`}
+          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
+        >
+          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
+        </Link>
+      </motion.div>
+    </section>
+  )
+}
+    </section>
+  );
+  );
+    </section>
+  );
+
+

@@ -1,4 +1,8 @@
 
+
+
+
+
 import {useState} from "react";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useForm} from "react-hook-form";
@@ -8,6 +12,9 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+
+
+
 import { useState } from "react",
 import { zodResolver } from "@hookform/resolvers/zod",
 import { useForm } from "react-hook-form",
@@ -99,6 +106,9 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                   </div>;
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
+
+
+
             )}
 
           />;
@@ -184,10 +194,33 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
                     }`}
                     className="bg - zion - blue text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple min - h-[120px]";
                     {...field}
+}
+                  />;
+                </FormControl>;
+
+          />;
+
+          <Button
+            type="submit"
+            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
+
+
+
+                <FormMessage className="text - red - 400" />;
+              </FormItem>)}
+          />;
+          <Button;
+            type="submit";
+            className="w - full bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white";
+          >;
             Complete Profile;
           </Button>;
         </form>;
       </Form>;
+
+
+
+
 }
     </div>);
 }

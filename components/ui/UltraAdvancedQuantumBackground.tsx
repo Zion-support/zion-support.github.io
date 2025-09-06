@@ -342,6 +342,9 @@ if (return) {
           ease: 'easeInOut'
           delay: 2,        }}
 
+
+
+
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -405,6 +408,12 @@ export default UltraAdvancedQuantumBackground;
     </div>);
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
+            delay: 2
+          }}
+        />
+      </div>
+    </div>
+  );
             delay: 2;
           }}
         />;
@@ -415,5 +424,9 @@ export default UltraAdvancedQuantumBackground;            ease: "linear",
 export default UltraAdvancedQuantumBackground);
 }
 ;
+        />
+      </div>
+    </div>
 
+      {/* Content Layer */}
 

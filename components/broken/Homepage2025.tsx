@@ -1,3 +1,6 @@
+ 
+
+
 };
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
@@ -147,8 +150,17 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) )
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>)
 }export default Homepage2025;export default Homepage2025;
+}export default Homepage2025;export default Homepage2025;
+
+
 }
 }
 }
 }
 }
+{
+  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
+}].map ( (feature, index) => (<motion.div </p> </motion.div>) );
+}</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
+}export default Homepage2025;export default Homepage2025;
+;

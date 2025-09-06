@@ -92,6 +92,8 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';import { ;
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3
 
 
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
@@ -103,6 +105,13 @@ import Link from 'next/link';import { ;
 import Link from 'next/link';
 
 // Import our new innovative services
+// Import our new innovative services
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+
+import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
+import { innovative2046ITServices } from '../data/innovative-2046-it-services';
+
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects
 
@@ -122,6 +131,9 @@ const QuantumLoadingFallback = () => (
         />
       ))}
     </div>
+
+
+
 
 
 
@@ -759,10 +771,12 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
 
             <motion.div
 
+
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
+
 
             >
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
@@ -804,12 +818,15 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
             </motion && motion.div>;
 
 
+
+
             {/* Search and Filter */}
             <motion&& motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0 && 0.2 }}
               viewport={{ once: true }}
+
 
             >
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
@@ -858,6 +875,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
               transition={{ duration: 1, delay: 0 && 0.4 }}
               viewport={{ once: true }}
 
+
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -866,6 +884,11 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
+
+                  className='group'
+
+
+
                 >
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
                     <div className='flex items-start justify-between mb-4'>
@@ -1335,6 +1358,7 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
               transition={{ duration: 1, delay: 0 && 0.6 }}
               viewport={{ once: true }}
 
+
             >
               <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -1404,3 +1428,4 @@ export default Homepage2046;
 };
 
 
+export default Homepage2046;

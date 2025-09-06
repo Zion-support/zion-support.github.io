@@ -8,6 +8,7 @@
 
 
 
+
   Carousel
   CarouselContent
   CarouselItem
@@ -60,6 +61,9 @@ export function EnterpriseTestimonials() {;
                         src={testimonial && testimonial.image}
                         alt={testimonial && testimonial.author}
                         className="h-full w-full object-cover"
+}
+
+
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -103,6 +107,9 @@ export function EnterpriseTestimonials() {;
                 <div className="bg-card rounded-xl p-8 border border-border h-full">;
                   <Quote className="h-10 w-10 text-primary/20 mb-4" />;
                   <blockquote className="text-xl mb-6 italic">;
+
+
+
 }
 ;
                       </p>;

@@ -1,3 +1,13 @@
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
+import { Download, FileImage, FileText, FileType, FileVideo, Link } from "lucide-react",
+import { toast } from "@/hooks/use-toast",
+
+
+
+
 interface ResourceItem {
 
   id: string
@@ -71,11 +81,19 @@ export function PartnerResources() {
                     className="w-full flex items-center gap-2";
                   >;
                     <Download className="h-4 w-4" />;
+
+
+
                     {resource.type === 'link' ? 'Visit Link' : 'Download'}
                   </Button>
                 </CardContent>
               </Card>
             ))}
+
+
+};
+
+
           </div>;
         </CardContent>;
       </Card>;
@@ -119,6 +137,11 @@ export function PartnerResources() {
           </Button>;
         </CardContent>;
       </Card>;
+}
+}
+
+    </div>);
+
 }
 
 }

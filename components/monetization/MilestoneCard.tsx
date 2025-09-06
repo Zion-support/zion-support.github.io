@@ -12,6 +12,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
+
+
 type Props = {
   milestone: Milestone;
   projectId: string;
@@ -140,6 +142,11 @@ const statusSteps = [
   'Paid'
 ] as const;
 export default function MilestoneCard({
+  milestone,
+  projectId,
+  role,
+  onAction,
+}: Props) {;
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex(s => s === milestone.status);
   const canClientMarkInProgress =
@@ -171,6 +178,7 @@ type Props = {
       </div>;
       <div className='mt - 3'>;
         <div className='flex items - center gap - 2'>type Props = {
+
   const [expanded, setExpanded] = useState(false);
   const currentIndex = statusSteps.findIndex((s) => s === milestone.status);
   const canClientMarkInProgress = role !== 'talent' && milestone.status === 'Pending';
@@ -306,6 +314,14 @@ function MilestoneCard() {
 
             onClick={() => onAction('in_progress', milestone.id)}
 
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
             className='px-3 py-1 text-sm rounded bg-indigo-600 text-white hover:bg-indigo-700'            onClick={() => onAction('in_progress', milestone.id)}      <div className="mt-4 flex flex-wrap gap-2">
         {canClientMarkInProgress && (
           <button
@@ -340,12 +356,16 @@ function MilestoneCard() {
         )}
         {canClientApprove && (
           <button
+
+
           >
             Approve
           </button>
         )}
         {canClientMarkPaid && (
           <button
+
+
           >
             Mark as Paid
           </button>
@@ -413,4 +433,6 @@ function MilestoneCard() {
           </button>)}
       </div>;
     </div>);
+}
+}
 }

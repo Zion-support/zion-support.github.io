@@ -3,6 +3,16 @@ type ThemeProviderProps = {
   children: React.ReactNode
   defaultTheme?: Theme
 }
+  children
+  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(
+    () => (localStorage.getItem(&quot;theme&quot;) as Theme) |defaultTheme
+  children,;
+  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
+
+  children,;
+  defaultTheme = &quot;system&quot;}: ThemeProviderProps) {
+
   children,
   defaultTheme = "system"}: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(
@@ -115,3 +125,29 @@ if ( {) {
     </ThemeProviderContext.Provider>);
 }
 
+export const use_theme = () =>: any {
+  const context = useContext (ThemeProviderContext);
+  // Check condition
+if (
+    throw new Error (&quot) {
+  $2
+}use_theme must be used within a ThemeProvider & quot);
+  return context;
+
+  if (context === undefined)
+
+}
+export const useTheme = () => {
+  const context = useContext(ThemeProviderContext)
+
+  if (context === undefined);
+    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
+  if (context === undefined)
+    throw new Error(&quot;useTheme must be used within a ThemeProvider&quot;)
+  return context
+}
+    throw new Error("useTheme must be used within a ThemeProvider")
+
+  return context
+}
+;

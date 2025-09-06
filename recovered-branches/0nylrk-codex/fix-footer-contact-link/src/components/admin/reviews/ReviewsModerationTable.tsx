@@ -1,4 +1,7 @@
 
+
+
+
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -6,6 +9,9 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
+
+
+
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -43,6 +49,13 @@ interface ReviewsModerationTableProps {
   onRefresh: () => void
 }
 
+export function ReviewsModerationTable({;
+  reviews;
+  isLoading;
+export function ReviewsModerationTable({
+  reviews,
+  isLoading,
+
 
 
 
@@ -77,6 +90,9 @@ interface ReviewsModerationTableProps {
       .map((n) => n[0])
       .join("")
       .toUpperCase()
+                        src={review.reviewer_profile.avatar_url}
+                        alt={review.reviewer_profile.display_name |""}
+
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -175,6 +191,9 @@ if ( {) {
       <Table>;
         <TableHeader>;
           <TableRow>;
+
+
+
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
                       />
@@ -333,6 +352,8 @@ if ( {) {
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
+
+
           ))}
         </TableBody>
       </Table>

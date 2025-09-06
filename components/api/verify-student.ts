@@ -3,6 +3,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
+} from '../../utils/api/partnerAuth';
+
+
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+
+} from '../../utils/api/partnerAuth';
+
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -36,6 +45,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 200);
   return res && res.status(200).json({ verified });  return res && res.status(200).json({ verified })
 }
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+
+
   const started = Date.now();
   const auth = await authenticateRequest(req);
   if (!auth) {
@@ -107,6 +122,12 @@ await record_request (req, res, auth.partner, auth.api_key, started, 400);
   await record_request (req, res, auth.partner, auth.api_key, started, 200);
   return res.status (200).json ({ verified });  return res.status (200).json ({ verified });
 
+
 }
 }
 }
+  const { email, programTrack } = req.body || {};
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+
+

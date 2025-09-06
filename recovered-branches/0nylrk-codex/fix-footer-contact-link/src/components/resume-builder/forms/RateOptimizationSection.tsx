@@ -4,6 +4,7 @@ import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessag
 import {Input} from "@/components/ui/input";
 import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
 import {Card, CardContent} from "@/components/ui/card";
+
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -15,6 +16,7 @@ import {
   FormMessage
 } from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
+
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
@@ -24,6 +26,25 @@ interface RateOptimizationSectionProps {
   rateType: "hourly" | "fixed"
 }
 
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
+  control;
+  setValue;
+  skills;
+  yearsExperience;
+
+
+
+  location
+  control,
+  setValue,
+  skills,
+  yearsExperience,
+  location,
   rateType
 }) => {
   const handleSuggestionApplied = (rate: number) => {
@@ -88,6 +109,8 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 type="number";
                 min="1";
                 step="0.01";
+
+
                 {...field}
               />;
             </FormControl>;
@@ -105,10 +128,20 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
+}
+
+
+
+
+
           />;
         </CardContent>;
       </Card>;
     </div>;
+
+
+
+
 };
             rate_type={rate_type}
           />;

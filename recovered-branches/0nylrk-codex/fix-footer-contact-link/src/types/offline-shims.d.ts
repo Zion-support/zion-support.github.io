@@ -46,6 +46,12 @@
   export const StrictMode: any;
   export const clone_element: any;
   export type ReactNode = any;
+
+
+  export type ReactElement = any,
+  export type ComponentType<P = {}> = (props: P) => any,;
+
+
   export type FC<P = {}> = (props: P) => any;
   export type ComponentProps<T = any> = any;
   export type ComponentPropsWithoutRef<T = any> = any;
@@ -79,6 +85,7 @@ declare module 'react/jsx-runtime' {;
   export const jsxs: any,
   export const Fragment: any;
 };
+
 declare module 'react' {;
   const React: any,;
   export default React,;
@@ -168,6 +175,12 @@ declare module 'react/jsx-runtime' {
 declare module 'react-dom' {;
   export * from 'react-dom/index';
 }
+}
+;
+declare module 'react-dom' {;
+  export * from 'react-dom/index';
+}
+
 ;
 declare module 'react/jsx-runtime' {;
   export const jsx: any,;

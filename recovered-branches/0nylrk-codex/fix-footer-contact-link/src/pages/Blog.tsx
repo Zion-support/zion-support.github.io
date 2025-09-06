@@ -1,4 +1,23 @@
 
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardFooter } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
+import { BlogPost } from "@/types/blog";
+import { Search } from "lucide-react";
+// Sample blog data - in a real app this would come from an API or CMS
+const BLOG_POSTS: BlogPost[] = [
+  {
+import { BlogPost } from "@/types/blog",
+import { Search } from "lucide-react",
+
+
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -7,6 +26,11 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "ai-trends-2025",
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
+
+
+
+
+
 
 
 <h2>1. Multimodal AI Systems</h2>
@@ -20,6 +44,26 @@ const BLOG_POSTS: BlogPost[] = [
 <h2>5. AI for Climate Solutions</h2>
 <p>AI systems designed specifically to address climate challenges are gaining traction. From optimizing energy networks to modeling climate scenarios, these specialized tools are becoming essential in sustainability efforts.</p>`;
     author: {
+
+      name: "Dr. Alicia Zhang"
+      title: "AI Research Director"
+      avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
+    }
+    publishedDate: "Apr 15, 2025";
+    readTime: "5 min read"
+    category: "Trends"
+    tags: ["AI", "Technology Trends", "Machine Learning", "Future Tech"];
+    featuredImage: "https://images.unsplash.com/photo-1677442135026-f00ef565c4be?auto=format&fit=crop&w=1200&h=630"
+    isFeatured: true
+  }
+  {
+    id: "optimize-ai-listings"
+    title: "How to Optimize Your AI Service Listings for Maximum Visibility"
+    slug: "optimize-ai-listings"
+    excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
+    content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
+
+
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -37,6 +81,7 @@ const BLOG_POSTS: BlogPost[] = [
     featuredImage: "https://images.unsplash.com/photo-1508921340878-ba53e1f016ec?auto=format&fit=crop&w=1200&h=630"
   }
   {
+
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -166,6 +211,9 @@ const CATEGORIES = [
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation
             </p>
           </div>
+
+
+
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts.length > 0 && (
             <div className="mb-16">
@@ -284,6 +332,15 @@ const CATEGORIES = [
                 Clear all filters
               </Button>
             </div>
+          )}
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+
+
                     </p>;
                     <div className="flex items-center">;
                       <img;
@@ -308,6 +365,9 @@ const CATEGORIES = [
                 </Card>;
               ))}
             </div>
+
+
+
           )}
         </div>;
       </div>;

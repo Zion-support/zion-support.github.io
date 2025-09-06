@@ -21,6 +21,11 @@ interface AIMatchmakerProps {
       toast({
         title: "Please enter a description",
         description: "Tell us what you're looking for so we can find matches.",
+      // Set empty matches to show no results found UI
+      setMatches([])
+    } finally {
+      setIsMatchmaking(false)
+
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;

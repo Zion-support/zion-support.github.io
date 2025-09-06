@@ -1,3 +1,28 @@
+  phone: string;
+  email: string;
+  address: string;
+  site: string;
+}
+export interface Service {
+
+export interface Service {;
+  id: string;
+  name: string;
+  description: string;
+  category: 'micro-saas' | 'ai-services' | 'it-services';
+  price: {
+    min: number;
+    max: number;
+    currency: string;
+
+export interface ContactInfo {;
+export interface ContactInfo {
+  phone: string, email: string,
+  address: string, site: string,
+
+
+export interface Service {;
+
 }
 export interface Service {
 
@@ -11,11 +36,32 @@ export interface Service {
   image?: string;
   popular?: boolean;
   title: string;
+;
+
+}
+export interface ServiceCategory {
+  title: string;
   description: string;
   count: number;
   features: string[];
   href: string;
   color: string;
+}
+
+export interface SEOProps {;
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+export interface LoadingState {;
+  isLoading: boolean;
+  error?: string;
+}
+
 }
 export interface SEOProps {
   title?: string;
@@ -41,6 +87,12 @@ export interface LoadingState {
   is_loading: boolean;
   error?: string;
 export interface FormData {
+export interface AnimationState {;
+  isLoaded: boolean;
+  hasError: boolean;
+}
+
+export interface FormData {
   name: string;
   email: string;
   company?: string;
@@ -55,6 +107,32 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
+export interface Testimonial {
+
+export interface Testimonial {;
+
+}
+
+}
+export interface SEOProps {
+  title?: string;
+  description?: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  url?: string;
+  type?: string;
+  noindex?: boolean;
+  image?: string;
+}
+export interface LoadingState {
+  isLoading: boolean;
+  error?: string;
+  progress?: number;
+}
+
+
+
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
@@ -94,6 +172,8 @@ export interface BlogPost {;
 
   readTime: number;
 }
+  readTime: number;
+}
 export interface TeamMember {
 
 }
@@ -121,6 +201,42 @@ export interface Project {
   "id": string;
   name: string;
   description: string;
+
+export interface Project {;
+  id: string;
+  title: string;
+  id: string;
+  title: string;
+  name: string;
+
+;
+
+}
+export interface Project {
+
+
+  id: string;
+  title: string;
+
+
+  name: string;
+
+
+
+
+  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
+;
+  description: string;
+  image: string;
+  technologies: string[];
+  liveUrl?: string;
+origin/main
+  "id": string;
+  name: string;
+  description: string;
+  githubUrl?: string;
+  featured: boolean;
+  status: 'planning' | 'in-progress' | 'completed' | 'on-hold' | 'cancelled';
   priority: 'low' | 'medium' | 'high' | 'critical';
   start_date: Date;
   end_date: Date;
@@ -223,6 +339,7 @@ export interface FAQ {
 
 
 export interface FAQ {;
+
   question: string;
   answer: string;
   category?: string;
@@ -237,6 +354,10 @@ export interface FAQ {;
 }
 export interface PricingPlan {
 
+
+
+export interface PricingPlan {;
+
   id: string;
 
   id: string;
@@ -247,12 +368,22 @@ export interface PricingPlan {
   features: string[];
   popular?: boolean;
   cta: string;
+}
+  href: string;
+
+
   name: string;
   href: string;
   children?: NavigationItem[];
   submenu?: NavigationItem[];
   external?: boolean;
 }
+
+
+
+
+
+export interface SocialLink {;
 
 
   name: string;
@@ -306,15 +437,33 @@ export interface HeroSection {;
   }
   image?: string;
 }
+
+
+
+export interface Feature {;
+
+
   title: string;
   description: string;
   icon: string;
   color: string;
 }
+
+
+
+export interface Stats {;
+
+
   label: string;
   value: string;
   description?: string;
 }
+export interface CaseStudy {
+
+
+export interface CaseStudy {;
+
+
   id: string;
   title: string;
   client: string;
@@ -328,10 +477,22 @@ export interface HeroSection {;
   teamSize: number;
   featured?: boolean;
 }
+
+
+
+export interface JobOpening {;
+
+
   id: string;
   title: string;
   department: string;
   location: string;
+
+
+
+export interface NewsItem {;
+
+
   id: string;
   title: string;
   excerpt: string;
@@ -342,6 +503,12 @@ export interface HeroSection {;
   image?: string;
   featured: boolean;
 }
+
+
+
+export interface Event {;
+
+
   id: string;
   title: string;
   description: string;
@@ -357,6 +524,9 @@ export interface Environment {
   NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }
+ursor/fix-lint-push-and-merge-to-main-2c83
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
 export interface Partner {
   name: string;
   logo: string;
@@ -448,5 +618,9 @@ export interface ErrorResponse {
   message?: string;
 }
 export type Response<T> = SuccessResponse<T> | ErrorResponse;
+export interface ContactInfo {
+
+export interface ContactInfo {
+
 export type Response < T> = SuccessResponse < T> | ErrorResponse;
 ;

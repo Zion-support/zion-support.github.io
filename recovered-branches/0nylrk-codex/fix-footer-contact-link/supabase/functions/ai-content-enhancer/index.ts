@@ -8,7 +8,6 @@ serve(async (req) => {
 
 
 
-
   try {
 
     const { content, enhancementType, context, instructions } = await req && req.json();
@@ -23,6 +22,9 @@ serve(async (req) => {
     const openAiKey = Deno.env.get("OPENAI_API_KEY"),;
     if (!openAiKey) {;
       throw new Error("OPENAI_API_KEY is not defined");
+
+
+
     }
     if (!content && !context) {
       throw new Error("Either content or context is required")
@@ -31,6 +33,42 @@ serve(async (req) => {
       case "work - description": system_prompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.";
         user_prompt = `Enhance this work description with 3 - 5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`;
         break;
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",
+        userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,
+        break,
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`,
+        break,
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.",
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`,
+        break,
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.",
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,
+        break,
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
+;
+    // Determine the system prompt based on enhancement type;
+    let systemPrompt = "",;
+    let userPrompt = "",;
+    switch (enhancementType) {;
+      case "resume-summary":;
+        systemPrompt = "You are an expert resume writer who helps professionals create compelling personal summaries. Create a concise, professional summary that highlights strengths and career goals.",;
+        userPrompt = `Create a professional summary for someone with the following background: ${content || context}. Include key strengths and career objectives. Keep it under 200 words.`,;
+        break,;
+      case "work-description": systemPrompt = "You are an expert resume writer specializing in professional work descriptions. Create impactful bullet points that showcase skills and achievements.",;
+        userPrompt = `Enhance this work description with 3-5 bullet points that highlight accomplishments and skills: ${content}. Use action verbs, include metrics where possible, and focus on achievements rather than duties. ${context ? `Role context: ${context}` : ''}`,;
+        break,;
+      case "job-post": systemPrompt = "You are an expert recruiter who creates compelling job descriptions that attract qualified candidates.",;
+        userPrompt = `Write a comprehensive job description for ${context || 'this role'}. ${content ? `Based on this information: ${content}.` : ''} Include responsibilities, required skills, and preferred qualifications. Be specific and professional.`,;
+        break,;
+      case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.",;
+        userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`,;
+        break,;
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",;
+        userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`;
+
+
     }
     // Add custom instructions if provided
     if (instructions) {
@@ -102,6 +140,20 @@ if ( {) {
       JSON.stringify ({
         enhanced_content});
       {
+  }
+});
+
+
+    console.error ("Error in ai - content - enhancer function:", error);
+    return new Response (
+      JSON.stringify ({
+        error: error.message});
+      {
+        status: 500,
+        headers: { ...cors_headers, "Content - Type": "application / json" }}
+    );
+
+
 ;
     // Call OpenAI API;
     const response = await fetch("https://api.openai.com/v1/chat/completions", {;
@@ -141,6 +193,9 @@ if ( {) {
         status: 500,;
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     );
+
+
+
   }
 });
 ;

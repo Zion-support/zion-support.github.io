@@ -1,3 +1,9 @@
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -20,6 +26,12 @@ if ( {) {
     throw new Error ('Failed to connect to MetaMask');
   }
 }
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
     return [];
   }
   try {
@@ -42,6 +54,12 @@ if ( {) {
     return [];
   }
 }
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -65,6 +83,12 @@ if ( {) {
     throw new Error ('Failed to get balance');
   }
 }
+
+  if (typeof window === 'undefined' || !window && window.ethereum) {
+
+
+  if (typeof window === 'undefined' || !window.ethereum) {;
+
     throw new Error('MetaMask is not installed');
   }
   try {
@@ -93,5 +117,9 @@ declare global {
     ethereum?: {
       request: (args: { method: string; params?: any[] }) => Promise < any>;
       on: (event: string, callback: (accounts: string[]) => void) => void;
+
+
+    };
+
   }
 }

@@ -1,3 +1,27 @@
+  ArrowRight
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Rocket
+  Globe
+  Sparkles
+  CheckCircle
+  Phone
+  Mail
+  MapPin;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Sparkles,
+  CheckCircle,
+  Phone,
+  Mail,;
+  MapPin,;
 } from 'lucide-react';
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
@@ -250,10 +274,17 @@ function UltraAdvancedHero2026() {
               Explore All Services
               <ArrowRight className="w-6 h-6 ml-3" />
             </Link>
+            <Link
+
+            <Link 
+
               href="/contact"
               className="inline-flex items-center px-8 py-4 border-2 border-purple-500/50 text-purple-300 font-bold text-lg rounded-2xl hover:bg-purple-500/10 hover:border-purple-400 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
             >
               <Zap className="w-6 h-6 mr-3" />
+              Get Started Today
+            </Link>
+          </motion.div>
               Get Started Today
             </Link>
           </motion.div>

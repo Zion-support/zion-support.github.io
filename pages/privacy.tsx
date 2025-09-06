@@ -1,3 +1,18 @@
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { Shield, Lock, Eye, Database, Mail, Phone, MapPin, Users } from 'lucide-react';
+import MainLayout from '../components/layout/MainLayout';
+import Layout from '../components/layout/Layout';
+import SEOOptimizer from '../components/SEOOptimizer';
+import AnalyticsTracker from '../components/AnalyticsTracker';
+import ErrorBoundary from '../components/ErrorBoundary';
+import { motion } from 'framer-motion';
+origin/automation-improvements-final
+
+
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -147,6 +162,8 @@ export default function PrivacyPage() {;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
+
+
               transition={{ duration: 0 && 0.8 }}
               className="text-center">;
               <h1 className="text-4xl md:text-6xl font-bold mb-6">;
@@ -711,8 +728,13 @@ const PrivacyPage: React.FC = () => {
                   We collect information you provide directly to us, such as when you create an account, 
                   use our services, or contact us for support.
                 </p>
-
-
+                <ul className="list-disc pl-6 mb-6">
+                  <li>Name and contact information</li>
+                  <li>Email address</li>
+                  <li>Phone number</li>
+                  <li>Company information</li>
+                  <li>Payment information</li>
+                </ul>
 
 
 
@@ -720,6 +742,9 @@ const PrivacyPage: React.FC = () => {
                   Usage Information
                 </h3>
                 <h3 className="text-xl font-semibold mb-4">Usage Information</h3>
+                <h3 className="text-xl font-semibold mb-4">
+                  Usage Information
+                </h3>
                 <ul className="list-disc pl-6 mb-6">
                   <li>How you use our services</li>
                   <li>Device information</li>
@@ -727,6 +752,10 @@ const PrivacyPage: React.FC = () => {
                   <li>Browser type and version</li>
                   <li>Operating system</li>
                 </ul>
+
+
+
+
 
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   How We Use Your Information
@@ -751,6 +780,10 @@ const PrivacyPage: React.FC = () => {
                   <li>Monitor and analyze usage and trends</li>
                 </ul>
 
+
+
+
+
                 <h2 className="text-2xl font-bold mb-6 mt-12">
                   Information Sharing
                 </h2>
@@ -766,6 +799,25 @@ const PrivacyPage: React.FC = () => {
                   If you have any questions about this Privacy Policy, please contact us at:
                 </p>
                 
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Data Security</h2>
+                <p className="mb-6">
+                  We implement appropriate security measures to protect your
+                  personal information against unauthorized access, alteration,
+                  disclosure, or destruction.
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Your Rights</h2>
+                <p className="mb-6">
+                  You have the right to access, update, or delete your personal
+                  information. You may also opt out of certain communications
+                  from us.
+                </p>
+                <h2 className="text-2xl font-bold mb-6 mt-12">Contact Us</h2>
+                <p className="mb-6">
+                  If you have any questions about this Privacy Policy, please
+                  contact us at:
+                </p>
+
                 <div className="bg-gray-50 rounded-lg p-6">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
@@ -787,6 +839,7 @@ const PrivacyPage: React.FC = () => {
 
 <p className="text-sm text-gray-600 mt-8">
                 <p className="text-sm text-gray-600 mt-8">
+<p className="text-sm text-gray-600 mt-8">
                   Last updated: January 2024
                 </p>
               </div>
@@ -834,6 +887,25 @@ function PrivacyPage() {
                   information. You may also opt out of certain communications;
                   from us.;
                 </p>;
+    </MainLayout>;
+  );
+}
+
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <a
+                    href="mailto:kleber@ziontechgroup.com"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Email Us
+                  </Link>
+                  <a
+                    href="/contact"
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+                  >
+                    <User className="w-5 h-5" />
+                    Contact Form
+                  </Link>
                 </div>
               </motion.div>
             </div>
@@ -846,6 +918,8 @@ function PrivacyPage() {
 };
 
 export default PrivacyPage;
+
+
 
 
                 <h2 className="text - 2xl font - bold mb - 6 mt - 12">Contact Us</h2>;

@@ -290,6 +290,17 @@
 export const getPopularEmergingTechServices = () => {;
   return innovative2026EmergingTechServices.filter(service => service.popular);
 }
+        'Advanced quantum internet platform with quantum key distribution, secure communication protocols, and comprehensive network infrastructure. Includes professional installation and ongoing support.',
+      launchDate: '2026-01-25',
+      customers: 60,
+      rating: 4.9,
+      reviews: 30,
+    },;
+  ];
+
+export const getPopularEmergingTechServices = () => {;
+  return innovative2026EmergingTechServices.filter(service => service.popular);
+}
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
 launchDate: '2026-01-20';
@@ -579,6 +590,52 @@ export const getEmergingTechServicesByCategory = (category: string) => {
 
 
 export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: number) => {
+}
+
+import { ServiceVariant } from '../types/service-variants',;
+export interface Innovative2026EmergingTechService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+
+};
+
+
 reviews: 30;
 }];
 export const getEmergingTechServicesByCategory = (category: string) =>: any {
@@ -599,3 +656,8 @@ export const getEmergingTechServicesByPriceRange = (min_price: number, max_price
     const price = parse_int (service.price.replace ('$', '').replace (, ''));
     return price >= min_price && price <= max_price;
   });
+
+
+
+
+};

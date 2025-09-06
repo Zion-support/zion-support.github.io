@@ -1,4 +1,9 @@
+ const getInitialPosition = () => {
+  switch (direction) {
+  case 'up': 
 
+  switch (direction) {
+  case 'up':
 
 
 

@@ -36,7 +36,14 @@ export function TalentOnboardingSteps() {
       action: "Set"
     }
     {
-
+import React from "react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",;
+import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react",;
+import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker",;
+export function TalentOnboardingSteps() {;
+  const { user } = useAuth(),;
+  const onboardingStatus = useOnboardingStatus(),;
   const steps: OnboardingStep[] = [;
     {;
       id: "profile",;
@@ -59,6 +66,10 @@ export function TalentOnboardingSteps() {
     {;
       id: "match",;
       label: "Receive your first job match",;
+
+  return <OnboardingTracker steps={steps} />;
+
+
 }
 
 import React from './react';

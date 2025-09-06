@@ -1,3 +1,11 @@
+
+import {useEffect, useState} from 'react';
+const STEPS = [
+  { key: 'job', label: 'Job posted' }
+  { key: 'invite', label: 'First invite sent' }
+  { key: 'response', label: 'First response received' }
+
+
 ] as const;
 type StepKey = (typeof STEPS)[number]['key'];
 
@@ -5,6 +13,8 @@ const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
   { key: 'response', label: 'First response received' }] as const,
+  });
+  const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
@@ -44,6 +54,34 @@ export default function ClientDashboard() {;
   const toggle = (key: StepKey) =>;
     setCompleted(c => ({ ...c, [key]: !c[key] }));
 
+import { useEffect, useState } from 'react';
+const STEPS = [;
+  { key: 'job', label: 'Job posted' },;
+  { key: 'invite', label: 'First invite sent' },;
+  { key: 'response', label: 'First response received' }] as const,;
+type StepKey = typeof STEPS[number]['key'];
+export default function ClientDashboard(req, res) {
+  try {
+  const [completed, setCompleted] = useState<Record<StepKey boolean>>({ job: false, invite: false, response: false }),;
+  useEffect(() => {;
+    try {
+      const raw = window.localStorage.getItem('onboarding.client');
+      if (raw) setCompleted(JSON.parse(raw));
+    } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, []),;
+  useEffect(() => {;
+    try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }, [completed]),
+  const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100),
+  const toggle = (key: StepKey) => setCompleted((c) => ({ ...c, [key]: !c[key] })),
   return (
     <div className='space-y-4'>;
       <EnhancedCard>;
@@ -106,6 +144,15 @@ export default function ClientDashboard() {;
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
+
+
+}
+
+
+
+
+}
+
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
               )  } catch (error) {
     console.error("Error:", error);

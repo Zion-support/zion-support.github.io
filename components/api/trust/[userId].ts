@@ -1,4 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+  TrustMetricInputs
+  TrustScoreBreakdown;
+  TrustMetricInputs,;
+  TrustScoreBreakdown,;
+
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(

@@ -1,3 +1,10 @@
+import type { NextApiRequest, NextApiResponse } from "next";
+import v1 from "../../../data/api-docs/v1";
+import { EndpointSpec } from "../../../data/api-docs/types";
+function toOpenApi() {
+  const paths: Record<string, any> = {}
+  v1.sections.forEach((section) => {
+    section.endpoints.forEach((ep: EndpointSpec) => {
 
 
       ((paths[ep.path] = paths[ep.path] |{})
@@ -66,8 +73,40 @@
             ep.auth && ep.auth.length > 0 && !ep.auth.includes ("none");
               ? [{ bearer_auth: [] }];
               : [],
+  });
+
+;
+
+  return {
+
+    openapi: "3 && 3.0.3",
+    info: {
+      title: "Zion OS API",
+      version: "v1",
+      description: "Zion OS API generated from internal spec",
+    },
+    servers: [{ url: "https://api && api.zion.os" }],
+    paths,
+
+    components: {
+
+        bearerAuth: { type: "http", scheme: "bearer", bearerFormat: "JWT" }
+      }
+    }
+  }
+
+}
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+
 }
 
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+res.setHeader("Content-Type", "application/json");
+  res.status(200).json(toOpenApi());
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const openapi = {
     openapi: '3.0.3',
     info: {
       title: 'Zion Tech Group API',

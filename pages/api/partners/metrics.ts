@@ -2,6 +2,17 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getServerSupabase } from "../../../utils/supabase/server";
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({ $2 });
 
@@ -12,10 +23,10 @@ export default async function handler(
         total_job_creations: 5,
         conversion_rate: 7 / 12,
         payout_amount: 210,
-      });
+        : 0
+      payout_amount: total_profile_completions * 50
+      currency: "USD"
 
-
-    }
         : 0,
       payout_amount: total_profile_completions * 50,
       currency: "USD",
@@ -112,7 +123,6 @@ export default async function handler(req, res) {
 
   }
 }
-}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -128,3 +138,6 @@ export default async function handler(req, res) {
 
   }
 }
+  }
+}
+

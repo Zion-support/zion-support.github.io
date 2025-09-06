@@ -32,4 +32,3 @@ export default function CategoryDetail({ }: CategoryDetailProps) {
     </div>
   );
 }
-}

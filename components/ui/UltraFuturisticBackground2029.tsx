@@ -10,10 +10,29 @@
   type: 'energy' | 'data' | 'quantum' | 'neon';
   life: number;
   children: React.ReactNode;
+  children,
+}: {;
+  children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const energyFieldsRef = useRef<EnergyField[]>([]);
   const animationRef = useRef<number | undefined>(undefined);
+
+
+interface EnergyField {;
+  x: number,;
+  y: number,;
+  radius: number,;
+  intensity: number,;
+  color: string,;
+  pulse: number;
+}
+
+export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
+
+
+
+export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -227,6 +246,8 @@ if ( {) {
             duration: 10
             repeat: Infinity
             ease: 'easeInOut',          }}          }}
+
+          }}
 
           }}
 

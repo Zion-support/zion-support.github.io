@@ -200,6 +200,9 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
+
+  DizzyFace2,;
+
 } from "lucide-react";
 const guides = [
 

@@ -1,4 +1,22 @@
 
+import { Trophy } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+import {Trophy} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
+
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
+import {Trophy} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import { Trophy } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
 interface ReputationDisplayProps {
 
   reputation: number
@@ -28,6 +46,11 @@ interface ReputationDisplayProps {
       </div>
     </div>
   )
+export default ReputationDisplay,
+import { Trophy } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+import {Trophy} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
 interface ReputationDisplayProps {;
   reputation: number,;
   size?: 'sm' | 'md' | 'lg';
@@ -64,6 +87,11 @@ sm: {
 export default ReputationDisplay;
   );
 };
+
+
+
+},
+
 
 export default ReputationDisplay;
 
