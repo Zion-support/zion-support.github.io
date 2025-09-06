@@ -1,42 +1,49 @@
-// Token service utilities
-export interface TokenConfig {
-  name: string;
-  symbol: string;
-  totalSupply: number;
-  decimals: number;
+
+export interface TokenTransaction {
+  id: string;
+  userId: string;
+  amount: number;
+  type: 'issue' | 'redeem' | 'transfer';
+  reason: string;
+  timestamp: number;
 }
 
-export interface TokenMetrics {
-  price: number;
-  marketCap: number;
-  volume24h: number;
-  holders: number;
+// Mock data storage - replace with actual database
+let transactions: TokenTransaction[] = [];
+
+export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now()
+  };
+  
+  transactions.push(transaction);
+  return transaction;
 }
 
-export class TokenService {
-  static async getTokenConfig(): Promise<TokenConfig> {
-    // Placeholder implementation
-    return {
-      name: 'Zion Token',
-      symbol: 'ZION',
-      totalSupply: 1000000000,
-      decimals: 18
-    };
-  }
-
-  static async getTokenMetrics(): Promise<TokenMetrics> {
-    // Placeholder implementation
-    return {
-      price: 0.1,
-      marketCap: 100000000,
-      volume24h: 1000000,
-      holders: 10000
-    };
-  }
-
-  static async updateTokenConfig(config: Partial<TokenConfig>): Promise<boolean> {
-    // Placeholder implementation
-    console.log('Updating token config:', config);
-    return true;
-  }
+export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
+  const transaction: TokenTransaction = {
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount: -amount, // Negative for redemption
+    type: 'redeem',
+    reason,
+    timestamp: Date.now()
+  };
+  
+  transactions.push(transaction);
+  return transaction;
 }
+
+export function setConfig(
+  partial: Partial<ReturnType<typeof getConfig>>
+): void {
+  const current = getConfig();
+  // Update the configuration
+  Object.assign(current, partial);
+}
+

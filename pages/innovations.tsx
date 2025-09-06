@@ -1,22 +1,22 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',;
+import Head from 'next/head',;
+import { motion } from 'framer-motion',;
 import { 
   Brain, Rocket, Target, Cpu, Globe, Eye, 
-  ChevronRight, Star, TrendingUp, Zap, Shield;
-  ArrowRight, Search, Filter, Grid, List;
+  ChevronRight, Star, TrendingUp, Zap, Shield,
+  ArrowRight, Search, Filter, Grid, List,
   Phone, Mail, MapPin, ExternalLink, Sparkles
-} from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029';
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2';
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
+} from 'lucide-react',
+import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',;
+import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',;
+import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2',;
+import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029',;
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 export default function InnovationsPage() {
   return (
@@ -82,7 +82,7 @@ export default function InnovationsPage() {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-12"
               >
-                Experience the future today with our revolutionary innovations in AI consciousness,
+                Experience the future today with our revolutionary innovations in AI consciousness, 
                 quantum computing, space technology, and enterprise solutions that are reshaping 
                 industries and unlocking unprecedented possibilities.
               </motion.p>
@@ -132,7 +132,7 @@ export default function InnovationsPage() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
                 {
                   icon: Brain,
@@ -140,21 +140,21 @@ export default function InnovationsPage() {
                   description: 'Revolutionary AI consciousness development and emotional intelligence platforms',
                   color: 'from-violet-600 via-purple-600 to-indigo-600',
                   features: ['Consciousness EvolutionEmotional IntelligenceCreative OrchestrationAutonomous Business Management']
-                };
+                },
                 {
                   icon: Globe,
                   title: 'Quantum Technology',
                   description: 'Quantum-AI fusion and breakthrough quantum computing solutions',
                   color: 'from-indigo-600 via-blue-600 to-cyan-600',
                   features: ['Quantum-AI FusionQuantum Internet SecurityDNA ComputingQuantum Financial Trading']
-                };
+                },
                 {
                   icon: Rocket,
                   title: 'Space Technology',
                   description: 'Next-generation space exploration and metaverse digital reality',
                   color: 'from-teal-600 via-emerald-600 to-green-600',
                   features: ['Space Mining AutomationMetaverse Digital RealityAI Health AnalyticsHolographic Events']
-                };
+                },
                 {
                   icon: Cpu,
                   title: 'Enterprise IT',
@@ -228,15 +228,15 @@ export default function InnovationsPage() {
                 {
                   icon: TrendingUp,
                   title: 'Market Leadership',
-                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology';
+                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology',
                   stats: '15+ First-to-market innovations'
-                };
+                },
                 {
                   icon: Zap,
                   title: 'ROI Performance',
                   description: 'Exceptional return on investment with our breakthrough solutions',
                   stats: 'Up to 1500% ROI'
-                };
+                },
                 {
                   icon: Shield,
                   title: 'Future-Proofing',
@@ -319,4 +319,4 @@ export default function InnovationsPage() {
       </div>
     </UltraFuturisticBackground2029>
   )
-}
+};

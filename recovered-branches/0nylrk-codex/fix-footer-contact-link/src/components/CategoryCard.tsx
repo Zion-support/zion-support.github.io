@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
-import { cn } from "@/lib/utils";
-import { slugify } from "@/lib/slugify";
-import { Link } from "react-router-dom";
+import {cn} from "@/lib/utils";
+import {slugify} from "@/lib/slugify";
+import {Link} from "react-router-dom";
 interface CategoryCardProps {
   title: string,
   description: string,
@@ -24,7 +24,7 @@ export function CategoryCard({ title, description, icon, color, count, className
     <Link 
       to={`/category/${slug}`} 
       className={cn(
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group";
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
         className
       )}
     >
@@ -44,4 +44,4 @@ export function CategoryCard({ title, description, icon, color, count, className
       )}
     </Link>
   )
-}
+};

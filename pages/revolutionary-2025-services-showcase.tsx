@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion, AnimatePresence } from 'framer-motion',;
 import { 
   Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight;
+  DollarSign, Clock, CheckCircle, ArrowRight,
   Brain, Rocket, Dna, Globe, Shield, Wifi, 
   Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code;
-  Phone, Mail, MapPin, ExternalLink, ChevronDown;
+  Zap, Atom, Database, Cloud, Lock, Code,
+  Phone, Mail, MapPin, ExternalLink, ChevronDown,
   Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react';
+} from 'lucide-react',
 
 // Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
-const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
+import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services',;
+import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure',;
+const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices],
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
-};
+},
 
 const serviceCategories = [
   {
@@ -33,16 +33,16 @@ const serviceCategories = [
     color: 'from-violet-500 to-purple-500',
     services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI')),
     gradient: 'from-violet-500/20 to-indigo-500/20'
-  };
+  },
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond';
+    description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from-blue-500 to-cyan-500',
     services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
     gradient: 'from-blue-500/20 to-cyan-500/20'
-  };
+  },
   {
     id: 'space-tech',
     title: '🚀 Space Technology & Satellite',
@@ -51,7 +51,7 @@ const serviceCategories = [
     color: 'from-indigo-500 to-blue-500',
     services: allServices.filter(s => s.category.includes('Space Technology')),
     gradient: 'from-indigo-500/20 to-blue-500/20'
-  };
+  },
   {
     id: 'cybersecurity',
     title: '🔒 Next-Generation Cybersecurity',
@@ -60,7 +60,7 @@ const serviceCategories = [
     color: 'from-red-500 to-pink-500',
     services: allServices.filter(s => s.category.includes('Cybersecurity')),
     gradient: 'from-red-500/20 to-pink-500/20'
-  };
+  },
   {
     id: 'cloud-infrastructure',
     title: '☁️ Quantum Cloud & Infrastructure',
@@ -69,7 +69,7 @@ const serviceCategories = [
     color: 'from-cyan-500 to-blue-500',
     services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure')),
     gradient: 'from-cyan-500/20 to-blue-500/20'
-  };
+  },
   {
     id: 'fintech',
     title: '🏦 Financial Technology Revolution',
@@ -78,7 +78,7 @@ const serviceCategories = [
     color: 'from-green-500 to-emerald-500',
     services: allServices.filter(s => s.category.includes('Financial Technology')),
     gradient: 'from-green-500/20 to-emerald-500/20'
-  };
+  },
   {
     id: 'industrial-iot',
     title: '🏭 Industrial IoT & Smart Manufacturing',
@@ -87,7 +87,7 @@ const serviceCategories = [
     color: 'from-gray-500 to-slate-500',
     services: allServices.filter(s => s.category.includes('Industrial IoT')),
     gradient: 'from-gray-500/20 to-slate-500/20'
-  };
+  },
   {
     id: 'edtech',
     title: '🎓 Education Technology Revolution',
@@ -96,7 +96,7 @@ const serviceCategories = [
     color: 'from-blue-500 to-cyan-500',
     services: allServices.filter(s => s.category.includes('Education Technology')),
     gradient: 'from-blue-500/20 to-cyan-500/20'
-  };
+  },
   {
     id: 'sustainability',
     title: '🌱 Sustainability & Green Technology',
@@ -105,7 +105,7 @@ const serviceCategories = [
     color: 'from-green-500 to-emerald-500',
     services: allServices.filter(s => s.category.includes('Sustainability')),
     gradient: 'from-green-500/20 to-emerald-500/20'
-  };
+  },
   {
     id: 'logistics',
     title: '🚛 Logistics & Supply Chain',
@@ -115,36 +115,36 @@ const serviceCategories = [
     services: allServices.filter(s => s.category.includes('Logistics')),
     gradient: 'from-orange-500/20 to-red-500/20'
   }
-];
+],
 
 export default function Revolutionary2025ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('popularity'),
+  const [viewMode, setViewMode] = useState('grid'),
 
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         service.category.toLowerCase().includes(searchTerm.toLowerCase());
+                         service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     const matchesCategory = selectedCategory === 'all' || 
-                           service.category.toLowerCase().includes(selectedCategory.toLowerCase());
+                           service.category.toLowerCase().includes(selectedCategory.toLowerCase()),
     return matchesSearch && matchesCategory
-  });
+  }),
 
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price-low':
-        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
       case 'price-high':
-        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, ''));
+        return parseFloat(b.price.replace(/[^0-9.]/g, '')) - parseFloat(a.price.replace(/[^0-9.]/g, '')),
       case 'rating':
-        return b.rating - a.rating;
+        return b.rating - a.rating,
       case 'customers':
-        return b.customers - a.customers;
+        return b.customers - a.customers,
       default: return b.popular ? 1 : -1
     }
-  });
+  }),
 
   return (
     <>
@@ -495,7 +495,7 @@ export default function Revolutionary2025ServicesShowcase() {
                           <div className="space-y-2 text-xs">
                             <div className="flex items-center gap-2 text-purple-400">
                               <Phone className="w-3 h-3" />
-                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover: text-white">
+                              <a href={`tel:${service.contactInfo.mobile.replace(/[^+\d]/g, '')}`} className="hover:text-white">
                                 {service.contactInfo.mobile}
                               </a>
                             </div>
@@ -522,7 +522,7 @@ export default function Revolutionary2025ServicesShowcase() {
                 <p className="text-gray-400 mb-6">Try adjusting your search terms or filters</p>
                 <button
                   onClick={() => {
-                    setSearchTerm('');
+                    setSearchTerm(''),
                     setSelectedCategory('all')
                   }}
                   className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
@@ -597,4 +597,4 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   )
-}
+};

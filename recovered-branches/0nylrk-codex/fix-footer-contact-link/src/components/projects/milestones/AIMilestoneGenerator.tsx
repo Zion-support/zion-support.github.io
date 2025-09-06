@@ -1,16 +1,12 @@
 
 import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from '@/components/ui/accordion';
-import { Loader2, Sparkles, Plus, Calendar } from 'lucide-react';
-import { format, parseISO } from 'date-fns';
-import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator } from '@/hooks/useMilestoneGenerator';
-import { Badge } from '@/components/ui/badge';
+import {Button} from '@/components/ui/button';
+import {Card, CardContent} from '@/components/ui/card';
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from '@/components/ui/accordion';
+import {Loader2, Sparkles, Plus, Calendar} from 'lucide-react';
+import {format, parseISO} from 'date-fns';
+import {MilestoneInput, GeneratedMilestone, useMilestoneGenerator} from '@/hooks/useMilestoneGenerator';
+import {Badge} from '@/components/ui/badge';
 interface AIMilestoneGeneratorProps {
   scope: string,
   startDate: string,
@@ -39,7 +35,7 @@ export function AIMilestoneGenerator({
     const input: MilestoneInput = {
       scope;
       startDate;
-      endDate;
+      endDate,
       projectType
     };
 
@@ -64,7 +60,7 @@ export function AIMilestoneGenerator({
 
   const toggleMilestoneSelection = (index: number) => {
     setSelectedMilestones(prev => ({
-      ...prev;
+      ...prev,
       [index]: !prev[index]
     }))
   };
@@ -177,3 +173,4 @@ export function AIMilestoneGenerator({
     </div>
   )
 }
+;

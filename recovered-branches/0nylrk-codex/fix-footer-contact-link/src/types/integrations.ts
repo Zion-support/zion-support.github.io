@@ -9,7 +9,7 @@ export interface Integration {
   description: string;
   logoUrl: string;
   status: IntegrationStatus;
-  lastSync?: string;
+  lastSync?: string,
   type: IntegrationType
 }
 
@@ -18,7 +18,7 @@ export interface SyncLog {
   integration: string;
   event: string;
   status: "success" | "error" | "warning";
-  timestamp: string;
+  timestamp: string,
   details: string
 }
 

@@ -1,10 +1,9 @@
 
 import * as React from "react"
-import { Slot } from "@radix-ui/react-slot"
-import { ChevronRight } from "lucide-react"
+import {Slot} from "@radix-ui/react-slot"
+import {ChevronRight} from "lucide-react"
  
-import { cn } from "@/lib/utils"
- 
+import {cn} from "@/lib/utils"
 const Breadcrumb = React.forwardRef<
   HTMLElement;
   React.ComponentPropsWithoutRef<"nav"> & {
@@ -91,7 +90,7 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    &#8230;
+    &#8230,
   </span>
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
@@ -103,3 +102,4 @@ export {
   BreadcrumbLink;
   BreadcrumbSeparator;
   BreadcrumbEllipsis}
+;

@@ -1,13 +1,17 @@
+          <div className="h-12 w-12 rounded bg-gray-200" />)};
+        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>;
+      </div>;
+      <p className="text-sm text-gray-600 mb-4">{description}</p>;
+      <div className="mt-auto flex items-center justify-between">;
+        {price && <span className="text-sm font-medium text-blue-600">{price}</span>};
 
 import Link from 'next/link';
 import Image from 'next/image';
 
 interface EnhancedMarketplaceCardProps {
-  title: string;
-  description: string;
+  title: string, description: string,
   price?: string;
-  href: string;
-  image?: string;
+  href: string, image?: string,
   category?: string;
   rating?: number;
   reviews?: number;
@@ -96,7 +100,6 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
         </div>
       </div>
     </Link>
-=======
 interface MarketplaceCardProps {
   title: string,
   description: string,
@@ -148,11 +151,9 @@ const EnhancedMarketplaceCard: React.FC<MarketplaceCardProps> = ({
           Add to Cart
         </button>
       </div>
-    </div>
-
+</div>
   );
 };
 
 export default EnhancedMarketplaceCard;
-
 

@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-import { useTranslation } from 'react-i18next';
-import { supabase } from '../integrations/supabase/client';
-import { toast } from '../components/ui/use-toast';
+import {useTranslation} from 'react-i18next';
+import {supabase} from '../integrations/supabase/client';
+import {toast} from '../components/ui/use-toast';
 export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
 
 export type LanguageContextType = {
@@ -98,7 +98,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
     
     try {
       await i18n.changeLanguage(lang);
-      setCurrentLanguage(lang);
+      setCurrentLanguage(lang),
       localStorage.setItem('zion_language', lang);
       
       // Get language name for toast

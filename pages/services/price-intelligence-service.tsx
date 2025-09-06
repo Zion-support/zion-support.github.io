@@ -1,7 +1,7 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-import UseTokensButton from '../../components/tokens/UseTokensButton';
+import type { NextPage } from 'next',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import UseTokensButton from '../../components/tokens/UseTokensButton',;
 const PriceIntelligenceService: NextPage = () => {
   return (
     <div>
@@ -18,6 +18,6 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
-};
+},
 
-export default PriceIntelligenceService;
+export default PriceIntelligenceService,;

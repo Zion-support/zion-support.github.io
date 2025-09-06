@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
   talentId, 
   name, 
   title, 
@@ -7,3 +7,6 @@
   location, 
   category, 
   matchPercent, 
+}
+}
+;

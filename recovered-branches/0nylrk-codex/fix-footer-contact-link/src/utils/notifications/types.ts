@@ -8,13 +8,13 @@ export interface CreateNotificationParams {
   type: NotificationType;
   relatedId?: string | null;
   sendEmail?: boolean;
-  actionUrl?: string | null;
+  actionUrl?: string | null,
   actionText?: string | null
 }
 
 export interface CreateNotificationResult {
   success: boolean;
-  notificationId?: string;
+  notificationId?: string,
   error?: any
 }
 
@@ -24,13 +24,13 @@ export interface HireRequestNotificationParams {
   requesterName: string;
   requesterEmail: string;
   projectType?: string;
-  projectSummary?: string;
+  projectSummary?: string,
   hireRequestId: string
 }
 
 export interface OnboardingNotificationParams {
   userId: string;
-  missingMilestone: string;
+  missingMilestone: string,
   userRole: 'talent' | 'client'
 }
 
@@ -39,6 +39,6 @@ export interface SystemNotificationParams {
   title: string;
   message: string;
   actionUrl?: string | null;
-  actionText?: string | null;
+  actionText?: string | null,
   sendEmail?: boolean
 }

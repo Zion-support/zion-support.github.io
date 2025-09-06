@@ -3,7 +3,7 @@ export interface ContentGenerationRequest {
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
-  keywords?: string[];
+  keywords?: string[],
   targetAudience?: string
 }
 
@@ -15,7 +15,7 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
-    description: string;
+    description: string,
     tags: string[]
   }
 }
@@ -25,16 +25,16 @@ export interface ContentTemplate {
   name: string;
   description: string;
   type: string;
-  preview: string;
+  preview: string,
   price: number
 }
 
 export class AIContentGeneratorService {
   private apiKey: string;
-  private baseUrl: string;
+  private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 
@@ -42,7 +42,7 @@ export class AIContentGeneratorService {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -66,7 +66,7 @@ export class AIContentGeneratorService {
         name: 'Blog Post Starter';
         description: 'Professional blog post template with SEO optimization';
         type: 'blog-post';
-        preview: 'Create engaging blog posts that rank well in search engines...';
+        preview: 'Create engaging blog posts that rank well in search engines...',
         price: 29
       };
       {
@@ -74,7 +74,7 @@ export class AIContentGeneratorService {
         name: 'Social Media Campaign';
         description: 'Complete social media content strategy and posts';
         type: 'social-media';
-        preview: 'Engage your audience with compelling social media content...';
+        preview: 'Engage your audience with compelling social media content...',
         price: 49
       };
       {
@@ -82,7 +82,7 @@ export class AIContentGeneratorService {
         name: 'Email Sequence';
         description: 'Convert prospects with persuasive email sequences';
         type: 'email';
-        preview: 'Build relationships and drive sales with email automation...';
+        preview: 'Build relationships and drive sales with email automation...',
         price: 39
       };
       {
@@ -90,7 +90,7 @@ export class AIContentGeneratorService {
         name: 'Landing Page Copy';
         description: 'High-converting landing page content';
         type: 'landing-page';
-        preview: 'Turn visitors into customers with compelling copy...';
+        preview: 'Turn visitors into customers with compelling copy...',
         price: 59
       }
     ]
@@ -118,7 +118,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       readabilityScore: 78;
       suggestions: [
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
-      ];
+      ],
       metadata: {
         title: `${request.topic} - Complete Guide`;
         description: `Learn everything about ${request.topic} and how to implement it effectively.`;
@@ -130,7 +130,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
   async analyzeContent(content: string): Promise<{
     seoScore: number;
     readabilityScore: number;
-    suggestions: string[];
+    suggestions: string[],
     keywordDensity: Record<string, number>
   }> {
     // Mock content analysis
@@ -142,7 +142,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       ];
       keywordDensity: {
         'content': 2.1;
-        'seo': 1.8;
+        'seo': 1.8,
         'marketing': 1.5
       }
     }
@@ -154,7 +154,7 @@ export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
     price: 29;
-    period: '/month';
+    period: '/month',
     features: [
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality'
     ]
@@ -162,7 +162,7 @@ export const AI_CONTENT_PRICING = {
   professional: {
     name: 'Professional';
     price: 99;
-    period: '/month';
+    period: '/month',
     features: [
       '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
     ]
@@ -170,7 +170,7 @@ export const AI_CONTENT_PRICING = {
   enterprise: {
     name: 'Enterprise';
     price: 299;
-    period: '/month';
+    period: '/month',
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]

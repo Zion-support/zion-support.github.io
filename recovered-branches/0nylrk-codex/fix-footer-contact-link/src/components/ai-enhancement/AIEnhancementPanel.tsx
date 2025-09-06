@@ -1,12 +1,11 @@
 
 import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Textarea } from '@/components/ui/textarea';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-
+import {Card, CardContent, CardHeader, CardTitle, CardFooter} from '@/components/ui/card';
+import {Textarea} from '@/components/ui/textarea';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Sparkles, Loader2, Copy, Check} from '@/components/icons';
+import {useAIContentEnhancer, AIEnhancementOptions} from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps {
   title: string,
   defaultOptions: AIEnhancementOptions,
@@ -43,7 +42,7 @@ export function AIEnhancementPanel({
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-      ...options;
+      ...options,
       [field]: e.target.value})
   };
 
@@ -164,3 +163,4 @@ export function AIEnhancementPanel({
     </Card>
   )
 }
+;

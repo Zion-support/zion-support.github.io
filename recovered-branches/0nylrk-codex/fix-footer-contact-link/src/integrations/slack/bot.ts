@@ -24,7 +24,7 @@ declare const globalThis: {
   console?: SafeConsole;
   process?: {
     env: {
-      PORT?: string;
+      PORT?: string,
       [key: string]: string | undefined
     }
   }
@@ -35,7 +35,7 @@ class MockApp {
   private commandHandlers: Record<string, Function> = {};
 
   command(commandName: string, handler: Function) {
-    this.commandHandlers[commandName] = handler;
+    this.commandHandlers[commandName] = handler,
     return this
   }
 
@@ -54,7 +54,7 @@ const app = new MockApp();
 
 async function askZionGPT(prompt: string): Promise<string> {
   // Safely log without direct console reference
-  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
+  const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined,
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
   }

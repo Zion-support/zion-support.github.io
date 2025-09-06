@@ -23,3 +23,4 @@ document.addEventListener('DOMContentLoaded', () => {
     chrome.runtime.sendMessage({ type: 'view-notifications' })
   })
 }),
+;

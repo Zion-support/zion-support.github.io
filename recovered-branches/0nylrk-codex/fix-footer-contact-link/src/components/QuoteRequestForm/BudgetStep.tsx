@@ -1,6 +1,6 @@
-import { QuoteFormData } from "@/types/quotes";
-import { Label } from "@/components/ui/label";
-import { Slider } from "@/components/ui/slider";
+import {QuoteFormData} from "@/types/quotes";
+import {Label} from "@/components/ui/label";
+import {Slider} from "@/components/ui/slider";
 interface BudgetStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
@@ -12,14 +12,14 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
       updateFormData({
         budget: {
           ...formData.budget;
-          type;
+          type,
           maxAmount: formData.budget.amount + 5000
         }
       })
     } else {
       updateFormData({
         budget: {
-          ...formData.budget;
+          ...formData.budget,
           type
         }
       })
@@ -175,4 +175,4 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
       </div>
     </div>
   )
-}
+};

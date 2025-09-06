@@ -1,306 +1,291 @@
-#!/usr/bin/env node;
-;
+#!/usr/bin/env node
+
 const { execSync } = require('child_process');
 const fs = require('fs');
-
 const path = require('path');
-;
-class EnhancedAutomationSuite {;
-  constructor() {;
 
+class EnhancedAutomationSuite {
+  constructor() {
     this.projectRoot = process.cwd();
     this.startTime = new Date();
-
     this.results = {
-
+      codeQuality: { success: false, duration: 0, errors: [], warnings: [] },
+      securityAudit: { success: false, duration: 0, errors: [], warnings: [] },
+      performanceOptimization: { success: false, duration: 0, errors: [], warnings: [] },
+      accessibilityCheck: { success: false, duration: 0, errors: [], warnings: [] },
+      seoOptimization: { success: false, duration: 0, errors: [], warnings: [] },
+      testing: { success: false, duration: 0, errors: [], warnings: [] }
     };
-
+    this.reportsDir = path.join(this.projectRoot, 'automation-reports');
+    this.ensureReportsDir();
   }
-;
-  log(message, type = 'INFO') {;
+
+  ensureReportsDir() {
+    if (!fs.existsSync(this.reportsDir)) {
+      fs.mkdirSync(this.reportsDir, { recursive: true });
+    }
+  }
+
+  log(message) {
     const timestamp = new Date().toISOString();
-
-    const prefix =;
-      type === 'ERROR';
-        ? '❌';
-        :type === 'SUCCESS';
-          ? '✅';
-          :type === 'WARNING';
-            ? '⚠️';
-            :'ℹ️';
-    console.log(`${prefix} [${timestamp}] ${message}`);
-
+    console.log(`[${timestamp}] ${message}`);
   }
 
-  async runCommand(command, description, options = {}) {
-    this.log(`Running: ${description}`),
+  async runCommand(command, description) {
+    const startTime = Date.now();
     try {
+      this.log(`🚀 ${description}`);
       const result = execSync(command, {
-
-      };
-
-    }
-  }
-;
-  async improveCodeQuality() {;
-    const startTime = Date.now();
-    this.log('\n🔍 IMPROVING CODE QUALITY');
-
-    try {
-      // Remove unused imports
-      const unusedImportsResult = await this.runCommand(
-
-      };
-
-    }
-  }
-;
-  async performSecurityAudit() {;
-    const startTime = Date.now();
-    this.log('\n🔒 PERFORMING SECURITY AUDIT');
-;
-    try {;
-      // Run npm audit;
-      const auditResult = await this.runCommand(;
-        'npm audit --audit-level moderate',;
-        'Security Audit';
-      );
-;
-      // Check for security vulnerabilities in dependencies;
-      const vulnerabilityCheck = await this.runCommand(;
-        'npm audit --json',;
-        'Vulnerability Check';
-      );
-
-      // Scan for common security issues
-      const securityScan = await this.runCommand(
-
-      };
-
-    }
-  }
-;
-  async optimizePerformance() {;
-    const startTime = Date.now();
-    this.log('\n⚡ OPTIMIZING PERFORMANCE');
-
-    try {
-      // Analyze bundle size
-      const bundleAnalysis = await this.runCommand(
-        'npm runbuild:analyze',
-        'Bundle Analysis'
-
-      );
-;
-      // Check for performance issues;
-      const performanceCheck = await this.runCommand(;
-        'npx lighthouse:http://localhos:t:3000 --output=json',;
-        'Performance Check';
-      );
-
-      // Check for performance issues
-      const performanceCheck = await this.runCommand(
-
-      };
-
-    }
-  }
-;
-  async optimizeSEO() {;
-    const startTime = Date.now();
-    this.log('\n🔍 OPTIMIZING SEO');
-
-    try {
-      // Generate sitemap
-      const sitemapResult = await this.runCommand(
-        'npm runsitemap:generate',
-        'Generate Sitemap'
-      );
-
-      // Generate search index
-      const searchIndexResult = await this.runCommand(
-        'npm runsearch:index',
-        'Generate Search Index'
-      );
-
-      // Check for SEO issues
-      const seoCheck = await this.runCommand(
-
-      };
-
-    }
-  }
-;
-  async improveAccessibility() {;
-    const startTime = Date.now();
-    this.log('\n♿ IMPROVING ACCESSIBILITY');
-
-    try {
-      // Run accessibility checks
-      const accessibilityCheck = await this.runCommand(
-
-      };
-
-    }
-  }
-;
-  async optimizeBuild() {;
-    const startTime = Date.now();
-    this.log('\n🏗️ OPTIMIZING BUILD');
-;
-    try {;
-      // Clean build;
-      const cleanBuild = await this.runCommand('npm run clean', 'Clean Build');
-
-      // Production build
-      const productionBuild = await this.runCommand(
-        'npm runbuild:production',
-        'Production Build'
-      );
-
-      // Build analysis
-      const buildAnalysis = await this.runCommand(
-        'npm runbuild:analyze',
-        'Build Analysis'
-      );
-
-      this.results.buildOptimization = {
-
-      };
-
-    }
-  }
-;
-  async deployChanges() {;
-    const startTime = Date.now();
-    this.log('\n🚀 DEPLOYING CHANGES');
-;
-    try {;
-      // Add all changes;
-      await this.runCommand('git add .', 'Git Add');
-
-      // Commit changes
-
-      await this.runCommand(`git commit -m "${commitMessage}"`, 'Git Commit');
-
-      // Push changes
-      await this.runCommand('git push origin HEAD', 'Git Push');
-
-      this.results.deployment = {
-
-      };
-
+        encoding: 'utf8',
+        stdio: 'pipe',
+        cwd: this.projectRoot,
+        timeout: 300000 // 5 minutes timeout
+      });
+      const duration = Date.now() - startTime;
+      this.log(`✅ ${description} completed in ${duration}ms`);
+      return { success: true, result, duration };
     } catch (error) {
-      this.results.deployment = {
-        success: false,
-        duration: Date.now() - startTime,
-        errors: [error.message],
-        warnings: [],
-
-      };
-
+      const duration = Date.now() - startTime;
+      this.log(`❌ ${description} failed after ${duration}ms: ${error.message}`);
+      return { success: false, error: error.message, duration };
     }
   }
-;
-  generateDetailedReport() {;
-    const totalDuration = Date.now() - this.startTime;
-    const successfulTasks = Object.values(this.results).filter(;
-      r => r.success;
-    ).length;
-    const totalTasks = Object.keys(this.results).length;
-;
-    this.log('\n📊 ENHANCED AUTOMATION REPORT');
-    this.log('='.repeat(60));
 
-    this.log(`Total: Duration: ${totalDuration}ms`);
-    this.log(`Successful: Tasks: ${successfulTasks}/${totalTasks}`);
+  async runCodeQuality() {
+    this.log('🔧 Running code quality improvements...');
+    const startTime = Date.now();
+    
+    const commands = [
+      { cmd: 'npm run lint:fix', desc: 'Fix linting errors' },
+      { cmd: 'npm run type-check', desc: 'TypeScript type checking' },
+      { cmd: 'npm run format', desc: 'Format code with Prettier' }
+    ];
 
-    this.log('');
+    const errors = [];
+    const warnings = [];
+    let success = true;
 
-    Object.entries(this.results).forEach(([task, result]) => {
-      const status = result.success ? '✅' : '❌';
-      const duration = `${result.duration}ms`;
-      this.log(`${status} ${task}: ${duration}`);
-
-      if (result.errors.length > 0) {
-
-        result.errors.forEach(error => this.log(`   Error: ${error}`));
+    for (const { cmd, desc } of commands) {
+      const result = await this.runCommand(cmd, desc);
+      if (!result.success) {
+        success = false;
+        errors.push(`${desc}: ${result.error}`);
       }
-      if (result.warnings.length > 0) {
-        result.warnings.forEach(warning => this.log(`   Warning: ${warning}`));
+    }
 
-      }
-    });
-
-    // Save detailed report
-    const report = {
-      timestamp: new Date().toISOString(),
-      totalDuration,
-      successfulTasks,
-      totalTasks,
-
-      result: this.results,
-      recommendation: this.generateRecommendations(),
-
+    this.results.codeQuality = {
+      success,
+      duration: Date.now() - startTime,
+      errors,
+      warnings
     };
 
-;
-    fs.writeFileSync(;
-      'enhanced-automation-report.json',;
-      JSON.stringify(report, null, 2);    );
-    this.log('\n📄 Detailed report saved to enhanced-automation-report.json');
-
+    return this.results.codeQuality;
   }
-;
-  generateRecommendations() {;
-    const recommendations = [];
 
-;
-    if (!this.results.codeQuality.success) {;
-      recommendations.push('Review and fix code quality issues');
-    }
-    if (!this.results.securityAudit.success) {;
-      recommendations.push('Address security vulnerabilities');
-    }
-    if (!this.results.performanceOptimization.success) {;
-      recommendations.push('Optimize application performance');
-    }
-    if (!this.results.seoOptimization.success) {;
-      recommendations.push('Improve SEO optimization');
-    }
-    if (!this.results.accessibilityImprovements.success) {;
-      recommendations.push('Enhance accessibility features');
-    }
-;
-    return recommendations;
+  async runSecurityAudit() {
+    this.log('🔒 Running security audit...');
+    const startTime = Date.now();
+    
+    const commands = [
+      { cmd: 'npm audit', desc: 'Security audit' },
+      { cmd: 'npm audit fix --force', desc: 'Fix security vulnerabilities' }
+    ];
 
+    const errors = [];
+    const warnings = [];
+    let success = true;
+
+    for (const { cmd, desc } of commands) {
+      const result = await this.runCommand(cmd, desc);
+      if (!result.success) {
+        warnings.push(`${desc}: ${result.error}`);
+      }
+    }
+
+    this.results.securityAudit = {
+      success,
+      duration: Date.now() - startTime,
+      errors,
+      warnings
+    };
+
+    return this.results.securityAudit;
   }
-;
-  async run() {;
-    this.log('🚀 Starting Enhanced Automation Suite');
-    this.log('='.repeat(60));
-;
-    try {;
-      await this.improveCodeQuality();
-      await this.performSecurityAudit();
-      await this.optimizePerformance();
-      await this.optimizeSEO();
-      await this.improveAccessibility();
-      await this.optimizeBuild();
 
-      this.log(`Fatal: error: ${error.message}`, 'ERROR');
+  async runPerformanceOptimization() {
+    this.log('⚡ Running performance optimization...');
+    const startTime = Date.now();
+    
+    const commands = [
+      { cmd: 'npm run build:analyze', desc: 'Analyze bundle size' },
+      { cmd: 'npm run optimize:images', desc: 'Optimize images' }
+    ];
 
-    } finally {
-      this.generateDetailedReport(),
+    const errors = [];
+    const warnings = [];
+    let success = true;
 
+    for (const { cmd, desc } of commands) {
+      const result = await this.runCommand(cmd, desc);
+      if (!result.success) {
+        warnings.push(`${desc}: ${result.error}`);
+      }
+    }
+
+    this.results.performanceOptimization = {
+      success,
+      duration: Date.now() - startTime,
+      errors,
+      warnings
+    };
+
+    return this.results.performanceOptimization;
+  }
+
+  async runAccessibilityCheck() {
+    this.log('♿ Running accessibility check...');
+    const startTime = Date.now();
+    
+    const commands = [
+      { cmd: 'npm run test:accessibility', desc: 'Accessibility tests' }
+    ];
+
+    const errors = [];
+    const warnings = [];
+    let success = true;
+
+    for (const { cmd, desc } of commands) {
+      const result = await this.runCommand(cmd, desc);
+      if (!result.success) {
+        warnings.push(`${desc}: ${result.error}`);
+      }
+    }
+
+    this.results.accessibilityCheck = {
+      success,
+      duration: Date.now() - startTime,
+      errors,
+      warnings
+    };
+
+    return this.results.accessibilityCheck;
+  }
+
+  async runSEOOptimization() {
+    this.log('🔍 Running SEO optimization...');
+    const startTime = Date.now();
+    
+    const commands = [
+      { cmd: 'npm run sitemap:generate', desc: 'Generate sitemap' },
+      { cmd: 'npm run search:index', desc: 'Generate search index' }
+    ];
+
+    const errors = [];
+    const warnings = [];
+    let success = true;
+
+    for (const { cmd, desc } of commands) {
+      const result = await this.runCommand(cmd, desc);
+      if (!result.success) {
+        warnings.push(`${desc}: ${result.error}`);
+      }
+    }
+
+    this.results.seoOptimization = {
+      success,
+      duration: Date.now() - startTime,
+      errors,
+      warnings
+    };
+
+    return this.results.seoOptimization;
+  }
+
+  async runTesting() {
+    this.log('🧪 Running tests...');
+    const startTime = Date.now();
+    
+    const commands = [
+      { cmd: 'npm run test:smoke', desc: 'Smoke tests' },
+      { cmd: 'npm run test:comprehensive', desc: 'Comprehensive tests' }
+    ];
+
+    const errors = [];
+    const warnings = [];
+    let success = true;
+
+    for (const { cmd, desc } of commands) {
+      const result = await this.runCommand(cmd, desc);
+      if (!result.success) {
+        warnings.push(`${desc}: ${result.error}`);
+      }
+    }
+
+    this.results.testing = {
+      success,
+      duration: Date.now() - startTime,
+      errors,
+      warnings
+    };
+
+    return this.results.testing;
+  }
+
+  async generateReport() {
+    this.log('📊 Generating comprehensive report...');
+    
+    const endTime = new Date();
+    const totalDuration = endTime - this.startTime;
+    
+    const report = {
+      timestamp: endTime.toISOString(),
+      totalDuration,
+      results: this.results,
+      summary: {
+        totalTasks: Object.keys(this.results).length,
+        successfulTasks: Object.values(this.results).filter(r => r.success).length,
+        failedTasks: Object.values(this.results).filter(r => !r.success).length,
+        totalErrors: Object.values(this.results).reduce((sum, r) => sum + r.errors.length, 0),
+        totalWarnings: Object.values(this.results).reduce((sum, r) => sum + r.warnings.length, 0)
+      }
+    };
+
+    const reportPath = path.join(this.reportsDir, 'enhanced-automation-suite-report.json');
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+    
+    this.log(`📊 Report saved to: ${reportPath}`);
+    return report;
+  }
+
+  async run() {
+    try {
+      this.log('🎯 Starting Enhanced Automation Suite...');
+      
+      await this.runCodeQuality();
+      await this.runSecurityAudit();
+      await this.runPerformanceOptimization();
+      await this.runAccessibilityCheck();
+      await this.runSEOOptimization();
+      await this.runTesting();
+      
+      const report = await this.generateReport();
+      
+      this.log('🎉 Enhanced Automation Suite completed!');
+      this.log(`📈 Summary: ${report.summary.successfulTasks}/${report.summary.totalTasks} tasks successful`);
+      
+      return report;
+    } catch (error) {
+      this.log(`❌ Enhanced Automation Suite failed: ${error.message}`);
+      process.exit(1);
     }
   }
 }
-;
-// Run the enhanced automation suite;
-if (require.main === module) {;
+
+// Run the automation suite
+if (require.main === module) {
   const suite = new EnhancedAutomationSuite();
-  suite.run().catch(console.error),
+  suite.run().catch(console.error);
 }
-;
+
 module.exports = EnhancedAutomationSuite;

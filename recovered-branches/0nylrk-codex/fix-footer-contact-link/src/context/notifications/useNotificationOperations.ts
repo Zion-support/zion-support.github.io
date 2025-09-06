@@ -1,7 +1,6 @@
-import { useState, useCallback } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Notification, FilterType, NotificationContextType } from './types';
-
+import {useState, useCallback} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Notification, FilterType, NotificationContextType} from './types';
 export const useNotificationOperations = (userId?: string): NotificationContextType => {
   const [notifications, setNotifications] = useState<Notification[]>([]);
   const [loading, setLoading] = useState(false);
@@ -28,7 +27,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
   }, [userId]);
 
   const markAsRead = useCallback(async (id: string) => {
-    if (!userId) return;
+    if (!userId) return,
 
     try {
       const { error } = await supabase
@@ -62,7 +61,7 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
   }, [userId, fetchNotifications]);
 
   const dismissNotification = useCallback(async (id: string) => {
-    if (!userId) return;
+    if (!userId) return,
 
     try {
       const { error } = await supabase

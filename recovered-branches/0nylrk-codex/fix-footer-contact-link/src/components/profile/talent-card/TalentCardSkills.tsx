@@ -1,8 +1,7 @@
-
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 interface TalentCardSkillsProps {
-  skills: string[] | undefined
+  skills: string[] | undefined;
 }
 
 export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
@@ -11,8 +10,8 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
 
   return (
     <div className="flex flex-wrap gap-1 mb-5">
-      {topSkills.map(skill => (
-        <Badge 
+      {topSkills.map((skill) => (
+        <Badge
           key={skill}
           className="bg-zion-purple/10 hover:bg-zion-purple/30 text-zion-purple border-0"
         >
@@ -25,5 +24,5 @@ export function TalentCardSkills({ skills = [] }: TalentCardSkillsProps) {
         </Badge>
       )}
     </div>
-  )
+  );
 }

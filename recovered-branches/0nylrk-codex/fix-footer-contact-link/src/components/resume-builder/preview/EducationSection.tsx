@@ -1,6 +1,6 @@
 
-import { Education } from '@/types/resume';
-import { format } from 'date-fns';
+import {Education} from '@/types/resume';
+import {format} from 'date-fns';
 interface EducationSectionProps {
   education: Education[]
 }
@@ -17,7 +17,7 @@ export function EducationSection({ education }: EducationSectionProps) {
   });
 
   const formatDate = (date: Date | string | undefined) => {
-    if (!date) return '';
+    if (!date) return '',
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
     }
@@ -53,3 +53,4 @@ export function EducationSection({ education }: EducationSectionProps) {
     </div>
   )
 }
+;

@@ -1,6 +1,6 @@
 
-import { useAuth } from './useAuth';
-import { getAccessibleRoutes } from '@/config/sitemap';
+import {useAuth} from './useAuth';
+import {getAccessibleRoutes} from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
@@ -30,7 +30,7 @@ export function useSitemap() {
     // If route requires specific roles and user doesn't have one
     if (route.requiredRoles && route.requiredRoles.length > 0) {
       if (!user || !user.userType) return false;
-      const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined;
+      const userTypeEnum = isValidUserType(user.userType) ? user.userType as UserType : undefined,
       return userTypeEnum ? route.requiredRoles.includes(userTypeEnum) : false
     }
     
@@ -48,3 +48,4 @@ export function useSitemap() {
     canAccessRoute
   }
 }
+;

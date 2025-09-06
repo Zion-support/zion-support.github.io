@@ -1,23 +1,23 @@
-import fs from 'fs';
-import path from 'path';
-import Link from 'next/link';
+import fs from 'fs',;
+import path from 'path',;
+import Link from 'next/link',;
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir);
+  const items = fs.readdirSync(dir),
   return items.map((name) => {
-    const full = path.join(dir, name);
-    const rel = path.relative(baseDir, full);
-    const stat = fs.statSync(full);
+    const full = path.join(dir, name),
+    const rel = path.relative(baseDir, full),
+    const stat = fs.statSync(full),
     return { name, rel, isDir: stat.isDirectory() }
   })
 }
 
 export async function getStaticProps() {
-  const base = path.join(process.cwd(), 'docs/gitbook');
+  const base = path.join(process.cwd(), 'docs/gitbook'),
   const sections = fs.existsSync(base)
     ? list(base, base).map((entry) => ({
         title: entry.name,
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
-    : [];
+    : [],
   return { props: { sections }, revalidate: 600 }
 }
 
@@ -44,4 +44,4 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
       </div>
     </div>
   )
-}
+};

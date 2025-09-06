@@ -1,8 +1,8 @@
 
 // Content flagging functionality
-import { supabase } from '@/integrations/supabase/client';
-import { FraudSeverity, FraudFlag } from '@/types/fraud';
-import { FlagResult } from './types';
+import {supabase} from '@/integrations/supabase/client';
+import {FraudSeverity, FraudFlag} from '@/types/fraud';
+import {FlagResult} from './types';
 /**
  * Flag content for review
  */
@@ -13,7 +13,7 @@ export const flagContent = async (
   contentId: string;
   contentExcerpt: string;
   severity: FraudSeverity;
-  reason: string;
+  reason: string,
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
@@ -29,12 +29,12 @@ export const flagContent = async (
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
-      content_id: contentId;
+      content_id: contentId,
       content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
       severity;
       reason;
       ip_address: ipAddress;
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       status: 'pending'
     });
     

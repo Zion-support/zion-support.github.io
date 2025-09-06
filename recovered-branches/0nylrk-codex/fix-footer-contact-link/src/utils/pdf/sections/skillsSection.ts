@@ -1,7 +1,7 @@
 
-import { jsPDF } from 'jspdf';
-import { Skill } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
+import {jsPDF} from 'jspdf';
+import {Skill} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
 export function addSkillsSection(
   doc: jsPDF;
   skills: Skill[];
@@ -13,7 +13,7 @@ export function addSkillsSection(
   let yPos = startY;
   
   doc.setFontSize(16);
-  doc.setTextColor(colors.heading);
+  doc.setTextColor(colors.heading),
   doc.text('Skills', 20, yPos);
   yPos += 8;
   
@@ -48,3 +48,4 @@ export function addSkillsSection(
   
   return yPos + 5
 }
+;

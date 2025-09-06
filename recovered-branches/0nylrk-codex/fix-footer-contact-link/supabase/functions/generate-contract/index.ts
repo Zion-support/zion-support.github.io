@@ -1,13 +1,13 @@
 
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts";
+import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
 interface Milestone {
   title: string;
   description: string;
-  dueDate: string;
+  dueDate: string,
   estimatedHours: number
 }
 
@@ -55,7 +55,7 @@ serve(async (req) => {
     - Timeline
     - Payment terms
     - Deliverables
-    `;
+    `,
 
     if (additionalClauses && additionalClauses.length > 0) {
       prompt += `
@@ -72,7 +72,7 @@ serve(async (req) => {
     if (milestones && milestones.length > 0) {
       prompt += `
       
-      The project will be divided into the following milestones: `;
+      The project will be divided into the following milestones: `,
       
       milestones.forEach((milestone: Milestone, index: number) => {
         prompt += `
@@ -96,17 +96,17 @@ serve(async (req) => {
 
     // Call OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON.stringify({
         model: 'gpt-4o';
         messages: [
           {
-            role: 'system';
+            role: 'system',
             content: 'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.'};
           {
-            role: 'user';
+            role: 'user',
             content: prompt}];
         temperature: 0.7})});
 

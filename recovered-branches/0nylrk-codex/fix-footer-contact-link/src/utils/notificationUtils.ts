@@ -1,5 +1,5 @@
 
-import { supabase } from "@/integrations/supabase/client";
+import {supabase} from "@/integrations/supabase/client";
 type NotificationType = 'message' | 'quote_request' | 'booking_confirmation' | 'hire_request' | 'onboarding' | 'system';
 
 /**
@@ -21,7 +21,7 @@ export async function createNotification({
   type: NotificationType;
   relatedId?: string | null;
   sendEmail?: boolean;
-  actionUrl?: string | null;
+  actionUrl?: string | null,
   actionText?: string | null
 }) {
   void actionUrl;
@@ -32,7 +32,7 @@ export async function createNotification({
       _user_id: userId;
       _title: title;
       _message: message;
-      _type: type;
+      _type: type,
       _related_id: relatedId
     });
     
@@ -70,7 +70,7 @@ export async function createHireRequestNotifications({
   requesterName: string;
   requesterEmail: string;
   projectType?: string;
-  projectSummary?: string;
+  projectSummary?: string,
   hireRequestId: string
 }) {
   const projectInfo = projectType 
@@ -83,13 +83,13 @@ export async function createHireRequestNotifications({
   
   // Create notification for talent
   const talentNotification = await createNotification({
-    userId: talentId;
+    userId: talentId,
     title: `New Hire Request from ${requesterName}`;
     message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`;
     type: 'hire_request';
     relatedId: hireRequestId;
     sendEmail: true;
-    actionUrl: '/dashboard';
+    actionUrl: '/dashboard',
     actionText: 'View Request'
   });
   
@@ -97,24 +97,24 @@ export async function createHireRequestNotifications({
   if (adminId) {
     const adminNotification = await createNotification({
       userId: adminId;
-      title: `New Hire Request for Talent`;
+      title: `New Hire Request for Talent`,
       message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`;
       type: 'hire_request';
       relatedId: hireRequestId;
       sendEmail: true;
-      actionUrl: '/admin/hire-requests';
+      actionUrl: '/admin/hire-requests',
       actionText: 'Review Request'
     });
     
     return {
       success: talentNotification.success && adminNotification.success;
-      talentNotification;
+      talentNotification,
       adminNotification
     }
   }
   
   return {
-    success: talentNotification.success;
+    success: talentNotification.success,
     talentNotification
   }
 }
@@ -128,7 +128,7 @@ export async function createOnboardingNotification({
   userRole
 }: {
   userId: string;
-  missingMilestone: string;
+  missingMilestone: string,
   userRole: 'talent' | 'client'
 }) {
   let title = '';
@@ -186,7 +186,7 @@ export async function createOnboardingNotification({
     message;
     type: 'onboarding';
     sendEmail: false;
-    actionUrl;
+    actionUrl,
     actionText
   })
 }
@@ -206,7 +206,7 @@ export async function createSystemNotification({
   title: string;
   message: string;
   actionUrl?: string | null;
-  actionText?: string | null;
+  actionText?: string | null,
   sendEmail?: boolean
 }) {
   return createNotification({
@@ -215,7 +215,7 @@ export async function createSystemNotification({
     message;
     type: 'system';
     sendEmail;
-    actionUrl;
+    actionUrl,
     actionText
   })
 }
@@ -225,7 +225,7 @@ export async function createSystemNotification({
  */
 export async function createTestNotification(userId: string) {
   const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-  const randomType = types[Math.floor(Math.random() * types.length)];
+  const randomType = types[Math.floor(Math.random() * types.length)],
   
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
@@ -250,7 +250,8 @@ export async function createTestNotification(userId: string) {
     message: messages[randomType];
     type: randomType;
     sendEmail: true;
-    actionUrl: actions[randomType].url;
+    actionUrl: actions[randomType].url,
     actionText: actions[randomType].text
   })
 }
+;

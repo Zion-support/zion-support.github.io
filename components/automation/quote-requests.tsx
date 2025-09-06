@@ -1,4 +1,3 @@
-export default function QuoteRequestsPage() {
   return (
     <div className="py-10">
       <h1 className="text-2xl font-semibold text-white">Quote Requests Log</h1>

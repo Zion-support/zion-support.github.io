@@ -1,9 +1,8 @@
 
-import { useState, useEffect } from "react";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from 'recharts';
-
+import {useState, useEffect} from "react";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip} from 'recharts';
 interface HiringAnalyticsProps {
   jobId?: string
 }
@@ -173,3 +172,4 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
     </div>
   )
 }
+;

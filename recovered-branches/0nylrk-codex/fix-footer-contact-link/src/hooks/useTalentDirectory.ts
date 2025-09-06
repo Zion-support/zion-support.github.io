@@ -1,8 +1,8 @@
 
-import { useAuthStatus } from "./talent/useAuthStatus";
-import { useTalentData } from "./talent/useTalentData";
-import { useFilterTalents } from "./talent/useFilterTalents";
-import { useUIState } from "./talent/useUIState";
+import {useAuthStatus} from "./talent/useAuthStatus";
+import {useTalentData} from "./talent/useTalentData";
+import {useFilterTalents} from "./talent/useFilterTalents";
+import {useUIState} from "./talent/useUIState";
 export function useTalentDirectory() {
   // Fetch auth status and saved talents
   const { 
@@ -92,3 +92,4 @@ export function useTalentDirectory() {
     handleToggleSave
   }
 }
+;

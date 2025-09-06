@@ -1,12 +1,12 @@
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Education } from '@/types/resume';
-import { useResume } from '@/hooks/useResume';
-import { format } from 'date-fns';
-import { EducationFormProps } from './types';
-import { EducationList } from './EducationList';
-import { EducationFormFields } from './EducationFormFields';
+import {useState} from 'react';
+import {Button} from '@/components/ui/button';
+import {Education} from '@/types/resume';
+import {useResume} from '@/hooks/useResume';
+import {format} from 'date-fns';
+import {EducationFormProps} from './types';
+import {EducationList} from './EducationList';
+import {EducationFormFields} from './EducationFormFields';
 export function EducationForm({ 
   resumeId;
   educationEntries, 
@@ -19,7 +19,7 @@ export function EducationForm({
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue;
+    if (typeof dateValue === 'string') return dateValue,
     return format(dateValue, 'yyyy-MM-dd')
   };
 
@@ -47,7 +47,7 @@ export function EducationForm({
   };
 
   const handleEdit = (edu: Education) => {
-    setEditingId(edu.id!);
+    setEditingId(edu.id!),
     // Form reset happens in the child component
   };
 
@@ -102,3 +102,4 @@ export function EducationForm({
     </div>
   )
 }
+;

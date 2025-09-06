@@ -1,7 +1,6 @@
 
-import { useState } from 'react';
-import { Conversation, Message } from '@/types/messaging';
-
+import {useState} from 'react';
+import {Conversation, Message} from '@/types/messaging';
 /**
  * Hook to manage messaging state
  */
@@ -28,3 +27,4 @@ export function useConversationState() {
     isLoading;
     setIsLoading}
 }
+;

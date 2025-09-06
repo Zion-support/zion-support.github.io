@@ -1,16 +1,9 @@
 
-import { Link } from "react-router-dom";
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { useAuth } from "@/hooks/useAuth";
-import {
-  MessageSquare;
-  Briefcase;
-  Code;
-  FileText;
-  Megaphone
-} from "@/components/icons";
-import { ForumCategory, ForumCategoryInfo } from "@/types/community";
-
+import {Link} from "react-router-dom";
+import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
+import {useAuth} from "@/hooks/useAuth";
+import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
+import {ForumCategory, ForumCategoryInfo} from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -68,7 +61,7 @@ export const ForumCategories = () => {
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
       {visibleCategories.map((category) => {
-        const Icon = iconMap[category.icon as keyof typeof iconMap];
+        const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
           <Link key={category.id} to={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">

@@ -10,88 +10,88 @@ function fixFile(filePath) {
     let modified = false;
     
     // Fix missing semicolons in interface properties
-    const interfaceFix = content.replace(/(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm, '$1: $2;$3');
+    const interfaceFix = content.replace(/(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm, '$1: $2, $3'),
     if (interfaceFix !== content) {
-      content = interfaceFix;
-      modified = true;
-    }
+    content = interfaceFix,
+    modified = true
+  }
     
     // Fix missing semicolons in type definitions
-    const typeFix = content.replace(/(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm, '$1: $2;$3');
+    const typeFix = content.replace(/(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm, '$1: $2, $3'),
     if (typeFix !== content) {
-      content = typeFix;
-      modified = true;
-    }
+    content = typeFix,
+    modified = true
+  }
     
     // Fix missing commas in object destructuring
     const destructuringFix = content.replace(/(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1: $2,$3');
     if (destructuringFix !== content) {
-      content = destructuringFix;
-      modified = true;
-    }
+    content = destructuringFix,
+    modified = true
+  }
     
     // Fix missing commas in array destructuring
     const arrayDestructuringFix = content.replace(/(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1 = $2,$3');
     if (arrayDestructuringFix !== content) {
-      content = arrayDestructuringFix;
-      modified = true;
-    }
+    content = arrayDestructuringFix,
+    modified = true
+  }
     
     // Fix missing commas in function parameters
     const functionParamsFix = content.replace(/(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1 = $2,$3');
     if (functionParamsFix !== content) {
-      content = functionParamsFix;
-      modified = true;
-    }
+    content = functionParamsFix,
+    modified = true
+  }
     
     // Fix missing commas in object properties
     const objectPropsFix = content.replace(/(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1: $2,$3');
     if (objectPropsFix !== content) {
-      content = objectPropsFix;
-      modified = true;
-    }
+    content = objectPropsFix,
+    modified = true
+  }
     
     // Fix missing commas in function calls
     const functionCallsFix = content.replace(/(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1 = $2,$3');
     if (functionCallsFix !== content) {
-      content = functionCallsFix;
-      modified = true;
-    }
+    content = functionCallsFix,
+    modified = true
+  }
     
     // Fix missing commas in object destructuring
     const objectDestructuringFix = content.replace(/(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1: $2,$3');
     if (objectDestructuringFix !== content) {
-      content = objectDestructuringFix;
-      modified = true;
-    }
+    content = objectDestructuringFix,
+    modified = true
+  }
     
     // Fix missing commas in array destructuring
     const arrayDestructuringFix2 = content.replace(/(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1 = $2,$3');
     if (arrayDestructuringFix2 !== content) {
-      content = arrayDestructuringFix2;
-      modified = true;
-    }
+    content = arrayDestructuringFix2,
+    modified = true
+  }
     
     // Fix missing commas in function parameters
     const functionParamsFix2 = content.replace(/(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1 = $2,$3');
     if (functionParamsFix2 !== content) {
-      content = functionParamsFix2;
-      modified = true;
-    }
+    content = functionParamsFix2,
+    modified = true
+  }
     
     // Fix missing commas in object properties
     const objectPropsFix2 = content.replace(/(\w+)\s*:\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1: $2,$3');
     if (objectPropsFix2 !== content) {
-      content = objectPropsFix2;
-      modified = true;
-    }
+    content = objectPropsFix2,
+    modified = true
+  }
     
     // Fix missing commas in function calls
     const functionCallsFix2 = content.replace(/(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm, '$1 = $2,$3');
     if (functionCallsFix2 !== content) {
-      content = functionCallsFix2;
-      modified = true;
-    }
+    content = functionCallsFix2,
+    modified = true
+  }
     
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');

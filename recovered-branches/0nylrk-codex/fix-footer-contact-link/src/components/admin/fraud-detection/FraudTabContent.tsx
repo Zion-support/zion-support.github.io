@@ -1,7 +1,6 @@
 
 import React from "react";
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
-
+import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react";
 interface FraudTabContentProps {
   tabValue: string
 }
@@ -39,7 +38,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab shows flags where action has already been taken.
           </p>
         </div>
-      );
+      ),
     
     default:
       return null

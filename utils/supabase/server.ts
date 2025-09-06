@@ -1,8 +1,10 @@
-export const supabase = {
-  from: (table: string) => ({
-    select: () => ({ data: [], error: null }),
-    insert: () => ({ data: [], error: null }),
-    update: () => ({ data: [], error: null }),
-    delete: () => ({ data: [], error: null }),
-  }),
-};
+
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key';
+
+export function getServerSupabase() {
+  return createClient(supabaseUrl, supabaseKey);
+}
+

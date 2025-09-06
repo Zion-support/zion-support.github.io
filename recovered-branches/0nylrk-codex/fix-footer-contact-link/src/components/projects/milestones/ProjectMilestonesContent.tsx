@@ -1,19 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useProjects } from '@/hooks/useProjects';
-import { useMilestones } from '@/hooks/useMilestones';
-import { useJobDetails } from '@/hooks/useJobDetails';
-import { useAuth } from '@/hooks/useAuth';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
-import { 
-  MilestoneActivities;
-  MilestoneManager;
-  MilestoneCreator;
-  ProjectActions;
-  ProjectHeader
-} from './components';
+import {useParams} from 'react-router-dom';
+import {useProjects} from '@/hooks/useProjects';
+import {useMilestones} from '@/hooks/useMilestones';
+import {useJobDetails} from '@/hooks/useJobDetails';
+import {useAuth} from '@/hooks/useAuth';
+import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
+import {useDisputeCheck} from '@/hooks/useDisputeCheck';
+import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
 
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string };
@@ -80,7 +74,7 @@ export function ProjectMilestonesContent() {
   }
 
   const handleMilestoneSubmit = async (data: any) => {
-    if (!projectId) return;
+    if (!projectId) return,
     
     // Ensure all required fields are present
     const milestoneData = {
@@ -160,3 +154,4 @@ export function ProjectMilestonesContent() {
     </div>
   )
 }
+;

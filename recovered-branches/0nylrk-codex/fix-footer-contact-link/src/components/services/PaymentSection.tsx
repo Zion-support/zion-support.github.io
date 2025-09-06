@@ -1,10 +1,9 @@
-
 import { MapPin } from "lucide-react";
 import { PaymentButton } from "@/components/transactions/PaymentButton";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 import { toast } from "@/hooks/use-toast";
 interface PaymentSectionProps {
-  selectedCountry: CountryPricing
+  selectedCountry: CountryPricing;
 }
 
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
@@ -12,9 +11,11 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   const handlePaymentInitiated = () => {
     toast({
       title: "Processing your request",
-      description: "You'll be redirected to our secure payment portal momentarily."})
+      description:
+        "You'll be redirected to our secure payment portal momentarily.",
+    });
   };
-  
+
   return (
     <div className="text-center">
       <p className="text-zion-slate-light mb-2">Selected Country</p>
@@ -25,7 +26,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       <p className="text-2xl font-bold text-zion-cyan mb-6">
         ${selectedCountry.pricePerIncident.toFixed(2)}
       </p>
-      <PaymentButton 
+      <PaymentButton
         amount={selectedCountry.pricePerIncident}
         serviceId="it-onsite-service"
         providerId="zion-tech-group"
@@ -35,8 +36,9 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
         onPaymentInitiated={handlePaymentInitiated}
       />
       <p className="text-xs text-zion-slate-light mt-2">
-        Price includes transportation and first hour onsite. Additional hours billed separately.
+        Price includes transportation and first hour onsite. Additional hours
+        billed separately.
       </p>
     </div>
-  )
+  );
 }

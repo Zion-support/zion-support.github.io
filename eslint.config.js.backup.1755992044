@@ -1,5 +1,32 @@
 import js from '@eslint/js';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
 import globals from 'globals';
+=======
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
+>>>>>>> origin/cursor/enhance-app-with-micro-saas-and-deploy-d599
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
+
+import globals from 'globals';
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+import globals from 'globals';
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+import globals from 'globals';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
 export default [
   js.configs.recommended,
   {
@@ -22,8 +49,30 @@ export default [
         clearInterval: 'readonly'
       },
       parserOptions: {
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         ecmaVersion: 2020,
         sourceType: 'module',
+        ecmaVersion: 2020,
+        sourceType: 'module',
+<<<<<<< HEAD
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+<<<<<<< HEAD
+=======
+=======
+        ecmaVersion: 2020,
+        sourceType: 'module',
+>>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+>>>>>>> d90ff5f58ffc6a0718ebaaf076582d55e112dfc3
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-9381
         ecmaFeatures: {
           jsx: true
         }

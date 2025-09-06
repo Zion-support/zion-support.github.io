@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { useRouter } from 'next/router',;
 export default function CaseStudyPage() {
-  const router = useRouter();
-  const { id } = router.query;
+  const router = useRouter(),
+  const { id } = router.query,
 
   // Case studies data - this should match the data in case-studies.tsx
   const caseStudies = [
@@ -49,7 +49,7 @@ export default function CaseStudyPage() {
         <p>The project was completed in 6 months with minimal disruption to ongoing operations. 
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
       `
-    };
+    },
     {
       id: 'content-generation-scale',
       title: 'Scaling Content Generation 10x',
@@ -91,17 +91,17 @@ export default function CaseStudyPage() {
         <p>The system was deployed in 4 months with comprehensive training for the creative team. 
         The AI systems learned from human feedback and continuously improved over time.</p>
       `
-    };
+    },
     {
       id: 'cloud-infrastructure-optimization',
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
       industry: 'Technology',
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
-      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.';
+      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
       results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.';
+      description: 'Building self-healing, auto-scaling cloud infrastructure.',
       fullContent: `
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
@@ -112,7 +112,7 @@ export default function CaseStudyPage() {
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         
         <h2>Solution</h2>
-        <p>We designed and implemented a comprehensive cloud optimization system: </p>
+        <p>We designed and implemented a comprehensive cloud optimization system:</p>
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -133,9 +133,9 @@ export default function CaseStudyPage() {
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
-  ];
+  ],
 
-  const caseStudy = caseStudies.find(study => study.id === id);
+  const caseStudy = caseStudies.find(study => study.id === id),
 
   if (!caseStudy) {
     return (
@@ -258,4 +258,4 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
-}
+};

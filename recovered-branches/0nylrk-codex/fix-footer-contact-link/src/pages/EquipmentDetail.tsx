@@ -1,14 +1,14 @@
 
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import {useState} from "react";
+import {useParams} from "react-router-dom";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {ShoppingCart, Star, Truck, Shield, RotateCcw, Clock} from "lucide-react";
+import {toast} from "@/hooks/use-toast";
 interface EquipmentSpecification {
   name: string,
   value: string
@@ -47,7 +47,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1581591524425-c7e0978865fc?auto=format&fit=crop&w=1200&h=800"
-    ];
+    ],
     price: 6999,
     currency: "$",
     rating: 4.9,
@@ -73,7 +73,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Dual native ISO technology";
       "5-axis in-body image stabilization";
       "AI-powered autofocus with subject tracking";
-      "Weather-sealed magnesium alloy body";
+      "Weather-sealed magnesium alloy body",
       "Multiple assist tools: false color, waveform, vectorscope";
       "Anamorphic de-squeeze options";
       "Custom 3D LUT support"
@@ -91,7 +91,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
     images: [
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=1200&h=800";
       "https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=1200&h=800"
-    ];
+    ],
     price: 3499,
     currency: "$",
     rating: 4.8,
@@ -119,7 +119,7 @@ const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } = {
       "Configurable user layers";
       "8 DCA groups and 6 mute groups";
       "Integrated WiFi for wireless control"
-    ];
+    ],
     warranty: "3 years manufacturer warranty",
     returnPolicy: "21-day return policy for items in original condition"
   }
@@ -424,3 +424,4 @@ export default function EquipmentDetail() {
     </>
   )
 }
+;

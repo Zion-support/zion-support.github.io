@@ -1,4 +1,3 @@
-
 import { Progress } from "@/components/ui/progress";
 import { ResumeProgressProps } from "./types";
 export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
@@ -10,5 +9,5 @@ export const ResumeProgress = ({ resume, progress }: ResumeProgressProps) => {
       </div>
       <Progress value={progress} className="h-2 w-full sm: w-48" />
     </div>
-  )
+  );
 };

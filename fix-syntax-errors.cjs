@@ -2,56 +2,73 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 
-// Common syntax fixes
-const fixes = [
-  // Fix interface properties - add semicolons
-  {
-    pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2;$3'
-  },
-  // Fix object properties - add semicolons
-  {
-    pattern: /(\w+)\s*:\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1: $2;$3'
-  },
-  // Fix function parameters - add commas
-  {
-    pattern: /(\w+)\s*=\s*([^,;)]+);(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2,$3'
-  },
-  // Fix missing semicolons after return statements
-  {
-    pattern: /return\s+([^;]+),(\s*\/\/[^\n]*)?$/gm,
-    replacement: 'return $1;$2'
-  },
-  // Fix missing semicolons after variable declarations
-  {
-    pattern: /(\w+)\s*=\s*([^,;]+),(\s*\/\/[^\n]*)?$/gm,
-    replacement: '$1 = $2;$3'
-  }
-];
-
-function fixFile(filePath) {
+function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
+    let originalContent = content;
     
-    // Apply fixes
-    for (const fix of fixes) {
-      const newContent = content.replace(fix.pattern, fix.replacement);
-      if (newContent !== content) {
-        content = newContent;
-        modified = true;
+    // Fix common syntax errors
+    content = content.replace(/;\s*;/g, ';');
+    content = content.replace(/;\s*$/gm, '');
+    content = content.replace(/;\s*{/g, ' {');
+    content = content.replace(/;\s*}/g, ' }');
+    content = content.replace(/;\s*return/g, '; return');
+    content = content.replace(/;\s*export/g, '; export');
+    content = content.replace(/;\s*import/g, '; import');
+    
+    // Fix JSX syntax
+    content = content.replace(/;\s*<([^>]+)>/g, ' <$1>');
+    content = content.replace(/;\s*<\/[^>]+>/g, ' </>');
+    
+    // Fix function declarations
+    content = content.replace(/function\s+(\w+)\s*\(\s*\)\s*{\s*;/g, 'function $1() {');
+    content = content.replace(/export\s+default\s+function\s+(\w+)\s*\(\s*\)\s*{\s*;/g, 'export default function $1() {');
+    
+    // Fix object syntax
+    content = content.replace(/{\s*;\s*}/g, '{}');
+    content = content.replace(/{\s*;\s*([^}]+)\s*}/g, '{$1}');
+    
+    // Fix array syntax
+    content = content.replace(/\[\s*;\s*\]/g, '[]');
+    content = content.replace(/\[\s*;\s*([^\]]+)\s*\]/g, '[$1]');
+    
+    // Fix import statements
+    content = content.replace(/import\s+([^;]+);\s*;/g, 'import $1;');
+    
+    // Fix export statements
+    content = content.replace(/export\s+([^;]+);\s*;/g, 'export $1;');
+    
+    // Fix shebang issues
+    if (content.includes('#!/usr/bin/env node') && !content.startsWith('#!/usr/bin/env node')) {
+      content = content.replace(/.*#!/usr\/bin\/env node.*\n/g, '#!/usr/bin/env node\n');
+    }
+    
+    // Fix duplicate imports
+    const lines = content.split('\n');
+    const seenImports = new Set();
+    const filteredLines = [];
+    
+    for (const line of lines) {
+      if (line.trim().startsWith('import ')) {
+        if (!seenImports.has(line.trim())) {
+          seenImports.add(line.trim());
+          filteredLines.push(line);
+        }
+      } else {
+        filteredLines.push(line);
       }
     }
     
-    if (modified) {
+    content = filteredLines.join('\n');
+    
+    // Only write if content changed
+    if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed syntax errors in: ${filePath}`);
       return true;
     }
+    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -59,19 +76,27 @@ function fixFile(filePath) {
   }
 }
 
-// Find all TypeScript/JavaScript files
-const files = glob.sync('src/**/*.{ts,tsx,js,jsx}', {
-  cwd: process.cwd(),
-  ignore: ['node_modules/**', 'dist/**', 'build/**', 'out/**']
-});
-
-console.log(`Found ${files.length} files to check...`);
-
-let fixedCount = 0;
-for (const file of files) {
-  if (fixFile(file)) {
-    fixedCount++;
+function processDirectory(dirPath) {
+  const files = fs.readdirSync(dirPath);
+  let fixedCount = 0;
+  
+  for (const file of files) {
+    const filePath = path.join(dirPath, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      fixedCount += processDirectory(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
   }
+  
+  return fixedCount;
 }
 
-console.log(`Fixed ${fixedCount} files`);
+// Main execution
+console.log('Starting syntax error fixing...');
+const fixedCount = processDirectory('/workspace/src');
+console.log(`Fixed syntax errors in ${fixedCount} files.`);

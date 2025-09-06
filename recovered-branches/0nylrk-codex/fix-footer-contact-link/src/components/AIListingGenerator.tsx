@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
-import { Sparkles, ArrowRight } from "@/components/icons";
-import { supabase } from "@/integrations/supabase/client";
-import { Badge } from "@/components/ui/badge";
+import {useToast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Textarea} from "@/components/ui/textarea";
+import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Skeleton} from "@/components/ui/skeleton";
+import {Sparkles, ArrowRight} from "@/components/icons";
+import {supabase} from "@/integrations/supabase/client";
+import {Badge} from "@/components/ui/badge";
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -49,7 +49,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         setKeyFeatures(e.target.value);
         break;
       case 'targetAudience':
-        setTargetAudience(e.target.value);
+        setTargetAudience(e.target.value),
         break
     }
   };
@@ -249,4 +249,4 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       )}
     </div>
   )
-}
+};

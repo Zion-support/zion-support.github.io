@@ -1,40 +1,40 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import { motion } from 'framer-motion',;
 import { 
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
-  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3;
-  Brain, Database, TrendingUp as TrendingUpIcon, Users;
+  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3,
+  Brain, Database, TrendingUp as TrendingUpIcon, Users,
   Target, BarChart, PieChart, Activity, Eye, Lock
-} from 'lucide-react';
-import Button from '../components/ui/Button';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
+} from 'lucide-react',
+import Button from '../components/ui/Button',;
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',;
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'
-  };
+  },
 
   const features = [
-    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards';
+    'Real-time data analysis and visualizationAI-powered trend prediction and forecastingAutomated report generation and schedulingCustom dashboard builder with drag-and-dropMulti-source data integration (CRM, ERP, Analytics)Natural language query interfacePredictive analytics and machine learning modelsMobile-responsive dashboards',
     'Role-based access control and securityAPI access for custom integrations'
-  ];
+  ],
 
   const useCases = [
     'Sales performance analysisCustomer behavior insightsFinancial forecastingMarketing ROI optimizationOperational efficiency tracking'
-  ];
+  ],
 
   const integrations = [
     'SalesforceHubSpotGoogle AnalyticsShopifyQuickBooksSlackMicrosoft Teams'
-  ];
+  ],
 
   const technology = [
     'PythonTensorFlowReactNode.jsPostgreSQLRedisAWSDocker'
-  ];
+  ],
 
   return (
     <UltraAdvancedFuturisticBackground 
@@ -476,4 +476,4 @@ export default function AIBusinessIntelligenceSuite() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-}
+};

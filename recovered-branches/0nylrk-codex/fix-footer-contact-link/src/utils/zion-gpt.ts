@@ -2,13 +2,13 @@
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
-import { supabase } from '@/integrations/supabase/client';
+import {supabase} from '@/integrations/supabase/client';
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
 
 export type ZionGPTUsage = {
   modelId: string;
   tokensUsed: number;
-  cost: number;
+  cost: number,
   timestamp: Date
 };
 
@@ -17,7 +17,7 @@ export interface ModelConfig {
   version: number;
   createdAt: string;
   baseModel: string;
-  purpose: string;
+  purpose: string,
   active: boolean
 }
 
@@ -55,7 +55,7 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
 export async function logModelUsage(
   modelId: string;
   tokensUsed: number;
-  feature: string;
+  feature: string,
   userId?: string
 ): Promise<void> {
   try {
@@ -68,7 +68,7 @@ export async function logModelUsage(
         tokens_used: tokensUsed;
         cost: cost;
         feature: feature;
-        user_id: userId || null;
+        user_id: userId || null,
         timestamp: new Date().toISOString()
       })
       
@@ -96,7 +96,7 @@ export async function callZionGPT({
   prompt: string;
   purpose: 'job' | 'resume' | 'support';
   maxTokens?: number;
-  temperature?: number;
+  temperature?: number,
   userId?: string
 }): Promise<string> {
   try {
@@ -108,7 +108,7 @@ export async function callZionGPT({
       body: {
         prompt;
         modelId;
-        maxTokens;
+        maxTokens,
         temperature
       }
     });
@@ -131,3 +131,4 @@ export async function callZionGPT({
     throw error
   }
 }
+;

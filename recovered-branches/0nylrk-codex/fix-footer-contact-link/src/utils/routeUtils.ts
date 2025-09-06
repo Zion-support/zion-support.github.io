@@ -1,6 +1,5 @@
 
-import { completeSitemap, SitemapItem } from "@/config/sitemap";
-
+import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
@@ -8,7 +7,7 @@ export const findRouteByPath = (path: string): SitemapItem | undefined => {
 
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-  const route = findRouteByPath(path);
+  const route = findRouteByPath(path),
   return route?.requiredAuth === true
 };
 
@@ -18,7 +17,7 @@ export const canAccessRoute = (
   isAuthenticated: boolean;
   userType?: string | null
 ): boolean => {
-  const route = findRouteByPath(path);
+  const route = findRouteByPath(path),
   
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
@@ -51,7 +50,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     
     if (route) {
       breadcrumbs.push({
-        label: route.label;
+        label: route.label,
         path: currentPath
       })
     } else {

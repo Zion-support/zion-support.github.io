@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,28 +6,33 @@ import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 interface ProfileContactProps {
   email?: string;
-  profileName: string,
-  profileType: 'service' | 'talent'
+  profileName: string;
+  profileType: "service" | "talent";
 }
 
-export function ProfileContact({ email, profileName, profileType }: ProfileContactProps) {
+export function ProfileContact({
+  email,
+  profileName,
+  profileType,
+}: ProfileContactProps) {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("");
   const [isSending, setIsSending] = useState(false);
-  
+
   const handleSendMessage = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSending(true);
-    
+
     // Here would be the actual API call to send the message
     setTimeout(() => {
       setIsSending(false);
       setMessage("");
-      setSubject("");
-      toast({
-        title: "Message Sent",
-        description: `Your message has been sent to ${profileName}.`})
-    }, 1000)
+      (setSubject(""),
+        toast({
+          title: "Message Sent",
+          description: `Your message has been sent to ${profileName}.`,
+        }));
+    }, 1000);
   };
 
   return (
@@ -37,19 +41,19 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-      
+
       {email && (
         <div className="mb-4 text-zion-slate-light">
           <span className="block">Email: </span>
-          <a 
-            href={`mailto:${email}`} 
+          <a
+            href={`mailto:${email}`}
             className="text-zion-cyan hover:underline truncate block"
           >
             {email}
           </a>
         </div>
       )}
-      
+
       <form onSubmit={handleSendMessage}>
         <div className="space-y-4">
           <div>
@@ -70,8 +74,8 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
               required
             />
           </div>
-          <Button 
-            type="submit" 
+          <Button
+            type="submit"
             className="w-full bg-zion-cyan hover:bg-zion-cyan/90"
             disabled={isSending}
           >
@@ -81,5 +85,5 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         </div>
       </form>
     </div>
-  )
+  );
 }

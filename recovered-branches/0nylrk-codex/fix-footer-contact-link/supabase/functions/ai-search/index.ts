@@ -1,9 +1,8 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0";
-
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
@@ -29,7 +28,7 @@ serve(async (req) => {
     const prompt = `Interpret the following user search query and extract filters as JSON.\nQuery: "${query}"\nReturn JSON with fields: type, skills, location, budget, availability. Use null if a value is not provided.`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini";
+      model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
       temperature: 0.1});
 

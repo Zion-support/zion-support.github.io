@@ -1,54 +1,48 @@
-// Token storage utilities
-export interface TokenStorage {
-  get(key: string): Promise<any>;
-  set(key: string, value: any): Promise<void>;
-  delete(key: string): Promise<void>;
-  list(): Promise<string[]>;
+
+export interface TokenConfig {
+  tokenName: string;
+  tokenSymbol: string;
+  decimals: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
+  minIssueAmount: number;
+  maxIssueAmount: number;
 }
 
-export class LocalTokenStorage implements TokenStorage {
-  private storage: Map<string, any> = new Map();
+class TokenStore {
+  private config: TokenConfig = {
+    tokenName: 'ZION$',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000000,
+    issueRate: 1.0,
+    redeemRate: 1.0,
+    minIssueAmount: 1,
+    maxIssueAmount: 10000
+  };
 
-  async get(key: string): Promise<any> {
-    return this.storage.get(key);
-  }
-
-  async set(key: string, value: any): Promise<void> {
-    this.storage.set(key, value);
-  }
-
-  async delete(key: string): Promise<void> {
-    this.storage.delete(key);
-  }
-
-  async list(): Promise<string[]> {
-    return Array.from(this.storage.keys());
-  }
+export interface TokenStoreData {
+  wallets: Record<string, Wallet>;
+  transactions: TokenTransaction[];
+  config: TokenConfig;
 }
 
-export class DatabaseTokenStorage implements TokenStorage {
-  async get(key: string): Promise<any> {
-    // Placeholder implementation - would connect to database
-    console.log('Getting token data for key:', key);
+function readFromDisk(): TokenStoreData | null {
+  try {
+    ensureDataDir();
+    if (!fs.existsSync(STORE_FILE)) return null;
+    const raw = fs.readFileSync(STORE_FILE, 'utf8');
+    const parsed = JSON.parse(raw) as TokenStoreData;
+    return parsed;
+  } catch {
     return null;
   }
 
-  async set(key: string, value: any): Promise<void> {
-    // Placeholder implementation - would save to database
-    console.log('Setting token data for key:', key, 'value:', value);
-  }
-
-  async delete(key: string): Promise<void> {
-    // Placeholder implementation - would delete from database
-    console.log('Deleting token data for key:', key);
-  }
-
-  async list(): Promise<string[]> {
-    // Placeholder implementation - would list from database
-    console.log('Listing token keys');
-    return [];
+  setConfig(newConfig: Partial<TokenConfig>): void {
+    this.config = { ...this.config, ...newConfig };
   }
 }
 
-// Default storage instance
-export const tokenStorage = new LocalTokenStorage();
+export const tokenStore = new TokenStore();
+

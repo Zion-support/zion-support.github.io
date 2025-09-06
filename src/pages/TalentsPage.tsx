@@ -1,7 +1,6 @@
 
-<<<<<<< HEAD
 
-    let filteredTalents = allTalents;
-    
-
-
+    let filteredTalents = allTalents
+    }
+}
+;

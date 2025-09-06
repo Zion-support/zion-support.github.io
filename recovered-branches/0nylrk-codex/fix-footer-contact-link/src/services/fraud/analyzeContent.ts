@@ -1,13 +1,13 @@
 
 // Content analysis functionality
-import { suspiciousPhrases } from './constants';
-import { AnalysisResult } from './types';
+import {suspiciousPhrases} from './constants';
+import {AnalysisResult} from './types';
 /**
  * Analyzes text content for suspicious patterns
  */
 export const analyzeContent = (content: string): AnalysisResult => {
   const contentLower = content.toLowerCase();
-  const reasons: string[] = [];
+  const reasons: string[] = [],
   
   // Check for suspicious phrases
   for (const phrase of suspiciousPhrases) {
@@ -38,7 +38,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
   }
   
   return {
-    isSuspicious: reasons.length > 0;
+    isSuspicious: reasons.length > 0,
     reasons
   }
 };

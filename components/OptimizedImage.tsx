@@ -18,7 +18,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height = 600;
   className = '';
   priority = false;
-  quality = 75;
+  quality = 75,
 }) => {
   return (
     <Image
@@ -31,8 +31,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       quality={quality}
       placeholder="blur"
       blurDataURL="data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-    />
-  );
+/>  );
 };
 
 export default OptimizedImage;
