@@ -7,14 +7,14 @@ import { Textarea } from "@/components/ui/textarea";
 import { Plus, Trash2 } from 'lucide-react'
 import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
-  platform: AppPlatform
+  platform: AppPlatform;
 }
 
 type ChangelogEntry = {
-  id: string,
-  version: string,
-  date: string,
-  changes: string
+  id: string;
+  version: string;
+  date: string;
+  changes: string;
 };
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) => {
@@ -37,7 +37,7 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
     if (!newEntry.version || !newEntry.changes) return;
     
     const entry: ChangelogEntry = {
-      ...newEntry;
+      ...newEntry,
       id: Math.random().toString(36).substring(2, 9)
     };
     
@@ -46,16 +46,16 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
       version: "",
       date: new Date().toISOString().split('T')[0] || new Date().toLocaleDateString('en-CA'),
       changes: ""
-    })
+    });
   };
   
   const handleRemoveEntry = (id: string) => {
-    setEntries(entries.filter(entry => entry.id !== id))
+    setEntries(entries.filter(entry => entry.id !== id));
   };
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setNewEntry(prev => ({ ...prev, [name]: value }))
+    setNewEntry(prev => ({ ...prev, [name]: value }));
   };
   
   return (
@@ -128,5 +128,5 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({ platform }) 
         </div>
       </CardContent>
     </Card>
-  )
+  );
 };

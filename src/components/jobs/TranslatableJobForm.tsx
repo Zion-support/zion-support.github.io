@@ -12,8 +12,8 @@ import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface TranslatableJobFormProps {
-  onSubmit: (formData: any) => void,
-  isSubmitting?: boolean
+  onSubmit: (formData: any) => void;
+  isSubmitting?: boolean;
 }
 
 export function TranslatableJobForm({ onSubmit, isSubmitting = false }: TranslatableJobFormProps) {
@@ -29,36 +29,39 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     es: "",
     fr: "",
     pt: "",
-    ar: ""}),
+    ar: ""
+  });
   
   const [description, setDescription] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""}),
+    ar: ""
+  });
   
   const [requirements, setRequirements] = useState<Record<SupportedLanguage, string>>({
     en: "",
     es: "",
     fr: "",
     pt: "",
-    ar: ""}),
+    ar: ""
+  });
   
   const [budget, setBudget] = useState("");
   const [deadline, setDeadline] = useState("");
   
   // Handle text changes
   const handleTitleChange = (value: string) => {
-    setTitle({ ...title, [activeTab]: value })
+    setTitle({ ...title, [activeTab]: value });
   };
   
   const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description, [activeTab]: value })
+    setDescription({ ...description, [activeTab]: value });
   };
   
   const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements, [activeTab]: value })
+    setRequirements({ ...requirements, [activeTab]: value });
   };
   
   // Handle form submission
@@ -69,24 +72,25 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     await ensureAllTranslations();
     
     onSubmit({
-      title;
-      description;
-      requirements;
-      budget;
-      deadline})
+      title,
+      description,
+      requirements,
+      budget,
+      deadline
+    });
   };
   
   // Auto translate content when language tab changes
   const handleTabChange = async (tab: string) => {
     const selectedLanguage = tab as SupportedLanguage;
     if (selectedLanguage !== activeTab) {
-      setActiveTab(selectedLanguage)
+      setActiveTab(selectedLanguage);
     }
   };
   
   // Auto translate function
   const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
-    let sourceLanguage: SupportedLanguage = 'en',
+    let sourceLanguage: SupportedLanguage = 'en';
     let content = '';
     
     // Find first non-empty content to translate
@@ -94,15 +98,15 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       if (field === 'title' && title[lang]) {
         content = title[lang];
         sourceLanguage = lang;
-        break
+        break;
       } else if (field === 'description' && description[lang]) {
         content = description[lang];
         sourceLanguage = lang;
-        break
+        break;
       } else if (field === 'requirements' && requirements[lang]) {
         content = requirements[lang];
         sourceLanguage = lang;
-        break
+        break;
       }
     }
     
@@ -110,8 +114,9 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       toast({
         title: t('translation.no_content'),
         description: t('translation.add_content_first'),
-        variant: "destructive"}),
-      return
+        variant: "destructive"
+      });
+      return;
     }
     
     try {
@@ -121,27 +126,30 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         toast({
           title: t('translation.translation_failed'),
           description: error,
-          variant: "destructive"}),
-        return
+          variant: "destructive"
+      });
+      return;
       }
       
       if (field === 'title') {
-        setTitle(translations)
+        setTitle(translations);
       } else if (field === 'description') {
-        setDescription(translations)
+        setDescription(translations);
       } else if (field === 'requirements') {
-        setRequirements(translations)
+        setRequirements(translations);
       }
       
       toast({
         title: t('translation.translation_success'),
-        description: t('translation.content_translated')})
+        description: t('translation.content_translated')
+      });
     } catch (error) {
-      logErrorToProduction('Error translating ${field}:', { data: error }),
+      logErrorToProduction('Error translating ${field}:', { data: error });
       toast({
         title: t('translation.translation_failed'),
         description: error instanceof Error ? error.message : t('translation.unknown_error'),
-        variant: "destructive"})
+        variant: "destructive"
+      });
     }
   };
   
@@ -154,21 +162,21 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
     
     // Title translations
     if (Object.values(title).some(val => val) && Object.values(title).some(val => !val)) {
-      promises.push(autoTranslate('title'))
+      promises.push(autoTranslate('title'));
     }
     
     // Description translations
     if (Object.values(description).some(val => val) && Object.values(description).some(val => !val)) {
-      promises.push(autoTranslate('description'))
+      promises.push(autoTranslate('description'));
     }
     
     // Requirements translations
     if (Object.values(requirements).some(val => val) && Object.values(requirements).some(val => !val)) {
-      promises.push(autoTranslate('requirements'))
+      promises.push(autoTranslate('requirements'));
     }
     
     if (promises.length) {
-      await Promise.all(promises)
+      await Promise.all(promises);
     }
   };
   
@@ -364,5 +372,5 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         </Button>
       </div>
     </form>
-  )
+  );
 }

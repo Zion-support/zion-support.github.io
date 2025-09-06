@@ -34,35 +34,36 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'order_status':
       return <span className="text-orange-500">📦</span>;
     default:
-      return <span className="text-gray-500">📣</span>
+      return <span className="text-gray-500">📣</span>;
   }
 };
 
 interface NotificationItemProps {
-  notification: Notification,
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>
+  notification: Notification;
+  onMarkAsRead: (id: string) => Promise<void>;
+  onDismiss: (id: string) => Promise<void>;
 }
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
-  notification;
-  onMarkAsRead;
-  onDismiss}) => {
-  const router = useRouter(), // Changed from useNavigate to useRouter
+  notification,
+  onMarkAsRead,
+  onDismiss
+}) => {
+  const router = useRouter(); // Changed from useNavigate to useRouter
 
   const handleClick = () => {
     if (!notification.read) {
-      onMarkAsRead(notification.id)
+      onMarkAsRead(notification.id);
     }
     // If there's an action URL, navigate to it
     if (notification.action_url) {
-      router.push(notification.action_url), // Changed to router.push
+      router.push(notification.action_url); // Changed to router.push
     }
   };
 
   return (<div
       className={cn(
-        'p-3 border-b border-zion-blue-light relative group';
+        'p-3 border-b border-zion-blue-light relative group',
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
     >
       <div className="flex items-start gap-2">
@@ -83,7 +84,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
             <p className="text-xs text-zion-slate">
               {notification.created_at
                 ? formatDistanceToNow(new Date(notification.created_at), {
-                    addSuffix: true})
+                    addSuffix: true
+                  })
                 : 'Just now'}
             </p>
 
@@ -103,7 +105,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       </div>
 
       {/* Action buttons that appear on hover */}
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
+      <div className="absolute right-2 top-2 opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
@@ -113,7 +115,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 className="h-6 w-6"
                 onClick={(e) => {
                   e.stopPropagation();
-                  onMarkAsRead(notification.id)
+                  onMarkAsRead(notification.id);
                 }}
                 aria-label="Mark as read"
               >
@@ -135,7 +137,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 className="h-6 w-6"
                 onClick={(e) => {
                   e.stopPropagation();
-                  onDismiss(notification.id)
+                  onDismiss(notification.id);
                 }}
                 aria-label="Dismiss notification"
               >
@@ -149,5 +151,5 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         </TooltipProvider>
       </div>
     </div>
-  )
+  );
 };
