@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface SetupProps {
@@ -67,3 +68,14 @@ export default function Setup({ }: SetupProps) {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import '@testing-library/jest-dom'
+import { cleanup } from '@testing-library/react'
+import { afterEach, vi } from 'vitest'
+
+// Ensure React Testing Library cleans up and mocks are restored between tests
+afterEach(() => {
+  cleanup()
+  vi.restoreAllMocks()
+})
+>>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
