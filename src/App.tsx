@@ -41,6 +41,7 @@ import LoadingSpinner from './components/LoadingSpinner';
 const HomePage = lazy(() => import('./pages/index'));
 const AboutPage = lazy(() => import('./pages/about'));
 const ContactPage = lazy(() => import('./pages/contact'));
+<<<<<<< HEAD
 const ServicesPage = lazy(() => import('./pages/services/index'));
 const ComprehensiveMicroSaasShowcase = lazy(() => import('./pages/services/comprehensive-micro-saas-showcase'));
 >>>>>>> origin/cursor/automate-test-fix-improve-and-merge-code-bfbd
@@ -48,6 +49,54 @@ const ComprehensiveMicroSaasShowcase = lazy(() => import('./pages/services/compr
 import { BackToTopButton } from './components/BackToTopButton';
 // Pages are handled by Next.js in the app directory
 >>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+=======
+const ServicesPage = lazy(() => import('./pages/services'));
+const SolutionsPage = lazy(() => import('./pages/solutions'));
+const ServicesOverview = lazy(() => import('./pages/services-overview'));
+
+// Service pages
+const AIContentGenerationSuite = lazy(() => import('./pages/services/ai-content-generation-suite'));
+const CloudMigrationServices = lazy(() => import('./pages/services/cloud-migration-services'));
+const SmartCRMPlatform = lazy(() => import('./pages/services/smart-crm-platform'));
+const AIEmailAutomationPlatform = lazy(() => import('./pages/services/ai-email-automation-platform'));
+const SmartSurveyAnalyticsPlatform = lazy(() => import('./pages/services/smart-survey-analytics-platform'));
+const ComprehensiveITSolutions = lazy(() => import('./pages/services/comprehensive-it-solutions'));
+const AdvancedAISolutions = lazy(() => import('./pages/services/advanced-ai-solutions'));
+
+// Simple Header component
+const Header = () => (
+  <header className="bg-zion-slate-dark text-white p-4 shadow-lg">
+    <div className="container mx-auto">
+      <h1 className="text-2xl font-bold">Zion Tech Group</h1>
+      <nav className="mt-2">
+        <a href="/" className="mr-4 hover:text-cyan-400">Home</a>
+        <a href="/about" className="mr-4 hover:text-cyan-400">About</a>
+        <a href="/services" className="mr-4 hover:text-cyan-400">Services</a>
+        <a href="/contact" className="hover:text-cyan-400">Contact</a>
+      </nav>
+      <div className="mt-2 text-sm text-gray-300">
+        <a href="tel:+13024640950" className="mr-4 hover:text-cyan-400">+1 302 464 0950</a>
+        <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a>
+      </div>
+    </div>
+  </header>
+);
+
+// Simple Footer component
+const Footer = () => (
+  <footer className="bg-zion-slate-dark text-white p-4 mt-auto">
+    <div className="container mx-auto text-center">
+      <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+      <div className="mt-2 text-sm text-gray-300">
+        <p>Phone: <a href="tel:+13024640950" className="hover:text-cyan-400">+1 302 464 0950</a></p>
+        <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400">kleber@ziontechgroup.com</a></p>
+        <p>Address: 364 E Main St STE 1008 Middletown DE 19709</p>
+        <p>Website: <a href="https://ziontechgroup.com" className="hover:text-cyan-400">https://ziontechgroup.com</a></p>
+      </div>
+    </div>
+  </footer>
+);
+>>>>>>> origin/cursor/add-new-services-and-advertise-them-new
 
 function App() {
   return (
@@ -58,11 +107,29 @@ function App() {
         <Header />
         <main className="flex-1">
           <Routes>
+<<<<<<< HEAD
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/pricing" element={<Pricing />} />
+=======
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services-overview" element={<ServicesOverview />} />
+            <Route path="/solutions" element={<SolutionsPage />} />
+            {/* Service pages */}
+            <Route path="/services/ai-content-generation-suite" element={<AIContentGenerationSuite />} />
+            <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
+            <Route path="/services/smart-crm-platform" element={<SmartCRMPlatform />} />
+            <Route path="/services/ai-email-automation-platform" element={<AIEmailAutomationPlatform />} />
+            <Route path="/services/smart-survey-analytics-platform" element={<SmartSurveyAnalyticsPlatform />} />
+            <Route path="/services/comprehensive-it-solutions" element={<ComprehensiveITSolutions />} />
+            <Route path="/services/advanced-ai-solutions" element={<AdvancedAISolutions />} />
+            <Route path="*" element={<HomePage />} />
+>>>>>>> origin/cursor/add-new-services-and-advertise-them-new
           </Routes>
         </main>
         <Footer />
