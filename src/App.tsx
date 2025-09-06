@@ -1,8 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { ThemeProvider } from './components/ThemeProvider';
 import ErrorBoundary from './components/ErrorBoundary';
 import ScrollToTop from './components/ScrollToTop';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import PerformanceMonitor from './components/PerformanceMonitor';
 
 // Pages
 import Home from './pages/Home';
@@ -29,10 +32,13 @@ import Support from './pages/Support';
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider>
-        <Router>
-          <ScrollToTop />
-          <div className="min-h-screen bg-background text-foreground">
+      <HelmetProvider>
+        <ThemeProvider>
+          <AccessibilityEnhancer>
+            <Router>
+              <ScrollToTop />
+              <PerformanceMonitor />
+              <div className="min-h-screen bg-background text-foreground" id="main-content">
             <Routes>
               {/* Main Routes */}
               <Route path="/" element={<Home />} />
@@ -58,9 +64,11 @@ function App() {
               {/* 404 Route */}
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </div>
-        </Router>
-      </ThemeProvider>
+              </div>
+            </Router>
+          </AccessibilityEnhancer>
+        </ThemeProvider>
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }
