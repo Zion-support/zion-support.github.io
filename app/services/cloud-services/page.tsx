@@ -1,5 +1,6 @@
 export const metadata = {
   title: 'Cloud Services | Zion Tech Group',
+
   description: 'Professional cloud services services for your business needs.',
   keywords: 'cloud-services, services, business, technology'
 };
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

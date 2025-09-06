@@ -1,15 +1,61 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+// Mock Next.js router
+jest.mock('next/router', () => ({
+  useRouter() {
+    return {
+      route: '/',
+      pathname: '/',
+      query: {},
+      asPath: '/',
+      push: jest.fn(),
+      pop: jest.fn(),
+      reload: jest.fn(),
+      back: jest.fn(),
+      prefetch: jest.fn(),
+      beforePopState: jest.fn(),
+      events: {
+        on: jest.fn(),
+        off: jest.fn(),
+        emit: jest.fn(),
+      },
+    };
+  },
+}));
 =======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
 import React from 'react';
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
+=======
+import React from 'react';
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 
 interface SetupProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Mock IntersectionObserver
+// @ts-ignore
+global.IntersectionObserver = class IntersectionObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+// @ts-ignore
+global.ResizeObserver = class ResizeObserver {
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock window.scrollTo
+global.window.scrollTo = jest.fn();
+=======
+=======
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739
 export default function Setup({ }: SetupProps) {
   return (
     <div>
@@ -49,9 +95,7 @@ global.window.scroll_to = vi.fn (), // vi should be globally available;
   runAllTimers: vi.runAllTimers.bind (vi),
   // Reset / clear mocks;
 <<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 =======
 import React from 'react';
 
@@ -67,18 +111,4 @@ export default function Setup({ }: SetupProps) {
     </div>
   );
 }
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
-=======
-import '@testing-library/jest-dom'
-import { cleanup } from '@testing-library/react'
-import { afterEach, vi } from 'vitest'
-
-// Ensure React Testing Library cleans up and mocks are restored between tests
-afterEach(() => {
-  cleanup()
-  vi.restoreAllMocks()
-})
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-8896
-=======
->>>>>>> d0a9ec4ff3a15c755bf51b53a72e5129849de793
+>>>>>>> 91fec3a61bf105731881304ea8d3824dd093e739

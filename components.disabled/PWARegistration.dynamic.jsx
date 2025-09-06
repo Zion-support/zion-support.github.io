@@ -5,5 +5,10 @@ const PWARegistration = dynamic(() => import("./PWARegistration"),{'; "loading":
 
 
 </p>'
+
+
+</p>'
+
+</p>'
 </p>'
 </p>'

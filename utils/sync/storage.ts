@@ -1,29 +1,5 @@
-<<<<<<< HEAD
 }
-let state: SyncState = { ...defaultState }
-export function readState(): SyncState {
-  return { ...state }
-}
-export function updateState(updates: Partial<SyncState>): void {
-  state = { ...state, ...updates }
-};
-=======
-<<<<<<< HEAD
-=======
 
-
-    );
-  }
-
-  return events;export function resetState(): void {
-  state = { ...defaultState }
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-<<<<<<< HEAD
 
 export function readState(): SyncState {;
   return { ...state };
@@ -151,10 +127,6 @@ export interface SyncConnection {
   createdAt: string;
   updatedAt: string;
 }
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 export interface SyncMapping {
   id: string;
@@ -183,7 +155,6 @@ export interface SyncLog {
   timestamp: string;
 }
 
-<<<<<<< HEAD
 class SyncStorage {
   private jobs: Map<string, SyncJob> = new Map();
   private connections: Map<string, SyncConnection> = new Map();
@@ -244,7 +215,6 @@ class SyncStorage {
       new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
     );
   }
-<<<<<<< HEAD
 }
 // Singleton instance
 export const syncStorage = new SyncStorage();
@@ -384,13 +354,6 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 const default_state: SyncState = {
   config: {
     instance_id: 'default - instance',
@@ -400,30 +363,10 @@ const default_state: SyncState = {
     paused: false;
   },
   lastSyncedAt: new Date ().toISOString ();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   return events;export function resetState(): void {;
   state = { ...defaultState };
 }
 
-=======
-}
-
-}
-}
-}
-<<<<<<< HEAD
-=======
-  const entity_id = getEntityId (event);
-  const current_version = state.latestVersionByEntityId[entity_id] || 0;
-  const is_newer = event.version > current_version;
-;
-  // Check condition
-if ( {) {
-  $2
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
     state.proposalMerkleById[entity_id] = event.merkle_root;
   }
@@ -462,32 +405,3 @@ export function filterEventsByScope (
 if (return events) {
   $2
 }
-<<<<<<< HEAD
-=======
-  // Check condition
-if ( {) {
-  $2
-}
-    return events.filter (
-      e => e.type === 'proposal' || e.type === 'dao_endorsement');
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return events.filter (
-      e =>;
-        e.type === 'token_transfer' ||;
-        e.type === 'talent_mobility' ||;
-        e.type === 'leaderboard_entry');
-  }
-  return events;export function reset_state (): void {
-  state = { ...default_state }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-=======
-  return events;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-2533

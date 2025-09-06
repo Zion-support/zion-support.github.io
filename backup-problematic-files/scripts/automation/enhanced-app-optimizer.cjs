@@ -315,5 +315,4 @@ if ( {})
      {}
   const optimizer = new EnhancedAppOptimizer}(;);
   optimizer.run().catch(console.error)};
-module.exports = EnhancedAppOptimizer;
-module.exports = EnhancedAppOptimizer;
+

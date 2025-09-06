@@ -4,10 +4,15 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   server: {
     port: 3000,
     open: true,
-    host: true,
+    host: true
   },
   build: {
     outDir: "dist",
@@ -19,16 +24,11 @@ export default defineConfig({
           vendor: ["react", "react-dom"],
           ui: ["framer-motion", "lucide-react"],
           router: ["react-router-dom"]
-        },
-      },
-    },
-  },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+        }
+      }
+    }
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom'],
-  },
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react', 'react-router-dom']
+  }
 });

@@ -1,3 +1,4 @@
+
 export const metadata = {
   title: 'Real Time Data Processing | Zion Tech Group',
   description: 'Professional real time data processing services for your business needs.',
@@ -52,3 +53,4 @@ export default function ServicePage() {
     </div>
   );
 }
+

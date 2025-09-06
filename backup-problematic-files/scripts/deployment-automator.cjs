@@ -9,5 +9,4 @@ console.log(' Deployment Automator Starting...')
         "command"
         "name"
         "command"
-        execSync(step.command, { "stdio"})
-        execSync(step.command, { "stdio"})
+

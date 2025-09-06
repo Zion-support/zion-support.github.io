@@ -1,4 +1,6 @@
-:src.broken/pages/Blog.jsimport { useState, useEffect } from "react";
+:src.broken/pages/Blog.js
+:src.broken/pages/Blog.js
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { GradientHeading } from "@/components/GradientHeading";
 import { SEO } from "@/components/SEO";
@@ -112,6 +114,8 @@ export default function Blog() {
             </div>
           </div>
 import React from 'react';
+import React from 'react';
+
 export default function Blog() {
     return (
         <div className="min-h-screen bg-background p-8">
@@ -156,3 +160,6 @@ export default function Blog() {
       </div>
     </>);
     );
+      </div>
+    </>);
+}
