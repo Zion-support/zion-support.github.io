@@ -1,4 +1,32 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+export interface User {
+  id: string;
+  email: string;
+  role: 'client' | 'talent' | 'admin';
+  name?: string;
+}
+
+export interface AuthContext {
+  user: User | null;
+  login: (email: string, password: string) => Promise<User | null>;
+  logout: () => void;
+  register: (email: string, password: string, role: User['role']) => Promise<User | null>;
+}
+
+export function validateUser(userId: string, role: string): User | null {
+  if (!userId || !role) return null;
+  if (role !== 'client' && role !== 'talent' && role !== 'admin') return null;
+  
+  return {
+    id: userId,
+    email: '',
+    role: role as User['role']
+  };
+}
+=======
+import { NextApiRequest, NextApiResponse } from "next";
+=======
 import { NextApiRequest, NextApiResponse } from "next";
 =======
 <<<<<<< HEAD
@@ -22,6 +50,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 import { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export function getUserFromRequest(req: any): User | null {
   // Mock implementation - in production, this would extract user from JWT or session
   const authHeader = req.headers.authorization;
@@ -30,6 +59,9 @@ export function getUserFromRequest(req: any): User | null {
   }
   return user;
 }
+<<<<<<< HEAD
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+=======
 <<<<<<< HEAD
 =======
 
@@ -52,3 +84,4 @@ export function getUserFromRequest (req: any): User | null {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

@@ -1,11 +1,18 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+import React from 'react';
+import { Link } from 'react-router-dom';
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 =======
+>>>>>>> main
 
 
 <<<<<<< HEAD
@@ -133,6 +140,7 @@ export function Logo({ customLogo, customColor }) {
 
 
 =======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -172,6 +180,8 @@ export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#22D3EE';
 
   return (
+<<<<<<< HEAD
+=======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
@@ -224,6 +234,7 @@ origin/automation-improvements-final
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
     <Link to="/" className="flex items-center space-x-3 group">
       <div
         className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300"
@@ -241,17 +252,21 @@ origin/automation-improvements-final
         style={{
           background: customColor
             ? `linear-gradient(135deg,${customColor},${customColor}dd)`
-            : 'linear-gradient(135deg,#22D3EE,#A855F7)'}}
+            : 'linear-gradient(135deg,#22D3EE,#A855F7)'
+        }}
       >
         <span className="text-white font-bold text-xl">Z</span>
       </div>
       <div className="flex flex-col">
-        <span className="text-xl font-bold" style={{ "color": logoColor }}>
+        <span className="text-xl font-bold" style={{ color: logoColor }}>
           Zion
         </span>
         <span className="text-sm text-zinc-300 font-medium">Tech Group</span>
       </div>
     </Link>
+<<<<<<< HEAD
+  );
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -391,6 +406,7 @@ origin/automation-improvements-final
 ,
 import _React from 'react'; import { Link } from 'react-router-dom'; export function Logo({ customLogo,customColor }) { const logoColor = customColor || '#22D3EE'; return ( <Link to="/" className="flex items-center space-x-3 group"> {' '} <div className="w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300" style={{ background: customColor ? `linear-gradient(135deg,${customColor},${customColor}dd)` : 'linear-gradient(135deg,#22D3EE,#A855F7)',}} > {' '} <span className="text-white font-bold text-xl">Z</span>{' '} </div>{' '} <div className="flex flex-col"> {' '} <span className="text-xl font-bold" style={{ color: logoColor }}> {' '} Zion{' '} </span>{' '} <span className="text-sm text-zinc-300 font-medium"> {' '} Tech Group{' '} </span>{' '} </div>{' '} </Link> )}',
 =======
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
 }
 >>>>>>> origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68

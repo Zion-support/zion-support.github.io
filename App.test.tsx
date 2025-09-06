@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import App from './src/App';
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import React from 'react';
 import { render } from '@testing-library/react';
+>>>>>>> main
 
 =======
 
@@ -54,38 +60,28 @@ import App from './src/App';
 describe('App', () => {
   it('renders without crashing', () => {
     render(<App />);
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> main
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
-<<<<<<< HEAD
-});
-=======
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
->>>>>>> main
-
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
->>>>>>> e7b4ba039d3ef26c0e950221fd17cd540150e75a
-=======
-
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   it('displays correct content', () => {
     render(<App />);
-    // Add specific content assertions here
+    expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
+
   it('handles user interactions', () => {
     render(<App />);
     // Add interaction tests here
-  });
-
-
 =======
-<<<<<<< HEAD
+    expect(screen.getByText(/Welcome to Zion Tech/i)).toBeInTheDocument();
+>>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
+  });
 });
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
 =======
@@ -120,3 +116,4 @@ describe('App', () => {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

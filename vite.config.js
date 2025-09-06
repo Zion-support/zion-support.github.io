@@ -9,6 +9,11 @@ export default defineConfig({
     open: true,
     host: true,
   },
+  server: {
+    port: 3000,
+    open: true,
+    host: true
+  },
   build: {
     outDir: "dist",
     sourcemap: true,
@@ -25,6 +30,16 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
+<<<<<<< HEAD
+        drop_debugger: true
+      }
+    }
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
+});
+=======
         drop_debugger: true,
       },
     },
@@ -33,3 +48,4 @@ export default defineConfig({
     include: ["react", "react-dom", "framer-motion", "lucide-react"],
   },
 });
+>>>>>>> main

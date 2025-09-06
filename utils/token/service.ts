@@ -31,6 +31,9 @@ export interface TokenTransaction {
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 export function issueTokens(
   userId: string,
@@ -38,6 +41,8 @@ export function issueTokens(
   reason: string,
 ): TokenTransaction {
   const transaction: TokenTransaction = {
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
@@ -52,6 +57,7 @@ export function issueTokens(
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     userId,
     amount,
@@ -62,6 +68,9 @@ export function issueTokens(
 <<<<<<< HEAD
 
 =======
+<<<<<<< HEAD
+
+=======
   
 <<<<<<< HEAD
 =======
@@ -69,6 +78,7 @@ export function issueTokens(
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   transactions.push(transaction);
   return transaction;
 }
@@ -82,6 +92,13 @@ export function redeemTokens(
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
+<<<<<<< HEAD
+    type: "redeem",
+    reason,
+    timestamp: Date.now(),
+  };
+
+=======
 <<<<<<< HEAD
     type: "redeem",
 =======
@@ -128,6 +145,7 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   transactions.push(transaction);
   return transaction;
 =======
@@ -160,12 +178,17 @@ export interface TokenConfig {
 }
 
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>,
 ): void {
   const current = getConfig();
   // Update the configuration
   Object.assign(current, partial);
+<<<<<<< HEAD
+=======
 =======
 export interface TokenBalance {
   address: string;
@@ -270,6 +293,7 @@ export function set_config (
   // Update the configuration;
   Object.assign (current, partial);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 <<<<<<< HEAD
 

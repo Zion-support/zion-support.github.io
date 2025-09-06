@@ -35,6 +35,9 @@ export type UserRole = 'admin' | 'user' | 'guest';
 export type UserRole = "admin" | "user" | "guest";
 =======
 <<<<<<< HEAD
+export type UserRole = "admin" | "user" | "guest";
+=======
+<<<<<<< HEAD
 
 
 export interface Application {
@@ -84,3 +87,4 @@ export type UserRole = 'admin' | 'user' | 'guest';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main

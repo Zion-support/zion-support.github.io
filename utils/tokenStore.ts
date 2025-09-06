@@ -1,14 +1,20 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import fs from "fs";
 import path from "path";
 
 ;
 
+<<<<<<< HEAD
+=======
 =======
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export interface TokenTransaction {
 
 
@@ -48,11 +54,16 @@ export interface TokenConfig {;
   stakingRewardRate: number; // APY percentage;
 }
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const TRANSACTIONS_FILE = path.join(DATA_DIR, "token-transactions.json");
 const CONFIG_FILE = path.join(DATA_DIR, "token-config.json");
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 =======
@@ -65,6 +76,7 @@ const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -84,7 +96,10 @@ function loadTransactions(): TokenTransaction[] {
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
@@ -102,11 +117,16 @@ function load_config (): TokenConfig {
     const raw = fs.readFileSync(CONFIG_FILE, "utf8");
     return JSON.parse(raw);
 =======
+<<<<<<< HEAD
+    const raw = fs.readFileSync(CONFIG_FILE, "utf8");
+    return JSON.parse(raw);
+=======
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   } catch {
     return getDefaultConfig ();
   }
@@ -115,6 +135,9 @@ function load_config (): TokenConfig {
 export function getAllTransactions(): TokenTransaction[] {
   return loadTransactions();
 }
+<<<<<<< HEAD
+function getDefaultConfig (): TokenConfig {
+=======
 <<<<<<< HEAD
 function getDefaultConfig (): TokenConfig {
 =======
@@ -130,6 +153,7 @@ function getDefaultConfig (): TokenConfig {
   return {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 
   return {
     name: "ZION Token",
@@ -180,6 +204,10 @@ export function getUserBalance(userId: string): number {;
   let balance = 0;
 
   for (const tx of transactions) {
+<<<<<<< HEAD
+    if (tx.userId === userId) {
+      if (tx.type === "earn") {
+=======
 <<<<<<< HEAD
     if (tx.userId === userId) {
       if (tx.type === "earn") {
@@ -296,6 +324,7 @@ if ( {) {
   $2
 }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
         balance += tx.amount;
       } else if (tx.type === "spend") {
         balance -= tx.amount;

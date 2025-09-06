@@ -1,12 +1,18 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 import crypto from "crypto";
 
 
 }
 =======
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 export function getSyncSecret(): string | null {
   const raw = process.env.ZION_SYNC_SECRET || '';
   return raw.length > 0 ? raw : null;
@@ -57,6 +63,11 @@ export function verifySignature(
 export function generateNonce(): string {
   return crypto.randomBytes(16).toString("hex");
 =======
+<<<<<<< HEAD
+
+export function generateNonce(): string {
+  return crypto.randomBytes(16).toString("hex");
+=======
 // Signature utilities;
 export const signature = {
   // Add signature functionality here;
@@ -73,6 +84,7 @@ import crypto from 'crypto';
   recover: (signature: string, message: string) => '';
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 }
 
 export function hashData(data: string): string {

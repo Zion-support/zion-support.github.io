@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
 
 import { execSync } from "child_process";
 
@@ -6,6 +9,8 @@ console.log("🔧 Performing selective merge of main source files...");
 
 // List of main source directories to merge
 const mainSourceDirs = [
+=======
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -16,6 +21,7 @@ console && console.log('🔧 Performing selective merge of main source files...'
 // List of main source directories to merge
 const mainSourceDirs = [
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 #!/usr / bin / env node;
 import {exec_sync} from 'child_process';
 ;
@@ -26,8 +32,11 @@ const mainSourceDirs = [;
 
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
   'pages/',
   'components/',
   'utils/',
@@ -129,6 +138,9 @@ const mergeSpecificFiles = () =>: any {
     console.error("Error in selective merge:", error.message);
 =======
 <<<<<<< HEAD
+    console.error("Error in selective merge:", error.message);
+=======
+<<<<<<< HEAD
 =======
 
   if (mergeSpecificFiles()) {
@@ -153,6 +165,7 @@ const mergeSpecificFiles = () =>: any {
 main();
     console.error ('Error in selective merge:', error.message);
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     return false;
   }
 };

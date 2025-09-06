@@ -2,6 +2,9 @@
 export type UserRole = "admin" | "user" | "guest";
 =======
 <<<<<<< HEAD
+export type UserRole = "admin" | "user" | "guest";
+=======
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -24,3 +27,4 @@ export type UserRole = 'admin' | 'user' | 'guest';
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
