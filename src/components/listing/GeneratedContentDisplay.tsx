@@ -12,41 +12,21 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-
-interface GeneratedContent {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  description: string,
-  tags: string[],
-  suggestedPrice: {
-    min: number,
-    max: number
-  },
-  keyPoints: string[]
-import React from "react",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import { ArrowRight } from 'lucide-react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-interface GeneratedContent {;
-  description: string,;
-  tags: string[],;
-  suggestedPrice: {;
-    min: number,;
-    max: number;
-  },;
-  keyPoints: string[];
+  description: string
+tags: string[]
+suggestedPrice: {
+  min: number
+max: number
 }
-;
-interface GeneratedContentDisplayProps {;
-  content: GeneratedContent;
-  onApply: () => void;
-}
+keyPoints: string[]
+}interface GeneratedContentDisplayProps {
+  content: GeneratedContent
 
-export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDisplayProps) {
-
-
-
-  return (
+  onApply: () => void
+export function GeneratedContentDisplay({
+  content
+  onApply
+}: GeneratedContentDisplayProps) {
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>
         <CardTitle className="text-white">Generated Content</CardTitle>
@@ -232,23 +212,3 @@ function GeneratedContentDisplay() {
         </Button>;
       </CardFooter>;
     </Card>;
-  );
-}
-
-        <Button;
-          on_click={on_apply}
-          className='w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover:from - zion - cyan - light hover:to - zion - cyan text - white';
-        >;
-          Apply to My Listing;
-          <ArrowRight className='ml - 2 h - 4 w - 4' />        </Button>;
-      </CardFooter>;
-    </Card>);
-}          className="w - full bg - gradient - to - r from - zion - cyan to - zion - cyan - dark hover: from - zion - cyan - light hover:to - zion - cyan text - white";
-        >;
-          Apply to My Listing;
-          <ArrowRight className="ml - 2 h - 4 w - 4" />;
-      </CardFooter>;
-    </Card>);
-}
-
-;

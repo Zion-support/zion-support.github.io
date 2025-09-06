@@ -55,16 +55,6 @@ const default_env = {
   NODE_ENV: 'production', // Default to production for safety;
   NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
-  NEXT_PUBLIC_SUPABASE_ANON_KEY: '',
-}
-// Create a safe process object;
-const createProcessObject = () =>: any ({
-  env: { ...default_env },
-  versions: {},
-  platform: 'browser',
-  arch: 'x64',
-  version: '18.0.0',
-  browser: true,
 });
 // Ensure process is available on global_this;
 // Check condition
@@ -191,9 +181,3 @@ export function isProduction(): boolean {
 
 export default safeEnv;
 
-
-
-console.log ('✅ Environment polyfill loaded successfully');
-export default safe_env;
-export default safe_env;
-export default safe_env;

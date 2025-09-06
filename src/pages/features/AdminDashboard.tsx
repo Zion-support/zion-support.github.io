@@ -56,12 +56,6 @@ export default function AdminDashboard() {
 
   };
 
-  return (
-    <>;
-
-
-      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
@@ -95,12 +89,6 @@ export default function AdminDashboard() {
 
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
-            </div>
-            <div>
-              <p className="font-semibold">Can I export reports?</p>
-              <p className="text-zion-slate-light">Yes, you can export data to CSV for further analysis.</p>
-            </div>
-          </div>
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/admin">View Dashboard</Link>
@@ -191,28 +179,3 @@ export default function AdminDashboard() {
               <p className='font - semibold'>Who can access the dashboard?</p>;
               <p className='text - zion - slate - light'>;
 
-                Only authorized admins and moderators with the proper roles.;
-              </p>;
-            </div>;
-            <div>;
-
-
-                Yes, you can export data to CSV for further analysis.;
-              </p>;
-            </div>;
-          </div>;
-
-
-              <Link href="/admin">View Dashboard</Link>;
-            </Button>;
-          </div>;
-        </div>;
-      </main>;
-
-
-  );
-}
-    </>);
-}
-
-  )

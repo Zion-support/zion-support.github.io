@@ -53,10 +53,6 @@ import {
         ))}
       </select>
     </div>
-
-
-
-    <div className='flex items-center gap-2'>;
       <select
 
         value={filterLocation}
@@ -127,10 +123,6 @@ export default function Marketplace() {
                   <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
-
-
-
-
               )}
             </motion && motion.div>;
           ))}
@@ -219,11 +211,6 @@ export default function Marketplace() {
                   <Sparkles className='h - 3 w - 3 mr - 1' />;
                   AI {product.ai_score}
                 </Badge>)}
-              {/* Featured Badge */}
-              {product.featured && (
-                <Badge className='absolute top - 2 left - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 z - 10'>;
-                  <Star className='h - 3 w - 3 mr - 1' />;
-                  Featured;
                 </Badge>)}
             </motion.div>))}
         </AnimatePresence>;
@@ -816,41 +803,3 @@ const Marketplace = () =>: any {
             </div>;
 
 
-
-    </>);
-}
-            className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
-            initial={{ opacity: 0, scale: 0 }}
-
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-
-;
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-
-          >;
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />;
-          </motion.button>;
-        )}
-      </AnimatePresence>;
-    </div>;
-  );
-}
-;

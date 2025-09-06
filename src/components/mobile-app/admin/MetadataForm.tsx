@@ -1,16 +1,6 @@
-interface MetadataFormProps {;
-  form: UseFormReturn<AppMetadataValues>;
-}
-
-
-export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {;
-  const { control, register, watch, setValue } = form;
-  const keywords = watch("keywords");
-  const platform = watch("platform");  ;
-  const addKeyword = (e: React && React.KeyboardEvent<HTMLInputElement>,) => {;
-    if (e && e.key === "Enter" || e && e.key === ",") {;
-      e && e.preventDefault();
-      const value = e && e.currentTarget.value && value.trim();
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Badge } from "@/components/ui/badge";
+import { X } from 'lucide-react'
 
       if (value && !keywords && keywords.includes(value)) {;
         setValue("keywords", [...keywords, value]);

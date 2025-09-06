@@ -33,21 +33,6 @@ import {
   Tabs;
   TabsContent;
   TabsList;
-
-
-  const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  Tabs
-  TabsContent
-  TabsList
-  TabsTrigger} from "@/components/ui/tabs"
-
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
@@ -107,9 +92,6 @@ function highlight(text: string, term: string) {
     }
   },
 
-
-
-
   return (
     <div key={pageKey}>
       <main className="container mx-auto px-4 py-8">
@@ -134,19 +116,6 @@ function highlight(text: string, term: string) {
           <div className="flex justify-center py-8">
             <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
           </div>
-            onSelectSuggestion={(suggestion) => {;
-              const searchTerm = suggestion && suggestion.text.trim();
-              setQuery(searchTerm);              router && router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
-            }}
-            searchSuggestions = {suggestions,}
-            placeholder="Search talent, jobs, and projects...";
-          />;
-        </form>;
-
-        {loading && (;
-          <div className="flex justify-center py-8">;
-            <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />;
-          </div>;
         )}
         {!loading && marketplaceResults.length === 0 && blogResults.length > 0 && (
           <div>
@@ -164,33 +133,6 @@ function highlight(text: string, term: string) {
         {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
           <p className="text-zion-slate-light">No results found for "{query}".</p>
         )}
-
-        {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
-          <Tabs defaultValue="products" className="space-y-4">;
-            <TabsList className="mb-4">;
-              <TabsTrigger value="products">;
-                Products ({productResults && productResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="talent">;
-                Talent ({talentResults && talentResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="docs">;
-                Docs ({docResults && docResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="blog">;
-                Blog ({blogResults && blogResults.length});
-              </TabsTrigger>;
-            </TabsList>;
-            <TabsContent value="products" className="space-y-4">;
-              {results;
-                .filter((r,) => r && r.type === "product" || r && r.type === "service");
-                .map((r,) => (;
-
-
-                .filter((r) => r.type === "product" || r.type === "service")
-                .map((r) => (
-
-                  <div
                     key={`${r.type}-${r.id}`}
                     className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
                   >
@@ -391,10 +333,6 @@ if (data && data.results && Array.isArray (data.results) ) {
   // Check condition
 if (return) {
   $2
-}
-if () {) {
-  $2
-}
   fetch_results (query.trim () );
 }else {
   set_results ([]);
@@ -500,49 +438,3 @@ router.push (`/search?q=$ {
           {/* Results Count */}
 
 
-;
-
-
-      </main>;
-    </div>;
-  );
-
-          <div  className="mb - 6">;
-            <p className="text - slate -300">;
-              {search_query ? `Found ${filtered_results.length} results for "${search_query}"` : `Showing ${filtered_results.length} items`}
-            </p>;
-            <div className="grid md:grid - cols - 2 gap - 8 mb - 12">;
-              <div className="bg - white p - 6 rounded - lg shadow - md">;
-                <h2 className="text - 2xl font - semibold mb - 4">Our Services</h2>;
-                <ul className="text - gray - 600 space - y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24 / 7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-              <div className="bg - white p - 6 rounded - lg shadow - md">;
-                <h2 className="text - 2xl font - semibold mb - 4">Why Choose Us</h2>;
-                <ul className="text - gray - 600 space - y-2">;
-
-                  <li>• Industry Expertise</li>;
-                  <li>• Proven Results</li>;
-                  <li>• Scalable Solutions</li>;
-                  <li>• Competitive Pricing</li>;
-                </ul>;
-              </div>;
-
-
-
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-              <Link href="/pricing/" className="bg - blue - 600 text - white px - 6 py - 3 rounded - lg hover:bg - blue - 700 transition - colors">;
-                View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg - gray - 600 text - white px - 6 py - 3 rounded - lg hover:bg - gray - 700 transition - colors">;
-                Contact Us;
-              </Link>;
-            </div>;
-    </>);
-}
-}
-;

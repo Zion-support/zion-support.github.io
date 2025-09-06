@@ -1,16 +1,12 @@
-interface MainNavigationProps {
-  isAdmin?: boolean
-  unreadCount?: number
-  className?: string
 
-import Link from 'next / link';
-import { use_router } from 'next / router';
-import { useState } from 'react';
-import { cn } from '@/lib / utils';
-import { use_auth } from '@/hooks / use_auth';
-import { use_translation } from 'react - i18next';
-import { use_favorites } from '@/hooks / use_favorites';
-import { use_cart } from '@/context / CartContext';
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
+import { useAuth } from '@/hooks/useAuth'
+import { useTranslation } from 'react-i18next'
+import { useFavorites } from '@/hooks/useFavorites'
+import { useCart } from '@/context/CartContext'
 import {
   Heart,
   MessageSquare,
@@ -852,13 +848,6 @@ export default function Page() {; []);
                     <ShoppingCart className="w-4 h-4 mr-1" />
                     {t('nav.cartCart')}
                     {cartCount > 0 && (
-
-}`};
-;
-                          {link.name}'`;
-                          <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
-
-                        {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
                               <Link
@@ -979,51 +968,3 @@ export default function Page() {; []);
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-
-
-                        {link && link.name}
-                      </Link>;
-                    )}
-                                on_click={: unknown setIsMobileMenuOpen (false)}
-                                {child.name}
-                              </Link>))}
-                          </div>)}
-                      </div>) : (
-                      <Link;
-                        to={link.href}`;
-                        className={`block px - 4 py - 3 text - sm font - medium rounded - md transition - colors ${is_active (link);
-                            ? 'bg - zion - cyan text - white'';
-                            : 'text - zion - slate - light hover:text - white hover:bg - white / 10'`;
-}`}
-                        on_click={: unknown setIsMobileMenuOpen (false)}
-                        {link.name}
-                      </Link>)}
-
-                  </Link>;
-                </HoverCardTrigger>;
-                <HoverCardContent>;
-                  <MiniCartPreview />;
-                </HoverCardContent>;
-              </HoverCard>;
-            </li>;
-          </ul>;
-
-          <div className='flex items - center gap - 2 mt - 4 md:mt - 0 md:ml - auto'>;
-
-            <LanguageSelector />;
-          </div>;
-        </div>;
-      </nav>;
-
-
-
-      <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>));
-}
-
-;
-}
-
-  )
-}
-;

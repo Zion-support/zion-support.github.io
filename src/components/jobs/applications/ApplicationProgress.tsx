@@ -1,13 +1,11 @@
-interface ApplicationProgressProps {
 
-  status: ApplicationStatus
-
-  className?: string
-}
-export function ApplicationProgress({ status, className }: ApplicationProgressProps) {
-  // Define the progress value based on status
-
-  const getProgressValue = () => {
+import { ApplicationStatus } from "@/types/jobs"
+import { Progress } from "@/components/ui/progress"
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn } from "@/lib/utils"
+import { ApplicationStatus } from "@/types/jobs",
+import { Progress } from "@/components/ui/progress";
+import { CheckCircle2, Circle, CircleDot } from 'lucide-react'
+import { cn } from "@/lib/utils";
 import { ApplicationStatus  } from '@/types / jobs';
 import { Progress  } from '@/components / ui / progress';
 import { CheckCircle2, Circle, CircleDot } from 'lucide-react'import { cn  } from '@/lib / utils';
@@ -227,6 +225,3 @@ if ( {) {
     return <Circle className="h - 4 w - 4 text - muted - foreground / 50" />;
   }
 }
-
-    // This step is upcoming
-    return <Circle className="h-4 w-4 text-muted-foreground/50" />

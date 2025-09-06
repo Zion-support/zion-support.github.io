@@ -1,61 +1,18 @@
->
-        <Eye className="h-4 w-4" />
-      </Button>
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+return (
+    <div className='flex space-x-2'>
       <Button
 
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
 
-};
-'"},;
-  );
-};
-
-
-        variant="ghost"
-        size="icon"
-        title="Send Warning"
-        aria-label="Send warning"
-        onClick={() => onAction(flagId, 'warning')}
-        disabled={status === 'actioned' || status === 'ignored'}
-      >
-        <Info className="h-4 w-4" />
-      </Button>
-      <Button
-        variant="ghost"
-        size="icon"
-        title="Suspend User"
-        aria-label="Suspend user"
-        onClick={() => onAction(flagId, 'suspension')}
-        disabled={status === 'actioned' || status === 'ignored'}
-      >
-        <AlertTriangle className="h-4 w-4" />
-      </Button>
-      <Button
-        variant="ghost"
-        size="icon"
-        title="Ban User"
-        aria-label="Ban user"
-        onClick={() => onAction(flagId, 'ban')}
-        disabled={status === 'actioned' || status === 'ignored'}
-      >
-        <Ban className="h-4 w-4" />
-      </Button>
-      {status === 'pending' && (
-        <Button
-          variant="ghost"
-          size="sm"
+import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
+interface ActionButtonsProps {
           onClick={() => onAction(flagId, 'ignore')}
-        >
-          Ignore
-        </Button>
-      )}
-
-    </div>
-  )
-
-
-  );
-};
-
 
 
 import React from 'react';

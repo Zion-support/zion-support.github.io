@@ -1,23 +1,8 @@
-import Link from 'next/link';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
-import { AuthButtons  } from '@/components/AuthButtons';
-
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
-import * as Yup from 'yup'
-import axios from 'axios'
-import Link from 'next/link'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
-import { AuthButtons } from '@/components/AuthButtons'
-
+import { useState, useEffect  } from 'react';
+import { useRouter } from 'next/router', // Changed from react-router-dom
+import { useFormik  } from 'formik';
+import * as Yup from 'yup',
+import axios from 'axios',
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
 
@@ -783,79 +768,6 @@ import {
         const { error: sessionError } = await supabase.auth.setSession(resData.session)
         if (sessionError) {
           console.error("Error setting session:", sessionError)
-
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage, ,
-} from '@/components / ui / form';
-// Form validation schema;
-const signup_schema = z;
-  .object ({
-    display_name: z.string ().min (2, "Name must be at least 2 characters"),
-    email: z.string ().email ("Please enter a valid email"),
-    password: z.string ();
-      .min (8, "Password must be at least 8 characters");
-      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");
-      .regex (/[a - z]/, "Password must contain at least one lowercase letter");
-      .regex (/[0 - 9]/, "Password must contain at least one number"),
-    confirm_password: z.string (),
-    terms_accepted: z.boolean ().refine (val => val === true, {
-      message: "You must accept the terms and conditions", ,
-}), ,
-});
-  .refine (data => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"], ,
-});
-type SignupFormValues = z.infer < typeof signup_schema>;
-export default /**
- * Signup - Function description
- */
-function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ();
-  const navigate = use_navigate ();
-  const [show_password, setShowPassword] = useState (false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState (false);
-  // Track confirm password locally to prevent it from clearing on blur;
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState ("");
-  const password_value = form.watch ("password");
-  const [is_submitting, setIsSubmitting] = useState (false);
-  // Initialize react - hook - form;
-  const form = use_form ({
-    resolver: zod_resolver (signup_schema),
-    default_values: {
-      display_name: ",
-      email: ",
-      password: ",
-      confirm_password: ",
-      terms_accepted: false, ,
-}, ,
-}) as UseFormReturn < SignupFormValues>;
-  // Form submission handler;
-  const on_submit = async (data: SignupFormValues) => {
-    // Check condition
-if (return) {
-  $2
-} // Prevent multiple submissions;
-    setIsSubmitting (true);
-    try {
-      const { res, data: res_data } = await register (
-        data.display_name,
-        data.email,
-        data.password);
-      // Handle duplicate email error from API;
-      // Check condition
-if ( {) {
-  $2
-
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
-          return;
-
-
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -1073,78 +985,3 @@ export default function Signup() {;
           console && console.error('Mailchimp subscription failed', err);
           // Non-critical error, don't block user flow;
 }
-      }
-      // Toast and navigation are handled above if session is present;
-      // If emailVerificationRequired, no toast/navigation here, message is shown;
-} catch (err: any) {;
-      const message = err && err.message ?? "Registration failed";
-      form && form.setError("root", { message });
-      toast && toast.error(message);
-} finally {;
-      setIsSubmitting(false);    }
-  };
-  const onInvalid = (errors: any) => {;
-    const firstError = Object && Object.keys(errors)[0] as keyof SignupFormValues;
-    if (firstError) {;
-      form && form.setFocus(firstError);
-
-  const on_invalid = (errors: any) =>: any {
-    const first_error = Object.keys (errors)[0] as keyof SignupFormValues;
-    // Check condition
-if ( {) {
-  $2
-}
-      form.set_focus (first_error);
-}
-  }
-  // Redirect if user is already logged in and has completed profile
-  if (isAuthenticated && user?.profileComplete) {
-    return <Navigate to="/" />
-}
-
-
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Signup = () => {;
-  return (
-    <>;
-      <Head>;
-        <title>Signup - Zion Tech Group</title>;
-        <meta name="description" content="Professional Signup services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-              Signup;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
-              Professional Signup services and solutions;
-            </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
-                <ul className="text-gray-600 space-y-2">;
-    return <Navigate to="/" />;
-}
-
-
-}};
-};
-
-        </div>;
-      </div>;
-    </AuthLayout>;
-  );
-}
-;

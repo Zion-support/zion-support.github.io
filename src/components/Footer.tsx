@@ -9,23 +9,17 @@ const Footer: React.FC = () => {
       behavior: 'smooth'
     });
   };
+
   return (
-    <footer className="bg-slate-900 text-gray-300">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="bg-gray-900 text-white py-8">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Z</span>
-              </div>
-              <span className="text-xl font-bold text-white">Zion Tech Group</span>
-            </div>
-            <p className="text-gray-400 mb-4 max-w-md">
-              Leading AI & Technology Solutions for a Smarter Future. We deliver cutting-edge 
-              technology solutions that transform businesses and drive innovation.
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300">
+              Leading technology solutions provider for modern businesses.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 mt-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <span className="sr-only">Twitter</span>
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -99,6 +93,16 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Contact</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>Email: info@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+              <p>Address: 123 Tech Street, Innovation City</p>
+            </div>
           </div>
         </div>
 

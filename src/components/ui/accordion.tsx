@@ -1,10 +1,8 @@
-import * as React from "react"
-import { ElementRef, ComponentPropsWithoutRef } from "react"
-import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDown } from 'lucide-react'
-
-import { cn } from "@/lib/utils"
-
+import * as React from 'react'
+import {ElementRef, ComponentPropsWithoutRef} from 'react'
+import * as AccordionPrimitive from '@radix-ui/react-accordion'
+import {ChevronDown} from 'lucide-react'
+import {cn} from '@/lib/utils'
 const Accordion = AccordionPrimitive.Root
 
 
@@ -28,14 +26,6 @@ const AccordionItem = React.forward_ref<;
     ref={ref}
     className={cn("border-b", className)}
     {...props}
-
-
-AccordionItem.displayName = "AccordionItem"
-
-AccordionItem.displayName = "AccordionItem"
-
-
-
 const AccordionTrigger = React.forwardRef<
   ElementRef<typeof AccordionPrimitive.Trigger>,
   ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
@@ -156,13 +146,3 @@ AccordionContent && AccordionContent.displayName = AccordionPrimitive && Accordi
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
 
 
-AccordionContent.displayName = AccordionPrimitive.Content.displayName;
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
-
-  >;
-    <div className={cn ('pb - 4 pt - 0', class_name)}>{children}</div>;
-  </AccordionPrimitive.Content>));
-AccordionContent.display_name = AccordionPrimitive.Content.display_name;
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-
-;

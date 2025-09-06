@@ -1,58 +1,26 @@
-const handleApplySuggestion = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      onSuggestionApplied (suggestion.min_rate, suggestion.max_rate);
-      // Track this suggestion application;
-      // Check condition
-if ( {) {
-  $2
-}
-        trackPricingSuggestion ({
-          user_id: user.id,
-          suggestion_type: 'client',
-          suggested_min: suggestion.min_rate,
-          suggested_max: suggestion.max_rate,
-          accepted: true,
-        });
-      }
-    }
-  }
-  return (
 
-
-
-
-
-import { Sparkles } from 'lucide-react'
-interface ClientBudgetRecommenderProps {
-
-  jobTitle: string,
-  category: string,
-  timeline?: string,
-  scope?: string,
-  experienceLevel?: string,
-
-      // Track this suggestion application
-      if (user && user.id) {
-        trackPricingSuggestion({
-          userId: user.id,
-          suggestionType: "client",
-          suggestedMin: suggestion.minRate,
-          suggestedMax: suggestion.maxRate,
-
-
-
-  return (
-    <div className="space-y-4">
-      <div>
-        {!suggestion && !isLoading ? (
-          <Button
-
-            type="button"
-            variant="outline"
-            onClick={generateSuggestion}
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import { logErrorToProduction } from '@/utils/productionLogger'
+import {
+  getClientBudgetSuggestion
+  PricingSuggestion
+  ClientBudgetParams
+  trackPricingSuggestion
+} from '@/services/pricingSuggestionService'
+import { PricingSuggestionBox } from './PricingSuggestionBox'
+import { useAuth } from '@/hooks/useAuth'
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import { 
+  getClientBudgetSuggestion,
+  PricingSuggestion,
+  ClientBudgetParams,
+  trackPricingSuggestion
+} from "@/services/pricingSuggestionService",
+import { PricingSuggestionBox } from "./PricingSuggestionBox",
+import { useAuth } from "@/hooks/useAuth",
             disabled={!jobTitle || !category}
             className="w-full"
           >
@@ -105,27 +73,3 @@ if (experienceLevel) params.experienceLevel = experienceLevel
   trackPricingSuggestion ({
 }
 
-
-},
-
-            rateType="hourly"
-          />
-        )}
-
-      </div>;
-    </div>;
-  );
-};
-
-
-
-
-
-return (<div className="space - y-4" > <div> {";
-  !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
-  generate_suggestion ";
-}> <Sparkles className="h - 4 w - 4 mr - 2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />);
-}</div> </div>);
-}
-'"  );
-},
