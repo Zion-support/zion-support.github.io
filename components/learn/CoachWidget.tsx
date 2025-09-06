@@ -1,80 +1,200 @@
+<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React, { useState } from 'react';
+<<<<<<< HEAD
+export default function CoachWidget() {
+=======
+
 export default function CoachWidget() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [input, setInput] = useState('');
   const [reply, setReply] = useState<string | null>(null),
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
   async function ask() {
     if (!input.trim()) return;
     setLoading(true);
     try {
 
       const resp = await fetch('/api/learn/coach', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
       setReply(data.text |'');
     } finally {
+=======
+
+  async function ask() {;
+    if (!input && input.trim()) return;
+    setLoading(true);
+    try {;
+      const resp = await fetch('/api/learn/coach', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON && JSON.stringify({ prompt: input }),;
+      });
+      const data = await resp && resp.json();
+      setReply(data && data.text || '');
+    } finally {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setLoading(false);    }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-
-  return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (      });
+<<<<<<< HEAD
       const data = await resp.json();
       setReply(data.text |'')
-=======
-
-  return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     } finally {
       setLoading(false)
-    }
-  }
 <<<<<<< HEAD
 =======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      const data = await resp && resp.json();
+      setReply(data && data.text || '');
+    } finally {;
+      setLoading(false);
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    }
+  }
   return (
-    <div className='border rounded p-3'>
-      <div className='font-medium mb-2'>ZionGPT Coach</div>
-      <div className='flex gap-2'>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    <div className='border rounded p-3'>;
+      <div className='font-medium mb-2'>ZionGPT Coach</div>;
+      <div className='flex gap-2'>;
         <input
           className='flex-1 border rounded px-3 py-2 bg-white dark:bg-black'
           placeholder='Ask for help...'
           value={input}
-          onChange={e => setInput(e.target.value)}
-        />
+          onChange={e => setInput(e && e.target.value)}
+        />;
         <button
           onClick={ask}
           className='px-3 py-2 bg-blue-600 text-white rounded'
-          disabled={loading}
-        >
+          disabled={loading}>;
           {loading ? '...' : 'Ask'}
-        </button>
-      {reply && (
-        <div className='mt-2 text-sm text-gray-800 dark:text-gray-200'>
+        </button>;
+      {reply && (;
+        <div className='mt-2 text-sm text-gray-800 dark:text-gray-200'>;
           {reply}
-        </div>
+        </div>;
       )}
+<<<<<<< HEAD
     </div>
 );
 }
 =======
+    </div>;
 <<<<<<< HEAD
-
-  return (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
+  );
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    <div className="border rounded p-3">
+      <div className="font-medium mb-2">ZionGPT Coach</div>
+      <div className="flex gap-2">
+        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
+        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
+      </div>
+      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
+    </div>
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+import React, { useState } from 'react';
+export default /**
+ * CoachWidget - Function description
+ */
+function CoachWidget() {
+  const [input, set_input] = useState ('');
+  const [reply, set_reply] = useState < string | null>(null);
+  const [loading, set_loading] = useState (false);
+;
+  async /**
+ * ask - Function description
+ */
+function ask() {
+    if () return) {
+  $2
+}
+    set_loading (true);
+    try {
+      const resp = await fetch ('/api / learn / coach', {
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ prompt: input }),
+      });
+      const data = await resp.json ();
+      set_reply (data.text || '');
+    } finally {
+      set_loading (false);    }
+  }
+  return (      });
+      const data = await resp.json ();
+      set_reply (data.text || '');
+    } finally {
+      set_loading (false);
+    }
+  }
   return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    <div className='border rounded p - 3'>;
+      <div className='font - medium mb - 2'>ZionGPT Coach</div>;
+      <div className='flex gap - 2'>;
+        <input;
+          className='flex - 1 border rounded px - 3 py - 2 bg - white dark:bg - black';
+          placeholder='Ask for help...';
+          value={input}
+          on_change={e => set_input (e.target.value)}
+        />;
+        <button;
+          on_click={ask}
+          className='px - 3 py - 2 bg - blue - 600 text - white rounded';
+          disabled={loading}
+        >;
+          {loading ? '...' : 'Ask'}
+        </button>;
+      {reply && (
+        <div className='mt - 2 text - sm text - gray - 800 dark:text - gray - 200'>;
+          {reply}
+        </div>)}
+    </div>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,36 +1,47 @@
-<<<<<<< HEAD
-// Global type declarations for DOM types
+// Global type declarations for DOM types;
 declare global {
   interface Window {
     performance: Performance;
   }
+<<<<<<< HEAD
   // Define Performance interface if not available
+=======
+  // Define Performance interface if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[];
-    now(): number;
+    getEntriesByType (type: string): PerformanceEntry[];
+    now (): number;
   }
+<<<<<<< HEAD
   // Define PerformanceEntry interface if not available
+=======
+  // Define PerformanceEntry interface if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   interface PerformanceEntry {
     name: string;
-    entryType: string;
-    startTime: number;
+    entry_type: string;
+    start_time: number;
     duration: number;
   }
+<<<<<<< HEAD
   // Define HTML element types if not available
+=======
+  // Define HTML element types if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   interface Element {
-    tagName: string;
+    tag_name: string;
     attributes: NamedNodeMap;
     children: HTMLCollection;
-    parentElement: HTMLElement | null;
+    parent_element: HTMLElement | null;
   }
   interface CSSStyleDeclaration {
     [key: string]: string;
   }
   interface HTMLElement extends Element {
-    className: string;
+    class_name: string;
     id: string;
     innerHTML: string;
-    textContent: string | null;
+    text_content: string | null;
     style: CSSStyleDeclaration;
   }
   interface HTMLDivElement extends HTMLElement {}
@@ -40,15 +51,24 @@ declare global {
     href: string;
     target: string;
   }
+<<<<<<< HEAD
   // Define MessageEvent if not available
   interface MessageEvent<T = any> extends Event {
+=======
+  // Define MessageEvent if not available;
+  interface MessageEvent < T = any> extends Event {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     data: T;
     origin: string;
     lastEventId: string;
     source: MessageEventSource | null;
-    ports: ReadonlyArray<MessagePort>;
+    ports: ReadonlyArray < MessagePort>;
   }
+<<<<<<< HEAD
   // Define RequestInit if not available
+=======
+  // Define RequestInit if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   interface RequestInit {
     body?: BodyInit | null;
     cache?: RequestCache;
@@ -60,17 +80,25 @@ declare global {
     mode?: RequestMode;
     redirect?: RequestRedirect;
     referrer?: string;
-    referrerPolicy?: ReferrerPolicy;
+    referrer_policy?: ReferrerPolicy;
     signal?: AbortSignal | null;
     window?: any;
     timeout?: number;
   }
+<<<<<<< HEAD
   // Define AbortController if not available
+=======
+  // Define AbortController if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   interface AbortController {
     signal: AbortSignal;
-    abort(): void;
+    abort (): void;
   }
+<<<<<<< HEAD
   // Define AbortSignal if not available
+=======
+  // Define AbortSignal if not available;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   interface AbortSignal extends EventTarget {
     aborted: boolean;
     onabort: ((this: AbortSignal, ev: Event) => any) | null;
@@ -78,79 +106,6 @@ declare global {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-// Module declarations
-declare module "*.svg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.png" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.jpeg" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.gif" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.webp" {
-  const content: string;
-  export default content;
-}
-
-declare module "*.css" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.scss" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.module.css" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-declare module "*.module.scss" {
-  const content: { [className: string]: string };
-  export default content;
-}
-
-// Environment variables
-declare namespace NodeJS {
-  interface ProcessEnv {
-    NODE_ENV: "development" | "production" | "test";
-    NEXT_PUBLIC_SUPABASE_URL?: string;
-    NEXT_PUBLIC_SUPABASE_ANON_KEY?: string;
-    SUPABASE_SERVICE_ROLE_KEY?: string;
-    NEXT_PUBLIC_GA_TRACKING_ID?: string;
-  }
-}
-
-export {};
-<<<<<<< HEAD
-=======
-export {};
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
 <<<<<<< HEAD
 // Re-export DOM types that might not be available
@@ -158,7 +113,6 @@ export {};
 =======
 export {};
 <<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 declare module "*.svg" { const content: 'string; export default content;' } declare module "*.png" { const content: 'string; export default content;' } declare module "*.jpg" { const content: 'string; export default content;' } declare module "*.jpeg" { const content: 'string; export default content;' } declare module "*.gif" { const content: 'string; export default content;' } declare module "*.webp" { const content: 'string; export default content;' } declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } } declare global { interface Window { gtag?: (...args: 'any[]) => void; dataLayer?: any[];' } } } export {};
 <<<<<<< HEAD
 declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
@@ -169,18 +123,6 @@ declare module "*.svg" { const content: string; export default content} declare 
 declare module "*.svg" { const content: string; export default content} declare module "*.png" { const content: string; export default content} declare module "*.jpg" { const content: string; export default content} declare module "*.jpeg" { const content: string; export default content} declare module "*.gif" { const content: string; export default content} declare module "*.webp" { const content: string; export default content} declare module "*.css" { const content: { [className: string]: string }; export default content} declare module "*.scss" { const content: { [className: string]: string }; export default content} declare module "*.module.css" { const content: { [className: string]: string }; export default content} declare module "*.module.scss" { const content: { [className: string]: string }; export default content} declare namespace NodeJS { interface ProcessEnv { NODE_ENV: "development" | "production" | "test"; NEXT_PUBLIC_SUPABASE_URL?: string; NEXT_PUBLIC_SUPABASE_ANON_KEY?: string; SUPABASE_SERVICE_ROLE_KEY?: string; NEXT_PUBLIC_GA_TRACKING_ID?: string} } declare global { interface Window { gtag?: (...args: any[]) => void; dataLayer?: any[]} } export {};
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-// Re-export DOM types that might not be available
-export {}
->>>>>>> origin/main
-=======
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -188,15 +130,7 @@ export {}
 // Re-export DOM types that might not be available
 export {}
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
-
-export {};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-// Re-export DOM types that might not be available;
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-export {};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+// Re - export DOM types that might not be available;
+export {}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

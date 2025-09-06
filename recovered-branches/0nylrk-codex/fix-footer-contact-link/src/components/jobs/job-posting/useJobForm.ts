@@ -1,6 +1,5 @@
+<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -11,42 +10,21 @@ import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
 =======
 import {useState, useEffect} from 'react';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from "@hookform/resolvers/zod";
-import {format} from 'date-fns';
-import {toast} from "sonner";
-import {useNavigate} from 'react-router-dom';
-import {jobSchema, JobSchemaType} from './validation';
-import {useAuth} from "@/hooks/useAuth";
-export interface JobPostingProps {;
-  jobId?: string;
-  onSuccess?: () => void
-}
-
-export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
-  const { user } = useAuth();
-  const navigate = useNavigate();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { useState, useEffect } from 'react',
-import { useForm } from 'react-hook-form',
-import { zodResolver } from "@hookform/resolvers/zod",
-import { format } from 'date-fns',
-import { toast } from "sonner",
-import { useNavigate } from 'react-router-dom',
-import { jobSchema, JobSchemaType } from './validation',
-import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import {use_form} from 'react - hook - form';
+import { zod_resolver } from '@hookform / resolvers / zod';
+import {format} from 'date - fns';
+import { toast } from './sonner';
+import {use_navigate} from 'react-router-dom';
+import {job_schema, JobSchemaType} from './validation';
+import { use_auth } from '@/hooks / use_auth';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface JobPostingProps {
-  jobId?: string,
-  onSuccess?: () => void
+  job_id?: string;
+  on_success?: () => void;
 }
+<<<<<<< HEAD
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
-<<<<<<< HEAD
   const { user } = useAuth();
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
@@ -54,22 +32,24 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isRemote, setIsRemote] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
-=======
-  const { user } = useAuth(),
-  const navigate = useNavigate(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  
-  const [startDate, setStartDate] = useState<Date | undefined>(undefined),
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),
-  const [isRemote, setIsRemote] = useState(false),
-  const [isLoading, setIsLoading] = useState(false),
-  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<JobSchemaType>({
-    resolver: zodResolver(jobSchema),
+    resolver: zodResolver(jobSchema);
     defaultValues: {
-<<<<<<< HEAD
+=======
+export const useJobForm = ({ job_id, on_success }: JobPostingProps) =>: any {
+  const { user } = use_auth ();
+  const navigate = use_navigate ();
+;
+  const [start_date, setStartDate] = useState < Date | undefined>(undefined);
+  const [end_date, setEndDate] = useState < Date | undefined>(undefined);
+  const [is_remote, setIsRemote] = useState (false);
+  const [is_loading, setIsLoading] = useState (false);
+  const [initial_values, setInitialValues] = useState < JobSchemaType | null>(null);
+;
+  const form = use_form < JobSchemaType>({
+    resolver: zod_resolver (job_schema);
+    default_values: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       title: '';
       company: '';
       location: '';
@@ -85,222 +65,125 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       expiry_date: '';
       is_remote: false;
       category: '';
+<<<<<<< HEAD
       status: ''
       external_apply_link: ''}
     mode: "onChange"});
   // Function to create/update jobs that will be implemented by parent component
   const submitJob = async (values: JobSchemaType) => {
     if (!user) {
+<<<<<<< HEAD
       toast.error("You must be logged in to post a job");
       navigate("/login")
+=======
+      toast && toast.error("You must be logged in to post a job");
+      navigate("/login"),
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return
     }
     setIsLoading(true);
     try {
+<<<<<<< HEAD
       const publishedDate = startDate ? startDate.toString() : '';
       const expiryDate = endDate ? endDate.toString() : '';
+=======
+      const publishedDate = startDate ? startDate && startDate.toString() : '';
+      const expiryDate = endDate ? endDate && endDate.toString() : '';
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const jobData = {
         ...values;
         published_date: publishedDate;
         expiry_date: expiryDate;
+<<<<<<< HEAD
         is_remote: isRemote
         user_id: user.id}
+=======
+        is_remote: isRemote,
+        user_id: user && user.id};
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (onSuccess) {
         onSuccess()
       }
       return jobData
     } catch (error: any) {
+<<<<<<< HEAD
       console.error("Error in job form submission:", error);
       toast.error(error.message |"Failed to process form");
+=======
+      console && console.error("Error in job form submission:", error);
+      toast && toast.error(error && error.message || "Failed to process form");
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       throw error
-    } finally {
-      setIsLoading(false)
-    }
-  }
-  return {
-    form;
-    isLoading;
-    startDate;
-    setStartDate;
-    endDate
-    setEndDate;
-    isRemote;
-    setIsRemote;
-    initialValues;
-    setInitialValues;
-    submitJob
-  }
-}
-
 =======
-      title: '',
-      company: '',
-      location: '',
-      job_type: '',
-      salary_range: '',
-      description: '',
-      responsibilities: '',
-      qualifications: '',
-      benefits: '',
-      application_instructions: '',
-      contact_email: '',
-      published_date: '',
-      expiry_date: '',
-      is_remote: false,
-      category: '',
       status: '',
-      external_apply_link: ''},
-    mode: "onChange"}),
-
-  // Function to create/update jobs that will be implemented by parent component
-  const submitJob = async (values: JobSchemaType) => {
-    if (!user) {
-      toast.error("You must be logged in to post a job"),
-      navigate("/login"),
-      return
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    }
-
-    setIsLoading(true);
-
-    try {
-      const publishedDate = startDate ? startDate.toString() : '';
-      const expiryDate = endDate ? endDate.toString() : '';
-
-      const jobData = {
-        ...values;
-        published_date: publishedDate;
-        expiry_date: expiryDate;
-        is_remote: isRemote,
-        user_id: user.id};
-
-      if (onSuccess) {
-        onSuccess()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-import { useState, useEffect } from 'react',;
-import { useForm } from 'react-hook-form',;
-import { zodResolver } from "@hookform/resolvers/zod",;
-import { format } from 'date-fns',;
-import { toast } from "sonner",;
-import { useNavigate } from 'react-router-dom',;
-import { jobSchema, JobSchemaType } from './validation',;
-import { useAuth } from "@/hooks/useAuth",;
-export interface JobPostingProps {;
-  jobId?: string,;
-  onSuccess?: () => void;
-}
+      external_apply_link: ''}
+    mode: "on_change"});
 ;
-export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
-  const { user } = useAuth(),;
-  const navigate = useNavigate(),;
-  const [startDate, setStartDate] = useState<Date | undefined>(undefined),;
-  const [endDate, setEndDate] = useState<Date | undefined>(undefined),;
-  const [isRemote, setIsRemote] = useState(false),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),;
-  const form = useForm<JobSchemaType>({;
-    resolver: zodResolver(jobSchema),;
-    defaultValues: {;
-      title: '',;
-      company: '',;
-      location: '',;
-      job_type: '',;
-      salary_range: '',;
-      description: '',;
-      responsibilities: '',;
-      qualifications: '',;
-      benefits: '',;
-      application_instructions: '',;
-      contact_email: '',;
-      published_date: '',;
-      expiry_date: '',;
-      is_remote: false,;
-      category: '',;
-      status: '',;
-      external_apply_link: ''},;
-    mode: "onChange"}),;
-  // Function to create/update jobs that will be implemented by parent component;
-  const submitJob = async (values: JobSchemaType) => {;
-    if (!user) {;
-      toast.error("You must be logged in to post a job"),;
-      navigate("/login"),;
+  // Function to create / update jobs that will be implemented by parent component;
+  const submit_job = async (values: JobSchemaType) => {
+    // Check condition
+if ( {) {
+  $2
+}
+      toast.error ("You must be logged in to post a job");
+      navigate ("/login"),
       return;
     }
+    setIsLoading (true);
 ;
-    setIsLoading(true),;
-    try {;
-      const publishedDate = startDate ? startDate.toString() : '',;
-      const expiryDate = endDate ? endDate.toString() : '',;
-      const jobData = {;
-        ...values,;
-        published_date: publishedDate,;
-        expiry_date: expiryDate,;
-        is_remote: isRemote,;
-        user_id: user.id},;
-      if (onSuccess) {;
-        onSuccess();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    try {
+      const published_date = start_date ? start_date.to_string () : '';
+      const expiry_date = end_date ? end_date.to_string () : '';
+;
+      const job_data = {
+        ...values;
+        published_date: published_date;
+        expiry_date: expiry_date;
+        is_remote: is_remote,
+        user_id: user.id}
+;
+      // Check condition
+if ( {) {
+  $2
+}
+        on_success ();
       }
-      
-      return jobData
+      return job_data;
     } catch (error: any) {
-      console.error("Error in job form submission:", error),
-      toast.error(error.message || "Failed to process form"),
-      throw error
+      console.error ("Error in job form submission:", error);
+      toast.error (error.message || "Failed to process form");
+      throw error;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
+    }
+  }
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-    }
-  };
-
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     form;
-    isLoading;
-    startDate;
+    is_loading;
+    start_date;
     setStartDate;
-    endDate, 
-    setEndDate;
-    isRemote;
-    setIsRemote;
-    initialValues;
-    setInitialValues;
-    submitJob
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-;
-      return jobData;
-    } catch (error: any) {;
-      console.error("Error in job form submission:", error),;
-      toast.error(error.message || "Failed to process form"),;
-      throw error;
-    } finally {;
-      setIsLoading(false);
-    }
-  },;
-  return {;
-    form,;
-    isLoading,;
-    startDate,;
-    setStartDate,;
-    endDate,;
-    setEndDate,;
-    isRemote,;
-    setIsRemote,;
-    initialValues,;
-    setInitialValues;
-    submitJob;
 <<<<<<< HEAD
+    endDate
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    end_date,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    setEndDate;
+    is_remote;
+    setIsRemote;
+    initial_values;
+    setInitialValues;
+    submit_job;
   }
-};
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}
+<<<<<<< HEAD
+
+=======
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

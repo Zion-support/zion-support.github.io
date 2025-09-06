@@ -1,21 +1,15 @@
+<<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { ResumeBasicInfo  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addBasicInfoSection(
-=======
-import {jsPDF} from 'jspdf';
-import {ResumeBasicInfo} from '@/types/resume';
-import {PdfThemeColors} from '../themeConfig';
-export function addBasicInfoSection(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   doc: jsPDF;
   basicInfo: ResumeBasicInfo;
   colors: PdfThemeColors
 ): number {
   // Add header with name and title
+<<<<<<< HEAD
   doc.setFontSize(24);
 
   doc.setTextColor(colors.heading)
@@ -25,14 +19,27 @@ export function addBasicInfoSection(;
     doc.setFontSize(14);
     doc.setTextColor(colors.subheading);
     doc.text(basicInfo.headline, 20, yPos);
+=======
+  doc && doc.setFontSize(24);
+  doc && doc.setTextColor(colors && colors.heading),
+  doc && doc.text(basicInfo && basicInfo.title || 'Resume', 20, 20);
+  
+  let yPos = 30;
+  
+  if (basicInfo && basicInfo.headline) {
+    doc && doc.setFontSize(14);
+    doc && doc.setTextColor(colors && colors.subheading);
+    doc && doc.text(basicInfo && basicInfo.headline, 20, yPos);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     yPos += 5
   }
   // Add horizontal line divider
-  doc.setDrawColor(colors.accent);
-  doc.setLineWidth(0.5);
-  doc.line(20, yPos, 190, yPos);
+  doc && doc.setDrawColor(colors && colors.accent);
+  doc && doc.setLineWidth(0 && 0.5);
+  doc && doc.line(20, yPos, 190, yPos);
   yPos += 10;
   // Add summary if available
+<<<<<<< HEAD
   if (basicInfo.summary) {
     doc.setFontSize(12);
     doc.setTextColor(colors.text);
@@ -42,44 +49,60 @@ export function addBasicInfoSection(;
 
     yPos += (summaryLines.length * 6) + 10
 =======
-import { jsPDF } from 'jspdf',;
-import { ResumeBasicInfo } from '@/types/resume',;
-import { PdfThemeColors } from '../themeConfig',;
-export function addBasicInfoSection(;
-  doc: jsPDF,;
-  basicInfo: ResumeBasicInfo,;
-  colors: PdfThemeColors;
-): number {;
-  // Add header with name and title;
-  doc.setFontSize(24),;
-  doc.setTextColor(colors.heading),;
-  doc.text(basicInfo.title || 'Resume', 20, 20),;
-  let yPos = 30,;
-  if (basicInfo.headline) {;
-    doc.setFontSize(14),;
-    doc.setTextColor(colors.subheading),;
-    doc.text(basicInfo.headline, 20, yPos),;
-    yPos += 5;
-  }
-;
-  // Add horizontal line divider;
-  doc.setDrawColor(colors.accent),;
-  doc.setLineWidth(0.5),;
-  doc.line(20, yPos, 190, yPos),;
-  yPos += 10,;
-  // Add summary if available;
-  if (basicInfo.summary) {;
-    doc.setFontSize(12),;
-    doc.setTextColor(colors.text),;
-    // Split text into multiple lines to fit within page width;
-    const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
-    doc.text(summaryLines, 20, yPos);
-    yPos += (summaryLines.length * 6) + 10;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (basicInfo && basicInfo.summary) {
+    doc && doc.setFontSize(12);
+    doc && doc.setTextColor(colors && colors.text);
+    
+    // Split text into multiple lines to fit within page width
+    const summaryLines = doc && doc.splitTextToSize(basicInfo && basicInfo.summary, 170);
+    doc && doc.text(summaryLines, 20, yPos);
+    yPos += (summaryLines && summaryLines.length * 6) + 10
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return yPos
+=======
+import {jsPDF} from 'jspdf';
+import {ResumeBasicInfo} from '@/types / resume';
+import {PdfThemeColors} from '../theme_config';
+export function addBasicInfoSection (
+  doc: jsPDF;
+  basic_info: ResumeBasicInfo;
+  colors: PdfThemeColors): number {
+  // Add header with name and title;
+  doc.setFontSize (24);
+  doc.setTextColor (colors.heading),
+  doc.text (basic_info.title || 'Resume', 20, 20);
+;
+  let y_pos = 30;
+;
+  // Check condition
+if ( {) {
+  $2
+}
+    doc.setFontSize (14);
+    doc.setTextColor (colors.subheading);
+    doc.text (basic_info.headline, 20, y_pos);
+    y_pos += 5;
+  }
+  // Add horizontal line divider;
+  doc.setDrawColor (colors.accent);
+  doc.setLineWidth (0.5);
+  doc.line (20, y_pos, 190, y_pos);
+  y_pos += 10;
+;
+  // Add summary if available;
+  // Check condition
+if ( {) {
+  $2
+}
+    doc.setFontSize (12);
+    doc.setTextColor (colors.text);
+;
+    // Split text into multiple lines to fit within page width;
+    const summary_lines = doc.splitTextToSize (basic_info.summary, 170);
+    doc.text (summary_lines, 20, y_pos);
+    y_pos += (summary_lines.length * 6) + 10;
+  }
+  return y_pos;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

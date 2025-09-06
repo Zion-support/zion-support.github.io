@@ -1,29 +1,44 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
 <<<<<<< HEAD
+=======
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
+import React from 'react';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Head from "next/head";
 import Link from "next/link";
 <<<<<<< HEAD
 =======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import Link from 'next/link';
 >>>>>>> origin/automation-improvements-final
 
-=======
 <<<<<<< HEAD
-import Head from "next/head";
-import Link from "next/link";
->>>>>>> origin/main
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 export default function FAQ() {
   const contact = {
     phone: "+1 302 464 0950"
@@ -82,90 +97,84 @@ export default function FAQ() {
       answer:
         "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
     }
-  ];
 =======
-import Head from 'next/head'
-import Link from 'next/link'
-export default function FAQ() {
-  const contact = {
-<<<<<<< HEAD
-    phone: "+1 302 464 0950",
-    email: "kleber@ziontechgroup.com",
-    address: "364 E Main St STE 1008 Middletown DE 19709",
-    site: "https://ziontechgroup.com",;
+export default function FAQ() {;
+  const contact = {;
+    phone: "+1 302 464 0950",;
+    email: "kleber@ziontechgroup && ziontechgroup.com",;
+    address: "364 E Main St STE 1008 Middletown DE 19709",;
+    site: "https://ziontechgroup && ziontechgroup.com",;
   };
-=======
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-  const faqs = [
-    {
-      question: "What services does Zion Tech Group offer ? ",
-      answer : "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more."
-    },
-    {
-      question: "How do I get started with your services?",
-      answer: "Contact us through our contact form, call us at +1 302 464 0950, or email kleber@ziontechgroup.com. We'll schedule a consultation to understand your needs and provide a custom solution."
-    },
-    {
-      question: "What is the typical pricing for your services?",
-      answer: "Pricing varies by service and complexity. Micro SaaS products typically range from $99-$3,500/month, AI services from $699-$12,999/month, and IT services from $999-$15,999/month. Contact us for a custom quote."
-    },
-    {
-      question: "Do you offer custom development?",
-      answer: "Yes, we specialize in custom development for micro SaaS products, AI solutions, and IT services. We work closely with clients to build tailored solutions that meet their specific business requirements."
-    },
-    {
-      question: "What technologies do you work with?",
-      answer: "We work with modern technologies including AWS, Azure, GCP, Kubernetes, Docker, Python, JavaScript, React, Node.js, machine learning frameworks, and various cloud and AI platforms."
-    },
-    {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary based on complexity. Simple micro SaaS products can be delivered in 2-4 weeks, while complex AI or IT solutions may take 2-6 months. We provide detailed timelines during consultation."
-    },
-    {
-      question: "Do you provide ongoing support?",
-      answer: "Yes, we offer comprehensive support and maintenance services for all our solutions. This includes monitoring, updates, troubleshooting, and optimization to ensure optimal performance."
-    },
-    {
-      question: "Can you help with cloud migration?",
-      answer: "Absolutely! We specialize in cloud migration and modernization services, helping businesses move to AWS, Azure, or GCP with minimal downtime and maximum efficiency."
-    },
-    {
-      question: "What makes your AI services different?",
-      answer: "Our AI services are tailored to specific business needs, not generic solutions. We focus on practical applications that deliver measurable ROI, with custom model development and integration support."
-    },
-    {
-      question: "Do you work with small businesses?",
-      answer: "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  ]
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  const faqs = [;
+    {;
+      question: "What services does Zion Tech Group offer?",;
+      answer:;
+        "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more.",;
+    },;
+    {;
+      question: "How do I get started with your services?",;
+      answer:;
+        "Contact us through our contact form, call us at +1 302 464 0950, or email kleber@ziontechgroup && ziontechgroup.com. We'll schedule a consultation to understand your needs and provide a custom solution.",;
+    },;
+    {;
+      question: "What is the typical pricing for your services?",;
+      answer:;
+        "Pricing varies by service and complexity. Micro SaaS products typically range from $99-$3,500/month, AI services from $699-$12,999/month, and IT services from $999-$15,999/month. Contact us for a custom quote.",;
+    },;
+    {;
+      question: "Do you offer custom development?",;
+      answer:;
+        "Yes, we specialize in custom development for micro SaaS products, AI solutions, and IT services. We work closely with clients to build tailored solutions that meet their specific business requirements.",;
+    },;
+    {;
+      question: "What technologies do you work with?",;
+      answer:;
+        "We work with modern technologies including AWS, Azure, GCP, Kubernetes, Docker, Python, JavaScript, React, Node && Node.js, machine learning frameworks, and various cloud and AI platforms.",;
+    },;
+    {;
+      question: "How long does a typical project take?",;
+      answer:;
+        "Project timelines vary based on complexity. Simple micro SaaS products can be delivered in 2-4 weeks, while complex AI or IT solutions may take 2-6 months. We provide detailed timelines during consultation.",;
+    },;
+    {;
+      question: "Do you provide ongoing support?",;
+      answer:;
+        "Yes, we offer comprehensive support and maintenance services for all our solutions. This includes monitoring, updates, troubleshooting, and optimization to ensure optimal performance.",;
+    },;
+    {;
+      question: "Can you help with cloud migration?",;
+      answer:;
+        "Absolutely! We specialize in cloud migration and modernization services, helping businesses move to AWS, Azure, or GCP with minimal downtime and maximum efficiency.",;
+    },;
+    {;
+      question: "What makes your AI services different?",;
+      answer:;
+        "Our AI services are tailored to specific business needs, not generic solutions. We focus on practical applications that deliver measurable ROI, with custom model development and integration support.",;
+    },;
+    {;
+      question: "Do you work with small businesses?",;
+      answer:;
+        "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions.",;
+    },;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  ];
   return (
-    <>
-      <Head>
-        <title>Frequently Asked Questions - Zion Tech Group</title>
-        <meta name="description" content="Find answers to common questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get help with pricing, implementation, and support." />
-        <meta name="keywords" content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions" />
+    <>;
+      <Head>;
+        <title>Frequently Asked Questions - Zion Tech Group</title>;
+        <meta
+          name="description"
+          content="Find answers to common questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get help with pricing, implementation, and support."
+        />;
+        <meta
+          name="keywords"
+          content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions"
+<<<<<<< HEAD
+        />
         <link rel="canonical" href={`${contact.site}/faq`} />
       </Head>
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Hero Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+        {/* Hero Section */}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
@@ -175,87 +184,224 @@ export default function FAQ() {
               Get Answers to Common Questions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-<<<<<<< HEAD
               Find answers to the most common questions about our services
               pricing, implementation, and support. Can&apos;t find what
               you&apos;re looking for? Contact us directly.
             </p>
           </div>
         </section>
+=======
+        />;
+        <link rel="canonical" href={`${contact && contact.site}/faq`} />;
+      </Head>;
+
+      <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">;
+        {/* Hero Section */}
+        <section className="py-20 px-4 text-center">;
+          <div className="max-w-4xl mx-auto">;
+            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">;
+              Frequently Asked Questions;
+            </h1>;
+            <p className="text-xl text-slate-300 mb-8">;
+              Get Answers to Common Questions;
+            </p>;
+            <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">;
+              Find answers to the most common questions about our services,;
+              pricing, implementation, and support. Can&apos;t find what;
+              you&apos;re looking for? Contact us directly.;
+            </p>;
+          </div>;
+        </section>;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* FAQ Section */}
-=======
-              Find answers to the most common questions about our services, pricing,
-              implementation, and support. Can't find what you're looking for? Contact us directly.
-            </p>
-          </div>
-        </section>
+        <section className="py-16 px-4">;
+          <div className="max-w-4xl mx-auto">;
+            <div className="space-y-8">;
+              {faqs && faqs.map((faq, index) => (;
+                <div
+                  key={index}
+                  className="p-8 bg-slate-900/60 rounded-xl border border-white/10">;
+                  <h3 className="text-xl font-bold mb-4 text-blue-400">;
+                    {faq && faq.question}
+                  </h3>;
+                  <p className="text-slate-300 leading-relaxed">{faq && faq.answer}</p>;
+                </div>;
+              ))}
 <<<<<<< HEAD
-        {/* FAQ Section */}
-=======
-        {/* FAQ Section */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-8">
-              {faqs.map((faq, index) => (
-                <div key={index} className="p-8 bg-slate-900/60 rounded-xl border border-white/10">
-                  <h3 className="text-xl font-bold mb-4 text-blue-400">{faq.question}</h3>
-                  <p className="text-slate-300 leading-relaxed">{faq.answer}</p>
-                </div>
-              ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
             </div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Contact CTA */}
-=======
-        {/* Contact CTA */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Still Have Questions?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Our team is here to help. Contact us for personalized answers to your specific questions
-              and to discuss how we can help your business.
+              Our team is here to help. Contact us for personalized answers to
+              your specific questions and to discuss how we can help your
+              business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Call {contact.phone  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
+=======
+            </div>;
+          </div>;
+        </section>;
+
+        {/* Contact CTA */}
+        <section className="py-16 px-4 bg-slate-900/40">;
+          <div className="max-w-4xl mx-auto text-center">;
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">;
+              Still Have Questions?;
+            </h2>;
+            <p className="text-lg text-slate-300 mb-8">;
+=======
+import Head from './next / head';
+import Link from './next / link';
+;
+export default /**
+ * FAQ - Function description
+ */
+function FAQ() {
+  const contact = {
+    phone: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    site: "https://ziontechgroup.com",
   }
-}
-              </a>
-              <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                Email {contact.email  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </a>
-              <Link href="/contact" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
+  const faqs = [;
+    {
+      question: "What services does Zion Tech Group offer?",
+      answer:;
+        "We offer 40+ micro SaaS products, 16+ AI services, and 16+ IT solutions including cloud migration, cybersecurity, data engineering, machine learning, and more.",
+    },
+    {
+      question: "How do I get started with your services?",
+      answer:;
+        "Contact us through our contact form, call us at +1 302 464 0950, or email kleber@ziontechgroup.com. We'll schedule a consultation to understand your needs and provide a custom solution.",
+    },
+    {
+      question: "What is the typical pricing for your services?",
+      answer:;
+        "Pricing varies by service and complexity. Micro SaaS products typically range from $99-$3, 500 / month, AI services from $699-$12, 999 / month, and IT services from $999-$15, 999 / month. Contact us for a custom quote.",
+    },
+    {
+      question: "Do you offer custom development?",
+      answer:;
+        "Yes, we specialize in custom development for micro SaaS products, AI solutions, and IT services. We work closely with clients to build tailored solutions that meet their specific business requirements.",
+    },
+    {
+      question: "What technologies do you work with?",
+      answer:;
+        "We work with modern technologies including AWS, Azure, GCP, Kubernetes, Docker, Python, JavaScript, React, Node.js, machine learning frameworks, and various cloud and AI platforms.",
+    },
+    {
+      question: "How long does a typical project take?",
+      answer:;
+        "Project timelines vary based on complexity. Simple micro SaaS products can be delivered in 2 - 4 weeks, while complex AI or IT solutions may take 2 - 6 months. We provide detailed timelines during consultation.",
+    },
+    {
+      question: "Do you provide ongoing support?",
+      answer:;
+        "Yes, we offer comprehensive support and maintenance services for all our solutions. This includes monitoring, updates, troubleshooting, and optimization to ensure optimal performance.",
+    },
+    {
+      question: "Can you help with cloud migration?",
+      answer:;
+        "Absolutely! We specialize in cloud migration and modernization services, helping businesses move to AWS, Azure, or GCP with minimal downtime and maximum efficiency.",
+    },
+    {
+      question: "What makes your AI services different?",
+      answer:;
+        "Our AI services are tailored to specific business needs, not generic solutions. We focus on practical applications that deliver measurable ROI, with custom model development and integration support.",
+    },
+    {
+      question: "Do you work with small businesses?",
+      answer:;
+        "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well - suited for small and medium businesses looking for cost - effective solutions.",
+    },
+  ];
+;
+  return (
+    <>;
+      <Head>;
+        <title > Frequently Asked Questions - Zion Tech Group</title>;
+        <meta;
+          name="description";
+          content="Find answers to common questions about Zion Tech Group's micro SaaS products, AI services, and IT solutions. Get help with pricing, implementation, and support.";
+        />;
+        <meta;
+          name="keywords";
+          content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions";
+        />;
+        <link rel="canonical" href={`${contact.site}/faq`} />;
+      </Head>;
+      <main className="min - h-screen bg - gradient - to - b from - slate - 950 via - slate - 900 to - slate - 950 text - white">;
+        {/* Hero Section */}
+        <section className="py - 20 px - 4 text - center">;
+          <div className="max - w-4xl mx - auto">;
+            <h1 className="text - 4xl md:text - 5xl font - extrabold tracking - tight mb - 6">;
+              Frequently Asked Questions;
+            </h1>;
+            <p className="text - xl text - slate - 300 mb - 8">;
+              Get Answers to Common Questions;
+            </p>;
+            <p className="text - lg text - slate - 400 mb - 12 max - w-3xl mx - auto">;
+              Find answers to the most common questions about our services,
+              pricing, implementation, and support. Can & apos;t find what;
+              you & apos;re looking for? Contact us directly.;
+            </p>;
+          </div>;
+        </section>;
+        {/* FAQ Section */}
+        <section className="py - 16 px - 4">;
+          <div className="max - w-4xl mx - auto">;
+            <div className="space - y-8">;
+              {faqs.map ((faq, index) => (
+                <div;
+                  key={index}
+                  className="p - 8 bg - slate - 900 / 60 rounded - xl border border - white / 10";
+                >;
+                  <h3 className="text - xl font - bold mb - 4 text - blue - 400">;
+                    {faq.question}
+                  </h3>;
+                  <p className="text - slate - 300 leading - relaxed">{faq.answer}</p>;
+                </div>))}
+            </div>;
+          </div>;
+        </section>;
+        {/* Contact CTA */}
+        <section className="py - 16 px - 4 bg - slate - 900 / 40">;
+          <div className="max - w-4xl mx - auto text - center">;
+            <h2 className="text - 3xl md:text - 4xl font - bold mb - 8">;
+              Still Have Questions?;
+            </h2>;
+            <p className="text - lg text - slate - 300 mb - 8">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              Our team is here to help. Contact us for personalized answers to;
+              your specific questions and to discuss how we can help your;
+              business.;
+            </p>;
+<<<<<<< HEAD
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <a
+                href={`tel:${contact && contact.phone.replace(/[^\d+]/g, "")}`}
+                className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">;
+                Call {contact && contact.phone}
+              </a>;
+              <a
+                href={`mailto:${contact && contact.email}`}
+                className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">;
+                Email {contact && contact.email}
+              </a>;
+              <Link
+                href="/contact"
+<<<<<<< HEAD
+                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+              >
                 Contact Form
               </Link>
             </div>
@@ -263,7 +409,6 @@ export default function FAQ() {
         </section>
       </main>
     </>
-<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -290,18 +435,39 @@ export default function FAQPage() {
       </div>
     </Layout>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 >>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-  );
-}
 =======
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+                className="px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">;
+=======
+            <div className="flex flex - col sm:flex - row items - center justify - center gap - 4">;
+              <a;
+                href={`tel:${contact.phone.replace (/[^\d+]/g, "")}`}
+                className="px - 8 py - 3 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors";
+              >;
+                Call {contact.phone}
+              </a>;
+              <a;
+                href={`mailto:${contact.email}`}
+                className="px - 8 py - 3 bg - purple - 600 hover:bg - purple - 700 rounded - lg font - semibold transition - colors";
+              >;
+                Email {contact.email}
+              </a>;
+              <Link;
+                href="/contact";
+                className="px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors";
+              >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                Contact Form;
+              </Link>;
+            </div>;
+          </div>;
+        </section>;
+      </main>;
+<<<<<<< HEAD
+    </>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  );
+=======
+    </>);
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

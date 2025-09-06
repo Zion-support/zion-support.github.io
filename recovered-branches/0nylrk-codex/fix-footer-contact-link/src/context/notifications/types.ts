@@ -1,22 +1,14 @@
 <<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
   | 'quote_request'
   | 'booking_confirmation'
   | 'hire_request'
-  | 'onboarding';
+  | 'onboarding'
   | 'system';
-<<<<<<< HEAD
 export interface Notification extends BaseNotification {
-=======
-
-export interface Notification extends BaseNotification {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   type: NotificationType;
   action_url?: string
   action_text?: string
@@ -25,60 +17,50 @@ export type FilterType =
   | 'all'
   | 'unread'
   | 'messages'
-  | 'onboarding';
+  | 'onboarding'
   | 'system';
-<<<<<<< HEAD
-export interface NotificationContextType {
 =======
-
-export interface NotificationContextType {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  notifications: Notification[];
-  filteredNotifications: Notification[];
-  unreadCount: number;
-  loading: boolean;
-  filter: FilterType;
-  markAsRead: (id: string) => Promise<void>;
-  markAllAsRead: () => Promise<void>;
-  dismissNotification: (id: string) => Promise<void>;
-  setFilter: (filter: FilterType) => void
-
-  fetchNotifications: () => Promise<void>
-=======
-import { Notification as BaseNotification } from '@/types/notifications',;
+import {Notification, as, BaseNotification} from '@/types / notifications';
 export type NotificationType =;
   | 'message';
   | 'quote_request';
   | 'booking_confirmation';
   | 'hire_request';
   | 'onboarding';
-  | 'system',;
-export interface Notification extends BaseNotification {;
-  type: NotificationType,;
-  action_url?: string,;
+  | 'system';
+;
+export interface Notification extends BaseNotification {
+  type: NotificationType;
+  action_url?: string,
   action_text?: string;
 }
-;
 export type FilterType =;
   | 'all';
   | 'unread';
   | 'messages';
   | 'onboarding';
-  | 'system',;
-export interface NotificationContextType {;
-  notifications: Notification[],;
-  filteredNotifications: Notification[],;
-  unreadCount: number,;
-  loading: boolean,;
-  filter: FilterType,;
-  markAsRead: (id: string) => Promise<void>,;
-  markAllAsRead: () => Promise<void>,;
-  dismissNotification: (id: string) => Promise<void>;
-  setFilter: (filter: FilterType) => void;
-  fetchNotifications: () => Promise<void>;
+  | 'system';
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export interface NotificationContextType {
+  notifications: Notification[];
+  filtered_notifications: Notification[];
+  unread_count: number;
+  loading: boolean;
+  filter: FilterType;
 <<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  markAsRead: (id: string) => Promise<void>;
+  markAllAsRead: () => Promise<void>;
+  dismissNotification: (id: string) => Promise<void>;
+  setFilter: (filter: FilterType) => void
+
+  fetchNotifications: () => Promise<void>
 }
+=======
+  markAsRead: (id: string) => Promise < void>;
+  markAllAsRead: () => Promise < void>;
+  dismiss_notification: (id: string) => Promise < void>;
+  set_filter: (filter: FilterType) => void,
+  fetch_notifications: () => Promise < void>;
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

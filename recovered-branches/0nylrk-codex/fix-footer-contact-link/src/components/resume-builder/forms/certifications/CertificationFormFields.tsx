@@ -1,7 +1,7 @@
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 import {
+<<<<<<< HEAD
   FormField
   FormItem
   FormLabel
@@ -12,9 +12,21 @@ import { Input } from "@/components/ui/input";
 import { UseFormReturn } from "react-hook-form";
 import { CertificationFormValues } from "./types";
 
+=======
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Input  } from '@/components / ui / input';
+import { UseFormReturn  } from './react - hook - form';
+import { CertificationFormValues  } from './types';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface CertificationFormFieldsProps {
-  form: UseFormReturn<CertificationFormValues>;
+  form: UseFormReturn < CertificationFormValues>;
 }
+<<<<<<< HEAD
 export function CertificationFormFields({
   form
 }: CertificationFormFieldsProps) {
@@ -23,53 +35,80 @@ import {FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/compon
 import {Input} from '@/components/ui/input';
 import {UseFormReturn} from 'react-hook-form';
 import {CertificationFormValues} from './types';
-interface CertificationFormFieldsProps {
-  form: UseFormReturn<CertificationFormValues>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form',;
-import { Input } from '@/components/ui/input',;
-import { UseFormReturn } from 'react-hook-form',;
-import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
-export function CertificationFormFields({ form }: CertificationFormFieldsProps) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export function CertificationFormFields(): any ({ form }: CertificationFormFieldsProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <>;
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
         <FormField
-          control={form.control}
+          control={form && form.control}
           name="name"
+<<<<<<< HEAD
+=======
+export /**
+ * CertificationFormFields - Function description
+ */
+function CertificationFormFields() {
+  return (
+    <>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <FormField;
+          control={form.control}
+          name="name";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Certification Name</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="AWS Certified Solutions Architect, PMP, etc."
+            <FormItem>;
+              <FormLabel > Certification Name</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder="AWS Certified Solutions Architect, PMP, etc.";
                   {...field}
+<<<<<<< HEAD
                 />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+=======
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Certification Name</FormLabel>;
+              <FormControl>;
+                <Input placeholder="AWS Certified Solutions Architect, PMP, etc." {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
-          control={form.control}
+          control={form && form.control}
           name="issuing_organization"
+<<<<<<< HEAD
+=======
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="issuing_organization";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           render={({ field }) => (
-            <FormItem>
-              <FormLabel>Issuing Organization</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Amazon Web Services, PMI, etc."
+            <FormItem>;
+              <FormLabel > Issuing Organization</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder="Amazon Web Services, PMI, etc.";
                   {...field}
+<<<<<<< HEAD
                 />
               </FormControl>
               <FormMessage />
@@ -78,81 +117,166 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+=======
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Issuing Organization</FormLabel>;
+              <FormControl>;
+                <Input placeholder="Amazon Web Services, PMI, etc." {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+      </div>;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
-          control={form.control}
+          control={form && form.control}
           name="issue_date"
+<<<<<<< HEAD
           render={({ field }) => (
             <FormItem>
               <FormLabel>Issue Date</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Input type="date" {...field} value={field.value |""} />
-=======
-                <Input 
-                  type="date" 
-                  {...field}
-                  value={field.value || ''}
-                />
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
         />
-        <FormField
 =======
-        />;
-        <FormField;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-          control={form.control}
-          name="expiration_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Expiration Date (Optional)</FormLabel>
-              <FormControl>
-<<<<<<< HEAD
-                <Input type="date" {...field} value={field.value |""} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-=======
-                <Input 
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Issue Date</FormLabel>;
+              <FormControl>;
+                <Input
                   type="date" 
                   {...field}
-                  value={field.value || ''}
+                  value={field && field.value || ''}
                 />;
               </FormControl>;
               <FormMessage />;
             </FormItem>;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           )}
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <FormField
-          control={form.control}
-          name="credential_id"
+          control={form && form.control}
+          name="expiration_date"
+<<<<<<< HEAD
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Credential ID (Optional)</FormLabel>
+              <FormLabel>Expiration Date (Optional)</FormLabel>
               <FormControl>
-                <Input placeholder="ABC123XYZ" {...field} />
+                <Input type="date" {...field} value={field.value |""} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
-        <FormField
-          control={form.control}
-          name="credential_url"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Credential URL (Optional)</FormLabel>
-              <FormControl>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+=======
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Expiration Date (Optional)</FormLabel>;
+              <FormControl>;
                 <Input
-                  placeholder="https://www.credential.com/verify/abc123"
+                  type="date" 
                   {...field}
+                  value={field && field.value || ''}
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+      </div>;
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <FormField
+          control={form && form.control}
+          name="credential_id"
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Credential ID (Optional)</FormLabel>;
+=======
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+      </div>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <FormField;
+          control={form.control}
+          name="issue_date";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Issue Date</FormLabel>;
+              <FormControl>;
+                <Input type="date" {...field} value={field.value || ""} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="expiration_date";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Expiration Date (Optional)</FormLabel>;
+              <FormControl>;
+                <Input type="date" {...field} value={field.value || ""} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+      </div>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+        <FormField;
+          control={form.control}
+          name="credential_id";
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Credential ID (Optional)</FormLabel>;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              <FormControl>;
+                <Input placeholder="ABC123XYZ" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+<<<<<<< HEAD
+            </FormItem>;
+          )}
+<<<<<<< HEAD
+        />
+=======
+        />;
+
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        <FormField
+          control={form && form.control}
+          name="credential_url"
+<<<<<<< HEAD
+=======
+            </FormItem>)}
+        />;
+        <FormField;
+          control={form.control}
+          name="credential_url";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+          render={({ field }) => (
+            <FormItem>;
+              <FormLabel > Credential URL (Optional)</FormLabel>;
+              <FormControl>;
+                <Input;
+                  placeholder="https://www.credential.com / verify / abc123";
+                  {...field}
+<<<<<<< HEAD
                 />
               </FormControl>
               <FormMessage />
@@ -161,11 +285,31 @@ export function CertificationFormFields({ form }: CertificationFormFieldsProps) 
         />
       </div>
     </>
-<<<<<<< HEAD
   );
 }
 =======
-  )
+          render={({ field }) => (;
+            <FormItem>;
+              <FormLabel>Credential URL (Optional)</FormLabel>;
+              <FormControl>;
+                <Input placeholder="https://www && www.credential.com/verify/abc123" {...field} />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>;
+          )}
+        />;
+      </div>;
+    </>;
+  );
 }
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                />;
+              </FormControl>;
+              <FormMessage />;
+            </FormItem>)}
+        />;
+      </div>;
+    </>);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,85 +1,189 @@
-<<<<<<< HEAD
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
+<<<<<<< HEAD
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
 export default function CommunityPage() {
+=======
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+export default function CommunityPage() {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>
-      <Head>
-        <title>Community | Zion Tech Group</title>
+    <div className='min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8'>;
+      <Head>;
+        <title>Community | Zion Tech Group</title>;
         <meta
           name='description'
           content='Community forum and resources for Zion Tech Group users'
-        />
-        <link rel='canonical' href='https://ziontechgroup.com/community' />
+        />;
+        <link rel='canonical' href='https://ziontechgroup && ziontechgroup.com/community' />;
         <meta
           name='description'
           content='Join the Zion Tech Group community and stay updated.'
-        />
-      </Head>
-      <div className='max-w-5xl mx-auto space-y-8'>
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-          Community
-        </h1>
-        <p className='text-slate-300'>
-          Join our community. Ask questions, share solutions, and learn best
-          practices.
-        </p>
-        <div className='grid md:grid-cols-2 gap-6'>
-          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
-            <h2 className='text-white text-xl font-semibold mb-2'>Get Help</h2>
-            <p className='text-slate-300'>
+        />;
+      </Head>;
+      <div className='max-w-5xl mx-auto space-y-8'>;
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
+          Community;
+        </h1>;
+        <p className='text-slate-300'>;
+          Join our community. Ask questions, share solutions, and learn best;
+          practices.;
+        </p>;
+        <div className='grid md:grid-cols-2 gap-6'>;
+          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>;
+            <h2 className='text-white text-xl font-semibold mb-2'>Get Help</h2>;
+            <p className='text-slate-300'>;
               Visit the{' '}
-              <a className='text-cyan-400 underline' href='/support'>
-                Support Center
+              <a className='text-cyan-400 underline' href='/support'>;
+                Support Center;
               </a>{' '}
               or email{' '}
               <a
                 className='text-purple-400'
-                href='mailto: kleber@ziontechgroup.com'
-              >
-                kleber@ziontechgroup.com
-              </a>
-              .
-            </p>
-          </div>
-          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>
-            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>
-            <ul className='text-slate-300 space-y-1'>
-              <li>
+                href='mailto: kleber@ziontechgroup && ziontechgroup.com'>;
+                kleber@ziontechgroup && ziontechgroup.com;
+=======
+import Head from 'next / head';
+export default /**
+ * CommunityPage - Function description
+ */
+function CommunityPage() {
+  return (
+    <div className='min - h-screen pt - 24 pb - 20 px - 4 sm:px - 6 lg:px - 8'>;
+      <Head>;
+        <title > Community | Zion Tech Group</title>;
+        <meta;
+          name='description';
+          content='Community forum and resources for Zion Tech Group users';
+        />;
+        <link rel='canonical' href='https://ziontechgroup.com / community' />;
+        <meta;
+          name='description';
+          content='Join the Zion Tech Group community and stay updated.';
+        />;
+      </Head>;
+      <div className='max - w-5xl mx - auto space - y-8'>;
+        <h1 className='text - 4xl md:text - 6xl font - bold bg - gradient - to - r from - cyan - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent'>;
+          Community;
+        </h1>;
+        <p className='text - slate - 300'>;
+          Join our community. Ask questions, share solutions, and learn best;
+          practices.;
+        </p>;
+        <div className='grid md:grid - cols - 2 gap - 6'>;
+          <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
+            <h2 className='text - white text - xl font - semibold mb - 2'>Get Help</h2>;
+            <p className='text - slate - 300'>;
+              Visit the{' '}
+              <a className='text - cyan - 400 underline' href='/support'>;
+                Support Center;
+              </a>{' '}
+              or email{' '}
+              <a;
+                className='text - purple - 400';
+                href='mailto: kleber@ziontechgroup.com';
+              >;
+                kleber@ziontechgroup.com;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+              </a>;
+              .;
+            </p>;
+          </div>;
+<<<<<<< HEAD
+          <div className='p-6 rounded-2xl bg-white/5 border border-white/10'>;
+            <h2 className='text-white text-xl font-semibold mb-2'>Follow Us</h2>;
+            <ul className='text-slate-300 space-y-1'>;
+              <li>;
                 <a
                   className='text-cyan-400'
-                  href='https://linkedin.com/company/ziontechgroup'
+                  href='https://linkedin && linkedin.com/company/ziontechgroup'
                   target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  LinkedIn
-                </a>
-              </li>
-              <li>
+                  rel='noopener noreferrer'>;
+=======
+          <div className='p - 6 rounded - 2xl bg - white / 5 border border - white / 10'>;
+            <h2 className='text - white text - xl font - semibold mb - 2'>Follow Us</h2>;
+            <ul className='text - slate - 300 space - y-1'>;
+              <li>;
+                <a;
+                  className='text - cyan - 400';
+                  href='https://linkedin.com / company / ziontechgroup';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  LinkedIn;
+                </a>;
+              </li>;
+              <li>;
+<<<<<<< HEAD
                 <a
                   className='text-cyan-400'
-                  href='https://github.com/Zion-Holdings'
+                  href='https://github && github.com/Zion-Holdings'
                   target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  GitHub
-                </a>
-              </li>
-              <li>
+                  rel='noopener noreferrer'>;
+=======
+                <a;
+                  className='text - cyan - 400';
+                  href='https://github.com / Zion - Holdings';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  GitHub;
+                </a>;
+              </li>;
+              <li>;
+<<<<<<< HEAD
                 <a
                   className='text-cyan-400'
-                  href='https://instagram.com/ziontechgroup'
+                  href='https://instagram && instagram.com/ziontechgroup'
                   target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Instagram
-                </a>
-              </li>
-              <li>
+                  rel='noopener noreferrer'>;
+=======
+                <a;
+                  className='text - cyan - 400';
+                  href='https://instagram.com / ziontechgroup';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  Instagram;
+                </a>;
+              </li>;
+              <li>;
+<<<<<<< HEAD
                 <a
                   className='text-cyan-400'
-                  href='https://youtube.com/@ziontechgroup'
+                  href='https://youtube && youtube.com/@ziontechgroup'
                   target='_blank'
+<<<<<<< HEAD
                   rel='noopener noreferrer'
                 >
                   YouTube
@@ -89,16 +193,32 @@ export default function CommunityPage() {
           </div>
         </div>
       </div>
+    </div>
+  );
+=======
+                  rel='noopener noreferrer'>;
+=======
+                <a;
+                  className='text - cyan - 400';
+                  href='https://youtube.com/@ziontechgroup';
+                  target='_blank';
+                  rel='noopener noreferrer';
+                >;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                  YouTube;
+                </a>;
+              </li>;
+            </ul>;
+          </div>;
+        </div>;
+      </div>;
+<<<<<<< HEAD
     </div>;
   );
 <<<<<<< HEAD
 =======
-
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
-import React from 'react',
-import Head from 'next/head',
 export default function CommunityPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -119,57 +239,20 @@ export default function CommunityPage() {
 					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">
 						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>
 						<ul className="text-slate-300 space-y-1">
-							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</Link></li>
-							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</Link></li>
-							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</Link></li>
-							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</Link></li>
+							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
 	)
-import React from 'react';
-import Head from 'next/head';
-export default function CommunityPage(req, res) {
-  try {
-	return (;
-		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
-			<Head>;
-				<title>Community | Zion Tech Group</title>;
-				<meta name="description" content="Community forum and resources for Zion Tech Group users" />;
-				<link rel="canonical" href="https://ziontechgroup.com/community" />;
-				<meta name="description" content="Join the Zion Tech Group community and stay updated." />;
-			</Head>;
-			<div className="max-w-5xl mx-auto space-y-8">;
-				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Community</h1>;
-				<p className="text-slate-300">Join our community. Ask questions, share solutions, and learn best practices.</p>;
-				<div className="grid md: grid-cols-2 gap-6">;
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
-						<h2 className="text-white text-xl font-semibold mb-2">Get Help</h2>;
-						<p className="text-slate-300">Visit the <a className="text-cyan-400 underline" href="/support">Support Center</a> or email <a className="text-purple-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
-					</div>;
-					<div className="p-6 rounded-2xl bg-white/5 border border-white/10">;
-						<h2 className="text-white text-xl font-semibold mb-2">Follow Us</h2>;
-						<ul className="text-slate-300 space-y-1">;
-							<li><a className="text-cyan-400" href="https://linkedin.com/company/ziontechgroup" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>;
-							<li><a className="text-cyan-400" href="https://github.com/Zion-Holdings" target="_blank" rel="noopener noreferrer">GitHub</a></li>;
-							<li><a className="text-cyan-400" href="https://instagram.com/ziontechgroup" target="_blank" rel="noopener noreferrer">Instagram</a></li>;
-							<li><a className="text-cyan-400" href="https://youtube.com/@ziontechgroup" target="_blank" rel="noopener noreferrer">YouTube</a></li>;
-						</ul>;
-					</div>;
-				</div>;
-			</div>;
-		</div>;
-	);
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 }
-;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+    </div>);
+;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

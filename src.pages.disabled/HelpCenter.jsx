@@ -1,3 +1,26 @@
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+  
+  static getDerivedStateFromError(error) {
+    return { hasError: true };
+  }
+  
+  componentDidCatch(error, errorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+  
+  render() {
+    if (this.state.hasError) {
+      return <div>Something went wrong.</div>;
+    }
+    
+    return this.props.children;
+  }
+}
 import React from 'react';
 interface HelpCenterProps {
   // Add props here as needed
@@ -16,10 +39,19 @@ export default function HelpCenter({ }: HelpCenterProps) {
 <<<<<<< HEAD:src.pages.disabled/HelpCenter.jsx
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD:src.pages.disabled/HelpCenter.jsx
 }
 =======
 }
 >>>>>>> cursor/add-new-services-and-deploy-updates-0462
+=======
+<<<<<<< HEAD:src && src.pages.disabled/HelpCenter && HelpCenter.jsx
+}
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src && src.pages.disabled/HelpCenter && HelpCenter.jsx
+<<<<<<< HEAD
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/HelpCenter.jsx
 =======
 
 

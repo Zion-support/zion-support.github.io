@@ -1,5 +1,5 @@
-
 <<<<<<< HEAD
+
 import React from "react";
 <<<<<<< HEAD
 import { UseFormReturn } from "react-hook-form";
@@ -12,59 +12,91 @@ import {
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
+import { FormValues } from "./useHireRequestForm";
+=======
+import React from './react';
+import { UseFormReturn  } from './react - hook - form';
+import {
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
+} from '@/components / ui / form';
+import { Textarea  } from '@/components / ui / textarea';
+import { FormValues  } from './useHireRequestForm';
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+interface ProjectDetailsFieldProps {
+  form: UseFormReturn < FormValues>;
+}
+<<<<<<< HEAD
+export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
 =======
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Textarea} from "@/components/ui/textarea";
 import {FormValues} from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-import React from "react",
-import { UseFormReturn } from "react-hook-form",
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Textarea } from "@/components/ui/textarea",
-import { FormValues } from "./useHireRequestForm",
-interface ProjectDetailsFieldProps {
-  form: UseFormReturn<FormValues>
-import React from "react",;
-import { UseFormReturn } from "react-hook-form",;
-import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
-import { Textarea } from "@/components/ui/textarea",;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-import { FormValues } from "./useHireRequestForm";
-interface ProjectDetailsFieldProps {
+interface ProjectDetailsFieldProps {;
   form: UseFormReturn<FormValues>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-export function ProjectDetailsField({ form }: ProjectDetailsFieldProps) {
+
+export function ProjectDetailsField(): any ({ form }: ProjectDetailsFieldProps) {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <FormField
-      control={form.control}
+      control={form && form.control}
       name="projectOverview"
+<<<<<<< HEAD
+=======
+export /**
+ * ProjectDetailsField - Function description
+ */
+function ProjectDetailsField() {
+  return (
+    <FormField;
+      control={form.control}
+      name="project_overview";
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       render={({ field }) => (
-        <FormItem>
-          <FormLabel className="text-white">Project Overview</FormLabel>
-          <FormControl>
-            <Textarea
-              placeholder="Describe your project, goals, and requirements"
-              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+        <FormItem>;
+          <FormLabel className="text - white">Project Overview</FormLabel>;
+          <FormControl>;
+            <Textarea;
+              placeholder="Describe your project, goals, and requirements";
+              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
               {...field}
+<<<<<<< HEAD
             />
           </FormControl>
           <FormMessage className="text-red-400" />
         </FormItem>
       )}
     />
-<<<<<<< HEAD
   );
 }
 =======
-  )
+      render={({ field }) => (;
+        <FormItem>;
+          <FormLabel className="text-white">Project Overview</FormLabel>;
+          <FormControl>;
+            <Textarea
+              placeholder="Describe your project, goals, and requirements" 
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              {...field} 
+            />;
+          </FormControl>;
+          <FormMessage className="text-red-400" />;
+        </FormItem>;
+      )}
+    />;
+  );
 }
-;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+            />;
+          </FormControl>;
+          <FormMessage className="text - red - 400" />;
+        </FormItem>)}
+    />);
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

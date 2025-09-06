@@ -4,38 +4,43 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
+<<<<<<< HEAD
   connections: []
   logs: []
   overrides: []
-<<<<<<< HEAD
 }
 export function getState(): IntegrationState {
   return { ...state }
 }
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
-=======
-};
-
-export function getState(): IntegrationState {;
-  return { ...state };
-}
-
-export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   updater(state);
   return { ...state }
 }
 export function resetState(): void {
   state = {
-<<<<<<< HEAD
     connections: []
     logs: []
     overrides: []
   }
+}
 =======
+  connections: [],
+  logs: [],
+  overrides: [];
+}
+;
+export function get_state (): IntegrationState {
+  return { ...state }
+}
+export function write_state (updater: (state: IntegrationState) => void): IntegrationState {
+  updater (state);
+  return { ...state }
+}
+export function reset_state (): void {
+  state = {
     connections: [],
     logs: [],
     overrides: [];
-  };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
 }
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

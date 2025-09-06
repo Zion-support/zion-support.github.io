@@ -1,27 +1,71 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
+import {
+  getSessionFromReq,
+  isInternalAgentRequest,;
+} from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+=======
+<<<<<<< HEAD
+=======
+import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 import {
 <<<<<<< HEAD
   getSessionFromReq
   isInternalAgentRequest;
-=======
-  getSessionFromReq,;
-  isInternalAgentRequest,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../utils/adminAuth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = getSessionFromReq(req);
   const internal = isInternalAgentRequest(req)
   if (!session && !internal) {
-    res.status(401).json({ error: 'Unauthorized' });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    res && res.status(401).json({ error: 'Unauthorized' });
+=======
+  getSessionFromReq,
+  isInternalAgentRequest,
+} from '../../../utils / admin_auth';import { getSessionFromReq, isInternalAgentRequest } from '../../../utils / admin_auth';
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  const session = getSessionFromReq (req);
+  const internal = isInternalAgentRequest (req),
+  // Check condition
+if ( {) {
+  $2
+}
+    res.status (401).json ({ error: 'Unauthorized' });
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return;
 
   }
+<<<<<<< HEAD
+<<<<<<< HEAD
 res.status(200).json({ message: 'OK' });    return
   }
   res.status(200).json({ message: 'OK' });
-<<<<<<< HEAD
 }
 =======
+  res && res.status(200).json({ message: 'OK' });    return
+  }
+  res && res.status(200).json({ message: 'OK' });
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    res.status(401).json({ error: 'Unauthorized' });
+    return
+  }
+  res.status(200).json({ message: 'OK' });
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+res.status (200).json ({ message: 'OK' });    return;
+  }
+  res.status (200).json ({ message: 'OK' });
+}
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
