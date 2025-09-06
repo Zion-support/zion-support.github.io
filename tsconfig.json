@@ -1,17 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es6",
-      "es2017",
-      "es2018",
-      "es2019",
-      "es2020",
-      "es2021",
-      "es2022"
-    ],
+    "lib": ["dom", "dom.iterable", "es6", "es2017", "es2018", "es2019", "es2020", "es2021", "es2022"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -31,60 +21,13 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./*"
-      ],
-      "@/components/*": [
-        "./components/*"
-      ],
-      "@/lib/*": [
-        "./lib/*"
-      ],
-      "@/utils/*": [
-        "./utils/*"
-      ],
-      "@/hooks/*": [
-        "./hooks/*"
-      ],
-      "@/types/*": [
-        "./types/*"
-      ]
+      "@/*": ["./*"],
+      "@/components/*": ["./components/*"],
+      "@/lib/*": ["./lib/*"],
+      "@/utils/*": ["./utils/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/types/*": ["./types/*"]
     },
-<<<<<<< HEAD
-    "allowSyntheticDefaultImports": true,
-    "tsBuildInfoFile": ".tsbuildinfo"
-  },
-  "include": [
-    "next-env.d.ts",
-    "types/global.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "apps/**",
-    "apps.backup/**",
-    "api-backup/**",
-    "backup-merge-conflicts/**",
-    "browserstack.config.ts",
-    "cypress.config.ts",
-    "jest.config.*",
-    "*.config.ts",
-    "netlify/**",
-    "temp_exclude/**",
-    "node_modules",
-    "dist",
-    ".next",
-    "out",
-    "backup-problematic-files",
-    "temp_exclude",
-    "src_backup",
-    "recovered-branches"
-  ]
-}
-=======
     "allowSyntheticDefaultImports": true
   }
 }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
