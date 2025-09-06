@@ -2,289 +2,301 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+import { Brain;
+  MessageSquare;
+  Image;
+  Video;
+  Code;
+  FileText;
+  Zap;
+=======
 import {
-  Brain,
-  MessageSquare,
-  Image,
-  Video,
-  Code,
-  FileText,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
-  Shield,;} from 'lucide-react';import { 
+  Brain
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
+  Star
+  ExternalLink
+  CheckCircle
+  TrendingUp
+  Shield;} from 'lucide-react';import {
   Brain;
-  MessageSquare, 
-  Image, 
-  Video, 
-  Code, 
-  FileText, 
-  Zap, 
+  MessageSquare
+  Image
+  Video
+  Code
+  FileText
+  Zap
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   Star;
   ExternalLink;
   CheckCircle;
   TrendingUp;
   Shield
-
+<<<<<<< HEAD
+ } from 'lucide-react';
+export default function AiToolsPage() {
+  const aiTools = null;
+=======
 export default function AiToolsPage() {
   const aiTools = [
     {
-      icon: <Brain className='w-8 h-8 text-white' />,
+      icon: <Brain className='w-8 h-8 text-white' />
       description:
-        'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+        'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
       features: [
-        'Advanced reasoning & analysis',
-        'Web browsing & real-time info',
-        'Plugin ecosystem access',
-        'Code generation & debugging',
-        'Professional writing assistance',
+        'Advanced reasoning & analysis'
+        'Web browsing & real-time info'
+        'Plugin ecosystem access'
+        'Code generation & debugging'
+        'Professional writing assistance'
       ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
       ];
-      pricing: '$20/month',
-      marketPrice: '$20/month',
-      website: 'https://chat.openai.com',
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
-      textColor: 'text-green-400',
-      gradient: 'from-green-400 to-emerald-500',
-      popular: true,
-      category: 'Conversational AI',
-    },
+      pricing: '$20/month'
+      marketPrice: '$20/month'
+      website: 'https://chat.openai.com'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-emerald-500'
+      popular: true
+      category: 'Conversational AI'
+    }
     {
-      icon: <Image className='w-8 h-8 text-white' />,
-      title: 'Midjourney',
+      icon: <Image className='w-8 h-8 text-white' />
+      title: 'Midjourney'
       description:
-        'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',
+        'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.'
       features: [
-        'High-quality image generation',
-        'Artistic style control',
-        'Commercial usage rights',
-        'Community features',
-        'Advanced prompting system',
+        'High-quality image generation'
+        'Artistic style control'
+        'Commercial usage rights'
+        'Community features'
+        'Advanced prompting system'
       ],      pricing: '$10-30/month',    {
-      icon: <Image className="w-8 h-8 text-white" />,
-      title: 'Midjourney',
-      description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',
+      icon: <Image className="w-8 h-8 text-white" />
+      title: 'Midjourney'
+      description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.'
       features: [
         'High-quality image generationArtistic style controlCommercial usage rightsCommunity featuresAdvanced prompting system'
       ];
-      pricing: '$10-30/month',
-      marketPrice: '$10-30/month',
-      website: 'https://midjourney.com',
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
-      textColor: 'text-purple-400',
-      gradient: 'from-purple-400 to-pink-500',
-      popular: true,
-      category: 'Image Generation',
-    },
+      pricing: '$10-30/month'
+      marketPrice: '$10-30/month'
+      website: 'https://midjourney.com'
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600'
+      textColor: 'text-purple-400'
+      gradient: 'from-purple-400 to-pink-500'
+      popular: true
+      category: 'Image Generation'
+    }
     {
-      icon: <Code className='w-8 h-8 text-white' />,
-      title: 'GitHub Copilot',
+      icon: <Code className='w-8 h-8 text-white' />
+      title: 'GitHub Copilot'
       description:
-        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
+        'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
       features: [
-        'Intelligent code completion',
-        'Multi-language support',
-        'IDE integration',
-        'Code explanation',
-        'Security vulnerability detection',
+        'Intelligent code completion'
+        'Multi-language support'
+        'IDE integration'
+        'Code explanation'
+        'Security vulnerability detection'
       ],      pricing: '$10/month',    {
-      icon: <Code className="w-8 h-8 text-white" />,
-      title: 'GitHub Copilot',
-      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
+      icon: <Code className="w-8 h-8 text-white" />
+      title: 'GitHub Copilot'
+      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
       features: [
         'Intelligent code completionMulti-language supportIDE integrationCode explanationSecurity vulnerability detection'
       ];
-      pricing: '$10/month',
-      marketPrice: '$10-20/month',
-      website: 'https://github.com/features/copilot',
-      color: 'bg-gradient-to-br from-gray-500 to-black',
-      textColor: 'text-gray-400',
-      gradient: 'from-gray-400 to-black',
-      popular: true,
-      category: 'Code Generation',
-    },
-      icon: <Video className='w-8 h-8 text-white' />,
-      title: 'Runway ML',
+      pricing: '$10/month'
+      marketPrice: '$10-20/month'
+      website: 'https://github.com/features/copilot'
+      color: 'bg-gradient-to-br from-gray-500 to-black'
+      textColor: 'text-gray-400'
+      gradient: 'from-gray-400 to-black'
+      popular: true
+      category: 'Code Generation'
+    }
+      icon: <Video className='w-8 h-8 text-white' />
+      title: 'Runway ML'
       description:
-        'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
+        'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.'
       features: [
-        'AI video generation',
-        'Video editing tools',
-        'Motion tracking',
-        'Green screen removal',
-        'Professional workflows',
+        'AI video generation'
+        'Video editing tools'
+        'Motion tracking'
+        'Green screen removal'
+        'Professional workflows'
       ],      pricing: '$12-76/month',        'AI video generationVideo editing toolsMotion trackingGreen screen removalProfessional workflows'
       ];
-      pricing: '$12-76/month',
-      marketPrice: '$15-100/month',
-      website: 'https://runwayml.com',
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
-      textColor: 'text-blue-400',
-      gradient: 'from-blue-400 to-indigo-500',
-      popular: false,
-      category: 'Video Generation',
-    },
+      pricing: '$12-76/month'
+      marketPrice: '$15-100/month'
+      website: 'https://runwayml.com'
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600'
+      textColor: 'text-blue-400'
+      gradient: 'from-blue-400 to-indigo-500'
+      popular: false
+      category: 'Video Generation'
+    }
     {
-      icon: <MessageSquare className='w-8 h-8 text-white' />,
-      title: 'Claude Pro',
+      icon: <MessageSquare className='w-8 h-8 text-white' />
+      title: 'Claude Pro'
       description:
-        "Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.",
+        "Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities."
       features: [
-        'Advanced reasoning abilities',
-        'Document analysis',
-        'Code generation',
-        'Creative writing',
-        'Research assistance',
+        'Advanced reasoning abilities'
+        'Document analysis'
+        'Code generation'
+        'Creative writing'
+        'Research assistance'
       ],      pricing: '$20/month',    {
-      icon: <MessageSquare className="w-8 h-8 text-white" />,
-      title: 'Claude Pro',
+      icon: <MessageSquare className="w-8 h-8 text-white" />
+      title: 'Claude Pro'
       description: 'Anthropic\'s advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
       features: [
         'Advanced reasoning abilitiesDocument analysisCode generationCreative writingResearch assistance'
       ];
-      pricing: '$20/month',
-      marketPrice: '$20/month',
-      website: 'https://claude.ai',
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
-      textColor: 'text-orange-400',
-      gradient: 'from-orange-400 to-red-500',
-      popular: false,
-      category: 'Conversational AI',
-    },
-      icon: <FileText className='w-8 h-8 text-white' />,
-      title: 'Jasper AI',
+      pricing: '$20/month'
+      marketPrice: '$20/month'
+      website: 'https://claude.ai'
+      color: 'bg-gradient-to-br from-orange-500 to-red-600'
+      textColor: 'text-orange-400'
+      gradient: 'from-orange-400 to-red-500'
+      popular: false
+      category: 'Conversational AI'
+    }
+      icon: <FileText className='w-8 h-8 text-white' />
+      title: 'Jasper AI'
       description:
-        'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
+        'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
       features: [
-        'Content generation',
-        'Brand voice training',
-        'SEO optimization',
-        'Team collaboration',
-        'Enterprise integrations',
+        'Content generation'
+        'Brand voice training'
+        'SEO optimization'
+        'Team collaboration'
+        'Enterprise integrations'
       ],      pricing: '$39-125/month',        'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
       ];
-      pricing: '$39-125/month',
-      marketPrice: '$40-150/month',
-      website: 'https://jasper.ai',
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
-      textColor: 'text-teal-400',
-      gradient: 'from-teal-400 to-cyan-500',
-      popular: false,
-      category: 'Content Creation',
+      pricing: '$39-125/month'
+      marketPrice: '$40-150/month'
+      website: 'https://jasper.ai'
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600'
+      textColor: 'text-teal-400'
+      gradient: 'from-teal-400 to-cyan-500'
+      popular: false
+      category: 'Content Creation'
     },  ];      category: 'Content Creation'
     }
   ];
-
   const aiMarketStats = [
     {
-      title: 'AI Market Size',
-      value: '$136.6B',
-      growth: '+37% YoY',
-      description: 'Global AI market value in 2024',
+      title: 'AI Market Size'
+      value: '$136.6B'
+      growth: '+37% YoY'
+      description: 'Global AI market value in 2024'
     },    {
-      title: 'AI Adoption Rate',
-      value: '35%',
-      growth: '+12% YoY',
-      description: 'Businesses actively using AI tools',
+      title: 'AI Adoption Rate'
+      value: '35%'
+      growth: '+12% YoY'
+      description: 'Businesses actively using AI tools'
     },    {
-      title: 'AI Investment',
-      value: '$93.5B',
-      growth: '+28% YoY',
-      description: 'Global AI investment in 2024',
+      title: 'AI Investment'
+      value: '$93.5B'
+      growth: '+28% YoY'
+      description: 'Global AI investment in 2024'
     },    {
-      title: 'AI Productivity Gain',
-      value: '40%',
-      growth: '+15% YoY',
-      description: 'Average productivity improvement',
+      title: 'AI Productivity Gain'
+      value: '40%'
+      growth: '+15% YoY'
+      description: 'Average productivity improvement'
     },  ];      description: 'Global AI market value in 2024'
-    };
+    }
     {
-      title: 'AI Adoption Rate',
-      value: '35%',
-      growth: '+12% YoY',
-      description: 'Businesses actively using AI tools',
+      title: 'AI Adoption Rate'
+      value: '35%'
+      growth: '+12% YoY'
+      description: 'Businesses actively using AI tools'
     },      description: 'Businesses actively using AI tools'
-    };
+    }
     {
-      title: 'AI Investment',
-      value: '$93.5B',
-      growth: '+28% YoY',
-      description: 'Global AI investment in 2024',
+      title: 'AI Investment'
+      value: '$93.5B'
+      growth: '+28% YoY'
+      description: 'Global AI investment in 2024'
     },      description: 'Global AI investment in 2024'
-    };
+    }
     {
-      title: 'AI Productivity Gain',
-      value: '40%',
-      growth: '+15% YoY',
-      description: 'Average productivity improvement',
+      title: 'AI Productivity Gain'
+      value: '40%'
+      growth: '+15% YoY'
+      description: 'Average productivity improvement'
     },      description: 'Average productivity improvement'
     }
   ];
-
   const aiCategories = [
     {
-      name: 'Conversational AI',
-      description: 'Chatbots, virtual assistants, and language models',
-      tools: 3,      tools: 3,
+      name: 'Conversational AI'
+      description: 'Chatbots, virtual assistants, and language models'
+      tools: 3,      tools: 3
       avgPrice: '$20/month'
-    };
+    }
     {
-      name: 'Image Generation',
+      name: 'Image Generation'
       description: 'AI-powered art, design, and visual content creation';
-      tools: 1,
-      avgPrice: '$20/month',
-    },
+      tools: 1
+      avgPrice: '$20/month'
+    }
     {
-      name: 'Image Generation',
-      description: 'AI-powered art, design, and visual content creation',
-      tools: 1,
-      avgPrice: '$20/month',
+      name: 'Image Generation'
+      description: 'AI-powered art, design, and visual content creation'
+      tools: 1
+      avgPrice: '$20/month'
     },    {
-      name: 'Code Generation',
-      description: 'AI-assisted programming and development tools',
-      tools: 1,
-      avgPrice: '$10/month',
-    },    {
-      name: 'Video Generation',
-      description: 'AI video creation and editing tools',
-      tools: 1,
-      avgPrice: '$44/month',
-    },    {
-      name: 'Content Creation',
-      description: 'AI-powered writing and content generation',
-      tools: 1,
-      avgPrice: '$82/month',
-    },  ];    {
-      name: 'Code Generation',
-      description: 'AI-assisted programming and development tools',
-      tools: 1,
-      avgPrice: '$10/month',
-    },      avgPrice: '$20/month'
-    };
-    {
-      name: 'Code Generation',
-      description: 'AI-assisted programming and development tools',
-      tools: 1,
+      name: 'Code Generation'
+      description: 'AI-assisted programming and development tools'
+      tools: 1
       avgPrice: '$10/month'
-    };
+    },    {
+      name: 'Video Generation'
+      description: 'AI video creation and editing tools'
+      tools: 1
+      avgPrice: '$44/month'
+    },    {
+      name: 'Content Creation'
+      description: 'AI-powered writing and content generation'
+      tools: 1
+      avgPrice: '$82/month'
+    },  ];    {
+      name: 'Code Generation'
+      description: 'AI-assisted programming and development tools'
+      tools: 1
+      avgPrice: '$10/month'
+    },      avgPrice: '$20/month'
+    }
     {
-      name: 'Video Generation',
-      description: 'AI video creation and editing tools',
-      tools: 1,
-      avgPrice: '$44/month',
+      name: 'Code Generation'
+      description: 'AI-assisted programming and development tools'
+      tools: 1
+      avgPrice: '$10/month'
+    }
+    {
+      name: 'Video Generation'
+      description: 'AI video creation and editing tools'
+      tools: 1
+      avgPrice: '$44/month'
     },      avgPrice: '$44/month'
-    };
+    }
     {
-      name: 'Content Creation',
-      description: 'AI-powered writing and content generation',
-      tools: 1,
-      avgPrice: '$82/month',
+      name: 'Content Creation'
+      description: 'AI-powered writing and content generation'
+      tools: 1
+      avgPrice: '$82/month'
     },      avgPrice: '$82/month'
     }
   ];
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <Head>
@@ -305,13 +317,11 @@ export default function AiToolsPage() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       {/* Hero Section */}
       <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]' />
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]' />
         <div className='absolute inset-0 bg-grid opacity-10' />
-
         <div className='relative z-10 container-cursor text-center'>
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6'>
             <span className='w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse' />
@@ -324,13 +334,11 @@ export default function AiToolsPage() {
             Curated AI tools and services that actually work. Each tool has been
             tested and verified to provide real value for professionals and
             businesses. No hype - just results.          </p>      </Head>
-
       {/* Hero Section */}
       <section className="relative section-padding bg-gradient-cursor overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,122,204,0.08),transparent_50%)]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,122,204,0.06),transparent_50%)]" />
         <div className="absolute inset-0 bg-grid opacity-10" />
-        
         <div className="relative z-10 container-cursor text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-cursor-blue/10 border border-cursor-blue/20 text-cursor-blue text-sm font-medium mb-6">
             <span className="w-2 h-2 bg-cursor-blue rounded-full mr-2 animate-pulse" />
@@ -340,12 +348,11 @@ export default function AiToolsPage() {
             Real AI Tools for Real Results
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed">
-            Curated AI tools and services that actually work. Each tool has been tested and verified to provide 
+            Curated AI tools and services that actually work. Each tool has been tested and verified to provide
             real value for professionals and businesses. No hype - just results.
           </p>
         </div>
       </section>
-
       {/* AI Market Statistics */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -357,7 +364,6 @@ export default function AiToolsPage() {
               about which tools to invest in.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'>
             {aiMarketStats.map((stat, index) => (
               <Card
@@ -385,7 +391,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -394,18 +399,16 @@ export default function AiToolsPage() {
               Curated AI Tools & Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-              Each tool has been carefully selected based on performance,
+              Each tool has been carefully selected based on performance
               reliability, and real-world value.
             </p>
           </div>
-
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>            {aiTools.map((tool, index) => (              Curated AI Tools & Services
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
               Each tool has been carefully selected based on performance, reliability, and real-world value.
             </p>
           </div>
-
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {aiTools.map((tool, index) => (
               <Card
@@ -425,7 +428,6 @@ export default function AiToolsPage() {
                     </div>
                   </div>
                 )}
-
                 <div className='flex items-start space-x-6'>
                   <div className='relative'>
                     <div
@@ -437,7 +439,6 @@ export default function AiToolsPage() {
                       className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`}
                     />
                   </div>
-
                   <div className='flex-1'>
                     <div className='flex items-center justify-between mb-2'>
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -447,11 +448,9 @@ export default function AiToolsPage() {
                         {tool.category}
                       </span>
                     </div>
-
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
-
                     <div className='mb-6'>
                       <div className='flex items-center justify-between mb-3'>
                         <span className='text-sm text-gray-500'>
@@ -470,7 +469,6 @@ export default function AiToolsPage() {
                         </span>
                       </div>
                     </div>
-
                     <ul className='space-y-2 mb-6'>
                       {tool.features.map((feature, featureIndex) => (
                         <li
@@ -481,7 +479,6 @@ export default function AiToolsPage() {
                     </div>
                     <div className={`absolute -inset-2 bg-gradient-to-r from-transparent via-${tool.gradient} to-transparent rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-sm`} />
                   </div>
-                  
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-2">
                       <h3 className={`text-2xl font-bold ${tool.textColor}`}>
@@ -491,11 +488,9 @@ export default function AiToolsPage() {
                         {tool.category}
                       </span>
                     </div>
-                    
                     <p className="text-gray-400 leading-relaxed mb-6">
                       {tool.description}
                     </p>
-                    
                     <div className="mb-6">
                       <div className="flex items-center justify-between mb-3">
                         <span className="text-sm text-gray-500">Service Price:</span>
@@ -506,7 +501,6 @@ export default function AiToolsPage() {
                         <span className="text-sm text-gray-400">{tool.marketPrice}</span>
                       </div>
                     </div>
-
                     <ul className="space-y-2 mb-6">
                       {tool.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center text-gray-300">
@@ -515,7 +509,6 @@ export default function AiToolsPage() {
                         </li>
                       ))}
                     </ul>
-
                     <div className='flex items-center justify-between'>
                       <Button
                         href={tool.website}
@@ -551,7 +544,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
@@ -563,7 +555,6 @@ export default function AiToolsPage() {
               comprehensive toolkit for your needs.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {aiCategories.map((category, index) => (
               <Card
@@ -595,7 +586,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
@@ -608,7 +598,6 @@ export default function AiToolsPage() {
               maximizing their value.
             </p>
           </div>
-
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
@@ -628,7 +617,6 @@ export default function AiToolsPage() {
               Practical advice for implementing AI tools in your workflow and maximizing their value.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="card-hover border-gradient-blue">
               <div className="p-6">
@@ -646,7 +634,6 @@ export default function AiToolsPage() {
                 </ul>
               </div>
             </Card>
-
             <Card className='card-hover border-gradient-blue'>
               <div className='p-6'>
                 <div className='w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4'>
@@ -674,7 +661,6 @@ export default function AiToolsPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>

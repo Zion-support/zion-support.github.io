@@ -1,8 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
+import Button from '../components/ui/Button';
+export default function AIEvaluationOrchestratorPage() {
+=======
 import Layout from '../components/layout/Layout';
-
 const AIEvaluationOrchestrator: React.FC = () => {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Layout>
       <Head>
@@ -23,18 +27,18 @@ const AIEvaluationOrchestrator: React.FC = () => {
               AI Evaluation Orchestrator
             </h1>
             <p className='text-gray-300 text-lg'>
-              Automated LLM and prompt evaluations with dashboards, baselines,
+              Automated LLM and prompt evaluations with dashboards, baselines
               and CI gates.
             </p>
           </header>
           <section className='grid grid-cols-1 md:grid-cols-3 gap-6'>
             {[
-              'Create datasets and scoring functions',
-              'Batch runs across models and versions',
-              'Track regressions and enforce quality gates',
-              'Integrations: OpenAI, Anthropic, Groq, OpenRouter, Langfuse',
-              'Export reports, share baselines, and diff results',
-              'From $199/mo',
+              'Create datasets and scoring functions'
+              'Batch runs across models and versions'
+              'Track regressions and enforce quality gates'
+              'Integrations: OpenAI, Anthropic, Groq, OpenRouter, Langfuse'
+              'Export reports, share baselines, and diff results'
+              'From $199/mo'
             ].map(f => (
               <div
                 key={f}
@@ -53,7 +57,6 @@ const AIEvaluationOrchestrator: React.FC = () => {
             </Button>
           </div>
         </div>
-
         <div className="text-center">
           <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: opacity-90">
             Talk to Sales

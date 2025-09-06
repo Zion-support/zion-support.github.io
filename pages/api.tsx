@@ -2,98 +2,95 @@ import React from "react";
 import MainLayout from "../src/components/layout/MainLayout";
 import { motion } from "framer-motion";
 import {
-  Code,
-  Check,
-  Globe,
-  Shield,
-  Zap,
-  Database,
-  Cpu,
-  Cloud,
-  XCircle,
+  Code
+  Check
+  Globe
+  Shield
+  Zap
+  Database
+  Cpu
+  Cloud
+  XCircle
 } from "lucide-react";
-
 export default function APIPage() {
   const apiEndpoints = [
     {
-      id: "auth",
-      title: "Authentication",
-      description: "Secure authentication and authorization endpoints",
-      baseUrl: "/api/v1/auth",
+      id: "auth"
+      title: "Authentication"
+      description: "Secure authentication and authorization endpoints"
+      baseUrl: "/api/v1/auth"
       methods: [
         {
-          method: "POST",
-          endpoint: "/login",
-          description: "Authenticate user with email and password",
+          method: "POST"
+          endpoint: "/login"
+          description: "Authenticate user with email and password"
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/login \\
   -H "Content-Type: application/json" \\
   -d '{
-    "email": "user@example.com",
+    "email": "user@example.com"
     "password": "your_password"
-  }'`,
-        },
+  }'`
+        }
         {
-          method: "POST",
-          endpoint: "/register",
-          description: "Register a new user account",
+          method: "POST"
+          endpoint: "/register"
+          description: "Register a new user account"
           code: `curl -X POST https://api.ziontechgroup.com/v1/auth/register \\
   -H "Content-Type: application/json" \\
   -d '{
-    "email": "user@example.com",
-    "password": "your_password",
+    "email": "user@example.com"
+    "password": "your_password"
     "name": "John Doe"
-  }'`,
-        },
-      ],
-    },
+  }'`
+        }
+      ]
+    }
     {
-      id: "ai-services",
-      title: "AI Services",
-      description: "Access our AI-powered services and models",
-      baseUrl: "/api/v1/ai",
+      id: "ai-services"
+      title: "AI Services"
+      description: "Access our AI-powered services and models"
+      baseUrl: "/api/v1/ai"
       methods: [
         {
-          method: "POST",
-          endpoint: "/chat",
-          description: "Send messages to our AI chat service",
+          method: "POST"
+          endpoint: "/chat"
+          description: "Send messages to our AI chat service"
           code: `curl -X POST https://api.ziontechgroup.com/v1/ai/chat \\
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\
   -H "Content-Type: application/json" \\
   -d '{
-    "message": "Hello, how can you help me?",
-    "model": "gpt-4",
+    "message": "Hello, how can you help me?"
+    "model": "gpt-4"
     "temperature": 0.7
-  }'`,
-        },
-      ],
-    },
+  }'`
+        }
+      ]
+    }
   ];
-
   const responseExamples = {
     success: {
-      status: 200,
+      status: 200
       data: {
-        message: "Request successful",
+        message: "Request successful"
         data: {
-          id: "12345",
-          name: "Example Response",
-          created_at: "2024-01-01T00:00:00Z",
-        },
-      },
-    },
+          id: "12345"
+          name: "Example Response"
+          created_at: "2024-01-01T00:00:00Z"
+        }
+      }
+    }
     error: {
-      status: 400,
+      status: 400
       error: {
-        code: "VALIDATION_ERROR",
-        message: "Invalid request parameters",
+        code: "VALIDATION_ERROR"
+        message: "Invalid request parameters"
         details: {
-          field: "email",
-          issue: "Invalid email format",
-        },
-      },
-    },
-  };
-
+          field: "email"
+          issue: "Invalid email format"
+        }
+      }
+    }
+  }
   return (
     <MainLayout
       title="API Documentation - Zion Tech Group"
@@ -107,7 +104,6 @@ export default function APIPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
           </div>
-
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -128,7 +124,6 @@ export default function APIPage() {
             </motion.div>
           </div>
         </section>
-
         {/* Quick Start */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
@@ -147,7 +142,6 @@ export default function APIPage() {
                 to make your first API call.
               </p>
             </motion.div>
-
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <motion.div
@@ -167,7 +161,6 @@ export default function APIPage() {
                     Sign up and obtain your API key from the dashboard
                   </p>
                 </motion.div>
-
                 <motion.div
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -185,7 +178,6 @@ export default function APIPage() {
                     Use our RESTful APIs with your preferred language
                   </p>
                 </motion.div>
-
                 <motion.div
                   className="text-center"
                   initial={{ opacity: 0, y: 30 }}
@@ -207,7 +199,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
         {/* Response Examples */}
         <section className="py-20 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -226,7 +217,6 @@ export default function APIPage() {
                 examples.
               </p>
             </motion.div>
-
             <div className="max-w-4xl mx-auto">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <motion.div
@@ -250,7 +240,6 @@ export default function APIPage() {
                     </pre>
                   </div>
                 </motion.div>
-
                 <motion.div
                   className="bg-white border border-gray-200 rounded-lg p-6"
                   initial={{ opacity: 0, y: 30 }}
@@ -276,7 +265,6 @@ export default function APIPage() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
           <div className="container mx-auto px-4">

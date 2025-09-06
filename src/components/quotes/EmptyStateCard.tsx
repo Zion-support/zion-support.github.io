@@ -1,7 +1,11 @@
 
-import React from "react"
-import { Card, CardContent } from "@/components/ui/card"
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
 import { MessageSquare, ArchiveIcon } from 'lucide-react'
+<<<<<<< HEAD
+
+type EmptyStateCardProps = any;
+=======
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 type EmptyStateCardProps = {
   type: 'active' | 'archived'
@@ -22,7 +26,7 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
           {isActive ? 'No hire requests yet' : 'No archived requests'}
         </h3>
         <p className="text-zion-slate-light max-w-md mx-auto">
-          {isActive 
+          {isActive
             ? "You haven't received any hire requests yet. Promote your profile and services to attract potential clients."
             : "You haven't archived any hire requests yet. Archive requests to keep your active list organized."
           }
@@ -31,3 +35,4 @@ export const EmptyStateCard: React.FC<EmptyStateCardProps> = ({ type }) => {
     </Card>
   )
 }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

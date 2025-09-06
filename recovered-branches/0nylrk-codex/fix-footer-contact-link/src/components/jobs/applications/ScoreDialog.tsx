@@ -1,14 +1,24 @@
 
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {JobApplication} from "@/types/jobs";
-import {ApplicationScoreCard} from "../ApplicationScoreCard";
+import {
+  Dialog;
+  DialogContent;
+  DialogHeader;
+  DialogTitle
+} from "@/components/ui/dialog",
+import { JobApplication } from "@/types/jobs";
+import { ApplicationScoreCard } from "../ApplicationScoreCard";
 interface ScoreDialogProps {
-  open: boolean,
-  onOpenChange: (open: boolean) => void,
-  application: JobApplication | null,
+<<<<<<< HEAD
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  application: JobApplication | null;
+=======
+  open: boolean
+  onOpenChange: (open: boolean) => void
+  application: JobApplication | null
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   onScoreUpdated: (updatedApplication: JobApplication) => void
 }
-
 export function ScoreDialog({
   open;
   onOpenChange;
@@ -22,7 +32,7 @@ export function ScoreDialog({
           <DialogTitle>Application Match Score</DialogTitle>
         </DialogHeader>
         {application && (
-          <ApplicationScoreCard 
+          <ApplicationScoreCard
             application={application}
             onScoreUpdated={onScoreUpdated}
           />

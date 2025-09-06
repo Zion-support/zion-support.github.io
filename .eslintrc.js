@@ -2,7 +2,7 @@
 module.exports = {
   env: {
     node: true,
-    es2021: true,
+    es2021: true
   },
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
@@ -15,7 +15,7 @@ module.exports = {
     "no-undef": "off",
     "react/no-unescaped-entities": "off",
     "@next/next/no-html-link-for-pages": "off",
-    "@next/next/no-img-element": "off",
+    "@next/next/no-img-element": "off"
   },
   ignorePatterns: [
     "node_modules/",
@@ -172,6 +172,6 @@ module.exports = {
     "build-verification.js",
     "check-syntax.js",
     "clean-conflicts.js",
-    "commit-and-push.js",
-  ],
+    "commit-and-push.js"
+  ]
 };

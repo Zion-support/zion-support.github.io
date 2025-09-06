@@ -2,14 +2,22 @@
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
  */
+<<<<<<< HEAD
 
+import { logErrorToProduction } from './productionLogger';
+=======
 import { logErrorToProduction } from './productionLogger'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface ChunkErrorStats {
-  errorCount: number
-  lastErrorTime: number
-  userAgent: string
+  errorCount: number;
+  lastErrorTime: number;
+  userAgent: string;
   url: string
 class ChunkErrorHandler {
+<<<<<<< HEAD
+  private errorStats: Map<string, ChunkErrorStats> = new Map();
+  private readonly MAX_RETRIES;
+=======
   private errorStats: Map<string, ChunkErrorStats> = new Map()
   private readonly MAX_RETRIES = 3
   private readonly RETRY_DELAY = 1000; // 1 second
@@ -17,7 +25,6 @@ class ChunkErrorHandler {
   constructor() {
     this.initializeGlobalHandlers()
   }
-
   private initializeGlobalHandlers(): void {
     if (typeof window === 'undefined') return
     // Handle webpack chunk loading errors
@@ -28,7 +35,6 @@ class ChunkErrorHandler {
     window.addEventListener('unhandledrejection', event => {
       this.handlePromiseRejection(event)
     }) }
-
   private handleScriptError(event: ErrorEvent): void {
     const { error, filename } = event
     if (this.isChunkError(error, filename)) {
@@ -36,7 +42,6 @@ class ChunkErrorHandler {
       this.handleChunkError(error, { filename, source: 'script' })
     }
   }
-
   private handlePromiseRejection(event: PromiseRejectionEvent): void {
     const error = event.reason
     if (this.isChunkError(error)) {
@@ -44,29 +49,27 @@ class ChunkErrorHandler {
       this.handleChunkError(error, { source: 'promise' })
     }
   }
-
   private isChunkError(error: any, filename?: string): boolean {
     if (!error) return false
-    const errorMessage = error.message || String(error)
-    const errorName = error.name || ''
+    const errorMessage = error.message |String(error)
+    const errorName = error.name |''
     const chunkErrorPatterns = [
-      'ChunkLoadError',
-      'Loading chunk',
-      'Failed to fetch dynamically imported module',
-      'Failed to import',
-      'chunk-',
-      'vendors-',
+      'ChunkLoadError'
+      'Loading chunk'
+      'Failed to fetch dynamically imported module'
+      'Failed to import'
+      'chunk-'
+      'vendors-'
     ]
     return chunkErrorPatterns.some(
       pattern =>
-        errorMessage.includes(pattern) ||
-        errorName.includes(pattern) ||
+        errorMessage.includes(pattern) |
+        errorName.includes(pattern) |
         (filename && filename.includes(pattern))
     )
   }
-
   private async handleChunkError(
-    error: Error,
+    error: Error
     context: { filename?: string; source: string }
   ): Promise<void> {
     const sessionKey = this.getSessionKey()
@@ -74,13 +77,13 @@ class ChunkErrorHandler {
     stats.errorCount++
     stats.lastErrorTime = Date.now()
     logErrorToProduction('ChunkLoadError detected', error, {
-      context: 'chunkErrorHandler',
-      errorCount: stats.errorCount,
-      retryAttempt: stats.errorCount,
-      source: context.source,
-      filename: context.filename,
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+      context: 'chunkErrorHandler'
+      errorCount: stats.errorCount
+      retryAttempt: stats.errorCount
+      source: context.source
+      filename: context.filename
+      userAgent: navigator.userAgent
+      url: window.location.href
     })
     // Attempt recovery based on error count
     if (stats.errorCount <= this.MAX_RETRIES) {
@@ -89,18 +92,17 @@ class ChunkErrorHandler {
       this.showFatalErrorMessage()
     }
   }
-
   private async attemptRecovery(
-    attemptNumber: number,
+    attemptNumber: number
     context: { filename?: string; source: string }
   ): Promise<void> {
     logErrorToProduction(
-      `Attempting ChunkLoadError recovery #${attemptNumber}`,
-      undefined,
+      `Attempting ChunkLoadError recovery #${attemptNumber}`
+      undefined
       {
-        context: 'chunkErrorRecovery',
-        attemptNumber,
-        recoveryMethod: this.getRecoveryMethod(attemptNumber),
+        context: 'chunkErrorRecovery'
+        attemptNumber
+        recoveryMethod: this.getRecoveryMethod(attemptNumber)
       }
     )
     switch (attemptNumber) {
@@ -123,7 +125,6 @@ class ChunkErrorHandler {
         this.showFatalErrorMessage()
     }
   }
-
   private getRecoveryMethod(attemptNumber: number): string {
     switch (attemptNumber) {
       case 1:
@@ -136,7 +137,6 @@ class ChunkErrorHandler {
         return 'fatal-error'
     }
   }
-
   private async clearCaches(): Promise<void> {
     try {
       // Clear service worker caches
@@ -146,7 +146,6 @@ class ChunkErrorHandler {
           cacheNames.map(cacheName => caches.delete(cacheName))
         )
       }
-
       // Clear localStorage items that might be stale
       const keysToRemove = ['__NEXT_ROUTER_STATE__', '__NEXT_ROUTE_INFO__']
       keysToRemove.forEach(key => {
@@ -157,27 +156,24 @@ class ChunkErrorHandler {
         }
       })
       logErrorToProduction('Caches cleared successfully', undefined, {
-        context: 'chunkErrorRecovery',
-        action: 'cache-clear',
+        context: 'chunkErrorRecovery'
+        action: 'cache-clear'
       })
     } catch (error) {
       logErrorToProduction('Failed to clear caches', error as Error, {
-        context: 'chunkErrorRecovery',
-        action: 'cache-clear-failed',
+        context: 'chunkErrorRecovery'
+        action: 'cache-clear-failed'
       })
     }
   }
-
   private reloadPage(): void {
     // Use replace to avoid adding to history
     window.location.replace(window.location.href)
   }
-
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
     window.location.href = window.location.href + '?_t=' + Date.now()
   }
-
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
     const errorDiv = document.createElement('div')
@@ -199,7 +195,7 @@ class ChunkErrorHandler {
       <div style="text-align: center; padding: 2rem; max-width: 500px;">
         <h2 style="margin-bottom: 1rem;">Connection Issue</h2>
         <p style="margin-bottom: 1.5rem; line-height: 1.5;">
-          We're having trouble loading some parts of the application. 
+          We're having trouble loading some parts of the application.
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
@@ -228,46 +224,39 @@ class ChunkErrorHandler {
     `
     document.body.appendChild(errorDiv)
   }
-
   private delay(ms: number): Promise<void> {
     return new Promise(resolve => setTimeout(resolve, ms))
   }
-
   private getSessionKey(): string {
     return `${navigator.userAgent}_${window.location.origin}`
   }
-
   private getOrCreateErrorStats(sessionKey: string): ChunkErrorStats {
     if (!this.errorStats.has(sessionKey)) {
       this.errorStats.set(sessionKey, {
-        errorCount: 0,
-        lastErrorTime: 0,
-        userAgent: navigator.userAgent,
-        url: window.location.href,
+        errorCount: 0
+        lastErrorTime: 0
+        userAgent: navigator.userAgent
+        url: window.location.href
       })
     }
     return this.errorStats.get(sessionKey)!
   }
-
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
     this.clearCaches().then(() => {
       this.reloadPage()
     }) }
-
   // Public method to check if we're in a chunk error state
   public isInErrorState(): boolean {
     const sessionKey = this.getSessionKey()
     const stats = this.errorStats.get(sessionKey)
     return stats ? stats.errorCount > 0 : false
   }
-
   // Public method to reset error state
   public resetErrorState(): void {
     const sessionKey = this.getSessionKey()
     this.errorStats.delete(sessionKey)
   }
-
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
@@ -278,3 +267,4 @@ export default chunkErrorHandler
         </button>
         <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

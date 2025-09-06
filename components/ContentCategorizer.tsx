@@ -1,266 +1,241 @@
-import React, { useState, useEffect, useMemo } from 'react',;
-import {;
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,;
+import React, { useState, useEffect, useMemo } from 'react';
+import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
   BarChart3, Globe, Database, Cpu, Rocket, Brain;
-} from 'lucide-react',;
-interface ContentItem {;
-  id: string,;
-  title: string,;
-  href: string,;
-  desc: string,;
-  category: string,;
-  subcategory?: string,;
-  date: string,;
-  relevance: 'high' | 'medium' | 'low',;
-  tags: string[],;
-  source: string,;
+} from 'lucide-react';
+interface ContentItem {id: string;
+  title: string;
+  href: string;
+  desc: string;
+  category: string;
+  subcategory?: string;
+  date: string;
+  relevance: 'high' | 'medium' | 'low';
+  tags: string[];
+  source: string;
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature';
 }
-;
-interface ContentCategory {;
-  id: string,;
-  name: string,;
-  icon: any,;
-  description: string,;
-  color: string,;
-  count: number,;
+interface ContentCategory {id: string;
+  name: string;
+  icon: any;
+  description: string;
+  color: string;
+  count: number;
   subcategories?: string[];
 }
-;
-const ContentCategorizer: React.FC = () => {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),;
-  const [selectedType, setSelectedType] = useState('all'),;
-  const [selectedDateRange, setSelectedDateRange] = useState('all'),;
-  const [selectedRelevance, setSelectedRelevance] = useState('all'),;
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),;
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),;
+const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [selectedType, setSelectedType] = useState('all');
+  const [selectedDateRange, setSelectedDateRange] = useState('all');
+  const [selectedRelevance, setSelectedRelevance] = useState('all');
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   // Sample content data - in a real implementation, this would come from an API;
   const contentItems: ContentItem[] = [;
     {;
-      id: '1',;
-      title: 'Structured Data Audit Report',;
-      href: '/reports/structured-data-audit.json',;
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',;
-      category: 'seo',;
-      subcategory: 'structured-data',;
-      date: '2025-08-19',;
-      relevance: 'high',;
-      tags: ['seojson-ldschemaaudit'],;
-      source: 'autonomous-auditor',;
+      id: '1';
+      title: 'Structured Data Audit Report';
+      href: '/reports/structured-data-audit.json';
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
+      category: 'seo';
+      subcategory: 'structured-data';
+      date: '2025-08-19';
+      relevance: 'high';
+      tags: ['seojson-ldschemaaudit'];
+      source: 'autonomous-auditor';
       type: 'report';
-    },;
-    {;
-      id: '2',;
-      title: 'Security Vulnerability Scan Results',;
-      href: '/reports/security-scan-2025-08-19',;
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',;
-      category: 'security',;
-      subcategory: 'vulnerability-scan',;
-      date: '2025-08-19',;
-      relevance: 'high',;
-      tags: ['securityvulnerabilityscanremediation'],;
-      source: 'security-scanner',;
+    }
+    {id: '2';
+      title: 'Security Vulnerability Scan Results';
+      href: '/reports/security-scan-2025-08-19';
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
+      category: 'security';
+      subcategory: 'vulnerability-scan';
+      date: '2025-08-19';
+      relevance: 'high';
+      tags: ['securityvulnerabilityscanremediation'];
+      source: 'security-scanner';
       type: 'security';
-    },;
-    {;
-      id: '3',;
-      title: 'AI Model Performance Update',;
-      href: '/reports/ai-model-performance-2025-08-19',;
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.',;
-      category: 'ai',;
-      subcategory: 'performance',;
-      date: '2025-08-19',;
-      relevance: 'high',;
-      tags: ['aiperformanceoptimizationmetrics'],;
-      source: 'ai-monitor',;
+    }
+    {id: '3';
+      title: 'AI Model Performance Update';
+      href: '/reports/ai-model-performance-2025-08-19';
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.';
+      category: 'ai';
+      subcategory: 'performance';
+      date: '2025-08-19';
+      relevance: 'high';
+      tags: ['aiperformanceoptimizationmetrics'];
+      source: 'ai-monitor';
       type: 'update';
-    },;
-    {;
-      id: '4',;
-      title: 'Feature Deployment Summary',;
-      href: '/reports/feature-deployment-2025-08-19',;
-      desc: 'Overview of newly deployed features and their impact on user experience.',;
-      category: 'features',;
-      subcategory: 'deployment',;
-      date: '2025-08-19',;
-      relevance: 'medium',;
-      tags: ['featuresdeploymentuximpact'],;
-      source: 'deployment-tracker',;
+    }
+    {id: '4';
+      title: 'Feature Deployment Summary';
+      href: '/reports/feature-deployment-2025-08-19';
+      desc: 'Overview of newly deployed features and their impact on user experience.';
+      category: 'features';
+      subcategory: 'deployment';
+      date: '2025-08-19';
+      relevance: 'medium';
+      tags: ['featuresdeploymentuximpact'];
+      source: 'deployment-tracker';
       type: 'feature';
-    },;
-    {;
-      id: '5',;
-      title: 'System Health Dashboard',;
-      href: '/reports/system-health-2025-08-19',;
-      desc: 'Real-time system performance metrics and infrastructure health status.',;
-      category: 'monitoring',;
-      subcategory: 'system-health',;
-      date: '2025-08-19',;
-      relevance: 'medium',;
-      tags: ['monitoringperformanceinfrastructurehealth'],;
-      source: 'health-monitor',;
+    }
+    {id: '5';
+      title: 'System Health Dashboard';
+      href: '/reports/system-health-2025-08-19';
+      desc: 'Real-time system performance metrics and infrastructure health status.';
+      category: 'monitoring';
+      subcategory: 'system-health';
+      date: '2025-08-19';
+      relevance: 'medium';
+      tags: ['monitoringperformanceinfrastructurehealth'];
+      source: 'health-monitor';
       type: 'report';
-    },;
-    {;
-      id: '6',;
-      title: 'User Behavior Insights',;
-      href: '/reports/user-behavior-2025-08-19',;
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',;
-      category: 'analytics',;
-      subcategory: 'user-behavior',;
-      date: '2025-08-19',;
-      relevance: 'high',;
-      tags: ['analyticsuser-behaviorengagementoptimization'],;
-      source: 'behavior-analyzer',;
+    }
+    {id: '6';
+      title: 'User Behavior Insights';
+      href: '/reports/user-behavior-2025-08-19';
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
+      category: 'analytics';
+      subcategory: 'user-behavior';
+      date: '2025-08-19';
+      relevance: 'high';
+      tags: ['analyticsuser-behaviorengagementoptimization'];
+      source: 'behavior-analyzer';
       type: 'insight';
     }
-  ],;
+  ];
   const categories: ContentCategory[] = [;
-    {;
-      id: 'all',;
-      name: 'All Content',;
-      icon: Globe,;
-      description: 'Complete collection of autonomous content',;
-      color: 'from-blue-500 to-cyan-500',;
+    {id: 'all';
+      name: 'All Content';
+      icon: Globe;
+      description: 'Complete collection of autonomous content';
+      color: 'from-blue-500 to-cyan-500';
       count: contentItems.length;
-    },;
-    {;
-      id: 'seo',;
-      name: 'SEO & Analytics',;
-      icon: BarChart3,;
-      description: 'Search optimization and performance analytics',;
-      color: 'from-green-500 to-emerald-500',;
-      count: contentItems.filter(item => item.category === 'seo').length,;
+    }
+    {id: 'seo';
+      name: 'SEO & Analytics';
+      icon: BarChart3;
+      description: 'Search optimization and performance analytics';
+      color: 'from-green-500 to-emerald-500';
+      count: contentItems.filter(item => item.category === 'seo').length;
       subcategories: ['structured-dataperformancetechnical-seo'];
-    },;
-    {;
-      id: 'security',;
-      name: 'Security & Compliance',;
-      icon: Shield,;
-      description: 'Security assessments and compliance reports',;
-      color: 'from-red-500 to-orange-500',;
-      count: contentItems.filter(item => item.category === 'security').length,;
+    }
+    {id: 'security';
+      name: 'Security & Compliance';
+      icon: Shield;
+      description: 'Security assessments and compliance reports';
+      color: 'from-red-500 to-orange-500';
+      count: contentItems.filter(item => item.category === 'security').length;
       subcategories: ['vulnerability-scancompliancethreat-detection'];
-    },;
-    {;
-      id: 'ai',;
-      name: 'AI & Machine Learning',;
-      icon: Brain,;
-      description: 'AI model performance and insights',;
-      color: 'from-purple-500 to-pink-500',;
-      count: contentItems.filter(item => item.category === 'ai').length,;
+    }
+    {id: 'ai';
+      name: 'AI & Machine Learning';
+      icon: Brain;
+      description: 'AI model performance and insights';
+      color: 'from-purple-500 to-pink-500';
+      count: contentItems.filter(item => item.category === 'ai').length;
       subcategories: ['performancetrainingdeployment'];
-    },;
-    {;
-      id: 'features',;
-      name: 'Feature Updates',;
-      icon: Zap,;
-      description: 'New features and system updates',;
-      color: 'from-yellow-500 to-orange-500',;
-      count: contentItems.filter(item => item.category === 'features').length,;
+    }
+    {id: 'features';
+      name: 'Feature Updates';
+      icon: Zap;
+      description: 'New features and system updates';
+      color: 'from-yellow-500 to-orange-500';
+      count: contentItems.filter(item => item.category === 'features').length;
       subcategories: ['deploymentenhancementsroadmap'];
-    },;
-    {;
-      id: 'monitoring',;
-      name: 'System Monitoring',;
-      icon: Cpu,;
-      description: 'Infrastructure and system health',;
-      color: 'from-indigo-500 to-purple-500',;
-      count: contentItems.filter(item => item.category === 'monitoring').length,;
+    }
+    {id: 'monitoring';
+      name: 'System Monitoring';
+      icon: Cpu;
+      description: 'Infrastructure and system health';
+      color: 'from-indigo-500 to-purple-500';
+      count: contentItems.filter(item => item.category === 'monitoring').length;
       subcategories: ['system-healthperformanceinfrastructure'];
-    },;
-    {;
-      id: 'analytics',;
-      name: 'User Analytics',;
-      icon: TrendingUp,;
-      description: 'User behavior and engagement insights',;
-      color: 'from-teal-500 to-cyan-500',;
-      count: contentItems.filter(item => item.category === 'analytics').length,;
+    }
+    {id: 'analytics';
+      name: 'User Analytics';
+      icon: TrendingUp;
+      description: 'User behavior and engagement insights';
+      color: 'from-teal-500 to-cyan-500';
+      count: contentItems.filter(item => item.category === 'analytics').length;
       subcategories: ['user-behaviorengagementconversion'];
     }
-  ],;
+  ];
   const contentTypes = [;
-    { id: 'all', name: 'All Types', icon: Globe },;
-    { id: 'report', name: 'Reports', icon: BookOpen },;
-    { id: 'update', name: 'Updates', icon: Zap },;
-    { id: 'insight', name: 'Insights', icon: Lightbulb },;
-    { id: 'guide', name: 'Guides', icon: Code },;
-    { id: 'security', name: 'Security', icon: Shield },;
+    { id: 'all', name: 'All Types', icon: Globe }
+    { id: 'report', name: 'Reports', icon: BookOpen }
+    { id: 'update', name: 'Updates', icon: Zap }
+    { id: 'insight', name: 'Insights', icon: Lightbulb }
+    { id: 'guide', name: 'Guides', icon: Code }
+    { id: 'security', name: 'Security', icon: Shield }
     { id: 'feature', name: 'Features', icon: TrendingUp }
-  ],;
+  ];
   const dateRanges = [;
-    { id: 'all', name: 'All Time' },;
-    { id: 'today', name: 'Today' },;
-    { id: 'week', name: 'This Week' },;
-    { id: 'month', name: 'This Month' },;
+    { id: 'all', name: 'All Time' }
+    { id: 'today', name: 'Today' }
+    { id: 'week', name: 'This Week' }
+    { id: 'month', name: 'This Month' }
     { id: 'quarter', name: 'This Quarter' }
-  ],;
+  ];
   const relevanceLevels = [;
-    { id: 'all', name: 'All Relevance', color: 'text-gray-400' },;
-    { id: 'high', name: 'High Priority', color: 'text-green-400' },;
-    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' },;
+    { id: 'all', name: 'All Relevance', color: 'text-gray-400' }
+    { id: 'high', name: 'High Priority', color: 'text-green-400' }
+    { id: 'medium', name: 'Medium Priority', color: 'text-yellow-400' }
     { id: 'low', name: 'Low Priority', color: 'text-red-400' }
-  ],;
-  const filteredItems = useMemo(() => {;
-    const filtered = contentItems.filter(item => {;
-      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),;
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,;
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,;
-      const matchesType = selectedType === 'all' || item.type === selectedType,;
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,;
+  ];
+  const filteredItems = useMemo(() => {const filtered = contentItems.filter(item => {;
+      const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           item.desc.toLowerCase().includes(searchTerm.toLowerCase()) |;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+      const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory;
+      const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory;
+      const matchesType = selectedType === 'all' |item.type === selectedType;
+      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance;
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance;
-    }),;
+    });
     // Sort items;
-    filtered.sort((a, b) => {;
-      let comparison = 0,;
+    filtered.sort((a, b) => {let comparison = 0;
       switch (sortBy) {;
         case 'date':;
-          comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),;
-          break,;
+          comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
+          break;
         case 'relevance':;
-          const relevanceOrder = { high: 3, medium: 2, low: 1 },;
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],;
-          break,;
+          const relevanceOrder = { high: 3, medium: 2, low: 1 }
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
+          break;
         case 'title':;
-          comparison = a.title.localeCompare(b.title),;
+          comparison = a.title.localeCompare(b.title);
           break;
       }
       return sortOrder === 'asc' ? comparison : -comparison;
-    }),;
+    });
     return filtered;
-  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]),;
-  const getCategoryIcon = (category: string) => {;
-    const cat = categories.find(c => c.id === category),;
+  }, [searchTerm, selectedCategory, selectedSubcategory, selectedType, selectedRelevance, sortBy, sortOrder]);
+  const getCategoryIcon = (category: string) => {const cat = categories.find(c => c.id === category);
     return cat ? cat.icon : Globe;
-  },;
-  const getRelevanceColor = (relevance: string) => {;
-    switch (relevance) {;
-      case 'high': return 'text-green-400',;
-      case 'medium': return 'text-yellow-400',;
-      case 'low': return 'text-red-400',;
+  }
+  const getRelevanceColor = (relevance: string) => {switch (relevance) {;
+      case 'high': return 'text-green-400';
+      case 'medium': return 'text-yellow-400';
+      case 'low': return 'text-red-400';
       default: return 'text-gray-400';
     }
-},
-
+}
   const getTypeIcon = (type: string) => {
-    const typeInfo = contentTypes.find(t => t.id === type),
+    const typeInfo = contentTypes.find(t => t.id === type)
     return typeInfo ? typeInfo.icon : Globe
-  },
-
+  }
   const clearAllFilters = () => {
-    setSearchTerm(''),
-    setSelectedCategory('all'),
-    setSelectedSubcategory('all'),
-    setSelectedType('all'),
-    setSelectedDateRange('all'),
+    setSearchTerm('')
+    setSelectedCategory('all')
+    setSelectedSubcategory('all')
+    setSelectedType('all')
+    setSelectedDateRange('all')
     setSelectedRelevance('all')
-  },
-
+  }
   return (
     <div className=&quot;space-y-6&quot;>
       {/* Search and Advanced Filters */}
@@ -276,7 +251,6 @@ const ContentCategorizer: React.FC = () => {;
             className=&quot;w-full pl-10 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
           />
         </div>
-
         {/* Advanced Filter Controls */}
         <div className=&quot;grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4&quot;>
           {/* Category Filter */}
@@ -284,8 +258,7 @@ const ContentCategorizer: React.FC = () => {;
             <label className=&quot;block text-sm font-medium text-white/70 mb-2&quot;>Category</label>
             <select
               value={selectedCategory}
-              onChange={(e) => {;
-                setSelectedCategory(e.target.value),;
+              onChange={(e) => {setSelectedCategory(e.target.value);
                 setSelectedSubcategory('all');
               }}
 className=&quot;w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-200&quot;
@@ -374,7 +347,6 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
           </button>
         </div>
       </div>
-
       {/* Category Pills */}
       <div>
         <div className=&quot;flex flex-wrap gap-2&quot;>
@@ -382,8 +354,7 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${;
-                selectedCategory === category.id;
+              className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-200 ${selectedCategory === category.id;
                   ? 'border-cyan-500 bg-cyan-500/20 text-cyan-300';
                   : 'border-white/10 bg-white/5 text-white/70 hover:border-white/20 hover:bg-white/10';
               }`}
@@ -405,7 +376,6 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
         {selectedType !== 'all' && ` of type ${contentTypes.find(t => t.id === selectedType)?.name}`}
       </div>;
       {/* Content Grid */}
-
                   {item.type}
                 </div>;
               </div>;
@@ -440,15 +410,13 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
                   {item.relevance} priority
                 </span>
               </div>
-
               {/* Source and Action */}
               <div className=&quot;flex items-center justify-between&quot;>
                 <span className=&quot;text-xs text-white/40&quot;>
                   Source: {item.source}
                 </span>
-                <a 
-                  href={item.href} 
-
+                <a
+                  href={item.href}
         })}
       </div>;
       {/* No Results */}
@@ -469,5 +437,5 @@ className=&quot;px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
       )}
     </div>;
   );
-},;
+}
 export default ContentCategorizer;

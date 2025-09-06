@@ -1,3 +1,24 @@
+<<<<<<< HEAD
+import React, { useState, Suspense } from 'react';
+import { Dialog;
+  DialogContent;
+  DialogTrigger } from '@/components/ui/dialog';
+import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
+const ReactPlayer = null;
+  return (
+    <Dialog open={zoomOpen} onOpenChange={(o) => { setZoomOpen(o), if (!o) setZoomed(false) }}>
+      <Tabs defaultValue="images" className="w-full">
+      <TabsList className="grid grid-cols-3 bg-zion-blue-dark border border-zion-blue-light">
+        <TabsTrigger value="images">Images</TabsTrigger>
+        {videoUrl && <TabsTrigger value="video">Video</TabsTrigger>}
+        {modelUrl && <TabsTrigger value="model">3D</TabsTrigger>}
+      </TabsList>
+
+      <TabsContent value="images" className="pt-4">
+        <div className="aspect-video w-full relative">
+          <DialogTrigger asChild>
+=======
 import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
@@ -6,7 +27,7 @@ const ReactPlayer = React.lazy(() => import('react-player'))
 const ModelViewer = React.lazy(async () => {
   await import('@google/model-viewer')
   return {
-    default: (props: any) => React.createElement('model-viewer', props),
+    default: (props: any) => React.createElement('model-viewer', props)
   }
 })
 interface ProductGalleryProps {
@@ -14,9 +35,9 @@ interface ProductGalleryProps {
   videoUrl?: string
   modelUrl?: string
 export function ProductGallery({
-  images,
-  videoUrl,
-  modelUrl,
+  images
+  videoUrl
+  modelUrl
 }: ProductGalleryProps) {
   const [selected, setSelected] = useState(0)
   const [zoomOpen, setZoomOpen] = useState(false)
@@ -37,7 +58,7 @@ export function ProductGallery({
           <div className='aspect-video w-full relative'>
             <DialogTrigger asChild>
               <img
-                src={images[selected] || images[0] || ''}
+                src={images[selected] |images[0] |''}
                 alt={`Product image ${selected + 1}`}
                 className='w-full h-full object-contain bg-zion-blue-light/10 p-4 cursor-zoom-in'
               />
@@ -61,7 +82,6 @@ export function ProductGallery({
             </div>
           )}
         </TabsContent>
-
         {videoUrl && (
           <TabsContent value='video' className='pt-4'>
             <AspectRatio ratio={16 / 9}>
@@ -85,7 +105,6 @@ export function ProductGallery({
             </AspectRatio>
           </TabsContent>
         )}
-
         {modelUrl && (
           <TabsContent value='model' className='pt-4'>
             <AspectRatio ratio={16 / 9}>
@@ -116,8 +135,9 @@ export function ProductGallery({
             className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
             onClick={() => setZoomed(!zoomed)}
           >
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             <img
-              src={images[selected] || images[0] || ''}
+              src={images[selected] |images[0] |''}
               alt='Zoomed view'
               className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
             />          </div>
@@ -127,4 +147,3 @@ export function ProductGallery({
   )
 }
 }
-;

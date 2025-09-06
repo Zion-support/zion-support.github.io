@@ -1,56 +1,57 @@
-import { useState } from 'react',;
-import { useRouter } from 'next/router',;
+<<<<<<< HEAD
+import { useState  } from 'react';
+import { useRouter } from 'next/router';
 export default function PostJobPage() {
-  const router = useRouter(),
-  const [title, setTitle] = useState(''),
-  const [description, setDescription] = useState(''),
-  const [category, setCategory] = useState(''),
-  const [skills, setSkills] = useState<string>(''),
-  const [budgetMinUsd, setBudgetMinUsd] = useState<string>(''),
-  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>(''),
-  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>(''),
-  const [clientEmail, setClientEmail] = useState(''),
-  const [isSubmitting, setIsSubmitting] = useState(false),
-  const [error, setError] = useState<string | null>(null),
-
+  const router = null;
+=======
+import { useState } from 'react';
+import { useRouter } from 'next/router';
+export default function PostJobPage() {
+  const router = useRouter()
+  const [title, setTitle] = useState('')
+  const [description, setDescription] = useState('')
+  const [category, setCategory] = useState('')
+  const [skills, setSkills] = useState<string>('')
+  const [budgetMinUsd, setBudgetMinUsd] = useState<string>('')
+  const [budgetMaxUsd, setBudgetMaxUsd] = useState<string>('')
+  const [deliveryDeadlineIso, setDeliveryDeadlineIso] = useState<string>('')
+  const [clientEmail, setClientEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault(),
-    setError(null),
-
-    if (!title || !description || !category || !clientEmail) {
-      setError('Please fill in all required fields.'),
+    e.preventDefault()
+    setError(null)
+    if (!title |!description |!category |!clientEmail) {
+      setError('Please fill in all required fields.')
       return
     }
-
     try {
-      setIsSubmitting(true),
+      setIsSubmitting(true)
       const res = await fetch('/api/jobs', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
-          title,
-          description,
-          category,
+          title
+          description
+          category
           requiredSkills: skills
             .split()
             .map((s) => s.trim())
-            .filter(Boolean),
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
-          clientEmail})}),
-
-      const data = await res.json(),
-      if (!res.ok) throw new Error(data.error || 'Failed to post job'),
-
+            .filter(Boolean)
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined
+          deliveryDeadlineIso: deliveryDeadlineIso |undefined
+          clientEmail})})
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error |'Failed to post job')
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
       router.push(`/client/dashboard`)
     } catch (err: any) {
-      setError(err.message || 'Something went wrong')
+      setError(err.message |'Something went wrong')
     } finally {
       setIsSubmitting(false)
     }
   }
-
   return (
     <div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
@@ -98,4 +99,4 @@ export default function PostJobPage() {
       </form>
     </div>
   )
-};
+}

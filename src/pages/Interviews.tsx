@@ -1,20 +1,27 @@
-import React, { useEffect, useState } from 'react'
-import { useInterviews } from '@/hooks/useInterviews'
-import { Interview } from '@/types/interview'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { SEO } from '@/components/SEO'
-import { ProtectedRoute } from '@/components/ProtectedRoute'
-import { InterviewCard } from '@/components/interviews/InterviewCard'
-import { Button } from '@/components/ui/button'
+
+import React, { useEffect, useState } from "react",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { InterviewCard } from "@/components/interviews/InterviewCard",
+import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from 'lucide-react'
-import { format, isAfter, parseISO, startOfDay } from 'date-fns'
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
+<<<<<<< HEAD
+  const { interviews, isLoading, fetchInterviews } = useInterviews();
+  const [activeTab, setActiveTab] = useState("upcoming");
+  useEffect(() => {
+    // Modified to handle Promise<Interview[]> return type
+    const loadInterviews = null;
+=======
   const { interviews, isLoading, fetchInterviews } = useInterviews()
   const [activeTab, setActiveTab] = useState('upcoming')
   useEffect(() => {function InterviewsContent() {
-  const { interviews, isLoading, fetchInterviews } = useInterviews(),
-  const [activeTab, setActiveTab] = useState("upcoming"),
-  
+  const { interviews, isLoading, fetchInterviews } = useInterviews()
+  const [activeTab, setActiveTab] = useState("upcoming")
   useEffect((,) => {
     // Modified to handle Promise<Interview[]> return type
     const loadInterviews = async () => {
@@ -44,7 +51,7 @@ function InterviewsContent() {
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date)
     return (
-      !isAfter(interviewDate, now) ||
+      !isAfter(interviewDate, now) |
       ['completed', 'declined', 'cancelled'].includes(interview.status)
     )
   })
@@ -90,6 +97,7 @@ function InterviewsContent() {
         </div>
       ))
   }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
       <SEO
@@ -105,7 +113,6 @@ function InterviewsContent() {
             </p>
           </div>
         </div>
-
         <Tabs
           defaultValue={activeTab}
           onValueChange={setActiveTab}
@@ -131,7 +138,6 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value='past'>Past</TabsTrigger>
           </TabsList>
-
           <TabsContent value='upcoming' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -151,7 +157,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='pending' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -172,7 +177,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-
           <TabsContent value='past' className='space-y-6'>
             {isLoading ? (
               <div className='flex justify-center py-12'>
@@ -202,4 +206,3 @@ export default function Interviews() {
   )
 }
 }
-;

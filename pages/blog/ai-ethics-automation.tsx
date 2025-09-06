@@ -1,6 +1,10 @@
-import Head from 'next/head';
+import Head from 'next/head',
 import Link from 'next/link';
-import React from 'react',
+<<<<<<< HEAD
+import React from 'react';
+=======
+import React from 'react'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export default function AIEthicsAutomation() {
   return (
     <>
@@ -22,7 +26,6 @@ export default function AIEthicsAutomation() {
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
-
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>
         <main className='container mx-auto px-6 py-12'>
           <div className='max-w-4xl mx-auto'>
@@ -34,7 +37,6 @@ export default function AIEthicsAutomation() {
                 ← Back to Blog
               </Link>
             </nav>
-
             <article className='prose prose-invert prose-lg max-w-none'>
               <header className='mb-12 text-center'>
                 <div className='flex items-center gap-3 justify-center mb-4'>
@@ -56,7 +58,6 @@ export default function AIEthicsAutomation() {
                   responsible development and deployment.
                 </p>
               </header>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-cyan-400'>
                   The Foundation of Ethical AI
@@ -89,7 +90,6 @@ export default function AIEthicsAutomation() {
                   </li>
                 </ul>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
                   Transparency and Explainability
@@ -122,7 +122,6 @@ export default function AIEthicsAutomation() {
                   oversight of autonomous systems.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-green-400'>
                   Bias Detection and Mitigation
@@ -152,7 +151,6 @@ export default function AIEthicsAutomation() {
                   groups.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
                   Privacy and Data Protection
@@ -178,7 +176,6 @@ export default function AIEthicsAutomation() {
                   individual privacy.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-purple-400'>
                   Human Oversight and Control
@@ -201,7 +198,6 @@ export default function AIEthicsAutomation() {
                   beyond human control.
                 </p>
               </section>
-
               <section className='mb-12'>
                 <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>
                   Continuous Ethical Evaluation
@@ -223,7 +219,6 @@ export default function AIEthicsAutomation() {
                   expectations.
                 </p>
               </section>
-
               <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>
                 <h3 className='text-xl font-semibold mb-4 text-cyan-400'>
                   Commitment to Ethical AI

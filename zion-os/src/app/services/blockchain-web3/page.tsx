@@ -1,6 +1,5 @@
-"use client",;
-export default function BlockchainWeb3Page() {;
-  return (;
+"use client";
+export default function BlockchainWeb3Page() {return (;
     <div className="space-y-8">;
       <div className="text-center space-y-4">;
         <h1 className="text-4xl font-bold">Blockchain & Web3 Solutions</h1>;
@@ -222,7 +221,6 @@ export default function BlockchainWeb3Page() {;
               Get Started
             </Link>
           </div>
-
           <div className="bg-gradient-to-r from-orange-600 to-purple-600 rounded-lg p-6 text-center text-white relative">
             <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-semibold">
               Most Popular
@@ -240,7 +238,6 @@ export default function BlockchainWeb3Page() {;
               Get Started
             </Link>
           </div>
-
           <div className="bg-zinc-900 border border-white/10 rounded-lg p-6 text-center">
             <h3 className="text-xl font-semibold mb-2">Enterprise</h3>
             <div className="text-3xl font-bold mb-4">Custom</div>
@@ -257,7 +254,6 @@ export default function BlockchainWeb3Page() {;
           </div>
         </div>
       </div>
-
       {/* Contact Section */}
       <div className="bg-gradient-to-r from-purple-600 to-orange-600 rounded-lg p-8 text-white text-center">
         <h2 className="text-2xl font-bold mb-4">Ready to Build the Future?</h2>

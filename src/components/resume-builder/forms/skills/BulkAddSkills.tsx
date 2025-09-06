@@ -1,8 +1,15 @@
-          
 
-}; import { useState } from 'react'
-import { Button } from '@/components/ui/button'
+import { useState  } from 'react';
+import { Button  } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react'
+<<<<<<< HEAD
+import { useResumeEnhancer  } from '@/hooks/useResumeEnhancer';
+import { useResume  } from '@/hooks/useResume';
+import { BulkAddSkillsProps  } from './types';
+import { Alert, AlertDescription  } from '@/components/ui/alert';
+import { Textarea } from '@/components/ui/textarea';
+export const BulkAddSkills = null;
+=======
 import { useState } from 'react'
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer'
 import { useResume } from '@/hooks/useResume'
@@ -15,11 +22,10 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
   const { enhanceContent, isEnhancing } = useResumeEnhancer()
   const { addSkill } = useResume()
   const handleCategorizeSkills = async () => {
-    if (!bulkSkills || bulkSkills.trim().length === 0) {
+    if (!bulkSkills |bulkSkills.trim().length === 0) {
       setError('Please enter some skills to categorize')
       return
     }
-    
     setError(null)
     try {
       const enhancedContent = await enhanceContent(
@@ -35,13 +41,12 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
             if (Array.isArray(skillsList)) {
               for (const skillName of skillsList as string[]) {
                 await addSkill(resumeId, {
-                  name: skillName,
-                  category: category,
+                  name: skillName
+                  category: category
                   proficiency: 3})
               }
             }
           }
-          
           // Reset the form and bulk input
           setBulkSkills('')
           // Refresh the skills
@@ -51,7 +56,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         }
       }
     } catch (err: any) {
-      setError(err.message || 'Failed to categorize skills')
+      setError(err.message |'Failed to categorize skills')
     }
   }
   return (
@@ -60,17 +65,16 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
       <div className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium" htmlFor="input-Enter multiple skills (comma separated)">Enter multiple skills (comma separated)</label>
-          <Textarea 
+          <Textarea
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value = {bulkSkills,}
             onChange = {(e,) => setBulkSkills(e.target.value),}
           />
         </div>
-
-        <Button 
+        <Button
           onClick = {handleCategorizeSkills,}
-          disabled = {isEnhancing || !bulkSkills.trim(),}
+          disabled = {isEnhancing |!bulkSkills.trim(),}
           className="gap-2"
         >
           {isEnhancing ? (
@@ -80,14 +84,13 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
           )}
           Categorize with AI
         </Button>
-        
         <p className="text-xs text-muted-foreground mt-1">
           AI will identify skills and categorize them automatically. This may take a moment to process.
         </p>
-        
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>
     </div>
   )
 }
 '"
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

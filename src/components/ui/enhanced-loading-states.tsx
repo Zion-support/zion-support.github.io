@@ -1,49 +1,62 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence  } from 'framer-motion';
+import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
+import { Button  } from '@/components/ui/button';
+import { Card, CardContent  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { cn  } from '@/lib/utils';
+=======
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Loader2,
-  AlertTriangle,
-  RefreshCw,
-  Wifi,
-  WifiOff,
-  Clock,
-  Zap,
+  Loader2
+  AlertTriangle
+  RefreshCw
+  Wifi
+  WifiOff
+  Clock
+  Zap
 } from 'lucide-react'; import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl'
-  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error'
-  className?: string
-  showText?: boolean
+  size?: 'sm' | 'md' | 'lg' | 'xl',
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
+  className?: string;
+  showText?: boolean;
   text?: string
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md',
-  variant = 'default',
-  className,
-  showText = false,
-  text = 'Loading...',
+<<<<<<< HEAD
+  size;
+=======
+  size = 'md'
+  variant = 'default'
+  className
+  showText = false
+  text = 'Loading...'
 }) => {  const sizeClasses = {
-    sm: 'h-4 w-4',
-    md: 'h-6 w-6',
-    lg: 'h-8 w-8',
-    xl: 'h-12 w-12',
+    sm: 'h-4 w-4'
+    md: 'h-6 w-6'
+    lg: 'h-8 w-8'
+    xl: 'h-12 w-12'
   }
   const variantClasses = {
-    default: 'text-muted-foreground',
-    primary: 'text-primary',
-    success: 'text-green-500',
-    warning: 'text-yellow-500',
-    error: 'text-red-500',
+    default: 'text-muted-foreground'
+    primary: 'text-primary'
+    success: 'text-green-500'
+    warning: 'text-yellow-500'
+    error: 'text-red-500'
   }
   return (
     <div className={cn('flex items-center gap-2', className)}>
       <Loader2
         className={cn(
-          'animate-spin',
-          sizeClasses[size],
+          'animate-spin'
+          sizeClasses[size]
           variantClasses[variant]
         )}
       />
@@ -55,19 +68,19 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 }
 //Progressive loading component useEffect ( () => {
   if (currentStep !== undefined) {
-  /> </div>) 
+  /> </div>)
 }<motion.div key= {
-  step.id 
+  step.id
 }className= {
-  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50') 
+  cn ('flex items-center gap-3 p-2 rounded-md', index === activeStep ? 'bg-primary/10' : 'opacity-50')
 }initial= {
   {
-  opacity: 0, x: -20 
+  opacity: 0, x: -20
 export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
-  steps,
-  currentStep = 0,
-  showProgress = true,
-  onComplete,
+  steps
+  currentStep = 0
+  showProgress = true
+  onComplete
 }) => {
   const [activeStep, setActiveStep] = useState(0)
   const progress = ((activeStep + 1) / steps.length) * 100
@@ -93,12 +106,11 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
           />
         </div>
       )}
-
       <div className='space-y-2'>
         {steps.map((step, index) => (          <motion.div
             key = {step.id,}
             className = {cn(
-              'flex items-center gap-3 p-2 rounded-md',
+              'flex items-center gap-3 p-2 rounded-md'
               index === activeStep ? 'bg-primary/10' : 'opacity-50'
             ),}
             initial={{ opacity: 0, x: -20 }}
@@ -128,22 +140,22 @@ interface SkeletonProps {
   animation?: 'pulse' | 'wave' | 'none'
   lines?: number
 export const Skeleton: React.FC<SkeletonProps> = ({
-  className,
-  variant = 'rectangular',
-  animation = 'pulse',
-  lines = 1,
+  className
+  variant = 'rectangular'
+  animation = 'pulse'
+  lines = 1
 }) => {
   const baseClasses = 'bg-muted rounded'
   const variantClasses = {
-    text: 'h-4 w-full',
-    circular: 'h-12 w-12 rounded-full',
-    rectangular: 'h-6 w-full',
-    card: 'h-48 w-full',
+    text: 'h-4 w-full'
+    circular: 'h-12 w-12 rounded-full'
+    rectangular: 'h-6 w-full'
+    card: 'h-48 w-full'
   }
   const animationClasses = {
-    pulse: 'animate-pulse',
-    wave: 'animate-bounce',
-    none: '',
+    pulse: 'animate-pulse'
+    wave: 'animate-bounce'
+    none: ''
   }
   if (variant === 'text' && lines > 1) {
     return (
@@ -151,10 +163,10 @@ export const Skeleton: React.FC<SkeletonProps> = ({
         {Array.from({ length: lines }).map((_, i) => (          <div
             key = {i,}
             className = {cn(
-              baseClasses,
-              variantClasses.text,
-              animationClasses[animation],
-              i === lines - 1 ? 'w-3/4' : 'w-full',
+              baseClasses
+              variantClasses.text
+              animationClasses[animation]
+              i === lines - 1 ? 'w-3/4' : 'w-full'
               className
             ),}
           />
@@ -162,29 +174,28 @@ export const Skeleton: React.FC<SkeletonProps> = ({
       </div>
     )
   }
-
       />
   )
 }
-//Enhanced error state component 
+//Enhanced error state component
 }return undefined
 }, [])
 const getErrorConfig = () => {
   switch (variant) {'
   case 'network': return {'
-  icon: isOnline ? Wifi : WifiOff,  title: title || (isOnline ? 'Connection Error' : 'No Internet Connection'), description: description || (isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.' 
+  icon: isOnline ? Wifi : WifiOff,  title: title |(isOnline ? 'Connection Error' : 'No Internet Connection'), description: description |(isOnline ? 'Unable to connect to our servers. Please check your connection.' : 'You appear to be offline. Please check your internet connection.'
 export const ErrorState: React.FC<ErrorStateProps> = ({
-  error,
-  title,
-  description,
-  action,
-  secondaryAction,
-  variant = 'generic',
-  showRetry = true,
-  retryCount = 0,
-  maxRetries = 3,
-  onRetry,
-  className,
+  error
+  title
+  description
+  action
+  secondaryAction
+  variant = 'generic'
+  showRetry = true
+  retryCount = 0
+  maxRetries = 3
+  onRetry
+  className
 }) => {
   const [isOnline, setIsOnline] = useState(true)
   useEffect(() => {
@@ -199,47 +210,46 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
         window.removeEventListener('offline', handleOffline)
       }
     }
-
     return undefined
   }, [])
   const getErrorConfig = () => {
     switch (variant) {
       case 'network':
         return {
-          icon: isOnline ? Wifi : WifiOff,
+          icon: isOnline ? Wifi : WifiOff
           title:
-            title || (isOnline ? 'Connection Error' : 'No Internet Connection'),
+            title |(isOnline ? 'Connection Error' : 'No Internet Connection')
           description:
-            description ||
+            description |
             (isOnline
               ? 'Unable to connect to our servers. Please check your connection.'
-              : 'You appear to be offline. Please check your internet connection.'),
-          color: 'text-orange-500',
+              : 'You appear to be offline. Please check your internet connection.')
+          color: 'text-orange-500'
         }
       case 'timeout':
         return {
-          icon: Clock,
-          title: title || 'Request Timeout',
+          icon: Clock
+          title: title |'Request Timeout'
           description:
-            description ||
-            'The request took too long to complete. Please try again.',
-          color: 'text-yellow-500',
+            description |
+            'The request took too long to complete. Please try again.'
+          color: 'text-yellow-500'
         }
       case 'permission':
         return {
-          icon: AlertTriangle,
-          title: title || 'Access Denied',
+          icon: AlertTriangle
+          title: title |'Access Denied'
           description:
-            description || "You don't have permission to access this resource.",
-          color: 'text-red-500',
+            description |"You don't have permission to access this resource."
+          color: 'text-red-500'
         }
       default:
         return {
-          icon: AlertTriangle,
-          title: title || 'Something went wrong',
+          icon: AlertTriangle
+          title: title |'Something went wrong'
           description:
-            description || 'An unexpected error occurred. Please try again.',
-          color: 'text-red-500',
+            description |'An unexpected error occurred. Please try again.'
+          color: 'text-red-500'
         }
     }
   }
@@ -259,7 +269,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
           <p className='text-muted-foreground mb-6 max-w-md mx-auto'>
             {config.description}
           </p>
-
           {error && process.env.NODE_ENV === 'development' && (
             <details className='mb-4 text-left'>
               <summary className='text-sm text-muted-foreground cursor-pointer'>
@@ -270,7 +279,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
               </pre>
             </details>
           )}
-
           <div className='flex flex-col sm:flex-row gap-2 justify-center'>
             {canRetry && (
               <Button onClick={onRetry} variant='default'>
@@ -278,7 +286,6 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
                 Try Again {retryCount > 0 && `(${retryCount}/${maxRetries})`}
               </Button>
             )}
-
             {action && (
               <Button
                 onClick={action.onClick}
@@ -287,14 +294,12 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
                 {action.label}
               </Button>
             )}
-
             {secondaryAction && (
               <Button onClick={secondaryAction.onClick} variant='ghost'>
                 {secondaryAction.label}
               </Button>
             )}
           </div>
-
           {!isOnline && (
             <div className='mt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground'>
               <WifiOff className='h-4 w-4' />
@@ -308,21 +313,21 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
 }
 <motion.div initial= {
   {
-  scale: 0.8, opacity: 0 
+  scale: 0.8, opacity: 0
 export const LoadingGrid: React.FC<LoadingGridProps> = ({
-  count = 8,
-  columns = 4,
-  variant = 'card',
-  className,
+  count = 8
+  columns = 4
+  variant = 'card'
+  className
 }) => {  const gridClasses = {
-    card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`,
-    list: 'space-y-4',
-    table: 'space-y-2',
+    card: `grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-${columns} gap-6`
+    list: 'space-y-4'
+    table: 'space-y-2'
   }
   const itemClasses = {
-    card: 'p-6 space-y-4',
-    list: 'p-4 space-y-3',
-    table: 'p-3 space-y-2',
+    card: 'p-6 space-y-4'
+    list: 'p-4 space-y-3'
+    table: 'p-3 space-y-2'
   }
   return (
     <div className={cn(gridClasses[variant], className)}>
@@ -341,7 +346,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </>
             )}
-
             {variant === 'list' && (
               <div className='flex gap-4'>
                 <Skeleton variant='circular' />
@@ -351,7 +355,6 @@ export const LoadingGrid: React.FC<LoadingGridProps> = ({
                 </div>
               </div>
             )}
-
             {variant === 'table' && (
               <div className='flex items-center gap-4'>
                 <Skeleton variant='text' className='h-4 w-1/4' />
@@ -373,10 +376,10 @@ interface PerformanceIndicatorProps {
   itemCount?: number
   className?: string
 export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
-  isLoading = false,
-  loadTime,
-  itemCount,
-  className,
+  isLoading = false
+  loadTime
+  itemCount
+  className
 }) => {
   const getPerformanceColor = (time: number) => {
     if (time < 100) return 'text-green-500'
@@ -391,7 +394,6 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       </Badge>
     )
   }
-
     >
       {loadTime && (
         <Badge variant='outline' className={getPerformanceColor(loadTime)}>
@@ -405,3 +407,4 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 }
 }
 }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

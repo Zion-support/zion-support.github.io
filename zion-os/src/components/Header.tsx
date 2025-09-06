@@ -1,37 +1,35 @@
-'use client',;
-import { useState, useEffect } from 'react',;
-import Link from 'next/link',;
-export default function Header() {;
-  const [isMenuOpen, setIsMenuOpen] = useState(false),;
-  const [isScrolled, setIsScrolled] = useState(false),;
+'use client';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+export default function Header() {const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {;
     const handleScroll = () => {;
       setIsScrolled(window.scrollY > 20);
-    },;
-    window.addEventListener('scroll', handleScroll),;
+    }
+    window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []),;
+  }, []);
   const navigation = [;
-    { name: 'Home', href: '/' },;
-    { name: 'About', href: '/about' },;
-    { name: 'Services', href: '/services' },;
-    { name: 'AI Solutions', href: '/ai-solutions' },;
-    { name: 'Quantum Computing', href: '/quantum-computing' },;
-    { name: 'Research & Development', href: '/research-development' },;
-    { name: 'Case Studies', href: '/case-studies' },;
-    { name: 'News', href: '/news' },;
-    { name: 'Contact', href: '/contact' }],;
+    { name: 'Home', href: '/' }
+    { name: 'About', href: '/about' }
+    { name: 'Services', href: '/services' }
+    { name: 'AI Solutions', href: '/ai-solutions' }
+    { name: 'Quantum Computing', href: '/quantum-computing' }
+    { name: 'Research & Development', href: '/research-development' }
+    { name: 'Case Studies', href: '/case-studies' }
+    { name: 'News', href: '/news' }
+    { name: 'Contact', href: '/contact' }];
   const services = [;
-    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' },;
-    { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' },;
-    { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' },;
-    { name: 'Business Intelligence', href: '/ai-business-intelligence' },;
-    { name: 'Content Generation', href: '/ai-content-generator' };
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems' }
+    { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform' }
+    { name: 'Enterprise Security', href: '/ai-powered-enterprise-security' }
+    { name: 'Business Intelligence', href: '/ai-business-intelligence' }
+    { name: 'Content Generation', href: '/ai-content-generator' }
     { name: 'Research Automation', href: '/ai-autonomous-research-assistant' }];
   return (;
     <header;
-      className={`sticky top-0 z-50 transition-all duration-300 ${;
-        isScrolled;
+      className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled;
           ? 'bg-black/90 backdrop-blur-xl border-b border-white/20 shadow-2xl';
           : 'bg-black/60 backdrop-blur-md border-b border-white/10';
       }`}
@@ -51,7 +49,6 @@ role=&quot;banner&quot;
               </span>
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className=&quot;hidden lg:flex items-center space-x-8&quot; role=&quot;navigation&quot; aria-label=&quot;Main menu&quot;>
             {navigation.map((item) => (
@@ -65,10 +62,9 @@ role=&quot;banner&quot;
 <span className=&quot;absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-blue-400 transition-all duration-300 group-hover:w-full&quot;></span>
               </Link>
             ))}
-;
             {/* Services Dropdown */}
 <div className=&quot;relative group&quot;>
-              <button 
+              <button
                 className=&quot;text-gray-300 hover:text-white transition-all duration-200 font-medium flex items-center group&quot;
                 aria-expanded=&quot;false&quot;
                 aria-haspopup=&quot;true&quot;
@@ -129,7 +125,7 @@ className=&quot;lg:hidden p-2 rounded-lg text-gray-400 hover:text-white hover:bg
         </div>;
         {/* Mobile Navigation */}
 {isMenuOpen && (
-          <div 
+          <div
             id=&quot;mobile-menu&quot;
             className=&quot;lg:hidden border-t border-white/10 animate-fade-in&quot;
             role=&quot;navigation&quot;

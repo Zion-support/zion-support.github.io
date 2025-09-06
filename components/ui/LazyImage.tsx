@@ -1,16 +1,33 @@
+<<<<<<< HEAD
+import React, { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+interface LazyImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  placeholder?: string;
+  threshold?: number;
+  width?: number;
+  height?: number
+}
+
+export const LazyImage: React.FC<LazyImageProps> = ({
+  src;
+  alt;
+  className;
+=======
 useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
-  return () => observer.disconnect () 
+  return () => observer.disconnect ()
 }, [threshold]);
-
-  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+',
-  threshold = 0.1,
-  width,
+  placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+'
+  threshold = 0.1
+  width
   height,}) => {export const LazyImage: React.FC<LazyImageProps> = ({
   src;
   alt;
-  className = '',
+  className = ''
   placeholder = 'data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjM0I0RjYwIi8+CjxwYXRoIGQ9Ik0zMCAzMEg3MFY3MEgzMFYzMFoiIGZpbGw9IiM2QjcyOEEiLz4KPC9zdmc+';
   threshold = 0.1;
   width;
@@ -18,7 +35,6 @@ useEffect ( () => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -28,31 +44,24 @@ useEffect ( () => {
         }
       },      { threshold }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);          observer.disconnect()
         }
-      };
+      }
       { threshold }
     );
-
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
-
     return () => observer.disconnect();
   }, [threshold]);
-
   const handleLoad = () => {
     setIsLoaded(true);  };    }
-
     return () => observer.disconnect()
   }, [threshold]);
-
   const handleLoad = () => {
     setIsLoaded(true)
-  };
-
+  }
   return (
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder */}
@@ -64,7 +73,6 @@ useEffect ( () => {
         }`}
         style={{ width, height }}
       />
-      
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -81,8 +89,7 @@ useEffect ( () => {
       )}
     </div>
   );
-};
-
+}
 export default LazyImage;          className="w-full h-full object-cover"
           loading="lazy"
           style={{ width, height }}
@@ -90,9 +97,8 @@ export default LazyImage;          className="w-full h-full object-cover"
       )}
     </div>
   );
-};
-
+}
 export default LazyImage;  )
-};
-
+}
 export default LazyImage;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

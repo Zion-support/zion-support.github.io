@@ -1,38 +1,61 @@
+<<<<<<< HEAD
+
+import { useState } from 'react';
+import { DropdownMenu;
+  DropdownMenuContent;
+  DropdownMenuItem;
+  DropdownMenuSeparator;
+  DropdownMenuTrigger 
+ } from '@/components/ui/dropdown-menu';
+import { Button  } from '@/components/ui/button';
+import { Input  } from '@/components/ui/input';
+import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle  } from '@/components/ui/dialog';
+import { Save, ChevronDown, Plus, Loader2  } from 'lucide-react';
+import { Resume  } from '@/types/resume';
+import { useResume } from '@/hooks/useResume';
+=======
 import { useState } from "react";
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
+  DropdownMenu
+  DropdownMenuContent
+  DropdownMenuItem
+  DropdownMenuSeparator
+  DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
-  Dialog,
-  DialogContent,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+  Dialog
+  DialogContent
+  DialogFooter
+  DialogHeader
+  DialogTitle
 } from "@/components/ui/dialog";
 import { Save, ChevronDown, Plus, Loader2 } from "lucide-react";
 import { Resume } from "@/types/resume";
 import { useResume } from "@/hooks/useResume";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
-  onResumeChange: (resumeId: string) => void;
+  onResumeChange: (resumeId: string) => void
 }
+<<<<<<< HEAD
 
+export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {
+=======
 export function ResumeVersionSelector({
-  currentResume,
-  onResumeChange,
+  currentResume
+  onResumeChange
 }: ResumeVersionSelectorProps) {
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
-  const [newResumeTitle, setNewResumeTitle] = useState("");
-  const [existingResumes, setExistingResumes] = useState<Resume[]>([]);
+  const [newResumeTitle, setNewResumeTitle] = useState('');
+  const [existingResumes, setExistingResumes] = useState<Resume[]>([]),
   const [isLoading, setIsLoading] = useState(false);
-
+<<<<<<< HEAD
+  const handleCreateNewVersion = null;
+=======
   const handleCreateNewVersion = async () => {
     if (newResumeTitle.trim()) {
       setIsLoading(true);
@@ -45,15 +68,15 @@ export function ResumeVersionSelector({
       }
       setIsLoading(false);
     }
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="flex items-center gap-2">
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="sm" className="gap-2">
-            {currentResume?.basic_info?.title || "My Resume"}
+            {currentResume?.basic_info?.title |"My Resume"}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
@@ -77,7 +100,6 @@ export function ResumeVersionSelector({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-
       <Dialog open={saveDialogOpen} onOpenChange={setSaveDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
@@ -96,7 +118,7 @@ export function ResumeVersionSelector({
             </Button>
             <Button
               onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
+              disabled={!newResumeTitle.trim() |isLoading}
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}

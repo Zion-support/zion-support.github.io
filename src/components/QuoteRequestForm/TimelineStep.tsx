@@ -3,24 +3,33 @@ import { Calendar } from '@/components/ui/calendar'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { CalendarIcon } from 'lucide-react'
+<<<<<<< HEAD
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { cn } from "@/lib/utils";
+import { QuoteFormData } from "@/types/quotes";
+=======
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
+  Popover
+  PopoverContent
+  PopoverTrigger
 } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 import { QuoteFormData } from '@/types/quotes'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface TimelineStepProps {
-  formData: QuoteFormData
+  formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
+<<<<<<< HEAD
+    <div className;
+                        !formData.endDate && "text-zion-slate-light"
+=======
     <div className='space-y-6'>
       <div>
         <h3 className='text-xl font-semibold text-white mb-4'>
           When do you need this?
         </h3>
-
         <div className='space-y-4'>
           <div className='flex items-center space-x-4'>
             <div
@@ -35,7 +44,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                 I have specific start and end dates
               </p>
             </div>
-
             <div
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData.timeline === 'flexible'
@@ -50,7 +58,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
               </p>
             </div>
           </div>
-
           {formData.timeline === 'fixed' && (
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mt-6'>
               <div>
@@ -62,7 +69,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant='outline'
                       className={cn(
-                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark',
+                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
                         !formData.startDate && 'text-zion-slate-light'
                       )}                    >
                       <CalendarIcon className='mr-2 h-4 w-4' />
@@ -86,7 +93,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   </PopoverContent>
                 </Popover>
               </div>
-
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
@@ -96,7 +102,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant='outline'
                       className={cn(
-                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark',
+                        'w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark'
                         !formData.endDate && 'text-zion-slate-light'
                       )}                    >
                       <CalendarIcon className='mr-2 h-4 w-4' />
@@ -104,6 +110,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                         format(formData.endDate, 'PPP')
                       ) : (
                         <span>Pick a date</span>
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
                       )}
                     </Button>
                   </PopoverTrigger>
@@ -118,7 +125,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       initialFocus
                       className='p-3 pointer-events-auto'
                       disabled={date =>
-                        date < (formData.startDate || new Date())
+                        date < (formData.startDate |new Date())
                       }                    />
                   </PopoverContent>
                 </Popover>

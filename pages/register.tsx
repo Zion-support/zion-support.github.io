@@ -3,53 +3,47 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Eye, EyeOff, Mail, Lock, User, ArrowRight, Check } from "lucide-react";
 import Layout from "../components/Layout";
-
 export default function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    password: "",
-    confirmPassword: "",
-    company: "",
-    agreeToTerms: false,
-    subscribeNewsletter: false,
+    firstName: ""
+    lastName: ""
+    email: ""
+    password: ""
+    confirmPassword: ""
+    company: ""
+    agreeToTerms: false
+    subscribeNewsletter: false
   });
-
   const [passwordRequirements, setPasswordRequirements] = useState({
-    length: false,
-    uppercase: false,
-    lowercase: false,
-    number: false,
-    special: false,
+    length: false
+    uppercase: false
+    lowercase: false
+    number: false
+    special: false
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle registration logic here
-  };
-
+  }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
-      ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      ...prev
+      [name]: type === "checkbox" ? checked : value
     }));
-
     // Check password requirements
     if (name === "password") {
       setPasswordRequirements({
-        length: value.length >= 8,
-        uppercase: /[A-Z]/.test(value),
-        lowercase: /[a-z]/.test(value),
-        number: /\d/.test(value),
-        special: /[!@#$%^&*(),.?":{}|<>]/.test(value),
+        length: value.length >= 8
+        uppercase: /[A-Z]/.test(value)
+        lowercase: /[a-z]/.test(value)
+        number: /\d/.test(value)
+        special: /[!@#$%^&*(),.?":{}|<>]/.test(value)
       });
     }
-  };
-
+  }
   const isPasswordValid = Object.values(passwordRequirements).every(Boolean);
   const isFormValid =
     formData.firstName &&
@@ -60,7 +54,6 @@ export default function RegisterPage() {
     formData.password === formData.confirmPassword &&
     isPasswordValid &&
     formData.agreeToTerms;
-
   return (
     <Layout
       title="Register - Zion Tech Group"
@@ -85,7 +78,6 @@ export default function RegisterPage() {
               Join Zion Tech Group and start your digital transformation journey
             </p>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -117,7 +109,6 @@ export default function RegisterPage() {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label
                     htmlFor="lastName"
@@ -137,7 +128,6 @@ export default function RegisterPage() {
                   />
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="email"
@@ -162,7 +152,6 @@ export default function RegisterPage() {
                   />
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="company"
@@ -180,7 +169,6 @@ export default function RegisterPage() {
                   placeholder="Your company name"
                 />
               </div>
-
               <div>
                 <label
                   htmlFor="password"
@@ -215,7 +203,6 @@ export default function RegisterPage() {
                     )}
                   </button>
                 </div>
-
                 {/* Password Requirements */}
                 <div className="mt-2 space-y-1">
                   {Object.entries(passwordRequirements).map(
@@ -236,11 +223,10 @@ export default function RegisterPage() {
                           {key === "special" && "One special character"}
                         </span>
                       </div>
-                    ),
+                    )
                   )}
                 </div>
               </div>
-
               <div>
                 <label
                   htmlFor="confirmPassword"
@@ -282,7 +268,6 @@ export default function RegisterPage() {
                     </p>
                   )}
               </div>
-
               <div className="space-y-4">
                 <div className="flex items-center">
                   <input
@@ -314,7 +299,6 @@ export default function RegisterPage() {
                     </Link>
                   </label>
                 </div>
-
                 <div className="flex items-center">
                   <input
                     id="subscribeNewsletter"
@@ -332,7 +316,6 @@ export default function RegisterPage() {
                   </label>
                 </div>
               </div>
-
               <div>
                 <button
                   type="submit"
@@ -345,7 +328,6 @@ export default function RegisterPage() {
                   Create account
                 </button>
               </div>
-
               <div className="text-center">
                 <p className="text-sm text-gray-300">
                   Already have an account?{" "}

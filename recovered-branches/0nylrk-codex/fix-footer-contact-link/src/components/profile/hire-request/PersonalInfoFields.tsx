@@ -1,17 +1,22 @@
+<<<<<<< HEAD
+
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+=======
 import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormMessage,
+  FormField
+  FormItem
+  FormLabel
+  FormControl
+  FormMessage
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { UseFormReturn } from "react-hook-form";
 import { FormValues } from "./useHireRequestForm";
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
 }
-
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (
     <>
@@ -32,7 +37,6 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
           </FormItem>
         )}
       />
-
       <FormField
         control={form.control}
         name="requesterEmail"

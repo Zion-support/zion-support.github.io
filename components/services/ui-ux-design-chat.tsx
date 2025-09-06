@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const UiUxDesignChat: NextPage;
+=======
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -8,7 +14,6 @@ const UiUxDesignChat: NextPage = () => {
         <title>UiUxDesignChat - Zion Tech Solutions</title>
         <meta name="description" content="UiUxDesignChat service" />{" "}
       </Head>
-
       <main>
         <h1>UiUxDesignChat</h1>
         <p>Service details coming soon...</p>
@@ -16,6 +21,6 @@ const UiUxDesignChat: NextPage = () => {
       </main>
     </div>
   );
-};
-
+}
 export default UiUxDesignChat;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

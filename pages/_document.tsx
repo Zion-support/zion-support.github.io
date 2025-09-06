@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import { Html, Head, Main, NextScript } from 'next/document';
 
+=======
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 export default function Document() {
   return (
     <Html lang="en">
@@ -18,5 +22,9 @@ export default function Document() {
         <NextScript />
       </body>
     </Html>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4

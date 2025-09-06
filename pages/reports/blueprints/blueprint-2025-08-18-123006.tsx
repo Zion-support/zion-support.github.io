@@ -1,77 +1,73 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-
 const Blueprint20250818123006: React.FC = () => {
   const blueprintDetails = {
-    id: 'blueprint-2025-08-18-123006',
-    name: 'Edge Computing Network Blueprint',
-    description: 'Distributed computing architecture for improved global performance',
-    category: 'Infrastructure',
-    status: 'development',
-    complexity: 'critical',
-    lastUpdated: '2025-08-18 12:30:06',
+    id: 'blueprint-2025-08-18-123006'
+    name: 'Edge Computing Network Blueprint'
+    description: 'Distributed computing architecture for improved global performance'
+    category: 'Infrastructure'
+    status: 'development'
+    complexity: 'critical'
+    lastUpdated: '2025-08-18 12:30:06'
     version: '1.5.0'
-  };
-
+  }
   const edgeNodes = [
     {
-      name: 'North America',
-      description: 'Primary edge node with high availability',
-      status: 'active',
-      health: 'excellent',
+      name: 'North America'
+      description: 'Primary edge node with high availability'
+      status: 'active'
+      health: 'excellent'
       latency: '15ms'
-    },
+    }
     {
-      name: 'Europe',
-      description: 'Secondary edge node for EU traffic',
-      status: 'active',
-      health: 'excellent',
+      name: 'Europe'
+      description: 'Secondary edge node for EU traffic'
+      status: 'active'
+      health: 'excellent'
       latency: '25ms'
-    },
+    }
     {
-      name: 'Asia Pacific',
-      description: 'Edge node for APAC region',
-      status: 'active',
-      health: 'excellent',
+      name: 'Asia Pacific'
+      description: 'Edge node for APAC region'
+      status: 'active'
+      health: 'excellent'
       latency: '35ms'
-    },
+    }
     {
-      name: 'South America',
-      description: 'Edge node for LATAM region',
-      status: 'deploying',
-      health: 'good',
+      name: 'South America'
+      description: 'Edge node for LATAM region'
+      status: 'deploying'
+      health: 'good'
       latency: '45ms'
     }
   ];
-
   const features = [
     {
-      feature: 'Global Load Balancing',
-      description: 'Intelligent traffic routing based on location and performance',
-      benefit: 'Reduced latency and improved user experience',
+      feature: 'Global Load Balancing'
+      description: 'Intelligent traffic routing based on location and performance'
+      benefit: 'Reduced latency and improved user experience'
       status: 'implemented'
-    },
+    }
     {
-      feature: 'Content Delivery',
-      description: 'Edge caching and content distribution',
-      benefit: 'Faster content delivery worldwide',
+      feature: 'Content Delivery'
+      description: 'Edge caching and content distribution'
+      benefit: 'Faster content delivery worldwide'
       status: 'implemented'
-    },
+    }
     {
-      feature: 'Failover Management',
-      description: 'Automatic failover between edge nodes',
-      benefit: 'High availability and reliability',
+      feature: 'Failover Management'
+      description: 'Automatic failover between edge nodes'
+      benefit: 'High availability and reliability'
       status: 'implemented'
-    },
+    }
     {
-      feature: 'Performance Monitoring',
-      description: 'Real-time monitoring of edge node performance',
-      benefit: 'Proactive issue detection and resolution',
+      feature: 'Performance Monitoring'
+      description: 'Real-time monitoring of edge node performance'
+      benefit: 'Proactive issue detection and resolution'
       status: 'implemented'
     }
   ];
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-400';
@@ -79,8 +75,7 @@ const Blueprint20250818123006: React.FC = () => {
       case 'deploying': return 'text-yellow-400';
       default: return 'text-gray-400';
     }
-  };
-
+  }
   const getHealthColor = (health: string) => {
     switch (health) {
       case 'excellent': return 'bg-green-500/20 text-green-400';
@@ -89,8 +84,7 @@ const Blueprint20250818123006: React.FC = () => {
       case 'critical': return 'bg-red-500/20 text-red-400';
       default: return 'bg-gray-500/20 text-gray-400';
     }
-  };
-
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white">
       <Head>
@@ -98,7 +92,6 @@ const Blueprint20250818123006: React.FC = () => {
         <meta name="description" content="Distributed computing architecture for improved global performance" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-
       <div className="container mx-auto px-4 py-8">
         {/* Header */}
         <div className="mb-8">
@@ -112,7 +105,6 @@ const Blueprint20250818123006: React.FC = () => {
             {blueprintDetails.description}
           </p>
         </div>
-
         {/* Blueprint Overview */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -136,7 +128,6 @@ const Blueprint20250818123006: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Recently updated</p>
           </div>
         </div>
-
         {/* Edge Nodes */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Edge Computing Nodes</h2>
@@ -160,7 +151,6 @@ const Blueprint20250818123006: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Features */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Key Features</h2>
@@ -179,7 +169,6 @@ const Blueprint20250818123006: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Network Architecture */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Network Architecture</h2>
@@ -188,8 +177,8 @@ const Blueprint20250818123006: React.FC = () => {
               <div className="text-6xl font-bold text-purple-400 mb-4">🌐</div>
               <h3 className="text-xl font-semibold mb-2 text-white">Global Edge Network</h3>
               <p className="text-gray-300 mb-6">
-                Our edge computing network provides distributed computing capabilities across 
-                multiple geographic regions, ensuring low-latency access and high availability 
+                Our edge computing network provides distributed computing capabilities across
+                multiple geographic regions, ensuring low-latency access and high availability
                 for users worldwide.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
@@ -213,7 +202,6 @@ const Blueprint20250818123006: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Technology Stack */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Technology Stack</h2>
@@ -242,22 +230,21 @@ const Blueprint20250818123006: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Navigation */}
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
+          <Link
             href="/reports/blueprints"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
           >
             All Blueprints
           </Link>
-          <Link 
+          <Link
             href="/reports/blueprints/comprehensive-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
           >
             Comprehensive Redundancy
           </Link>
-          <Link 
+          <Link
             href="/reports/blueprints/ultimate-redundancy"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-red-400/50"
           >
@@ -267,6 +254,5 @@ const Blueprint20250818123006: React.FC = () => {
       </div>
     </div>
   );
-};
-
+}
 export default Blueprint20250818123006;

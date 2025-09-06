@@ -1,52 +1,60 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
+<<<<<<< HEAD
+import { motion  } from 'framer-motion';
+import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target  } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+=======
 import { motion } from 'framer-motion';
 import {
-  Search,
-  Filter,
-  Star,
-  TrendingUp,
-  Zap,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  Atom,
-  Sparkles,
-  Target,;
+  Search
+  Filter
+  Star
+  TrendingUp
+  Zap
+  Brain
+  Cpu
+  Shield
+  Rocket
+  Globe
+  Database
+  Lock
+  Cloud
+  Atom
+  Sparkles
+  Target;
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionary2026Services } from '../data/revolutionary-2026-services';
-import { emergingTech2026Services } from '../data/emerging-tech-2026-services';
+import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
+import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
 import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-services';
 export default function ServicesShowcase2026() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
-
   // Combine all 2026 services
+<<<<<<< HEAD
+  const allServices = null;
+                emerging technologies, and comprehensive IT solutions
+=======
   const allServices = [
-    ...revolutionary2026Services,
-    ...emergingTech2026Services,
+    ...revolutionary2026Services
+    ...emergingTech2026Services
     ...comprehensiveIT2026Services,    ...revolutionary2026Services;
     ...emergingTech2026Services;
     ...comprehensiveIT2026Services
   ];
-
   // Filter and sort services
   const filteredServices = allServices
     .filter(service => {
       const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory =
-        selectedCategory === 'all' ||
+        selectedCategory === 'all' |
         service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory;    })
     .sort((a, b) => {
@@ -60,10 +68,10 @@ export default function ServicesShowcase2026() {
         case 'customers':
           return b.customers - a.customers;
         default:
-          return a.name.localeCompare(b.name);      }      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          return a.name.localeCompare(b.name);      }      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) |
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
                            service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory
     .sort((a, b) => {
       switch (sortBy) {
@@ -80,61 +88,58 @@ export default function ServicesShowcase2026() {
           return a.name.localeCompare(b.name);        default: return a.name.localeCompare(b.name)
       }
     });
-
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
+    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length }
     {
-      id: 'AI',
-      name: 'AI & Machine Learning',
-      icon: Brain,
-      count: allServices.filter(s => s.category.includes('AI')).length,
-    },
+      id: 'AI'
+      name: 'AI & Machine Learning'
+      icon: Brain
+      count: allServices.filter(s => s.category.includes('AI')).length
+    }
     {
-      id: 'Quantum',
-      name: 'Quantum Computing',
-      icon: Atom,
-      count: allServices.filter(s => s.category.includes('Quantum')).length,
-    },
+      id: 'Quantum'
+      name: 'Quantum Computing'
+      icon: Atom
+      count: allServices.filter(s => s.category.includes('Quantum')).length
+    }
     {
-      id: 'Emerging',
-      name: 'Emerging Technology',
-      icon: Sparkles,
-      count: allServices.filter(s => s.category.includes('Emerging')).length,
-    },
+      id: 'Emerging'
+      name: 'Emerging Technology'
+      icon: Sparkles
+      count: allServices.filter(s => s.category.includes('Emerging')).length
+    }
     {
-      id: 'IT',
-      name: 'IT & Infrastructure',
-      icon: Shield,
+      id: 'IT'
+      name: 'IT & Infrastructure'
+      icon: Shield
       count: allServices.filter(
-        s => s.category.includes('IT') || s.category.includes('Infrastructure')
-      ).length,
-    },
+        s => s.category.includes('IT') |s.category.includes('Infrastructure')
+      ).length
+    }
     {
-      id: 'Autonomous',
-      name: 'Autonomous Systems',
-      icon: Target,
-      count: allServices.filter(s => s.category.includes('Autonomous')).length,
-    },
+      id: 'Autonomous'
+      name: 'Autonomous Systems'
+      icon: Target
+      count: allServices.filter(s => s.category.includes('Autonomous')).length
+    }
     {
-      id: 'Cloud',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
+      id: 'Cloud'
+      name: 'Cloud & DevOps'
+      icon: Cloud
       count: allServices.filter(
-        s => s.category.includes('Cloud') || s.category.includes('DevOps')
-      ).length,
-    },  ];    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
-    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-
+        s => s.category.includes('Cloud') |s.category.includes('DevOps')
+      ).length
+    },  ];    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length }
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length }
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') |s.category.includes('Infrastructure')).length }
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length }
+    { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') |s.category.includes('DevOps')).length }
   const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
-
+    mobile: '+1 302 464 0950'
+    email: 'kleber@ziontechgroup.com'
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+    website: 'https://ziontechgroup.com'
     >
       <div className='min-h-screen'>
         <Head>
@@ -178,10 +183,8 @@ export default function ServicesShowcase2026() {
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
-
         {/* Navigation */}
         <UltraAdvancedNavigation />
-
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -197,11 +200,10 @@ export default function ServicesShowcase2026() {
                 </span>
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
-                Discover the future of technology with our revolutionary AI,
+                Discover the future of technology with our revolutionary AI
                 quantum computing, emerging technologies, and comprehensive IT
                 solutions
               </p>
-
               {/* Service Statistics */}
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
                 <div className='text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm'>
@@ -237,8 +239,8 @@ export default function ServicesShowcase2026() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
               </p>
-              
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center p-4 bg-gray-800/30 rounded-xl border border-gray-700/50 backdrop-blur-sm">
@@ -261,7 +263,6 @@ export default function ServicesShowcase2026() {
             </motion.div>
           </div>
         </section>
-
         {/* Search and Filter Section */}
         <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -277,7 +278,6 @@ export default function ServicesShowcase2026() {
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                  />
                 </div>
-
                 {/* Category Filter */}                {/* Search */}
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -289,7 +289,6 @@ export default function ServicesShowcase2026() {
                     className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
-
                 {/* Category Filter */}
                 <div className='relative'>
                   <Filter className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -309,7 +308,6 @@ export default function ServicesShowcase2026() {
                     ))}
                   </select>
                 </div>
-
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -329,7 +327,6 @@ export default function ServicesShowcase2026() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
@@ -360,26 +357,21 @@ export default function ServicesShowcase2026() {
                         </span>
                       )}
                     </div>
-
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
-
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                      {service.tagline}
                     </p>
-
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
                       {service.name}
                     </h3>
-
                     {/* Tagline */}
                     <p className='text-gray-300 text-sm mb-4'>                    <p className="text-gray-300 text-sm mb-4">
                       {service.tagline}
                     </p>
-
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
@@ -396,22 +388,18 @@ export default function ServicesShowcase2026() {
                           ({service.reviews})
                         </span>                      </div>
                     </div>
-
                     {/* Description */}
                     <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                      {service.description}
                     </p>
-
                     {/* Features */}                      <div className="flex items-center space-x-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
                         <span className="text-white text-sm">{service.rating}</span>
                         <span className="text-gray-400 text-sm">({service.reviews})</span>
                     </div>
-
                     {/* Description */}
                     <p className='text-gray-400 text-sm mb-4 line-clamp-3'>                    <p className="text-gray-400 text-sm mb-4 line-clamp-3">
                       {service.description}
                     </p>
-
                     {/* Features */}
                     <div className='mb-4'>
                       <h4 className='text-white font-semibold mb-2 text-sm'>
@@ -433,7 +421,6 @@ export default function ServicesShowcase2026() {
                         ))}
                       </ul>
                     </div>
-
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
@@ -446,7 +433,6 @@ export default function ServicesShowcase2026() {
                       <span className="text-xs text-gray-500">
                       </span>
                     </div>
-
                     {/* CTA Button */}
                     <a
                       href={service.link}
@@ -458,7 +444,6 @@ export default function ServicesShowcase2026() {
                 </motion.div>
               ))}
             </div>
-
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -480,7 +465,6 @@ export default function ServicesShowcase2026() {
             )}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
@@ -499,7 +483,6 @@ export default function ServicesShowcase2026() {
                 Join thousands of companies already leveraging our revolutionary
                 2026 AI, quantum, and IT solutions
               </p>
-
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3 text-cyan-300'>
                   <span className='text-2xl'>📱</span>
@@ -516,7 +499,6 @@ export default function ServicesShowcase2026() {
                   </span>
                 </div>
               </div>
-
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
@@ -530,7 +512,6 @@ export default function ServicesShowcase2026() {
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of companies already leveraging our revolutionary 2026 AI, quantum, and IT solutions
               </p>
-              
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 text-cyan-300">
                   <span className="text-2xl">📱</span>
@@ -545,7 +526,6 @@ export default function ServicesShowcase2026() {
                   <span className="font-semibold text-sm">{contactInfo.address}</span>
                 </div>
               </div>
-
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"

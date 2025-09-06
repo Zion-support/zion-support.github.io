@@ -1,14 +1,17 @@
+
 import React from "react";
 import { Star } from "lucide-react";
+<<<<<<< HEAD
+export const CommunityTrust: React.FC;
+=======
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof
   const stats = [
-    { value: "4.8", label: "App Store Rating" },
-    { value: "50K+", label: "Downloads" },
-    { value: "96%", label: "User Satisfaction" },
-    { value: "12M+", label: "Matches Made" },
+    { value: "4.8", label: "App Store Rating" }
+    { value: "50K+", label: "Downloads" }
+    { value: "96%", label: "User Satisfaction" }
+    { value: "12M+", label: "Matches Made" }
   ];
-
   return (
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -22,7 +25,6 @@ export const CommunityTrust: React.FC = () => {
             mobile app to connect, hire, and work
           </p>
         </div>
-
         {/* Stats Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-16">
           {stats.map((stat, index) => (
@@ -37,7 +39,6 @@ export const CommunityTrust: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Rating display */}
         <div className="max-w-3xl mx-auto bg-zion-blue-dark border border-zion-purple/30 rounded-lg p-6">
           <div className="flex justify-center mb-4">
@@ -61,4 +62,5 @@ export const CommunityTrust: React.FC = () => {
       </div>
     </section>
   );
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

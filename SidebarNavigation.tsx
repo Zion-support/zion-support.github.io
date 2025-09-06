@@ -1,16 +1,13 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Home, Settings, User, LogOut } from 'lucide-react';
-
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },
-    { name: 'Settings', href: '/settings', icon: Settings },
+    { name: 'Settings', href: '/settings', icon: Settings }
   ];
-
   return (
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
@@ -23,7 +20,6 @@ const SidebarNavigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         <nav className="mt-4">
           {navigationItems.map((item) => (
             <Link
@@ -36,7 +32,6 @@ const SidebarNavigation: React.FC = () => {
             </Link>
           ))}
         </nav>
-
         <div className="absolute bottom-4 left-4 right-4">
           <button className="flex items-center w-full p-4 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
             <LogOut className="w-6 h-6" />
@@ -44,7 +39,6 @@ const SidebarNavigation: React.FC = () => {
           </button>
         </div>
       </div>
-
       {/* Main content */}
       <div className="flex-1 p-8">
         <h1 className="text-2xl font-bold text-gray-800">Dashboard</h1>
@@ -52,6 +46,5 @@ const SidebarNavigation: React.FC = () => {
       </div>
     </div>
   );
-};
-
+}
 export default SidebarNavigation;

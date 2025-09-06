@@ -1,20 +1,42 @@
+<<<<<<< HEAD
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
+import { Badge  } from '@/components/ui/badge';
+import { Button  } from '@/components/ui/button';
+import { Progress  } from '@/components/ui/progress';
+import { Activity, Zap, Package, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, RefreshCw, BarChart3, Clock, Globe } from 'lucide-react'
+import { bundleMonitor  } from '@/utils/bundleMonitor';
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
+interface PerformanceMetrics {
+  bundleSize: number;
+  loadTime: number;
+  performanceScore: number;
+  chunkCount: number;
+  cacheHitRate: number;
+  fcp: number, // First Contentful Paint
+  lcp: number, // Largest Contentful Paint
+  cls: number, // Cumulative Layout Shift
+  fid: number, // First Input Delay
+}
+
+=======
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Progress } from '@/components/ui/progress'
 import {
-  Activity,
-  Zap,
-  Package,
-  TrendingUp,
-  TrendingDown,
-  AlertTriangle,
-  CheckCircle,
-  RefreshCw,
-  BarChart3,
-  Clock,
-  Globe,
+  Activity
+  Zap
+  Package
+  TrendingUp
+  TrendingDown
+  AlertTriangle
+  CheckCircle
+  RefreshCw
+  BarChart3
+  Clock
+  Globe
 } from 'lucide-react'
 import { bundleMonitor } from '@/utils/bundleMonitor'
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
@@ -28,14 +50,22 @@ interface PerformanceMetrics {
   lcp: number; // Largest Contentful Paint
   cls: number; // Cumulative Layout Shift
   fid: number; // First Input Delay
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface BundleChunk {
-  name: string
-  size: number
-  loadTime: number
-  cached: boolean
+  name: string;
+  size: number;
+  loadTime: number;
+  cached: boolean;
   type: string
 export function PerformanceDashboard() {
+<<<<<<< HEAD
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
+  const [chunks, setChunks] = useState<BundleChunk[]>([]),
+  const [isLoading, setIsLoading] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState<Date | null>(null),
+
+  const collectMetrics = null;
+=======
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null)
   const [chunks, setChunks] = useState<BundleChunk[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -52,9 +82,9 @@ export function PerformanceDashboard() {
         bundleSize: 0, // This would need to be calculated separately
         loadTime: navigationEntry
           ? navigationEntry.loadEventEnd - navigationEntry.fetchStart
-          : 0,
+          : 0
         performanceScore: 0, // This would need to be calculated
-        chunkCount: resourceCount,
+        chunkCount: resourceCount
         cacheHitRate: 0, // This would need to be calculated from resource timing
         fcp: 0, // First Contentful Paint - would need Performance Observer
         lcp: 0, // Largest Contentful Paint - would need Performance Observer
@@ -63,25 +93,25 @@ export function PerformanceDashboard() {
       }
       setMetrics(performanceMetrics)
       logInfo('Performance metrics collected successfully', {
-        loadTime: performanceMetrics.loadTime,
-        resourceCount: performanceMetrics.chunkCount,
+        loadTime: performanceMetrics.loadTime
+        resourceCount: performanceMetrics.chunkCount
       })
     } catch (error) {
       logErrorToProduction('Failed to collect performance metrics', error, {
-        component: 'PerformanceDashboard',
-        action: 'collectMetrics',
+        component: 'PerformanceDashboard'
+        action: 'collectMetrics'
       })
       // Set fallback metrics
       setMetrics({
-        bundleSize: 0,
-        loadTime: 0,
-        performanceScore: 0,
-        chunkCount: 0,
-        cacheHitRate: 0,
-        fcp: 0,
-        lcp: 0,
-        cls: 0,
-        fid: 0,
+        bundleSize: 0
+        loadTime: 0
+        performanceScore: 0
+        chunkCount: 0
+        cacheHitRate: 0
+        fcp: 0
+        lcp: 0
+        cls: 0
+        fid: 0
       })
     }
   }
@@ -96,7 +126,6 @@ export function PerformanceDashboard() {
       vitals.fcp = navigation.loadEventEnd - navigation.loadEventStart
       vitals.lcp = navigation.loadEventEnd - navigation.fetchStart
     }
-
     // Use PerformanceObserver for more accurate metrics
     if ('PerformanceObserver' in window) {
       return new Promise(resolve => {
@@ -110,7 +139,7 @@ export function PerformanceDashboard() {
               vitals.lcp = entry.startTime
             }
             if (entry.entryType === 'layout-shift') {
-              vitals.cls = (vitals.cls || 0) + (entry as any).value
+              vitals.cls = (vitals.cls |0) + (entry as any).value
             }
             if (entry.entryType === 'first-input') {
               vitals.fid = (entry as any).processingStart - entry.startTime
@@ -119,11 +148,11 @@ export function PerformanceDashboard() {
         })
         observer.observe({
           entryTypes: [
-            'paint',
-            'largest-contentful-paint',
-            'layout-shift',
-            'first-input',
-          ],
+            'paint'
+            'largest-contentful-paint'
+            'layout-shift'
+            'first-input'
+          ]
         })
         // Resolve after a short delay
         setTimeout(() => {
@@ -131,7 +160,6 @@ export function PerformanceDashboard() {
           resolve(vitals)
         }, 2000)
       }) }
-
     return vitals
   }
   const collectChunkData = async (): Promise<BundleChunk[]> => {
@@ -145,11 +173,11 @@ export function PerformanceDashboard() {
     )
     return scriptEntries
       .map(entry => ({
-        name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
-        size: entry.transferSize || entry.encodedBodySize || 0,
-        loadTime: entry.responseEnd - entry.requestStart,
-        cached: entry.transferSize === 0,
-        type: categorizeChunk(entry.name),
+        name: entry.name.split('/').pop()?.split('?')[0] |'unknown'
+        size: entry.transferSize |entry.encodedBodySize |0
+        loadTime: entry.responseEnd - entry.requestStart
+        cached: entry.transferSize === 0
+        type: categorizeChunk(entry.name)
       }))
       .sort((a, b) => b.size - a.size)
   }
@@ -183,6 +211,7 @@ export function PerformanceDashboard() {
     const interval = setInterval(collectMetrics, 30000); // Update every 30 seconds
     return () => clearInterval(interval)
   }, [])
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className='space-y-6'>
       {/* Header */}
@@ -201,7 +230,6 @@ export function PerformanceDashboard() {
           {isLoading ? 'Collecting...' : 'Refresh'}
         </Button>
       </div>
-
       {/* Performance Score */}
       <Card>
         <CardHeader>
@@ -235,7 +263,6 @@ export function PerformanceDashboard() {
                   <Progress value={metrics.performanceScore} className='h-2' />
                 </div>
               </div>
-
               {lastUpdated && (
                 <p className='text-sm text-muted-foreground'>
                   Last updated: {lastUpdated.toLocaleString()}
@@ -252,7 +279,6 @@ export function PerformanceDashboard() {
           )}
         </CardContent>
       </Card>
-
       {/* Metrics Grid */}
       {metrics && (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
@@ -270,7 +296,6 @@ export function PerformanceDashboard() {
               </p>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className='p-4'>
               <div className='flex items-center gap-2'>
@@ -285,7 +310,6 @@ export function PerformanceDashboard() {
               </p>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className='p-4'>
               <div className='flex items-center gap-2'>
@@ -302,7 +326,6 @@ export function PerformanceDashboard() {
               </p>
             </CardContent>
           </Card>
-
           <Card>
             <CardContent className='p-4'>
               <div className='flex items-center gap-2'>
@@ -321,7 +344,6 @@ export function PerformanceDashboard() {
           </Card>
         </div>
       )}
-
       {/* Bundle Chunks */}
       <Card>
         <CardHeader>
@@ -363,7 +385,6 @@ export function PerformanceDashboard() {
                   </div>
                 </div>
               ))}
-
               {chunks.length > 10 && (
                 <p className='text-sm text-muted-foreground text-center pt-2'>
                   ... and {chunks.length - 10} more chunks
@@ -377,7 +398,6 @@ export function PerformanceDashboard() {
           )}
         </CardContent>
       </Card>
-
       {/* Recommendations */}
       <Card>
         <CardHeader>
@@ -400,7 +420,6 @@ export function PerformanceDashboard() {
                 </p>
               </div>
             </div>
-
             <div className='flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded'>
               <CheckCircle className='w-5 h-5 text-green-600 mt-0.5' />
               <div>
@@ -413,7 +432,6 @@ export function PerformanceDashboard() {
                 </p>
               </div>
             </div>
-
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
               <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
                 <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
@@ -433,6 +451,6 @@ export function PerformanceDashboard() {
       </Card>
     </div>
   )
-} 
-} 
+}
+}
 }

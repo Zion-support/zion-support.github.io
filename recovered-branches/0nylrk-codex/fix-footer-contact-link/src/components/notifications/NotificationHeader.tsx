@@ -1,13 +1,20 @@
-import React from "react";
-import { Button } from "@/components/ui/button";
+
+import React from 'react';
+import { Button } from '@/components/ui/button';
 interface NotificationHeaderProps {
   unreadCount: number;
-  onMarkAllAsRead: () => Promise<void>;
+  onMarkAllAsRead: () => Promise<void>
 }
-
 export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
-  unreadCount,
-  onMarkAllAsRead,
+<<<<<<< HEAD
+  unreadCount;
+  onMarkAllAsRead
+}) => {
+  return (
+    <div className;
+=======
+  unreadCount
+  onMarkAllAsRead
 }) => {
   return (
     <div className="flex justify-between items-center p-4 border-b border-zion-blue-light">
@@ -24,4 +31,5 @@ export const NotificationHeader: React.FC<NotificationHeaderProps> = ({
       )}
     </div>
   );
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

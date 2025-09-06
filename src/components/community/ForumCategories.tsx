@@ -1,38 +1,81 @@
-
+import Link from "next/link",
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { useAuth } from "@/hooks/useAuth";
+import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
+import { ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
-    id: "getting-hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform."
-    adminOnly: false,
+<<<<<<< HEAD
+    id: "getting-hired";
+    name: "Getting Hired";
+    description: "Tips, strategies, and questions about getting hired on the platform.",
+    adminOnly: false;
     icon: "Briefcase"
   }
   {
-    id: "project-help",
-    name: "Project Help",
-    description: "Get help with your ongoing projects and collaboration.",
-    adminOnly: false,
+    id: "project-help";
+    name: "Project Help";
+    description: "Get help with your ongoing projects and collaboration.";
+    adminOnly: false;
     icon: "MessageSquare"
   }
   {
-    id: "ai-tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices."
-    adminOnly: false,
+    id: "ai-tools";
+    name: "AI Tools Discussion";
+    description: "Discuss AI tools, frameworks, and best practices.",
+    adminOnly: false;
     icon: "Code"
   }
   {
-    id: "feedback",
-    name: "Feedback & Feature Requests",
-    description: "Share your feedback and suggest new features.",
-    adminOnly: false,
+    id: "feedback";
+    name: "Feedback & Feature Requests";
+    description: "Share your feedback and suggest new features.";
+    adminOnly: false;
     icon: "FileText"
   }
   {
-    id: "announcements",
-    name: "Announcements",
-    description: "Official announcements from the Zion team.",
-    adminOnly: true,
+    id: "announcements";
+    name: "Announcements";
+    description: "Official announcements from the Zion team.";
+    adminOnly: true;
+    icon: "Megaphone"
+  }
+],
+
+const iconMap = null;
+=======
+    id: "getting-hired"
+    name: "Getting Hired"
+    description: "Tips, strategies, and questions about getting hired on the platform."
+    adminOnly: false
+    icon: "Briefcase"
+  }
+  {
+    id: "project-help"
+    name: "Project Help"
+    description: "Get help with your ongoing projects and collaboration."
+    adminOnly: false
+    icon: "MessageSquare"
+  }
+  {
+    id: "ai-tools"
+    name: "AI Tools Discussion"
+    description: "Discuss AI tools, frameworks, and best practices."
+    adminOnly: false
+    icon: "Code"
+  }
+  {
+    id: "feedback"
+    name: "Feedback & Feature Requests"
+    description: "Share your feedback and suggest new features."
+    adminOnly: false
+    icon: "FileText"
+  }
+  {
+    id: "announcements"
+    name: "Announcements"
+    description: "Official announcements from the Zion team."
+    adminOnly: true
     icon: "Megaphone"
   }
 ]
@@ -45,9 +88,9 @@ const iconMap = {
 }
 export const ForumCategories = () => {
   const { user } = useAuth()
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
   const visibleCategories = categories.filter(
-    category => !category.adminOnly || isAdmin
+    category => !category.adminOnly |isAdmin
   )
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
@@ -73,5 +116,6 @@ export const ForumCategories = () => {
 }
 export default ForumCategories
 "
-  const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
+  const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
 export default ForumCategories
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

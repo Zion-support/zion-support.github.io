@@ -1,22 +1,23 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 export function NewsletterForm() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
+<<<<<<< HEAD
+  const handleSubmit = null;
+=======
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     // Simulate API call
     setTimeout(() => {
       setIsSubmitting(false);
       (setIsSubmitted(true), setEmail(""));
     }, 1000);
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <div className="w-full max-w-md mx-auto">
       {isSubmitted ? (
@@ -53,4 +54,3 @@ export function NewsletterForm() {
     </div>
   );
 }
-

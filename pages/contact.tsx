@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 
+=======
+import React from "react";
+import Layout from "../components/Layout";
+>>>>>>> f38908027c6fb310e108d8eef8d480933f0e20c4
 export default function Contact() {
   return (
     <>

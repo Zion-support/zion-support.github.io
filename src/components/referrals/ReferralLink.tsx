@@ -1,23 +1,31 @@
+<<<<<<< HEAD
+
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+=======
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
+  Card
+  CardContent
+  CardDescription
+  CardFooter
+  CardHeader
+  CardTitle
 } from '@/components/ui/card'
 import { Input } from '@/components/ui/input'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 interface ReferralLinkProps {
-  referralLink: string
-  onCopy: () => void
+  referralLink: string;
+  onCopy: () => void;
   onShare: (platform: 'twitter' | 'facebook' | 'linkedin') => void
 export function ReferralLink({
-  referralLink,
-  onCopy,
-  onShare,
+  referralLink
+  onCopy
+  onShare
 }: ReferralLinkProps) {
   const [copied, setCopied] = useState(false)
   const handleCopy = () => {
@@ -55,16 +63,21 @@ export function ReferralLink({
               <span className='sr-only'>Copy</span>
             </Button>
           </div>
+<<<<<<< HEAD
 
+export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProps) {
+  const [copied, setCopied] = useState(false);
+  const handleCopy = null;
+=======
           {copied && (
             <p className='text-sm text-green-600 dark:text-green-500'>              Copied to clipboard!
             <p className="text-sm text-green-600 dark:text-green-500">
-  
   const handleCopy = () => {
     onCopy()
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -89,7 +102,6 @@ export function ReferralLink({
               <span className="sr-only">Copy</span>
             </Button>
           </div>
-          
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
               Copied to clipboard!
@@ -107,8 +119,8 @@ export function ReferralLink({
               variant='outline'
               size='sm'
               className='flex items-center gap-2'
-              onClick={() => onShare('twitter')}            <Button 
-              variant="outline" 
+              onClick={() => onShare('twitter')}            <Button
+              variant="outline"
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('twitter'),}
@@ -120,8 +132,8 @@ export function ReferralLink({
               variant='outline'
               size='sm'
               className='flex items-center gap-2'              onClick={() => onShare('facebook')}
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="sm"
               className="flex items-center gap-2"
               onClick = {() => onShare('facebook'),}
@@ -143,4 +155,3 @@ export function ReferralLink({
     </Card>
   )
 }
-;

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { MessageCircle } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import React, { useState } from "react",
+import { MessageCircle } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Avatar, AvatarFallback } from "@/components/ui/avatar",
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 interface DiscussionPost {
@@ -12,49 +12,60 @@ interface DiscussionPost {
   avatar?: string;
   time: string;
   title: string;
-  body: string;
+  body: string
 }
-
 const initialPosts: DiscussionPost[] = [
   {
-    id: 1,
-    author: "Anna Zhou",
-    time: "2h ago",
-    title: "What AI trends are you most excited for in 2025?",
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?",
-  },
+<<<<<<< HEAD
+    id: 1;
+    author: "Anna Zhou";
+    time: "2h ago";
+    title: "What AI trends are you most excited for in 2025?";
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
   {
-    id: 2,
-    author: "David Kim",
-    time: "50m ago",
-    title: "Quick tip: How to rank your Zion listing higher",
-    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month.",
-  },
-];
+    id: 2;
+    author: "David Kim";
+    time: "50m ago";
+    title: "Quick tip: How to rank your Zion listing higher";
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."}],
 
+export const CommunityDiscussion: React.FC;
+=======
+    id: 1
+    author: "Anna Zhou"
+    time: "2h ago"
+    title: "What AI trends are you most excited for in 2025?"
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"
+  }
+  {
+    id: 2
+    author: "David Kim"
+    time: "50m ago"
+    title: "Quick tip: How to rank your Zion listing higher"
+    body: "Fill out every profile detail, add strong tags, and post weekly! See results in a month."
+  }
+];
 export const CommunityDiscussion: React.FC = () => {
   const [posts, setPosts] = useState(initialPosts);
   const [showNew, setShowNew] = useState(false);
   const [newTitle, setNewTitle] = useState("");
   const [newBody, setNewBody] = useState("");
-
   const handleAddPost = () => {
-    if (!newTitle.trim() || !newBody.trim()) return;
+    if (!newTitle.trim() |!newBody.trim()) return;
     setPosts([
       {
-        id: Date.now(),
-        author: "You",
-        time: "Now",
-        title: newTitle,
-        body: newBody,
-      },
-      ...posts,
+        id: Date.now()
+        author: "You"
+        time: "Now"
+        title: newTitle
+        body: newBody
+      }
+      ...posts
     ]);
     setNewTitle("");
     setNewBody("");
     setShowNew(false);
-  };
-
+  }
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">
       <div className="flex items-center gap-3 mb-4">
@@ -111,7 +122,7 @@ export const CommunityDiscussion: React.FC = () => {
                 size="sm"
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
-                disabled={!newTitle.trim() || !newBody.trim()}
+                disabled={!newTitle.trim() |!newBody.trim()}
               >
                 Post
               </Button>
@@ -162,4 +173,5 @@ export const CommunityDiscussion: React.FC = () => {
       </div>
     </div>
   );
-};
+}
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

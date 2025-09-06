@@ -1,18 +1,35 @@
+<<<<<<< HEAD
+
+import React from "react";
+import { logDebug  } from '@/utils/productionLogger';
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Check, ExternalLink, Slack, Briefcase, Users } from 'lucide-react'
+
+interface IntegrationCardProps {
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  status?: "connected" | "disconnected" | "pending";
+  href?: string;
+  onConnect?: () => void
+=======
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
+  Card
+  CardContent
+  CardFooter
+  CardHeader
 } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-  ArrowRight,
-  Check,
-  ExternalLink,
-  Slack,
-  Briefcase,
-  Users,
+  ArrowRight
+  Check
+  ExternalLink
+  Slack
+  Briefcase
+  Users
 } from 'lucide-react'
 interface IntegrationCardProps {
   title: string
@@ -22,12 +39,12 @@ interface IntegrationCardProps {
   href?: string
   onConnect?: () => void
 export function IntegrationCard({
-  title,
-  description,
-  icon,
-  status = 'disconnected',
-  href,
-  onConnect,
+  title
+  description
+  icon
+  status = 'disconnected'
+  href
+  onConnect
 }: IntegrationCardProps) {
   return (
     <Card className='overflow-hidden'>
@@ -80,20 +97,19 @@ export function IntegrationCard({
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />          </Button>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
 interface IntegrationCardProps {
-  title: string,
-  description: string,
-  icon: React.ReactNode,
+  title: string
+  description: string
+  icon: React.ReactNode
   status?: "connected" | "disconnected" | "pending"
   href?: string
   onConnect?: () => void
 }
-
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 export function IntegrationCard({
-  title
-  description
-  icon
-  status = "disconnected"
-  href
+  title;
+  description;
+  icon;
+  status;
   onConnect}: IntegrationCardProps) {
   return (
     <Card className="overflow-hidden">

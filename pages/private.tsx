@@ -7,8 +7,7 @@ import { User, Mail, Calendar, Shield } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
-interface PrivatePageProps {;
-  user: SupabaseUser;
+interface PrivatePageProps {user: SupabaseUser;
 }
 export default function PrivatePage({ user }: PrivatePageProps) {
   return (
@@ -17,7 +16,6 @@ export default function PrivatePage({ user }: PrivatePageProps) {
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
       </Head>
-      
       <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
         <Card>
           <CardHeader>
@@ -59,13 +57,12 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                 </div>
               </div>
             </div>
-
             <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
               <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
               <div className=&quot;grid gap-2 text-sm&quot;>
                 <div>
                   <span className=&quot;font-medium&quot;>Last Sign In: </span>
-                  {user.last_sign_in_at 
+                  {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
                   }
@@ -78,7 +75,6 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                 </div>
               </div>
             </div>
-
             <div className=&quot;flex gap-2&quot;>
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
@@ -97,18 +93,13 @@ export default function PrivatePage({ user }: PrivatePageProps) {
     </>
   )
 }
-;
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {;
-  const supabase = createServerSideClient(context);
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
   const { data, error } = await supabase.auth.getUser();
-  if (error || !data?.user) {;
-    return {;
+  if (error |!data?.user) {return {;
       redirect: {;
         destination: '/auth/login';
         permanent: false}}
   }
-;
-  return {;
-    props: {;
+  return {props: {;
       user: data.user}}
-} ;
+}

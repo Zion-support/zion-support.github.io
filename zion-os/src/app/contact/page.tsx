@@ -13,7 +13,6 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-
       {/* Contact Form & Info */}
       <section className=&quot;py-20&quot;>
         <div className=&quot;max-w-7xl mx-auto px-4 sm:px-6 lg:px-8&quot;>
@@ -50,7 +49,6 @@ export default function ContactPage() {
                     />
                   </div>
                 </div>
-
                 <div>
                   <label htmlFor=&quot;email&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Email Address *
@@ -64,7 +62,6 @@ export default function ContactPage() {
                     placeholder=&quot;Enter your email address&quot;
                   />
                 </div>
-
                 <div>
                   <label htmlFor=&quot;company&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Company
@@ -77,7 +74,6 @@ export default function ContactPage() {
                     placeholder=&quot;Enter your company name&quot;
                   />
                 </div>
-
                 <div>
                   <label htmlFor=&quot;phone&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Phone Number
@@ -90,7 +86,6 @@ export default function ContactPage() {
                     placeholder=&quot;Enter your phone number&quot;
                   />
                 </div>
-
                 <div>
                   <label htmlFor=&quot;service&quot; className=&quot;block text-sm font-medium text-gray-700 mb-2&quot;>
                     Service of Interest
@@ -109,7 +104,6 @@ export default function ContactPage() {
                     <option value=&quot;other&quot;>Other</option>
                   </select>
                 </div>
-
                 <div>
                   <label htmlFor=&quot;message" className="block text-sm font-medium text-gray-700 mb-2&quot;>
                     Message *
@@ -123,7 +117,6 @@ export default function ContactPage() {
                     placeholder=&quot;Tell us about your project or inquiry...&quot;
                   ></textarea>
                 </div>
-
                 <button
                   type=&quot;submit"
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
@@ -132,7 +125,6 @@ export default function ContactPage() {
                 </button>
               </form>
             </div>
-
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
@@ -141,7 +133,6 @@ export default function ContactPage() {
                   We're here to help you succeed. Reach out to us through any of the channels below.
                 </p>
               </div>
-
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -159,7 +150,6 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-green-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
@@ -175,7 +165,6 @@ export default function ContactPage() {
                     </p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-purple-600&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
@@ -193,7 +182,6 @@ export default function ContactPage() {
                   </div>
                 </div>
               </div>
-
               {/* Social Media Links */}
               <div>
                 <h3 className="font-semibold text-gray-900 mb-4">Follow Us</h3>

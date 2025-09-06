@@ -1,15 +1,15 @@
+
 import { Review } from "@/types/reviews";
 import { ReviewCard } from "./ReviewCard";
 interface ReviewsListProps {
   reviews: Review[];
   isLoading: boolean;
-  onReportReview: (reviewId: string, reason: string) => Promise<boolean>;
+  onReportReview: (reviewId: string, reason: string) => Promise<boolean>
 }
-
 export function ReviewsList({
-  reviews,
-  isLoading,
-  onReportReview,
+  reviews
+  isLoading
+  onReportReview
 }: ReviewsListProps) {
   if (isLoading) {
     return (
@@ -38,7 +38,6 @@ export function ReviewsList({
       </div>
     );
   }
-
   if (reviews.length === 0) {
     return (
       <div className="text-center py-8 border rounded-lg bg-muted/20">
@@ -49,7 +48,6 @@ export function ReviewsList({
       </div>
     );
   }
-
   return (
     <div className="space-y-4">
       {reviews.map((review) => (

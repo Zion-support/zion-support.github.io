@@ -1,52 +1,49 @@
-import { 
-  UserGroupIcon,
-  LightBulbIcon, 
-  GlobeAltIcon, 
-  ShieldCheckIcon,
-  AcademicCapIcon,
+import {
+  UserGroupIcon
+  LightBulbIcon
+  GlobeAltIcon
+  ShieldCheckIcon
+  AcademicCapIcon
   RocketLaunchIcon
 } from '@heroicons/react/24/outline'
-
 const values = [
   {
-    name: 'Innovation First',
-    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.',
-    icon: LightBulbIcon},
+    name: 'Innovation First'
+    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.'
+    icon: LightBulbIcon}
   {
-    name: 'Global Impact',
-    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.',
-    icon: GlobeAltIcon},
+    name: 'Global Impact'
+    description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
+    icon: GlobeAltIcon}
   {
-    name: 'Trust & Security',
-    description: 'We maintain the highest standards of security and ethical AI development.',
-    icon: ShieldCheckIcon},
+    name: 'Trust & Security'
+    description: 'We maintain the highest standards of security and ethical AI development.'
+    icon: ShieldCheckIcon}
   {
-    name: 'Research Excellence',
-    description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.',
+    name: 'Research Excellence'
+    description: 'Our team of world-class researchers drives breakthrough discoveries and innovations.'
     icon: AcademicCapIcon}]
-
 const team = [
   {
-    name: 'Dr. Sarah Chen',
-    role: 'Chief Executive Officer',
-    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.',
-    image: '/images/team/sarah-chen.jpg'},
+    name: 'Dr. Sarah Chen'
+    role: 'Chief Executive Officer'
+    bio: 'Former AI researcher at Stanford, leading Zion Tech Group\'s vision for the future of technology.'
+    image: '/images/team/sarah-chen.jpg'}
   {
-    name: 'Dr. Marcus Rodriguez',
-    role: 'Chief Technology Officer',
-    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.',
-    image: '/images/team/marcus-rodriguez.jpg'},
+    name: 'Dr. Marcus Rodriguez'
+    role: 'Chief Technology Officer'
+    bio: 'Quantum computing expert with 15+ years in advanced AI systems and neural network architecture.'
+    image: '/images/team/marcus-rodriguez.jpg'}
   {
-    name: 'Dr. Elena Petrov',
-    role: 'Head of Research',
-    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.',
-    image: '/images/team/elena-petrov.jpg'},
+    name: 'Dr. Elena Petrov'
+    role: 'Head of Research'
+    bio: 'Leading researcher in autonomous systems and AI ethics, with publications in top-tier journals.'
+    image: '/images/team/elena-petrov.jpg'}
   {
-    name: 'James Kim',
-    role: 'Chief Operations Officer',
-    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.',
+    name: 'James Kim'
+    role: 'Chief Operations Officer'
+    bio: 'Former Fortune 500 executive, specializing in scaling AI operations and enterprise deployment.'
     image: '/images/team/james-kim.jpg'}]
-
 export default function AboutPage() {
   return (
     <div className=&quot;bg-black&quot;>
@@ -61,13 +58,12 @@ export default function AboutPage() {
               </span>
             </h1>
             <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              We are pioneers in artificial intelligence, quantum computing, and autonomous systems, 
+              We are pioneers in artificial intelligence, quantum computing, and autonomous systems
               dedicated to transforming industries and advancing human potential through technology.
             </p>
           </div>
         </div>
       </div>
-
       {/* Mission & Vision */}
       <div className=&quot;mx-auto max-w-7xl px-6 sm:px-6 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -84,7 +80,7 @@ export default function AboutPage() {
                 <h3 className=&quot;text-xl font-semibold text-white&quot;>Our Mission</h3>
               </div>
               <p className=&quot;text-gray-300&quot;>
-                To accelerate human progress through cutting-edge AI and technology solutions that solve 
+                To accelerate human progress through cutting-edge AI and technology solutions that solve
                 the world's most complex challenges while maintaining the highest ethical standards.
               </p>
             </div>
@@ -94,14 +90,13 @@ export default function AboutPage() {
                 <h3 className=&quot;text-xl font-semibold text-white&quot;>Our Vision</h3>
               </div>
               <p className=&quot;text-gray-300&quot;>
-                A future where AI and technology seamlessly enhance human capabilities, creating a more 
+                A future where AI and technology seamlessly enhance human capabilities, creating a more
                 intelligent, efficient, and sustainable world for generations to come.
               </p>
             </div>
           </div>
         </div>
       </div>
-
       {/* Company Story */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -113,25 +108,24 @@ export default function AboutPage() {
         <div className=&quot;mx-auto mt-16 max-w-2xl lg:max-w-none&quot;>
           <div className=&quot;bg-white/5 p-8 rounded-2xl backdrop-blur-sm&quot;>
             <p className=&quot;text-lg text-gray-300 mb-6&quot;>
-              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs, 
-              Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge 
+              Founded in 2020 by a team of world-class AI researchers and technology entrepreneurs
+              Zion Tech Group emerged from a shared vision: to bridge the gap between cutting-edge
               research and real-world applications.
             </p>
             <p className=&quot;text-lg text-gray-300 mb-6&quot;>
-              What started as a small research lab has grown into a global technology powerhouse, 
-              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+ 
-              researchers, engineers, and business professionals work tirelessly to push the 
+              What started as a small research lab has grown into a global technology powerhouse
+              with offices in Silicon Valley, London, Tokyo, and Singapore. Our team of 200+
+              researchers, engineers, and business professionals work tirelessly to push the
               boundaries of what's possible.
             </p>
             <p className=&quot;text-lg text-gray-300&quot;>
-              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative 
-              startups, helping them harness the power of AI to transform their operations and 
+              Today, we serve over 1,000 clients worldwide, from Fortune 500 companies to innovative
+              startups, helping them harness the power of AI to transform their operations and
               accelerate their growth.
             </p>
           </div>
         </div>
       </div>
-
       {/* Values */}
       <div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
         <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
@@ -202,7 +196,7 @@ export default function AboutPage() {
             Join us in shaping the future
           </h2>
           <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Ready to be part of the AI revolution? Let's discuss how we can work together to 
+            Ready to be part of the AI revolution? Let's discuss how we can work together to
             transform your organization.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>

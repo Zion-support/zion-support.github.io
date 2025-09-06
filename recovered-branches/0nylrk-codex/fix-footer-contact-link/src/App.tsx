@@ -1,22 +1,38 @@
-import React, { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import { ThemeProvider } from "./components/ThemeProvider";
-import { WhitelabelProvider } from "./context/WhitelabelContext";
+import React, { Suspense } from 'react';
+import { Routes, Route  } from 'react-router-dom';
+import './App.css',
+import { ThemeProvider } from "./components/ThemeProvider",
+import { WhitelabelProvider } from "./context/WhitelabelContext",
 import { Toaster } from "./components/ui/toaster";
+<<<<<<< HEAD
+import { Toaster as SonnerToaster } from "./components/ui/sonner";
+import { AuthRoutes;
+  DashboardRoutes;
+  MarketplaceRoutes;
+  TalentRoutes;
+  AdminRoutes;
+  MobileAppRoutes;
+  ContentRoutes;
+  ErrorRoutes;
+  EnterpriseRoutes;
+  CommunityRoutes;
+  DeveloperRoutes
+ } from './routes';
+const Home = null;
+=======
 import { Toaster, as, SonnerToaster } from "./components/ui/sonner";
 import {
-  AuthRoutes,
-  DashboardRoutes,
-  MarketplaceRoutes,
-  TalentRoutes,
-  AdminRoutes,
-  MobileAppRoutes,
-  ContentRoutes,
-  ErrorRoutes,
-  EnterpriseRoutes,
-  CommunityRoutes,
-  DeveloperRoutes,
+  AuthRoutes
+  DashboardRoutes
+  MarketplaceRoutes
+  TalentRoutes
+  AdminRoutes
+  MobileAppRoutes
+  ContentRoutes
+  ErrorRoutes
+  EnterpriseRoutes
+  CommunityRoutes
+  DeveloperRoutes
 } from "./routes";
 const Home = React.lazy(() => import("./pages/Home"));
 const AIMatcherPage = React.lazy(() => import("./pages/AIMatcher"));
@@ -31,29 +47,27 @@ const Categories = React.lazy(() => import("./pages/Categories"));
 const Login = React.lazy(() => import("./pages/Login"));
 const Signup = React.lazy(() => import("./pages/Signup"));
 const ITOnsiteServicesPage = React.lazy(
-  () => import("./pages/ITOnsiteServicesPage"),
+  () => import("./pages/ITOnsiteServicesPage")
 );
 const OpenAppRedirect = React.lazy(() => import("./pages/OpenAppRedirect"));
 const ContactPage = React.lazy(() => import("./pages/Contact"));
-
 const baseRoutes = [
-  { path: "/", element: <Home /> },
-  { path: "/match", element: <AIMatcherPage /> },
-  { path: "/login", element: <Login /> },
-  { path: "/signup", element: <Signup /> },
-  { path: "/talent", element: <TalentDirectory /> },
-  { path: "/talents", element: <TalentsPage /> },
-  { path: "/services", element: <ServicesPage /> },
-  { path: "/it-onsite-services", element: <ITOnsiteServicesPage /> },
-  { path: "/categories", element: <Categories /> },
-  { path: "/equipment", element: <EquipmentPage /> },
-  { path: "/analytics", element: <Analytics /> },
-  { path: "/mobile-launch", element: <MobileLaunchPage /> },
-  { path: "/open-app", element: <OpenAppRedirect /> },
-  { path: "/community", element: <CommunityPage /> },
-  { path: "/contact", element: <ContactPage /> },
+  { path: "/", element: <Home /> }
+  { path: "/match", element: <AIMatcherPage /> }
+  { path: "/login", element: <Login /> }
+  { path: "/signup", element: <Signup /> }
+  { path: "/talent", element: <TalentDirectory /> }
+  { path: "/talents", element: <TalentsPage /> }
+  { path: "/services", element: <ServicesPage /> }
+  { path: "/it-onsite-services", element: <ITOnsiteServicesPage /> }
+  { path: "/categories", element: <Categories /> }
+  { path: "/equipment", element: <EquipmentPage /> }
+  { path: "/analytics", element: <Analytics /> }
+  { path: "/mobile-launch", element: <MobileLaunchPage /> }
+  { path: "/open-app", element: <OpenAppRedirect /> }
+  { path: "/community", element: <CommunityPage /> }
+  { path: "/contact", element: <ContactPage /> }
 ];
-
 const App = () => {
   return (
     <WhitelabelProvider>
@@ -81,6 +95,6 @@ const App = () => {
       </ThemeProvider>
     </WhitelabelProvider>
   );
-};
-
+}
 export default App;
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5

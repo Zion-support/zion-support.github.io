@@ -1,57 +1,52 @@
 
-import React, { useEffect, useState } from "react";
-import {useInterviews} from "@/hooks/useInterviews";
-import {Interview} from "@/types/interview";
-import {AppHeader} from "@/layout/AppHeader";
-import {Footer} from "@/components/Footer";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {SEO} from "@/components/SEO";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {InterviewCard} from "@/components/interviews/InterviewCard";
-import {Button} from "@/components/ui/button";
-import {Calendar, Clock, Video} from "lucide-react";
-import {format, isAfter, parseISO, startOfDay} from "date-fns";
+import React, { useEffect, useState } from "react",
+import { useInterviews } from "@/hooks/useInterviews",
+import { Interview } from "@/types/interview",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { InterviewCard } from "@/components/interviews/InterviewCard",
+import { Button } from "@/components/ui/button",
+import { Calendar, Clock, Video } from "lucide-react";
+import { format, isAfter, parseISO, startOfDay } from "date-fns";
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
   const [activeTab, setActiveTab] = useState("upcoming");
-  
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
+<<<<<<< HEAD
+    const loadInterviews = null;
+=======
     const loadInterviews = async () => {
       await fetchInterviews()
-    };
-    
+    }
     loadInterviews()
   }, []);
-
   // Filter interviews based on status and date
   const now = new Date();
   const today = startOfDay(now);
-  
   const upcomingInterviews = interviews
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
-      return isAfter(interviewDate, now) && 
+      return isAfter(interviewDate, now) &&
         ['confirmedrequested'].includes(interview.status)
     })
-    .sort((a, b) => 
+    .sort((a, b) =>
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
     );
-  
-  const pendingInterviews = interviews.filter(interview => 
+  const pendingInterviews = interviews.filter(interview =>
     interview.status === 'requested'
   );
-  
   const pastInterviews = interviews.filter(interview => {
     const interviewDate = parseISO(interview.scheduled_date);
-    return !isAfter(interviewDate, now) || 
+    return !isAfter(interviewDate, now) |
       ['completeddeclinedcancelled'].includes(interview.status)
   });
-
   // Group interviews by date
   const groupInterviewsByDate = (interviews: Interview[]) => {
-    const grouped: Record<string, Interview[]> = {};
-    
+    const grouped: Record<string, Interview[]> = {}
     interviews.forEach((interview) => {
       const dateKey = format(parseISO(interview.scheduled_date), 'yyyy-MM-dd');
       if (!grouped[dateKey]) {
@@ -59,17 +54,14 @@ function InterviewsContent() {
       }
       grouped[dateKey].push(interview)
     });
-    
     return grouped
-  };
-  
+  }
   const upcomingGrouped = groupInterviewsByDate(upcomingInterviews);
   const pendingGrouped = groupInterviewsByDate(pendingInterviews);
   const pastGrouped = groupInterviewsByDate(pastInterviews);
-
   const renderInterviewGroups = (groupedInterviews: Record<string, Interview[]>) => {
     return Object.entries(groupedInterviews)
-      .sort(([dateA], [dateB]) => 
+      .sort(([dateA], [dateB]) =>
         parseISO(dateA).getTime() - parseISO(dateB).getTime()
       )
       .map(([date, interviews]) => (
@@ -80,8 +72,8 @@ function InterviewsContent() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
-              <InterviewCard 
-                key={interview.id} 
+              <InterviewCard
+                key={interview.id}
                 interview={interview}
                 onRefresh={async () => {
                   await fetchInterviews()
@@ -91,13 +83,13 @@ function InterviewsContent() {
           </div>
         </div>
       ))
-  };
-
+  }
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
   return (
     <>
-      <SEO 
-        title="Interviews | Zion AI Marketplace" 
-        description="Manage your scheduled interviews with clients and talent" 
+      <SEO
+        title="Interviews | Zion AI Marketplace"
+        description="Manage your scheduled interviews with clients and talent"
       />
       <AppHeader />
       <main className="container mx-auto px-4 py-8">
@@ -107,7 +99,6 @@ function InterviewsContent() {
             <p className="text-muted-foreground mt-1">Schedule and manage your video interviews</p>
           </div>
         </div>
-
         <Tabs defaultValue={activeTab} onValueChange={setActiveTab} className="space-y-8">
           <TabsList className="mb-6">
             <TabsTrigger value="upcoming" className="flex items-center">
@@ -129,7 +120,6 @@ function InterviewsContent() {
             </TabsTrigger>
             <TabsTrigger value="past">Past</TabsTrigger>
           </TabsList>
-          
           <TabsContent value="upcoming" className="space-y-6">
             {isLoading ? (
               <div className="flex justify-center py-12">
@@ -145,7 +135,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-          
           <TabsContent value="pending" className="space-y-6">
             {isLoading ? (
               <div className="flex justify-center py-12">
@@ -161,7 +150,6 @@ function InterviewsContent() {
               </div>
             )}
           </TabsContent>
-          
           <TabsContent value="past" className="space-y-6">
             {isLoading ? (
               <div className="flex justify-center py-12">
@@ -183,7 +171,6 @@ function InterviewsContent() {
     </>
   )
 }
-
 export default function Interviews() {
   return (
     <ProtectedRoute>

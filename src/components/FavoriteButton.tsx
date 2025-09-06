@@ -1,20 +1,41 @@
-import React from 'react'
+import React from 'react';
 import { Heart } from 'lucide-react'
+<<<<<<< HEAD
+import { cn  } from '@/lib/utils';
+import { useWishlist  } from '@/hooks/useWishlist';
+import { useAuth  } from '@/hooks/useAuth';
+import { toast  } from '@/hooks/use-toast';
+import { LoginModal } from '@/components/auth/LoginModal';
+import { Tooltip;
+  TooltipContent;
+  TooltipProvider;
+  TooltipTrigger } from '@/components/ui/tooltip';
+=======
 import { cn } from '@/lib/utils'
 import { useWishlist } from '@/hooks/useWishlist'
 import { useAuth } from '@/hooks/useAuth'
 import { toast } from '@/hooks/use-toast'
 import { LoginModal } from '@/components/auth/LoginModal'
 import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
+  Tooltip
+  TooltipContent
+  TooltipProvider
+  TooltipTrigger
 } from '@/components/ui/tooltip'
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
 interface FavoriteButtonProps {
-  itemId: string
+  itemId: string;
   className?: string
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
+<<<<<<< HEAD
+  const { isWishlisted, toggle } = useWishlist();
+  const { isAuthenticated } = useAuth();
+  const [loginOpen, setLoginOpen] = React.useState(false);
+  const handleClick = null;
+                  active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate'
+                )}
+              />
+=======
   const { isWishlisted, toggle } = useWishlist()
   const { isAuthenticated } = useAuth()
   const [loginOpen, setLoginOpen] = React.useState(false)
@@ -23,15 +44,14 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       setLoginOpen(true)
       return
     }
-
     const wasWishlisted = isWishlisted(itemId)
     toggle(itemId)
     // Provide feedback
     toast({
-      title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist',
+      title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist'
       description: wasWishlisted
         ? 'Item has been removed from your wishlist'
-        : 'Item has been added to your wishlist',
+        : 'Item has been added to your wishlist'
     })
   }
   const active = isWishlisted(itemId)
@@ -42,7 +62,7 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
           <TooltipTrigger asChild>
             <button
               className = {cn(
-                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors',
+                'absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
                 className
               )}
               onClick={handleClick}
@@ -51,11 +71,12 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
               }            >
               <Heart
                 className = {cn(
-                  'h-4 w-4 transition-transform duration-200',
+                  'h-4 w-4 transition-transform duration-200'
                   active
                     ? 'fill-red-500 text-red-500 scale-110'
                     : 'text-zion-slate'
                 )}              />
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
             </button>
           </TooltipTrigger>
           {!isAuthenticated && <TooltipContent>Login required</TooltipContent>}
@@ -84,9 +105,8 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   )};`
 className: {`w-4 h-4 transition-all duration-300 ${
           isFavorited ? 'fill-current' : '';`
-}`} 
+}`}
       />
     </button>;) }
 '`
 }
-;
