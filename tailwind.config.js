@@ -7,7 +7,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
         primary: {
           50: '#eff6ff',
           500: '#3b82f6',
@@ -26,7 +25,10 @@ module.exports = {
           800: '#1f2937',
           900: '#111827',
           950: '#030712'
-        }
+        },
+        'zion-slate-dark': '#1e293b',
+        'zion-slate': '#334155',
+        'zion-slate-light': '#475569',
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
@@ -128,11 +130,6 @@ module.exports = {
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem'
-=======
-        'zion-slate-dark': '#1e293b',
-        'zion-slate': '#334155',
-        'zion-slate-light': '#475569',
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
       },
     },
   },

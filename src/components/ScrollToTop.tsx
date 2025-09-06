@@ -1,29 +1,18 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { useLocation } from 'react-router-dom';
 import { ChevronUp } from 'lucide-react';
 
 const ScrollToTop: React.FC = () => {
   const { pathname } = useLocation();
-=======
-import { ChevronUp } from 'lucide-react';
-
-const ScrollToTop: React.FC = () => {
->>>>>>> 3355446c491e527b29697d580cc54457b0d965fc
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
+      if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
         setIsVisible(false);
@@ -31,7 +20,10 @@ const ScrollToTop: React.FC = () => {
     };
 
     window.addEventListener('scroll', toggleVisibility);
-    return () => window.removeEventListener('scroll', toggleVisibility);
+
+    return () => {
+      window.removeEventListener('scroll', toggleVisibility);
+    };
   }, []);
 
   const scrollToTop = () => {
