@@ -9,6 +9,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
+import Components from './pages/Components';
 import NotFound from './pages/NotFound';
 import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
@@ -16,6 +17,7 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 import { ThemeProvider } from './context/ThemeContext';
 import { NotificationProvider } from './context/NotificationContext';
 import { initAnalytics } from './utils/analytics';
+import LiveChat from './components/LiveChat';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -42,6 +44,7 @@ function App() {
                     <Route path="/services" element={<Services />} />
                     <Route path="/pricing" element={<Pricing />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/components" element={<Components />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </Suspense>
@@ -49,6 +52,7 @@ function App() {
               
               <Footer />
               <PerformanceMonitor />
+              <LiveChat />
             </div>
           </Router>
         </ErrorBoundary>
