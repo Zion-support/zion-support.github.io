@@ -1,6 +1,4 @@
 
-
-export interface Application {;
   id: string;
 
   job_id: string;
@@ -9,7 +7,4 @@ export interface Application {;
   createdAtIso: string;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
-
-
-
 

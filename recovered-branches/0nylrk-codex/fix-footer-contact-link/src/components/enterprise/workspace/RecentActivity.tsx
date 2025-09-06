@@ -1,6 +1,6 @@
 
 
-
+import React from "react",
 
 export function RecentActivity() {
   // Mock activity data
@@ -8,13 +8,7 @@ export function RecentActivity() {
   const activities = [
     {
 
-
-      id: "act-1",
-      user: "Michael Chen",
-      action: "posted a new job",
-      target: "Senior React Developer",
-      timestamp: "1h ago",
-
+      type: "job"
 
     {
       id: "act-2"
@@ -23,8 +17,7 @@ export function RecentActivity() {
       target: "5 candidates for UI/UX Designer"
       timestamp: "3h ago"
       type: "candidate"
-    }
-    },
+
     {
       id: "act-3"
       user: "David Johnson"
@@ -32,8 +25,7 @@ export function RecentActivity() {
       target: "Alex Morgan"
       timestamp: "Yesterday"
       type: "interview"
-    }
-    },
+
     {
       id: "act-4"
       user: "Emily Davis"
@@ -42,8 +34,6 @@ export function RecentActivity() {
       timestamp: "2d ago"
       type: "comment"
     }
-  ];
-  ],
 
   const getBadgeForType = (type: string) => {
     switch (type) {
@@ -57,8 +47,6 @@ export function RecentActivity() {
       default:
         return <Badge variant="outline">Activity</Badge>
     }
-  }
-  },
 
   return (
     <Card>
@@ -97,7 +85,6 @@ export function RecentActivity() {
       </CardContent>
     </Card>
   )
-
 
 import React from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -281,9 +268,9 @@ function RecentActivity() {
           </button>;
         </div>;
       </CardContent>;
-
-
-
+    </Card>;
+  );
 
 }
 ;
+

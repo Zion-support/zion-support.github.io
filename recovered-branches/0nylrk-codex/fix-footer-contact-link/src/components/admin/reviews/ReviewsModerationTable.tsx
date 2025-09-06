@@ -1,7 +1,4 @@
 
-
-
-
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -10,8 +7,6 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
 
-
-
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -19,9 +14,6 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
-
-
-
 
 import {
   Table,
@@ -45,6 +37,7 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
+
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
@@ -52,13 +45,12 @@ interface ReviewsModerationTableProps {
   onRefresh: () => void
 }
 
-
-
+export function ReviewsModerationTable({
+  reviews,
+  isLoading,
 
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
@@ -72,39 +64,13 @@ interface ReviewsModerationTableProps {
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-        .eq("id", reviewId);
-      if (error) throw error;
-      return { reviewId, status }
-    }
-    onSuccess: (data) => {
-      toast({
 
-        title: "Review updated"
-        description: `Review has been ${data.status}.`})
-
-      onRefresh();
-      setViewDetailsOpen(false)
-    }
-        .eq("id", reviewId),
-
-      if (error) throw error,
-      return { reviewId, status }
-    },
-    onSuccess: (data) => {
-      toast({
-        title: "Review updated",
-        description: `Review has been ${data.status}.`}),
-      onRefresh(),
-      setViewDetailsOpen(false)
-    },
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
-    }});
-    }}),
 
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
@@ -114,8 +80,6 @@ interface ReviewsModerationTableProps {
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-  }
-  },
 
   const getInitials = (name: string) => {
     return name
@@ -123,8 +87,6 @@ interface ReviewsModerationTableProps {
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-  }
-  },
 
   if (isLoading) {
     return (
@@ -148,21 +110,10 @@ interface ReviewsModerationTableProps {
   }
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-  }
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })
-  }
-  },
-
-  const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })
-  },
 
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review)
     setViewDetailsOpen(true)
-  }
-  },
 
   const renderStars = (rating: number) => {
     return (
@@ -172,11 +123,6 @@ interface ReviewsModerationTableProps {
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
-        ))}
-      </div>
-    )
-  }
-
 
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
@@ -456,10 +402,9 @@ if ( {) {
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
 
-
-
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
+
                       />
                     ) : (
                       <AvatarFallback>
@@ -651,18 +596,6 @@ if ( {) {
                           Mark as approved
                         </DropdownMenuItem>
                       )}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </div>
-              </TableCell>
-            </TableRow>
-                    </DropdownMenuContent>;
-                  </DropdownMenu>;
-                </div>;
-              </TableCell>;
-
-            </TableRow>;
-
 
           ))}
 

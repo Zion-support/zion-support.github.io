@@ -1,13 +1,3 @@
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
-
-
-  currentLanguage: SupportedLanguage,
-  changeLanguage: (lang: SupportedLanguage) => Promise<void>,
-  isRTL: boolean,
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
-};
-
-
 
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '' }
@@ -45,14 +35,13 @@ const defaultLanguageContext: LanguageContextType = {;
 
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-
-
-
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
-  children, 
-  authState = { isAuthenticated: false, user: null } 
-}) => {;
-
+interface LanguageProviderProps {
+  children: ReactNode
+  authState?: {
+    isAuthenticated: boolean
+    user: { id?: string } | null
+  }
+}
 
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
@@ -94,6 +83,7 @@ if ( {) {
             .eq('id', user.id);
           if (error) {
             console.error('Error updating language preference:', error)
+
 import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react',;
 import { useTranslation } from 'react-i18next',;
 import { supabase } from '../integrations/supabase/client',;
@@ -233,17 +223,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
             .eq('id', user && user.id);
 
           if (error) {;
+            console.error('Error updating language preference:', error);
 
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
         }
       }
-
-
-    };
-    
-
 
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
@@ -266,6 +252,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
           .eq('id', user.id);
         if (error) {
           console.error('Error updating language preference:', error)
+
     },;
     syncLanguageWithProfile();
   }, [currentLanguage, isAuthenticated, user]);
@@ -295,18 +282,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
 
           console.error('Error updating language preference:', error);
 
-
-
         }
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
-
-
-  };
-  
-
 
   return (
     <LanguageContext.Provider
@@ -323,6 +303,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         changeLanguage, 
         isRTL
         supportedLanguages
+
   },;
   return (;
     <LanguageContext.Provider;
@@ -332,15 +313,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         isRTL;
         supportedLanguages;
 
-
       }}
     >
       {children}
 
-};
-
     </LanguageContext.Provider>;
   );
 };
-
 

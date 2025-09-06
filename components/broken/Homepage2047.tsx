@@ -1,64 +1,5 @@
 
 import {
-import {motion, AnimatePresence} from 'framer-motion';
-import Link from 'next / link';
-import {
-
-  ArrowRight,
-  Play,
-  TrendingUp,
-  Brain,
-  Shield,
-  Rocket,
-  Globe,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles as SparklesIcon,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Shield as ShieldIcon,
-  Rocket as RocketIcon,
-  Zap,
-  Eye,
-  Heart,
-  Infinity,
-  ChevronRight,
-  ChevronLeft,
-  ExternalLink,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Zap as ZapIcon,
-  DollarSign,
-  BarChart3,
-  Palette,
-  Cloud,
-  Network,
-  ShoppingCart,
-  Settings,
-  Building,
-  Monitor,
-  Layers,
-  Globe2,
-  Lock,
-  Code,
-  Server,
-  Phone,
-  Search,
-  Filter,
-  Grid,
-  List,
-  Eye as EyeIcon,
-  ArrowUpRight,
-  Star as StarIcon,
-
-  Sparkles,;
-  Target as TargetIcon,;} from 'lucide-react';import { ;
-
 
   ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
 
@@ -66,7 +7,6 @@ import {
   ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
   DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
   Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
-
 
 
 // Import our new innovative services
@@ -318,43 +258,10 @@ if (return allInnovativeServices) {
 ;
   const categories = [;
     {
-      number: `${allInnovativeServices.length}+`
-      label: 'Innovative Services'
-      icon: Star
-    }
-    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp }
-    { number: '24/7', label: 'AI Intelligence Available', icon: Brain }
-    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star }
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp }
-    { number: "24/7", label: "AI Intelligence Available", icon: Brain }
-    { number: "300+", label: "Countries Served", icon: Globe }
-  const fadeInUp = {
-    initial: { opacity: 0, y: 60 }
-    animate: { opacity: 1, y: 0 }
-    transition: { duration: 0.6 },  };    transition: { duration: 0.6 }
-  }
-      number: `${allInnovativeServices.length}+`,
-      label: 'Innovative Services',
-      icon: Star,
-    },
-    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp },
-    { number: '24 / 7', label: 'AI Intelligence Available', icon: Brain },
-    { number: '300+', label: 'Countries Served', icon: Globe },  ];    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
-    { number: "24 / 7", label: "AI Intelligence Available", icon: Brain },
-    { number: "300+", label: "Countries Served", icon: Globe }
-
-
-
 
   const fadeInUp = {
     initial: { opacity: 0, y: 60 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },  };
-
-
-
-
 
   };
 
@@ -492,14 +399,6 @@ if (return allInnovativeServices) {
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden">;
       {/* Futuristic Background */}
       <UltraFuturisticBackground2047 />
-      {/* Navigation */}
-      <UltraFuturisticNavigation2047 />
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2047 />;
-
-
-
 
       {/* Hero Section */}
       <section className='relative py-32 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center'>
@@ -564,43 +463,12 @@ if (return allInnovativeServices) {
                 </p>
               </div>
 
-      
-  const fadeInUp = {
-    initial: { opacity: 0, coordinate_y: 60 },
-    animate: { opacity: 1, coordinate_y: 0 },
-    transition: { duration: 0.6 },  }    transition: { duration: 0.6 }
-  }
-;
-  const stagger_container = {
-    animate: {
-      transition: {
-        stagger_children: 0.1,
-      },
-    },
-  }
-;
-  return (
-    <div className='min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white overflow - hidden'>;
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />  }
-;
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - black via - gray - 900 to - black text - white overflow - hidden">;
-      {/* Futuristic Background */}
-      <UltraFuturisticBackground2047 />;
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2047 />;
-      {/* Hero Section */}
-
-
               {/* CTA Buttons */}
               <motion&& motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className='flex flex-col sm:flex-row gap-4'
-
 
               >
                 <Link
@@ -639,20 +507,11 @@ if (return allInnovativeServices) {
                 </Link>
               </motion.div>
 
-
-
-
-
               {/* Stats */}
               <motion&& motion.div
                 variants={staggerContainer}
                 initial='initial'
                 animate='animate'
-                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >                initial="initial"
-                animate="animate"
-                className="grid grid-cols-2 md:grid-cols-4 gap-6"
-                className='grid grid-cols-2 md:grid-cols-4 gap-6'              >
-
 
               >
                 {stats.map((stat, index) => (
@@ -665,24 +524,6 @@ if (return allInnovativeServices) {
                     <div className='text-2xl font-bold text-cyan-400 mb-1'>
                       {stat.number}
                     </div>
-                    <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>                    className="text-center"
-                  >
-                    <div className="text-2xl font-bold text-cyan-400 mb-1">{stat.number}</div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
-                ))}
-              </motion.div>
-            </motion.div>
-                    <div className='text-sm text-gray-400'>{stat.label}</div>                  </motion.div>
-
-
-                  </motion.div>
-                ))}
-
-              </motion && motion.div>;
-            </motion && motion.div>;
-
-
-
 
             {/* Right Content - Featured Service */}
             <motion&& motion.div
@@ -696,20 +537,12 @@ if (return allInnovativeServices) {
               <AnimatePresence mode="wait">
                 <motion.div
 
-
-
-
-
                   key={currentServiceIndex}
                   initial={{ opacity: 0, scale: 0 && 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
                   className='relative'
-
-
-
-
 
                 >
                   <div className='bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-3xl p-8 border border-cyan-500/20 backdrop-blur-sm'>
@@ -819,23 +652,9 @@ if (return allInnovativeServices) {
                         <span className="text-gray-400">Market Size:</span>;
                         <span className="text-blue-400 font-medium">;
                           {featuredServices[currentServiceIndex]?.marketSize}
-                        </span>;
-                      </div>;
-                    </div>;
-
-
-                    
-                    <Link
-                      href={featuredServices[currentServiceIndex]?.slug |'#'}
-                      className='w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block'
-                    <Link
-
-                      href={featuredServices[currentServiceIndex]?.slug |'#'}
-                      className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white py-3 rounded-xl font-medium text-center hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-105 block"
-
-
-                    >
-
+                        </span>
+                      </div>
+                    </div>
 
                       Learn More
 
@@ -859,8 +678,6 @@ if (return allInnovativeServices) {
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-
-
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -961,10 +778,6 @@ if (return allInnovativeServices) {
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
 
-
-
-
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Revolutionary Service Categories
@@ -990,26 +803,6 @@ if (return allInnovativeServices) {
               Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies
             </p>
           </motion.div>
-
-            transition={{ duration: 0 && 0.8 }}
-            className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              Revolutionary Service Categories;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
-              Explore our comprehensive suite of innovative solutions across AI,;
-              quantum computing, IT infrastructure, and emerging technologies            </p>          >;
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Revolutionary Service Categories;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
-              Explore our comprehensive suite of innovative solutions across AI, quantum computing, IT infrastructure, and emerging technologies;
-            </p>;
-          </motion && motion.div>;
-
-
-
-
 
           {/* Category Cards */}
           <motion&& motion.div
@@ -1059,22 +852,11 @@ if (return allInnovativeServices) {
         </div>
       </section>
 
-
-      {/* Featured Services Grid */}
-      <section className='relative py-20 px-4 sm:px-6 lg:px-8'>;
-        <div className='max-w-7xl mx-auto'>          <motion && motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">;
-        <div className="max-w-7xl mx-auto">;
-          <motion&& motion.div
-
-
-
       {/* Featured Services Grid */}
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-7xl mx-auto'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.div
-
-
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1126,10 +908,6 @@ if (return allInnovativeServices) {
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
 
-
-
-
-
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Featured Innovative Services
@@ -1155,26 +933,6 @@ if (return allInnovativeServices) {
               Discover our most revolutionary and cutting-edge technology solutions
             </p>
           </motion.div>
-
-            transition={{ duration: 0 && 0.8 }}
-            className='text-center mb-16'>;
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-              Featured Innovative Services;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>;
-              Discover our most revolutionary and cutting-edge technology;
-              solutions            </p>          >;
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-              Featured Innovative Services;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">;
-              Discover our most revolutionary and cutting-edge technology solutions;
-            </p>;
-          </motion && motion.div>;
-
-
-
-
 
           {/* Services Grid */}
           <motion&& motion.div
@@ -1216,10 +974,6 @@ if (return allInnovativeServices) {
             ))}
           </motion.div>
 
-
-
-
-
           {/* View All Services CTA */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -1227,7 +981,6 @@ if (return allInnovativeServices) {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-center mt-16'
-
 
           >
             <Link
@@ -1255,7 +1008,6 @@ if (return allInnovativeServices) {
         <div className='max-w-4xl mx-auto text-center'>          <motion.div      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-
 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1286,132 +1038,14 @@ if (return allInnovativeServices) {
         </div>
       </section>
 
-
-                className="border border-cyan-500/50 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-200">;
-                Explore Services;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
-
-
-      {/* Footer */}
-      <UltraFuturisticFooter2047 />;
-    </div>;
-  );
-
-
-};
-
-export default Homepage2047;  );
-};
-
-export default Homepage2047;
-
-
-                    </p>;
-                    <div className='flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200'>;
-                      <span className='text - sm font - medium'>Learn More</span>;
-                      <ArrowRight className='w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 200' />                    </div>;
-                    <div className="flex items - center text - cyan - 400 group - hover:text - cyan - 300 transition - colors duration - 200">;
-                      <span className="text - sm font - medium">Learn More</span>;
-                      <ArrowRight className="w - 4 h - 4 ml - 2 group - hover:translate - x-1 transition - transform duration - 200" />;
-                  </div>;
-                </Link>;
-              </motion.div>))}
-          </motion.div>;
-          {/* View All Services CTA */}
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className='text - center mt - 16';
-          >;
-            <Link;
-              href='/2025 - innovative - services - showcase - v2';
-              className='inline - flex items - center space - x-3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - purple - 500 / 25';
-            >;
-              <span > View All {allInnovativeServices.length}+ Services</span>;
-              <ArrowRight className='w - 5 h - 5' />            </Link>          >;
-            <Link;
-              href="/2025 - innovative - services - showcase - v2";
-              className="inline - flex items - center space - x-3 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - purple - 600 hover:to - pink - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - purple - 500 / 25";
-            >;
-              <span > View All {allInnovativeServices.length}+ Services</span>;
-              <ArrowRight className="w - 5 h - 5" />;
-            </Link>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* CTA Section */}
-      <section className='relative py - 20 px - 4 sm:px - 6 lg:px - 8'>;
-        <div className='max - w-4xl mx - auto text - center'>          <motion.div      <section className="relative py - 20 px - 4 sm:px - 6 lg:px - 8">;
-        <div className="max - w-4xl mx - auto text - center">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to Transform Your Business?;
-            </h2>;
-            <p className='text - xl text - gray - 300 mb - 8 leading - relaxed'>;
-              Join thousands of organizations already leveraging our;
-              revolutionary AI, quantum, and IT infrastructure solutions;
-            </p>;
-            <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-              <Link;
-                href='/contact';
-                className='bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25'              >;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/2025 - innovative - services - showcase - v2';
-                className='border border - cyan - 500 / 50 text - cyan - 400 px - 8 py - 4 rounded - xl font - semibold text - lg hover:bg - cyan - 500 / 10 transition - all duration - 200'              >              Ready to Transform Your Business?;
-            </h2>;
-            <p className="text - xl text - gray - 300 mb - 8 leading - relaxed">;
-              Join thousands of organizations already leveraging our revolutionary AI, quantum, and IT infrastructure solutions;
-            </p>;
-            <div className="flex flex - col sm: flex - row gap - 4 justify - center">;
-              <Link;
-                href="/contact";
-                className="bg - gradient - to - r from - cyan - 500 to - blue - 500 text - white px - 8 py - 4 rounded - xl font - semibold text - lg hover:from - cyan - 600 hover:to - blue - 600 transition - all duration - 200 hover:scale - 105 shadow - lg hover:shadow - cyan - 500 / 25";
-              >;
-                Get Started Today;
-              </Link>;
-              <Link;
-                href='/2025 - innovative - services - showcase - v2';
-                className='border border - cyan - 500 / 50 text - cyan - 400 px - 8 py - 4 rounded - xl font - semibold text - lg hover:bg - cyan - 500 / 10 transition - all duration - 200'                href="/2025 - innovative - services - showcase - v2";
-                className="border border - cyan - 500 / 50 text - cyan - 400 px - 8 py - 4 rounded - xl font - semibold text - lg hover:bg - cyan - 500 / 10 transition - all duration - 200";
-              >;
-                Explore Services;
-              </Link>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      {/* Footer */}
-      <UltraFuturisticFooter2047 />;
-    </div>);
-}
-;
-export default Homepage2047);
-}
-;
-export default Homepage2047;
-;
-
-
-
       {/* Footer */}
       <UltraFuturisticFooter2047 />
     </div>
   );
 
-};
+export default Homepage2047;  )
+}
+export default Homepage2047;
 
+export default Homepage2047;
 

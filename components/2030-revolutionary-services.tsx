@@ -1,62 +1,8 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
 import Head from 'next/head';
 
 import { motion } from 'framer-motion';
-
-
-} from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
-
-import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react';
-
-import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
-import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
-import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
-import { innovative2030Services } from '../data/2030-innovative-services';
-
-
-  };
-
-  return (
-
-
-
-  ArrowRight,
-  Star,
-  Zap,
-  TrendingUp,
-  Users,
-  Award,
-  Phone,
-
-  Mail,;
-  MapPin,;
+import {
 
 } from 'lucide-react';import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030';
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
@@ -68,16 +14,6 @@ import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFoote
 import { innovative2030Services } from '../data/2030-innovative-services';
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
-
-
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com';
-
-  };
-
-
 
   return (
     <UltraFuturisticBackground2030>;
@@ -275,14 +211,6 @@ export default function Revolutionary2030ServicesPage() {
             })
         />
       </Head>
-      {/* Navigation */}
-      <UltraFuturisticNavigation2030 />
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2030 />;
-
-
-
 
       {/* Hero Section */}
       <section className='py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>;
@@ -445,14 +373,6 @@ export default function Revolutionary2030ServicesPage() {
         <div className="max-w-7xl mx-auto">
           <motion.div
 
-      {/* Services Showcase */}
-      <section className='py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
-        <div className='max-w-7xl mx-auto'>          <motion.div      <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-
-
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
@@ -588,37 +508,6 @@ export default function Revolutionary2030ServicesPage() {
             ))}
           </div>
 
-                  {/* Price and CTA */}
-                  <div className='flex items-center justify-between'>;
-                    <div>;
-                      <div className='text-3xl font-bold text-white'>;
-                        {service && service.price}
-                      </div>;
-                      <div className='text-gray-400 text-sm'>;
-                        {service && service.period}
-                      </div>;
-                    </div>;
-                    <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group'>;
-                      Learn More;
-                      <ArrowRight className='w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform' />                    </button>                    <div>;
-                      <div className="text-3xl font-bold text-white">{service && service.price}</div>;
-                      <div className="text-gray-400 text-sm">{service && service.period}</div>;
-                    </div>;
-                    <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 group">;
-                      Learn More;
-                      <ArrowRight className="w-4 h-4 ml-2 inline group-hover:translate-x-1 transition-transform" />;
-                    </button>;
-                  </div>;
-                </div>;
-              </motion && motion.div>;
-            ))}
-
-          </div>;
-
-
-
-
-
           {/* Call to Action */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -638,23 +527,6 @@ export default function Revolutionary2030ServicesPage() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
 
-
-
-
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0 && 0.8 }}>;
-            <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>;
-              Ready to Transform Your Business with;
-              <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-                {' '}
-
-
-      {/* Contact Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -702,7 +574,6 @@ export default function Revolutionary2030ServicesPage() {
       {/* Footer */}
       <UltraFuturisticFooter2030 />
     </UltraFuturisticBackground2030>
-  );
 
                 2030 Technology?;
               </span>;
@@ -855,3 +726,6 @@ export default function Revolutionary2030ServicesPage() {
       <UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>));
 }
+
+  );
+

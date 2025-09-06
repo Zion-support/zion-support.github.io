@@ -1,7 +1,4 @@
 
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
-
-
 
 export type DisputeReason =;
   | 'Scope Disagreement';
@@ -12,7 +9,27 @@ export type DisputeReason =;
 
   | 'Other',;
 
+export type DisputeAttachment = {
+  id: string;
+  fileName: string;
+  fileSize: number;
+  mimeType: string;
+
+export type DisputeMessage = {
+  id: string;
+  authorUserId: string;
+  authorRole: 'client' | 'talent' | 'admin';
+  body: string;
+  createdAt: string;
+
+  clientUserId: string;
+  talentUserId: string;
+  createdAt: string;
+  updatedAt: string;
+
+export type UserSummary = {
+  id: string;
+  name: string;
 
   role: 'admin' | 'client' | 'talent';
-}
-};
+

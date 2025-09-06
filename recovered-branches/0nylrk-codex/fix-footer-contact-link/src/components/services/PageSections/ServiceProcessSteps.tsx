@@ -17,8 +17,6 @@
       </div>
     </div>
   )
-}
-
 
 export function ServiceProcessSteps() {;
   return (;
@@ -53,7 +51,7 @@ export function ServiceProcessSteps() {;
       </div>;
     </div>;
   );
+
 }
 ;
-
 

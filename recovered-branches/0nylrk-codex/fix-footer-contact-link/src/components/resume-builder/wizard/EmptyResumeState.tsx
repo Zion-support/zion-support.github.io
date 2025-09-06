@@ -1,6 +1,7 @@
 
 
-
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
 
 export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
   return (
@@ -18,13 +19,6 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) => {
         </div>
       </CardContent>
     </Card>
-
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {FilePlus} from "lucide-react";
-import {EmptyResumeProps} from "./types";
-
-};
 
   )
 },
@@ -70,5 +64,4 @@ export const EmptyResumeState = ({ onCreateClick }: EmptyResumeProps) =>: any {
 
 
 export default EmptyResumeState;
-
 

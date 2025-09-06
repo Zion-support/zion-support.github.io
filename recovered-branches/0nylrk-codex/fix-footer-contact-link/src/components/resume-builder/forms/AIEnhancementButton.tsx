@@ -1,12 +1,5 @@
 
 
-
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Sparkles, Loader2} from 'lucide-react';
-import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
-
-
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -14,44 +7,14 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
-import {useState} from 'react';
-import {Button} from '@/components / ui / button';
-import {Sparkles, Loader2} from 'lucide-react';
-
-export function AIEnhancementButton({;
-
+  buttonText?: string;
+  className?: string
+}
 
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-
-  buttonText = "Enhance with AI";
-
-
-  const handleEnhance = async () => {;
-    if (!currentContent || currentContent && currentContent.trim().length < 10) {;
-
-      setError('Please enter at least some basic content before enhancing');
-      return;
-    }
-
-
-
-    setError(null);
-    const enhancedContent = await enhanceContent(;
-      currentContent;
-      enhancementType;
-      context;
-    );
-
-
-    if (enhancedContent) {;
-      onEnhanced(enhancedContent);
-    }
-  };
-
-
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -72,6 +35,7 @@ export function AIEnhancementButton({
   context,
   onEnhanced,
   buttonText = "Enhance with AI",
+
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -83,8 +47,18 @@ export function AIEnhancementButton({
       return
     }
 
+;
+    setError(null),;
+    const enhancedContent = await enhanceContent(;
+      currentContent,;
+      enhancementType,;
+      context;
+    );
+    if (enhancedContent) {;
+      onEnhanced(enhancedContent);
+    }
+  },
 
-  
   return (
     <Button
       type="button"
@@ -101,21 +75,4 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-}
-}
-import {useResumeEnhancer} from '@/hooks / useResumeEnhancer';
-interface AIEnhancementButtonProps {
-  current_content: string,
-  enhancement_type: 'summary' | 'work - description' | 'skill - categorization' | 'general',
-  context?: string;
-  on_enhanced: (enhanced_content: string) => void,
-  button_text?: string;
-  class_name?: string;
-}
-export /**
- * AIEnhancementButton - Function description
- */
-function AIEnhancementButton() {
-  const { enhance_content, is_enhancing } = useResumeEnhancer ();
-  const [error, set_error] = useState < string | null>(null);
-;
+

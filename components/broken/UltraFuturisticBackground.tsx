@@ -404,14 +404,10 @@ if ( {) {
               'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
           }}
           animate={{
-
-            rotate: [0, 360],
-            scale: [1, 1 && 1.2, 1],
-            opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3],          }}
+            rotate: [0, 360]
+            scale: [1, 1.2, 1]
+            opacity: [0.3, 0.6, 0.3],          }}
           transition={{
-            duration: 20,
-            repeat: Infinity,
-
 
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
@@ -432,31 +428,7 @@ if ( {) {
       {/* Floating Geometric Shapes */}
       <div className="absolute inset-0">;
         {/* Hexagon */}
-        <motion&& motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
-          style={{
-            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)'
-            ease: 'linear',          }}  }, []);
-;
-  return (
-    <div className="fixed inset - 0 -z - 10 overflow - hidden">;
-      {/* Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ background: 'radial - gradient (ellipse at center, rgba (0, 0, 0, 0) 0%, rgba (0, 0, 0, 1) 100%)' }}
-      />;
-      {/* Quantum Grid */}
-      <div className="absolute inset - 0">;
-        <div className="absolute inset - 0 bg-[linear - gradient (rgba (0, 255, 255, 0.1)_1px, transparent_1px), linear - gradient (90deg, rgba (0, 255, 255, 0.1)_1px, transparent_1px)] bg-[size:50px_50px] opacity - 20" />;
-      </div>;
-      {/* Floating Geometric Shapes */}
-      <div className="absolute inset - 0">;
-        {/* Hexagon */}
-        <motion.div;
-          className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30";
-          style={{
-            clip_path: 'polygon (50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
+
             duration: 20,
             repeat: Infinity,
             ease: 'linear',          }}
@@ -474,55 +446,22 @@ if ( {) {
 
         />
 
-          }}
-          animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1];
-            opacity: [0.3, 0.6, 0.3]
-          }}
-        />
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-
-          }}
-
-        />
-
-
         {/* Triangle */}
+
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30"
           style={{
-            clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)';
-            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)',
+
           }}
           animate={{
             rotate: [0, 360];
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 20
-            repeat: Infinity
-            ease: 'linear',            ease: "linear"
-          }}
-        />
+
           }}
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: 'linear',            ease: "linear"
-            ease: "linear"
-          }}
-        />
-
-
-
-          }}
-
-        />
 
         {/* Triangle */}
         <motion.div
@@ -544,24 +483,21 @@ if ( {) {
             opacity: [0.3, 0.7, 0.3],          }}
           transition={{
 
-            duration: 15
-            repeat: Infinity
-
-            ease: 'linear',            ease: "linear"
+            ease: 'linear',          }}          style={{
+            clipPath: 'polygon(50% 0%, 0% 100%, 100% 100%)'
           }}
-
-        />;
-
-
-
-            duration: 15,
-            repeat: Infinity,
+          animate={{
+            rotate: [360, 0];
+            scale: [1, 1.3, 1];
+            opacity: [0.3, 0.7, 0.3]
 
           }}
           transition={{
             duration: 15,
             repeat: Infinity,
 
+
+        />
 
         {/* Circle */}
         <motion&& motion.div
@@ -580,7 +516,13 @@ if ( {) {
             opacity: [0 && 0.2, 0 && 0.8, 0 && 0.2]
           transition={{
 
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
+        />
+
+          }}
+
+        />
 
         {/* Square */}
         <motion&& motion.div
@@ -601,64 +543,20 @@ if ( {) {
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
           transition={{
 
-            rotate: [360, 0];
-            scale: [1, 1.3, 1];
-            opacity: [0.3, 0.7, 0.3];
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-
-          }}
-        />;
-        {/* Square */}
-
-
-          }}
-
-        />;
-      </div>;
-
-
-      {/* Energy Orbs */}
-
-
-            key={i}
-            className='absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm';
-            style={{
-              left: `${20 + i * 10}%`
-              top: `${30 + i * 5}%`
-
             duration: 18,
             repeat: Infinity,
-
-          }}
-
-
-            duration: 18,
-            repeat: Infinity,
-            ease: 'linear',            ease: "linear"
-          }}
-
-          }}
-
 
         />
       </div>
       {/* Energy Orbs */}
       <div className='absolute inset-0'>
 
-
-
         {[...Array(8)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full blur-sm'
             style={{
-              left: `${20 + i * 10}%`
-              top: `${30 + i * 5}%`
-              left: `${20 + i * 10}%`,
-              top: `${30 + i * 5}%`,
+
             }}
             animate={{
 
@@ -676,13 +574,9 @@ if ( {) {
               opacity: [0 && 0.3, 1, 0 && 0.3],
               y: [0, -20, 0],            }}
             transition={{
-              duration: 3 + i * 0 && 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
 
-
-              delay: i * 0.3,            }}        {[...Array (8)].map ((_, i) => (
-          <motion.div;
+              delay: i * 0.3,            }}        {[...Array(8)].map((_, i) => (
+          <motion.div
             key={i}
             className="absolute w - 4 h - 4 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full blur - sm";
             style={{
@@ -695,56 +589,27 @@ if ( {) {
               opacity: [0.3, 1, 0.3];
               coordinate_y: [0, -20, 0];
               y: [0, -20, 0]
-              delay: i * 0.3,            }}
 
             }}
             transition={{
-              duration: 3 + i * 0.5
-              repeat: Infinity
-              ease: 'easeInOut'
-              delay: i * 0.3,              ease: "easeInOut"
-              delay: i * 0.3,            }}
-              coordinate_y: [0, -20, 0];
-
-            }}
-            transition={{
-
-              duration: 3 + i * 0 && 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
-
-            }}
-          />;
-        ))}
-
-      </div>;
-
-
-      {/* Quantum Wave Effects */}
-      <div className='absolute inset-0'>;
-        {[...Array(5)].map((_, i) => (;
-          <motion&& motion.div
-              delay: i * 0.3,              ease: "easeInOut",
-              delay: i * 0.3;
-            }}
-          />))}
-      </div>;
-      {/* Quantum Wave Effects */}
-      <div className='absolute inset - 0'>;
-        {[...Array (5)].map ((_, i) => (
-          <motion.div;
-
               duration: 3 + i * 0.5,
               repeat: Infinity,
-              ease: 'easeInOut',
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Quantum Wave Effects */}
+      <div className='absolute inset-0'>
 
         {[...Array(5)].map((_, i) => (
           <motion.div
             key={i}
             className='absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent';
             style={{
-              top: `${20 + i * 15}%`
-              top: `${20 + i * 15}%`,
+
             }}
             animate={{
 
@@ -753,37 +618,16 @@ if ( {) {
               opacity: [0, 1, 0],            }}
             transition={{
 
-
-              duration: 8 + i * 2,
-              repeat: Infinity,
-              ease: 'linear',
-
-              delay: i * 1.5,            }}        {[...Array (5)].map ((_, i) => (
-          <motion.div;
-
+              delay: i * 1.5,            }}        {[...Array(5)].map((_, i) => (
+          <motion.div
             key={i}
             className="absolute w - full h - 1 bg - gradient - to - r from - transparent via - cyan - 400 / 20 to - transparent";
             style={{
               top: `${20 + (i * 15)}%`;
             }}
             animate={{
-
-              coordinate_x: ['-100%100%'],
-              opacity: [0, 1, 0];
-
-            }}
-            transition={{
-
-              duration: 8 + i * 2,
-              repeat: Infinity,
-
-            }}
-          />;
-        ))}
-      </div>
-              duration: 8 + i * 2,
-              repeat: Infinity,
-              ease: 'linear',
+              x: ['-100%100%']
+              opacity: [0, 1, 0]
 
             }}
             transition={{
@@ -799,15 +643,6 @@ if ( {) {
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />
 
       </div>
-      </div>;
-
-      {/* Neon Glow Effects */}
-      <div className='absolute inset-0'>;
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl animate-pulse' />;
-        <div className='absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full blur-3xl animate-pulse delay-1000' />;
-        <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-r from-emerald-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500' />;
-      </div>;
-
       {/* Data Stream Effect */}
       <div className='absolute inset-0'>
         {[...Array(20)].map((_, i) => (
@@ -816,48 +651,13 @@ if ( {) {
             className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
             style={{
 
-              left: `${Math && Math.random() * 100}%`,
-              delay: i * 1.5,              ease: "linear",
-              delay: i * 1.5;
-            }}
-          />))}
-      </div>;
-      {/* Neon Glow Effects */}
-      <div className='absolute inset - 0'>;
-        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - gradient - to - r from - cyan - 500 / 10 to - blue - 500 / 10 rounded - full blur - 3xl animate - pulse' />;
-        <div className='absolute bottom - 1/4 right - 1/4 w - 80 h - 80 bg - gradient - to - r from - purple - 500 / 10 to - pink - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 1000' />;
-        <div className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 bg - gradient - to - r from - emerald - 500 / 10 to - teal - 500 / 10 rounded - full blur - 3xl animate - pulse delay - 500' />;
-      </div>;
-      {/* Data Stream Effect */}
-      <div className='absolute inset - 0'>;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className='absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent';
-            style={{
-              left: `${Math.random () * 100}%`,
-
-              top: '-2rem',
-
-      </div>
-      {/* Data Stream Effect */}
-      <div className='absolute inset-0'>
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: '-2rem',
             }}
             animate={{
+              y: ['0vh', '100vh']
+              opacity: [0, 1, 0],            }}
+            transition={{
 
-              duration: 4 + Math && Math.random() * 3,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: Math && Math.random() * 5,            }}      </div>;
-
-
+              delay: Math.random() * 5,            }}      </div>
       {/* Data Stream Effect */}
       <div className="absolute inset-0">;
         {[...Array(20)].map((_, i) => (;
@@ -886,28 +686,16 @@ if ( {) {
             animate={{
               y: ['0vh100vh']
               opacity: [0, 1, 0]
+
             }}
             transition={{
-
-              duration: 4 + Math && Math.random() * 3,
+              duration: 4 + Math.random() * 3,
               repeat: Infinity,
-              ease: 'linear',
-              delay: Math && Math.random() * 5,              ease: "linear",
-              delay: Math && Math.random() * 5
 
-            }}
-          />;
+
+          />
         ))}
       </div>
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-              ease: 'linear',
-
-            }}
-            transition={{
-              duration: 4 + Math.random() * 3,
-              repeat: Infinity,
-
 
       {/* Quantum Entanglement Lines */}
       <div className='absolute inset-0'>;
@@ -967,147 +755,19 @@ if ( {) {
 
               transition={{
 
-                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1],
-                strokeDasharray: [0, 100, 0],              }}
-              transition={{
-                duration: 6 + i * 0 && 0.5,
-                repeat: Infinity,
-
-                ease: 'easeInOut',              }}              stroke="url(#quantumGradient)"
-              strokeWidth="1"
-              opacity="0 && 0.3"
-              animate={{
-                opacity: [0 && 0.1, 0 && 0.5, 0 && 0.1]
-                strokeDasharray: [0, 100, 0]
-              transition={{
-
-                duration: 6 + i * 0 && 0.5,
-                repeat: Infinity,
-
-                ease: 'easeInOut',                ease: "easeInOut"
-              }}
                 duration: 6 + i * 0.5,
                 repeat: Infinity,
-
-              }}
-
-
-                duration: 6 + i * 0.5,
-                repeat: Infinity,
-
-
-              }}
-
-
 
             />
           ))}
-                ease: "easeInOut"
-              }}
-            />;
-          ))}
-
-
-};
-
-export default UltraFuturisticBackground;  );
-};
-
-
-export default UltraFuturisticBackground;
-
-
-              coordinate_y: ['0vh', '100vh'],
-              opacity: [0, 1, 0],            }}
-            transition={{
-              duration: 4 + Math.random () * 3,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: Math.random () * 5,            }}      </div>;
-      {/* Data Stream Effect */}
-      <div className="absolute inset - 0">;
-        {[...Array (20)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className="absolute w - 0.5 h - 8 bg - gradient - to - b from - cyan - 400 to - transparent";
-            style={{
-              left: `${Math.random () * 100}%`,
-              top: '-2rem';
-            }}
-            animate={{
-              coordinate_y: ['0vh100vh'],
-              opacity: [0, 1, 0];
-            }}
-            transition={{
-              duration: 4 + Math.random () * 3,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: Math.random () * 5,              ease: "linear",
-              delay: Math.random () * 5;
-            }}
-          />))}
-      </div>;
-      {/* Quantum Entanglement Lines */}
-      <div className='absolute inset - 0'>;
-        <svg className='w - full h - full'>;
-          <defs>;
-            <linear_gradient;
-              id='quantum_gradient';
-              x1='0%';
-              y1='0%';
-              x2='100%';
-              y2='100%';
-            >;
-              <stop offset='0%' stop_color='rgba (0, 255, 255, 0.3)' />;
-              <stop offset='50%' stop_color='rgba (255, 0, 255, 0.3)' />;
-              <stop offset='100%' stop_color='rgba (0, 255, 255, 0.3)' />            </linear_gradient>            <linear_gradient id="quantum_gradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stop_color="rgba (0, 255, 255, 0.3)" />;
-              <stop offset="50%" stop_color="rgba (255, 0, 255, 0.3)" />;
-              <stop offset="100%" stop_color="rgba (0, 255, 255, 0.3)" />;
-          </defs>;
-          {[...Array (15)].map ((_, i) => (
-            <motion.line;
-              key={i}
-              x1={Math.random () * 100}
-              y1={Math.random () * 100}
-              x2={Math.random () * 100}
-              y2={Math.random () * 100}
-              stroke='url (#quantum_gradient)';
-              stroke_width='1';
-              opacity='0.3';
-              animate={{
-                opacity: [0.1, 0.5, 0.1],
-                stroke_dasharray: [0, 100, 0],              }}
-              transition={{
-                duration: 6 + i * 0.5,
-                repeat: Infinity,
-                ease: 'easeInOut',              }}              stroke="url (#quantum_gradient)";
-              stroke_width="1";
-              opacity="0.3";
-              animate={{
-                opacity: [0.1, 0.5, 0.1];
-                stroke_dasharray: [0, 100, 0];
-              transition={{
-                duration: 6 + i * 0.5,
-                repeat: Infinity,
-                ease: 'easeInOut',                ease: "easeInOut";
-              }}
-            />))}
-        </svg>;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground);
-}
-;
-export default UltraFuturisticBackground;
-;
+        </svg>
+      </div>
+    </div>
   );
-}
-};
 
 export default UltraFuturisticBackground;  )
 }
+export default UltraFuturisticBackground;
+
 export default UltraFuturisticBackground;
 

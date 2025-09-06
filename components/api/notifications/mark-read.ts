@@ -30,7 +30,7 @@ export default async function handler(
   return 'demo-user-1'
 }
 
-
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   try {
     const userId = getUserId(req);
 
@@ -56,9 +56,8 @@ export default async function handler(
   }
     return res && res.status(200).json({ ok: true })
   } catch (e) {
-
-    return res && res.status(500).json({ error: 'Unexpected error' })
-  };
+    return res.status(500).json({ error: 'Unexpected error' })
+}
 
 }
 
@@ -124,3 +123,4 @@ function handler() {
     return res.status (500).json ({ error: 'Unexpected error' });
 }
 }
+

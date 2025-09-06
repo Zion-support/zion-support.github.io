@@ -1,125 +1,10 @@
 import React from 'react';
-
-import Head from 'next / head';
-import Link from 'next / link';
-;
-
-
+import Head from 'next/head';
+import Link from 'next/link';
 
 const BlueprintsIndexPage: React.FC = () => {
   const blueprint_categories = [;
     {
-      category: 'System Architecture'
-      blueprints: [
-        {
-          id: 'comprehensive - redundancy',
-          name: 'Comprehensive Redundancy System',
-          description: 'Multi - layer redundancy architecture for maximum uptime',
-          status: 'active',
-          complexity: 'high',
-          last_updated: '2025 - 01 - 17';
-        },
-        {
-          id: 'ultimate-redundancy'
-          name: 'Ultimate Redundancy System'
-          description: 'Advanced redundancy with automated failover'
-          status: 'active'
-          complexity: 'critical'
-          lastUpdated: '2025-01-16'
-        }
-        {
-          id: 'github-actions-automation'
-          name: 'GitHub Actions Automation'
-          description: 'Complete CI/CD automation with self-healing'
-          status: 'active'
-          complexity: 'high'
-          lastUpdated: '2025-01-15'
-        }
-      ]
-    }
-    {
-      category: 'Deployment Patterns'
-      blueprints: [
-        {
-          id: 'zero-downtime-deployment'
-          name: 'Zero-Downtime Deployment'
-          description: 'Blue-green deployment with health checks'
-          status: 'active'
-          complexity: 'medium'
-          lastUpdated: '2025-01-14'
-        }
-        {
-          id: 'canary-deployment'
-          name: 'Canary Deployment'
-          description: 'Gradual rollout with traffic splitting'
-          status: 'active'
-          complexity: 'high'
-          lastUpdated: '2025-01-13'
-        }
-        {
-          id: 'rolling-update'
-          name: 'Rolling Update Strategy'
-          description: 'Sequential instance updates with health monitoring'
-          status: 'active'
-          complexity: 'medium'
-          lastUpdated: '2025-01-12'
-        }
-      ]
-    }
-    {
-      category: 'Monitoring & Observability'
-      blueprints: [
-        {
-          id: 'health-check-system'
-          name: 'Health Check System'
-          description: 'Comprehensive health monitoring and alerting'
-          status: 'active'
-          complexity: 'medium'
-          lastUpdated: '2025-01-11'
-        }
-        {
-          id: 'performance-monitoring'
-          name: 'Performance Monitoring'
-          description: 'Real-time performance metrics and alerting'
-          status: 'active'
-          complexity: 'medium'
-          lastUpdated: '2025-01-10'
-        }
-        {
-          id: 'logging-aggregation'
-          name: 'Logging Aggregation'
-          description: 'Centralized logging with search and analytics'
-          status: 'active'
-          complexity: 'low'
-          lastUpdated: '2025-01-09'
-        }
-      ]
-    }
-  ];
-  const recentBlueprints = [
-    {
-      id: 'blueprint-2025-01-17-130835'
-      name: 'AI Content Factory Blueprint'
-      description: 'Automated content generation system architecture'
-      date: '2025-01-17'
-      status: 'deployed'
-    }
-    {
-      id: 'blueprint-2025-01-17-130857'
-      name: 'Edge Computing Network Blueprint'
-      description: 'Distributed computing architecture for global performance'
-      date: '2025-01-17'
-      status: 'development'
-    }
-    {
-      id: 'blueprint-2025-01-17-130921'
-      name: 'Quantum Integration Blueprint'
-      description: 'Quantum computing integration framework'
-      date: '2025-01-17'
-      status: 'research'
-    }
-      category: 'System Architecture',
-      blueprints: [
 
           id: 'comprehensive-redundancy',
           name: 'Comprehensive Redundancy System',
@@ -128,7 +13,6 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'high',
           lastUpdated: '2025-01-17'
         },
-
 
           id: 'ultimate-redundancy',
 
@@ -140,7 +24,6 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-16'
         },
 
-
           id: 'github-actions-automation',
           name: 'GitHub Actions Automation',
           description: 'Complete CI/CD automation with self-healing',
@@ -148,13 +31,17 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'high',
           lastUpdated: '2025-01-15'
 
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
       ]
     }
     {
       category: 'Deployment Patterns'
       blueprints: [
-
 
           id: 'zero-downtime-deployment',
           name: 'Zero-Downtime Deployment',
@@ -163,7 +50,6 @@ const BlueprintsIndexPage: React.FC = () => {
           complexity: 'medium',
           lastUpdated: '2025-01-14'
         },
-
 
           id: 'canary-deployment',
 
@@ -175,7 +61,6 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-13'
         },
 
-
           id: 'rolling-update',
 
           name: 'Rolling Update Strategy',
@@ -185,13 +70,17 @@ const BlueprintsIndexPage: React.FC = () => {
 
           lastUpdated: '2025-01-12'
 
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
       ]
     }
     {
       category: 'Monitoring & Observability'
       blueprints: [
-
 
           id: 'health-check-system',
 
@@ -203,7 +92,6 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-11'
         },
 
-
           id: 'performance-monitoring',
           name: 'Performance Monitoring',
           description: 'Real-time performance metrics and alerting',
@@ -212,18 +100,26 @@ const BlueprintsIndexPage: React.FC = () => {
           lastUpdated: '2025-01-10'
         },
 
-
           id: 'logging-aggregation',
 
           name: 'Logging Aggregation',
           description: 'Centralized logging with search and analytics',
           status: 'active',
           complexity: 'low',
-
-;
-  const recent_blueprints = [;
           lastUpdated: '2025-01-09'
 
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
 
   const recentBlueprints = [
 
@@ -249,10 +145,13 @@ const BlueprintsIndexPage: React.FC = () => {
       date: '2025-01-17',
       status: 'research'
 
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   ];
-
-
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -262,16 +161,12 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'research': return 'text-purple-400';
       default: return 'text-gray-400';
 
-  };
-
-
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-
 
   const getComplexityColor = (complexity: string) => {
 ;
@@ -284,17 +179,12 @@ const BlueprintsIndexPage: React.FC = () => {
       case 'low': return 'bg-green-500/20 text-green-400';
       default: return 'bg-gray-500/20 text-gray-400';
 
-  };
-
-
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
-
-
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-gray-900 text-white">
@@ -304,13 +194,6 @@ const BlueprintsIndexPage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-        {/* Header */}
-        {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
         <div className="mb-8">
           <Link href="/reports" className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -323,13 +206,6 @@ const BlueprintsIndexPage: React.FC = () => {
             Architectural patterns and deployment strategies for scalable systems
           </p>
         </div>
-        {/* Blueprint Overview */}
-        {/* Blueprint Overview */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -353,13 +229,6 @@ const BlueprintsIndexPage: React.FC = () => {
             <p className="text-gray-300 text-sm mt-2">Conceptual phase</p>
           </div>
         </div>
-        {/* Blueprint Categories */}
-        {/* Blueprint Categories */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Categories</h2>
@@ -372,123 +241,44 @@ const BlueprintsIndexPage: React.FC = () => {
                     <div key={blueprintIndex} className="border-l-2 border-indigo-400/30 pl-4">
                       <div className="flex justify-between items-start mb-2">
 
-;
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - indigo - 900 to - gray - 900 text - white">;
-      <Head>;
-        <title > System Blueprints - bolt.new.zion.app</title>;
-        <meta name="description" content="System architecture blueprints and deployment patterns" />;
-        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
-      </Head>;
-      <div className="container mx - auto px - 4 py - 8">;
-        {/* Header */}
-        <div className="mb - 8">;
-          <Link href="/reports" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-            ← Back to Reports;
-          </Link>;
-          <h1 className="text - 4xl font - bold mt - 4 mb - 2 bg - gradient - to - r from - indigo - 400 to - blue - 400 bg - clip - text text - transparent">;
-            System Blueprints;
-          </h1>;
-          <p className="text - gray - 300 text - lg">;
-            Architectural patterns and deployment strategies for scalable systems;
-          </p>;
-        </div>;
-        {/* Blueprint Overview */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 4 gap - 6 mb - 8">;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - indigo - 400">Total Blueprints</h3>;
-            <div className="text - 4xl font - bold text - blue - 400">27</div>;
-            <p className="text - gray - 300 text - sm mt - 2">Available patterns</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - indigo - 400">Active</h3>;
-            <div className="text - 2xl font - bold text - green - 400">18</div>;
-            <p className="text - gray - 300 text - sm mt - 2">Currently deployed</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - indigo - 400">In Development</h3>;
-            <div className="text - 2xl font - bold text - yellow - 400">6</div>;
-            <p className="text - gray - 300 text - sm mt - 2">Under construction</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - indigo - 400">Research</h3>;
-            <div className="text - 2xl font - bold text - purple - 400">3</div>;
-            <p className="text - gray - 300 text - sm mt - 2">Conceptual phase</p>;
-          </div>;
-        </div>;
-        {/* Blueprint Categories */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Blueprint Categories</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
-            {blueprint_categories.map ((category, category_index) => (
-              <div key={category_index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <h3 className="text - xl font - semibold mb - 4 text - indigo - 400">{category.category}</h3>;
-                <div className="space - y-4">;
-                  {category.blueprints.map ((blueprint, blueprint_index) => (
-                    <div key={blueprint_index} className="border - l-2 border - indigo - 400 / 30 pl - 4">;
-                      <div className="flex justify - between items - start mb - 2">;
-                        <Link;
-                          href={`/reports / blueprints/${blueprint.id}`}
-                          className="text - white font - medium hover:text - indigo - 300 transition - colors";
-                        >;
-
+                          href={`/reports/blueprints/${blueprint.id}`}
+                          className="text-white font-medium hover:text-indigo-300 transition-colors"
+                        >
                           {blueprint.name}
                         </Link>;
                         <span className={`px - 2 py - 1 text - xs rounded - full ${getComplexityColor (blueprint.complexity)}`}>;
                           {blueprint.complexity}
-                        </span>;
-                      </div>;
-                      <p className="text - gray - 300 text - sm mb - 2">{blueprint.description}</p>;
-                      <div className="flex justify - between items - center text - xs">;
-                        <span className={`${getStatusColor (blueprint.status)}`}>;
-                          ● {blueprint.status}
 
-
+                          href={`/reports/blueprints/${blueprint.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          className="text-white font-medium hover:text-indigo-300 transition-colors"
+                        >
+                          {blueprint.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        </Link>
+                        <span className={`px-2 py-1 text-xs rounded-full ${getComplexityColor(blueprint.complexity)}`}>
+                          {blueprint.complexity  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
                         </span>
                       </div>
                       <p className="text-gray-300 text-sm mb-2">{blueprint.description}</p>
                       <div className="flex justify-between items-center text-xs">
                         <span className={`${getStatusColor(blueprint.status)}`}>
-                          ● {blueprint.status}
-                          ● {blueprint.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
                         </span>
                         <span className="text-gray-400">{blueprint.lastUpdated}</span>
                       </div>
                     </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Recent Blueprints */}
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>
-              </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Recent Blueprints */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Blueprints</h2>
@@ -498,12 +288,6 @@ const BlueprintsIndexPage: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{blueprint.name}</h3>
                   <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(blueprint.status)}`}>
-                    {blueprint.status}
-                    {blueprint.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
                   </span>
                 </div>
@@ -511,8 +295,7 @@ const BlueprintsIndexPage: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{blueprint.date}</span>
 
-
-
+                  <Link
 
                     className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
                   >
@@ -520,30 +303,6 @@ const BlueprintsIndexPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Blueprint Benefits */}
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className="text-indigo-400 hover:text-indigo-300 text-sm transition-colors"
-                  >
-                    View Blueprint 
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Blueprint Benefits */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Blueprint Benefits</h2>
@@ -552,9 +311,6 @@ const BlueprintsIndexPage: React.FC = () => {
               <div className="text-6xl font-bold text-indigo-400 mb-4"></div>
               <h3 className="text-xl font-semibold mb-2 text-white">Proven Architecture</h3>
               <p className="text-gray-300 mb-6">
-
-
-
 
                 scalability, reliability, and maintainability for your systems.
               </p>
@@ -580,18 +336,14 @@ const BlueprintsIndexPage: React.FC = () => {
           </div>
         </div>
 
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
-
 
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-indigo-400/50"
@@ -599,17 +351,11 @@ const BlueprintsIndexPage: React.FC = () => {
             All Reports
           </Link>
 
-
-
-
             href="/reports/performance"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
           >
             Performance
           </Link>
-
-
-
 
             href="/reports/innovation"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-purple-400/50"
@@ -620,10 +366,5 @@ const BlueprintsIndexPage: React.FC = () => {
       </div>
     </div>
   );
-}
-;
-
-
-};
 
 export default BlueprintsIndexPage;

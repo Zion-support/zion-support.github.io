@@ -97,25 +97,17 @@ const reasonsToChoose = [;
     description: 'Successfully delivered 500+ AI solutions across diverse industries worldwide.'
     icon: ChartBarIcon}
   {
-
-    name: 'Cutting - Edge Technology',
-    description: 'Access to the latest AI research and technology innovations.',
-    icon: LightBulbIcon},
+    name: 'Cutting-Edge Technology'
+    description: 'Access to the latest AI research and technology innovations.'
+    icon: LightBulbIcon}
   {
-    name: 'Global Support',
-    description: '24 / 7 support and maintenance services across multiple time zones.',
-    icon: GlobeAltIcon}];
-export default /**
- * ServicesPage - Function description
- */
-function ServicesPage() {
+    name: 'Global Support'
+    description: '24/7 support and maintenance services across multiple time zones.'
+    icon: GlobeAltIcon}]
 
-export default function ServicesPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className="bg-black">
+
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -126,10 +118,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 AI Services
               </span>
             </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              From strategy to implementation, our comprehensive AI services help you navigate
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              From strategy to implementation, our comprehensive AI services help you navigate 
+
               the complexities of artificial intelligence and achieve transformative results.
             </p>
           </div>
@@ -142,10 +131,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
           <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
             Comprehensive AI Solutions
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            We offer end-to-end AI services designed to accelerate your digital transformation
-          <p className="mt-6 text-lg leading-8 text-gray-300">
-            We offer end-to-end AI services designed to accelerate your digital transformation 
+
             and drive measurable business outcomes.
           </p>
         </div>
@@ -231,19 +217,16 @@ const Page: React.FC<PageProps> = ({ className }) => {
       </div>;
       {/* Service Process */}
 
-
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Our Process</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-
-
             How We Deliver Results
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our proven methodology ensures successful project delivery and maximum value 
+
             from your AI investment.
           </p>
         </div>
@@ -294,15 +277,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* Why Choose Us */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Why Choose Us</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Why Choose Us</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
 
             The Zion Tech Group Advantage
           </p>
@@ -326,13 +300,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
         </div>;
       </div>;
       {/* CTA section */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
 
             Ready to get started?
           </h2>

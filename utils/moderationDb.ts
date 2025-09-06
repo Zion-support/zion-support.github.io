@@ -1,5 +1,4 @@
 
-
   id: string;
   contentId: string;
   contentType: string;
@@ -9,49 +8,7 @@
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
-  reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
 }
-
-;
-export async function getFlagById (id: string): Promise < ModerationFlag | null> {
-  return flags.find (flag => flag.id === id) || null;
-}
-export async function readAllFlags (): Promise < ModerationFlag[]> {
-  return [...flags];
-
-}
-export async function create_flag (data: Partial < ModerationFlag>): Promise < ModerationFlag> {
-  const flag: ModerationFlag = {
-
-  flag && flag.status = status;
-  flag && flag.adminNotes = adminNotes || flag && flag.adminNotes;
-  flag && flag.updatedAt = new Date().toISOString();
-
-  await upsertFlag(flag);
-  return flag;
-
-}
-
-// Moderation database utilities
-export interface ModerationFlag {
-  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
-  content: string, reporterId: string,
-  reportedUserId?: string;
-  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
-  updatedAt: Date, moderatorId?: string,
-  notes?: string;
-}
-
-
-
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -95,3 +52,4 @@ export async function updateFlagStatus(
   return flag;
 
 }
+

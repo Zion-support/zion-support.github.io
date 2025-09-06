@@ -1,16 +1,4 @@
 
-// Signup checking functionality;
-import {supabase} from '@/integrations / supabase / client';
-import {analyze_email} from './analyze_email';
-import {SignupCheckResult} from './types';
-/**;
-* Check for suspicious signup patterns;
-*/;
-
-export const checkSignupPatterns = async (
-
-
-export const checkSignupPatterns = async (;
 
   email: string;
   ip_address?: string): Promise < SignupCheckResult> => {
@@ -33,6 +21,7 @@ export const checkSignupPatterns = async (;
       if (!error && recentSignups && recentSignups.length >= 3) {
 
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`)
+
 // Signup checking functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { analyzeEmail } from './analyzeEmail',;
@@ -63,8 +52,6 @@ export const checkSignupPatterns = async (;
       if (!error && recentSignups && recentSignups.length >= 3) {;
         reasons.push(`Multiple accounts (${recentSignups.length}) created from same IP in last 24 hours`);
 
-
-
       }
     } catch (error) {
       console && console.error('Error checking signup patterns:', error)
@@ -76,37 +63,4 @@ export const checkSignupPatterns = async (;
 
     reasons
   }
-}
-    reasons.push (...email_check.reasons);
-  }
-  // If IP address is provided, check for rapid signups from same IP;
-  // Check condition
-if ( {) {
-  $2
-}
-    try {
-      const { data: recent_signups, error } = await supabase;
-        .from ('profiles');
-        .select ('created_at');
-        .eq ('ip_address', ip_address);
-        .gte ('created_at', new Date (Date.now () - 24 * 60 * 60 * 1000).toISOString ()) // Last 24 hours;
-        .order ('created_at', { ascending: false });
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        reasons.push (`Multiple accounts (${recent_signups.length}) created from same IP in last 24 hours`);
-      }
-    } catch (error) {
-      console.error ('Error checking signup patterns:', error);
-    }
-  }
-  return {
-    is_suspicious: reasons.length > 0,
-    reasons;
-  }
-}
-;
 
-};

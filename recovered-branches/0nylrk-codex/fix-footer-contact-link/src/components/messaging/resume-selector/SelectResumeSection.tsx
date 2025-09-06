@@ -1,19 +1,5 @@
 
 
-
-  resumeOptions: ResumeOption[],
-  selectedResume: ResumeOption | null,
-  handleResumeSelect: (resumeId: string) => void,
-  handleDownloadResume: () => void,
-  isLoading: boolean
-}
-
-export function SelectResumeSection({;
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
-
 import React from 'react',;
 import { FileText } from 'lucide-react',;
 import { ResumeOption } from '../resume-selector/types',;
@@ -39,6 +25,7 @@ export function SelectResumeSection({
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
+
   isLoading
 }: SelectResumeSectionProps) {
   return (

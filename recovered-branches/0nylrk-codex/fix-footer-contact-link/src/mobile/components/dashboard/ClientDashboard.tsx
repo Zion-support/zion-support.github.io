@@ -1,6 +1,9 @@
 
 
-
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 
 export function ClientDashboard() {
   return (
@@ -153,14 +156,6 @@ export function ClientDashboard() {
       </section>
     </div>
   )
-
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {ChevronRight, Plus, UserCheck, FileText, Bell} from "lucide-react";
-import {Link} from "react-router-dom";
-
 
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
@@ -381,7 +376,7 @@ function ClientDashboard() {
       </section>;
     </div>;
   );
+
 }
 ;
-
 

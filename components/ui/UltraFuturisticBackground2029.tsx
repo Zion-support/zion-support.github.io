@@ -39,13 +39,16 @@ import { motion } from 'framer-motion';
 
   maxLife: number;
 
-  children,
-}: {;
+interface EnergyField {
+  x: number;
+  y: number;
+  radius: number;
+  intensity: number;
+  color: string;
 
+  pulse: number;
+export default function UltraFuturisticBackground2029({
 
-  children: React.ReactNode;
-  children,
-}: {;
   children: React.ReactNode;
 }) {  const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -64,21 +67,6 @@ import { motion } from 'framer-motion';
   life: number,;
   maxLife: number;
 }
-
-interface EnergyField {;
-  x: number,;
-  y: number,;
-  radius: number,;
-  intensity: number,;
-  color: string,;
-  pulse: number;
-}
-
-export default function UltraFuturisticBackground2029(): any ({ children }: { children: React && React.ReactNode }) {;
-
-
-
-export default function UltraFuturisticBackground2029({ children }: { children: React.ReactNode }) {;
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
@@ -1259,40 +1247,7 @@ if ( {) {
           }}
           transition={{
 
-          className="absolute bottom-20 right-20 w-28 h-28 border border-yellow-400 opacity-20"
-        />;
-        <motion.div;
-          className='absolute bottom - 20 right - 20 w - 28 h - 28 border border - yellow - 400 opacity - 20';
-          animate={{
-            rotate: [-45, 315],
-            opacity: [0.2, 0.6, 0.2],          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',          }}          }}
-        />;
-        <motion.div;
-          className="absolute bottom - 20 right - 20 w - 28 h - 28 border border - yellow - 400 opacity - 20";
-          animate={{
-
           }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',            ease: "easeInOut"
-            duration: 10,
-            repeat: Infinity,
-
-          }}
-
-
-
-          }}
-
-
-            duration: 10,
-            repeat: Infinity,
-
 
         />
       </div>
@@ -1326,12 +1281,4 @@ if ( {) {
 }
       <div className='relative z-10'>{children}</div>
     </div>
-  );      {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
-    </div>
-  )
-}
-  );
 

@@ -239,13 +239,8 @@ if ( {) {
       error: 'Method not allowed',
     });
   }
-
-
-  params,
-}: {;
-  params: { shortCode: string };
-}) {  const shortCode = params.shortCode;export async function getServerSideProps({ params }: { params: { shortCode: string } }) {;
-
+// Handle redirects for short URLs
+export async function getServerSideProps({
 
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
@@ -289,36 +284,4 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   // Redirect to original URL
   return {
     redirect: {
-      destination: shortUrl.originalUrl
-      permanent: false
-    }
-  };      destination: shortUrl.originalUrl;
-
-      permanent: false
-    }
-}
-}
-    return {
-      not_found: true,    }      not_found: true;
-    }
-  }
-  // Increment click count;
-  short_url.clicks++;
-  url_storage.set (short_code, short_url);
-;
-  // Redirect to original URL;
-  return {
-    redirect: {
-      destination: short_url.original_url,
-      permanent: false,
-    },
-  }      destination: short_url.original_url;
-      permanent: false;
-    }
-}
-}
-
-      destination: shortUrl.originalUrl,
-      permanent: false,
-    },
 

@@ -1,50 +1,4 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-  const pageKey = `search-${routeKey}-${router && router.asPath}`;
-import { useRouter } from 'next/router';
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
 
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {;
-  Tabs;
-  TabsContent;
-  TabsList;
-  const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  Tabs
-  TabsContent
-  TabsList
-  TabsTrigger} from "@/components/ui/tabs"
 
 import { useEffect, useState } from "react",
 import { useRouter } from 'next/router',
@@ -58,35 +12,7 @@ import {
   TabsContent,
   TabsList,
   TabsTrigger} from "@/components/ui/tabs",
-import { Loader2 } from 'lucide-react'
 
-
-
-import { Loader2 } from 'lucide-react'
-  const pageKey = `search-${routeKey}-${router.asPath}`
-import { useRouter } from 'next/router'
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
-import { generateSearchSuggestions } from "@/data/marketplaceData"
-import { SearchSuggestion } from "@/types/search"
-import {logErrorToProduction} from '@/utils/productionLogger'
-import {
-  Tabs
-  TabsContent
-  TabsList
-  TabsTrigger} from "@/components/ui/tabs"
-import { useEffect, useState } from "react",
-import { useRouter } from 'next/router',
-import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
-import { generateSearchSuggestions } from "@/data/marketplaceData",
-import { SearchSuggestion } from "@/types/search",
-import {logErrorToProduction} from '@/utils/productionLogger',
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 
 interface SearchResult {
@@ -98,14 +24,183 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
-  },;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    if (query.trim()) {;
-      router.push(`/search?q=${encodeURIComponent(query.trim())}`);
-    }
-  },
 
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+  const regex = new RegExp(`(${escaped})`, "gi")
+  const parts = text.split(regex)
+
+  return (
+    <>
+      {parts.map((part, i) =>
+        regex.test(part) ? (
+          <mark key={i} className="bg-yellow-200 text-black">
+
+    setResults([]);    setLoading(false)
+  })
+  const productResults = results.filter(
+    r => r.type === 'product' |r.type === 'service'
+  )
+  const talentResults = results.filter(r => r.type === 'talent')
+  const docResults = results.filter(r => r.type === 'doc')
+  const blogResults = results.filter(r => r.type === 'blog')
+  const marketplaceResults = [...productResults, ...talentResults]
+  // Sync query with URL parameter changes
+  useEffect(() => {
+
+    if (urlQuery !== query) {
+      setQuery(urlQuery)
+    }
+  }, [router.isReady, router.query.q]), // Fixed dependency array
+  // Fetch results when query changes
+  useEffect(() => {
+    if (!router.isReady) return;
+    if (query.trim()) {
+      fetchResults(query.trim())
+    } else {
+      setResults([])
+    }
+  }, [router.isReady, query]), // Fixed dependency array
+  const fetchResults = async (term: string,) => {
+    if (!term.trim()) {
+
+    }
+    setLoading(true)
+    try {
+      const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`)
+      const data = await res.json()
+      if (data && data.results && Array.isArray(data.results)) {
+        setResults(data.results)
+      } else {
+        setResults([])
+        logErrorToProduction('Search API response structure is not as expected:', { data: data })
+
+import { useEffect, useState } from "react",;
+import { useRouter } from 'next/router',;
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { generateSearchSuggestions } from "@/data/marketplaceData",;
+import { SearchSuggestion } from "@/types/search",;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+import {;
+  Tabs,;
+  TabsContent,;
+  TabsList,;
+  TabsTrigger} from "@/components/ui/tabs",;
+import { Loader2 } from 'lucide-react';
+interface SearchResult {;
+  id: string,;
+  type: "product" | "service" | "talent" | "blog" | "doc",;
+  title: string,;
+  description: string;
+}
+;
+function highlight(text: string, term: string) {;
+  if (!term) return text,;
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),;
+  const regex = new RegExp(`(${escaped})`, "gi"),;
+  const parts = text.split(regex),;
+  return (;
+    <>;
+      {parts.map((part, i) =>;
+        regex.test(part) ? (;
+          <mark key={i} className="bg-yellow-200 text-black">;
+            {part}
+          </mark>;
+        ) : (;
+          part;
+        );
+      )}
+    </>;
+  );
+}
+
+export default function SearchPage() {
+  const router = useRouterReady(), // Use our custom hook
+  const [query, setQuery] = useState(""),
+  const [results, setResults] = useState<SearchResult[]>([]),
+  const [loading, setLoading] = useState(false),
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
+
+  // Force re-render and reset state when route changes
+  const routeKey = useRouteChange(() => {
+    setResults([]),
+    setLoading(false)
+  }),
+
+  const productResults = results.filter(
+    r => r.type === 'product' || r.type === 'service'
+  ),
+  const talentResults = results.filter(r => r.type === 'talent'),
+  const docResults = results.filter(r => r.type === 'doc'),
+  const blogResults = results.filter(r => r.type === 'blog'),
+  const marketplaceResults = [...productResults, ...talentResults],
+
+  // Sync query with URL parameter changes
+  useEffect(() => {
+    if (!router.isReady) return,
+    
+    const urlQuery = (router.query.q as string) || "",
+    if (urlQuery !== query) {
+      setQuery(urlQuery)
+;
+export default function SearchPage() {;
+  const router = useRouterReady(), // Use our custom hook;
+  const [query, setQuery] = useState(""),;
+  const [results, setResults] = useState<SearchResult[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+  // Force re-render and reset state when route changes;
+  const routeKey = useRouteChange(() => {;
+    setResults([]),;
+    setLoading(false);
+  }),;
+  const productResults = results.filter(;
+    r => r.type === 'product' || r.type === 'service';
+  ),;
+  const talentResults = results.filter(r => r.type === 'talent'),;
+  const docResults = results.filter(r => r.type === 'doc'),;
+  const blogResults = results.filter(r => r.type === 'blog'),;
+  const marketplaceResults = [...productResults, ...talentResults],;
+  // Sync query with URL parameter changes;
+  useEffect(() => {;
+    if (!router.isReady) return,;
+    const urlQuery = (router.query.q as string) || "",;
+    if (urlQuery !== query) {;
+      setQuery(urlQuery);
+    }
+  }, [router.isReady, router.query.q]), // Fixed dependency array;
+  // Fetch results when query changes;
+  useEffect(() => {;
+    if (!router.isReady) return,;
+    if (query.trim()) {;
+      fetchResults(query.trim());
+    } else {;
+      setResults([]);
+    }
+  }, [router.isReady, query]), // Fixed dependency array;
+  const fetchResults = async (term: string) => {;
+    if (!term.trim()) {;
+      setResults([]),;
+      return;
+    }
+;
+    setLoading(true),;
+    try {;
+      const res = await fetch(`/api/search?query=${encodeURIComponent(term)}`),;
+      const data = await res.json(),;
+      if (data && data.results && Array.isArray(data.results)) {;
+        setResults(data.results);
+      } else {;
+        setResults([]),;
+        logErrorToProduction('Search API response structure is not as expected:', { data: data });
+
+      }
+    } catch (error) {
+      logErrorToProduction('Search failed:', { data: error })
+      setResults([])
+    } finally {
+      setLoading(false)
+    }
 
   return (
     <div key={pageKey}>;
@@ -114,19 +209,6 @@ function highlight(text: string, term: string) {
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
-            onSelectSuggestion={(suggestion) => {
-              const searchTerm = suggestion.text.trim()
-              setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
-
-            }}
-            searchSuggestions = {suggestions,}
-            onSelectSuggestion={(suggestion) => {;
-              const searchTerm = suggestion.text.trim();
-              setQuery(searchTerm);
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
-            }}
-            searchSuggestions={suggestions}
-
 
             placeholder="Search talent, jobs, and projects..."
           />
@@ -165,31 +247,24 @@ function highlight(text: string, term: string) {
         {!loading && marketplaceResults && marketplaceResults.length === 0 && blogResults && blogResults.length === 0 && query && (;
           <p className="text-zion-slate-light">No results found for "{query}".</p>;
         )}
-
-        {!loading && marketplaceResults && marketplaceResults.length > 0 && (;
-          <Tabs defaultValue="products" className="space-y-4">;
-            <TabsList className="mb-4">;
-              <TabsTrigger value="products">;
-                Products ({productResults && productResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="talent">;
-                Talent ({talentResults && talentResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="docs">;
-                Docs ({docResults && docResults.length});
-              </TabsTrigger>;
-              <TabsTrigger value="blog">;
-                Blog ({blogResults && blogResults.length});
-              </TabsTrigger>;
-            </TabsList>;
-            <TabsContent value="products" className="space-y-4">;
-              {results;
-                .filter((r,) => r && r.type === "product" || r && r.type === "service");
-                .map((r,) => (;
-
-
-                .filter((r) => r.type === "product" || r.type === "service")
-                .map((r) => (
+        {!loading && marketplaceResults.length > 0 && (
+          <Tabs defaultValue="products" className="space-y-4">
+            <TabsList className="mb-4">
+              <TabsTrigger value="products">
+                Products ({productResults.length})
+              </TabsTrigger>
+              <TabsTrigger value="talent">
+                Talent ({talentResults.length})
+              </TabsTrigger>
+              <TabsTrigger value="docs">
+                Docs ({docResults.length})
+              </TabsTrigger>
+              <TabsTrigger value="blog">
+                Blog ({blogResults.length})
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="products" className="space-y-4">
+              {results
 
                   <div
                     key={`${r && r.type}-${r && r.id}`}
@@ -253,6 +328,7 @@ function highlight(text: string, term: string) {
             </TabsContent>;
           </Tabs>;
         )}
+
 }setLoading (true)
 try {
   const res = await fetch (`/api/search?query=$ {
@@ -490,8 +566,40 @@ router.push (`/search?q=$ {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="max - w - 6xl mx -auto">;
           {/* Results Count */}
-;
-
+          <div  className="mb-6">
+            <p className="text-slate -300">
+              {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Professional Solutions</li>
+                  <li>• Expert Implementation</li>
+                  <li>• 24/7 Support</li>
+                  <li>• Custom Development</li>
+                </ul>
+              </div>
+              <div className="bg-white p-6 rounded-lg shadow-md">
+                <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>
+                <ul className="text-gray-600 space-y-2">
+                  <li>• Industry Expertise</li>
+                  <li>• Proven Results</li>
+                  <li>• Scalable Solutions</li>
+                  <li>• Competitive Pricing</li>
+                </ul>
+              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                View Pricing
+              </Link>
+              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">
+                Contact Us
+              </Link>
+            </div>
+    </>
+  )
+}
 
       </main>;
     </div>;
@@ -536,3 +644,4 @@ router.push (`/search?q=$ {
 }
 }
 ;
+

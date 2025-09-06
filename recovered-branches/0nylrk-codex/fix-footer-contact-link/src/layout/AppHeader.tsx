@@ -1,16 +1,5 @@
 
 
-
-
-import {useState} from 'react';
-import {use_messaging} from '@/context / MessagingContext';
-import {MainNavigation} from './MainNavigation';
-import {Logo} from '@/components / header / Logo';
-import {ModeToggle} from '@/components / ModeToggle';
-import {Menu, X} from 'lucide-react';
-
-
-
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const isMobile = useIsMobile();
@@ -36,7 +25,6 @@ function AppHeader() {
   } catch (error) {
     console.warn('Messaging context not available')
 
-
 import { useState } from 'react',;
 import { useMessaging } from '@/context/MessagingContext',;
 import { MainNavigation } from './MainNavigation',;
@@ -57,9 +45,8 @@ export function AppHeader() {;
   } catch (error) {;
     console.warn('Messaging context not available');
 
-
   }
-  
+
   return (
 
 

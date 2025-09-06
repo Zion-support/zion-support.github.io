@@ -272,7 +272,4 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
-}
-
 

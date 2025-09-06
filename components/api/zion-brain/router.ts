@@ -10,10 +10,6 @@ export default async function handler(
   function isAuthorized(req: NextApiRequest): boolean {
     const token = req.headers["x-admin-token"] |req.query.token;
     const superToken = process.env.SUPERADMIN_TOKEN;
-    return !superToken |token === superToken;
-    return !superToken || token === superToken;
-  }
-
 
   }
   export default async function handler(

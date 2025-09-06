@@ -1,4 +1,8 @@
 
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+export default function ApiPerformanceTestingPage() {
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -146,8 +150,6 @@ import {Check, ExternalLink} from 'lucide-react';
     </div>
   );
 
-}
-import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
 export default function ApiPerformanceTestingPage() {
@@ -275,25 +277,4 @@ export default function ApiPerformanceTestingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-<div className='mt - 14 flex flex - wrap items - center gap - 4'>;
-            <Link;
-              href='/contact';
-              className='px - 5 py - 3 rounded - lg bg - cyan - 500 text - black font - semibold';
-            >;
-              Talk to Sales;
-            </Link>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
-              className='px - 5 py - 3 rounded - lg border border - white / 20';
-            >;
-              Email: kleber@ziontechgroup.com;
-            </a>;
-            <span className='text - gray - 400'>Call: +1 302 464 0950</span>;
-          </div>;
-        </div>;
-      </section>;
-    </div>);
-;
-
 

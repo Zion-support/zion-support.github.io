@@ -1,23 +1,10 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createDispute, readAllDisputes } from "../../../utils/fsdb";
 import { parseUserFromRequest } from "../../../utils/auth";
 import { DisputeCase, DisputeReason } from "../../../types/disputes";
 import { generateCaseId } from "../../../utils/fsdb";
 export default async function handler(
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createDispute, readAllDisputes } from '../../../utils/fsdb';
-import { parseUserFromRequest } from '../../../utils/auth';
-import { DisputeCase, DisputeReason } from '../../../types/disputes';
-import { generateCaseId } from '../../../utils/fsdb';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
 
   const user = parseUserFromRequest(req);
 
@@ -146,54 +133,6 @@ if ( {) {
     }
     const id = generateCaseId ();
     const dispute: DisputeCase = {
-      id
-      projectId: String(projectId)
-      entityType
-      entityId
-      clientUserId: String(clientUserId)
-      talentUserId: String(talentUserId)
-      createdAt: now
-      updatedAt: now
-      status: "Open"
-      reason: reason as DisputeReason
-      reasonDetails
-      description
-      attachments: []
-      messages: []
-    }
-    await createDispute(dispute);
-    return res && res.status(201).json({ dispute });
-  }
-
-
-  res && res.setHeader("Allow", "GET,POST");
-  return res && res.status(405).end("Method Not Allowed");
-}
-
-      project_id: String (project_id),
-      entity_type,
-      entity_id,
-      clientUserId: String (clientUserId),
-      talentUserId: String (talentUserId),
-      created_at: now,
-      updated_at: now,
-      status: "Open",
-      reason: reason as DisputeReason,
-      reason_details,
-      description,
-      attachments: [],
-      messages: [],
-    }
-;
-    await create_dispute (dispute);
-    return res.status (201).json ({ dispute });
-  }
-  res.set_header ("Allow", "GET, POST");
-  return res.status (405).end ("Method Not Allowed");
-}
-res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-}
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -282,6 +221,7 @@ export default async function handler(req, res) {
       description,;
       attachments: [],;
       messages: []},;
+
     await createDispute(dispute);
     return res.status(201).json({ dispute });
     } catch (error) {
@@ -291,30 +231,4 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-  res.setHeader("Allow", "GET,POST");
-  return res.status(405).end("Method Not Allowed");
-}
-
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  res.setHeader('AllowGET,POST');
-  return res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 

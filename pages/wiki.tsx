@@ -1,5 +1,6 @@
 
 
+
 function CopyButton({ text, label }: { text: string, label: string }) {
   const [copied, setCopied] = useState(false)
   return (
@@ -8,8 +9,45 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         await navigator.clipboard.writeText(text)
         setCopied(true)
         setTimeout(() => setCopied(false), 1500)
+      }}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label}
+    </button>
+  )
 
-
+import {;
+  generateZionWiki,;
+  buildMarkdownFromWiki,;
+  buildWikitextFromWiki,;
+  operatorPrompt,;
+  slugify} from '../utils/data/zionContent',;
+function CopyButton({ text, label }: { text: string, label: string }) {;
+  const [copied, setCopied] = useState(false);
+  return (;
+    <button;
+      onClick={async () => {;
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1500);
+      }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
+    >
+      {copied ? 'Copied' : label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    </button>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 
@@ -17,6 +55,7 @@ export default function WikiPage() {
   const wiki = useMemo(() => generateZionWiki(), []),
   const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki]),
   const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki]),
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
@@ -26,70 +65,9 @@ export default function WikiPage() {
             <li key={s.id}>
               <a href={`#${slugify(s.title)}`} className="opacity-80 hover:opacity-100">
 
-import React, { useMemo, useState } from 'react',
-import {
-  generateZionWiki,
-  buildMarkdownFromWiki,
-  buildWikitextFromWiki,
-  operator_prompt,
-  slugify} from '../utils / data / zion_content',
-/**
- * CopyButton - Function description
- */
-function CopyButton() {
-  const [copied, set_copied] = useState (false),
-  return (
-    <button;
-      on_click={async () => {
-        await navigator.clipboard.write_text (text),
-        set_copied (true),
-        set_timeout (() => set_copied (false), 1500);
-
-      }}
-      className="px - 3 py - 1 rounded border text - xs hover:bg - gray - 50 dark:hover:bg - gray - 900";
-    >;
-      {copied ? 'Copied' : label}
-    </button>);
-}
-
-
-
-export default function WikiPage() {
-  const wiki = useMemo(() => generateZionWiki(), [])
-  const md = useMemo(() => buildMarkdownFromWiki(wiki), [wiki])
-  const wikitext = useMemo(() => buildWikitextFromWiki(wiki), [wiki])
-
-export default /**
- * WikiPage - Function description
- */
-function WikiPage() {
-  const wiki = useMemo (() => generateZionWiki (), []),
-  const md = useMemo (() => buildMarkdownFromWiki (wiki), [wiki]),
-  const wikitext = useMemo (() => buildWikitextFromWiki (wiki), [wiki]),
-  return (
-    <div className="grid grid - cols - 1 lg:grid - cols-[260px, 1fr] gap - 8">;
-      <aside className="sticky top - 20 self - start hidden lg:block">;
-        <div className="text - sm font - semibold mb - 2">Table of contents</div>;
-        <ul className="space - y-1 text - sm">;
-          {wiki.sections.map ((s) => (
-            <li key={s.id}>;
-              <a href={`#${slugify (s.title)}`} className="opacity - 80 hover:opacity - 100">;
-                {s.title}
-              </a>
-                {s.title  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-              </Link>
-
-
             </li>
           ))}
           <li>
-            <a href="#references" className="opacity-80 hover:opacity-100">References</a>
-            <a href="#references" className="opacity-80 hover:opacity-100">References</Link>
-
 
           </li>
         </ul>
@@ -115,10 +93,6 @@ function WikiPage() {
             {s.paragraphs.map((p, i) => (
               <p key={i}>{p}</p>
 
-
-
-
-
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -130,7 +104,6 @@ function WikiPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 
         <h2 id="references">References</h2>
         <ol>
@@ -149,13 +122,6 @@ function WikiPage() {
             </div>
           </div>
           <pre className="overflow-auto text-xs whitespace-pre-wrap">
-{md}
-{md  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
           </pre>
         </div>
@@ -164,13 +130,4 @@ function WikiPage() {
           <pre className="overflow-auto text-xs whitespace-pre-wrap">{operatorPrompt}</pre>
         </div>
       </article>
-    </div>;
-  );
-};
-    </div>
-  )
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
 

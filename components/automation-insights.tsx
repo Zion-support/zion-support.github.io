@@ -1,5 +1,4 @@
-import React from 'react',
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
@@ -9,13 +8,6 @@ export default function AutomationInsightsPage() {
       id: 'ai-automation-2025'
       title: 'AI Automation Trends 2025'
       description:
-
-
-        'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',
-      readTime: '8 min read',
-      featured: true;
-    };
-
 
     {
       id: 'autonomous-systems'
@@ -322,47 +314,6 @@ import React from 'react';
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
-                ))}
-              </div>
-            </div>
-
-              Deep insights into AI automation, autonomous systems, and the;
-              future of intelligent technology;
-            </p>;
-          </section>;
-
-          <section className='mx-auto max-w-7xl'>;
-            {/* Success Metrics */}
-
-          <section className='mx-auto max-w-7xl'>;
-            {/* Success Metrics */}
-            <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 mb-16'>;
-              <h2 className='text-3xl font-bold mb-8 text-center text-cyan-400'>;
-                Our Automation Success;
-              </h2>;
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>;
-                {successMetrics && successMetrics.map((item, index) => (;
-                  <div key={index} className='text-center'>;
-                    <div className='text-4xl font-bold text-fuchsia-400 mb-2'>;
-                      {item && item.metric}
-                    </div>;
-                    <div className='text-lg font-semibold text-white mb-1'>;
-                      {item && item.label}
-                    </div>;
-                    <div className='text-sm text-white/70'>;
-                      {item && item.description}
-                    </div>                  </div>                  <div key={index} className="text-center">;
-                    <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item && item.metric}</div>;
-                    <div className="text-lg font-semibold text-white mb-1">{item && item.label}</div>;
-                    <div className="text-sm text-white/70">{item && item.description}</div>;
-                ))}
-
-              </div>;
-            </div>;
-
-
-            {/* Automation Trends */}
-
 
             {/* Automation Trends */}
             <div className='mb-16'>
@@ -370,8 +321,6 @@ import React from 'react';
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-
-
 
                 {automationTrends.map((trend, index) => (
                   <div
@@ -393,24 +342,6 @@ import React from 'react';
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
-                      Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full">{trend.category}</span>
-                      <span className="text-white/60 text-sm">{trend.readTime}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
-                    <p className="text-white/70 mb-4">{trend.description}</p>
-                    <Link
-                      href={`/blog/${trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Read More <span className="ml-1"></span>
-                    </Link>
-                      Read More <span className='ml-1'>→</span>                    </Link>
-
-                    </Link>
-
 
                   </div>
                 ))}
@@ -451,21 +382,6 @@ import React from 'react';
               </div>
             </div>
 
-
-
-
-            {/* Automation Tools & Frameworks */}
-
-
-                ))}
-
-              </div>;
-            </div>;
-
-
-            {/* Call to Action */}
-
-
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -474,8 +390,6 @@ import React from 'react';
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
-
-
 
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
@@ -508,20 +422,10 @@ import React from 'react';
       </div>
     </>
 
-                  View Case Studies;
-                </Link>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </div>;
-
+}
 
 }
+
   );
 }
-}
-  );
-}
-    </>);
-}
+

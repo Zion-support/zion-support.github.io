@@ -1,57 +1,4 @@
-"use client";
-import { useState } from "react";
-import Link from "next/link";
-import { useAuth } from "@/contexts/AuthContext";
-export default function SignUpPage() {const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState("");
-  const { register } = useAuth();
-  const handleSubmit = async (e: React.FormEvent) => {e.preventDefault();
-    setIsLoading(true);
-    setError("");
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match");
-      setIsLoading(false);
-      return;
-    }
-    try {await register(name, email, password);
-    } catch (error) {setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {setIsLoading(false);
-    }
-  }
-"use client",;
-import { useState } from "react",;
-import Link from "next/link",;
-import { useAuth } from "@/contexts/AuthContext",;
-export default function SignUpPage() {;
-  const [name, setName] = useState(""),;
-  const [email, setEmail] = useState(""),;
-  const [password, setPassword] = useState(""),;
-  const [confirmPassword, setConfirmPassword] = useState(""),;
-  const [isLoading, setIsLoading] = useState(false),;
-  const [error, setError] = useState(""),;
-  const { register } = useAuth(),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setIsLoading(true),;
-    setError(""),;
-    if (password !== confirmPassword) {;
-      setError("Passwords do not match"),;
-      setIsLoading(false);
-      return;
-    }
-;
-    try {;
-      await register(name, email, password);
-    } catch (error) {;
-      setError(error instanceof Error ? error.message : "Registration failed");
-    } finally {;
-      setIsLoading(false);
-    }
-  };
+
   return (;
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-zinc-900 to-zinc-800">;
       <div className="max-w-md w-full space-y-8 p-8">;
@@ -138,7 +85,7 @@ if ( {) {
                 <p className="text-red-400 text-sm">{error}</p>;
               </div>;
             )}
-;
+
             <div>;
               <label html_for="name" className="block text - sm font - medium text - zinc - 300 mb - 2">;
                 Full Name;

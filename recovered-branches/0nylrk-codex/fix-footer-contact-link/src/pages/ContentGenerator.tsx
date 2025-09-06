@@ -1,79 +1,26 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
-import React, { useState } from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Textarea} from "@/components/ui/textarea";
-import {Input} from "@/components/ui/input";
-import {Switch} from "@/components/ui/switch";
-import {Label} from "@/components/ui/label";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {toast} from "sonner";
-import {Loader2} from "lucide-react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {ScrollArea} from "@/components/ui/scroll-area";
-import {useNavigate} from "react-router-dom";
-export default function ContentGenerator() {;
-
-  const { user, isLoading } = useAuth();
-
-  const navigate = useNavigate();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
-  const [customPrompt, setCustomPrompt] = useState('');
-  const [topic, setTopic] = useState('');
-  const [autoPublish, setAutoPublish] = useState(false);
-  const [includeImage, setIncludeImage] = useState(true);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [previewContent, setPreviewContent] = useState<any>(null);
-  const [testEmail, setTestEmail] = useState('');
-import { ScrollArea } from "@/components/ui/scroll-area",
-import { useNavigate } from "react-router-dom",
-export default function ContentGenerator() {
-  const { user, isLoading } = useAuth(),
-  const navigate = useNavigate(),
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),
-  const [customPrompt, setCustomPrompt] = useState(''),
-  const [topic, setTopic] = useState(''),
-  const [autoPublish, setAutoPublish] = useState(false),
-  const [includeImage, setIncludeImage] = useState(true),
-  const [isGenerating, setIsGenerating] = useState(false),
-  const [previewContent, setPreviewContent] = useState<any>(null),
-  const [testEmail, setTestEmail] = useState(''),
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { toast } from "sonner",
+import { Loader2 } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
 
   // Redirect if not logged in
   React.useEffect(() => {
     if (!isLoading && !user) {
       toast.error("You must be logged in to access this page");
       navigate("/login?redirect=/content-generator")
-
-
-
 
 import React, { useState } from 'react',;
 import { Header } from "@/components/Header",;
@@ -136,12 +83,10 @@ export default function ContentGenerator() {;
 
       }),
 
-
-
-      
       if (error) throw error,
       
       setPreviewContent(data),
+
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)
     } catch (error) {
       console.error("Error generating content:", error),
@@ -149,8 +94,6 @@ export default function ContentGenerator() {;
     } finally {
       setIsGenerating(false)
     }
-  }
-  },
 
   const sendTestNewsletter = async () => {
     if (!testEmail) {
@@ -160,10 +103,6 @@ export default function ContentGenerator() {;
     if (!previewContent) {
       toast.error("Generate newsletter content first");
       return
-
-  };
-
-
 
       }),;
       if (error) throw error,;
@@ -200,18 +139,13 @@ export default function ContentGenerator() {;
 
       }),
 
-
-
-      
       if (error) throw error,
-      
+
       toast.success(`Test newsletter sent to ${testEmail}!`)
     } catch (error) {
       console.error("Error sending test newsletter:", error);
       toast.error("Failed to send test newsletter. Please try again.")
     }
-  }
-  },
 
   },
 
@@ -271,100 +205,6 @@ export default function ContentGenerator() {;
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>
                         <Switch
                           id="includeImage"
-      }),;
-      if (error) throw error,;
-      toast.success(`Test newsletter sent to ${testEmail}!`);
-    } catch (error) {;
-      console.error("Error sending test newsletter:", error);
-      toast.error("Failed to send test newsletter. Please try again.");
-    }
-  };
-  // Check if user is still loading;
-  if (isLoading) {;
-    return (;
-      <>;
-        <Header />;
-        <div className="min-h-screen bg-zion-blue flex items-center justify-center">;
-          <div className="animate-pulse text-white">Loading...</div>;
-        </div>;
-        <Footer />;
-      </>;
-    );
-  }
-;
-  return (;
-
-    <>;
-      <Header />;
-      <div className="min-h-screen bg-zion-blue py-12">;
-        <div className="container mx-auto px-4">;
-          <h1 className="text-3xl font-bold text-white mb-8">Content Generator</h1>;
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">;
-            <div className="lg:col-span-1">;
-              <Card className="bg-zion-blue-dark border border-zion-blue-light">;
-                <CardHeader>;
-                  <CardTitle className="text-white">Content Settings</CardTitle>;
-                  <CardDescription className="text-zion-slate-light">;
-                    Configure what type of content you want to generate.;
-                  </CardDescription>;
-                </CardHeader>;
-                <CardContent className="space-y-6">;
-                  <div className="space-y-2">;
-                    <Label htmlFor="contentType" className="text-white">Content Type</Label>;
-                    <Select value={contentType} onValueChange={(value) => setContentType(value as 'blog' | 'newsletter')}>;
-                      <SelectTrigger id="contentType" className="bg-zion-blue border border-zion-blue-light text-white">;
-                        <SelectValue placeholder="Select content type" />;
-                      </SelectTrigger>;
-                      <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">;
-                        <SelectItem value="blog" className="text-white">Blog Post</SelectItem>;
-                        <SelectItem value="newsletter" className="text-white">Email Newsletter</SelectItem>;
-                      </SelectContent>;
-                    </Select>;
-                  </div>;
-
-                  <div className="space-y-2">;
-                    <Label htmlFor="topic" className="text-white">Topic (Optional)</Label>;
-                    <Input
-                      id="topic"
-                      placeholder={contentType === 'blog' ? "e && e.g., Hiring AI Freelancers" : "e && e.g., May Platform Updates"}
-                      className="bg-zion-blue border border-zion-blue-light text-white"
-                      value={topic}
-
-                      onChange={(e) => setTopic(e && e.target.value)}
-                    />;
-                  </div>;
-
-                  <div className="space-y-2">;
-                    <Label htmlFor="customPrompt" className="text-white">Custom Prompt (Optional)</Label>;
-
-                    <Textarea
-                      id="customPrompt"
-                      placeholder="Enter a custom prompt for the AI..."
-                      className="bg-zion-blue border border-zion-blue-light text-white min-h-[100px]"
-                      value={customPrompt}
-
-                      onChange={(e) => setCustomPrompt(e && e.target.value)}
-                    />;
-                  </div>;
-
-                  {contentType === 'blog' && (;
-                    <>;
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="autoPublish" className="text-white">Auto-Publish</Label>;
-
-                        <Switch
-                          id="autoPublish"
-                          checked={autoPublish}
-                          onCheckedChange={setAutoPublish}
-
-                        />;
-                      </div>;
-                      <div className="flex items-center justify-between">;
-                        <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>;
-                        <Switch;
-                          id="includeImage";
-
 
                           checked={includeImage}
                           onCheckedChange={setIncludeImage}
@@ -372,7 +212,7 @@ export default function ContentGenerator() {;
                       </div>
                     </>
                   )}
-                  
+
                   {contentType === 'newsletter' && (
                     <div className="space-y-2">
                       <Label htmlFor="testEmail" className="text-white">Test Email</Label>
@@ -577,25 +417,4 @@ export default function ContentGenerator() {;
                       </p>;
                     </div>;
                   )}
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-                </CardContent>;
-              </Card>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      <Footer />;
 
-    </>);
-}
-
-;

@@ -1,6 +1,4 @@
 
-import { cn } from &quot;@/lib/utils&quot;
-import { cn } from "@/lib/utils"
 
 function Skeleton({
   className
@@ -16,4 +14,3 @@ function Skeleton({
 
 ;
 
-;

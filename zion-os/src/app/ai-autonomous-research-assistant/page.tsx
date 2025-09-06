@@ -1,6 +1,4 @@
-export default function AIAutonomousResearchAssistantPage() {return (;
-export default function AIAutonomousResearchAssistantPage() {;
-  return (;
+
     <div className="min-h-screen bg-white">;
 export default /**
  * AIAutonomousResearchAssistantPage - Function description

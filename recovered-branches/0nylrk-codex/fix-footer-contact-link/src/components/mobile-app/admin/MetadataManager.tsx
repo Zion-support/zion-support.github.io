@@ -1,8 +1,5 @@
 
 
-
-
-
 import React, { useState } from "react";
 import {useForm} from "react-hook-form";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -13,6 +10,7 @@ import {ExportPanel} from "./ExportPanel";
 import {Button} from "@/components/ui/button";
 import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
+
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -24,16 +22,9 @@ import { Button } from "@/components/ui/button",
 import { toast } from "sonner",
 export type AppPlatform = "ios" | "android",
 
-
-
-
 export type AppMetadataValues = {
 
-  appTitle: string,
-  shortDescription: string,
-  longDescription: string,
-  keywords: string[],
-  version: string,
+  platform: AppPlatform
 
 const defaultValues: AppMetadataValues = {
   appTitle: "Zion AI Marketplace",
@@ -44,31 +35,17 @@ const defaultValues: AppMetadataValues = {
   platform: "ios"
 },
 
-export const MetadataManager: React.FC = () => {;
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios");
-  const [isSaving, setIsSaving] = useState(false);
-export const MetadataManager: React.FC = () => {
-  const [currentPlatform, setCurrentPlatform] = useState<AppPlatform>("ios"),
-  const [isSaving, setIsSaving] = useState(false),
-  
   // Separate form instances for each platform
   const iosForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "ios" } }),
   const androidForm = useForm<AppMetadataValues>({ defaultValues: { ...defaultValues, platform: "android" } }),
   
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm,
-  
+
   const handleSaveMetadata = async (data: AppMetadataValues) => {
     setIsSaving(true)
     try {
       // This would be implemented with actual API calls in production
-      console.log("Saving metadata for", currentPlatform, data);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      // // // console.log("Saving metadata for", currentPlatform, data),
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-      
+
       toast.success(`${currentPlatform === "ios" ? "iOS" : "Android"} metadata saved successfully!`)
     } catch (error) {
       toast.error("Failed to save metadata"),
@@ -76,9 +53,7 @@ export const MetadataManager: React.FC = () => {
     } finally {
       setIsSaving (false);
     }
-  }
-  },
-  
+
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">
       <Tabs defaultValue="ios" className="w-full">
@@ -91,10 +66,6 @@ export const MetadataManager: React.FC = () => {
               Google Play (Android)
             </TabsTrigger>
           </TabsList>
-
-
-          <Button 
-
 
             onClick={currentForm.handleSubmit(handleSaveMetadata)}
             disabled={isSaving}
@@ -129,9 +100,6 @@ export const MetadataManager: React.FC = () => {
       </Tabs>
     </div>
   )
-
-
-
 
 },
 import React, { useState } from "react",;
@@ -281,8 +249,8 @@ export const MetadataManager: React.FC = () => {;
           </div>;
         </TabsContent>;
       </Tabs>;
-
-
-
+    </div>;
+  );
 
 };
+

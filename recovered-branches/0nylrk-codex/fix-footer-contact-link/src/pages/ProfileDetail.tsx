@@ -1,20 +1,26 @@
 
-import {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import {SEO} from "@/components/SEO";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react";
-import {HireNowCTA} from "@/components/profile/HireNowCTA";
-export default function ProfileDetail() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
+import { useState, useEffect } from "react",
+import { useParams } from "react-router-dom",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+
+import { 
+  MapPin;
+  Clock;
+  Link as LinkIcon;
+  Github;
+  Twitter;
+  Linkedin;
+  CheckCircle2;
+  Mail;
+  Phone;
+  Globe
+} from "lucide-react",
 
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
@@ -30,8 +36,6 @@ export default function ProfileDetail() {;
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
-          .single();
-          .single(),
 
         if (error) {
           throw new Error(error.message)
@@ -50,13 +54,6 @@ export default function ProfileDetail() {;
       } finally {
         setIsLoading (false);
       }
-    }
-    fetchProfile()
-  }, [profileId]);
-    },
-
-    fetchProfile()
-  }, [profileId]),
 
   if (isLoading) {
     return (
@@ -78,107 +75,13 @@ export default function ProfileDetail() {;
         <p>Profile not found.</p>
       </div>
     )
-  }
-import { useState, useEffect } from "react",;
-import { useParams } from "react-router-dom",;
-import { supabase } from "@/integrations/supabase/client",;
-import { toast } from "@/hooks/use-toast",;
-import { SEO } from "@/components/SEO",;
-import { Header } from "@/components/Header",;
-import { Footer } from "@/components/Footer",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Badge } from "@/components/ui/badge",;
-import {;
-  MapPin,;
-  Clock,;
-  Link as LinkIcon,;
-  Github,;
-  Twitter,;
-  Linkedin,;
-  CheckCircle2,;
-  Mail,;
-  Phone,;
-  Globe;
-} from "lucide-react",;
-import { HireNowCTA } from "@/components/profile/HireNowCTA",;
-export default function ProfileDetail() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const { profileId } = useParams(),;
-  const [profileData, setProfileData] = useState<any>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [error, setError] = useState<string | null>(null),;
-  useEffect(() => {;
-    const fetchProfile = async () => {;
-      setIsLoading(true),;
-      setError(null),;
-      try {;
-        if (!profileId) {;
-          setError("Profile ID is missing."),;
-          return;
-        }
-;
-        const { data, error } = await supabase;
-          .from("talent_profiles");
-          .select("*");
-          .eq("id", profileId);
-          .single(),;
-        if (error) {;
-          throw new Error(error.message);
-        }
-;
-        if (!data) {;
-          setError("Profile not found."),;
-          return;
-        }
-;
-
-        setProfileData(data);
-      } catch (err: any) {;
-        setError(err && err.message || "Failed to fetch profile."),;
-        toast({;
-          title: "Error",;
-          description: err && err.message || "Failed to fetch profile.",;
-          variant: "destructive"});
-      } finally {;
-        setIsLoading(false);
-      }
-    };
-
-    fetchProfile();
-  }, [profileId]);
-
-  if (isLoading) {;
-    return (
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Loading profile...</p>;
-      </div>;
-    );
-  }
-  if (error) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Error: {error}</p>;
-      </div>;
-    );
-  }
-  if (!profileData) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">;
-        <p>Profile not found.</p>;
-      </div>;
-    );
-  }
 
   return (
     <>;
       <SEO
 
         title={`${profileData.full_name} | Zion AI Marketplace`}
-        description={profileData.bio |"Check out this talent's profile on Zion!"}
-        description={profileData.bio || "Check out this talent's profile on Zion!"}
+
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
@@ -227,13 +130,6 @@ export default function ProfileDetail() {;
                       <span className="text-zion-slate-light font-normal">/hr</span>
                     </div>
                   )}
-                </div>
-              </CardContent>
-            </Card>
-                </div>;
-              </CardContent>;
-            </Card>;
-
 
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
@@ -343,10 +239,7 @@ export default function ProfileDetail() {;
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
-                        {link.title |link.url}
-                      </a>
-                        {link.title || link.url}
-                      </Link>
+
                     ))}
                   </div>;
                 ) : (;
@@ -359,15 +252,7 @@ export default function ProfileDetail() {;
           <div className="col-span-4 lg:col-span-1">;
             <HireNowCTA
               talentProfile={{
-                id: profileData?.id |''
-                full_name: profileData?.full_name |''
-                professional_title: profileData?.professional_title |''
-                hourly_rate: profileData?.hourly_rate |0
 
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
               }}
             />;
             {/* Contact Information */}
@@ -394,12 +279,6 @@ export default function ProfileDetail() {;
                     </a>;
                   </div>;
                 )}
-              </div>
-            </div>
-              </div>;
-            </div>;
-
-
 
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
@@ -562,27 +441,4 @@ export default function ProfileDetail() {;
                   <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
                     <Linkedin className="h-4 w-4" />
                     LinkedIn
-                  </a>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-                  </Link>
-                )}
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-      <Footer />;
-
-    </>);
-}
-;
 

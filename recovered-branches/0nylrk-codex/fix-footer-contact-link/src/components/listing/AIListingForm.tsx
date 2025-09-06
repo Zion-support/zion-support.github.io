@@ -1,6 +1,9 @@
 
 
-
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
 
 interface AIListingFormProps {
   onSubmit: (formData: {
@@ -9,11 +12,7 @@ interface AIListingFormProps {
     category: string
     keyFeatures: string
     targetAudience: string
-  }) => void;
-  isLoading: boolean
 
-  }) => void,
-  isLoading: boolean,
   initialValues?: {
     title?: string,
     category?: string,
@@ -21,24 +20,6 @@ interface AIListingFormProps {
     targetAudience?: string
   }
 }
-
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {;
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title || "");
-  const [category, setCategory] = useState(initialValues.category || "");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
-export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
-  const { toast } = useToast();
-  const [title, setTitle] = useState(initialValues.title |"");
-  const [category, setCategory] = useState(initialValues.category |"");
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures |"");
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience |"");
-  const { toast } = useToast(),
-  const [title, setTitle] = useState(initialValues.title || ""),
-  const [category, setCategory] = useState(initialValues.category || ""),
-  const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || ""),
-  const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || ""),
 
   const handleSubmit = () => {
     if (!title |!category) {
@@ -55,8 +36,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       keyFeatures,
       targetAudience
     })
-  }
-  },
 
   return (
     <div className="space-y-4">
@@ -101,8 +80,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
           onChange={(e) => setTargetAudience(e.target.value)}
           placeholder="e.g. Developers, Marketers, Startups"
           className="bg-zion-blue border border-zion-blue-light text-white"
-
-      <Button 
 
 import React, { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
@@ -200,10 +177,9 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
       </div>;
       <Button;
 
-
-
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
+
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
       >
         {isLoading ? (
@@ -214,42 +190,4 @@ export function AIListingForm(): any ({ onSubmit, isLoading, initialValues = {} 
             Generate Optimized Content
           </>
         )}
-      </Button>
-    </div>
-  )
-}
-      </Button>;
-    </div>;
-  );
-}
-import React, { useState } from './react';
-import { use_toast } from '@/hooks / use - toast';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Sparkles } from './lucide-react';
-interface AIListingFormProps {
-  on_submit: (form_data: {
-    title: string,
-    category: string,
-    key_features: string,
-    target_audience: string;
-  }) => void;
-  is_loading: boolean,
-  initial_values?: {
-    title?: string;
-    category?: string;
-    key_features?: string;
-    target_audience?: string;
-  }
-}
-export /**
- * AIListingForm - Function description
- */
-function AIListingForm() {
-  const { toast } = use_toast ();
-  const [title, set_title] = useState (initial_values.title || "");
-  const [category, set_category] = useState (initial_values.category || "");
-  const [key_features, setKeyFeatures] = useState (initial_values.key_features || "");
-  const [target_audience, setTargetAudience] = useState (initial_values.target_audience || "");
-;
+

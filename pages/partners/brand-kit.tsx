@@ -1,4 +1,4 @@
-
+export default function BrandKit() {
 
       <p>Download assets and messaging to promote Zion AI Marketplace.</p>
       <ul className="list-disc pl-6">

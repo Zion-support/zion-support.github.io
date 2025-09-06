@@ -1,18 +1,10 @@
 
-import {WorkExperience} from '@/types / resume';
-import {format} from 'date - fns';
-
-
-
-import {WorkExperience} from '@/types/resume';
-import {format} from 'date-fns';
 
 interface WorkExperienceSectionProps {
-  work_experience: WorkExperience[];
+  workExperience: WorkExperience[]
 }
-
-  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
-
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
+  // Sort work experience by date (newest first)
 
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
@@ -24,8 +16,6 @@ interface WorkExperienceSectionProps {
     if (!date) return ''
     if (typeof date === 'string') {
       return format(new Date(date), 'MMM yyyy')
-
-
 
 import { WorkExperience } from '@/types/resume',;
 import { format } from 'date-fns',;
@@ -47,15 +37,13 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (typeof date === 'string') {;
       return format(new Date(date), 'MMM yyyy');
 
-
-
     }
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
 
   if (sortedWorkExperience.length === 0) return null,
-  
+
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>

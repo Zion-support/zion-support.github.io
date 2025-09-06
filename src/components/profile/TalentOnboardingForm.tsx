@@ -1,6 +1,5 @@
-public_url;
-}= supabase.storage.from ('resumes') .getPublicUrl (file_name);
-return public_url;
+
+
 import {
   Form
   FormControl
@@ -51,6 +50,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Separator } from "@/components/ui/separator"
 import { toast } from "@/components/ui/use-toast"
 import { User, Briefcase, Star, Calendar, Globe, DollarSign, FileText, Link, Upload, ArrowRight, ArrowLeft, Trash2, Plus, CheckCircle2 } from 'lucide-react'
+
 // Define the form schema with validation
 
 const talentSchema = z.object({
@@ -107,13 +107,12 @@ export function TalentOnboardingForm() {
   const [showSuccessScreen, setShowSuccessScreen] = useState(false)
   const { enhanceProfile, isGenerating } = useTalentProfileEnhancer()
   const totalSteps = 4
-import { useAuth } from "@/hooks/useAuth",
-import { useTalentProfileEnhancer } from "@/hooks/useTalentProfileEnhancer",
-import { supabase } from "@/integrations/supabase/client",
+
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentSchema)
     defaultValues: {
       basicInfo: {
+
         availabilityType: "",
         timezone: "",
         hourlyRate: "",
@@ -135,12 +134,9 @@ import { supabase } from "@/integrations/supabase/client",
   const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0],
     if (!file) return,
-    
+
     // Preview the image
     const reader = new FileReader()
     reader.onloadend = () => {
       setProfilePictureUrl(reader.result as string)
-}
-//Rest of the file remains unchanged... // [Previous implementation continues...] return null;
-}'}
-}
+

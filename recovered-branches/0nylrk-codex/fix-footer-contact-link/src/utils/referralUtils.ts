@@ -1,8 +1,4 @@
 
-
-import {format} from 'date-fns';
-
-
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -59,6 +55,7 @@ export function checkUrlForReferralCode(): string | null {;
     url.searchParams.delete('ref');
     window.history.replaceState({}, document.title, url.toString());
     return refCode
+
 import { format } from 'date-fns',;
 /**;
  * Formats a date for display in the referral system;
@@ -92,13 +89,9 @@ export function checkUrlForReferralCode(): string | null {;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
 
-
-
   }
   return localStorage.getItem('referral_code')
 }
-
-
 
 /**
  * Track referral when a user signs up
@@ -130,6 +123,7 @@ function track_referral() {
       // Clear the stored referral code
 
       localStorage.removeItem('referral_code')
+
 ;
 /**;
  * Track referral when a user signs up;
@@ -152,8 +146,6 @@ export async function trackReferral(userId: string, email: string) {;
     if (response.ok) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
-
-
 
     }
   } catch (error) {

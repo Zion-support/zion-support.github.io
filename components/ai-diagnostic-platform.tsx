@@ -1,52 +1,8 @@
-import React from 'react',
-import React from 'react';
+
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-
-
-  Brain,
-  Shield,
-  Zap,
-  Target,
-  Stethoscope,
-  BarChart3,
-  Cpu,
-  Globe,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,;
-  MapPin,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';import {
-  Brain, Shield, Zap, Target, Stethoscope, ;
-  Brain,
-  Shield,
-  Zap,
-  Target,
-  Stethoscope,
-  BarChart3,
-  Cpu,
-  Globe,
-  Users,
-  Award,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Phone,
-  Mail,;
-  MapPin,;
-} from 'lucide-react';
-import Layout from '../components/layout/Layout';import {
-  Brain, Shield, Zap, Target, Stethoscope, ;
-
-
-
 
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
@@ -289,40 +245,8 @@ export default function AIDiagnosticPlatform() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className='mb-8'>;
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>;
-              <Stethoscope className='w-4 h-4 mr-2' />;
-              Healthcare Technology;
-            </div>;
-            <h1 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>;
-              <span className='bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent'>;
-                AI Diagnostic;
-              </span>;
-              <br />;
-              <span className='text-white'>Pro Platform</span>;
-            </h1>;
-            <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>;
-              Advanced medical diagnostic platform using AI and machine learning;
-              to provide accurate disease detection and treatment;
-              recommendations.            </p>          >;
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6">;
-              <Stethoscope className="w-4 h-4 mr-2" />;
-              Healthcare Technology;
-            </div>;
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6">;
-              <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">;
-                AI Diagnostic;
-              </span>;
-              <br />;
-              <span className="text-white">Pro Platform</span>;
-            </h1>;
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-              Advanced medical diagnostic platform using AI and machine learning to provide accurate disease detection and treatment recommendations.;
-            </p>;
-          </motion && motion.div>;
-
-
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className='flex flex-col sm:flex-row gap-4 justify-center items-center'
 
           >
             <a
@@ -362,15 +286,11 @@ export default function AIDiagnosticPlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-
-
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-
 
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
@@ -425,7 +345,6 @@ export default function AIDiagnosticPlatform() {
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-blue-500/10 to-indigo-500/10 border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300'
 
-
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4'>
                   <CheckCircle className='w-6 h-6 text-white' />
@@ -447,21 +366,10 @@ export default function AIDiagnosticPlatform() {
                 <h3 className="text-lg font-semibold text-white mb-2">{feature}</h3>
               </motion.div>
 
-
-
-
             ))}
           </div>
         </div>
       </section>
-
-          </div>;
-        </div>;
-      </section>;
-
-
-
-
 
       {/* Pricing Section */}
       <section id='pricing' className='py-20 bg-black'>;
@@ -475,15 +383,11 @@ export default function AIDiagnosticPlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-
-
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-
 
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
@@ -551,83 +455,7 @@ export default function AIDiagnosticPlatform() {
                   </div>
                 )}
 
-                  <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
-                    <span className='bg - gradient - to - r from - blue - 500 to - indigo - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold'>                  <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                    <span className="bg - gradient - to - r from - blue - 500 to - indigo - 500 text - white px - 4 py - 2 rounded - full text - sm font - semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>)}
-                <div className='text - center mb - 8'>;
-                  <h3 className='text - 2xl font - bold text - white mb - 4'>;
-
-                    {plan.name}
-                  </h3>;
-                  <div className='text - 4xl font - bold text - white mb - 2'>;
-                    ${plan.price}
-                    <span className='text - lg text - gray - 400 font - normal'>;
-                      /{plan.period}
-
-                
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-4">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-white mb-2">
-                    ${plan.price}
-
-                    <span className="text-lg text-gray-400 font-normal">/{plan.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-
-              >;
-                {plan && plan.popular && (;
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>;
-                    <span className='bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">;
-                    <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold">;
-                      Most Popular;
-                    </span>;
-                  </div>;
-                )}
-
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-4'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='text-4xl font-bold text-white mb-2'>;
-                    ${plan && plan.price}
-                    <span className='text-lg text-gray-400 font-normal'>;
-                      /{plan && plan.period}
-                    </span>;
-                  </div>;
-                </div>;
-
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-blue-400 mr-3 flex-shrink-0' />                      {feature}                    ${plan && plan.price}
-                    <span className="text-lg text-gray-400 font-normal">/{plan && plan.period}</span>;
-                  </div>;
-                </div>;
-
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
-
                       {feature}
-                    </li>;
-                  ))}
-
-                      {feature}
-
-
-
-
-
 
                     </li>
                   ))}
@@ -642,21 +470,6 @@ export default function AIDiagnosticPlatform() {
         </div>
       </section>
 
-                </ul>;
-
-                <button className='w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300'>                  Get Started                <button className="w-full bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold py-3 px-6 rounded-xl hover:from-blue-600 hover:to-indigo-600 transition-all duration-300">;
-                  Get Started;
-                </button>;
-              </motion && motion.div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-
-
-
-
-
       {/* Contact Section */}
       <section
         id='contact'
@@ -666,16 +479,11 @@ export default function AIDiagnosticPlatform() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
 
-
-
-
-
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-
 
           >
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
@@ -699,39 +507,11 @@ export default function AIDiagnosticPlatform() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
 
-
-            className='text-center mb-16'>;
-            <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>;
-              Ready to Transform Healthcare?;
-            </h2>;
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>;
-              Contact our team to learn more about how AI Diagnostic Pro;
-              Platform can revolutionize your medical practice.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion && motion.div          >;
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">;
-              Ready to Transform Healthcare?;
-            </h2>;
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-              Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.;
-            </p>;
-          </motion && motion.div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
-            <motion&& motion.div
-
-
-
-
-
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
               viewport={{ once: true }}
               className='text-center'
-
 
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
@@ -768,7 +548,6 @@ export default function AIDiagnosticPlatform() {
               viewport={{ once: true }}
               className='text-center'
 
-
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <Mail className='w-8 h-8 text-white' />
@@ -804,7 +583,6 @@ export default function AIDiagnosticPlatform() {
               viewport={{ once: true }}
               className='text-center'
 
-
             >
               <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>
                 <MapPin className='w-8 h-8 text-white' />
@@ -823,149 +601,5 @@ export default function AIDiagnosticPlatform() {
         </div>
       </section>
 
-
-              className='text-center'>;
-              <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4'>;
-                <MapPin className='w-8 h-8 text-white' />;
-              </div>;
-              <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>;
-              <p className='text-gray-300'>{contactInfo && contactInfo.address}</p>            </motion && motion.div>            >;
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-4">;
-                <MapPin className="w-8 h-8 text-white" />;
-              </div>;
-              <h3 className="text-xl font-semibold text-white mb-2">Address</h3>;
-              <p className="text-gray-300">{contactInfo && contactInfo.address}</p>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </Layout>;
-  );
-}
-  );
-}
-                    </span>;
-                  </div>;
-                </div>;
-                <ul className='space - y-4 mb - 8'>;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li;
-                      key={feature_index}
-                      className='flex items - center text - gray - 300';
-                    >;
-                      <CheckCircle className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                      {feature}                    ${plan.price}
-                    <span className="text - lg text - gray - 400 font - normal">/{plan.period}</span>;
-                  </div>;
-                </div>;
-                <ul className="space - y-4 mb - 8">;
-                  {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
-                      {feature}
-                    </li>))}
-                </ul>;
-                <button className='w - full bg - gradient - to - r from - blue - 500 to - indigo - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - blue - 600 hover:to - indigo - 600 transition - all duration - 300'>                  Get Started                <button className="w - full bg - gradient - to - r from - blue - 500 to - indigo - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - blue - 600 hover:to - indigo - 600 transition - all duration - 300">;
-                  Get Started;
-                </button>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* Contact Section */}
-      <section;
-        id='contact';
-        className='py - 20 bg - gradient - to - b from - slate - 900 to - black';
-      >;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id="contact" className="py - 20 bg - gradient - to - b from - slate - 900 to - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className='text - center mb - 16';
-          >;
-            <h2 className='text - 3xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to Transform Healthcare?;
-            </h2>;
-            <p className='text - xl text - gray - 300 max - w-3xl mx - auto'>;
-              Contact our team to learn more about how AI Diagnostic Pro;
-              Platform can revolutionize your medical practice.;
-            </p>;
-          </motion.div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div          >;
-            <h2 className="text - 3xl md:text - 5xl font - bold text - white mb - 6">;
-              Ready to Transform Healthcare?;
-            </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
-              Contact our team to learn more about how AI Diagnostic Pro Platform can revolutionize your medical practice.;
-            </p>;
-          </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - indigo - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Phone className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
-              <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - indigo - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Phone className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Phone</h3>;
-              <p className="text - gray - 300">{contact_info.mobile}</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - indigo - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <Mail className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
-              <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - indigo - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Mail className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Email</h3>;
-              <p className="text - gray - 300">{contact_info.email}</p>;
-            </motion.div>;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true }}
-              className='text - center';
-            >;
-              <div className='w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - indigo - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4'>;
-                <MapPin className='w - 8 h - 8 text - white' />;
-              </div>;
-              <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
-              <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - blue - 500 to - indigo - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <MapPin className="w - 8 h - 8 text - white" />;
-              </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Address</h3>;
-              <p className="text - gray - 300">{contact_info.address}</p>;
-            </motion.div>;
-          </div>;
-        </div>;
-      </section>;
-    </Layout>);
-}
-
-  );
-
-}
-    </Layout>
-  );
 }
 

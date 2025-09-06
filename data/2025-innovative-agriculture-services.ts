@@ -1,61 +1,3 @@
-import { ServiceVariant } from '../types/service-variants';
-export interface InnovativeAgricultureService {;
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  text_color: string;
-  link: string;
-  market_position: string;
-  target_audience: string;
-  trial_days: number;
-  setup_time: string;
-  category: string;
-  real_service: boolean;
-  technology: string[];
-  integrations: string[];
-  use_cases: string[];
-  roi: string;
-  competitors: string[];
-  market_size: string;
-  growth_rate: string;
-  variant: ServiceVariant;
-  contact_info: {
-    mobile: string;
-    email: string;
-    address: string;
-
-import { ServiceVariant } from '../types / service - variants';
-
-export interface InnovativeAgricultureService {
-
-  real_implementation: boolean;
-  implementation_details: string;
-  launch_date: string;
-
-  customers: number;
-  rating: number;
-
-  reviews: number;
-
-;
-const contact = {
-
-
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com', }
-;
-export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
-
-
 
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
@@ -320,73 +262,55 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     reviews: 67,
   },
   {
-
-      'AI-powered climate control',
-    id: 'ai - powered - vertical - farming',
-    name: 'AI - Powered Vertical Farming',
-    tagline:;
-      'Intelligent vertical farming with AI - powered climate control and crop optimization',
-    price: '$2, 299',
-    period: '/month',
-    description:;
-      'Advanced vertical farming platform that uses AI to optimize climate control, monitor crop growth, and maximize yields in controlled environment agriculture.',
-    features: [;
-      'AI - powered climate control',
-
-      'Crop growth monitoring',
-      'Environmental optimization',
-      'Real - time control',
-      'Performance analytics',
-      'Integration capabilities',
-      'Custom growing protocols',
-      'Multi - tier support',
-      'Compliance management',
-    ],
-    popular: true,
-    icon: '🏗️',
-
-    color: 'from - orange - 600 to - red - 700',
-    text_color: 'text - orange - 400',
-    link: 'https://ziontechgroup.com / ai - powered - vertical - farming',
-    market_position:;
-      'Leading AI - powered vertical farming platform for climate control and crop optimization.',
-    target_audience:;
-      'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers',
-    trial_days: 30,
-    setup_time: '1 month',
-    category: 'Agriculture & Food Technology',
-    real_service: true,
-    technology: [;
-      'AI / ML, Vertical farming, Climate control, IoT sensors, Machine learning',
-    ],
-    integrations: [;
-      'Climate control systems, IoT devices, Lighting systems, Analytics platforms',
-    ],
-    use_cases: [;
-
-      'Climate control, Crop monitoring, Environmental optimization, Yield maximization',
-    ],
-    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%',
-    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens'],
-
-
-
-      'AI-powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
-    launchDate: '2025-02-02',
-    market_size: '$9.3B+ vertical farming market',
-    growth_rate: '280% YoY',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details:;
-      'AI - powered vertical farming platform with intelligent climate control and crop optimization capabilities.',
-    launch_date: '2025 - 02 - 02',
-    customers: 123,
-    rating: 4 && 4.6,
-    reviews: 89,
-
-  },;
-
+    id: 'ai-powered-vertical-farming'
+    name: 'AI-Powered Vertical Farming'
+    tagline:
+      'Intelligent vertical farming with AI-powered climate control and crop optimization'
+    price: '$2,299'
+    period: '/month'
+    description:
+      'Advanced vertical farming platform that uses AI to optimize climate control, monitor crop growth, and maximize yields in controlled environment agriculture.'
+    features: [
+      'AI-powered climate control'
+      'Crop growth monitoring'
+      'Environmental optimization'
+      'Real-time control'
+      'Performance analytics'
+      'Integration capabilities'
+      'Custom growing protocols'
+      'Multi-tier support'
+      'Compliance management'
+    ]
+    popular: true
+    icon: '🏗️'
+    color: 'from-orange-600 to-red-700'
+    textColor: 'text-orange-400'
+    link: 'https://ziontechgroup.com/ai-powered-vertical-farming'
+    marketPosition:
+      'Leading AI-powered vertical farming platform for climate control and crop optimization.'
+    targetAudience:
+      'Vertical farming companies, Urban agriculture, Controlled environment agriculture, Food producers'
+    trialDays: 30
+    setupTime: '1 month'
+    category: 'Agriculture & Food Technology'
+    realService: true
+    technology: [
+      'AI/ML, Vertical farming, Climate control, IoT sensors, Machine learning'
+    ]
+    integrations: [
+      'Climate control systems, IoT devices, Lighting systems, Analytics platforms'
+    ]
+    useCases: [
+      'Climate control, Crop monitoring, Environmental optimization, Yield maximization'
+    ]
+    roi: 'Increase crop yields by 300% and reduce energy consumption by 40%'
+    competitors: ['Plenty, AeroFarms, Bowery Farming, Gotham Greens']
+    marketSize: '$9.3B+ vertical farming market'
+    growthRate: '280% YoY'
+    variant: 'ai-futuristic'
+    contactInfo: contact
+    realImplementation: true
+    implementationDetails:
 
 ];      'AI-powered climate controlCrop growth monitoringEnvironmental optimizationReal-time controlPerformance analyticsIntegration capabilitiesCustom growing protocolsMulti-tier support';
 
@@ -534,15 +458,65 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4 && 4.6,
 
     reviews: 89
-  }
-];
 
-
-    rating: 4.6
-    reviews: 89
-
-
-];      'AI - powered climate control_crop growth monitoring_environmental optimization_real - time control_performance analytics_integration capabilities_custom growing protocols_multi - tier support';
+import { ServiceVariant } from '../types/service-variants',;
+export interface InnovativeAgricultureService {;
+  id: string,;
+  name: string,;
+  tagline: string,;
+  price: string,;
+  period: string,;
+  description: string,;
+  features: string[],;
+  popular: boolean,;
+  icon: string,;
+  color: string,;
+  textColor: string,;
+  link: string,;
+  marketPosition: string,;
+  targetAudience: string,;
+  trialDays: number,;
+  setupTime: string,;
+  category: string,;
+  realService: boolean,;
+  technology: string[],;
+  integrations: string[],;
+  useCases: string[],;
+  roi: string,;
+  competitors: string[],;
+  marketSize: string,;
+  growthRate: string,;
+  variant: ServiceVariant,;
+  contactInfo: {;
+    mobile: string,;
+    email: string,;
+    address: string,;
+    website: string;
+  },;
+  realImplementation: boolean,;
+  implementationDetails: string,;
+  launchDate: string,;
+  customers: number,;
+  rating: number,;
+  reviews: number;
+}
+;
+const contact = {;
+  mobile: '+1 302 464 0950',;
+  email: 'kleber@ziontechgroup.com',;
+  address: '364 E Main St STE 1008 Middletown DE 19709',;
+  website: 'https://ziontechgroup.com';
+},;
+export const innovativeAgricultureServices: InnovativeAgricultureService[] = [;
+  {;
+    id: 'ai-powered-precision-agriculture',;
+    name: 'AI-Powered Precision Agriculture',;
+    tagline: 'Intelligent farming with AI-powered crop monitoring and optimization',;
+    price: '$1,899',;
+    period: '/month',;
+    description: 'Advanced precision agriculture platform that uses AI to monitor crops, optimize irrigation, and maximize yields for agricultural businesses.',;
+    features: [;
+      'AI-powered crop monitoringIrrigation optimizationYield predictionReal-time monitoringPerformance analyticsIntegration capabilitiesCustom monitoring modelsMulti-field support',;
       'Compliance management';
     ];
     popular: true;
@@ -572,9 +546,6 @@ export const innovativeAgricultureServices: InnovativeAgricultureService[] = [
     rating: 4.6,
     reviews: 89;
 
-
-
-
   }
 ];
-;
+

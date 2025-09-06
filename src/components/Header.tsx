@@ -1,63 +1,74 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 
 interface HeaderProps {
-  onMenuClick: () => void;
+  onMenuClick?: () => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Header: React.FC<HeaderProps> = ({ onMenuClick }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    onMenuClick();
-  };
-
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Contact', href: '/contact' }
+  ]
   return (
-    <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+    <header className="bg-white shadow-lg sticky top-0 z-50">
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Z</span>
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
-            <span className="text-xl font-bold">Zion Tech Group</span>
+            <div>
+              <h1 className="text-2xl font-bold text-gray-900">Zion Tech Group</h1>
+              <p className="text-sm text-gray-600">AI & Technology Solutions</p>
+            </div>
           </Link>
-
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
-            <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-            <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
-            <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
-          </nav>
-
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
           {/* Mobile Menu Button */}
           <button
-            onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
-            aria-label="Toggle menu"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors duration-200"
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-700">
-            <nav className="flex flex-col space-y-4">
-              <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-              <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
-              <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-              <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
-              <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
-            </nav>
+          <div className="lg:hidden mt-4 border-t border-gray-200 pt-4">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="block text-gray-700 hover:text-blue-600 transition-colors duration-200 font-medium py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
           </div>
         )}
-      </div>
+      </nav>
     </header>
-  );
-};
+  )
+}
+
+export { Header };
+export default Header;

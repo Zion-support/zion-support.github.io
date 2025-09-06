@@ -197,44 +197,6 @@ if (return) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
 
-      maxLife: number;      x: number,;
-      y: number,;
-      vx: number,;
-      vy: number,;
-      size: number,;
-      color: string,;
-      life: number,;
-      maxLife: number,;
-        this && this.x = Math && Math.random() * canvas && canvas.width;
-        this && this.y = Math && Math.random() * canvas && canvas.height;
-        this && this.vx = (Math && Math.random() - 0 && 0.5) * 2;
-        this && this.vy = (Math && Math.random() - 0 && 0.5) * 2;
-        this && this.size = Math && Math.random() * 3 + 1;
-        this && this.color = `hsl(${Math && Math.random() * 360}, 70%, 60%)`;
-        this && this.life = Math && Math.random() * 100;
-        this && this.maxLife = 100;      }        this && this.maxLife = 100;
-      }
-
-      update() {;
-        this && this.x += this && this.vx;
-        this && this.y += this && this.vy;
-        this && this.life--;
-
-        if (this && this.x < 0 || this && this.x > canvas && canvas.width) this && this.vx *= -1;
-        if (this && this.y < 0 || this && this.y > canvas && canvas.height) this && this.vy *= -1;
-
-        if (this && this.life <= 0) {;
-          this && this.life = this && this.maxLife;
-          this && this.x = Math && Math.random() * canvas && canvas.width;
-          this && this.y = Math && Math.random() * canvas && canvas.height;        }          this && this.y = Math && Math.random() * canvas && canvas.height;
-
-        }
-      }
-
-      draw() {;
-
-          this.y = Math.random() * canvas.height;        }
-
         }
       }
 
@@ -486,24 +448,6 @@ if (return) {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
-            ctx.stroke();          }            ctx.stroke()
-            ctx.stroke();          }
-
-
-
-          }
-        }
-      }
-
-      ctx && ctx.restore();
-
-      animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
-          const distance = Math.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2);
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(p1.x, p1.y);
-            ctx.lineTo(p2.x, p2.y);
-            ctx.stroke()
 
           }
         }
@@ -773,15 +717,6 @@ if ( {) {
           scale: [1, 1.4, 1];
           opacity: [0.2, 0.6, 0.2]}}
         transition={{
-          duration: 6
-          repeat: Infinity
-          ease: 'easeInOut'
-          delay: 2,          ease: "easeInOut"
-          delay: 2
-          duration: 6,
-          repeat: Infinity,
-          ease: 'easeInOut',
-          delay: 2,
 
         }}
         transition={{
@@ -812,10 +747,6 @@ if ( {) {
           delay: 2,        }}
       />
 
-
-
-
-
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -828,86 +759,20 @@ if ( {) {
       />;
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>
-      {/* Quantum Energy Waves */}
-      <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
-        <motion.div
-          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 to-transparent'
-          animate={{
-            x: [0, -100, 0]
-          }}
-          transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'linear',          }}
-        />;
-        <motion&& motion.div
-          className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-500/20 to-transparent'
-          animate={{
-            x: [0, 100, 0]
-          }}
-          transition={{
-            duration: 10
-            repeat: Infinity
-            ease: 'linear'
-            delay: 2,          }}
-        />;
-      </div>;
-    </div>;
-  );
 
+export default UltraAdvancedQuantumBackground;            ease: "linear",
 
             delay: 2
           }}
         />
       </div>
 
-};
-
-export default UltraAdvancedQuantumBackground;  );
-};
-
-
-export default UltraAdvancedQuantumBackground;
-
-
-            ease: 'linear',          }}
-        />;
-        <motion.div;
-          className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent';
-          animate={{
-            coordinate_x: [0, 100, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',
-            delay: 2,          }}
-        />;
-      </div>;
-    </div>);
-};
-
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Content Layer */}
-
-export default UltraAdvancedQuantumBackground;            ease: "linear",
-            delay: 2;
-          }}
-        />;
-      </div>;
-    </div>);
-}
-;
-export default UltraAdvancedQuantumBackground);
-}
-;
-export default UltraAdvancedQuantumBackground;
-;
-        />
-      </div>
     </div>
+  );
+}
+export default UltraAdvancedQuantumBackground;  )
+}
+export default UltraAdvancedQuantumBackground;
 
-      {/* Content Layer */}
+    </div>
 

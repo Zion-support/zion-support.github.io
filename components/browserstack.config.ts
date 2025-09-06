@@ -43,5 +43,4 @@ default define_config ({
   ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-});
-});
+

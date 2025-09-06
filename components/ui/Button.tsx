@@ -148,4 +148,3 @@ if ( {) {
       disabled={disabled}
       type={type}
 
-export { Button };

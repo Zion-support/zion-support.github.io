@@ -88,11 +88,3 @@ const EnhancedFooter = () =>: any {
       </div>
       {/* Bottom Footer */}
 
-);
-}
-export default EnhancedFooter;}
-export default EnhancedFooter;
-
-export default EnhancedFooter;},
-
-export default EnhancedFooter;

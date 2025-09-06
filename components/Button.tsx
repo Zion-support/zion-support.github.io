@@ -82,14 +82,8 @@ function Button() {
       on_click={on_click}
       disabled={disabled}
 
-
     >
       {children}
     </button>
   );
-
-    </button>);
-}
-
-
 

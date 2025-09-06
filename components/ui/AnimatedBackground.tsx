@@ -13,8 +13,7 @@ export default function AnimatedBackground() {
       />
       <style jsx global>{`
         @keyframes bgflow {
-          0% {;
-          0% {
+
             transform: translateY(0px) rotate(0deg);
           }
           50% {;
@@ -152,7 +151,4 @@ function AnimatedBackground() {
 
     </div>;
   );
-}
-export default AnimatedBackground;
-};
-export default AnimatedBackground;
+

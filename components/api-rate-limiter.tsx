@@ -1,47 +1,7 @@
-import React, { useState } from 'react',
-import Head from 'next/head',
-import Card from '../components/ui/Card',
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
+
 import Button from '../components/ui/Button';
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-
-  CheckCircle,;
-  AlertTriangle,;
-} from 'lucide-react';import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-
 import {
-import { Shield, Zap, BarChart3, Code, ArrowRight, Copy, RefreshCw, CheckCircle, AlertTriangle } from 'lucide-react';
-
-
-export default function APIRateLimiterPage() {;
-
-
 
   const [endpoint, setEndpoint] = useState('');
   const [rateLimit, setRateLimit] = useState('100');
@@ -56,22 +16,26 @@ export default function APIRateLimiterPage() {;
     { value: '1h', label: '1 Hour', description: 'Per hour rate limiting' }
     { value: '1d', label: '1 Day', description: 'Per day rate limiting' },  ];    { value: '1d', label: '1 Day', description: 'Per day rate limiting' }
   ];
-
-    { value: '10', label: '10 requests', description: 'Very strict' },
-    { value: '100', label: '100 requests', description: 'Standard' },
-    { value: '1000', label: '1000 requests', description: 'High volume' },
-
+  const rateLimits = [
+    { value: '10', label: '10 requests', description: 'Very strict' }
+    { value: '100', label: '100 requests', description: 'Standard' }
+    { value: '1000', label: '1000 requests', description: 'High volume' }
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
-
-    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
+  const generateApiKey = () => {
+    const key =
+      'zt_' +
+      Math.random().toString(36).substr(2, 9) +
+      '_' +
+      Date.now().toString(36);
+    setApiKey(key);  }
+  const testRateLimiting = async () => {
 
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
     setApiKey(key)
   }
+
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
 
 
@@ -107,9 +71,8 @@ export default function APIRateLimiterPage() {;
     setApiKey(key);
   };
 
-  const testRateLimiting = async () => {;
-    if (!endpoint && endpoint.trim() || !rateLimit || !timeWindow) return;
-
+  const testRateLimiting = async () => {
+    if (!endpoint.trim() |!rateLimit |!timeWindow) return;
     setIsTesting(true);
     setTestResults([]);
     const limit = parseInt(rateLimit);
@@ -193,138 +156,11 @@ export default function APIRateLimiterPage() {;
         return <CheckCircle className='w-5 h-5 text-green-400' />;
       case 'rate_limited':;
         return <AlertTriangle className='w-5 h-5 text-red-400' />;
-
-  };
-
-  const testRateLimiting = async () => {
-    if (!endpoint.trim() || !rateLimit || !timeWindow) return;
-    
-    setIsTesting(true);
-    setTestResults([]);
-    
-    const limit = parseInt(rateLimit);
-;
-  const rate_limits = [;
-    { value: '10', label: '10 requests', description: 'Very strict' },
-    { value: '100', label: '100 requests', description: 'Standard' },
-    { value: '1000', label: '1000 requests', description: 'High volume' },
-    { value: '10000', label: '10000 requests', description: 'Enterprise' },
-  ];
-;
-  const generateApiKey = () =>: any {
-    const key =;
-      'zt_' +;
-      Math.random ().to_string (36).substr (2, 9) +;
-      '_' +;
-      Date.now ().to_string (36);
-    setApiKey (key);  }
-;
-  const testRateLimiting = async () => {
-    if (|| !rate_limit || !time_window) return) {
-  $2
-}
-    { value: '10000', label: '10000 requests', description: 'Enterprise' }
-  ];
-;
-  const generateApiKey = () =>: any {
-    const key = 'zt_' + Math.random ().to_string (36).substr (2, 9) + '_' + Date.now ().to_string (36);
-    setApiKey (key);
-  }
-;
-  const testRateLimiting = async () => {
-    if (|| !rate_limit || !time_window) return) {
-  $2
-}
-    setIsTesting (true);
-    setTestResults ([]);
-;
-    const limit = parse_int (rate_limit);
-    const results = [];
-;
-    // Simulate API calls to test rate limiting;
-    for (let index = 1; i <= limit + 5; i++) {
-      await new Promise (resolve => set_timeout (resolve, 100));
-;
-      const is_allowed = i <= limit;
-      const status = is_allowed ? 'success' : 'rate_limited';
-      const status_code = is_allowed ? 200 : 429;
-;
-      results.push ({
-        request: i,
-        timestamp: new Date ().toLocaleTimeString (),
-        status,
-        status_code,
-        response_time: Math.random () * 100 + 50,
-        headers: {
-          'X - RateLimit - Limit': limit,
-          'X - RateLimit - Remaining': Math.max (0, limit - i),
-          'X - RateLimit - Reset': new Date (Date.now () + 60000).toISOString (),
-        },
-      });
-;
-      // Check condition
-if (break) {
-  $2
-}
-    }
-    setTestResults (results);
-    setIsTesting (false);
-  }
-;
-  const copyToClipboard = (text: string) =>: any {
-    navigator.clipboard.write_text (text);  }    setIsTesting (true);
-    setTestResults ([]);
-;
-    const limit = parse_int (rate_limit);
-
-    const results = [];
-;
-    // Simulate API calls to test rate limiting;
-    for (let index = 1, i <= limit + 5, i++) {
-      await new Promise (resolve => set_timeout (resolve, 100));
-;
-      const is_allowed = i <= limit;
-      const status = is_allowed ? 'success' : 'rate_limited';
-      const status_code = is_allowed ? 200 : 429;
-;
-      results.push ({
-        request: i,
-        timestamp: new Date ().toLocaleTimeString (),
-        status;
-        status_code;
-        response_time: Math.random () * 100 + 50,
-        headers: {
-          'X - RateLimit - Limit': limit;
-          'X - RateLimit - Remaining': Math.max (0, limit - i);
-          'X - RateLimit - Reset': new Date (Date.now () + 60000).toISOString ();
-        }
-      });
-;
-      // Check condition
-if (break) {
-  $2
-}
-    }
-    setTestResults (results);
-    setIsTesting (false);
-  }
-;
-  const copyToClipboard = (text: string) =>: any {
-    navigator.clipboard.write_text (text);
-  }
-;
-  const getStatusIcon = (status: string) =>: any {
-    switch (status) {
-
       default:
-
 
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
 
     }
-
-
-
 
   };
 
@@ -338,26 +174,6 @@ if (break) {
 
         return 'text-yellow-400'
     }
-
-  };
-
-  const getStatusColor = (status: string) => {;
-    switch (status) {;
-      case 'success':;
-        return 'text-green-400';
-      case 'rate_limited':;
-        return 'text-red-400',;
-      default:;
-        return 'text-yellow-400';    }        return 'text-yellow-400';
-
-
-    }
-  }
-        return 'text-yellow-400';    }        return 'text-yellow-400'
-    }
-  }
-
-  };
 
   return (
 
@@ -750,9 +566,6 @@ if (break) {
                     Rate Limit
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
-                    {rateLimits.map(limit => (                      <button
-
-                      <button
 
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
@@ -769,8 +582,91 @@ if (break) {
                         <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
                       </button>
 
+                {/* Time Window */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-3'>
+                    Time Window
+                  </label>
+                  <div className='grid grid-cols-2 gap-3'>
 
+                        key={window.value}
+                        onClick={() => setTimeWindow(window.value)}
+                        className={`p-3 rounded-lg border text-left transition-all ${
+                          timeWindow === window.value
+                            ? 'border-green-500 bg-green-500/10 text-green-300'
+                            : 'border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white'
+                        }`}
+                      >
+                        <div className='font-medium'>{window.label}</div>
+                        <div className='text-xs text-gray-400 mt-1'>
+                          {window.description}
+                        </div>                      </button>                        <div className="font-medium">{window.label}</div>
+                        <div className="text-xs text-gray-400 mt-1">{window.description}</div>
+                      </button>
 
+                {/* API Key Generation */}
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-2'>
+                    API Key
+                  </label>
+                  <div className='flex space-x-2'>
+                    <input
+                      type='text'
+                      value={apiKey}
+                      readOnly
+                      placeholder='Generate an API key to test rate limiting'
+                      className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400'
+                    />
+                    <Button
+                      onClick={generateApiKey}
+                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'                    >                    API Key
+                  </label>
+                  <div className="flex space-x-2">
+                    <input
+                      type="text"
+                      value={apiKey}
+                      readOnly
+                      placeholder="Generate an API key to test rate limiting"
+                      className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400"
+                    />
+                    <Button
+                      onClick={generateApiKey}
+                      className="px-6 py-3 bg-green-600 hover:bg-green-700 text-white"
+                    >
+                      Generate
+                    </Button>
+                  </div>
+                </div>
+                <Button
+                  onClick={testRateLimiting}
+                  disabled={
+                    !endpoint.trim() |!rateLimit |!timeWindow |isTesting
+                  }
+                  className='w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'
+                >
+                  {isTesting ? (
+                    <>
+                      <RefreshCw className='w-5 h-5 mr-2 animate-spin' />                      Testing Rate Limiting...
+                    </>
+                  ) : (
+                    <>
+                      <Zap className='w-5 h-5 mr-2' />                      Test Rate Limiting                  disabled={!endpoint.trim() |!rateLimit |!timeWindow |isTesting}
+                  className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isTesting ? (
+                    <>
+                      <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
+                      Testing Rate Limiting...
+                    </>
+                  ) : (
+                    <>
+                      <Zap className='w-5 h-5 mr-2' />                      <Zap className="w-5 h-5 mr-2" />
+                      Test Rate Limiting
+                    </>
+                  )}
+                </Button>
+              </div>
+            </Card>
 
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
@@ -780,9 +676,6 @@ if (break) {
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
-
-                  Test Results
-
 
                 </h3>
                 {testResults.length > 0 && (
@@ -983,84 +876,10 @@ if (break) {
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
-                        result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
-                      }`}
 
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="flex items-center space-x-3">
-                          {getStatusIcon(result.status)}
-                          <span className={`font-medium ${getStatusColor(result.status)}`}>
-                            Request #{result.request}
-                          </span>
-                        </div>
-                        <span className="text-sm text-gray-400">{result.timestamp}</span>
-                      </div>
-                      <div className="grid grid-cols-2 gap-4 text-sm">
-                        <div>
-                          <span className="text-gray-400">Status:</span>
-                          <span className={`ml-2 font-medium ${getStatusColor(result.status)}`}>
-                            {result.statusCode} {result.status === 'success' ? 'OK' : 'Too Many Requests'}
-                          </span>
-                        </div>
-                        <div>
-                          <span className="text-gray-400">Response Time:</span>
-                          <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
-
-                          </span>;
-                        </div>;
-                        <div>;
-                          <span className='text-gray-400'>Response Time:</span>;
-                          <span className='ml-2 text-white'>;
-                            {result && result.responseTime.toFixed(0)}ms;
-                          </span>                        </div>;
-                      </div>;
-
-                      {result && result.status === 'rate_limited' && (;
-                        <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>;
-                          <strong>Rate Limited:</strong> Request exceeded the;
-                          limit of {rateLimit} requests per {timeWindow}                        </div>                      }`}
-                    >;
-                      <div className="flex items-center justify-between mb-2">;
-                        <div className="flex items-center space-x-3">;
-                          {getStatusIcon(result && result.status)}
-                          <span className={`font-medium ${getStatusColor(result && result.status)}`}>;
-                            Request #{result && result.request}
-                          </span>;
-                        </div>;
-                        <span className="text-sm text-gray-400">{result && result.timestamp}</span>;
-                      </div>;
-
-                      <div className="grid grid-cols-2 gap-4 text-sm">;
-                        <div>;
-                          <span className="text-gray-400">Status:</span>;
-                          <span className={`ml-2 font-medium ${getStatusColor(result && result.status)}`}>;
-                            {result && result.statusCode} {result && result.status === 'success' ? 'OK' : 'Too Many Requests'}
-                          </span>;
-                        </div>;
-                        <div>;
-                          <span className="text-gray-400">Response Time:</span>;
-                          <span className="ml-2 text-white">{result && result.responseTime.toFixed(0)}ms</span>;
-                        </div>;
-                      </div>;
-
-                      {result && result.status === 'rate_limited' && (;
-                        <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>;
-                          <strong>Rate Limited:</strong> Request exceeded the;
-                          limit of {rateLimit} requests per {timeWindow}                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
-
-                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
-                        </div>;
-
-                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-                          <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
-                        </div>
-
-                        </div>
-
 
                       )}
                     </div>;
@@ -1081,18 +900,11 @@ if (break) {
         </div>
       </section>
 
-
-
-
-
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-
-              Advanced Rate Limiting Features
-
 
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -1588,19 +1400,8 @@ const endpoint = '${endpoint || '/api/users'}';
 const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
 
-
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
-    'X-RateLimit-Window': '${timeWindow}'  }
-
-
-    'Authorization': \`Bearer \${apiKey}\`,
-    'X-RateLimit-Limit': '${rateLimit}',
-    'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
-    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
-    'X-RateLimit-Window': '${timeWindow}'  }
-
-
 
   }
 });
@@ -1643,17 +1444,11 @@ endpoint = '${endpoint || '/api/users'}'
 
 # Make API request with rate limiting
 headers = {
-    'Authorization': f'Bearer {api_key}'
-    'X-RateLimit-Limit': '${rateLimit}'
-    'Authorization': f'Bearer {api_key}',
-    'X-RateLimit-Limit': '${rateLimit}',
+
     'X-RateLimit-Window': '${timeWindow}'
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-
-
-response = requests.get(;
 
     f'https://api.zion.tech{endpoint}';
 
@@ -1732,8 +1527,6 @@ headers = {
 response = requests.get(
     f'https://api.zion.tech{endpoint}',    headers=headers    'Authorization': f'Bearer {api_key}X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
 }
-response = requests.get(
-
 
     f'https://api.zion.tech{endpoint}';
 
@@ -1883,41 +1676,35 @@ console.log ('Rate Limit Info:', {
       </section>;
 
       {/* CTA Section */}
-      <section className='py - 20 bg - gradient - to - r from - green - 600 to - blue - 600'>;
-        <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-          <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 6'>;
-          </h2>;
-          <p className='text - xl text - green - 100 mb - 8'>;
-            Join thousands of developers and companies who trust our rate;
-            limiting service to protect their APIs.;
-          </p>;
-          <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-            <Button;
-              href='/contact';
-              size='lg';
-              className='bg - white text - green - 600 hover:bg - gray - 100';
-            >;
-              Get Started Today;
-              <ArrowRight className='w - 5 h - 5 ml - 2' />;
-            </Button>;
-            <Button;
-              href='/pricing';
-              variant='outline';
-              size='lg';
-              className='border - white text - white hover:bg - white hover:text - green - 600'            >              href="/pricing";
-              variant="outline";
-              size="lg";
-              className="border - white text - white hover:bg - white hover:text - green - 600";
-
-              View Pricing;
-            </Button>;
-          </div>;
-        </div>;
-      </section>;
-
-  );    </>;
-  );
-
-}
-  );
+      <section className='py-20 bg-gradient-to-r from-green-600 to-blue-600'>
+        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+          </h2>
+          <p className='text-xl text-green-100 mb-8'>
+            Join thousands of developers and companies who trust our rate
+            limiting service to protect their APIs.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <Button
+              href='/contact'
+              size='lg'
+              className='bg-white text-green-600 hover:bg-gray-100'
+            >
+              Get Started Today
+              <ArrowRight className='w-5 h-5 ml-2' />
+            </Button>
+            <Button
+              href='/pricing'
+              variant='outline'
+              size='lg'
+              className='border-white text-white hover:bg-white hover:text-green-600'            >              href="/pricing"
+              variant="outline"
+              size="lg"
+              className="border-white text-white hover:bg-white hover:text-green-600"
+              View Pricing
+            </Button>
+          </div>
+        </div>
+      </section>
+    </>;
 

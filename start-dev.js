@@ -1,7 +1,4 @@
 
-const { spawn } = require ('child_process'),
-console.log ('🚀 Starting development server...'),
-
 
 console.log('🚀 Starting development server...'),;
 
@@ -27,3 +24,4 @@ process.on('SIGTERM', () => {;
   devProcess.kill('SIGTERM'),;
   process.exit(0);
 }),;
+

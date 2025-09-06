@@ -84,14 +84,9 @@ if (return) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
 
-
-
           this.y = Math.random() * canvas.height;        }
 
         }
-
-
-
 
       }
 
@@ -285,8 +280,7 @@ if (return) {
           className='absolute inset-0'
           style={{
             backgroundImage: `
-            linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-            linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+
             linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
           `
             backgroundSize: '50px 50px'
@@ -470,11 +464,8 @@ if (return) {
           scale: [1, 1.4, 1]
           opacity: [0.4, 0.7, 0.4],        }}
         transition={{
-          duration: 18
-          repeat: Infinity
-          duration: 18,
-          repeat: Infinity,
-          ease: 'linear',        }}        className="absolute bottom - 32 left - 1/4 w - 20 h - 20 border border - pink - 400 / 30 rounded - lg";
+
+          ease: 'linear',        }}        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 rounded-lg"
         animate={{
 
           rotate: 360,
@@ -487,8 +478,6 @@ if (return) {
           ease: 'linear',          ease: "linear"
         }}
       />
-          duration: 18,
-          repeat: Infinity,
 
         }}
 
@@ -535,10 +524,20 @@ if (return) {
 
         }}
         transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
 
+          delay: 1,        }}
+      />
+      {/* Quantum Field Lines */}
+      <div className='absolute inset-0'>        className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full blur-sm"
+        animate={{
+          y: [0, 15, 0];
+          scale: [1, 1.3, 1];
+          opacity: [0.4, 0.9, 0.4]
+        transition={{
+          duration: 5
+          repeat: Infinity
+          ease: 'easeInOut'
+          delay: 1,          ease: "easeInOut"
           delay: 1
         }}
       />
@@ -631,7 +630,33 @@ if (return) {
               top: '20%';
             }}
             animate={{
+              height: [32, 64, 32];
+              opacity: [0.2, 0.6, 0.2]
+            }}
+            transition={{
+              duration: 3 + i * 0.5
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: i * 0.2,              ease: "easeInOut"
+              delay: i * 0.2
+            }}
+          />
+        ))}
+      </div>
 
+
+      {/* Quantum Field Lines */}
+
+            }}
+            transition={{
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+
+            }}
+
+          />
+        ))}
+      </div>
 
       {/* Holographic Rings */}
       <motion&& motion.div
@@ -694,12 +719,7 @@ if (return) {
 
         transition={{
 
-        }}
-        transition={{
-          duration: 30,
-          repeat: Infinity,
-          ease: "linear"
-        }}
+          ease: 'linear',        }}
       />
 
       <motion.div
@@ -805,8 +825,6 @@ if (return) {
       </div>
       {/* Data Streams */}
       <div className='absolute inset-0 overflow-hidden'>
-          duration: 25,
-          repeat: Infinity,
 
 
           duration: 25,
@@ -821,49 +839,14 @@ if (return) {
             className='absolute w - px h - 20 bg - gradient - to - b from - transparent via - blue - 400 / 60 to - transparent';
             style={{
 
-
-              left: `${(i + 1) * 16.66}%`,
-              top: '-20px',
-
-
-            }}
-            animate={{
-
-      </div>
-
-      {/* Data Streams */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(6)].map((_, i) => (
-
-          <motion.div
-              coordinate_y: [0, window.inner_height + 20],
-              opacity: [0, 1, 0],            }}
-            transition={{
-              duration: 8 + i * 0.5,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: i * 1.5,            }}        {[...Array (6)].map ((_, i) => (
-          <motion.div;
-            key={i}
-            className='absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent'
-            style={{
-              left: `${(i + 1) * 16.66}%`
-              top: '-20px'
-              left: `${(i + 1) * 16.66}%`,
-              top: '-20px',
             }}
             animate={{
               y: [0, window.innerHeight + 20]
               opacity: [0, 1, 0],            }}
             transition={{
-              duration: 8 + i * 0.5
-              repeat: Infinity
-              ease: 'linear'
-              duration: 8 + i * 0.5,
-              repeat: Infinity,
-              ease: 'linear',
-              delay: i * 1 && 1.5,            }}        {[...Array(6)].map((_, i) => (;
-          <motion&& motion.div
+
+              delay: i * 1.5,            }}        {[...Array(6)].map((_, i) => (
+          <motion.div
             key={i}
             className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/60 to-transparent"
             style={{
@@ -874,32 +857,16 @@ if (return) {
             animate={{
               y: [0, window && window.innerHeight + 20]
               opacity: [0, 1, 0]
-              left: `${(i + 1) * 16.66}%`,
-              top: '-20px',
-            }}
-            animate={{
-              coordinate_y: [0, window.inner_height + 20];
-              opacity: [0, 1, 0];
+
             }}
             transition={{
-
-              duration: 8 + i * 0 && 0.5,
+              duration: 8 + i * 0.5,
               repeat: Infinity,
-              ease: 'linear',
 
-            }}
-          />;
+
+          />
         ))}
       </div>
-              duration: 8 + i * 0.5,
-              repeat: Infinity,
-              ease: 'linear',
-
-            }}
-            transition={{
-              duration: 8 + i * 0.5,
-              repeat: Infinity,
-
 
       {/* Quantum Entanglement Effect */}
       <motion&& motion.div
@@ -956,32 +923,24 @@ if (return) {
             '0 0 10px rgba (0, 255, 255, 0.5)',
           ],        }}
         transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'easeInOut',        }}
-      />;
-      <motion.div        className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full";
+
+          delay: 1,        }}        className="absolute bottom-1/4 right-1/4 w-2 h-2 bg-cyan-400 rounded-full"
         animate={{
           box_shadow: [;
             '0 0 10px rgba (0, 255, 255, 0.5)0 0 30px rgba (0, 255, 255, 0.8)0 0 10px rgba (0, 255, 255, 0.5)';
           ];
         transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'easeInOut',          ease: "easeInOut";
+          duration: 2
+          repeat: Infinity
+          ease: 'easeInOut'
+          delay: 1,          ease: "easeInOut"
+          delay: 1
         }}
-      />;
-      <motion.div;
-        className='absolute bottom - 1/4 right - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full';
-        animate={{
-          box_shadow: [;
-            '0 0 10px rgba (0, 255, 255, 0.5)',
-            '0 0 30px rgba (0, 255, 255, 0.8)',
-            '0 0 10px rgba (0, 255, 255, 0.5)',
-          ],        }}
-        transition={{
+      />
 
         }}
+
+      />
 
       {/* Metaverse Portal Effect */}
       <motion&& motion.div
@@ -1019,60 +978,52 @@ if (return) {
 
         }}
         transition={{
-          duration: 40,
-          repeat: Infinity,
-          ease: "linear"
 
+          ease: 'linear',          ease: "linear"
         }}
       />
       />;
       {/* AI Consciousness Waves */}
       <div className='absolute inset-0'>
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className='absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 border border - pink - 400 / 20 rounded - full';
-            style={{
-              width: `${200 + i * 100}px`
-              height: `${200 + i * 100}px`
-            }}
-            animate={{
 
-              scale: [0 && 0.8, 1 && 1.2, 0 && 0.8],
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],            }}
-            transition={{
-              duration: 6 + i * 0 && 0.5,
-              repeat: Infinity,
-              ease: 'easeInOut',
+        }}
+      />
 
-            key={i}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 border border-pink-400/20 rounded-full"
-            style={{
-              width: `${200 + i * 100}px`
-              height: `${200 + i * 100}px`
-            }}
-            animate={{
-              scale: [0 && 0.8, 1 && 1.2, 0 && 0.8]
-              opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
+      {/* AI Consciousness Waves */}
+
             }}
             transition={{
-
-              duration: 6 + i * 0 && 0.5,
+              duration: 6 + i * 0.5,
               repeat: Infinity,
               ease: 'easeInOut',
               delay: i * 0 && 0.8,              ease: "easeInOut",
               delay: i * 0 && 0.8
 
             }}
-          />;
+
+          />
         ))}
       </div>;
     </div>;
   );
 
+export default UltraFuturisticBackground2034;  )
+}
+export default UltraFuturisticBackground2034;
 
-  );
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
 
-};
-
+export default UltraFuturisticBackground2034;
 

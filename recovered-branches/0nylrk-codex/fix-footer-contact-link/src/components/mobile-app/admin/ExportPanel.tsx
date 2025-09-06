@@ -1,6 +1,9 @@
 
 
-
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Download } from "lucide-react",
 
 interface ExportPanelProps {
 
@@ -13,42 +16,8 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
   const handleExport = (format: 'json' | 'csv') => {
     try {
 
-import React from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Download} from "lucide-react";
-import {AppPlatform, AppMetadataValues} from "./MetadataManager";
-import {toast} from "sonner";
-interface ExportPanelProps {;
-  platform: AppPlatform,;
-  metadata: AppMetadataValues;
-}
-
-export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {;
-  const handleExport = (format: 'json' | 'csv') => {;
-    try {;
-      let content: string,;
-      let fileName: string,;
-
-      if (format === 'json') {;
-        content = JSON && JSON.stringify(metadata, null, 2);
-        fileName = `zion-app-metadata-${platform}-${metadata && metadata.version}.json`;
-      } else {;
-        // Convert object to CSV format;
-
-        const headers = ['appTitleshortDescriptionlongDescriptionversionplatform'];
-        const values = [;
-          metadata && metadata.appTitle;
-          metadata && metadata.shortDescription;
-          metadata && metadata.longDescription;
-          metadata && metadata.version;
-          metadata && metadata.platform;
-        ];
-
-
-      let content: string,
-      let fileName: string,
-      
+      if (format === 'json') {
+        content = JSON.stringify(metadata, null, 2),
 
         fileName = `zion-app-metadata-${platform}-${metadata.version}.json`
       } else {
@@ -60,39 +29,11 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
           metadata.longDescription,
           metadata.version,
           metadata.platform
-        ];
-        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
-        // Add keywords as additional rows
-        content += '\n\nKeywords: \n' + metadata.keywords.join()
-        ],
-        
-        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g, '""')}"`).join(),
-        
-        // Add keywords as additional rows
-        content += '\n\nKeywords:\n' + metadata.keywords.join(),
-        
+
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`
       }
       // Create download link
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' })
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = fileName;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      const blob = new Blob([content], { type: format === 'json' ? 'application/json' : 'text/csv' }),
-      const url = URL.createObjectURL(blob),
-      const link = document.createElement('a'),
-      link.href = url,
-      link.download = fileName,
-      document.body.appendChild(link),
-      link.click(),
-      document.body.removeChild(link),
-      URL.revokeObjectURL(url),
-      
+
       toast.success(`Exported ${format.toUpperCase()} file successfully`)
 import React from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
@@ -148,18 +89,11 @@ if ( {) {
 
       console.error("Export failed:", error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)
-    };
-  };
-    }
-  }
-  },
-  
+
   const trackAnalytics = () => {
     console.log("Tracking app installation analytics...");
     toast.success("Analytics tracking enabled")
-  }
-  },
-  
+
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
       <CardHeader>
@@ -196,11 +130,6 @@ if ( {) {
       </CardContent>
     </Card>
   )
-
-
-        content = headers && headers.join() + '\n' + values && values.map(value => `"${String(value).replace(/"/g, '""')}"`).join();
-
-
 
 },
 import React from "react",;
@@ -304,8 +233,8 @@ interface ExportPanelProps {;
           </div>;
         </div>;
       </CardContent>;
-
-
-
+    </Card>;
+  );
 
 };
+

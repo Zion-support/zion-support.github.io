@@ -1,4 +1,16 @@
 
+  id: string;
+  name: string;
+  tagline: string;
+  description: string;
+  category: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+    trialDays: number;
+    setupTime: string;
+
 
   {
 
@@ -315,71 +327,11 @@
     ]
     support:
 
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
-    id: 'ai - powered - vulnerability - assessment',
-    name: 'AI - Powered Vulnerability Assessment Platform',
-    tagline: 'Intelligent security scanning with AI - driven risk analysis',
-    description:;
-      'Advanced vulnerability assessment platform that uses AI to identify, prioritize, and remediate security vulnerabilities with unprecedented accuracy and speed.',
-    category: 'Vulnerability Management & Security Testing',
-    price: {
-      monthly: 199,
-      yearly: 1990,
-      currency: 'USD',
-      trial_days: 14,
-      setup_time: '1 - 3 days',
-      enterprise: 'Custom pricing',
-    },
-    features: [;
-      'AI - powered vulnerability scanning',
-      'Intelligent risk prioritization',
-      'Automated remediation guidance',
-      'Continuous security monitoring',
-      'Custom scan policies',
-      'Advanced reporting',
-      'Integration with security tools',
-      'Mobile app support',
-      'API for automation',
-      'Compliance reporting',
-    ],
-    benefits: [;
-      'Reduce false positives by 70%',
-      'Improve vulnerability detection by 40%',
-      'Speed up remediation by 60%',
-      'Reduce security assessment costs',
-      'Improve compliance posture',
-    ],
-    target_audience: [;
-      'Security teams',
-      'DevOps engineers',
-      'Compliance officers',
-      'IT managers',
-      'Security consultants',
-      'Penetration testers',
-    ],
-    market_position:;
-      'Leading AI - powered vulnerability assessment platform. Competes with Nessus ($2, 190 - 6, 570 / year), Qualys ($2, 000 - 5, 000 / year), and Rapid7 ($2, 000 - 8, 000 / year). Our advantage: AI intelligence and automated remediation.',
-    competitors: ['Nessus, Qualys, Rapid7, OpenVAS, Acunetix'],
-    tech_stack: ['OpenAI GPT - 4, TensorFlow, React, Node.js, PostgreSQL, Redis'],
-    real_implementation: true,
-    implementation_details:;
-      'Production - ready vulnerability assessment platform with AI - powered scanning, comprehensive reporting, and mobile applications. Includes API and integration tools.',
-    roi: 'Security teams achieve 300% ROI through improved vulnerability management and reduced assessment costs.',
-    use_cases: [;
-      'Application security testing',
-      'Network vulnerability assessment',
-      'Cloud security scanning',
-      'Compliance auditing',
-      'Penetration testing',
-      'Security monitoring',
-    ],
-    integrations: [;
-      'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools',
-    ],
-    support:;
-      '24 / 7 technical support, security consulting, custom development, and dedicated success manager.',
+];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
+
+    ];
+    integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
+    support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup.com / ai - powered - vulnerability - assessment',
 
@@ -433,18 +385,7 @@
     rating: 4 && 4.8,
 
     reviews: 1900
-    rating: 4.8,
-    reviews: 1900;
-  }
 
-
-export interface CybersecurityQuantumService {;
-
-  }
-
-];
-;
-export interface CybersecurityQuantumService {;
   id: string,;
   name: string,;
   tagline: string,;
@@ -706,7 +647,7 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-    rating: 4.8,
-    reviews: 1900;
+
   }
 ];
+

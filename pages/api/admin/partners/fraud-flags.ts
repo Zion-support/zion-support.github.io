@@ -1,4 +1,6 @@
 
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+
 
     }
     const supabase = getServerSupabase()
@@ -13,6 +15,7 @@
     counts.forEach((count, ip) => {
       if (count > 30 && ip !== 'unknown') {
 
+  } catch (e: any) {
 
 
 
@@ -33,7 +36,7 @@
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
-
 

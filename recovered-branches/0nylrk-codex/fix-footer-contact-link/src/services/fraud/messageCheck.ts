@@ -1,9 +1,5 @@
 
 
-
-export const checkMessage = (messageContent: string): MessageAnalysisResult => {;
-
-
   const analysis = analyzeContent(messageContent);
   // Determine severity based on number and type of issues
 
@@ -37,11 +33,7 @@ if ( {) {
   }
   return {
     ...analysis;
-
-;
-
     severity
-
 
 // Message checking functionality;
 import { FraudSeverity } from '@/types/fraud',;
@@ -65,6 +57,6 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     ...analysis;
     severity;
 
-
   }
 };
+

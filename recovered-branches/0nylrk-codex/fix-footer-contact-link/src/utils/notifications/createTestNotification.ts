@@ -1,9 +1,5 @@
 
 
-import {NotificationType} from './types';
-import {createNotification} from './createNotification';
-
-
 /**
  * Demo function to create test notifications for the current user
  */
@@ -51,7 +47,8 @@ function createTestNotification() {
     'system': { url: '/dashboard', text: 'Learn More' }
   }
 
-
+    actionText: actions[randomType].text
+  })
 
 import { NotificationType } from './types',;
 import { createNotification } from './createNotification',;
@@ -85,7 +82,6 @@ export async function createTestNotification(userId: string) {;
     actionText: actions[randomType].text;
   });
 
-
-
 }
 ;
+

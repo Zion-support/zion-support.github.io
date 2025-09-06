@@ -1,24 +1,7 @@
 
 
 import React from 'react';
-import React, { ReactNode } from 'react';
 
-import Header from '../Header';
-import Footer from '../Footer';
-
-import React, { ReactNode } from 'react';
-import Header from './Header';
-import Footer from './Footer';
-import Header from '../Header';
-import Footer from '../Footer';
-
-
-
-
-
-
-;
-;
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -26,13 +9,6 @@ interface LayoutProps {;
   title?: string;
   description?: string;
   keywords?: string;
-  canonical?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  noIndex?: boolean;
-}
-
 
 export default function Layout({
 
@@ -47,10 +23,7 @@ export default function Layout({
   noIndex = false
 
 }: LayoutProps) {
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+
   return (
     <div className="min-h-screen bg-white">;
 export default /**
@@ -73,28 +46,37 @@ export default Layout;
 import React from 'react;
 import Header from './Header;
 import Footer from './Footer;
-
-
-  "./Footer"import Footer  from "react./Footer,;
-export default function Layout({ children }: LayoutProps) {;
-  return (;
-
+type LayoutProps = {children: React.ReactNode;
+}
+  children: React.ReactNode}
+export: default function Layout() {return: <div>{children}</div>;
+React from";
+  "react""import Footer from "react";
 
 <div className="min-h-screen flex flex-col>      <Header />"      <main className="flex-1 pt-16>        {children}"      </main><Footer />;
     </div>;
   )"; type: LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div>; type LayoutProps = { children: React.ReactNode, }; export default function Layout({ children }: LayoutProps) { return <div>{children}</div> } " ;
 }}
-type LayoutProps = {children: React && React.ReactNode;
-};
-  children: React && React.ReactNode}
 
-export: default function Layout() {;
-
-  return: <div>{children}</div>;
-React from";
-  "react""import Footer from "react";
-  "./Footer"import Footer  from "react./Footer,;
-export default function Layout(): any ({ children }: LayoutProps) {;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+export default function Layout({
+  children,
+  title = "Zion Tech Group",
+  description = "Leading technology solutions provider",
+  keywords = "technology, AI, cloud, micro SaaS"
+}: LayoutProps) {
   return (
 
 export: default /**
@@ -166,5 +148,4 @@ export default function Layout({ children }: LayoutProps) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 

@@ -1,53 +1,19 @@
+
+
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button";
+import { Leaf, Server, Cloud } from 'lucide-react'
+
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
-      title: 'Energy-Efficient Hardware'
-      description:
-        'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.'
-      icon: Server
-    }
-    
-    return this.props.children;
-  }
-}
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import { Leaf, Server, Cloud } from 'lucide-react';
-import Link from 'next/link';
 
-export default function GreenIT() {;
-  const greenITSolutions = [;
-    {;
-      title: 'Energy-Efficient Hardware',;
-      description:;
-        'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',;
-      icon: Server,;
-    },;
-    {;
-      title: 'Optimized Cooling Systems',;
-      description:;
-        'Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.',;
-      icon: Cloud,;
-    },;
-    {;
-      title: 'Renewable Energy Integration',;
-      description:;
-        'Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.',;
-      icon: Leaf,;
-    },;
-  ];
-
-
-      title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server},
-    {
-      title: "Optimized Cooling Systems",
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
-      icon: Cloud},
-    {
+      title: "Renewable Energy Integration",
+      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
+      icon: Leaf}
+  ],
 
   return (
     <>;
@@ -65,14 +31,6 @@ export default function GreenIT() {;
               Sustainable technology solutions that reduce environmental impact without compromising performance
             </p>
           </div>
-          <div className='mb-16'>
-            <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16'>
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-          
-          <div className="mb-16">
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-
 
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>
@@ -85,168 +43,7 @@ export default function GreenIT() {;
                     From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions 
                     for reducing your carbon footprint.
                   </p>
-                  <div className='mt-8'>
-                    <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>                      Explore Green IT Solutions
-                    </Button>
-                  </div>
-                </div>
-                  <div className="mt-8">
-                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
-import { SEO } from "@/components/SEO"
-import { GradientHeading } from "@/components/GradientHeading"
-import { Button } from "@/components/ui/button"
-import Link from "next/link"
-export default function GreenIT() {
-  const greenITSolutions = [
-    {
-      title: 'Energy - Efficient Hardware',
-      description:;
-        'Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.',
-      icon: Server,
-    },
-    {
-      title: 'Optimized Cooling Systems',
-      description:;
-        'Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.',
-      icon: Cloud,
-    },
-    {
-      title: 'Renewable Energy Integration',
-      description:;
-        'Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.',
-      icon: Leaf,
-    },
-  ];
-  return (
-    <>;
-      <SEO;
-        title='Green IT Solutions - Sustainable Technology';
-        description='Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.';
-        keywords='green IT, sustainable technology, eco - friendly computing, energy efficient hardware';
-        canonical='https://app.ziontechgroup.com / marketplace / category / green - it';
-      />;
-      <main className='min - h-screen bg - zion - blue pt - 24 pb - 20'>;
-        <div className='container mx - auto px - 4 sm:px - 6 lg:px - 8'>;
-          <div className='text - center mb - 16'>;
-            <GradientHeading > Green IT Solutions</GradientHeading>;
-            <p className='mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto'>;
-              Sustainable technology solutions that reduce environmental impact;
-              without compromising performance;
-            </p>;
-          </div>;
-          <div className='mb - 16'>;
-            <div className='bg - zion - blue - dark border border - zion - blue - light rounded - xl p - 8 md:p - 12 mb - 16'>;
-              <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center'>;
-                <div>;
-                  <h2 className='text - 3xl font - bold text - white mb - 6'>;
-                    Sustainable IT for a Better Future;
-                  </h2>;
-                  <p className='text - zion - slate - light text - lg mb - 6'>;
-                    As AI and cloud computing demand grows exponentially, so;
-                    does the environmental impact of data centers. Our Green IT;
-                    solutions help organizations implement sustainable practices;
-                    in their IT infrastructure while maintaining performance and;
-                    reliability.;
-                  </p>;
-                  <p className='text - zion - slate - light text - lg mb - 6'>;
-                    From energy - efficient hardware to renewable energy;
-                    integration, we offer comprehensive solutions for reducing;
-                    your carbon footprint.;
-                  </p>;
-                  <div className='mt - 8'>;
-                    <Button className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple'>                      Explore Green IT Solutions;
-                    </Button>;
-                  </div>;
-                </div>;
-                  <div className="mt - 8">;
-                    <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
-import { SEO  } from '@/components / SEO';
-import { GradientHeading  } from '@/components / GradientHeading';
-import { Button  } from '@/components / ui / button';
-import Link from './next / link';
-export default /**
- * GreenIT - Function description
- */
-function GreenIT() {
-  const greenITSolutions = [;
-    {
-      title: "Energy - Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},
 
-    {
-      title: "Optimized Cooling Systems"
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
-      icon: Cloud}
-    {
-
-        canonical='https://app && app.ziontechgroup.com/marketplace/category/green-it'
-      />;
-      <main className='min-h-screen bg-zion-blue pt-24 pb-20'>;
-        <div className='container mx-auto px-4 sm:px-6 lg:px-8'>;
-          <div className='text-center mb-16'>;
-            <GradientHeading>Green IT Solutions</GradientHeading>;
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>;
-              Sustainable technology solutions that reduce environmental impact;
-              without compromising performance;
-            </p>;
-          </div>;
-
-          <div className='mb-16'>;
-            <div className='bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16'>;
-              <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>;
-                <div>;
-                  <h2 className='text-3xl font-bold text-white mb-6'>;
-                    Sustainable IT for a Better Future;
-                  </h2>;
-                  <p className='text-zion-slate-light text-lg mb-6'>;
-                    As AI and cloud computing demand grows exponentially, so;
-                    does the environmental impact of data centers. Our Green IT;
-                    solutions help organizations implement sustainable practices;
-                    in their IT infrastructure while maintaining performance and;
-                    reliability.;
-                  </p>;
-                  <p className='text-zion-slate-light text-lg mb-6'>;
-                    From energy-efficient hardware to renewable energy;
-                    integration, we offer comprehensive solutions for reducing;
-                    your carbon footprint.;
-                  </p>;
-                  <div className='mt-8'>;
-                    <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple'>                      Explore Green IT Solutions;
-                    </Button>;
-                  </div>;
-                </div>;
-                  <div className="mt-8">;
-                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-
-
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from 'lucide-react';
-import Link from "next/link";
-export default function GreenIT() {;
-  const greenITSolutions = [;
-    {;
-      title: "Energy-Efficient Hardware",;
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server},;
-    {;
-      title: "Optimized Cooling Systems",;
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",;
-      icon: Cloud},;
-    {;
-      title: "Renewable Energy Integration",;
-      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",;
-      icon: Leaf}
-  ]
-
-  return (
-    <>;
-      <SEO
-        title="Green IT Solutions - Sustainable Technology"
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
-        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
                   <div className="mt-8">
                     <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">
                       Explore Green IT Solutions
@@ -254,288 +51,11 @@ export default function GreenIT() {;
                   </div>
                 </div>
 
-
-        canonical="https://app && app.ziontechgroup.com/marketplace/category/green-it"
-      />;
-      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-          <div className="text-center mb-16">;
-            <GradientHeading>Green IT Solutions</GradientHeading>;
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-              Sustainable technology solutions that reduce environmental impact without compromising performance;
-            </p>;
-          </div>;
-
-          <div className="mb-16">;
-            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">;
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
-                <div>;
-                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>;
-                  <p className="text-zion-slate-light text-lg mb-6">;
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. ;
-                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure ;
-                    while maintaining performance and reliability.;
-                  </p>;
-                  <p className="text-zion-slate-light text-lg mb-6">;
-                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions ;
-                    for reducing your carbon footprint.;
-                  </p>;
-                  <div className="mt-8">;
-                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-      title: "Renewable Energy Integration",
-      description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
-      icon: Leaf}
-  ];
-  return (
-    <>;
-      <SEO;
-        title="Green IT Solutions - Sustainable Technology";
-        description="Explore eco - friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance.";
-        keywords="green IT, sustainable technology, eco - friendly computing, energy efficient hardware";
-        canonical="https://app.ziontechgroup.com / marketplace / category / green - it";
-      />;
-      <main className="min - h-screen bg - zion - blue pt - 24 pb - 20">;
-        <div className="container mx - auto px - 4 sm:px - 6 lg:px - 8">;
-          <div className="text - center mb - 16">;
-            <GradientHeading > Green IT Solutions</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
-              Sustainable technology solutions that reduce environmental impact without compromising performance;
-            </p>;
-          </div>;
-          <div className="mb - 16">;
-            <div className="bg - zion - blue - dark border border - zion - blue - light rounded - xl p - 8 md:p - 12 mb - 16">;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 12 items - center">;
-                <div>;
-                  <h2 className="text - 3xl font - bold text - white mb - 6">Sustainable IT for a Better Future</h2>;
-                  <p className="text - zion - slate - light text - lg mb - 6">;
-                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.;
-                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure;
-                    while maintaining performance and reliability.;
-                  </p>;
-                  <p className="text - zion - slate - light text - lg mb - 6">;
-                    From energy - efficient hardware to renewable energy integration, we offer comprehensive solutions;
-                    for reducing your carbon footprint.;
-                  </p>;
-                  <div className="mt - 8">;
-                    <Button className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple">;
-                      Explore Green IT Solutions;
-                    </Button>;
-                  </div>;
-                </div>;
-
-                <div className="rounded-lg overflow-hidden relative w-full h-full">
-
-
-                <div className="rounded-lg overflow-hidden relative w-full h-full">
-
                   <img
                     src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80"
                     alt="Green IT sustainability"
                     className="object-cover"
-                </div>
-              </div>
-            </div>
-            <div className='mb-16'>
-              <h2 className='text-2xl font-bold text-white mb-8'>
-                Our Green IT Solutions
-              </h2>
-              <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-                {greenITSolutions.map((solution, index) => (
-                  <div
-                    key={index}
-                    className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors'
-                  >
-                    <div className='flex justify-center mb-4'>
-                      <solution.icon className='h-12 w-12 text-zion-cyan' />                    </div>
-                    <h3 className='text-white font-medium text-xl text-center mb-3'>
-                      {solution.title}
-                    </h3>
-                    <p className='text-zion-slate-light text-center'>
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
-import {
-  Leaf
-  Zap
-  Sun
-  Wind
-  Droplets
-  Recycle
-  TreePine
-  Globe
-  TrendingUp
-  Target
-  CheckCircle
-  Award
-  Users
-  Building2
-  Server
-  Monitor
-  Smartphone
-  Cloud
-  Database
-  Shield
-  BarChart3
-  Settings
-  ChevronDown
-  ChevronUp
-  Lightbulb
-  Cpu
-  HardDrive
-  Network
-  Smartphone as Mobile
-  Laptop
-  Tablet
-  Printer
-  Router
-  Camera
-  Speaker
-  Headphones
-  Keyboard
-  Mouse
-  ExternalHardDrive
-  Usb
-  Wifi
-  Bluetooth
-  Battery
-  Power
-  Save
-  Eco
-  Plant
-  Mountain
-  Ocean
-  Forest
-  MountainSnow
-  Thermometer
-  Gauge
-  Activity
-  LineChart
-  PieChart
-  Calculator
-  FileText
-  Calendar
-  Clock
-  Star
-  Heart
-  Eye
-  Search
-  Filter
-  ArrowRight
-  Mail
-  Phone
-  MapPin
-  Clock as Time
-  DollarSign
-  Percent
-  Plus
-  Minus
-  X
-  Check
-  AlertTriangle
-  Info
-  HelpCircle
-  ExternalLink
-  Download
-  BookOpen
-  Video
-  Play
-  Pause
-  SkipBack
-  SkipForward
-  Volume2
-  VolumeX
-  Maximize2
-  Minimize2
-  RotateCcw
-  RefreshCw
-  PowerOff
-  PowerOn
-  BatteryCharging
-  BatteryFull
-  BatteryLow
-  BatteryMedium
-  BatteryEmpty
-  WifiOff
-  WifiLow
-  WifiMedium
-  WifiHigh
-  Signal
-  SignalLow
-  SignalMedium
-  SignalHigh
-  SignalOff
-  WifiHigh as WifiStrong
-  WifiMedium as WifiMedium2
-  WifiLow as WifiWeak
-  WifiOff as WifiNone
-  SignalHigh as SignalStrong
-  SignalMedium as SignalMedium2
-  SignalLow as SignalWeak
-  SignalOff as SignalNone
-  SignalHigh as SignalFull
-  SignalMedium as SignalHalf
-  SignalLow as SignalQuarter
-  SignalOff as SignalEmpty
-  WifiHigh as WifiFull
-  WifiMedium as WifiHalf
-  WifiLow as WifiQuarter
-  WifiOff as WifiEmpty
-  BatteryCharging as BatteryCharging2
-  BatteryFull as BatteryFull2
-  BatteryLow as BatteryLow2
-  BatteryMedium as BatteryMedium2
-  BatteryEmpty as BatteryEmpty2
-  BatteryCharging as BatteryCharging3
-  BatteryFull as BatteryFull3
-  BatteryLow as BatteryLow3
-  BatteryMedium as BatteryMedium3
-  BatteryEmpty as BatteryEmpty3
-  BatteryCharging as BatteryCharging4
-  BatteryFull as BatteryFull4
-  BatteryLow as BatteryLow4
-  BatteryMedium as BatteryMedium4
-  BatteryEmpty as BatteryEmpty4
-  BatteryCharging as BatteryCharging5
-  BatteryFull as BatteryFull5
-  BatteryLow as BatteryLow5
-  BatteryMedium as BatteryMedium5
-  BatteryEmpty as BatteryEmpty5
-  BatteryCharging as BatteryCharging6
-  BatteryFull as BatteryFull6
-  BatteryLow as BatteryLow6
-  BatteryMedium as BatteryMedium6
-  BatteryEmpty as BatteryEmpty6
-  BatteryCharging as BatteryCharging7
-  BatteryFull as BatteryFull7
-  BatteryLow as BatteryLow7
-  BatteryMedium as BatteryMedium7
-  BatteryEmpty as BatteryEmpty7
-  BatteryCharging as BatteryCharging8
-  BatteryFull as BatteryFull8
-  BatteryLow as BatteryLow8
-  BatteryMedium as BatteryMedium8
-  BatteryEmpty as BatteryEmpty8
-  BatteryCharging as BatteryCharging9
-  BatteryFull as BatteryFull9
-  BatteryLow as BatteryLow9
-  BatteryMedium as BatteryMedium9
-  BatteryEmpty as BatteryEmpty9
-  BatteryCharging as BatteryCharging10
-  BatteryFull as BatteryFull10
-  BatteryLow as BatteryLow10
-  BatteryMedium as BatteryMedium10
-  BatteryEmpty as BatteryEmpty10
-} from 'lucide-react'
-export default function GreenIT(...args: unknown[]): unknown {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null)
-  const [selectedCategory, setSelectedCategory] = useState('all')
-  const categories = [
-    { id: 'all', name: 'All Solutions', count: 12 }
-    { id: 'energy', name: 'Energy Efficiency', count: 4 }
-    { id: 'hardware', name: 'Green Hardware', count: 3 },    { id: 'software', name: 'Sustainable Software', count: 3 }
-    { id: 'data', name: 'Data Centers', count: 2 }
-  ]
-  const greenSolutions: unknown = [{}
+
   const [expandedSection, setExpandedSection] = useState<string | null>(null);'
   const [selectedCategory, setSelectedCategory] = useState('all')}
   return()
@@ -1134,6 +654,12 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <p className="text - gray - 300 text - sm mb - 4 leading - relaxed">;
                       {solution.description}
                     </p>                  </div>
+                ))}
+              </div>
+            </div>
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>
+                    <p className="text-zion-slate-light text-center">{solution.description}</p>
+
                   />
                 </div>
               </div>
@@ -1144,9 +670,6 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-
-
-
                 {greenITSolutions.map((solution, index) => (
                   <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">
                     <div className="flex justify-center mb-4">
@@ -1156,28 +679,13 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
                     <p className="text-zion-slate-light text-center">{solution.description}</p>
                   </div>
                 ))}
-              </div>;
-            </div>;
-                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
-                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
-                {greenITSolutions && greenITSolutions.map((solution, index) => (;
-                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
-                    <div className="flex justify-center mb-4">;
-                      <solution && solution.icon className="h-12 w-12 text-zion-cyan" />;
-                    </div>;
-                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution && solution.title}</h3>;
-                    <p className="text-zion-slate-light text-center">{solution && solution.description}</p>;
-                  </div>;
-                ))}
-
-
+              </div>
+            </div>
 
                     <li>• Decreased electronic waste through better lifecycle management</li>
                     <li>• Support for renewable energy initiatives</li>
                   </ul>
                 </div>
-                
-
 
                 <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">
                   <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>
@@ -1192,186 +700,128 @@ export default function GreenIT(): any (...args: any[]): any {): unknown {): unk
             </div>
           </div>
 
-
-
-          
-          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">
-            <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>
-            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">
-              Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure.
-            </p>
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>
-              <Link href="/contact">Contact Our Team</Link>
-
-            </Button>
-
-            </Button>
-
           </div>
         </div>
       </main>
     </>
   )
-"                    {expandedSection === solution.id && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}'
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}"
-                        transition={{ duration: 0.3 }}""
-                        className="mt-4 pt-4 border-t border-slate-600/50"">""
-                        <div className="mb-4">""
-                          <h4 className="text-sm font-semibold text-white mb-2">
-                            Key Features:"
-                          </h4>""
-                          <ul className="space-y-1">
-                            {solution.features.map((feature, featureIndex) => (
-                              <li"
-                                key={featureIndex}""
-                                className="flex items-center text-gray-300 text-sm"">""
-                                <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0"  />                                {feature}
-                              </li>) ) }
-                          </ul>
-                        </div>"
-""
-                        <div className="mb-4">""
-                          <h4 className="text-sm font-semibold text-white mb-2">
-                            Benefits:"
-                          </h4>""
-                          <ul className="space-y-1">
-                            {solution.benefits.map((benefit, benefitIndex) => (
-                              <li"
-                                key={benefitIndex}""
-                                className="flex items-center text-gray-300 text-sm"">""
-                                <Star className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0"  />                                {benefit}
-                              </li>) ) }
-                          </ul>
-                        </div>
-                      </motion.div>) }
-                  </div>
-                </div>
-              </motion.div>) ) }
-          </div>
-        </div>
-      </section>
-"
-      {/* Certifications */}""
-      <section className="py-20">""
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}"
-            transition={{ duration: 0.8 }}""
-            className="text-center mb-16"">""
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Our Certifications"
-            </h2>""
-            <p className="text-xl text-gray-300">
-              Recognized for our commitment to environmental sustainability
-            </p>
-          </motion.div>"
-""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {certifications.map((cert, index) => (
-              <motion.div
-                key={cert.name}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}";
-                transition={{ duration: 0.8, delay: index * 0.1 }}"";
-                className="text - center">`;
-                <div``;
-                  className={`inline - flex items - center justify - center w - 20 h - 20 bg - gradient - to - r ${cert.color} rounded - 2xl mb - 6`}">"";
-                  <cert.icon className="w - 10 h - 10 text - white" />";
-                </div>"";
-                <h3 className="text - lg font - bold text - white mb - 2">;
-                  {cert.name}";
-                </h3>"";
-                <p className="text - gray - 300 text - sm">{cert.description}</p>;
-              </motion.div>))}
-          </div>;
-        </div>;
-      </section>;
-";
-      {/* Case Studies */}"";
-      <section className="py - 20 bg - gradient - to - r from - slate - 800 / 50 to - slate - 700 / 50">"";
-        <div className="container mx - auto px - 6">;
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}";
-            transition={{ duration: 0.8 }}"";
-            className="text - center mb - 16"">"";
-            <h2 className="text - 4xl font - bold text - white mb - 4">;
-              Success Stories";
-            </h2>"";
-            <p className="text - xl text - gray - 300">;
-              Real results from organizations implementing our Green IT;
-              solutions;
+
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import { Leaf, Server, Cloud } from 'lucide-react';
+import Link from "next/link",;
+export default function GreenIT() {;
+  const greenITSolutions = [;
+    {;
+      title: "Energy-Efficient Hardware",;
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",;
+      icon: Server},;
+    {;
+      title: "Optimized Cooling Systems",;
+      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",;
+      icon: Cloud},;
+    {;
+      title: "Renewable Energy Integration",;
+      description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.";
+      icon: Leaf}
+  ];
+  return (;
+    <>;
+      <SEO;
+        title="Green IT Solutions - Sustainable Technology";
+        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance.";
+        keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware";
+        canonical="https://app.ziontechgroup.com/marketplace/category/green-it";
+      />;
+      <main className="min-h-screen bg-zion-blue pt-24 pb-20">;
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
+          <div className="text-center mb-16">;
+            <GradientHeading>Green IT Solutions</GradientHeading>;
+            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
+              Sustainable technology solutions that reduce environmental impact without compromising performance;
             </p>;
-          </motion.div>";
-"";
-          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8">;
-            {case_studies.map ((study, index) => (
-              <motion.div;
-                key={study.title}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}";
-                transition={{ duration: 0.8, delay: index * 0.1 }}"";
-                className="group"">"";
-                <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - 2xl border border - slate - 600 / 50 hover:border - green - 400 / 50 transition - all duration - 300 hover:scale - 105 p - 6">"";
-                  <div className="flex items - center gap - 3 mb - 4">"";
-                    <span className="px - 3 py - 1 rounded - full text - xs font - medium bg - blue - 500 / 20 text - blue - 400">;
-                      {study.industry}
-                    </span>;
-                  </div>";
-"";
-                  <h3 className="text - xl font - bold text - white mb - 3 group - hover:text - green - 400 transition - colors duration - 200">;
-                    {study.title}
-                  </h3>";
-"";
-                  <div className="mb - 4">"";
-                    <h4 className="text - sm font - semibold text - white mb - 2">;
-                      Challenge:";
-                    </h4>"";
-                    <p className="text - gray - 300 text - sm">{study.challenge}</p>;
-                  </div>";
-"";
-                  <div className="mb - 4">"";
-                    <h4 className="text - sm font - semibold text - white mb - 2">;
-                      Solution:";
-                    </h4>"";
-                    <p className="text - gray - 300 text - sm">{study.solution}</p>;
-                  </div>";
-"";
-                  <div className="mb - 4">"";
-                    <h4 className="text - sm font - semibold text - white mb - 2">;
-                      Results:";
-                    </h4>"";
-                    <ul className="space - y-1">;
-                      {study.results.map ((result, result_index) => (
-                        <li";
-                          key={result_index}"";
-                          className="flex items - center text - gray - 300 text - sm"">"";
-                          <CheckCircle className="w - 3 h - 3 text - green - 400 mr - 2 flex - shrink - 0"  />                          {result}
-                        </li>) ) }
-                    </ul>;
-                  </div>";
-"";
-                  <div className="grid grid - cols - 2 gap - 4 text - sm">";
-                    <div>"";
-                      <div className="text - gray - 400">Annual Savings</div>"";
-                      <div className="text - green - 400 font - medium">;
-                        {study.savings}
-                      </div>;
-                    </div>";
-                    <div>"";
-                      <div className="text - gray - 400">Implementation</div>"";
-                      <div className="text - blue - 400 font - medium">;
-                        {study.timeline}
-                      </div>;
-                    </div>;
+          </div>;
+          <div className="mb-16">;
+            <div className="bg-zion-blue-dark border border-zion-blue-light rounded-xl p-8 md:p-12 mb-16">;
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">;
+                <div>;
+                  <h2 className="text-3xl font-bold text-white mb-6">Sustainable IT for a Better Future</h2>;
+                  <p className="text-zion-slate-light text-lg mb-6">;
+                    As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers.;
+                    Our Green IT solutions help organizations implement sustainable practices in their IT infrastructure;
+                    while maintaining performance and reliability.;
+                  </p>;
+                  <p className="text-zion-slate-light text-lg mb-6">;
+                    From energy-efficient hardware to renewable energy integration, we offer comprehensive solutions;
+                    for reducing your carbon footprint.;
+                  </p>;
+                  <div className="mt-8">;
+                    <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
+                      Explore Green IT Solutions;
+                    </Button>;
                   </div>;
                 </div>;
-              </motion.div>) ) }
+                <div className="rounded-lg overflow-hidden relative w-full h-full">;
+                  <img;
+                    src="https://images.unsplash.com/photo-1473876637954-4b493d59fd97?auto=format&fit=crop&w=800&h=600&q=80";
+                    alt="Green IT sustainability";
+                    className="object-cover";
+                  />;
+                </div>;
+              </div>;
+            </div>;
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-8">Our Green IT Solutions</h2>;
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
+                {greenITSolutions.map((solution, index) => (;
+                  <div key={index} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 hover:border-zion-purple transition-colors">;
+                    <div className="flex justify-center mb-4">;
+                      <solution.icon className="h-12 w-12 text-zion-cyan" />;
+                    </div>;
+                    <h3 className="text-white font-medium text-xl text-center mb-3">{solution.title}</h3>;
+                    <p className="text-zion-slate-light text-center">{solution.description}</p>;
+                  </div>;
+                ))}
+              </div>;
+            </div>;
+            <div className="mb-16">;
+              <h2 className="text-2xl font-bold text-white mb-6">Why Choose Green IT?</h2>;
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                  <h3 className="text-white font-medium text-xl mb-4">Environmental Benefits</h3>;
+                  <ul className="text-zion-slate-light space-y-2">;
+                    <li>• Reduced carbon footprint and greenhouse gas emissions</li>;
+                    <li>• Lower energy consumption and resource utilization</li>;
+                    <li>• Decreased electronic waste through better lifecycle management</li>;
+                    <li>• Support for renewable energy initiatives</li>;
+                  </ul>;
+                </div>;
+                <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6">;
+                  <h3 className="text-white font-medium text-xl mb-4">Business Benefits</h3>;
+                  <ul className="text-zion-slate-light space-y-2">;
+                    <li>• Significant cost savings on energy and cooling</li>;
+                    <li>• Enhanced brand reputation and stakeholder relations</li>;
+                    <li>• Compliance with emerging environmental regulations</li>;
+                    <li>• Improved operational efficiency and performance</li>;
+                  </ul>;
+                </div>;
+              </div>;
+            </div>;
+          </div>;
+          <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue-light border border-zion-purple/30 rounded-xl p-8 md:p-12 text-center">;
+            <h2 className="text-3xl font-bold text-white mb-6">Ready to implement Green IT solutions?</h2>;
+            <p className="text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto">;
+              Connect with our experts to discuss how we can help you build a more sustainable IT infrastructure.;
+            </p>;
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" asChild>;
+              <Link href="/contact">Contact Our Team</Link>;
+            </Button>;
+          </div>;
+        </div>;
+      </main>;
+    </>;
+  );
+}
+;
 
-  )
-export { GreenIT, GreenIT };
-};

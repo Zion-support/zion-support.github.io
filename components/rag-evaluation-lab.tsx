@@ -1,10 +1,4 @@
-import React from 'react',
-import SEO from '../components/SEO';
-import Link from 'next/link';
 
-import React from 'react';
-import SEO from '../components/SEO';
-import Link from 'next/link';
 
   return (
     <>;
@@ -101,7 +95,6 @@ import Link from 'next / link';
                 <p className='mt-4 text-3xl font-bold'>;
                   $149;
                   <span className='text-base font-normal text-gray-300'>;
-=======
                 title: 'Golden Datasets',
                 desc: 'Curate and run task - specific datasets for repeatable evaluation.',
               },
@@ -232,5 +225,4 @@ import Link from 'next / link';
 			</section>
 		</>
 	)
-}
-}
+

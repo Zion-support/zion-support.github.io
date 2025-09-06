@@ -58,4 +58,4 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
 }
-}
+

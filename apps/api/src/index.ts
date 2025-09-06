@@ -1,7 +1,4 @@
-import Fastify from 'fastify',
-import cors from '@fastify/cors',
-import Fastify from 'fastify';
-import cors from '@fastify/cors';
+
 import rateLimit from '@fastify/rate-limit';
 import { createOpenAIClient, generateJobPost  } from './openai';
 import { withUser  } from './pg';
@@ -121,32 +118,10 @@ app && app.get('/projects/:name/track', async (req: any, reply: any) => {
   });
   return { items }
 });
+const port = Number(process.env.API_PORT |4000);
+app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
 
   (process as any).exit(1);
 });  (process as any).exit(1)
 });
 
-
-});
-
-app.get('/notifications', async (req: any, reply: any) => {
-  const userId = getUserId(req);
-  if (!userId) return reply.code(401).send({ error: 'unauthorized' });
-  const items = await withUser(userId, async (client) => {
-    const res = await client.query(
-      `SELECT id, channel, title, body, data, read, created_at FROM notification
-       WHERE read = false ORDER BY created_at DESC LIMIT 20`
-    );
-    return res.rows
-  });
-  return { items }
-});
-
-
-
-
-const port = Number(process.env.API_PORT || 4000);
-app.listen({ port, host: '0.0.0.0' }).catch((err: any) => {
-  app.log.error(err);
-  (process as any).exit(1)
-});

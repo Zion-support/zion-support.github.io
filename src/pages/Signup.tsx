@@ -1,22 +1,25 @@
-import Link from 'next/link';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
-import { Alert, AlertDescription  } from '@/components/ui/alert';
-import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
-import { AuthButtons  } from '@/components/AuthButtons';
 
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
-import * as Yup from 'yup'
-import axios from 'axios'
-import Link from 'next/link'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
-import { LoadingSpinner } from '@/components/ui/enhanced-loading-states'
-import { Alert, AlertDescription } from '@/components/ui/alert'
-import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
-import { AuthButtons } from '@/components/AuthButtons'
+import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
+
+import { toast } from '@/hooks/use-toast'
+import { AuthLayout } from '@/layout'
+import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
+const SignupSchema = Yup.object({
+  name: Yup.string().required('Name is required')
+  email: Yup.string().email('Invalid email').required('Email is required')
+  password: Yup.string()
+    .min(8, 'Password must be at least 8 characters')
+    .matches(/[A-Z]/, 'Password must include an uppercase letter')
+    .matches(/[a-z]/, 'Password must include a lowercase letter')
+    .matches(/[0-9]/, 'Password must include a number')
+    .required('Password is required')
+  confirm: Yup.string()
+    .oneOf([Yup.ref('password')], 'Passwords must match')
+    .required('Confirm password is required')
+  terms: Yup.boolean().oneOf(
+    [true]
+    'You must accept the terms and conditions'
+
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
@@ -89,6 +92,10 @@ if ( {) {
         setHealthCheckError ('Authentication service is experiencing issues');
       }
     } catch (err: any) {
+      logErrorToProduction('Auth service health check failed', { data: err })
+      setAuthServiceAvailable(false)
+      // Set a more specific error message based on the error type
+
       ) {
         setHealthCheckError('Network connection issues detected')
       } else if (err.response?.status === 500) {
@@ -222,6 +229,11 @@ if ( {) {
                 url: err.config.url
                 method: err.config.method
               }
+            : 'No config'
+        })
+        const status = err.response?.status
+        // Try both 'error' and 'message' fields for compatibility
+
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
         if (status === 409) {
@@ -323,6 +335,7 @@ if ( {) {
       return () => clearTimeout(timer) }
     return undefined
   }, [emailVerificationRequired, formik.values.email, router])
+
 import { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from react-router-dom;
 import { useFormik } from 'formik',;
@@ -578,6 +591,8 @@ export default function Signup() {;
   };
 
 
+  // Show loading state only during initial health check
+  if (healthCheckLoading) {
     return (
       <AuthLayout>;
         <div className='flex min-h-screen items-center justify-center p-4'>;
@@ -632,6 +647,18 @@ export default function Signup() {;
               </p>
             </div>
           )}
+
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full"
+                onClick={() =>
+                  router.push(`/verify-status?email=${encodeURIComponent(formik.values.email)}`)
+                }
+              >
+                Check Verification Status
+              </Button>
+
               <Button
                 type="button"
                 variant="ghost"
@@ -654,139 +681,13 @@ export default function Signup() {;
             </div>
           )}
 
-          </form>;
-          {!emailVerificationRequired && (;
-            <div className='mt-6'>;
-              <AuthButtons providers={['google', 'github']} />;
-            </div>;
-          )}
-        </div>;
-      </div>;
-    </AuthLayout>;
-  );
-
-}) ;
-};
-toast ({';
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';
-setSuccessMessage (data && data.message || message);
-toast ({';
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.' ;
-});
-//Redirect to appropriate page after a short delay ;
-
-}catch (err: unknown) {';
-  logErrorToProduction ('Signup error details:', {;
-  message: err && err.message, response: err && err.response ? {;
-  status: err && err.response.status,  statusText: err && err.response.statusText, data: err && err.response.data ';
-}: 'No response';';
-request: err && err.request ? 'Request made but no response': 'No request';
-
-});
-}return undefined;
-}, [emailVerificationRequired, formik && formik.values.email, router]);
-//Show loading state only during initial health check if (healthCheckLoading) {;
-  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>) ;
-}> {';
-  healthCheckLoading ? 'Checking...': 'Retry' ;
-}</Button> </AlertDescription> </Alert>) ;
-}<AlertDescription> {;
-  errorMessage ;
-}</AlertDescription> </Alert>) ;
-}<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {;
-  formik && formik.values.email ;
-}</strong>. </AlertDescription> </Alert>) ";
-
-}<div> <label htmlFor="name" className="block text-sm font-medium" > Full Name </label> <Input) "
-}</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) "
-}</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) "
-}</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) "
-
-              </div>)}
-          </form>;
+          </form>
           {!emailVerificationRequired && (
-            <div className='mt - 6'>;
-              <AuthButtons providers={['google', 'github']} />;
-            </div>)}
-        </div>;
-      </div>;
-    </AuthLayout>);
-});
-}
-toast ({';
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created!',  description: isPartnerSignup ? 'Please verify your email. Your partner application will be reviewed after verification.'? 'Partner application submitted successfully! You can now log in and your application will be reviewed.': 'Account created successfully!';
-setSuccessMessage (data.message || message);
-toast ({';
-  title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.';
-});
-//Redirect to appropriate page after a short delay;
-}catch (err: unknown) {';
-  logErrorToProduction ('Signup error details:', {
-  message: err.message, response: err.response ? {
-  status: err.response.status,  status_text: err.response.status_text, data: err.response.data ';
-}: 'No response';';
-request: err.request ? 'Request made but no response': 'No request';
-});
-}return undefined;
-}, [emailVerificationRequired, formik.values.email, router]);
-//Show loading state only during initial health check // Check condition
-if ( {) {
-  $2
+            <div className="mt-6">
+              <AuthButtons providers={["google", "github"]} />
+            </div>
+          )}
 
-}
-  return (<AuthLayout> <div className="flex min - h-screen items - center justify - center p - 4" > <div className="text - center space - y-4" > <div className="animate - spin rounded - full h - 8 w - 8 border - b-2 border - blue - 600 mx - auto" ></div> <p className="text - muted - foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>);
-}> {';
-  healthCheckLoading ? 'Checking...': 'Retry';
-}</Button> </AlertDescription> </Alert>);
-}<AlertDescription> {
-  error_message;
-}</AlertDescription> </Alert>);
-}<AlertDescription> Before you can log in, please click the verification link in the email we sent to <strong> {
-  formik.values.email;
-}</strong>. </AlertDescription> </Alert>) ";
-}<div> <label html_for="name" className="block text - sm font - medium" > Full Name </label> <Input) ";
-}</div> <div> <label html_for="email" className="block text - sm font - medium" > Email address </label> <Input) ";
-}</div> <div> <label html_for="password" className="block text - sm font - medium" > Password </label> <Input) ";
-}</div> <div> <label html_for="confirm" className="block text - sm font - medium" > Confirm Password </label> <Input) ";
-}</div> <div className="flex items - center space - x-2" > <input);
-}{";
-  !emailVerificationRequired ? (<Button type="submit" disabled= {
-  loading;
-}> {'";
-  loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Creating Account... </>) : (healthCheckError ? 'Try Creating Account': 'Create Account');
-}</Button> > Go to Login </Button> <Button router.push (`/verify - status?email=$ {
-  encodeURIComponent (formik.values.email);
-}`);
-}> Check Verification Status </Button> <Button > Try Different Email </Button> </div>);
-}<p>⚠️ We detected some authentication service issues.</p> <p > If signup fails, please try again in a few minutes or contact support.</p> </div>);
-}</form> </div>);
-}</div> </div> </AuthLayout>);
-}'";
-}
-import { useState  } from './react';
-import { Link, Navigate, use_navigate  } from './react-router-dom';
-import { use_form, type UseFormReturn  } from './react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from './zod';
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter, Loader2  } from './lucide-react';
-import { use_auth  } from '@/hooks / use_auth';
-import { register  } from '@/services / auth';
-import { toast  } from '@/hooks / use - toast';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { Alert, AlertDescription  } from '@/components / ui / alert';
-import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
-import {
-      displayName: ",
-      email: ",
-      password: ",
-      confirmPassword: ",
-      termsAccepted: false,,
-},,;
-}) as UseFormReturn<SignupFormValues>;
-  // Form submission handler;
-  const onSubmit = async (data: SignupFormValues) => {;
     if (isSubmitting) return; // Prevent multiple submissions
     setIsSubmitting(true)
     try {
@@ -817,76 +718,6 @@ import {
         if (sessionError) {
           console.error("Error setting session:", sessionError)
 
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage, ,
-} from '@/components / ui / form';
-// Form validation schema;
-const signup_schema = z;
-  .object ({
-    display_name: z.string ().min (2, "Name must be at least 2 characters"),
-    email: z.string ().email ("Please enter a valid email"),
-    password: z.string ();
-      .min (8, "Password must be at least 8 characters");
-      .regex (/[A - Z]/, "Password must contain at least one uppercase letter");
-      .regex (/[a - z]/, "Password must contain at least one lowercase letter");
-      .regex (/[0 - 9]/, "Password must contain at least one number"),
-    confirm_password: z.string (),
-    terms_accepted: z.boolean ().refine (val => val === true, {
-      message: "You must accept the terms and conditions", ,
-}), ,
-});
-  .refine (data => data.password === data.confirm_password, {
-    message: "Passwords do not match",
-    path: ["confirm_password"], ,
-});
-type SignupFormValues = z.infer < typeof signup_schema>;
-export default /**
- * Signup - Function description
- */
-function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, is_loading, is_authenticated, user } = use_auth ();
-  const navigate = use_navigate ();
-  const [show_password, setShowPassword] = useState (false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState (false);
-  // Track confirm password locally to prevent it from clearing on blur;
-  const [confirmPasswordValue, setConfirmPasswordValue] = useState ("");
-  const password_value = form.watch ("password");
-  const [is_submitting, setIsSubmitting] = useState (false);
-  // Initialize react - hook - form;
-  const form = use_form ({
-    resolver: zod_resolver (signup_schema),
-    default_values: {
-      display_name: ",
-      email: ",
-      password: ",
-      confirm_password: ",
-      terms_accepted: false, ,
-}, ,
-}) as UseFormReturn < SignupFormValues>;
-  // Form submission handler;
-  const on_submit = async (data: SignupFormValues) => {
-    // Check condition
-if (return) {
-  $2
-} // Prevent multiple submissions;
-    setIsSubmitting (true);
-    try {
-      const { res, data: res_data } = await register (
-        data.display_name,
-        data.email,
-        data.password);
-      // Handle duplicate email error from API;
-      // Check condition
-if ( {) {
-  $2
-
-          form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
-          toast.error(sessionError.message || "Failed to set session. Please try logging in.")
-          return;
 }
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
@@ -1092,79 +923,11 @@ export default function Signup() {;
         // Potentially navigate to login or show a more specific error;
         return;
 }
-}}
-}
-      }
-      // Toast and navigation are handled above if session is present;
-      // If emailVerificationRequired, no toast/navigation here, message is shown;
-} catch (err: any) {;
-      const message = err && err.message ?? "Registration failed";
-      form && form.setError("root", { message });
-      toast && toast.error(message);
-} finally {;
-      setIsSubmitting(false);    }
-  };
-  const onInvalid = (errors: any) => {;
-    const firstError = Object && Object.keys(errors)[0] as keyof SignupFormValues;
-    if (firstError) {;
-      form && form.setFocus(firstError);
 
-  const on_invalid = (errors: any) =>: any {
-    const first_error = Object.keys (errors)[0] as keyof SignupFormValues;
-    // Check condition
-if ( {) {
-  $2
+        </div>;
+      </div>;
+    </AuthLayout>;
+  );
 }
-      form.set_focus (first_error);
-}
-  }
-  // Redirect if user is already logged in and has completed profile;
-  // Check condition
-if ( {) {
-  $2
-}
+;
 
-
-import React from "react";
-import Head from "next/head";
-import Link from "next/link";
-const Signup = () => {;
-  return (
-    <>;
-      <Head>;
-        <title>Signup - Zion Tech Group</title>;
-        <meta name="description" content="Professional Signup services"  />;
-      </Head>;
-      <div className="min-h-screen bg-gray-50">;
-        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">;
-          <div className="text-center">;
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">;
-              Signup;
-            </h1>;
-            <p className="text-xl text-gray-600 mb-12">;
-              Professional Signup services and solutions;
-            </p>;
-            <div className="grid md:grid-cols-2 gap-8 mb-12">;
-              <div className="bg-white p-6 rounded-lg shadow-md">;
-                <h2 className="text-2xl font-semibold mb-4">Our Services</h2>;
-                <ul className="text-gray-600 space-y-2">;
-                  <li>• Professional Solutions</li>;
-                  <li>• Expert Implementation</li>;
-                  <li>• 24/7 Support</li>;
-                  <li>• Custom Development</li>;
-                </ul>;
-              </div>;
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-              <Link href="/pricing/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">;
-                View Pricing;
-              </Link>;
-              <Link href="/contact/" className="bg-gray-600 text-white px-6 py-3 rounded-lg hover:bg-gray-700 transition-colors">;
-                Contact Us;
-              </Link>;
-            </div>;
-    </>  );
-}
-
-
-}};
-};

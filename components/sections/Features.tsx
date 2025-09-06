@@ -1,13 +1,7 @@
-import React from 'react',
-import React from 'react';
+
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
 
-
-import React from 'react';
-import Card from '../ui / Card';
-import { Zap } from 'lucide-react';
-;
   icon: React.ReactNode;
 
 class ErrorBoundary extends React.Component {
@@ -49,7 +43,6 @@ interface FeaturesProps {
   title: string;
   subtitle: string;
   features: Feature[];
-  columns?: 2 | 3 | 4;
 
   columns?: 2 | 3 | 4;
 
@@ -127,13 +120,6 @@ const Features: React.FC<FeaturesProps> = ({
             {subtitle}
           </p>
         </div>
-
-          </p>;
-        </div>;
-
-
-
-
 
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>;

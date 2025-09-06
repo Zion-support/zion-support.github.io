@@ -1,13 +1,21 @@
 
 
+import React from "react",
+import { CheckCircle, Circle, ArrowRight } from "lucide-react",
+import { cn } from "@/lib/utils",
 
+export interface OnboardingStep {
+  id: string,
+  label: string,
+  completed: boolean,
+  link: string,
+  action?: string
 
-
-import React from "react";
-import {CheckCircle, Circle, ArrowRight} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
+import React from "react",;
+import { CheckCircle, Circle, ArrowRight } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
 export interface OnboardingStep {;
   id: string,;
   label: string,;
@@ -25,8 +33,10 @@ interface OnboardingTrackerProps {
 
 export function OnboardingTracker({ 
   steps,
+
   title = "Complete Your Profile", 
   className 
+
 }: OnboardingTrackerProps) {
   const completedSteps = steps.filter(step => step.completed).length;
   const progress = Math.round((completedSteps / steps.length) * 100);
@@ -40,11 +50,11 @@ export function OnboardingTracker({
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
 
-
-export function OnboardingTracker(): any ({ ;
-  steps;
-  title = "Complete Your Profile", ;
-  className ;
+;
+export function OnboardingTracker({;
+  steps,;
+  title = "Complete Your Profile",;
+  className;
 }: OnboardingTrackerProps) {;
   const completedSteps = steps && steps.filter(step => step && step.completed).length;
   const progress = Math && Math.round((completedSteps / steps && steps.length) * 100);
@@ -58,15 +68,8 @@ export function OnboardingTracker(): any ({ ;
 
       {/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">;
-        <div
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
-          style={{ width: `${progress}%` }}></div>;
-      </div>;
-
-
-
-        <div 
-          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
+        <div;
+          className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out";
 
           style={{ width: `${progress}%` }}
         ></div>
@@ -100,35 +103,4 @@ export function OnboardingTracker(): any ({ ;
             )}
           </div>;
         ))}
-      </div>
-    </div>
-  )
-}
-      </div>;
-    </div>;
-  );
-}
-import React from './react';
-import { CheckCircle, Circle, ArrowRight } from './lucide-react';
-import { cn } from '@/lib / utils';
-import { Button } from '@/components / ui / button';
-import { Link } from './react-router-dom';
-export interface OnboardingStep {
-  id: string,
-  label: string,
-  completed: boolean,
-  link: string,
-  action?: string;
-}
-interface OnboardingTrackerProps {
-  steps: OnboardingStep[],
-  title?: string;
-  class_name?: string;
-}
-export /**
- * OnboardingTracker - Function description
- */
-function OnboardingTracker() {
-  const completed_steps = steps.filter (step => step.completed).length;
-  const progress = Math.round ((completed_steps / steps.length) * 100);
-;
+

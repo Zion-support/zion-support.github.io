@@ -1,35 +1,3 @@
-// Messaging storage utilities
-export interface Message {;
-  id: string;
-  conversationId: string;
-  senderId: string;
-  recipientId: string;
-  body: string;
-  link_url?: string;
-  attachmentBase64?: string;
-  attachment_name?: string;
-  context?: string;
-  sentAtIso: string;
-  readAtIso?: string;
-  is_read: boolean;
-  is_edited: boolean;
-  editedAtIso?: string;
-  is_deleted: boolean;
-  deletedAtIso?: string;
-  replyToId?: string;
-  reactions: Array<{
-    user_id: string;
-    emoji: string;
-
-    createdAt: string
-
-    created_at: string,
-  }>;
-}
-export interface Conversation {
-
-
-export interface Conversation {;
 
   id: string;
   participants: string[];
@@ -48,11 +16,6 @@ export interface Conversation {;
   }
 }
 
-
-
-export interface MessageThread {;
-
-
   id: string;
   conversation_id: string;
   rootMessageId: string;
@@ -64,9 +27,6 @@ export interface MessageThread {;
 }
   updatedAtIso: string
 }
-
-
-export interface MessageSearchResult {;
 
   message: Message;
   conversation: Conversation;
@@ -1004,9 +964,6 @@ export async function getMessage(id: string): Promise<Message | null> {
   return messagingStorage.getMessage(id)
 }
 
-
-export async function updateMessage(id: string, updates: Partial<Message>): Promise<Message | null> {;
-
   return messagingStorage.updateMessage(id, updates);
 }
 export async function deleteMessage(id: string): Promise<boolean> {
@@ -1020,41 +977,11 @@ export async function markAsRead(id: string): Promise<boolean> {
   return messagingStorage && messagingStorage.markAsRead(id),
 }
 
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
-  return messagingStorage.createConversation(conversation);
-}
-export async function getConversation(id: string): Promise<Conversation | null> {
-
-  return messagingStorage.getConversation(id)
-
-  return messagingStorage && messagingStorage.getConversation(id),
-}
-  return messagingStorage && messagingStorage.getUnreadMessageCount(userId),
-}
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {
-  return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
-  return messagingStorage.markAsRead(id)
-}
-
-
-export async function createConversation(conversation: Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'>): Promise<Conversation> {;
-
   return messagingStorage.createConversation(conversation);
 }
 export async function getConversation(id: string): Promise<Conversation | null> {
   return messagingStorage.getConversation(id)
 }
-
-
-export async function updateConversation(id: string, updates: Partial<Conversation>): Promise<Conversation | null> {;
-  return messagingStorage.updateConversation(id, updates);
-}
-
-export async function getMessagesByConversation(conversationId: string, limit?: number, offset?: number): Promise<Message[]> {;
-  return messagingStorage.getMessagesByConversation(conversationId, limit, offset);
-}
-
-export async function getConversationsByUser(userId: string, includeArchived?: boolean): Promise<Conversation[]> {;
 
   return messagingStorage.getConversationsByUser(userId, includeArchived);
 }
@@ -1062,39 +989,24 @@ export async function getUnreadMessageCount(userId: string): Promise<number> {
   return messagingStorage.getUnreadMessageCount(userId)
 }
 
-
-export async function searchMessages(query: string, userId: string, limit?: number): Promise<MessageSearchResult[]> {;
-
   return messagingStorage.searchMessages(query, userId, limit);
 }
 // Utility functions
+export function createMessageData(
+  conversationId: string
+  senderId: string
+  recipientId: string
+  body: string
+  additionalData?: Partial<Message>
+): Omit<Message, 'id' | 'sentAtIso' | 'isRead' | 'isEdited' | 'isDeleted' | 'reactions'> {
+  return {
 
-
-export function generateMessageId(): string {
-  return `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 }
-export function generateConversationId(): string {
-  return `conv_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
-}
-export function formatMessageTime(isoString: string): string {
-
-    participants,
-    lastMessageAtIso: new Date().toISOString(),
-    isArchived: false,
-    isMuted: false,
-    ...additionalData;
-  };
-}
-
-export function generateMessageId(): string {;
-  return `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function generateConversationId(): string {;
-  return `conv_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
-
-export function formatMessageTime(isoString: string): string {;
+export function createConversationData(
+  participants: string[]
+  additionalData?: Partial<Conversation>
+): Omit<Conversation, 'id' | 'createdAtIso' | 'updatedAtIso'> {
+  return {
 
   const date = new Date(isoString);
   const now = new Date();
@@ -1107,8 +1019,6 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
-
-
 
   }
 

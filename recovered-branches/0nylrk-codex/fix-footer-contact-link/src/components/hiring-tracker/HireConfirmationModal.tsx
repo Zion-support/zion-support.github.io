@@ -1,12 +1,5 @@
 
 
-
-import React, { useState } from 'react',
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -15,38 +8,7 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
-export interface HireConfirmationModalProps {
 
-  isOpen: boolean
-  onClose: () => void
-  candidateData?: TalentProfile;
-  application?: JobApplication;
-  onConfirm: () => void
-
-
-import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Textarea} from "@/components/ui/textarea";
-import {toast} from "@/hooks/use-toast";
-import {supabase} from "@/integrations/supabase/client";
-import {TalentProfile} from "@/types/talent";
-import {useAuth} from "@/hooks/useAuth";
-import {JobApplication} from "@/types/jobs";
-export interface HireConfirmationModalProps {;
-  isOpen: boolean,;
-  onClose: () => void,;
-  candidateData?: TalentProfile;
-  application?: JobApplication;
-  onConfirm: () => void
-
-  isSubmitting?: boolean
-}
-
-export function HireConfirmationModal({ ;
   isOpen;
 
 export function HireConfirmationModal({ ;
@@ -64,22 +26,15 @@ export function HireConfirmationModal({ ;
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
-
-
-import React, { useState } from 'react',
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle} from "@/components/ui/dialog",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Label } from "@/components/ui/label",
-import { Textarea } from "@/components/ui/textarea",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client",
-import { TalentProfile } from "@/types/talent",
+  // Get talent information from either candidateData or application
+  const talentData = candidateData |(application?.talent_profile as TalentProfile);
+  const handleHireCandidate = async () => {
+    if (!projectName |!projectDescription) {
+      toast({
+        title: 'Required fields missing'
+        description: 'Please fill in both project name and description.'
+        variant: 'destructive'})
+      return
 
 import { useAuth } from "@/hooks/useAuth",
 import { JobApplication } from "@/types/jobs",
@@ -138,8 +93,6 @@ export function HireConfirmationModal({;
         variant: 'destructive'}),;
       return;
 
-
-
     }
     if (!user) {
       toast({
@@ -154,39 +107,7 @@ export function HireConfirmationModal({;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
-
-
-  // Get talent information from either candidateData or application;
-  const talentData = candidateData || (application?.talent_profile as TalentProfile);
-
-  const handleHireCandidate = async () => {;
-    if (!projectName || !projectDescription) {;
-      toast({;
-        title: 'Required fields missing',;
-        description: 'Please fill in both project name and description.',;
-        variant: 'destructive'}),;
-      return;
     }
-
-    if (!user) {;
-      toast({;
-        title: 'Not authenticated',;
-        description: 'You must be logged in to hire a candidate.',;
-        variant: 'destructive'}),;
-      return;
-    }
-
-    if (!talentData) {;
-      toast({;
-        title: 'Missing talent data',;
-        description: 'Talent information is missing.',;
-        variant: 'destructive'}),;
-      return;
-
-    }
-    }
-
-
 
     setIsLoading(true);
 
@@ -418,8 +339,6 @@ if ( {) {
       setIsLoading(false)
     }
 
-  };
-
 ;
     setIsLoading(true),;
     // Create a new project;
@@ -509,9 +428,6 @@ if ( {) {
 
   },
 
-
-
-
   return (
 
     <Dialog open={isOpen} onOpenChange={onClose}>;
@@ -573,6 +489,4 @@ if ( {) {
       </DialogContent>
     </Dialog>
   )
-}
-}
-;
+

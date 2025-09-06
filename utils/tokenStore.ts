@@ -1,13 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-;
-
-export interface TokenTransaction {
-
-
-export interface TokenTransaction {;
-
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -16,11 +9,6 @@ export interface TokenTransaction {;
   timestamp: string;
   metadata?: Record < string, any>;
 }
-
-
-
-export interface TokenConfig {;
-
 
   name: string;
   symbol: string;
@@ -100,9 +88,15 @@ function save_config (config: TokenConfig): void {
 function getDefaultConfig (): TokenConfig {
 
   return {
-
-    name: 'ZION Token',
-    symbol: 'ZION$',
+    name: 'ZION Token'
+    symbol: 'ZION$'
+    totalSupply: 1000000000
+    circulatingSupply: 250000000
+    exchangeRate: 0.05
+    stakingEnabled: true
+    stakingRewardRate: 12.5
+  }
+}
 
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
@@ -117,19 +111,6 @@ function getDefaultConfig (): TokenConfig {
   saveTransactions(transactions);
   return newTransaction;
 }
-
-
-
-export function getConfig(): TokenConfig {;
-  return loadConfig();
-}
-
-export function setConfig(config: TokenConfig): void {;
-  saveConfig(config);
-}
-
-export function getUserBalance(userId: string): number {;
-
 
   const transactions = loadTransactions();
   let balance = 0;

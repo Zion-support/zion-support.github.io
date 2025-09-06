@@ -1,17 +1,9 @@
 
-
   kind: "document" | 'government_id_back' | 'selfie' | 'business_registration' | 'tax_certificate' | 'proof_of_address';
   url: string;
   uploaded_at: string;
   status: 'pending' | 'approved' | 'rejected';
 }
-
-
-export interface KycProfile {
-  user_id: string;
-
-
-export interface KycProfile {;
 
   userId: string;
   role: KycRole;
@@ -73,34 +65,6 @@ if ( {) {
   }
 }
 
-
-
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
-
-
-  const missing: string[] = [];
-  
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
-  }
-  
-  if (!profile && profile.country) {
-    missing && missing.push('country');
-  }
-  
-  if (profile && profile.role === 'individual' && !profile && profile.dateOfBirth) {
-    missing && missing.push('dateOfBirth');
-  }
-  return { ok: missing && missing.length === 0, missing };  
-  if (profile && profile.role === 'enterprise' && !profile && profile.businessRegistrationNumber) {
-    missing && missing.push('businessRegistrationNumber');
-
-  
-  if (!profile && profile.fullLegalName && !profile && profile.businessName) {
-    missing && missing.push('name'),
-
-
-export function validateKycSubmission(profile: KycProfile): { ok: boolean, missing: string[] } {;
   const missing: string[] = [];
   if (!profile.fullLegalName && !profile.businessName) {
     missing.push('name');
@@ -181,5 +145,4 @@ if ( {) {
     missing;
   }
 }
-
 

@@ -1,20 +1,5 @@
 
 
-
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
-  onRetry: () => void
-}
-
-export const NotificationList: React.FC<NotificationListProps> = ({;
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -39,17 +24,9 @@ interface NotificationListProps {;
   onRetry: () => void
 }
 export const NotificationList: React.FC<NotificationListProps> = ({
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
 
-  onDismiss
-  loading,
-  error,
-  notifications,
-  onMarkAsRead,
   onDismiss,
+
   onRetry
   on_dismiss,
   on_retry;
@@ -96,13 +73,5 @@ export const NotificationList: React.FC<NotificationListProps> = ({
         ));
       )}
 
-
-
-    </ScrollArea>;
-  );
-
-    </ScrollArea>;
-  );
-
-
 };
+

@@ -1,5 +1,40 @@
 
+  id: string;
+  name: string;
+  tagline: string;
+  price: string;
+  period: string;
+  description: string;
+  features: string[];
+  popular: boolean;
+  icon: string;
+  color: string;
+  textColor: string;
+  link: string;
+  marketPosition: string;
+  targetAudience: string;
+  trialDays: number;
+  setupTime: string;
+  category: string;
+  realService: boolean;
+  technology: string[];
+  integrations: string[];
+  useCases: string[];
+  roi: string;
+  competitors: string[];
+  marketSize: string;
+  growthRate: string;
+  contactInfo: {
+    mobile: string;
+    email: string;
+    address: string;
 
+
+  }
+}
+export const realMicroSaasServices: RealMicroSaasService[] = [
+  // AI-Powered Business Solutions
+  {
 
     id: 'ai-legal-document-generator'
     name: 'AI Legal Document Generator'
@@ -1444,94 +1479,12 @@ reviews: 14
 
 
 export const serviceCategories = [
-  'Legal Technology'
-  'Customer Service & Support'
-  'Digital Marketing & SEO'
-  'Creative & Media'
-  'Data & Analytics'
-  'Human Resources'
-  'Sales & CRM'
-  'Market Research'
-  'Blockchain & Cryptocurrency'
-  'Cloud & DevOps'
-  'Database & Performance'
-  'Design & UI/UX'
-  'Development & DevOps'
-  'Business Intelligence'
-  'Quantum Computing'
-  'Cybersecurity'
-  'Metaverse & Virtual Reality'
-  'Web3 & DeFi'
-  'IoT & Edge Computing'
-  'Autonomous Vehicles & Robotics'
-  'Climate & Environmental'
-  'Biotechnology & Healthcare'
-  'Financial Technology'
-  'Education Technology'
-  'Enterprise IT'
-  return realMicroSaasServices.filter(service => service.category === category)
-};
-];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
 
-  return realMicroSaasServices.filter(service => service.category === category)
-};
-
-
-export const getServicesByPriceRange = (min: number, max: number) => {
-  return realMicroSaasServices.filter(service => {
-    const price = parseFloat(service.price.replace('$', '').replace(, ''));
-    return price >= min && (max === Infinity || price <= max)
-  })
-};
-
-export const getPopularServices = () => {
-  return realMicroSaasServices.filter(service => service.popular)
-};
-
-
-export const getPopularServices = () => {
-  return realMicroSaasServices.filter(service => service.popular)
-};
-
-export const serviceCategories = [
-  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
-
-  'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI/UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
-reviews: 14;
-}
-;
-export const service_categories = [;
-  'Legal Technology',
-  'Customer Service & Support',
-  'Digital Marketing & SEO',
-  'Creative & Media',
-  'Data & Analytics',
-  'Human Resources',
-  'Sales & CRM',
-  'Market Research',
-  'Blockchain & Cryptocurrency',
-  'Cloud & DevOps',
-  'Database & Performance',
-  'Design & UI / UX',
-  'Development & DevOps',
-  'Business Intelligence',
-  'Quantum Computing',
-  'Cybersecurity',
-  'Metaverse & Virtual Reality',
-  'Web3 & DeFi',
-  'IoT & Edge Computing',
-  'Autonomous Vehicles & Robotics',
-  'Climate & Environmental',
-  'Biotechnology & Healthcare',
-  'Financial Technology',
-  'Education Technology',
-  'Enterprise IT',;
 ];  'Legal TechnologyCustomer Service & SupportDigital Marketing & SEOCreative & MediaData & AnalyticsHuman ResourcesSales & CRMMarket Research';
   'Blockchain & CryptocurrencyCloud & DevOpsDatabase & PerformanceDesign & UI / UXDevelopment & DevOpsBusiness IntelligenceQuantum ComputingCybersecurity';
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT'
 ];
-
 
   id: string,;
   name: string,;
@@ -1600,9 +1553,4 @@ export const service_categories = [;
   'Metaverse & Virtual RealityWeb3 & DeFiIoT & Edge ComputingAutonomous Vehicles & RoboticsClimate & EnvironmentalBiotechnology & HealthcareFinancial TechnologyEducation Technology';
   'Enterprise IT';
 ];
-
-
-;
-
-export interface RealMicroSaasService {;
 

@@ -1,16 +1,8 @@
 
 
-interface UploadSectionProps {;
-  customFile: File | null;
-  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
-export function UploadSection({
-  customFile
-  onFileUpload
-}: UploadSectionProps) {
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Upload, FileText } from "lucide-react";
+import React from 'react',
+import { Button } from "@/components/ui/button",
+import { Upload, FileText } from 'lucide-react',
 
 interface UploadSectionProps {
   customFile: File | null,
@@ -19,6 +11,7 @@ interface UploadSectionProps {
 }
 
 export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
+
   return (
     <div className="space-y-3">
       <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
@@ -36,8 +29,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
           />
         </Button>
       </div>
-      
-
 
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
@@ -51,8 +42,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>
           </div>
         </div>
-
-
 
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
@@ -94,6 +83,7 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             </span>;
           </div>;
         </div>;
+
       )}
     </div>;
   );
@@ -120,6 +110,4 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
     </div>);
 
 }
-}
-
 

@@ -1,11 +1,61 @@
-if (error) {
+
+
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
+import { Badge } from '@/components/ui/badge'
+import { Star } from 'lucide-react'
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+
+  const router = useRouter()
+  const profileId = router.query.profileId as string
+  const [profileData, setProfileData] = useState<any>(null)
+  const [isLoading, setIsLoading] = useState(true)
+  const [isError, setIsError] = useState(false)
+  useEffect((,) => {
+    const fetchProfile = async () => {
+      setIsLoading(true)
+      setIsError(false)
+
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+import { logErrorToProduction } from '@/utils/productionLogger',
+import { Star, MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2 } from 'lucide-react'
+
+export default function ProfilePage() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const router = useRouter(),
+  const profileId = router.query.profileId as string,
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [isError, setIsError] = useState(false),
+
+  useEffect(() => {
+    const fetchProfile = async () => {
+      setIsLoading(true),
+      setIsError(false),
+
+      try {
+        const { data, error } = await supabase
+          .from("talent_profiles")
+          .select("*")
+          .eq("id", profileId)
+
+        if (error) {
           throw error
         }
+        setProfileData(data)
+      } catch (error) {
+
         logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true),
-        logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error fetching profile' }),
-        setIsError(true)
-        setIsError(true),
+
+        toast({
+          title: "Error"
+          description: "Failed to load profile. Please try again later."
+          variant: "destructive"})
+      } finally {
+        setIsLoading(false)
+
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
@@ -21,39 +71,17 @@ if (error) {
     )
   }
 
-
-  if (isError || !profileData) {;
-
-    return (
-      <div className="min-h-screen flex items-center justify-center">;
-        <p className="text-red-500">Failed to load profile.</p>;
-      </div>;
-    );
-  }
-  return (
-    <>;
-      <SEO
-
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <p className="text-red-500">Failed to load profile.</p>
-      </div>
-    )
-  }
-
   return (
     <>
       <SEO
         title={`${profileData.full_name} | Talent Profile`}
-        description = {profileData.bio || "View the profile of this talented individual.",}
+
 ;
   return (;
     <>;
       <SEO;
         title={`${profileData.full_name} | Talent Profile`}
         description={profileData.bio || "View the profile of this talented individual."}
-
-
 
       />
       <div className="container mx-auto px-4 py-8">
@@ -106,14 +134,6 @@ if (error) {
                         <span>{profileData.availability}</span>
                       </div>
                     )}
-                  </div>
-                </div>
-              </div>
-                  </div>;
-                </div>;
-              </div>;
-
-
 
               {/* Skills */}
               {profileData && profileData.skills && profileData && profileData.skills.length > 0 && (;
@@ -130,8 +150,7 @@ if (error) {
             {/* Bio Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">About Me</h2>
-              <p className="text-zion-slate-light">{profileData.bio |"No bio provided."}</p>
-              <p className="text-zion-slate-light">{profileData.bio || "No bio provided."}</p>
+
             </div>
             </div>;
 
@@ -165,8 +184,7 @@ if (error) {
             {/* Experience Section */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-6">
               <h2 className="text-xl font-bold text-white mb-3">Experience</h2>
-              <p className="text-zion-slate-light">{profileData.experience |"No experience provided."}</p>
-              <p className="text-zion-slate-light">{profileData.experience || "No experience provided."}</p>
+
             </div>
               </div>;
             </div>;
@@ -192,17 +210,6 @@ if (error) {
                     title="GitHub"
                   >
                     <Github className="h-6 w-6" />
-                  </a>
-                )}
-                {profileData.twitter_link && (
-                  <a
-                    href = {profileData.twitter_link,}
-                  </Link>
-                )}
-                {profileData.twitter_link && (;
-                  <a;
-                    href={profileData.twitter_link}
-
 
                     target="_blank"
                     rel="noopener noreferrer"
@@ -223,9 +230,6 @@ if (error) {
                     title="LinkedIn"
                   >
                     <Linkedin className="h-6 w-6" />
-                  </a>
-                  </Link>
-
 
                 )}
 
@@ -238,20 +242,11 @@ if (error) {
           <div className="col-span-12 lg:col-span-4 space-y-6">
             <HireNowCTA
               talentProfile={{
-                id: profileData?.id |''
-                full_name: profileData?.full_name |''
-                professional_title: profileData?.professional_title |''
-                hourly_rate: profileData?.hourly_rate |0
 
-                id: profileData?.id || '',
-                full_name: profileData?.full_name || '',
-                professional_title: profileData?.professional_title || '',
               }}
             />;
             {/* Placeholder for other sidebar elements */}
-  /* Placeholder for other sidebar elements */ ;
-}</div> </div> </div> </>) ;
-}'"};
+
           </div>;
         </div>;
       </div>;
@@ -476,3 +471,4 @@ if ( {") {
 }'"}
 }
 ;
+

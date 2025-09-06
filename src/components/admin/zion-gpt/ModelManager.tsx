@@ -1,45 +1,7 @@
-// If activating, deactivate all other models with the same purpose;
-      // Check condition
-if ( {) {
-  $2
+
+
 }
 
-
-      }
-
-      // Update this model;
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase  } from '@/integrations/supabase/client';
-import { ModelConfig  } from '@/utils/zion-gpt';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-  errorMessage?: string
-}
-      await supabase;
-        .from ('model_versions');
-        .update ({ active: !current_active });
-        .eq ('id', model_id),
-      // Refresh the model list;
-      fetch_models ();
-
-    } catch (error) {
-      logErrorToProduction ('Error toggling model active state:', { data: error });
-    }
-
-
-        .order('createdAt', { ascending: false }),;
-
-
-
-  const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string,) => {;
-    try {;
-      // If activating, deactivate all other models with the same purpose;
-      if (!currentActive) {;
-        await supabase;
-          .from('model_versions');
-          .update({ active: false });
-          .eq('purpose', purpose);
       }
 
       // Update this model;
@@ -53,10 +15,6 @@ interface ModelVersionData extends ModelConfig {
     } catch (error) {;
       logErrorToProduction('Error toggling model active state:', { data: error });
     }
-  },;
-
-  },
-
 
   return (
     <Card className="w-full">;
@@ -110,22 +68,7 @@ interface ModelVersionData extends ModelConfig {
                   </TableCell>
                   <TableCell>{new Date(model.createdAt).toLocaleDateString()}</TableCell>
                   <TableCell className="text-right">
-                    {model.trainingStatus === 'queued' |model.trainingStatus === 'running' ? (
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick = {(,) => checkTrainingStatus(model && model.id),}
-                        disabled = {activeJobs[model && model.id],}
-                      >;
-                        {activeJobs[model && model.id] ? (;
-                          <Loader2 className="h-4 w-4 animate-spin" />;
-                        ) : (;
-                          <RefreshCw className="h-4 w-4" />;
 
-                    {model.trainingStatus === 'queued' || model.trainingStatus === 'running' ? (
-                      <Button
-                        variant="ghost"
-                        size="sm"
                       >
                         {activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -136,12 +79,7 @@ interface ModelVersionData extends ModelConfig {
                       </Button>;
                     ) : model && model.trainingStatus === 'succeeded' ? (;
                       <Button
-                        variant = {model.active ? "outline" : "default",}
-                        size="sm"
-                        onClick = {(,) => toggleModelActive(model.id, model.active, model.purpose),}
-                        variant={model.active ? "outline" : "default"}
-                        size="sm"
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
+
                       >
                         {model.active ? (
                           <>
@@ -159,26 +97,14 @@ interface ModelVersionData extends ModelConfig {
                         size="sm"
                         className="text-red-500"
 
-                        title = {model && model.errorMessage || "Training failed",}>;
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error;
-                      </Button>;
-
-                    )}
-                  </TableCell>;
-                </TableRow>;
-
-                        title={model.errorMessage || "Training failed"}
-
                         title = {model.errorMessage || "Training failed",}
+
                         title={model.errorMessage || "Training failed"}
+
                       >
                         <AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
-                  </TableCell>
-                </TableRow>
-                  </TableCell>;
-                </TableRow>;
 
               ))}
             </TableBody>;
@@ -278,4 +204,6 @@ interface ModelVersionData extends ModelConfig {
       </CardContent>;
     </Card>);
 }
-}
+
+;
+

@@ -1,85 +1,16 @@
 
-import React, { useState } from "react";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-import {Interview} from "@/types/interview";
-import {useAuth} from "@/hooks/useAuth";
-import {useInterviews} from "@/hooks/useInterviews";
-import {format, formatDistanceToNow, isPast, parseISO} from "date-fns";
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger} from "@/components/ui/alert-dialog";
-import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {Clock, ExternalLink, MessageSquare, Video, X} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {InterviewResponseForm} from "./InterviewResponseForm";
-interface InterviewCardProps {;
-  interview: Interview,;
-  onRefresh: () => Promise<void>;
-}
 
-export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardProps) {;
-
-  const { user } = useAuth();
-  const { respondToInterview, cancelInterview } = useInterviews();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-
-import React, { useState } from './react';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Interview } from '@/types / interview';
-import { use_auth } from '@/hooks / use_auth';
-import { use_interviews } from '@/hooks / use_interviews';
-import { format, formatDistanceToNow, is_past, parseISO } from './date - fns';
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from '@/components / ui / alert - dialog';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components / ui / dialog';
-import { Clock, ExternalLink, MessageSquare, Video, X } from './lucide-react';
-import { toast } from '@/components / ui / use - toast';
-import { InterviewResponseForm } from './InterviewResponseForm';
-interface InterviewCardProps {
-  interview: Interview,
-  on_refresh: () => Promise < void>;
-}
-export /**
- * InterviewCard - Function description
- */
-function InterviewCard() {
-  const { user } = use_auth ();
-  const { respondToInterview, cancel_interview } = use_interviews ();
-  const [isResponseDialogOpen, setIsResponseDialogOpen] = useState (false);
-  const [is_loading, setIsLoading] = useState (false);
-;
-  const is_client = user?.id === interview.client_id;
-  const is_talent = user?.id === interview.talent_id;
-;
-  // Format interview date and time;
-  const interview_date = parseISO (interview.scheduled_date);
-  const formatted_date = format (interview_date, 'EEEE, MMMM d');
-  const formatted_time = format (interview_date, 'h: mm a'),
-  // Calculate when interview ends;
-  const end_time = new Date (interview_date);
-  end_time.set_minutes (end_time.get_minutes () + interview.duration_minutes);
-  const formattedEndTime = format (end_time, 'h: mm a'),
-  const isInterviewPending = interview.status === 'requested';
-  const isInterviewConfirmed = interview.status === 'confirmed';
-  const isInterviewLive = isInterviewConfirmed && !is_past (interview_date) && is_past (new Date (interview_date.get_time () - 5 * 60000)), // 5 minutes before;
-  const isInterviewPast = is_past (interview_date);
-;
-  const getRelativeTime = () =>: any {
-    if () {) {
-  $2
-}
-      return `Took place ${formatDistanceToNow (interview_date)} ago`;
-
-    } else {
-      return `Starts in ${formatDistanceToNow (interview_date)}`;
-    }
-  }
-
-
-
+import React, { useState } from "react",
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Interview } from "@/types/interview",
+import { useAuth } from "@/hooks/useAuth",
+import { useInterviews } from "@/hooks/useInterviews",
+import { format, formatDistanceToNow, isPast, parseISO } from "date-fns",
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from "@/components/ui/alert-dialog",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Clock, ExternalLink, MessageSquare, Video, X } from "lucide-react",
 
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
@@ -87,7 +18,7 @@ function InterviewCard() {
       interview_id: interview.id, 
       status 
     }),
-    
+
     if (success) {
       toast({
         title: `Interview ${status}`
@@ -103,16 +34,7 @@ function InterviewCard() {
       })
     }
     setIsLoading(false)
-  }
-  const handleCancelInterview = async () => {
-    setIsLoading(true);
-    const success = await cancelInterview(interview.id);
-  },
 
-  const handleCancelInterview = async () => {
-    setIsLoading(true),
-    const success = await cancelInterview(interview.id),
-    
     if (success) {
       toast({
         title: "Interview cancelled"
@@ -127,20 +49,13 @@ function InterviewCard() {
       })
     }
     setIsLoading(false)
-  }
-  },
 
   const getStatusBadge = () => {
     switch (interview.status) {
       case 'requested':
         return <Badge className="bg-amber-500">Pending</Badge>;
       case 'confirmed':
-        return isInterviewLive ?
-          <Badge className="bg-green-500 animate-pulse">Live Now</Badge> :
-          <Badge className="bg-green-600">Confirmed</Badge>;
-        return isInterviewLive ? 
-          <Badge className="bg-green-500 animate-pulse">Live Now</Badge> : 
-          <Badge className="bg-green-600">Confirmed</Badge>,
+
       case 'declined':
         return <Badge variant="destructive">Declined</Badge>,
       case 'rescheduled':
@@ -151,8 +66,6 @@ function InterviewCard() {
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
       default:
         return <Badge>{interview.status}</Badge>
-
-  };
 
   },;
 
@@ -473,42 +386,36 @@ if ( {) {
       <CardFooter className="pt-2">
         <div className="grid grid-cols-1 gap-2 w-full">
           {/* For clients with pending requests */}
-          {is_client && isInterviewPending && (
-            <AlertDialog>;
-              <AlertDialogTrigger as_child>;
-                <Button variant="outline" size="sm" className="w - full">;
-                  <X className="h - 4 w - 4 mr - 2" /> Cancel Request;
-                </Button>;
-              </AlertDialogTrigger>;
-              <AlertDialogContent className="bg - zion - blue - dark border - zion - blue - light text - white">;
-                <AlertDialogHeader>;
-                  <AlertDialogTitle > Cancel Interview Request</AlertDialogTitle>;
-
-                  <AlertDialogDescription>;
-                    Are you sure you want to cancel this interview request? This action cannot be undone.;
-                  </AlertDialogDescription>;
-                </AlertDialogHeader>;
-                <AlertDialogFooter>;
-
-                  <AlertDialogCancel > Go Back</AlertDialogCancel>;
-                  <AlertDialogAction;
-                    on_click={handleCancelInterview}
-                    disabled={is_loading}
-                    className="bg - destructive text - destructive - foreground hover:bg - destructive / 90";
-                  >;
-
-                    Cancel Interview;
-                  </AlertDialogAction>;
-                </AlertDialogFooter>;
-              </AlertDialogContent>;
-
-
-
+          {isClient && isInterviewPending && (
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button variant="outline" size="sm" className="w-full">
+                  <X className="h-4 w-4 mr-2" /> Cancel Request
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent className="bg-zion-blue-dark border-zion-blue-light text-white">
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Cancel Interview Request</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Are you sure you want to cancel this interview request? This action cannot be undone.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Go Back</AlertDialogCancel>
+                  <AlertDialogAction
+                    onClick={handleCancelInterview}
+                    disabled={isLoading}
+                    className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+                  >
+                    Cancel Interview
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          )}
 
 ;
 
-          
-;
           {/* For talents with pending requests */}
           {isTalent && isInterviewPending && (;
             <div className="grid grid-cols-2 gap-2">;
@@ -552,13 +459,11 @@ if ( {) {
                 </Button>
               ) : (
                 <Button className="w-full" disabled={!isInterviewLive}>
-                  <Video className="h-4 w-4 mr-2" />
-                  <Video className="h-4 w-4 mr-2" /> 
 
                   {isInterviewLive ? 'Join Now' : 'Join Meeting'}
                 </Button>;
               )}
-              
+
               <AlertDialog>
                 <AlertDialogTrigger asChild>
                   <Button variant="outline" size="sm" className="w-full mt-2">
@@ -634,43 +539,9 @@ if ( {) {
           <DialogHeader>
             <DialogTitle>Respond to Interview Request</DialogTitle>
           </DialogHeader>
-          <InterviewResponseForm
-          <InterviewResponseForm 
+
             interview={interview}
             onConfirm={() => handleRespondToInterview('confirmed')}
             onClose={() => setIsResponseDialogOpen(false)}
             isLoading={isLoading}
-          />
-        </DialogContent>
-      </Dialog>
-    </Card>
-  )
-}
-          />;
-        </DialogContent>;
-      </Dialog>;
-    </Card>;
-  );
-}
 
-            </>)}
-        </div>;
-      </CardFooter>;
-      {/* Response dialog for talents */}
-      <Dialog open={isResponseDialogOpen} onOpenChange={setIsResponseDialogOpen}>;
-        <DialogContent className="sm:max - w-[500px] bg - zion - blue - dark border - zion - blue - light text - white">;
-          <DialogHeader>;
-            <DialogTitle > Respond to Interview Request</DialogTitle>;
-          </DialogHeader>;
-          <InterviewResponseForm;
-            interview={interview}
-            on_confirm={() => handleRespondToInterview ('confirmed')}
-            on_close={() => setIsResponseDialogOpen (false)}
-            is_loading={is_loading}
-          />;
-        </DialogContent>;
-      </Dialog>;
-    </Card>);
-}
-
-;

@@ -1,8 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+import type {
 
-
+} from '../../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants';
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants');
@@ -112,12 +114,10 @@ if ( {) {
   }
 const payload = req.body as StatusUpdatePayload;
   existing.status = payload.status;
-  existing.updated_at = new Date ().toISOString ();
-  write_grant (existing);
-  res.status (200).json ({ record: existing });  res.status (200).json ({ record: existing });
+  existing.updatedAt = new Date().toISOString();
+  writeGrant(existing);
+
 }
 
   res.status(200).json({ record: existing });
-}
-  res.status(200).json({ record: existing });
-}
+

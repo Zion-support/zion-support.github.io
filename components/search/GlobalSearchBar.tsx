@@ -1,22 +1,15 @@
 
+import { useRouter } from 'next/router';
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
+  const router = useRouter();
+  const [query, setQuery] = useState('');
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [open, setOpen] = useState(false);
+  const controller = useRef<AbortController | null>(null);
+  useEffect(() => {
+    if (!query) {
+      setSuggestions([]);
+      return;      return
     }
     
     return this.props.children;
@@ -158,11 +151,6 @@ export default function GlobalSearchBar() {;
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
                   }}
 
-
-                  className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    };
-    rec && rec.start();
-  };
-
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">;
       <input
@@ -191,16 +179,8 @@ export default function GlobalSearchBar() {;
                     router && router.push(`/search?q=${encodeURIComponent(s)}`);
 
                   }}
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800";
-                >;
-                  {s}
-                </button>;
-              </li>;
-            ))}
-          </ul>;
-        </div>;
-      )}
-
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
 
                   {s}
                 </button>
@@ -210,7 +190,4 @@ export default function GlobalSearchBar() {;
         </div>
       )}
     </form>
-);  )
-}
-  );
 

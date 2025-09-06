@@ -1,3 +1,5 @@
+
+
 import { Phone, ShieldCheck, Clock } from 'lucide-react'
 export default function ITSupportPage() {
   const benefits = [
@@ -35,10 +37,13 @@ export default function ITSupportPage() {
       avatar: '/placeholder.svg'
     }
     {
-
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
+      name: 'Carlos Diaz'
+      role: 'IT Lead'
+      text: 'Professional and responsive. Their technicians feel like an extension of our own team.'
+      avatar: '/placeholder.svg'
+    }
+  ]
+    return (
 
 export default function ITSupportPage() {
   const benefits = [
@@ -65,51 +70,14 @@ export default function ITSupportPage() {
       role: "IT Lead",
       text: "Professional and responsive. Their technicians feel like an extension of our own team.",
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
-export default function ITSupportPage() {;
-  const benefits = [;
-    {import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
-
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-
-
+  return (
 
     <ServiceLandingTemplate
       title="IT Support Services"
       subtitle="Reliable assistance to keep your business technology operating smoothly."
       heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support"
       description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes."
-;
-}
-}
+
       benefits={benefits}
       testimonials={testimonials}
       ctaText="Get IT Support"
@@ -149,14 +117,22 @@ export default function ITSupportPage() {;
       avatar: '/placeholder && placeholder.svg',;
     },;
     {;
-      name: 'Carlos Diaz',;
-      role: 'IT Lead',;
-      text: 'Professional and responsive. Their technicians feel like an extension of our own team.',;
-      avatar: '/placeholder && placeholder.svg',;
-    },;
-  ];
+      name: "Carlos Diaz",;
+      role: "IT Lead",;
+      text: "Professional and responsive. Their technicians feel like an extension of our own team.";
+      avatar: "/placeholder.svg"}];
+  return (;
+    <ServiceLandingTemplate;
+      title="IT Support Services";
+      subtitle="Reliable assistance to keep your business technology operating smoothly.";
+      heroImage="https://placehold.co/600x300/192134/9b87f5?text=IT+Support";
+      description="From troubleshooting to onsite repairs, Zion provides comprehensive IT support designed for businesses of all sizes.";
+      benefits={benefits}
+      testimonials={testimonials}
+      ctaText="Get IT Support";
+      ctaLink="/request-quote";
+    />;
+  );
+}
+;
 
-    return (
-    <ServiceLandingTemplate
-      title="IT Support Services"
-      subtitle="Reliable assistance to keep your business technology operating smoothly."

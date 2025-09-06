@@ -1,5 +1,6 @@
 
 
+
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`
@@ -14,7 +15,13 @@ Title: ${slide.title}\nContent:\n${slide.content}`
     } catch (err) {
       // keep original if AI fails;
     }
+res.status(200).json({ title, content })
+  } catch (e: any) {
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 
     if (req.method === 'POST') {
       const { slide } = req.body;
@@ -46,7 +53,7 @@ ${slide.content}`;
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
   }
 }
-
 

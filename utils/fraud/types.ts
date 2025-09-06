@@ -1,18 +1,3 @@
-// Fraud detection types
-export type AdminActionType =
-  | 'ban_user'
-  | 'suspend_user'
-  | 'flag_content'
-  | 'remove_content'
-  | 'investigate'
-  | 'dismiss'
-  | 'escalate';
-;
-
-export interface AdminAction {
-
-
-export interface AdminAction {;
 
   id: string;
   case_id: string;
@@ -26,21 +11,13 @@ export interface AdminAction {;
   status: 'pending' | 'executed' | 'failed',
 
 }
-export interface FraudDetectionResult {
-  is_fraud: boolean;
-}
-
-
-export interface FraudDetectionResult {;
 
   isFraud: boolean;
   confidence: number;
   reasons: string[];
-export interface FraudDetectionConfig {
+  suggestedActions: AdminActionType[]
+  metadata: Record<string, any>;
 }
-
-
-export interface FraudDetectionConfig {;
 
   enabled: boolean;
   rules: {
@@ -65,12 +42,6 @@ export interface FraudDetectionConfig {;
   auto_actions: {
     enabled: boolean;
     actions: AdminActionType[];
-    confidence_threshold: number,
-  }
-}
-
-
-
 
     confidenceThreshold: number,
   };

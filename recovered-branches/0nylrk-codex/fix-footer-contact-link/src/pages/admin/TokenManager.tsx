@@ -1,10 +1,4 @@
 
-
-
-import {useEffect, useState} from 'react';
-
-
-
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -81,8 +75,6 @@ if ( {) {
       })
     }
 
-  };
-
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -138,9 +130,6 @@ export default function TokenManager() {;
     }
 
   },
-
-
-
 
   return (
 

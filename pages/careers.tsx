@@ -1,32 +1,10 @@
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
+
 import React from 'react';
-ursor/integrate-build-improve-and-re-verify-8f7d
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-origin/main
-origin/automation-improvements-final
-import {
 
-  Users,
-  MapPin,
-  Clock,
-  DollarSign,
-  ArrowRight,
-  Heart,
-  Star,
-  Award,
-  Coffee,
-  Zap,
-  Shield,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  CheckCircle,;
+import {
 
 } from "lucide-react";
 const jobOpenings = [
@@ -157,124 +135,7 @@ const values = [
       "We conduct business with honesty, transparency, and ethical practices.",
   },
 ];
-export default function CareersPage() {
 
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-import {;
-  Users,;
-  MapPin,;
-  Clock,;
-  DollarSign,;
-  ArrowRight,;
-  Heart,;
-  Star,;
-  Award,;
-  Coffee,;
-  Zap,;
-  Shield,;
-  Briefcase,;
-  GraduationCap,;
-  Globe,;
-  CheckCircle,;
-} from "lucide-react";
-
-const jobOpenings = [;
-  {;
-    id: 1,;
-    title: "Senior AI Engineer",;
-    department: "AI & Machine Learning",;
-    location: "Remote",;
-    type: "Full-time",;
-    experience: "5+ years",;
-    description:;
-      "Lead the development of cutting-edge AI solutions and machine learning models for our clients.",;
-    requirements: [;
-      "Master's degree in Computer Science or related field",;
-      "5+ years experience in AI/ML development",;
-      "Proficiency in Python, TensorFlow, PyTorch",;
-      "Experience with cloud platforms (AWS, Azure, GCP)",;
-      "Strong problem-solving and communication skills",;
-    ],;
-    benefits: [;
-      "Competitive salary",;
-      "Health insurance",;
-      "Remote work",;
-      "Professional development",;
-    ],;
-  },;
-  {;
-    id: 2,;
-    title: "Full-Stack Developer",;
-    department: "Micro SaaS",;
-    location: "New York, NY",;
-    type: "Full-time",;
-    experience: "3+ years",;
-    description:;
-      "Build scalable web applications and microservices for our SaaS solutions.",;
-    requirements: [;
-      "3+ years experience in full-stack development",;
-      "Proficiency in React, Node && Node.js, TypeScript",;
-      "Experience with databases (PostgreSQL, MongoDB)",;
-      "Knowledge of cloud deployment and DevOps",;
-    ],;
-    benefits: [;
-      "Competitive salary",;
-      "Health insurance",;
-      "Flexible hours",;
-      "Stock options",;
-    ],;
-  },;
-  {;
-    id: 3,;
-    title: "Cloud Solutions Architect",;
-    department: "IT Services",;
-    location: "Remote",;
-    type: "Full-time",;
-    experience: "7+ years",;
-    description:;
-      "Design and implement cloud infrastructure solutions for enterprise clients.",;
-    requirements: [;
-      "7+ years experience in cloud architecture",;
-      "Certifications in AWS, Azure, or GCP",;
-      "Experience with containerization (Docker, Kubernetes)",;
-      "Strong understanding of security best practices",;
-    ],;
-    benefits: [;
-      "Competitive salary",;
-      "Health insurance",;
-      "Remote work",;
-      "Certification support",;
-    ],;
-  },;
-];
-
-const Careers: React.FC<CareersProps> = ({ className }) => {
   return (
     <MainLayout
       title="Careers - Zion Tech Group"
@@ -294,19 +155,7 @@ const Careers: React.FC<CareersProps> = ({ className }) => {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-import Head from 'next/head';
-import Layout from '../components/Layout';
 
-export default function CareersPage() {
-  
-    >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">;
           <div className="absolute inset-0">;
@@ -906,31 +755,34 @@ function CareersPage() {
               animate={{ opacity: 1, coordinate_y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 6">;
-                Don't See Your Dream Job?;
-              </h2>;
-              <p className="text - xl text - blue - 100 mb - 8 max - w-3xl mx - auto">;
-                We're always looking for talented individuals. Send us your;
-                resume and let us know how you'd like to contribute to our team.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <a;
-                  href="/contact";
-                  className="px - 8 py - 4 bg - white text - blue - 600 rounded - lg hover:shadow - lg transition - all duration - 300 font - semibold";
-                >;
-                  Send Resume;
-                </a>;
-                <a;
-                  href="/about";
-                  className="px - 8 py - 4 border - 2 border - white text - white rounded - lg hover:bg - white hover:text - blue - 600 transition - all duration - 300 font - semibold";
-                >;
-                  Learn More About Us;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </MainLayout>);
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Don't See Your Dream Job?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+                We're always looking for talented individuals. Send us your
+                resume and let us know how you'd like to contribute to our team.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="/contact"
+                  className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:shadow-lg transition-all duration-300 font-semibold"
+                >
+                  Send Resume
+                </a>
+                <a
+                  href="/about"
+                  className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
+                >
+                  Learn More About Us
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+
+    </MainLayout>;
+
+  );
 }

@@ -1,6 +1,5 @@
 
 
-
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -9,10 +8,6 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-
-
-export function EducationForm({ ;
-
 
   resumeId;
   educationEntries
@@ -42,6 +37,7 @@ export function EducationForm({ ;
       success = await updateEducation(editingId, educationData)
     } else {
       success = await addEducation(resumeId, educationData)
+
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Education } from '@/types/resume',;
@@ -83,15 +79,10 @@ export function EducationForm({;
     } else {;
       success = await addEducation(resumeId, educationData);
 
-
-
-
     }
-
-
-  };
-
-
+    if (success) {
+      setEditingId(null)
+    }
 
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
@@ -111,9 +102,6 @@ export function EducationForm({;
     if (success) {;
       setEditingId(null);
     }
-
-
-  };
 
   },;
 
@@ -137,21 +125,18 @@ export function EducationForm({;
 
   },
 
-
-
-
   return (
-
-
-      <EducationList 
-        educationEntries={educationEntries} 
+    <div className="space-y-6">
+      <div>
+        <h2 className="text-xl font-semibold mb-2">Education</h2>
+        <p className="text-muted-foreground">
+          Add your educational background and academic achievements.
+        </p>
+      </div>
 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
-
-
-
 
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">

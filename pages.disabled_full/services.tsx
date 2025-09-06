@@ -1,9 +1,4 @@
-main
-main
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-main
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 
 import React from 'react';
 import Link from 'next/link';
@@ -1521,12 +1516,6 @@ export default function Services() {;
 		</PageTransition>
 		</Layout>
 	);
-ursor/integrate-build-improve-and-re-verify-8f7d
-}
-
 
 }
-
-
-
 

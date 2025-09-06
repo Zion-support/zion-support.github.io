@@ -24,39 +24,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-
-
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  Phone,
-  Mail,
-  MapPin,
-  Brain,
-  Rocket,
-  Dna,
-  Globe,
-  Shield,
-  Wifi,
-  Package,
-  Bot,
-  Car,
-  Building2,
-  DollarSign,
-  Monitor,
-  Users,
-  Cpu,
-  Zap,
-  Atom,
-  Database,
-  Cloud,
-  Lock,
-  Code,
-} from 'lucide-react';
-
-import Link from 'next/link';import { ;
-
+import {
 
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
 
@@ -170,10 +138,6 @@ import Link from 'next / link';
 
     }
   ];
-
-
-
-
 
   const contactInfo = {
 
@@ -452,7 +416,6 @@ import Link from 'next / link';
             transition={{ duration: 0.5 }}
             className='flex items-center'
 
-
           >
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
@@ -625,10 +588,6 @@ import Link from 'next / link';
                     {item.icon && <item.icon className="w-4 h-4" />}
                     <span>{item.name}</span>
 
-
-
-
-
                   </Link>
                 )}
 
@@ -642,7 +601,6 @@ import Link from 'next / link';
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-
 
                       >
                         <div className="p-4">
@@ -678,12 +636,6 @@ import Link from 'next / link';
             ))}
           </div>
 
-          </div>;
-
-
-
-
-
           {/* Contact Info & CTA */}
           <div className='hidden lg:flex items-center space-x-6'>;
             <div className='flex items-center space-x-4 text-sm text-gray-300'>;
@@ -694,9 +646,6 @@ import Link from 'next / link';
               >
                 <Phone className='w-4 h-4' />
                 <span className='hidden xl:inline'>{contactInfo.mobile}</span>
-
-
-
 
               </a>
               <a
@@ -778,16 +727,6 @@ import Link from 'next / link';
         </div>
       </div>
 
-
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-
-
-
-
-
       {/* Mobile Menu */}
       <AnimatePresence>;
         {isOpen && (;
@@ -859,13 +798,6 @@ import Link from 'next / link';
                       onClick={() => setIsOpen(false)}
                       className='flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3'
                     >
-                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>                      className="flex items-center space-x-3 text-gray-300 hover:text-white transition-colors duration-200 py-3"
-                    >
-                      {item.icon && <item.icon className="w-5 h-5" />}
-                      <span>{item.name}</span>
-                      {item.icon && <item.icon className='w-5 h-5' />}                      <span>{item.name}</span>
-
-                      <span>{item.name}</span>
 
                     </Link>
 
@@ -938,22 +870,9 @@ import Link from 'next / link';
     </nav>;
   );
 
-
-};
-
-export default UltraAdvancedNavigation;  );
-};
-
-export default UltraAdvancedNavigation;
-
-
-
+export default UltraAdvancedNavigation;  )
+}
 export default UltraAdvancedNavigation;
 
 export default UltraAdvancedNavigation;
-;
-  );
-
-};
-
 

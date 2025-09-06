@@ -1,11 +1,8 @@
 
 
-
-import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { StepProps } from "./types",
-
 import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {StepProps} from "./types";
+
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { StepProps } from "./types",
 
@@ -29,7 +26,6 @@ import {StepProps} from "./types";
       {steps.map((step) => (
         <TabsTrigger key={step.id} value={step.id}>
 
-
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
 import { StepProps } from "./types",;
 
@@ -49,5 +45,7 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
       ))}
 
     </TabsList>;
+
   );
 };
+

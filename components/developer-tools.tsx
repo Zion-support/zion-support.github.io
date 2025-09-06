@@ -1,33 +1,18 @@
-import React from 'react',
-import Head from 'next/head',
-import React from 'react';
-import Head from 'next/head';
+
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 
 import {
-  Code
+
+  Cpu,;
+  Globe,;} from 'lucide-react';import { ;
+
+  Code;
   GitBranch
   Database
   Cloud
   Shield
   Zap
-  Star
-  ExternalLink
-  CheckCircle
-  TrendingUp
-  Cpu
-  Globe;} from 'lucide-react';import {
-  Code,
-  GitBranch,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
-  TrendingUp,
 
 
 
@@ -88,24 +73,90 @@ function DeveloperToolsPage() {
       description:
         'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.'
       features: [
-        'API design & testing',
-        'Team collaboration',
-        'API documentation',
-        'Mock servers',
-        'Monitoring & analytics',
-      ],      pricing: '$12 / month',        'API design & testing_team collaborationAPI documentation_mock servers_monitoring & analytics';
+        'Unlimited private repositories'
+        'Advanced code review tools'
+        'Priority support'
+        'Advanced insights'
+        'Team management features'
+      ],      pricing: '$4/month',        'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
       ];
-      pricing: '$12 / month',
-      market_price: '$12 - 99 / month',
-      website: 'https://www.postman.com / pricing',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      text_color: 'text - orange - 400',
-      gradient: 'from - orange - 400 to - red - 500',
-      popular: false,
-
-      category: 'API Development',
-
-    },  ];
+      pricing: '$4/month'
+      marketPrice: '$4/month'
+      website: 'https://github.com/pricing'
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-emerald-500'
+      popular: true
+      category: 'Version Control'
+    }
+      icon: <Database className='w-8 h-8 text-white' />
+      title: 'MongoDB Atlas'
+      description:
+        'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.'
+      features: [
+        'Fully managed MongoDB'
+        'Auto-scaling & optimization'
+        'Global distribution'
+        'Advanced security'
+        'Real-time analytics'
+      ],      pricing: '$9/month',        'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
+      ];
+      pricing: '$9/month'
+      marketPrice: '$9-57/month'
+      website: 'https://www.mongodb.com/atlas'
+      color: 'bg-gradient-to-br from-green-500 to-blue-600'
+      textColor: 'text-green-400'
+      gradient: 'from-green-400 to-blue-500'
+      popular: false
+      category: 'Database'
+    }
+      icon: <Cloud className='w-8 h-8 text-white' />
+      title: 'Vercel Pro'
+      description:
+        'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.'
+      features: [
+        'Zero-config deployments'
+        'Preview deployments'
+        'Advanced analytics'
+        'Team collaboration'
+        'Custom domains'
+      ],      pricing: '$20/month',        'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
+      ];
+      pricing: '$20/month'
+      marketPrice: '$20/month'
+      website: 'https://vercel.com/pricing'
+      color: 'bg-gradient-to-br from-black to-gray-600'
+      textColor: 'text-gray-400'
+      gradient: 'from-black to-gray-500'
+      popular: false
+      category: 'Deployment'
+    }
+      icon: <Shield className='w-8 h-8 text-white' />
+      title: 'Snyk'
+      description:
+        'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.'
+      features: [
+        'Vulnerability scanning'
+        'Dependency monitoring'
+        'Container security'
+        'Infrastructure as Code'
+        'CI/CD integration'
+      ],      pricing: '$25/month',        'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
+      ];
+      pricing: '$25/month'
+      marketPrice: '$25-100/month'
+      website: 'https://snyk.io/pricing'
+      color: 'bg-gradient-to-br from-red-500 to-pink-600'
+      textColor: 'text-red-400'
+      gradient: 'from-red-400 to-pink-500'
+      popular: false
+      category: 'Security'
+    }
+      icon: <Zap className='w-8 h-8 text-white' />
+      title: 'Postman'
+      description:
+        'Complete API development platform for building, testing, and documenting APIs with team collaboration.'
+      features: [
 
   ];
 
@@ -405,19 +456,11 @@ export default function DeveloperToolsPage() {;
         </div>
       </section>
 
-
-
-
-
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Curated Developer Tools & Services
             </h2>
@@ -621,19 +664,11 @@ export default function DeveloperToolsPage() {;
         </div>
       </section>
 
-
-
-
-
       {/* Developer Workflow */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Complete Developer Workflow
             </h2>
@@ -883,7 +918,58 @@ export default function DeveloperToolsPage() {;
                 className="card-hover border-gradient-blue"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="p-6">
+                <div className="p-6 text-center">
+                  <div className="w-16 h-16 bg-cursor-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Cpu className="w-8 h-8 text-cursor-blue" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{phase.phase}</h3>
+                  <p className="text-gray-400 mb-4">{phase.description}</p>
+                  <div className="space-y-1">
+                    {phase.tools.map((tool, toolIndex) => (
+                      <div key={toolIndex} className="text-sm text-cursor-blue font-medium">
+                        {tool}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Tool Categories */}
+      <section className='section-padding bg-gradient-cursor'>
+        <div className='container-cursor'>
+          <div className='text-center mb-20'>
+            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+
+            </h2>
+            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
+              Understanding the different types of developer tools helps you
+              build a comprehensive development stack.
+            </p>
+          </div>
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            {devCategories.map((category, index) => (
+              <Card
+                key={index}
+                className='card-hover border-gradient-blue'
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className='p-6'>
+                  <h3 className='text-xl font-semibold text-white mb-3'>
+                    {category.name}
+                  </h3>
+                  <p className='text-gray-400 mb-4'>{category.description}</p>
+                  <div className='flex items-center justify-between text-sm'>
+                    <span className='text-gray-500'>
+                      Tools Available:{' '}
+                      <span className='text-white'>{category.tools}</span>
+                    </span>
+                    <span className='text-cursor-blue font-semibold'>
+                      {category.avgPrice}
+                    </span>                  </div>                <div className="p-6">
                   <h3 className="text-xl font-semibold text-white mb-3">{category.name}</h3>
                   <p className="text-gray-400 mb-4">{category.description}</p>
                   <div className="flex items-center justify-between text-sm">
@@ -898,29 +984,10 @@ export default function DeveloperToolsPage() {;
         </div>
       </section>
 
-          </div>;
-        </div>;
-      </section>;
-
-
-      {/* CTA Section */}
-
-
-            Start with one tool or build a complete development stack. Each tool;
-            is designed to work independently and integrate seamlessly with your;
-            existing workflow.;
-          </p>;
-
-
-
-
-
       {/* CTA Section */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor text-center'>
           <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-            Ready to Level Up Your Development?
 
           </h2>
           <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed mb-12'>
@@ -1013,5 +1080,4 @@ export default function DeveloperToolsPage() {;
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore AI Tools
             </Button>
-            <Button
 

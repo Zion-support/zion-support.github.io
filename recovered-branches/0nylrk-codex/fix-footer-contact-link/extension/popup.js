@@ -9,9 +9,6 @@
   document && document.getElementById('output').textContent = res && res.answer
 
 }
-}
-
-
 
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 
@@ -73,5 +70,4 @@ document.addEventListener('DOMContentLoaded', () => {;
     chrome.runtime.sendMessage({ type: 'view-notifications' });
   });
 }),;
-
 

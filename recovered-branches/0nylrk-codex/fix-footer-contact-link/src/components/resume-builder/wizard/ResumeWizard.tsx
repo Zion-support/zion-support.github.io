@@ -1,28 +1,5 @@
 
 
-
-
-import {useState, useEffect} from 'react';
-import {use_auth} from '@/hooks / use_auth';
-import {use_resume} from '@/hooks / use_resume';
-import {Tabs} from '@/components / ui / tabs';
-import {Card, CardContent} from '@/components / ui / card';
-import {Alert, AlertDescription, AlertTitle} from '@/components / ui / alert';
-import {AlertCircle, FilePlus, Loader2} from 'lucide-react';
-import {Button} from '@/components/ui/button';
-import {Resume} from '@/types/resume';
-// Import components;
-import {ResumeProgress} from './ResumeProgress';
-import {EmptyResumeState} from './EmptyResumeState';
-import {CreateResumeForm} from './CreateResumeForm';
-import {ResumeSteps} from './ResumeSteps';
-import {ResumeStepContent} from './ResumeStepContent';
-import {useResumeProgress} from './useResumeProgress';
-import {ResumeVersionSelector} from './ResumeVersionSelector';
-import {RESUME_STEPS} from './constants';
-
-
-
   const { user } = useAuth();
   const { ;
     isLoading;
@@ -37,8 +14,30 @@ import {RESUME_STEPS} from './constants';
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation
 
-
-  };
+  const progress = useResumeProgress(resume);
+  useEffect(() => {
+    if (user) {
+      fetchResume()
+    }
+  }, [user, fetchResume]);
+  const handleCreateNewResume = async (title: string) => {
+    const resumeId = await createResume({ title: title.trim() })
+    if (resumeId) {
+      await fetchResume(resumeId);
+      setShowNewResumeForm(false)
+    }
+  }
+  const nextStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex < RESUME_STEPS.length - 1) {
+      setActiveTab(RESUME_STEPS[currentIndex + 1].id)
+    }
+  }
+  const prevStep = () => {
+    const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab);
+    if (currentIndex > 0) {
+      setActiveTab(RESUME_STEPS[currentIndex - 1].id)
+    }
 
 import { useState, useEffect } from 'react',;
 import { useAuth } from '@/hooks/useAuth',;
@@ -96,11 +95,12 @@ export function ResumeWizard() {;
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)
     }
-
   },
 
   },
-  
+
+  },
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
@@ -130,8 +130,6 @@ export function ResumeWizard() {;
       </Alert>
     )
 
-
-
   }
   if (showNewResumeForm) {
 
@@ -148,7 +146,7 @@ export function ResumeWizard() {;
       />;
     );
   }
-  
+
   return (
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
@@ -182,36 +180,11 @@ export function ResumeWizard() {;
               onChange={setActiveTab}
             />
             {resume && (
-              <ResumeStepContent
-              <ResumeStepContent 
+
                 activeTab={activeTab}
                 resume={resume as Resume}
                 onNextStep={nextStep}
                 onPrevStep={prevStep}
               />;
             )}
-          </Tabs>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-          </Tabs>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-}
-export /**
- * ResumeWizard - Function description
- */
-function ResumeWizard() {
-  const { user } = use_auth ();
-  const {
-    is_loading;
-    error,
-    resume,
-    fetch_resume;
-    create_resume;
-  } = use_resume ();
-;
+

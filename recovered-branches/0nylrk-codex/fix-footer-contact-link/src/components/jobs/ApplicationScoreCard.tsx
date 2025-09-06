@@ -1,6 +1,11 @@
 
 
-
+import { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardHeader, CardTitle, CardContent, CardFooter } from "@/components/ui/card",
+import { supabase } from "@/integrations/supabase/client",
+import { Loader2, Star, BarChart2, Lightbulb } from "lucide-react",
 
 interface ApplicationScoreCardProps {
 
@@ -9,9 +14,7 @@ interface ApplicationScoreCardProps {
   onScoreUpdated?: (updatedApplication: JobApplication) => void
 }
 
-
-
-
+export function ApplicationScoreCard({ application, onScoreUpdated }: ApplicationScoreCardProps) {
 
   // Determine if application has been scored
   const hasScore = typeof application.match_score === 'number',
@@ -29,38 +32,13 @@ interface ApplicationScoreCardProps {
   // Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined) => {
     switch (suggestion) {
-import {useState} from "react";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
-import {supabase} from "@/integrations/supabase/client";
-import {Loader2, Star, BarChart2, Lightbulb} from "lucide-react";
-import {toast} from "sonner";
-import {JobApplication} from "@/types/jobs";
-interface ApplicationScoreCardProps {;
-  application: JobApplication,;
-  onScoreUpdated?: (updatedApplication: JobApplication) => void;
-}
-
-export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: ApplicationScoreCardProps) {;
-  const [isScoring, setIsScoring] = useState(false);
-
-  // Determine if application has been scored;
-  const hasScore = typeof application && application.match_score === 'number';
-
-  // Format the date when the application was scored;
-  const scoredDate = application && application.scored_at ;
-    ? new Date(application && application.scored_at).toLocaleDateString() ;
-    : null;
-
-  // Get suggestion color;
-  const getSuggestionColor = (suggestion: string | undefined) => {;
-    switch (suggestion) {;
-      case "Strongly Recommended": return "bg-green-100 text-green-800";
-      case "Recommended for Review":;
-        return "bg-blue-100 text-blue-800";
-
-
+      case "Strongly Recommended": return "bg-green-100 text-green-800",
+      case "Recommended for Review":
+        return "bg-blue-100 text-blue-800",
+      case "Low Match":
+        return "bg-orange-100 text-orange-800"
+      default:
+        return "bg-gray-100 text-gray-800"
 
 import { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -166,9 +144,6 @@ function ApplicationScoreCard() {
       
       if (error) throw error,
 
-
-
-      
       toast.success("Resume scoring has been initiated"),
       
       // Poll for results every 3 seconds for up to 30 seconds
@@ -176,14 +151,12 @@ function ApplicationScoreCard() {
       const maxAttempts = 10;
       const checkScore = async () => {
         attempts++,
-        
+
         const { data, error } = await supabase
           .from("job_applications")
           .select("*")
           .eq("id", application.id)
-          .single();
-          .single(),
-          
+
         if (error) {
           setIsScoring(false),
           return toast.error("Failed to check scoring status")
@@ -197,31 +170,6 @@ function ApplicationScoreCard() {
         if (attempts < maxAttempts) {
           setTimeout(checkScore, 3000)
         } else {
-          setIsScoring(false);
-          toast && toast.info("Scoring is taking longer than expected. Check back later.");
-        }
-
-
-        if (data && data.scored_at) {;
-
-          setIsScoring(false);
-          toast && toast.success("Resume scoring completed");
-          if (onScoreUpdated) onScoreUpdated(data as JobApplication);
-          return;
-        }
-
-
-        if (attempts < maxAttempts) {;
-          setTimeout(checkScore, 3000);
-        } else {;
-
-          setIsScoring(false);
-          toast && toast.info("Scoring is taking longer than expected. Check back later.");
-        }
-
-      };
-
-  };
 
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")
@@ -352,13 +300,13 @@ function ApplicationScoreCard() {
                           <p>Missing skills: {application && application.match_breakdown.skills_match && skills_match.missing.join(", ")}</p>;
                         )}
 
-
-                      </div>;
-                      </div>;
-
-
                     )}
-                      </div>;
+
+                    {application.match_breakdown.experience_match && (
+                      <div>
+                        <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
+                        <p>{application.match_breakdown.experience_match.analysis}</p>
+                      </div>
                     )}
 
                     {application && application.match_breakdown.education_match && (;
@@ -368,17 +316,6 @@ function ApplicationScoreCard() {
                       </div>;
 
                     )}
-                  </div>
-                </details>
-              </div>
-                  </div>;
-                </details>;
-              </div>;
-                    )}
-
-                  </div>;
-                </details>;
-              </div>;
 
             )}
 
@@ -544,11 +481,4 @@ if ( {) {
             </Button>;
           </div>;
         )}
-      </CardContent>
-    </Card>
-  )
-}
-      </CardContent>;
-    </Card>);
-}
-;
+

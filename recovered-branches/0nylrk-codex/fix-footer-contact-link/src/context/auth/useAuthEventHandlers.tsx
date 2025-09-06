@@ -3,6 +3,9 @@ import React from 'react';
 
 
 
+
+import { toast } from "@/hooks/use-toast",
+
 /**
  * Custom hook for auth event handling
  */
@@ -21,11 +24,6 @@ export function useAuthEventHandlers(
     setTimeout(() => {
       if (mappedUser) {
         checkNewRegistration(mappedUser)
-      };
-    }, 0);
-      }
-    }, 0);
-    }, 0),
 
     // Check if user needs to complete onboarding
     if (!mappedUser.profileComplete && navigate) {
@@ -36,20 +34,17 @@ export function useAuthEventHandlers(
         variant: "default"})
       navigate('/onboarding')
     }
-  }
-  },
 
   const handleSignedOut = () => {
     toast({
       title: "Signed out"
       description: "You have been successfully logged out"
       variant: "default"})
-  }
-  return {
-    handleSignedIn;
 
-import {checkNewRegistration} from "@/utils/authUtils";
-import {useNavigate} from 'react-router-dom';
+import { toast } from "@/hooks/use-toast",;
+import type { UserProfile } from "@/types/auth",;
+import { checkNewRegistration } from "@/utils/authUtils",;
+import { useNavigate } from 'react-router-dom',;
 /**;
  * Custom hook for auth event handling;
  */;
@@ -93,64 +88,6 @@ export function useAuthEventHandlers(): any (;
   return {;
     handleSignedIn;
     handleSignedOut;
-
-import { toast } from '@/hooks / use - toast';
-import type { UserProfile } from "@/types / auth";
-import { checkNewRegistration } from '@/utils / auth_utils';
-import {use_navigate} from 'react-router-dom';
-/**;
-* Custom hook for auth event handling;
-*/;
-export /**
- * useAuthEventHandlers - Function description
- */
-function useAuthEventHandlers() {
-  const navigate = use_navigate (),
-  const handleSignedIn = (mapped_user: UserProfile) =>: any {
-    toast ({
-      title: "Welcome back!",
-      description: `You're now signed in as ${mapped_user.display_name || mapped_user.email}`,
-      variant: "default"}),
-    // Check for new registration and send welcome email if needed;
-    set_timeout (() => {
-      // Check condition
-if ( {) {
-  $2
-}
-        checkNewRegistration (mapped_user);
-      }
-    }, 0);
-;
-    // Check if user needs to complete onboarding;
-    // Check condition
-if ( {) {
-  $2
-}
-      setOnboardingStep ('profile');
-      toast ({
-        title: "Complete your profile",
-        description: "Please complete your profile information to get started",
-        variant: "default"}),
-      navigate ('/onboarding');
-    }
-  }
-;
-  const handleSignedOut = () =>: any {
-    toast ({
-      title: "Signed out",
-      description: "You have been successfully logged out",
-      variant: "default"});
-  }
-;
-  return {
-    handleSignedIn;
-    handleSignedOut;
-
-  },
-
-  return {
-    handleSignedIn,
-    handleSignedOut
 
   }
 }

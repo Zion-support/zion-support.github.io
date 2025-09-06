@@ -1,32 +1,12 @@
 
 
-
 import React from 'react';
-
-export default function Training() {
-  return (
-    <Layout
-      title="Training & Education - Zion Tech Group"
-      description="Professional training and education services for technology professionals."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Training & Education</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Professional training and education services for technology professionals.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">Training page is under construction.</p>
-          </div>
-        </div>
+import Layout from '../components/Layout';
 
 import React from 'react';
 import Layout from '../components/Layout';
 
 export default function Training() {
-
 
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
@@ -274,17 +254,6 @@ export default function TrainingPage() {
   const getCategoryColor = (category: string) => {
     const colors = {
 
-
-
-      'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
-    };
-    return colors[category as keyof typeof colors] || 'gray'
-  };
-
-  const toggleProgram = (id: number) => {
-    setExpandedProgram(expandedProgram === id ? null : id)
-
-  },
   return (
 
     <Layout>
@@ -325,29 +294,65 @@ export default function TrainingPage() {
               </div>
             </motion.div>
           </div>
-          <div className="text-center">
-            <p className="text-gray-600">Training page is under construction.</p>
+
+    };
+    return colors[category as keyof typeof colors] || 'gray';
+  };
+
+  const toggleProgram = (id: number) => {
+    setExpandedProgram(expandedProgram === id ? null : id);  };
+
+  return (
+    <Layout>
+      <SEO
+        title='Training & Certification - Zion Tech Group'
+        description='Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career.'
+      />
+
+      <div className='min-h-screen'>
+        {/* Hero Section */}
+        <section className='relative py-20 lg:py-32 overflow-hidden'>
+          <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10' />
+          <div className='relative z-10 container mx-auto px-4 text-center'>            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
+                Training & Certification
+              </h1>
+              <p className='text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>
+                Master the future of technology with our comprehensive training
+                programs in AI consciousness, quantum computing, and autonomous
+                operations.
+              </p>
+              <div className='flex flex-wrap justify-center gap-4 text-gray-400'>
+                <div className='flex items-center gap-2'>
+                  <GraduationCap className='w-5 h-5' />
+                  <span>Expert-Led Training</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <Award className='w-5 h-5' />
+                  <span>Industry Certifications</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <Users className='w-5 h-5' />                  <span>Global Community</span>
+                </div>
+              </div>
+            </motion.div>
           </div>
-        </div>
+        </section>
+
       </div>
-    </Layout>;
-  );
-}
-};
-  )
-};
+    </Layout>
+  ),
 
       </div>
     </Layout>
 
-
 }
 
   )
-
-
-
-
 
   {
   opacity: 0, y: 20 
@@ -398,43 +403,49 @@ export default function TrainingPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
-};
-}
-origin/main
+
   )
 }
 export default Training;
-origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-};export default Training;
-origin/cursor/integrate-build-improve-and-re-verify-242d
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+
 };export default Training;
 
-origin/main
   )
 };
 
 export default Training;
 
-import Layout from '../components / Layout';
-;
-export default /**
- * Training - Function description
- */
-function Training() {
-  return (
-    <Layout;
-      title="Training & Education - Zion Tech Group";
-      description="Professional training and education services for technology professionals.";
-    >;
-      <div className="min - h-screen bg - gray - 50 py - 20">;
-        <div className="container mx - auto px - 4">;
-          <div className="text - center mb - 12">;
-            <h1 className="text - 4xl font - bold text - gray - 900 mb - 4">Training & Education</h1>;
-            <p className="text - xl text - gray - 600 max - w-3xl mx - auto">;
-              Professional training and education services for technology professionals.;
-            </p>;
+}  )
+
+};
+
+export default Training;
+};export default Training;
+
+},
+export default Training,
+            >;
+              <h2 className="text-4xl font-bold text-white mb-6">;
+                Ready to Transform Your Career?;
+              </h2>;
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">;
+                Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications.;
+              </p>;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">;
+                <a;
+                  href="/contact";
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105";
+                >;
+                  Get Personalized Guidance;
+                </a>;
+                <a;
+                  href="/resources";
+                  className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300";
+                >;
+                  Explore Free Resources;
+                </a>;
+              </div>;
+            </motion.div>;
           </div>;
           <div className="text - center">;
             <p className="text - gray - 600">Training page is under construction.</p>;
@@ -448,5 +459,4 @@ function Training() {
 }
 ;
 export default Training;
-}export default Training;
-;
+

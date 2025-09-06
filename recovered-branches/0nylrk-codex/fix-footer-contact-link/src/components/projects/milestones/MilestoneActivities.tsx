@@ -1,32 +1,4 @@
 
-import React, { useState, useEffect } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage  } from '@/components/ui/avatar';
-import { format  } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
-interface MilestoneActivitiesProps {
-  project_id: string;
-}
-interface Activity {
-
-  id: string
-  milestone_id: string
-  user_id: string
-  action: string
-  previous_status: string | null
-  new_status: string
-  comment: string | null
-  created_at: string
-
-  milestone: {
-
-
-
-
-export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
-  const [activities, setActivities] = useState<Activity[]>([]);
-
 
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
@@ -50,6 +22,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         console.error ('Error fetching milestone activities:', err);
       } finally {
         setIsLoading(false)
+
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
@@ -110,16 +83,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
     if (projectId) {
       fetchActivities()
     }
-  }, [projectId]);
-  function getActivityDescription(activity: Activity): string {
-    switch (activity.action) {
-      case 'created':
-
-    if (projectId) {;
-      fetchActivities();
-    }
-
-
 
   }, [projectId]),;
   function getActivityDescription(activity: Activity): string {;
@@ -135,7 +98,6 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
         return 'added a deliverable';
       default:;
         return activity.action.replace(/_/g, ' ');
-
 
     }
   }
@@ -228,23 +190,4 @@ export function MilestoneActivities(): any ({ projectId }: MilestoneActivitiesPr
                 </div>;
               </div>;
             ))}
-          </div>
-        </CardContent>
-      </Card>
-    </div>
-  )
-}
-          </div>;
-        </CardContent>;
-      </Card>;
-    </div>;
-  );
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      fetch_activities ();
-    }
-  }, [project_id]);
-;
+

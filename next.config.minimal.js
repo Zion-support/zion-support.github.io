@@ -6,16 +6,6 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
-    domains: ["localhost", "ziontechgroup.com"]
-  }
-  output: 'standalone'
-  trailingSlash: false
-  distDir: '.next'
-}
-    domains: ["localhost", "ziontechgroup.com"],
-  },
-  output: 'standalone',
-  trailingSlash: false,
-  distDir: '.next',
-};
+
+module.exports = nextConfig;
 

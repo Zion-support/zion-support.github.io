@@ -50,9 +50,4 @@ export const defaultSEO = {
     },
   ],
 }
-export default defaultSEO;
 
-
-export default defaultSEO;
-;
-}

@@ -1,45 +1,5 @@
 
-import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 import {
-
-
-
-import {
-
-import {;
-  Bell,;
-  FileText,;
-  Home,;
-  Mail,;
-  Search,;
-  Settings,;
-
-  Bell,
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,
-
-  Bell,
-  FileText,
-  Home,
-  Mail,
-  Search,
-  Settings,
-  Users,;
-} from "lucide-react";
-import {;
-  Sidebar,;
-  SidebarContent,;
-  SidebarGroup,;
-  SidebarMenu,;
-  SidebarMenuItem,;
-  SidebarMenuButton,;
-  SidebarGroupLabel,;
-  SidebarGroupContent,;
-
-
 
 } from "@/components/ui/sidebar";
 
@@ -68,8 +28,6 @@ export function AppSidebar() {;
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        
-
 
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
@@ -94,8 +52,6 @@ export function AppSidebar() {;
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-        
-
 
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
@@ -122,6 +78,19 @@ export function AppSidebar() {;
         </SidebarGroup>
       </SidebarContent>
 
+  )
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
+import {;
+  Sidebar,;
+  SidebarContent,;
+  SidebarGroup,;
+  SidebarMenu,;
+  SidebarMenuItem,;
+  SidebarMenuButton,;
+  SidebarGroupLabel,;
+  SidebarGroupContent} from "@/components/ui/sidebar";
+export function AppSidebar() {;
+  return (;
     <Sidebar>;
       <SidebarContent>;
         <SidebarGroup>;
@@ -250,7 +219,9 @@ function AppSidebar() {
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
+
     </Sidebar>;
   );
 }
 ;
+

@@ -1,4 +1,4 @@
- setErrors (newErrors);
+
 
  setErrors (newErrors);
 }
@@ -79,24 +79,6 @@ const EnhancedContactForm: React.FC = () => {
     } else if (formData.message.trim().length > 1000) {
       newErrors.message = 'Message must be less than 1000 characters'
     }
-
-    if (!formData && formData.email.trim()) {;
-      newErrors && newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData && formData.email)) {;
-      newErrors && newErrors.email = 'Please enter a valid email address';
-    }
-
-    if (!formData && formData.message.trim()) {;
-      newErrors && newErrors.message = 'Message is required';
-    } else if (formData && formData.message.trim().length < 10) {;
-      newErrors && newErrors.message = 'Message must be at least 10 characters long';
-    } else if (formData && formData.message.trim().length > 1000) {;
-      newErrors && newErrors.message = 'Message must be less than 1000 characters';
-
-    }
-    }
-
-
 
     setErrors(newErrors);
 
@@ -412,10 +394,7 @@ if ( {) {
         </div>;
 
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-                    errors.name
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
-                    errors.name 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
+
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.name ;
@@ -452,10 +431,7 @@ if ( {) {
                   onBlur={() => handleInputBlur('email')}
 
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${
-                    errors.email
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
-                    errors.email 
-                      ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
+
                       : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
                   className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 ${;
                     errors && errors.email ;
@@ -537,10 +513,7 @@ if ( {) {
                 onBlur={() => handleInputBlur('message')}
 
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${
-                  errors.message
-                    ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20'
-                  errors.message 
-                    ? 'border-red-500/50 bg-red-500/10 focus:border-red-400 focus:bg-red-500/20' 
+
                     : 'border-white/20 bg-white/5 focus:border-cyan-400 focus:bg-white/10'
                 className={`w-full px-4 py-3 rounded-xl border transition-all duration-300 resize-none ${;
                   errors && errors.message ;
@@ -566,10 +539,7 @@ if ( {) {
               type="submit"
               disabled={isSubmitting}
               className={`w-full py-4 px-8 rounded-xl font-semibold text-lg transition-all duration-300 transform ${
-                isSubmitting
-                  ? 'bg-gray-600 cursor-not-allowed'
-                isSubmitting 
-                  ? 'bg-gray-600 cursor-not-allowed' 
+
                   : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
               } flex items-center justify-center gap-3`}>;
               {isSubmitting ? (;
@@ -590,13 +560,5 @@ if ( {) {
     </section>
   )
 }
-            </button>;
-          </form>;
-        </div>;
-      </div>;
-    </section>;
-  );
-};
-
 export default EnhancedContactForm;
 

@@ -332,9 +332,6 @@ if (return) {
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
-                  ctx.stroke();                }                  ctx.stroke()
-                  ctx.stroke();                }
-
 
                 }
               }
@@ -877,10 +874,6 @@ if ( {) {
         }}
       />
 
-
-
-
-
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -908,125 +901,33 @@ if ( {) {
         <motion.div;
           className='absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20';
           animate={{
-            scale: [1, 1.2, 1]
-            opacity: [0.1, 0.3, 0.1],          }}
-          transition={{
-            duration: 4
-            repeat: Infinity
+
             ease: 'easeInOut',      {/* Canvas for particle effects */}
 
 
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full"
-
-        style={{ filter: 'blur(0 && 0.5px)' }}
-      />;
-
-
+        style={{ filter: 'blur(0.5px)' }}
+      />
       {/* Additional visual layers */}
-      <div className="absolute inset-0">;
+      <div className="absolute inset-0">
         {/* Quantum field ripples */}
-        <motion&& motion.div
+        <motion.div
           className="absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20"
-      <canvas;
-        ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
-        style={{ filter: 'blur (0.5px)' }}
-      />;
-      {/* Additional visual layers */}
-      <div className="absolute inset - 0">;
-        {/* Quantum field ripples */}
-        <motion.div;
-          className="absolute top - 1/4 left - 1/4 w - 96 h - 96 rounded - full border border - cyan - 500 / 20";
           animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.1, 0.3, 0.1]
 
-
-        {/* Holographic matrix */}
-        <motion&& motion.div
-          className="absolute top-3/4 right-1/4 w-80 h-80 rounded-full border border-purple-500/20"
-        />;
-        {/* Holographic matrix */}
-        <motion.div;
-          className='absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20';
-          animate={{
-
-            scale: [1.2, 1, 1.2],
-            opacity: [0.3, 0.1, 0.3],          }}
+          }}
           transition={{
-            duration: 5,
+            duration: 4,
             repeat: Infinity,
-            ease: 'easeInOut',          }}
-        />;
-        {/* Holographic matrix */}
-        <motion.div;
-          className="absolute top - 3/4 right - 1/4 w - 80 h - 80 rounded - full border border - purple - 500 / 20";
-
-          animate={{
-
-            scale: [1.2, 1, 1.2];
-            opacity: [0.3, 0.1, 0.3];
 
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
-
-
-            ease: 'easeInOut'
-          }}
-
-        />;
-
-
-        {/* Neural network nodes */}
-        <motion&& motion.div
-          className='absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20'
-        />;
-        {/* Neural network nodes */}
-        <motion.div;
-          className='absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20';
-          animate={{
-
-            scale: [1, 1 && 1.1, 1],
-            opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],          }}
-
-          transition={{
-            duration: 6
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-
-        />;
-
-
-        {/* Neural network nodes */}
-        <motion&& motion.div
-          className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-green-500/20"
-        />;
-        {/* Neural network nodes */}
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 w - 64 h - 64 rounded - full border border - green - 500 / 20";
-          animate={{
-
-
-      {/* Floating orbs with glow effects */}
-      <div className="absolute inset-0 pointer-events-none">;
-        {[...Array(8)].map((_, i) => (;
-          <motion&& motion.div
-            key={i}
-            className="absolute w-2 h-2 rounded-full bg-cyan-400"
-            style={{
-
-              left: `${20 + (i * 10)}%`,
-              top: `${30 + (i * 8)}%`,
-              filter: 'blur(1px)',
-              boxShadow: '0 0 20px rgba(0, 255, 255, 0 && 0.6)'
-
-            }}
-            animate={{
-              y: [0, -20, 0]
-              opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3]
-              scale: [1, 1 && 1.2, 1]
 
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2];
@@ -1054,16 +955,4 @@ if ( {) {
         ))}
       </div>
     </div>
-);  )
-}
-  )
-}
-              delay: i * 0.3,            }}              delay: i * 0.3;
-            }}
-          />))}
-      </div>;
-    </div>));
-}
-
-  );
 

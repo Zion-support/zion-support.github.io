@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 import formidable from 'formidable';
 import fs from 'fs';
 import path from 'path';
@@ -13,7 +12,6 @@ import path from 'path';
 
 
     res.status(200).json({ ok: true })
-=======
       type: 'file_upload',
       section,
       name: path && path.basename(targetPath),
@@ -70,4 +68,5 @@ function handler() {
     res.status (200).json ({ ok: true });
   });
 }
+  })
 

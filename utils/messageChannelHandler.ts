@@ -1,7 +1,5 @@
 
 
-
-
 }}}};
 ;
 ;
@@ -9,22 +7,13 @@
 }
 }
 }
-},
 
-,
-
-ursor/fix-lint-push-and-merge-to-main-28da
-},;
-,;
-ursor/automate-test-improve-and-merge-code-4094
-ursor/fix-syntax-push-and-merge-to-main-40de
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
   sendMessage: (message: any) => {},
   receiveMessage: (callback: any) => {},
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
+
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -36,18 +25,6 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
-};
-};
-ursor/add-new-services-and-deploy-updates-0462
-};
-};
-};
-};
-,
-
-
-
-
 
 // Message channel handler for real-time communication
 export class MessageChannelHandler {;
@@ -95,14 +72,9 @@ if ( {) {
 }
 export default MessageChannelHandler;
 
-
-
-
 }}}};
 ;
 
 },;
 ,;
-
-
 

@@ -1,17 +1,13 @@
 
-
-import {;
-  Card,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
-interface FraudStatsCardsProps {;
-  stats: FraudStats;
+
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
+import { FraudStats } from "@/types/fraud",
 
 interface FraudStatsCardsProps {
   stats: FraudStats
@@ -24,8 +20,6 @@ interface FraudStatsCardsProps {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
-      
-
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -36,8 +30,6 @@ interface FraudStatsCardsProps {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
-      
-
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -50,8 +42,6 @@ interface FraudStatsCardsProps {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
-      
-
 
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
@@ -64,8 +54,6 @@ interface FraudStatsCardsProps {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
-      
-
 
       <Card>
         <CardHeader className="pb-2">
@@ -75,8 +63,6 @@ interface FraudStatsCardsProps {
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
-      
-
 
       <Card>
         <CardHeader className="pb-2">
@@ -87,7 +73,16 @@ interface FraudStatsCardsProps {
         </CardHeader>
       </Card>
 
-
+  )
+},
+import React from "react",;
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",;
+import { FraudStats } from "@/types/fraud",;
+interface FraudStatsCardsProps {;
+  stats: FraudStats;
+}
+;
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">;
@@ -155,9 +150,8 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
           <CardDescription>False Positives</CardDescription>;
         </CardHeader>;
       </Card>;
+
     </div>;
 );
 };
-
-export default FraudStatsCards;
 

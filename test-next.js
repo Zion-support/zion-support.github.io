@@ -11,4 +11,5 @@ try {;
   console.log('Build successful!');
 } catch (error) {;
   console.error('Error:', error.message);
+
 }

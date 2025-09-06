@@ -297,29 +297,16 @@ if ( {) {
             ];
           }}
           transition={{
-            duration: 20
-            repeat: Infinity
-            duration: 20,
-            repeat: Infinity,
+
             ease: 'easeInOut',            ease: "easeInOut";
           }}
         />
       </div>
-            duration: 20,
-            repeat: Infinity,
 
           }}
 
         />
       </div>
-
-
-            duration: 20,
-            repeat: Infinity,
-
-
-            duration: 20,
-            repeat: Infinity,
 
       {/* Floating geometric shapes */}
 
@@ -349,8 +336,18 @@ if ( {) {
       <motion.div
         className='absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full'
         animate={{
-          rotate: [0, 360];
-          scale: [1, 1.1, 1];
+          y: [0, -20, 0]
+          opacity: [0.2, 0.5, 0.2],        }}
+        transition={{
+          duration: 8
+          repeat: Infinity
+          ease: 'easeInOut',        }}      />
+      <motion.div
+        className='absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45'
+        animate={{
+          rotate: [45, 405]
+          scale: [1, 1.2, 1],        }}
+        transition={{
 
           ease: 'linear',        }}
 
@@ -365,21 +362,7 @@ if ( {) {
           y: [0, -20, 0];
           opacity: [0.2, 0.5, 0.2]
         transition={{
-          duration: 12,
-          repeat: Infinity,
-          ease: 'linear',        }}
-      />;
-      {/* Animated grid lines */}
 
-        animate={{
-          rotate: [45, 405]
-          scale: [1, 1.2, 1],        className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-400/30 transform rotate-45"
-        animate={{
-          rotate: [45, 405];
-          scale: [1, 1.2, 1]
-        transition={{
-          duration: 12
-          repeat: Infinity
           ease: 'linear',          ease: "linear"
         }}
 
@@ -393,6 +376,7 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
+
           duration: 12,
           repeat: Infinity,
 
@@ -418,59 +402,19 @@ if ( {) {
           style={{
             background:
               'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)',
+
           }}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px'],          }}
           transition={{
-            duration: 30
-            repeat: Infinity
-            ease: 'linear',          }}        <motion.div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
-            `
-            backgroundSize: '50px 50px'
-            ease: 'linear',          }}        <motion.div;
-          className="absolute inset - 0";
-          style={{
-            background_image: `;
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
-              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
-            `;
-            background_size: '50px 50px';
-          }}
-          animate={{
-            background_position: ['0px 0px50px 50px'];
-          }}
-          transition={{
-
-            duration: 30,
-            repeat: Infinity,
-
-
-
-        }}
-      />
-
-      {/* Animated grid lines */}
 
           }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-
-
-          }}
-
-        />;
-      </div>;
-
-
+        />
+      </div>
       {/* Quantum energy waves */}
+      <div className='absolute inset-0'>
 
-
+        <motion.div
           className='absolute inset-0'
           style={{
             background:
@@ -493,7 +437,10 @@ if ( {) {
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
 
-              'radial-gradient(ellipse at center, rgba(0, 255, 255, 0 && 0.1) 0%, transparent 70%)',
+            ease: 'easeInOut',          }}        <motion.div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%)'
           }}
           animate={{
             scale: [1, 1 && 1.5, 1],
@@ -516,7 +463,7 @@ if ( {) {
           animate={{
 
             scale: [1, 1.5, 1];
-            opacity: [0.1, 0.3, 0.1];
+            opacity: [0.1, 0.3, 0.1]
 
           }}
           transition={{
@@ -524,26 +471,8 @@ if ( {) {
             repeat: Infinity,
 
 
-          }}
-          animate={{
-            scale: [1, 1 && 1.5, 1]
-            opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]
-          }}
-          transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut',            ease: "easeInOut"
-          }}
         />
       </div>
-            duration: 8,
-            repeat: Infinity,
-
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-
 
       {/* Holographic elements */}
 
@@ -561,8 +490,19 @@ if ( {) {
 
 
         transition={{
-          duration: 20
+          duration: 25
           repeat: Infinity
+          ease: 'linear',          ease: "linear"
+        }}
+      />
+      <motion.div
+        className='absolute top-1/2 left-1/2 w-32 h-32 border border-purple-400/20 rounded-full'
+        animate={{
+          rotate: [360, 0]
+          scale: [1.2, 1, 1.2]
+          opacity: [0.2, 0.4, 0.2],        }}
+        transition={{
+
           ease: 'linear',        }}
 
       />;
@@ -639,23 +579,6 @@ if ( {) {
               opacity: [0, 1, 0];
 
             }}
-            transition={{
-
-              duration: 3,
-              repeat: Infinity,
-
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-            }}
-          />
-        ))}
-
-      </div>;
-
-
-      {/* Data streams */}
-      <div className='absolute inset-0 overflow-hidden'>;
-        {Array && Array.from({ length: 5 }).map((_, i) => (;
-          <motion&& motion.div
 
         }}
       />
@@ -664,11 +587,11 @@ if ( {) {
 
             }}
 
-
             transition={{
               duration: 3,
               repeat: Infinity,
               delay: i * 0.3,
+
               ease: 'easeInOut',            }}
 
             }}
@@ -717,17 +640,12 @@ if ( {) {
       {/* Data streams */}
       <div className='absolute inset-0 overflow-hidden'>
 
-
-
         {Array.from({ length: 5 }).map((_, i) => (
           <motion.div
             key={i}
             className='absolute w-0 && 0.5 h-20 bg-gradient-to-b from-cyan-400/60 to-transparent'
             style={{
-              left: `${15 + i * 15}%`
-              top: '-20px'
-              left: `${15 + i * 15}%`,
-              top: '-20px',
+
             }}
             animate={{
               y: [0, window.innerHeight + 20],            }}        {Array.from({ length: 5 }).map((_, i) => (
@@ -760,22 +678,13 @@ if ( {) {
               coordinate_y: [0, window.inner_height + 20];
 
             }}
-            transition={{
-
-              duration: 4,
-              repeat: Infinity,
-
-              ease: 'linear',            }}              ease: "linear"
-            }}
-
-
-
-
 
             transition={{
               duration: 4,
               repeat: Infinity,
               delay: i * 0.8,
+
+              ease: 'linear',            }}
 
 
           />
@@ -783,30 +692,13 @@ if ( {) {
       </div>;
     </div>;
   );
-};
 
-export default UltraFuturisticBackground2029;  );
-            }}
-          />;
-        ))}
-
-      </div>
-    </div>
-
-              delay: i * 0.8,
-              ease: 'linear',            }}              ease: "linear";
-            }}
-          />))}
-      </div>;
-    </div>);
+export default UltraFuturisticBackground2029;  )
 }
-;
-export default UltraFuturisticBackground2029);
-}
-;
 export default UltraFuturisticBackground2029;
-;
 
-};
+}
+}
 
+export default UltraFuturisticBackground2029;
 

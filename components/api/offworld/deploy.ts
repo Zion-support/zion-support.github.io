@@ -17,8 +17,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     const { cid, provider } = await addDirectory(outDir);
 
     if (!cid) return res.status(500).json({ error: 'IPFS upload failed' });
+    return res.status(200).json({ cid, provider });
+  } catch (error: any) {
 
-    return res.status(200).json({ cid, provider })
+  }    return res.status(200).json({ cid, provider })
 
   } catch (error: any) {
     return res.status(500).json({ error: error?.message |'Unknown error' })
@@ -95,14 +97,9 @@ function handler() {
   } catch (error: any) {
     return res.status (500).json ({ error: error?.message || 'Unknown error' });
 }
-}
-    return res.status(500).json({ error: error?.message || 'Unknown error' });
-  }
 
 }
 }
-  }
-}
 
-    return res.status(500).json({ error: error?.message || 'Unknown error' });
+  }
 

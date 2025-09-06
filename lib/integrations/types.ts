@@ -17,9 +17,6 @@ export type IntegrationProviderId =;
   | 'bamboohr';
 export interface IntegrationProviderMeta {
 
-  id: IntegrationProviderId, name: string,;
-
-
   category: IntegrationCategory, description?: string,  oauthScopes?: string[];
   icon?: string
 }
@@ -38,8 +35,10 @@ export interface SyncRules {
   pushNotesMode?: 'auto' | 'manual';
   // ATS rules;
   autoSyncApplicants?: boolean;
+  autoUploadResumes?: boolean;
 
-
+  providerId: IntegrationProviderId;
+  status: SyncStatus;  accessToken?: string;  refreshToken?: string;
   expiresAt?: number;
   connectedAt?: number;
   syncRules?: SyncRules;
@@ -52,71 +51,22 @@ export interface SyncLogEntry {
   provider_id: IntegrationProviderId;
   level: 'info' | 'warn' | 'error';
   action: string;
-
-  details?: Record < string, any>;
-;
-
-export interface ManualOverride {
-  job_id: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-;
-
-export interface ZapierEvent {
-  id: string;
-  type: 'zion && zion.job.posted' | 'zion && zion.talent.matched';
-  timestamp: number;
-
-  payload: Record < string, any>;
-;
-
-export interface IntegrationsState {
-
-export interface ManualOverride {;
-  jobId: string;
-  disableCrmSync?: boolean;
-  disableAtsSync?: boolean;
-
-export interface ZapierEvent {;
+  details?: Record<string, any>;
 
   id: string;
   type: 'zion.job.posted' | 'zion.talent.matched';
   timestamp: number;
   payload: Record<string, any>;
 
-
-export interface IntegrationsState {;
-
   connections: ProviderConnection[];
   logs: SyncLogEntry[];
   overrides: ManualOverride[];
-
-
-  lastError?: string | null
+  events: ZapierEvent[];  events: ZapierEvent[]
 }
 
-export interface SyncLogEntry {
-  id: string, timestamp: number,
-  providerId: IntegrationProviderId, level: 'info' | 'warn' | 'error',
-  action: string,
-  details?: Record<string, any>
+}
+}
+}
+}
 }
 
-export interface ManualOverride {
-  jobId: string, disableCrmSync?: boolean,
-  disableAtsSync?: boolean
-}
-
-export interface ZapierEvent {
-  id: string, type: 'zion.job.posted' | 'zion.talent.matched',
-  timestamp: number,
-  payload: Record<string, any>
-}
-
-export interface IntegrationsState {
-  connections: ProviderConnection[], logs: SyncLogEntry[],
-  overrides: ManualOverride[],
-  events: ZapierEvent[]
-}
-}

@@ -23,14 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
-
-
-  Room,
-  RoomEvent,
-  RemoteParticipant,
-  LocalParticipant,
-  createLocalTracks,;
-  VideoPresets,;
+import {
 
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
@@ -48,30 +41,8 @@ type Props = {;
   token: string;
   startMode: StartMode;
   onLeave?: (durationSec: number) => void;
-
-};
-
-export default function CallRoom(): any ({;
-  projectId,;
-  userId,;
-  displayName,;
-  roomName,;
-  serverUrl,;
-  token,;
-  startMode,;
-  onLeave,;
-}: Props) {;
-
-
-  projectId,
-  userId,
-  displayName,
-  roomName,
-  serverUrl,
-  token,
-  startMode,
-  onLeave,
-}: Props) {;
+}
+export default function CallRoom({
 
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<;
@@ -83,12 +54,15 @@ import ParticipantTile from './ParticipantTile';
 
 import Controls from './Controls';
 export type StartMode = 'video' | 'audio';
-
-
-};
-
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {;
-
+type Props = {
+  projectId: string
+  userId: string
+  displayName: string
+  roomName: string
+  serverUrl: string
+  token: string
+  startMode: StartMode
+  onLeave?: (durationSec: number) => void
 
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
@@ -198,22 +172,6 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
   }, [connect]);
   const handleLeave = () => {
     if (room) {
-      room.disconnect();
-    }
-  }, [connect]);
-
-  const handleLeave = () => {;
-    if (room) {;
-      room && room.disconnect();
-    }
-    const durationSec = connectedAt;
-      ? Math && Math.round((Date && Date.now() - connectedAt) / 1000);
-      : 0;
-    onLeave?.(durationSec);  };      room && room.disconnect();
-    }
-    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
-    onLeave?.(durationSec)
-
 
   const gridCols = useMemo(() => {
     const count = participants.length |1;
@@ -230,20 +188,4 @@ export default function CallRoom(): any ({ projectId, userId, displayName, roomN
       </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
-          <ParticipantTile
-            key={String((p as any).sid |(p as any).identity) + idx}
-            participant={p}
-            is_local={p instanceof LocalParticipant}
-            display_name={
-              (p as any).name ||;
-              (p instanceof LocalParticipant ? 'You' : undefined);
-            }
-          />        ))}
-      </div>;
-    </div>);
-}          <ParticipantTile key={String ((p as any).sid || (p as any).identity) + idx} participant={p} is_local={p instanceof LocalParticipant} display_name={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />))}
-      </div>;
-    </div>);
-}
-
 

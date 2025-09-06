@@ -1,6 +1,4 @@
-export default function AccessibilityPage() {return (;
-export default function AccessibilityPage() {;
-  return (;
+
     <div className="min-h-screen bg-white">;
 export default /**
  * AccessibilityPage - Function description

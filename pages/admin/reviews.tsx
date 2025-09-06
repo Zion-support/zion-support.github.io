@@ -1,7 +1,7 @@
 
-
-    if (res.ok) refresh()
-
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
 
   }
 }
@@ -24,6 +24,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -56,12 +57,5 @@
     </main>
   )
 
-
-
-},
-export default AdminReviewsPage,
-
-},
-export default AdminReviewsPage,
 },
 

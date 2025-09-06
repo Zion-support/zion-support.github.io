@@ -1,5 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 import fs from 'fs';
 import path from 'path';
 import fse from 'fs - extra';
@@ -358,14 +357,6 @@ if ( {) {
 
 
     return res.status(500).json({ error: 'Internal server error' });
-  }    return res.status(200).json({ ok: true, id, summary, tags })
-  } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' });
-  }    return res.status (200).json ({ ok: true, id, summary, tags });
-  } catch (error) {
-    return res.status (500).json ({ error: 'Internal server error' });
-}
-}
+
   }
-  }
-}
+

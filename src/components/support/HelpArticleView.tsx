@@ -1,6 +1,16 @@
+
+
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card } from "@/components/ui/card",
+import { ThumbsUp, ThumbsDown } from 'lucide-react'
+import { toast } from "@/components/ui/use-toast",
+
 interface HelpArticleViewProps {
   articleId: string
 }
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {
+
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -17,17 +27,6 @@ interface HelpArticleViewProps {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
-
-
-export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
-
-
-    year: "numeric",;
-    month: "long",;
-    day: "numeric", });
-};
-}
 
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
   
@@ -116,3 +115,4 @@ if ( {) {
 }
 
 ;
+

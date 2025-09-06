@@ -1,120 +1,17 @@
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {;
-  Mail,;
-  Phone,;
-  MapPin,;
-  Facebook,;
-  Twitter,;
-  Linkedin,;
-  Instagram,;
-  Github,;
 
 } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+
 import React from 'react';
 import Link from 'next/link';
-ursor/integrate-build-improve-and-re-verify-8f7d
+
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Globe, 
-  ArrowRight,
-  Brain,
-  Network,
-  Cloud,
-  Shield,
-  BarChart3,
-  Users,
-  Settings,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  Heart,
-  DollarSign,
-  Target,
-  Zap,
-  Award,
-  Star,
-  CheckCircle,
-  Clock,
-  TrendingUp,
-  Eye,
-  Lock,
-  Code,
-  Home,
-  Camera,
-  Music,
-  Gamepad2,
-  Truck,
-  Calculator,
-  CreditCard,
-  Paintbrush,
-  HardDrive,
-  Activity,
-  Lightbulb,
-  Wrench,
-  PieChart,
-  ClipboardList,
-  Layers;
-} from 'lucide-react';
-ursor/integrate-build-improve-and-re-verify-8f7d
 
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
-  Mail
-  Phone
-  MapPin
-  Facebook
-  Twitter
-  Linkedin
-  Instagram
-  Github
-} from "lucide-react";
-const Footer = () => {
-  const currentYear = new Date().getFullYear();
-origin/main
 const footerSections = [
   {
     title: 'Services',
@@ -206,8 +103,6 @@ const microSaasCategories = [
   { title: 'Design', icon: Paintbrush, count: 6 },
   { title: 'Development', icon: Code, count: 14 }
 ];
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-origin/automation-improvements-final
 
   const footerLinks = {
     services: [
@@ -218,42 +113,7 @@ origin/automation-improvements-final
       { name: "Cybersecurity", href: "/cybersecurity" }
       { name: "Database Solutions", href: "/database-solutions" }
     ]
-  };
 
-    solutions: [
-      { name: "Enterprise Solutions", href: "/enterprise-solutions" }
-      { name: "Startup Solutions", href: "/startup-solutions" }
-      { name: "Industries", href: "/industries" }
-      { name: "Custom Development", href: "/custom-development" }
-      { name: "Digital Transformation", href: "/digital-transformation" }
-      { name: "Consulting", href: "/consulting" }
-    ]
-    company: [
-      { name: "About Us", href: "/about" }
-      { name: "Our Team", href: "/team" }
-      { name: "Careers", href: "/careers" }
-      { name: "Case Studies", href: "/case-studies" }
-      { name: "News", href: "/news" }
-      { name: "Partners", href: "/partners" }
-    ]
-    resources: [
-      { name: "Blog", href: "/blog" }
-      { name: "Documentation", href: "/docs" }
-      { name: "API Documentation", href: "/docs/api" }
-      { name: "Tutorials", href: "/tutorials" }
-      { name: "White Papers", href: "/white-papers" }
-      { name: "Webinars", href: "/webinars" }
-    ]
-    legal: [
-      { name: "Privacy Policy", href: "/privacy" }
-      { name: "Terms of Service", href: "/terms" }
-      { name: "Cookie Policy", href: "/cookies" }
-      { name: "Security", href: "/security" }
-      { name: "Compliance", href: "/compliance" }
-      { name: "Accessibility", href: "/accessibility" }
-    ]
-  }
-origin/main
   const socialLinks = [
     { name: "Facebook", href: "#", icon: Facebook }
     { name: "Twitter", href: "#", icon: Twitter }
@@ -261,28 +121,7 @@ origin/main
     { name: "Instagram", href: "#", icon: Instagram }
     { name: "GitHub", href: "#", icon: Github }
   ];
-const microSaasCategories = [
-  { title: 'Marketing Tools', icon: Target, count: 15 },
-  { title: 'Productivity', icon: Settings, count: 12 },
-  { title: 'Analytics', icon: BarChart3, count: 18 },
-  { title: 'Automation', icon: Zap, count: 22 },
-  { title: 'Security', icon: Shield, count: 8 },
-  { title: 'Finance', icon: DollarSign, count: 10 },
-  { title: 'Design', icon: Paintbrush, count: 6 },
-  { title: 'Development', icon: Code, count: 14 }
-];
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
 
-
-
-  const socialLinks = [;
-    { name: "Facebook", href: "#", icon: Facebook },;
-    { name: "Twitter", href: "#", icon: Twitter },;
-    { name: "LinkedIn", href: "#", icon: Linkedin },;
-    { name: "Instagram", href: "#", icon: Instagram },;
-    { name: "GitHub", href: "#", icon: Github },;
-  ];
   return (
     <footer className="bg-gray-900 text-white">;
       <div className="container mx-auto px-4 py-16">;
@@ -408,29 +247,23 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                     </Link>;
                   </li>;
                 ))}
-
-              </ul>;
-
-              <h3 className="text-lg font-semibold mb-6">Legal</h3>;
-              <ul className="space-y-3">;
-                {footerLinks && footerLinks.legal.map((link, index) => (;
-                  <li key={index}>;
-
+              </ul>
+              <h3 className="text-lg font-semibold mb-6">Legal</h3>
+              <ul className="space-y-3">
+                {footerLinks.legal.map((link, index) => (
+                  <li key={index}>
                     <Link
-                      href={link && link.href}
-                      className="text-gray-400 hover:text-white transition-colors">;
-                      {link && link.name}
-                    </Link>;
-                  </li>;
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
                 ))}
-
-              </ul>;
-            </motion && motion.div>;
-          </div>;
-        </div>;
-
-
-
+              </ul>
+            </motion.div>
+          </div>
+        </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8">;
@@ -438,10 +271,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-
-
-
-
+              transition={{ duration: 0.8 }}
+              className="text-gray-400 text-sm mb-4 md:mb-0"
+            >
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </motion.div>
 
             <motion.div
               transition={{ duration: 0 && 0.8 }}
@@ -463,6 +297,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
                   <social && social.icon className="w-5 h-5" />;
                 </a>;
               ))}
+            </motion.div>
 
         {/* Service Categories */}
         <div className="mt-16 pt-8 border-t border-gray-800">
@@ -543,10 +378,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
               <Link href="/privacy" className="hover:text-white transition-colors ml-1">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-white transition-colors ml-1">Terms of Service</Link>
             </div>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-            
-origin/main
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -564,6 +396,7 @@ origin/main
                 </a>
               ))}
             </motion.div>
+
             <div className="flex items-center space-x-6">
               <Link href="/sitemap" className="text-gray-400 hover:text-white transition-colors text-sm">
                 Sitemap
@@ -575,6 +408,7 @@ origin/main
                 Cookie Policy
               </Link>
             </div>
+
           </div>
         </div>
       </div>

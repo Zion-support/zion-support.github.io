@@ -1,23 +1,4 @@
 
-
-import {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {Button} from '@/components/ui/button';
-import {Textarea} from '@/components/ui/textarea';
-import {Input} from '@/components/ui/input';
-import {Checkbox} from '@/components/ui/checkbox';
-import {format} from 'date-fns';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {WorkExperience} from '@/types/resume';
-import {Loader2, Edit, Trash2} from 'lucide-react';
-import {useResume} from '@/hooks/useResume';
-import {Alert, AlertDescription} from '@/components/ui/alert';
-import {Card, CardContent} from '@/components/ui/card';
-import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
-
-
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -35,11 +16,6 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
-
-
-
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
-
 
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -85,6 +61,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -171,17 +148,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           location: ''}),;
         setEditingId(null);
 
-
-
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-
-
-  };
-
-
 
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
@@ -194,9 +164,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
-
-
-  };
 
   },;
   const handleEdit = (work: WorkExperience) => {;
@@ -211,9 +178,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
-
-
-
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
@@ -492,14 +456,7 @@ if ( {) {
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-                      <Input
-                        type="date"
-                        {...field}
-                        value={field.value |''}
-                      <Input 
-                        type="date" 
-                        {...field} 
-                        value={field.value || ''}
+
                       />
                     </FormControl>
                     <FormMessage />
@@ -704,17 +661,7 @@ if ( {) {
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
-                      company_name: ''
-                      role_title: ''
-                      start_date: format(new Date(), 'yyyy-MM-dd');
-                      is_current: false
-                      description: ''
 
-                      company_name: '',
-                      role_title: '',
-                      start_date: format(new Date(), 'yyyy-MM-dd'),
-                      is_current: false,
-                      description: '',
                       location: ''})
                   } else {
                     onBack()
@@ -745,21 +692,4 @@ if ( {) {
                     Next;
                   </Button>;
                 )}
-              </div>
-            </div>
-          </form>
-        </Form>
-      </div>
-    </div>
-  )
-}
-              </div>;
-            </div>;
-          </form>;
-        </Form>;
-      </div>;
 
-    </div>);
-}
-
-;

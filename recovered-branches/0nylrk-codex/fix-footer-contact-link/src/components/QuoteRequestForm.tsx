@@ -1,8 +1,5 @@
 
 
-
-
-
 import {useState} from "react";
 import {useToast} from "@/hooks/use-toast";
 import {useNavigate} from "react-router-dom";
@@ -19,15 +16,11 @@ import {QuoteFormData} from "@/types/quotes";
 import {Sparkles} from "lucide-react";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
-
-export function QuoteRequestForm() {;
-
-
-
   const navigate = useNavigate();
   const { toast } = useToast();
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service");
   const [isSubmitting, setIsSubmitting] = useState(false);
+
 import { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
@@ -50,9 +43,6 @@ export function QuoteRequestForm() {
   const [currentStep, setCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmitting, setIsSubmitting] = useState(false),
 
-
-
-  
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -65,25 +55,20 @@ export function QuoteRequestForm() {
     budget: {
       amount: 0
       type: "fixed"
-    }
-    },
+
     contactInfo: {
       name: ""
       email: ""
       phone: ""
       company: ""
     }
-  });
-  }),
-  
+
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev
       ...data
     }))
-  }
-  },
-  
+
   const handleNext = () => {
     switch (currentStep) {
       case "service": setCurrentStep("details"),
@@ -100,9 +85,7 @@ export function QuoteRequestForm() {
       default:
         break
     }
-  }
-  },
-  
+
   const handleBack = () => {
     switch (currentStep) {
       case "details": setCurrentStep("service"),
@@ -119,24 +102,7 @@ export function QuoteRequestForm() {
       default:
         break
     }
-  }
-  const handleSubmit = async () => {
-    setIsSubmitting(true);
-    try {
-      // In a real application, you would send the data to your backend
-      console.log("Submitting form data:", formData);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-  },
-  
-  const handleSubmit = async () => {
-    setIsSubmitting(true);
-    try {
-      // In a real application, you would send the data to your backend
-      console.log("Submitting form data:", formData);
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500)),
-      
+
       toast({
         title: "Quote Request Submitted"
         description: "We've received your request and will get back to you soon."})
@@ -266,9 +232,7 @@ function QuoteRequestForm() {
     } finally {
       setIsSubmitting (false);
     }
-  }
-  },
-  
+
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":
@@ -283,10 +247,7 @@ function QuoteRequestForm() {
         return <SummaryStep formData={formData} updateFormData={updateFormData} />,
       default: return null
     }
-  }
 
-  },
-  
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
@@ -331,7 +292,6 @@ function QuoteRequestForm() {
                 >
                   {isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
-
 
 import { useState } from "react",;
 import { useToast } from "@/hooks/use-toast",;
@@ -572,9 +532,9 @@ export function QuoteRequestForm() {;
           </CardContent>;
         </Card>;
       </div>;
-
-
-
+    </div>;
+  );
 
 }
 ;
+

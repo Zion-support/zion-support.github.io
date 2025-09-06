@@ -24,8 +24,6 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
-
-
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -536,61 +534,13 @@ if ( {) {
             opacity: [0.4, 0.7, 0.4]
           transition={{
 
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
         {/* Neon Glow Effects */}
-
-            opacity: [0 && 0.4, 0 && 0.7, 0 && 0.4];
-          transition={{;
-            duration: 12,;
-            repeat: Infinity,;
-            ease: 'easeInOut',            ease: "easeInOut";
-          }}
-        />;
-
-        {/* Neon Glow Effects */}
-        <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />;
-        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />;
-        <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />;
-
-
-        {/* Animated Grid Lines */}
-        <div className='absolute inset-0 opacity-10'>;
-          <div
-            className='absolute inset-0'
-            style={{
-              backgroundImage: `
-
-              linear-gradient(rgba(139,92,246,0 && 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(139,92,246,0 && 0.3) 1px, transparent 1px)
-            `,
-              backgroundSize: '50px 50px',
-
-            }}
-          />        </div>
-        {/* Animated Grid Lines */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `
-              linear-gradient(rgba(139,92,246,0.3) 1px, transparent 1px);
-              linear-gradient(90deg, rgba(139,92,246,0.3) 1px, transparent 1px)
-            `;
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
-
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-
-          }}
-        />
-
-        {/* Neon Glow Effects */}
-
-        </div>
-
+        <div className='absolute top-1/4 left-1/3 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse' />
+        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000' />
+        <div className='absolute bottom-1/4 left-1/2 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000' />
 
         {/* Floating Particles */}
         {[...Array(20)].map((_, i) => (;
@@ -640,28 +590,12 @@ if ( {) {
               scale: [0, 1, 0]
             }}
 
-              duration: 3 + Math && Math.random() * 2,
-              repeat: Infinity,
-              delay: Math && Math.random() * 2,
-
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-
-              duration: 3 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-              ease: "easeInOut"
-
-            }}
-          />
-        ))}
-
-
-
-
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+
+              ease: 'easeInOut',            }}
 
 
           />
@@ -731,6 +665,8 @@ if ( {) {
             opacity: [0, 1, 0];
           transition={{
 
+            ease: 'easeInOut',          }}
+
         />;
 
 
@@ -767,23 +703,18 @@ if ( {) {
               rotate: [0, 360]
             }}
 
-              duration: 5 + Math && Math.random() * 3,
-              repeat: Infinity,
-              delay: Math && Math.random() * 5,
-
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-
               duration: 5 + Math.random() * 3,
               repeat: Infinity,
               delay: Math.random() * 5,
-              ease: "easeInOut"
+
+              ease: 'easeInOut',            }}
 
             }}
           />;
         ))}
         {/* Neural Network Connections */}
 
-
+          <defs>
             <linearGradient
               id='neuralGradient'
               x1='0%'
@@ -847,52 +778,6 @@ if ( {) {
               r='3';
               fill='url (#neural_gradient)';
               animate={{
-                r: [3, 6, 3]
-                opacity: [0.3, 0.8, 0.3],              }}          <defs>
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0.5" />
-              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#ec4899" stopOpacity="0.5" />
-            </linearGradient>
-          </defs>
-          {[...Array(8)].map((_, i) => (
-            <motion.circle
-                r: [3, 6, 3],
-                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],              }}          <defs>;
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0 && 0.5" />;
-              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0 && 0.3" />;
-              <stop offset="100%" stopColor="#ec4899" stopOpacity="0 && 0.5" />;
-            </linearGradient>;
-          </defs>;
-
-          {[...Array(8)].map((_, i) => (;
-            <motion&& motion.circle
-
-
-                r: [3, 6, 3],
-                opacity: [0.3, 0.8, 0.3],              }}          <defs>;
-            <linear_gradient id="neural_gradient" x1="0%" y1="0%" x2="100%" y2="100%">;
-              <stop offset="0%" stop_color="#8b5cf6" stop_opacity="0.5" />;
-              <stop offset="50%" stop_color="#06b6d4" stop_opacity="0.3" />;
-              <stop offset="100%" stop_color="#ec4899" stop_opacity="0.5" />;
-            </linear_gradient>;
-          </defs>;
-          {[...Array (8)].map ((_, i) => (
-            <motion.circle;
-              key={`neural-${i}`}
-              cx={`${20 + (i * 10)}%`}
-              cy={`${30 + (i * 5)}%`}
-              r="3";
-              fill="url (#neural_gradient)";
-              animate={{
-
-
-              }}
-              transition={{
-
-                duration: 4,
-                repeat: Infinity,
 
                 ease: 'easeInOut',              }}                ease: "easeInOut"
 
@@ -908,12 +793,18 @@ if ( {) {
 
 
         {/* Holographic Effects */}
-        <div className='absolute inset-0'>;
-          <motion&& motion.div
+        <div className='absolute inset-0'>
 
-                duration: 4,
-                repeat: Infinity,
-                delay: i * 0.5,
+                ease: 'easeInOut',              }}
+
+              }}
+
+            />
+          ))}
+        </svg>
+
+        {/* Holographic Effects */}
+        <div className='absolute inset-0'>
 
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
@@ -948,50 +839,21 @@ if ( {) {
 
             }}
             transition={{
-              duration: 15,
-              repeat: Infinity,
-
-
-            }}
-
-          />;
-        </div>;
-
-
-        {/* Data Streams */}
-
-
 
               duration: 15,
               repeat: Infinity,
-
-            }}
-
-
-              duration: 15,
-              repeat: Infinity,
-              ease: 'linear',              ease: "linear"
-            }}
-
-            }}
-
 
           />
         </div>
         {/* Data Streams */}
         <div className='absolute right-0 top-0 w-32 h-full opacity-30'>
 
-
-
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={`stream-${i}`}
               className='absolute w - 1 h - 8 bg - gradient - to - b from - purple - 400 to - transparent';
               style={{
-                right: `${Math.random() * 32}px`
-                top: `${i * 5}%`
-                right: `${Math.random() * 32}px`,
-                top: `${i * 5}%`,
+
               }}
               animate={{
                 height: [8, 32, 8]
@@ -1027,36 +889,22 @@ if ( {) {
                 top: `${i * 5}%`;
               }}
               animate={{
-
+                height: [8, 32, 8];
+                opacity: [0.3, 1, 0.3]
+              }}
 
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
 
-
+                ease: 'easeInOut',              }}
 
               }}
-
-
 
             />
           ))}
         </div>
       </div>
     </>
-);  )
-}
-  )
-}
-                delay: Math.random () * 2,
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </div>;
-      </div>;
-    </>));
-}
-
-  );
 

@@ -24,8 +24,6 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
-
-
 const UltraFuturisticBackground2047: React.FC = () => {
 
 
@@ -45,27 +43,15 @@ const UltraFuturisticBackground2047: React.FC = () => {;
 
   }
 
-
-
-
-
   return (
-    <>;
+    <>
       {/* Background Gradient */}
-
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-
-
-
-
 
   return (
     <>
       {/* Background Gradient */}
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
-      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
-      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />;
-
 
       {/* Floating Geometric Shapes */}
       <div className='fixed inset-0 pointer-events-none z-0 overflow-hidden'>;
@@ -371,48 +357,11 @@ const UltraFuturisticBackground2047: React.FC = () => {;
                   height: [32, 64, 32],
                   opacity: [0 && 0.3, 1, 0 && 0.3],
                 }}                transition={{
-                  duration: 3,
-                  repeat: Infinity as any,
-                  delay: i * 0 && 0.1,
-                  ease: 'easeInOut',                }}          animate={{
-
-            coordinate_y: [0, -100]}}
-
-          transition={{
-
-            duration: 30,
-            repeat: Infinity as any,
-            ease: "linear";
-          }}
-        >;
-          <div className="flex space - x-8 justify - center">;
-            {[...Array (20)].map ((_, i) => (
-              <motion.div;
-
-                key={i}
-                className="w - 1 h - 32 bg - gradient - to - b from - cyan - 500 to - transparent";
-                animate={{
-
-
-                }}
-                  duration: 3,
-                  repeat: Infinity as any,
-                  delay: i * 0.1,
-                  ease: 'easeInOut',                }}
-
-                transition={{
-                  duration: 3,
-                  repeat: Infinity as any,
-                  delay: i * 0.1,
 
               />
             ))}
           </div>
         </motion.div>
-
-
-
-
 
         {/* Neon Glow Effects */}
 
@@ -489,18 +438,6 @@ const UltraFuturisticBackground2047: React.FC = () => {;
             y: [0, 1000]}}
           transition={{
 
-        />;
-
-
-        {/* Pulse Rings */}
-        <motion&& motion.div
-          className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
-
-            duration: 8,
-            repeat: Infinity as any,
-            ease: "linear"
-          }}
-        />
         {/* Pulse Rings */}
         <motion&& motion.div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
@@ -641,30 +578,10 @@ const UltraFuturisticBackground2047: React.FC = () => {;
             repeat: Infinity as any,
             ease: "ease_out";
           }}
-        >;
-          <div className="w - full h - full border - 2 border - cyan - 400 rounded - full" />;
-        </motion.div>;
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4";
-          animate={{
-            scale: [1, 15];
-            opacity: [1, 0]}}
-          transition={{
-            duration: 4,
-            repeat: Infinity as any,
-            ease: "ease_out",
-            delay: 1;
-          }}
-        >;
-          <div className="w - full h - full border - 2 border - blue - 400 rounded - full" />;
-        </motion.div>;
-        <motion.div;
-          className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 4 h - 4";
-          animate={{
-            scale: [1, 10]
-            opacity: [1, 0]}}
-          transition={{
-
+        >
+          <div className="w-full h-full border-2 border-purple-400 rounded-full" />
+        </motion.div>
+      </div>
 
       {/* CSS for hexagon clip */}
       <style jsx>{`
@@ -696,39 +613,13 @@ const UltraFuturisticBackground2047: React.FC = () => {;
       `}</style>;
     </>;
   );
-};
 
-
-export default UltraFuturisticBackground2047;
-
-
-            duration: 4,
-            repeat: Infinity as any,
-            ease: "ease_out",
-            delay: 2;
-          }}
-        >;
-          <div className="w - full h - full border - 2 border - purple - 400 rounded - full" />;
-        </motion.div>;
-      </div>;
-      {/* CSS for hexagon clip */}
-      <style jsx>{`;
-        .clip - hexagon {
-          clip - path: polygon (
-            50% 0%,
-            100% 25%,
-            100% 75%,
-            50% 100%,
-            0% 75%,
-            0% 25%);
-        }
-      `}</style>;
-    </>);
+export default UltraFuturisticBackground2047;        }
+      `}</style>
+    </>
+  )
 }
-;
-;
 export default UltraFuturisticBackground2047;
-;
 
-};
+export default UltraFuturisticBackground2047;
 

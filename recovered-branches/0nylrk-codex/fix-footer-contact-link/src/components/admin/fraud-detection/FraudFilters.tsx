@@ -1,6 +1,8 @@
 
 
-
+import React from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
 
 interface FraudFiltersProps {
 
@@ -16,61 +18,10 @@ interface FraudFiltersProps {
   resetFilters: () => void
 }
 
-import React from "react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {Search, Filter} from "lucide-react";
+export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
-interface FraudFiltersProps {;
-  searchQuery: string,;
-  setSearchQuery: (value: string) => void,;
-  statusFilter: string | null,;
-  setStatusFilter: (value: string | null) => void,;
-  severityFilter: string | null,;
-  setSeverityFilter: (value: string | null) => void,;
-  contentTypeFilter: string | null,;
-  setContentTypeFilter: (value: string | null) => void,;
-  resetFilters: () => void;
-}
-
-export const FraudFilters: React.FC<FraudFiltersProps> = ({;
-
-  searchQuery;
-import React from './react';
-import { Input } from '@/components / ui / input';
-import { Button } from '@/components / ui / button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Search, Filter } from './lucide-react';
-interface FraudFiltersProps {
-  search_query: string,
-  setSearchQuery: (value: string) => void,
-  status_filter: string | null,
-  setStatusFilter: (value: string | null) => void,
-  severity_filter: string | null,
-  setSeverityFilter: (value: string | null) => void,
-  contentTypeFilter: string | null,
-  setContentTypeFilter: (value: string | null) => void,
-  reset_filters: () => void;
-}
-export const FraudFilters: React.FC < FraudFiltersProps> = ({
-  search_query;
-  setSearchQuery;
-  status_filter;
-  setStatusFilter;
-  severity_filter;
-  setSeverityFilter;
-  contentTypeFilter;
-
-  setContentTypeFilter
-  searchQuery,
-  setSearchQuery,
-  statusFilter,
-  setStatusFilter,
-  severityFilter,
-  setSeverityFilter,
-  contentTypeFilter,
   setContentTypeFilter,
+
   resetFilters}) => {
   setContentTypeFilter,;
   resetFilters}) => {;
@@ -81,10 +32,10 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
         <Input
           placeholder="Search by user or content..."
           value={searchQuery}
-
-
-      <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>
-
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="pl-10"
+        />
+      </div>
 
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Status" />
@@ -98,10 +49,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
         </SelectContent>
       </Select>
 
-
-      <Select value={severityFilter || ""} onValueChange={value => setSeverityFilter(value || null)}>
-
-
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Severity" />
         </SelectTrigger>
@@ -112,10 +59,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-
-
-      <Select value={contentTypeFilter || ""} onValueChange={value => setContentTypeFilter(value || null)}>
-
 
         <SelectTrigger className="w-[180px]">
           <SelectValue placeholder="Content Type" />
@@ -134,10 +77,6 @@ export const FraudFilters: React.FC < FraudFiltersProps> = ({
       </Button>
     </div>
   )
-
-          onChange={(e) => setSearchQuery(e && e.target.value)}
-
-};
 
 },
 import React from "react",;
@@ -225,5 +164,4 @@ interface FraudFiltersProps {;
 
 
 export default FraudFilters;
-
 

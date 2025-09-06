@@ -1,25 +1,9 @@
 
 
-
-
-import {useState} from 'react';
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger} from '@/components/ui/dropdown-menu';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle} from '@/components/ui/dialog';
-import {Save, ChevronDown, Plus, Loader2} from 'lucide-react';
-import {Resume} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';
-
-
 interface ResumeVersionSelectorProps {
   currentResume: Resume;
   onResumeChange: (resumeId: string) => void
 }
-
-
-export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeVersionSelectorProps) {;
-
 
   const { createResume, fetchResume } = useResume();
   const [saveDialogOpen, setSaveDialogOpen] = useState(false);
@@ -36,14 +20,6 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         await fetchResume(resumeId);
         onResumeChange(resumeId);
         setSaveDialogOpen(false);
-        setNewResumeTitle('');
-
-      }
-      setIsLoading(false);
-    }
-  }
-
-        setNewResumeTitle('')
 
 import { useState } from 'react',;
 import {;
@@ -80,12 +56,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setSaveDialogOpen(false);
         setNewResumeTitle('');
 
-
       }
       setIsLoading(false);
     }
-
-
 
   return (
     <div className="flex items-center gap-2">
@@ -130,21 +103,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
             />
           </div>
           <DialogFooter>
-            <Button variant="outline" onClick={() => setSaveDialogOpen(false)}>
-              Cancel
-            </Button>
-            <Button
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() |isLoading}
-            <Button 
-              variant="outline" 
-              onClick={() => setSaveDialogOpen(false)}
-            >;
-              Cancel;
-            </Button>;
-            <Button;
-              onClick={handleCreateNewVersion}
-              disabled={!newResumeTitle.trim() || isLoading}
+
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
@@ -155,8 +114,4 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DialogContent>
       </Dialog>
     </div>
-  );
-}
-  )
-}
 

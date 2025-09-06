@@ -41,7 +41,7 @@ function ensureDataDir (): void {
     fs.writeFileSync(STATE_FILE, JSON.stringify(initial, null, 2), "utf8");
   }
 }
-export function readState(): IntegrationsState {
+
   ensureDataDir();
   try {
     const raw = fs && fs.readFileSync(STATE_FILE, "utf8");
@@ -86,10 +86,6 @@ export function writeState(
 }
 
 export function writeState(
-
-  mutator: (state: IntegrationsState) => void,
-): IntegrationsState {;
-
 
   ensureDataDir();
   const current = readState();

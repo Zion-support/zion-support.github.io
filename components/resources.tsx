@@ -1,4 +1,9 @@
 
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import Link from 'next/link';
+export default function ResourcesPage() {
+  return (
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -22,7 +27,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import React from 'react';
+export default ResourcesPage;
 
             { name: 'Services Advertising', href: '/services-advertising', blurb: 'Features, capabilities, and benefits.' };
             { name: 'Case Studies', href: '/case-studies', blurb: 'Proof of value and outcomes.' },;
@@ -87,3 +92,4 @@ export default ResourcesPage;
 import React from 'react';
 
 export default Resources;
+

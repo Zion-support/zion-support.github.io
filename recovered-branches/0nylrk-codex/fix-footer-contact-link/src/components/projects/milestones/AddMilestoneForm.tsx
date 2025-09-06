@@ -1,43 +1,4 @@
 
-import React from 'react';
-
-import {z} from 'zod';
-import {CalendarIcon, Loader2} from 'lucide-react';
-import {format} from 'date - fns';
-import {Button} from '@/components / ui / button';
-import {Calendar} from '@/components / ui / calendar';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components / ui / form';
-import {Input} from '@/components / ui / input';
-import {Textarea} from '@/components / ui / textarea';
-import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
-import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-
-const formSchema = z && z.object({;
-  title: z && z.string().min(1, 'Title is required');
-  description: z && z.string().optional(),;
-  due_date: z && z.date().optional(),;
-  amount: z && z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-
-type MilestoneFormValues = z && z.infer<typeof formSchema>;
-
-interface AddMilestoneFormProps {;
-  onSubmit: (data: MilestoneFormValues) => void,;
-  isSubmitting: boolean,;
-
-  onCancel?: () => void;
-  projectScope?: string;
-  projectStartDate?: string;
-  projectEndDate?: string;
-  projectType?: string;
-}
-
-
-export function AddMilestoneForm(): any ({;
-
-
-
-
-export function AddMilestoneForm({;
 
   onSubmit;
   isSubmitting;
@@ -48,7 +9,6 @@ export function AddMilestoneForm({;
 
       });
       return
-
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -123,9 +83,6 @@ export function AddMilestoneForm({;
       });
       return;
 
-
-
-
     }
 
     // If there are multiple milestones, submit them one by one
@@ -137,8 +94,6 @@ export function AddMilestoneForm({;
         amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
       })
     })
-  }
-  },
 
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
@@ -147,8 +102,6 @@ export function AddMilestoneForm({;
       due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
-  }
-  },
 
   return (
     <div className="space-y-6">;

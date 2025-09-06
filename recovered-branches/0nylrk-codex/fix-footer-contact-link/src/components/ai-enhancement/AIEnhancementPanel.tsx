@@ -1,30 +1,4 @@
 
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
-import { Textarea  } from '@/components/ui/textarea';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-interface AIEnhancementPanelProps {
-
-interface AIEnhancementPanelProps {;
-  title: string,;
-  defaultOptions: AIEnhancementOptions,;
-  onApply: (content: string) => void,;
-
-  onClose?: () => void;
-  showInstructions?: boolean;
-  initialContent?: string;
-}
-
-
-export function AIEnhancementPanel(): any ({;
-
-
-
-
-export function AIEnhancementPanel({;
 
   title;
   defaultOptions;
@@ -46,8 +20,6 @@ export function AIEnhancementPanel({;
     if (result) {
       setGeneratedContent(result)
     }
-
-  };
 
 import React, { useState } from 'react',;
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card',;
@@ -85,11 +57,7 @@ export function AIEnhancementPanel({;
     if (result) {;
       setGeneratedContent(result);
     }
-
   },
-
-
-
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -98,21 +66,15 @@ export function AIEnhancementPanel({;
     setOptions({
       ...options
       [field]: e.target.value})
-  }
-  },
 
   const handleApply = () => {
     onApply(generatedContent);
     if (onClose) onClose()
-  }
-  },
 
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
-  }
-  },
 
   return (
     <Card className="w-full max-w-2xl mx-auto">;
@@ -160,17 +122,7 @@ export function AIEnhancementPanel({;
             />;
           </div>;
         )}
-        {/* Generate button */}
-        <Button
-          onClick={handleGenerate}
-          className="w-full"
-          disabled={isEnhancing |!options.content && !options.context}
 
-        {/* Generate button */}
-        <Button 
-          onClick={handleGenerate} 
-          className="w-full" 
-          disabled={isEnhancing || !options.content && !options.context}
         >
           {isEnhancing ? (
             <>

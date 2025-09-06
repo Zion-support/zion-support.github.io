@@ -1,4 +1,9 @@
 
+useEffect ( () => {
+  const observer = new IntersectionObserver ( ([entry]) => {
+  if (entry.isIntersecting) {
+  return () => observer.disconnect ()
+}, [threshold]);
 
   src;
   alt;
@@ -161,19 +166,12 @@ if ( {) {
       {/* Placeholder */}
       <img
         src={placeholder}
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
-        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-
 
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
-
-
       />
-
-
 
       {/* Actual Image */}
       {isInView && (;
@@ -182,23 +180,21 @@ if ( {) {
           src={src}
           alt={alt}
           onLoad={handleLoad}
-
-
-          className='w - full h - full object - cover';
+          initial={{ opacity: 0, scale: 1.1 }}
+          animate={{ opacity: isLoaded ? 1 : 0, scale: isLoaded ? 1 : 1.1 }}
+          transition={{ duration: 0.5 }}
+          className='w-full h-full object-cover'
           loading='lazy'          style={{ width, height }}
-        />)}
-    </div>);
+        />
+      )}
+    </div>
+  );
 }
-;
-export default LazyImage;          className="w - full h - full object - cover";
-          loading="lazy";
+export default LazyImage;          className="w-full h-full object-cover"
+          loading="lazy"
           style={{ width, height }}
-        />)}
-    </div>);
-}
-;
-export default LazyImage);
-}
-;
-export default LazyImage;
-;
+        />
+      )}
+
+    </div>
+

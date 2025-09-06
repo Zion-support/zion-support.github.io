@@ -1,32 +1,8 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
 
-import React, { useState } from './react';
-import Link from './next / link';
-import { motion  } from './framer-motion';
-
-import {
   ArrowRight,
   Award,
   BarChart3,
-  Shield,
-  Code,
-  Zap,
-  Globe,
-  Home,
-  Building,
-  FileText,
-  MessageSquare,
-  Calendar,
-  ShoppingCart,
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+
   BookOpen,
   Brain,
   Building,
@@ -61,63 +37,16 @@ origin/automation-improvements-final
   Star,
   Target,
   TrendingUp,
-ursor/integrate-build-improve-and-re-verify-8f7d
+
   Truck,
   Users,
   X,
   Zap,;
 
 } from "lucide-react";
-  Truck,
-  Users,
-  X,
-  Zap
-  Clock,
-  DollarSign,
-  Cpu,
-  Rocket,
-  Car,
-  Sprout,
-  Wifi,
-  GraduationCap,
-  Award as Recognition,
-  Star as Rating,
-  Users as People,
-  Settings as Config,
-  BarChart3 as Analytics,
-  Shield as Security,
-  Code as Programming,
-  Zap as Lightning,
-  Globe as World,
-  Home as House,
-  Building as Office,
-  FileText as Document,
-  MessageSquare as Chat,
-  Calendar as Schedule,
-  ShoppingCart as Cart,
-  BookOpen as Book,
-  Camera as Photo,
-  Music as Audio,
-  Gamepad2 as Gaming,
-  Heart as Love,
-  Truck as Delivery,
-  Calculator as Math,
-  CreditCard as Payment,
-  Lock as Secure,
-  Eye as View,
-  Target as Goal,
-  TrendingUp as Growth,
-  Clock as Time,
-  DollarSign as Money;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-} from 'lucide-react';
-origin/automation-improvements-final
 
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import {
+} from 'lucide-react';
+
   ArrowRight
   Award
   BarChart3
@@ -160,7 +89,7 @@ import {
   X
   Zap
 } from "lucide-react";
-origin/main
+
 const navigationItems = [
   {
     title: "Services"
@@ -617,19 +546,9 @@ const quickLinks = [;
   { title: "API Docs", href: "/api-docs", icon: Code },;
 ];
 
-export default function Navigation() {;
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
-
-export default function Navigation() {;
-
-  const [isOpen, setIsOpen] = useState(false);
-  const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
-
-
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">;
       {/* Top Bar */}

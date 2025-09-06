@@ -1,5 +1,9 @@
 
 
+const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+
+ const filteredJobs = selectedDepartment === 'all' ? jobOpenings : jobOpenings.filter (job => job.department === selectedDepartment);
+
 > <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Join Our Team </h1> </p> </motion.div> {
   /* Company Culture */
 }<motion.div </div>) )
@@ -81,11 +85,6 @@ import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import {motion} from 'framer-motion';
 import {Users, Rocket, Brain, Globe, Award, Zap, Heart, Star, ArrowRight, CheckCircle, Briefcase} from 'lucide-react';
-
-
-
-export default function Careers() {;
-
 
   const [selectedDepartment, setSelectedDepartment] = useState('all');
   const departments = [
@@ -262,13 +261,10 @@ function Careers() {
           <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />
         </Head>
 
-
-
-
-
       <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.div 
+
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -282,129 +278,9 @@ function Careers() {
           </p>
         </motion.div>
 
+        {/* Company Culture */}
+        <motion.div 
 
-
-
-
-export default function Careers() {;
-  const [selectedDepartment, setSelectedDepartment] = useState('all');
-
-  const departments = [;
-    { id: 'all', name: 'All Departments' },;
-    { id: 'engineering', name: 'Engineering' },;
-    { id: 'ai-research', name: 'AI Research' },;
-    { id: 'quantum', name: 'Quantum Computing' },;
-    { id: 'space-tech', name: 'Space Technology' },;
-    { id: 'sales', name: 'Sales & Business Development' },;
-    { id: 'marketing', name: 'Marketing' },;
-    { id: 'operations', name: 'Operations' }
-  ];
-
-  const jobOpenings = [;
-    {;
-      id: 1,;
-      title: 'Senior AI Engineer',;
-      department: 'ai-research',;
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',;
-      experience: '5+ years',;
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',;
-      requirements: [;
-        'Advanced degree in Computer Science, AI, or related fieldExpertise in Python, TensorFlow, PyTorchExperience with large language models and neural networksStrong problem-solving and analytical skills';
-      ];
-    };
-    {;
-      id: 2,;
-      title: 'Quantum Computing Researcher',;
-      department: 'quantum',;
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',;
-      experience: '3+ years',;
-      description: 'Research and develop quantum algorithms and quantum computing solutions.',;
-      requirements: [;
-        'PhD in Physics, Computer Science, or related fieldExperience with quantum programming languages (Qiskit, Cirq)Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background';
-      ];
-    };
-    {;
-      id: 3,;
-      title: 'Space Technology Engineer',;
-      department: 'space-tech',;
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',;
-      experience: '4+ years',;
-      description: 'Design and develop innovative space technology solutions and satellite systems.',;
-      requirements: [;
-        'Degree in Aerospace Engineering, Physics, or related fieldExperience with satellite design and space systemsKnowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations';
-      ];
-    };
-    {;
-      id: 4,;
-      title: 'Full Stack Developer',;
-      department: 'engineering',;
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',;
-      experience: '3+ years',;
-      description: 'Build scalable web applications and cloud-based solutions.',;
-      requirements: [;
-        'Experience with React, Node && Node.js, and cloud platformsKnowledge of modern web technologies and APIsUnderstanding of software architecture and design patternsExperience with DevOps and CI/CD practices';
-      ];
-    };
-    {;
-      id: 5,;
-      title: 'Business Development Manager',;
-      department: 'sales',;
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',;
-      experience: '5+ years',;
-      description: 'Drive business growth through strategic partnerships and client relationships.',;
-      requirements: [;
-        'Proven track record in B2B sales and business developmentExperience in technology or consulting industriesStrong networking and relationship-building skillsUnderstanding of emerging technologies and market trends';
-      ];
-    }
-  ];
-
-  const companyValues = [;
-    {;
-      icon: <Brain className="w-8 h-8" />,;
-      title: 'Innovation First',;
-      description: 'We push boundaries and explore new technologies to solve complex problems.';
-    };
-    {;
-      icon: <Heart className="w-8 h-8" />,;
-      title: 'People Matter',;
-      description: 'Our team is our greatest asset, and we invest in their growth and well-being.';
-    };
-    {;
-      icon: <Globe className="w-8 h-8" />,;
-      title: 'Global Impact',;
-      description: 'We create solutions that make a difference in the world.';
-    };
-    {;
-      icon: <Star className="w-8 h-8" />,;
-      title: 'Excellence',;
-      description: 'We strive for the highest quality in everything we do.';
-    }
-  ];
-
-  const benefits = [;
-    'Competitive salary and equity packagesComprehensive health, dental, and vision insuranceFlexible work arrangements and remote work optionsProfessional development and training programsGenerous paid time off and holidays401(k) with company matchingModern technology and equipmentCollaborative and inclusive work environment';
-  ];
-
-  const filteredJobs = selectedDepartment === 'all' ;
-    ? jobOpenings ;
-    : jobOpenings && jobOpenings.filter(job => job && job.department === selectedDepartment);
-
-  return (
-    <UltraFuturisticBackground>;
-      <div className="min-h-screen">;
-        <Head>;
-          <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>;
-          <meta name="description" content="Join Zion Tech Group's team of innovators. Explore career opportunities in AI, quantum computing, and emerging technologies. Remote work, competitive benefits, and cutting-edge projects." />;
-        </Head>;
-
-      <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8">;
-        {/* Hero Section */}
-        <motion&& motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6 }}
@@ -434,15 +310,12 @@ export default function Careers() {;
                 <p className="text-gray-300 text-sm">{value && value.description}</p>;
               </div>;
             ))}
-
-          </div>;
-        </motion && motion.div>;
-
-
-
+          </div>
+        </motion.div>
 
         {/* Benefits */}
-        <motion&& motion.div 
+        <motion.div 
+
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
@@ -456,13 +329,13 @@ export default function Careers() {;
                   <span className="text-gray-300">{benefit}</span>;
                 </div>;
               ))}
-
-
-
-
+            </div>
+          </div>
+        </motion.div>
 
         {/* Job Openings */}
         <motion.div 
+
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -519,8 +392,6 @@ export default function Careers() {;
             ))}
           </div>
 
-
-
           {/* Job Listings */}
           <div className="space-y-6">;
             {filteredJobs && filteredJobs.map((job) => (;
@@ -548,13 +419,43 @@ export default function Careers() {;
                     </div>;
                   </div>;
                   <a
-
-
-
-
+                    href={`/contact?position=${encodeURIComponent(job.title)}`}
+                    className="mt-4 lg:mt-0 inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                  >
+                    Apply Now
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </a>
+                </div>
+                <p className="text-gray-300 mb-4">{job.description}</p>
+                <div>
+                  <h4 className="text-white font-semibold mb-2">Requirements:</h4>
+                  <ul className="space-y-1">
+                    {job.requirements.map((req, index) => (
+                      <li key={index} className="flex items-start text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                        {req}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          {filteredJobs.length === 0 && (
+            <div className="text-center py-12">
+              <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>
+              <p className="text-gray-500">
+                We don't have any open positions in this department at the moment.
+                Check back later or send us your resume for future opportunities.
+              </p>
+            </div>
+          )}
+        </motion.div>
 
         {/* General Application */}
         <motion.div 
+
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -858,4 +759,3 @@ export default function Careers() {;
 
 export default CareersPage;
 
-export default CareersPage;

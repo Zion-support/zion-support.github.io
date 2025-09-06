@@ -1,15 +1,4 @@
-import Link from "next/link";
-export const metadata = {title: "Events - Zion Tech Group | Conferences, Webinars & Workshops";
-  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.";
-  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"}
-export default function EventsPage() {return (;
-import Link from "next/link",;
-export const metadata = {;
-  title: "Events - Zion Tech Group | Conferences, Webinars & Workshops",;
-  description: "Join Zion Tech Group at upcoming technology events, conferences, webinars, and workshops. Network with industry leaders and learn about the latest innovations.",;
-  keywords: "events, conferences, webinars, workshops, technology events, Zion Tech Group, AI conferences, quantum computing events"},;
-export default function EventsPage() {;
-  return (;
+
     <div className="min-h-screen">;
 import Link from './next / link';,
 export const metadata = {
@@ -50,8 +39,7 @@ function EventsPage() {
                   Zion Tech Summit 2025;
                 </h2>;
                 <p className="text-gray-300 text-lg mb-6 leading-relaxed">;
-                  Our flagship annual conference bringing together technology leaders, innovators;
-                  Our flagship annual conference bringing together technology leaders, innovators,;
+
                   and visionaries to explore the future of AI, quantum computing, and enterprise;
                   technology solutions.;
                 </p>;
@@ -121,8 +109,7 @@ function EventsPage() {
               </div>;
               <h3 className="text-xl font-semibold mb-3">Conferences</h3>;
               <p className="text-gray-400 mb-4">;
-                Large-scale industry events featuring keynote speakers, panel discussions;
-                Large-scale industry events featuring keynote speakers, panel discussions,;
+
                 and networking opportunities;
               </p>;
               <Link href="/events / category / conferences" className="text - blue - 400 hover:text - blue - 300 text - sm font - medium">;
@@ -137,8 +124,7 @@ function EventsPage() {
               </div>;
               <h3 className="text-xl font-semibold mb-3">Webinars</h3>;
               <p className="text-gray-400 mb-4">;
-                Online educational sessions covering specific topics, technologies;
-                Online educational sessions covering specific topics, technologies,;
+
                 and industry trends;
               </p>;
               <Link href="/events / category / webinars" className="text - purple - 400 hover:text - purple - 300 text - sm font - medium">;
@@ -222,8 +208,7 @@ function EventsPage() {
                 Quantum Computing Fundamentals;
               </h3>;
               <p className="text-gray-400 mb-4 leading-relaxed">;
-                Hands-on workshop covering the basics of quantum computing, qubits;
-                Hands-on workshop covering the basics of quantum computing, qubits,;
+
                 and quantum algorithms for beginners and intermediate developers.;
               </p>;
               <div className="flex items - center text - sm text - gray - 400 mb - 4">;

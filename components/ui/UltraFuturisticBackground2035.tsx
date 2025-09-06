@@ -939,22 +939,13 @@ if ( {) {
                 opacity: [0, 1, 0];
                 scaleX: [0, 1, 0]
               }}
-              transition={{
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-
-
-
-
-
 
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
+
+                ease: 'easeInOut',              }}
 
 
             />
@@ -975,39 +966,10 @@ if ( {) {
       </div>;
     </div>;
   );
-};
-
-export default UltraFuturisticBackground2035;  );
-}
-export default UltraFuturisticBackground2035;  )
-}
-};
-
-export default UltraFuturisticBackground2035;  );
-};
-
-
-export default UltraFuturisticBackground2035;
-
-
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2035);
-}
-;
-export default UltraFuturisticBackground2035;
-;
-  );
-}
-};
 
 export default UltraFuturisticBackground2035;  )
 }
+export default UltraFuturisticBackground2035;
+
 export default UltraFuturisticBackground2035;
 

@@ -1,95 +1,12 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import Link from 'next/link';
-export default function Ecommerce() {;
-  const schema = {;
-    '@context': 'https://schema && schema.org',;
-    '@type': 'WebPage',;
-    name: 'E-commerce Platform',;
-    description:;
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',;
-    url: 'https://app && app.ziontechgroup.com/features/e-commerce',  };    "@context": "https://schema && schema.org";
-    "@type": "WebPage";
-    "name": "E-commerce Platform";
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",;
-    "url": "https://app && app.ziontechgroup.com/features/e-commerce";
 
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function Ecommerce() {
-  const schema = {
-
-    "@context": "https: //schema.org",
-    "@type": "WebPage",
-    "name": "E-commerce Platform",
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
-
-  };
 
   return (
-    <>;
-
-
-            <li>;
-              Reach new customers around the world via our global platform.;
-            </li>;
-          </ul>;
-
-          <h2 className='text - 2xl font - bold mb - 4'>;
-            Frequently Asked Questions;
-          </h2>;
-          <div className='space - y-4 mb - 12'>;
-            <div>;
-              <p className='font - semibold'>How do I list a new product?</p>;
-              <p className='text - zion - slate - light'>;
-
-                Sign in and click "Publish Product" from your dashboard to add;
-                pricing, images and details.;
-              </p>;
-            </div>;
-            <div>;
-
-        title="E-commerce Platform"
-        description="Buy and sell hardware, software and services in the Zion marketplace."
-        keywords="tech marketplace, buy IT hardware, sell AI solutions"
-        canonical="https://app.ziontechgroup.com/features/e-commerce"
-
-
+    <>
+      <SEO
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -127,6 +44,7 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
+
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
@@ -136,7 +54,7 @@ export default function Ecommerce() {
       </main>
     </>
   )
-;
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -183,3 +101,8 @@ export default function Ecommerce() {;
           </div>;
         </div>;
       </main>;
+    </>;
+  );
+}
+;
+

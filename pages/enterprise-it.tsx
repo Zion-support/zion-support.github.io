@@ -1,5 +1,10 @@
 
 
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
+
 export default function EnterpriseITPage() {
   const features = [
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
@@ -15,8 +20,9 @@ export default function EnterpriseITPage() {_const _features = [
     {_name: 'Cloud Cost Optimizer', _href: '/cloud-cost-optimizer'},
     {_name: 'Data Pipeline Observability', _href: '/data-pipeline-observability'},
     {_name: 'Uptime & SLO Monitor', _href: '/uptime-slo-monitor'}];
-ursor/fix-lint-push-and-merge-to-main-ce13
+
   return (_<Layout>
+
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
         <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />
@@ -31,11 +37,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Enterprise IT</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Ship secure, reliable platforms with measurable business outcomes.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/contact" className="px-8 py-4">Get a Roadmap</a>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
-              <a href="/contact" className="px-8 py-4">Get a Roadmap</Link>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
-
 
             </div>
           </header>
@@ -57,10 +58,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-
-
-  );
-};
 
                 </Link>
               ))  } catch (error) {
@@ -137,7 +134,4 @@ function EnterpriseITPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-
 

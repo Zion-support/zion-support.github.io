@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
 
-
+  const dir = resolveDataPath(path.join("dataroom", section));
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
   const section = String(req && req.query.section || "General");

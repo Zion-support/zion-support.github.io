@@ -1,34 +1,8 @@
 
-import { GradientHeading } from './GradientHeading';
-import { Link } from './react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users } from './lucide-react';
-const categories = [;
-  {
-    title: "Services",
-    description: "On - demand IT support, consulting, development, and more";
-    icon: <Briefcase className="w - 10 h - 10" />,
-    link: "/services",
-    color: "from - purple - 500 to - indigo - 600"},
-
-  {
-    title: "Talents"
-    description: "Connect with AI experts, developers, and tech specialists";
-
-    icon: <Users className="w - 10 h - 10" />,
-    link: "/talent",
-    color: "from - cyan - 500 to - blue - 600"},
-
-  {
-    title: "Equipment"
-    description: "Rent or buy specialized hardware, servers, and devices";
-
 
 import { GradientHeading } from "./GradientHeading",
 import { Link } from "react-router-dom",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
-
-
-
 
 const categories = [
   {
@@ -49,6 +23,7 @@ const categories = [
     icon: <HardDrive className="w-10 h-10" />,
     link: "/equipment",
     color: "from-amber-500 to-orange-600"},
+
   {
     title: "Innovation"
     description: "Discover cutting-edge solutions and tech breakthroughs"
@@ -58,7 +33,15 @@ const categories = [
 const specialServices = [
   {
 
+  }
+];
 
+interface CategoriesSectionProps {
+  showTitle?: boolean
+
+import { GradientHeading } from "./GradientHeading",;
+import { Link } from "react-router-dom",;
+import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",;
 const categories = [;
   {;
     title: "Services",;
@@ -95,7 +78,6 @@ const specialServices = [;
 
 interface CategoriesSectionProps {;
   showTitle?: boolean;
-
 
 }
 
@@ -206,8 +188,20 @@ function CategoriesSection() {
                 {service && service.title}
               </Link>;
             ))}
+          </div>
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            to="/categories"
+            className="text-zion-cyan border-b border-zion-cyan hover: border-zion-cyan-dark transition-colors"
+          >
+            View All Categories →
+          </Link>
+        </div>
+      </div>
+    </section>
+  )
 
-};
           </div>;
         </div>;
 
@@ -231,6 +225,5 @@ function CategoriesSection() {
     </section>);
 }
 
-
-
 ;
+

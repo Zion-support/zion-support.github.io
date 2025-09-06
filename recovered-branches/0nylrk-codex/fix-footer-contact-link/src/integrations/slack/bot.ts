@@ -11,16 +11,10 @@ interface SlackAck {
 interface SlackRespond {
   (text: string): Promise < void>;
 }
-
-// Define console type to avoid TypeScript errors;
-
+// Define console type to avoid TypeScript errors
 interface SafeConsole {
-  log: (message: string) => void;
+  log: (message: string) => void
 }
-
-
-
-
 
 // Declare available globals
 declare const globalThis: {
@@ -50,9 +44,6 @@ class MockApp {
 
     if (safeConsole && safeConsole.log) {
 
-
-      safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`)
-
 ;
 // Declare available globals;
 declare const globalThis: {;
@@ -78,14 +69,10 @@ class MockApp {;
     if (safeConsole && safeConsole.log) {;
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port || 3000}!`);
 
-
-
     }
     return Promise.resolve()
   }
 }
-
-
 
 // Create a mock app instance
 const app = new MockApp();
@@ -96,6 +83,7 @@ async function askZionGPT(prompt: string): Promise<string> {
 
   if (safeConsole && safeConsole.log) {
     safeConsole.log(`ZionGPT was asked: ${prompt}`)
+
 ;
 // Create a mock app instance;
 const app = new MockApp(),;
@@ -105,13 +93,9 @@ async function askZionGPT(prompt: string): Promise<string> {;
   if (safeConsole && safeConsole.log) {;
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
 
-
-
   }
   return `AI response to: ${prompt}`
 }
-
-
 
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {
   await ack();
@@ -130,6 +114,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       const project = args.join(' ');
       await respond(`Tracking project **${project}** - feature coming soon.`);
       break
+
 ;
 app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, ack: SlackAck, respond: SlackRespond }) => {;
   await ack(),;
@@ -144,28 +129,21 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
       await respond(answer),;
       break;
     }
+    case 'track-project': {;
+      const project = args.join(' '),;
+      await respond(`Tracking project **${project}** - feature coming soon.`),;
+      break;
+
+    }
+    case 'help':
+    default: await respond(
+        'Commands:\n' +
+          '`/zion post-job` - post a new job\n' +
+          '`/zion suggest-talent [skills]` - AI talent suggestions\n' +
+          '`/zion track-project [name]` - project status\n' +
+          '`/zion help` - show this list'
+      )
   }
-});
-// Mock startup with safer environment access
-(async () => {
-  // Get PORT from environment or use default
-  const env = typeof globalThis !== 'undefined' && globalThis.process ?
-    globalThis.process.env : {}
-  const port = env.PORT ? Number(env.PORT) : 3000;
-  await app.start(port)
-})();
-export default app;
-
-}),;
-// Mock startup with safer environment access;
-(async () => {
-  // Get PORT from environment or use default;
-
-  const env = typeof globalThis !== 'undefined' && globalThis.process ?;
-    globalThis.process.env : {},;
-  const port = env.PORT ? Number(env.PORT) : 3000,;
-  await app.start(port);
-})(),;
-
 
 export default app;
+

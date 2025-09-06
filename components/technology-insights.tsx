@@ -1,5 +1,4 @@
-import React from 'react',
-import React from 'react';
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function TechnologyInsightsPage() {
@@ -9,13 +8,6 @@ export default function TechnologyInsightsPage() {
       id: 'quantum-computing'
       title: 'Quantum Computing in 2025'
       description:
-
-
-        'Exploring the latest developments in quantum computing and their implications for AI and automation.',      category: 'Emerging Tech',
-      readTime: '15 min read',
-      featured: true;
-    };
-
 
     {
       id: 'edge-ai'
@@ -196,123 +188,11 @@ class ErrorBoundary extends React.Component {
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
-                      Read More <span className='ml-1'>→</span>                    </Link>      </Head>
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
-        <main className="container mx-auto px-6 py-12">
-          <section className="text-center mb-16">
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
-              Technology Insights
-            </h1>
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies
-            </p>
-          </section>
-          <section className="mx-auto max-w-7xl">
-            {/* Technology Trends */}
-            <div className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {technologyTrends.map((trend, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend.category}</span>
-                      <span className="text-white/60 text-sm">{trend.readTime}</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend.title}</h3>
-                    <p className="text-white/70 mb-4">{trend.description}</p>
-                    <Link
-                      href={`/blog/${trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
-                    >
-                      Read More <span className="ml-1">→</span>
-                    </Link>
-                      Read More <span className='ml-1'>→</span>                    </Link>
-
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-
-      <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white'>;
-        <main className='container mx-auto px-6 py-12'>;
-          <section className='text-center mb-16'>;
-            <h1 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent'>;
-              Technology Insights;
-            </h1>;
-            <p className='text-xl text-white/80 max-w-3xl mx-auto'>;
-        <meta;
-          name='description';
-          content="Explore Zion Tech Group's technology insights, research, and thought leadership in AI, automation, and emerging technologies.";
-        />;
-        <meta;
-          property='og:title';
-          content='Technology Insights | Zion Tech Group';
-        />;
-        <meta;
-          property='og:description';
-          content='Research insights, technology trends, and thought leadership in AI and automation.';
-        />;
-        <meta name='twitter:card' content='summary_large_image' />;
-      </Head>;
-      <div className='min - h-screen bg - gradient - to - br from - indigo - 950 via - purple - 950 to - slate - 950 text - white'>;
-        <main className='container mx - auto px - 6 py - 12'>;
-          <section className='text - center mb - 16'>;
-            <h1 className='text - 5xl font - extrabold mb - 6 bg - gradient - to - r from - cyan - 400 to - fuchsia - 400 bg - clip - text text - transparent'>;
-              Technology Insights;
-            </h1>;
-            <p className='text - xl text - white / 80 max - w-3xl mx - auto'>;
-
-              Research insights, technology trends, and thought leadership in;
-              AI, automation, and emerging technologies;
-            </p>;
-          </section>;
-
 
                   </div>
                 ))}
               </div>
             </div>
-
-
-                      href={`/blog/${trend && trend.id}`}
-                      className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;
-                      Read More <span className='ml-1'>→</span>                    </Link>      </Head>;
-
-      <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">;
-        <main className="container mx-auto px-6 py-12">;
-          <section className="text-center mb-16">;
-            <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">;
-              Technology Insights;
-            </h1>;
-            <p className="text-xl text-white/80 max-w-3xl mx-auto">;
-              Research insights, technology trends, and thought leadership in AI, automation, and emerging technologies;
-            </p>;
-          </section>;
-
-          <section className="mx-auto max-w-7xl">;
-            {/* Technology Trends */}
-            <div className="mb-16">;
-              <h2 className="text-3xl font-bold mb-8 text-center text-cyan-400">Latest Technology Trends</h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-                {technologyTrends && technologyTrends.map((trend, index) => (;
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">;
-                    <div className="flex items-center justify-between mb-4">;
-                      <span className="px-3 py-1 bg-fuchsia-400/20 text-fuchsia-400 text-sm rounded-full">{trend && trend.category}</span>;
-                      <span className="text-white/60 text-sm">{trend && trend.readTime}</span>;
-                    </div>;
-                    <h3 className="text-xl font-bold mb-3 text-white">{trend && trend.title}</h3>;
-                    <p className="text-white/70 mb-4">{trend && trend.description}</p>;
-                    <Link
-                      href={`/blog/${trend && trend.id}`}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">;
-                      Read More <span className="ml-1">→</span>;
-                    </Link>;
-                  </div>;
-                ))}
-              </div>;
-            </div>;
-
-            {/* Research Areas */}
-
 
             {/* Research Areas */}
             <div className='mb-16'>
@@ -320,8 +200,6 @@ class ErrorBoundary extends React.Component {
                 Research Focus Areas
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-
-
 
                 {researchAreas.map((area, index) => (
                   <div
@@ -369,21 +247,12 @@ class ErrorBoundary extends React.Component {
               </div>
             </div>
 
-              </div>;
-            </div>;
-
-
-            {/* Whitepapers */}
-
-
             {/* Whitepapers */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
                 Research Whitepapers
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-
-
 
                 {whitepapers.map((paper, index) => (
                   <div
@@ -405,33 +274,11 @@ class ErrorBoundary extends React.Component {
                       href={paper.downloadUrl}
                       className='inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors'
                     >
-                      Download PDF <span className='ml-1'>→</span>                    </Link>                {whitepapers.map((paper, index) => (
-                  <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="px-3 py-1 bg-blue-400/20 text-blue-400 text-sm rounded-full">{paper.category}</span>
-                      <span className="text-white/60 text-sm">{paper.pages} pages</span>
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white">{paper.title}</h3>
-                    <p className="text-white/70 mb-4">{paper.description}</p>
-                    <Link
-                      href={paper.downloadUrl}
-                      className="inline-flex items-center text-fuchsia-400 hover:text-fuchsia-300 transition-colors"
-                    >
-                      Download PDF <span className="ml-1"></span>
-                    </Link>
-                      Download PDF <span className='ml-1'>→</span>                    </Link>
-
-                    </Link>
-
 
                   </div>
                 ))}
               </div>
             </div>
-
-
-
-
 
             {/* Innovation Lab */}
             <div className='mb-16'>
@@ -440,10 +287,6 @@ class ErrorBoundary extends React.Component {
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 items-center'>
-
-
-
-
 
                   <div>
                     <h3 className='text-2xl font-bold mb-4 text-cyan-400'>
@@ -732,20 +575,10 @@ class ErrorBoundary extends React.Component {
       </div>
     </>
 
-                  Read Our Blog;
-                </Link>;
-              </div>;
-            </div>;
-          </section>;
-        </main>;
-      </div>;
-
+}
 
 }
+
   );
 }
-}
-  );
-}
-    </>);
-}
+

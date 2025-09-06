@@ -1,6 +1,8 @@
 
 
-
+import React from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",
 
 interface ChatMessageProps {
 
@@ -10,9 +12,7 @@ interface ChatMessageProps {
   timestamp: Date
 }
 
-
-
-
+export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
 
   return (
 
@@ -34,24 +34,14 @@ interface ChatMessageProps {
         )}
       </Avatar>
       <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
-        isUser
-          ? "bg-zion-purple text-white"
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
-        isUser 
-          ? "bg-zion-purple text-white" 
+
           : theme === "dark"
             ? "bg-zion-blue-light text-white"
             : "bg-gray-100 text-gray-800"
       )}>
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />
         <div className={cn(
-          "text-xs mt-1";
-          isUser
-            ? "text-white/70"
-          "text-xs mt-1",
-          isUser 
-            ? "text-white/70" 
+
             : theme === "dark"
               ? "text-gray-300"
               : "text-gray-500"
@@ -69,9 +59,7 @@ function formatMessageWithLinks(message: string): string {
   let formattedMessage = message.replace(
     urlRegex
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'
-  );
-  ),
-  
+
   // Replace help center references like [Getting Started]
   const helpCenterRegex = /\[([^\]]+)\]/g
   formattedMessage = formattedMessage.replace(
@@ -80,9 +68,6 @@ function formatMessageWithLinks(message: string): string {
   )
 
   return formattedMessage
-
-
-
 
 import React from "react",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
@@ -158,9 +143,6 @@ function formatMessageWithLinks(): any (message: string): string {;
 
   return formattedMessage;
 
-
-
-
 }
 import React from './react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -178,3 +160,4 @@ export /**
 function ChatMessage() {
   const { theme } = use_theme ();
 ;
+

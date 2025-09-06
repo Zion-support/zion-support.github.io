@@ -48,28 +48,17 @@ import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
-  Brain
+
+  TrendingUp,;
+  Shield,;} from 'lucide-react';import { ;
+
+  Brain;
   MessageSquare
   Image
   Video
   Code
   FileText
   Zap
-  Star
-  ExternalLink
-  CheckCircle
-  TrendingUp
-  Shield;} from 'lucide-react';import {
-  Brain,
-  MessageSquare,
-  Image,
-  Video,
-  Code,
-  FileText,
-  Zap,
-  Star,
-  ExternalLink,
-  CheckCircle,
 
 
 
@@ -85,17 +74,13 @@ import {
   CheckCircle;
   TrendingUp;
 
-
-
-
-
-        'Advanced reasoning & analysis',
-        'Web browsing & real-time info',
-        'Plugin ecosystem access',
-        'Code generation & debugging',
-        'Professional writing assistance',
-      ],      pricing: '$20/month',        'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance';
-
+export default function AiToolsPage() {
+  const aiTools = [
+    {
+      icon: <Brain className='w-8 h-8 text-white' />
+      description:
+        'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.'
+      features: [
 
       ];
       pricing: '$20/month'
@@ -255,45 +240,6 @@ export default function AiToolsPage() {;
       description:
         'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.'
       features: [
-        'Content generation'
-        'Brand voice training'
-        'SEO optimization'
-        'Team collaboration'
-        'Enterprise integrations'
-      ],      pricing: '$39-125/month',        'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
-      ];
-      pricing: '$39-125/month'
-      marketPrice: '$40-150/month'
-      website: 'https://jasper.ai'
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600'
-      textColor: 'text-teal-400'
-      gradient: 'from-teal-400 to-cyan-500'
-      popular: false
-      category: 'Content Creation'
-    },  ];      category: 'Content Creation'
-    }
-        'Advanced reasoning abilities',
-        'Document analysis',
-        'Code generation',
-        'Creative writing',
-        'Research assistance',
-      ],      pricing: '$20 / month',    {
-      icon: <MessageSquare className="w - 8 h - 8 text - white" />,
-      title: 'Claude Pro',
-      description: 'Anthropic's advanced AI assistant with superior reasoning, analysis, and document processing capabilities.';
-      features: [;
-        'Advanced reasoning abilities_document analysis_code generation_creative writing_research assistance';
-      ];
-
-      pricing: '$20 / month',
-      market_price: '$20 / month',
-      website: 'https://claude.ai',
-      color: 'bg - gradient - to - br from - orange - 500 to - red - 600',
-      text_color: 'text - orange - 400',
-      gradient: 'from - orange - 400 to - red - 500',
-      popular: false,
-
-    },  ];
 
   ];
 
@@ -544,19 +490,11 @@ export default function AiToolsPage() {;
         </div>
       </section>
 
-
-
-
-
       {/* AI Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Curated AI Tools & Services
             </h2>
@@ -760,18 +698,11 @@ export default function AiToolsPage() {;
         </div>
       </section>
 
-
-
-
-
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-              AI Tool Categories
-
 
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -893,19 +824,11 @@ export default function AiToolsPage() {;
         </div>
       </section>
 
-
-
-
-
       {/* AI Implementation Guide */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Getting Started with AI Tools
             </h2>
@@ -1181,5 +1104,4 @@ export default function AiToolsPage() {;
               className="bg-cursor-blue hover:bg-cursor-blue-dark"
               Explore More Tools
             </Button>
-            <Button
 

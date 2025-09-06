@@ -1,21 +1,5 @@
 
 
-
-  title: string,
-  isOpen: boolean,
-  onClose: () => void,
-  onApply: (content: string) => void,
-  defaultOptions: AIEnhancementOptions,
-  initialContent?: string
-}
-
-export function AIEnhancementDialog({;
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
-
 import React from 'react',;
 import {;
   Dialog,;
@@ -47,14 +31,13 @@ export function AIEnhancementDialog({
   onClose,
   onApply,
   defaultOptions,
+
   initialContent
 }: AIEnhancementDialogProps) {
 
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
-  }
-  },
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>;

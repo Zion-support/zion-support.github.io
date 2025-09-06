@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { requireSuperadminApi } from '../../../utils/api/auth';
 
-
-
-
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+
   if (!requireSuperadminApi(req, res)) return;
 
   const rows = [
@@ -19,5 +19,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
 
   res.status(200).send(csv)
-}
-}
+

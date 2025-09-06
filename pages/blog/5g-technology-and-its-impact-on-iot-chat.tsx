@@ -11,14 +11,8 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
 
-
-
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-        <Link href="/blog"><a>Back to Blog</Link></Link>
-
       </main>
     </div>
   )
 },
-
 

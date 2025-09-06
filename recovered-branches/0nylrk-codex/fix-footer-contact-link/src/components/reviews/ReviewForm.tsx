@@ -1,36 +1,13 @@
 
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {useForm} from "react-hook-form";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
-import {Switch} from "@/components/ui/switch";
-import {Review} from "@/types/reviews";
-interface ReviewFormValues {;
 
-import { useState } from './react';
-import { Star } from './lucide-react';
-import { use_form } from './react - hook - form';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
-import { Switch } from '@/components / ui / switch';
-import { Review } from '@/types / reviews';
-interface ReviewFormValues {
-  rating?: number;
-  review_text?: string;
-  communication_rating?: number;
-  quality_rating?: number;
-  timeliness_rating?: number;
-  would_work_again?: boolean;
-  is_anonymous?: boolean;
-}
+import { useState } from "react",
+import { Star } from "lucide-react",
+import { useForm } from "react-hook-form",
 
-
-
+  FormMessage} from "@/components/ui/form",
+import {
+  RadioGroup;
+  RadioGroupItem} from "@/components/ui/radio-group",
 
 interface ReviewFormValues {
   rating?: number,
@@ -40,28 +17,6 @@ interface ReviewFormValues {
   timeliness_rating?: number,
   would_work_again?: boolean,
   is_anonymous?: boolean
-}
-interface ReviewFormProps {
-
-
-interface ReviewFormProps {;
-  projectId: string,;
-  revieweeId: string,;
-  revieweeName: string,;
-  onSubmit: (data: any) => Promise<boolean>, ;
-  defaultValues?: Review;
-  isSubmitting: boolean;
-}
-
-
-export function ReviewForm(): any ({;
-
-  projectId;
-  revieweeId;
-  revieweeName;
-  onSubmit;
-  defaultValues;
-
 
 import { useState } from "react",;
 import { Star } from "lucide-react",;
@@ -105,11 +60,9 @@ export function ReviewForm({
   revieweeName,
   onSubmit,
   defaultValues,
-  isSubmitting}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number>(0);
 
-  const [hoveredStar, setHoveredStar] = useState<number>(0),
-  
+  isSubmitting}: ReviewFormProps) {
+
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -119,79 +72,29 @@ export function ReviewForm({
       timeliness_rating: defaultValues.timeliness_rating
       would_work_again: defaultValues.would_work_again
       is_anonymous: defaultValues.is_anonymous} : {
-      rating: 0
-      review_text: ""
-      communication_rating: undefined
-      quality_rating: undefined
-      timeliness_rating: undefined
-      would_work_again: undefined
-      is_anonymous: false}
+
   });
-
-  const handleSubmit = async (values: ReviewFormValues) => {;
-    const formattedData = {;
-      ...values,;
-      project_id: projectId,;
-      reviewee_id: revieweeId},;
-
-
+  const handleSubmit = async (values: ReviewFormValues) => {
+    const formattedData = {
+      ...values
+      project_id: projectId
+      reviewee_id: revieweeId}
     const success = await onSubmit(formattedData);
-    if (success) {;
-      form && form.reset();
+    if (success) {
+      form.reset()
     }
-
-  };
-
-  const watchRating = form && form.watch("rating");
-
+  }
+  const watchRating = form.watch("rating");
 
   return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
     <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
-        {/* Main Rating */}
-        <FormField
-          control={form && form.control}
-          name="rating"
-          rules={{ required: "Rating is required" }}
-          render={({ field }) => (;
-            <FormItem>;
-              <FormLabel className="block text-center mb-2">;
-                How was your experience with {revieweeName}?;
-              </FormLabel>;
-              <FormControl>;
-                <div className="flex justify-center gap-1">;
-                  {[1, 2, 3, 4, 5].map((star) => (;
-                    <button
-                      key={star}
-                      type="button"
-                      onClick={() => field && field.onChange(star)}
-                      onMouseEnter={() => setHoveredStar(star)}
-                      onMouseLeave={() => setHoveredStar(0)}
-                      className="focus:outline-none transition-transform hover:scale-110";
-                    >;
-                      <Star
-                        className={`h-10 w-10 ${
-
-                          star <= (hoveredStar || field && field.value || 0)
-
-                            ? "fill-yellow-400 text-yellow-400"
-                            : "text-gray-300"
-                        } transition-colors`}
-                      />;
-                    </button>;
-                  ))}
-                </div>;
-              </FormControl>;
-              <div className="text-center mt-1 h-5">;
-                <FormMessage />;
-              </div>;
-            </FormItem>;
-          )}
-
-        />;
-
-
-
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
 
         {/* Review Text */}
         <FormField
@@ -324,7 +227,6 @@ if ( {) {
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
-            
 
             {/* Communication */}
             <FormField
@@ -599,6 +501,4 @@ if ( {) {
       </form>
     </Form>
   )
-}
-}
-;
+

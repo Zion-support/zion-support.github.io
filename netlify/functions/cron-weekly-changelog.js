@@ -1,5 +1,6 @@
 
-
+  const resp = await fetch(url, {
+    headers: token
       ? {
 
           Authorization: `token ${token}`,
@@ -48,29 +49,4 @@ exports && exports.handler = async function () {
     for (const c of commits) {
 
   } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
-}
-    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token })
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
-  }
 
-}
-
-    return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
-  }
-};
-    await upsertFile({ owner, repo, path: 'data/reports/changelog/weekly-changelog.json', content: JSON.stringify(summary, null, 2), message: 'chore(automation): weekly changelog summary', token }),
-    return { statusCode: 200, body: JSON.stringify({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-}
-    await upsert_file ({ owner, repo, path: 'data / reports / changelog / weekly - changelog.json', content: JSON.stringify (summary, null, 2), message: 'chore (automation): weekly changelog summary', token }),
-    return { status_code: 200, body: JSON.stringify ({ ok: true, commits: commits.length }) }
-  } catch (e) {
-    return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
-  }
-},

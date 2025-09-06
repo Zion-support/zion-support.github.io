@@ -1,7 +1,4 @@
 
-import React from 'react';
-import React from 'react',
-
 
 export function ProfileLoadingState() {
   return (
@@ -10,9 +7,4 @@ export function ProfileLoadingState() {
         Loading profile...
       </div>
     </div>
-  );
-}
-  )
-}
-;
 

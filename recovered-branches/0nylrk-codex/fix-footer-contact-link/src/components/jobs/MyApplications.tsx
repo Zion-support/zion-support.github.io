@@ -1,42 +1,13 @@
 
-import {useState} from "react";
-import {useJobApplications} from "@/hooks/useJobApplications";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Loader2, MessageSquare, ExternalLink} from "lucide-react";
-import {formatDistanceToNow} from "date-fns";
-import {Link} from "react-router-dom";
-import {ApplicationStatus} from "@/types/jobs";
-export function MyApplications() {;
-  const { applications, isLoading, error } = useJobApplications();
 
-  const getStatusBadge = (status: ApplicationStatus) => {;
-    switch (status) {;
+import { useState } from "react",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Loader2, MessageSquare, ExternalLink } from "lucide-react",
+import { formatDistanceToNow } from "date-fns",
 
-import { useState } from './react';
-import { useJobApplications } from '@/hooks / useJobApplications';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Loader2, MessageSquare, ExternalLink } from './lucide-react';
-import { formatDistanceToNow } from './date - fns';
-import { Link } from './react-router-dom';
-import { ApplicationStatus } from '@/types / jobs';
-export /**
- * MyApplications - Function description
- */
-function MyApplications() {
-  const { applications, is_loading, error } = useJobApplications ();
-;
-  const getStatusBadge = (status: ApplicationStatus) =>: any {
-
-
-import { Link } from "react-router-dom",
-import { ApplicationStatus } from "@/types/jobs",
-export function MyApplications() {
-  const { applications, isLoading, error } = useJobApplications(),
-  
   const getStatusBadge = (status: ApplicationStatus) => {
     switch (status) {
       case "new": return <Badge variant="secondary">New</Badge>,
@@ -53,10 +24,7 @@ export function MyApplications() {
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
 
-  },
-  
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">
@@ -85,8 +53,25 @@ export function MyApplications() {
       </Card>
     )
   }
-
-
+  return (
+    <div className="grid gap-4 md:grid-cols-2">
+      {applications.map((application) => (
+        <Card key={application.id}>
+          <CardHeader className="pb-2">
+            <div className="flex justify-between items-start">
+              <CardTitle className="text-lg">
+                {application.job?.title |"Unknown Job"}
+              </CardTitle>
+              {getStatusBadge(application.status)}
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
+            </p>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-3">
+              {application.cover_letter && (
+                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">
 
 import { useState } from "react",;
 import { useJobApplications } from "@/hooks/useJobApplications",;
@@ -167,12 +152,10 @@ export function MyApplications() {;
               {application.cover_letter && (;
                 <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
 
-
-
                   {application.cover_letter}
                 </p>
               )}
-              
+
               <div className="flex justify-between items-center">
                 <Button
                   variant="outline"
@@ -184,48 +167,6 @@ export function MyApplications() {;
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
-
-
-  return (
-    <div className="grid gap-4 md:grid-cols-2">;
-      {applications && applications.map((application) => (;
-        <Card key={application && application.id}>;
-          <CardHeader className="pb-2">;
-            <div className="flex justify-between items-start">;
-              <CardTitle className="text-lg">;
-                {application && application.job?.title || "Unknown Job"}
-              </CardTitle>;
-              {getStatusBadge(application && application.status)}
-            </div>;
-            <p className="text-sm text-muted-foreground">;
-              Applied {formatDistanceToNow(new Date(application && application.created_at), { addSuffix: true })}
-            </p>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="space-y-3">;
-              {application && application.cover_letter && (;
-                <p className="text-sm text-muted-foreground line-clamp-2 mb-2">;
-                  {application && application.cover_letter}
-                </p>;
-              )}
-
-              <div className="flex justify-between items-center">;
-                <Button
-                  variant="outline" 
-                  size="sm" 
-                  className="text-xs"
-                  asChild>;
-                  <Link to={`/jobs/${application && application.job_id}`}>;
-                    <ExternalLink className="h-3 w-3 mr-1" /> View Job;
-                  </Link>;
-                </Button>;
-
-                <Button
-                  variant="default" 
-
-
-                <Button 
-                  variant="default" 
 
                   size="sm"
                   className="text-xs"
@@ -239,21 +180,4 @@ export function MyApplications() {;
           </CardContent>;
         </Card>;
       ))}
-    </div>
-  )
-}
-    </div>;
-  );
-}
-        return <Badge className="bg - blue - 100 text - blue - 800">Shortlisted</Badge>;
-      case "interview":;
-        return <Badge className="bg - purple - 100 text - purple - 800">Interview</Badge>;
-      case "hired":;
-        return <Badge className="bg - green - 100 text - green - 800">Hired</Badge>;
-      case "rejected":;
-        return <Badge className="bg - red - 100 text - red - 800">Rejected</Badge>,
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  }
-;
+

@@ -1,6 +1,4 @@
 
-export type ProjectStatus = 
-
 
   | 'offer_sent'
   | 'offer_accepted'
@@ -15,11 +13,6 @@ export type ProjectStatus =;
   | 'in_progress';
   | 'completed';
   | 'canceled';
-
-
-
-export interface Project {;
-
 
   id: string;
   client_id: string;
@@ -49,11 +42,6 @@ export interface Project {;
   }
 }
 
-
-
-export interface ProjectNote {;
-
-
   id: string;
   project_id: string;
   user_id: string;
@@ -62,6 +50,7 @@ export interface ProjectNote {;
   created_by_profile?: {
 
     avatar_url?: string
+
 export type ProjectStatus =;
   | 'offer_sent';
   | 'offer_accepted';
@@ -92,6 +81,18 @@ export interface Project {;
   },;
   client_profile?: {;
     display_name: string,;
+    avatar_url?: string;
+  }
+}
+;
+export interface ProjectNote {;
+  id: string,;
+  project_id: string,;
+  user_id: string,;
+  content: string,;
+  created_at: string,;
+  created_by_profile?: {;
+    display_name: string;
     avatar_url?: string;
 
   }

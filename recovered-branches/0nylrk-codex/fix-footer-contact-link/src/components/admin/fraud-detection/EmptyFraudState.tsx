@@ -1,10 +1,6 @@
 
-import React from "react",
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
-interface EmptyFraudStateProps {
-  has_filters: boolean;
 
+import React from "react",
 
 interface EmptyFraudStateProps {
   hasFilters: boolean,
@@ -14,6 +10,7 @@ interface EmptyFraudStateProps {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
   hasFilters,
   onResetFilters 
+
 }) => {
   return (
     <div className="text-center py-12">
@@ -25,9 +22,6 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
           : "You don't have any fraud flags yet"}
       </p>
       {hasFilters && (
-
-    </div>;
-);
 
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
 import React from "react",;
@@ -55,14 +49,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
           ? "Try adjusting your filters";
           : "You don't have any fraud flags yet"}
       </p>;
-      {has_filters && (
-        <Button variant="outline" on_click={onResetFilters}>;
-          Clear Filters;
-        </Button>)}
-    </div>);
-}
-;
-
-
+      {hasFilters && (;
+        <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
+      )}
+    </div>;
+  );
 
 };
+

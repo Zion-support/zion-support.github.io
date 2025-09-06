@@ -1,6 +1,6 @@
 
 
-
+import React from "react",
 
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
@@ -20,41 +20,29 @@ export const DownloadSection: React.FC = () => {
                 needs to the next level. Available on iOS and Android.
               </p>
 
-import React from './react';
-import { QrCodeIcon  } from './lucide-react';
-import { AppStoreButtons  } from './AppStoreButtons';
-export const DownloadSection: React.FC = () => {
+import React from "react",;
+import { QrCodeIcon } from "lucide-react",;
+import { AppStoreButtons } from "./AppStoreButtons",;
+export const DownloadSection: React.FC = () => {;
   // These would typically come from environment variables or a config;
-  const appStoreUrl = "#"; // Replace with actual App Store URL when available;
-  const googlePlayUrl = "#"; // Replace with actual Google Play URL when available;
-  return (
-    <section className="py - 16 bg - gradient - to - b from - zion - blue to - zion - blue - dark">;
-      <div className="container mx - auto px - 4">;
-        <div className="max - w-4xl mx - auto">;
-          <div className="flex flex - col md:flex - row items - center justify - between gap - 8">;
-            <div className="flex - 1">;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">;
-                Get The App Today;
-              </h2>;
-              <p className="text - lg text - gray - 300 mb - 8">;
-                Download the Zion app now and take your tech career or hiring;
-                needs to the next level. Available on iOS and Android.;
+  const appStoreUrl = "#", // Replace with actual App Store URL when available;
+  const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
+  return (;
+    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
+      <div className="container mx-auto px-4">;
+        <div className="max-w-4xl mx-auto">;
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">;
+            <div className="flex-1">;
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
+              <p className="text-lg text-gray-300 mb-8">;
+                Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
-                className="mb - 8";
-
+                className="mb-8";
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => console.log ("App Store button clicked")}
-                onGooglePlayClick={() =>;
-                  console.log ("Google Play button clicked");
-                }
-              
-              <AppStoreButtons 
-                className="mb-8" 
-              <AppStoreButtons 
-                className="mb-8" 
-
+                onAppStoreClick={() => // // // console.log("App Store button clicked")}
+                onGooglePlayClick={() => // // // console.log("Google Play button clicked")}
 
               />
               <div className="text-sm text-gray-400">
@@ -75,34 +63,6 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
-
-import React from "react";
-import {QrCodeIcon} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
-export const DownloadSection: React.FC = () => {;
-  // These would typically come from environment variables or a config;
-  const appStoreUrl = "#", // Replace with actual App Store URL when available;
-  const googlePlayUrl = "#", // Replace with actual Google Play URL when available;
-
-  return (
-    <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">;
-      <div className="container mx-auto px-4">;
-        <div className="max-w-4xl mx-auto">;
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">;
-            <div className="flex-1">;
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Get The App Today</h2>;
-              <p className="text-lg text-gray-300 mb-8">;
-                Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
-              </p>;
-
-              <AppStoreButtons
-                className="mb-8" 
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => console && console.log("App Store button clicked")}
-                onGooglePlayClick={() => console && console.log("Google Play button clicked")}
-
-};
 
   )
 },
@@ -146,5 +106,4 @@ export const DownloadSection: React.FC = () => {;
 
 
 export default DownloadSection;
-
 

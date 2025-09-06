@@ -1,11 +1,4 @@
 
-
-import {useState} from 'react';
-import {useQuery, useMutation, useQueryClient} from '@tanstack/react-query';
-import {quoteRequestService} from '@/services/quoteRequestService';
-import {useAuth} from '@/hooks/useAuth';
-
-
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 
 import {useToast} from '@/hooks/use-toast';
@@ -33,6 +26,7 @@ export const useTalentQuotes = () => {
     // Status filter
     if (statusFilter !== 'all' && quote && quote.status !== statusFilter) {
       return false
+
 import { useState } from 'react',;
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query',;
 import { quoteRequestService } from '@/services/quoteRequestService',;
@@ -62,8 +56,6 @@ export const useTalentQuotes = () => {;
     if (statusFilter !== 'all' && quote.status !== statusFilter) {;
       return false;
 
-
-
     }
     // Archive filter
     if (archiveFilter === 'active' && quote && quote.is_archived) {
@@ -72,20 +64,7 @@ export const useTalentQuotes = () => {;
     if (archiveFilter === 'archived' && !quote && quote.is_archived) {
       return false
     }
-    return true
-  });
-  // Mark as viewed/responded mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>
-      quoteRequestService.updateStatus(id, status);
-    
-    return true
-  }),
 
-  // Mark as viewed/responded mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) => 
-      quoteRequestService.updateStatus(id, status),
     onSuccess: (_, variables) => {
       let message = "Status updated";
       if (variables && variables.status === 'in_review') {
@@ -98,34 +77,7 @@ export const useTalentQuotes = () => {;
         description: "The quote request status has been updated"
       }),
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-    }
-    onError: (error: Error) => {
-      toast({
-        title: "Error";
-        description: "Failed to update status: " + error && error.message,
 
-        variant: "destructive"
-      })
-    }
-  });
-  // Archive/Unarchive mutation
-  const toggleArchiveMutation = useMutation({
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>
-      quoteRequestService.toggleArchive(id, isArchived);
-    },
-    onError: (error: Error) => {
-      toast({
-        title: "Error",
-        description: "Failed to update status: " + error.message,
-        variant: "destructive"
-      })
-    }
-  }),
-
-  // Archive/Unarchive mutation
-  const toggleArchiveMutation = useMutation({
-    mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) => 
-      quoteRequestService.toggleArchive(id, isArchived),
     onSuccess: (_, variables) => {
       toast({
         title: variables.isArchived ? "Quote archived" : "Quote unarchived"
@@ -134,10 +86,6 @@ export const useTalentQuotes = () => {;
           : "The quote request has been moved back to active quotes"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
-
-
-    };
-
 
     onError: (error: Error) => {
       toast({
@@ -169,9 +117,12 @@ export const useTalentQuotes = () => {;
     error;
     statusFilter;
     setStatusFilter;
-
-
-    toggleArchive: (id: string, isArchived: boolean) => 
+    archiveFilter;
+    setArchiveFilter
+    markAsViewed: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'in_review' });
+    markAsResponded: (id: string) =>
+      updateStatusMutation.mutate({ id, status: 'responded' });
 
     },
     onError: (error: Error) => {
@@ -244,8 +195,6 @@ export const useTalentQuotes = () => {;
     markAsResponded: (id: string) =>;
       updateStatusMutation.mutate({ id, status: 'responded' });
     toggleArchive: (id: string, isArchived: boolean) =>;
-
-
 
       toggleArchiveMutation.mutate({ id, isArchived })}
 }

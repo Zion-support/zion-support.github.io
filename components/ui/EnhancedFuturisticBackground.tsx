@@ -191,13 +191,6 @@ if (return) {
         // Fade out near end of life
         if (this.life < 20) {
 
-          this.opacity *= 0.95
-
-        }
-      }
-
-          this.opacity *= 0.95;        }
-
         }
       }
 
@@ -226,33 +219,13 @@ if (return) {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-
-        
-
-        ctx.restore()
-        return this.life <= 0 || this.opacity < 0.01;      }
-
-      }
-      isDead() {
-        return this.life <= 0 |this.opacity < 0.01;      }
-        return this.life <= 0 || this.opacity < 0.01;      }        
-        ctx.restore()
-        return this.life <= 0 || this.opacity < 0.01;      }
-
+        ctx.restore();
       }
       isDead() {
 
-        return this.life <= 0 || this.opacity < 0.01
-      }
-
-    }
-
-        return this.life <= 0 || this.opacity < 0.01;      }        
-
         ctx.restore()
+
         return this.life <= 0 || this.opacity < 0.01;      }
-
-
 
       }
       isDead() {
@@ -612,27 +585,6 @@ if (> 0.975) {) {
           }
           drops[i]++;
         }
-      }
-      return drawMatrix;    };          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-          if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0
-          }
-          drops[i]++
-        }
-      }
-      return drawMatrix
-    }
-      };
-
-      return drawMatrix;    };          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-          if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {;
-            drops[i] = 0;
-          }
-          drops[i]++;
-        }
-
-    };
 
     const drawMatrix = matrixRain();
     // Main animation loop
@@ -766,7 +718,8 @@ if (> 0.975) {) {
       // Create connections between nearby particles
       connections = [];
 
-
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
 
           }
         }
@@ -964,17 +917,7 @@ if (< 0.5) {) {
 }
 export default EnhancedFuturisticBackground;
 
-
+export default EnhancedFuturisticBackground;
 
 export default EnhancedFuturisticBackground;
 
-          background: `radial - gradient (circle at 50% 50%, transparent 0%, rgba (0, 0, 0, 0.3) 100%)`,
-        }}
-      />;
-{/* Content */}
-      <div className='relative z - 10'>{children}</div>;
-    </div>);
-}
-;
-export default EnhancedFuturisticBackground;
-;

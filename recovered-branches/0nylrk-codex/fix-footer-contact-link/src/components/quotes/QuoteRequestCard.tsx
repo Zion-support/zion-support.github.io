@@ -1,14 +1,8 @@
 
 
-import {format} from "date-fns";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {QuoteStatusBadge} from "@/components/quotes/QuoteStatusBadge";
-import {Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon} from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-
 import React from "react",
 import { format } from "date-fns",
+
 import { 
   Card;
   CardContent;
@@ -18,10 +12,6 @@ import {
 } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react";
-import type { QuoteRequest } from "@/types/quotes";
-import { Eye, MessageSquare, ArchiveIcon, RefreshCw, CalendarIcon } from "lucide-react",
-import type { QuoteRequest } from "@/types/quotes",
 
 type QuoteRequestCardProps = {
   quote: QuoteRequest,
@@ -30,7 +20,9 @@ type QuoteRequestCardProps = {
   onToggleArchive: (id: string, isArchived: boolean) => void
 },
 
+export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
+  onMarkAsResponded,
 
   onToggleArchive
 }) => {
@@ -41,8 +33,6 @@ type QuoteRequestCardProps = {
     } catch (e) {
       return dateString
     }
-  }
-  },
 
   return (
 
@@ -98,7 +88,6 @@ type QuoteRequestCardProps = {
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
-
 
 import React from "react",;
 import { format } from "date-fns",;
@@ -257,8 +246,8 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
           </div>;
         </div>;
       </CardContent>;
-
-
-
+    </Card>;
+  );
 
 };
+

@@ -1,6 +1,6 @@
 
-
-
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Referral, ReferralStatus } from "@/types/referrals",
 
 interface ReferralTableProps {
 
@@ -12,11 +12,7 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
   // Helper function to render status badges
 
   const renderStatusBadge = (status: ReferralStatus) => {
-    switch (status) {;
 
-      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>;
-    switch (status) {
-      case "pending": return <Badge variant="outline" className="bg-yellow-50 text-yellow-800 border-yellow-200">Pending</Badge>,
       case "completed":
         return <Badge variant="outline" className="bg-green-50 text-green-800 border-green-200">Completed</Badge>,
 
@@ -31,8 +27,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         return null;
 
     }
-  }
-  },
 
   if (isLoading) {
     return (
@@ -52,9 +46,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {
         </p>
       </div>
     )
-
-              {referral.referred_user_type 
-                ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1) 
 
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
 import { Referral, ReferralStatus } from "@/types/referrals",;
@@ -121,8 +112,6 @@ export function ReferralTable({ referrals, isLoading }: ReferralTableProps) {;
 
               {referral.referred_user_type;
                 ? referral.referred_user_type.charAt(0).toUpperCase() + referral.referred_user_type.slice(1);
-
-
 
                 : '-'}
             </TableCell>;

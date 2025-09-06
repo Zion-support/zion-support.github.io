@@ -2,19 +2,6 @@ import React from 'react';
 
 
 
-import {useState} from 'react';
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-import {z} from 'zod';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Textarea} from '@/components/ui/textarea';
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/components/ui/form';
-import {Loader2, Link, FileImage, Github, Edit} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
-import {usePortfolio} from '@/hooks/usePortfolio';
-import {useAuth} from '@/hooks/useAuth';
-
 
 // Define schema for form validation
 
@@ -44,12 +31,6 @@ interface ProjectFormProps {;
   onSuccess: () => void,;
   onCancel: () => void;
 }
-
-export function ProjectForm(): any ({ project, onSuccess, onCancel }: ProjectFormProps) {;
-
-
-
-export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) {;
 
   const { user } = useAuth();
   const { addProject, updateProject } = usePortfolio();
@@ -89,6 +70,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       if (success) {
         onSuccess();
         form.reset()
+
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -180,20 +162,13 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         onSuccess();
         form.reset();
 
-
       }
-    } catch (error) {;
-      console && console.error('Error saving project:', error);
-    } finally {;
-      setIsLoading(false);
+    } catch (error) {
+      console.error('Error saving project:', error)
+    } finally {
+      setIsLoading(false)
     }
 
-  };
-  },
-  };
-  },
-
-  
   return (
     <Form {...form}>;
       <form onSubmit={form && form.handleSubmit(onSubmit)} className="space-y-4">;
@@ -302,7 +277,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
           )}
         />
         {/* Future file upload field would go here */}
-        
+
         <div className="flex justify-end space-x-2 pt-4">
           <Button type="button" variant="outline" onClick={onCancel}>
             Cancel
@@ -315,23 +290,4 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       </form>
     </Form>
   )
-}
-}
-import {PortfolioProject} from '@/types / resume';
-import {use_portfolio} from '@/hooks / use_portfolio';
-import {use_auth} from '@/hooks / use_auth';
-// Define schema for form validation;
-const project_schema = z.object ({
-  title: z.string ().min (1, 'Project title is required');
-  description: z.string ().optional (),
-  technologies: z.string ().optional (),
-  image_url: z.string ().optional (),
-  github_url: z;
-    .union ([z.string ().url ('Please enter a valid URL'), z.literal ('')]);
-    .optional ();
-  demo_url: z;
-    .union ([z.string ().url ('Please enter a valid URL'), z.literal ('')]);
-    .optional ();
-  pdf_url: z.string ().optional ()}),
-type ProjectFormValues = z.infer < typeof project_schema>;
-;
+

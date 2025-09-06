@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -24,19 +23,39 @@ export default async function handler(
     return res && res.status(404).json({ error: "Fraud record not found" });
   }
   const adminAction: AdminActionType = {
+    id: `action-${Date.now()}`
+    fraudId
+    action
+    reason
+    adminId
+    timestamp: new Date().toISOString()
+  }
+  store.addAdminAction(adminAction);
+  return res.status(200).json({ success: true, action: adminAction });
+}
 
-    id: `action-${Date && Date.now()}`,
-    fraudId,
-    action,
-    reason,
-    adminId,
-    timestamp: new Date().toISOString(),
-  };
-
-  store && store.addAdminAction(adminAction);
-
-  return res && res.status(200).json({ success: true, action: adminAction });
-
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+import { AdminActionType } from '../../../../utils/fraud/types';
+function ensureAdmin(req: NextApiRequest): boolean {;
+  const token = req.headers['x-admin-token'];
+  if (!process.env.ADMIN_TOKEN) return true, // allow if not configured;
+  return token === process.env.ADMIN_TOKEN;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
 
@@ -109,6 +128,4 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
-
 

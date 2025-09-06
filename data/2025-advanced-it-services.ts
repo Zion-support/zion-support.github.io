@@ -1,7 +1,4 @@
 
-
-
-
 export const advancedITServices2025 = [
   {
 
@@ -15,16 +12,13 @@ export const advancedITServices2025 = [
     targetAudience:
       'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms'
     competitiveAdvantage:
-      'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration',
-  },;
+
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com'
     }
     marketSize: '$15.7B'
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms';
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
-  }
-];
 
 export const advancedITServices2025 = [;
   {;
@@ -271,8 +265,6 @@ export const advancedITServices2025 = [;
     targetAudience: 'Cloud migration specialists, enterprise businesses, managed service providers, consulting firms',;
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration';
 
-
-
   }
 ];
-;
+

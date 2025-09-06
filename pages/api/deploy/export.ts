@@ -1,9 +1,4 @@
 
-
-import type { NextApiRequest, NextApiResponse } from 'next',;
-;
-
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query
   if (!id |typeof id !== 'string') {
@@ -11,15 +6,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // In a real system, look up persisted deployment by id
   const fake = {
-
-
-
-    id,
-
-    note: 'This is a stub export. Connect to persistence to return real deployment state.'},
-  res.setHeader('Content-Typeapplication/json'),
-  return res.status(200).json(fake);
-};
 
 export default async function handler(req, res) {
   try {
@@ -47,13 +33,4 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-
-    exported_at: new Date ().toISOString (),
-    note: 'This is a stub export. Connect to persistence to return real deployment state.'},
-  res.set_header ('Content - Typeapplication / json'),
-  return res.status (200).json (fake);
-}
-
-}
 

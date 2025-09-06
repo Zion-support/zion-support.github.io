@@ -1,24 +1,9 @@
 
-
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Input} from '@/components/ui/input';
-import {Label} from '@/components/ui/label';
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
-import {Skill} from '@/types/resume';
-import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
-
-
 interface AddSkillFormProps {
 
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
-
-
-
-export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
-
 
   const [skillName, setSkillName] = useState('');
   const [skillCategory, setSkillCategory] = useState('');
@@ -30,8 +15,11 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
       name: skillName.trim()
       category: skillCategory |'Other'
       proficiency: proficiency}
-import React from 'react';
-import {useState} from 'react';
+    const success = await onAddSkill(newSkill);
+    if (success) {
+      setSkillName('');
+      setProficiency(3)
+    }
 
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
@@ -67,13 +55,10 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {;
     }
   },
 
-
-
-  
   const handleEnhanceSkill = (enhancedCategory: string) => {
     setSkillCategory(enhancedCategory)
   },
-  
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">;
       <div className="flex flex-col gap-4 md:flex-row">;
@@ -208,15 +193,17 @@ if ( {) {
               min={1}
               max={5}
               value={proficiency}
-              on_change={(e) => set_proficiency (Number (e.target.value))}
-              className="w - 20";
-            />;
-            <Button type="submit">Add</Button>;
-          </div>;
-        </div>;
-      </div>;
+              onChange={(e) => setProficiency(Number(e.target.value))}
+              className="w-20"
+            />
+            <Button type="submit">Add</Button>
+          </div>
+        </div>
+      </div>
+    </form>
+  )
 
-    </form>);
-}
-;
+};
+
+},
 

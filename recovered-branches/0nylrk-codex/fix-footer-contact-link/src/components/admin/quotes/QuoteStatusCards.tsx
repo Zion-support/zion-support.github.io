@@ -1,16 +1,6 @@
 
+
 import React from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-interface QuoteStatusCardsProps {
-  status_counts: {
-
-    new: number;
-    in_review: number;
-    responded: number;
-    accepted: number;
-
-
 
 interface QuoteStatusCardsProps {
   statusCounts: {
@@ -23,6 +13,7 @@ interface QuoteStatusCardsProps {
 }
 
 export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {
+
   return (
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -39,8 +30,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-      
-
 
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
@@ -55,8 +44,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-      
-
 
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
@@ -71,8 +58,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-      
-
 
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
@@ -87,8 +72,6 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
           </p>
         </CardContent>
       </Card>
-      
-
 
       <Card className="bg-zion-blue-dark border border-zion-blue-light">
         <CardHeader className="pb-2">
@@ -104,10 +87,23 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardContent>
       </Card>
 
-export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({;
-  statusCounts,;
-}) => {;
-  return (
+  )
+},
+import React from "react",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+interface QuoteStatusCardsProps {;
+  statusCounts: {;
+    new: number,;
+    in_review: number,;
+    responded: number,;
+    accepted: number,;
+    closed: number;
+  }
+}
+;
+export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts }) => {;
+  return (;
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">;
       <Card className="bg-zion-blue-dark border border-zion-blue-light">;
         <CardHeader className="pb-2">;
@@ -200,9 +196,8 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
           </p>;
         </CardContent>;
       </Card>;
+
     </div>;
 );
 };
-
-export default QuoteStatusCards;
 

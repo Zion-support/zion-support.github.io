@@ -25,23 +25,6 @@ import React from 'react';
 
 
 import {
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Microscope,
-  Star,
-  ArrowRight,
-  Play,
-  CheckCircle,
-  Phone,
-  Mail,;
-  MapPin,;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
-
 
   Microscope, Star, ArrowRight, Play, CheckCircle;
   Phone, Mail, MapPin
@@ -332,13 +315,6 @@ function UltraFuturisticHero2032() {
                 delay: Math.random() * 2}}
 
             />
-          ))}
-        </div>
-
-          ))}
-        </div>
-
-
 
         {/* Gradient Orbs */}
 
@@ -381,15 +357,6 @@ function UltraFuturisticHero2032() {
           <span className='text-purple-300 font-medium'>
              2032 Revolutionary Technology
           </span>
-          <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>          className="inline-flex items-center space-x-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 rounded-full px-6 py-3 mb-8 backdrop-blur-sm"
-        >
-          <Sparkles className="w-5 h-5 text-purple-400" />
-          <span className="text-purple-300 font-medium"> 2032 Revolutionary Technology</span>
-          <Sparkles className="w-5 h-5 text-cyan-400" />
-          <Sparkles className='w-5 h-5 text-cyan-400' />        </motion.div>
-
-        </motion.div>
-
 
         {/* Main Heading */}
         <motion&& motion.h1
@@ -397,7 +364,6 @@ function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'
-
 
         >
           <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -415,36 +381,12 @@ function UltraFuturisticHero2032() {
           <span className="text-white">Technology is Here</span>
         </motion.h1>
 
-
-          transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-          className='text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight'>;
-          <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-            The Future of;
-          </span>;
-          <br />;
-          <span className='text-white'>Technology is Here</span>        </motion && motion.h1>        >;
-          <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
-            The Future of;
-          </span>;
-          <br />;
-          <span className="text-white">Technology is Here</span>;
-        </motion && motion.h1>;
-
-
-
-
         {/* Subheading */}
         <motion&& motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
-
         </motion.p>
-
-
-
-        </motion.p>
-
 
         {/* CTA Buttons */}
         <motion&& motion.div
@@ -452,7 +394,6 @@ function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-16'
-
 
         >
           <Link
@@ -484,17 +425,11 @@ function UltraFuturisticHero2032() {
           </Link>
         </motion.div>
 
-
-
-
         {/* Stats Grid */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
-
 
         >
           {heroStats.map((stat, index) => (
@@ -618,13 +553,7 @@ function UltraFuturisticHero2032() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 1 + index * 0.1 }}
-
-        </motion && motion.div>;
-
-
               className='text-center group'
-
-
 
             >
               <div
@@ -635,24 +564,6 @@ function UltraFuturisticHero2032() {
               <div className='text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2'>
                 {stat.number}
               </div>
-              <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>            >
-              <div className={`w-16 h-16 mx-auto mb-4 flex items-center justify-center bg-gradient-to-r ${stat.color} rounded-2xl transform transition-all duration-300 group-hover:shadow-lg hover:shadow-cyan-400/40 group-hover:shadow-lg`}>
-                <stat.icon className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent mb-2">
-                {stat.number}
-              </div>
-              <div className="text-gray-400 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
-              <div className='text-gray-400 text-sm'>{stat.label}</div>            </motion.div>
-
-            </motion.div>
-
-          ))}
-        </motion.div>
-
 
         {/* Featured Services */}
         <motion&& motion.div
@@ -660,7 +571,6 @@ function UltraFuturisticHero2032() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
           className='mb-16'
-
 
         >
           <h2 className='text-2xl md:text-3xl font-bold text-white mb-8'>
@@ -678,8 +588,6 @@ function UltraFuturisticHero2032() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.4 + index * 0.1 }}
                 className='group'
-
-
 
               >
                 <Link
@@ -740,17 +648,12 @@ function UltraFuturisticHero2032() {
           </div>
         </motion.div>
 
-
-
-
-
         {/* Contact Information */}
         <motion&& motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
           className='bg-gradient-to-r from-purple-900/50 to-cyan-900/50 backdrop-blur-xl border border-purple-500/30 rounded-3xl p-8 max-w-4xl mx-auto'
-
 
         >
           <h3 className='text-2xl font-bold text-white mb-6 text-center'>
@@ -814,61 +717,6 @@ function UltraFuturisticHero2032() {
           </div>
         </motion.div>
       </div>
-
-                href={`mailto:${contactInfo && contactInfo.email}`}
-                className='hover:text-purple-400 transition-colors'>;
-                {contactInfo && contactInfo.email}
-              </a>;
-            </div>;
-            <div className='flex items-center space-x-3 text-gray-300'>;
-              <MapPin className='w-5 h-5 text-green-400' />;
-              <span>{contactInfo && contactInfo.address}</span>;
-            </div>;
-          </div>;
-
-          <div className='text-center'>;
-            <Link
-              href='/contact'
-              className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25'>;
-              <span>Get Started Today</span>;
-              <ArrowRight className='w-5 h-5' />            </Link>        >;
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">;
-            Ready to Transform Your Business?;
-          </h3>;
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">;
-            <div className="flex items-center space-x-3 text-gray-300">;
-              <Phone className="w-5 h-5 text-cyan-400" />;
-              <a href={`tel:${contactInfo && contactInfo.mobile}`} className="hover:text-cyan-400 transition-colors">;
-                {contactInfo && contactInfo.mobile}
-              </a>;
-            </div>;
-            <div className="flex items-center space-x-3 text-gray-300">;
-              <Mail className="w-5 h-5 text-purple-400" />;
-              <a href={`mailto:${contactInfo && contactInfo.email}`} className="hover:text-purple-400 transition-colors">;
-                {contactInfo && contactInfo.email}
-              </a>;
-            </div>;
-            <div className="flex items-center space-x-3 text-gray-300">;
-              <MapPin className="w-5 h-5 text-green-400" />;
-              <span>{contactInfo && contactInfo.address}</span>;
-            </div>;
-          </div>;
-
-          <div className="text-center">;
-            <Link
-              href="/contact"
-              className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg transform transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-xl hover:shadow-purple-500/25">;
-              <span>Get Started Today</span>;
-              <ArrowRight className="w-5 h-5" />;
-            </Link>;
-          </div>;
-        </motion && motion.div>;
-      </div>;
-
-
-
-
 
       {/* Floating Action Button */}
       <motion&& motion.div
@@ -979,41 +827,8 @@ function UltraFuturisticHero2032() {
       <motion.div;
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
-
-
-}
-
-          href={`tel:${contactInfo && contactInfo.mobile}`}
-          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40">;
-          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />;
-        </Link>;
-      </motion && motion.div>;
-    </section>;
-  );
-}
-
-        className='fixed bottom - 8 right - 8 z - 50';
-      >;
-        <Link;
-          href={`tel:${contact_info.mobile}`}
-          className='group w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full flex items - center justify - center shadow - 2xl shadow - purple - 500 / 25 transform transition - all duration - 300 hover:shadow - lg hover:shadow - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - purple - 500 / 40';
-        >;
-          <Phone className='w - 7 h - 7 text - white group - hover:rotate - 12 transition - transform' />;
-        </Link>;
-      </motion.div>;
-    </section>);      >;
-        <Link;
-          href={`tel:${contact_info.mobile}`}
-          className="group w - 16 h - 16 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - full flex items - center justify - center shadow - 2xl shadow - purple - 500 / 25 transform transition - all duration - 300 hover: shadow - lg hover:shadow - cyan - 400 / 40 hover:shadow - 2xl hover:shadow - purple - 500 / 40";
-        >;
-          <Phone className="w - 7 h - 7 text - white group - hover:rotate - 12 transition - transform" />;
-        </Link>;
-      </motion.div>;
-    </section>);
-}
+        transition={{ duration: 0.8, delay: 2 }}
         className='fixed bottom-8 right-8 z-50'
-
-
 
       >
         <Link
@@ -1024,4 +839,15 @@ function UltraFuturisticHero2032() {
         </Link>
       </motion.div>
 
+  );      >
+        <Link
+          href={`tel:${contactInfo.mobile}`}
+          className="group w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center shadow-2xl shadow-purple-500/25 transform transition-all duration-300 hover: shadow-lg hover:shadow-cyan-400/40 hover:shadow-2xl hover:shadow-purple-500/40"
+        >
+          <Phone className="w-7 h-7 text-white group-hover:rotate-12 transition-transform" />
+        </Link>
+      </motion.div>
+    </section>
+  )
+}
 

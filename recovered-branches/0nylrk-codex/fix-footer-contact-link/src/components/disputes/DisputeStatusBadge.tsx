@@ -1,35 +1,17 @@
 
-import { Badge } from '@/components / ui / badge';
-import { ShieldAlert } from './lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
 
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
-  let message = "This item has an open dispute";
-  switch (status) {
-    case 'under_review':
+import { Badge } from "@/components/ui/badge",
 
-import {Badge} from "@/components/ui/badge";
-import {ShieldAlert} from "lucide-react";
-import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
-
-interface DisputeStatusBadgeProps {;
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
-export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute";
 
-  switch (status) {;
-    case 'under_review':;
-
-export /**
- * DisputeStatusBadge - Function description
- */
-function DisputeStatusBadge() {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
   let message = "This item has an open dispute",
-  
+
   switch (status) {
     case 'under_review':;
       variant = "secondary";
@@ -52,13 +34,7 @@ function DisputeStatusBadge() {
       message = "This dispute has been resolved",
       break,
     case 'closed':
-      variant = "outline";
-      message = "This dispute has been closed";
-      break;
 
-      variant = "outline",
-      message = "This dispute has been closed",
-      break,
     default:
       break
   }
@@ -75,8 +51,6 @@ function DisputeStatusBadge() {
       </TooltipContent>
     </Tooltip>
   )
-
-
 
 import { Badge } from "@/components/ui/badge",;
 import { ShieldAlert } from "lucide-react",;
@@ -126,9 +100,9 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-
-
-
+    </Tooltip>;
+  );
 
 }
 ;
+

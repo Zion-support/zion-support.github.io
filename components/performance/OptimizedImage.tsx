@@ -103,18 +103,11 @@ if ( {) {
       priority={priority}
       sizes={sizes}
 
-
-
       quality={quality}
       style={style}
-
-
-
 
   );
 };
 
 export default OptimizedImage;
-;
-export default OptimizedImage;
-;
+

@@ -1,39 +1,10 @@
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React from "react";
-import Head from "next/head";
-origin/main
-origin/automation-improvements-final
-
 interface SEOProps {
 interface SEOProps {;
   title?: string;
   description?: string;
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+
   keywords?: string;
 }
 
@@ -57,13 +28,9 @@ const SEO: React.FC<SEOProps> = ({;
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Head>
   );
-}
-};
-
-export default SEO;
-
 
 }
+
   image?: string;
   url?: string;
   type?: string;
@@ -94,11 +61,7 @@ export default function SEO({
       <link rel="canonical" href={canonicalUrl} />
     </Head>
   );
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
+
 }
 export default SEO;
-origin/main
-origin/automation-improvements-final
-}
-export default SEO;
+

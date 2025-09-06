@@ -1,7 +1,4 @@
 
-
-
-
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -10,11 +7,6 @@ export type NotificationType =
   | 'hire_request'
   | 'onboarding'
   | 'system';
-
-
-
-export interface Notification extends BaseNotification {;
-
 
   type: NotificationType;
   action_url?: string
@@ -27,11 +19,6 @@ export type FilterType =
   | 'onboarding'
   | 'system';
 
-import {Notification, as, BaseNotification} from '@/types / notifications';
-
-
-export interface NotificationContextType {;
-
   notifications: Notification[];
   filtered_notifications: Notification[];
   unread_count: number;
@@ -43,6 +30,7 @@ export interface NotificationContextType {;
   setFilter: (filter: FilterType) => void
 
   fetchNotifications: () => Promise<void>
+
 import { Notification as BaseNotification } from '@/types/notifications',;
 
 export type NotificationType =;
@@ -83,6 +71,5 @@ export interface NotificationContextType {;
   dismissNotification: (id: string) => Promise<void>;
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
-
 
 }

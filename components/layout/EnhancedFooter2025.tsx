@@ -1,33 +1,8 @@
-import React from 'react',
-import React from 'react';
+
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-import { 
-
-
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  ArrowRight,
-  Brain,
-  Atom,
-  Shield,
-  Rocket,
-  Target,
-  Microscope,
-  Zap,
-  Globe,
-  Database,
-  Lock,
-  Cloud,
-  BarChart3,
-  Twitter,
-  Linkedin,
-  Github,
-  Youtube,;
-  Instagram,;} from 'lucide-react';import { ;
+import {
 
   Phone, Mail, MapPin, Star, ArrowRight;
   Brain, Atom, Shield, Rocket, Target, Microscope;
@@ -365,9 +340,6 @@ const EnhancedFooter2025: React.FC = () => {
               </div>
             </div>
 
-
-
-
             {/* Service Categories */}
             {serviceCategories && serviceCategories.map((category, index) => (;
               <motion&& motion.div
@@ -377,7 +349,6 @@ const EnhancedFooter2025: React.FC = () => {
                 transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
                 className='space-y-4'
-
 
               >
                 <div className='flex items-center space-x-3'>
@@ -393,132 +364,14 @@ const EnhancedFooter2025: React.FC = () => {
                     <Link
                       key={service.name}
                       href={service.href}
-                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >              >
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                    <category.icon className="w-4 h-4 text-white" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-white">{category.title}</h3>
-                </div>
-                <div className="space-y-2">
-                  {category.services.map((service) => (
-                className='space-y-4'>;
-                <div className='flex items-center space-x-3'>;
-                  <div className='w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center'>;
-                    <category && category.icon className='w-4 h-4 text-white' />;
-                  </div>;
-                  <h3 className='text-lg font-semibold text-white'>;
-                    {category && category.title}
-                  </h3>;
-                </div>;
-
-                <div className='space-y-2'>;
-                  {category && category.services.map(service => (;
-                    <Link
-
-              {/* Contact Info */}
-              <div className='space - y-3'>;
-                <div className='flex items - center space - x-3 text - gray - 300'>;
-                  <Phone className='w - 4 h - 4 text - cyan - 400' />;
-                  <a;
-                    href={`tel:${contact_info.mobile}`}
-                    className='hover:text - cyan - 400 transition - colors';
-                  >;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className='flex items - center space - x-3 text - gray - 300'>;
-                  <Mail className='w - 4 h - 4 text - purple - 400' />;
-                  <a;
-                    href={`mailto:${contact_info.email}`}
-                    className='hover:text - purple - 400 transition - colors';
-                  >;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className='flex items - center space - x-3 text - gray - 300'>;
-                  <MapPin className='w - 4 h - 4 text - pink - 400' />;
-                  <span className='text - sm'>{contact_info.address}</span>                </div>      {/* Background Effects */}
-      <div className="absolute inset - 0 bg - gradient - to - r from - cyan - 500 / 5 via - purple - 500 / 5 to - pink - 500 / 5"></div>;
-      <div className="relative z - 10">;
-        {/* Main Footer Content */}
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 py - 16">;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8 lg:gap - 12">;
-            {/* Company Info */}
-            <div className="lg:col - span - 1">;
-              <div className="flex items - center space - x-3 mb - 6">;
-                <div className="w - 12 h - 12 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - xl flex items - center justify - center">;
-                  <Star className="w - 7 h - 7 text - white" />;
-                </div>;
-                <div>;
-                  <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - purple - 400 bg - clip - text text - transparent">;
-                    Zion Tech Group;
-                  </div>;
-                  <div className="text - sm text - gray - 400">Future Technology Solutions</div>;
-                </div>;
-              </div>;
-              <p className="text - gray - 400 mb - 6 leading - relaxed">;
-                Leading the future with revolutionary AI, quantum computing, and emerging technology solutions that transform businesses worldwide.;
-              </p>;
-              {/* Contact Info */}
-              <div className="space - y-3">;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <Phone className="w - 4 h - 4 text - cyan - 400" />;
-                  <a href={`tel:${contact_info.mobile}`} className="hover:text - cyan - 400 transition - colors">;
-                    {contact_info.mobile}
-                  </a>;
-                </div>;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <Mail className="w - 4 h - 4 text - purple - 400" />;
-                  <a href={`mailto:${contact_info.email}`} className="hover:text - purple - 400 transition - colors">;
-                    {contact_info.email}
-                  </a>;
-                </div>;
-                <div className="flex items - center space - x-3 text - gray - 300">;
-                  <MapPin className="w - 4 h - 4 text - pink - 400" />;
-                  <span className="text - sm">{contact_info.address}</span>;
-                </div>;
-              </div>;
-            </div>;
-            {/* Service Categories */}
-            {service_categories.map ((category, index) => (
-              <motion.div;
-                key={category.title}
-                initial={{ opacity: 0, coordinate_y: 20 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className='space - y-4';
-              >;
-                <div className='flex items - center space - x-3'>;
-                  <div className='w - 8 h - 8 bg - gradient - to - r from - cyan - 500 to - purple - 600 rounded - lg flex items - center justify - center'>;
-                    <category.icon className='w - 4 h - 4 text - white' />;
-                  </div>;
-                  <h3 className='text - lg font - semibold text - white'>;
-                    {category.title}
-                  </h3>;
-                </div>;
-                <div className='space - y-2'>;
-                  {category.services.map (service => (
-                    <Link;
-                      key={service.name}
-                      href={service.href}
-                      className="block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
-                    >
-                      className='block text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm'                    >
-
-                    >
-
 
                       {service.name}
-
-          </div>;
-
-
-
-          {/* Additional Links */}
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-gray-800/50'>
-
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
 
             {/* Company Links */}
             <div>;
@@ -528,38 +381,12 @@ const EnhancedFooter2025: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >            {/* Company Links */}
-            <div>
-              <h4 className="text-white font-semibold mb-4">Company</h4>
-              <div className="space-y-2">
-                {companyLinks.map((link) => (
-                  <Link
-                    </Link>))}
-                </div>;
-              </motion.div>))}
-          </div>;
-          {/* Additional Links */}
-          <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mt - 12 pt - 8 border - t border - gray - 800 / 50'>;
-            {/* Company Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Company</h4>;
-              <div className='space - y-2'>;
-                {company_links.map (link => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-                  >
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
-
-                  >
-
 
                     {link.name}
-
-              </div>;
-            </div>;
-
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             {/* Legal Links */}
 
@@ -567,15 +394,6 @@ const EnhancedFooter2025: React.FC = () => {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <div className="space-y-2">
-                {legalLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm"
-                    className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm'                  >
-
 
                     {link.name}
                   </Link>
@@ -592,12 +410,6 @@ const EnhancedFooter2025: React.FC = () => {
                 {socialLinks.map((social) => (
                   <a
 
-
-
-
-            {/* Social Links */}
-
-
                     key={social.name}
                     href={social.href}
                     className={`w-10 h-10 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 ${social.color} transition-all duration-200 border border-gray-700 hover:border-gray-600`}
@@ -606,62 +418,11 @@ const EnhancedFooter2025: React.FC = () => {
                     <social.icon className="w-5 h-5" />
                   </a>
 
-
-
-
-
                 ))}
               </div>
             </div>
           </div>
         </div>
-
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Legal Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Legal</h4>;
-              <div className='space - y-2'>;
-                {legal_links.map (link => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className='block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm'                  >              <h4 className="text - white font - semibold mb - 4">Legal</h4>;
-              <div className="space - y-2">;
-                {legal_links.map ((link) => (
-                  <Link;
-                    key={link.name}
-                    href={link.href}
-                    className="block text - gray - 400 hover:text - white transition - colors duration - 200 text - sm";
-                    {link.name}
-                  </Link>))}
-              </div>;
-            </div>;
-            {/* Social Links */}
-            <div>;
-              <h4 className='text - white font - semibold mb - 4'>Follow Us</h4>;
-              <div className='flex space - x-4'>;
-                {social_links.map (social => (                  <a              <h4 className="text - white font - semibold mb - 4">Follow Us</h4>;
-              <div className="flex space - x-4">;
-                {social_links.map ((social) => (
-                  <a;
-                    key={social.name}
-                    href={social.href}
-                    className={`w - 10 h - 10 bg - gray - 800 / 50 hover:bg - gray - 700 / 50 rounded - lg flex items - center justify - center text - gray - 400 ${social.color} transition - all duration - 200 border border - gray - 700 hover:border - gray - 600`}
-                    aria - label={social.name}
-                  >;
-                    <social.icon className='w - 5 h - 5' />                  </a>                    <social.icon className="w - 5 h - 5" />;
-                  </a>))}
-
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-
-
-
-
 
         {/* Newsletter Section */}
         <div className='border-t border-gray-800/50'>
@@ -671,17 +432,10 @@ const EnhancedFooter2025: React.FC = () => {
             <div className="text-center">
               <motion.h3
 
-
-
-
-
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
-                className='text-2xl md:text-3xl font-bold text-white mb-4'              >                className="text-2xl md:text-3xl font-bold text-white mb-4"
-                className='text-2xl md:text-3xl font-bold text-white mb-4'              >
-
 
               >
                 Stay Ahead of the Future
@@ -692,7 +446,6 @@ const EnhancedFooter2025: React.FC = () => {
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.1 }}
                 viewport={{ once: true }}
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'
-
 
               >
                 Get the latest insights on AI, quantum computing, and emerging
@@ -722,7 +475,6 @@ const EnhancedFooter2025: React.FC = () => {
                 viewport={{ once: true }}
                 className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'
 
-
               >
                 <input
                   type='email'
@@ -738,27 +490,50 @@ const EnhancedFooter2025: React.FC = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                />
+                <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
+                  Subscribe
+                </button>
+              </motion.div>
+            </div>
+          </div>
+        </div>
+        {/* Bottom Bar */}
+        <div className='border-t border-gray-800/50'>
+          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
+            <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+              <div className='text-gray-400 text-sm'>
+                © {currentYear} Zion Tech Group. All rights reserved.
+              </div>
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>                © {currentYear} Zion Tech Group. All rights reserved.
+              </div>
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <div className="flex items-center space-x-2">
+                  <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <span>Trusted by 1000+ companies worldwide</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <Star className='w-4 h-4 text-yellow-400 fill-current' />
+                  <span>Trusted by 1000+ companies worldwide</span>
+                </div>
+                <div className='flex items-center space-x-2'>
+                  <div className='w-2 h-2 bg-green-400 rounded-full'></div>                  <span>99.9% Uptime Guarantee</span>                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  <span>99.9% Uptime Guarantee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
 
-
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-  )
-
-};
-
-export default EnhancedFooter2025;
-
-
-    </footer>);
+export default EnhancedFooter2025;  )
 }
 export default EnhancedFooter2025;
-;
 
-};
+}
 
+export default EnhancedFooter2025;
 

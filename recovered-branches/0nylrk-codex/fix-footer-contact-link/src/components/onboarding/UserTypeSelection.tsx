@@ -3,6 +3,9 @@ import React from 'react';
 
 
 
+
+import { useState } from "react",
+
 interface UserTypeOption {
 
   id: "serviceProvider" | "talent" | "client"
@@ -21,11 +24,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
   const userTypes: UserTypeOption[] = [
     {
 
-
-      id: "serviceProvider",
-      name: "Service Provider",
-      description: "I want to offer services on the platform",
-
+      icon: Briefcase
 
     {
 
@@ -34,8 +33,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       description: "I want to showcase my skills and find opportunities"
 
       icon: Star
-    }
-    },
+
     {
 
       id: "client"
@@ -80,8 +78,6 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
       icon: User;
 
     }
-  ];
-  ],
 
   return (
 
@@ -94,12 +90,7 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
       </div>
       <div className="grid gap-4 md: grid-cols-3">
         {userTypes.map((type) => {
-          const Icon = type.icon;
-          const is_selected = selected_type === type.id,
 
-          const Icon = type.icon,
-          const isSelected = selectedType === type.id,
-          
           return (
             <Button;
               key={type.id}
@@ -112,7 +103,6 @@ export function UserTypeSelection(): any ({ onSelect, selectedType }: UserTypeSe
               <div className="text-center">
                 <h4 className="font-medium">{type.name}</h4>
                 <p className="text-sm text-zion-slate-light mt-1">
-
 
 import { useState } from "react",;
 import { Briefcase, Star, User } from "lucide-react",;
@@ -195,3 +185,4 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
 
 }
 ;
+

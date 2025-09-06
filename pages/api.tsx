@@ -1,26 +1,10 @@
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
+
 import React from 'react';
-ursor/integrate-build-improve-and-re-verify-8f7d
+
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
-import React from "react";
-import MainLayout from "../src/components/layout/MainLayout";
-import { motion } from "framer-motion";
-origin/main
-origin/automation-improvements-final
-import {
 
-  Code,
-  Check,
-  Globe,
-  Shield,
-  Zap,
-  Database,
-  Cpu,
-  Cloud,
-  XCircle,;
+import {
 
 } from "lucide-react";
 export default function APIPage() {
@@ -73,85 +57,6 @@ export default function APIPage() {
     "message": "Hello, how can you help me?"
     "model": "gpt-4"
     "temperature": 0.7
-
-import React from './react';
-import MainLayout from "../src / components / layout / MainLayout";
-import { motion  } from './framer-motion';
-import {
-  Code,
-  Check,
-  Globe,
-  Shield,
-  Zap,
-  Database,
-  Cpu,
-  Cloud,
-  XCircle,
-} from './lucide-react';
-;
-export default /**
- * APIPage - Function description
- */
-function APIPage() {
-  const api_endpoints = [;
-    {
-      id: "auth",
-      title: "Authentication",
-      description: "Secure authentication and authorization endpoints",
-      base_url: "/api / v1 / auth",
-      methods: [;
-        {
-          method: "POST",
-          endpoint: "/login",
-          description: "Authenticate user with email and password",
-          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / login \\;
-  -H "Content - Type: application / json" \\;
-  -d '{
-    "email": "user@example.com",
-    "password": "your_password";
-  }'`,
-        },
-        {
-          method: "POST",
-          endpoint: "/register",
-          description: "Register a new user account",
-          code: `curl -X POST https://api.ziontechgroup.com / v1 / auth / register \\;
-  -H "Content - Type: application / json" \\;
-  -d '{
-    "email": "user@example.com",
-    "password": "your_password",
-    "name": "John Doe";
-  }'`,
-        },
-      ],
-    },
-    {
-      id: "ai - services",
-      title: "AI Services",
-      description: "Access our AI - powered services and models",
-      base_url: "/api / v1 / ai",
-      methods: [;
-        {
-          method: "POST",
-          endpoint: "/chat",
-          description: "Send messages to our AI chat service",
-          code: `curl -X POST https://api.ziontechgroup.com / v1 / ai / chat \\;
-  -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \\;
-  -H "Content - Type: application / json" \\;
-  -d '{
-    "message": "Hello, how can you help me?",
-    "model": "gpt - 4",
-    "temperature": 0.7;
-  }'`,
-        },
-      ],
-    },
-
-  }'`,
-        },
-      ],
-    },;
-
 
   ];
 ;
@@ -678,30 +583,7 @@ export default function APIPage() {;
         </section>
       </div>
     </MainLayout>
-import Head from 'next/head';
-import Layout from '../components/Layout';
 
-export default function APIPage() {
-  
-    >
-      <div className="min-h-screen bg-gray-50">
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                API Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Powerful, scalable API solutions for your applications
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
   );
         {/* CTA Section */}
         <section className="py - 20 bg - gradient - to - r from - indigo - 600 to - purple - 600 text - white">;

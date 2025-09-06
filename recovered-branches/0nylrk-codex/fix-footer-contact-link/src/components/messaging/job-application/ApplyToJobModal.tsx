@@ -2,13 +2,6 @@
 import React from "react";
 import {
 
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-DialogTitle,;
-
-
 } from "@/components/ui/dialog";
 import { ApplyForm } from "./ApplyForm";
 import { ApplyToJobModalProps } from "./types";
@@ -84,8 +77,8 @@ function ApplyToJobModal() {
           onApplySuccess={onApplySuccess}
         />;
       </DialogContent>;
-    </Dialog>;
 
+    </Dialog>;
 
   );
     </Dialog>);

@@ -1,17 +1,25 @@
 
 
+interface MilestoneCardProps {
+  id: string,
+  projectId: string,
+  title: string,
+  description?: string,
+  amount: number,
+  status: string,
+  dueDate?: string,
+  onApprove?: (id: string) => Promise<void>,
+  onReject?: (id: string) => Promise<void>
 
-
-
-import React from 'react';
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {format} from 'date-fns';
-import {Check, ArrowDown, X} from "lucide-react";
-import {useDisputeCheck} from '@/hooks/useDisputeCheck';
-import {DisputeStatusBadge} from '@/components/disputes/DisputeStatusBadge';
-import {RaiseDisputeButton} from '@/components/disputes/RaiseDisputeButton';
+import React from 'react',;
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { format } from 'date-fns',;
+import { Check, ArrowDown, X } from "lucide-react",;
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',;
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',;
 interface MilestoneCardProps {;
   id: string,;
   projectId: string,;
@@ -51,9 +59,10 @@ export function MilestoneCard(): any ({ ;
       case 'rejected':;
         return 'bg-red-500';
       default: return 'bg-gray-500';
+
     }
   }
-  
+
   return (
     <Card>;
       <CardHeader className="pb-2">;
@@ -99,8 +108,22 @@ export function MilestoneCard(): any ({ ;
               size="sm"
             />;
           )}
-
-
+        </div>
+        <div className="flex gap-2">
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant="outline" size="sm" onClick={() => onReject(id)}>
+              <X className="h-4 w-4 mr-1" /> Reject
+            </Button>
+          )}
+          {status === 'pending' && onApprove && !isUnderDispute && (
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>
+              <Check className="h-4 w-4 mr-1" /> Approve
+            </Button>
+          )}
+          {isUnderDispute && (
+            <Button variant="outline" size="sm" disabled>
+              Actions frozen due to dispute
+            </Button>
 
           </div>;
           <div className="flex gap-2">;
@@ -157,9 +180,6 @@ export function MilestoneCard(): any ({ ;
     </Card>;
   );
 
-
-
-
 }
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components / ui / card';
@@ -187,3 +207,4 @@ export /**
 function MilestoneCard() {
   const { isUnderDispute, dispute_status } = useDisputeCheck (project_id, id);
 ;
+

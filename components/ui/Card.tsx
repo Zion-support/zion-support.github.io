@@ -46,9 +46,6 @@ const CardFooter = React.forward_ref<;
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
 
-import React from 'react';
-
-
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -121,20 +118,6 @@ const Card: React.FC < CardProps> = ({
       )}
     </div>
   )
-}
-export default Card;
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-},
-export default Card,
-;
-},
-export default Card,
-;
-
-
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-
 

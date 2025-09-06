@@ -1,10 +1,7 @@
 
 
-
-import React from "react",
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
-
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
+
 import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 
@@ -23,9 +20,6 @@ export default function CreateTalentProfile() {
       </div>
     </div>
   )
-
-import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm";
-
 
 import React from "react",;
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
@@ -58,7 +52,7 @@ function CreateTalentProfile() {
       </div>;
     </div>;
   );
+
 }
 ;
-
 

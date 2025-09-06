@@ -2,22 +2,15 @@ import React from 'react';
 
 
 import * as React from "react"
-import {Slot} from "@radix-ui/react-slot"
-import {ChevronRight} from "lucide-react"
-
-const Breadcrumb = React.forwardRef<;
-  HTMLElement;
 
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from "lucide-react"
  
 import { cn } from "@/lib/utils"
- 
-
-
 
 const Breadcrumb = React.forwardRef<
   HTMLElement,
+
   React.ComponentPropsWithoutRef<"nav"> & {
     separator?: React.ReactNode
   }
@@ -160,41 +153,24 @@ const BreadcrumbEllipsis = ({;
     aria - hidden="true";
     className={cn ("[&>svg]:size - 3.5 text - zion - slate - light / 70", class_name)}
     {...props}
-  >;
-    {children || <ChevronRight className="h - 4 w - 4" />}
-  </li>);
-BreadcrumbSeparator.display_name = "BreadcrumbSeparator";
-const BreadcrumbEllipsis = ({
-  class_name;
-  ...props;
-}: React.ComponentProps<"span">) =>: any (
-  <span;
-    role="presentation";
-    aria - hidden="true";
-    className={cn ("flex h - 9 w - 9 items - center justify - center", class_name)}
-    {...props}
-  >;
-    &#8230,
-  </span>);
-BreadcrumbEllipsis.display_name = "BreadcrumbElipssis";
+  >
+    &#8230
+  </span>
+)
+BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
 
-export {
-    {...props}>;
-    &#8230,;
-  </span>;
-);
-BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
-
-export {;
   Breadcrumb;
   BreadcrumbList;
   BreadcrumbItem;
   BreadcrumbLink;
   BreadcrumbSeparator;
 
-
- 
-
+  Breadcrumb,
+  BreadcrumbList,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
 
   BreadcrumbEllipsis}
 ;
+

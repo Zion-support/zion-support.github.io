@@ -1,33 +1,14 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import React from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-origin/main
+
+import React from 'react';
+import Head from 'next/head';
+import Header from './Header';
+import Footer from './Footer';
+
 interface LayoutProps {
   children: React.ReactNode;
 interface LayoutProps {;
@@ -167,51 +148,21 @@ import React, { ReactNode } from "react";
       <main>{children}</main>
       <Footer />
     </div>
-import React, { ReactNode } from "react";
 
-interface LayoutProps {
-  children: ReactNode,
-}
-
-const Layout: React.FC<LayoutProps> = ({ children }) => {
-  return (
-    <main className="min-h-screen">
-      {children}
-    </main>
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
   );
 }
 export default Layout;
-        {no_index && <meta name="robots" content="noindex, nofollow" />}
-        {/* Open Graph */}
-        <meta property="og:title" content={og_title || title} />;
-        <meta;
-          property="og:description";
-          content={og_description || description}
-        />;
-        <meta property="og:image" content={og_image} />;
-        <meta property="og:url" content={canonical} />;
-        <meta property="og:type" content="website" />;
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />;
-        <meta name="twitter:title" content={og_title || title} />;
-        <meta;
-          name="twitter:description";
-          content={og_description || description}
-        />;
-        <meta name="twitter:image" content={og_image} />;
-        {/* JSON - LD */}
-        <script;
-          type="application / ld + json";
-          dangerouslySetInnerHTML={{ __html: JSON.stringify (json_ld) }}
-        />;
-      </Head>;
-      <Header />;
-      <main>{children}</main>;
-      <Footer />;
-    </div>);
+
+import React, { ReactNode } from "react";
+interface LayoutProps {
+  children: ReactNode;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 
   } catch (error) {
@@ -237,8 +188,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 }
     </main>
 
-
-
   );
 };
 export default Layout;
+

@@ -1,8 +1,7 @@
 
 
-import { Loader2 } from "lucide-react",
-
 import {Loader2} from "lucide-react";
+
 import { Loader2 } from "lucide-react",
 
 interface ResultsHeaderProps {
@@ -20,7 +19,7 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
       ) : (
         <span>
 
-import {Loader2} from "lucide-react";
+import { Loader2 } from "lucide-react",;
 interface ResultsHeaderProps {;
   isLoading: boolean,;
   resultCount: number;
@@ -41,18 +40,9 @@ export function ResultsHeader(): any ({ isLoading, resultCount }: ResultsHeaderP
           ) : (;
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`;
 
-          {resultCount === 0 ? (
-            "No talents found. Try adjusting your filters."
-          ) : (
-            `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
-
-
           )}
         </span>;
+
       )}
     </div>
-
-  )
-}
-;
 

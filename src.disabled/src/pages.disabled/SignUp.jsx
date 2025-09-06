@@ -24,9 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface SignUpProps {
   // Add props here as needed
-}
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 export default function SignUp({ }: SignUpProps) {
   return (
     <div>
@@ -37,4 +35,3 @@ export default function SignUp({ }: SignUpProps) {
 
 }
 
-}

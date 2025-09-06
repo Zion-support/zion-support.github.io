@@ -1,8 +1,5 @@
 
 
-export interface ThemeColors {;
-
-
   primaryColor: string;
   backgroundColor: string;
   textColor: string;
@@ -55,15 +52,8 @@ export function getThemeColors(preset: ThemePreset, primaryColor: string): Theme
         cardBackground: '#f8fafc'}
   }
 }
-// Define theme presets;
-export function getThemeColors (preset: ThemePreset, primary_color: string): ThemeColors {
-  switch (preset) {
-    case 'dark':;
-      return {
-
-
-  const root = document.documentElement,;
-
+// Apply theme colors to document CSS variables
+export function applyThemeColors(colors: ThemeColors) {
 
   root.style.setProperty('--primary-color', colors.primaryColor);
   root.style.setProperty('--background-color', colors.backgroundColor);
@@ -75,19 +65,6 @@ export function getThemeColors (preset: ThemePreset, primary_color: string): The
   document.body.style.backgroundColor = colors.backgroundColor;
 
   document.body.style.color = colors.textColor
-
-  const root = document && document.documentElement,
-  root && root.style.setProperty('--primary-color', colors && colors.primaryColor);
-  root && root.style.setProperty('--background-color', colors && colors.backgroundColor);
-  root && root.style.setProperty('--text-color', colors && colors.textColor);
-  root && root.style.setProperty('--accent-color', colors && colors.accentColor);
-  root && root.style.setProperty('--button-color', colors && colors.buttonColor);
-  root && root.style.setProperty('--card-background', colors && colors.cardBackground);
-  
-  // Set background and text colors on body
-  document && document.body.style && style.backgroundColor = colors && colors.backgroundColor;
-  document && document.body.style && style.color = colors && colors.textColor
-
 
 export type ThemePreset = 'light' | 'dark' | 'neon' | 'corporate' | 'startup',;
 export interface ThemeColors {;
@@ -153,7 +130,6 @@ export function applyThemeColors(colors: ThemeColors) {;
   document.body.style.backgroundColor = colors.backgroundColor;
   document.body.style.color = colors.textColor;
 
-
-
 }
 ;
+

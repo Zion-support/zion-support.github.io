@@ -1,4 +1,9 @@
 
+</Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+
+import React from 'react';
+
+ </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 
   reports.filter (report => report.featured) .map ( (report, index) => (<motion.div key= {
   index
@@ -320,8 +325,7 @@ const ReportsPage: React.FC = () => {;
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            <motion.div
-            <motion.div 
+
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -556,10 +560,6 @@ const ReportsPage: React.FC = () => {;
           </div>
         </section>
 
-
-
-
-
         {/* Categories Filter */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">
           <div className="max-w-7xl mx-auto">
@@ -579,47 +579,6 @@ const ReportsPage: React.FC = () => {;
             </motion.div>
             {/* Category Pills */}
 
-                    </div>;
-                  </div>;
-                </div>;
-
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                  <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 inline-flex items-center space-x-2">;
-                    <Download className="w-5 h-5" />;
-                    <span>Download Full Report</span>;
-                  </button>;
-                  <button className="border border-cyan-400/40 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-xl font-semibold transition-all duration-200 inline-flex items-center space-x-2">;
-                    <Eye className="w-5 h-5" />;
-                    <span>Preview Report</span>;
-                  </button>;
-                </div>;
-              </motion && motion.div>;
-            ))}
-          </div>;
-        </section>;
-
-        {/* Categories Filter */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;
-          <div className="max-w-7xl mx-auto">;
-            <motion&& motion.div 
-              className="text-center mb-16"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8 }}
-              viewport={{ once: true }}>;
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">;
-                All Reports;
-              </h2>;
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">;
-                Explore our comprehensive research across different technology domains;
-              </p>;
-            </motion && motion.div>;
-
-            {/* Category Pills */}
-            <motion&& motion.div 
-
-
-            <motion.div 
               className="flex flex-wrap justify-center gap-4 mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -637,12 +596,6 @@ const ReportsPage: React.FC = () => {;
                 </button>;
               ))}
             </motion.div>
-
-            </motion && motion.div>;
-
-
-
-
 
             {/* Reports Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
@@ -798,10 +751,6 @@ const ReportsPage: React.FC = () => {;
           </div>
         </section>
 
-
-
-
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">;
@@ -842,4 +791,3 @@ const ReportsPage: React.FC = () => {;
 
 export default ReportsPage;
 
-export default ReportsPage;

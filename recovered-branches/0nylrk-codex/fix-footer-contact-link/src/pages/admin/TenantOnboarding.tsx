@@ -1,6 +1,18 @@
 
 
-
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
 
   const [formData, setFormData] = useState({
 
@@ -14,112 +26,19 @@
     custom_domain: ""
     is_co_branded: true
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-import React, { useState } from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {useAuth} from "@/hooks/useAuth";
-import {Navigate} from "react-router-dom";
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {toast} from "sonner";
-import {supabase} from "@/integrations/supabase/client";
-import {Switch} from "@/components/ui/switch";
-export default function TenantOnboarding() {;
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [formData, setFormData] = useState({;
-    brand_name: "",;
-    subdomain: "",;
-    logo_url: "",;
-    primary_color: "#9b87f5",;
-    theme_preset: "light",;
-    company_size: "",;
-    industry: "",;
-    custom_domain: "",;
-    is_co_branded: true;
-  });
-
-  // Check if user has admin role;
-  const isAdmin = user?.role === "admin";
-  }),
-  
-  // Check if user has admin role
-  const isAdmin = user?.role === "admin",
-  
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />
   }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))
-  }
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))
-  }
-  const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))
-  }
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true)
-    try {
-      // Generate subdomain if not provided
-      const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
-  },
-  
-  const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))
-  },
-  
-  const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))
-  },
-  
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault(),
-    setIsSubmitting(true),
-    
-    try {
-      // Generate subdomain if not provided
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
-      
+
       // Create landing page copy
       const landingPageCopy = {
         headline: "AI Hiring Assistant"
         subtitle: `Find the best talent for your ${formData.industry |"company"}`
         cta: "Get Started"
-      }
-      },
-      
+
       // Submit to Supabase
       const { data, error } = await supabase
         .from('whitelabel_tenants')
@@ -137,19 +56,7 @@ export default function TenantOnboarding() {;
           email_template_override: null
         })
         .select('id, brand_name, subdomain')
-        .single();
-      if (error) throw error;
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      });
-        .single(),
-      
-      if (error) throw error,
-      
-      toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`
-      }),
-      
+
       // Reset form
       setFormData({
         brand_name: ""
@@ -163,18 +70,11 @@ export default function TenantOnboarding() {;
         is_co_branded: true
       })
     } catch (error: any) {
-      console.error("Error creating tenant:", error);
-      toast.error("Failed to create tenant", {
-        description: error.message
-      console.error("Error creating tenant:", error),
-      toast.error("Failed to create tenant", { 
-        description: error.message 
+
       })
     } finally {
       setIsSubmitting(false)
     }
-  }
-  },
 
   return (
 
@@ -549,9 +449,30 @@ if (throw error) {
                         name="custom_domain"
                         value={formData && formData.custom_domain}
                         onChange={handleInputChange}
-
-                        placeholder="hire && hire.yourcompany.com"
-
+                        placeholder="hire.yourcompany.com"
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        If you want to use your own domain, enter it here. You'll need to configure DNS records.
+                      </p>
+                    </div>
+                  </TabsContent>
+                </Tabs>
+                <div className="flex justify-end space-x-2">
+                  <Button type="button" variant="outline" onClick={() => window.history.back()}>
+                    Cancel
+                  </Button>
+                  <Button type="submit" disabled={isSubmitting}>
+                    {isSubmitting ? "Creating..." : "Create Tenant"}
+                  </Button>
+                </div>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </main>
+      <Footer />
+    </>
+  )
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -858,9 +779,9 @@ export default function TenantOnboarding() {;
         </div>;
       </main>;
       <Footer />;
-
-
-
+    </>;
+  );
 
 }
 ;
+

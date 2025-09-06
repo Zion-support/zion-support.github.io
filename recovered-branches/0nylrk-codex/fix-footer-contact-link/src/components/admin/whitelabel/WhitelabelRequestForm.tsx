@@ -1,25 +1,4 @@
 
-import React from 'react';
-import { useForm  } from 'react-hook-form';
-import { z  } from 'zod';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { Input  } from '@/components/ui/input';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage  } from '@/components/ui/form';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle  } from '@/components/ui/card';
-import { toast  } from '@/hooks/use-toast';
-import { supabase } from '@/integrations/supabase/client';
-// Form schema
-
-
-          headline: values.headline,
-          subtitle: values.subtitle,
-          cta: values.cta};
-      };
-      
-
 
       // Submit to Supabase
       const { data, error } = await supabase
@@ -39,8 +18,6 @@ import { supabase } from '@/integrations/supabase/client';
         title: 'Error creating tenant'
         description: error.message |'Something went wrong'})
     }
-
-  };
 
 import React from 'react',;
 import { useForm } from 'react-hook-form',;
@@ -122,9 +99,6 @@ export function WhitelabelRequestForm() {;
     }
 
   },
-
-
-
 
   return (
     <Card className="w-full max-w-2xl">
@@ -295,6 +269,4 @@ export function WhitelabelRequestForm() {;
       </CardFooter>
     </Card>
   )
-}
-}
-;
+

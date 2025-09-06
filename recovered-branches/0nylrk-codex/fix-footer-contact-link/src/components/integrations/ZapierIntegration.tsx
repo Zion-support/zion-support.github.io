@@ -1,39 +1,27 @@
 
-import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-
-import {;
-  Card,;
-  CardContent,;
-  CardFooter,;
-  CardHeader,;
-
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-
 import { toast } from "sonner";
 import { Check, Copy, ExternalLink } from "lucide-react";
 
+import React, { useState } from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { toast } from "sonner",
+import { Check, Copy, ExternalLink } from "lucide-react",
 
-export function ZapierIntegration() {;
-
-  const [copied, setCopied] = useState(false);
-  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R");
-
-  const handleCopyApiKey = () => {;
-    navigator && navigator.clipboard.writeText(apiKey);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-
-import React, { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-
+export function ZapierIntegration() {
+  const [copied, setCopied] = useState(false),
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),
+  
+  const handleCopyApiKey = () => {
+    navigator.clipboard.writeText(apiKey),
+    setCopied(true),
+    setTimeout(() => setCopied(false), 2000),
+    toast.success("API key copied to clipboard")
+  },
 
   return (
     <div className="space-y-6">
@@ -52,8 +40,6 @@ import {
               Connect Zion with 3,000+ apps via Zapier. Use your API key below
               to set up integrations.
             </p>
-            
-
 
             <div className="space-y-4">
               <div className="space-y-2">
@@ -78,8 +64,6 @@ import {
             </Button>
           </CardFooter>
         </Card>
-        
-
 
         <Card>
           <CardHeader>
@@ -113,8 +97,6 @@ import {
           </CardFooter>
         </Card>
       </div>
-      
-
 
       <Card>
         <CardHeader>
@@ -125,8 +107,6 @@ import {
             Use these webhook triggers to start Zaps when events happen in your
             Zion account.
           </p>
-          
-
 
           <div className="grid md: grid-cols-3 gap-4">
             <div className="border rounded-md p-4">
@@ -138,8 +118,6 @@ import {
                 Set Up Trigger
               </Button>
             </div>
-            
-
 
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">New Application</h4>
@@ -150,8 +128,6 @@ import {
                 Set Up Trigger
               </Button>
             </div>
-            
-
 
             <div className="border rounded-md p-4">
               <h4 className="font-medium mb-2">Contract Signed</h4>
@@ -167,12 +143,36 @@ import {
       </Card>
     </div>
 
-
-
-
-            <p className="text - sm text - muted - foreground mb - 4">;
-              Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
-              to set up integrations.;
+  )
+import React, { useState } from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "sonner",;
+import { Check, Copy, ExternalLink } from "lucide-react",;
+export function ZapierIntegration() {;
+  const [copied, setCopied] = useState(false),;
+  const [apiKey] = useState("zap_live_KztCaFieDu4VBnp8eMJZ9x73R"),;
+  const handleCopyApiKey = () => {;
+    navigator.clipboard.writeText(apiKey),;
+    setCopied(true),;
+    setTimeout(() => setCopied(false), 2000);
+    toast.success("API key copied to clipboard");
+  };
+  return (;
+    <div className="space-y-6">;
+      <div className="grid md:grid-cols-3 gap-6">;
+        <Card className="md:col-span-2">;
+          <CardHeader>;
+            <div className="flex items-center justify-between">;
+              <h3 className="text-lg font-semibold">Zapier Connection</h3>;
+              <Badge variant="outline" className="bg-blue-100 text-blue-800">Active</Badge>;
+            </div>;
+          </CardHeader>;
+          <CardContent>;
+            <p className="text-sm text-muted-foreground mb-4">;
+              Connect Zion with 3,000+ apps via Zapier. Use your API key below to set up integrations.;
             </p>;
             <div className="space - y-4">;
               <div className="space - y-2">;
@@ -290,8 +290,7 @@ import {
 
     </div>;
 
-
-
   );
 }
 ;
+

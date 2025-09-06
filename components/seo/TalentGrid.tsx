@@ -136,16 +136,12 @@ if (return true) {
     profile.title.toLowerCase ().includes (s) ||;
     profile.skills.some ((sk) => sk.toLowerCase ().includes (s)));
 }
-export default /**
- * TalentGrid - Function description
- */
-function TalentGrid() {
-  const items = React.useMemo (
-    () =>;
-      TALENT_PROFILES.filter (
-        (p) => matches_region (p, region) && matches_service (p, service),
-      ),
-    [region, service],
+
+export default function TalentGrid({ region, service }: Props) {
+  const items = React.useMemo(
+    () =>
+      TALENT_PROFILES.filter(
+
   );
 ;
   // Check condition
@@ -185,11 +181,14 @@ if ( {) {
                 className="text - xs px - 2 py - 1 rounded bg - gray - 100 dark:bg - gray - 800 text - gray - 600 dark:text - gray - 300";
               >;
                 {sk}
-              </span>))}
-          </div>;
-          <div className="mt - 3 text - sm">;
-            ${p.hourlyRateUsd}/hr  {p.availability}
-          </div>;
-        </div>))}
-    </div>);
-}
+              </span>
+            ))}
+          </div>
+          <div className="mt-3 text-sm">
+            ${p.hourlyRateUsd}/hr • {p.availability}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+

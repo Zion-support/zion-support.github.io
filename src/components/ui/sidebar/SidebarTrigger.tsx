@@ -1,10 +1,3 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-
-    </Button>;
-  );
-};
-};
 
 
 import React from "react",
@@ -42,3 +35,5 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 };
 
 }
+;
+

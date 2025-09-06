@@ -1,46 +1,9 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
 import Head from 'next/head';
 
 import Head from 'next / head';
 import { motion } from 'framer-motion';
-
-
-
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Star,
-  TrendingUp,
-  Eye,;
-  Timer,;
+import {
 
 } from 'lucide-react';import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react';
 
@@ -54,6 +17,7 @@ import UltraFuturistic2029ServiceShowcase from '../components/sections/UltraFutu
 import { cuttingEdge2029Services  } from '../data/2029-cutting-edge-innovations';
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services';
 
+  const contactInfo = {
 
   const all2029Services = [
     ...cuttingEdgeInnovations2029
@@ -91,33 +55,6 @@ export default function UltraFuturistic2029InnovationsPage() {;
 
       {/* Background */}
       <UltraFuturisticBackground2029 />
-      {/* Navigation */}
-      <UltraFuturisticNavigation2029 />
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2029 />
-          href='https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations'
-        />      </Head>;
-
-      {/* Background */}
-      <UltraFuturisticBackground2029 />        <meta name="description" content="Experience the future of technology with our revolutionary 2029 innovations including AI consciousness simulation, quantum brain-computer interfaces, Mars colonization automation, and space mining platforms." />;
-        <meta name="keywords" content="2029 innovations, AI consciousness, quantum computing, space colonization, Mars automation, space mining, futuristic technology, Zion Tech Group" />;
-        <meta property="og:title" content="2029 Ultra-Futuristic Innovations | Zion Tech Group" />;
-        <meta property="og:description" content="Experience the future of technology with our revolutionary 2029 innovations." />;
-        <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
-        <meta property="og:type" content="website" />;
-        <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/2029-ultra-futuristic-innovations" />;
-
-      {/* Background */}
-      <UltraFuturisticBackground2029 />;
-
-
-      {/* Navigation */}
-      <UltraFuturisticNavigation2029 />;
-
-
-
-
 
       {/* Hero Section */}
 
@@ -364,17 +301,9 @@ export default function UltraFuturistic2029InnovationsPage() {;
   duration: 0.8
 }className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-12 backdrop-blur-sm" > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6"> Ready to Experience 2029? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto"> Join the future of technology with our revolutionary 2029 innovations. Contact us today to discover how we can transform your business. </p> <div className="flex flex-col sm:flex-row items-center justify-center gap-4"> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl hover:from-purple-700 hover:to-pink-700 transition-all duration-200 text-lg font-semibold shadow-lg hover:shadow-purple-500/25" > Get Started Today </a> <a href= {
   `tel:$ {
-  contact_info.mobile;
-}`;
-}className="px - 8 py - 4 bg - gray - 900 / 50 text - white rounded - xl hover:bg - purple - 900 / 30 border border - gray - 700 hover:border - purple - 500 / 50 transition - all duration - 200 text - lg font - semibold" > Call Now </a> </div> </motion.div> </div> </section> {
-  /* Footer */;
-}<UltraFuturisticFooter2029 /> </>)   );
-}
+  contactInfo.mobile
+}`
+}className="px-8 py-4 bg-gray-900/50 text-white rounded-xl hover:bg-purple-900/30 border border-gray-700 hover:border-purple-500/50 transition-all duration-200 text-lg font-semibold" > Call Now </a> </div> </motion.div> </div> </section> {
 
   /* Footer */ 
-}<UltraFuturisticFooter2029 /> </>)
-
-  /* Footer */ 
-
-}<UltraFuturisticFooter2029 /> </>)
 

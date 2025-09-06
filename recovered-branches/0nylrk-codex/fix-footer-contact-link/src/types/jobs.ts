@@ -1,36 +1,9 @@
 
-export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
-;
-export type JobCategory =;
-  | 'development';
-  | 'design';
-  | 'marketing';
-  | 'content';
-  | 'data';
-  | 'business';
-  | 'other';
-;
-export interface JobBudget {
-export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
-
-export type JobCategory = 
-  | 'development' 
-  | 'design' 
-  | 'marketing' 
-  | 'content' 
-  | 'data' 
-  | 'business' ;
-  | 'other';
-
-export interface JobBudget {;
 
   min: number;
   max: number
   currency: string
 }
-
-
-export interface Job {;
 
   id: string;
   client_id: string;
@@ -86,11 +59,6 @@ export interface JobMatch {
   }
 }
 
-
-
-export interface ResumeAttachment {;
-
-
   id: string;
   title: string;
   type: 'ai_resume' | 'custom_upload';
@@ -101,12 +69,6 @@ export interface ResumeAttachment {;
   skills?: string[];
 }
 export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-;
-
-export interface JobApplication {
-
-
-export interface JobApplication {;
 
   id: string;
   job_id: string;
@@ -137,8 +99,7 @@ export interface JobApplication {;
     skills_match?: {
       score: number;
 
-      matching: string[],
-
+  notes?: string,  // New field for client notes
 
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed',;
 export type JobCategory =;
@@ -262,8 +223,6 @@ export interface JobApplication {;
   scored_at?: string;
   notes?: string,  // New field for client notes;
 
-
-
-
 }
 ;
+

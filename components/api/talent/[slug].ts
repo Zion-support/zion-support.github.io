@@ -37,25 +37,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 }
 
-
-import {supabase, as, supabase_client} from '@/utils / supabase / client';
-import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
-import type { TalentProfile } from '@/utils / types / talent';
-;
-const has_supabase =;
-  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const has_supabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-;
-/**
- * apply_translations - Function description
- */
-function apply_translations() {
-  // Check condition
-if (return { item, translated: false }) {
-  $2
-}
-  }
-
 }
     return res.set_header ('Allow', 'GET').status (405).end ('Method Not Allowed');
   }
@@ -124,3 +105,4 @@ if (throw error) {
     return res.status (500).json ({ error: e.message });
 }
 }
+

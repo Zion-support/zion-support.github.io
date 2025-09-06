@@ -2,20 +2,8 @@ import React from 'react';
 
 
 
-import {useState} from 'react';
-import {SmartContractBuilder} from '@/components/contracts/SmartContractBuilder';
-import {ContractBuilder} from '@/components/contracts/ContractBuilder';
-import {ContractHeader} from './ContractHeader';
-import {ContractTypeCards} from './ContractTypeCards';
-import {RecentContractsTable} from './RecentContractsTable';
-import {TalentProfile} from '@/types/talent';
-import {useAuth} from '@/hooks/useAuth';
 
 // Mock data for demo purposes
-
-
-export function ContractBuilderContent() {;
-
 
   const { user } = useAuth();
   const [showBuilderType, setShowBuilderType] = useState<'none' | 'standard' | 'smart'>('none');
@@ -37,8 +25,6 @@ export function ContractBuilderContent() {;
       isSmartContract: false
     }
   ]);
-
-
 
 import { useState } from 'react',;
 import { SmartContractBuilder } from '@/components/contracts/SmartContractBuilder',;
@@ -79,9 +65,6 @@ export function ContractBuilderContent() {;
     }
   ]),
 
-
-
-
   const handleContractGenerated = (content: string) => {
     // // // console.log('Contract generated:', content.substring(0, 100) + '...')
   },
@@ -89,16 +72,23 @@ export function ContractBuilderContent() {;
   const handleViewContract = (contractId: string) => {
     console.log('Viewing contract:', contractId);
     // Future implementation: View specific contract details
-  }
-  },
 
   return (
     <>
       <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />
-      <ContractTypeCards
-      
-      <ContractTypeCards 
 
+  ]),;
+  const handleContractGenerated = (content: string) => {;
+    // // // console.log('Contract generated:', content.substring(0, 100) + '...');
+  },;
+  const handleViewContract = (contractId: string) => {;
+    // // // console.log('Viewing contract:', contractId);
+    // Future implementation: View specific contract details;
+  };
+  return (;
+    <>;
+      <ContractHeader onCreateClick={() => setShowBuilderType('smart')} />;
+      <ContractTypeCards;
 
         onStandardClick={() => setShowBuilderType('standard')}
         onSmartClick={() => setShowBuilderType('smart')}

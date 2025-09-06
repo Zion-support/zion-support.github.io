@@ -1,11 +1,8 @@
 
 
-
-import { Link } from "react-router-dom",
-import { Button } from "@/components/ui/button",
-
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
+
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
 
@@ -22,8 +19,8 @@ export function EnterpriseCallToAction() {
       </p>
     </div>
 
-import {Link} from "react-router-dom";
-import {Button} from "@/components/ui/button";
+import { Link } from "react-router-dom",;
+import { Button } from "@/components/ui/button";
 export function EnterpriseCallToAction() {;
   return (
     <div className="mt-12 text-center">;
@@ -37,7 +34,7 @@ export function EnterpriseCallToAction() {;
       </p>;
     </div>;
   );
+
 }
 ;
-
 

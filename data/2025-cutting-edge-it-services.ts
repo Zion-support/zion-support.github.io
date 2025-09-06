@@ -1,7 +1,4 @@
 
-
-
-
 export const cuttingEdgeITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -418,32 +415,12 @@ export const cuttingEdgeITServices2025 = [
       'Google Cloud'
     ]
     compliance: [
-      'DevOps Best Practices'
-      'Security Standards'
-      'Quality Assurance Protocols'
-    ]
-  }
-export const cuttingEdgeITServices2025 = [
-  {
-
-
-      'DevOps Best Practices',
-      'Security Standards',
-      'Quality Assurance Protocols',
-    ],
-
-  },;
-
 
 ];      'Software development automationContinuous deployment pipelinesPerformance monitoring and optimizationIncident response automationQuality assurance automation'
 ];      'Software development automation_continuous deployment pipelines_performance monitoring and optimization_incident response automation_quality assurance automation';
     ];
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'];
-
-
-;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols']
-
 
 export const cuttingEdgeITServices2025 = [;
   {;
@@ -651,6 +628,6 @@ export const cuttingEdgeITServices2025 = [;
     integrations: ['GitHubGitLabJenkinsDockerKubernetesAWSAzureGoogle Cloud'],;
     compliance: ['DevOps Best PracticesSecurity StandardsQuality Assurance Protocols'];
 
-
   }
 ];
+

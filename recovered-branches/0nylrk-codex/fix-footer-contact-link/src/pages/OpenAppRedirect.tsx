@@ -1,31 +1,13 @@
 
 
-
+import React, { useEffect, useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
 
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
-  const navigate = useNavigate()
-  const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting');
-  useEffect(() => {
-    const attemptAppOpen = async () => {
-      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      const isAndroid = /Android/.test(navigator.userAgent);
-      // App scheme URLs (these would be your actual app's URL schemes)
-      const appScheme = "zion: //"
-      const androidAppUrl = "market: //details?id=app.zion.marketplace";
-      const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000"
-  const navigate = useNavigate(),
-  const [status, setStatus] = useState<'redirecting' | 'failed' | 'timeout'>('redirecting'),
-  
-  useEffect(() => {
-    const attemptAppOpen = async () => {
-      const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      const isAndroid = /Android/.test(navigator.userAgent);
-      // App scheme URLs (these would be your actual app's URL schemes)
-      const appScheme = "zion: //",
-      const androidAppUrl = "market://details?id=app.zion.marketplace",
-      const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
+
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       let timeout: number | undefined
       // Try to open the app
@@ -99,7 +81,6 @@ const OpenAppRedirect: React.FC = () => {;
           } else if (isiOS) {
             window.location.href = iosAppUrl
 
-
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -140,25 +121,15 @@ const OpenAppRedirect: React.FC = () => {;
           navigate(fallbackUrl);
         }, 1500);
 
-
-
-
       }
-      
+
       // Clear timeout if page visibility changes (meaning app opened successfully)
       document.addEventListener("visibilitychange", () => {
         if (document.hidden && timeout) {
           clearTimeout(timeout)
         }
       })
-    }
-    attemptAppOpen()
-  }, [navigate]);
-    },
-    
-    attemptAppOpen()
-  }, [navigate]),
-  
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-zion-blue">
       <SEO
@@ -197,15 +168,6 @@ const OpenAppRedirect: React.FC = () => {;
             </Link>
           </>
         )}
-      </div>
-    </div>
-  )
-}
-export default OpenAppRedirect;
-
-      </div>;
-    </div>;
-  );
-},;
 
 export default OpenAppRedirect;
+

@@ -1,5 +1,18 @@
 
-
+const [loading, setLoading] = useState(false);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    // Simulate deployment
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }
+  const [message, setMessage] = useState('');
+  const [messageType, setMessageType] = useState<'success' | 'error' | 'info'>('success');
+  // Mock feature keys and functions
+  const FeatureKeys = ['ai', 'blockchain', 'governance', 'treasury'];
+  const labelFor = (key: string) => {
     const labels: { [key: string]: string } = {
       ai: 'AI Integration'
       blockchain: 'Blockchain Technology'
@@ -541,6 +554,7 @@ ai: 'Advanced AI capabilities and automation',
 
                 }`}
               >
+
 "use client",;
 import { useState } from "react",;
 import { FeatureKeys } from "@/lib/zod",;
@@ -929,63 +943,7 @@ export default function AdminDeployPage() {;
                   : 'bg-red-900/20 border border-red-500/20 text-red-400';
               }`}>;
 
-
-
                 {message}
               </div>;
             )}
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-          </div>;
-        </form>;
-      </div>;
-    </div>);
-}
-
-;
-function labelFor(key: string) {;
-  switch (key) {;
-    case "marketplace": return "Marketplace",;
-    case "zion_gpt": return "ZionGPT Core",;
-    case "resume_ai": return "Resume AI",;
-    case "token_rewards": return "Token System",;
-    case "onchain_contracts": return "Smart Contracts",;
-    case "kyc_aml": return "KYC/AML",;
-    case "dao_voting": return "DAO Voting",;
-    case "incubator_grants": return "Incubator",;
-    case "academy": return "Zion Academy",;
-    case "partner_api": return "Partner API",;
-    case "regional_dashboards": return "Regional Dashboards",;
-    case "vendor_plugin": return "Vendor Plugin",;
-    case "web3_login": return "Web3 Login",;
-    case "multi_currency": return "Multi-Currency",;
-    default: return key;
-  }
-}
-;
-function getFeatureDescription(key: string) {;
-  switch (key) {;
-    case "marketplace": return "Jobs, talent, and project marketplace",;
-    case "zion_gpt": return "Core AI intelligence system",;
-    case "resume_ai": return "AI-powered resume and proposal builder",;
-    case "token_rewards": return "Token system with rewards",;
-    case "onchain_contracts": return "Smart contract builder",;
-    case "kyc_aml": return "Identity verification and compliance",;
-    case "dao_voting": return "Proposal and voting system",;
-    case "incubator_grants": return "Startup incubation and funding",;
-    case "academy": return "Educational platform",;
-    case "partner_api": return "API access for partners",;
-    case "regional_dashboards": return "Regional and institutional views",;
-    case "vendor_plugin": return "White-label vendor solutions",;
-    case "web3_login": return "Web3 authentication and DID";
-    case "multi_currency": return "Multi-currency support";
-    default: return "Core platform feature";
-  }
-}
-}
-
 

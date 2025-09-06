@@ -1,25 +1,6 @@
 
-import {useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {UserProfile, UserDetails} from '@/types / auth';
-import {Message, Conversation} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-export function useMessagingRealtime (
-
-
-import {useEffect} from 'react';
-import {supabase} from '@/integrations/supabase/client';
-import {UserProfile, UserDetails} from '@/types/auth';
-import {Message, Conversation} from '@/types/messaging';
-import {toast} from '@/hooks/use-toast';
 
 // Allow either UserProfile or UserDetails
-
-
-export function useMessagingRealtime(;
 
   user: UserWithProfile;
   active_conversation: Conversation | null;
@@ -53,6 +34,7 @@ export function useMessagingRealtime(;
 
     return () => {
       supabase.removeChannel(subscription)
+
 import { useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import { UserProfile, UserDetails } from '@/types/auth',;
@@ -102,8 +84,6 @@ if ( {) {
       .subscribe();
     return () => {;
       supabase.removeChannel(subscription);
-
-
 
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);

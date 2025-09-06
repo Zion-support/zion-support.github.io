@@ -1,28 +1,4 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useMemo } from 'react';
 import Head from 'next/head';
 import { useRouter  } from 'next/router';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
@@ -49,8 +25,6 @@ import { nextGenAIServices  } from '../data/next-gen-ai-services';
 import { industryRealServices  } from '../data/industry-real-services';
 import { professionalServices  } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-
-
 
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
@@ -534,50 +508,47 @@ function normalizeSlug(value: string): string {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
+// Static export support: generate root-level pages for service slugs;
 
-function collectAllServices(): any (): Svc[] {;
-  return enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.concat(;
-    extraServices as Svc[],;
-    additionalEnhancedServices as Svc[],;
-    innovativeAIServices as Svc[],;
-    quantumSpaceServices as Svc[],;
-    enterpriseITServices as Svc[],;
-    newRealServices as Svc[],;
-    marketReadyServices as Svc[],;
-    nextGenerationAIServices as Svc[],;
-    emergingTechnologyServices as Svc[],;
-    comprehensiveITSolutions as Svc[],;
-    marketValidatedServices as Svc[],;
-    newRealInnovations as Svc[],;
-    realMarketServices as Svc[],;
-    realVerifiedServices as unknown as Svc[];
+// Static export support: generate root-level pages for service slugs
+
+type Svc = (typeof enhancedRealMicroSaasServices)[number];
+function collectAllServices(): Svc[] {
+  return enhancedRealMicroSaasServices.concat(
+    extraServices as Svc[]
+    additionalEnhancedServices as Svc[]
+    innovativeAIServices as Svc[]
+    quantumSpaceServices as Svc[]
+    enterpriseITServices as Svc[]
+    newRealServices as Svc[]
+    marketReadyServices as Svc[]
+    nextGenerationAIServices as Svc[]
+    emergingTechnologyServices as Svc[]
+    comprehensiveITSolutions as Svc[]
+    marketValidatedServices as Svc[]
+    newRealInnovations as Svc[]
+    realMarketServices as Svc[]
+    realVerifiedServices as unknown as Svc[]
   );
-
-function normalizeSlug(): any (value: string): string {;
-  return value;
-    .toLowerCase();
-    .replace(/[^a-z0-9]+/g, '-');
-    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(): any (link?: string): string | null {;
-
-
+function normalizeSlug(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
-  try {;
+  try {
     const url = new URL(link);
+    const path = url.pathname.replace(/^\/+|\/+$/g, '');
+    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/..."
+    if (path && !path.includes('/')) return path;
+    return null
+  } catch {
+    return null
 
-    const path = url && url.pathname.replace(/^\/+|\/+$/g, '');
-    // Accept root-level slugs like "/ai-energy-management", ignore nested like "services/...";
-    if (path && !path && path.includes('/')) return path;
-    return null;
-  } catch {;
-    return null;
+export const getStaticPaths: GetStaticPaths = async () => {
 
-
-  };
-}
-
-
+export const getStaticPaths: GetStaticPaths = async () => {;
 
   const services = collectAllServices();
 
@@ -650,44 +621,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
           }
     }
   } catch {}
-      const entries = fs.readdir_sync (pages_dir, { withFileTypes: true }),
-    for (const entry of entries) {
-      if (&& /\.tsx?$/.test (entry.name)) {) {
-  $2
-}
-        const base = entry.name.replace (/\.(tsx | ts | jsx | js)$/i, '');
-        if () {) {
-  $2
-}
-          static_slugs.add (base.toLowerCase ());
-        }
-
-
-
-
-
 
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
     slug => !staticSlugs.has(slug)
   );
   return {
-
-
-    paths: uniqueNonConflicting.map(slug => ({ params: { slug } })),
-    fallback: true,
-  };
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
-  // No dynamic fetching needed; the component resolves the service client-side.
-  return { props: {} };};
-  // Exclude any slug that conflicts with an existing root page file
-  const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
-
-  return {
-    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
-
 
     fallback: true
   }
@@ -705,76 +644,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
 
-
-      const entries = fs && fs.readdirSync(pagesDir, { withFileTypes: true }),;
-    for (const entry of entries) {;
-      if (entry && entry.isFile() && /\.tsx?$/.test(entry && entry.name)) {;
-        const base = entry && entry.name.replace(/\.(tsx|ts|jsx|js)$/i, '');
-        if (base !== 'index' && base !== '[slug]' && !base && base.startsWith('_')) {;
-          staticSlugs && staticSlugs.add(base && base.toLowerCase());
-        }
-    }
-  } catch {}
-
-
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter(;
-    slug => !staticSlugs && staticSlugs.has(slug);
-  );
-
-  return {;
-    paths: uniqueNonConflicting && uniqueNonConflicting.map(slug => ({ params: { slug } })),;
-    fallback: true,;
-  };
+  return { props: {} };
 };
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
-  // No dynamic fetching needed; the component resolves the service client-side.;
-  return { props: {} };};
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array && Array.from(candidateSlugs).filter((slug) => !staticSlugs && staticSlugs.has(slug));
-
-
-  return {;
-    paths: uniqueNonConflicting && uniqueNonConflicting.map((slug) => ({ params: { slug } })),;
-    fallback: true;
-  }
-};
-
-export const getStaticProps: GetStaticProps = async ({ params }) => {;
-  // No dynamic fetching needed, the component resolves the service client-side.;
-  return { props: {} }
 
 };
 
-
-
-};
-
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter (
-    slug => !static_slugs.has (slug));
-;
-  return {
-    paths: uniqueNonConflicting.map (slug => ({ params: { slug } })),
-    fallback: true,
-  }
-}
-;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed; the component resolves the service client - side.;
-  return { props: {} }}
-  // Exclude any slug that conflicts with an existing root page file;
-  const uniqueNonConflicting = Array.from (candidate_slugs).filter ((slug) => !static_slugs.has (slug));
-;
-  return {
-    paths: uniqueNonConflicting.map ((slug) => ({ params: { slug } })),
-    fallback: true;
-  }
-}
-;
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  // No dynamic fetching needed, the component resolves the service client - side.;
-  return { props: {} }
-}
-;

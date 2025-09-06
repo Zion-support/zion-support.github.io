@@ -1,13 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import fs from 'fs';
+import path from 'path';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
-    const users = readUsers(),
-    if (req && req.method === 'GET') {
-      const { userId = 'demo-user' } = req && req.query;
-
+      const { userId = 'demo-user' } = req.query;
       const user = users[userId as string];
       return res.status(200).json({ progress: user?.progress ?? {} });
     }
@@ -51,6 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
       if (typeof percent === 'number') {
         courseProgress.percent = Math.max(courseProgress.percent, percent);      }
+
 const usersPath = path.join(process.cwd(), 'datalearnusers.json');
 function readUsers() {
   return JSON.parse(fs.readFileSync(usersPath, 'utf-8'))
@@ -64,10 +61,15 @@ function readUsers() {
 }
         course_progress.completed_lessons.push (lesson_id);
       }
-      // Check condition
-if ( {) {
-  $2
-}
+      if (typeof percent === 'number') {
+        courseProgress.percent = Math.max(courseProgress.percent, percent);
+      }
 
+      user.progress[courseId] = courseProgress;
+      users[userId] = user;
+      writeUsers(users);
+      return res.status(200).json({ ok: true, progress: courseProgress });
+    }
 
+  }
 

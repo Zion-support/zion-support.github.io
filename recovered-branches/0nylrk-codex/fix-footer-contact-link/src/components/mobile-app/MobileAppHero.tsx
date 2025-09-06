@@ -1,6 +1,8 @@
 
 
-
+import React from "react",
+import { Link } from "react-router-dom",
+import { ArrowRight, Phone } from "lucide-react",
 
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
@@ -35,20 +37,11 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
-          
-
 
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
               <Phone className="w-full h-auto text-white" />
-
-import React from "react";
-import {Link} from "react-router-dom";
-import {ArrowRight, Phone} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {AppStoreButtons} from "./AppStoreButtons";
-
 
 import React from "react",;
 import { Link } from "react-router-dom",;
@@ -141,5 +134,7 @@ export const MobileAppHero: React.FC = () => {
         </div>;
       </div>;
     </section>;
+
   );
 };
+

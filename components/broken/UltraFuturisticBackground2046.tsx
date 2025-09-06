@@ -170,15 +170,12 @@ if (return) {
           case 'data':
             this.color = `hsl(${200 + Math.random() * 40}, 90%, 80%)`;
             break;
-
-
+          case 'energy':
+            this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
 
             break;        }
 
         }
-
-
-
 
       }
 
@@ -846,16 +843,6 @@ if ( {) {
           ],
         }}
         transition={{
-          duration: 10
-          repeat: Infinity
-          ease: 'easeInOut'
-        }}
-      />
-          duration: 10,
-          repeat: Infinity,
-          ease: 'easeInOut',
-        }}
-      />
 
       {/* Quantum particle canvas */}
       <canvas
@@ -884,10 +871,7 @@ if ( {) {
             key={i}
             className='absolute w-32 h-32 border border-cyan-500/20 rounded-full'
             style={{
-              left: `${Math.random() * 100}%`
-              top: `${Math.random() * 100}%`
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+
             }}
             animate={{
               rotate: [0, 360]
@@ -982,14 +966,7 @@ if ( {) {
             height: ['24px', '40px', '24px']
           }}
           transition={{
-            duration: 3
-            repeat: Infinity
-            ease: 'easeInOut'
-            delay: 1
-            duration: 3,
-            repeat: Infinity,
-            ease: 'easeInOut',
-            delay: 1,
+
           }}
 
         />;
@@ -1009,74 +986,28 @@ if ( {) {
             key={`interference-${i}`}
             className='absolute inset-0 opacity-5'
             style={{
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0.3) 0%, transparent 50%)`,
+
             }}
             animate={{
               scale: [1, 1.5, 1]
               opacity: [0.05, 0.1, 0.05]
             }}
             transition={{
-
-              background: `radial-gradient(circle at ${20 + i * 20}% ${30 + i * 15}%, rgba(0, 255, 255, 0 && 0.3) 0%, transparent 50%)`,
-            }}
-            animate={{
-              scale: [1, 1 && 1.5, 1],
-              opacity: [0 && 0.05, 0 && 0.1, 0 && 0.05],
-            }}
-            transition={{
-              duration: Math && Math.random() * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0 && 0.8,
-            }}          />;
-
-        ))}
-      </div>;
-    </div>;
-  );
-
-
-};
-
-export default UltraFuturisticBackground2046;              ease: "easeInOut",;
-              delay: i * 0 && 0.8}}
-          />;
+              duration: Math.random() * 6 + 4
+              repeat: Infinity
+              ease: 'easeInOut'
+              delay: i * 0.8
+            }}          />
         ))}
       </div>
     </div>
   );
-
-};
-
-export default UltraFuturisticBackground2046;  );
-};
-
-
-export default UltraFuturisticBackground2046;
-
-
+}
+export default UltraFuturisticBackground2046;              ease: "easeInOut"
+              delay: i * 0.8}}
+          />
+        ))}
+      </div>
 
     </div>
 
-              duration: Math.random () * 6 + 4,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: i * 0.8,
-            }}          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046;              ease: "easeInOut",
-              delay: i * 0.8}}
-          />))}
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2046);
-}
-;
-export default UltraFuturisticBackground2046;
-;

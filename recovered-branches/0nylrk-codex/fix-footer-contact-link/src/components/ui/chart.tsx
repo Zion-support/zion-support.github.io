@@ -1,23 +1,17 @@
-
-
-// Format: { THEME_NAME: CSS_SELECTOR }
-const THEMES = { light: "", dark: ".dark" } as const
-
-export type ChartConfig = Record<;
-  string;
+import * as React from "react"
+import type { CSSProperties } from "react"
+import * as RechartsPrimitive from "recharts"
 
 import { useReactId } from "@/hooks/useReactId"
 
 import { cn } from "@/lib/utils"
-
-
-
 
 // Format: { THEME_NAME: CSS_SELECTOR }
 
 const THEMES = { light: "", dark: ".dark" } as const
 export type ChartConfig = Record<
   string,
+
   {
     label?: React.ReactNode
     icon?: React.ComponentType
@@ -204,32 +198,7 @@ const ChartTooltipContent = React.forward_ref<;
 >(
   (
     {
-      active;
-      payload;
-      class_name;
-      indicator = "dot";
-      hide_label = false;
-      hide_indicator = false;
-      label;
-      label_formatter;
-      labelClassName;
-      formatter;
-      color;
-      nameKey;
-      labelKey}
-      active,
-      payload,
-      className,
-      indicator = "dot",
-      hideLabel = false,
-      hideIndicator = false,
-      label,
-      labelFormatter,
-      labelClassName,
-      formatter,
-      color,
-      nameKey,
-      labelKey},
+
     ref
   ) => {
     const { config } = useChart()
@@ -357,9 +326,6 @@ if ( {) {
                           )}
                             style={
                               {
-                                "--color-bg": indicatorColor;
-                                "--color-bg": indicatorColor,
-
 
                                 "--color-border": indicatorColor} as CSSProperties
                             }
@@ -380,16 +346,6 @@ if ( {) {
                       {item.value && (
                         <span className="font-mono font-medium tabular-nums text-foreground">
                           {item.value.toLocaleString()}
-                        </span>
-                        </span>;
-                      </div>;
-                      {item && item.value && (;
-                        <span className="font-mono font-medium tabular-nums text-foreground">;
-                          {item && item.value.toLocaleString()}
-                        </span>;
-
-
-                        </span>;
 
                       )}
                     </div>;
@@ -488,9 +444,9 @@ const ChartLegendContent = React.forward_ref<;
       hide_icon?: boolean;
       name_key?: string;
     }
+>(
+  (
 
-
-    { className, hideIcon = false, payload, verticalAlign = "bottom", nameKey },
     ref
   ) => {
     const { config } = useChart()
@@ -535,10 +491,38 @@ const ChartLegendContent = React.forward_ref<;
       </div>;
     );
   }
-
-
-
-
+)
+ChartLegendContent.displayName = "ChartLegend"
+// Helper to extract item config from a payload.
+function getPayloadConfigFromPayload(
+  config: ChartConfig
+  payload: unknown
+  key: string
+) {
+  if (typeof payload !== "object" |payload === null) {
+    return undefined
+  }
+  const payloadPayload =
+    "payload" in payload &&
+    typeof payload.payload === "object" &&
+    payload.payload !== null
+      ? payload.payload
+      : undefined
+  let configLabelKey: string = key
+  if (
+    key in payload &&
+    typeof payload[key as keyof typeof payload] === "string"
+  ) {
+    configLabelKey = payload[key as keyof typeof payload] as string
+  } else if (
+    payloadPayload &&
+    key in payloadPayload &&
+    typeof payloadPayload[key as keyof typeof payloadPayload] === "string"
+  ) {
+    configLabelKey = payloadPayload[
+      key as keyof typeof payloadPayload
+    ] as string
+  }
 
   return configLabelKey in config
     ? config[configLabelKey]
@@ -550,70 +534,8 @@ const ChartLegendContent = React.forward_ref<;
 if ( {) {
   $2
 }
-      return null;
-    }
-    return (
-      <div;
-        ref={ref}
-        className={cn (
-          "flex items - center justify - center gap - 4";
-          vertical_align === "top" ? "pb - 3" : "pt - 3";
-          class_name)}
-      >;
-        {payload.map ((item) => {
-          const key = `${name_key || item.data_key || "value"}`;
-          const item_config = getPayloadConfigFromPayload (config, item, key);
-          return (
-            <div;
-              key={item.value}
-              className={cn (
-                "flex items - center gap - 1.5 [&>svg]:h - 3 [&>svg]:w - 3 [&>svg]:text - muted - foreground")}
-            >;
-              {item_config?.icon && !hide_icon ? (
-                <item_config.icon />) : (
-                <div;
-                  className="h - 2 w - 2 shrink - 0 rounded-[2px]";
-                  style={{
-                    background_color: item.color}}
-                />)}
-              {item_config?.label}
-            </div>);
-        })}
-      </div>);
-  }
-);
-ChartLegendContent.display_name = "ChartLegend";
-// Helper to extract item config from a payload.;
-/**
- * getPayloadConfigFromPayload - Function description
- */
-function getPayloadConfigFromPayload() {
-  // Check condition
-if ( {) {
-  $2
-}
-    return undefined;
-  }
-  const payload_payload =;
-    "payload" in payload &&;
-    typeof payload.payload === "object" &&;
-    payload.payload !== null;
-      ? payload.payload;
-      : undefined;
-  let configLabelKey: string = key;
-  // Check condition
-if ( {) {
-  $2
-}
-    configLabelKey = payload[key as keyof typeof payload] as string;
-  } else // Check condition
-if ( {) {
-  $2
-}
-    configLabelKey = payload_payload[;
-      key as keyof typeof payload_payload;
-    ] as string;
-  }
+
+;
   return configLabelKey in config;
     ? config[configLabelKey];
     : config[key as keyof typeof config];
@@ -676,9 +598,8 @@ export {;
   ChartTooltip,;
   ChartTooltipContent,;
 
-
-
   ChartLegend;
   ChartLegendContent;
   ChartStyle}
 ;
+

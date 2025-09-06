@@ -1,10 +1,5 @@
 
 
-import {useRef, useEffect} from 'react';
-import {useAnalytics} from '@/context/AnalyticsContext';
-export function useTrackUserBehavior(componentName: string) {;
-
-
   const { trackEvent } = useAnalytics();
 
   const componentRef = useRef<HTMLDivElement>(null);
@@ -56,16 +51,6 @@ export function useTrackUserBehavior(componentName: string) {;
 
   return componentRef
 
-import {useRef, useEffect} from 'react';
-import {use_analytics} from '@/context / AnalyticsContext';
-export /**
- * useTrackUserBehavior - Function description
- */
-function useTrackUserBehavior() {
-  const { track_event } = use_analytics ();
-  const component_ref = useRef < HTMLDivElement>(null);
-
-
 import { useRef, useEffect } from 'react',;
 import { useAnalytics } from '@/context/AnalyticsContext',;
 export function useTrackUserBehavior(componentName: string) {;
@@ -108,7 +93,6 @@ export function useTrackUserBehavior(componentName: string) {;
   }, [trackEvent, componentName]);
   return componentRef;
 
-
-
 }
 ;
+

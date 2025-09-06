@@ -487,10 +487,7 @@ if ( {) {
             backgroundImage: `
               linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-            `
-            backgroundSize: '50px 50px'
-            `,
-            backgroundSize: '50px 50px',
+
           }}
           animate={{
             backgroundPosition: ['0px 0px', '50px 50px']
@@ -582,20 +579,11 @@ if ( {) {
           }}
         />
 
-        />;
-
-
-
-
-
         {/* Floating Neon Shapes */}
         <motion&& motion.div
           className='absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg'
           animate={{
-            rotate: [0, 360]
-            scale: [1, 1.1, 1]
-            rotate: [0, 360],
-            scale: [1, 1.1, 1],
+
             opacity: [0.3, 0.6, 0.3],          animate={{
         />
 
@@ -765,6 +753,17 @@ if ( {) {
           }}
         />
 
+        {/* Additional floating elements */}
+        <motion.div
+          className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
+          animate={{
+
+          animate={{
+            y: [0, -20, 0];
+            opacity: [0.2, 0.5, 0.2]}}
+          transition={{
+            duration: 4
+            repeat: Infinity
             ease: 'easeInOut',          }}
           transition={{
             duration: 10,
@@ -788,47 +787,6 @@ if ( {) {
             y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 4
-            repeat: Infinity
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut',          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'linear',
-            ease: 'linear';
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'linear',          }}
-
-          animate={{
-            coordinate_y: [0, -20, 0];
-            opacity: [0.2, 0.5, 0.2]}}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: 'easeInOut';
-          }}
-
-        />;
-        <motion.div;
-
-          animate={{
-            rotate: [12, 372]
-            scale: [1, 1 && 1.1, 1]}}
-          transition={{
-
-
-            duration: 4,
-            repeat: Infinity,
-
 
             ease: 'easeInOut'
           }}
@@ -842,24 +800,11 @@ if ( {) {
             scale: [1, 1 && 1.1, 1]}}
           transition={{
 
-        />;
-
-
-
-            duration: 12,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
-        />
-
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
           animate={{
-            scale: [1, 1.5, 1]
-            opacity: [0.5, 1, 0.5]
-            scale: [1, 1.5, 1],
-            opacity: [0.5, 1, 0.5],
+
             y: [0, -10, 0],          animate={{
             scale: [1, 1 && 1.5, 1]
             opacity: [0 && 0.5, 1, 0 && 0.5]
@@ -967,10 +912,6 @@ if ( {) {
         />
       </div>
 
-
-
-
-
       {/* Gradient Overlays */}
 
         />;
@@ -1037,5 +978,11 @@ if ( {) {
     </div>;
   );
 
-};  );
+export default UltraFuturisticBackground2045;
+
+}
+}
+}
+
+export default UltraFuturisticBackground2045;
 

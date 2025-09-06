@@ -1,71 +1,19 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
-import React, { useState, useEffect } from 'react';
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {SEO} from "@/components/SEO";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {toast} from "@/components/ui/use-toast";
-import {useTranslation} from "react-i18next";
-import {AlertTriangle, Check, Globe, Search, Loader2} from "lucide-react";
-import {useIsMobile} from "@/hooks/use-mobile";
-import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
-import {useTranslationService} from "@/hooks/useTranslationService";
-export default function TranslationManager() {;
+import React, { useState, useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/components/ui/use-toast",
+import { useTranslation } from "react-i18next",
+import { AlertTriangle, Check, Globe, Search, Loader2 } from "lucide-react",
+import { useIsMobile } from "@/hooks/use-mobile",
 
-  const { t, i18n } = useTranslation();
-
-  const isMobile = useIsMobile();
-  const { supportedLanguages } = useLanguage();
-  const { translateContent, isTranslating } = useTranslationService();
-
-
-
-  const [selectedNamespace, setSelectedNamespace] = useState("translation");
-  const [searchQuery, setSearchQuery] = useState("");
-  const [translations, setTranslations] = useState<Record<string, any>>({});
-  const [filteredKeys, setFilteredKeys] = useState<string[]>([]);
-  const [editingKey, setEditingKey] = useState<string | null>(null);
-  const [editedTranslations, setEditedTranslations] = useState<Record<string, Record<SupportedLanguage, string>>>({});
-  const [isSaving, setIsSaving] = useState(false);
-  // Simulated translation data - in a real app, this would come from your backend
-  useEffect(() => {
-    // For demo purposes, we're using the loaded translations from i18next
-    const currentTranslations: Record<string, any> = {}
-import { useLanguage, SupportedLanguage } from "@/context/LanguageContext",
-import { useTranslationService } from "@/hooks/useTranslationService",
-export default function TranslationManager() {
-  const { t, i18n } = useTranslation(),
-  const isMobile = useIsMobile(),
-  const { supportedLanguages } = useLanguage(),
-  const { translateContent, isTranslating } = useTranslationService(),
-  
   const [selectedNamespace, setSelectedNamespace] = useState("translation"),
   const [searchQuery, setSearchQuery] = useState(""),
   const [translations, setTranslations] = useState<Record<string any>>({}),
@@ -78,7 +26,7 @@ export default function TranslationManager() {
   useEffect(() => {
     // For demo purposes, we're using the loaded translations from i18next
     const currentTranslations: Record<string any> = {},
-    
+
     supportedLanguages.forEach(lang => {
       const res = i18n.getResourceBundle(lang.code, selectedNamespace);
       if (res) {
@@ -90,7 +38,6 @@ export default function TranslationManager() {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
-
 
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
@@ -184,8 +131,6 @@ export default function TranslationManager() {;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
 
-
-
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -194,23 +139,12 @@ export default function TranslationManager() {;
       setTranslations(updatedTranslations),
       setEditingKey(null),
       setIsSaving(false),
-      
+
       toast({
         title: t("translation.saved")
         description: t("translation.changes_saved")})
     }, 1000)
-  }
-  const handleTranslateKey = async (key: string) => {
-    // Find first non-empty translation to use as source
-    let sourceLanguage: SupportedLanguage = 'en'
-    let sourceText = '';
-  },
-  
-  const handleTranslateKey = async (key: string) => {
-    // Find first non-empty translation to use as source
-    let sourceLanguage: SupportedLanguage = 'en',
-    let sourceText = '',
-    
+
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
 
@@ -296,9 +230,7 @@ export default function TranslationManager() {;
         sourceText
         'general'
         sourceLanguage
-      );
-      ),
-      
+
       if (error) {
         toast({
           title: t('translation.translation_failed')
@@ -342,9 +274,7 @@ export default function TranslationManager() {;
 
         ...editedTranslations,
         [key]: translatedText
-      });
-      }),
-      
+
       toast({
         title: t('translation.translation_success')
         description: t('translation.content_translated')})
@@ -354,29 +284,6 @@ export default function TranslationManager() {;
         title: t('translation.translation_failed')
         description: error instanceof Error ? error.message : t('translation.unknown_error')
         variant: "destructive"})
-    }
-  }
-  const handleCancel = () => {
-    setEditingKey(null)
-  }
-  const handleChange = (lang: SupportedLanguage, key: string, value: string) => {
-    setEditedTranslations({
-      ...editedTranslations;
-      [key]: {
-        ...editedTranslations[key]
-        [lang]: value
-      }
-    })
-  }
-  const getMissingLanguages = (key: string): SupportedLanguage[] => {
-    return supportedLanguages
-      .map(lang => lang.code)
-      .filter(lang => !translations[lang]?.[key])
-  }
-
-
-      <SEO 
-        title={t('translation.manager_title')} 
 
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
@@ -448,8 +355,6 @@ export default function TranslationManager() {;
     <>;
       <SEO;
         title={t('translation.manager_title')} ;
-
-
 
         description={t('translation.manager_description')}
       />
@@ -532,8 +437,6 @@ export default function TranslationManager() {;
                   </TabsList>
                 </Tabs>
               </div>
-              
-
 
               {/* Translations table */}
               <div className="border rounded-md">
@@ -579,10 +482,7 @@ export default function TranslationManager() {;
                               ))}
                             </div>
                             <div className="flex gap-2 mt-4">
-                              <Button
-                                size="sm"
-                              <Button 
-                                size="sm" 
+
                                 onClick={() => handleSave(key)}
                                 disabled={isSaving}
                               >;
@@ -597,24 +497,7 @@ export default function TranslationManager() {;
                                     {t('general && general.save')}
                                   </>;
                                 )}
-                              </Button>
-                              <Button
-                                size="sm"
-                                variant="outline"
-                                onClick={handleCancel}
-                              >
-                                {t('general.cancel')}
-                              </Button>
-                              <Button
-                              </Button>
-                              <Button 
 
-                                size="sm" 
-                                variant="outline" 
-                                onClick={handleCancel}>;
-                                {t('general && general.cancel')}
-                              </Button>;
-                              <Button
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
@@ -668,23 +551,4 @@ export default function TranslationManager() {;
                     ))}
                   </div>;
                 )}
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      </main>
-      <Footer />
-    </>
-  )
-}
-              </div>;
-            </div>;
-          </CardContent>;
-        </Card>;
-      </main>;
-      <Footer />;
 
-    </>);
-}
-
-;

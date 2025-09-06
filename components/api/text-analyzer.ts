@@ -287,104 +287,12 @@ export default async function handler(
       .slice(0, 5)
       .map(([phrase, count]) => ({ phrase, count }));
     // Language detection (simplified - assume English for demo)
+    const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);    const detectedLanguage = isEnglish ? 'en' : 'unknown';
+    const confidence = isEnglish ? 0.95 : 0.5;
+    const result: TextAnalysisResult = {
+      text,    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
+    const detectedLanguage = isEnglish ? 'en' : 'unknown';
+    const confidence = isEnglish ? 0.95 : 0.5;
 
-
-      language: {
-
-        topWords,
-        bigrams,
-        trigrams,
-      },
-    };
-    res && res.status(200).json(result);
-
-  } catch (error) {
-    console && console.error('Text analysis error:', error);
-    res && res.status(500).json({ error: 'Internal server error' });
-  }        score: sentimentScore;
-        label: sentimentLabel;
-
-        positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word));
-        negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
-
-      language: {
-
-      text;
-      statistics: {
-      
-        characters;
-        charactersNoSpaces;
-        words;
-        sentences;
-        paragraphs;
-        syllables;
-        readingTime;
-        speakingTime
-    },
-    readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
-        gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100,
-        colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100,
-        averageGrade};
-      sentiment: {
-      
-        score: sentimentScore, label: sentimentLabel,
-        positiveWords: textWords.filter(word => positiveWords.includes(word)),
-        negativeWords: textWords.filter(word => negativeWords.includes(word))
-    },
-    language: {
-
-        detectedLanguage;
-        confidence;
-        isEnglish}
-        detected_language,
-        confidence,
-        is_english,
-      },
-      keywords: {
-        top_words,
-        bigrams,
-        trigrams,
-      },
-    }
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Text analysis error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-  }        score: sentiment_score;
-        label: sentiment_label;
-        positive_words: text_words.filter (word => positive_words.includes (word));
-        negative_words: text_words.filter (word => negative_words.includes (word))}
-      language: {
-        detected_language;
-        confidence;
-        is_english}
-      keywords: {
-        top_words;
-        bigrams;
-
-        trigrams}};
-
-    res && res.status(200).json(result)
-  } catch (error) {
-    console && console.error('Text analysis error:', error);
-    res && res.status(500).json({ error: 'Internal server error' })
-
-  }
-
-}
-
-        trigrams}}
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Text analysis error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-  }
-}
-
-
-
-
+    const result: TextAnalysisResult = {
 

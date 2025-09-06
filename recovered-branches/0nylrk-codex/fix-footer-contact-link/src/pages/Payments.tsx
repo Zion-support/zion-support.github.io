@@ -1,6 +1,9 @@
 
 
-
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",
 
 export default function Payments() {
   return (
@@ -90,26 +93,23 @@ export default function Payments() {
   )
 }
 
-
-
-// Import UI components for Payment Settings tab;
-
 import {Button} from "@/components/ui/button";
 import {Switch} from "@/components/ui/switch";
 import {Label} from "@/components/ui/label";
 import {Checkbox} from "@/components/ui/checkbox";
 
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { TransactionHistory } from '@/components / transactions / TransactionHistory';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-export default /**
- * Payments - Function description
- */
-function Payments() {
-  return (
+import { Button } from "@/components/ui/button",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { TransactionHistory } from "@/components/transactions/TransactionHistory",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+export default function Payments() {;
+  return (;
     <>;
       <Header />;
       <div className="min - h-screen bg - zion - blue py - 12 px - 4">;
@@ -194,10 +194,8 @@ function Payments() {
     </>);
 }
 // Import UI components for Payment Settings tab;
-import { Button } from '@/components / ui / button';
-import { Switch } from '@/components / ui / switch';
-import { Label } from '@/components / ui / label';
-import { Checkbox } from '@/components / ui / checkbox';
-;
-
+import { Button } from "@/components/ui/button",;
+import { Switch } from "@/components/ui/switch",;
+import { Label } from "@/components/ui/label";
+import { Checkbox } from "@/components/ui/checkbox";
 

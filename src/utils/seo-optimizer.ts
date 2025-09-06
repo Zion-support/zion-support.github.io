@@ -11,12 +11,6 @@ export const optimize_headings = () =>: any {
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
-};
-};
-
-export const optimizeHeadings = () => {;
-  console.log('Optimizing headings...');
-};
 
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
@@ -42,3 +36,4 @@ export const generateStructuredData = pageData => {;
     }
   }
 };
+

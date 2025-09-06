@@ -1,9 +1,4 @@
 
-
-
-export interface ModerationAction {;
-
-
   id: string;
   flagId: string;
   action: ModerationStatus;
@@ -11,8 +6,6 @@ export interface ModerationAction {;
   adminId: string;
   reason?: string;
   createdAt: string;
-}
-export interface ModerationFlag {
 }
 
   id: string;
@@ -25,7 +18,6 @@ export interface ModerationFlag {
   createdAt: string;
   updatedAt: string;
   adminNotes?: string
-ursor/fix-syntax-push-and-merge-to-main-7db5
-}
 
+}
 

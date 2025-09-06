@@ -1,6 +1,5 @@
 
 
-
   return (
 
     <main className='mx-auto max-w-5xl px-4 py-12'>;
@@ -135,5 +134,4 @@ import Link from 'next / link';
       </div>
     </main>
   );
-}
-}
+

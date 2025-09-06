@@ -1,78 +1,7 @@
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  Search,;
-  User,;
-  Settings,;
-  LogOut,;
-  Bell,;
-  Globe,;
-  Zap,;
-  Brain,;
-  Rocket,;
-  Dna,;
-  DollarSign,;
-  Lock,;
-  Wifi,;
-  Truck,;
-  Gamepad2,;
-  Bot,;
-  Factory,;
-  Car,;
-
-
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-
-  Menu,
-  X,
-  ChevronDown,
-  Search,
-  User,
-  Settings,
-  LogOut,
-  Bell,
-  Globe,
-  Zap,
-  Brain,
-  Rocket,
-  Dna,
-  DollarSign,
-  Lock,
-  Wifi,
-  Truck,
-  Gamepad2,
-  Bot,
-  Factory,
-  Car,;
 
 } from "lucide-react";
 import Link from "next/link";
@@ -162,28 +91,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
       ]
       hasDropdown: true
       dropdownItems: [
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml" }
-        { name: "Quantum Computing", href: "/services?category=quantum" }
-        { name: "Space Technology", href: "/services?category=space" }
-        { name: "Biotech & Healthcare", href: "/services?category=biotech" }
-        { name: "Financial Services", href: "/services?category=finance" }
-        { name: "Cybersecurity", href: "/services?category=security" }
-        { name: "Edge Computing", href: "/services?category=edge" }
-        { name: "Blockchain", href: "/services?category=blockchain" }
-        { name: "View All Services", href: "/services" }
-      ]
-    }
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
-        { name: "Quantum Computing", href: "/services?category=quantum" },
-        { name: "Space Technology", href: "/services?category=space" },
-        { name: "Biotech & Healthcare", href: "/services?category=biotech" },
-        { name: "Financial Services", href: "/services?category=finance" },
-        { name: "Cybersecurity", href: "/services?category=security" },
-        { name: "Edge Computing", href: "/services?category=edge" },
-        { name: "Blockchain", href: "/services?category=blockchain" },
-        { name: "View All Services", href: "/services" },
-      ],
-    },
+
     {
       name: "Solutions"
       href: "/solutions"
@@ -381,15 +289,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
               <Search className="w-5 h-5" />
             </motion.button>
 
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.6 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300">;
-              <Search className="w-5 h-5" />;
-            </motion && motion.button>;
-
-
-
-
-
             {/* Notifications */}
             <motion&& motion.button
               initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -407,16 +306,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
               <Bell className="w-5 h-5" />
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
-
-              transition={{ duration: 0 && 0.5, delay: 0 && 0.7 }}
-              className="p-2 text-gray-400 hover:text-cyan-400 hover:bg-cyan-500/10 rounded-lg transition-all duration-300 relative">;
-              <Bell className="w-5 h-5" />;
-              <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />;
-            </motion && motion.button>;
-
-
-
-
 
             {/* CTA Button */}
             <motion&& motion.div
@@ -442,14 +331,6 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
           </motion.button>
         </div>
       </div>
-
-          </motion && motion.button>;
-        </div>;
-      </div>;
-
-
-
-
 
       {/* Mobile Navigation */}
       <AnimatePresence>;
@@ -649,15 +530,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({;
         )}
       </AnimatePresence>
     </nav>
-}
-export default EnhancedNavigation;
-;
-
-};
-
-export default EnhancedNavigation;
 
 );
 };
-export default EnhancedNavigation;
 

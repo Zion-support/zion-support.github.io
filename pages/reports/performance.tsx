@@ -1,25 +1,16 @@
 import React from 'react';
-
-import Head from 'next / head';
-import Link from 'next / link';
-;
-
-
+import Head from 'next/head';
+import Link from 'next/link';
 
 const PerformancePage: React.FC = () => {
   const performance_metrics = [;
     {
 
-
-
-      category: 'System Performance',
-      metrics: [;
-        { name: 'Response Time', value: '45ms', status: 'excellent', trend: '+12%' },
-        { name: 'Throughput', value: '2.4k req / s', status: 'good', trend: '+8%' },
-        { name: 'Error Rate', value: '0.02%', status: 'excellent', trend: '-15%' },
-
-
-
+        { name: 'Uptime', value: '99.97%', status: 'excellent', trend: '+0.1%'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
       ]
 
@@ -32,8 +23,11 @@ const PerformancePage: React.FC = () => {
 
         { name: 'Disk I/O', value: '45 MB/s', status: 'excellent', trend: '+18%' },
 
-
-
+        { name: 'Network', value: '1.2 GB/s', status: 'good', trend: '+7%'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
       ]
 
@@ -46,8 +40,18 @@ const PerformancePage: React.FC = () => {
         { name: 'Core Web Vitals', value: '98/100', status: 'excellent', trend: '+5%' },
         { name: 'Accessibility Score', value: '96/100', status: 'excellent', trend: '+2%' },
 
-
-
+        { name: 'SEO Score', value: '94/100', status: 'excellent', trend: '+3%'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      ]
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  ];
 
   const recentReports = [
 
@@ -73,10 +77,13 @@ const PerformancePage: React.FC = () => {
 
       status: 'completed'
 
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 
   ];
-
-
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -86,9 +93,6 @@ const PerformancePage: React.FC = () => {
       case 'critical': return 'text-red-400';
       default: return 'text-gray-400';
 
-  };
-
-
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -96,7 +100,6 @@ const PerformancePage: React.FC = () => {
   const getTrendColor = (trend: string) => {
     return trend.startsWith('+') ? 'text-green-400' : 'text-red-400';
   };
-
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
@@ -106,16 +109,6 @@ const PerformancePage: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className="container mx-auto px-4 py-8">
-
-
-        {/* Header */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
 
         <div className="mb-8">
           <Link href="/" className="text-cyan-400 hover:text-cyan-300 transition-colors">
@@ -128,16 +121,6 @@ const PerformancePage: React.FC = () => {
             Real-time system performance metrics and analytics dashboard
           </p>
         </div>
-
-
-        {/* Performance Overview */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
-
-
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           <div className="bg-white/10 rounded-xl p-6 border border-white/20">
@@ -157,7 +140,6 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
 
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Metrics</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -171,112 +153,6 @@ const PerformancePage: React.FC = () => {
                       <div className="flex items-center space-x-3">
                         <span className={`font-semibold ${getStatusColor(metric.status)}`}>
 
-;
-  const getTrendColor = (trend: string) =>: any {
-    return trend.starts_with ('+') ? 'text - green - 400' : 'text - red - 400';
-  }
-;
-  return (
-    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - gray - 900 text - white">;
-      <Head>;
-        <title > Performance Reports - bolt.new.zion.app</title>;
-        <meta name="description" content="Comprehensive performance metrics and system analytics" />;
-        <meta name="viewport" content="width = device - width, initial - scale = 1" />;
-      </Head>;
-      <div className="container mx - auto px - 4 py - 8">;
-        {/* Header */}
-        <div className="mb - 8">;
-          <Link href="/" className="text - cyan - 400 hover:text - cyan - 300 transition - colors">;
-            ← Back to Home;
-          </Link>;
-          <h1 className="text - 4xl font - bold mt - 4 mb - 2 bg - gradient - to - r from - cyan - 400 to - blue - 400 bg - clip - text text - transparent">;
-            Performance Reports;
-          </h1>;
-          <p className="text - gray - 300 text - lg">;
-            Real - time system performance metrics and analytics dashboard;
-          </p>;
-        </div>;
-        {/* Performance Overview */}
-        <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6 mb - 8">;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Overall Score</h3>;
-            <div className="text - 4xl font - bold text - green - 400">96.8</div>;
-            <p className="text - gray - 300 text - sm mt - 2">Performance Index</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Status</h3>;
-            <div className="text - 2xl font - bold text - green - 400">Healthy</div>;
-            <p className="text - gray - 300 text - sm mt - 2">All systems operational</p>;
-          </div>;
-          <div className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-            <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">Last Updated</h3>;
-            <div className="text - 2xl font - bold text - blue - 400">2 min ago</div>;
-            <p className="text - gray - 300 text - sm mt - 2">Real - time monitoring</p>;
-          </div>;
-        </div>;
-
-        {/* Performance Metrics */}
-        <div className="mb - 8">;
-          <h2 className="text - 2xl font - bold mb - 6 text - white">Performance Metrics</h2>;
-          <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 6">;
-            {performance_metrics.map ((section, section_index) => (
-              <div key={section_index} className="bg - white / 10 rounded - xl p - 6 border border - white / 20">;
-                <h3 className="text - xl font - semibold mb - 4 text - cyan - 400">{section.category}</h3>;
-                <div className="space - y-4">;
-                  {section.metrics.map ((metric, metric_index) => (
-                    <div key={metric_index} className="flex justify - between items - center">;
-                      <span className="text - gray - 300">{metric.name}</span>;
-                      <div className="flex items - center space - x-3">;
-                        <span className={`font - semibold ${getStatusColor (metric.status)}`}>;
-                          {metric.value}
-                        </span>
-                        <span className={`text-sm ${getTrendColor(metric.trend)}`}>
-                          {metric.trend}
-                        </span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Recent Reports */}
-                          {metric.value  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </span>
-                        <span className={`text-sm ${getTrendColor(metric.trend)}`}>
-                          {metric.trend  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                        </span>
-                      </div>
-                    </div>
-                  ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                </div>
-              </div>
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-          </div>
-        </div>
-        {/* Recent Reports */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Recent Reports</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -285,12 +161,6 @@ const PerformancePage: React.FC = () => {
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-lg font-semibold text-white">{report.title}</h3>
                   <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
-                    {report.status}
-                    {report.status  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
 
                   </span>
                 </div>
@@ -298,8 +168,7 @@ const PerformancePage: React.FC = () => {
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400 text-sm">{report.date}</span>
 
-
-
+                  <Link
 
                     className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
                   >
@@ -307,30 +176,6 @@ const PerformancePage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Performance Trends */}
-            ))  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-                    className="text-cyan-400 hover:text-cyan-300 text-sm transition-colors"
-                  >
-                    View Report 
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        {/* Performance Trends */  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-
 
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6 text-white">Performance Trends</h2>
@@ -340,10 +185,8 @@ const PerformancePage: React.FC = () => {
               <h3 className="text-xl font-semibold mb-2 text-white">Continuous Improvement</h3>
               <p className="text-gray-300 mb-6">
 
-
-                Our automated systems continuously monitor and optimize performance,
-
                 Our automated systems continuously monitor and optimize performance, 
+
                 Our automated systems continuously monitor and optimize performance,
 
                 ensuring consistent improvement across all metrics.
@@ -370,18 +213,14 @@ const PerformancePage: React.FC = () => {
           </div>
         </div>
 
-
-        <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
-
         {/* Navigation */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
         <div className="flex flex-wrap gap-4 justify-center">
           <Link
-
 
             href="/reports"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-cyan-400/50"
@@ -389,17 +228,11 @@ const PerformancePage: React.FC = () => {
             All Reports
           </Link>
 
-
-
-
             href="/reports/updates"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-blue-400/50"
           >
             Recent Updates
           </Link>
-
-
-
 
             href="/automation-health"
             className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-lg text-white transition-all duration-200 hover:border-green-400/50"
@@ -410,10 +243,5 @@ const PerformancePage: React.FC = () => {
       </div>
     </div>
   );
-}
-;
-
-
-};
 
 export default PerformancePage;

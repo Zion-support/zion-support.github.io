@@ -3,12 +3,19 @@ import React from 'react';
 
 
 
+export interface TalentCardProps {
+  talent: TalentProfile,
+  onViewProfile: (id: string) => void,
+  onRequestHire: (talent: TalentProfile) => void,
+  isSaved: boolean,
+  onToggleSave: (id: string, isSaved: boolean) => void,
+  isAuthenticated: boolean
 
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {Star, MapPin, Clock, ArrowRight, CheckCircle2} from "lucide-react";
-import {useNavigate} from "react-router-dom";
-import {TalentProfile} from "@/types/talent";
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { Star, MapPin, Clock, ArrowRight, CheckCircle2 } from "lucide-react",;
+import { useNavigate } from "react-router-dom",;
+import { TalentProfile } from "@/types/talent",;
 export interface TalentCardProps {;
   talent: TalentProfile,;
   onViewProfile: (id: string) => void,;
@@ -54,7 +61,7 @@ export function TalentCard(): any ({;
     if (onToggleSave) {;
       onToggleSave(talent && talent.id, !isSaved);
     }
-  };
+  },
 
 
   return (
@@ -102,7 +109,6 @@ export function TalentCard(): any ({;
               </Button>
             </div>
             <p className="text-zion-cyan font-medium">{talent.professional_title}</p>
-            
 
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">;
@@ -118,78 +124,6 @@ export function TalentCard(): any ({;
                   <span>{talent && talent.availability_type}</span>;
                 </div>;
               )}
-            </div>
-          </div>
-        </div>
-        {/* Skills */}
-        {skills.length > 0 && (
-          <div className="mt-4">
-            <div className="flex flex-wrap gap-2">
-              {skills.map((skill, index) => (
-                <span
-                  key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
-                  {skill}
-                </span>;
-              ))}
-              {(talent.skills?.length |0) > 5 && (
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length |0) - 5} more
-                </span>
-              )}
-            </div>
-          </div>
-        )}
-        {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">
-          <div>
-            {talent.hourly_rate ? (
-              <div className="text-white font-bold">
-                ${talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>
-              </div>
-            ) : (
-              <div className="text-zion-slate-light">Rate not specified</div>
-            </div>;
-          </div>;
-        </div>;
-
-        {/* Skills */}
-        {skills && skills.length > 0 && (;
-          <div className="mt-4">;
-            <div className="flex flex-wrap gap-2">;
-              {skills && skills.map((skill, index) => (;
-                <span
-                  key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
-                  {skill}
-                </span>;
-              ))}
-
-              {(talent && talent.skills?.length || 0) > 5 && (;
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">;
-                  +{(talent && talent.skills?.length || 0) - 5} more;
-                </span>;
-
-              )}
-            </div>;
-          </div>;
-        )}
-
-
-
-        {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent && talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-
-
 
             )}
 
@@ -210,9 +144,7 @@ export function TalentCard(): any ({;
               size="sm"
               variant="ghost"
               onClick={(e) => {
-                e.stopPropagation();
 
-                e.stopPropagation(),
                 handleViewProfile()
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light"

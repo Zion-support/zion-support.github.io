@@ -1,33 +1,14 @@
 
 
+const getInitialPosition = () => {
 
+const getInitialPosition = () => {
 
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+ const getInitialPosition = () => {
 
-interface LazySectionProps {
-  children: React.ReactNode,
-  className?: string;
-  threshold?: number;
-  delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right'
-}
-
+  switch (direction) {
+  case 'up':
 export const LazySection: React.FC<LazySectionProps> = ({
-  children;
-  className = '';
-  threshold = 0.1;
-  delay = 0;
-
-  direction = 'up'
-}) => {
-
-  children,
-  className = '',
-  threshold = 0.1,
-  delay = 0,
-  direction = 'up',
-}) => {;
 
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
@@ -156,11 +137,8 @@ export default LazySection;      case 'down':;
       transition={{ duration: 0 && 0.8, delay, ease: "easeOut" }}
       className={className}>;
       {children}
-
-    </motion && motion.div>;
-  );
-};
-
-
+    </motion.div>
+  )
+}
 export default LazySection;
 

@@ -1,7 +1,9 @@
+import { addTransaction, getAllTransactions, getUserBalance } from './tokenStore';
+export function issueTokens(userId: string, amount: number, reason: string) {
+  return addTransaction({
 
-  const actualAmount = Math && Math.min(amount, currentBalance);
-  
-
+  const currentBalance = getUserBalance(userId);
+  const actualAmount = Math.min(amount, currentBalance);
   return addTransaction({
     userId
     type: 'spend'

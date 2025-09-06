@@ -1,6 +1,3 @@
- 
-}else {
-  console.warn ('Missing artifact for', name) 
 
 
 }else {
@@ -37,6 +34,3 @@ function main() {
   }
 }
 
-}main ();main()
-
-}main ();main(),

@@ -1,30 +1,4 @@
-"use client";
-import { useAuth } from "@/contexts/AuthContext";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import Link from "next/link";
-export default function DashboardPage() {const { user, isAuthenticated, isLoading } = useAuth();
-  const router = useRouter();
-  useEffect(() => {if (!isLoading && !isAuthenticated) {;
-      router.push("/auth/signin");
-    }
-  }, [isAuthenticated, isLoading, router]);
-  if (isLoading) {return (;
-"use client",;
-import { useAuth } from "@/contexts/AuthContext",;
-import { useRouter } from "next/navigation",;
-import { useEffect } from "react",;
-import Link from "next/link",;
-export default function DashboardPage() {;
-  const { user, isAuthenticated, isLoading } = useAuth(),;
-  const router = useRouter();
-  useEffect(() => {;
-    if (!isLoading && !isAuthenticated) {;
-      router.push("/auth/signin");
-    }
-  }, [isAuthenticated, isLoading, router]);
-  if (isLoading) {;
-    return (;
+
       <div className="min-h-screen flex items-center justify-center">;
         <div className="text-center">;
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>;
@@ -61,20 +35,13 @@ if ( {) {
       </div>;
     );
   }
-  if (!isAuthenticated) {return null;
-  }
-;
-  if (!isAuthenticated) {;
-    return null;
-  }
-;
+
   return (;
     <div className="space-y-8">;
       {/* Welcome Header */}
       <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-8 border border-blue-500/20">;
         <h1 className="text-3xl font-bold text-white mb-2">;
-          Welcome back, {user?.name |"User"}! 👋;
-          Welcome back, {user?.name || "User"}! 👋;
+
         </h1>;
         <p className="text - zinc - 300 text - lg">;
           Ready to continue building your digital economy? Here's what you can do next.;
@@ -147,8 +114,7 @@ if ( {) {
         <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
           <div>;
             <label className="block text-sm font-medium text-zinc-400 mb-1">Name</label>;
-            <p className="text-white">{user?.name |"Not provided"}</p>;
-            <p className="text-white">{user?.name || "Not provided"}</p>;
+
           </div>;
           <div>;
             <label className="block text - sm font - medium text - zinc - 400 mb - 1">Email</label>;

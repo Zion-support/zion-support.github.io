@@ -23,14 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useMemo, useState } from 'react';
 
-
-type InsightResponse = {
-import {;
-  LineChart,;
-  BarChart,;
-  DonutChart,;
-
-
+import {
 
 } from '../components/salary/InsightCharts';
 
@@ -44,37 +37,16 @@ type InsightResponse = {;
   trend_monthly: { label: string; value: number }[];
   regional_comparison: { region: string; medianHourlyUsd: number }[];
   tags: string[];
-
-import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
-
-type InsightResponse = {
-  recommendedHourlyUsd: number,
-  gpt_recommendation?: string;}  recommendedHourlyUsd: number,
-
-  recommendedMonthlyUsd: number,
-  medianHourlyUsd: number,
-  minHourlyUsd: number,
-  maxHourlyUsd: number,
-  confidence: number,
-  trend_monthly: { label: string, value: number }[],
-  regional_comparison: { region: string, medianHourlyUsd: number }[],
-  tags: string[],
-
-  gptRecommendation?: string;};  recommendedHourlyUsd: number,;
-  recommendedMonthlyUsd: number,;
-  medianHourlyUsd: number,;
-  minHourlyUsd: number,;
-  maxHourlyUsd: number,;
-  confidence: number,;
-  trendMonthly: { label: string, value: number }[],;
-  regionalComparison: { region: string, medianHourlyUsd: number }[],;
-  tags: string[],;
-  gptRecommendation?: string;
-export default function SalaryInsightsPage() {;
-
-
-
-export default function SalaryInsightsPage() {;
+  gptRecommendation?: string;};  recommendedHourlyUsd: number
+  recommendedMonthlyUsd: number
+  medianHourlyUsd: number
+  minHourlyUsd: number
+  maxHourlyUsd: number
+  confidence: number
+  trendMonthly: { label: string, value: number }[]
+  regionalComparison: { region: string, medianHourlyUsd: number }[]
+  tags: string[]
+  gptRecommendation?: string
 
   const [roleTitle, setRoleTitle] = useState('Senior AI Engineer');
   const [skills, setSkills] = useState('OpenAI, RAG, TypeScript');
@@ -165,31 +137,6 @@ function SalaryInsightsPage() {
     } catch (e: any) {
       setError(e.message |'Unexpected error');
     } finally {
-      setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res.json()) as InsightResponse;
-      setData(json)
-    } catch (e: any) {
-      setError(e.message |'Unexpected error')
-    } finally {
-      setLoading(false)
-
-    } catch (e: any) {;
-      setError(e && e.message || 'Unexpected error');
-    } finally {;
-      setLoading(false);    }      if (!res && res.ok) throw new Error('Failed to fetch insights');
-      const json = (await res && res.json()) as InsightResponse;
-      setData(json);
-    } catch (e: any) {;
-      setError(e && e.message || 'Unexpected error');
-    } finally {;
-      setLoading(false);
-
-    }
-  }
-
-  useEffect(() => {;
-
-      setLoading(false);    }
 
     }
   }
@@ -341,11 +288,6 @@ if ( {) {
 
 
         alert('Insight saved locally');
-
-
-
-
-
 
       } catch {}
     })();
@@ -870,251 +812,21 @@ if (return [] as { label: string, value: number }[], ) {
               ) : (;
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />;
               )}
-              {data && (
-                <table className="w-full mt-3 text-sm">
-                  <thead>
-                    <tr className="text-left text-xs text-gray-500">
-                      <th className="py-1">Region</th>
-                      <th className="py-1">Median (USD/hr)</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.regionalComparison.map((r) => (
-                      <tr key={r.region} className="border-t border-gray-100 dark:border-gray-900">
-                        <td className="py-1">{r.region}</td>
-                        <td className="py-1">${r.medianHourlyUsd}</td>
-                      </tr>
-
-                    ))}
-                  </tbody>;
-                </table>;
-              )}
-
-              </div>;
-            </div>;
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <div className='text - xs text - gray - 500'>Confidence</div>;
-              <div className='text - xl font - semibold'>;
-                {data ? `${Math.round (data.confidence * 100)}%` : '—'}
-              </div>;
-            </div>;
-          </div>;
-          <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-            <h3 className='font - medium mb - 3'>Trend: Last 12 months</h3>;
-            {data ? (
-              <LineChart points={data.trend_monthly} />) : (
-              <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />)}
-          </div>;
-          <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4'>;
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 3'>Regional comparison</h3>;
-              {data ? (
-                <BarChart;
-                  data={data.regional_comparison.map (r => ({
-                    label: r.region,
-                    value: r.medianHourlyUsd,
-                  }))}
-                />) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />)}
-              {data && (
-                <table className='w - full mt - 3 text - sm'>;
-                  <thead>;
-                    <tr className='text - left text - xs text - gray - 500'>;
-                      <th className='py - 1'>Region</th>;
-                      <th className='py - 1'>Median (USD / hr)</th>;
-                    </tr>;
-                  </thead>;
-                  <tbody>;
-                    {data.regional_comparison.map (r => (
-                      <tr;
-                        key={r.region}
-                        className='border - t border - gray - 100 dark:border - gray - 900';
-                      >;
-                        <td className='py - 1'>{r.region}</td>;
-                        <td className='py - 1'>${r.medianHourlyUsd}</td>                      </tr>                    {data.regional_comparison.map ((r) => (
-                      <tr key={r.region} className="border - t border - gray - 100 dark:border - gray - 900">;
-                        <td className="py - 1">{r.region}</td>;
-                        <td className="py - 1">${r.medianHourlyUsd}</td>))}
-                  </tbody>;
-                </table>)}
-            </div>;
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 3'>Distribution</h3>;
-
-              {data ? (
-                <div className='flex flex - col items - center gap - 3'>;
-                  <DonutChart;
-                    slices={
-
-            </div>;
-
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-              <h3 className='font-medium mb-3'>Distribution</h3>;
-              {data ? (;
-                <div className='flex flex-col items-center gap-3'>;
-                  <DonutChart
-                    slices={
-                      donutData && donutData.map((d, i) => ({;
-                        label: d && d.label,;
-                        value: d && d.value,;
-                      })) as any;
-
-                    }
-                  />;
-                  <div className='flex gap-2 flex-wrap justify-center text-xs'>;
-                    {donutData && donutData.map(d => (;
-                      <span
-                        key={d && d.label}
-                        className='rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5'>;
-                        {d && d.label}
-                      </span>                    ))}
-                  </div>;
-                </div>;
-              ) : (;
-                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />              )}                <div className="flex flex-col items-center gap-3">;
-                  <DonutChart slices={donutData && donutData.map((d, i) => ({ label: d && d.label, value: d && d.value })) as any} />;
-                  <div className="flex gap-2 flex-wrap justify-center text-xs">;
-                    {donutData && donutData.map((d) => (;
-                      <span key={d && d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0 && 0.5">{d && d.label}</span>;
-                  </div>;
-                </div>;
-              ) : (;
-                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />;
-
-            </div>
-
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-              <h3 className="font-medium mb-3">Distribution</h3>
-              {data ? (
-                <div className="flex flex-col items-center gap-3">
-                  <DonutChart slices={donutData.map((d, i) => ({ label: d.label, value: d.value })) as any} />
-                  <div className="flex gap-2 flex-wrap justify-center text-xs">
-                    {donutData.map((d) => (
-                      <span key={d.label} className="rounded-full border border-gray-300 dark:border-gray-700 px-2 py-0.5">{d.label}</span>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
-              )}
-
-              )}
-
-
-
-
 
             </div>
           </div>
           {data?.gptRecommendation && (
-
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-
-              <h3 className="font-medium mb-2">GPT Recommendation</h3>
-              <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
-            </div>
-          )}
-          {data && (
-
-            </div>;
-          </div>;
-
-          {data?.gptRecommendation && (;
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-              <h3 className='font-medium mb-2'>GPT Recommendation</h3>;
-              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>;
-                {data && data.gptRecommendation}
-              </p>            </div>;
+            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>
+              <h3 className='font-medium mb-2'>GPT Recommendation</h3>
+              <p className='text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap'>
+                {data.gptRecommendation}
+              </p>            </div>
           )}
 
-          {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
-              <h3 className="font-medium mb-2">GPT Recommendation</h3>;
-              <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data && data.gptRecommendation}</p>;
-            </div>;
-          )}
-
-          {data && (;
-            <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'>;
-              <h3 className='font-medium mb-3'>Signals</h3>;
-              <div className='flex gap-2 flex-wrap'>;
-                <span className='rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs'>;
-                  Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr;
-                </span>;
-                {data && data.tags.map(t => (;
-
-                  <span
-                    key={t}
-                    className='rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs'>;
-                    {t}
-                  </span>                ))}            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">;
-              <h3 className="font-medium mb-3">Signals</h3>;
-              <div className="flex gap-2 flex-wrap">;
-                <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data && data.minHourlyUsd} - ${data && data.maxHourlyUsd} / hr</span>;
-                {data && data.tags.map((t) => (;
-                  <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>;
-              </div>;
-            </div>;
-
-            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
-              <h3 className="font-medium mb-3">Signals</h3>
-              <div className="flex gap-2 flex-wrap">
-                <span className="rounded-full bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 px-3 py-1 text-xs">Range: ${data.minHourlyUsd} - ${data.maxHourlyUsd} / hr</span>
-                {data.tags.map((t) => (
-                  <span key={t} className="rounded-full bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800 px-3 py-1 text-xs">{t}</span>
-                ))}
-              </div>
-            </div>
-
-          )}
-
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-  );
-}
-                      donut_data.map ((d, i) => ({
-                        label: d.label,
-                        value: d.value,
-                      })) as any;
-                    }
-                  />;
-                  <div className='flex gap - 2 flex - wrap justify - center text - xs'>;
-                    {donut_data.map (d => (
-                      <span;
-                        key={d.label}
-                        className='rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5';
-                      >;
-                        {d.label}
-                      </span>                    ))}
-                  </div>;
-                </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />              )}                <div className="flex flex - col items - center gap - 3">;
-                  <DonutChart slices={donut_data.map ((d, i) => ({ label: d.label, value: d.value })) as any} />;
-                  <div className="flex gap - 2 flex - wrap justify - center text - xs">;
-                    {donut_data.map ((d) => (
-                      <span key={d.label} className="rounded - full border border - gray - 300 dark:border - gray - 700 px - 2 py - 0.5">{d.label}</span>;
-                  </div>;
-                </div>) : (
-                <div className='h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded' />                <div className="h - 40 animate - pulse bg - gray - 100 dark:bg - gray - 900 rounded" />)}
-            </div>;
-          </div>;
-          {data?.gpt_recommendation && (
-            <div className='rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4'>;
-              <h3 className='font - medium mb - 2'>GPT Recommendation</h3>;
-              <p className='text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap'>;
-                {data.gpt_recommendation}
-              </p>            </div>)}
-          {data && (            <div className="rounded - lg border border - gray - 200 dark:border - gray - 800 p - 4">;
-              <h3 className="font - medium mb - 2">GPT Recommendation</h3>;
-              <p className="text - sm text - gray - 700 dark:text - gray - 300 whitespace - pre - wrap">{data.gpt_recommendation}</p>;
-            </div>)}
           {data && (
 
             </div>
           )}
 
-
-
+          {data && (
 

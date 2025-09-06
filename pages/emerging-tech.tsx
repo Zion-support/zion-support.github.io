@@ -1,5 +1,10 @@
 
 
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
+
 export default function EmergingTechPage() {
   const features = [
     'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
@@ -15,8 +20,9 @@ export default function EmergingTechPage() {_const _features = [
     {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
     {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
     {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
-ursor/fix-lint-push-and-merge-to-main-ce13
+
   return (_<Layout>
+
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />
@@ -31,11 +37,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">Emerging Technology</h1>
             <p className="text-gray-300 text-lg max-w-3xl mx-auto">Accelerate innovation responsibly across blockchain, IoT/edge, 5G, and spatial computing.</p>
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/contact" className="px-8 py-4">Start a Pilot</a>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
-              <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
-              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
-
 
             </div>
           </header>
@@ -57,10 +58,6 @@ ursor/fix-lint-push-and-merge-to-main-ce13
                 <a key={s.name} href={s.href} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40 transition-colors">
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
-
-
-  );
-};
 
                 </Link>
               ))  } catch (error) {
@@ -137,7 +134,4 @@ function EmergingTechPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
-
 

@@ -1,27 +1,4 @@
 
-import { ReactNode  } from './react';
-
-export interface HelpArticle {
-  id: string;
-  title: string;
-  content: string;
-
-  last_updated: string;
-  tags: string[];
-
-}
-export interface HelpCategory {
-
-import {ReactNode} from "react";
-export interface HelpArticle {;
-  id: string;
-  title: string;
-  content: string;
-  lastUpdated: string,
-  tags: string[]
-}
-
-export interface HelpCategory {;
 
   id: string;
   name: string;
@@ -29,11 +6,6 @@ export interface HelpCategory {;
   icon: ReactNode;
   articles: HelpArticle[]
 }
-
-
-
-export interface SupportTicket {;
-
 
   id: string;
   user_id: string;
@@ -45,7 +17,6 @@ export interface SupportTicket {;
   created_at: string;
   updated_at: string;
 }
-
 
 import { ReactNode } from "react",
 export interface HelpArticle {
@@ -92,5 +63,4 @@ export interface SupportTicket {;
   updatedAt: string;
 }
 ;
-
 

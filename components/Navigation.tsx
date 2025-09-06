@@ -1,36 +1,4 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Phone, 
-  Mail, 
-  MapPin, 
-  Facebook, 
-  Twitter, 
-  Linkedin, 
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
 
-import React, { useState } from './react';
-import Link from './next / link';
-import { motion, AnimatePresence  } from './framer-motion';
-
-import {
-  Menu,
-  X,
-  ChevronDown,
-  ChevronRight,
-  Phone,
-  Mail,
-  MapPin,
-  Facebook,
-  Twitter,
-  Linkedin,
   Instagram,
   Github,
   ArrowRight,
@@ -40,24 +8,12 @@ import {
   Shield,
   Zap,
   Globe,
-ursor/integrate-build-improve-and-re-verify-8f7d
+
   BarChart3,
   Search,;
 
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-  BarChart3,
-  Search
-} from 'lucide-react';
-import SearchModal from './SearchModal';
-  BarChart3
-} from 'lucide-react;
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-
-
-
-
 
   Menu
   X
@@ -82,9 +38,11 @@ ursor/integrate-build-improve-and-re-verify-8f7d
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
-origin/main
+
 export default function Navigation() {
+
 export default function Navigation() {;
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -412,7 +370,6 @@ function Navigation() {
 
   ];
 
-const Navigation: React.FC<NavigationProps> = ({ className }) => {
   return (
     <>;
       {/* Top Bar */}
@@ -771,11 +728,6 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               </Link>
             </div>
 
-
-                </AnimatePresence>;
-              </div>;
-
-
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button
@@ -788,14 +740,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-            {/* CTA Buttons */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link
-                href=/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-ursor/integrate-build-improve-and-re-verify-8f7d
-origin/automation-improvements-final
+
               >
                 Get Started
               </Link>

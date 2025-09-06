@@ -1,14 +1,4 @@
 
-import {useState, useEffect} from "react";
-import {format} from "date-fns";
-import {List, RefreshCw} from "lucide-react";
-import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
-
-
-export function ApiLogs() {;
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
-  const [pageSize, setPageSize] = useState(25);
-  const [currentPage, setCurrentPage] = useState(0);
 
 import { useState, useEffect } from "react",
 import { format } from "date-fns",
@@ -23,7 +13,7 @@ export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),
   const [pageSize, setPageSize] = useState(25),
   const [currentPage, setCurrentPage] = useState(0),
-  
+
   // Load logs on mount and when pagination changes
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
@@ -36,7 +26,7 @@ export function ApiLogs() {
   const formatTimestamp = (timestamp: string) => {
     return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss')
   },
-  
+
   // Helper to get badge color based on status code
   const getStatusBadge = (statusCode: number) => {
     if (statusCode >= 200 && statusCode < 300) {
@@ -48,17 +38,6 @@ export function ApiLogs() {
     } else {
       return <Badge className="bg-blue-700">Other</Badge>
     }
-  }
-  // Calculate pagination info
-  const totalPages = Math.ceil(totalLogs / pageSize);
-  const hasNextPage = currentPage < totalPages - 1;
-  const hasPrevPage = currentPage > 0;
-  },
-  
-  // Calculate pagination info
-  const totalPages = Math.ceil(totalLogs / pageSize),
-  const hasNextPage = currentPage < totalPages - 1,
-  const hasPrevPage = currentPage > 0,
 
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">
@@ -75,73 +54,6 @@ export function ApiLogs() {
           <div className="flex items-center space-x-2">
             <span className="text-sm text-zinc-400">Show</span>
             <Select
-              value={pageSize.toString()}
-              onValueChange={(value) => {
-                setPageSize(Number(value));
-
-                setCurrentPage(0), // Reset to first page when changing page size
-import { useState, useEffect } from "react",;
-import { format } from "date-fns",;
-import { List, RefreshCw } from "lucide-react",;
-import { useApiKeys, type ApiLog } from "@/hooks/useApiKeys",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
-import { Badge } from "@/components/ui/badge",;
-export function ApiLogs() {;
-  const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys(),;
-  const [pageSize, setPageSize] = useState(25),;
-  const [currentPage, setCurrentPage] = useState(0),;
-  // Load logs on mount and when pagination changes;
-  useEffect(() => {;
-    fetchApiLogs(pageSize, currentPage * pageSize);
-  }, [pageSize, currentPage]),;
-  const handleRefresh = () => {;
-    fetchApiLogs(pageSize, currentPage * pageSize);
-  },;
-  // Helper to format the timestamp;
-  const formatTimestamp = (timestamp: string) => {;
-    return format(new Date(timestamp), 'yyyy-MM-dd HH: mm:ss');
-  },;
-  // Helper to get badge color based on status code;
-  const getStatusBadge = (statusCode: number) => {;
-    if (statusCode >= 200 && statusCode < 300) {;
-      return <Badge className="bg-green-700">Success</Badge>;
-    } else if (statusCode >= 400 && statusCode < 500) {;
-      return <Badge className="bg-amber-700">Client Error</Badge>;
-    } else if (statusCode >= 500) {;
-      return <Badge className="bg-red-700">Server Error</Badge>;
-    } else {;
-      return <Badge className="bg-blue-700">Other</Badge>;
-    }
-  },;
-  // Calculate pagination info;
-  const totalPages = Math.ceil(totalLogs / pageSize),;
-  const hasNextPage = currentPage < totalPages - 1,;
-  const hasPrevPage = currentPage > 0;
-  return (;
-
-    <Card className="bg-zinc-900 border-zinc-800 text-white">;
-      <CardHeader>;
-        <CardTitle className="text-xl flex items-center">;
-          <List className="mr-2" size={20} /> API Request Logs;
-        </CardTitle>;
-        <CardDescription className="text-zinc-400">;
-          View logs of requests made using your API keys.;
-        </CardDescription>;
-      </CardHeader>;
-
-      <CardContent>;
-        <div className="flex justify-between items-center mb-6">;
-          <div className="flex items-center space-x-2">;
-            <span className="text-sm text-zinc-400">Show</span>;
-            <Select
-              value={pageSize && pageSize.toString()}
-              onValueChange={(value) => {;
-                setPageSize(Number(value));
-
-                setCurrentPage(0), // Reset to first page when changing page size;
-
 
               }}
             >
@@ -325,16 +237,4 @@ export function ApiLogs() {;
             </div>;
           </div>;
         )}
-      </CardContent>
-    </Card>
-  )
-}
-      </CardContent>;
-    </Card>;
-  );
-}
-import { useState, useEffect } from './react';
-import { format } from './date - fns';
-import { List, RefreshCw } from './lucide-react';
-import { useApiKeys, type, ApiLog } from '@/hooks / useApiKeys';
-;
+

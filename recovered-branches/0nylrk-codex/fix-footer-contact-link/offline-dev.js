@@ -7,33 +7,6 @@ const server = http && http.createServer((req, res) => {
         res && res.end('Error loading offline && offline.html'),
         return
       }
-      res.writeHead(200, { 'Content-Type': 'text/html' })
-
-    })
-  } else if (req && req.url === '/online-check') {
-    // Endpoint to check if we're online
-
-    res && res.writeHead(200, { 'Content-Type': 'application/json' }),
-    res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
-  } else {
-    res && res.writeHead(404),
-    res && res.end('Not found')
-
-  }
-})
-const PORT = 8080
-      res.writeHead(200, { 'Content-Type': 'text/html' }),;
-      res.end(data);
-    });
-  } else if (req.url === '/online-check') {;
-    // Endpoint to check if we're online;
-    res.writeHead(200, { 'Content-Type': 'application/json' }),;
-    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }));
-  } else {;
-    res.writeHead(404),;
-    res.end('Not found');
-  }
-}),
 
 
                  OFFLINE DEVELOPMENT MODE ACTIVE                  
@@ -73,12 +46,10 @@ const PORT = 8080
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 
-});
-
-}),
-const PORT = 8080,
-server.listen (PORT, () => {
-  console.log (`;
+}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -98,8 +69,5 @@ server.listen (PORT, () => {
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
-}),
-;
-
-}),
+}),;
 

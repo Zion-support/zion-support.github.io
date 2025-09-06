@@ -1,14 +1,4 @@
-const { test, expect } = require('@playwright/test')'
-test.describe('"Performance"
-  test('"page"
-    "await"
-    "await"
-            "output"
-  test('"bundle"
-    "await"
-    page.on('console', "msg"
-              "output"
-          resolve({ "error"
+
 import { test, expect } from '@playwright/test';
 
 test.describe('Performance Tests', () => {
@@ -55,7 +45,6 @@ test.describe('Performance Tests', () => {
     
     await page.waitForTimeout(2000);
 
-
     expect(consoleMessages.length).toBe(0);
   });
   
@@ -78,15 +67,3 @@ test.describe('Performance Tests', () => {
   });
 });
 
-const { test, expect } = require('@playwright/test')'
-test && test.describe('"Performance"
-  test('"page"
-    "await"
-    "await"
-            "output"
-  test('"bundle"
-    "await"
-    page && page.on('console', "msg"
-              "output"
-          resolve({ "error"
-ursor/automate-test-improve-and-merge-code-2480

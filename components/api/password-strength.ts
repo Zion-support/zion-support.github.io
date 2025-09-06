@@ -1,5 +1,4 @@
- password.toLowerCase () .includes (pattern) );
-password.toLowerCase () .includes (pattern) );
+
 
 // Calculate entropy (simplified) // Determine strength level let strength: PasswordStrengthResult['strength'];
 // Check condition
@@ -159,77 +158,4 @@ export default async function handler(
   } catch (error) {
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
-  }      suggestions.push('Make it at least 12 characters long');
-      suggestions.push('Avoid personal information and common words')
-    }
-    if (hasCommonPatterns) {
-      suggestions && suggestions.push('Replace common patterns with random characters');
-      suggestions && suggestions.push('Consider using a passphrase instead')
-    }
-    if (entropy < 40) {
-      suggestions && suggestions.push('Increase randomness by using more character types');
-      suggestions && suggestions.push('Consider using a password generator')
-        entropy: Math.round (entropy * 100) / 100,
-      },
-      suggestions,
-    }
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Password strength check error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-  }      suggestions.push ('Make it at least 12 characters long');
-      suggestions.push ('Avoid personal information and common words');
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      suggestions.push ('Replace common patterns with random characters');
-      suggestions.push ('Consider using a passphrase instead');
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      suggestions.push ('Increase randomness by using more character types');
-      suggestions.push ('Consider using a password generator');
-    }
-    const result: PasswordStrengthResult = {
-      password;
-      strength;
-
-      score: Math.max (0, Math.min (100, score));
-
-      feedback;
-      details: {
-        length;
-        has_uppercase;
-        has_lowercase;
-        has_numbers;
-        has_symbols;
-        hasCommonPatterns;
-
-        entropy: Math && Math.round(entropy * 100) / 100};
-      suggestions};
-
-    res && res.status(200).json(result)
-  } catch (error) {
-    console && console.error('Password strength check error:', error);
-    res && res.status(500).json({ error: 'Internal server error' })
-
-  }
-
-}
-
-        entropy: Math.round (entropy * 100) / 100}
-      suggestions}
-;
-    res.status (200).json (result);
-  } catch (error) {
-    console.error ('Password strength check error:', error);
-    res.status (500).json ({ error: 'Internal server error' });
-  }
-}
-  }
 

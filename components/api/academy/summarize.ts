@@ -97,16 +97,6 @@ function handler() {
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
     return fallback();
-  }
-    const text = completion.choices?.[0]?.message?.content ?? '';
 
   }
 
-    return res.status (200).json ({ summary: text.trim () });
-  } catch (err) {
-    return fallback ();
-}
-}
-  }
-  }
-}

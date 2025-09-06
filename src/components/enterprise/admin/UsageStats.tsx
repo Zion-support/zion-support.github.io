@@ -1,9 +1,32 @@
-return (
 
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
 
+import React from "react",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+import {
 
+export function UsageStats() {
+
+  const handleSaveChanges = () => {
+    toast({
+
+  return (
+    <div className="space-y-8">
+      <div>
+        <h3 className="text-xl font-medium mb-4">Usage Limits & Settings</h3>
+        <p className="text-muted-foreground mb-6">
+          Configure usage limits for your team to manage your subscription resources.
+        </p>
+      </div>
 
         <Card>
           <CardHeader>
@@ -37,8 +60,6 @@ return (
             </Button>
           </CardFooter>
         </Card>
-        
-
 
         <Card>
           <CardHeader>
@@ -72,8 +93,6 @@ return (
             </Button>
           </CardFooter>
         </Card>
-        
-
 
         <Card>
           <CardHeader>
@@ -105,8 +124,6 @@ return (
             </Button>
           </CardFooter>
         </Card>
-        
-
 
         <Card>
           <CardHeader>
@@ -150,16 +167,6 @@ return (
           </CardFooter>
         </Card>
       </div>
-      <div className='bg-muted/50 rounded-lg p-6 flex items-center justify-between'>
-        <div className='flex items-center gap-4'>
-          <div className='h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center'>
-            <Sparkles className='h-5 w-5 text-primary' />
-      
-      <div className="bg-muted/50 rounded-lg p-6 flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
-            <Sparkles className="h-5 w-5 text-primary" />
-
 
           </div>
           <div>
@@ -172,6 +179,12 @@ return (
         </div>
         <Button>Contact Us</Button>
       </div>
+
+import React from "react",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { toast } from "@/hooks/use-toast",;
 import {;
   Card,;
   CardContent,;
@@ -382,3 +395,10 @@ export function UsageStats() {;
             </p>;
           </div>;
         </div>;
+        <Button>Contact Us</Button>;
+      </div>;
+    </div>;
+  );
+}
+;
+

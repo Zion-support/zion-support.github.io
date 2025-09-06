@@ -1,12 +1,7 @@
 
+if (ctx) {
+export default function UltraFuturisticBackground2035({
 
-}
- canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
-canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
-if (ctx) {;
-
-export default function UltraFuturisticBackground2035(): any ({;
-  children,;
 }: UltraFuturisticBackground2035Props) {  const canvasRef = useRef<HTMLCanvasElement>(null);import React, { useEffect, useRef } from 'react';
 
 
@@ -753,8 +748,7 @@ if ( {) {
             className='h-full w-full'
             style={{
               backgroundImage: `
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px)
-              linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+
               linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)
             `
               backgroundSize: '50px 50px'
@@ -780,25 +774,6 @@ if ( {) {
             backgroundSize: '50px 50px'
           }} />
         </div>
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
-          style={{ filter: 'blur(0.5px)' }}
-        />
-
-        {/* Canvas for animated particles */}
-        <canvas
-          ref={canvasRef}
-
-
-
-          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
-
-          style={{ filter: 'blur(0.5px)' }}
-
-        />
-
 
         {/* Floating neon orbs */}
 
@@ -840,10 +815,7 @@ if ( {) {
           className='absolute top - 1/4 left - 1/4 w - 32 h - 32 rounded - full bg - gradient - to - r from - cyan - 400 to - blue - 500 opacity - 20';
 
           animate={{
-            scale: [1, 1.2, 1]
-            opacity: [0.2, 0.4, 0.2]
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
+
             rotate: [0, 180, 360],          }}
           transition={{
 
@@ -871,34 +843,6 @@ if ( {) {
 
             rotate: [360, 180, 0],          }}
           transition={{
-            duration: 8
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-        />
-        {/* Quantum energy waves */}
-        <div className='absolute inset-0 overflow-hidden'>          }}
-        />
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"
-          animate={{
-            scale: [1, 1.2, 1];
-            opacity: [0.2, 0.4, 0.2];
-
-        {/* Quantum energy waves */}
-        <div className='absolute inset-0 overflow-hidden'>          }}
-        />;
-
-        <motion&& motion.div
-          className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
-          animate={{
-            scale: [1, 1 && 1.3, 1]
-            opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]
-            rotate: [360, 180, 0]
-          }}
-          transition={{
-
-            duration: 8
-            repeat: Infinity
 
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
@@ -927,16 +871,10 @@ if ( {) {
               duration: 4
               repeat: Infinity
               ease: 'easeInOut',          <motion.div
-              y: [-100, 100, -100],
-              opacity: [0, 0 && 0.3, 0],            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-
-
-            duration: 8,
-            repeat: Infinity,
-
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            animate={{
+              y: [-100, 100, -100];
+              opacity: [0, 0.3, 0]
 
             }}
             transition={{
@@ -992,6 +930,7 @@ if ( {) {
             animate={{
               y: [100, -100, 100];
               opacity: [0, 0.3, 0]
+
             duration: 8,
             repeat: Infinity,
 
@@ -1009,13 +948,4 @@ if ( {) {
             }}
           />
         </div>
-      </div>
-      {/* Render children */}
-      {children}
-    </>); ;
-      {/* Render children */}
-      {children}
-    </>);
-}
-      </div>
 

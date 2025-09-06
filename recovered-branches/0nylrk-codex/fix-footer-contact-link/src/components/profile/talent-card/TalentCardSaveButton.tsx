@@ -1,6 +1,7 @@
 
 
-
+import React from "react",
+import { Heart } from "lucide-react",
 
 interface TalentCardSaveButtonProps {
 
@@ -10,29 +11,14 @@ interface TalentCardSaveButtonProps {
   onToggleSave?: (id: string, isSaved: boolean) => void
   isAuthenticated: boolean
 }
-export function TalentCardSaveButton({
-  profileId
-  profileName;
-  isSaved
 
-  onToggleSave;
-  isAuthenticated
-}: TalentCardSaveButtonProps) {
-  const { toast } = useToast();
-  const [localIsSaved, setLocalIsSaved] = React.useState(isSaved);
-
-export function TalentCardSaveButton({ 
-  profileId, ;
-  profileName;
-  profileId, 
-  profileName,
   isSaved, 
   onToggleSave,
   isAuthenticated 
 }: TalentCardSaveButtonProps) {
   const { toast } = useToast(),
   const [localIsSaved, setLocalIsSaved] = React.useState(isSaved),
-  
+
   // Handle save toggle
 
   const handleSaveToggle = (e: React.MouseEvent) => {
@@ -42,13 +28,6 @@ export function TalentCardSaveButton({
         title: "Authentication required"
         description: "Please log in to save talents to your favorites"
         variant: "destructive"
-
-import React from "react";
-import {Heart} from "lucide-react";
-import {cn} from "@/lib/utils";
-import {useToast} from "@/hooks/use-toast";
-
-    
 
       }),
       return
@@ -100,9 +79,6 @@ export function TalentCardSaveButton({;
     if (onToggleSave) {;
       onToggleSave(profileId, !localIsSaved);
     }
-    
-
-
 
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites"
@@ -125,12 +101,10 @@ export function TalentCardSaveButton({;
           "h-4 w-4 transition-colors"
 
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
-
-        )} 
-      />;
-    </button>;
-  );
-
+        )}
+      />
+    </button>
+  )
 
 ;
     toast({;
@@ -156,8 +130,6 @@ export function TalentCardSaveButton({;
     </button>;
   );
 
-
-
 }
 import React from './react';
 import { Heart } from './lucide-react';
@@ -177,3 +149,4 @@ function TalentCardSaveButton() {
   const { toast } = use_toast ();
   const [localIsSaved, setLocalIsSaved] = React.useState (is_saved);
 ;
+

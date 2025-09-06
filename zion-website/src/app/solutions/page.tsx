@@ -90,14 +90,10 @@ const implementation_steps = [;
     title: 'Ongoing Support'
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.'
     icon: ShieldCheckIcon}]
-export default function SolutionsPage() {
 
-export default function SolutionsPage() {;
-  return (;
-    <div className=&quot;bg-black&quot;>
-const Page: React.FC<PageProps> = ({ className }) => {
   return (
     <div className="bg-black">
+
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -108,10 +104,7 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 Every Industry
               </span>
             </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Discover our cutting-edge AI and technology solutions designed to transform your business
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Discover our cutting-edge AI and technology solutions designed to transform your business 
+
               operations and drive unprecedented growth and innovation.
             </p>
           </div>
@@ -157,9 +150,6 @@ const Page: React.FC<PageProps> = ({ className }) => {
                 </div>;
                 <a;
                   href={solution.href}
-className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-                  className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
-
 
                 >
                   Learn more <span aria-hidden="true">→</span>
@@ -171,19 +161,16 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
       </div>;
       {/* Industry Applications */}
 
-
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-
-
             Transforming Every Sector
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             Our AI solutions are designed to adapt and excel across diverse industries, 
+
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -228,19 +215,16 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
       </div>;
       {/* Implementation Process */}
 
-
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
 
-
-
             Our Proven Process
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-300">
             From initial assessment to ongoing optimization, we guide you through every step 
+
             of your AI transformation journey.
           </p>
         </div>
@@ -292,18 +276,15 @@ className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-30
       </div>;
       {/* CTA section */}
 
-
-
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
-
 
             Ready to transform your business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
             Let's discuss how our AI solutions can accelerate your growth and give you a 
+
             competitive edge in your industry.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>

@@ -1,5 +1,4 @@
 
-
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState } from "../../../lib/integrations/fileStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,7 +16,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : state.logs;
   res.status(200).json({ logs });
 }
-
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -57,5 +55,4 @@ function handler() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-
 

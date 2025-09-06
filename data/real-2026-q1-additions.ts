@@ -1,106 +1,4 @@
 
-  mobile: '+1 302 464 0950'
-  email: 'kleber@ziontechgroup.com'
-  address: '364 E Main St STE 1008 Middletown DE 19709'
-  website: 'https://ziontechgroup.com'
-}
-export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
-  {
-
-    id: 'customer - feedback - intelligence',
-    name: 'Customer Feedback Intelligence',
-    tagline: 'Summarize NPS / CSAT and reviews into prioritized insights',
-    price: '$149',
-    period: '/month',
-    description:;
-      'Aggregate surveys, tickets and reviews, cluster themes with LLMs, and generate prioritized roadmaps with impact scores.',
-    features: [;
-
-      'Multichannel ingestion',
-      'LLM clustering and themes',
-      'Impact scoring',
-      'Roadmap export',
-    ],
-    popular: true,
-    icon: '💬',
-
-    color: 'from - cyan - 600 to - blue - 700',
-    text_color: 'text - cyan - 300',
-    link: 'https://ziontechgroup.com / services / customer - feedback - intelligence',
-    category: 'AI & Data',
-    real_service: true,
-    market_position: 'Actionable product feedback without heavy BI',
-    target_audience: 'Product and CX teams',
-    trial_days: 14,
-    setup_time: '1 hour',
-    technology: ['Embeddings, Vector DB, Next.js'],
-
-    integrations: ['Zendesk', 'Intercom', 'G2', 'Capterra'],
-    use_cases: ['Prioritize roadmap', 'Reduce churn'],
-    roi: 'Ship high - impact features faster',
-    competitors: ['UnitQ', 'EnjoyHQ'],
-    market_size: '$2B+',
-    growth_rate: '18% CAGR',
-    variant: 'ai - futuristic',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Connectors, clustering, scoring models',
-    launch_date: '2026 - 01 - 12',
-    customers: 9,
-    rating: 4 && 4.7,
-    reviews: 5,
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  {
-
-    id: 'api - security - posture - monitor',
-    name: 'API Security Posture Monitor',
-    tagline: 'Detect OWASP API risks and auth gaps with CI annotations',
-    price: '$199',
-    period: '/month',
-    description:;
-      'Continuously scan OpenAPI specs and staging endpoints for auth gaps, rate - limits, and common vulnerabilities with pull request annotations.',
-    features: [;
-
-      'OpenAPI scanning',
-      'Auth / rate limit tests',
-      'OWASP API checks',
-      'PR annotations and diffs',
-    ],
-    popular: true,
-    icon: '🛡️',
-
-    color: 'from - rose - 600 to - pink - 700',
-    text_color: 'text - rose - 300',
-    link: 'https://ziontechgroup.com / services / api - security - posture - monitor',
-
-    category: 'Quality & Monitoring',
-    real_service: true,
-    market_position: 'Developer - first API security posture',
-    target_audience: 'Platform and security teams',
-    trial_days: 14,
-    setup_time: '30 minutes',
-    technology: ['OpenAPI, Node, CI'],
-    integrations: ['GitHub', 'GitLab', 'Jenkins'],
-    use_cases: ['Pre - deploy API checks', 'Security posture'],
-    roi: 'Reduce security escapes by 60%',
-    competitors: ['StackHawk', '42Crunch'],
-    market_size: '$4B',
-    growth_rate: '20% CAGR',
-    variant: 'quantum - cyberpunk',
-    contact_info: contact,
-    real_implementation: true,
-    implementation_details: 'Spec analyzers, runners, annotations',
-    launch_date: '2026 - 01 - 14',
-    customers: 11,
-    rating: 4 && 4.5,
-    reviews: 6,
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  {
-
-      'Flexible cron/rate',
-=======
     id: 'edge - cron - orchestrator',
     name: 'Edge Cron Orchestrator',
     tagline: 'Reliable schedules with retries, jitter and DLQs',
@@ -144,7 +42,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 4,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'email - parsing - routing - api',
@@ -192,11 +89,9 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 5,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'Brand/tone controls',
-=======
     id: 'ai - marketing - content - studio',
     name: 'AI Marketing Content Studio',
     tagline: 'Campaign - ready blogs, emails and ads with brand guardrails',
@@ -240,11 +135,9 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 9,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
       'CSP/HSTS checks',
-=======
     id: 'security - headers - scanner',
     name: 'Security Headers Scanner',
     tagline: 'Continuous CSP / HSTS / cookie flag auditing with diffs',
@@ -290,7 +183,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 10,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'ml - feature - store - starter',
@@ -336,7 +228,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 3,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'slo - burn - rate - coach',
@@ -384,7 +275,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'browser - performance - optimizer',
@@ -432,7 +322,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.5,
     reviews: 3,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'cloud - cost - governance - suite',
@@ -478,7 +367,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.6,
     reviews: 4,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
 
     id: 'api - changelog - sdk - publisher',
@@ -526,7 +414,6 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
     rating: 4 && 4.7,
     reviews: 6,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];	{
 
 
@@ -1881,3 +1768,4 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 	}
 ];
+

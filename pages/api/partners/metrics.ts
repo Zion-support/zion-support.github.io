@@ -1,13 +1,4 @@
 
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getServerSupabase } from "../../../utils/supabase/server";
-export default async function handler(
-
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status($1).json({ $2 });
 
@@ -18,21 +9,22 @@ export default async function handler(
       "placeholder-key";
   try {
     if (usingPlaceholder) {
-      return res && res.status(200).json({
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const code = (req.query.code as string)?.toLowerCase ();
-  if (return res.status ($1).json ({ $2 })) {
-  $2
-}
-  const using_placeholder =;
-    (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes ("placeholder") ||;
-    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder - key") ===;
-      "placeholder - key";
+      return res.status(200).json({
+        total_signups: 12
+        total_visits: 180
+        total_profile_completions: 7
+        total_job_creations: 5
+        conversion_rate: 7 / 12
+        payout_amount: 210
+        currency: "USD"
+      });
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const code = (req.query.code as string)?.toLowerCase();
+  if (!code) return res.status($1).json({$2});
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
   try {
     // Check condition
 if ( {) {
@@ -47,67 +39,9 @@ if ( {) {
         conversion_rate: 7 / 12,
         payout_amount: 210,
         currency: 'USD'})
+
     }
-
-
-        : 0,
-      payout_amount: total_profile_completions * 50,
-      currency: "USD",
-    });
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-    if (req.method === 'GET') {
-      return res.status(200).json({
-        metrics: []
-      });
-    } else {
-      res.status(405).end('Method Not Allowed');
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    res.status(500).json({ error: 'Internal server error' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '../../../utils/supabase/server';
-export default async function handler(req, res) {
-  try {
-  const code = (req.query.code as string)?.toLowerCase();
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
-        total_visits: 180;
-        total_profile_completions: 7;
-        total_job_creations: 5,;
-        conversion_rate: 7 / 12,;
-        payout_amount: 210,;
-        currency: 'USD'});
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
     const supabase = getServerSupabase();
-
 
     const events = ['visitsignupprofile_completedjob_createdhire'] as const;
     const counts: Record<string, number> = {};
@@ -155,36 +89,12 @@ export default async function handler(req, res) {
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
       payout_amount,
       currency: 'USD'
+
     });
 
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message });
-    return res.status(500).json({ error: e?.message })
-  }
-}
-      conversion_rate: total_signups ? total_profile_completions / total_signups : 0, payout_amount,
-      currency: 'USD'})
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
-
-
-    return res.status(500).json({ error: e?.message })
 
   }
-
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-    return res.status (500).json ({ error: e?.message });
-  }
-}
-
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
 
   }
 }

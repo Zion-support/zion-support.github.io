@@ -1,7 +1,11 @@
 
-import React from './react';
-import { use_theme } from '@/hooks / use_theme';
 
+  const { theme } = useTheme();
+  return (
+    <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>
+
+import React from "react",
+import { useTheme } from "@/hooks/useTheme",
 interface MobileThemeProviderProps {
   children: React.ReactNode
 import React from "react",;
@@ -19,9 +23,6 @@ export function MobileThemeProvider({ children }: MobileThemeProviderProps) {;
   const { theme } = useTheme();
   return (;
     <div className={`mobile-app ${theme === 'dark' ? 'dark' : 'light'}`}>;
-
-
-
 
       {children}
 

@@ -1,19 +1,4 @@
-import React from 'react';
-import * as React from 'react';
-import {;
-  RefreshCw,;
-  Wifi,;
-  Server,;
-  ShoppingCart,;
-  Users,;
-  Wrench,;
-  Lightbulb,;
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-export interface EmptyStateProps {;
-import * as React from 'react';
+
 import * as React from 'react'
 import {
   RefreshCw,
@@ -28,16 +13,14 @@ import { Button } from '@/components / ui / button';
 import Link from 'next / link';
 import { use_translation } from 'react - i18next';
 export interface EmptyStateProps {
-  type:;
-    | 'products';
-    | 'categories';
-    | 'talent';
-    | 'equipment';
-    | 'search';
-    | 'error';
-    | 'network';
-    | 'loading';
-
+  type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
+  title?: string;
+  description?: string;
+  action?: {
+    label: string;
+    onClick: () => void
+  }
+  icon?: React.ReactNode
 
 import * as React from 'react',;
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react';
@@ -50,14 +33,6 @@ export interface EmptyStateProps {;
   description?: string,;
   action?: {;
     label: string,;
-
-    onClick: () => void;
-  };
-  icon?: React && React.ReactNode;
-
-
-
-
 
 const defaultContent = {
   products: {
@@ -91,84 +66,39 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
-      
+
+    description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
 
 
       
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+        {displayTitle}
+      </h3>
+      
+      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
+        {displayDescription}
+      </p>;
+      {action && (;
+        <Button;
+          onClick={action.onClick}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <RefreshCw className="w-4 h-4" />
+
+          {action.label}
+        </Button>
+      )}
+
       {type === 'error' && (
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
-      
+
       {type === 'network' && (
         <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>
-            {t('general.check_status_page')}{' '}
-            <Link href='https://status.zion.ai' className='underline'>
-              {t('general.status_page')}
-            </Link>
-            .
-          </p>
-        </div>
-      )}
-    </div>
-  )
-// Specific empty state variants for quick use
-export function ProductsEmptyState({
-  onRetry
-  onAddProduct
-  isAuthenticated = false
-}: {
-  on_retry?: () => void;
-  onAddProduct?: () => void;
-  is_authenticated?: boolean }) {
-  const action = onAddProduct;
-    ? {
-
-
-      {type === 'error' && (;
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
-          <p>If this issue continues, please contact our support team.</p>;
-        </div>;
-      )}
-
-      {type === 'network' && (;
-        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>;
-          <p>;
-            {t('general && general.check_status_page')}{' '}
-            <Link href='https://status && status.zion.ai' className='underline'>;
-              {t('general && general.status_page')}
-
-  )
-export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-} 
-};
-;
-}
-}
-}
-}
-}
-}
-}
 
             {t('general.check_status_page')}
             {" "}
@@ -220,89 +150,4 @@ export function ProductsEmptyState(): any ({;
 
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-      />
-  )
-}
-}
-  return (
-    <EmptyState
-      type="categories"
-      action={onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined}
-    />;
-  );
-}
 
-
-  const customDescription = isAuthenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-
-      />;
-  );
-
-export function CategoriesEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function TalentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function EquipmentEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function SearchEmptyState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function NetworkErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-
-export function ServerErrorState(): any ({ onRetry }: { onRetry?: () => void }) {;
-      />;
-  );
-} ;
-
-
-
-
-        label: is_authenticated ? 'Add Product' : 'Login to Add Product',
-        on_click: onAddProduct,
-      }
-    : on_retry;
-      ? { label: 'Try Again', on_click: on_retry }
-      : undefined;
-  const custom_description = is_authenticated;
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!";
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-      />);
-export function CategoriesEmptyState ({ on_retry }: { on_retry?: () => void }) {
-      />);
-export function TalentEmptyState ({ on_retry }: { on_retry?: () => void }) {
-      />);
-export function EquipmentEmptyState ({ on_retry }: { on_retry?: () => void }) {
-      />);
-export function SearchEmptyState ({ on_retry }: { on_retry?: () => void }) {
-      />);
-export function NetworkErrorState ({ on_retry }: { on_retry?: () => void }) {
-      />);
-export function ServerErrorState ({ on_retry }: { on_retry?: () => void }) {
-      />);
-}

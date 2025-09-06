@@ -30,11 +30,6 @@ type Props = {
     dueDate: string;
     amountUsd: number;
   }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-  }) => Promise<void> | void;};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void
-
-};
-
-export default function MilestoneForm({ onSubmit }: Props) {;
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -65,24 +60,6 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       setError(err?.message |'Failed to create milestone');
     } finally {
       setLoading(false);    }
-  }
-  return (
-    <form onSubmit={handleSubmit} className='space-y-4'>
-      {error && <div className='text-red-600 text-sm'>{error}</div>}    }
-    setLoading(true);
-    try {
-      await onSubmit({ title, description: description |undefined, dueDate, amountUsd: parsedAmount })
-      setTitle('');
-      setDescription('');
-      setDueDate('');
-      setAmountUsd('')
-    } catch (err: any) {
-      setError(err?.message |'Failed to create milestone')
-    } finally {
-      setLoading(false)
-    }
-  }
-  };
 
   return (
 
@@ -194,23 +171,10 @@ export default function MilestoneForm({ onSubmit }: Props) {;
       </button>
     </form>
 
-      </button>;
-    </form>;
-  );
-
-  );
+}
 
 }
-}
+
   );
 }
-      <button;
-        type='submit';
-        className='bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50'        disabled={loading}        type="submit";
-        className="bg - blue - 600 text - white px - 4 py - 2 rounded hover:bg - blue - 700 disabled:opacity - 50";
-        disabled={loading}
-      >;
-        {loading ? 'Adding...' : 'Add Milestone'}
-      </button>;
-    </form>);
-}
+

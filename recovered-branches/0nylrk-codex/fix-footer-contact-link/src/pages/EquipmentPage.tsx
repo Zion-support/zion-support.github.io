@@ -2,8 +2,6 @@
 
 import React from 'react',
 
-import React from 'react',
-
 const EquipmentPage = () => {
 const EquipmentPage = () => {;
   return (
@@ -20,9 +18,4 @@ const EquipmentPage = () => {;
       </div>
     </div>
   )
-}
-export default EquipmentPage;
-
-},
-
 

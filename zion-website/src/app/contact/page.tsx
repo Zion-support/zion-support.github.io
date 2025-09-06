@@ -1,11 +1,3 @@
-import {
-  EnvelopeIcon
-  PhoneIcon
-  MapPinIcon
-  ClockIcon
-  ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline'
-import React from 'react';
 
 const contactMethods = [
   EnvelopeIcon,
@@ -67,16 +59,13 @@ const faqs = [;
     question: 'Do you provide ongoing support?'
     answer: 'Yes, we provide comprehensive ongoing support including technical assistance, updates, training, and optimization services to ensure your AI solutions continue to deliver value.'}
   {
+    question: 'What security measures do you have?'
+    answer: 'We implement enterprise-grade security including end-to-end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}]
 
-    question: 'What security measures do you have?',
-    answer: 'We implement enterprise - grade security including end - to - end encryption, SOC 2 compliance, regular security audits, and strict access controls to protect your data and systems.'}];
-export default /**
- * ContactPage - Function description
- */
-function ContactPage() {
-
+export default function ContactPage() {
   return (
     <div className="bg-black">
+
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
@@ -87,10 +76,7 @@ function ContactPage() {
                 Touch
               </span>
             </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Ready to transform your business with AI? Let's discuss how our cutting-edge
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Ready to transform your business with AI? Let's discuss how our cutting-edge 
+
               technology can accelerate your growth and innovation.
             </p>
           </div>
@@ -123,18 +109,7 @@ function ContactPage() {
                   <method.icon className="h-5 w-5 flex-none text-blue-400" aria-hidden="true" />
                   {method.name}
                 </dt>
-                <dd className=&quot;mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300&quot;>
-                  <p className=&quot;flex-auto&quot;>{method.description}</p>
-                  <p className=&quot;mt-6&quot;>
-                    <a
-                      href={method.href}
-                      className=&quot;text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200&quot;
-                <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-300">
-                  <p className="flex-auto">{method.description}</p>
-                  <p className="mt-6">
-                    <a 
-                      href={method.href} 
-                      className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+
                     >
                       {method.value} <span aria-hidden=&quot;true&quot;>→</span>
                     </Link>
@@ -159,15 +134,6 @@ function ContactPage() {
         </div>;
       </div>;
       {/* Contact form */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Send us a message</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Send us a message</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
 
             Let's start a conversation
           </p>
@@ -298,15 +264,6 @@ function ContactPage() {
         </div>;
       </div>;
       {/* FAQ */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Frequently Asked</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-blue-400">Frequently Asked</h2>
-          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
 
             Common questions
           </p>
@@ -326,13 +283,6 @@ function ContactPage() {
         </div>;
       </div>;
       {/* CTA section */}
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-
 
             Ready to get started?
           </h2>

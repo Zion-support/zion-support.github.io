@@ -1,11 +1,5 @@
-  const isAdmin = user?.userType === 'admin'
-  const paginatedTalents = filteredTalents
-  const pageKey = `talent-directory-${routeKey}-${router.asPath}`
-  )
-}
-  )
-}
-;
+
+
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useNavigate;
 import Link from 'next/link',;
@@ -139,6 +133,163 @@ export default function TalentDirectory() {;
     initialized]), // Fixed dependencies
 
 
+  const viewProfile = (id: string) => {
+    // Navigate to the talent profile page
+    router.push(`/talent/${id}`), // Changed to router.push
+  },
+
+  // Add key prop to force re-render when route changes
+  const pageKey = `talent-directory-${routeKey}-${router.asPath}`,
+
+  if (isLoading) {
+    return (
+      <div key={pageKey} className="container mx-auto px-4 py-8">
+        <TalentSkeleton />
+      </div>
+    )
+  }
+
+  if (
+    !isLoading &&
+    !error &&
+    filteredTalents.length === 0 &&
+    !searchTerm &&
+    selectedSkills.length === 0 &&
+    selectedAvailability.length === 0 &&
+    selectedRegions.length === 0 &&
+    priceRange[0] === 50 &&
+    priceRange[1] === 200 &&
+    experienceRange[0] === 0 &&
+    experienceRange[1] === 15
+  ) {
+    return (
+      <div key={pageKey} className="container mx-auto px-4 py-8">
+        <div className="text-center py-16">
+          <Image
+            src="/images/talent-placeholder.svg"
+            alt="No talent"
+            width={200}
+            height={200}
+            className="mx-auto mb-6"
+          />
+          <h2 className="text-2xl font-bold text-white mb-4">
+            Talent Directory Currently Empty
+          </h2>
+          <p className="text-zion-slate-light max-w-md mx-auto mb-6">
+            No talent profiles are currently available.
+          </p>
+          <Link href="/create-talent-profile">
+            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+              Be the first to list a talent
+            </Button>
+          </Link>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div key={pageKey} className="container mx-auto px-4 py-8">
+        <ErrorBanner msg="Unable to load talent profiles." />
+      </div>
+    )
+  }
+
+  return (
+    <div key={pageKey} className="container mx-auto px-4 py-8">
+      <div className="flex flex-col space-y-8">
+        <div className="flex items-start justify-between">
+          <div>
+            <h1 className="text-3xl font-bold text-white mb-2">
+              AI & Tech Talent Directory
+            </h1>
+            <p className="text-zion-slate-light">
+              Connect with expert AI developers, data scientists, ML engineers,
+              and tech professionals for your projects.
+            </p>
+          </div>
+          {isAdmin && (
+            <Link
+              href="/create-talent-profile"
+              className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark"
+            >
+              Add Talent
+            </Link>
+          )}
+        </div>;
+        {/* Main content */}
+        <div className="flex flex-col lg:flex-row gap-6">
+          {/* Sidebar - Desktop */}
+          <div className="w-full lg:w-64 shrink-0 hidden lg:block">
+            <FilterSidebar
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+              selectedSkills={selectedSkills}
+              toggleSkill={toggleSkill}
+              selectedAvailability={selectedAvailability}
+              toggleAvailability={toggleAvailability}
+              selectedRegions={selectedRegions}
+              toggleRegion={toggleRegion}
+              priceRange={priceRange}
+              setPriceRange={setPriceRange}
+              experienceRange={experienceRange}
+              setExperienceRange={setExperienceRange}
+              expandedSections={expandedSections}
+              toggleSection={toggleSection}
+              sortOption={sortOption}
+              setSortOption={setSortOption}
+              clearFilters={clearFilters}
+            />;
+          </div>;
+          {/* Mobile filter button */}
+          <div className="lg:hidden mb-4">
+            <Button
+              onClick={() => setIsMobileFilterOpen(true)}
+              variant="outline"
+              className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
+            >
+              Filter & Sort
+            </Button>
+          </div>
+
+          {/* Results and Pagination Wrapper for ErrorBoundary */}
+          <div className="flex-1">
+            {' '}
+            {/* Added a wrapper div to contain Results and Pagination */}
+            <ErrorBoundary>;
+              <TalentResults;
+                talents={paginatedTalents}
+                totalCount={total}
+                isLoading={isLoading}
+                viewProfile={viewProfile}
+                handleRequestHire={handleRequestHire}
+                isAuthenticated={isAuthenticated}
+                activeFiltersProps={{;
+                  selectedSkills,;
+                  toggleSkill,;
+                  selectedAvailability,;
+                  toggleAvailability,;
+                  selectedRegions,;
+                  toggleRegion,;
+                  priceRange,;
+                  setPriceRange,;
+                  experienceRange,;
+                  setExperienceRange,;
+                  clearFilters}}
+              />
+
+              {totalPages > 1 && (
+                <div className="mt-6">
+                  <Pagination className="justify-center">
+                    <PaginationContent>
+                      <PaginationItem>
+                        <PaginationPrevious
+                          href={`?page=${currentPage - 1}`}
+                          onClick={(e) => {;
+                            e.preventDefault(),;
+                            setCurrentPage(Math.max(1, currentPage - 1));
+
                           }}
                         />
                       </PaginationItem>
@@ -188,24 +339,4 @@ export default function TalentDirectory() {;
               </div>
             </div>
           )}
-        </div>
-      </div>
-    </div>
-  )
-}
-  );
-}
 
-  const is_admin = user?.user_type === 'admin';
-  const paginated_talents = filtered_talents;
-  const page_key = `talent - directory-${route_key}-${router.as_path}`);
-}
-  );
-}
-
-        </div>;
-      </div>;
-    </div>;
-  );
-}
-;

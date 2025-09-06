@@ -33,14 +33,6 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
 
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { id } = req.query as { id: string };
-
-
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
   if (!existing) return res.status(404).json({ error: 'Not found' });
@@ -171,4 +163,4 @@ if ( {) {
 
 
   res.status(405).end('Method Not Allowed')
-}
+

@@ -1,8 +1,6 @@
 
-
-}
- canvas && canvas.width = window && window.innerWidth;
-canvas && canvas.height = window && window.innerHeight;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 let animationId: number;
 let particles: Array< {;
 
@@ -384,11 +382,7 @@ if ( {) {
             opacity: [0.3, 0.6, 0.3],          }}
           transition={{
 
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-
+            ease: 'linear',          }}          }}
         />
         <motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
@@ -412,11 +406,6 @@ if ( {) {
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]
 
             opacity: [0.3, 0.6, 0.3]
-            duration: 25,
-            repeat: Infinity,
-            ease: 'linear',          }}
-
-            ease: 'linear',          }}
 
           }}
           transition={{
@@ -496,7 +485,13 @@ if ( {) {
             opacity: [0 && 0.4, 0 && 0.8, 0 && 0.4]
           transition={{
 
+            ease: 'easeInOut',            ease: "easeInOut"
           }}
+        />
+
+          }}
+
+        />
 
         {/* Animated Lines */}
         <motion&& motion.div
@@ -576,25 +571,9 @@ if ( {) {
             opacity: [0.3, 0.8, 0.3]
           }}
           transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-
-          }}
-
-        />;
-
-        <motion&& motion.div
-          className='absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent'
-          animate={{
-            height: [24, 48, 24],
-            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],          className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-400 to-transparent"
 
             duration: 8,
             repeat: Infinity,
-
-
-
 
         />
       </div>
@@ -660,12 +639,6 @@ if ( {) {
             className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full';
             style={{
 
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`,
-
-
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -100, 0]
@@ -733,81 +706,17 @@ if ( {) {
               scale: [0, 1, 0]
             }}
 
-              duration: Math && Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math && Math.random() * 10,
-
-              ease: 'easeInOut',            }}              ease: "easeInOut"
-
+            transition={{
               duration: Math.random() * 10 + 10,
               repeat: Infinity,
               delay: Math.random() * 10,
-              ease: "easeInOut"
 
-            }}
-          />;
+              ease: 'easeInOut',            }}
+
+
+          />
         ))}
       </div>
-
-
-      {/* Neon Glow Effects */}
-      <div className='fixed inset-0 pointer-events-none z-25'>;
-        <div className='absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl' />;
-        <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />;
-        <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />;
-      </div>;
-    </div>;
-  );
-
-};
-
-export default UltraFuturisticBackground2030;      </div>;
-    </div>;
-  );
-
-};
-
-              left: `${Math.random () * 100}%`,
-              top: `${Math.random () * 100}%`;
-            }}
-            animate={{
-              coordinate_y: [0, -100, 0];
-              opacity: [0, 1, 0];
-              scale: [0, 1, 0];
-            }}
-            transition={{
-              duration: Math.random () * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random () * 10,
-              ease: 'easeInOut',            }}              ease: "easeInOut";
-            }}
-          />))}
-      </div>;
-      {/* Neon Glow Effects */}
-      <div className='fixed inset - 0 pointer - events - none z - 25'>;
-        <div className='absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 5 rounded - full blur - 3xl' />;
-        <div className='absolute top - 1/3 right - 1/4 w - 80 h - 80 bg - purple - 500 / 5 rounded - full blur - 3xl' />;
-        <div className='absolute bottom - 1/4 left - 1/3 w - 72 h - 72 bg - pink - 500 / 5 rounded - full blur - 3xl' />;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2030;      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2030;
-;
-
-
-
-
-
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 10,
-
 
       {/* Neon Glow Effects */}
       <div className='fixed inset-0 pointer-events-none z-25'>
@@ -815,13 +724,17 @@ export default UltraFuturisticBackground2030;
         <div className='absolute top-1/3 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl' />
         <div className='absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-500/5 rounded-full blur-3xl' />
 
-
+      </div>
+    </div>
+  );
+}
 
       </div>
     </div>
   );
 };
 
+}
 
 export default UltraFuturisticBackground2030;
 

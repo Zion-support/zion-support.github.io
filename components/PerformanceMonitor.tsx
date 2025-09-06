@@ -496,8 +496,4 @@ if (return 'Needs Improvement) {
       </div>;
     </div>;
   );
-}
-export default PerformanceMonitor;
-};
-export default PerformanceMonitor;
 

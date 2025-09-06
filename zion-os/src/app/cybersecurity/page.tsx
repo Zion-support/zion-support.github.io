@@ -1,15 +1,4 @@
-import Link from "next/link";
-export const metadata = {title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection";
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.";
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"}
-export default function CybersecurityPage() {return (;
-import Link from "next/link",;
-export const metadata = {;
-  title: "Cybersecurity Services - Zion Tech Group | Advanced Threat Protection",;
-  description: "Protect your organization with Zion Tech Group's comprehensive cybersecurity solutions. From threat detection to compliance management, we secure your digital assets.",;
-  keywords: "cybersecurity, threat protection, security services, compliance, Zion Tech Group, security solutions, threat detection"},;
-export default function CybersecurityPage() {;
-  return (;
+
     <div className="min-h-screen">;
 import Link from './next / link';,
 export const metadata = {
@@ -30,8 +19,7 @@ function CybersecurityPage() {
           </h1>;
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">;
             Protect your organization from evolving cyber threats with our comprehensive;
-            security solutions. From threat detection to compliance management;
-            security solutions. From threat detection to compliance management,;
+
             we secure your digital assets and ensure business continuity.;
           </p>;
         </div>;
@@ -127,8 +115,7 @@ function CybersecurityPage() {
               </div>;
               <h3 className="text-xl font-semibold mb-3">Security Assessment</h3>;
               <p className="text-gray-400 mb-4">;
-                Comprehensive security assessments including penetration testing;
-                Comprehensive security assessments including penetration testing,;
+
                 vulnerability scanning, and risk analysis.;
               </p>;
               <ul className="space - y-2 mb - 6 text - sm text - gray - 400">;
@@ -150,8 +137,7 @@ function CybersecurityPage() {
               </div>;
               <h3 className="text-xl font-semibold mb-3">Compliance Management</h3>;
               <p className="text-gray-400 mb-4">;
-                Ensure compliance with industry standards including SOC2, ISO 27001;
-                Ensure compliance with industry standards including SOC2, ISO 27001,;
+
                 GDPR, and industry-specific regulations.;
               <h3 className="text - xl font - semibold mb - 3">Compliance Management</h3>;
               <p className="text - gray - 400 mb - 4">;

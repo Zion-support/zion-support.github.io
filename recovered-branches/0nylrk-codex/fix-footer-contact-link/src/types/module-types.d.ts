@@ -4,14 +4,10 @@ declare module 'vitest / config' {
 }
 
 
-
-declare module '@vitejs/plugin-react-swc' {;
-import {Plugin} from 'vite';
-  export default function reactSWC(): Plugin
+// Type declarations for modules used in Vite configuration
+declare module 'vitest/config' {
+  export { defineConfig } from 'vite'
 }
-
-declare module 'path' {;
-
 
   export function resolve(...paths: string[]): string;
 
@@ -19,16 +15,6 @@ declare module 'path' {;
 
   export function dirname(path: string): string
 }
-
-
-
-declare module 'lovable-tagger' {;
-
-import {Plugin} from 'vite';
-  export default function reactSWC (): Plugin;
-}
-
-;
 
 ;
 declare module '@vitejs/plugin-react-swc' {;
@@ -47,6 +33,4 @@ declare module 'lovable-tagger' {;
   export function componentTagger(): Plugin;
 }
 ;
-
-
 

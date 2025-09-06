@@ -1,10 +1,4 @@
 
-
-import fs from 'fs',;
-import path from 'path',;
-import Link from 'next/link',;
-
-
 function list(dir: string, baseDir: string) {
 
 
@@ -14,16 +8,6 @@ function list(dir: string, baseDir: string) {
     const stat = fs.statSync(full)
     return { name, rel, isDir: stat.isDirectory() }
   })
-
-
-  const sections = fs.existsSync(base)
-    ? list(base, base).map((entry) => ({
-        title: entry.name
-        items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
-    : []
-
-  return { props: { sections }, revalidate: 600 }
-
 
 import fs from 'fs';
 import path from 'path';
@@ -38,7 +22,6 @@ function list(dir: string, baseDir: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
 
 }
   });
@@ -64,6 +47,7 @@ export async function getStaticProps() {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 export default function DocsIndex({ sections }: { sections: { title: string, items: { name: string, rel: string, isDir: boolean }[] }[] }) {
 import fs from 'fs',
@@ -109,29 +93,6 @@ function DocsIndex() {
               {s.items.map((it) => (
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
-                    {it.rel}
-
-
-
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </div>
-
-}
-
-                  </a>;
-                </li>))}
-            </ul>;
-          </div>))}
-      </div>;
-    </div>);
-}
-  );
-};
 
                     {it.rel  } catch (error) {
     console.error("Error:", error);
@@ -139,6 +100,7 @@ function DocsIndex() {
   }
 }
                   </Link>
+
                 </li>
               ))  } catch (error) {
     console.error("Error:", error);
@@ -159,6 +121,4 @@ function DocsIndex() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-
-}
 

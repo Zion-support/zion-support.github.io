@@ -1,17 +1,17 @@
 
 
-
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Leaf, Server, Cloud } from "lucide-react",
 
 export default function GreenIT() {
 
   const greenITSolutions = [
     {
-      title: "Energy-Efficient Hardware"
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server}
-      title: "Energy-Efficient Hardware",
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+
       icon: Server},
+
     {
       title: "Optimized Cooling Systems"
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures."
@@ -46,12 +46,7 @@ function GreenIT() {
 
   return (
     <AppLayout>
-      <SEO
-        title="Green IT Solutions - Sustainable Technology"
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining performance."
-      <SEO 
-        title="Green IT Solutions - Sustainable Technology" 
-        description="Explore eco-friendly IT solutions and sustainable technology practices that reduce environmental impact while maintaining window.window.window.performance." 
+
         keywords="green IT, sustainable technology, eco-friendly computing, energy efficient hardware"
         canonical="https://app.ziontechgroup.com/marketplace/category/green-it"
       />
@@ -143,8 +138,6 @@ function GreenIT() {
       </main>
     </AppLayout>
   )
-
-
 
 import { SEO } from "@/components/SEO",;
 import { GradientHeading } from "@/components/GradientHeading",;
@@ -301,9 +294,9 @@ export default function GreenIT() {;
           </div>;
         </div>;
       </main>;
-
-
-
+    </AppLayout>;
+  );
 
 }
 ;
+

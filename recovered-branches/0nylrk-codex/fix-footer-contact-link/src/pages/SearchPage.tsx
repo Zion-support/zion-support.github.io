@@ -1,42 +1,10 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
 
-import {useEffect, useState} from "react";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput";
-import {generateSearchSuggestions} from "@/data/marketplaceData";
-import {SearchSuggestion} from "@/types/search";
-import {useAISearch} from "@/hooks/useAISearch";
-import {AppLayout} from "@/layout/AppLayout";
-export default function SearchPage() {;
-
-  const [params] = useSearchParams();
-
-  const navigate = useNavigate();
-
-
+import { useEffect, useState } from "react",
+import { useNavigate, useSearchParams } from "react-router-dom",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
 
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 
@@ -44,20 +12,6 @@ export default function SearchPage() {;
     if (initial) {
       search(initial)
     }
-  }, [initial]);
-
-  const handleSubmit = (e: React && React.FormEvent) => {;
-    e && e.preventDefault(),;
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query)
-  }
-  }, [initial]),
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(),
-    navigate(`/search?q=${encodeURIComponent(query)}`),
-    search(query)
-  },
 
   return (
     <AppLayout>;
@@ -70,43 +24,6 @@ export default function SearchPage() {;
             placeholder="Search talent, jobs, and projects..."
           />
         </form>
-
-
-import { useEffect, useState } from "react",;
-import { useNavigate, useSearchParams } from "react-router-dom",;
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
-import { generateSearchSuggestions } from "@/data/marketplaceData",;
-import { SearchSuggestion } from "@/types/search",;
-import { useAISearch } from "@/hooks/useAISearch",;
-import { AppLayout } from "@/layout/AppLayout",;
-export default function SearchPage() {;
-  const [params] = useSearchParams(),;
-  const navigate = useNavigate(),;
-  const initial = params.get("q") || "",;
-  const [query, setQuery] = useState(initial),;
-  const { results, loading, search } = useAISearch(),;
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),;
-  useEffect(() => {;
-    if (initial) {;
-      search(initial);
-    }
-  }, [initial]),;
-  const handleSubmit = (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query);
-  };
-  return (;
-    <AppLayout>;
-      <main className="container mx-auto px-4 py-8">;
-        <form onSubmit={handleSubmit} className="mb-6">;
-          <EnhancedSearchInput;
-            value={query}
-            onChange={setQuery}
-            searchSuggestions={suggestions}
-            placeholder="Search talent, jobs, and projects...";
-          />;
-        </form>;
 
         {loading && <p className="text-zion-slate-light">Searching...</p>}
         {!loading && results && results.length === 0 && (;

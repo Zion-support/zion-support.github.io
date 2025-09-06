@@ -7,9 +7,11 @@ import { User, Mail, Calendar, Shield } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
-interface PrivatePageProps {user: SupabaseUser;
-interface PrivatePageProps {;
-  user: SupabaseUser;
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 
 }
 export default /**
@@ -19,14 +21,6 @@ function PrivatePage() {
   return (
     <>
       <Head>
-        <title>Private Profile - Zion Tech Marketplace</title>;
-        <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
-      </Head>
-      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-        <title>Private Profile - Zion Tech Marketplace</title>
-        <meta name="description" content="Private user profile page" />
-      </Head>
-
 
         <Card>
           <CardHeader>
@@ -69,13 +63,13 @@ function PrivatePage() {
               </div>
             </div>
 
-
-
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
+
                 <div>
                   <span className="font-medium">Last Sign In: </span>
+
                   {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
@@ -89,9 +83,6 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
-            <div className=&quot;flex gap-2&quot;>
-            <div className="flex gap-2">
-
 
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
@@ -109,25 +100,6 @@ function PrivatePage() {
       </div>
     </>
   )
-}
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  const supabase = createServerSideClient (context);
-  const { data, error } = await supabase.auth.get_user ();
-  // Check condition
-if ( {) {
-  $2
-}
-    return {
-      redirect: {
-        destination: '/auth / login';
-        permanent: false}}
-  }
-  return {
-    props: {
-
-      user: data.user}}
-}
-
 
   } catch (error) {
     console.error("Error:", error);
@@ -161,5 +133,5 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
   }
 }
 
-
 } ;
+

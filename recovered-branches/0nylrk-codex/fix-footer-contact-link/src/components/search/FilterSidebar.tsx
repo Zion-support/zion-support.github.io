@@ -1,6 +1,8 @@
 
 
-
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox",
 
 interface FilterSidebarProps {
   filters: {
@@ -9,16 +11,30 @@ interface FilterSidebarProps {
     selectedLocations: string[]
     selectedAvailability: string[]
     selectedRating: number | null
-  }
-  filterOptions: FilterOptions
-  onFilterChange: (filterType: string, value: string) => void
-  onRatingChange: (rating: number | null) => void
 
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Filter, X, Star} from "lucide-react";
-import {FilterOptions} from "@/types/search";
+  onClearFilters: () => void
+}
+
+export function FilterSidebar({
+  filters,
+  filterOptions,
+  onFilterChange,
+  onRatingChange,
+
+  onClearFilters
+}: FilterSidebarProps) {
+  return (
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white flex items-center">
+          <Filter className="mr-2 h-5 w-5" /> Filters
+        </h3>
+
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Filter, X, Star } from "lucide-react",;
+import { FilterOptions } from "@/types/search",;
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
@@ -40,35 +56,16 @@ export function FilterSidebar(): any ({;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
-  return (
-
-
-  },
-  filterOptions: FilterOptions,
-  onFilterChange: (filterType: string, value: string) => void,
-  onRatingChange: (rating: number | null) => void,
-
-  onClearFilters: () => void
-}
-
-
-
-  onClearFilters
-}: FilterSidebarProps) {
-  return (
-
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-medium text-white flex items-center">
-          <Filter className="mr-2 h-5 w-5" /> Filters
-        </h3>
-
-
-        <Button 
-          variant="outline" 
-          size="sm"
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-
+  return (;
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
+      <div className="flex items-center justify-between mb-4">;
+        <h3 className="text-lg font-medium text-white flex items-center">;
+          <Filter className="mr-2 h-5 w-5" /> Filters;
+        </h3>;
+        <Button;
+          variant="outline";
+          size="sm";
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
 
           onClick={onClearFilters}
         >

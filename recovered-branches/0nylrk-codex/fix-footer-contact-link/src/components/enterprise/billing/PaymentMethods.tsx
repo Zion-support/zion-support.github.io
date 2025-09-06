@@ -2,39 +2,15 @@
 import React from "react";
 import {
 
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,;
-
 } from "@/components/ui/card";
 
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from "lucide-react";
-export function PaymentMethods() {
-  // Mock payment methods
-
-
-
-      id: "pm-1",
-      type: "credit_card",
-      brand: "Visa",
-      last4: "4242",
-      expMonth: 12,
-      expYear: 2025,
-      isDefault: true,
-    },
-
 
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { CreditCard, Plus, Trash } from "lucide-react",
-
-
-
 
     {
       id: "pm-2",
@@ -43,12 +19,6 @@ import { CreditCard, Plus, Trash } from "lucide-react",
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-      isDefault: false,
-    },;
-  ];
-      isDefault: false}
-  ],
-
 
   return (
     <Card>
@@ -100,7 +70,6 @@ import { CreditCard, Plus, Trash } from "lucide-react",
         </Button>
       </CardFooter>
     </Card>
-
 
   )
 import React from "react",;
@@ -217,5 +186,9 @@ function PaymentMethods() {
           Add Payment Method;
         </Button>;
       </CardFooter>;
-    </Card>);
+    </Card>;
+
+  );
 }
+;
+

@@ -125,9 +125,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   const payload = req.body as VotePayload;
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+
     res.status(400).json({ error: 'Missing fields' });
     return
   }
@@ -141,8 +139,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ record: g })
 }
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-    res.status(400).json({ error: 'Missing fields' });
 
     id: uuidv4(),
     voter: payload && payload.voter,
@@ -192,33 +188,6 @@ if ( {) {
 if ( {) {
   $2
 }
-    res.status (400).json ({ error: 'Missing fields' });
-    return;
-  }
-  const g = read_grant (payload.grant_id);
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
-  $2
-}
-  const vote = {
-    id: uuidv4 (),
-    voter: payload.voter,
-    choice: payload.choice,
-    created_at: new Date ().toISOString (),
-  }
-  g.votes = [...(g.votes || []), vote];
-  g.updated_at = new Date ().toISOString ();
-  write_grant (g);
-  res.status (200).json ({ record: g });  }
-  const g = read_grant (payload.grant_id);
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
-  $2
-}
-  const vote = { id: uuidv4 (), voter: payload.voter, choice: payload.choice, created_at: new Date ().toISOString () }
-  g.votes = [...(g.votes || []), vote];
-  g.updated_at = new Date ().toISOString ();
-  write_grant (g);
-  res.status (200).json ({ record: g });
-}
 
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+    res.status(400).json({ error: 'Missing fields' });
 

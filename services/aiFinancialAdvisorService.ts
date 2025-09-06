@@ -1,4 +1,10 @@
 
+  id: string;
+  userId: string;
+  name: string;
+  totalValue: number;
+  currency: string;
+
   risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years;
   target_return: number;
@@ -11,7 +17,7 @@
   updated_at: Date;
 
 }
-export interface PortfolioAsset {
+
   id: string;
   symbol: string;
   name: string;
@@ -32,9 +38,9 @@ export interface PortfolioAsset {
 
   }
 }
-export interface PortfolioPerformance {
-  total_return: number;
-  annualized_return: number;
+
+  totalReturn: number;
+  annualizedReturn: number;
   volatility: number;
   sharpe_ratio: number;
   max_drawdown: number;
@@ -46,7 +52,7 @@ export interface PortfolioPerformance {
   sortino_ratio: number;
 
 }
-export interface InvestmentRecommendation {
+
   id: string;
   user_id: string;
   type: 'buy' | 'sell' | 'hold' | 'rebalance';
@@ -67,7 +73,7 @@ export interface InvestmentRecommendation {
   expires_at: Date;
 
 }
-export interface FinancialGoal {
+
   id: string;
   user_id: string;
   name: string;
@@ -85,7 +91,7 @@ export interface FinancialGoal {
   updated_at: Date;
 
 }
-export interface MarketAnalysis {
+
   id: string;
   market: string;
 
@@ -102,7 +108,7 @@ export interface MarketAnalysis {
   next_update: Date;
 
 }
-export interface FinancialPlan {
+
   id: string;
   user_id: string;
   name: string;
@@ -144,18 +150,15 @@ export interface FinancialPlan {
   created_at: Date,
   updated_at: Date;
 }
-export interface FinancialRequest {
-  user_id: string;
-  request_type: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
-  parameters: Record < string, any>;
-  preferences?: Record < string, any>;
+
+  userId: string;
 
   requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking'
   parameters: Record<string, any>;
 
   preferences?: Record<string, any>
 }
-export interface FinancialResponse {
+
   success: boolean;
   data: {
     portfolio?: InvestmentPortfolio;
@@ -166,6 +169,15 @@ export interface FinancialResponse {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+  estimatedFees: number
+}
+
+  private apiKey: string;
+
+  private baseUrl: string
+  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+    this.apiKey = apiKey
+    this.baseUrl = baseUrl
   }
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
@@ -563,23 +575,19 @@ if ( {) {
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key');
 
-
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process && process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
-
-    risks: string[],
-    deadlines: Record < string, Date>;
-  }> {
-    try {
-      const response = await fetch (`${this.base_url}/api / financial / tax - optimization`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.api_key}`;
-          'Content - Type': 'application / json'}
-        body: JSON.stringify ({ user_id, tax_year })});
-;
-      // Check condition
-if ( {) {
-  $2
+  id: string,;
+  userId: string,;
+  name: string,;
+  totalValue: number,;
+  currency: string,;
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive',;
+  investmentHorizon: number, // in years;
+  targetReturn: number,;
+  assets: PortfolioAsset[],;
+  lastRebalanced: Date,;
+  performance: PortfolioPerformance,;
+  createdAt: Date,;
+  updatedAt: Date;
 }
         throw new Error (`HTTP error! status: ${response.status}`);
       }
@@ -623,6 +631,5 @@ if ( {) {
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService (process.env.FINANCIAL_ADVISOR_API_KEY || 'demo - key');
 ;
 
-export interface InvestmentPortfolio {;
-
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+

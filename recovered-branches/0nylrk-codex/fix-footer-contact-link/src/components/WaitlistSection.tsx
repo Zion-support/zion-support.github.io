@@ -1,21 +1,11 @@
 import React from 'react';
 
-import {useState} from "react";
-import {Button} from "@/components/ui/button";
-import {GradientHeading} from "@/components/GradientHeading";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {useToast} from "@/hooks/use-toast";
-import {Checkbox} from "@/components/ui/checkbox";
-export function WaitlistSection() {;
 
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [role, setRole] = useState("");
-  const [agreeTerms, setAgreeTerms] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
+import { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
 
 export function WaitlistSection() {
   const [email, setEmail] = useState(""),
@@ -34,17 +24,7 @@ export function WaitlistSection() {
         description: "Please fill all fields and agree to the terms."})
       return
     }
-    setIsSubmitting(true);
-    try {
-      // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(true),
-    
-    try {
-      // Simulating an API call
-      await new Promise(resolve => setTimeout(resolve, 1000)),
-      
+
       toast({
         title: "Success!"
         description: "Thank you for registering with Zion. We'll be in touch soon."})
@@ -153,10 +133,7 @@ if ( {) {
     } finally {
       setIsSubmitting(false)
     }
-  }
 
-  },
-  
   return (
     <section id="waitlist" className="py-20 bg-zion-blue-dark relative overflow-hidden">;
       {/* Background elements */}
@@ -226,12 +203,11 @@ if ( {) {
               />;
               <Label
                 htmlFor="terms"
-
-
-            <Button 
-              type="submit" 
-              disabled={isSubmitting} 
-
+                className="text-sm text-zion-slate font-normal"
+              >
+                I agree to receive updates about Zion and understand I can unsubscribe anytime.
+              </Label>
+            </div>
 
               className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
             >
@@ -243,19 +219,29 @@ if ( {) {
     </section>
   )
 
-                className="text-sm text-zion-slate font-normal">;
-                I agree to receive updates about Zion and understand I can unsubscribe anytime.;
-              </Label>;
-            </div>;
-
-            <Button
-              type="submit" 
-              disabled={isSubmitting} 
-              className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">;
-              {isSubmitting ? "Processing..." : "Complete Registration"}
-
-
-
+import { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { useToast } from "@/hooks/use-toast",;
+import { Checkbox } from "@/components/ui/checkbox",;
+export function WaitlistSection() {;
+  const [email, setEmail] = useState(""),;
+  const [name, setName] = useState(""),;
+  const [role, setRole] = useState(""),;
+  const [agreeTerms, setAgreeTerms] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  const { toast } = useToast(),;
+  const handleSubmit = async (e: React.FormEvent) => {;
+    e.preventDefault(),;
+    if (!email || !name || !role || !agreeTerms) {;
+      toast({;
+        variant: "destructive",;
+        title: "Missing information",;
+        description: "Please fill all fields and agree to the terms."}),;
+      return;
+    }
 ;
   return (
     <section id="waitlist" className="py - 20 bg - zion - blue - dark relative overflow - hidden">;
@@ -328,9 +314,9 @@ if ( {) {
           </form>;
         </div>;
       </div>;
-
-
-
+    </section>;
+  );
 
 }
 ;
+

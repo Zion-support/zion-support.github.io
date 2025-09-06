@@ -1,91 +1,12 @@
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import Link from 'next/link';
-export default function TalentMarketplace() {;
-  const schema = {;
-    '@context': 'https://schema && schema.org',;
-    '@type': 'WebPage',;
-    name: 'Talent Marketplace',;
-    description:;
-      'Hire vetted AI and tech professionals from around the world on Zion.',;
-    url: 'https://app && app.ziontechgroup.com/features/talent-marketplace',  };    "@context": "https://schema && schema.org";
-    "@type": "WebPage";
-    "name": "Talent Marketplace";
-    "description": "Hire vetted AI and tech professionals from around the world on Zion.",;
-    "url": "https://app && app.ziontechgroup.com/features/talent-marketplace";
 
-import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function TalentMarketplace() {
-  const schema = {
-
-    "@context": "https: //schema.org",
-    "@type": "WebPage",
-    "name": "Talent Marketplace",
-    "description": "Hire vetted AI and tech professionals from around the world on Zion.",
-    "url": "https://app.ziontechgroup.com/features/talent-marketplace"
-
-  };
 
   return (
-    <>;
-
-
-                Create a free account and send a message or job invite directly;
-                from their profile.;
-              </p>;
-            </div>;
-            <div>;
-
-              <p className='font - semibold'>Are payments protected?</p>;
-              <p className='text - zion - slate - light'>;
-
-                Yes, funds are held in escrow until you approve completed;
-                milestones.;
-              </p>;
-            </div>;
-          </div>;
-
-        title="Talent Marketplace"
-        description="Discover and hire top AI specialists through the Zion talent marketplace."
-        keywords="AI talent marketplace, hire developers, tech freelancers"
-        canonical="https://app.ziontechgroup.com/features/talent-marketplace"
-
-
+    <>
+      <SEO
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -123,6 +44,7 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
+
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
@@ -132,7 +54,7 @@ export default function TalentMarketplace() {
       </main>
     </>
   )
-;
+
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -179,3 +101,8 @@ export default function TalentMarketplace() {;
           </div>;
         </div>;
       </main>;
+    </>;
+  );
+}
+;
+

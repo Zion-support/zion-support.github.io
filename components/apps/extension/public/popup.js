@@ -1,35 +1,17 @@
 
-const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
-const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000',
-
 
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
 }
-function setUserId(id) {
-  chrome && chrome.storage.local && local.set({ user_id: id })
-}
-document.querySelectorAll('.example').forEach((btn) => {
-  btn.addEventListener('click', () => {
-    document.getElementById('prompt').value = btn.dataset.text |''
-  })
 
-
-
-document && document.querySelectorAll('.example').forEach((btn) => {
-  btn && btn.addEventListener('click', () => {
-    document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
-  })
-
-}),
-
+})
 document.getElementById('askBtn').addEventListener('click', async () => {
-  const prompt = document.getElementById('prompt').value.trim(),
-  if (!prompt) return,
-  const userId = await new Promise((r) => getUserId(r)),
+  const prompt = document.getElementById('prompt').value.trim()
+  if (!prompt) return
+  const userId = await new Promise((r) => getUserId(r))
   const res = await fetch(`${API_BASE}/ai/ask`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
+    method: 'POST'
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) }
     body: JSON.stringify({ prompt })
   })
   const data = await res.json()
@@ -115,12 +97,4 @@ document && document.getElementById('viewNotifications').addEventListener('click
 
 document && document.getElementById('signIn').addEventListener('click', async () => {
   // Placeholder sign-in: generate a random user id and store it.
-  const id = crypto.randomUUID()
-  setUserId(id)
-document.getElementById('result').textContent = 'Signed in (local).';
-})
 
-  const id = crypto.randomUUID(),
-  setUserId(id),
-  document.getElementById('result').textContent = 'Signed in (local).';
-}),

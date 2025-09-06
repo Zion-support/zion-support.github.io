@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+import { computeTrustScore } from '../../../utils/trust/compute';
+import type {
 
 } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
@@ -302,15 +304,4 @@ if ( {) {
   return res.status (405).json ({ error: 'Method not allowed' });
 }
   res.setHeader('Allow', 'GET, POST');
-  return res.status(405).json({ error: 'Method not allowed' });      } catch {}
-      return res.status(200).json(breakdown)
-    } catch (e: any) {
-      return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })
-    }
-  }
-  res.setHeader('AllowGET, POST');
-
-  return res.status(405).json({ error: 'Method not allowed' })
-}
-  return res.status(405).json({ error: 'Method not allowed' });
 
