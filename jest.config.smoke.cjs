@@ -15,7 +15,7 @@ module.exports = {
     '!src/**/*.d.ts',
     '!src/**/*.stories.{js,jsx,ts,tsx}'
   ],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1'
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
