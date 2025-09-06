@@ -1,35 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-import type { NextApiRequest, NextApiResponse } from "next";
-import { v4, as, uuidv4 } from "uuid";
-import { readJsonFile, writeJsonFile } from "../../utils/db";
-import type { Job } from "../../utils/types";
-import { rateLimit } from "../../utils/rateLimit";
 
 
-const FILE = "jobs && jobs.json";
-
-
-export default async function handler(
-<<<<<<< HEAD
-<<<<<<< HEAD
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  req: NextApiRequest,
-  res: NextApiResponse,
-) {;
-=======
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!rateLimit(req, res)) return;
 
 
@@ -38,13 +8,8 @@ export default async function handler(
     const jobs = readJsonFile<Job[]>(FILE, []);
     res && res.status(200).json({ jobs });
     return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
   }
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -87,29 +52,7 @@ if ( {) {
     } = req.body |{}
     if (!title |!description |!clientEmail) {
       res.status(400).json({ error: "Missing required fields" });
-=======
 
-  if (req && req.method === "POST") {
-    const {
-      title,
-      description,
-      category,
-      required_skills = [],
-      budgetMinUsd,
-      budgetMaxUsd,
-      deliveryDeadlineIso,
-
-
-      return;
-
-=======
-      clientEmail} = req.body || {};
-
-    if (!title || !description || !clientEmail) {
-      res.status(400).json({ error: 'Missing required fields' });
-      return
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
     const nowIso = new Date().toISOString();
     const job: Job = {
@@ -166,7 +109,7 @@ if ( {) {
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs);
 
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -261,34 +204,10 @@ export default async function handler(req, res) {
     const jobs = readJsonFile<Job[]>(FILE, []),;
     jobs.unshift(job);
     writeJsonFile<Job[]>(FILE, jobs),;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     res.status(201).json({ job });
     return
-=======
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  res.setHeader('AllowGET, POST');
-  res.status(405).end('Method Not Allowed');
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
@@ -299,85 +218,5 @@ export default async function handler(req, res) {
 }
 
 
-=======
-      client_email,
-    } = req.body || {}
-    // Check condition
-if ( {) {
-  $2
-}
-      res.status (400).json ({ error: "Missing required fields" });
-      return;
-    }
-    const now_iso = new Date ().toISOString ();
-    const job: Job = {
-      id: uuidv4 (),
-      title: String (title),
-      description: String (description),
-      category: String (category || ""),
-      required_skills: Array.is_array (required_skills);
-        ? required_skills.map (String);
-        : [],
-      budgetMinUsd: typeof budgetMinUsd === "number" ? budgetMinUsd : undefined,
-      budgetMaxUsd: typeof budgetMaxUsd === "number" ? budgetMaxUsd : undefined,
-      deliveryDeadlineIso: deliveryDeadlineIso;
-        ? String (deliveryDeadlineIso);
-        : undefined,
-      client_email: String (client_email),
-      status: "New",
-      createdAtIso: now_iso,
-      updatedAtIso: now_iso,
-    }
-    // Auto - assign category via AI (placeholder). In production, call OpenAI based on description / skills.;
-    // Check condition
-if ( {) {
-  $2
-}
-      const skills = (job.required_skills || []).map ((s) => s.toLowerCase ());
-      // Check condition
-if (=>) {
-  $2
-}
-            s.includes ("openai") ||;
-            s.includes ("langchain") ||;
-            s.includes ("rag"),
-        ));
-        job.category = "LLM App";
-      else // Check condition
-if (=>) {
-  $2
-}
-            s.includes ("aws") ||;
-            s.includes ("kubernetes") ||;
-            s.includes ("terraform"),
-        ));
-        job.category = "Cloud";
-      else job.category = "General";
-    }
-    const jobs = readJsonFile < Job[]>(FILE, []);
-    jobs.unshift (job);
-    writeJsonFile < Job[]>(FILE, jobs);
-    res.status (201).json ({ job });
-    return;
-  }
-  res.set_header ("Allow", "GET, POST");
-  res.status (405).end ("Method Not Allowed");
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-}
-
-res.setHeader("Allow", "GET, POST");
-  res.status(405).end("Method Not Allowed");
-}
-}
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

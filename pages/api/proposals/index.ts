@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs-extra";
 import path from "path";
@@ -14,7 +7,7 @@ const FILE_PATH = path && path.join(process && process.cwd(), "dataproposalsinde
 async function ensureStore() {
   await fs && fs.ensureFile(FILE_PATH);
   try {
-<<<<<<< HEAD
+
     const raw = await fs.readFile(FILE_PATH, "utf8");
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -27,17 +20,14 @@ async function ensureStore() {;
   await fs.ensureFile(FILE_PATH);
   try {
     const raw = await fs.readFile(FILE_PATH, 'utf8');
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (!raw) await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch {
     await fs && fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
 }
-<<<<<<< HEAD
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -73,12 +63,7 @@ export default async function handler(
   if (req.method === "POST") {
     const body = req.body |{}
     const data = await fs.readJson(FILE_PATH);
-=======
 
-  if (req && req.method === "POST") {
-    const body = req && req.body || {};
-    const data = await fs && fs.readJson(FILE_PATH);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const item = {
       id: body && body.id,
       title: body && body.title,
@@ -92,6 +77,7 @@ export default async function handler(
     await fs && fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res && res.status(201).json(item);
   }
+
   res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -99,6 +85,8 @@ import path from 'path';
 const FILE_PATH = path.join(process.cwd(), 'dataproposalsindex.json');
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH);
+
+
   try {
     const raw = await fs.read_file (FILE_PATH, "utf8");
     if (await fs.write_json (FILE_PATH, { items: [] }, { spaces: 2 })) {
@@ -139,49 +127,27 @@ if ( {) {
     await fs.write_json (FILE_PATH, data, { spaces: 2 });
     return res.status (201).json (item);
   }
-<<<<<<< HEAD
-  res.status(405).json({ error: 'Method not allowed' })
-}
-res.status(405).json({ error: "Method not allowed" });
-}
-;
-export default async function handler(req, res) {
-  try {
-  await ensureStore(),;
-  if (req.method === 'GET') {
-    const data = await fs.readJson(FILE_PATH);
-    return res.status(200).json(data);
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-=======
-  res.status (405).json ({ error: "Method not allowed" });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

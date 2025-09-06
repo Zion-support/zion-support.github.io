@@ -1,3 +1,4 @@
+
 export const metadata = { 
   title: 'AI Services | Zion Tech Group',
   description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
@@ -246,9 +247,11 @@ export default function AIPage() {
       </section>
 
       <CTASection />
+
     </div>
   );
 }
+
 
 function AIServiceCard({ title, description, features, price, icon }: { 
   title: string; 
@@ -332,12 +335,14 @@ function IndustryUseCase({ title, description, examples, icon }: {
         {examples.map((example) => (
           <li key={example} className="flex items-center">
             <span className="text-blue-500 mr-2">•</span> {example}
+
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
 
 function AIBenefitCard({ title, description, icon }: { 
   title: string; 
@@ -400,6 +405,7 @@ function Plan({ name, price, features, popular }: {
         {features.map((feature) => (
           <li key={feature} className="flex items-center">
             <span className="text-blue-500 mr-3">✓</span> {feature}
+
           </li>
         ))}
       </ul>
@@ -407,8 +413,10 @@ function Plan({ name, price, features, popular }: {
         href="tel:+13024640950" 
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
           popular 
+
             ? 'bg-blue-600 text-white hover:bg-blue-700' 
             : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+
         }`}
       >
         Get Started
@@ -416,6 +424,7 @@ function Plan({ name, price, features, popular }: {
     </div>
   );
 }
+
 
 function CTASection() {
   return (
@@ -426,25 +435,34 @@ function CTASection() {
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
         Let's discuss your AI needs and create a custom solution that drives real business value. 
         Our team of AI experts is ready to help you implement cutting-edge AI solutions.
+
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"
+
           className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+
         >
           Call +1 302 464 0950
         </a>
         <a
           href="mailto:kleber@ziontechgroup.com"
+
           className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+
         >
           Email Us
         </a>
       </div>
+
       <div className="mt-6 text-sm text-gray-600">
         <p>Address: 364 E Main St STE 1008, Middletown, DE 19709</p>
+
       </div>
     </div>
   );
 }
+
 }
+

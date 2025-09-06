@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import { 
   Brain, 
   Shield, 
@@ -268,10 +269,47 @@ const Services = () => {
               Call: +1 302 464 0950
             </a>
           </div>
+
         </div>
       </div>
     </div>
   );
 };
 
-export default Services;
+
+function ServiceCard({
+  href,
+  title,
+  description,
+  bullets,
+  icon,
+}: {
+  href: string;
+  title: string;
+  description: string;
+  bullets: string[];
+  icon: string;
+}) {
+  return (
+    <Link
+      to={href}
+      className="group border border-gray-200 rounded-xl p-8 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
+    >
+      <div className="text-4xl mb-4">{icon}</div>
+      <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+        {title}
+      </h3>
+      <p className="text-gray-600 mb-4 leading-relaxed">{description}</p>
+      <ul className="text-gray-600 space-y-2">
+        {bullets.map((bullet) => (
+          <li key={bullet} className="flex items-center">
+            <span className="text-blue-500 mr-2">•</span> {bullet}
+          </li>
+        ))}
+      </ul>
+    </Link>
+  );
+}
+
+export default ServicesPage;
+

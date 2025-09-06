@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Check, Star, Phone, Mail, MapPin } from 'lucide-react';
@@ -274,9 +275,55 @@ const Pricing = () => {
             >
               Call Now
             </a>
+
           </div>
-        </div>
-      </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-gray-600">
+                Everything you need to know about our pricing
+              </p>
+            </div>
+
+            <div className="max-w-3xl mx-auto space-y-6">
+              {faqs.map((faq, index) => (
+                <Card key={index} className="p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    {faq.question}
+                  </h3>
+                  <p className="text-gray-600">{faq.answer}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Join thousands of businesses already using our platform.
+            </p>
+            <div className="space-x-4">
+              <Button size="lg" variant="secondary">
+                Start Free Trial
+              </Button>
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
+                Contact Sales
+              </Button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 };

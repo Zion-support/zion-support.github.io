@@ -1,105 +1,63 @@
-// Example listing type
-interface Listing {
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ListingScoreCard } from '@/components/ListingScoreCard';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import {;
-  Select,;
-  SelectTrigger,;
-  SelectContent,;
-  SelectItem,;
-} from '@/components/ui/select';
-import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
-import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
-import { safeStorage } from '@/utils/safeStorage';
-
-// Example listing type;
-interface Listing {;
-import { useState, useEffect } from 'react';
-import { GradientHeading } from '@/components / GradientHeading';
-import { ListingScoreCard } from '@/components / ListingScoreCard';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
 import {
   Select,
   SelectTrigger,
   SelectContent,
   SelectItem,
-} from '@/components / ui / select';
+} from '@/components/ui/select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
-import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton';
-import { safe_storage } from '@/utils / safe_storage';
-// Example listing type;
+import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
+import { safeStorage } from '@/utils/safeStorage';
+
 interface Listing {
   id: string;
   title: string;
   description: string;
+  price: number;
   category: string;
+
   subcategory?: string;
   image?: string;
   tags?: string[];
   author?: string;
-<<<<<<< HEAD
-  authorImage?: string;
-  aiScore?: number;
-  rating?: number;
-  reviewCount?: number;
-  price?: number | null;
-  createdAt: string
-interface CategoryListingPageProps {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-  author_image?: string;
-  ai_score?: number;
-  rating?: number;
-  review_count?: number;
-  price?: number | null;
-  created_at: string;
-interface CategoryListingPageProps {
-  title: string;
-  description: string;
-  listings: Listing[];
-  sort_options?: { label: string; value: string }[];
-  filter_options?: { label: string; value: string }[];
-export /**
- * CategoryListingPage - Function description
- */
-function CategoryListingPage() {
-  const [search_query, setSearchQuery] = useState ('');
-  const [selected_sort, setSelectedSort] = useState (
-    () =>;
-      safe_storage.get_item ('category_selected_sort') ||;
-      sort_options[0]?.value ||;
-      'newest');
-  const [selected_filter, setSelectedFilter] = useState (
-    () =>;
-      safe_storage.get_item ('category_selected_filter') ||;
-      filter_options[0]?.value ||;
-      'all');
-  const [is_loading, setIsLoading] = useState (false);
-  useEffect (() => {
-    safe_storage.set_item ('category_selected_sort', selected_sort);
-  }, [selected_sort]);
-  useEffect (() => {
-    safe_storage.set_item ('category_selected_filter', selected_filter);
-  }, [selected_filter]);
-  useEffect (() => {
-    let mounted = true;
-    setIsLoading (true);
-    const timeout = set_timeout (() => {
-      if (setIsLoading (false)) {
-  $2
 }
 
-    }, 300); return () => {
-      mounted = false;
-      clear_timeout (timeout);
+interface CategoryListingPageProps {
+  category: string;
+  listings: Listing[];
+  loading?: boolean;
+}
+
+export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
+  category,
+  listings,
+  loading = false,
+}) => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [sortBy, setSortBy] = useState('newest');
+  const [filterBy, setFilterBy] = useState('all');
+  const [filteredListings, setFilteredListings] = useState<Listing[]>([]);
+
+  useEffect(() => {
+    let filtered = listings;
+
+    // Filter by search term
+    if (searchTerm) {
+      filtered = filtered.filter(
+        listing =>
+          listing.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          listing.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+          listing.tags.some(tag =>
+            tag.toLowerCase().includes(searchTerm.toLowerCase())
+          )
+      );
     }
-<<<<<<< HEAD
+
   }, [searchQuery, selectedSort, selectedFilter])
   // Process listings based on filters and search
   const processedListings = initialListings
@@ -131,45 +89,12 @@ function CategoryListingPage() {
       // Apply sorting
       switch (selectedSort) {
         case 'newest':
-=======
 
-  }, [search_query, selected_sort, selected_filter]);
-  // Process listings based on filters and search;
-  const processed_listings = initial_listings;
-    .filter (listing => {
-      // Apply search filter;
-      const matches_search =;
-        listing.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        listing.description.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-        (listing.tags &&;
-          listing.tags.some (tag =>;
-            tag.toLowerCase ().includes (search_query.toLowerCase ())));
-      // Apply category filters;
-      // Check condition
-if (return matches_search) {
-  $2
-}
-      if (
-        return matches_search && (listing.rating || 0) >= 4) {
-  $2
-}
-      if (
-        return matches_search && (listing.ai_score || 0) >= 85) {
-  $2
-}
-      return matches_search;
-    });
-    .sort ((a, b, ) => {
-      // Apply sorting;
-      switch (selected_sort) {
-        case 'newest':;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           return (
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
           return (
-<<<<<<< HEAD
+
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
           )
         case 'rating-high':
@@ -240,9 +165,7 @@ interface Listing {;
   rating?: number,;
   reviewCount?: number,;
   price?: number | null,;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   createdAt: string;
 
 interface CategoryListingPageProps {;
@@ -357,34 +280,64 @@ export function CategoryListingPage(): any ({;
         case 'z - a':;
           return b.title.locale_compare (a.title);
         default:;
+
           return 0;
       }
     });
+
+    setFilteredListings(filtered);
+  }, [listings, searchTerm, sortBy, filterBy]);
+
+  const categories = Array.from(new Set(listings.map(listing => listing.category)));
+
+  if (loading) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <GradientHeading text={`${category} Listings`} />
+        <ListingGridSkeleton />
+      </div>
+    );
+  }
+
   return (
+
     <>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
+          <Select value={filterBy} onValueChange={setFilterBy}>
+            <SelectTrigger className="w-full sm:w-48">
+              <Filter className="h-4 w-4 mr-2" />
+              Filter by
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">All Categories</SelectItem>
+              {categories.map(cat => (
+                <SelectItem key={cat} value={cat}>
+                  {cat}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+      </div>
+
+      {/* Results */}
+      <div className="mb-4">
+        <p className="text-gray-600">
+          Showing {filteredListings.length} of {listings.length} listings
+        </p>
+      </div>
 
 
-<<<<<<< HEAD
-=======
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="text-center mb-12">;
             <GradientHeading>{title}</GradientHeading>;
             <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
               {description}
 
             </p>;
@@ -499,10 +452,9 @@ export function CategoryListingPage(): any ({;
                       value={option && option.value}
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -545,11 +497,8 @@ export function CategoryListingPage(): any ({;
 
           <div className="mb-6">
             <p className="text-zion-slate-light">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
 
@@ -577,7 +526,7 @@ export function CategoryListingPage(): any ({;
                     rating = {listing && listing.rating,}
                     reviewCount = {listing && listing.reviewCount,}
                   />;
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
 
@@ -597,35 +546,16 @@ export function CategoryListingPage(): any ({;
 
 
 
-=======
 
-
-
-                ))}
-              </div>;
-            ) : (;
-              <div className='text-center py-20'>;
-                <h3 className='text-xl font-bold text-white mb-2'>;
-                  No listings found;
-                </h3>;
-                <p className='text-zion-slate-light mb-6'>;
-                  Try adjusting your filters or search query;
-                </p>;
-                <Button
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
                     setSelectedFilter(filterOptions[0]?.value || 'all')
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -657,7 +587,7 @@ export function CategoryListingPage(): any ({;
       </div>;
     </>;
   );
-<<<<<<< HEAD
+
 
 
 
@@ -799,3 +729,4 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }</div> </div> </div> </>);
 }'"}
 }
+

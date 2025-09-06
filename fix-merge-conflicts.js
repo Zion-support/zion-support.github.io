@@ -120,10 +120,9 @@ function fixFilesInDirectory(dirPath) {
   
   return fixedCount;
 }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 // Main execution
 console.log('Starting merge conflict fix...');

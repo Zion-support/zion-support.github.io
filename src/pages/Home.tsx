@@ -1,10 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
+import { Header } from '../components/Header';
+import Footer from '../components/Footer';
+import { GradientHeading } from '../components/GradientHeading';
+import { Card, CardContent } from '../components/ui/card';
+import { Button } from '../components/ui/button';
+import { Badge } from '../components/ui/badge';
+
 import { 
   ArrowRight, 
   CheckCircle, 
   Star, 
   Users, 
+
   Shield, 
   Zap,
   Brain,
@@ -62,11 +71,13 @@ const Home: React.FC = () => {
       href: '/services/data-analytics',
       color: 'from-yellow-500 to-orange-500'
     }
+
   ];
 
   const testimonials = [
     {
       name: 'Sarah Johnson',
+
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'Zion Tech Group transformed our entire infrastructure. Their AI solutions increased our efficiency by 300%.',
@@ -290,6 +301,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+
     </div>
   );
 };
