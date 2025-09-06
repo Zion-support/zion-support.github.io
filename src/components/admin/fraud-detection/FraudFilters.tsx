@@ -4,6 +4,8 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
 
 
+
+
   searchQuery
   setSearchQuery
   statusFilter
@@ -52,12 +54,16 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
     <div className="flex flex-col md:flex-row gap-4 mb-6">
 
 
+
+
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
 
+
 <<<<<<< HEAD
+
 
           value = {searchQuery,}
 
@@ -77,7 +83,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -95,7 +103,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -116,7 +126,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </Select>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -126,9 +138,11 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
     </div>
   )
 
+
 }
 '"}
 }
+
 
 
           onChange = {(e,) => setSearchQuery(e && e.target.value),}
@@ -222,7 +236,9 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 

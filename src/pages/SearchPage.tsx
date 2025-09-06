@@ -28,7 +28,42 @@ import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
 import { generateSearchSuggestions } from "@/data/marketplaceData";
 
 
+import { SearchSuggestion } from "@/types/search";
+import {logErrorToProduction} from '@/utils/productionLogger';
+import {
+  Tabs;
+  TabsContent;
+  TabsList;
+  const pageKey = `search-${routeKey}-${router.asPath}`
+import { useRouter } from 'next/router'
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady'
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput"
+import { generateSearchSuggestions } from "@/data/marketplaceData"
+import { SearchSuggestion } from "@/types/search"
+import {logErrorToProduction} from '@/utils/productionLogger'
+import {
+  Tabs
+  TabsContent
+  TabsList
+  TabsTrigger} from "@/components/ui/tabs"
 
+import { useEffect, useState } from "react",
+import { useRouter } from 'next/router',
+import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady',
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
+import {logErrorToProduction} from '@/utils/productionLogger',
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
+
+import { Loader2 } from 'lucide-react'
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -68,6 +103,7 @@ interface SearchResult {
   description: string
 }
 function highlight(text: string, term: string) {
+
 
 
 
@@ -337,6 +373,7 @@ export default function SearchPage() {;
 
 
 
+
   },;
   const handleSubmit = (e: React.FormEvent) => {;
     e.preventDefault(),;
@@ -347,11 +384,13 @@ export default function SearchPage() {;
 
 
 
+
   const handleSubmit = (e: React && React.FormEvent) => {;
     e && e.preventDefault();    if (query && query.trim()) {;
       router && router.push(`/search?q=${encodeURIComponent(query && query.trim())}`);
     }
   };
+
 
 
 
@@ -377,7 +416,9 @@ export default function SearchPage() {;
             }}
             searchSuggestions={suggestions}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -511,6 +552,7 @@ export default function SearchPage() {;
           </Tabs>
         )}
 
+
       </main>
     </div>
   )
@@ -526,6 +568,7 @@ if (query.trim () ) {
   setResults ([])
 return
 return;
+
 
 }setLoading (true)
 try {
@@ -765,6 +808,7 @@ router.push (`/search?q=$ {
           className="max - w-6xl mx -auto">
           {/* Results Count */}
 
+
           <div  className="mb-6">
             <p className="text-slate -300">
               {searchQuery ? `Found ${filteredResults.length} results for "${searchQuery}"` : `Showing ${filteredResults.length} items`}
@@ -799,6 +843,7 @@ router.push (`/search?q=$ {
     </>
   )
 }
+
 
 ;
 

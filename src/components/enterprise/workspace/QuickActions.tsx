@@ -17,8 +17,13 @@ import { Calendar } from 'lucide-react';
           {actions && actions.map(action => (;
             <Button
 
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { FileText, Plus, Search, Calendar } from 'lucide-react'
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
       id: 'post - job',
       label: 'Post New Job',
@@ -57,7 +62,19 @@ import { Calendar } from 'lucide-react';
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+              key={action.id}
+              variant='outline'              className={`h - auto justify - start p - 4 ${action.color}`}
+            >;
+              <div className='flex flex - col items - start text - left'>;
+                <div className='flex items - center'>;
+                  {action.icon}
+                  <span>{action.label}</span>;
+                </div>;
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
   return (
     <Card>
@@ -80,6 +97,8 @@ import { Calendar } from 'lucide-react';
               className={`h-auto justify-start p-4 ${action.color}`}
 
 
+
+
             >
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-center">
@@ -87,12 +106,14 @@ import { Calendar } from 'lucide-react';
                   <span>{action.label}</span>
                 </div>
 
+
                 <span className='mt-1 text-xs text-muted-foreground'>
                   {action.description}
                 </span>              </div>
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
           {actions.map(action => (
             <Button
+
 
             <Button 
 
@@ -145,7 +166,9 @@ export function QuickActions() {;
           {actions.map(action => (;
             <Button;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -154,7 +177,9 @@ export function QuickActions() {;
               className={`h-auto justify-start p-4 ${action.color}`}
             >
 
+
 <<<<<<< HEAD
+
 
 
               key={action && action.id}

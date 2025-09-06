@@ -1,6 +1,7 @@
 const { wallet, loading } = useWallet();
   return (
 
+
 export function TokenDisplay() {
 
 
@@ -8,6 +9,11 @@ export function TokenDisplay() {
 
 
 
+
+
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
@@ -40,7 +46,9 @@ export function TokenDisplay() {
               <Button variant='outline' size='sm'>                View Wallet            <div className="mt-2">
             <div className="mt-2">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -50,7 +58,9 @@ export function TokenDisplay() {
             </div>
           </div>
 
+
 <<<<<<< HEAD
+
 
 
 

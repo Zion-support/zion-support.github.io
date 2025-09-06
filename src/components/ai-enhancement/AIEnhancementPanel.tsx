@@ -136,6 +136,7 @@ export function AIEnhancementPanel(): any ({;
   ) => {
     setOptions({
 
+
       ...options
       [field]: e.target.value
       ...options,
@@ -154,6 +155,7 @@ export function AIEnhancementPanel(): any ({;
       ...options,
       [field]: e.target.value})
   },
+
 
 
 
@@ -208,7 +210,9 @@ export function AIEnhancementPanel(): any ({;
           />;
         </div>;
 
+
 <<<<<<< HEAD
+
 
 
         {/* Instructions input (optional) */}
@@ -222,6 +226,7 @@ export function AIEnhancementPanel(): any ({;
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
 
+
               onChange={e => handleInputChange(e, 'instructions')}            />
           </div>
         )}
@@ -230,6 +235,7 @@ export function AIEnhancementPanel(): any ({;
           onClick={handleGenerate}
           className='w-full'
           disabled={isEnhancing |(!options.content && !options.context)}        >
+
 
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
@@ -245,7 +251,9 @@ export function AIEnhancementPanel(): any ({;
           disabled={isEnhancing || !options.content && !options.context}
         >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -297,6 +305,8 @@ export function AIEnhancementPanel(): any ({;
               >
 
 
+
+
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -314,13 +324,17 @@ export function AIEnhancementPanel(): any ({;
               />
 
 
+
+
             </div>
           </div>
         )}
       </CardContent>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -340,11 +354,13 @@ export function AIEnhancementPanel(): any ({;
             </Button>;
           )}
 
+
           <Button onClick={handleApply}>Apply to Form</Button>
         </CardFooter>
       )}
     </Card>
   )
+
 
 }
 
@@ -443,7 +459,9 @@ export function AIEnhancementPanel(): any ({;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
           <Button onClick={handleApply}>;

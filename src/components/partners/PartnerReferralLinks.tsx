@@ -42,6 +42,7 @@ export function PartnerReferralLinks() {;
   const [customParam, setCustomParam] = useState<string>('');
   const [generatedLinks, setGeneratedLinks] = useState<;
 
+
     { name: string; link: string }[]
   >([])
   // Get the base referral link
@@ -59,6 +60,7 @@ export function PartnerReferralLinks() {;
       // Add custom campaign parameter if selected
       if (selectedCampaign !== 'default') {
         url.searchParams.append('campaign', selectedCampaign)
+
 
       }
 
@@ -125,6 +127,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 
 
+
+
 export function PartnerReferralLinks() {
   const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
   const [isDialogOpen, setIsDialogOpen] = useState(false),
@@ -153,10 +157,13 @@ export function PartnerReferralLinks() {
         url.searchParams.append("campaign", selectedCampaign)
 
 
+
+
       }
       
       // Add custom parameter if provided
       if (customParam) {
+
 
         url.searchParams.append("source", customParam)
       }
@@ -222,6 +229,7 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
+
 
 
 
@@ -406,6 +414,8 @@ export function PartnerReferralLinks() {;
         <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
 
 
+
+
         <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
@@ -438,7 +448,9 @@ export function PartnerReferralLinks() {;
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
 
+
 <<<<<<< HEAD
+
 
 
                   </SelectTrigger>
@@ -489,7 +501,9 @@ export function PartnerReferralLinks() {;
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
 
+
 <<<<<<< HEAD
+
 
 
               >
@@ -498,6 +512,7 @@ export function PartnerReferralLinks() {;
               <Button
                 type='button'
                 onClick={handleGenerateLink}
+
 
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
                 Generate Link
@@ -519,6 +534,7 @@ export function PartnerReferralLinks() {;
                     <Link className='h-4 w-4 text-zion-purple' />
                     <span>{item.name |'Campaign Link'}</span>                  </div>
 
+
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
 
@@ -533,7 +549,9 @@ export function PartnerReferralLinks() {;
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -584,6 +602,8 @@ export function PartnerReferralLinks() {;
                   >
                     <Copy className="h-4 w-4" />
                     <span className="sr-only">Copy</span>
+
+
 
 
                   </Button>

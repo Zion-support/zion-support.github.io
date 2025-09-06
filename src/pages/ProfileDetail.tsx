@@ -7,6 +7,7 @@ export default function ProfileDetail() {;
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+
 import { useState, useEffect } from "react",
 import { useRouter } from "next/router",
 import { supabase } from "@/integrations/supabase/client",
@@ -22,6 +23,7 @@ import { HireNowCTA } from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
+
 
 
 
@@ -116,6 +118,7 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">
         <p>Profile not found.</p>
       </div>
+
 
 
   }, [profileId]);
@@ -224,6 +227,7 @@ export default function ProfileDetail() {;
         description={profileData.bio || "Check out this talent's profile on Zion!"}
 <<<<<<< HEAD
 <<<<<<< HEAD
+
 
 
 
@@ -380,7 +384,9 @@ if ( {) {
               </CardContent>;
             </Card>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -543,9 +549,11 @@ if ( {) {
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
 
+
                 hourly_rate: profileData?.hourly_rate || 0
                 hourly_rate: profileData?.hourly_rate || 0,
                 hourly_rate: profileData?.hourly_rate || 0
+
 
               }}
             />
@@ -578,7 +586,9 @@ if ( {) {
               </div>;
             </div>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -614,7 +624,9 @@ if ( {) {
                   <a;
                     href={profileData.twitter_url}
 
+
 <<<<<<< HEAD
+
 
 
                     target="_blank"
@@ -639,7 +651,9 @@ if ( {) {
                   <a;
                     href={profileData.linkedin_url}
 
+
 <<<<<<< HEAD
+
 
 
                     target="_blank"

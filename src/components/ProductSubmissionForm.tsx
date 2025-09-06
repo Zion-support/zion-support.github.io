@@ -2,26 +2,168 @@ try {
       // Create the product listing;
       const product_data = {
 
+import {
 
+  Form
+  FormControl
+  FormDescription
+  FormField
+  FormItem
+  FormLabel
+  FormMessage
+} from '@/components/ui/form'
+import { Input } from '@/components/ui/input'
+import { Button } from '@/components/ui/button'
+import { Textarea } from '@/components/ui/textarea'
+import { AspectRatio } from '@/components/ui/aspect-ratio'
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
+import { AIListingGenerator } from '@/components/listing/AIListingGenerator'
+import { Sparkles } from 'lucide-react'
+// Define the form schema with zod
+const productSchema = z.object({
+  title: z.string().min(3, 'Title must be at least 3 characters')
+  description: z.string().min(10, 'Description must be at least 10 characters')
+  price: z
+    .string()
+    .refine(val => !isNaN(parseFloat(val)) && parseFloat(val) >= 0, {
+      message: 'Price must be a valid number'
+    })
+  category: z.string().min(1, 'Please select a category')
+  image:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  video:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  model:
+    typeof window === 'undefined'
+      ? z.any().optional()
+      : z.instanceof(File).optional()
+  tags: z.string().optional()
+})
+// Type for our form values
+type ProductFormValues = z.infer<typeof productSchema>
+export function ProductSubmissionForm() {
+  const { user } = useAuth()
+  const { toast } = useToast()
+  const router = useRouter()
+  const [isSubmitting, setIsSubmitting] = React.useState(false)
+  const [imagePreview, setImagePreview] = React.useState(null as string | null)
+  const [activeTab, setActiveTab] = React.useState('manual')
+import React from "react",
+import { useForm, ControllerRenderProps } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import z from "zod",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
+import { useToast } from "@/hooks/use-toast",
+import { useRouter } from "next/router",
+import Image from 'next/image', // Import next/image
+import {logErrorToProduction} from '@/utils/productionLogger',
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   // Initialize the form
   const form = useForm<ProductFormValues>({
     resolver: zodResolver(productSchema)
     defaultValues: {
 
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('image', file)
+      const reader = new FileReader()
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+      }
+      reader.readAsDataURL(file)
+    }
+  }
+  const handleVideoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('video', file)
+    }
+  }
+  const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];    if (file) {
+      form.setValue('model', file)
+    }
+  }
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue('description', content.description)
+    form.setValue('tags', content.tags.join(', '))
+    // Set a default price as the middle of the suggested range
+    const averagePrice = (
+      (content.suggestedPrice.min + content.suggestedPrice.max) /
+      2
+    ).toFixed(2)
+    form.setValue('price', averagePrice)
+    // Switch to the manual tab to show applied content
+    setActiveTab('manual')
+  }
+      tags: ""}}),
+  
+  // Handle image upload preview
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0],
+    if (file) {
+      form.setValue("image", file),
+      const reader = new FileReader(),
+      reader.onloadend = () => {
+        setImagePreview(reader.result as string)
+      },
+      reader.readAsDataURL(file)
+    }
+  },
 
 
+
+
+
+  // Apply AI-generated content to the form
+  const handleApplyGenerated = (content: any) => {
+    form.setValue("description", content.description),
+    form.setValue("tags", content.tags.join(", ")),
+    
+    // Set a default price as the middle of the suggested range
+    const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
+    form.setValue("price", averagePrice),
+    
+    // Switch to the manual tab to show applied content
+    setActiveTab("manual")
+  },
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Handle form submission
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
       toast({
 
+      })
+      return;
+    }
+    setIsSubmitting(true)
+        title: "Authentication Required",
+        description: "You must be logged in to publish products",
+        variant: "destructive"}),
+      return
+    }
 
+    setIsSubmitting(true),
+    
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     try {
       // Create the product listing
       const productData = {
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
         title: values.title,
         description: values.description,
         price: parse_float (values.price),
@@ -29,6 +171,7 @@ try {
         currency: 'USD', // Default currency;
         tags: values.tags ? values.tags.split (', ').map (tag => tag.trim ()) : [],
         author: {
+
 
 
       let imagePublicUrl: string | undefined;
@@ -65,6 +208,7 @@ if ( {) {
 }
           throw new Error (update_error.message);
         }
+
 
       }
       // Upload video if provided;
@@ -159,16 +303,24 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 
 
+
+
           name: user.displayName || "Anonymous Creator",
           id: user.id},
         createdAt: new Date().toISOString()},
       
+
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       const { data: productRecord, error: productError } = await supabase
         .from('product_listings')
         .insert([productData])
@@ -524,13 +676,17 @@ export function ProductSubmissionForm() {;
       
 
 
+
+
       // Redirect to product page
       router.push(`/marketplace/listing/${productRecord.id}`)
     } catch (error) {
       toast({
 
+
         title: 'Publication Failed'
         title: 'Publication Failed',
+
 
         description:
           error instanceof Error ? error.message : 'An unknown error occurred'
@@ -549,7 +705,9 @@ export function ProductSubmissionForm() {;
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -568,7 +726,9 @@ export function ProductSubmissionForm() {;
       
       <TabsContent value="manual">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -637,7 +797,9 @@ export function ProductSubmissionForm() {;
                 const { onChange, onBlur, value, ref } = field,
                 return (
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -735,6 +897,8 @@ export function ProductSubmissionForm() {;
                       className="min-h-32";
 
 
+
+
                       {...field}
                     />
                   </FormControl>
@@ -759,6 +923,7 @@ export function ProductSubmissionForm() {;
               <FormField
                 control={form.control}
 
+
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
@@ -771,6 +936,7 @@ export function ProductSubmissionForm() {;
                 name="price"
                 render={({ field }: { field: ControllerRenderProps<ProductFormValues "price"> }) => (
                   <FormItem>
+
 
                     <FormLabel>Price (USD)</FormLabel>
                     <FormControl>
@@ -911,6 +1077,8 @@ export function ProductSubmissionForm() {;
                   <FormItem>
 
 
+
+
                     <FormLabel>Category</FormLabel>
                     <FormControl>
                       <select
@@ -983,7 +1151,9 @@ export function ProductSubmissionForm() {;
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (
                 <FormItem>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -995,6 +1165,7 @@ export function ProductSubmissionForm() {;
                     />
                   </FormControl>
                   <FormDescription>
+
 
                     Add relevant tags to help users find your product (e.g., ai
                     productivity, design)
@@ -1020,6 +1191,7 @@ export function ProductSubmissionForm() {;
               render={({ field }: { field: ControllerRenderProps<ProductFormValues "tags"> }) => (;
                 <FormItem>;
 
+
                   <FormLabel>Tags</FormLabel>;
                   <FormControl>;
                     <Input
@@ -1036,6 +1208,7 @@ export function ProductSubmissionForm() {;
               )}
             />;
 
+
             <FormField;
               control={form.control}
               name="image"
@@ -1043,6 +1216,7 @@ export function ProductSubmissionForm() {;
                 <FormItem>
                   <FormLabel>Product Image</FormLabel>
                   <FormControl>
+
 
                     <Input
                       type='file'
@@ -1056,7 +1230,9 @@ export function ProductSubmissionForm() {;
                       className="cursor-pointer"
                     />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1068,7 +1244,9 @@ export function ProductSubmissionForm() {;
                   <FormMessage />
                   
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1092,7 +1270,9 @@ export function ProductSubmissionForm() {;
                           alt="Product image preview"
                           width={600} // Example width, adjust as needed
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1241,6 +1421,8 @@ export function ProductSubmissionForm() {;
               render={() => (
 
 
+
+
                 <FormItem>
                   <FormLabel>Product Video (MP4)</FormLabel>
                   <FormControl>
@@ -1262,7 +1444,9 @@ export function ProductSubmissionForm() {;
               name="model"
               render={() => (
 
+
 <<<<<<< HEAD
+
 
 
                 <FormItem>
@@ -1278,6 +1462,7 @@ export function ProductSubmissionForm() {;
               )}
             />
 
+
 <<<<<<< HEAD
 
             <div className='flex justify-end'>
@@ -1286,6 +1471,9 @@ export function ProductSubmissionForm() {;
                 disabled={isSubmitting}
                 className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'              >
                 {isSubmitting ? 'Publishing...' : 'Publish Product'}
+
+
+
 
 
 
@@ -1488,7 +1676,9 @@ const {
   toast ({
 }finally {
 
+
 <<<<<<< HEAD
+
 
   setIsSubmitting (false);
 
@@ -1506,7 +1696,9 @@ const {
     </Tabs>;
   );
 
+
 <<<<<<< HEAD
+
 
 
 

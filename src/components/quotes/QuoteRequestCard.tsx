@@ -13,14 +13,18 @@ type QuoteRequestCardProps = {
 }
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
 
+
   quote
   onViewDetails
   onMarkAsResponded
+
 
   quote,
   onViewDetails,
   quote,
   onViewDetails,
+
+
 
 
   onMarkAsResponded,
@@ -58,7 +62,9 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -85,7 +91,9 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
         <p className="text-white line-clamp-3 mb-4">{quote.project_summary}</p>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -97,6 +105,8 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
     <Card key={quote && quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">;
 
         
+
+
 
 
         <div className="flex justify-between items-center mt-4">
@@ -111,7 +121,9 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
           </Button>
           
 
+
 <<<<<<< HEAD
+
 
 
           <div className="flex items-center">
@@ -138,6 +150,7 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
 
+
               )}
             </Button>
           </div>
@@ -150,16 +163,19 @@ export const QuoteRequestCard: React.FC < QuoteRequestCardProps> = ({
 }
 
 
+
   );
 };
 "};
 };
 
 
+
   );
 };
 "};
 };
+
 
 
 import React from "react",;
@@ -269,7 +285,9 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
       return date_string;

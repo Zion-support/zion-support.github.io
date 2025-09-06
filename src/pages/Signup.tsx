@@ -18,6 +18,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
 
+
 <<<<<<< HEAD
 
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
@@ -46,6 +47,7 @@ export default function Signup() {
   ),
 });
 export default function Signup() {;
+
 
   const router = useRouter(); // Changed from navigate
   const [loading, setLoading] = useState(false)
@@ -117,6 +119,7 @@ function Signup() {
       }
     } catch (err: any) {
 
+
       logErrorToProduction('Auth service health check failed', { data: err })
       setAuthServiceAvailable(false)
       // Set a more specific error message based on the error type
@@ -124,6 +127,7 @@ function Signup() {
         err.code === 'NETWORK_ERROR' |
         err.message?.includes('Network Error')
       if (true) {}
+
 
       ) {
         setHealthCheckError('Network connection issues detected')
@@ -259,6 +263,7 @@ if ( {) {
                 method: err.config.method
               }
 
+
             : 'No config'
         })
         const status = err.response?.status
@@ -269,6 +274,7 @@ if ( {) {
         const errorMsg = null;
           err.response?.data?.error ||
           err.response?.data?.message ||
+
 
           'Signup failed. Please try again.'
         logInfo('Processed error message:', { data: errorMsg })
@@ -585,8 +591,10 @@ export default function Signup() {;
 
 
 
+
   // Show loading state only during initial health check
   if (healthCheckLoading) {
+
 
     return (
       <AuthLayout>;
@@ -635,6 +643,7 @@ export default function Signup() {;
               </p>
             </div>
           )}
+
 
 ;
           {/* Show Success message */}
@@ -796,6 +805,7 @@ export default function Signup() {;
 
 
 
+
               <Button
                 type="button"
                 variant="ghost"
@@ -820,12 +830,14 @@ export default function Signup() {;
 
 
 
+
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
               <AuthButtons providers={['google', 'github']} />
             </div>
           )}
+
 
 
           </form>;
@@ -953,6 +965,7 @@ import { Alert, AlertDescription  } from '@/components / ui / alert';
 import { PasswordStrengthMeter  } from '@/components / PasswordStrengthMeter';
 import {
 
+
   Form
   FormControl
   FormField
@@ -1003,6 +1016,7 @@ export default function Signup() {
   // Form submission handler
   const onSubmit = async (data: SignupFormValues) => {
 
+
       displayName: ",
       email: ",
       password: ",
@@ -1012,6 +1026,8 @@ export default function Signup() {
 }) as UseFormReturn<SignupFormValues>;
   // Form submission handler;
   const onSubmit = async (data: SignupFormValues) => {;
+
+
 
 
     if (isSubmitting) return; // Prevent multiple submissions
@@ -1044,7 +1060,9 @@ export default function Signup() {
         if (sessionError) {
           console.error("Error setting session:", sessionError)
 
+
 <<<<<<< HEAD
+
 
 
   Form,
@@ -1117,6 +1135,8 @@ if ( {) {
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
           return;
+
+
 
 
 }
@@ -1393,11 +1413,3 @@ const Signup = () => {;
 
 }};
 };
-<<<<<<< HEAD
-
-        </div>;
-      </div>;
-    </AuthLayout>;
-  );
-}
-;

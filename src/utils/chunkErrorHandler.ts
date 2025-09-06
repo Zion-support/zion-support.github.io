@@ -200,7 +200,9 @@ if ( {) {
   private hardRefresh(): void {
     // Force a hard refresh bypassing all caches
 
+
     window.location.href = window.location.href + '?_t=' + Date.now()
+
 
   }
   private showFatalErrorMessage(): void {
@@ -248,6 +250,39 @@ if ( {) {
     window.location.href = window.location.href + '?_t=' + Date.now();
 
 
+
+
+  }
+  private showFatalErrorMessage (): void {
+    // Create a user - friendly error message;
+    const error_div = document.create_element ('div');
+    error_div.style.css_text = `;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+  private showFatalErrorMessage(): void {
+    // Create a user-friendly error message
+    const errorDiv = document.createElement('div'),
+    errorDiv.style.cssText = `
+      position: fixed,
+      top: 0,
+      left: 0,
+      width: 100%,
+      height: 100%,
+      background: rgba(0, 0, 0, 0.8),
+      color: white,
+      display: flex,
+      align-items: center,
+      justify-content: center,
+      z-index: 999999,
+      font-family: system-ui, -apple-system, sans-serif,
+    `,
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
     errorDiv.innerHTML = `
@@ -258,6 +293,7 @@ if ( {) {
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
+
 
           background: #0070f3
           color: white
@@ -296,6 +332,7 @@ if ( {) {
           border-radius: 0.5rem,
           font-size: 1rem,
           cursor: pointer,
+
 
         ">
           Go Home
@@ -399,14 +436,18 @@ if ( {) {
         url: window.location.href;
       });
 
+
 <<<<<<< HEAD
+
 
 
     }
     return this.errorStats.get(sessionKey)!
   }
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -448,8 +489,10 @@ export default chunkErrorHandler
           Try Again
         </button>
 
+
         <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler
+
 
 
 
@@ -480,6 +523,7 @@ export default chunkErrorHandler
           Try Again;
         </button>;
         <button onclick="window.location.href='/'" style=";
+
 
           background: #666;
           color: white;
@@ -546,6 +590,7 @@ export default chunkErrorHandler;
 }
 
 
+
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;
@@ -571,6 +616,7 @@ export default chunkErrorHandler;
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
+
 
 export default chunkErrorHandler;
 export default chunkErrorHandler;
@@ -609,5 +655,6 @@ export default chunkErrorHandler;
 // Create and export singleton instance;
 export const chunkErrorHandler = new ChunkErrorHandler();
 // Export for manual usage;
+
 
 export default chunkErrorHandler;

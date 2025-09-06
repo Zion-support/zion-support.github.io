@@ -7,6 +7,8 @@ return (
       >
 
 
+
+
         <span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
@@ -14,8 +16,11 @@ return (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
 
+
       </button>
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {expanded && (
         <div className="mt-4 space-y-2">
@@ -26,11 +31,14 @@ return (
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
 
+
             <div key={region.id} className="flex items-center">
 import { Checkbox } from "@/components/ui/checkbox"
 import { RegionFilterProps } from "@/types/filters"
 const REGION_OPTIONS = [
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components / ui / checkbox';
 import { RegionFilterProps } from '@/types / filters';
@@ -95,7 +103,9 @@ const REGION_OPTIONS = [;
   { id: "South America", label: "South America" },;
   { id: "Australia", label: "Australia" },;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -219,6 +229,7 @@ function RegionFilter() {
 }</button> {
   REGION OPTIONS.map (region => (<div key= {
 
+
   region.id "
 }className="flex items-center" > <Checkbox > {
   region.label
@@ -233,6 +244,7 @@ function RegionFilter() {
 }</div>) ;
 }"};
 <<<<<<< HEAD
+
 
 
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer";

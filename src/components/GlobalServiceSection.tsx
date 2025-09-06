@@ -28,9 +28,15 @@ export function GlobalServiceSection() {;
           ))}
 
 
-import { GradientHeading } from './GradientHeading'
-import {
+  Truck,;
+} from 'lucide-react';
+import { Button } from './ui/button';
 
+import { GradientHeading } from "./GradientHeading",
+import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
+import { Button } from "./ui/button",
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 const services = [
   {
     title: "Servers",
@@ -58,9 +64,16 @@ const services = [
 
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">
@@ -92,7 +105,9 @@ export function GlobalServiceSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -112,7 +127,9 @@ export function GlobalServiceSection() {
 
         <div className="flex justify-center mt-12">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -127,6 +144,7 @@ export function GlobalServiceSection() {
 };
       </div>
     </section>
+
 
   )
 }
@@ -167,6 +185,7 @@ export function GlobalServiceSection() {;
           <p className="mt-4 text-zion-slate-light text-xl max-w-2xl mx-auto">;
             Our 24x7x365 global IT service offering provides enterprise-grade solutions for businesses of all sizes;
           </p>;
+
 
         </div>;
 
@@ -283,7 +302,9 @@ function GlobalServiceSection() {
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
     </section>);

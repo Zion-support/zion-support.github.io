@@ -17,7 +17,9 @@ avatarUrl?: string;
               className='w-full h-full object-cover'
               loading='lazy'
 
+
 export function ProfileHero({
+
 
   name
   title
@@ -127,7 +129,9 @@ export function ProfileHero({
         </AspectRatio>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -258,6 +262,8 @@ export function ProfileHero({;
               <div className="flex flex-wrap items-center gap-3 mt-2">
 
 
+
+
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
@@ -295,17 +301,3 @@ export function ProfileHero({;
                   <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;
                   <span className="text-sm text-zion-slate-light">{location}</span>;
                 )}
-<<<<<<< HEAD
-
-                {rating && (;
-                  <div className="flex items-center gap-1">;
-                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
-                    <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
-                    {reviewCount && (;
-                      <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
-                    )}
-                  </div>
-                )}
-
-
-;

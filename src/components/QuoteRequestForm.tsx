@@ -18,6 +18,7 @@ import {z} from "zod"
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary"
 const serviceStepSchema = z.object({
 
+
   serviceType: z.string().min(1)
   specificItem: z.object({ id: z.string() })})
   serviceType: z.string().min(1),
@@ -41,6 +42,7 @@ export function QuoteRequestForm() {
   const [autoFillOpen, setAutoFillOpen] = useState(false),
   
 
+
   const [formData, setFormData] = useState<QuoteFormData>({
     serviceType: ""
     serviceCategory: ""
@@ -56,7 +58,9 @@ export function QuoteRequestForm() {
     }
     },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -71,11 +75,13 @@ export function QuoteRequestForm() {
     setFormData(prev => ({
       ...prev;
 
+
 };
   );
 };
 }
 <<<<<<< HEAD
+
 
 
   )

@@ -28,7 +28,9 @@ export default function App() {
           <main className="flex-1 lg:ml-80">
             <Routes>
 
+
               <Route path="/" element={<LandingPage />} />
+
 
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />

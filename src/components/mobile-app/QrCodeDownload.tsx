@@ -10,7 +10,9 @@ export const QrCodeDownload: React.FC = () => {
               />
               
 
+
 <<<<<<< HEAD
+
 
 
               <div className="flex gap-2 items-center text-sm text-gray-400">
@@ -20,7 +22,9 @@ export const QrCodeDownload: React.FC = () => {
             </div>
             
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -28,6 +32,7 @@ export const QrCodeDownload: React.FC = () => {
               <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">
                   <QrCode className="w-full h-full p-4" />
+
 
 
   // App store links - these would come from environment variables in production;
@@ -78,6 +83,7 @@ export const QrCodeDownload: React.FC = () => {
 import React from "react";
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons";
 
+
 export const QrCodeDownload: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
@@ -122,7 +128,9 @@ export const QrCodeDownload: React.FC = () => {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 "

@@ -58,7 +58,9 @@ export function ClientDashboard() {
                   </div>
                 </div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -88,7 +90,9 @@ export function ClientDashboard() {
         
         <div className="space-y-3">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -121,7 +125,9 @@ export function ClientDashboard() {
           </Card>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -153,7 +159,9 @@ export function ClientDashboard() {
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
               <div className="mt-3 flex gap-1 flex-wrap">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -171,7 +179,9 @@ export function ClientDashboard() {
       </section>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -181,7 +191,9 @@ export function ClientDashboard() {
         </div>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -206,7 +218,9 @@ export function ClientDashboard() {
               <div className="bg-primary/10 p-2 rounded-full">
                 <FileText className="h-5 w-5 text-primary" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -251,13 +265,16 @@ export function ClientDashboard() {
 
             
 
+
 <<<<<<< HEAD
+
 
 
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
+
 
     </div>;
   );
@@ -270,6 +287,7 @@ import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Badge } from "@/components/ui/badge",;
+
 
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";

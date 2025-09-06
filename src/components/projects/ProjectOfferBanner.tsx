@@ -55,6 +55,8 @@ export function ProjectOfferBanner() {;
     return null;
 
 
+
+
   }
   
   return (
@@ -83,7 +85,9 @@ export function ProjectOfferBanner() {;
               </div>
               
 
+
 <<<<<<< HEAD
+
 
 
 

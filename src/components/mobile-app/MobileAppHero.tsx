@@ -7,7 +7,9 @@
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -17,12 +19,14 @@
               <Phone className="w-full h-auto text-white" />
               {/* This would be replaced with an actual phone mockup image in production */}
 
+
             </div>
           </div>
         </div>
       </div>
     </section>
   )
+
 
 }
 
@@ -36,6 +40,7 @@ import { AppStoreButtons } from "./AppStoreButtons";
   );
 };
 ";
+
 
 
 import React from "react",;
@@ -85,6 +90,7 @@ export const MobileAppHero: React.FC = () => {;
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
+
 
 
 "

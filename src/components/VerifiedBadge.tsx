@@ -88,7 +88,9 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
   },
   
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -143,7 +145,9 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
     </TooltipProvider>);

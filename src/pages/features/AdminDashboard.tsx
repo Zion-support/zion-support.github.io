@@ -32,6 +32,9 @@ export default function AdminDashboard() {;
     '@context': 'https://schema && schema.org',;
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     '@type': 'WebPage',;
     name: 'Admin Dashboard',;
     description:;
@@ -48,13 +51,18 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 
 
+
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function AdminDashboard() {
@@ -69,6 +77,7 @@ export default function AdminDashboard() {
 
   return (
 
+
     <>
       <SEO
         title='Admin Dashboard'
@@ -79,6 +88,7 @@ export default function AdminDashboard() {
         description="Gain insight into your marketplace with powerful administration tools."
         keywords="admin dashboard, analytics, manage listings"
         canonical="https://app.ziontechgroup.com/features/admin-dashboard"
+
 
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
@@ -98,6 +108,7 @@ export default function AdminDashboard() {
               src="https: //placehold.co/800x400"
               alt="Screenshot of admin dashboard"
               className="object-cover"
+
 
             />
           </div>
@@ -125,6 +136,7 @@ export default function AdminDashboard() {
               className="object-cover"
             />
           </div>
+
 
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
           <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
@@ -156,7 +168,9 @@ export default function AdminDashboard() {
           <div className="space-y-4 mb-12">
             <div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -177,6 +191,7 @@ export default function AdminDashboard() {
         </div>
       </main>
     </>
+
 
   );
 };
@@ -221,6 +236,7 @@ export default function AdminDashboard() {;
               src="https: //placehold.co/800x400";
               alt="Screenshot of admin dashboard";
               className="object-cover";
+
 
             />;
           </div>;

@@ -24,6 +24,18 @@ import { logInfo } from '@/utils/productionLogger',
 
 
 
+interface PostCardProps {
+  post: ForumPost
+  compact?: boolean
+}
+
+
+
+
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 
       "transition-shadow hover: shadow-md",
 import React from 'react';
@@ -53,7 +65,9 @@ export default PostCard;
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
 export default PostCard;
 
+
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+
 
 
 

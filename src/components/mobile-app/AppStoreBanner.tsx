@@ -24,6 +24,7 @@ return (
       </div>
     </div>
 
+
   );
 };
 '"};
@@ -38,6 +39,7 @@ import React, { useState, useEffect } from "react",;
 import { safeStorage } from "@/utils/safeStorage",;
 import { X } from 'lucide-react';
 import { useIsMobile } from "@/hooks/use-mobile",;
+
 
 export const AppStoreBanner: React.FC = () => {;
   const [isVisible, setIsVisible] = useState(false),;
@@ -87,7 +89,9 @@ export const AppStoreBanner: React.FC = () => {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 '"},;
 

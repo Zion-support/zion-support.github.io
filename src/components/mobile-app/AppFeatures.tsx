@@ -1,13 +1,21 @@
 {
     icon: <Award className="h - 10 w - 10 text - zion - cyan" />,
 
+import React from "react",
+import { Brain, Clock, Award, Zap } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   {
     icon: <Clock className="h-10 w-10 text-zion-cyan" />,
     title: "1-Click Hiring",
     description: "Streamlined hiring process that lets you connect with talent instantly with just one click."
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   {
     icon: <Award className="h-10 w-10 text-zion-cyan" />,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -18,11 +26,14 @@
   }
   },
 
+
+
   {
     icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
     title: "Real - time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
   }
+
 
 ],
 
@@ -31,6 +42,8 @@
 
 
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 export const AppFeatures: React.FC = () => {
@@ -52,7 +65,9 @@ export const AppFeatures: React.FC = () => {
             <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
               <CardHeader>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -78,7 +93,9 @@ export const AppFeatures: React.FC = () => {
 ";
 ;
 
+
 <<<<<<< HEAD
+
 
 
 import React from "react",;
@@ -134,7 +151,9 @@ export const AppFeatures: React.FC = () => {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 "

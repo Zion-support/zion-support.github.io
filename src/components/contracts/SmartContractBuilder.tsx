@@ -173,6 +173,7 @@ interface SmartContractBuilderProps {
 // Helper to ensure milestones are always an array;
 }
 
+
   return []}
 export function SmartContractBuilder({
   isOpen
@@ -217,6 +218,7 @@ export function SmartContractBuilder({
   // Prefill form with talent and client name(existing useEffect)
   useEffect(() => {
   // TODO: Add dependencies if needed
+
 
   return () => {
     // Cleanup function;
@@ -388,6 +390,7 @@ if ( {) {
       return}
 
 
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
@@ -508,6 +511,7 @@ import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts",
 import { useSmartContracts } from "@/hooks/useSmartContracts",
 import { toast } from "sonner",
 import {logErrorToProduction} from '@/utils/productionLogger',
+
 
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
@@ -776,6 +780,7 @@ if ( {) {
             </div>;
           </div>;
 
+
           <TabsContent value="form" className="pt-4">;
             <ContractForm;
               talent={talent}
@@ -795,15 +800,18 @@ if ( {) {
                   onClose={onClose}
                   deploymentInfo={deploymentInfo}
 
+
                   generatedContract = {generatedContract,}
                   talent = {talent,}
                   onClose = {onClose,}
                   deploymentInfo = {deploymentInfo,}
 
+
                 />
                 {!deploymentInfo && deployOptions.deployToChain && (
                   <div className="mt-6 flex justify-center">
                     <Button 
+
 
                       onClick = {handleDeployContract,}
                       disabled = {deployStatus === 'deploying',}
@@ -869,6 +877,7 @@ setActiveTab ("preview");
 }'"            {!enableOnChainAgreement && <p className="text-muted-foreground p-4 text-center">Enable on-chain agreement to deploy this contract to a blockchain.</p>}
             {/* Fallback for old Solidity preview if needed, or remove if fully replaced by on-chain flow */}
 
+
             {/* {generatedSolidityContract && !deployOptions.deployToChain && !enableOnChainAgreement && ( ... )} */}
           </TabsContent>
         </Tabs>
@@ -894,6 +903,7 @@ setActiveTab ("preview");
             )}
             {!generatedMarkdownContract && !isLoadingLegalDraft && <p>Generate a legal draft to preview and download.</p>}
 
+
           </TabsContent>;
         </Tabs>;
 
@@ -911,55 +921,10 @@ setActiveTab ("preview");
           onSelectTemplate={handleLoadTemplate}
           currentValues={formValues}
 
+
 <<<<<<< HEAD
 
 
 
-;
-<<<<<<< HEAD
-
-
-
-
-          <TabsContent value="form" className="pt - 4">;
-            <ContractForm;
-              talent = {talent, }
-              client_name = {client_name, }
-              initial_values = {form_values, }
-              onFormValuesChange = {setFormValues, }
-              onContractGenerated = {handleFormSubmit, }
-            />;
-          </TabsContent>;
-          <TabsContent value="preview" className="pt - 4">;
-            {generated_contract && (
-              <div>;
-                <ContractPreview;
-                  generated_contract = {generated_contract, }
-                  talent = {talent, }
-                  on_close = {on_close, }
-                  deployment_info = {deployment_info, }
-                />;
-                {!deployment_info && deploy_options.deployToChain && (
-                  <div className="mt - 6 flex justify - center">;
-                    <Button;
-                      on_click = {handleDeployContract, }
-                      disabled = {deploy_status === 'deploying', }
-                      className="bg - gradient - to - r from - blue - 600 to - indigo - 600 hover:from - blue - 700 hover:to - indigo - 700";
-                    >;
-                      {deploy_status === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
-                    </Button>;
-                  </div>                )}
-              </div>)}
-          </TabsContent>;
-        </Tabs>;
-        <TemplateManager;
-          is_open = {templateManagerOpen, }
-          on_close = {() => setTemplateManagerOpen (false), }
-          onSelectTemplate = {handleLoadTemplate, }
-          current_values = {form_values, }
-        />;
-      </DialogContent>;
-    </Dialog>);
-}
 
 ;

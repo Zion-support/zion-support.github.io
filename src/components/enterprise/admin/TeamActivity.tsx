@@ -107,7 +107,14 @@ export function TeamActivity() {;
     return <Badge variant={style.variant}>{category}</Badge>
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
 
 
@@ -298,7 +305,9 @@ const getCategoryBadge = (category: string) =>: any {
                 <TableCell>{getCategoryBadge(activity && activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
 
+
 <<<<<<< HEAD
+
 
 
   activity.id;
@@ -315,7 +324,9 @@ const getCategoryBadge = (category: string) =>: any {
       </div>
       
 
+
 <<<<<<< HEAD
+
 
 
       <div className="flex items-center justify-between">

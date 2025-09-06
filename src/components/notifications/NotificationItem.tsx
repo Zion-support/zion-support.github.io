@@ -87,6 +87,7 @@ export const getTypeIcon = (type: NotificationType) => {
     default:
       return <span className="text-gray-500">📣</span>
 
+
 import React from 'react',;
 // Use the centralized icon wrapper to avoid missing icons;
 import { Check, Trash2, ChevronRight } from 'lucide-react';
@@ -124,6 +125,7 @@ export const getTypeIcon = (type: NotificationType) => {;
     default:;
       return <span className="text-gray-500">📣</span>;
 
+
   }
 }
 interface NotificationItemProps {
@@ -145,8 +147,10 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       router.push(notification.action_url), // Changed to router.push
     }
 
+
   }
   },
+
 
 
   return (<div
@@ -161,7 +165,9 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         'p-3 border-b border-zion-blue-light relative group',;
         !notification.read ? 'bg-zion-blue-dark/30' : '')}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -230,6 +236,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
               >;
 
 
+
+
                 {notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
@@ -250,10 +258,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
 
+
                 onClick={(e,) => {
                   e.stopPropagation()
                 onClick={(e) => {
                 onClick={(e) => {
+
 
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
@@ -294,10 +304,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon"
                 className="h-6 w-6"
 
+
                 onClick={(e,) => {
                   e.stopPropagation()
                 onClick={(e) => {
                 onClick={(e) => {
+
 
                   e.stopPropagation(),
                   onDismiss(notification.id)
@@ -524,7 +536,9 @@ if ( {) {
         </TooltipProvider>;
       </div>;
 
+
 <<<<<<< HEAD
+
 
 
 

@@ -10,10 +10,14 @@ import { Button  } from '@/components / ui / button';
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import {
   Tooltip;
   TooltipContent;
   TooltipProvider;
+
 
   TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast";
@@ -211,6 +215,7 @@ export function OnChainExport() {;
   const { user } = useAuth(),;
   const handleConnectWallet = async () => {;
     try {;
+
 
       // Check if wallet is available;
       const ethereum = (window as any).ethereum;

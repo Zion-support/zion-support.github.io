@@ -18,6 +18,10 @@ export default function ListingDetail() {;
 
 
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 import { useCurrency } from '@/hooks/useCurrency';
 export default function ListingDetail() {
   // useParams may be untyped in this environment, so avoid passing a
@@ -190,6 +194,7 @@ export default function ListingDetail() {;
 
   return (
 
+
     <>
       <div className="min-h-screen bg-zion-blue py-12 px-4">
         <div className="container mx-auto">
@@ -206,6 +211,7 @@ export default function ListingDetail() {;
                       fallbackSrc="/placeholder.svg"
                     />
 
+
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
                       <span className="text-zion-slate-light">No image available</span>
@@ -219,9 +225,128 @@ export default function ListingDetail() {;
                   <div className="flex p-4 gap-2 overflow-x-auto">
 
 
+
+                    {listing.images.map((image, index) => (
+                      <div
+                        key={index}
+                        onClick={() => setSelectedImageIndex(index)}
+
+                        className={cn(
+                          index === selectedImageIndex
+                            ? 'border-zion-purple'
+                            : 'border-transparent'                        )}                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2";
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        )}
+                  <div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, index,) => (
+                      <div
+                        key = {index,}
+                        onClick = {(,) => setSelectedImageIndex(index),}
+
+                        className = {cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2"
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        ),}
+                      >
+                        <ImageWithRetry
+                          src = {image,}
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className='object-cover'
+                          fallbackSrc='/placeholder.svg'                        />                          className="object-cover"
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        )}
+                      >
+                        <ImageWithRetry
+
+                          src={image}
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className="object-cover"
+                          fallbackSrc="/placeholder.svg"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {/* Description Section */}
+
+
+
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+                
+
+
+
+                {/* Features */}
+                <div className='mt-8'>;
+                  <h3 className='text-xl font-bold text-white mb-4'>;
+                    Key Features;
+                  </h3>;
+                  <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>;
+                    <div className='flex items-start gap-3'>;
+                      <div className='p-2 rounded-full bg-zion-purple/20'>;
+                        <Brain className='h-5 w-5 text-zion-purple' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font-medium text-white'>Advanced AI</h4>;
+                        <p className='text-sm text-zion-slate-light'>;
+                          State-of-the-art machine learning techniques;
+                        </p>;
+                      </div>;
+                    </div>;
+                    <div className='flex items-start gap-3'>;
+                      <div className='p-2 rounded-full bg-zion-cyan/20'>;
+                        <Shield className='h-5 w-5 text-zion-cyan' />;
+                      </div>;
+                      <div>;
+                        <h4 className='font-medium text-white'>;
+                          Enterprise Security;
+                        </h4>;
+                        <p className='text-sm text-zion-slate-light'>;
+                          Built-in data protection and encryption;
+                        on_click={() => setSelectedImageIndex (index)}
+                        className={cn (
+                          'w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2',
+                          index === selectedImageIndex;
+                            ? 'border - zion - purple';
+                            : 'border - transparent'                        )}                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2";
+                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent")}
+                  <div className="flex p - 4 gap - 2 overflow - x-auto">;
+                    {listing.images.map ((image, index, ) => (
+                      <div;
+                        key = {index, }
+                        on_click = {(, ) => setSelectedImageIndex (index), }
+                        class_name = {cn (
+                          "w - 20 h - 20 flex - shrink - 0 cursor - pointer rounded overflow - hidden border - 2",
+                          index === selectedImageIndex ? "border - zion - purple" : "border - transparent"), }
+                      >;
+                        <ImageWithRetry;
+                          src = {image, }
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className='object - cover';
+                          fallback_src='/placeholder.svg'                        />                          className="object - cover";
+                          fallback_src="/placeholder.svg";
+                        />;
+                      </div>))}
+                  </div>)}
+              </div>;
+              {/* Description Section */}
+              <div className='mt - 8 bg - zion - blue - dark rounded - lg p - 6 border border - zion - blue - light'>;
+                <h2 className='text - 2xl font - bold text - white mb - 4'>;
+                  Description;
+                </h2>;
+                <p className='text - zion - slate - light whitespace - pre - line'>;
+                  {listing.description}
+                </p>;
+                {/* Features */}
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
                         <h4 className="font-medium text-white">Enterprise Security</h4>
                         <p className="text-sm text-zion-slate-light">Built-in data protection and encryption</p>
                       </div>
@@ -377,6 +502,8 @@ export default function ListingDetail() {;
                   {listing.featured && (
 
 
+
+
                     <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
                       Featured
                     </Badge>
@@ -391,17 +518,123 @@ export default function ListingDetail() {;
                     <div className="flex items-center">
 
 
+
+
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={cn(
+                            i < Math.floor(listing.rating!)
+
+                              ? 'text-zion-cyan fill-zion-cyan'
+                              : 'text-zion-slate-light'                          )}
+                        />
+                      ))}
+                    </div>
+                    <span className='text-sm text-zion-slate-light'>
+                      {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
+                      reviews)                            "h-5 w-5";
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          )}
+                  <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i,) => (
+                        <Star
+                          key = {i,}
+                          className = {cn(
+
+                            "h-5 w-5",
+                            i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+
+                          ),}
+                        />
+                      ))}
+                    </div>;
+                    <span className='text-sm text-zion-slate-light'>;
+                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
+                      reviews);
+                    </span>;
+                  </div>;
+                            "h-5 w-5",
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          )}
+                        />;
+                      ))}
+                    </div>
+                    <span className="text-sm text-zion-slate-light">
+                      {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+
+
+
+
+                    </span>
+                  </div>
+                )}
+                {/* Price */}
+                <div className='mb-6'>
+                  {listing.price !== null ? (
+                    <div className='text-3xl font-bold text-white'>
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
+                    <div className='text-2xl font-bold text-white'>                      Custom Pricing
+                    </div>
+                  )}
+                </div>
+                {/* Action Buttons */}
+                <div className='space-y-3 mb-8'>                  {listing && listing.price !== null ? (                    </span>;
+                  </div>;
+                )}
+
+
+
+                {/* Price */}
+                <div className="mb-6">;
+                  {listing && listing.price !== null ? (;
+                    <div className="text-3xl font-bold text-white">;
+                      {formatPrice(listing && listing.price)}
+                    </div>;
+                  ) : (;
+                    <div className="text-2xl font-bold text-white">;
+                      Custom Pricing;
+                    </div>;
+
+                <div className="mb-6">
+                  {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
+
+                    <div className="text-2xl font-bold text-white">
+                      Custom Pricing
+                    </div>
+                  )}
+                </div>;
+
+
+
+                {/* Action Buttons */}
+                <div className='space-y-3 mb-8'>                ;
+                {/* Action Buttons */}
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Action Buttons */}
                 <div className="space-y-3 mb-8">
                   {listing.price !== null ? (
                     <PaymentButton
 
-                      amount={listing.price}
-                      serviceId={listing.id}
-                      providerId={listing.author.id}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={() => {
+                        toast({
+                          title: "Payment Processing",
+                          description: "Redirecting to secure checkout..."
+                        })
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
                 <div className="space-y-3 mb-8">;
                   {listing && listing.price !== null ? (;
                     <PaymentButton
@@ -660,7 +893,9 @@ export default function ListingDetail() {;
                 </div>
                 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -675,6 +910,7 @@ export default function ListingDetail() {;
                           src={listing.author.avatarUrl}
                           alt={listing.author.name}
 
+
                           className='object-cover'
                           onError={e => {
                             const target = e.target as HTMLImageElement;
@@ -688,11 +924,14 @@ export default function ListingDetail() {;
 
 
 
+
                           className="object-cover"
                           onError={(e) => {
                             const target = e.target as HTMLImageElement,
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -738,7 +977,9 @@ export default function ListingDetail() {;
 
                     <div>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -749,7 +990,9 @@ export default function ListingDetail() {;
                 </div>
                 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -961,7 +1204,9 @@ export default function ListingDetail() {;
       <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
         <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
 
+
 <<<<<<< HEAD
+
 
 
           <DialogHeader>
@@ -971,7 +1216,9 @@ export default function ListingDetail() {;
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
 
+
 <<<<<<< HEAD
+
 
 
 

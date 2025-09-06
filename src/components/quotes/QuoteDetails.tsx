@@ -3,6 +3,7 @@ interface QuoteDetailsProps {
   isOpen: boolean
   onClose: () => void
 
+
 }
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
   if (!quote) return null
@@ -53,6 +54,7 @@ import { QuoteStatusBadge } from "./QuoteStatusBadge",;
 import type { QuoteRequest } from "@/types/quotes",;
 import { format } from "date-fns",;
 
+
 interface QuoteDetailsProps {;
   quote: QuoteRequest | null,;
   isOpen: boolean,;
@@ -69,6 +71,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       return dateString;
     }
   }
+
 
 
 <<<<<<< HEAD
@@ -88,12 +91,15 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         <Separator className="my-4" />
         <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
 
+
         
         <Separator className="my-4" />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -114,7 +120,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
           </Card>
           
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -136,7 +144,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -146,7 +156,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
             <p className="mb-4">{quote.project_summary}</p>
             
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -171,7 +183,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </Card>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -182,7 +196,9 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     </Dialog>
   )
 
+
 <<<<<<< HEAD
+
 
 
     <Dialog open={isOpen} onOpenChange={(open,) => !open && onClose()}>;

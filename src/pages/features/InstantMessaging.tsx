@@ -32,6 +32,9 @@ export default function InstantMessaging() {;
     '@context': 'https://schema && schema.org',;
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     '@type': 'WebPage',;
     name: 'Instant Messaging',;
     description:;
@@ -48,13 +51,18 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 
 
+
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function InstantMessaging() {
@@ -147,6 +155,7 @@ export default function InstantMessaging() {
             </div>
           </div>
 
+
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />
@@ -187,6 +196,7 @@ export default function InstantMessaging() {
             </div>
           </div>
 
+
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/open-app">Start Chatting</Link>
@@ -197,7 +207,9 @@ export default function InstantMessaging() {
     </>
   )
 
+
 }
+
 
 ;
 
@@ -246,7 +258,3 @@ export default function InstantMessaging() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-
-;

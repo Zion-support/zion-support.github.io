@@ -5,8 +5,10 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
 
+
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
+
 
   ],
   theme: {
@@ -50,6 +52,7 @@ module.exports = {
           800: '#86198f',
           900: '#701a75',
         },
+
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out',
@@ -131,5 +134,6 @@ module.exports = {
     require('@tailwindcss/aspect-ratio')
   ]
 };
+
 
 

@@ -3,7 +3,9 @@ let filteredTalents = allTalents
 }
 ;
 
+
 <<<<<<< HEAD
+
 
 
 import { useRouter } from 'next/router',

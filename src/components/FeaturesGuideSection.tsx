@@ -26,7 +26,9 @@ export function FeaturesGuideSection() {
   const features = [
     {
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -299,6 +301,8 @@ import { Users, Zap, Settings, MessageSquare, Sparkles, ArrowRight, BarChart3, P
 export function FeaturesGuideSection() {
   const features = [
     {
+
+
 
 
       id: "ai-matcher",
@@ -1336,7 +1340,9 @@ function FeaturesGuideSection() {
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan";
               >;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1361,7 +1367,9 @@ function FeaturesGuideSection() {
                 key={feature.id} 
                 value={feature.id}
 
+
 <<<<<<< HEAD
+
 
 
                 className="data-[state=active]:bg-zion-blue-light data-[state=active]:text-zion-cyan"
@@ -1536,6 +1544,7 @@ function FeaturesGuideSection() {
                       </li>;
 
 
+
                     ))}
                   </ol>;
                 </div>;
@@ -1555,6 +1564,7 @@ function FeaturesGuideSection() {
 
 
 
+
                     ))}
                   </ol>
                 </div>
@@ -1566,7 +1576,9 @@ function FeaturesGuideSection() {
         
         <div className="mt-12 text-center">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -1588,7 +1600,9 @@ function FeaturesGuideSection() {
               Explore Full Marketplace
               <ArrowRight className="ml-2 h-4 w-4" />
 
+
 <<<<<<< HEAD
+
 
 
 

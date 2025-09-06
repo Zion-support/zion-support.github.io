@@ -243,6 +243,174 @@ export default function EquipmentDetail() {;
     }
 
 
+
+
+import { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { NextSeo } from '@/components/NextSeo',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { getStripe } from "@/utils/getStripe",
+import { useCart } from '@/context/CartContext',
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
+import { equipmentListings } from '@/data/equipmentData',
+import { ProductListing } from '@/types/listings',
+import { motion } from 'framer-motion',
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface EquipmentSpecification {
+  name: string,
+  value: string
+import { useState, useEffect } from "react",;
+import { useRouter } from 'next/router',;
+import { NextSeo } from '@/components/NextSeo',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast",;
+import { useAuth } from "@/hooks/useAuth",;
+import { getStripe } from "@/utils/getStripe",;
+import { useCart } from '@/context/CartContext',;
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
+import { equipmentListings } from '@/data/equipmentData',;
+import { ProductListing } from '@/types/listings',;
+import { motion } from 'framer-motion',;
+import { useCurrency } from '@/hooks/useCurrency',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface EquipmentSpecification {;
+  name: string,;
+  value: string;
+}
+;
+interface EquipmentDetails {;
+  id: string,;
+  name: string,;
+  description: string,;
+  brand: string,;
+  category: string,;
+  subcategory?: string,;
+  images: string[],;
+  price: number,;
+  currency: string,;
+  rating?: number,;
+  reviewCount?: number,;
+  inStock: boolean,;
+  expectedShipping?: string,;
+  specifications: EquipmentSpecification[],;
+  features: string[],;
+  warranty?: string,;
+  returnPolicy?: string;
+}
+;
+// Convert ProductListing to EquipmentDetails format;
+function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {;
+  return {;
+    id: item.id,;
+    name: item.title,;
+    description: item.description,;
+    brand: item.brand || 'Unknown',;
+    category: item.category,;
+    subcategory: item.subcategory,;
+    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],;
+    price: item.price || 0,;
+    currency: item.currency || '$',;
+    rating: item.rating,;
+    reviewCount: item.reviewCount,;
+    inStock: item.availability === 'In Stock' || !item.availability,;
+    expectedShipping: item.availability || 'In Stock',;
+    specifications: (item.specifications || []).map((spec) => ({;
+      name: spec,;
+      value: '';
+    })),;
+    features: item.tags || [],;
+    warranty: '1 Year Manufacturer Warranty',;
+    returnPolicy: '30-day return policy';
+  }
+}
+;
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipmentListings.reduce((acc, item) => {;
+    acc[item.id] = convertProductListingToEquipmentDetails(item),;
+    return acc;
+  }, {} as { [key: string]: EquipmentDetails }),;
+export default function EquipmentDetail() {;
+  const router = useRouter(),;
+  const { id } = router.query as { id?: string },;
+  const { isAuthenticated, user } = useAuth(),;
+  const { items, dispatch } = useCart(),;
+  const { formatPrice } = useCurrency(),;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
+  const [quantity, setQuantity] = useState(1),;
+  const [isAdding, setIsAdding] = useState(false),;
+  const [loading, setLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),;
+  useEffect(() => {;
+    async function loadEquipment() {;
+      if (!id) {;
+        setLoading(false),;
+        setError('No equipment ID provided'),;
+        return;
+      }
+;
+      try {;
+        setLoading(true),;
+        setError(null),;
+        // Try to find in static data first;
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id],;
+        if (equipmentFromSample) {;
+          setEquipment(equipmentFromSample),;
+          setLoading(false),;
+          return;
+        }
+;
+        // Try to get from sessionStorage (for dynamically generated equipment);
+        if (typeof window !== 'undefined') {;
+          try {;
+            const stored = sessionStorage.getItem(`equipment:${id}`),;
+            if (stored) {;
+              const storedData = JSON.parse(stored),;
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipmentData: EquipmentDetails,;
+              if (storedData.name) {;
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
+              } else {;
+                // It's a ProductListing, convert it;
+                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
+              }
+;
+              setEquipment(equipmentData),;
+              setLoading(false),;
+              return;
+            }
+          } catch (storageError) {;
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
+          }
+        }
+;
+        // If not found anywhere, set error;
+        setError('Equipment not found'),;
+        setLoading(false);
+      } catch (error) {;
+        logErrorToProduction('Error loading equipment:', { data: error }),;
+        setError('Failed to load equipment details'),;
+        setLoading(false);
+      }
+    }
+
+    loadEquipment()
+  }, [id]),
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
@@ -250,9 +418,11 @@ export default function EquipmentDetail() {;
     if (!equipment |!isAuthenticated) {
       toast({
 
+
         title: 'Authentication Required'
         description: 'Please log in to add items to cart'
         variant: 'destructive'
+
 
         title: 'Authentication Required',
         description: 'Please log in to add items to cart',
@@ -264,6 +434,7 @@ export default function EquipmentDetail() {;
 
 
     setIsAdding(true),
+
 
 
           quantity}}),
@@ -289,6 +460,14 @@ export default function EquipmentDetail() {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+          quantity}}),
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   // Loading state
   if (loading) {
     return (
@@ -445,6 +624,7 @@ if ( {) {
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
 
+
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
                 {error === 'Equipment not found'
                   ? "The equipment you're looking for doesn't exist or has been removed."
@@ -482,6 +662,7 @@ if ( {) {
                   className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue"
                 >
 
+
                   Browse Equipment
                 </Button>
               </div>
@@ -497,6 +678,7 @@ if ( {) {
         title={`${equipment.name} - Zion Marketplace`}
         description = {equipment.description,}
         openGraph={{
+
 
 
 
@@ -617,6 +799,7 @@ if ( {) {
 
 
 
+
         }}
       />
       <div className="min-h-screen bg-zion-blue py-8 px-4">
@@ -640,7 +823,9 @@ if ( {) {
               className="text-zion-cyan hover:text-white transition-colors"
             >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -664,7 +849,9 @@ if ( {) {
 
           <div className="grid lg:grid-cols-2 gap-12">
 
+
 <<<<<<< HEAD
+
 
 
             {/* Images */}
@@ -717,6 +904,8 @@ if ( {) {
                         className="object-cover"
 
 
+
+
                       />
                     </button>
                   ))}
@@ -732,7 +921,9 @@ if ( {) {
             <motion.div 
               className="space-y-6"
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -766,7 +957,9 @@ if ( {) {
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
 
+
 <<<<<<< HEAD
+
 
 
                     {equipment.category}
@@ -801,7 +994,9 @@ if ( {) {
                               ? 'text-yellow-400 fill-current';
                               : 'text-zion-slate-light';
 
+
 <<<<<<< HEAD
+
 
 
                           }`}
@@ -819,6 +1014,7 @@ if ( {) {
 
 
               {/* Price */}
+
 
               <div className='bg-zion-blue-light rounded-lg p-4'>;
                 <div className='text-3xl font-bold text-zion-cyan mb-2'>;
@@ -1231,13 +1427,16 @@ if ( {) {
 
 
 
+
   equipment.returnPolicy 
 }</p> </div> </div>) 
 }</div> </motion.div> </div> </div> </div> </>) 
 }'"};
 ;
 
+
 <<<<<<< HEAD
+
 
 
 

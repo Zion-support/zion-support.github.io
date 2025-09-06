@@ -15,6 +15,8 @@ import { logInfo, logWarn } from '@/utils/productionLogger',
 
 
 
+
+
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -26,7 +28,37 @@ interface EnhancedSearchInputProps {
   placeholder?: string;  /**
    */
 
+   * Optional list of fallback suggestions (e.g. recent searches).
+   * If provided, these will be shown when the input is empty.
+   */
+  searchSuggestions?: SearchSuggestion[]
+}
+export function EnhancedSearchInput({
 
+  value
+  onChange
+  onSelectSuggestion
+  placeholder = "Search..."
+  searchSuggestions
+}: EnhancedSearchInputProps) {
+  searchSuggestions;
+}: EnhancedSearchInputProps) {;
+
+import React, { useState, useEffect, useRef, useCallback, useMemo } from "react"; // Added useMemo
+import { Search, X  } from 'lucide-react'
+import { Input } from '@/components/ui/input'
+import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions'
+import { SearchSuggestion } from '@/types/search'
+export function EnhancedSearchInput({
+
+  value,
+  onChange,
+  onSelectSuggestion,
+  placeholder = "Search...",
+  searchSuggestions
+}: EnhancedSearchInputProps) {
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
   const debouncedFetchSuggestions = useMemo(
@@ -102,7 +134,165 @@ export function EnhancedSearchInput({;
           return;
         }
 
+        set_loading (true);
 
+        try {
+          const response = await fetch (`/api / search / suggest?q=${encodeURIComponent (query)}`, {
+            signal: AbortSignal.timeout (5000) // 5 second timeout;
+          });
+          // Check condition
+if ( {) {
+  $2
+}
+            const data = await response.json ();
+            if () {) {
+  $2
+}
+              setApiSuggestions (data.slice (0, 5)), // Limit to 5 API suggestions;
+
+          setApiSuggestions([]),
+
+            }
+          } else {
+
+            // Silently fail for search suggestions - don't show error toast;
+            log_warn ('Search suggestions API error:', { data: response.status }),
+            setApiSuggestions ([]);
+          }
+        } catch (error) {
+          // Silently fail for search suggestions - don't show error toast;
+          log_warn ('Search suggestions fetch error:', { data: error }),
+          setApiSuggestions ([]);
+
+        } finally {
+          setLoading(false)
+        }
+      }, 300)
+    []
+  )
+  // Fetch suggestions from API when input value changes
+  useEffect((,) => {
+    if (!debounced) {
+      // Show recent suggestions provided via props when no query entered
+      setFilteredSuggestions(
+        (searchSuggestions |[]).filter(s => s.type === 'recent')
+      )
+      setHighlightedIndex(-1)
+      return;
+    }
+    const controller = new AbortController ();
+    fetch (`/api / search / suggest?q=${encodeURIComponent (debounced)}`, {
+      signal: controller.signal;
+    });
+      .then (res => {
+        if (throw new Error ('Failed to fetch suggestions')) {
+  $2
+}
+        return res.json ();
+      });
+      .then (data => {
+        if () {) {
+  $2
+}
+          setFilteredSuggestions (data.slice (0, 8));
+
+        } else {
+          setFilteredSuggestions([])
+        }
+        setHighlightedIndex(-1)
+      })
+      .catch(() => setFilteredSuggestions([]))
+    return () => controller.abort()
+  }, [debounced, searchSuggestions])
+  // Handle clicks outside the component to close suggestions
+  useEffect((,) => {
+    function handleClickOutside(event: MouseEvent) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
+        setIsFocused(false)
+        // setHighlightedIndex(-1), // Already handled in onBlur generally
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [])
+  const router = useRouter()
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion,) => {
+    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj })
+    onChange(suggestionObj.text)
+      }, 300),;
+    [];
+  ),;
+  // Fetch suggestions from API when input value changes;
+  useEffect(() => {;
+    if (!debounced) {;
+      // Show recent suggestions provided via props when no query entered;
+      setFilteredSuggestions(;
+        (searchSuggestions || []).filter(s => s.type === 'recent');
+      ),;
+      setHighlightedIndex(-1),;
+      return;
+    }
+;
+    const controller = new AbortController(),;
+    fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {;
+      signal: controller.signal;
+    });
+      .then(res => {;
+        if (!res.ok) throw new Error('Failed to fetch suggestions'),;
+        return res.json();
+      });
+      .then(data => {;
+        if (Array.isArray(data)) {;
+          setFilteredSuggestions(data.slice(0, 8));
+        } else {;
+          setFilteredSuggestions([]);
+        }
+        setHighlightedIndex(-1);
+      });
+      .catch(() => setFilteredSuggestions([])),;
+    return () => controller.abort();
+  }, [debounced, searchSuggestions]),;
+  // Handle clicks outside the component to close suggestions;
+  useEffect(() => {;
+    function handleClickOutside(event: MouseEvent) {;
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
+        setIsFocused(false),;
+        // setHighlightedIndex(-1), // Already handled in onBlur generally;
+      }
+    }
+    
+    document.addEventListener("mousedown", handleClickOutside),
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, []),
+
+  const router = useRouter(),
+
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {
+    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),
+    onChange(suggestionObj.text),
+
+
+    if (onSelectSuggestion) {
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj })
+      onSelectSuggestion(suggestionObj)
+        setHighlightedIndex (-1);
+      });
+      .catch (() => setFilteredSuggestions ([]));
+    return () => controller.abort ();
+  }, [debounced, search_suggestions]);
+  // Handle clicks outside the component to close suggestions;
+  useEffect ((, ) => {
+    /**
+ * handleClickOutside - Function description
+ */
+function handleClickOutside() {
+      if () {) {
+  $2
+}
+        setIsFocused (false),
+        // setHighlightedIndex (-1), // Already handled in on_blur generally;
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (suggestionObj.id) {
         router.push(`/marketplace/listing/${suggestionObj.id}`)
@@ -114,6 +304,10 @@ export function EnhancedSearchInput({;
 
 
 
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       }
     }
     document.addEventListener ("mousedown", handleClickOutside);
@@ -533,8 +727,39 @@ if ( {) {
 
     switch(e && e.key) {;
 
+;
+    document.addEventListener("mousedown", handleClickOutside),;
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []),;
+  const router = useRouter(),;
+  const handleSelectSuggestion = (suggestionObj: SearchSuggestion) => {;
+    logInfo('EnhancedSearchInput handleSelectSuggestion called:', { data: suggestionObj }),;
+    onChange(suggestionObj.text),;
+    if (onSelectSuggestion) {;
+      logInfo('Calling onSelectSuggestion with:', { data: suggestionObj }),;
+      onSelectSuggestion(suggestionObj);
+    } else {;
+      // Provide a sensible default navigation if the parent did not supply a handler;
+      logWarn('onSelectSuggestion callback not provided'),;
+      if (suggestionObj.id) {;
+        router.push(`/marketplace/listing/${suggestionObj.id}`);
+      } else if (suggestionObj.type === 'doc' && suggestionObj.slug?.startsWith('/')) {;
+        router.push(suggestionObj.slug);
+      } else if (suggestionObj.type === 'blog' && suggestionObj.slug) {;
+        router.push(`/blog/${suggestionObj.slug}`);
+      } else {;
+        router.push(`/search/${suggestionObj.slug || slugify(suggestionObj.text)}`);
+      }
+    }
+    setIsFocused(false),;
+    inputRef.current?.blur(),;
+    setHighlightedIndex(-1);
+  },;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    switch (e.key) {;
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       case 'ArrowDown':;
         if (isFocused && filteredSuggestions.length > 0) {;
           e.preventDefault(),;
@@ -577,7 +802,9 @@ if ( {) {
         break;
     }
 
+
 <<<<<<< HEAD
+
 
   };
 
@@ -611,7 +838,9 @@ if ( {) {
           ref = {inputRef,}
           ref={inputRef}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -693,6 +922,8 @@ if ( {) {
           aria-label={t('general.search')}
 
 
+
+
           className="pl-10 bg-zion-blue border border-zion-blue-light text-gray-800 placeholder:text-zion-slate h-auto py-0 min-w-0"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
@@ -721,7 +952,9 @@ if ( {) {
         onSelectSuggestion={handleSelectSuggestion}
         visible={isFocused}
 
+
 <<<<<<< HEAD
+
 
 
         highlightedIndex={highlightedIndex} // Pass highlightedIndex
@@ -790,7 +1023,9 @@ setHighlightedIndex (-1)
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -798,6 +1033,7 @@ setHighlightedIndex (-1)
             const related_target = e.related_target as HTMLElement;            if () {) {
   $2
 }
+
 
               setIsFocused (false);
               setHighlightedIndex (-1);
@@ -832,6 +1068,7 @@ setHighlightedIndex (-1)
 }setIsFocused (false);
 input_ref.current?.blur ();
 setHighlightedIndex (-1);
+
 
 }
 const handleKeyDown = (e: React.KeyboardEvent < HTMLInputElement>) =>: any {

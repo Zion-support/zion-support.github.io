@@ -14,6 +14,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 type EmptyStateCardProps = {
 
 
+
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { MessageSquare, ArchiveIcon } from 'lucide-react';
@@ -49,6 +50,8 @@ type EmptyStateCardProps = {
 },
 
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
           }
         </p>
       </CardContent>
@@ -68,7 +71,9 @@ type EmptyStateCardProps = {
     </Card>;
   );
 
+
 <<<<<<< HEAD
+
 
 
 

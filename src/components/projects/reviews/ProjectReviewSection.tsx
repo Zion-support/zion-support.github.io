@@ -44,6 +44,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   
 
 
+
+
   return (
     <Card className="mt-6">
       <CardHeader>
@@ -56,7 +58,9 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
         </CardDescription>
       </CardHeader>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -167,18 +171,22 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
                         Edit Review;
                       </Button>;
 
+
 <<<<<<< HEAD
+
 
 
 
 
                     )}
 
+
                   </div>
                 ) : null}
               </div>
             )}
 <<<<<<< HEAD
+
 
 
             <ReviewsList
@@ -213,6 +221,8 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
               onReportReview={reportReview}
 
 
+
+
             />
           </div>
         ) : (
@@ -223,6 +233,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
             </p>
           </div>
         )}
+
 
       </CardContent>
       {/* Review Modal */}
@@ -239,6 +250,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {;
   )
 }
 }
+
 
     </Card>;
   );

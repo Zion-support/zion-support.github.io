@@ -12,6 +12,7 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
 
 
+
   serviceType?: string
 onMatchSelect?: (match: any) => void
 className?: string
@@ -32,6 +33,7 @@ toast ({
   //Set empty matches to show no results found UI setMatches ([]) ;
 }finally {;
 
+
   setIsMatchmaking (false) ; import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
 interface AIMatchmakerProps {
   serviceType?: string
@@ -41,28 +43,65 @@ interface AIMatchmakerProps {
 
 
 
+
+
+
+export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIMatchmakerProps) {
+  const [query, setQuery] = useState(""),
+  const [isMatchmaking, setIsMatchmaking] = useState(false),
+  const [matches, setMatches] = useState([] as MatchResult[]),
+  const [hasSearched, setHasSearched] = useState(false),
+
+
+  const handleSearch = async () => {
+    if (!query.trim()) {
+      toast({
+        title: "Please enter a description",
+        description: "Tell us what you're looking for so we can find matches.",
+
+      // Set empty matches to show no results found UI
+      setMatches([])
+    } finally {
+      setIsMatchmaking(false)
+
+        variant: "destructive"}),
+      return
+    }
+
+    setIsMatchmaking(true),
+    setHasSearched(true),
+    
+    try {
+      logInfo("Starting AI matching", { data: { query, serviceType } }),
+      
+      // Get AI matches
+      const results = await findMatches(
+        query,
+        serviceType,
+        3
+      ),
+      
+      logInfo('AI matching results:', { data: results }),
+      setMatches(results),
+      
+      toast({
+        title: "Matches Found",
+        description: `Found ${results.length} matches based on your description.`})
+    } catch (error) {
+      logErrorToProduction('Error during AI matching:', { data: error }),
+      toast({
+        title: "Matching Error",
+        description: "We couldn't find matches for your request. Please try again.",
+        variant: "destructive"}),
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Set empty matches to show no results found UI
       setMatches([])
     } finally {
       setIsMatchmaking(false)
 
-    }
-  }
-  const handleItemSelect = (item: any) => {    if (onMatchSelect) {
-      // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id)
-      if (matchResult) {
-        onMatchSelect(matchResult)
-      }
-    }
-  }
-  // Extract just the items from each MatchResult
-  const matchItems = matches.map(match => match.item)
-    >
-      <CardHeader className='pb-2'>
-        <CardTitle className='flex items-center text-white'>
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />;
           AI Matchmaker;
         </CardTitle>;
@@ -70,7 +109,9 @@ interface AIMatchmakerProps {
           Describe what you&apos;re looking for and our AI will find the best
           matches
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -200,6 +241,8 @@ if ( {) {
           <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
 
 
+
+
           AI Matchmaker
         </CardTitle>
         <p className="text-sm text-zion-slate-light">
@@ -250,7 +293,9 @@ if ( {) {
 
           {hasSearched && (;
 
+
 <<<<<<< HEAD
+
 
 
               matches={matchItems}
@@ -258,13 +303,16 @@ if ( {) {
               isLoading={isMatchmaking}
               serviceType={serviceType}
 
+
 <<<<<<< HEAD
 
 
 
 
+
 }
 }
+
 
 
               projectDescription={query}
@@ -278,6 +326,7 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+
 
 
 

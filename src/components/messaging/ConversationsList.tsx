@@ -1,3 +1,4 @@
+
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -8,6 +9,10 @@ import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   return (
     <div className='w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto'>;
       <div className='p-3 border-b border-zion-purple/20'>;
@@ -29,7 +34,9 @@ import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
           itemCount={conversations.length}
           itemSize={itemSize}
 
+
           width='100%'        >
+
 
           width="100%"
         >
@@ -74,6 +81,8 @@ import { FixedSizeList as List, ListChildComponentProps } from 'react-window';
           {Row}
         </List>;
       )}
+
+
 
 
     </div>;

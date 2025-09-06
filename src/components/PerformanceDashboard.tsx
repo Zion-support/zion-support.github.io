@@ -307,7 +307,9 @@ const PerformanceDashboard: React.FC = () => {
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -331,7 +333,9 @@ const PerformanceDashboard: React.FC = () => {
         </Card>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -348,7 +352,9 @@ const PerformanceDashboard: React.FC = () => {
         </Card>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -359,6 +365,7 @@ const PerformanceDashboard: React.FC = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
+
 
             <div className="text-2xl font-bold">{metrics.loadTime}s</div>
             <p className="text-xs text-gray-500">Average page load</p>
@@ -373,6 +380,7 @@ const PerformanceDashboard: React.FC = () => {
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
               <span className="text-sm font-semibold text-green-600">Healthy</span>
+
 
             </div>
           </CardContent>
@@ -478,6 +486,8 @@ const PerformanceDashboard: React.FC = () => {;
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
+
+
 
 
                 </div>
@@ -667,6 +677,8 @@ const PerformanceDashboard: React.FC = () => {;
                   </div>
 
 
+
+
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -691,6 +703,8 @@ const PerformanceDashboard: React.FC = () => {;
           <Shield className="h-4 w-4 mr-2" />
 
 
+
+
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -701,7 +715,9 @@ const PerformanceDashboard: React.FC = () => {;
     </div>
   )
 
+
 <<<<<<< HEAD
+
 
 
           variant='outline';
@@ -713,7 +729,9 @@ export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
 
+
 <<<<<<< HEAD
+
 
 
 },
@@ -736,7 +754,9 @@ export default PerformanceDashboard,
 
 export default PerformanceDashboard;
 
+
 <<<<<<< HEAD
+
 
 
 

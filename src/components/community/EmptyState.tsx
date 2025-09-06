@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 
 
+
+
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -129,6 +131,8 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
       <h2 className="text-xl font-medium mb-2">{title}</h2>
 
 
+
+
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -143,6 +147,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
 
+
         </Tooltip>
       </TooltipProvider>
     </div>
@@ -151,6 +156,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
 export default EmptyState;
 }
 export default EmptyState
+
 
 
 

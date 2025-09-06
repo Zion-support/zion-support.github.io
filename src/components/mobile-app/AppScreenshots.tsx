@@ -34,7 +34,9 @@ export const AppScreenshots: React.FC = () => {;
   },
 
 
+
 <<<<<<< HEAD
+
 
 
   return (
@@ -53,7 +55,9 @@ export const AppScreenshots: React.FC = () => {;
 
         
 
+
 <<<<<<< HEAD
+
 
 
         <div className="relative">
@@ -70,10 +74,12 @@ export const AppScreenshots: React.FC = () => {;
           </Button>
 
 
+
             aria-label="Scroll left";
           >;
             <ChevronLeft className="h-6 w-6" />;
           </Button>;
+
 
 
           <div
@@ -83,7 +89,9 @@ export const AppScreenshots: React.FC = () => {;
             {mockScreenshots && mockScreenshots.map((screenshot,) => (;
               <div
 
+
 <<<<<<< HEAD
+
 
                 key = {screenshot && screenshot.id,}
                 className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30">;
@@ -124,7 +132,9 @@ export const AppScreenshots: React.FC = () => {;
           </div>
           
 
+
 <<<<<<< HEAD
+
 
 
           <Button
@@ -141,6 +151,7 @@ export const AppScreenshots: React.FC = () => {;
         </div>
       </div>
     </section>
+
 
   );
 };
@@ -216,6 +227,7 @@ export const AppScreenshots: React.FC = () => {;
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white";
             onClick={() => scroll("right")}
 
+
             aria-label="Scroll right";
           >;
             <ChevronRight className="h-6 w-6" />;
@@ -226,7 +238,9 @@ export const AppScreenshots: React.FC = () => {;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 '"},;
 

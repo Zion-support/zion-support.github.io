@@ -14,6 +14,7 @@ interface AIMatchingResultsProps {
 }
 
 
+
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib / ai - matchmaking';
 import { Card, CardContent } from '@/components / ui / card';
@@ -41,6 +42,7 @@ export /**
 function AIMatchingResults() {
   const [active_tab, setActiveTab] = useState ('all');
   // Group matches by category;
+
 
   const categories = {
     all: matches,
@@ -312,6 +314,7 @@ if ( {) {
                                 src={match.image}
                                 alt={match.title}
 
+
                               />) : (
                               <AvatarFallback className='bg - zion - purple / 20'>;
                                 <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
@@ -358,6 +361,7 @@ if ( {) {
 
                                       : ''}
 
+
                                   </div>;
                                 </div>;
                               )}
@@ -370,8 +374,14 @@ if ( {) {
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
                                   </div>
                                 </div>
                               )}
@@ -443,7 +453,9 @@ if ( {) {
                       </div>;
                     </div>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -452,11 +464,13 @@ if ( {) {
           </TabsContent>;
         ))}
 
+
       </Tabs>
     </div>
   )
 };
 ;
+
 
 }
       </Tabs>;
@@ -464,7 +478,9 @@ if ( {) {
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
 

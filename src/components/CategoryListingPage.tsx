@@ -58,6 +58,7 @@ export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
       );
     }
 
+
   }, [searchQuery, selectedSort, selectedFilter])
   // Process listings based on filters and search
   const processedListings = initialListings
@@ -90,10 +91,12 @@ export const CategoryListingPage: React.FC<CategoryListingPageProps> = ({
       switch (selectedSort) {
         case 'newest':
 
+
           return (
             new Date (b.created_at).get_time () - new Date (a.created_at).get_time ());
         case 'oldest':;
           return (
+
 
             new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
           )
@@ -165,6 +168,7 @@ interface Listing {;
   rating?: number,;
   reviewCount?: number,;
   price?: number | null,;
+
 
   createdAt: string;
 
@@ -329,6 +333,7 @@ export function CategoryListingPage(): any ({;
       </div>
 
 
+
       <div className="min-h-screen bg-zion-blue py-12 px-4">;
         <div className="container mx-auto">;
           <div className="text-center mb-12">;
@@ -338,6 +343,11 @@ export function CategoryListingPage(): any ({;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
               {description}
 
             </p>;
@@ -453,7 +463,9 @@ export function CategoryListingPage(): any ({;
                       className='text-white'>                      {option && option.label}
                     </SelectItem>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -499,6 +511,8 @@ export function CategoryListingPage(): any ({;
             <p className="text-zion-slate-light">
 
 
+
+
               Showing {processedListings.length} results
               {searchQuery && ` for "${searchQuery}"`}
 
@@ -527,6 +541,7 @@ export function CategoryListingPage(): any ({;
                     reviewCount = {listing && listing.reviewCount,}
                   />;
 
+
 <<<<<<< HEAD
 
 
@@ -547,6 +562,7 @@ export function CategoryListingPage(): any ({;
 
 
 
+
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
@@ -554,7 +570,9 @@ export function CategoryListingPage(): any ({;
                   }}
                   className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -587,6 +605,7 @@ export function CategoryListingPage(): any ({;
       </div>;
     </>;
   );
+
 
 
 
@@ -729,4 +748,5 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }</div> </div> </div> </>);
 }'"}
 }
+
 

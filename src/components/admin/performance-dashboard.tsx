@@ -23,8 +23,33 @@ interface PerformanceMetrics {;
   loadTime: number;
   performanceScore: number;
 
+import React, { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+import { Progress } from '@/components/ui/progress'
+import {
+  Activity
+  Zap
+  Package
+  TrendingUp
+  TrendingDown
+  AlertTriangle
+  CheckCircle
+  RefreshCw
+  BarChart3
+  Clock
+  Globe
+} from 'lucide-react'
+import { bundleMonitor } from '@/utils/bundleMonitor'
+import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
+interface PerformanceMetrics {
+  bundleSize: number
+  loadTime: number
+  performanceScore: number
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   chunkCount: number;
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
@@ -400,6 +425,7 @@ export function PerformanceDashboard() {;
 
 
 
+
     return scriptEntries.map(entry => ({
       name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
       size: entry.transferSize || entry.encodedBodySize || 0,
@@ -443,6 +469,7 @@ export function PerformanceDashboard() {;
 
     return () => clearInterval(interval)
   }, []),
+
 
 
   return (
@@ -547,7 +574,9 @@ export function PerformanceDashboard() {;
         <Button onClick={collectMetrics} disabled={isLoading}>;
           <RefreshCw className={`w-4 h-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -584,7 +613,9 @@ export function PerformanceDashboard() {;
               {lastUpdated && (
                 <p className="text-sm text-muted-foreground">
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -787,6 +818,8 @@ export function PerformanceDashboard() {;
                       {index + 1}
 
 
+
+
                     </span>
                     <div>
                       <p className="font-medium text-sm">{chunk.name}</p>
@@ -856,7 +889,9 @@ export function PerformanceDashboard() {;
             <div className="flex items-start gap-3 p-3 bg-green-50 dark:bg-green-900/20 rounded">
               <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -872,7 +907,9 @@ export function PerformanceDashboard() {;
             </div>
             
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -891,7 +928,9 @@ export function PerformanceDashboard() {;
               </div>
             )}
 
+
 <<<<<<< HEAD
+
 
 
         </CardContent>;
@@ -957,7 +996,9 @@ export function PerformanceDashboard() {;
   );
 } ;
 
+
 <<<<<<< HEAD
+
 
 
 

@@ -8,6 +8,19 @@ import Image from 'next/image';
 import { PortfolioProject } from '@/types/resume';
 interface ProjectCardProps {
 
+  onDelete: (projectId: string) => void; import Image from 'next/image'
+interface ProjectCardProps {
+  project: PortfolioProject
+  onEdit: (project: PortfolioProject,) => void
+  onDelete: (projectId: string,) => void
+
+}
+
+}
+
+export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
+
+}
 
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
 
@@ -123,10 +136,30 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
+  const handleDelete = () => {
+    if (project.id) {
+      onDelete(project.id)
+    }
+    setDeleteDialogOpen(false)
+  };
+
+
+
+;
+export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
+  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
+  const handleDelete = () => {;
+    if (project.id) {;
+      onDelete(project.id);
+    }
+    setDeleteDialogOpen(false)
+  },
+  
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   return (
     <Card className="h-full flex flex-col">
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
@@ -147,7 +180,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             loading="lazy"
           />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -223,7 +258,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <a
               href={project.github_url}
 
+
 <<<<<<< HEAD
+
 
 
               target="_blank"
@@ -236,6 +273,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
               </Button>
             </Link>
           )}
+
 
 
 
@@ -273,6 +311,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
 
 
 
+
                 <Link className="h-4 w-4" />
               </Button>
             </Link>
@@ -291,7 +330,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
       </CardFooter>
       
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -406,6 +447,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogAction
               onClick={handleDelete}
 
+
               className='bg-destructive text-destructive-foreground'>              Delete              Are you sure you want to delete this project? This action cannot be undone.;
             </AlertDialogDescription>;
           </AlertDialogHeader>;
@@ -413,6 +455,7 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             <AlertDialogCancel>Cancel</AlertDialogCancel>;
             <AlertDialogAction
               onClick={handleDelete}
+
 
 
 
@@ -426,7 +469,9 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
             >            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
             <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">
 
+
 <<<<<<< HEAD
+
 
 
 

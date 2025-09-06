@@ -20,6 +20,7 @@ return (
 
                 <div
 
+
                   key={option.id}
                   className='flex justify-between items-center border-b pb-4'
                 >                  <div>
@@ -39,6 +40,7 @@ return (
                           ? 'default'
                           : 'outline'
 
+
                       }
 
                       disabled={!wallet || wallet.balance < option && option.cost}
@@ -57,14 +59,28 @@ return (
                 onClick={() => setOpen(false)}
 
 
+import React, { useState } from "react",
+import { useWallet } from "@/hooks/useWallet",
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,;
+} from '@/components/ui/card';
+import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
 
+
   DialogTrigger} from "@/components/ui/dialog",
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
 
   Card
   CardContent
@@ -80,6 +96,7 @@ import { Button } from '@/components/ui/button'; import { Gift, ArrowRight, Exte
   DialogTitle
   DialogTrigger
 
+
 } from '@/components/ui/dialog'
 type RewardOption = {
 
@@ -90,6 +107,8 @@ cost: number;'
 type: 'credit' | 'feature' | 'course'
 }
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week',
@@ -111,14 +130,24 @@ const REWARD_OPTIONS: RewardOption[] = [
     description: 'Get $5 credit to use on any paid service',
     cost: 100,
 
+    type: 'credit'
+  }
+],
 
 
 
 
-
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   return (
     <Card>
       <CardHeader>
@@ -136,6 +165,7 @@ const REWARD_OPTIONS: RewardOption[] = [
             <DialogHeader>
               <DialogTitle>Available Rewards</DialogTitle>
               <DialogDescription>
+
 
                 Exchange your tokens for these rewards. You currently have{' '}
                 {wallet?.balance |0} ZION$.
@@ -186,6 +216,7 @@ const REWARD_OPTIONS: RewardOption[] = [
                     >
                       Redeem <ArrowRight className="ml-1 h-3 w-3" />
 
+
                     </Button>
                   </div>
                 </div>
@@ -206,9 +237,71 @@ const REWARD_OPTIONS: RewardOption[] = [
           <DialogTrigger as_child>;
             <Button className='w - full'>View Available Rewards</Button>;
 
-  )
+import React, { useState } from "react",;
+import { useWallet } from "@/hooks/useWallet",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Gift, ArrowRight, ExternalLink } from 'lucide-react';
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogTrigger} from "@/components/ui/dialog",;
+type RewardOption = {;
+  id: string,;
+  title: string,;
+  description: string,;
+  cost: number,;
+  type: 'credit' | 'feature' | 'course';
+},;
+const REWARD_OPTIONS: RewardOption[] = [;
+  {;
+    id: 'premium-week',;
+    title: 'Premium Week',;
+    description: '7 days of premium features including top placement in search results',;
+    cost: 100,;
+    type: 'feature';
+  },;
+  {;
+    id: 'resume-review',;
+    title: 'AI Resume Review',;
+    description: 'Get your resume analyzed and optimized by our AI',;
+    cost: 50,;
+    type: 'feature';
+  },;
+  {;
+    id: 'platform-credit',;
+    title: '$5 Platform Credit',;
+    description: 'Get $5 credit to use on any paid service',;
+    cost: 100,;
+    type: 'credit';
+  }
+],;
+export function RedeemTokensCard() {;
+  const { wallet, spendTokens } = useWallet(),;
+  const [open, setOpen] = useState(false),;
+  const handleRedeem = async (option: RewardOption) => {;
+    if (!wallet || wallet.balance < option.cost) return,;
+    await spendTokens(option.cost, `Redeemed: ${option.title}`);
+    setOpen(false);
+  };
+  return (;
+    <Card>;
+      <CardHeader>;
+        <CardTitle className="flex items-center gap-2">;
+          <Gift className="h-5 w-5" /> Redeem Rewards;
+        </CardTitle>;
+        <CardDescription>Exchange your ZION$ for rewards and perks</CardDescription>;
+      </CardHeader>;
+      <CardContent>;
+        <Dialog open={open} onOpenChange={setOpen}>;
+          <DialogTrigger asChild>;
+            <Button className="w-full">View Available Rewards</Button>;
 
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
           </DialogTrigger>;
           <DialogContent>;
             <DialogHeader>;
@@ -256,11 +349,3 @@ const REWARD_OPTIONS: RewardOption[] = [
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-<<<<<<< HEAD
-
-
-
-    </Card>);
-}
-
-  )

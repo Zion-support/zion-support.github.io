@@ -1,8 +1,27 @@
 return (
     <>;
 
+import React, { useState } from 'react'
+import { Button } from '@/components/ui/button'
+import {  Dialog
+  DialogContent
+  DialogHeader
+  DialogTitle
+  DialogDescription
+} from '@/components/ui/dialog'
+import { DisputeForm } from './DisputeForm'
 
 
+
+
+export function RaiseDisputeButton({
+Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
   projectId: string,
   milestoneId?: string,
@@ -14,6 +33,8 @@ return (
 export function RaiseDisputeButton({ 
 
 
+
+
   projectId,
   milestoneId, 
   variant = "outline", 
@@ -21,7 +42,9 @@ export function RaiseDisputeButton({
   className 
 }: RaiseDisputeButtonProps) {
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -35,7 +58,9 @@ export function RaiseDisputeButton({
             </DialogDescription>
           </DialogHeader>
 
+
 <<<<<<< HEAD
+
 
 
         onClick={() => setIsDialogOpen(true)}      >;

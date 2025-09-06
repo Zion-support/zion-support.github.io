@@ -75,6 +75,7 @@ if ( {) {
     }
   }
 
+
 import { useState } from 'react',;
 import {;
   DropdownMenu,;
@@ -111,11 +112,17 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         setNewResumeTitle('');
 
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
       }
       setIsLoading(false)
     }
   },
 
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
@@ -125,6 +132,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
       <span className="text-sm text-muted-foreground">Resume:</span>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
+
 
           <Button variant='outline' size='sm' className='gap-2'>
             {currentResume?.basic_info?.title |'My Resume'}
@@ -143,11 +151,14 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
 
+
           <Button variant="outline" size="sm" className="gap-2">
             {currentResume?.basic_info?.title || 'My Resume'}
             <ChevronDown className="h-4 w-4" />
           </Button>
         </DropdownMenuTrigger>
+
+
 
 
         <DropdownMenuContent align="end">
@@ -179,17 +190,25 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
 
 
+
+
         <DropdownMenuContent align="end">
           {existingResumes.map((resume) => (
             <DropdownMenuItem 
               key={resume.id}
               onClick={() => onResumeChange(resume.id!)}
 
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
               className="cursor-pointer"
             >
               {resume.basic_info.title}
@@ -227,7 +246,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
           <DropdownMenuSeparator />;
           <DropdownMenuItem;
 
+
 <<<<<<< HEAD
+
 
 
             onClick={() => setSaveDialogOpen(true)}
@@ -239,7 +260,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
         </DropdownMenuContent>
       </DropdownMenu>
 
+
 <<<<<<< HEAD
+
 
 
             className='cursor-pointer'          >;
@@ -287,7 +310,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               value={newResumeTitle}
               onChange={(e) => setNewResumeTitle(e.target.value)}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -300,6 +325,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 
             <Button 
               variant="outline" 
+
 
               onClick = {() => setSaveDialogOpen(false),}
             >
@@ -322,6 +348,7 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
               className="gap-2"
             >
               {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+
 
               <Save className="h-4 w-4" />
               Save
@@ -410,7 +437,9 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
 }
 > {
 
+
 <<<<<<< HEAD
+
 
   resume.basic info.title;
 }</DropdownMenuItem>) );

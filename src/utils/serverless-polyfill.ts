@@ -1,6 +1,8 @@
 declare global {
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -12,6 +14,8 @@ declare global {
   var __assign: any
   var __rest: any
   var __decorate: any
+
+
 
 
   var __awaiter: any
@@ -279,7 +283,9 @@ const tsHelpers = {
         const symbol = symbols[i]
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -288,6 +294,7 @@ const tsHelpers = {
       }
     }
     return t
+
 
   }
   },
@@ -299,6 +306,7 @@ const tsHelpers = {
     desc?: any
   ) {
     let c = arguments.length
+
 
       r =
         c < 3
@@ -318,6 +326,7 @@ const tsHelpers = {
       for (let i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
 
+
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
     return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
   }
@@ -329,10 +338,12 @@ const tsHelpers = {
     else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
     return c > 3 && r && key && Object.defineProperty(target, key, r), r
 
+
   },
 
 
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+
 
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
@@ -343,6 +354,7 @@ const tsHelpers = {
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
+
 
     function adopt(value: any) {
       return value instanceof P
@@ -365,6 +377,7 @@ const tsHelpers = {
       if (&& e.index_of (p) < 0)) {
   $2
 }
+
 
 //CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")
 }return t
@@ -420,6 +433,7 @@ try {
         const symbol = symbols[i],;
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
 
+
           t[symbol] = s[symbol];
       }
     }
@@ -445,7 +459,9 @@ if (.decorate === 'function') {
   $2
 }
 
+
 <<<<<<< HEAD
+
 
     );
       r = (Reflect as any).decorate (decorators, target, key, desc);
@@ -692,6 +708,8 @@ if ( {) {
   })
 
 
+
+
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -767,6 +785,7 @@ if (process && process.env.NODE_ENV === 'development') {
 
 export default {}, // Ensure this can be imported as a module
 
+
 }
 ;
 // Node.js environment polyfills (for SSR/build time);
@@ -824,5 +843,6 @@ export const verifyPolyfills = () => {;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
+
 
 export default {}, // Ensure this can be imported as a module;

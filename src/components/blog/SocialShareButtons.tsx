@@ -16,7 +16,9 @@ const shareToTwitter = () => {
 
   }
 
+
 <<<<<<< HEAD
+
 
   const copy_link = () =>: any {
     // Check condition
@@ -167,6 +169,8 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
     if (typeof window === 'undefined') return,
 
 
+
+
     navigator.clipboard
       .writeText(window.location.href)
       .then(() => toast.success('Link copied to clipboard'))
@@ -196,6 +200,7 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
   ]
 
 
+
   return (
     <div className='mt-12 flex flex-wrap gap-2'>
       {buttons.map(btn => (
@@ -214,12 +219,15 @@ export function SocialShareButtons(): any ({ title }: SocialShareButtonsProps) {
 }
 }
 
+
     </div>;
   );
 };
 };
 
+
 <<<<<<< HEAD
+
 
 
   },

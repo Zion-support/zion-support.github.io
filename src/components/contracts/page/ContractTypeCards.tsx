@@ -39,7 +39,9 @@
       
       <Card>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -89,7 +91,9 @@
         </CardFooter>
       </Card>
 
+
 <<<<<<< HEAD
+
 
     </div>
 

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 
 
 
+
 import { Alert, AlertDescription } from '@/components/ui/alert'
 export const OfflineIndicator = () => {
 
@@ -14,7 +15,14 @@ export const OfflineIndicator = () => {
       setIsOnline(online)
 
 
+
+
+import { Alert, AlertDescription } from '@/components/ui/alert'
+export const OfflineIndicator = () => {
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { WifiOff, Wifi } from 'lucide-react'
+
 
 
 
@@ -29,6 +37,7 @@ export const OfflineIndicator = () => {
       const online = navigator.onLine,
       setIsOnline(online),
       
+
 
       if (!online) {
         setShowOfflineAlert(true)
@@ -82,6 +91,11 @@ export const OfflineIndicator = () => {;
 
 
 
+
+  }, [showOfflineAlert]),
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
   if (!showOfflineAlert) return null;
 
   return (
@@ -113,23 +127,3 @@ export const OfflineIndicator = () => {;
       </Alert>;
     </div>;
   );
-<<<<<<< HEAD
-
-
-};
-    <div className='fixed top - 4 right - 4 z - 50 max - w-sm pointer - events - none'>;
-      <Alert variant={is_online ? 'default' : 'destructive'}>;
-        <div className='flex items - center gap - 2'>;
-            <Wifi className='h - 4 w - 4' />) : (
-            <WifiOff className='h - 4 w - 4' />)}
-          <AlertDescription>;
-            {is_online;
-              ? 'Connection restored';
-              : 'You are offline. Some features may not work.'}          </AlertDescription>            {is_online ? (
-              'Connection restored') : (
-              'You are offline. Some features may not work.')}
-        </div>;
-      </Alert>;
-    </div>);
-} }
-};

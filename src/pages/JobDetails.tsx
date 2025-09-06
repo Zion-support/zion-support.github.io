@@ -5,6 +5,8 @@ Calendar,
   Users;
 
 
+
+
   Briefcase;
 import {;
   Calendar,;
@@ -57,6 +59,171 @@ interface Job {
   category: string;
 
 
+export default function JobDetails() {;
+  const router = useRouter(); // Init router;
+  const { jobId: rawJobId } = router && router.query; // Get jobId from query;
+
+  const jobId = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, isLoading, error } = useJobDetails(jobId) as {;
+  deadline?: string;
+;
+export default /**
+ * JobDetails - Function description
+ */
+function JobDetails() {
+  const router = use_router (); // Init router;
+  const { job_id: rawJobId } = router.query; // Get job_id from query;
+  const job_id = typeof rawJobId === 'string' ? rawJobId : undefined;
+  const { job, is_loading, error } = useJobDetails (job_id) as {
+    job: Job | undefined;
+    isLoading: boolean;
+    error: any;
+  };
+  const { user, isAuthenticated } = useAuth();
+import React, { useState, useEffect } from 'react',;
+import { useRouter } from 'next/router', // Changed from useParams, useNavigate;
+import { Header } from '@/components/Header',;
+import { Button } from '@/components/ui/button',;
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',;
+import { Badge } from '@/components/ui/badge',;
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from 'lucide-react';
+import { formatDistanceToNow } from 'date-fns',;
+import { toast } from 'sonner',;
+import { useAuth } from '@/hooks/useAuth',;
+import useJobDetails from '@/hooks/useJobDetails',;
+import { ApplyToJobModal } from '@/components/messaging/job-application',;
+import { SEO } from '@/components/SEO',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+import { JobDetailsSkeleton } from '@/components/jobs',;
+interface Job {;
+  id: string,;
+  title: string,;
+  description: string,;
+  company_name?: string,;
+  budget: { min: number, max: number },;
+  client_id: string,;
+  skills?: string[],;
+  created_at: string,;
+  category: string,;
+  deadline?: string;
+}
+
+  deadline?: string;
+export default function JobDetails() {
+
+
+
+  const formatBudget = (budget: any) => {
+    if (!budget) return "Not specified",
+    return `$${budget.min} - $${budget.max}`
+  },
+
+
+  if (isLoading) {
+    return <JobDetailsSkeleton />;
+  }
+  if (error |!job) {
+
+
+  const formatBudget = (budget: any) => {;
+    if (!budget) return 'Not specified';
+    return `$${budget && budget.min} - $${budget && budget.max}`;
+  };
+  if (isLoading) {;
+    return <JobDetailsSkeleton />;
+    return (
+      <>
+        <Header />
+
+        <div className="container mx-auto px-4 py-16 text-center">
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
+          <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
+        </div>
+
+
+      </>
+    )
+  }
+
+  if (error || !job) {;
+    return (
+      <>;
+        <Header />;
+        <div className='container mx-auto px-4 py-16 text-center'>;
+          <h1 className='text-2xl font-bold mb-4'>Job Not Found</h1>;
+          <p className='mb-8'>;
+            The job you're looking for doesn't exist or has been removed.;
+          </p>;
+          <Button onClick={() => router && router.push('/careers')}>View All Jobs</Button>        </div>;
+      </>;
+    );
+  }
+
+
+  const handleApply = () => {;
+    if (!isAuthenticated) {;
+      toast && toast.error('Please log in to apply for this job');
+      router && router.push(;
+        `/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`;
+      ); // Added null check for jobId;
+      return;
+    }
+
+    if (;
+      user?.userType !== 'talent' &&;
+      user?.userType !== 'admin' &&;
+      user?.userType !== 'client';
+    ) {;
+      toast && toast.error('Only job seekers can apply for jobs');
+
+      return;
+    }
+    setIsApplyModalOpen(true);
+
+  };
+
+  const handleApplySuccess = async (appliedJobId: string) => {;
+    toast && toast.success('Application submitted successfully!');
+    setIsApplyModalOpen(false);
+  };
+  const isOwnJob = user?.id === job && job.client_id;
+
+
+  return (
+    <>;
+      <SEO
+        title={`${job && job.title} - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
+        description = {job && job.description.substring(0, 160),}
+      />;
+      <Header />;
+      <main className='container mx-auto px-4 py-8'>;
+        <div className='mb-6'>;
+          <Button
+            variant='outline'
+            size='sm'
+
+
+      toast.error("Please log in to apply for this job"),
+      router.push(`/login?redirect=${encodeURIComponent(`/jobs/${jobId || ''}`)}`), // Added null check for jobId
+      return
+    }
+
+    if (user?.userType !== "talent" && user?.userType !== "admin" && user?.userType !== "client") {
+      toast.error("Only job seekers can apply for jobs"),
+      return
+    }
+    
+    setIsApplyModalOpen(true)
+  },
+
+  const handleApplySuccess = async (appliedJobId: string) => {
+    toast.success("Application submitted successfully!"),
+    setIsApplyModalOpen(false)
+  },
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -68,6 +235,7 @@ interface Job {
         description={job.description.substring(0, 160)}
       />
       <Header />
+
 
 
       <main className="container mx-auto px-4 py-8">
@@ -240,6 +408,7 @@ export default function JobDetails() {;
                     <p className='text-sm text-muted-foreground'>Budget</p>
                     <p className='font-medium'>{formatBudget(job.budget)}</p>
 
+
                   </div>
                 </div>
                 
@@ -261,7 +430,9 @@ export default function JobDetails() {;
                   </Button>;
                 )}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -297,7 +468,9 @@ export default function JobDetails() {;
                 )}
                 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -481,7 +654,9 @@ if ( {) {
         </div>;
       </main>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -490,6 +665,7 @@ if ( {) {
       {job && (
         <ApplyToJobModal
           job={{
+
 
             id: job.id
             title: job.title
@@ -503,6 +679,7 @@ if ( {) {
             company_name: job.company_name ?? "Company",
             budget: formatBudget(job.budget),
             client_id: job.client_id,
+
 
           }}
 

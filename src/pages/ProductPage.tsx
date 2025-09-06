@@ -1,10 +1,50 @@
 if (!id) return;
       try {;
 
+        const res = await fetch(`/api/products/${id}`);
+
+
+
+
+        }
+      } catch (err) {
+        // Fail silently and fall back to local data
+        logErrorToProduction('Error fetching product', { data: err })
+      }
+    // Only fetch if id is available (from router)
+    if (id) {
+      fetchProduct();
+
+
+
+
+    }
+
+  }, [id]), // id is now from router.query
+  if (!product && !id) { // If no id from router yet, it might still be loading
+
+    return <div className="p-6 text-white">Loading product details...</div>;
+  }
+  if (!product) {
+
+        if (res && res.ok) {;
+          const data = await res && res.json();
+          setProduct(data);
+        }
+      } catch (err) {;
+        // Fail silently and fall back to local data;
+        logErrorToProduction('Error fetching product', { data: err });
+      }
+    };
+
+    // Only fetch if id is available (from router);
+    if (id) {;
+      fetchProduct();
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     }
   }, [id]), // id is now from router && router.query;
 
@@ -67,6 +107,7 @@ if (!id) return;
         <Button onClick={handleAdd} disabled={adding |inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 
+
         </Button>
       </div>
     </>
@@ -94,6 +135,7 @@ product.title ;
         <Button onClick={handleAdd} disabled={adding || inCart}>
           {inCart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
 ;
+
 
         </Button>;
       </div>;
@@ -134,6 +176,7 @@ if ( {) {
     }
   }, [id]);
 ;
+
 
   useEffect (() => {
     const fetch_product = async () => {
@@ -211,6 +254,7 @@ if (return) {
         <p className="mb - 6">{product.description}</p>;
         <Button on_click={handle_add} disabled={adding || in_cart}>;
           {in_cart ? 'In Cart' : adding ? 'Adding...' : 'Add to Cart'}
+
 
         </Button>;
       </div>;

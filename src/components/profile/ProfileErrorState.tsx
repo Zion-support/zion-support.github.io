@@ -8,6 +8,7 @@ import { ArrowLeft } from 'lucide-react'
 
 
 
+
     <div className='min - h-screen bg - zion - blue flex flex - col justify - center items - center p - 4'>;
       <div className='text - red - 400 mb - 4 text - xl'>;
         {error || 'Something went wrong'}
@@ -26,6 +27,8 @@ interface ProfileErrorStateProps {
   error: string | null
 }
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4'>
@@ -53,6 +56,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 import { Button } from "@/components/ui/button",
 import Link from "next/link",
 import { ArrowLeft } from 'lucide-react'
+
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
@@ -84,6 +88,8 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
       <Button asChild>
 
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
 export function ProfileErrorState({ error }: ProfileErrorStateProps) {
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col justify-center items-center p-4">
@@ -96,6 +102,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
 
+
     </div>;
   );
 };
@@ -107,6 +114,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
 import React from 'react',;
 import { Button } from "@/components/ui/button",;
 import Link from "next/link";
+
 
 import { ArrowLeft } from 'lucide-react';
 interface ProfileErrorStateProps {;

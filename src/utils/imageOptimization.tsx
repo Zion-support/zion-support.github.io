@@ -6,8 +6,12 @@ const imgRef = useRef<HTMLDivElement>(null);
 
 
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -45,8 +49,10 @@ export function OptimizedImage({
   // Intersection Observer for lazy loading
   useEffect(() => {
 
+
     if (!lazy |priority |isInView) return
     if (!lazy || priority || isInView) return;
+
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -118,6 +124,7 @@ if (||) {
           setIsInView(true),;
           observer.disconnect();
 
+
         }
       }
       {
@@ -185,6 +192,7 @@ if (||) {
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL,
     
+
 
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
@@ -285,7 +293,9 @@ if (||) {
 
         <Image;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -320,13 +330,16 @@ if (return blurDataURL) {
             placeholder === 'blur' ? generateBlurDataURL() : undefined
           }
 
+
           onLoad={handleLoad}
           onError={handleError}
+
 
           className={cn(            'transition-opacity duration-300'
 
 
           className={cn(            'transition-opacity duration-300',
+
 
 <<<<<<< HEAD
 
@@ -342,6 +355,7 @@ if (return blurDataURL) {
 
 
 
+
           {...props}
         />
       )}
@@ -351,7 +365,9 @@ if (return blurDataURL) {
       {(isLoading && isInView) && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -399,7 +415,9 @@ if (return blurDataURL) {
               </svg>
               <span className="text-xs">Image not available</span>
 
+
 <<<<<<< HEAD
+
 
 
             </div>
@@ -472,6 +490,7 @@ export function getImageDimensions(
     img.onerror = reject
     img.src = src
   })
+
 
 }
 
@@ -601,5 +620,6 @@ export function getImageDimensions (
     img.onerror = reject;
     img.src = src;
   });
+
 
 }

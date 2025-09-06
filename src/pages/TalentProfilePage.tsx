@@ -27,6 +27,7 @@ export default function TalentProfilePage() {
   const { isAuthenticated, user } = useAuth(),
 
 
+
   const router = useRouter()
   // Get id from Next.js router query params
   const { id } = router.query as { id?: string }
@@ -35,6 +36,7 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false)
   const { userDetails } = useAuthStatus()
   const { isAuthenticated, user } = useAuth()
+
 
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user
@@ -99,6 +101,7 @@ export default function TalentProfilePage() {
     name: '',
     points: 0
 
+
   },
 
   }
@@ -106,6 +109,8 @@ export default function TalentProfilePage() {
 
 
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   // Handle loading error gracefully
@@ -113,8 +118,10 @@ export default function TalentProfilePage() {
     if (error) {
       toast({
 
+
         title: 'Error loading profile'
         title: 'Error loading profile',
+
 
         description:
           'There was a problem loading this talent profile. Please try again.'
@@ -165,7 +172,9 @@ export default function TalentProfilePage() {
     points: 0;
   }
 
+
 <<<<<<< HEAD
+
 
   // Handle loading error gracefully;
   useEffect ((, ) => {
@@ -513,7 +522,9 @@ return (<> <SEO title= {
         onRequestHire = {handleRequestHire,}
         onMessageTalent = {handleMessageTalent,}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -588,11 +599,14 @@ export default function TalentProfilePage() {;
     return <ProfileErrorState error={error} />;
 
 
+
+
   }
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
+
 
         title: 'Authentication required',
         description: 'Please sign in to hire this talent.',
@@ -730,6 +744,7 @@ return (<> <SEO title= {
   },
 
 
+
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
         <div className="p-2 flex gap-2">
@@ -759,7 +774,9 @@ return (<> <SEO title= {
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
 
+
 <<<<<<< HEAD
+
 
 
             onClick = {handleMessageTalent,}>;
@@ -821,6 +838,8 @@ return (<> <SEO title= {
       <HireRequestModal 
 
 
+
+
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
@@ -834,49 +853,11 @@ return (<> <SEO title= {
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
 
+
 <<<<<<< HEAD
+
 
 
         onClose = {() => setIsMessageModalOpen(false),}      />;
 
-;
-<<<<<<< HEAD
-
-      
-      {/* Request to Hire Modal */}
-      <HireRequestModal;
-        talent={profile}
-        isOpen={isHireModalOpen}
-        onClose={() => setIsHireModalOpen(false)}
-        userDetails={userProfile}
-      />;
-      {/* Message Talent Modal */}
-      <MessageTalentModal;
-        talent={profile}
-        isOpen={isMessageModalOpen}
-        onClose={() => setIsMessageModalOpen(false)}
-      />;
-
-    </div>;
-    </>;
-  );
-}
-<<<<<<< HEAD
-
-
-      {/* Request to Hire Modal */}
-      <HireRequestModal;
-        talent = {profile, }
-        is_open = {isHireModalOpen, }
-        on_close = {(, ) => setIsHireModalOpen (false), }
-        user_details = {user_profile, }
-      />;
-      {/* Message Talent Modal */}
-      <MessageTalentModal;
-        talent = {profile, }
-        is_open = {isMessageModalOpen, }
-        on_close = {() => setIsMessageModalOpen (false), }      />;
-    </div>;
-    </>);
-}
 ;

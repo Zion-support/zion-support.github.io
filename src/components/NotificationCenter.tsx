@@ -23,7 +23,9 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -41,6 +43,7 @@ export const NotificationCenter: React.FC = () => {
   const [error, setError] = useState<string | null>(null),
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
+
 
 
   const handleFilterChange = (newFilter: FilterType,) => {
@@ -119,6 +122,7 @@ export const NotificationCenter: React.FC = () => {;
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
 
+
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -140,7 +144,9 @@ export const NotificationCenter: React.FC = () => {;
     setFilter(newFilter as any);
   };
 
+
 <<<<<<< HEAD
+
 
 
   return (
@@ -149,9 +155,11 @@ export const NotificationCenter: React.FC = () => {;
 
           )}
 
+
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
+
 
         <NotificationHeader
           unreadCount = {unreadCount,}
@@ -166,6 +174,7 @@ export const NotificationCenter: React.FC = () => {;
 
         <NotificationList
 
+
         <NotificationHeader 
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
@@ -176,12 +185,14 @@ export const NotificationCenter: React.FC = () => {;
         />
         <NotificationList 
 
+
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
+
 
         />
         <NotificationFooter onClose={() => setOpen(false)} />
@@ -209,6 +220,7 @@ export const NotificationCenter: React.FC = () => {;
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
 
+
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
@@ -216,7 +228,9 @@ export const NotificationCenter: React.FC = () => {;
     </Popover>;
   );
 
+
 <<<<<<< HEAD
+
 
 },;
 

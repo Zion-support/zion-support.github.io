@@ -168,6 +168,9 @@ const WhitepaperViewPage: React.FC = () => {;
         return;
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       setLoading(true)
@@ -255,6 +258,14 @@ export default WhitepaperViewPage;
 },
 ;
 
+      }
+      setLoading(true),;
+      setError(null),;
+      try {;
+        const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
+          body: { id }}),;
+
+
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -330,7 +341,9 @@ export default WhitepaperViewPage;
   );
 },;
 
+
 <<<<<<< HEAD
+
 
 
 export default WhitepaperViewPage,;

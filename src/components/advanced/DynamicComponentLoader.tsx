@@ -67,13 +67,17 @@ const EnhancedLoading: React.FC<{;
           {showProgress && (
 
 
+
+
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
 
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -98,7 +102,9 @@ const EnhancedLoading: React.FC<{;
 )
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -124,7 +130,9 @@ const EnhancedError: React.FC<{
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -182,7 +190,9 @@ const EnhancedError: React.FC<{;
           </p>
           {retryCount > 0 && (
 
+
 <<<<<<< HEAD
+
 
 
               Retry {retryCount}/{maxRetries}
@@ -206,6 +216,8 @@ const EnhancedError: React.FC<{;
             <RefreshCw className="h-4 w-4 mr-2" />
 
 
+
+
             Try Again
           </Button>
         )}
@@ -227,6 +239,7 @@ const useNetworkStatus = () => {
   }, []);
   return is_online;
 }
+
 
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
@@ -264,6 +277,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     }
     };
 ;
+
 
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
@@ -494,7 +508,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
       </motion.div>;
     );
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -562,6 +578,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
     />
   );
 }
+
+
 
 
 

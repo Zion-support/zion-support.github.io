@@ -6,15 +6,19 @@
               !isPast(parseISO(interview.scheduled_date))
           )
 
+
           .sort(
             (a, b) =>
               parseISO(a.scheduled_date).getTime() -
               parseISO(b.scheduled_date).getTime()          )
 
+
           .sort(;
             (a, b) =>;
               parseISO(a.scheduled_date).getTime() -;
               parseISO(b.scheduled_date).getTime()          );
+
+
 
 
           .slice(0, 3); // Take only the next 3 interviews
@@ -42,6 +46,8 @@
 
 
 
+
+
   if (isLoading) {
     return (
       <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
@@ -63,9 +69,127 @@
               </div>
 
 
+
+import React, { useEffect, useState } from "react",;
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { useInterviews } from "@/hooks/useInterviews",;
+import { Interview } from "@/types/interview",;
+import { format, isPast, parseISO } from "date-fns",;
+import Link from "next/link",;
+import { Calendar, Clock, Video } from 'lucide-react';
+import { Avatar } from '@/components / ui / avatar';
+import { logErrorToProduction } from '@/utils / production_logger';
+export /**
+ * UpcomingInterviewsCard - Function description
+ */
+function UpcomingInterviewsCard() {
+  const { fetch_interviews } = use_interviews ();
+  const [upcoming_interviews, setUpcomingInterviews] = useState < Interview[]>([]);
+  const [is_loading, setIsLoading] = useState (true);
+  useEffect ((, ) => {
+    const load_interviews = async () => {      setIsLoading (true);
+      try {
+        const interviews = await fetch_interviews ();
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter (
+            interview =>;
+              interview.status === 'confirmed' &&;
+              !is_past (parseISO (interview.scheduled_date)));
+          .sort (
+            (a, b) =>;
+              parseISO (a.scheduled_date).get_time () -;
+              parseISO (b.scheduled_date).get_time ()          );
+          .slice (0, 3); // Take only the next 3 interviews;
+        setUpcomingInterviews (upcoming);
+      } catch (error) {
+        logErrorToProduction ('Error loading upcoming interviews:', {
+          data: error,
+        });
+      } finally {
+        setIsLoading (false);
+      }
+    }
+
+
+import React, { useEffect, useState } from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { useInterviews } from '@/hooks/useInterviews';
+import { Interview } from '@/types/interview';
+import { format, isPast, parseISO } from 'date-fns';
+import Link from 'next/link';
+import { Calendar, Clock, Video } from 'lucide-react';
+import { Avatar } from '@/components/ui/avatar';
+import { logErrorToProduction } from '@/utils/productionLogger';
+export function UpcomingInterviewsCard() {;
+  const { fetchInterviews } = useInterviews();
+  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect((,) => {;
+    const loadInterviews = async () => {      setIsLoading(true);
+      try {;
+        const interviews = await fetchInterviews();
+
+        // Filter for confirmed interviews in the future;
+        const upcoming = interviews;
+          .filter(;
+            interview =>;
+              interview && interview.status === 'confirmed' &&;
+              !isPast(parseISO(interview && interview.scheduled_date));
+          );
+          .sort(;
+            (a, b) =>;
+              parseISO(a && a.scheduled_date).getTime() -;
+              parseISO(b && b.scheduled_date).getTime()          );
+          .slice(0, 3); // Take only the next 3 interviews;
+
+        setUpcomingInterviews(upcoming);
+      } catch (error) {;
+        logErrorToProduction('Error loading upcoming interviews:', {;
+          data: error,;
+        });
+      } finally {;
+        setIsLoading(false);
+      }
+    };
+
+    loadInterviews();
+  }, []);
+
+  if (isLoading) {;
+    return (
+      <Card className='bg-zion-blue-dark/40 border-zion-blue-light'>;
+        <CardHeader>;
+          <CardTitle className='text-lg flex items-center'>;
+            <Video className='h-5 w-5 mr-2 text-zion-purple' />;
+    load_interviews ();
+  }, []);
+  // Check condition
+if ( {) {
+  $2
+}
+    return (
+      <Card className='bg - zion - blue - dark / 40 border - zion - blue - light'>;
+        <CardHeader>;
+          <CardTitle className='text - lg flex items - center'>;
+            <Video className='h - 5 w - 5 mr - 2 text - zion - purple' />;
+            Upcoming Interviews;
+          </CardTitle>;
+        </CardHeader>;
+        <CardContent>;
+
+          </div>;
+        </CardContent>;
+      </Card>;
+    );
+
   }
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 
 
 
@@ -124,6 +248,7 @@
   }
   return (
 
+
     <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
       <CardHeader>
         <CardTitle className="text-lg flex items-center">
@@ -145,6 +270,7 @@
 
 
 
+
             const interviewDate = parseISO(interview.scheduled_date),
             const formattedDate = format(interviewDate, 'EEE, MMM d'),
             const formattedTime = format(interviewDate, 'h: mm a'),
@@ -157,6 +283,8 @@
             
 
 
+
+
             return (
               <div key={interview.id} className="flex items-center gap-3">
                 <Avatar className="h-10 w-10 bg-zion-purple/10">
@@ -164,6 +292,7 @@
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
+
 
                       loading="lazy"
                     />
@@ -190,6 +319,7 @@
                       loading="lazy"
                     />
                   ) : (
+
 
                     <div className="flex h-full w-full items-center justify-center bg-zion-purple/20 text-zion-purple font-medium">
                       {(interview.client_name || interview.talent_name || "U").charAt(0)}
@@ -294,7 +424,9 @@
               View All Interviews
             </Link>
 
+
 <<<<<<< HEAD
+
 
 
 

@@ -3,6 +3,7 @@ const handleAddMember = () => {
     if (!newMemberEmail) {
       toast({
 
+
         title: 'Email required'
         description: 'Please enter an email address for the new team member.'
         variant: 'destructive'
@@ -22,6 +23,7 @@ const handleAddMember = () => {
       description: `An invitation has been sent to ${newMemberEmail}`
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
+
 
     })
     setNewMemberEmail('')
@@ -147,6 +149,9 @@ if ( {) {
 
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -154,6 +159,8 @@ if ( {) {
     }
 
     toast({
+
+
 
 
       title: "Invitation sent",
@@ -178,7 +185,9 @@ if ( {) {
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -221,7 +230,9 @@ if ( {) {
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
 
+
 <<<<<<< HEAD
+
 
 
               </div>
@@ -253,7 +264,9 @@ if ( {) {
 
       <div className="rounded-md border">
 
+
 <<<<<<< HEAD
+
 
 
         <Table>
@@ -271,7 +284,9 @@ if ( {) {
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
 
+
 <<<<<<< HEAD
+
 
 
                 <TableCell>
@@ -287,7 +302,9 @@ if ( {) {
                           .join("")}
                       </span>
 
+
 <<<<<<< HEAD
+
 
 
                     </div>
@@ -306,7 +323,9 @@ if ( {) {
                     variant={member.status === "active" ? "default" : "outline"}
                   >
 
+
 <<<<<<< HEAD
+
 
 
                     {member.status}
@@ -327,7 +346,9 @@ if ( {) {
                       >
                         <Mail className="h-4 w-4 mr-1" />
 
+
 <<<<<<< HEAD
+
 
 
                         Resend
@@ -583,7 +604,9 @@ export function TeamManagement() {;
                   </div>;
                 </TableCell>;
 
+
 <<<<<<< HEAD
+
 
 
 

@@ -10,6 +10,10 @@ import { MessageBubble } from './MessageBubble';
 import { DateDivider } from './DateDivider';
 
 
+                    src = {activeConversation && activeConversation.context_data.image_url,}
+                    alt = {activeConversation && activeConversation.context_data.title || "Context",}
+
+
 
 
   const scrollToBottom = () => {
@@ -142,6 +146,8 @@ import { DateDivider } from './DateDivider';
           ));
 
 
+
+
             return (
               <div key={message.id}>
                 {showDateDivider && (
@@ -167,6 +173,16 @@ import { DateDivider } from './DateDivider';
       <div className="p-3 border-t border-zion-purple/20">
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">
           <textarea
+
+
+
+
+            value={messageText}
+            onChange={(e) => setMessageText(e.target.value)}
+            onKeyDown={handleKeyDown}
+            placeholder="Type a message..."
+            className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-black focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+            ref={inputRef}
 
           />
           <Button
@@ -208,6 +224,7 @@ import { DateDivider } from './DateDivider';
             </div>)))}
         <div ref={messagesEndRef} />;
       </div>;
+
 <<<<<<< HEAD
     </div>;
   );
@@ -218,6 +235,7 @@ import { DateDivider } from './DateDivider';
 }
       <div className="p-3 border-t border-zion-purple/20">;
         <form onSubmit={handleSendMessage} className="flex items-start gap-2">;
+
 
           <textarea;
             value={messageText}
@@ -237,6 +255,7 @@ import { DateDivider } from './DateDivider';
         </form>;
       </div>;
 
+
             disabled={!newMessage.trim() || isSending}
           >
             {isSending ? 'Sending...' : 'Send'}
@@ -247,3 +266,4 @@ import { DateDivider } from './DateDivider';
     </div>
   );
 }
+

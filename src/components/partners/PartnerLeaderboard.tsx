@@ -15,7 +15,9 @@ export function PartnerLeaderboard() {
     }
     },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -30,7 +32,9 @@ export function PartnerLeaderboard() {
     }
     },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -45,7 +49,9 @@ export function PartnerLeaderboard() {
     }
     },
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -57,6 +63,7 @@ export function PartnerLeaderboard() {
       referrals: 98
       earnings: 2450
       badges: []
+
 
     }
     {
@@ -117,6 +124,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 import { Badge } from "@/components/ui/badge",;
 import { Crown, Medal, Trophy } from 'lucide-react';
+
 
 interface LeaderboardEntry {;
   id: string,;

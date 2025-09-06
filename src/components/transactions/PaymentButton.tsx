@@ -6,6 +6,7 @@ export function PaymentButton({
 
 
 
+
   amount
   serviceId
   providerId
@@ -83,14 +84,17 @@ if ( {) {
 
 
 
+
       }
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
 
+
           amount,
           serviceId,
+
 
           providerId,
           userId: user?.id,
@@ -119,6 +123,7 @@ if ( {) {
       // Reset button state after a short delay
       setTimeout(() => {
         setIsProcessing(false)
+
 
       }, 1500)
 
@@ -245,4 +250,5 @@ toast ({
 }
 
 ;
+
 

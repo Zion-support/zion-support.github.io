@@ -12,7 +12,9 @@
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -30,7 +32,9 @@
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -51,7 +55,9 @@
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -69,7 +75,9 @@
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -156,7 +164,9 @@ export function ServiceIncludes() {
             </div>
             <div>
 
+
 <<<<<<< HEAD
+
 
 
               <h3 className="text-white font-medium">Service Documentation</h3>
@@ -166,6 +176,7 @@ export function ServiceIncludes() {
         </div>
       </div>
 
+
     </div>;
   );
 };
@@ -173,6 +184,7 @@ export function ServiceIncludes() {
     </div>
   )
 }
+
 
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
@@ -389,7 +401,9 @@ function ServiceIncludes() {
   );
 }
 
+
 <<<<<<< HEAD
+
 
 
     </div>);

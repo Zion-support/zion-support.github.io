@@ -145,6 +145,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       },
       {
 
+
 id: 'dispute-prevention',
         title: 'Tips for preventing disputes',
         content:
@@ -189,6 +190,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
         content: "The Zion AI Marketplace platform is designed to be intuitive and easy to navigate. Here's a quick overview of the main sections:\n\n• Home: Your personalized dashboard with recommended matches\n• Marketplace: Browse all available services and talent\n• Jobs: View open positions or post new job opportunities\n• Messages: Communicate with clients, talent, or support\n• Profile: Manage your personal or company information\n• Settings: Configure your account preferences and security options\n\nUse the search bar at the top of any page to quickly find specific services, talent, or content. The navigation menu adapts based on your account type to show the most relevant options.",;
         lastUpdated: "2023-12-01",;
         tags: ["navigation", "interface"];
+
 
       }
       {
@@ -282,6 +284,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [;
       }
     ];
   }
+
+
 
 
 ];

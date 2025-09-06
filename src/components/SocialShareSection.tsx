@@ -7,6 +7,7 @@ return (
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
 
+
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (              <Button
                 key = {index,}
@@ -36,12 +37,15 @@ return (
 }'"
 }
 
+
 };
 }</div> </div> </div> </section>) ;
 }'";
 };
 
+
 <<<<<<< HEAD
+
 
 
           <div className="flex flex-wrap gap-3">

@@ -5,6 +5,7 @@ import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
 
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -18,6 +19,7 @@ import {
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 
+
 import {
   Form,
   FormControl,
@@ -28,6 +30,12 @@ import {
 
 
 
+
+
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
 import Link from "next/link",
@@ -73,9 +81,15 @@ export function LoginForm() {
       const result = await login(data.email, data.password, data.rememberMe),
 
 
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
   return (
     <Form {...form}>
       {form.formState.errors.root && (
@@ -119,7 +133,9 @@ export function LoginForm() {
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
 
+
 <<<<<<< HEAD
+
 
 
               <FormControl>
@@ -181,7 +197,9 @@ export function LoginForm() {
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
 
+
 <<<<<<< HEAD
+
 
 
                   />
@@ -245,7 +263,9 @@ export function LoginForm() {
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
 
+
 <<<<<<< HEAD
+
 
 
                 </div>
@@ -366,9 +386,11 @@ export function LoginForm() {
         <FormField;
           control={form.control}
 
+
           name="rememberMe"
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
             <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+
 
               <FormControl>
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
@@ -384,6 +406,8 @@ export function LoginForm() {
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
                 />
+
+
 
 
               </FormControl>
@@ -559,6 +583,8 @@ export function LoginForm() {
           >
 
 
+
+
             Check status
           </Button>
         </div>
@@ -570,6 +596,7 @@ export function LoginForm() {
       </form>
     </Form>
   )
+
 
 }else {
   fireEvent ('login', {'
@@ -586,6 +613,7 @@ if (!email) {'
 })
 return
 return;
+
 
 }setIsResending (true);'
 setVerificationMessage ('')
@@ -616,8 +644,10 @@ if (!email) {'
   message: 'Please enter your email address.'
 })
 
+
 return
 return;
+
 
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)

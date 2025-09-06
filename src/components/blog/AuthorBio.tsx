@@ -4,18 +4,22 @@
         className="w-16 h-16 rounded-full mr-4 mb-4 md: mb-0"
         onError={(e) => {
 
+
           const target = e.currentTarget as HTMLImageElement
+
 
           target.src = '/images/blog-placeholder.svg'
         }}
       />
       <div>
 
+
 import React from 'react',;
 import type { BlogAuthor } from '@/types/blog',;
 interface AuthorBioProps {;
   author: BlogAuthor;
 }
+
 
 
 
@@ -28,7 +32,9 @@ interface AuthorBioProps {;
     </div>
   )
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -64,7 +70,9 @@ export function AuthorBio(): any ({ author }: AuthorBioProps) {;
 }</p>;
 }'"};
 
+
 <<<<<<< HEAD
+
 
 
 ;

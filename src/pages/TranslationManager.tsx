@@ -10,6 +10,7 @@ let sourceText = '';    ;
 
 
 
+
 ;
     const query = searchQuery.toLowerCase().trim(),;
     const filtered: string[] = [],;
@@ -355,6 +356,7 @@ let sourceText = '';    ;
       </main>;
     </>;
   );
+
 
 }
 }

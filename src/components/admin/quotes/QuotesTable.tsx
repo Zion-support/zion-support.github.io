@@ -3,13 +3,17 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 
 
 
+
+
   quotes
   isArchived = false
   isLoading
   updateStatus
   toggleArchive
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -19,6 +23,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   isLoading,
   updateStatus,
   toggleArchive,
+
+
 
 
   deleteQuote,
@@ -177,7 +183,9 @@ export const QuotesTable: React.FC < QuotesTableProps> = ({
                     </Button>
                     
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -264,11 +272,13 @@ import {formatDate} from "@/utils/dateUtils";
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
 
+
                               }
                             }}
                               } }}
                               }
                             }}
+
 
                             className="text-red-500"
                           >
@@ -453,6 +463,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
 
+
 <<<<<<< HEAD
 
                     )}
@@ -469,6 +480,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
 '"
 
 
+
   );
 };
 '";
@@ -480,7 +492,9 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 '"

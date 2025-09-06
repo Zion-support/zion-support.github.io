@@ -32,6 +32,9 @@ export default function TalentMarketplace() {;
     '@context': 'https://schema && schema.org',;
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     '@type': 'WebPage',;
     name: 'Talent Marketplace',;
     description:;
@@ -48,13 +51,18 @@ import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 
 
+
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function TalentMarketplace() {
@@ -132,6 +140,7 @@ export default function TalentMarketplace() {
             </div>
           </div>
 
+
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/talent'>Browse Talent</Link>            </Button>      />
@@ -172,6 +181,7 @@ export default function TalentMarketplace() {
             </div>
           </div>
 
+
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
@@ -182,7 +192,9 @@ export default function TalentMarketplace() {
     </>
   )
 
+
 }
+
 
 ;
 
@@ -232,7 +244,3 @@ export default function TalentMarketplace() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-
-;

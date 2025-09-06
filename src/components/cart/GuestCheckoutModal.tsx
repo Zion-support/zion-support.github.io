@@ -56,7 +56,9 @@ export default function GuestCheckoutModal(): any ({;
   },
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -187,6 +189,7 @@ export default function GuestCheckoutModal(): any ({;
             </Label>
             <Input
 
+
               id='guest-email'
               type='email'
               value={email || ''}
@@ -261,6 +264,7 @@ export default function GuestCheckoutModal(): any ({;
               className="bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue"
             >
 
+
               {isSubmitting ? (
                 'Processing...'
               ) : (
@@ -270,7 +274,9 @@ export default function GuestCheckoutModal(): any ({;
                 </>
               )}
 
+
 <<<<<<< HEAD
+
 
 
               disabled={isSubmitting || !email || !address}
@@ -286,36 +292,3 @@ export default function GuestCheckoutModal(): any ({;
 
 };
 };
-<<<<<<< HEAD
-
-
-          <DialogFooter className='space - x-2'>;
-            <Button;
-              type='button';
-              variant='outline';
-              on_click={() => onOpenChange (false)}
-              className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
-              Cancel;
-            </Button>;
-            <Button;
-              type='submit';
-              disabled={is_submitting || !email || !address}
-              className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
-              {is_submitting ? (
-                'Processing...') : (
-                <>;
-                  <CreditCard className='h - 4 w - 4 mr - 2' />;
-                  Continue to Payment;
-                </>)}
-            </Button>;
-          </DialogFooter>;
-        </form>;
-      </DialogContent>;
-
-}
-
-
-    </Dialog>);
-}
-}
-;

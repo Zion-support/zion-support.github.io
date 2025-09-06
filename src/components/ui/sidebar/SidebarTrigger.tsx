@@ -6,7 +6,9 @@ import { Button } from '@/components/ui/button';
 };
 };
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -45,7 +47,3 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 };
 
 }
-<<<<<<< HEAD
-
-
-;

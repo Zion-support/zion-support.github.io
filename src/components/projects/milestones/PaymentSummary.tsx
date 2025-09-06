@@ -2,9 +2,11 @@ import React from 'react';
 import { Milestone  } from '@/hooks/useMilestones';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
+
 }; import React from 'react'
 import { Milestone } from '@/hooks/useMilestones'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+
 import { CreditCard } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import React from 'react'
@@ -13,6 +15,7 @@ interface PaymentSummaryProps {
   milestones: Milestone[]
   paymentTerms: string | null
 }
+
 
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms },) => {;
   const totalPayment = milestones.reduce(;
@@ -60,6 +63,7 @@ interface PaymentSummaryProps {
 
 }
 
+
 export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paymentTerms }) => {
   const totalPayment = milestones.reduce(
     (sum, m) => sum + parseFloat(m.amount.toString()), 
@@ -78,6 +82,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
     .reduce(;
       (sum, m) => sum + parseFloat(m && m.amount.toString());      0;
     ).toFixed(2);
+
 
 
 
@@ -104,6 +109,7 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
+
   return (
     <Card className="mb-8 bg-muted/30">;
       <CardHeader className="pb-3">;
@@ -123,6 +129,40 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
 
 
 
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>
+            <p className="font-medium capitalize">
+              {paymentTerms |"Not specified"}
+            </p>
+          </div>
+          
+
+
+          <div>
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>
+            <p className="font-medium">
+              ${paidAmount}
+
+            </p>;
+          </div>;
+
+          <div>;
+            <p className="text-sm text-muted-foreground mb-1">Payment Terms</p>;
+            <p className="font-medium capitalize">;
+              {paymentTerms || "Not specified"}
+            </p>;
+          </div>;
+
+          <div>;
+            <p className="text-sm text-muted-foreground mb-1">Paid Amount</p>;
+            <p className="font-medium">;
+              ${paidAmount}
+
+
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
             </p>;
           </div>;
         </div>;
@@ -131,7 +171,9 @@ export const PaymentSummary: React.FC<PaymentSummaryProps> = ({ milestones, paym
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 '"

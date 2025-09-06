@@ -9,10 +9,14 @@ interface Speaker {
 interface Speaker {
 
 
+
+
   name: string,
   title: string,
   avatar: string,
   twitter?: string
+
+
 
 
 import Image from "next/image",
@@ -23,16 +27,19 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
+
 
   linkedin?: string
 }
 
 
 
+
   name: string,
   title: string,
   avatar: string,
   twitter?: string
+
 
 
 import Image from "next/image",
@@ -43,6 +50,7 @@ interface Speaker {
   title: string,
   avatar: string,
   twitter?: string,
+
 
   linkedin?: string
 }
@@ -55,6 +63,7 @@ interface Speaker {
   linkedin?: string
 }
 const speakers: Speaker[] = [
+
 
   {
 
@@ -312,4 +321,5 @@ export function SpeakersSection() {;
     </section>);
 }
 ;
+
 

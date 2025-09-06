@@ -34,7 +34,9 @@ import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
 
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -67,6 +69,7 @@ export function EnterpriseTrustBadges() {
         </div>
       </div>
 
+
     </section>;
   );
 };
@@ -75,6 +78,7 @@ export function EnterpriseTrustBadges() {
   )
 }
 import React from "react";
+
 
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
 export function EnterpriseTrustBadges() {;

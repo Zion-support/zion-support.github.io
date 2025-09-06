@@ -20,7 +20,9 @@ const Menubar = React.forwardRef<
       &quot;flex h-10 items-center space-x-1 rounded-md border bg-background p-1&quot;
       "flex h-10 items-center space-x-1 rounded-md border bg-background p-1",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -34,7 +36,9 @@ const MenubarTrigger = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Trigger>;
   React.ElementRef<typeof MenubarPrimitive.Trigger>,;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -47,7 +51,9 @@ className={cn(
     className={cn(
       "flex cursor-default select-none items-center rounded-sm px-3 py-1.5 text-sm font-medium outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -59,7 +65,9 @@ className={cn(
 MenubarTrigger.displayName = MenubarPrimitive.Trigger.displayName;
 const MenubarSubTrigger = React.forwardRef<;
 
+
 <<<<<<< HEAD
+
 
 
 import * as React from &quot;react & quot;
@@ -115,7 +123,9 @@ className={cn(
       "flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[state=open]:bg-accent data-[state=open]:text-accent-foreground",
       inset && "pl-8",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -127,7 +137,9 @@ className={cn(
 <ChevronRight className=&quot;ml-auto h-4 w-4&quot; />
     <ChevronRight className="ml-auto h-4 w-4" />
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -144,7 +156,9 @@ const MenubarSubContent = React.forwardRef<
       &quot;z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2&quot;
       "z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -160,7 +174,9 @@ const MenubarContent = React.forwardRef<
 >(
   (
 
+
     { className, align = &quot;start&quot;, alignOffset = -4, sideOffset = 8, ...props }
+
 
     { className, align = "start", alignOffset = -4, sideOffset = 8, ...props },
 
@@ -180,7 +196,9 @@ className={cn(
         className={cn(
           "z-50 min-w-[12rem] overflow-hidden rounded-md border bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -194,7 +212,9 @@ className={cn(
 MenubarContent.displayName = MenubarPrimitive.Content.displayName;
 const MenubarItem = React.forwardRef<;
 
+
 <<<<<<< HEAD
+
 
 
 className={cn (
@@ -258,7 +278,9 @@ className={cn(
       "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
       inset && "pl-8",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -272,7 +294,9 @@ const MenubarCheckboxItem = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>;
   React.ElementRef<typeof MenubarPrimitive.CheckboxItem>,;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -285,7 +309,9 @@ className={cn(
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -323,7 +349,9 @@ const MenubarRadioItem = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.RadioItem>;
   React.ElementRef<typeof MenubarPrimitive.RadioItem>,;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -336,7 +364,9 @@ className={cn(
     className={cn(
       "relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -383,7 +413,9 @@ className={cn(
       "px-2 py-1.5 text-sm font-semibold",
       inset && "pl-8",
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -397,7 +429,9 @@ const MenubarSeparator = React.forwardRef<;
   React.ElementRef<typeof MenubarPrimitive.Separator>;
   React.ElementRef<typeof MenubarPrimitive.Separator>,;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -432,7 +466,9 @@ const MenubarShortcut = ({
         &quot;ml-auto text-xs tracking-widest text-muted-foreground&quot;
         "ml-auto text-xs tracking-widest text-muted-foreground",
 
+
 <<<<<<< HEAD
+
 
 
 

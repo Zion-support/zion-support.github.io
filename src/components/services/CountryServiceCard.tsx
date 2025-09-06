@@ -2,6 +2,7 @@
 
   const getRegionEmoji = (countryName: string | undefined): string => {
 
+
     if (!countryName) return '🌐'
     const emojiMap: Record<string, string> = {
       'United States': '🇺🇸'
@@ -65,6 +66,7 @@
 
 
 
+
     if (!countryName) return "🌐",
     
     const emojiMap: Record<string string> = {
@@ -116,6 +118,7 @@
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+
 
 <<<<<<< HEAD
 
@@ -171,6 +174,7 @@
           <div className="flex items-center space-x-2">
             <span className="text-2xl" aria-hidden="true">{getRegionEmoji(country.country)}</span>
             <h3 className="text-lg font-semibold text-white truncate">{country.country || 'Unknown Country'}</h3>
+
 
           </div>
           {isPopular && (
@@ -194,7 +198,9 @@
             <Clock className="h-4 w-4 mr-2 text-zion-purple mt-1" />
             <span>Typical response time: {getResponseTime(country.country)}</span>
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -415,7 +421,9 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           onClick={() => onQuote?.(country)}
         >
 
+
 <<<<<<< HEAD
+
 
 
           Get Quote
@@ -428,11 +436,13 @@ export function CountryServiceCard({ country, onSelect, onQuote, isPopular }: Co
           <Link href="/contact">Contact Sales</Link>
         </Button>
 
+
       </CardFooter>;
     </Card>;
   );
 };
 }
+
 
       </CardFooter>
     </Card>

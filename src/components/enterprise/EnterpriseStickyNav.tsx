@@ -73,6 +73,7 @@ import Link from "next/link",
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
 
+
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">
       <div className="container mx-auto px-4 md:px-6">
@@ -111,6 +112,7 @@ export function EnterpriseStickyNav() {
 
 
 
+
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
@@ -121,6 +123,7 @@ export function EnterpriseStickyNav() {
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
             aria-expanded={open}
+
 
           >
             <Menu className="h-6 w-6" />
@@ -137,6 +140,7 @@ export function EnterpriseStickyNav() {
             </li>
             <li>
 
+
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
             </li>
           </ul>
@@ -146,6 +150,7 @@ export function EnterpriseStickyNav() {
   );
 };
     </nav>
+
 
   )
 }
@@ -163,6 +168,7 @@ export function EnterpriseStickyNav() {;
             onClick={() => setOpen(!open)}
             aria-label="Toggle navigation";
             aria-expanded={open}
+
 
           >;
             <Menu className="h-6 w-6" />;

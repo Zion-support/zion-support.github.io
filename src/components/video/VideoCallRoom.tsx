@@ -7,6 +7,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 
 
+
   roomId: string
   participants?: Participant[]
   onLeave?: () => void
@@ -60,6 +61,7 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleScreenShare
   className
 
+
   participants = [], ;
     const secs = seconds % 60;
 };  onLeave,
@@ -68,7 +70,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   onToggleScreenShare,
   className 
 
+
 <<<<<<< HEAD
+
 
 
 },) => {
@@ -268,7 +272,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
           {participants.length > 0 ? (
             participants.map((participant) => (
 
+
 <<<<<<< HEAD
+
 
 
               <div key={participant.id} className="video-participant bg-zion-blue-dark rounded-lg overflow-hidden relative">
@@ -327,7 +333,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
         </div>
         
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -418,7 +426,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
             aria-label="Leave call"
           >
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -429,7 +439,9 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({ ;
     </Card>
   )
 
+
 }
+
 
 
             aria-label="Leave call">;

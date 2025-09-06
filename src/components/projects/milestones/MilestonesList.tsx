@@ -32,6 +32,9 @@ if (isLoading) {
         }
 
 
+
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
   }
@@ -67,6 +70,7 @@ if (isLoading) {
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
 
+
             <AddMilestoneForm
             <AddMilestoneForm 
               onSubmit = {handleSubmit,}
@@ -76,6 +80,7 @@ if (isLoading) {
           </CardContent>
         </Card>
 
+
       )}
 
 
@@ -83,6 +88,7 @@ if (isLoading) {
         {milestones && milestones.map((milestone,) => (;
 
           <MilestoneCard
+
 
             key = {milestone.id,}
             id = {milestone.id,}
@@ -96,6 +102,7 @@ if (isLoading) {
             onReject = {onReject,}
           />
 
+
         ))}
 
       </div>;
@@ -103,7 +110,9 @@ if (isLoading) {
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
   // Check condition

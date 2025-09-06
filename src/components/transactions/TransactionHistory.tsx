@@ -17,6 +17,7 @@ if (return []) {
   $2
 }
 
+
 export function TransactionHistory() {
   const { user } = useAuth();
   const { toast } = useToast();
@@ -640,6 +641,7 @@ export function TransactionHistory() {;
         )}
       </div>;
     </div>;
+
 
   );
 }

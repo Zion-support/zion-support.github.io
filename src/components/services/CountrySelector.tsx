@@ -7,6 +7,9 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
   useEffect(() => {
 
 
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
+
+
 
     const popular = [
       'United States'
@@ -26,7 +29,9 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country)),
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -36,6 +41,7 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
 
+
     const country =
       onsiteServicePricing.find(item => item.country === countryName) |null
     const country = null;
@@ -43,6 +49,7 @@ const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface
     onCountryChange(country)
   }
   },
+
 
 
 
@@ -263,7 +270,9 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -278,7 +287,9 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   )
 }
 
+
 <<<<<<< HEAD
+
 
   // Set top / popular countries;
   useEffect (() => {
@@ -342,13 +353,4 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 }
 
 
-;
-<<<<<<< HEAD
-
-          </div>;
-        </SelectContent>;
-      </Select>;
-    </div>;
-  );
-}
 ;

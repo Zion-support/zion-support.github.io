@@ -3,10 +3,12 @@ import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
 import { StarIcon } from 'lucide-react';
 
+
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
 import { Star } from 'lucide-react'
+
 
 interface ListingScoreCardProps {
   title: string;
@@ -15,6 +17,7 @@ interface ListingScoreCardProps {
   category: string;
   tags?: string[];
   author?: string;
+
 
 
 <<<<<<< HEAD
@@ -27,6 +30,7 @@ export function ListingScoreCard({
   image, 
   category, 
 
+
   tags,
   author,
   authorImage,
@@ -35,6 +39,7 @@ export function ListingScoreCard({
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
+
 
   const [mainImageError, setMainImageError] = useState(false)
   const [authorImageError, setAuthorImageError] = useState(false)
@@ -48,6 +53,7 @@ export function ListingScoreCard({
       className
     )}>
 
+
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
@@ -60,6 +66,8 @@ export function ListingScoreCard({
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
+
+
 
 
         </div>
@@ -87,6 +95,7 @@ export function ListingScoreCard({
           )}
         </div>
 
+
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
         </h3>
@@ -105,6 +114,7 @@ export function ListingScoreCard({
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
                   )}                />
+
 
 
 
@@ -281,7 +291,9 @@ function ListingScoreCard() {
                   )}
                 />;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -292,6 +304,7 @@ function ListingScoreCard() {
             </span>;
           </div>;
         )}
+
 
         {tags && tags.length > 0 && (
           <div className='flex flex-wrap gap-2 mb-4'>
@@ -315,16 +328,19 @@ function ListingScoreCard() {
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
 
+
               </Badge>;
             ))}
           </div>;
         )}
+
 
         
         <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">
           Request Quote
         </Button>
         
+
 
         {author && (
           <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
@@ -398,14 +414,18 @@ function ListingScoreCard() {
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
 
+
 <<<<<<< HEAD
+
 
 
                 {author.charAt(0)}
               </div>
             )}
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -418,6 +438,8 @@ function ListingScoreCard() {
 };
 }
 
+
 }
+
 
 ;

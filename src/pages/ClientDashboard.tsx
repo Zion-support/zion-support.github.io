@@ -2,6 +2,7 @@ function ClientDashboardContent() {;
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
+
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null),
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),
   const isMobile = null;
@@ -97,6 +98,7 @@ function ClientDashboardContent() {;
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>(""),;
   const isMobile = useIsMobile(),;
   const onboardingStatus = useOnboardingStatus(),;
+
 
   const showAdvanced =;
     onboardingStatus && onboardingStatus.jobPosted &&;
@@ -226,7 +228,9 @@ if ( {) {
           </div>;
         </div>;
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -252,7 +256,9 @@ if ( {) {
               </TabsList>
               
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -273,6 +279,7 @@ if ( {) {
               </TabsContent>
             </Tabs>
           </div>
+
 
           <div>
             <div className="sticky top-4 space-y-6">
@@ -348,6 +355,7 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
           
           <div>
             <div className="sticky top-4 space-y-6">
+
 
               {/* Active Projects Card */}
               <ActiveProjectsCard />;

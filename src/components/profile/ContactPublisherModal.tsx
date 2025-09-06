@@ -2,6 +2,7 @@ import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
 
+
   Dialog
   DialogContent
   DialogHeader
@@ -10,10 +11,13 @@ import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
 
+
   Dialog,
   DialogContent,
   DialogHeader,;
   DialogTitle;
+
+
 
 
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
@@ -307,6 +311,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
           aria-modal="true"
 
 
+
+
           aria-labelledby="contact-publisher-title"
         >
           <DialogHeader>
@@ -342,6 +348,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
                 <FormItem>
 
 
+
+
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
                     <Input
@@ -367,6 +375,8 @@ import { LoginModal } from '@/components/auth/LoginModal';
                 <FormItem>
 
 
+
+
                   <FormLabel>Message</FormLabel>
                   <FormControl>
                     <Textarea
@@ -387,6 +397,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
               {isSubmitting ? 'Sending...' : 'Send Message'}
 
 
+
             </Button>
           </form>
         </Form>
@@ -395,12 +406,16 @@ import { LoginModal } from '@/components/auth/LoginModal';
     </Dialog>
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
 
+
+>>>>>>> origin/cursor/fix-website-loading-errors-and-merge-756f
     </>;
   ) </>;
   );
 };
 
+
 <<<<<<< HEAD
+
 
 
 
@@ -469,10 +484,3 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-<<<<<<< HEAD
-
-
-    <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
-    </>) </>);
-}
-;
