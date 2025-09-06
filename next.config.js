@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 <<<<<<< HEAD
+  reactStrictMode: true,
+};
+
+export default nextConfig;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
@@ -186,4 +192,5 @@ export default nextConfig;
 };
 
 module.exports = nextConfig;
+>>>>>>> main
 >>>>>>> main

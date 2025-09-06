@@ -5,6 +5,8 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
     './src/**/*.{js,ts,jsx,tsx,mdx}',
 =======
 <<<<<<< HEAD
@@ -12,15 +14,11 @@ module.exports = {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> main
   ],
   theme: {
     extend: {
       colors: {
-<<<<<<< HEAD
-=======
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -58,6 +56,8 @@ module.exports = {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> main
         'slide-down': 'slideDown 0.5s ease-out',
         'slide-left': 'slideLeft 0.5s ease-out',
@@ -78,6 +78,7 @@ module.exports = {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 >>>>>>> main
+>>>>>>> main
       },
       keyframes: {
         fadeIn: {
@@ -86,6 +87,11 @@ module.exports = {
         },
         slideUp: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },
+<<<<<<< HEAD
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+      },
+=======
           '100%': { transform: 'translateY(0px)', opacity: '1' }
         },
         scaleIn: {
@@ -168,6 +174,7 @@ module.exports = {
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
     },
 >>>>>>> main
   },
@@ -181,9 +188,9 @@ module.exports = {
 =======
     require('@tailwindcss/aspect-ratio'),
   ],
-<<<<<<< HEAD
-}
-=======
 };
+<<<<<<< HEAD
+=======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+>>>>>>> main
 >>>>>>> main
