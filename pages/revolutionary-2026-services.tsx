@@ -319,8 +319,6 @@ function Revolutionary2026ServicesPage() {
     </>;
   );
 
-}
-    </>
   )
             <div className="text-center">;
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">;

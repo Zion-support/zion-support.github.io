@@ -166,7 +166,6 @@ function CertificationsForm() {
     if (confirm('Are you sure you want to delete this certification?')) {;
       await deleteCertification(id);
     }
-
   },
 
 

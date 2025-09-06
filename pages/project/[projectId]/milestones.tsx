@@ -14,10 +14,13 @@ import {
 
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+
   if (typeof window === 'undefined') return 'client';
-  const url = new URL(window.location.href);
-  const r = url.searchParams.get('role');
-  if (r === 'talent' |r === 'admin') return r;
+
+  const url = new URL(window && window.location.href);
+  const r = url && url.searchParams.get('role');
+  if (r === 'talent' || r === 'admin') return r;
+
   return 'client';
 export default function ProjectMilestonesPage() {;
   const router = useRouter();
@@ -52,17 +55,12 @@ export default function ProjectMilestonesPage(req, res) {
   }, []),;
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
-    if (!role) return,;
-    try {
-      const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
-      document.cookie = `x-user-id=${userId}, path=/`,;
-      document.cookie = `x-user-role=${role}, path=/`;
-    } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  }, [role]),;
+    if (!role) return;
+
+
+  }, [role]);
+
+
   useEffect(() => {;
 import MilestoneCard from '../../../components/monetization/MilestoneCard';
 

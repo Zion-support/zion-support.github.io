@@ -728,8 +728,6 @@ export default function AdvancedAIAutomationServices() {
     </Layout>;
 );
 
-}
-    </Layout>
   )
 }
 

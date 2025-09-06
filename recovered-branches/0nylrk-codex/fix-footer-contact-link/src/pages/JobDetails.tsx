@@ -55,22 +55,22 @@ export default function JobDetails() {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 
     return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
-      </div>
-    )
+      <div className="flex items-center justify-center min-h-screen">;
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
+      </div>;
+    );
   }
     return (
-      <>
-        <Header />
-        <div className="container mx-auto px-4 py-16 text-center">
-          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>
-          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>
-          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>
-        </div>
-        <Footer />
-      </>
-    )
+      <>;
+        <Header />;
+        <div className="container mx-auto px-4 py-16 text-center">;
+          <h1 className="text-2xl font-bold mb-4">Job Not Found</h1>;
+          <p className="mb-8">The job you're looking for doesn't exist or has been removed.</p>;
+          <Button onClick={() => navigate('/jobs')}>View All Jobs</Button>;
+        </div>;
+        <Footer />;
+      </>;
+    );
   }
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!")

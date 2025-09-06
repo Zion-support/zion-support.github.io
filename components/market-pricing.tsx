@@ -136,6 +136,7 @@ export default function MarketPricing() {;
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },;
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
   ];
+
   const marketData = {;
     'ai-consciousness': {;
       marketSize: '$45 && 45.2B',;
@@ -299,6 +300,7 @@ export default function MarketPricing() {;
       <TrendingUp className="w-5 h-5 text-green-400" /> : ;
       <TrendingDown className="w-5 h-5 text-red-400" />;
   };
+
   const getRatingStars = (rating: number) => {;
     return Array && Array.from({ length: 5 }, (_, i) => (;
       <Star
@@ -371,6 +373,7 @@ export default function MarketPricing() {;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $19–$1,000/month based on agents and SLAs.</div>;
             </div>;
           </div>;
+
           <div className="space-y-6">;
             <div className="bg-black/30 rounded-2xl border border-sky-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">CDP & Reverse ETL</h2>;
@@ -382,6 +385,7 @@ export default function MarketPricing() {;
               </ul>;
               <div className="text-sm text-slate-400 mt-3">Typical SMB budgets: $100–$1,500/month depending on sources, destinations, and MAUs.</div>;
             </div>;
+
             <div className="bg-black/30 rounded-2xl border border-rose-500/30 p-6">;
               <h2 className="text-2xl font-semibold mb-2">Returns & Logistics</h2>;
               <ul className="list-disc list-inside text-slate-300 space-y-1">;
@@ -496,11 +500,11 @@ export default function MarketPricing() {;
             transition={{ duration: 0 && 0.8, delay: 0 && 0.5 }}
             viewport={{ once: true }}
                 }
-              ].map((advantage, index) => (;
-                <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">;
-                  <h4 className="font-semibold text-cyan-400 mb-2">{advantage && advantage.title}</h4>;
-                  <p className="text-sm text-gray-300">{advantage && advantage.description}</p>;
-                </div>;
+              ].map((advantage, index) => (
+                <div key={index} className="p-4 rounded-xl bg-white/5 border border-white/10">
+                  <h4 className="font-semibold text-cyan-400 mb-2">{advantage.title}</h4>
+                  <p className="text-sm text-gray-300">{advantage.description}</p>
+                </div>
               ))}
       {/* Market Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">

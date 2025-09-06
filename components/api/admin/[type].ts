@@ -10,6 +10,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
     filters
     format: (format as any) |undefined}
+
 }
 function toCsv(rows: any[]): string {
 
@@ -78,6 +79,7 @@ if ( {) {
           const bv = (b as any)[params.sort!];
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
+
         });
       }
       return res.status(200).json({ items: pageItems, total });

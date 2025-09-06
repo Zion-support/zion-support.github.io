@@ -251,17 +251,5 @@ this.logError("Performance measurement failed")
   console.error("� Uncaught "exception": ")
     this.logError("Uncaught exception")
   console.error("� Unhandled "rejection": ")
-<<<<<<< HEAD
     this.logError("Unhandled rejection")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     this.logError("Unhandled rejection")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-    this.logError("Unhandled rejection")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

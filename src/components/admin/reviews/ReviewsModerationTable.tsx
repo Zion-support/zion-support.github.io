@@ -45,8 +45,8 @@ export function ReviewsModerationTable({
         description: `Review has been ${data.status}.`}),
       onRefresh(),
       setViewDetailsOpen(false)
-    },
-    onError: (error: Error) => {
+    }
+    onError: (error: Error,) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
@@ -271,9 +271,7 @@ export function ReviewsModerationTable({
                     <div className="font-medium">
                       {selectedReview.is_anonymous
                     </div>
-                    <Badge variant="outline">
-                      {selectedReview.status}
-                    </Badge>
+                    <Badge variant='outline'>{selectedReview.status}</Badge>
                   </div>
                 </div>
                 <div>{renderStars(selectedReview.rating)}</div>
@@ -291,7 +289,7 @@ export function ReviewsModerationTable({
                       Timeliness: {selectedReview.timeliness_rating}/5
                     </Badge>
                   )}
-                  {selectedReview.would_work_again !== undefined && (
+                  {selectedReview && selectedReview.would_work_again !== undefined && (;
                     <Badge
                     </Badge>
                   )}
@@ -342,8 +340,8 @@ export function ReviewsModerationTable({
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
   reviews.map ( (review) => (<TableRow key= {
-  review.id "
-}> <TableCell> <div className="flex items-center gap-2"> <Avatar className="h-8 w-8"> {
+  review.id ";
+}> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {
   review.reviewer profile?.avatar url ? (<AvatarImage src= {
   review.reviewer profile.avatar url
 }alt= {"
@@ -355,7 +353,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   review.reviewer profile?.display name |" User"
 }</span>)
 }</div> </div> </TableCell> <TableCell> {
-  renderStars (review.rating) "
+  render_stars (review.rating) ";
 }</TableCell> <TableCell> </TableCell> <TableCell> <Badge variant=" outline"> {
   review.status.charAt (0) .toUpperCase () + review.status.slice (1) "
 }</Badge> </TableCell> <TableCell>) : (" None") "

@@ -33,9 +33,9 @@ interface GovernedaiagentsProps {;
 }
 export default function Governedaiagents(): any ({ }: GovernedaiagentsProps) {;
   return (
-    <div>;
-      <h1>Governedaiagents</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Governedaiagents</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

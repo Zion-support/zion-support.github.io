@@ -80,7 +80,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       } else {;
         return dateObj.toLocaleDateString();
       }
-    default: return dateObj && dateObj.toLocaleDateString()
+    default: return dateObj.toLocaleDateString()
   }
 }
 },

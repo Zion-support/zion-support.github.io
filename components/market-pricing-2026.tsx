@@ -589,18 +589,6 @@ export default function MarketPricing2026() {;
                     <div className='flex items-start justify-between mb-4'>
                       <div className='text-4xl'>{service.icon}</div>
                       {service.popular && (
-                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular                >
-                  <div className="bg-gray-800/30 rounded-2xl p-6 border border-gray-700/50 backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
-                    {/* Service Header */}
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="text-4xl">{service.icon}</div>
-                      {service.popular && (
-                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full">
-                          Popular
-                        </span>
-                      )}
-                    </div>
-                        <span className='bg-gradient-to-r from-pink-500 to-purple-600 text-white text-xs px-3 py-1 rounded-full'>                          Popular
 
                           Popular
 

@@ -207,13 +207,13 @@ const AIPoweredITAssetManagement = () => {
 
   ],
   const capabilities = [
-    "Automated asset discovery and inventory",
-    "Real-time health monitoring and alerts",
-    "Predictive maintenance scheduling",
-    "License compliance management",
-    "Security vulnerability assessment",
-    "Asset lifecycle optimization",
-    "Cost allocation and tracking",
+    "Automated asset discovery and inventory"
+    "Real-time health monitoring and alerts"
+    "Predictive maintenance scheduling"
+    "License compliance management"
+    "Security vulnerability assessment"
+    "Asset lifecycle optimization"
+    "Cost allocation and tracking"
     "Integration with existing IT tools"
   ];
   return (

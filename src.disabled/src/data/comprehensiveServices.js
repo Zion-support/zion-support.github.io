@@ -6,7 +6,7 @@ export const comprehensiveServices = [
   id: 6, name: 'Help Desk Support', category: 'Support', description: 'Comprehensive IT help desk and user support services', basePrice: 800, pricingModel: 'monthly', features: [
   '24/7 help desk support', 'Remote troubleshooting', 'User training and guidance', 'Software support', 'Hardware support', 'Account management', 'Password resets', 'Basic troubleshooting'], included: [
   'Unlimited support tickets', 'Phone and email support', 'Remote desktop assistance', 'Knowledge base access', 'Monthly support reports', 'User satisfaction surveys'], notIncluded: [
-  'On-site visits', 'Hardware repairs', 'Software licensing', 'Advanced training'], popular: false, icon: '🎧', responseTime: '2 hours', sla: '95% first-call resolution'} ]; ; export const serviceCategories = [
+  'On-site visits', 'Hardware repairs', 'Software licensing', 'Advanced training'], popular: false, icon: '', responseTime: '2 hours', sla: '95% first-call resolution'} ]; ; export const serviceCategories = [
   {
   {
   name: 'Starter', description: 'Perfect for small businesses', price: 800, features: [

@@ -182,8 +182,8 @@ if ( {) {
       if (failedAttempts >= 2) {;
         suggestEscalation();
       }
-    } finally {;
-      setIsLoading(false);
+    } finally {
+      setIsLoading(false)
     }
   };
   },

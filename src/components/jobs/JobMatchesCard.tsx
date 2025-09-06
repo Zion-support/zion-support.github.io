@@ -91,8 +91,8 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             Applied
           </div>
         ) : match.status === 'declined' ? (
-          <div className="w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md">
-            <XCircle className="h-4 w-4 mr-2" />
+          <div className='w-full flex items-center justify-center p-2 bg-red-50 text-red-700 rounded-md'>
+            <XCircle className='h-4 w-4 mr-2' />
             Declined
           </div>
         ) : (

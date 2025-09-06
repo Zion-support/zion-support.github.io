@@ -18,5 +18,5 @@ import { Link } from 'react-router-dom'
       path: any
         details: 'Starting from $2,800/
       path: any
-    { icon: Rocket, value: any
+    { icon: Rocket, value: any;
     { icon: Star, value: any

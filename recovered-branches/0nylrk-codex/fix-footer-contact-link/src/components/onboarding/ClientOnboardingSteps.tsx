@@ -1,18 +1,18 @@
   const steps: OnboardingStep[] = [
     {
-      id: "post-job"
-      label: "Post your first job"
-      completed: onboardingStatus.jobPosted
-      link: "/post-job"
-      action: "Post Job"
-    }
+      id: "post-job",
+      label: "Post your first job",
+      completed: onboardingStatus.jobPosted,
+      link: "/post-job",
+      action: "Post Job",
+    },
     {
-      id: "invite"
-      label: "Send invitation to talent"
-      completed: onboardingStatus.inviteSent
-      link: "/talent"
-      action: "Find Talent"
-    }
+      id: "invite",
+      label: "Send invitation to talent",
+      completed: onboardingStatus.inviteSent,
+      link: "/talent",
+      action: "Find Talent",
+    },
     {
   
 import React from "react";

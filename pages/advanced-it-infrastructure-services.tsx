@@ -245,6 +245,7 @@ const testimonials = [;
 }
 ],
 export default function AdvancedITInfrastructureServices() {
+
   return (
     <Layout>
       <Head>
@@ -767,8 +768,6 @@ function AdvancedITInfrastructureServices() {
     </Layout>;
 );
 
-}
-    </Layout>
   )
 }
 

@@ -9,29 +9,31 @@ import {;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
-  DialogTitle} from '@/components/ui/dialog',;
+  DialogTitle,;
+} from '@/components/ui/dialog';
 import { User, Mail, MapPin, CreditCard } from 'lucide-react';
-import { isProdDomain } from '@/utils/getStripe',;
+import { isProdDomain } from '@/utils/getStripe';
+
 interface GuestCheckoutModalProps {;
-  open: boolean,;
-  onOpenChange: (open: boolean) => void,;
-  onSubmit: (details: { email: string, address: string }) => void;
-}
-;
-export default function GuestCheckoutModal({;
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+  onSubmit: (details: { email: string; address: string }) => void;
+export default function GuestCheckoutModal(): any ({;
   open,;
   onOpenChange,;
-  onSubmit}: GuestCheckoutModalProps) {;
-  const [email, setEmail] = useState(''),;
-  const [address, setAddress] = useState(''),;
-  const [isSubmitting, setIsSubmitting] = useState(false),;
-  const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
+  onSubmit,;
+}: GuestCheckoutModalProps) {;
+  const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React && React.FormEvent) => {;
+    e && e.preventDefault();
     if (!email || !address) {;
-      alert('Please fill in all required fields'),;
+      alert('Please fill in all required fields');
       return;
     }
-;
+
     setIsSubmitting(true);
     try {;
       onSubmit({ email, address });
@@ -107,7 +109,7 @@ export default function GuestCheckoutModal({;
                 'Processing...'
               ) : (
                 <>
-                  <CreditCard className="h-4 w-4 mr-2" />
+                  <CreditCard className='h-4 w-4 mr-2' />
                   Continue to Payment
                 </>
               )}

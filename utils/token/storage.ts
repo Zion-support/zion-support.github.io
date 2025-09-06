@@ -11,9 +11,9 @@ export interface TokenConfig {
   token_name: string;
   token_symbol: string;
   decimals: number;
-  total_supply: number;
-  issue_rate: number;
-  redeem_rate: number;
+  totalSupply: number;
+  issueRate: number;
+  redeemRate: number;
   minIssueAmount: number;
   maxIssueAmount: number;
 }

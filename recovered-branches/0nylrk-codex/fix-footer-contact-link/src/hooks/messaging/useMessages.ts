@@ -298,5 +298,6 @@ if (throw error) {
     load_messages;
     send_message;
     markAsRead;
+
   }
 }

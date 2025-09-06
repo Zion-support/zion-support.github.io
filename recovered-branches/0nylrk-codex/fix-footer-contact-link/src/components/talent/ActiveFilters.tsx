@@ -43,17 +43,6 @@ interface ActiveFiltersProps {
   experienceRange: [number, number],
   setExperienceRange: (range: [number, number]) => void,
 
-export function ActiveFilters({;
-  selectedSkills;
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
 export function ActiveFilters({
   selectedSkills,
   toggleSkill,

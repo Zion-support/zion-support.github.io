@@ -52,9 +52,8 @@ export interface SearchHighlight {
   after: string;
 }
 export interface FilterOptions {
-  product_types: {
-    label: string,
-    value: string;
+  productTypes: {
+
   }[];
   locations: {
     label: string,

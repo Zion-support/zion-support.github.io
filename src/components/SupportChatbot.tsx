@@ -180,7 +180,7 @@ export function SupportChatbot() {
     } catch (err) {
       logErrorToProduction('Chatbot error:', { data: err })
       // Provide a helpful fallback response instead of generic error
-      const fallbackResponse = null;
+      const fallbackResponse =
         FALLBACK_RESPONSES[
           Math.floor(Math.random() * FALLBACK_RESPONSES.length)
         ] |

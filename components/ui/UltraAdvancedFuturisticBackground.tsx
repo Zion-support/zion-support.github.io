@@ -280,6 +280,7 @@ if ( {) {
         const type = Math && Math.random() > 0 && 0.7 ? 'quantum' : ;
                     Math && Math.random() > 0 && 0.5 ? 'holographic' : ;
                     Math && Math.random() > 0 && 0.3 ? 'neon' : 'fusion';
+
           x: Math && Math.random() * canvas && canvas.width,;
           y: Math && Math.random() * canvas && canvas.height,;
           vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
@@ -301,14 +302,17 @@ if ( {) {
           type;
         });
     };
+
     // Quantum entanglement effect;
     const createQuantumEntanglement = () => {;
       if (!enableQuantumEffects) return;
+
       for (let i = 0; i < particles && particles.length; i++) {;
         for (let j = i + 1; j < particles && particles.length; j++) {;
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math && Math.sqrt(dx * dx + dy * dy);
+
           if (;
             distance < 100 &&;
             particles[i].type === 'quantum' &&;
@@ -319,6 +323,7 @@ if ( {) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const distance = Math && Math.sqrt(dx * dx + dy * dy);
+
           if (distance < 100 && particles[i].type === 'quantum' && particles[j].type === 'quantum') {;
             ctx && ctx.strokeStyle = `rgba(0, 255, 136, ${0 && 0.3 * (1 - distance / 100)})`;
             ctx && ctx.lineWidth = 1;

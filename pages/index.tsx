@@ -411,6 +411,7 @@ origin/main
               </h2>
               </p>
             </motion.div>
+
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>

@@ -331,7 +331,7 @@ const ProductListingCardComponent = ({;
       <div;
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation
-        role="button"
+        role='button'
         tabIndex={-1} // Remove from tab order as parent is focusable
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault()
@@ -532,7 +532,7 @@ const ProductListingCardComponent = ({;
 
                 router.push('/checkout')
               }}
-              disabled={loading}
+              disabled = {loading,}
             >
               Buy Now
             </Button>
@@ -540,7 +540,8 @@ const ProductListingCardComponent = ({;
                 size='sm'
                 variant='outline'
                 onClick={handleRequestQuote}
-                className='border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground'>;
+                className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground";
+              >;
                 Request Quote;
               </Button>;
             )}

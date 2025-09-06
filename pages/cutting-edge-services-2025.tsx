@@ -322,12 +322,6 @@ export default function CuttingEdgeServices2025() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {['StarterProfessionalEnterprise'].map((plan, index) => (
               <motion.div
-                key={plan}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-            className="text-center mb-16";
 
           >;
             <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - purple - 400 to - pink - 600 bg - clip - text text - transparent">;
@@ -434,7 +428,7 @@ export default function CuttingEdgeServices2025() {
               Ready to Experience the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact our team of experts to learn how our cutting-edge services can transform your business 
+
               Contact our team of experts to learn how our cutting-edge services can transform your business
 
 

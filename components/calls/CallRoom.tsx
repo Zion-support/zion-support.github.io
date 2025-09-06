@@ -94,13 +94,16 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   const [room, setRoom] = useState<Room | null>(null);
   const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
+
   const connect = useCallback(async () => {;
     const r = new Room();
+
     r && r.on(RoomEvent && RoomEvent.ParticipantConnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ParticipantDisconnected, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.ActiveSpeakersChanged, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.LocalTrackPublished, () => rebuild());
     r && r.on(RoomEvent && RoomEvent.TrackSubscribed, () => rebuild());
+
     // create local tracks per start mode;
     let localTracks: any[] = [];
     if (startMode === 'video') {;

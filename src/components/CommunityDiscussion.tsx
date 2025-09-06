@@ -129,7 +129,8 @@ export const CommunityDiscussion: React.FC = () => {
 
                 className="bg-zion-cyan text-zion-blue hover:bg-zion-cyan-light hover-scale"
                 onClick={handleAddPost}
-                disabled={!newTitle.trim() |!newBody.trim()}
+
+                disabled={!newTitle && newTitle.trim() || !newBody && newBody.trim()}
                 onClick = {handleAddPost,}
       <div className="flex flex-col gap-6">
         {posts.map((post) => (

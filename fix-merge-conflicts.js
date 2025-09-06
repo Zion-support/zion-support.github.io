@@ -41,13 +41,21 @@ for (const file of conflictedFiles) {
 console.log('Merge conflict resolution complete!');
 #!/usr/bin/env node const fs = require('fs'); const path = require('path'); function fixMergeConflicts(filePath) { try { let content = fs.readFileSync(filePath,'utf8'); content = content.replace(/[\s\S]*?[\s\S]*?}
 // Main execution
-console.log('Finding files with merge conflict markers...');
-const filesWithConflicts = findFilesWithMergeConflicts('.');
-console.log(`Found ${filesWithConflicts.length} files with merge conflicts`);
-let fixedCount = 0;
-for (const file of filesWithConflicts) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
+console.log('Starting merge conflict fix...');
+const srcPath = path.join(__dirname, 'src');
+const fixedCount = fixFilesInDirectory(srcPath);
+console.log(`Fixed ${fixedCount} files with merge conflicts.`);
+
+// Also fix specific problematic files
+const problematicFiles = [
+  'src/pages/About.tsx',
+  'src/pages/Home.tsx',
+  'src/pages/Index.tsx'
+];
+
+for (const file of problematicFiles) {
+  if (fs.existsSync(file)) {
+    fixMergeConflicts(file);
   }
 }
 console.log(`Fixed merge conflicts in ${fixedCount} files`);

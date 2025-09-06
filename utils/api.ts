@@ -7,24 +7,24 @@ interface File extends Blob {
 interface Blob {
   size: number;
   type: string;
-  slice (start?: number, end?: number, content_type?: string): Blob;
+  slice(start?: number, end?: number, contentType?: string): Blob;
 }
 interface FormData {
-  append (name: string, value: string | Blob): void;
-  delete (name: string): void;
-  get (name: string): string | File | null;
-  get_all (name: string): (string | File)[];
-  has (name: string): boolean;
-  set (name: string, value: string | Blob): void;
+  append(name: string, value: string | Blob): void;
+  delete(name: string): void;
+  get(name: string): string | File | null;
+  getAll(name: string): (string | File)[];
+  has(name: string): boolean;
+  set(name: string, value: string | Blob): void;
 }
 interface URLSearchParams {
-  append (name: string, value: string): void;
-  delete (name: string): void;
-  get (name: string): string | null;
-  get_all (name: string): string[];
-  has (name: string): boolean;
-  set (name: string, value: string): void;
-  to_string (): string;
+  append(name: string, value: string): void;
+  delete(name: string): void;
+  get(name: string): string | null;
+  getAll(name: string): string[];
+  has(name: string): boolean;
+  set(name: string, value: string): void;
+  toString(): string;
 }
 type BodyInit = string | Blob | ArrayBuffer | FormData | URLSearchParams;
 interface RequestInit {
@@ -117,7 +117,6 @@ export const apiClient = new ApiClient();
 export type { ApiResponse, RequestOptions };
 ;
 interface ApiResponse<T = unknown> {
-interface ApiResponse < T = unknown> {
   data?: T;
   error?: string;
   success: boolean;

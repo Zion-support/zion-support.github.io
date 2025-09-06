@@ -104,7 +104,6 @@ export function MobileJobPost() {;
     } else if (currentStep === "budget") {;
       setCurrentStep("preview");
     }
-  };
 
   const goToPrevStep = () => {;
     if (currentStep === "requirements") {;

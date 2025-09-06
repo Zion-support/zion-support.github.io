@@ -359,11 +359,13 @@ if ( {) {
             {/* Profile Header */}
             <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
               <CardHeader>;
-                <div className="flex items - center space - x-4">;
-                  <Avatar className="w - 20 h - 20">;
-                    {profile_data.profile_picture_url ? (
-                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
-                      <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
+                <div className="flex items-center space-x-4">;
+                  <Avatar className="w-20 h-20">;
+                    {profileData && profileData.profile_picture_url ? (;
+                      <AvatarImage src={profileData && profileData.profile_picture_url} alt={profileData && profileData.full_name} />;
+                    ) : (;
+                      <AvatarFallback>{profileData && profileData.full_name?.charAt(0)}</AvatarFallback>;
+                    )}
                   </Avatar>;
                   <div>;
                     <CardTitle className="text - 2xl font - bold text - white flex items - center gap - 2">;

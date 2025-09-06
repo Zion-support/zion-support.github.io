@@ -198,15 +198,12 @@ export function SmartContractBuilder({
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle>Smart Contract Builder</DialogTitle>
-          <DialogDescription>
-            Create, customize, and deploy your smart contract or generate a legal draft.</DialogDescription>
         </DialogHeader>
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-4">
-          <div className="flex justify-between items-center mb-4">
-            <TabsList className="grid grid-cols-3"> {/* Added new tab */}
-              <TabsTrigger value="form">1.Details</TabsTrigger>
-              <TabsTrigger value="preview_markdown" disabled={!generatedMarkdownContract}>2.Legal Draft</TabsTrigger>
-              <TabsTrigger value="preview_solidity" disabled={!enableOnChainAgreement && !generatedSolidityContract}>3.On-Chain Contract</TabsTrigger>
+          <div className="flex justify-between items-center">
+            <TabsList className="grid grid-cols-2">
+              <TabsTrigger value="form">Contract Details</TabsTrigger>
+              <TabsTrigger value="preview" disabled={!generatedContract}>Preview</TabsTrigger>
             </TabsList>
             {/* This button seems out of place if it's just for templates, maybe move into "form" tab? */}
             {/* <Button

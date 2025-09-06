@@ -15,7 +15,7 @@ const InputOTP = React.forwardRef<
     containerClassName={cn(
       containerClassName
     )}
-    className={cn("disabled:cursor-not-allowed", className)}
+    className={cn('disabled:cursor-not-allowed', className)}
     {...props}
 
   />;
@@ -86,7 +86,7 @@ const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ ...props }, ref) => (
-  <div ref={ref} role="separator" {...props}>
+  <div ref={ref} role='separator' {...props}>
     <Dot />
   </div>
 ))

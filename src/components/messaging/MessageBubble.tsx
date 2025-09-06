@@ -52,8 +52,6 @@ interface MessageBubbleProps {;
   isUserMessage: boolean;
 }
 
-  message: Message
-  isUserMessage: boolean
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         isUserMessage 
           ? "bg-zion-purple text-white" 

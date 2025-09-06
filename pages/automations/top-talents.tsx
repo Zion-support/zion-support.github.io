@@ -77,10 +77,8 @@ export default TopTalentsPage;
     const raw = fs.readFileSync(p, 'utf8'),
     const data = JSON.parse(raw),
     items = data.items || []
-  } catch {  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
+  } catch {}
+  return { props: { items } }
 }
   return { props: { items }   } catch (error) {
     console.error("Error:", error);

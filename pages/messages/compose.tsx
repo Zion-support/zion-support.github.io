@@ -2,19 +2,6 @@ import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
 
-  const router = useRouter();
-  const {
-    type
-    recipientId
-    recipientName
-    jobId
-    jobTitle
-    talentId
-    talentName
-  } = router.query as Record<string, string>;  const { user, loading } = useCurrentUser();
-import {useRouter} from 'next/router';
-import {useCurrentUser} from '../../hooks/useCurrentUser';
-export default function ComposePage() {;
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage(req, res) {

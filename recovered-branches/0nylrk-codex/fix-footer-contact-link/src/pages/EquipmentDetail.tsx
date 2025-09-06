@@ -24,27 +24,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
 interface EquipmentSpecification {
 
-  name: string
-
-  value: string
 }
-interface EquipmentDetails {
 
-  id: string
-  name: string
-  description: string
-  brand: string
-  category: string
-  subcategory?: string;
-  images: string[]
-  price: number
-  currency: string
-  rating?: number;
-  reviewCount?: number;
-  inStock: boolean
-  expectedShipping?: string;
-  specifications: EquipmentSpecification[]
-  features: string[]
 
 }
 // Sample data - in a real app this would come from an API

@@ -18,4 +18,4 @@ const AiModelDevelopmentChat: NextPage = () => {
   )
 },
 
-export default AiModelDevelopmentChat,
+export default AiModelDevelopmentChat,;

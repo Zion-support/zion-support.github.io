@@ -154,13 +154,13 @@ export function RoleManagement() {
             <TableRow>
               <TableHead>Team Member</TableHead>
               <TableHead>Role</TableHead>
-              <TableHead className="text-center">
-                <div className="flex items-center justify-center gap-1">
+              <TableHead className='text-center'>
+                <div className='flex items-center justify-center gap-1'>
                   View Candidates
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can view candidate profiles and applications
@@ -169,13 +169,13 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className="text-center">
-                <div className="flex items-center justify-center gap-1">
+              <TableHead className='text-center'>
+                <div className='flex items-center justify-center gap-1'>
                   Edit Candidates
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can edit candidate information and status
@@ -184,13 +184,13 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className="text-center">
-                <div className="flex items-center justify-center gap-1">
+              <TableHead className='text-center'>
+                <div className='flex items-center justify-center gap-1'>
                   Create Jobs
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can create and publish job listings
@@ -199,13 +199,13 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className="text-center">
-                <div className="flex items-center justify-center gap-1">
+              <TableHead className='text-center'>
+                <div className='flex items-center justify-center gap-1'>
                   Manage Team
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can add, edit, and remove team members
@@ -214,13 +214,13 @@ export function RoleManagement() {
                   </TooltipProvider>
                 </div>
               </TableHead>
-              <TableHead className="text-center">
-                <div className="flex items-center justify-center gap-1">
+              <TableHead className='text-center'>
+                <div className='flex items-center justify-center gap-1'>
                   Billing Access
                   <TooltipProvider>
                     <Tooltip>
                       <TooltipTrigger>
-                        <InfoIcon className="h-4 w-4 text-muted-foreground" />
+                        <InfoIcon className='h-4 w-4 text-muted-foreground' />
                       </TooltipTrigger>
                       <TooltipContent>
                         Can view and manage billing information
@@ -235,8 +235,8 @@ export function RoleManagement() {
 
 
                 <TableCell>
-                  <div className="font-medium">{member.name}</div>
-                  <div className="text-sm text-muted-foreground">
+                  <div className='font-medium'>{member.name}</div>
+                  <div className='text-sm text-muted-foreground'>
                     {member.email}
                   </div>
                 </TableCell>

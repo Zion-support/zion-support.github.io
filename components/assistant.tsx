@@ -25,6 +25,7 @@ export default function Assistant() {;
     }
   ]);
   const [input, setInput] = useState('');
+
   const faqs: Record<string, string> = useMemo(;
     () => ({;
       'is this role remote':;
@@ -38,6 +39,7 @@ export default function Assistant() {;
   );
     { role: 'assistant', content: `Hi! I am ${brand} Assistant. Ask me about roles, hiring timelines, and more.` }]);
   const [input, setInput] = useState('');
+
   const faqs: Record<string, string> = useMemo(() => ({;
     'is this role remote': 'Many roles support remote or hybrid work. Check the job description for specifics && specifics.how soon do you hire': 'Typical timelines range from 2-4 weeks depending on role and interview availability && availability.what is the interview process': 'Usually: recruiter screen, hiring manager interview, technical/functional round, and final round.'}), []);
   async function handleAsk(): any (question: string) {;
@@ -50,6 +52,7 @@ export default function Assistant() {;
         { role: 'assistant', content: faqs[faq] },;
       ]);
       return;
+
     }
     ]);
   }

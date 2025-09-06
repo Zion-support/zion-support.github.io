@@ -180,9 +180,9 @@ const SignupSchema = Yup.object({;
     )
   }
   return (
-    <AuthLayout>
-      <div className="flex min-h-screen items-center justify-center p-4">
-        <div className="w-full max-w-sm space-y-4">
+    <AuthLayout>;
+      <div className='flex min - h-screen items - center justify - center p - 4'>;
+        <div className='w - full max - w-sm space - y-4'>;
           {isPartnerSignup && (
               <Button
                 type="button"
@@ -418,11 +418,11 @@ if ( {) {
           return;
 }
 } else {
-        // This case might indicate an unexpected response from the API
-        console.error("Registration response did not include session or emailVerificationRequired flag.", resData)
-        form.setError("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." })
-        toast.error("Registration complete, but an unexpected issue occurred. Please try logging in manually.")
-        // Potentially navigate to login or show a more specific error
+        // This case might indicate an unexpected response from the API;
+        console.error ("Registration response did not include session or emailVerificationRequired flag.", res_data);
+        form.set_error ("root", { message: "Registration complete, but an unexpected issue occurred. Please try logging in." });
+        toast.error ("Registration complete, but an unexpected issue occurred. Please try logging in manually.");
+        // Potentially navigate to login or show a more specific error;
         return;
 }
 }

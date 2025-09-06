@@ -33,9 +33,9 @@ interface AiknowledgebaseagentProps {;
 }
 export default function Aiknowledgebaseagent(): any ({ }: AiknowledgebaseagentProps) {;
   return (
-    <div>;
-      <h1>Aiknowledgebaseagent</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Aiknowledgebaseagent</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

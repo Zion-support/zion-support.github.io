@@ -158,20 +158,6 @@ export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {;
     showAuthError,
     clearAllErrors},
 
-  return (
-    <ErrorContext.Provider value={contextValue}>
-      {children}
-    </ErrorContext.Provider>;
-  );
-}
-;
-export function useGlobalErrorHandler(): ErrorContextType {;
-  const context = useContext(ErrorContext),;
-  if (!context) {;
-    throw new Error('useGlobalErrorHandler must be used within a GlobalErrorHandler');
-  }
-  return context;
-}
 
 
 

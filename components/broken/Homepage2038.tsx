@@ -256,6 +256,8 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredAI.map((service, index) => (            >
+              className="text-center mb-20"
+            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Revolutionary AI Services
               </h2>
@@ -608,6 +610,8 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredMicroSaas.map((service, index) => (            >
+              className="text-center mb-20"
+            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
                 Innovative Micro SAAS
               </h2>
@@ -757,6 +761,8 @@ const Homepage2038: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>              {featuredIT.map((service, index) => (            >
+              className="text-center mb-20"
+            >
               <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
                 Advanced IT Infrastructure
               </h2>
@@ -1072,6 +1078,8 @@ const Homepage2038: React.FC = () => {
                 <Link href='/services'>
                   <motion.button
                     className='px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 text-lg'                    whileHover={{ scale: 1.05 }}            >
+              className="space-y-8"
+            >
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Ready to Shape the Future?
               </h2>

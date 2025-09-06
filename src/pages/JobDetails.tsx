@@ -282,8 +282,10 @@ export default function JobDetails() {
 
 
                 {isOwnJob && (
-                  <div className="text-center p-2 bg-muted rounded-md mt-4">
-                    <p className="text-sm text-muted-foreground">This is your job posting</p>
+                  <div className='text-center p-2 bg-muted rounded-md mt-4'>
+                    <p className='text-sm text-muted-foreground'>
+                      This is your job posting
+                    </p>
                   </div>
                 )}
               </CardContent>;
@@ -301,9 +303,9 @@ export default function JobDetails() {
           }}
 
           isOpen={isApplyModalOpen}
-          onClose={() => setIsApplyModalOpen(false)}        />
+          onClose={() => setIsApplyModalOpen(false)}        />;
       )}
-    </>
+    </>;
   );
   return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={';
   () => router.push ('/careers') ;
@@ -312,7 +314,7 @@ export default function JobDetails() {
   jobId |'' ;
 }`) ;
 }`);
-//Added null check for jobId return;
+//Added null check for job_id return;
 }setIsApplyModalOpen (true) ;
 }
 const isOwnJob = user?.id === job.client id;
@@ -333,7 +335,7 @@ const isOwnJob = user?.id === job.client id;
   {;
   />) ;
 }</>) ;
-}'"
+}'";
 }
 }
             client_id: job.client_id}}

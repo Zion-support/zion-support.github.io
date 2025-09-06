@@ -280,6 +280,59 @@ export default function DemosPage() {;
             <Card className='text-center group bg-gray-800/50 border border-gray-700 hover:border-cyan-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl bg-cyan-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>
                 <Play className='w-8 h-8 text-cyan-400' />              </div>
+      <section className="py-24 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.05)_1px,transparent_1px)] bg-[size:50px_50px] opacity-20" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
+              Why Test Our Demos?
+            </h2>
+            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
+              Experience the quality and reliability of our services before integrating them into your applications
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-blue-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Zap className="w-8 h-8 text-blue-400" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
+                Real Performance
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                Test actual API endpoints with real data processing and response times
+              </p>
+            </Card>
+
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-green-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-green-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <CheckCircle className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-green-400 transition-colors duration-300">
+                Full Functionality
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                Experience complete service capabilities, not just mock responses
+              </p>
+            </Card>
+
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-purple-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Code className="w-8 h-8 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-bold mb-4 text-white group-hover:text-purple-400 transition-colors duration-300">
+                API Examples
+              </h3>
+              <p className="text-gray-400 leading-relaxed">
+                See exact request/response formats for easy integration
+              </p>
+            </Card>
+
+            <Card className="text-center group bg-gray-800/50 border border-gray-700 hover:border-orange-500/30 hover:bg-gray-800/80 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-orange-500/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <BarChart3 className="w-8 h-8 text-orange-400" />
+              </div>
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-orange-400 transition-colors duration-300">
                 Detailed Results
               </h3>

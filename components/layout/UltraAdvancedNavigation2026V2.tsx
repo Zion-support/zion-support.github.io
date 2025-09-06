@@ -638,7 +638,7 @@ href={item && item.href}
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-white/10 z-50 lg:hidden'
                       <Link
-                        href={item.href}
+                        href={item && item.href}
                         onClick={() => setIsOpen(false)}
                       >
                         {item.icon}

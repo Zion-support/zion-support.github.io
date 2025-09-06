@@ -88,8 +88,8 @@ export default function ListingDetail() {
 
 
                     {listing.images.map((image, index) => (
-                      <div
-                        key={index}
+                      <div 
+                        key = {index}
                         onClick={() => setSelectedImageIndex(index)}
                         className={cn(
                           index === selectedImageIndex
@@ -265,17 +265,17 @@ export default function ListingDetail() {
                             i < Math.floor(listing.rating!)
                               ? 'text-zion-cyan fill-zion-cyan'
                               : 'text-zion-slate-light'                          )}
-                        />
+                        />;
                       ))}
-                    </div>
-                    <span className='text-sm text-zion-slate-light'>
-                      {listing.rating.toFixed(1)} ({listing.reviewCount}{' '}
+                    </div>;
+                    <span className='text-sm text-zion-slate-light'>;
+                      {listing && listing.rating.toFixed(1)} ({listing && listing.reviewCount}{' '}
                       reviews)                            "h-5 w-5";
-                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                            i < Math && Math.floor(listing && listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light";
                           )}
-                  <div className="flex items-center gap-2 mb-6">
-                    <div className="flex items-center">
-                      {[...Array(5)].map((_, i,) => (
+                  <div className="flex items-center gap-2 mb-6">;
+                    <div className="flex items-center">;
+                      {[...Array(5)].map((_, i,) => (;
                         <Star
                           key = {i,}
                           className = {cn(
@@ -287,7 +287,7 @@ export default function ListingDetail() {
                             "h-5 w-5",
                             i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
                           )}
-                        />;
+                        />
                       ))}
                     </div>
                     <span className="text-sm text-zion-slate-light">
@@ -305,7 +305,6 @@ export default function ListingDetail() {
                       Custom Pricing
                     </div>
                   )}
-                </div>;
 
 
 
@@ -441,6 +440,7 @@ export default function ListingDetail() {
 
 
                 {/* Additional Info */}
+
                 <div className="border-t border-zion-blue-light mt-6 pt-6">
                   <div className="flex justify-between mb-2">
                     <span className="text-zion-slate-light">Listed on</span>

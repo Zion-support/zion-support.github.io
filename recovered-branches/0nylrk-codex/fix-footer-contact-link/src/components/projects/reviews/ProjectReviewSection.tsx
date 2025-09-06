@@ -79,7 +79,7 @@ interface ProjectReviewSectionProps {
       <CardContent>
         {isCompleted ? (
           <div className="space-y-6">
-            {(isClient |isTalent) && (
+            {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
                 {canLeaveReview ? (
                   <div className="bg-muted/20 rounded-lg p-4 text-center">

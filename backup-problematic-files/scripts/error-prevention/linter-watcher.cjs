@@ -16,35 +16,14 @@ class LinterWatcher {}
     // Set up interval for periodic checks;
     this.intervalId = setInterval(() => {}
       this.runLint()}, this.interval);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     
->>>>>>> origin/main
-=======
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     console.log('Linter Watcher started successfully')};
   async runLint() {}
     try {}
       console.log('Running lint check...');
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       const child = spawn('npm', ['run', 'lint'], {})
         "stdio": ['pipe', 'pipe', 'pipe'],
         "cwd": process.cwd();
@@ -57,20 +36,9 @@ class LinterWatcher {}
       child.stderr.on('data', (data) => {}
         errorOutput += data.toString()}
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       child.on('close', (code) => {}
         if ( {})
           console.log('Lint check passed ✓')) {}
@@ -87,35 +55,14 @@ class LinterWatcher {}
   async attemptAutoFix() {}
     try {}
       console.log('Attempting to auto-fix linting issues...');
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       const child = spawn('npm', ['run', '"lint": fix'], {})
         "stdio": 'inherit',
         "cwd": process.cwd();
       };);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       child.on('close', (code) => {}
         if ( {})
           console.log('Auto-fix completed ✓')) {}
@@ -150,17 +97,5 @@ if ( {})
     process.exit(0)}
 });
   watcher.start().catch(console.error)};
-<<<<<<< HEAD
 module.exports = LinterWatcher;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = LinterWatcher;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-module.exports = LinterWatcher;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

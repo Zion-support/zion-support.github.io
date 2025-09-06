@@ -218,13 +218,13 @@ class BuildWatcher {
         "stdio": 'pipe',
         "timeout": 60000, // 1 minute timeout
       });
-      console.log('✅ Type check passed');
+      console.log(' Type check passed');
     } catch (error) {
-      console.log('❌ Type check failed');
+      console.log(' Type check failed');
       throw new Error(`Type check failed: ${error.message}`);
-      console.log('✅ Type check passed');
+      console.log(' Type check passed');
     } catch (error) {
-      console.log('❌ Type check failed');
+      console.log(' Type check failed');
       throw new Error(`Type check "failed": ${error.message}`);
     }
   }
@@ -237,13 +237,13 @@ class BuildWatcher {
         "stdio": 'pipe',
         "timeout": 60000, // 1 minute timeout
       });
-      console.log('✅ Lint check passed');
+      console.log(' Lint check passed');
     } catch (error) {
-      console.log('❌ Lint check failed');
+      console.log(' Lint check failed');
       throw new Error(`Lint check failed: ${error.message}`);
-      console.log('✅ Lint check passed');
+      console.log(' Lint check passed');
     } catch (error) {
-      console.log('❌ Lint check failed');
+      console.log(' Lint check failed');
       throw new Error(`Lint check "failed": ${error.message}`);
     }
   }

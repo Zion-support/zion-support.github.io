@@ -27,7 +27,7 @@ export default function CareersPage() {;
         "Advanced degree in Computer Science, AI, or related field";
         "Expertise in TensorFlow, PyTorch, and deep learning frameworks";
         "Experience with large-scale AI model deployment";
-        "Strong background in machine learning algorithms"
+        "Strong background in machine learning algorithms";
       ];
       benefits: ["Competitive salary", "Equity options", "Health insurance", "Flexible work arrangements"];
     }
@@ -152,7 +152,9 @@ export default function CareersPage() {;
                         <p className="text-white/70">{position && position.department}</p>;
                       </div>;
                     </div>;
+
                     <p className="text-white/80 mb-4">{position && position.description}</p>;
+
                     <div className="flex flex-wrap gap-4 mb-4">;
                       <div className="flex items-center gap-2 text-white/70">;
                         <MapPin className="w-4 h-4" />;
@@ -171,6 +173,7 @@ export default function CareersPage() {;
                         <span>{position && position.salary}</span>;
                       </div>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Requirements</h4>;
                       <ul className="space-y-1">;
@@ -184,6 +187,7 @@ export default function CareersPage() {;
 
                       </ul>;
                     </div>;
+
                     <div className="mb-4">;
                       <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Benefits</h4>;
                       <div className="flex flex-wrap gap-2">;

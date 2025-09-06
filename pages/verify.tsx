@@ -51,6 +51,7 @@
   }
 }
   const labels = getBadgeLabels(profile || undefined),
+
   return (
     <>
       <Head>

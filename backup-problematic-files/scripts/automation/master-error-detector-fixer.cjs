@@ -174,17 +174,5 @@ const { promisify } = require("util")
         await new Promise(resolve => setTimeout(resolve, interval))} catch (error) {  await this.log(` Error in continuous "run": ${error.message  }`, "ERROR")} catch (error) {await this.log(` Error in continuous "run": ${error.message}`, "ERROR"`)
   const continuous = args.includes(`--continuous") || args.includes("-c"`)
   const interval = parseInt(args.find(arg => arg.startsWith("--interval="))?.split("=")
-<<<<<<< HEAD
   console.error(""Error": ")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   console.error(""Error": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-  console.error(""Error": ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

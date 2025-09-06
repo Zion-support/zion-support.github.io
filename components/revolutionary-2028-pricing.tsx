@@ -553,6 +553,8 @@ const service_pricing = [;
               </p>
               <div className='text-3xl font-bold text-green-400'>30%</div>
               <div className='text-purple-300'>Lower than Market</div>            </motion.div>            >
+              className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
+            >
               <Target className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Pricing</h3>
               <p className="text-purple-300 mb-6">
@@ -599,6 +601,8 @@ const service_pricing = [;
               </p>
               <div className='text-3xl font-bold text-blue-400'>100%</div>
               <div className='text-blue-300'>Transparent Pricing</div>            </motion.div>            >
+              className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
+            >
               <Shield className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">No Hidden Costs</h3>
               <p className="text-blue-300 mb-6">
@@ -645,6 +649,8 @@ const service_pricing = [;
               </p>
               <div className='text-3xl font-bold text-pink-400'>5x</div>
               <div className='text-pink-300'>ROI Guarantee</div>            </motion.div>            >
+              className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
+            >
               <Award className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Premium Quality</h3>
               <p className="text-pink-300 mb-6">

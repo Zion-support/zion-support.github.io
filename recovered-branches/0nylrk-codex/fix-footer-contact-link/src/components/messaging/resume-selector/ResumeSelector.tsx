@@ -243,8 +243,11 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {;
     if (selected) {;
       (setSelectedResume(selected), onResumeSelected(selected));
     }
-  };
 
+          variant: "destructive"
+        }),
+        return
+  },;
   // Handle custom file upload;
   const handleFileUpload = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
     if (e && e.target.files && e && e.target.files[0]) {;

@@ -33,9 +33,9 @@ interface PriceintelligenceserviceProps {;
 }
 export default function Priceintelligenceservice(): any ({ }: PriceintelligenceserviceProps) {;
   return (
-    <div>;
-      <h1>Priceintelligenceservice</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Priceintelligenceservice</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

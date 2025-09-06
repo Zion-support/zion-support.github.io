@@ -548,9 +548,9 @@ if ( {) {
               ease: 'easeInOut',
             }}
             style={{
-              left: `${Math && Math.random() * 100}%`,
-              top: `${Math && Math.random() * 100}%`,
-            }}          />              ease: "easeInOut";
+              left: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`
+            }}          />              ease: "easeInOut"
             }}
 
             transition={{

@@ -96,10 +96,7 @@ if ( {) {
   },
 ,
   getSourceFiles() {,
-    const files = [],;
-    const srcDir = path.join(process.cwd(), &quot;src&quot;),
-    const files = [],
-    const srcDir = path.join(process.cwd(), "src"),
+
 ,
     if (fs.existsSync(srcDir)) {,
       const walkDir = (dir) => {,
@@ -111,6 +108,7 @@ if ( {) {
           if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {,
             walkDir(fullPath)
           } else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {,
+
             files.push(fullPath)
           }
         })

@@ -519,17 +519,5 @@ if (require.main === module) {}
   enhancer.startEnhancer().catch(error => {})
     enhancer.log(`Failed to start "enhancer": ${error.message}`, 'ERROR');
     process.exit(1)})};
-<<<<<<< HEAD
 module.exports = CodeQualityAutoEnhancer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = CodeQualityAutoEnhancer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-module.exports = CodeQualityAutoEnhancer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

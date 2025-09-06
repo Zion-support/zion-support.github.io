@@ -447,6 +447,7 @@ function QuantumCybersecurityPage() {
                   </div>;
                   <p className="text-slate-600">{plan && plan.description}</p>;
                 </div>;
+
                 <ul className="space-y-4 mb-8">;
                   {plan && plan.features.map((feature) => (;
                     <li key={feature} className="flex items-center space-x-3">;

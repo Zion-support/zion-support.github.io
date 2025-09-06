@@ -75,7 +75,9 @@ export default function OrdersPage() {
   const { user } = useAuth(),
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id),
 
-  const formatDate = (date: string) => new Date(date).toLocaleDateString(),
+  const getStatusBadge = (status: string,) => {;
+    switch (status) {;
+      case 'in_escrow':;
 
   const getStatusBadge = (status: string) => {
     switch (status) {
@@ -126,9 +128,9 @@ export default function OrdersPage() {
                 <TableCell><Skeleton className="h-4 w-24" /></TableCell>
               </TableRow>
             ))}
-          </TableBody>
-        </Table>
-      ) : orders.length === 0 ? (
+          </TableBody>;
+        </Table>;
+      ) : orders && orders.length === 0 ? (;
         <EmptyState
 
 

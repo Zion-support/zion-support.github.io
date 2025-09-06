@@ -150,7 +150,7 @@ class SecurityScanner {}
       await this.reportSecurityFailure(fixError);,
     }
   }
-  async reportSecurityIssues (vulnerabilities) {}
+  async reportSecurityIssues(vulnerabilities) {}
     const report = {
 
       "timestamp": new Date().toISOString()";
@@ -224,11 +224,9 @@ class SecurityScanner {}
         this.log ('All dependencies are up to date')}',
 
     } catch (error) {}
-      // Check condition
-if ( {) {
-  $2
-}
-    {
+      if ( {
+        // npm outdated returns 1 when there are outdated, packages) {
+     {
         // npm outdated returns 1 when there are outdated packages}
 
 
@@ -238,7 +236,7 @@ if ( {) {
 
     }
   }
-  async update_dependencies () {}
+  async updateDependencies() {}
     try {}
       this.log('Updating dependencies...');',
 
@@ -255,9 +253,9 @@ if ( {) {
     this.isRunning = true;,
     this.log('Security Scanner started');';,
     // Initial security scan;
-    await this && this.runSecurityAudit();
+    await this.runSecurityAudit();
     // Check for dependency updates;
-    await this && this.checkDependencyUpdates();
+    await this.checkDependencyUpdates();
     // Set up interval for regular scans;
     setInterval(async () => {}
 
@@ -288,7 +286,7 @@ scanner.start().catch(error => {}),
 }};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
 ; async runSecurityAudit() {; try {; this.log("Running security audit..."); const output = execSync("npm audit --json", { stdio: 'pipe' }); const auditResult = JSON.parse(output.toString());
-; if (auditResult.vulnerabilities) {; const vulnCount = Object.keys(auditResult.vulnerabilities).length; this.vulnerabilities.push(`${vulnCount} vulnerabilities found`); this.log(`Found ${vulnCount} vulnerabilities`, "WARN")} else {; this.log("✓ No vulnerabilities found")}} catch (error) {; this.log(`Security audit failed: ${error.message}`, "ERROR")}};
+; if (auditResult.vulnerabilities) {; const vulnCount = Object.keys(auditResult.vulnerabilities).length; this.vulnerabilities.push(`${vulnCount} vulnerabilities found`); this.log(`Found ${vulnCount} vulnerabilities`, "WARN")} else {; this.log(" No vulnerabilities found")}} catch (error) {; this.log(`Security audit failed: ${error.message}`, "ERROR")}};
 ; async checkSecrets() {; try {; this.log("Checking for exposed secrets..."); const files = this.getSourceFiles(); let secretCount = 0;
 ; files.forEach(file = > {; const content = fs.readFileSync(file, "utf8"); const secretPatterns = [; /api[_-]?key\s*[: = ]\s*["'][^"']+["']/gi; /secret\s*[: = ]\s*["'][^"']+["']/gi; /password\s*[: = ]\s*["'][^"']+["']/gi; /token\s*[: = ]\s*["'][^"']+["']/gi; ];
 ; secretPatterns.forEach(pattern = > {; if (pattern.test(content)) {; secretCount++}})});
@@ -411,17 +409,24 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
   parseVulnerabilities(output) {}
     const vulnerabilities = {}
   async handleSecurityIssues(vulnerabilities) {
-;    const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;}
-        this.log('Only moderate/low severity vulnerabilities found, reporting...');',
-        await this.reportSecurityIssues(vulnerabilities);,
+    const totalIssues = vulnerabilities.critical + vulnerabilities.high + vulnerabilities.moderate + vulnerabilities.low;
+if (totalIssues > 0) {
+      this.log(`Found ${totalIssues} security vulnerabilities`);
+      // Auto-fix if possible
+      if (vulnerabilities.critical > 0 || vulnerabilities.high > 0) {
+        this.log('Critical or high severity vulnerabilities found, attempting auto-fix...');
+        await this.autoFixSecurityIssues();
+      } else {ursor/migrate-github-actions-to-pm2-and-clean-up-5599
+        this.log('Only moderate/low severity vulnerabilities found, reporting...');
+        await this.reportSecurityIssues(vulnerabilities);
       }
-    } else {}
-      this.log('No security vulnerabilities found');',
+    } else {
+      this.log('No security vulnerabilities found');
     }
   }
-  async autoFixSecurityIssues() {}
-    try {}
-      this.log('Attempting to auto-fix security issues...');',
+  async autoFixSecurityIssues() {
+    try {
+      this.log('Attempting to auto-fix security issues...');
       // Run npm audit fix;
 "cwd": this.projectRoot,
         "encoding": 'utf8',
@@ -438,7 +443,7 @@ ursor/migrate-github-actions-to-pm2-and-clean-up-5599
       await this.reportSecurityFailure(fixError);,
     }
   }
-  async reportSecurityIssues(vulnerabilities) {}
+  async reportSecurityIssues(vulnerabilities) {
     const report = {
 };ursor/migrate-github-actions-to-pm2-and-clean-up-5599
     const reportFile = path.join(this.projectRoot, 'automation/logs/security-issues-report.json');
@@ -488,7 +493,7 @@ if (vulnerabilities.critical > 0) {
     fs.writeFileSync(this.securityReportFile, JSON.stringify(report, null, 2));
 ;    fs.writeFileSync(this.securityReportFile, JSON.stringify(report, null, 2));,
   }
-  async reportSecurityFailure(error) {}
+  async reportSecurityFailure(error) {
     const failureReport = {
 "timestamp": new Date().toISOString(),
       "error": error.message,
@@ -502,9 +507,9 @@ if (vulnerabilities.critical > 0) {
     fs.writeFileSync(failureFile, JSON.stringify(failureReport, null, 2));,
     this.log('Security failure reported');';
   }
-  async checkDependencyUpdates() {}
-    try {}
-      this.log('Checking for dependency updates...');',
+  async checkDependencyUpdates() {
+    try {
+      this.log('Checking for dependency updates...');
       // Check for outdated packages;
         "cwd": this.projectRoot;
         encoding: 'utf8'
@@ -531,17 +536,18 @@ if (vulnerabilities.critical > 0) {
         this.log('All dependencies are up to date')}',
     } catch (error) {}
       if ( {
-        // npm outdated returns 1 when there are outdated, packages) {
+        // npm outdated returns 1 when there are outdated packages) {
      {
-        // npm outdated returns 1 when there are outdated packages}
-        this.log('Outdated dependencies found');',
-        await this.updateDependencies()} else {}
-        this.log(`Dependency check "failed": ${error.message}`)}",
+        // npm outdated returns 1 when there are outdated packages;
+  }
+        this.log('Outdated dependencies found');
+        await this.updateDependencies()} else {
+        this.log(`Dependency check "failed": ${error.message}`)}
     }
   }
-  async updateDependencies() {}
-    try {}
-      this.log('Updating dependencies...');',
+  async updateDependencies() {
+    try {
+      this.log('Updating dependencies...');
       // Update non-breaking dependencies;
         timeout: 300000;,
       });,

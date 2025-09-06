@@ -23,6 +23,7 @@ export default function WhitelabelManager() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("tenants");
   // Check if user has admin role
+  const isAdmin = user?.role === "admin",
 
   // Check if user has admin role;
   const isAdmin = user?.role === "admin";

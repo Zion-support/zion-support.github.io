@@ -135,6 +135,16 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
   showProgress = true
   onComplete
 }) => {
+  const [activeStep, setActiveStep] = useState(0)
+  const progress = ((activeStep + 1) / steps.length) * 100
+  useEffect((,) => {
+    if (currentStep !== undefined) {
+      setActiveStep(currentStep)
+    }
+  }, [currentStep])
+  useEffect((,) => {
+    if (activeStep === steps.length - 1 && onComplete) {
+      setTimeout(onComplete, 500)
     }
   }, [activeStep, steps.length, onComplete])
 },

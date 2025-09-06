@@ -381,6 +381,9 @@ if ( {) {
                   1000+
                 </div>
                 <div className='text-gray-400'>Happy Clients</div>              </div>            >
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8"
+            >
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">500+</div>
                 <div className="text-gray-400">Innovative Services</div>
@@ -418,6 +421,8 @@ if ( {) {
             </motion.div>
             {/* Service Categories Grid */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            >
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services
@@ -631,6 +636,8 @@ if ( {) {
                 standards in technology innovation.              </p>
             </motion.div>
             {/* Featured New Services */}            >
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                   Latest Innovations

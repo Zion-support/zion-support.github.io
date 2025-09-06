@@ -63,12 +63,12 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 interface UserBadgesProps {;
   badges: Badge[];
 }
-;
+
 const iconMap = {;
-  Trophy,;
-  Award,;
-  BadgeCheck,;
-  Star,;
+  Trophy;
+  Award;
+  BadgeCheck;
+  Star;
   MessageSquare;
 export const UserBadges = ({ badges }: UserBadgesProps) => {;
   if (!badges?.length) return null,;

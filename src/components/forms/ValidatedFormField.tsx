@@ -73,7 +73,7 @@ export function ValidatedFormField({
   useEffect((,) => {
     if (!fieldValue |!isTouched) {
       setValidationState('idle')
-      return;
+      return
     }
     if (debounceTimer) {
       clearTimeout(debounceTimer)
@@ -128,86 +128,6 @@ interface ValidationRule {;
   minLength?: number,;
   maxLength?: number,;
   pattern?: RegExp,;
-  custom?: (value: any) => string | null;
-}
-;
-interface ValidatedFormFieldProps {;
-  name: string,;
-  label: string,;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox',;
-  placeholder?: string,;
-  description?: string,;
-  validation?: ValidationRule,;
-  options?: { value: string, label: string }[],;
-  form: any, // React Hook Form control;
-  className?: string,;
-  disabled?: boolean,;
-  showValidIcon?: boolean,;
-  debounceMs?: number;
-}
-;
-export function ValidatedFormField({;
-  name,;
-  label,;
-  type = 'text',;
-  placeholder,;
-  description,;
-  validation = {},;
-  options = [],;
-  form,;
-  className,;
-  disabled = false,;
-  showValidIcon = true,;
-  debounceMs = 300}: ValidatedFormFieldProps) {;
-  const [showPassword, setShowPassword] = useState(false),;
-  const [validationState, setValidationState] = useState<'idle' | 'validating' | 'valid' | 'invalid'>('idle'),;
-  const [debounceTimer, setDebounceTimer] = useState<NodeJS.Timeout | null>(null),;
-  const fieldValue = form.watch(name),;
-  const fieldError = form.formState.errors[name],;
-  const isTouched = form.formState.touchedFields[name],;
-  // Debounced validation;
-  useEffect(() => {;
-    if (!fieldValue || !isTouched) {;
-      setValidationState('idle'),;
-      return;
-    }
-;
-    if (debounceTimer) {;
-      clearTimeout(debounceTimer);
-    }
-;
-    setValidationState('validating'),;
-    const timer = setTimeout(() => {;
-      const error = validateField(fieldValue),;
-      setValidationState(error ? 'invalid' : 'valid');
-    }, debounceMs),;
-    setDebounceTimer(timer),;
-    return () => {;
-      if (timer) clearTimeout(timer);
-    }
-  }, [fieldValue, isTouched, debounceMs]),;
-  const validateField = (value: any): string | null => {;
-    if (validation.required && (!value || (typeof value === 'string' && value.trim() === ''))) {;
-      return `${label} is required`;
-    }
-;
-    if (typeof value === 'string') {;
-      if (validation.minLength && value.length < validation.minLength) {;
-        return `${label} must be at least ${validation.minLength} characters`;
-      }
-;
-      if (validation.maxLength && value.length > validation.maxLength) {;
-        return `${label} must not exceed ${validation.maxLength} characters`;
-      }
-;
-      if (validation.pattern && !validation.pattern.test(value)) {;
-        return `${label} format is invalid`;
-      }
-    }
-;
-    if (validation.custom) {;
-      return validation.custom(value);
-    }
 
     return null
   },
@@ -262,9 +182,7 @@ export function ValidatedFormField({;
 
               {...form.register(name)}
             />
-            <div className="absolute top-2 right-2">
-              {getValidationIcon()}
-            </div>
+            <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
           <div className="relative">
             <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>

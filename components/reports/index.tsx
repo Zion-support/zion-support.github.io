@@ -90,8 +90,6 @@ function ReportsIndex() {
   );
 }
 
-}
-    </div>
   )
         <div className="mt-12 text-center">;
           <Link href="/" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200 transition-colors duration-200">;

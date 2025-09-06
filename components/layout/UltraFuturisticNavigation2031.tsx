@@ -467,6 +467,16 @@ export default function UltraFuturisticNavigation2031() {;
             </motion.div>
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>              {mainNavigation.map((item, index) => (            >
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-20">
+            {/* Logo */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center space-x-3"
+            >
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Rocket className="w-6 h-6 text-white" />
               </div>
@@ -745,7 +755,7 @@ function UltraFuturisticNavigation2031() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   className='relative group'
-                  onMouseEnter={() => setActiveCategory(category && category.title)}
+                  onMouseEnter={() => setActiveCategory(category.title)}
                   onMouseLeave={() => setActiveCategory(null)}
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
@@ -996,6 +1006,7 @@ function UltraFuturisticNavigation2031() {
         )}
       </AnimatePresence>
       {/* Spacer for fixed navigation */}
+
       <div className='h-32 lg:h-40'></div>
     </>
 );      <div className="h-32 lg: h-40"></div>

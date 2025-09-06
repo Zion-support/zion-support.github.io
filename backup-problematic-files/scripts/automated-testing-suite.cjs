@@ -2,20 +2,9 @@
 
 const { execSync } = require('child_process');
 const fs = require('fs');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
 console.log('🧪 Automated Testing Suite');
 console.log('=====');
 
@@ -30,17 +19,7 @@ async function runTests() {
   ];
 
   const results = [];
-<<<<<<< HEAD
-=======
   
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
   for (const test of tests) {
     try {
       console.log(`\n🔍 Running ${test.name}...`);
@@ -63,20 +42,9 @@ async function runTests() {
       failed: results.filter(r => r.status === 'failed').length
     }
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
   fs.writeFileSync('test-results.json', JSON.stringify(report, null, 2));
   
   console.log('\n📊 Test Summary:');
@@ -86,16 +54,5 @@ async function runTests() {
   
   return report;
 }
-<<<<<<< HEAD
-runTests().catch(console.error);
-=======
 
 runTests().catch(console.error);
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

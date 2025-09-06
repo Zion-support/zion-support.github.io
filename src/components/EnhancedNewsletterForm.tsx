@@ -26,6 +26,13 @@
       return
     }
 
+    setIsSubmitting(true),
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: trimmed })}),
+
       const data = await res.json().catch(() => ({})),
 
       if (res.ok) {

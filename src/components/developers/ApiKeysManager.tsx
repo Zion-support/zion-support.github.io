@@ -16,10 +16,10 @@ export function ApiKeysManager() {
     fetchApiKeys()
     await createApiKey(keyName, selectedScopes)
     setShowCreateDialog(false)
-    setKeyName('');
-    setSelectedScopes([]) };
-  const handleRegenerateKey = async (keyId: string) => {;
-    await regenerateApiKey(keyId);
+    setKeyName('')
+    setSelectedScopes([]) }
+  const handleRegenerateKey = async (keyId: string) => {
+    await regenerateApiKey(keyId)
     setShowRegenerateConfirm(null);  useState(() => {
     fetchApiKeys()
   })
@@ -212,22 +212,53 @@ export function ApiKeysManager() {;
     await createApiKey(keyName, selectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
-    setSelectedScopes([])
+    setSelectedScopes([]),
+    setShowCreateDialog(false)
   },
 
-  const handleRegenerateKey = async (keyId: string) => {
+  return (
+    <Card className="bg-zinc-900 border-zinc-800 text-white">
+      <CardHeader>
+        <CardTitle className="text-xl flex items-center">
+          <Key className="mr-2" size={20} /> API Keys
+        </CardTitle>
+        <CardDescription className="text-zinc-400">
+          Create and manage API keys for accessing the Zion APIs.
+        </CardDescription>
+      </CardHeader>
+      
+      <CardContent>
+        <div className="flex justify-between items-center mb-6">
+          <p className="text-sm text-zinc-400">
+            You have {keys.length} API {keys.length === 1 ? 'key' : 'keys'}
+          </p>
+          
+          <Dialog open={showCreateDialog} onOpenChange={setShowCreateDialog}>
+            <DialogTrigger asChild>
+              <Button variant="default">Create New API Key</Button>
+            </DialogTrigger>
+            <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
+              <DialogHeader>
+                <DialogTitle>Create API Key</DialogTitle>
+                <DialogDescription className="text-zinc-400">
+                  Generate a new API key for accessing the Zion APIs.
+                </DialogDescription>
+              </DialogHeader>
+              
+              <div className="space-y-4 py-4">
+                <div className="space-y-2">
+                  <Label htmlFor="key-name">Key Name</Label>
+                  <Input
+                    id="key-name"
+                    value={keyName}
+                    onChange={(e) => setKeyName(e.target.value)}
+                    placeholder="e.g. Production API Key"
+                    className="bg-zinc-800 border-zinc-700"
+                  />
+                </div>
+                
+                <div className="space-y-2">
 
-    await regenerateApiKey(keyId),
-    setShowRegenerateConfirm(null)
-  },
-  
-
-  const handleRevokeKey = async (keyId: string) => {
-
-    await revokeApiKey(keyId),
-    setShowDeleteConfirm(null)
-  }
-  // Scope options
                   <Label>Scopes</Label>
                   <div className="grid gap-2 pt-2">
                     {scopeOptions.map((scope) => (

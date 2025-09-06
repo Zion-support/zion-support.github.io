@@ -3,7 +3,7 @@
 const DialogOverlay = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Overlay>
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Overlay>
->(({ className, ...props }, ref) => (
+></typeof>(({ className, ...props }, ref) => (
   <DialogPrimitive.Overlay
   />
 ))
@@ -19,13 +19,16 @@ const DialogContent = React.forwardRef<
 ));
 DialogOverlay && DialogOverlay.displayName = DialogPrimitive && DialogPrimitive.Overlay.displayName;
 
-const DialogContent = React && React.forwardRef<;
-  React && React.ElementRef<typeof DialogPrimitive && DialogPrimitive.Content>,;
-  React && React.ComponentPropsWithoutRef<typeof DialogPrimitive && DialogPrimitive.C</typeof>ontent>;
->(({ className, children, ...props }, ref) => (;
-  <DialogPortal>;
-    <DialogOverlay />;
-    <DialogPrimitive&& DialogPrimitive.Content
+  />
+))
+DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
+const DialogContent = React.forwardRef<
+  React.ElementRef<typeof DialogPrimitive.Content>
+  React.ComponentPropsWithoutRef<typeof DialogPrimitive.C</typeof>ontent>
+>(({ className, children, ...props }, ref) => (
+  <DialogPortal>
+    <DialogOverlay />
+    <DialogPrimitive.Content
 
 
 
@@ -91,15 +94,6 @@ const DialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-  />);
-DialogFooter.display_name = 'DialogFooter';
-const DialogTitle = React.forward_ref<;
-  React.ElementRef < typeof DialogPrimitive.Title>,
-  React.Comp</typeof > onentPropsWithoutRef < typeof DialogPrimitive.Title>;
->(({ class_name, ...props }, ref) => (
-  <DialogPrimitive.Title;
-
-
 
   />
 ))
@@ -109,6 +103,7 @@ const DialogDescription = React.forwardRef<
   React.C</typeof>omponentPropsWithoutRef<typeof DialogPrimitive.Description>
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
+
   />;
 ));
 DialogTitle.displayName = DialogPrimitive.Title.displayName;

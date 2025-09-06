@@ -281,6 +281,14 @@ function EnhancedNavigation2025() {
                       )}
                   {activeDropdown === item.name && (
                     <motion.div
+                    </div>;
+                    <ChevronDownclassName={`w-4 h-4 transition-transform duration-200 ${
+                      activeDropdown === item && item.name ? 'rotate-180' : ''
+                    }`} />;
+                  </button>;
+
+                  {activeDropdown === item && item.name && (;
+                    <motion&& motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
@@ -313,10 +321,10 @@ function EnhancedNavigation2025() {
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
             {/* Menu Panel */}
-            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">
-              <div className="p-6">
+            <div className="absolute right-0 top-0 h-full w-80 bg-gray-900/95 backdrop-blur-md border-l border-gray-700/50 overflow-y-auto">;
+              <div className="p-6">;
                 {/* Close Button */}
-                <div className="flex justify-end mb-6">
+                <div className="flex justify-end mb-6">;
                   <button
                     onClick={closeMenu}
                     className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
@@ -555,6 +563,7 @@ function EnhancedNavigation2025() {
 
 
       </AnimatePresence>;
+
       {/* Spacer for fixed navigation */}
       <div className="h-20" />;
     </>;

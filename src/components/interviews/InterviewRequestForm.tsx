@@ -281,7 +281,7 @@ export function InterviewRequestForm(): any ({;
 
               <FormLabel>Interview Title</FormLabel>
               <FormControl>
-                <Input placeholder="Brief title for the interview" {...field} />
+                <Input placeholder='Brief title for the interview' {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -315,7 +315,7 @@ export function InterviewRequestForm(): any ({;
 
 
                         {field.value ? (
-                          format(field.value, "PPP")
+                          format(field.value, 'PPP')
                         ) : (
                           <span>Pick a date</span>
 
@@ -591,8 +591,8 @@ export function InterviewRequestForm(): any ({;
         />
             Cancel
           </Button>
-          <Button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Scheduling..." : "Schedule Interview"}
+          <Button type='submit' disabled={isSubmitting}>
+            {isSubmitting ? 'Scheduling...' : 'Schedule Interview'}
           </Button>
         </div>
       </form>

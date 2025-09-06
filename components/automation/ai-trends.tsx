@@ -18,7 +18,9 @@ export type Trend = {
   tags: string[]
 }
 export async function getServerSideProps() {
+
 </div> </div>) ) 
+
  </div> </div>) ) 
 }</div> </div>) import fs from 'fs';
 import path from 'path';

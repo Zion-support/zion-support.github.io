@@ -10,6 +10,7 @@ import useSWR from 'swr';
       (d && d.status === 'Open' || d && d.status === 'Under Review');
   );
   return { hasActiveDispute, isLoading: !data && !error };
+
 export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
@@ -32,7 +33,6 @@ export default function UnderDisputeBadge(): any ({;
 export default function UnderDisputeBadge(): any ({ projectId }: { projectId: string }) {;
   const { hasActiveDispute } = useProjectDisputeStatus(projectId);
   if (!hasActiveDispute) return null;
-
   return (
 
 }

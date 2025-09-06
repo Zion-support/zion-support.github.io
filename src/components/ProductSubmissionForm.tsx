@@ -608,7 +608,8 @@ import {;
 
                   </FormControl>
                   <FormDescription>
-                    Upload a high-quality image of your product (recommended size: 1200x800px)
+                    Upload a high-quality image of your product (recommended
+                    size: 1200x800px)
                   </FormDescription>
                   <FormMessage />
 

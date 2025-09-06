@@ -279,6 +279,6 @@ module.exports = PerformanceOptimizer;
     });
 }
 module.exports = PerformanceOptimizer;
-      console.error('❌ Performance optimization "failed": ', error);
+      console.error(' Performance optimization "failed": ', error);
       process.exit(1)})}
 module.exports = PerformanceOptimizer;

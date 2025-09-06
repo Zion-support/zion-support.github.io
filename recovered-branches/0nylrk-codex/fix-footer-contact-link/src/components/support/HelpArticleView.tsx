@@ -34,13 +34,12 @@ interface HelpArticleViewProps {;
 }
 
 export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-
   const [feedbackGiven, setFeedbackGiven] = useState<
     "helpful" | "not-helpful" | null
   >(null);
 
   // Find the article in all categories
-  let article = null;
+  let article,
   for (const category of HELP_CATEGORIES) {
 export /**
  * HelpArticleView - Function description

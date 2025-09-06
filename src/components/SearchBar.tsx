@@ -60,8 +60,8 @@ export function SearchBar({
 }: SearchBarProps) {  const router = useRouter(); export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = 'Search...' }: SearchBarProps) {
   const router = useRouter()
   const [suggestions, setSuggestions] = useState<SearchSuggestion[]>([])
-  const [focused, setFocused] = useState(false);
-  const [highlightedIndex, setHighlightedIndex] = useState(-1);
+  const [focused, setFocused] = useState(false)
+  const [highlightedIndex, setHighlightedIndex] = useState(-1)
   const listId = 'searchbar-autocomplete-list';  const debounced = useDebounce(value, 150)
   const inputRef = useRef<HTMLInputElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -69,7 +69,7 @@ export function SearchBar({
     if (!debounced) {
       setSuggestions([])
       setHighlightedIndex(-1)
-      return;
+      return
     }
     const controller = new AbortController()
     fetch(`/api/search/suggest?q=${encodeURIComponent(debounced)}`, {
@@ -160,6 +160,7 @@ export function SearchBar({
           autoComplete='search'
           onKeyDown={e => {            if (!focused |suggestions.length === 0) {
           className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
+
 import React, { useState, useEffect, useRef } from 'react',;
 import { useRouter } from 'next/router',;
 import { Search, X } from 'lucide-react';
@@ -232,21 +233,14 @@ interface SearchBarProps {;
                 inputRef.current?.blur()
               }
               // If Enter is pressed and there's a value, navigate with query parameter
-              if (e.key === 'Enter' && value.trim()) {                e.preventDefault(); // Prevent form submission if SearchBar is in a form
-                fireEvent('search', { search_term: value })
-                router.push(`/search?q=${encodeURIComponent(value)}`)
-                setFocused(false)
-                inputRef.current?.blur()
+              if (e.key = == 'Enter' && value.trim()) {
+                e.preventDefault(); // Prevent form submission if SearchBar is in a form
+                fireEvent('search', { search_term: value });
+                router.push(`/search?q=${encodeURIComponent(value)}`);
+                setFocused(false);
+                inputRef && inputRef.current?.blur();
               }
-              return }              // If Enter is pressed and there's a value, navigate with query parameter
-              if (e.key === 'Enter' && value.trim()) {
-                e.preventDefault(), // Prevent form submission if SearchBar is in a form
-                fireEvent('search', { search_term: value })
-                router.push(`/search?q=${encodeURIComponent(value)}`)
-                setFocused(false)
-                inputRef.current?.blur()
-              }
-              return;
+              return
             }
             switch (e.key) {
               case 'ArrowDown':

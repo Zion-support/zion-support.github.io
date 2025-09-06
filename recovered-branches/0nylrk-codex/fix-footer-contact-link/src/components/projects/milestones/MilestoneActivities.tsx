@@ -38,7 +38,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {;
         setActivities(data |[])
 
       } catch (err) {
-        console.error('Error fetching milestone activities:', err)
+        console.error ('Error fetching milestone activities:', err);
       } finally {
       }
     }

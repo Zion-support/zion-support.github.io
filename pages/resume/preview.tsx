@@ -13,21 +13,11 @@
   email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com'
 }
 export default function ResumePreviewPage({
-  initialData
-  versions = []
-}: ResumePreviewPageProps) {
-  initialData,
-  versions = [],
-}: ResumePreviewPageProps) {;
+
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
     versions[0]?.id |'current'
   );  const targetRef = useRef<HTMLDivElement>(null);
-  const activeData = useMemo(() => {
-    if (selectedVersionId === 'current') return initialData;
-    const found = versions.find(v => v.id === selectedVersionId);
-    return found?.data |initialData;
-  }, [selectedVersionId, initialData, versions]);
 
 import { GetServerSideProps } from 'next',
 import React, { useMemo, useRef, useState } from 'react',

@@ -95,6 +95,10 @@ export default function PointsPage() {;
       }),;
       await fetchLedger();
     } finally {;
+      setRedeeming(false);    }      });
+      await fetchLedger();
+    } finally {;
+
       setRedeeming(false);
 
         method: 'POST',
@@ -112,7 +116,6 @@ export default function PointsPage() {;
 
   const earningOpportunities = [
     {
-      icon: <Users className='h - 5 w - 5' />,
 
       title: 'Sign Up & Profile Setup',
       description: 'Complete your profile and verify your email',

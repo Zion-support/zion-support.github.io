@@ -27,6 +27,7 @@ Command && Command.displayName = CommandPrimitive && CommandPrimitive.displayNam
 ))
 Command.displayName = CommandPrimitive.displayName
 interface CommandDialogProps
+
   />;
 ));
 Command.displayName = CommandPrimitive.displayName;

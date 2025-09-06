@@ -1,89 +1,118 @@
-export const metadata = { title: 'AI Marketing Automation | Zion Tech Group' };
+export const metadata = { title: "AI Marketing Automation | Zion Tech Group" };
 
 export default function AIMarketingAutomationPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Marketing Automation Platform</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-6">
+          AI Marketing Automation Platform
+        </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Intelligent marketing automation with AI-powered personalization, predictive analytics, 
-          and automated campaign optimization to maximize ROI and customer engagement.
+          Intelligent marketing automation with AI-powered personalization,
+          predictive analytics, and automated campaign optimization to maximize
+          ROI and customer engagement.
         </p>
       </div>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="AI-Powered Campaigns" 
+        <FeatureCard
+          title="AI-Powered Campaigns"
           features={[
             "Automated email marketing sequences",
             "Social media content generation",
             "Personalized ad targeting",
             "A/B testing optimization",
             "Cross-channel campaign orchestration",
-            "Real-time campaign adjustments"
+            "Real-time campaign adjustments",
           ]}
           icon="📧"
         />
-        <FeatureCard 
-          title="Customer Segmentation" 
+        <FeatureCard
+          title="Customer Segmentation"
           features={[
             "AI-driven customer profiling",
             "Behavioral segmentation",
             "Predictive customer scoring",
             "Dynamic audience creation",
             "Lifecycle stage identification",
-            "Churn prediction & prevention"
+            "Churn prediction & prevention",
           ]}
           icon="🎯"
         />
-        <FeatureCard 
-          title="Analytics & Optimization" 
+        <FeatureCard
+          title="Analytics & Optimization"
           features={[
             "Real-time performance tracking",
             "ROI analysis & attribution",
             "Predictive analytics & forecasting",
             "Automated optimization recommendations",
             "Customer journey mapping",
-            "Competitive intelligence"
+            "Competitive intelligence",
           ]}
           icon="📊"
         />
       </div>
 
       <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Marketing Automation Results</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Marketing Automation Results
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div className="text-center">
             <div className="text-4xl mb-4">📈</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">300% ROI Increase</h3>
-            <p className="text-gray-600">AI optimization boosts marketing returns</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              300% ROI Increase
+            </h3>
+            <p className="text-gray-600">
+              AI optimization boosts marketing returns
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">⚡</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">75% Time Savings</h3>
-            <p className="text-gray-600">Automated workflows reduce manual tasks</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              75% Time Savings
+            </h3>
+            <p className="text-gray-600">
+              Automated workflows reduce manual tasks
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">🎯</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">45% Higher Engagement</h3>
-            <p className="text-gray-600">Personalized content drives better results</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              45% Higher Engagement
+            </h3>
+            <p className="text-gray-600">
+              Personalized content drives better results
+            </p>
           </div>
           <div className="text-center">
             <div className="text-4xl mb-4">💰</div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">50% Cost Reduction</h3>
-            <p className="text-gray-600">Efficient automation reduces ad spend waste</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              50% Cost Reduction
+            </h3>
+            <p className="text-gray-600">
+              Efficient automation reduces ad spend waste
+            </p>
           </div>
         </div>
       </div>
 
       <PricingSection />
-      
+
       <ContactSection />
     </div>
   );
 }
 
-function FeatureCard({ title, features, icon }: { title: string; features: string[]; icon: string }) {
+function FeatureCard({
+  title,
+  features,
+  icon,
+}: {
+  title: string;
+  features: string[];
+  icon: string;
+}) {
   return (
     <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
       <div className="text-4xl mb-4">{icon}</div>
@@ -103,11 +132,13 @@ function FeatureCard({ title, features, icon }: { title: string; features: strin
 function PricingSection() {
   return (
     <div className="mb-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Marketing Automation Pricing</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Marketing Automation Pricing
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <PricingCard 
-          name="Starter Marketing" 
-          price="$149/mo" 
+        <PricingCard
+          name="Starter Marketing"
+          price="$149/mo"
           duration="Up to 10,000 contacts"
           features={[
             "Basic email automation",
@@ -115,13 +146,13 @@ function PricingSection() {
             "Standard templates",
             "Basic analytics",
             "Email support",
-            "Mobile app access"
+            "Mobile app access",
           ]}
           popular={false}
         />
-        <PricingCard 
-          name="Professional Marketing" 
-          price="$399/mo" 
+        <PricingCard
+          name="Professional Marketing"
+          price="$399/mo"
           duration="Up to 50,000 contacts"
           features={[
             "Everything in Starter Marketing",
@@ -130,13 +161,13 @@ function PricingSection() {
             "Multi-channel campaigns",
             "Advanced analytics & reporting",
             "API access & integrations",
-            "Priority support"
+            "Priority support",
           ]}
           popular={true}
         />
-        <PricingCard 
-          name="Enterprise Marketing" 
-          price="$999/mo" 
+        <PricingCard
+          name="Enterprise Marketing"
+          price="$999/mo"
           duration="Unlimited contacts"
           features={[
             "Everything in Professional Marketing",
@@ -145,7 +176,7 @@ function PricingSection() {
             "Dedicated marketing strategist",
             "Custom integrations",
             "White-label options",
-            "24/7 phone support"
+            "24/7 phone support",
           ]}
           popular={false}
         />
@@ -154,18 +185,28 @@ function PricingSection() {
   );
 }
 
-function PricingCard({ name, price, duration, features, popular }: { 
-  name: string; 
-  price: string; 
+function PricingCard({
+  name,
+  price,
+  duration,
+  features,
+  popular,
+}: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
   popular: boolean;
 }) {
   return (
-    <div className={`relative bg-white border-2 rounded-xl p-8 ${popular ? 'border-yellow-500 shadow-lg' : 'border-gray-200'}`}>
+    <div
+      className={`relative bg-white border-2 rounded-xl p-8 ${popular ? "border-yellow-500 shadow-lg" : "border-gray-200"}`}
+    >
       {popular && (
         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-          <span className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
+          <span className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular
+          </span>
         </div>
       )}
       <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
@@ -179,12 +220,12 @@ function PricingCard({ name, price, duration, features, popular }: {
           </li>
         ))}
       </ul>
-      <a 
-        href="tel:+13024640950" 
+      <a
+        href="tel:+13024640950"
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
-          popular 
-            ? 'bg-yellow-600 text-white hover:bg-yellow-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+          popular
+            ? "bg-yellow-600 text-white hover:bg-yellow-700"
+            : "bg-gray-100 text-gray-900 hover:bg-gray-200"
         }`}
       >
         Get Started
@@ -196,9 +237,12 @@ function PricingCard({ name, price, duration, features, popular }: {
 function ContactSection() {
   return (
     <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-xl p-8 text-center">
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Automate Your Marketing?</h3>
+      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+        Ready to Automate Your Marketing?
+      </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Let's discuss your marketing needs and create an AI-powered automation platform that drives growth and engagement.
+        Let's discuss your marketing needs and create an AI-powered automation
+        platform that drives growth and engagement.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

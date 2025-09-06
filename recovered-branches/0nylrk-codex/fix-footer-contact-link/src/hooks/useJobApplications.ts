@@ -67,7 +67,7 @@ export const useJobApplications = (jobId?: string) => {;
 
       toast.error("Failed to fetch applications")
     } finally {
-      setIsLoading(false)
+      setIsLoading (false);
     }
 
   },

@@ -237,6 +237,9 @@ function InnovativeServicesShowcase2025() {
                 99.9%
               </div>
               <div className='text-gray-400'>Uptime</div>            </div>          >
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+          >
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                 {serviceCategories.reduce((total, category) => total + category.services.length, 0)}+
@@ -517,6 +520,8 @@ function InnovativeServicesShowcase2025() {
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -557,6 +562,8 @@ function InnovativeServicesShowcase2025() {
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
+              className="text-center"
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
@@ -587,6 +594,8 @@ function InnovativeServicesShowcase2025() {
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
+              className="text-center"
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
               </div>

@@ -28,14 +28,14 @@ export interface Project {
 export interface Offer {
   id: string;
   createdAtIso: string;
-  client_id: string;
-  talent_slug: string;
+  clientId: string;
+  talentSlug: string;
   startDateIso: string;
-  scope_summary: string;
-  payment_terms: {
+  scopeSummary: string;
+  paymentTerms: {
     type: 'fixed' | 'hourly' | 'milestone';
     amount?: number;
-    hourly_rate?: number;
+    hourlyRate?: number;
     milestones?: Array<{
       title: string;
       amount: number;
@@ -69,13 +69,13 @@ export interface Application {
 }
 export interface Message {
   id: string;
-  conversation_id: string;
-  sender_id: string;
-  recipient_id: string;
+  conversationId: string;
+  senderId: string;
+  recipientId: string;
   body: string;
-  link_url?: string;
+  linkUrl?: string;
   attachmentBase64?: string;
-  attachment_name?: string;
+  attachmentName?: string;
   context?: string;
   sentAtIso: string;
   readAtIso?: string;

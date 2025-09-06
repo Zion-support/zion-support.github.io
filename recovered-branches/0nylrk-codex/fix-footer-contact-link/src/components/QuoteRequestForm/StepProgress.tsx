@@ -2,26 +2,7 @@ interface StepProgressProps {
   currentStep: QuoteRequestSteps
 }
 
-    { id: "service", label: "Service" }
-    { id: "details", label: "Details" }
-    { id: "timeline", label: "Timeline" }
-    { id: "budget", label: "Budget" }
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" },
-    { id: "summary", label: "Summary" };
-  ];
     { id: "summary", label: "Summary" }
-  ];
-  const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex(s => s.id === stepId);
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
-    if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current"
-    return "upcoming"
-  }
-  ],
 
     { id: "summary", label: "Summary" }
 

@@ -14,5 +14,5 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
     await client.query('ROLLBACK'),
     throw err
   } finally {
-    client.release()
+    client.release();
   }}

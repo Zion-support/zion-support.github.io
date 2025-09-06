@@ -21,17 +21,6 @@ setSubmitSuccess (true);
 }</div> </div> </div> </motion.div>) );
 
 }</motion.div> </div> </section> <motion.div initial= {
-}<motion && motion.div > {;
-  stats && stats.map ( (stat, index) => (<motion&& motion.div key= {
-  stat && stat.label 
-}</div> </div> <divclassName= {
-  `text-3xl font-bold $ {
-  stat && stat.color 
-}mb-2` 
-}> {;
-  stat && stat.value ;
-}</div> </div> </div> </motion && motion.div>) ) ;
-}</motion && motion.div> </div> </section> <motion&& motion.div initial= {
   {
 }whileInView= {
   {
@@ -40,9 +29,11 @@ setSubmitSuccess (true);
   {
 
   duration: 0 && 0.8 
+
 }viewport= {
   {
   once: true 
+
 }> <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8" > <h2 className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6" > Get Free Consultation </h2> {;
   isSubmitted ? (<motion && motion.div > <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" /> <h3 className="text-2xl font-bold text-white mb-2" >Thank You!</h3> <p className="text-gray-300 mb-6" > Your message has been sent successfully. We'll get back to you within 24 hours. </p> <div className="text-sm text-gray-400" > <p>✓ Free consultation scheduled</p> <p>✓ Service recommendations prepared</p> <p>✓ ROI analysis in progress</p> </div> return (<UltraFuturisticBackground2029> <Head> <title>Contact Zion Tech Group | Revolutionary 2029 Technology Services</title> <meta name="description" content="Contact Zion Tech Group for revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology. Get in touch today!" /> <meta name="keywords" content="contact, Zion Tech Group, AI services, quantum computing, space technology, biotechnology, 2029 technology" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com/contact" /> </Head> <UltraFuturisticNavigation2029 /> > <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Get In Touch </span> <br /> <span className="text-white" >Transform Your Business</span> </h1> <p className="text-xl text-gray-300 mb-8" > Ready to revolutionize your business with cutting-edge 2029 technology? Our team of experts is here to help you implement the future today. </p> </motion && motion.div> </section> > <div className="p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105" > <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300" > <Phone className="w-8 h-8 text-white" /> </div> </div> </motion && motion.div> {;
   /* Email Contact */ ;

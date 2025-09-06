@@ -63,20 +63,9 @@ function $1() {}
   fs.writeFileSync(f, updated, "utf8');
         changed += 1};
     } catch (e) {}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
   
->>>>>>> origin/main
-=======
-=======
   
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
 } catch (e) {}
   // ignore file-level errors} catch (e) {}
   // ignore file-level errors};
@@ -84,17 +73,5 @@ function $1() {}
   console.log(`Cleaned ${changed} files.`)};
 ;
 if (require.main === module) {}
-<<<<<<< HEAD
   main()};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   main()};
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-  main()};
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

@@ -89,6 +89,8 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {services.map((service, index) => (          >
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Revolutionary Technology Solutions
             </h2>
@@ -573,6 +575,8 @@ function HomePage() {
             <p className='text-xl text-white/70 max-w-3xl mx-auto'>
               Let's discuss your project and explore how our cutting-edge
               technology solutions can transform your business            </p>          >
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>

@@ -66,10 +66,6 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         variant: "destructive"})
       return
     }
-    setIsMatchmaking(true);
-    setHasSearched(true);
-    try {
-      console.log("Starting AI matching with query:", query, "and service type:", serviceType);
 
 
     try {;

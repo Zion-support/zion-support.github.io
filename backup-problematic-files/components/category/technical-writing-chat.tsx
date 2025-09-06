@@ -18,4 +18,4 @@ const TechnicalWritingChat: NextPage = () => {
   )
 },
 
-export default TechnicalWritingChat,
+export default TechnicalWritingChat,;

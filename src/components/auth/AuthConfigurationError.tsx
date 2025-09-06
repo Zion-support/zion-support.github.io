@@ -199,6 +199,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
                     className="text-blue-600 hover:underline inline-flex items-center gap-1"
                   >
                     Visit Auth0 Dashboard <ExternalLink className="w-3 h-3" />
+
                   </Link>
                 </div>
               </li>

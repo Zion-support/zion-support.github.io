@@ -719,6 +719,7 @@ export const getPracticalBusinessSolutions2029ByPriceRange = (min_price: number,
 }
   return practicalBusinessSolutions2029 && practicalBusinessSolutions2029.filter(service => service && service.popular);
 };
+
 export const getPracticalBusinessSolutions2029ByCategory = (
   category: string
 ) => {

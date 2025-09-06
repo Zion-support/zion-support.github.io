@@ -261,13 +261,9 @@ export default function ZionTechGroupPage() {
               </p>
             </div>
                 </div>
-                <h3 className='text-xl font-semibold text-white mb-2'>
-                  Innovation First
-                </h3>
-                <p className='text-gray-300'>
-                  We constantly push the boundaries of what's possible
-                  embracing cutting-edge technologies and unconventional
-                  thinking.
+                <h3 className="text-xl font-semibold text-white mb-2">Innovation First</h3>
+                <p className="text-gray-300">
+                  We constantly push the boundaries of what's possible, embracing cutting-edge technologies and unconventional thinking.
                 </p>
               </div>
 

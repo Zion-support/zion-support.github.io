@@ -22,8 +22,8 @@ export interface Conversation {
   participants: string[];
   lastMessageAtIso: string;
   lastMessageId?: string;
-  is_archived: boolean;
-  is_muted: boolean;
+  isArchived: boolean;
+  isMuted: boolean;
   createdAtIso: string;
   updatedAtIso: string;
   metadata?: {

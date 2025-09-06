@@ -397,7 +397,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               animate={{ opacity: 1, scale: 1 }}
             >
               <Brain className="w-4 h-4 mr-2" />
-              🚀 2029 Revolutionary AI Technology
+               2029 Revolutionary AI Technology
             </motion.div>
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
               className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-purple-500/30 text-purple-300 text-sm font-medium mb-8'>;
@@ -418,6 +418,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
               </span>
               <br />
               <span className='text-white'>Platform</span>            </motion.h1>            >
+              transition={{ duration: 1, delay: 0.3 }}
+              className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            >
               <span className="bg-gradient-to-r from-violet-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 AI Emotional Intelligence
               </span>
@@ -526,6 +529,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
                   $8.2B
                 </div>
                 <div className='text-sm text-gray-400'>Market Size by 2029</div>              </div>            >
+              transition={{ duration: 1, delay: 0.9 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            >
               <div className="text-center">
                 <div className="text-3xl font-bold text-violet-400 mb-2">85%</div>
                 <div className="text-sm text-gray-400">Customer Satisfaction Increase</div>

@@ -1,8 +1,9 @@
         // Filter for confirmed interviews in the future
         const upcoming = interviews
-          .filter(interview => 
-            interview.status === 'confirmed' && 
-            !isPast(parseISO(interview.scheduled_date))
+          .filter(
+            interview =>
+              interview.status === 'confirmed' &&
+              !isPast(parseISO(interview.scheduled_date))
           )
           .sort(;
             (a, b) =>;
@@ -123,9 +124,9 @@ import { Calendar, Clock, Video } from 'lucide-react';
               interviewDate.getTime() > now.getTime(),
             
             return (
-              <div key={interview.id} className="flex items-center gap-3">
-                <Avatar className="h-10 w-10 bg-zion-purple/10">
-                  {interview.client_avatar || interview.talent_avatar ? (
+              <div key={interview.id} className='flex items-center gap-3'>
+                <Avatar className='h-10 w-10 bg-zion-purple/10'>
+                  {interview.client_avatar |interview.talent_avatar ? (
                     <img
                       src={interview.client_avatar || interview.talent_avatar}
                       alt={interview.client_name || interview.talent_name}
@@ -136,7 +137,7 @@ import { Calendar, Clock, Video } from 'lucide-react';
                 </Avatar>
                     </p>
                     {isStartingSoon && (
-                      <span className="text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse">
+                      <span className='text-xs px-1.5 py-0.5 bg-green-600/20 text-green-400 rounded-full animate-pulse'>
                         Soon
                       </span>
         

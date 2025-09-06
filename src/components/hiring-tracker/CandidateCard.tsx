@@ -82,11 +82,11 @@ import { useState } from "react",;
 
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" className="h-8 w-8 p-0">
-                      <MoreVertical className="h-4 w-4" />
+                    <Button variant='ghost' className='h-8 w-8 p-0'>
+                      <MoreVertical className='h-4 w-4' />
                     </Button>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent align="end">
+                  <DropdownMenuContent align='end'>
                     <DropdownMenuItem onClick={() => setShowNotes(!showNotes)}>
                 )}
               {/* Notes Section */}
@@ -110,7 +110,7 @@ import { useState } from "react",;
 
 
                   <Link href={`/messages?talentId=${application.talent_id}`}>
-                    <MessageSquare className="h-3 w-3 mr-1" /> Message
+                    <MessageSquare className='h-3 w-3 mr-1' /> Message
                   </Link>
                 </Button>
 

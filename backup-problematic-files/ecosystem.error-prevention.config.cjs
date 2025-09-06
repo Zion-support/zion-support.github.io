@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
 module.exports = {
   apps: [
     {
@@ -87,28 +71,6 @@ module.exports = {
   ]
 };
 module.exports = { apps: [{ name: "error-prevention-linter","" script: "scripts/error-prevention/linter-watcher.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-linter.log","" out_file: "logs/error-prevention-linter-out.log","" error_file: "logs/error-prevention-linter-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-build-monitor","" script: "scripts/error-prevention/build-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-build.log","" out_file: "logs/error-prevention-build-out.log","" error_file: "logs/error-prevention-build-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-security-audit","" script: "scripts/error-prevention/security-auditor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-security.log","" out_file: "logs/error-prevention-security-out.log","" error_file: "logs/error-prevention-security-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-dependency-monitor","" script: "scripts/error-prevention/dependency-monitor.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-dependency.log","" out_file: "logs/error-prevention-dependency-out.log","" error_file: "logs/error-prevention-dependency-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" }, {"" name: "error-prevention-type-checker","" script: "scripts/error-prevention/type-checker.cjs"," instances: 1," autorestart: true," watch: false,"" max_memory_restart: "1G"," env: {" NODE_ENV: "production" },"" log_file: "logs/error-prevention-type.log","" out_file: "logs/error-prevention-type-out.log","" error_file: "logs/error-prevention-type-error.log","" log_date_format: "YYYY-MM-DD HH:mm:ss Z" } ]};"""
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD:backup-problematic-files/ecosystem.error-prevention.config.cjs
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.config.cjs
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 module.exports = {}
   "apps": [{}]
       name: 'error-prevention-linter',
@@ -186,41 +148,4 @@ module.exports = {}
       "log_date_format": 'YYYY-MM-DD HH:mm:ss Z'
     };
   ];
-<<<<<<< HEAD:backup-problematic-files/ecosystem.error-prevention.config.cjs
-<<<<<<< HEAD
 };
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.config.cjs
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-};
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-};
-<<<<<<< HEAD
-=======
-};
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD:backup-problematic-files/ecosystem.error-prevention.config.cjs
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:ecosystem.error-prevention.config.cjs
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663

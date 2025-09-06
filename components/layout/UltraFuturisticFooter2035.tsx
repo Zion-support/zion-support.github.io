@@ -162,7 +162,16 @@
             background_size: '200px 200px',
           }}
           animate={{
-            background_position: ['0px 0px', '200px 200px'],
+            backgroundPosition: ['0px 0px', '200px 200px']
+          }}
+          transition={{
+            duration: 20
+            repeat: Infinity
+            ease: 'linear',          }}
+
+        />
+      </div>
+      <div className='relative z-10'>            ease: 'linear'
           }}
           transition={{
             duration: 20,

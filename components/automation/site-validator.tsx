@@ -9,10 +9,11 @@ import path from 'path';
 import type { GetStaticProps } from 'next';
 type Broken = { url: string, page: string, status: number },
 interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
+
 type Props = { report: Report | null },
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {;
+  try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
     const raw = fs.readFileSync(file, 'utf8');
     const data = JSON.parse(raw);

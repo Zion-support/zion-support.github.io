@@ -11,6 +11,14 @@ export function buildPrintableHtml(project: BookProject): string {;
 
   const chapterHtml = chapters;
     .map(;
+import type { BookProject } from '../book / book_types',
+export function buildPrintableHtml (project: BookProject): string {
+  const { meta, chapters, visuals } = project,
+  const quotes_html = visuals.quote_callouts;
+    .map ((q) => `<blockquote class="quote"><p>${escape_html (q.text)}</p>${q.attribution ? `<cite>${escape_html (q.attribution)}</cite>` : ''}</blockquote>`);
+    .join ('\n'),
+  const chapter_html = chapters;
+    .map (
       (c) => `;
       <section class="chapter">;
         <h2>${escape_html (c.title)}</h2>;

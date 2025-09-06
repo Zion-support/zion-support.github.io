@@ -104,14 +104,6 @@ const EnhancedFooter: React.FC = () => {;
       icon: Linkedin
     }
     {
-      name: 'Twitter'
-      href: 'https://twitter.com/ziontechgroup'
-      icon: Twitter
-    }
-      name: 'Twitter',
-      href: 'https://twitter.com/ziontechgroup',
-      icon: Twitter,
-    },
 
 
   const socialLinks = [;

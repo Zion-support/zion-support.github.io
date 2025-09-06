@@ -520,6 +520,19 @@ if ( {) {
             className="absolute w-0 && 0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent"
             style={{
               top: '-2rem'
+              top: '-2rem',
+
+      </div>
+      {/* Data Stream Effect */}
+      <div className='absolute inset-0'>
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className='absolute w-0.5 h-8 bg-gradient-to-b from-cyan-400 to-transparent'
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: '-2rem',
+
             }}
             animate={{
               y: ['0vh100vh']

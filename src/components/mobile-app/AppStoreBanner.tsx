@@ -32,9 +32,9 @@
             className="px-4 py-1 bg-zion-cyan text-zion-blue-dark rounded text-sm font-medium"
           >
             View
-          </Link>
+          </a>
           <button
-            onClick={dismissBanner}
+            onClick = {dismissBanner,}
             className="text-gray-400 focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 rounded"
             aria-label="Dismiss banner"
           >

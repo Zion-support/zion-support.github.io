@@ -647,6 +647,7 @@ import React from 'react';
             {productivityTips.map((tip, index) => (
         </div>;
       </section>;
+
       {/* Productivity Tips */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;
@@ -824,22 +825,16 @@ import React from 'react';
             Start with the essentials and build your tech stack strategically.
           </p>
           <div className="flex flex-col sm: flex-row gap-6 justify-center">
-<Button
+            <Button
               href="/micro-saas"
               variant="secondary"
               size="lg"
               className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl"
-            <Button
-              href=&quot;/micro-saas&quot;
-              variant=&quot;secondary&quot;
-              size=&quot;lg&quot;
-              className=&quot;bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl&quot;
-
             >
               Explore Micro SaaS
             </Button>
             <Button
-href="/contact"
+              href="/contact"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-cursor-blue shadow-2xl"

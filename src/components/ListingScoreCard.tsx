@@ -59,6 +59,7 @@ export function ListingScoreCard({
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
+
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -74,6 +75,7 @@ export function ListingScoreCard({
           </Badge>
           {aiScore === undefined || aiScore === null ? (
             <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>
+
           ) : (
             aiScore > 0 && (
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">
@@ -83,7 +85,6 @@ export function ListingScoreCard({
             )
           )}
         </div>
-
 
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
@@ -226,7 +227,7 @@ function ListingScoreCard() {
         </Button>
         
         {author && (
-          <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
+          <div className='flex items-center mt-4 pt-4 border-t border-zion-blue-light'>
             {authorImage && !authorImageError ? (
               <div className="relative h-8 w-8 rounded-full mr-2 overflow-hidden"> {/* Added relative and overflow-hidden */}
                 <Image

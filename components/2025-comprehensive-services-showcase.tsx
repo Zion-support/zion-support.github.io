@@ -310,6 +310,7 @@
                             <span className="text-sm font-medium">Popular</span>;
                           </div>;
                         </div>;
+
                         {/* Price and Features */}
                         <div className="lg:w-1/3">;
                           <div className="text-right mb-4">;
@@ -320,6 +321,7 @@
                               {typeof service && service.price === 'string' ? (service as any).period || '/month' : '/month'}
                             </span>;
                           </div>;
+
                           <div className="mb-4">;
                             <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>;
                             <ul className="space-y-1 text-sm text-gray-600">;
@@ -492,6 +494,7 @@
               We deliver innovative, enterprise-grade solutions that transform businesses and drive growth;
             </p>;
           </div>;
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -506,6 +509,7 @@
                 Cutting-edge AI and machine learning solutions that deliver real business value;
               </p>;
             </motion && motion.div>;
+
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -519,6 +523,7 @@
                 Bank-grade security and compliance for mission-critical business applications;
               </p>;
             </motion && motion.div>;
+
             <motion&& motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -535,6 +540,7 @@
           </div>;
         </div>;
       </section>;
+
       {/* Contact Section */}
       <section className="py-20 bg-gradient-to-r from-blue-900 to-purple-900 text-white">;
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">;
@@ -544,6 +550,7 @@
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">;
             Let's discuss how our innovative services can help you achieve your business goals;
           </p>;
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">;
             <div className="text-center">;
               <Phone className="w-8 h-8 mx-auto mb-4 text-blue-300" />;
@@ -561,6 +568,7 @@
               <p className="text-blue-100">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">;
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"

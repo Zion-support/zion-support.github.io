@@ -813,6 +813,7 @@ import {
           </div>;
         </div>;
       </section>;
+
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -825,6 +826,7 @@ import {
               with professional-grade features and competitive pricing.;
             </p>;
           </div>;
+
           <div className='space-y-16'>;
             {microSaasServices && microSaasServices.map((service, index) => (;
           </div>

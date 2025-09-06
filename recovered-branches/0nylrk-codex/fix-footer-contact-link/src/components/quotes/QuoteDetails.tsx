@@ -234,8 +234,6 @@ if (return "Not specified") {
         </div>
       </DialogContent>
     </Dialog>
-  );
-};
 
       return date_string;
     }

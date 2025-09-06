@@ -10,18 +10,19 @@ const slugify = (text: string): string => {
 }
 const WhitepaperGeneratorPage: React.FC = () => {
     }
-    if (
-      totalPercentage < 100 &&
-      totalPercentage > 0 &&
-      processedDistData.length > 0
-    ) {
-      setError(
-        `Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`
-      )
-    } else if (true) {}
-    ) {
-      setError('Distribution percentages are all zero or invalid.')
-      setIsLoading(false)
+    // Check condition
+if ( {) {
+  $2
+}
+      set_error (
+        `Warning: Total distribution is ${total_percentage}%. Consider adjusting to sum to 100%.`);
+    } else // Check condition
+if (
+    ) {) {
+  $2
+}
+      set_error ('Distribution percentages are all zero or invalid.');
+      setIsLoading (false);
       return;
     }
     try {
@@ -389,10 +390,10 @@ import { Trash2, Download, Share2 } from 'lucide-react';
               size='sm'
         <form onSubmit={e => e.preventDefault()} className='space-y-6'>
           {/* ... (Input fields remain the same) ... */}
-          <div>
-            <label htmlFor='tokenName' className='block text-sm font-medium'>
-              Token Name:
-            </label>
+          <div>;
+            <label htmlFor='tokenName' className='block text-sm font-medium'>;
+              Token Name:;
+            </label>;
             <Input
               id='tokenName'
               value={tokenName}
@@ -438,19 +439,19 @@ import { Trash2, Download, Share2 } from 'lucide-react';
             />
           </div>
           {/* Token Distribution Inputs */}
-          <div className='space-y-3 p-3 border rounded-md'>
-            <h2 className='text-lg font-semibold'>Token Distribution</h2>
-            {distributionData.map(item => (
-              <div key={item.id} className='flex items-center space-x-2'>
+          <div className='space-y-3 p-3 border rounded-md'>;
+            <h2 className='text-lg font-semibold'>Token Distribution</h2>;
+            {distributionData && distributionData.map(item => (;
+              <div key={item && item.id} className='flex items-center space-x-2'>;
                 <Input
                   type='text'
                   placeholder='Category'
-                  value={item.name}
-                  onChange={e =>
-                    handleDistributionChange(item.id, 'name', e.target.value)
+                  value={item && item.name}
+                  onChange={e =>;
+                    handleDistributionChange(item && item.id, 'name', e && e.target.value);
                   }
-                  className='flex-grow'
-                />
+                  className='flex-grow';
+                />;
                 <Input
                   type='number'
                   placeholder='%'
@@ -462,10 +463,10 @@ import { Trash2, Download, Share2 } from 'lucide-react';
                       e.target.value
                     )
                   }
-                  className='w-24'
-                  min='0'
-                  max='100'
-                />
+                  className='w-24';
+                  min='0';
+                  max='100';
+                />;
                 <Button
                   variant='ghost'
                   size='icon'

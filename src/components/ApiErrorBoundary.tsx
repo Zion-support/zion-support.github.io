@@ -66,12 +66,4 @@
       );
     }
 
-
-
-
-},
-  return { handleApiError }
-},
-
-
 };

@@ -56,6 +56,7 @@ import {
       setActiveSection(sectionId);
       setIsMobileMenuOpen(false);    }
   };
+
   const allServices = [      element && element.scrollIntoView({ behavior: 'smooth' }),;
 
       setActiveSection(sectionId);
@@ -63,6 +64,7 @@ import {
     }
 
   };
+
   const allServices = [;
     ...innovativeRealMicroSaasServices2025,;
     ...innovativeAIServicesEnhanced2025,;
@@ -74,6 +76,7 @@ import {
     ...specializedITSolutions2026,;
     ...emergingTechServices2026,;
   ];
+
   const featuredServices = allServices;
     .filter(service => service && service.popular);
 

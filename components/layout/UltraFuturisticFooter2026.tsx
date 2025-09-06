@@ -547,41 +547,21 @@ const resource_links = [;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
-            <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
-              <Users className='w-5 h-5 mr-2 text-purple-400' />;
-              Company;
-            </h4>;
-            <ul className='space-y-2'>;
-              {companyLinks && companyLinks.map((link, index) => (;
-                <li key={index}>;
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>
+              <Users className='w-5 h-5 mr-2 text-purple-400' />
+              Company
+            </h4>
+            <ul className='space-y-2'>
+              {companyLinks.map((link, index) => (
+                <li key={index}>
                   <Link
             </h4>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
                 <li key={index}>
                   <Link
-                    </Link>;
-                  </li>))}
-              </ul>;
-            </motion.div>))}
-        </div>;
-        {/* Additional Links */}
-        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12'>          {/* Company Links */}        <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8 mb - 12">;
-          {/* Company Links */}
-          <motion.div;
-            initial={{ opacity: 0, coordinate_y: 20 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >;
-            <h4 className='text - lg font - semibold text - white mb - 4 flex items - center'>;
-              <Users className='w - 5 h - 5 mr - 2 text - purple - 400' />;
-              Company;
-            </h4>;
-            <ul className='space - y-2'>;
-              {company_links.map ((link, index) => (
-                <li key={index}>;
-                  <Link;
                     href={link.href}
                     className='text - gray - 400 hover:text - cyan - 400 transition - colors duration - 300 text - sm'                  >              Company;
             </h4>;

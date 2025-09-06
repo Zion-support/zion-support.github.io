@@ -25,8 +25,8 @@ import MainLayout from '../components/MainLayout.dynamic';
 describe('MainLayout', () => {
   test('renders without crashing', () => {
     render(<MainLayout />);
-    expect(screen.getByTestId('main-layout')).toBeInTheDocument();
+    expect(screen.getByTestId('mainlayout.dynamic')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
 });

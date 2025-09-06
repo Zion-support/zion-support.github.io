@@ -355,6 +355,14 @@ import { motion } from 'framer-motion';
                 Research Institutions
               </div>
               <div className='text-emerald-400 font-semibold'>Startups</div>            </div>            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="mb-16"
+        >
+          <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 backdrop-blur-sm">
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Trusted by Industry Leaders
+            </h3>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-70">
               <div className="text-cyan-400 font-semibold">Fortune 500 Companies</div>
               <div className="text-blue-400 font-semibold">Government Agencies</div>
               <div className="text-purple-400 font-semibold">Research Institutions</div>
@@ -455,6 +463,7 @@ import { motion } from 'framer-motion';
             className="w-1 h-3 bg-cyan-400 rounded-full mt-2"
   );
 
+}
 
   );
 

@@ -140,6 +140,8 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
               <div>
                 <div className='text-3xl font-bold text-orange-400'>500%+</div>
                 <div className='text-white/60'>Average ROI</div>              </div>        >
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
             Revolutionary Micro SAAS Services 2025
           </h2>
@@ -430,7 +432,9 @@ import { specializedEmergingTechServices } from '../data/specialized-emerging-te
                       <div>
                         <div className='text-lg font-bold text-blue-400'>
                           {service.rating}
+
                     </div>
+
                     {/* Stats */}
                     <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                       <div>

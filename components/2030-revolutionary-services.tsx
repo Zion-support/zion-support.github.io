@@ -394,6 +394,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
               revolutionary 2030 services can transform your business and propel;
               you into the future.;
             </p>;
+
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>;
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'>;
                 Schedule Consultation;
@@ -401,6 +402,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
               <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'>                View Pricing;
               </button>;
             </div>;
+
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
               <div className='flex items-center justify-center space-x-2'>;
                 <Phone className='w-5 h-5 text-cyan-400' />              Ready to Transform Your Business with;
@@ -412,6 +414,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
               Contact our team of technology experts to discuss how our revolutionary 2030 services ;
               can transform your business and propel you into the future.;
             </p>;
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">;
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">;
                 Schedule Consultation;
@@ -420,6 +423,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
                 View Pricing;
               </button>;
             </div>;
+
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>;
               <div className='flex items-center justify-center space-x-2'>;
                 <Phone className='w-5 h-5 text-cyan-400' />;
@@ -445,6 +449,7 @@ import { innovative2030Services } from '../data/2030-innovative-services';
           </motion && motion.div>;
         </div>;
       </section>;
+
       {/* Footer */}
       <UltraFuturisticFooter2030 />;
     </UltraFuturisticBackground2030>;

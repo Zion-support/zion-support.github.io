@@ -78,7 +78,7 @@ export default function TalentProfilePage() {
 
 
   // Handle loading error gracefully
-  useEffect(() => {
+  useEffect((,) => {
     if (error) {
       toast({
         description:
@@ -480,7 +480,7 @@ export default function TalentProfilePage() {;
           <Button
             size="sm"
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick={handleRequestHire}
+            onClick = {handleRequestHire,}
           >
             <Handshake className="mr-2 h-4 w-4" />
             Hire Now

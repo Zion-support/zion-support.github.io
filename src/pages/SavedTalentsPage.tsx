@@ -140,7 +140,7 @@ export default function SavedTalentsPage() {;
     logInfo('Request to hire:', { data: talent });    toast({
       title: 'Hire Request Sent',
       description: `A hire request has been sent to ${talent.full_name}.`,
-    })
+    });
   }
   const handleToggleSave = async (
     talentId: string,

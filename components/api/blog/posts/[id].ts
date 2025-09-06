@@ -25,7 +25,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const updated = { ...posts[idx], ...req && req.body, id };
       posts[idx] = updated;
       writePosts(posts);
-      return res && res.status(200).json(updated);
+      return res.status(200).json(updated);
     }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_posts, write_posts  } from '@/utils / data / blog_store';

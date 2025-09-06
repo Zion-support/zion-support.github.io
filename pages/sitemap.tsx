@@ -205,6 +205,11 @@ import {
     </>;
   );
 }
+
+
+
+
+
 import {
                           </div>;
                         </div>;
@@ -941,6 +946,7 @@ export default function SitemapPage() {;
                     {category.description}
                   </p>                </Link>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -1067,6 +1073,7 @@ export default function SitemapPage() {;
                   </div>
                   <p className='text-white/60 text-xs'>{service.category}</p>                </Link>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -1198,6 +1205,7 @@ export default function SitemapPage() {;
                     {resource.description}
                   </p>                </Link>
               </motion.div>
+
             ))}
           </div>
         </div>
@@ -1331,6 +1339,7 @@ export default function SitemapPage() {;
                     {link.description}
                   </p>                </a>
               </motion.div>
+
             ))}
           </div>
         </div>

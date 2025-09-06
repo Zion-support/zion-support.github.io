@@ -85,8 +85,6 @@ function RoleManagement() {
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.editCandidates}
                   <Switch 
                     checked={member.permissions.editCandidates} 
                     onCheckedChange={(checked) =>
@@ -95,8 +93,6 @@ function RoleManagement() {
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.createJobs}
                   <Switch 
                     checked={member.permissions.createJobs} 
                     onCheckedChange={(checked) =>
@@ -105,8 +101,6 @@ function RoleManagement() {
                   />
                 </TableCell>
                 <TableCell className="text-center">
-                  <Switch
-                    checked={member.permissions.manageTeam}
                   <Switch 
                     checked={member.permissions.manageTeam} 
                     onCheckedChange={(checked) =>

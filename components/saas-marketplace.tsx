@@ -221,6 +221,7 @@ import {
                         </span>;
                       </div>;
                     </div>;
+
                     <div className='flex items-center space-x-4 mb-3 text-sm text-gray-400'>;
                       <span className='px-2 py-1 bg-gray-800 rounded-full'>;
                         {service && service.category}
@@ -228,9 +229,11 @@ import {
                       <span>{service && service.users} users</span>;
                       <span className='text-green-400'>{service && service.pricing}</span>;
                     </div>;
+
                     <p className='text-gray-400 leading-relaxed mb-4'>;
                       {service && service.description}
                     </p>;
+
                     <div className='mb-4'>;
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>;
                         Key Features:;

@@ -32,11 +32,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
     }
 
-    }
-
-  res.setHeader('AllowGET,POST'),
-  return res.status(405).end('Method Not Allowed');
-};
     if (req.method === 'GET') {
       const { status, reason, userEmail, contentType } = req.query as Record<string, string | undefined>;
       const flags = await readAllFlags();

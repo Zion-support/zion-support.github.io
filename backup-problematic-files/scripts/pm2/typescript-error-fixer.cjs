@@ -6,20 +6,9 @@
 const fs = // // require('fs');
 const path = // // require('path');
 const { execSync } = // // require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
 class TypeScriptErrorFixer {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -41,20 +30,9 @@ class TypeScriptErrorFixer {}
       data,
       service: 'typescript-error-fixer'
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     if (level === 'error') {}
       console.error(`[${timestamp}] ERROR: ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] WARN: ${message}`, data)} else if (level === 'info') {`}
@@ -75,20 +53,9 @@ class TypeScriptErrorFixer {}
       this.startContinuousFixing();
       this.setupSignalHandlers();
       this.log('info', 'TypeScript Error Fixer Service started successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       
->>>>>>> origin/main
-=======
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       setInterval(async () => {}
         await this.performTypeScriptFixes()}, this.fixInterval)} catch (error) {}
       this.log('error', 'Failed to start TypeScript Error Fixer Service', error);
@@ -184,20 +151,9 @@ class TypeScriptErrorFixer {}
         fs.writeFileSync(error.file, fixedContent, 'utf8');
         this.fixesApplied++;
         this.fixedFiles.add(error.file);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
         
->>>>>>> origin/main
-=======
-=======
         
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
         this.log('info', `Successfully fixed TypeScript error in: ${error.file}:${error.line}`)} else {`}
         this.fixesSkipped++};
     } catch (error) {}
@@ -226,20 +182,9 @@ class TypeScriptErrorFixer {}
     const nameMatch = error.message.match(/Cannot find name '([^']+)'/);
     if (!nameMatch) return line;
     const undefinedName = nameMatch[1];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     
->>>>>>> origin/main
-=======
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     // Try to find the name in the file;
     const namePattern = new RegExp(`\\b${undefinedName}\\b`, 'g');
     const matches = line.match(namePattern);
@@ -270,20 +215,9 @@ class TypeScriptErrorFixer {}
     const moduleMatch = error.message.match(/Cannot find module '([^']+)'/);
     if (!moduleMatch) return line;
     const moduleName = moduleMatch[1];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     
->>>>>>> origin/main
-=======
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     // Try to fix common module issues;
     if (moduleName.startsWith('@/')) {}
       const fixedModule = moduleName.replace('@/', './src/');
@@ -295,20 +229,9 @@ class TypeScriptErrorFixer {}
     const propertyMatch = error.message.match(/Property '([^']+)' does not exist on type/);
     if (!propertyMatch) return line;
     const propertyName = propertyMatch[1];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     
->>>>>>> origin/main
-=======
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     // Add type assertion;
     if (line.includes('.' + propertyName)) {}
       return line.replace(new RegExp(`\\.${propertyName}`), `['${propertyName}']`)};
@@ -330,20 +253,9 @@ class TypeScriptErrorFixer {}
     const namePattern = new RegExp(`\\b${name}\\b`, 'g');
     let firstUsage = -1;
     let declaration = -1;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     
->>>>>>> origin/main
-=======
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     allLines.forEach((line, index) => {}
       if (namePattern.test(line)) {}
         if (firstUsage === -1) firstUsage = index;
@@ -445,17 +357,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 fixer.start().catch(error => {})
   fixer.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

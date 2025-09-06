@@ -506,6 +506,7 @@ const socialLinks = [;
               </h4>
               </div>;
             </div>;
+
             {/* Social & Certifications */}
             <div className='space-y-6'>;
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>;

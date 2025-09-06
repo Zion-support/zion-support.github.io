@@ -328,15 +328,18 @@
     marketSize: '$45.2B cloud computing market', growthRate: '50% annual growth',
     variant: 'quantum-cloud-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     realImplementation: true, implementationDetails: 'Hybrid quantum-classical cloud infrastructure with quantum processing capabilities and classical cloud services.',
     launchDate: '2024-11-01', customers: 23,
     rating: 4.9,
     reviews: 15
   };
+
   // Autonomous Edge Computing Network
   {
     id: 'autonomous-edge-computing-network', name: 'Autonomous Edge Computing Network',
@@ -361,15 +364,18 @@
     marketSize: '$12.8B edge computing market', growthRate: '45% annual growth',
     variant: 'edge-computing-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     realImplementation: true, implementationDetails: 'Autonomous edge computing network with intelligent optimization and real-time processing capabilities.',
     launchDate: '2024-10-15', customers: 45,
     rating: 4.8,
     reviews: 28
   };
+
   // Zero-Trust Security Architecture
   {
     id: 'zero-trust-security-architecture', name: 'Zero-Trust Security Architecture',
@@ -394,9 +400,11 @@
     marketSize: '$22.5B cybersecurity market', growthRate: '40% annual growth',
     variant: 'zero-trust-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     features: [
       'Continuous identity verificationDevice trust scoringNetwork segmentationBehavioral analysisThreat intelligence integrationAutomated responseCompliance automationSecurity monitoring';
@@ -416,15 +424,18 @@
     marketSize: '$22.5B cybersecurity market', growthRate: '40% annual growth',
     variant: 'zero-trust-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     realImplementation: true, implementationDetails: 'Comprehensive zero-trust security architecture with continuous verification and automated response capabilities.',
     launchDate: '2024-09-20', customers: 78,
     rating: 4.9,
     reviews: 56
   };
+
   // Autonomous Data Center Platform
   {
     id: 'autonomous-data-center-platform', name: 'Autonomous Data Center Platform',
@@ -450,9 +461,11 @@
     marketSize: '$35.8B data center market', growthRate: '35% annual growth',
     variant: 'data-center-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     features: [
       'AI-powered infrastructure managementAutomated capacity planningIntelligent power managementPredictive maintenancePerformance optimizationCost optimizationSecurity automationDisaster recovery';
@@ -472,15 +485,18 @@
     marketSize: '$35.8B data center market', growthRate: '35% annual growth',
     variant: 'data-center-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     realImplementation: true, implementationDetails: 'AI-powered autonomous data center platform with intelligent infrastructure management and optimization capabilities.',
     launchDate: '2024-08-15', customers: 34,
     rating: 4.8,
     reviews: 22
   };
+
   // Quantum Networking Platform
   {
     id: 'quantum-networking-platform', name: 'Quantum Networking Platform',
@@ -506,15 +522,18 @@
     marketSize: '$28.5B networking market', growthRate: '55% annual growth',
     variant: 'quantum-networking-enterprise',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
+    
     },
     realImplementation: true, implementationDetails: 'Quantum networking platform with unbreakable encryption and intelligent network optimization capabilities.',
     launchDate: '2024-07-20', customers: 19,
     rating: 4.9,
     reviews: 12
   };
+
   // New Advanced IT Infrastructure Services for 2025
   {
     id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
@@ -537,6 +556,7 @@
     marketSize: '$45B+ potential market', growthRate: '600%+ annual growth',
     variant: 'quantum-cloud',
     contactInfo: {
+      
   ];    features: [;
       'Multi - cloud orchestration and management_hybrid cloud integration and optimization_intelligent workload placement_cross - cloud resource optimization_unified monitoring and analytics_automated cloud migration_custom cloud workflows_integration with cloud platforms';
       'Advanced cloud analytics_comprehensive cloud management';

@@ -75,8 +75,8 @@ export function buildPressRelease(
   params: {;
     companyName: string;
     date: string;
-    raise_amount?: string;
-    token_name?: string;
+    raiseAmount?: string;
+    tokenName?: string;
     anchors?: string[];
   }
 ): string {

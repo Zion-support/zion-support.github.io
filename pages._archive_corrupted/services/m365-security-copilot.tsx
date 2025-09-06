@@ -33,9 +33,9 @@ interface M365securitycopilotProps {;
 }
 export default function M365securitycopilot(): any ({ }: M365securitycopilotProps) {;
   return (
-    <div>;
-      <h1>M365securitycopilot</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>M365securitycopilot</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

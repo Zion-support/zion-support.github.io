@@ -529,7 +529,6 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
                       />
-                      <span className="text-sm text-white">{post.author.name}</span>
                     </div>
               ))}
             </div>;
@@ -813,10 +812,9 @@ export default function Blog(): any ({ posts: initialPosts = BLOG_POSTS }: BlogP
               <Button;
                 variant="outline";
                 onClick={() => {;
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
+                  setSearchQuery('');
+                  setSelectedCategory('All Categories');                }}
+                className='border-zion-purple text-zion-purple hover:bg-zion-purple/10';
               >;
                 Clear all filters;
               </Button>;

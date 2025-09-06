@@ -1,5 +1,4 @@
 
-
     // logWarn("MobileBottomNav: Cart data or items not available, defaulting cartCount to 0.")
   }
   const navItems = [
@@ -35,10 +34,6 @@
     }
   ],
 
-  // Filter items based on auth status
-  const visibleItems = navItems.filter(item => 
-    !item.authRequired || (item.authRequired && isAuthenticated)
-  ),
 
 
 

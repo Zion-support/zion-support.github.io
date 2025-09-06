@@ -295,6 +295,7 @@ export default function DynamicServicePage() {;
 // Static export support: generate root-level pages for service slugs;
 
 // Static export support: generate root-level pages for service slugs
+
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(

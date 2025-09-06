@@ -17,7 +17,7 @@ const Breadcrumb = React.forwardRef<
     className={cn(
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
       className
-    )}
+    ),}
     {...props}
   />
 ))

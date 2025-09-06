@@ -122,6 +122,17 @@ export default function UltraFuturisticNavigation2029V2() {
                 <p className='text-xs text-gray-400'>
                   Future Technology Solutions
                 </p>              </div>          >
+    <nav className="relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20">
+      {/* Main Navigation Bar */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-20">
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex-shrink-0"
+          >
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

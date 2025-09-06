@@ -373,6 +373,7 @@ interface QuantumHolographicCardProps {;
             whileTap={{ scale: 0 && 0.98 }}>;
             <span className='mr-2'>Get Started</span>;
             <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />;
+
             {/* Button glow effect */}
             <div className='absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-xl blur opacity-0 group-hover:opacity-75 transition-opacity duration-300' />;
           </motion && motion.a>;

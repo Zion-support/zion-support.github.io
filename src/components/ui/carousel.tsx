@@ -8,7 +8,7 @@ type CarouselPlugin = any
 type CarouselProps = {
   opts?: CarouselOptions
   plugins?: CarouselPlugin
-  orientation?: "horizontal" | "vertical"
+  orientation?: &quot;horizontal&quot; | &quot;vertical&quot;
   setApi?: (api: CarouselApi) => void
 }
 type CarouselContextProps = {
@@ -119,7 +119,7 @@ const Carousel = React.forwardRef<
     const [canScrollNext, setCanScrollNext] = React.useState(false)
     const onSelect = React.useCallback((api: CarouselApi) => {
       if (!api) {
-        return;
+        return
       }
       setCanScrollPrev(api.canScrollPrev())
       setCanScrollNext(api.canScrollNext())
@@ -132,10 +132,10 @@ const Carousel = React.forwardRef<
     }, [api])
     const handleKeyDown = React.useCallback(
       (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key === "ArrowLeft") {
+        if (event.key === &quot;ArrowLeft&quot;) {
           event.preventDefault()
           scrollPrev()
-        } else if (event.key === "ArrowRight") {
+        } else if (event.key === &quot;ArrowRight&quot;) {
           event.preventDefault()
           scrollNext()
         }
@@ -200,8 +200,8 @@ const CarouselContent = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel()
   return (
-    <div ref={carouselRef} className="overflow-hidden">
-      <div
+    <div ref={carousel_ref} className=&quot;overflow - hidden & quot;>;
+      <div;
         ref={ref}
         className={cn(
 
@@ -239,7 +239,7 @@ const CarouselItem = React.forwardRef<
         className
       )}
       disabled={!canScrollPrev}
-      onClick={scrollPrev}
+      on_click={scroll_prev}
       {...props}
     >
       <ArrowLeft className="h-4 w-4" />

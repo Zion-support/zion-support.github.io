@@ -63,11 +63,11 @@ export const DownloadSection: React.FC = () => {;
                 Download the Zion app now and take your tech career or hiring needs to the next level. Available on iOS and Android.;
               </p>;
               <AppStoreButtons;
-                className="mb-8";
-                appStoreUrl={appStoreUrl}
-                googlePlayUrl={googlePlayUrl}
-                onAppStoreClick={() => logInfo("App Store button clicked")}
-                onGooglePlayClick={() => logInfo("Google Play button clicked")}
+                className="mb - 8";
+                appStoreUrl = {appStoreUrl, }
+                googlePlayUrl = {googlePlayUrl, }
+                onAppStoreClick = {(, ) => log_info ("App Store button clicked"), }
+                onGooglePlayClick = {() => log_info ("Google Play button clicked"), }
               />;
               <div className="w-36 h-36 flex items-center justify-center bg-white dark:bg-zion-blue rounded-lg">;
                 <QrCodeIcon className="w-full h-full p-2" />;

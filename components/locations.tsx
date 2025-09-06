@@ -53,8 +53,6 @@ export default function LocationsPage() {;
             +1 302 464 0950;
           </a>{" "}
           or email{" "}
-          <a className="text-cyan-400" href="mailto:kleber@ziontechgroup && ziontechgroup.com">;
-            kleber@ziontechgroup && ziontechgroup.com;
 import React from './react';
 import Head from './next / head';
 export default /**

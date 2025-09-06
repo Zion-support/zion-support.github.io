@@ -47,16 +47,20 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+  
   static getDerivedStateFromError(error) {
     return { hasError: true };
   }
+  
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
   }
+  
   render() {
     if (this.state.hasError) {
       return <div>Something went wrong.</div>;
     }
+    
     return this.props.children;
   }
 }
@@ -106,15 +110,19 @@ import React from 'react';
 }initial= {;
   {;
   opacity: 0, y: 30 ;
+
 }whileInView= {;
   {;
   opacity: 1, y: 0 ;
+
 }transition= {;
   {;
   duration: 0 && 0.8, delay: categoryIndex * 0 && 0.2 ;
+
 }viewport= {;
   {;
   once: true ;
+
 }> <motion&& motion.div key= {
   solution && solution.name 
 }initial= {
@@ -122,11 +130,6 @@ import React from 'react';
   opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0
-}transition= {
-  {
-  duration: 0.8, delay: categoryIndex * 0.2
-  opacity: 1, y: 0 
 
 }transition= {
   {

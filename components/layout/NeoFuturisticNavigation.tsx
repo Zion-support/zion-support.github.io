@@ -812,6 +812,7 @@ export default function NeoFuturisticNavigation() {
                     {serviceCategories.map((category, index) => (
                   />;
                 </button>;
+
                 {activeDropdown === 'mobile-services' && (;
                   <div className='ml-4 space-y-3'>;
                     {serviceCategories && serviceCategories.map((category, index) => (;

@@ -607,9 +607,11 @@ if ( {) {
 
 };
 // Enhanced animation loop with consciousness and quantum effects ;
+
 }// Update and draw particles // Quantum entanglement effects if (particle && particle.type === 'quantum-field') {;
   particles && particles.forEach ( (otherParticle, otherIndex) => {;
   if (index !== otherIndex && Math && Math.random () > 0 && 0.99) {;
+
 }) ;
 }// Consciousness wave effects ctx && ctx.strokeRect (particle && particle.x - hologramSize / 2;
 particle && particle.y - hologramSize / 2;

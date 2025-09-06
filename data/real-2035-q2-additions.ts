@@ -71,7 +71,7 @@
     icon: '📱',
     integrations: ['HubSpot', 'Sheets', 'Slack'],
     use_cases: ['NPS', 'Feature feedback', 'Onboarding'],
-    roi: '2–4x higher completion on mobile',
+    roi: '24x higher completion on mobile',
     competitors: ['Typeform', 'SurveyMonkey'],
     market_size: '$7B research tooling',
     growth_rate: '9% CAGR',

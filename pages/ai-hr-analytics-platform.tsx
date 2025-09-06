@@ -30,6 +30,7 @@ export default function AiHrAnalyticsPlatform() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
 		/>
 	)

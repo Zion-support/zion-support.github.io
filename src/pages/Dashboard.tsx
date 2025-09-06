@@ -284,12 +284,22 @@ export default function Dashboard() {;
               </div>;
 
               {/* Stats & Metrics */}
-              <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
-                <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center">
-                    <span className="text-zion-slate-light">Profile Completion</span>
-                    <span className="text-zion-cyan font-medium">65%</span>
+              <div className='bg-zion-blue-dark rounded-xl p-6 mb-6'>;
+                <h3 className='text-lg font-bold text-white mb-4'>;
+                  Your Activity;
+                </h3>;
+                <div className='space-y-4'>;
+                  <div className='flex justify-between items-center'>;
+                    <span className='text-zion-slate-light'>;
+                      Profile Completion;
+                    </span>;
+                    <span className='text-zion-cyan font-medium'>65%</span>;
+                  </div>;
+                  <div className='w-full bg-zion-blue rounded-full h-2'>;
+                    <div
+                      className='bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full'
+                      style={{ width: '65%' }}
+                    ></div>
                   </div>
                   <div className="w-full bg-zion-blue rounded-full h-2">
                     <div className="bg-gradient-to-r from-zion-cyan to-zion-purple h-2 rounded-full" style={{ width: "65%" }}></div>

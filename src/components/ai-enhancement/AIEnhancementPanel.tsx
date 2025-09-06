@@ -93,9 +93,11 @@ export function AIEnhancementPanel({;
         </div>;
 
         {/* Instructions input (optional) */}
-        {showInstructions && (
-          <div className="space-y-2">
-            <label className="text-sm font-medium">Special instructions (optional)</label>
+        {showInstructions && (;
+          <div className='space-y-2'>;
+            <label className='text-sm font-medium'>;
+              Special instructions (optional);
+            </label>;
             <Input
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
@@ -109,12 +111,12 @@ export function AIEnhancementPanel({;
 
           {isEnhancing ? (
             <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+              <Loader2 className='mr-2 h-4 w-4 animate-spin' />
               Enhancing...
             </>
           ) : (
             <>
-              <Sparkles className="mr-2 h-4 w-4" />
+              <Sparkles className='mr-2 h-4 w-4' />
               Generate Enhanced Content
             </>
           )}
@@ -124,9 +126,9 @@ export function AIEnhancementPanel({;
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
                 )}
-              </Button>
-            </div>
-            <div className="relative">
+              </Button>;
+            </div>;
+            <div className='relative'>;
               <Textarea
                 value={generatedContent}
             </div>
@@ -136,9 +138,9 @@ export function AIEnhancementPanel({;
 
 
       {generatedContent && (
-        <CardFooter className="flex justify-between">
+        <CardFooter className='flex justify-between'>
           {onClose && (
-            <Button variant="outline" onClick={onClose}>
+            <Button variant='outline' onClick={onClose}>
               Cancel
             </Button>
 }

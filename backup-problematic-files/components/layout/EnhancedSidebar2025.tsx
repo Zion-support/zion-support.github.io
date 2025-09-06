@@ -228,6 +228,7 @@ const resources = [
 ],
 
 
+
 const supportLinks = [
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },

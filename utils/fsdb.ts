@@ -3,15 +3,8 @@
   }
 }
 
-export function writeJson<T>(filePath: string, data: T): void {
-  try {;
-    const fs = require('fs');
-    const path = require('path');
-    const dir = path.dirname(filePath)
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+  }
+}
 
 }
 ;
@@ -19,6 +12,7 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
+
   } catch (error) {
 // Mock file system database utility;
 export function read_json < T>(file_path: string, default_value: T): T {

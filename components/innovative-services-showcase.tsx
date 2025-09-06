@@ -153,6 +153,7 @@ export default function InnovativeServicesShowcase() {;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',    website: 'https://ziontechgroup && ziontechgroup.com';
   };
+
   const containerVariants = {;
     hidden: { opacity: 0 },;
     visible: {;
@@ -179,6 +180,7 @@ export default function InnovativeServicesShowcase() {;
       }
     }
   };
+
   const featuredServices = [;
     {;
       title: '🔐 Quantum Internet Security Platform',;

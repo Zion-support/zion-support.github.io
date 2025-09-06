@@ -176,72 +176,82 @@ import React from 'react';
             </div>,
           </div>;
         </section>;
-            </div>
-          </div>
-        </section>
-:pages/solutions/digital-transformation.tsx
+            </div>;
+          </div>;
+        </section>;
+:pages/solutions/digital-transformation && transformation.tsx;
         {/* Benefits Section */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <motion.div
+        <section className="py-20 bg-gray-50">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Transformation Benefits
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                See the measurable impact of digital transformation on your business performance.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => {
-                const IconComponent = benefit.icon;
-                
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-12 h-12 mx-auto" />
-                    </div>
-                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit.metric}</div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
-                    <p className="text-gray-600">{benefit.description}</p>
-                  </motion.div>
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                Transformation Benefits;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                See the measurable impact of digital transformation on your business performance.;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+              {benefits && benefits.map((benefit, index) => {;
+                const IconComponent = benefit && benefit.icon;
+                return (
+                  <motion&& motion.div
+                    key={index}
+                    className="bg-white rounded-lg p-6 shadow-lg text-center"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>;
+                    <div className="text-blue-600 mb-4">;
+                      <IconComponent className="w-12 h-12 mx-auto" />;
+                    </div>;
+                    <div className="text-3xl font-bold text-blue-600 mb-2">{benefit && benefit.metric}</div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit && benefit.title}</h3>;
+                    <p className="text-gray-600">{benefit && benefit.description}</p>;
+                  </motion && motion.div>;
                 );
               })}
-            </div>
-          </div>
-        </section>
+            </div>;
+          </div>;
+        </section>;
         {/* Industries Section */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <motion.div
+        <section className="py-20 bg-white">;
+          <div className="container mx-auto px-4">;
+            <motion&& motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Industry Solutions
-              </h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                We have experience transforming businesses across various industries with tailored solutions.
-              </p>
-            </motion.div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => {
-                const IconComponent = industry.icon;
-                
-                  >
-                    <div className="text-blue-600 mb-4">
-                      <IconComponent className="w-8 h-8" />
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">{industry.name}</h3>
-                    <p className="text-gray-600">{industry.description}</p>
-                  </motion.div>
+              transition={{ duration: 0 && 0.8 }}
+              viewport={{ once: true }}>;
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">;
+                Industry Solutions;
+              </h2>;
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">;
+                We have experience transforming businesses across various industries with tailored solutions.;
+              </p>;
+            </motion && motion.div>;
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {industries && industries.map((industry, index) => {;
+                const IconComponent = industry && industry.icon;
+                return (
+                  <motion&& motion.div
+                    key={index}
+                    className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow duration-300"
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
+                    viewport={{ once: true }}>;
+                    <div className="text-blue-600 mb-4">;
+                      <IconComponent className="w-8 h-8" />;
+                    </div>;
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">{industry && industry.name}</h3>;
+                    <p className="text-gray-600">{industry && industry.description}</p>;
+                  </motion && motion.div>;
                 );
               })}
             </div>

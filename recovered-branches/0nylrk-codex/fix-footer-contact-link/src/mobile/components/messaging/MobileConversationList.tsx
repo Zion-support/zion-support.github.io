@@ -78,7 +78,7 @@ export function MobileConversationList({
 }: MobileConversationListProps) {;
   return (
           <div
-            key={conversation.id}
+            key={conversation && conversation.id}
             className={cn(
               activeConversation === conversation.id && "bg-primary/5"
             )}

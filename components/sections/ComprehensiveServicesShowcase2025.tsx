@@ -167,6 +167,7 @@ import { educationElearning2025 } from '../../data/education-elearning-2025';
                   </p>;
                 </div>;
               </div>;
+
               {/* Services Grid */}
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (

@@ -1,33 +1,4 @@
-<<<<<<< HEAD
-const logMessage = `[${timestamp}] ${message}\n`;
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const fs = require('fs');
-const path = require('path');
-const { exec } = require('child_process');
-const { promisify } = require('util');
-const execAsync = promisify(exec);
-class ComprehensiveSyntaxFixer {
-  constructor() {
-    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'syntax-fixer.log');
-    this.fixedFiles = [];
-    this.corruptedFiles = [];
-    this.mergeConflictFiles = [];
-    this.syntaxErrorFiles = [];
-  }
-  log(message) {
-    const timestamp = new Date().toISOString();
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
     const logMessage = `[${timestamp}] ${message}\n`;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     console.log(logMessage.trim());
     fs.appendFileSync(this.logFile, logMessage);
   }
@@ -71,28 +42,10 @@ class ComprehensiveSyntaxFixer {
   fixSyntaxErrors(content) {
     let fixed = content;
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-=======
     fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-=======
     // Fix merge conflicts by keeping the HEAD version
-<<<<<<< HEAD
-    fixed = fixed.replace(/\n([\s\S]*?)\n\n([\s\S]*?)\n    
-=======
-<<<<<<< HEAD
-=======
     fixed = fixed.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n/g, '$1\n');
     
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
     // Fix common syntax patterns
     fixed = fixed.replace(/,\s*"/g, ',\n  "');
     fixed = fixed.replace(/;\s*"/g, ';\n  "');
@@ -231,9 +184,6 @@ class ComprehensiveSyntaxFixer {
         { pattern: /,\s*;/g, replacement: ',' },
         { pattern: /;\s*,/g, replacement: ';' },
         // Fix merge conflict markers
-<<<<<<< HEAD
-        { pattern: /^
-=======
         { pattern: /^<<<<<<< .*$/gm, replacement: '' },
         
         // Fix malformed object literals
@@ -496,23 +446,7 @@ if (require.main === module) {
       process.exit(1);
   }
 }
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');

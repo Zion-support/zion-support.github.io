@@ -155,5 +155,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     trendMonthly: trend,
     regionalComparison,
     tags,
-    gptRecommendation},
+    gptRecommendation},;
   return res.status(200).json(response)}

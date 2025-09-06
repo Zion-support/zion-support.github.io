@@ -496,6 +496,7 @@ export default function SEOAnalyzerToolPage() {;
           </div>;
         </div>;
       </section>;
+
       {/* Demo Analysis Results */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;

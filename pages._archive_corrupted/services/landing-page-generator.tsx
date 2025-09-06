@@ -33,9 +33,9 @@ interface LandingpagegeneratorProps {;
 }
 export default function Landingpagegenerator(): any ({ }: LandingpagegeneratorProps) {;
   return (
-    <div>;
-      <h1>Landingpagegenerator</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Landingpagegenerator</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

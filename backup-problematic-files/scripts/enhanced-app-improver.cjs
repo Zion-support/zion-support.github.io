@@ -102,17 +102,5 @@ module.exports = DeploymentAutomation";"
     console.log("\\n Fixes "Applied":");";    this.fixes.forEach(fix => {);      console.log(" ${fix}");"
       "timestamp": new Date().toISOString(),""improvements": this.improvements,""fixes": this.fixes,""summary": {""totalImprovements": this.improvements.length,""totalFixes": this.fixes.length,,"}
     fs.writeFileSync();      path.join(this.projectRoot, "enhanced-app-improvement-report.json"),";      JSON.stringify(report, null, 2);"
-<<<<<<< HEAD
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-    console.log();      "\\n� Full report saved "to": enhanced-app-improvement-report.json""
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

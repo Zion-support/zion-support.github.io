@@ -61,6 +61,7 @@ export default function CompanyAdmin() {
 
     <main style={{ padding: '2rem', maxWidth: 1100, margin: '0 auto' }}>
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
+
         <h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
           <Link href="/workspace/acme">Go to Workspace</Link>
@@ -345,6 +346,7 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             </th>          </tr>
         <button onClick={add} style={{ padding: '0.5rem 0.75rem' }}>Add</button>
       </div>
+
       <table style={{ width: '100%', borderCollapse: 'collapse' }}>
         <thead>
           <tr>
@@ -353,6 +355,7 @@ function BillingTab(): any ({ invoices }: { invoices: Invoice[] }) {;
             <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Role</th>
             <th style={{ textAlign: 'right', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Actions</th>
           </tr>
+
         </thead>
         <tbody>
           {members.map(m => (
@@ -424,6 +427,7 @@ function UsageTab({ usage, setUsage, seatsUsed }: { usage: Usage, setUsage: (u: 
     <section>
       <h2>Usage limits</h2>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
+
         <label>
           <div>Monthly job posts</div>
           <input type="number" value={monthlyJobPosts} onChange={e => setMonthlyJobPosts(Number(e.target.value))} />

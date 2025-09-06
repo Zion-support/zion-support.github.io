@@ -700,6 +700,17 @@ const Homepage2047: React.FC = () => {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Explore our comprehensive suite of innovative solutions across AI
               quantum computing, IT infrastructure, and emerging technologies            </p>          >
+
+      {/* Services Overview */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Revolutionary Service Categories
             </h2>
@@ -838,6 +849,17 @@ const Homepage2047: React.FC = () => {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
               Discover our most revolutionary and cutting-edge technology
               solutions            </p>          >
+
+      {/* Featured Services Grid */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Featured Innovative Services
             </h2>

@@ -14,5 +14,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(401).json({ error: 'Invalid credentials' })
   }
   const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true }),
-  res.setHeader('Set-Cookie', cookie),
+  res.setHeader('Set-Cookie', cookie),;
   return res.status(200).json({ ok: true })}

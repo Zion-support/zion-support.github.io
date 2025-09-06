@@ -18,4 +18,4 @@ const WebDevelopmentChat: NextPage = () => {
   )
 },
 
-export default WebDevelopmentChat,
+export default WebDevelopmentChat,;

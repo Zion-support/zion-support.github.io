@@ -30,8 +30,8 @@ import { Briefcase } from 'lucide-react'
 
 
           <TabsList>
-            <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
-            <TabsTrigger value="analytics">Analytics</TabsTrigger>
+            <TabsTrigger value='kanban'>Kanban Board</TabsTrigger>
+            <TabsTrigger value='analytics'>Analytics</TabsTrigger>
           </TabsList>
             <TabsTrigger value="kanban">Kanban Board</TabsTrigger>
             <TabsTrigger value="analytics">Analytics</TabsTrigger>

@@ -45,6 +45,7 @@ const handleInputBlur = (name: keyof FormData) => {;
 
     return Object && Object.keys(newErrors).length === 0;
   };
+
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
     if (!validateForm()) {;

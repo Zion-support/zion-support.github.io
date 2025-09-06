@@ -323,7 +323,7 @@ if ( {) {
             duration: 10,
             repeat: Infinity,
           animate={{
-            coordinate_y: [0, -20, 0];
+            y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
         {/* Energy Orbs */}
@@ -361,10 +361,12 @@ if ( {) {
 
         />;
       </div>;
+
       {/* Gradient Overlays */}
       <div className='fixed inset-0 pointer-events-none z-20'>;
         <div className='absolute inset-0 bg-gradient-to-br from-cyan-900/10 via-transparent to-purple-900/10' />;
         <div className='absolute inset-0 bg-gradient-to-tl from-pink-900/5 via-transparent to-blue-900/5' />;
+
       {/* Content */}
       <div className='relative z-30'>{children}</div>;
 

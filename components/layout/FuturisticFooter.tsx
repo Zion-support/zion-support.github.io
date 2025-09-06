@@ -282,8 +282,8 @@ export default function FuturisticFooter() {;
                   <a
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-6 flex items-center">
-              <Shield className="w-5 h-5 text-purple-400 mr-2" />
+            <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
+              <Shield className='w-5 h-5 text-purple-400 mr-2' />
               Contact Us
             </h3>
             <div className="space-y-4">

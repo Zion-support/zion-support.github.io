@@ -358,6 +358,11 @@ const serviceCategories = [
               </motion.p>              >
                 Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
               </motion.p>
+                className="text-gray-400 mb-6 max-w-2xl mx-auto"
+              >
+                Get the latest insights on AI, quantum computing, and emerging technologies delivered to your inbox.
+              </motion.p>
+              
               <motion.div
                 className='text-gray-400 mb-6 max-w-2xl mx-auto'>;
                 Get the latest insights on AI, quantum computing, and emerging;

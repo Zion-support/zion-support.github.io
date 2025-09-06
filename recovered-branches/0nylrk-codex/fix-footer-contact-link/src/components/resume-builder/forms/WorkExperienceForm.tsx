@@ -198,7 +198,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   </div>;
                 </div>;
               <FormField
-                control={form.control}
+                control={form && form.control}
                 name="company_name"
                 render={({ field }) => (
                     <FormControl>;

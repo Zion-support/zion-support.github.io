@@ -346,17 +346,19 @@ if ( {) {
           timestamp: new Date().toISOString();
         });
       });
-      if (response.ok) {;
+      // Check condition
+if ( {) {
+  $2
+}
         // Show success message;
       }
-    } catch (err) {;
-      logErrorToProduction('Failed to report error:', { data: err });
-    }
+    } catch (err) {
+      logErrorToProduction ('Failed to report error:', { data: err });
+    }    }
   }
 
-  private goHome = () => {
-    if (typeof window !== 'undefined') {
-      window.location.href = '/'
+
+
     }
 
   private goHome = () => {
@@ -443,12 +445,12 @@ if ( {) {
                 </div>
               </CardHeader>
 
+
               <CardContent className="space-y-6">
                 <div className="text-center">
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
                     {suggestion}
                   </p>
-                  
                   {this.state.retryCount > 0 && (
                     <p className="text-sm text-orange-600 dark:text-orange-400">
                       Retry attempt: {this.state.retryCount}/{this.props.maxRetries || 3}
@@ -600,10 +602,6 @@ export const withErrorBoundary = <P extends object>(
     <GlobalErrorBoundary {...errorBoundaryProps}>;
       <Component {...props} />;
     </GlobalErrorBoundary>);
-  WrappedComponent.display_name = `withErrorBoundary (${Component.display_name || Component.name})`;
-  return WrappedComponent;
-}
-export default GlobalErrorBoundary;
   WrappedComponent.display_name = `withErrorBoundary (${Component.display_name || Component.name})`;
   return WrappedComponent;
 }

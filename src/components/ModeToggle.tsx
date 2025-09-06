@@ -126,7 +126,6 @@ export function ModeToggle() {
         aria-label="Loading theme toggle"
         className="focus-visible:ring-ring relative text-foreground"
 
-
       >
         <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>

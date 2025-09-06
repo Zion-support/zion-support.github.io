@@ -300,20 +300,9 @@ export class PerformanceMonitor {}
       
       const measure = performance.getEntriesByName(name)[0];
       this.metrics.set(name, measure.duration);
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       
->>>>>>> origin/main
-=======
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       // Log slow operations;
       if ( {})
         console.warn(\`Slow operation "detected": \${name} took \${measure.duration}ms\`)};
@@ -500,17 +489,5 @@ if ( {})
      {}
     const optimizer = new AdvancedAppOptimizer}(;);
     optimizer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = AdvancedAppOptimizer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = AdvancedAppOptimizer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-module.exports = AdvancedAppOptimizer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

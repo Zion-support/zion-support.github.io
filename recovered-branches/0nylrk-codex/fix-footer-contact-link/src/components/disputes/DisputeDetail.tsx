@@ -167,11 +167,11 @@ export function DisputeDetail() {;
     }
     const success = await resolveDispute(disputeId, resolution);
     if (success && dispute) {;
-      setDispute({ ;
-        ...dispute, ;
-        status: "resolved", ;
-        resolution_summary: resolution && resolution.summary,;
-        resolution_type: resolution && resolution.resolution_type,;
+      setDispute({;
+        ...dispute,;
+        status: "resolved",;
+        resolution_summary: resolution.summary,;
+        resolution_type: resolution.resolution_type,;
         resolved_at: new Date().toISOString();
       });
     }
@@ -180,15 +180,15 @@ export function DisputeDetail() {;
     if (!disputeId || !message && message.trim()) return;
     setIsSending(true);
     try {;
-      const success = await addDisputeMessage(disputeId, message, isAdmin);
+      const success = await addDisputeMessage(disputeId, message, isAdmin),;
       if (success) {;
         // Refresh messages;
-        const updatedMessages = await getDisputeMessages(disputeId);
-        setMessages(updatedMessages);
+        const updatedMessages = await getDisputeMessages(disputeId),;
+        setMessages(updatedMessages),;
         setMessage("");
       }
     } catch (error) {;
-      console && console.error("Error sending message:", error);
+      console.error("Error sending message:", error);
     } finally {;
       setIsSending(false);
     }

@@ -207,46 +207,13 @@ if ( {) {
     if (categoryId && category) {;
       logInfo('ForumCategoryPage - categoryId changed:', { data: categoryId });
     }
-  }, [categoryId, category]);
-  if (!categoryId || !category) {;
-    return <NotFound />;
   }
-
-  if (!hasAccess) {
-    return (
-      <div className="container py-8">
-        <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4">Access Restricted</h1>
-          <p className="text-muted-foreground mb-4">
-            This category is only accessible to administrators.
-          </p>
-          <Button asChild>
-            <Link href="/community">Back to Community</Link>
-          </Button>
-        </div>
-      </div>
-    )
-  }
-;
-  if (!IconComponent) {;
-    return <NotFound />;
-  }
-;
-  return (;
-    <>;
-      <SEO;
-        title={`${category.name} | Community Forum | Zion AI Marketplace`}
-        description={category.description}
-        keywords={`community, forum, ${category.name.toLowerCase()}, discussion`}
-        canonical={`https://app.ziontechgroup.com/community/category/${categoryId}`}
-      />;
-      <CategoryContent;
-        categoryId={categoryId}
-        category={category}
-        IconComponent={IconComponent}
-        user={user}
-      />;
-    </>;
+  log_info ('CategoryContent - category_id:', { data: category_id }),
+  log_info ('CategoryContent - category_posts:', { data: category_posts }),
+  log_info ('CategoryContent - filtered_posts:', { data: filtered_posts }),
+  const category = category_id ? categories_info[category_id] : null;
+  const IconComponent = category ? icon_map[category.icon as keyof typeof icon_map] : null;
+}
   );
 }
 ;

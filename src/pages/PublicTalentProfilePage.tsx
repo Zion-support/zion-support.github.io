@@ -28,7 +28,7 @@
   if (isError |!profileData) {
     return (
       <div className="min-h-screen flex items-center justify-center">;
-        <p className="text-red-500">Failed to load profile.</p>;
+        <span className="loading loading-ring loading-lg"></span>;
       </div>;
     );
   }
@@ -126,8 +126,8 @@
                 {profileData.portfolio_links && profileData.portfolio_links.length > 0 ? (
                   profileData.portfolio_links.map((link: string, index: number) => (
                     <a
-                      key={link + index}
-                      href={link}
+                      key = {link + index,}
+                      href = {link,}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center text-zion-cyan hover:text-white transition-colors">;
@@ -176,7 +176,7 @@
 
 
               }}
-            />
+            />;
             {/* Placeholder for other sidebar elements */}
           </div>;
         </div>;

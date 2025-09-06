@@ -75,7 +75,6 @@ export default function RequestToHirePage() {;
     } finally {
       setSubmitting(false)
     }
-  }
 
   if (result) {;
     return (

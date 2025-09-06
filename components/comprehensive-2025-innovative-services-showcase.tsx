@@ -28,7 +28,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [;
     {
   return (
-    <Layout>;
+    <Layout>
       <SEO
         title='2025 Innovative Services Showcase | Zion Tech Group'
   };
@@ -293,6 +293,9 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                 <div className='text-gray-300 text-sm'>
                   Future Possibilities
                 </div>              </div>            >
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
+            >
               <div className="p-4 group hover:bg-white/5 rounded-xl transition-all duration-300 border border-cyan-400/20">
                 <div className="text-3xl font-bold text-cyan-400 mb-2 group-hover:text-cyan-300 transition-colors">50+</div>
                 <div className="text-gray-300 text-sm">Innovative Services</div>
@@ -479,7 +482,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                   key={category.name}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
                   className="group relative"
                 >
@@ -581,9 +584,11 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
               the future;
             </p>;
           </motion && motion.div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {innovative2025MicroSaasBatch && innovative2025MicroSaasBatch.map((service, index) => {;
               const IconComponent = getCategoryIcon(service && service.category);
+
                 >;
                   <div className='p-6 rounded-xl bg-gradient-to-br from-gray-900/30 to-gray-800/30 border border-white/5 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl backdrop-blur-sm'>;
                     <div className='flex items-start space-x-4'>;

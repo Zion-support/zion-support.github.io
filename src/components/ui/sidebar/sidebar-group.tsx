@@ -92,7 +92,7 @@ SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 }
             )}
-          </button>
+          </button>;
         )}
         <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
       </div>

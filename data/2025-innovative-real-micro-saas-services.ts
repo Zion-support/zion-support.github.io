@@ -389,6 +389,7 @@ export interface EnhancedRealMicroSaasService {
     marketSize: '$29.5B BI market', growthRate: '15% annual growth',
     variant: 'ai-bi-enterprise',
     contactInfo: {
+      
   ];    features: [;
       'AI - powered contract analysis and review_legal risk identification and assessment_document comparison and analysis_legal research and case law analysis_compliance checking and monitoring_legal document generation_integration with legal systems_mobile legal app';
       'Multi - language legal support_predictive legal analytics';

@@ -86,7 +86,7 @@
   return (
     <>
       <SEO
-        title="Careers at Zion - Join Our Team"
+        title='Careers at Zion - Join Our Team'
         description="Join the team building the future of AI and technology. Explore career opportunities at Zion's innovative marketplace platform."
 
 

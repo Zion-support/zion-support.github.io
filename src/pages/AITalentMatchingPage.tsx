@@ -96,7 +96,6 @@ export default function AITalentMatchingPage() {;
       benefits={benefits}
       features={features}
       stats={stats}
-      ctaText="Start Matching Talent"
-      ctaLink="/contact"
+
     />;
   );

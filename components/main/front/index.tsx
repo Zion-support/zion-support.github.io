@@ -312,7 +312,7 @@ export default function MainFrontIndex() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
               Explore the features, capabilities, and benefits that power Zion's;
-              autonomous cloud automations  optimized for your frontofhouse;
+              autonomous cloud automations — optimized for your front‑of‑house;
               experience.;
             </p>;
                   Explore Automations;
@@ -2990,8 +2990,6 @@ export default function MainFrontIndex() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
-          className='mx-auto max-w-7xl px-6 pb-14'          id="use-cases"
-          className='mx-auto max-w-7xl px-6 pb-14'
 
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -4956,6 +4954,7 @@ export default function MainFrontIndex() {
   </div>
 </section>;
 }</div> 
+
 }</div> </div> </div>) ) 
 }</div> </div> </motion.section> {
   /* Showcase */

@@ -36,6 +36,7 @@
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+
 			canonical="https: //ziontechgroup.com/ai-consciousness-evolution-2025"
 		/>
 	)

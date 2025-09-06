@@ -47,7 +47,7 @@ interface Message {;
   content: string;
 }
 interface RequestBody {
-  messages: Message[]
+  messages: Message[];
 }
 
 

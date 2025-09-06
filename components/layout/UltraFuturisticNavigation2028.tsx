@@ -339,9 +339,9 @@ const companyLinks = [;
                       </p>;
                       <Link
                         href='/services'
-                        className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>                  <div className="mt-6 pt-6 border-t border-purple-500/20">;
-                    <div className="flex items-center justify-between">;
-                      <p className="text-purple-300">Explore all our cutting-edge services</p>;
+                        className='px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'                      >                  <div className="mt-6 pt-6 border-t border-purple-500/20">
+                    <div className="flex items-center justify-between">
+                      <p className="text-purple-300">Explore all our cutting-edge services</p>
                       <Link
                         href="/services"
                         className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"

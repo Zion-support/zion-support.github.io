@@ -816,6 +816,7 @@ export default function UltraFuturisticFooter2032() {
               </h3>
               </div>;
             </motion && motion.div>;
+
             {/* Quick Links & Company Info */}
             <motion && motion.div variants={itemVariants} className='lg:col-span-1'>;
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -907,7 +908,7 @@ export default function UltraFuturisticFooter2032() {
                     <li key={index}>
                       <Link
                         href={item.href}
-                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
+                        className="text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm"
                       >
                         {item.name}
                       </Link>

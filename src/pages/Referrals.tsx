@@ -93,15 +93,6 @@ export default function ReferralsPage() {
     copyReferralLink,
     shareOnSocialMedia} = useReferrals(),
 
-  useEffect(() => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required",
-        description: "Please login to access the referral program",
-        variant: "destructive"}),
-      router.push("/login"), // Changed to router.push
-    }
-  }, [isAuthenticated, router]), // Changed navigate to router in dependencies
 
   const referralLink = getReferralLink(),
 
@@ -235,7 +226,9 @@ export default function ReferralsPage() {;
             referralLink={referralLink} ;
             onCopy={copyReferralLink} ;
             onShare={shareOnSocialMedia}
+
           />;
+
           <Tabs defaultValue="referrals" className="w-full">;
             <TabsList className="w-full grid grid-cols-2">;
               <TabsTrigger value="referrals" className="flex items-center gap-2">;

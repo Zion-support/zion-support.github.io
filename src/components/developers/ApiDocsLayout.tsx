@@ -1,6 +1,4 @@
 
-import { SearchSuggestion } from "@/types/search",
-import React, { useState } from "react",
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Search } from 'lucide-react'
@@ -32,7 +30,7 @@ interface ApiDocsLayoutProps {
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {
     { title: "Webhooks", path: "/developers/docs/webhooks" },;
     { title: "Sample Code", path: "/docs/sample-code" },;
-    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }];
+    { title: "Error Codes & Rate Limits", path: "/developers/docs/errors" }],;
   const handleSelectSuggestion = (suggestion: SearchSuggestion) => {;
     const path = getDocsSearchPath(suggestion.text);    if (path) {
       router.push(path)

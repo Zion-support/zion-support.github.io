@@ -106,8 +106,11 @@ if ( {) {
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {;
   const supabase = createServerSideClient(context);
   const { data, error } = await supabase.auth.getUser();
-  if (error |!data?.user) {return {;
+  if (error || !data?.user) {;
+    return {;
       redirect: {;
         destination: '/auth/login';
-        permanent: false}}
+        permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }

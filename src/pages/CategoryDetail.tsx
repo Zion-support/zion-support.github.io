@@ -45,72 +45,24 @@ import { Header } from "@/components/Header",;
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton',;
 import {logErrorToProduction} from '@/utils/productionLogger',;
 const AUTO_SERVICE_TITLES = [;
-  "AI-Powered Customer Support",;
-  "Cloud Infrastructure Management",;
-  "Predictive Analytics Consulting",;
-  "Cybersecurity Automation Suite",;
-  "Robotic Process Automation",;
-  "Machine Learning Model Tuning",;
-  "IoT Device Integration Service",;
+  "AI - Powered Customer Support";
+  "Cloud Infrastructure Management";
+  "Predictive Analytics Consulting";
+  "Cybersecurity Automation Suite";
+  "Robotic Process Automation";
+  "Machine Learning Model Tuning";
+  "IoT Device Integration Service";
   "Blockchain Data Solutions";
-],;
-function generateInnovationListing(index: number): ProductListing {;
-  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service',;
-  const price = Math.floor(Math.random() * 9500) + 500, // $500 - $10,000;
-  const rating = Math.floor(Math.random() * 2) + 4, // 4-5 stars;
-  const reviewCount = Math.floor(Math.random() * 50) + 10,;
-  return {;
-    id: `innovation-auto-${index}`,;
-    title,;
-    description: `Professional ${title} package with expert support and global delivery. Ideal for businesses seeking modern IT and AI solutions at competitive market rates.`,;
-    category: "Innovation",;
-    price,;
-    currency: "$",;
-    tags: ["innovation", "ai", "service"],;
-    author: {;
-      name: "AutoGen Solutions",;
-      id: "autogen";
-    },;
-    images: ["https://source.unsplash.com/random/800x500?technology"],;
-    createdAt: new Date().toISOString(),;
-    rating,;
-    reviewCount,;
-    location: "Global",;
-    availability: "Immediate",;
-    aiScore: Math.floor(Math.random() * 20) + 80;
-  }
-}
-;
-interface CategoryDetailProps {;
-  slug?: string;
-}
-;
-export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps = {}) {;
-  const router = useRouter(),;
-  // Get slug from Next.js router query params;
-  const params = router.query as { slug?: string },;
-  const slug = slugProp ?? params.slug,;
-  // Redirect to categories list if slug is missing;
-  if (!slug) {;
-    router.push('/categories'),;
-    return null;
-  }
-  const [isLoading, setIsLoading] = useState(true),
-  const [listings, setListings] = useState(MARKETPLACE_LISTINGS),
-  const [category, setCategory] = useState<{title: string, description: string, icon: JSX.Element}>({
-    title: "",
-    description: "",
-    icon: <Bot className="w-6 h-6" />
-  }),
-  const innovationCounterRef = useRef(0),
+];
+function generateInnovationListing (index: number): ProductListing {
+  const title = AUTO_SERVICE_TITLES[index % AUTO_SERVICE_TITLES.length] || 'AI Service';
+  const price = Math.floor (Math.random () * 9500) + 500, // $500 - $10, 000;
+  const rating = Math.floor (Math.random () * 2) + 4, // 4 - 5 stars;
 
-  // Map of category slugs to their display data
-  const categoryData = {
-    'services': {
-      title: "Services",
-      description: "On-demand IT support, consulting, development, and more",
-      icon: <Briefcase className="w-6 h-6" />
-    },
+  const params = router.query as { slug?: string }
+  const slug = slug_prop ?? params.slug;
+      icon: <Briefcase className="w - 6 h - 6" />;
+    }
     'talents': {
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists",
@@ -311,12 +263,12 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
                 {category.icon}
-              </div>
-            </div>
-            <GradientHeading className="text-4xl md:text-5xl font-bold mb-4">
+              </div>;
+            </div>;
+            <GradientHeading className="text - 4xl md:text - 5xl font - bold mb - 4">;
               {category.title}
-            </GradientHeading>
-            <p className="text-zion-slate-light text-lg max-w-3xl mx-auto">
+            </GradientHeading>;
+            <p className="text - zion - slate - light text - lg max - w-3xl mx - auto">;
               {category.description}
                 {category.icon}
               </div>;

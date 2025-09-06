@@ -2800,17 +2800,18 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
 
+              >
+                IT Services
+              </h1>
 
+              </p>
+            </div>
 
 }
+
           </section>
 
           {/* Category Filter */}
-          <section className='py-8 px-4'>
-            <div className='max-w-6xl mx-auto'>
-              <div className='flex flex-wrap justify-center gap-4 mb-8'>
-                {categories.map(category => (
-ursor/integrate-build-improve-and-re-verify-8f7d
 
 ;
 const industries = [;

@@ -61,10 +61,12 @@ export default async function handler(
     })
   }
 }
+
 // Handle redirects for short URLs
 export async function getServerSideProps({ params }: { params: { shortCode: string } }) {
   const shortCode = params.shortCode;
   const shortUrl = urlStorage.get(shortCode);
+
   if (!shortUrl || !shortUrl.isActive) {
     return {
       notFound: true

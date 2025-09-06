@@ -367,9 +367,11 @@ export function DisputeDetail() {;
               <Card>
                 <CardHeader>
                   <CardTitle>Dispute Details</CardTitle>
-                  <CardDescription>Information about this dispute case</CardDescription>
+                  <CardDescription>
+                    Information about this dispute case
+                  </CardDescription>
                 </CardHeader>
-                <CardContent className="space-y-4">
+                <CardContent className='space-y-4'>
                   <div>
                     <h3 className="font-medium">Reason</h3>
                     <p>{
@@ -469,14 +471,16 @@ export function DisputeDetail() {;
               <Card>
                 <CardHeader>
                   <CardTitle>Messages</CardTitle>
-                  <CardDescription>Communication regarding this dispute</CardDescription>
+                  <CardDescription>
+                    Communication regarding this dispute
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6 max-h-[600px] overflow-y-auto p-2">
+                  <div className='space-y-6 max-h-[600px] overflow-y-auto p-2'>
                     {messages.length === 0 ? (
-                      <div className="text-center py-12">
-                        <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                        <p className="text-muted-foreground">No messages yet</p>
+                      <div className='text-center py-12'>
+                        <MessageSquare className='mx-auto h-12 w-12 text-muted-foreground mb-2' />
+                        <p className='text-muted-foreground'>No messages yet</p>
                       </div>
                     ) : (
                       messages
@@ -531,12 +535,16 @@ export function DisputeDetail() {;
               <Card>
                 <CardHeader>
                   <CardTitle>Attachments</CardTitle>
-                  <CardDescription>Files related to this dispute</CardDescription>
+                  <CardDescription>
+                    Files related to this dispute
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="text-center py-12">
-                    <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" />
-                    <p className="text-muted-foreground">No attachments available</p>
+                  <div className='text-center py-12'>
+                    <Download className='mx-auto h-12 w-12 text-muted-foreground mb-2' />
+                    <p className='text-muted-foreground'>
+                      No attachments available
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -649,7 +657,9 @@ export function DisputeDetail() {;
                               </p>
                             </div>
                         {!messages.some(msg => msg.is_admin_note) && (
-                          <p className="text-sm text-muted-foreground italic">No admin notes yet</p>
+                          <p className='text-sm text-muted-foreground italic'>
+                            No admin notes yet
+                          </p>
                         )}
                       </div>
                         <Textarea
@@ -714,24 +724,35 @@ export function DisputeDetail() {;
             <CardHeader>
               <CardTitle>Case Information</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4 text-sm">
-              <div className="flex justify-between">
-                <span className="font-medium">Case ID:</span>
-                <span className="font-mono">{dispute.id}</span>
+            <CardContent className='space-y-4 text-sm'>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Case ID:</span>
+                <span className='font-mono'>{dispute.id}</span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Created:</span>
-                <span>{format(new Date(dispute.created_at), "MMM d, yyyy")}</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Created:</span>
+                <span>
+                  {format(new Date(dispute.created_at), 'MMM d, yyyy')}
+                </span>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Status:</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Status:</span>
                 <Badge variant={getStatusBadgeVariant(dispute.status)}>
-                  {dispute.status.replace('_ ')}
+                  {dispute.status.replace('_', ' ')}
                 </Badge>
               </div>
-              <div className="flex justify-between">
-                <span className="font-medium">Raised by:</span>
-                <span>{dispute.client_profile && dispute.talent_profile && dispute.raised_by === (dispute.client_profile as any).id ? "Client" : dispute.talent_profile && dispute.raised_by === (dispute.talent_profile as any).id ? "Talent" : "Unknown"}</span>
+              <div className='flex justify-between'>
+                <span className='font-medium'>Raised by:</span>
+                <span>
+                  {dispute.client_profile &&
+                  dispute.talent_profile &&
+                  dispute.raised_by === (dispute.client_profile as any).id
+                    ? 'Client'
+                    : dispute.talent_profile &&
+                        dispute.raised_by === (dispute.talent_profile as any).id
+                      ? 'Talent'
+                      : 'Unknown'}
+                </span>
               </div>
             </CardContent>
           </Card>

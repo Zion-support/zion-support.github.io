@@ -1,5 +1,4 @@
 
-import { cn } from "@/lib/utils"
 
 const ResizablePanelGroup = ({
 onst ResizablePanelGroup = ({
@@ -30,8 +29,8 @@ const ResizableHandle = ({
     {...props}
   >
     {withHandle && (
-      <div className="z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border">
-        <GripVertical className="h-2.5 w-2.5" />
+      <div className=&quot;z-10 flex h-4 w-3 items-center justify-center rounded-sm border bg-border&quot;>
+        <GripVertical className=&quot;h-2.5 w-2.5&quot; />
       </div>
     )}
   </ResizablePrimitive.PanelResizeHandle>;

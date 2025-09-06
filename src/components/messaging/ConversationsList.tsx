@@ -58,7 +58,7 @@ export function ConversationsList({;
 
         <List
           height={listHeight}
-          itemCount={conversations.length}
+          itemCount={conversations && conversations.length}
           itemSize={itemSize}
           width="100%"
         >

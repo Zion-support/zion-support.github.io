@@ -68,7 +68,7 @@ export function DynamicListingPage({
     )
   // Swap icons to match action
   const ToggleViewIcon = isGrid ? (
-    <List className="h-4 w-4" />
+    <List className='h-4 w-4' />
   ) : (
     setCurrentPriceFilter([min, max])
   }
@@ -354,8 +354,8 @@ export function DynamicListingPage({
 
               </div>
               {availabilityOptions.length > 0 && (
-                <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <div className='mb-6'>
+                  <label className='text-sm font-medium text-zion-slate-light block mb-2'>
                     Availability
                   </label>
 
@@ -466,14 +466,22 @@ export function DynamicListingPage({
 
 
                   <Select value={sortOption} onValueChange={setSortOption}>
-                    <SelectTrigger className="w-[150px] bg-zion-blue border border-zion-blue-light text-white">
-                      <SelectValue placeholder="Sort" />
+                    <SelectTrigger className='w-[150px] bg-zion-blue border border-zion-blue-light text-white'>
+                      <SelectValue placeholder='Sort' />
                     </SelectTrigger>
-                    <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
-                      <SelectItem value="newest" className="text-white">Newest</SelectItem>
-                      <SelectItem value="price-asc" className="text-white">Price: Low to High</SelectItem>
-                      <SelectItem value="price-desc" className="text-white">Price: High to Low</SelectItem>
-                      <SelectItem value="rating" className="text-white">Highest Rating</SelectItem>
+                    <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>
+                      <SelectItem value='newest' className='text-white'>
+                        Newest
+                      </SelectItem>
+                      <SelectItem value='price-asc' className='text-white'>
+                        Price: Low to High
+                      </SelectItem>
+                      <SelectItem value='price-desc' className='text-white'>
+                        Price: High to Low
+                      </SelectItem>
+                      <SelectItem value='rating' className='text-white'>
+                        Highest Rating
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                     variant="outline"

@@ -7,20 +7,9 @@ const fs = // // require('fs');
 const path = // // require('path');
 const { execSync, spawn } = // // require('child_process');
 const chokidar = // // require('chokidar');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
 class ErrorDetectionService {}
   constructor() {}
     this.projectRoot = process.cwd();
@@ -29,20 +18,9 @@ class ErrorDetectionService {}
     this.logLevel = process.env.LOG_LEVEL || 'info';
     this.maxRetries = parseInt(process.env.MAX_RETRIES) || 3;
     this.backupBeforeFix = process.env.BACKUP_BEFORE_FIX === 'true';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     
->>>>>>> origin/main
-=======
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     this.errorTypes = {}
       "syntax": [],
       "typescript": [],
@@ -62,20 +40,9 @@ class ErrorDetectionService {}
       data,
       "service": 'error-detection-service'
     };
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     if (level === 'error') {}
       console.error(`[${timestamp}] "ERROR": ${message}`, data)} else if (level === 'warn') {`}
       console.warn(`[${timestamp}] "WARN": ${message}`, data)} else if (level === 'info') {`}
@@ -101,20 +68,9 @@ class ErrorDetectionService {}
       // Start file watching for real-time detection;
       this.startFileWatching();
       this.log('info', 'Error Detection Service started successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       
->>>>>>> origin/main
-=======
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       // Keep the process alive;
       setInterval(() => {}
         if (!this.isRunning) {}
@@ -129,20 +85,9 @@ class ErrorDetectionService {}
       'backups',
       'temp'
     ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     dirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (!fs.existsSync(fullPath)) {}
@@ -291,20 +236,9 @@ class ErrorDetectionService {}
         'vite.config.ts',
         'tailwind.config.js'
       ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       for (const configFile of configFiles) {}
         const filePath = path.join(this.projectRoot, configFile);
         if (fs.existsSync(filePath)) {}
@@ -335,20 +269,9 @@ class ErrorDetectionService {}
     const sourceDirs = ['src', 'components', 'pages', 'utils', 'hooks', 'types'];
     const extensions = ['.js', '.jsx', '.ts', '.tsx'];
     const files = [];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     sourceDirs.forEach(dir => {})
       const fullPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(fullPath)) {}
@@ -387,20 +310,9 @@ class ErrorDetectionService {}
     const blockComments = content.match(commentRegex) || [];
     const openComments = (content.match(/\/\*/g) || []).length;
     const closeComments = (content.match(/\*\//g) || []).length;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
     
->>>>>>> origin/main
-=======
-=======
     
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
     if (openComments !== closeComments) {}
       return true};
     // Check for missing semicolons in certain contexts;
@@ -597,20 +509,9 @@ class ErrorDetectionService {}
       const count = this.errorTypes[type].length;
       report.summary.totalErrors += count;
       report.summary.errorsByType[type] = count;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
       
->>>>>>> origin/main
-=======
-=======
       
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
       this.errorTypes[type].forEach(error => {})
         const severity = error.severity || 'medium';
         report.summary.severityBreakdown[severity]++})}
@@ -759,17 +660,5 @@ process.on('unhandledRejection', (reason, promise) => {}
 service.start().catch(error => {})
   service.log('error', 'Failed to start service', error);
   process.exit(1)}
-<<<<<<< HEAD
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 });
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-});
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

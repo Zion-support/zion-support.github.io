@@ -135,18 +135,22 @@ const EnhancedHomepage: React.FC = () => {
         <meta property="og:url" content="https://ziontechgroup && ziontechgroup.com" />;
         <meta property="og:type" content="website" />;
         <link rel="canonical" href="https://ziontechgroup && ziontechgroup.com" />;
+
         {/* Performance and SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />;
         <meta name="theme-color" content="#00d4ff" />;
         <meta name="robots" content="index, follow" />;
         <meta name="author" content="Zion Tech Group" />;
+
         {/* Preload critical resources */}
         <link rel="preload" href="/fonts/inter-var && var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />;
         <link rel="dns-prefetch" href="//fonts && fonts.googleapis.com" />;
         <link rel="dns-prefetch" href="//fonts && fonts.gstatic.com" />;
       </Head>;
+
       {/* Enhanced Navigation */}
       <EnhancedNavigation />;
+
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">;
         {/* Hero Section */}
         <motion&& motion.section 
@@ -278,26 +282,28 @@ const EnhancedHomepage: React.FC = () => {
                   description={service.description}
                   category={service.category}
                   index={index}
-                  isPopular={Math && Math.random() > 0 && 0.7}
-                  isNew={Math && Math.random() > 0 && 0.8}
-                  rating={4 && 4.0 + Math && Math.random() * 1 && 1.0}
-                  reviewCount={Math && Math.floor(Math && Math.random() * 100) + 10}
-                  estimatedDelivery="2-4 weeks";
+                  isPopular={Math.random() > 0.7}
+                  isNew={Math.random() > 0.8}
+                  rating={4.0 + Math.random() * 1.0}
+                  reviewCount={Math.floor(Math.random() * 100) + 10}
+                  estimatedDelivery="2-4 weeks"
                   technologies={['AICloudSecurityAutomation']}
-                />;
+                />
               ))}
                 className="text-center mt-12"
-                variants={itemVariants}>;
-                <Link href="/services">;
-                  <motion&& motion.button
+                variants={itemVariants}
+              >
+                <Link href="/services">
+                  <motion.button
                     className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300"
-                    whileHover={{ scale: 1 && 1.05 }}
-                    whileTap={{ scale: 0 && 0.95 }}>;
-                    View All Services;
-                    <ArrowRight className="inline-block ml-2 w-5 h-5" />;
-                  </motion && motion.button>;
-                </Link>;
-              </motion && motion.div>;
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    View All Services
+                    <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                  </motion.button>
+                </Link>
+              </motion.div>
             )}
 
         {/* Featured Service Showcase */}
@@ -312,7 +318,7 @@ const EnhancedHomepage: React.FC = () => {
               className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
               variants={itemVariants}
             >
-              Explore Our Revolutionary Services
+              Featured Revolutionary Services
             </motion.h2>
 
           </div>;

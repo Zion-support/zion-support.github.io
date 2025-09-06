@@ -25,6 +25,6 @@ import Navigation from '../components/Navigation.dynamic';
 describe('Navigation', () => {
   test('renders without crashing', () => {
     render(<Navigation />);
-    expect(screen.getByTestId('navigation')).toBeInTheDocument();
+    expect(screen.getByTestId('navigation.dynamic')).toBeInTheDocument();
   });
 });

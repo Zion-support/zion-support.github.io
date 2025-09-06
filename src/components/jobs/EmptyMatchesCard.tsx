@@ -30,6 +30,7 @@ export interface EmptyMatchesCardProps {
 
 export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardProps) {
   return (
+
     <Card className="p-6 text-center border-dashed border-2 bg-muted/30">
       <div className="mb-4 flex justify-center">
         <Sparkles className="h-12 w-12 text-muted-foreground" />

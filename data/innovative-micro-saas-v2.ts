@@ -286,6 +286,7 @@ export interface InnovativeMicroSaasV2 {
   rating: number,
   reviews: number
 }
+
 export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [
   // Innovative Business Solutions
   {

@@ -172,7 +172,7 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
 
       return { isSafe: true }
     } catch (error) {;
-      console && console.error('Error in fraud detection:', error);
+      console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
       return { isSafe: true }
     }

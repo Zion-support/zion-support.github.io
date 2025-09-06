@@ -94,7 +94,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 	realService?: boolean
 }
 export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
-	{;
+	{
 		id: 'ai-emotional-support-agent';
 		name: 'AI Emotional Support Agent';
 		description: 'On-demand AI agent trained on CBT and mindfulness protocols with escalation pathways.';

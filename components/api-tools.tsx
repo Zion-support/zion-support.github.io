@@ -294,6 +294,7 @@ export default function ApiToolsPage() {;
       responseTime: '<20ms',
     },
   ]
+
   const categories = [
   Terminal;
 export default /**
@@ -611,6 +612,16 @@ function ApiToolsPage() {
           </div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredTools.map((tool, index) => (
+            </h2>;
+            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>;
+              {filteredTools && filteredTools.length} APIs available. Each tool is;
+              production-ready with comprehensive documentation, SDKs, and;
+              support.;
+            </p>;
+          </div>;
+
+          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
+            {filteredTools && filteredTools.map((tool, index) => (;
               <Card
                 key={index}
                 className='group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300'

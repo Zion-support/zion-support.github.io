@@ -56,44 +56,24 @@ interface PartnerProfile {
   bio?: string,
   payout_method?: string,
   fraud_flags?: number,
+
   commission_rate?: number
 }
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
 
-export default function PartnerManager() {;
-  const [partners, setPartners] = useState<PartnerProfile[]>([]);
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [searchQuery, setSearchQuery] = useState("");
-  const [activeTab, setActiveTab] = useState("pending");
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
+
   const navigate = useNavigate();
   const navigate = useNavigate();
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
+
       navigate("/login");
-      return
+      return;
     }
     fetchPartners()
   }, [isAuthenticated, navigate]);
@@ -190,21 +170,7 @@ export default function PartnerManager() {;
       } else {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
 
-  useEffect(() => {
-    if (!isAuthenticated) {
       navigate("/login"),
       return
 import { useState, useEffect } from "react",;
@@ -417,7 +383,7 @@ if ( {) {
 
 
     } catch (error) {;
-      console && console.error("Error fetching partners:", error);
+      console.error("Error fetching partners:", error),;
       toast({;
         title: "Error",;
         description: "Failed to load partner data",;

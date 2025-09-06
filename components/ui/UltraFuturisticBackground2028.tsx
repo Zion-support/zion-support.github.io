@@ -270,6 +270,7 @@ if (return) {
       </div>
         />;
       </div>;
+
       {/* Energy Waves */}
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{

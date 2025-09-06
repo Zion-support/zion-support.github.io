@@ -99,12 +99,9 @@ export default async function handler(req, res) {
     res.status (500).json ({ error: "Generation failed" });
   }
 }
-function fallback_markdown (input: any): string {
-  const dist_lines = Array.is_array (input?.distribution);
-    ? input.distribution;
-        .map ((d: any) => `- ${d.label}: ${d.percent}%`);
-        .join ("\n");
-    : "";
-  return `# ${input?.token_name || "Token"} Tokenomics Whitepaper\n\n## Executive Summary\n${input?.token_name || "Token"} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI - native talent markets require aligned incentives, reputation systems, and credible neutrality.\n\n## Utility & Usage\n${input?.use_cases || ""}.\n\n## Rewards System\n${input?.rewards_logic || ""}.\n\n## Distribution\n${dist_lines}\n\n_total Supply: ${input?.token_supply || ""}.\n\n## Governance Model\n${input?.governance || ""}.\n\n## Risks + Disclaimers\n_not financial advice. Subject to ${input?.jurisdiction || "applicable"} regulations.`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 }

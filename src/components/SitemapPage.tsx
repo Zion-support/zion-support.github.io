@@ -56,9 +56,8 @@ export const SitemapPage: React.FC = () => {
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
-                    </Link>
-                  </li>
-                ))
+                    </Link>;
+                  </li>));
               }
 
 
@@ -75,7 +74,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -113,7 +112,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -151,7 +150,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />
@@ -188,7 +187,7 @@ export const SitemapPage: React.FC = () => {
                 .map(route => (
                   <li key={route.path}>
                     <Link
-                      href={resolvePath(route.path)}
+                      href = {resolvePath(route.path),}
                       className="flex items-center hover:text-zion-purple"
                     >
                       <ChevronRight className="h-4 w-4 mr-2" />

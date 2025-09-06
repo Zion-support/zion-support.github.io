@@ -121,16 +121,18 @@ export default function AboutPage() {
   ],
   const team = [
     {
-      name: "John Smith",
-      role: "CEO & Founder",
-      image: "/team/john.jpg",
-      bio: "Visionary leader with 15+ years in tech"
+      name: 'Kleber',
+      role: 'Founder & CEO',
+      description: 'Visionary leader driving innovation in AI and quantum technologies',
+      image: '/api/placeholder/150/150',
+      color: 'from-cyan-500 to-blue-500'
     },
     {
-      name: "Sarah Johnson",
-      role: "CTO",
-      image: "/team/sarah.jpg", 
-      bio: "Technical expert specializing in cloud architecture"
+      name: 'AI Team',
+      role: 'AI Research & Development',
+      description: 'Expert engineers and researchers pushing the boundaries of artificial intelligence',
+      image: '/api/placeholder/150/150',
+      color: 'from-purple-500 to-pink-500'
     },
     {
 import React from "react";

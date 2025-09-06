@@ -90,7 +90,7 @@ import Link from 'next / link';
 
 
 const AIHealthcareDiagnosticsPro: React.FC = () => {
-  const features = [;
+  const features = [
     {
       icon: Brain,
       description:;

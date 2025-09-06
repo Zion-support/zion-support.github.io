@@ -63,9 +63,6 @@ export interface NextGenAIService {
 
 
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
 
     website: string;
   }

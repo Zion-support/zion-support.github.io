@@ -46,6 +46,7 @@ interface EnhancedHero2026Props {
       }
     }
   }
+
         staggerChildren: 0.2,
       },
     },  }        ease: "ease_out" as const;

@@ -189,6 +189,7 @@
         >
           {loadingProvider === 'credentials' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
+
           ) : (
             <>Email Login</>
           )}

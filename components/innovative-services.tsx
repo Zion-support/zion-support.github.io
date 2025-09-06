@@ -554,6 +554,8 @@ if ( {) {
                         </div>
                         {/* CTA Buttons */}
                         <div className='flex space-x-3'>                          <div>
+                        <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
+                          <div>
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
@@ -614,6 +616,7 @@ if ( {) {
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
             </div>;
           </section>;
+
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
             <div className='max-w-4xl mx-auto text-center'>;

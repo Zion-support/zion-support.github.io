@@ -292,8 +292,7 @@ export default function DevOpsAutomationPage() {;
             </div>
                 <Card
                   key={index}
-                  className='text-center group hover:scale-105 transition-transform duration-300'
-                >
+                  className='text-center group hover:scale-105 transition-transform duration-300'>;
                   <div
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">

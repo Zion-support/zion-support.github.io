@@ -128,8 +128,6 @@ function Page() {
   );
 }
 
-}
-    </div>
   )
   } catch (error) {
     console.error("Error:", error);

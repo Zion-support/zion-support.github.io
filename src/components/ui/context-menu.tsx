@@ -123,12 +123,12 @@ const ContextMenuCheckboxItem = React.forwardRef<;
     )}
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <ContextMenuPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </ContextMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
 
 
@@ -141,12 +141,12 @@ const ContextMenuCheckboxItem = React.forwardRef<;
       className
     )}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <ContextMenuPrimitive.ItemIndicator>
-        <Circle className="h-2 w-2 fill-current" />
-      </ContextMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <ContextMenuPrimitive.ItemIndicator>;
+        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
+      </ContextMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
   React.ComponentPropsWithoutRef<typeof ContextMenuPrimitive.Label> & {;
     inset?: boolean;
@@ -184,6 +184,5 @@ const ContextMenuShortcut = ({
         className
       )}
       {...props}
-    />;
-  );
+    />);
 }

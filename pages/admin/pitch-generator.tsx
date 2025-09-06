@@ -315,9 +315,7 @@ if (return result) {
           </div>
         </div>
                 Drag & drop logos, photos here
-                <div className='text-xs mt-1'>
-                  {builder.assets.length} file(s) added
-                </div>
+                <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">

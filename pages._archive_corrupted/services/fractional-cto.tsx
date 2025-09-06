@@ -33,9 +33,9 @@ interface FractionalctoProps {;
 }
 export default function Fractionalcto(): any ({ }: FractionalctoProps) {;
   return (
-    <div>;
-      <h1>Fractionalcto</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Fractionalcto</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

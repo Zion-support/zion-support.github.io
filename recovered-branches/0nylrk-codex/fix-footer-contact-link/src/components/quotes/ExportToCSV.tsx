@@ -82,12 +82,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       onClick={handleExport}
       className="flex items-center gap-2"
       disabled={quotes.length === 0}
-    >
-      <Download size={16} />
-      Export CSV
-    </Button>
-  )
-}
 
     >;
       <Download size={16} />;

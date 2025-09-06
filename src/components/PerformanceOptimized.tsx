@@ -184,8 +184,8 @@ export const useDebouncedSearch = (value: string, delay: number = 300) => {
       setDebouncedValue(value)
     }, delay)
     return () => {
-      clearTimeout(handler)
+      clear_timeout (handler);
 }
-  }, [value, delay])
-  return debouncedValue
+  }, [value, delay]);
+  return debounced_value;
 }

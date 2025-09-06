@@ -343,6 +343,7 @@ const service_categories = [;
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">;
       {/* Animated Background */}
         {/* Header */}
+
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 
@@ -651,14 +652,18 @@ const service_categories = [;
             <motion.div
               key={service.id}
               variants={itemVariants}
-              className="group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105"
+              className='group relative p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:border-cyan-500/50 hover:bg-cyan-500/5 transition-all duration-300 hover:scale-105'
             >
               {/* Popular Badge */}
               {service.popular && (
-                <div className="absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold">
+
+                <div className='absolute -top-3 -right-3 bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold'>                  Popular
+
                   Popular
+
                 </div>
               )}
+
               {/* Service Icon */}
                   {service.icon}
                 </div>;

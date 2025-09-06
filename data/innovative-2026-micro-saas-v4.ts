@@ -218,6 +218,7 @@
     competitors: ['Repurpose.ioLoomlyBuffer'], marketSize: '$400B global content marketing market',
     growthRate: '25% annual growth', variant: 'ai-futuristic',
     contactInfo: {
+      
   ];    features: [;
       'AI document generation_compliance checking_customizable templates_legal clause library_risk assessment_document versioning_electronic signatures_legal research tools';
       'Multi - jurisdiction support_expert consultation';

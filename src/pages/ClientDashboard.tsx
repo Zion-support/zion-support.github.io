@@ -81,21 +81,18 @@
                 </h2>;
 
                 {selectedJobId ? (
-                  <SuggestedTalents jobId={selectedJobId} />
-                ) : (
-                  <div className="bg-muted/30 border rounded-lg p-6 text-center">
-                    <p className="text-muted-foreground">
-                      Select a job to see AI-matched talent suggestions
-                    </p>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
-    </>
-  )
+                  <SuggestedTalents job_id={selectedJobId} />) : (
+                  <div className="bg - muted / 30 border rounded - lg p - 6 text - center">;
+                    <p className="text - muted - foreground">;
+                      Select a job to see AI - matched talent suggestions;
+                    </p>;
+                  </div>)}
+              </div>;
+            </div>;
+          </div>;
+        </div>;
+      </main>;
+    </>);
 }
 
         </div>;
@@ -138,16 +135,20 @@
           
           <div>
             <div className="sticky top-4 space-y-6">
+
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
+
               {/* Upcoming Interviews Card */}
               <UpcomingInterviewsCard />;
+
               {/* AI Talent Suggestions */}
               <div>;
                 <h2 className="text-xl font-semibold mb-4 flex items-center">;
                   <BriefcaseIcon className="mr-2 h-5 w-5 text-primary" />;
                   AI Talent Suggestions;
                 </h2>;
+
                 {selectedJobId ? (;
                   <SuggestedTalents jobId={selectedJobId} />;
                 ) : (;

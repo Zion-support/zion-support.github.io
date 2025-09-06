@@ -54,12 +54,12 @@ export interface Milestone {
   id: string;
   title: string;
   description?: string;
-  dueDate: string;
-  amountUsd: number;
+  due_date: string;
+  amount_usd: number;
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: any[];
-  createdAt: string;
-  updatedAt: string;
+  created_at: string;
+  updated_at: string;
 }
   return projects.find(p => p.id === id) |null;
 

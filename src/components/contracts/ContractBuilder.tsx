@@ -36,7 +36,7 @@ import { ContractPreview } from "./components/ContractPreview",
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setTemplateManagerOpen(true)}
+                onClick = {(,) => setTemplateManagerOpen(true),}
                 className="flex gap-1"
               >
                 <Save className="h-4 w-4" />

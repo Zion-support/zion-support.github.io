@@ -387,23 +387,8 @@ if (break) {
                         }`}
                     ))}
                 {/* API Key Generation */}
-                <div>;
-                  <label className='block text-sm font-medium text-gray-300 mb-2'>;
-                    API Key;
-                  </label>;
-                  <div className='flex space-x-2'>;
-                    <input
-                      type='text'
-                      value={apiKey}
-                      readOnly
-                      placeholder='Generate an API key to test rate limiting'
-                      className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400'
-                    />;
-                    <Button
-                      onClick={generateApiKey}
-                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'>                    API Key;
-                  </label>;
-                  <div className="flex space-x-2">;
+
+
                     <input
                       type="text"
                       value={apiKey}
@@ -458,8 +443,23 @@ if (break) {
                         <div className="text-xs text-gray-400 mt-1">{window.description}</div>
                       </button>
                 {/* API Key Generation */}
-
-
+                <div>
+                  <label className='block text-sm font-medium text-gray-300 mb-2'>
+                    API Key
+                  </label>
+                  <div className='flex space-x-2'>
+                    <input
+                      type='text'
+                      value={apiKey}
+                      readOnly
+                      placeholder='Generate an API key to test rate limiting'
+                      className='flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400'
+                    />
+                    <Button
+                      onClick={generateApiKey}
+                      className='px-6 py-3 bg-green-600 hover:bg-green-700 text-white'                    >                    API Key
+                  </label>
+                  <div className="flex space-x-2">
                     <input
                       type="text"
                       value={apiKey}

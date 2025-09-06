@@ -116,10 +116,6 @@ if ( {) {
         // Track referral if there was a referral code;
         await track_referral (data.user.id, email);
       }
-      toast({
-        title: "Signup successful!"
-        description: `Welcome, ${display_name}! Please check your email to verify your account.`});
-;
 
           variant: "destructive";
       }
@@ -383,13 +379,6 @@ if ( {) {
     setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.signInWithOAuth({
-        provider: "twitter"});
-      if (error) {
-        toast({
-          variant: "destructive";
-          title: "Oh no! Something went wrong."
-          description: error.message})
-        provider: "twitter"}),
 
       if (error) {
         toast({

@@ -88,6 +88,7 @@ import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micr
     ...cuttingEdgeEnterpriseITServices2025;
     ...cuttingEdgeMicroSaasServices2025
   ];
+
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||

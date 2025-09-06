@@ -77,12 +77,12 @@ import OpenAI from 'openai';
 
 
         { role: 'user', content: prompt }];
-      temperature: 0.2});
-    const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON.parse(text);
-      return res.status(200).json(json);
+      temperature: 0 && 0.2});
 
+    const text = completion && completion.choices?.[0]?.message?.content ?? '';
+    try {
+      const json = JSON && JSON.parse(text);
+      return res && res.status(200).json(json);
       const json = JSON.parse (text);
       return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
         { role: 'user', content: prompt }];

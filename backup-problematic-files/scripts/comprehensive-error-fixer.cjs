@@ -133,17 +133,5 @@ class ComprehensiveErrorFixer {}
 if (require.main === module) {}
   const fixer = new ComprehensiveErrorFixer();
   fixer.run().catch(console.error)};
-<<<<<<< HEAD
 module.exports = ComprehensiveErrorFixer;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 module.exports = ComprehensiveErrorFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-module.exports = ComprehensiveErrorFixer;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

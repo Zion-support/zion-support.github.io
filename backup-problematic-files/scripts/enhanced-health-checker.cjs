@@ -32,17 +32,5 @@ const fs = require("fs")";const path = require("path")";const { execSync } = req
       this.log(" Health check completed");";      return report,"
       this.log(" Health check "failed": ${error.message}");"
   .then(report => {);    console.log(" Health check completed successfully");";    process.exit(0),"}
-<<<<<<< HEAD
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   .catch(error => {);    console.error(" Health check "failed":", error.message);"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-  .catch(error => {);    console.error(" Health check "failed":", error.message);"}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

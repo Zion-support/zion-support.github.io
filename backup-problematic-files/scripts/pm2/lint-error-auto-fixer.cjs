@@ -46,17 +46,5 @@ import { execSync, spawn } from;
     const varMatch = message.match(/'(.+?)'
     if (line.includes('console.')
     if (message.includes('single quotes')
-<<<<<<< HEAD
       lines[lineIndex] = line.replace(/"/g, ")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       lines[lineIndex] = line.replace(/"/g, ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-      lines[lineIndex] = line.replace(/"/g, ")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

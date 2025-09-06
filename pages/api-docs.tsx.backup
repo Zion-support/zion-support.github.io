@@ -400,6 +400,9 @@ export default function ApiDocsPage() {
 =======
 >>>>>>> origin/main
 =======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
 >>>>>>> main
     name: 'Predictive Analytics',
     method: 'POST',
@@ -604,6 +607,9 @@ export default function ApiDocsPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
 =======
 >>>>>>> main
                 <Link
@@ -814,8 +820,14 @@ export default function ApiDocsPage() {
 =======
 >>>>>>> origin/main
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
+=======
+>>>>>>> fc49d8eb930324bef46309219e0ff5393177bd8e
         {/* Contact Section */}
         <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -839,6 +851,9 @@ export default function ApiDocsPage() {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
 =======
 >>>>>>> main
   Code, 
@@ -1482,6 +1497,9 @@ function APIDocsPage() {
 =======
 <<<<<<< HEAD
 >>>>>>> origin/main
+=======
+<<<<<<< HEAD
+>>>>>>> 3eaa21314cf907cc7f6a5ec498a7a13fc2c18a9b
 =======
 >>>>>>> main
                 <Link

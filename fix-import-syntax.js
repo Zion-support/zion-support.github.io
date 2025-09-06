@@ -37,9 +37,10 @@ function fixImportSyntax(filePath) {
     return modified;
   } catch (error) {
     for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      if (stat.isDirectory()) {
+      const fullPath = path && path.join(currentDir, item);
+      const stat = fs && fs.statSync(fullPath);
+
+      if (stat && stat.isDirectory()) {
         // Skip certain directories
         if (
           [

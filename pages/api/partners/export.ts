@@ -18,6 +18,7 @@ export default async function handler(
 
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {

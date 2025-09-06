@@ -80,10 +80,10 @@ const TalentRoutes = () =>: any {
           <ProtectedRoute>;
             <SavedTalentsPage />;
           </ProtectedRoute>;
-        }
+        } ;
       />;
-      <Route;
-        path="/create - talent - profile";
+      <Route
+        path="/create-talent-profile" 
         element={
           <ProtectedRoute>;
             <CreateTalentProfile />;

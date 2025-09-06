@@ -143,32 +143,38 @@ function AnalyticsProvider() {
   const location = use_location ();
   const { user } = use_auth ();
 ;
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(;
+  undefined;
+),;
+export function AnalyticsProvider({ children }: { children: ReactNode }) {;
+  const [pageViews, setPageViews] = useState(0),;
+  const [events, setEvents] = useState<AnalyticsEvent[]>([]),;
+  const [lastEvent, setLastEvent] = useState<AnalyticsEvent | null>(null),;
+  const location = useLocation(),;
+  const { user } = useAuth(),;
   // Track page views when location changes;
-  useEffect (() => {
-    track_event ('page_view', { path: location.pathname }),
-    setPageViews ((prev) => prev + 1);
-    // eslint - disable - next - line react - hooks / exhaustive - deps;
-  }, [location.pathname]);
-;
+  useEffect(() => {;
+    trackEvent('page_view', { path: location.pathname }),;
+    setPageViews((prev) => prev + 1),;
+    // eslint-disable-next-line react-hooks/exhaustive-deps;
+  }, [location.pathname]),;
   // Function to track general analytics events;
-  const track_event = async (type: AnalyticsEventType, metadata: Record < string, any> = {}) => {
-    const event: AnalyticsEvent = {
-      type,
-      path: location.pathname,
-      timestamp: Date.now (),
-      user_id: user?.id,
+  const trackEvent = async (type: AnalyticsEventType, metadata: Record<string any> = {}) => {;
+    const event: AnalyticsEvent = {;
+      type,;
+      path: location.pathname,;
+      timestamp: Date.now(),;
+      userId: user?.id,;
       metadata;
-    }
-;
-    set_events ((prev_events) => [...prev_events, event]);
-    setLastEvent (event);
-;
-    try {
+    },;
+    setEvents((prevEvents) => [...prevEvents, event]),;
+    setLastEvent(event),;
+    try {;
       // Store event in Supabase for persistent analytics;
-      await supabase.from ('analytics_events').insert ([{
-        event_type: type,
-        path: location.pathname,
-        user_id: user?.id,
+      await supabase.from('analytics_events').insert([{;
+        event_type: type,;
+        path: location.pathname,;
+        user_id: user?.id,;
         metadata: metadata;
       }]);
 

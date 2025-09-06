@@ -16,7 +16,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({
     case 'dangerous':;
 
   switch (tabValue) {    case 'pending':
-      return (
 
 
   switch (tabValue) {    case 'pending':
@@ -102,7 +101,5 @@ import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
         </div>);
     default:;
       return null;
-  }
-}
 
   }

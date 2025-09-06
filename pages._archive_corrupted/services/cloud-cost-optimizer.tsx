@@ -33,9 +33,9 @@ interface CloudcostoptimizerProps {;
 }
 export default function Cloudcostoptimizer(): any ({ }: CloudcostoptimizerProps) {;
   return (
-    <div>;
-      <h1>Cloudcostoptimizer</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Cloudcostoptimizer</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

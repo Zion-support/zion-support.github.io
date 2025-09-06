@@ -125,17 +125,22 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {;
       }),;
       return;
     }
-;
-    try {;
-      setIsSubmitting(true),;
-      // First submit the application to the job applications table;
-      const applicationSuccess = await applyToJob(;
-        job.id,;
-        message,;
-        selectedResumeId;
-      ),;
-      if (!applicationSuccess) {;
-        throw new Error("Failed to submit application");
+
+      }),
+      return
+    }
+    try {
+      setIsSubmitting(true);
+      setIsSubmitting(true),
+      
+      // First submit the application to the job applications table
+      const applicationSuccess = await applyToJob(
+        job.id
+        message
+        selectedResumeId
+      );
+      if (!applicationSuccess) {
+        throw new Error("Failed to submit application")
       }
 ;
       // Format message with proposal link if provided;

@@ -30,7 +30,6 @@ export interface PerformanceAlert {
     firstContentfulPaint: number;
 export class PerformanceMonitorService {
 
-export class PerformanceMonitorService {;
   private apiKey: string;
 
   private baseUrl: string
@@ -514,6 +513,34 @@ export const PERFORMANCE_MONITOR_PRICING = {
     return url ? alerts.filter(a => a.url === url) : alerts;
   }
 }
+;
+// Pricing tiers for the Performance Monitor;
+export const PERFORMANCE_MONITOR_PRICING = {;
+  starter: {;
+    name: 'Starter',;
+    price: 19,;
+    period: '/month',;
+    features: [;
+      'Monitor up to 5 URLs5-minute monitoring frequencyBasic performance metricsEmail alerts7-day data retentionBasic reporting';
+    ];
+  },;
+  professional: {;
+    name: 'Professional',;
+    price: 49,;
+    period: '/month',;
+    features: [;
+      'Monitor up to 25 URLs1-minute monitoring frequencyAdvanced performance metricsEmail, Slack, and webhook alerts30-day data retentionAdvanced reporting and analyticsCustom thresholdsAPI access';
+    ];
+  },;
+  enterprise: {;
+    name: 'Enterprise',;
+    price: 149,;
+    period: '/month',;
+    features: [;
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',;
+      'SLA guarantee';
+
+    ];
 
 
 

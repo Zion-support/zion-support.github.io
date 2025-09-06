@@ -136,6 +136,7 @@ const UltraFuturisticBackground2047: React.FC = () => {;
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl" />
         </div>
+
         <div className="absolute top-1/4 right-1/4 w-64 h-64 opacity-5">
           <div className="w-full h-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
         </div>

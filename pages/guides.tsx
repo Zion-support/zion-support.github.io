@@ -362,11 +362,11 @@ const guides = [
     title: "Web Performance Optimization",
     category: "Performance",
     difficulty: "Advanced",
-    readTime: "18 min read",
+    read_time: "18 min read",
     author: "Performance Team",
     rating: 4.9,
     students: 650,
-    image: "/images/guides/web-performance.jpg",
+    image: "/images / guides / web - performance.jpg",
     icon: Zap,
 ];
 const categories = [

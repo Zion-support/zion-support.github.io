@@ -66,5 +66,5 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -44,6 +44,9 @@ function writeTextFile(filePath: string, content: string) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+  // Check condition
+if ( {) {
+  $2
 }
 ;
 function nowIso(): string {;

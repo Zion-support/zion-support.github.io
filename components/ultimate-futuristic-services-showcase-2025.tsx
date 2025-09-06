@@ -418,26 +418,6 @@ export default function UltimateFuturisticServicesShowcase2025() {;
 
                     {service.features.length > 4 && (
                       <div className='text-sm text-purple-400 mt-2'>                        +{service.features.length - 4} more features
-                {/* Features */}
-                <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3 flex items-center">
-                    <Sparkles className="w-4 h-4 mr-2 text-purple-400" />
-                    Key Features
-                  </h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    {service.features.slice(0, 4).map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature}
-                      </div>
-                    ))}
-                    {service.features.length > 4 && (
-                      <div className='text-sm text-purple-400 mt-2'>                      <div className="text-sm text-purple-400 mt-2">
-                        +{service.features.length - 4} more features
-                      </div>
-                    )}
-                  </div>
-                </div>
 
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>

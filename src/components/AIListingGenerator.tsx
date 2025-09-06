@@ -163,7 +163,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
               <>Generating Optimized Content...</>
             ) : (
               <>
-                <Sparkles className="h-4 w-4 mr-2" />
+                <Sparkles className='h-4 w-4 mr-2' />
                 Generate Optimized Content
               </>
             )}
@@ -174,7 +174,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       )}
         <Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden">
           <CardHeader>
-            <Skeleton className="h-8 w-3/4 bg-zion-blue-light/20" />
+            <Skeleton className='h-8 w-3/4 bg-zion-blue-light/20' />
           </CardHeader>
                 <Skeleton
     <div className='space - y-6'>;

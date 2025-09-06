@@ -26,7 +26,7 @@ interface Notification {
   message: string;
   timestamp: Date;
   read: boolean;
-  actionUrl?: string;
+  action_url?: string;
 }
 
 
@@ -55,15 +55,9 @@ const getNotificationIcon = (;
 const getNotificationIcon = (type: string) =>: any {
   switch (type) {
     case 'message':;
-      return <Badge className="bg-blue-500">Message</Badge>,;
-    case 'quote_request':;
-      return <Badge className="bg-purple-500">Quote Request</Badge>,;
-    case 'booking_confirmation':;
-      return <Badge className="bg-green-500">Booking</Badge>,;
-    case 'hire_request':;
-      return <Badge className="bg-zion-purple">Hire Request</Badge>,;
-    case 'onboarding':;
-      return <Badge className="bg-zion-cyan">Onboarding</Badge>,;
+      return <Bell className="h - 4 w - 4 text - blue - 500" />;
+    case 'order':;
+      return <CheckCircle className="h - 4 w - 4 text - green - 500" />;
     case 'system':;
       return <Badge className="bg-yellow-500">System</Badge>,;
     case 'project_update':;

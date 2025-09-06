@@ -17,13 +17,14 @@ import {
 
 
 } from "../../../utils/messaging/storage";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
     }
     const messages = getMessages(id);
 
       conversationId,
+      senderId: user.id,
       recipientId,
     res.status(200).json({ conversation, messages })
   } else if (req.method === 'POST') {

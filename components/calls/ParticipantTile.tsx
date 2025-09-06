@@ -34,7 +34,6 @@ type Props = {
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
 };
 
-export default function ParticipantTile({ participant, isLocal, displayName }: Props) {;
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => {

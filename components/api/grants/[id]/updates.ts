@@ -46,6 +46,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
     existing && existing.updatedAt = new Date().toISOString();
+
+
     writeGrant(existing);
     return res && res.status(201).json({ update })
   }
@@ -104,14 +106,12 @@ if ( {) {
   $2
 }
     const { content } = req.body as { content?: string }
-    if ()) {
-  $2
-}
-      return res.status (400).json ({ error: 'Missing content' });
+    if (!content |!content.trim())
+      return res.status(400).json({ error: 'Missing content' });
     const update = {
-      id: uuidv4 (),
-      created_at: new Date ().toISOString (),
-      content: content.trim (),
+      id: uuidv4()
+      createdAt: new Date().toISOString()
+      content: content.trim()
     }
     existing.updates = [...(existing.updates || []), update];
     existing.updated_at = new Date ().toISOString ();

@@ -225,8 +225,8 @@ import { comprehensiveIT2026Services } from '../data/comprehensive-it-2026-servi
                       </option>;
                     ))}
                 {/* Sort By */}
-                <div className='relative'>
-                  <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
+                <div className='relative'>;
+                  <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />;
                     value={sortBy}
                     onChange={e => setSortBy(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600/50 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent appearance-none'

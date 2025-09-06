@@ -1,5 +1,4 @@
 
-import { cn } from "@/lib/utils"
 
 const Sheet = SheetPrimitive.Root
 onst Sheet = SheetPrimitive.Root
@@ -33,7 +32,7 @@ const sheetVariants = cva(
         right:
           "inset-y-0 right-0 h-full w-3/4  border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right sm:max-w-sm"}},
     defaultVariants: {
-      side: "right"}}
+      side: &quot;right&quot;}}
 )
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>

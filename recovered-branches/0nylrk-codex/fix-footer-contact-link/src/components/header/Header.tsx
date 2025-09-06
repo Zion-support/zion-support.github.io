@@ -162,7 +162,6 @@ export function Header(): any ({ hideLogin = false, customLogo, customTheme }: H
       navigate(`/search?q=${encodeURIComponent(query)}`);
       setQuery("");
     }
-  }
 
   return (
     <header

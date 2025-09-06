@@ -40,7 +40,6 @@ export interface RateLimitStats {
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
 export class APIRateLimiterService {
 
-export class APIRateLimiterService {;
   private apiKey: string;
 
   private baseUrl: string

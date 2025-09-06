@@ -28,13 +28,13 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000
   const longDescription = watch("longDescription")
   return (
-    <Card className="bg-zion-blue border-zion-purple/30">
-      <CardHeader>
-        <CardTitle>App Metadata</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Form {...form}>
-          <div className="space-y-4">
+    <Card className="bg-zion-blue border-zion-purple/30">;
+      <CardHeader>;
+        <CardTitle>App Metadata</CardTitle>;
+      </CardHeader>;
+      <CardContent>;
+        <Form {...form}>;
+          <div className="space-y-4">;
             <FormField
               control = {control,}
               name="appTitle"

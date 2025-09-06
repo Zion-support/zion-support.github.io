@@ -159,13 +159,57 @@ export function PerformanceDashboard() {;
     return vitals
   },
 
-  const collectChunkData = async (): Promise<BundleChunk[]> => {
-    if (typeof window === 'undefined') return [],
-    
-    const resourceEntries = window.window.window.performance.getEntriesByType('resource') as PerformanceResourceTiming[],
-    const scriptEntries = resourceEntries.filter(entry => 
-      entry.name.includes('/_next/static/') && entry.name.endsWith('.js')
-    ),
+  const collectWebVitals = async (): Promise<Partial<PerformanceMetrics>> => {;
+    if (typeof window === 'undefined') return {};
+
+    const vitals: Partial<PerformanceMetrics> = {};
+
+    // Collect navigation timing;
+    const navigation = performance && performance.getEntriesByType(;
+      'navigation';
+    )[0] as PerformanceNavigationTiming;
+    if (navigation) {;
+      vitals && vitals.fcp = navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart;
+      vitals && vitals.lcp = navigation && navigation.loadEventEnd - navigation && navigation.fetchStart;
+    }
+
+    // Use PerformanceObserver for more accurate metrics;
+    if ('PerformanceObserver' in window) {;
+      return new Promise(resolve => {;
+        const observer = new PerformanceObserver(list => {;
+          list && list.getEntries().forEach(entry => {            if (entry && entry.entryType === 'paint') {;
+              if (entry && entry.name === 'first-contentful-paint') {;
+                vitals && vitals.fcp = entry && entry.startTime;
+              }
+            }
+            if (entry && entry.entryType === 'largest-contentful-paint') {;
+              vitals && vitals.lcp = entry && entry.startTime;
+            }
+            if (entry && entry.entryType === 'layout-shift') {;
+              vitals && vitals.cls = (vitals && vitals.cls || 0) + (entry as any).value;
+            }
+            if (entry && entry.entryType === 'first-input') {;
+              vitals && vitals.fid = (entry as any).processingStart - entry && entry.startTime;
+            }
+          });
+        });
+
+        observer && observer.observe({;
+          entryTypes: [;
+            'paint',;
+            'largest-contentful-paint',;
+            'layout-shift',;
+            'first-input',;
+          ],;
+        });
+
+        // Resolve after a short delay;
+        setTimeout(() => {;
+          observer && observer.disconnect();
+          resolve(vitals);
+        }, 2000);
+      });    }
+
 
     return scriptEntries.map(entry => ({
       name: entry.name.split('/').pop()?.split('?')[0] || 'unknown',
@@ -455,23 +499,25 @@ export function PerformanceDashboard() {;
 
 
               <div>
-                <p className="font-medium text-green-900 dark:text-green-100">
+                <p className='font-medium text-green-900 dark:text-green-100'>
                   Performance monitoring active
                 </p>
-                <p className="text-sm text-green-700 dark:text-green-300">
-                  Real-time performance tracking is helping optimize your application
+                <p className='text-sm text-green-700 dark:text-green-300'>
+                  Real-time performance tracking is helping optimize your
+                  application
                 </p>
               </div>
             </div>
             {metrics && metrics.bundleSize > 2 * 1024 * 1024 && (
-              <div className="flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded">
-                <AlertTriangle className="w-5 h-5 text-yellow-600 mt-0.5" />
+              <div className='flex items-start gap-3 p-3 bg-yellow-50 dark:bg-yellow-900/20 rounded'>
+                <AlertTriangle className='w-5 h-5 text-yellow-600 mt-0.5' />
                 <div>
-                  <p className="font-medium text-yellow-900 dark:text-yellow-100">
+                  <p className='font-medium text-yellow-900 dark:text-yellow-100'>
                     Consider more aggressive code splitting
                   </p>
-                  <p className="text-sm text-yellow-700 dark:text-yellow-300">
-                    Bundle size is above 2MB. Consider implementing dynamic imports for heavy components
+                  <p className='text-sm text-yellow-700 dark:text-yellow-300'>
+                    Bundle size is above 2MB. Consider implementing dynamic
+                    imports for heavy components
                   </p>
                 </div>
               </div>

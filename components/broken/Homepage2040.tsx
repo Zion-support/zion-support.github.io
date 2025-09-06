@@ -69,6 +69,18 @@ animationDelay: `$ {
 }</motion.div> </div> </section> > Ready to Transform Your Business? </motion.h2> <motion.p > Join thousands of companies already leveraging our revolutionary technology solutions </motion.p> <motion.div > <Link href="/contact" aria-label="Contact us" > <button className="px-12 py-5 bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:via-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25" > Contact Us Today </button> </a> <Link href="/demo" aria-label="Request a demo" > <button className="px-12 py-5 border-3 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Request Demo </button> </a> </motion.div> <motion.div > <div className="flex items-center gap-2" > <Shield className="w-5 h-5 text-green-400" /> <span>Enterprise Security</span> </div> <div className="flex items-center gap-2" > <Zap className="w-5 h-5 text-yellow-400" /> <span>24/7 Support</span> </div> <div className="flex items-center gap-2" > <TrendingUp className="w-5 h-5 text-blue-400" /> <span>Proven Results</span> </div> </motion.div> </motion.div> </div> </section> </main> </Layout>)
 }
 export default Homepage2040;
+import React, { Suspense, lazy, useState, useEffect } from 'react';
+import Layout from './layout/Layout';
+import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  ArrowRight, Star, 
+  Brain, Atom, Shield, Zap, TrendingUp, Globe;
+  Rocket, Target, Users, Cpu, Eye, Network;
+  Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
+  FileText, BarChart3, Heart, Truck, ShieldCheck;
+  Sparkles, Infinity as InfinityIcon, Zap as Lightning
+} from 'lucide-react';
 
 // Import new service data
 import { innovativeMicroSaasServices2025V2  } from '../data/2025-innovative-micro-saas-expansion-v2';

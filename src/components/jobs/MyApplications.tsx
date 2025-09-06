@@ -124,6 +124,7 @@ export function MyApplications() {;
                 
 
                 <Button 
+
                   variant="default" 
                   size="sm"
                   className="text-xs"

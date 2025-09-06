@@ -423,6 +423,7 @@ class QRCodeService {;
     let smsString = `sms:${data.phone}`;
     if (data.message) {
       smsString += `?body=${encodeURIComponent(data.message)}`
+
 ;
   private generateSMSString(data: any): string {;
     let smsString = `sms:${data.phone}`,;

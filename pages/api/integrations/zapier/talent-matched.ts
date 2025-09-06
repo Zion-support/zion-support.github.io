@@ -9,10 +9,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState();
   const sinceTs = since ? Number(since) : 0;
-  const events = state && state.events.filter(
-    (e) => e && e.type === "zion && zion.talent.matched" && e && e.timestamp > sinceTs,
+  const events = state.events.filter(
+    (e) => e.type === "zion.talent.matched" && e.timestamp > sinceTs
   );
-  res && res.status(200).json({ events });
+  res.status(200).json({ events });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

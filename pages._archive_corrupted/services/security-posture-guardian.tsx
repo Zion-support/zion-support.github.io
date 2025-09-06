@@ -33,9 +33,9 @@ interface SecuritypostureguardianProps {;
 }
 export default function Securitypostureguardian(): any ({ }: SecuritypostureguardianProps) {;
   return (
-    <div>;
-      <h1>Securitypostureguardian</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Securitypostureguardian</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

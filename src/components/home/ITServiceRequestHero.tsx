@@ -22,22 +22,31 @@ import { logErrorToProduction } from '@/utils/productionLogger'; export function
   hidden: { opacity: 0
   y: 20
 }
+      setIsSubmitting (true);
+      // Simulate API call;
+      set_timeout (: unknown {
+        setIsSubmitting (false);
+        router (`/it - onsite - services?location = ${encodeURIComponent (location)}`)}, 1000)}}}}}}}}}}
+  const container_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.6
-        staggerChildren: 0.2
+        duration: 0.6,
+        stagger_children: 0.2;
 }
 }
 }
-  const itemVariants = {
-  hidden: { opacity: 0
-  y: 20
-}
+  const item_variants = {
+  hidden: { opacity: 0,
+  coordinate_y: 20;
+},
     visible: {
-      opacity: 1
-      y: 0
+      opacity: 1,
+      coordinate_y: 0,
       transition: { duration: 0.5 }
 }
 }
@@ -425,12 +434,16 @@ export function ITServiceRequestHero() {;
                 {isSubmitting && (;
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />;
                 )}
+
                 Request Service;
               </Button>;
             </form>;
           </div>;
-          <p className="text-xs text-center text-zion-slate-light mt-3">;
-            {t('onsite_form.privacy_noticeRest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.')}
+          <p className='text-xs text-center text-zion-slate-light mt-3'>;
+            {t(;
+              'onsite_form && onsite_form.privacy_notice',;
+              'Rest assured, your personal information stays private. We use it only to coordinate service and never share details outside our secure scheduling system with anyone.';
+            )}
           </p>;
         </div>;
       </div>;

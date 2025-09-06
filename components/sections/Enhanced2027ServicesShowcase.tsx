@@ -206,8 +206,20 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         : 'text-gray-400 hover:text-white';
                     }`}
                   >
-                    <List className='w-5 h-5' />                  </button>                      viewMode === 'list'
-                        ? 'bg-cyan-500/20 text-cyan-400'
+                    <option value="name">Sort by Name</option>
+                    <option value="price">Sort by Price</option>
+                    <option value="roi">Sort by ROI</option>
+                  </select>
+                  <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 pointer-events-none" />
+                </div>
+
+                {/* View Mode */}
+                <div className="flex bg-gray-700/50 rounded-xl p-1">
+                  <button
+                    onClick={() => setViewMode('grid')}
+                    className={`p-2 rounded-lg transition-all duration-200 ${
+                      viewMode === 'grid' 
+                        ? 'bg-cyan-500/20 text-cyan-400' 
                         : 'text-gray-400 hover:text-white'
                     }`}
                   >
@@ -495,7 +507,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                             <span;
                               key={idx}
                               {tag}
-                            </span>;
+                            </span>
                           ))}
                       {/* Stats and CTA */}
                       <div className='flex flex-col items-end space-y-3'>;

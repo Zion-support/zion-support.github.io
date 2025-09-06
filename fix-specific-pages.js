@@ -186,7 +186,7 @@ function fixSpecificPages() {
 
 
   return results
-      results.failed++,
+
       // // // console.log(`❌ Failed: ${pagePath}`),
       // // // console.log(`   Reason: ${result.reason}`)
 ;

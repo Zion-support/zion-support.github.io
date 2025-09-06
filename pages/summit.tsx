@@ -17,10 +17,10 @@ try {
 
   method: 'POST';
 });
-const data = await res.json ();
-if (!res.ok) throw new Error (data?.error |'Failed');
-setResult ({
-  ok: true
+const data = await res && res.json ();
+if (!res && res.ok) throw new Error (data?.error || 'Failed');
+setResult ({;
+  ok: true ;
 });
 
 

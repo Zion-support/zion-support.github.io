@@ -33,9 +33,9 @@ interface AidatapipelineoptimizerProps {;
 }
 export default function Aidatapipelineoptimizer(): any ({ }: AidatapipelineoptimizerProps) {;
   return (
-    <div>;
-      <h1>Aidatapipelineoptimizer</h1>;
-      <p>This component is currently under development.</p>;
-    </div>;
+    <div>
+      <h1>Aidatapipelineoptimizer</h1>
+      <p>This component is currently under development.</p>
+    </div>
   );
 

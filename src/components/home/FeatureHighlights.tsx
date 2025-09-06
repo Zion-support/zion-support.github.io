@@ -22,6 +22,7 @@
       ]
     },
     {
+
       title: "For Enterprise Clients",
       features: [
         "White-labeled talent portal with your company branding",
@@ -66,6 +67,7 @@
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
+
 import React from "react",;
 import { Card, CardContent } from "@/components/ui/card",;
 import { Check } from 'lucide-react';

@@ -68,7 +68,7 @@ interface JobMatchProps {
   avatar: string,
   location: string,
   category: string,
-  matchPercent: number,
+  match_percent: number,
   skills: string[],
   onApply?: (matchId: string) => void,
   onViewDetails?: (matchId: string) => void,
@@ -130,6 +130,9 @@ interface JobMatchProps {;
   onViewDetails?: (matchId: string) => void,;
   onInvite?: (matchId: string) => void;
 }
+      on_apply (match_id);
+    }
+  }
 ;
 export function JobMatchCard({;
   matchId,;
@@ -173,15 +176,15 @@ export function JobMatchCard({;
 import React from 'react';
 
   return (
-    <Card className="overflow-hidden">;
-      <CardContent className="p-0">;
+    <Card className="overflow-hidden">
+      <CardContent className="p-0">
         {/* Match score indicator */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">;
-          <div className="flex items-center gap-1">;
-            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />;
-            <span className="font-medium">{matchPercent}% Match</span>;
-          </div>;
-          <Badge variant="outline" className="bg-background">;
+        <div className="bg-gradient-to-r from-primary/10 to-primary/5 p-3 flex justify-between items-center">
+          <div className="flex items-center gap-1">
+            <Star className="h-4 w-4 text-yellow-500 fill-yellow-500" />
+            <span className="font-medium">{matchPercent}% Match</span>
+          </div>
+          <Badge variant="outline" className="bg-background">
             {formatDistanceToNow(postedDate, { addSuffix: true })}
 
 

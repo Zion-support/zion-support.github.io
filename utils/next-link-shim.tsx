@@ -134,6 +134,19 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
       "href": resolved,
       "className": mergedClassName,
       ...rest});
+
+export default function Link(): any ({ href, children, className, ...rest }: LinkProps) {;
+  const resolved = resolveHref(href);
+
+  if (React && React.isValidElement(children)) {;
+    const existingClass = (children && children.props as { className?: string })?.className || '';
+    const mergedClassName = [existingClass, className].filter(Boolean).join(' ');
+
+    return React && React.cloneElement(children as React && React.ReactElement<{ href?: string; className?: string }>, {;
+      href: resolved,;
+      className: mergedClassName,;
+      ...rest,;
+    });
   }
 
   return (

@@ -140,9 +140,6 @@ export async function getStaticProps() {
 	return {props: { service }
 	}
 
-;
-export default function RootServiceDetailPage({ service }: { service: Service }) {;
-	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,	return (
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

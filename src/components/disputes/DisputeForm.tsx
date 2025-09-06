@@ -235,10 +235,11 @@ if ( {) {
                   onChange={handleFileChange}
                         <li
                           key={index}
-                          className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'>;
-                          <span>;
-                            {file && file.name} ({(file && file.size / 1024).toFixed(1)} KB);
-                          </span>;
+                          className='flex items-center justify-between text-sm bg-muted/30 p-2 rounded'
+                        >
+                          <span>
+                            {file.name} ({(file.size / 1024).toFixed(1)} KB)
+                          </span>
                           <Button
                             type='button'
                             variant='ghost'
@@ -336,7 +337,7 @@ if ( {) {
                   </div>
                 )}
             {onCancel && (
-              <Button type="button" variant="outline" onClick={onCancel}>
+              <Button type='button' variant='outline' onClick={onCancel}>
                 Cancel
               </Button>
 }value= {

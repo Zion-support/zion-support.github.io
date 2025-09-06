@@ -803,7 +803,14 @@ export default function Innovations2034Page() {;
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 
+                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure',
+                  color: 'from-indigo-500 to-blue-600',
+                  count: '6+ Services'
 
+                },
+                {
+                  icon: '🌌',
+                  title: 'Space & Metaverse',
 
                 Why Choose Zion Tech Group?
               </h2>

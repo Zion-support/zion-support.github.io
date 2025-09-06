@@ -118,22 +118,22 @@ export function QuickActions() {;
     {
       id: 'enable-performance-monitor',
       label: 'Enable Performance Monitor',
-      description: 'Show real-time performance metrics',
-      icon: <Activity className="w-4 h-4" />,
+      description: 'Show real - time performance metrics',
+      icon: <Activity className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
     {
-      id: 'enable-bundle-analyzer',
+      id: 'enable - bundle - analyzer',
       label: 'Enable Bundle Analyzer',
       description: 'Monitor bundle size and chunks',
       icon: <Package className='w - 4 h - 4' />,
       category: 'performance',
       action: () => {
     {
-      id: 'clear-cache',
+      id: 'clear - cache',
       label: 'Clear Cache',
       description: 'Clear browser cache and storage',
-      icon: <Trash2 className="w-4 h-4" />,
+      icon: <Trash2 className='w - 4 h - 4' />,
       category: 'maintenance',
       dangerous: true,
       action: () => {
@@ -270,7 +270,7 @@ if ( {) {
         window.location.reload()
   if (!isVisible) {
     return (
-      <div className="fixed bottom-4 left-4 z-50">
+      <div className='fixed bottom-4 left-4 z-50'>;
         <Button
 
 

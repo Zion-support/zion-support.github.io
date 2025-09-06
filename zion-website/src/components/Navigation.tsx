@@ -27,6 +27,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
           <a href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Zion Tech Group</span>
             <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-transform duration-200">
+
               Zion Tech Group
             </div>
           </Link>

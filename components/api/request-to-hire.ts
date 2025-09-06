@@ -40,55 +40,8 @@ import path from 'path';
       projectInfo,
     });
     // Persist to data/requests as a simple CMS-like log
-    const dir = path && path.join(process && process.cwd(), 'data', 'requests');
-    if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
-;
-export default async /**
- * handler - Function description
- */
-function handler() {  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (405).json ({ error: 'Method not allowed' });
-  }
-  const { talent_slug, requester_name, requester_email, project_info } =;
-    req.body || {}  // Check condition
-if ( {export default async /**
- * handler - Function description
- */
-function handler() {) {
-  $2
-}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (405).json ({ error: 'Method not allowed' });
-  }
-  const { talent_slug, requester_name, requester_email, project_info } =;
-    req.body || {}  const { talent_slug, requester_name, requester_email, project_info } = req.body || {}
-  // Check condition
-if ( {) {
-  $2
-}
-    return res.status (400).json ({ error: 'Missing required fields' });
-  }
-  try {
-    const timestamp = new Date ().toISOString ();
-    console.log ('[Operator] New request to hire:', {
-      timestamp,
-      talent_slug,
-      requester_name,
-      requester_email,
-      project_info,
-    });
-;
-    // Persist to data / requests as a simple CMS - like log;
-    const dir = path.join (process.cwd (), 'data', 'requests');
-    if () fs.mkdir_sync (dir, { recursive: true })) {
-  $2
-}
+    const dir = path.join(process.cwd(), 'data', 'requests');
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
     const payload = {
     // Persist to data/requests as a simple CMS-like log
     const dir = path && path.join(process && process.cwd(), 'datarequests');

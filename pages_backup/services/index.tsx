@@ -410,7 +410,7 @@ export default ServicesIndex;
                 <p className="text-gray-600 mb-4">{service && service.description}</p>;
                 <ul className="text-sm text-gray-500 mb-4">;
                   {service && service.features.map((feature, idx) => (;
-                    <li key={idx} className="mb-1">• {feature}</li>;
+                    <li key={idx} className="mb-1"> {feature}</li>;
                   ))}
                 </ul>;
                 <div className="flex justify-between items-center">;
@@ -496,7 +496,7 @@ export default ServicesIndex;
                 <p className="text-gray-600 mb-4">{service && service.description}</p>;
                 <ul className="text-sm text-gray-500 mb-4">;
                   {service && service.features.map((feature, idx) => (;
-                    <li key={idx} className="mb-1">• {feature}</li>;
+                    <li key={idx} className="mb-1"> {feature}</li>;
                   ))}
                 </ul>;
                 <div className="flex justify-between items-center">;
@@ -521,8 +521,12 @@ export default ServicesIndex;
                 <p className="text-gray-600 mb-4">{service && service.description}</p>;
                 <ul className="text-sm text-gray-500 mb-4">;
                   {service && service.features.map((feature, idx) => (;
-                    <li key={idx} className="mb-1">• {feature}</li>;
+                    <li key={idx} className="mb-1"> {feature}</li>;
                   ))}
+                </ul>
+                <div className="flex justify-between items-center">
+                  <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
+                  <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
                 </ul>;
                 <div className="flex justify-between items-center">;
                   <span className="text-lg font-semibold text-green-600">{service && service.pricing}</span>;

@@ -25,7 +25,7 @@ export default async function handler(
 
 
   );
-  res && res.status(200).send(pdfBuffer);
+  res.status(200).send(pdfBuffer);
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

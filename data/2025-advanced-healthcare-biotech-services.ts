@@ -251,6 +251,7 @@ export interface AdvancedHealthcareBiotechService {
     marketSize: '$45.8B AI drug discovery market', growthRate: '35% annual growth',
     variant: 'ai-drug-discovery-enterprise',
     contactInfo: {
+      
   ];    features: [;
       'AI - powered trial design optimization_intelligent patient recruitment and matching_real - time data collection and monitoring_predictive analytics and insights_regulatory compliance management_site and investigator management_risk assessment and mitigation_integration with EDC systems';
       'Mobile data collection appAPI for research platforms';

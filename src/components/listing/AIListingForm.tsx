@@ -72,19 +72,11 @@ export function AIListingForm({
           disabled={isLoading}        />
       targetAudience
     })
-  },
+  };
+
 
   return (
     <div className="space-y-4">
-      <div className="space-y-2">
-        <label htmlFor="title" className="text-sm font-medium text-zion-slate-light">Title</label>
-        <Input
-          id="title"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter your product or service title"
-          className="bg-zion-blue border border-zion-blue-light text-white"
-          disabled={isLoading}
         />
       </div>
       <div className="space-y-2">

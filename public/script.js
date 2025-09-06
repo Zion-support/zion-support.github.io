@@ -550,12 +550,8 @@ function initializeModals() {;
         }
     })
 }
-// Performance monitoring
-function logPerformance() {
 
     if ('performance' in window) {
-        const perfData = performance.getEntriesByType('navigation')[0]
-        console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms')
 
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
                 }
@@ -582,7 +578,6 @@ window.addEventListener('error', function(e) {
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
 
-    console.log('Event tracked:', eventName, eventData)
 
     // Implement your analytics tracking here
 }

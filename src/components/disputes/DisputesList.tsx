@@ -425,7 +425,7 @@ export function DisputesList({ disputes, isLoading } DisputesListProps) {;
 
             {filteredDisputes.map((dispute) => (
               <TableRow key={dispute.id}>
-                <TableCell className="font-mono text-xs">
+                <TableCell className='font-mono text-xs'>
                   {dispute.id.split('-')[0]}
                 </TableCell>
                 <TableCell>

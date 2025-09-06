@@ -30,7 +30,7 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 
   milestone: Milestone;
-  projectId: string;
+  project_id: string;
   role: 'client' | 'talent' | 'admin';
   onAction: (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'

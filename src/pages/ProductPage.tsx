@@ -155,7 +155,5 @@ product.title ;
 }
         </Button>;
       </div>;
-    </>;
-  );
-}
+    </>);
 ;

@@ -78,20 +78,20 @@ interface HealthData {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
+      <div className='flex items-center justify-center p-8'>
+        <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900'></div>
       </div>
     )
   }
   if (error) {
     return (
-      <Card className="border-red-200 bg-red-50">
-        <CardContent className="p-6">
-          <div className="flex items-center text-red-600">
-            <XCircle className="w-5 h-5 mr-2" />
+      <Card className='border-red-200 bg-red-50'>
+        <CardContent className='p-6'>
+          <div className='flex items-center text-red-600'>
+            <XCircle className='w-5 h-5 mr-2' />
             <span>Failed to load health data: {error}</span>
           </div>
-          <Button onClick={fetchHealthData} className="mt-4">
+          <Button onClick={fetchHealthData} className='mt-4'>
             Retry
           </Button>
         </CardContent>
@@ -340,22 +340,30 @@ interface HealthData {
                 <CardTitle>Error Summary</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-red-600">{healthData.errors.summary.critical}</p>
-                    <p className="text-sm text-gray-600">Critical</p>
+                <div className='grid grid-cols-2 gap-4'>
+                  <div className='text-center'>
+                    <p className='text-2xl font-bold text-red-600'>
+                      {healthData.errors.summary.critical}
+                    </p>
+                    <p className='text-sm text-gray-600'>Critical</p>
                   </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-orange-600">{healthData.errors.summary.high}</p>
-                    <p className="text-sm text-gray-600">High</p>
+                  <div className='text-center'>
+                    <p className='text-2xl font-bold text-orange-600'>
+                      {healthData.errors.summary.high}
+                    </p>
+                    <p className='text-sm text-gray-600'>High</p>
                   </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-yellow-600">{healthData.errors.summary.medium}</p>
-                    <p className="text-sm text-gray-600">Medium</p>
+                  <div className='text-center'>
+                    <p className='text-2xl font-bold text-yellow-600'>
+                      {healthData.errors.summary.medium}
+                    </p>
+                    <p className='text-sm text-gray-600'>Medium</p>
                   </div>
-                  <div className="text-center">
-                    <p className="text-2xl font-bold text-gray-600">{healthData.errors.summary.low}</p>
-                    <p className="text-sm text-gray-600">Low</p>
+                  <div className='text-center'>
+                    <p className='text-2xl font-bold text-gray-600'>
+                      {healthData.errors.summary.low}
+                    </p>
+                    <p className='text-sm text-gray-600'>Low</p>
                   </div>
                 </div>
               </CardContent>

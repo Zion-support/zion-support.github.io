@@ -49,6 +49,16 @@ const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
+import { 
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, 
+  Microscope, Star, ArrowRight, Play, CheckCircle;
+  Phone, Mail, MapPin
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 }
 const heroStats = [
@@ -263,6 +273,9 @@ function UltraFuturisticHero2032() {
           </span>
           <br />
           <span className='text-white'>Technology is Here</span>        </motion.h1>        >
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+        >
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             The Future of
           </span>

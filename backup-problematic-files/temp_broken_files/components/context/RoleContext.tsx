@@ -32,5 +32,5 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
 export function useRole(): RoleContextValue {
   const ctx = useContext(RoleContext),
   if (!ctx) throw new Error('useRole must be used within RoleProvider'),
-  return ctx
+  return ctx;
 }

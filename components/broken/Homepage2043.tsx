@@ -635,6 +635,8 @@ const Homepage2043: React.FC = () => {
               </p>
             </motion.div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {features.map((feature, index) => (            >
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -693,6 +695,13 @@ const Homepage2043: React.FC = () => {
                   >
                     Learn More
                     <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />                  </a>                  </div>
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
+                >
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <feature.icon className="w-8 h-8 text-white" />
+                  </div>
+                  
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {feature.title}
                   </h3>
@@ -785,6 +794,8 @@ const Homepage2043: React.FC = () => {
             <div className='relative'>
               <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm'>
                 <AnimatePresence mode='wait'>                  <motion.div            >
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -1308,6 +1319,8 @@ const Homepage2043: React.FC = () => {
             </motion.div>
             <div className='relative'>
               <AnimatePresence mode='wait'>                <motion.div            >
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 What Our
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">

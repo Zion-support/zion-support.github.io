@@ -384,6 +384,8 @@ if ( {) {
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Discover our comprehensive portfolio of cutting-edge services
                 designed to transform your business              </p>            >
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology Solutions
               </h2>
@@ -542,6 +544,8 @@ if ( {) {
                   description:
                     'Focused on delivering measurable business outcomes and ROI'
                 },              ].map((feature, index) => (            >
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
                 Why Choose Zion Tech Group?
               </h2>

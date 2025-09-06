@@ -131,13 +131,14 @@ import { motion } from 'framer-motion';
   ];
 ;
   ];
+;
   return (
-    <section className='relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>;
+    <section className='relative pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8 overflow - hidden'>;
       {/* Background Elements */}
-      <div className='absolute inset-0 pointer-events-none'>;
+      <div className='absolute inset - 0 pointer - events - none'>;
         {/* Floating Orbs */}
-        <motion&& motion.div
-          className='absolute top-20 left-10 w-32 h-32 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl'
+        <motion.div;
+          className='absolute top - 20 left - 10 w - 32 h - 32 bg - gradient - to - r from - cyan - 500 / 20 to - purple - 500 / 20 rounded - full blur - 3xl';
           animate={{
   return (
     <section className="relative pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8 overflow - hidden">;
@@ -211,6 +212,8 @@ import { motion } from 'framer-motion';
             <h2 className='text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6'>
               The Future of
               <span className='bg-gradient-to-r from-green-400 via-yellow-400 to-orange-400 bg-clip-text text-transparent ml-4'>                Technology          >
+            className="mb-8"
+          >
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Welcome to 2027
@@ -483,6 +486,9 @@ import { motion } from 'framer-motion';
                 'Research Labs'
                 'Government'
               ].map((trust, index) => (                <motion.div          >
+            transition={{ duration: 0.8, delay: 1.4 }}
+            className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto"
+          >
             <h3 className="text-2xl font-bold text-white mb-6">
               Trusted by Industry Leaders
             </h3>

@@ -527,6 +527,16 @@ export default function UltraFuturisticNavigation2034() {;
                 </p>              </div>
             </motion.div>
             {/* Desktop Navigation */}            >
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-20">
+            {/* Logo */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="flex items-center space-x-3"
+            >
               <div className="relative">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                   <Rocket className="w-7 h-7 text-white" />

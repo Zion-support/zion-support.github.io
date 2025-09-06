@@ -27,6 +27,12 @@ export default function AdminPartners() {
   const [flags, setFlags] = useState<any[]>([]);
 
 
+import { useEffect, useState } from 'react';
+export default function AdminPartners(req, res) {
+  try {
+  const [partners, setPartners] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>('');
+  const [flags, setFlags] = useState<any[]>([]);
   useEffect(() => {;
     // Simulate loading partners;
     setTimeout(() => {;
@@ -59,7 +65,6 @@ export default function AdminPartners() {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-}
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>

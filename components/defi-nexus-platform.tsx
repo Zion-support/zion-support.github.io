@@ -314,6 +314,8 @@ export default function DeFiNexusPlatform() {;
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {features.map((feature, index) => (          >
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Revolutionary DeFi Technology
             </h2>
@@ -401,6 +403,8 @@ export default function DeFiNexusPlatform() {;
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            {pricingPlans.map((plan, index) => (          >
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Choose Your Plan
             </h2>
@@ -514,6 +518,8 @@ export default function DeFiNexusPlatform() {;
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>            <motion.div          >
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform DeFi?
             </h2>
@@ -554,6 +560,8 @@ export default function DeFiNexusPlatform() {;
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>
               <p className='text-gray-300'>{contactInfo.mobile}</p>            </motion.div>            >
+              className="text-center"
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
@@ -584,6 +592,8 @@ export default function DeFiNexusPlatform() {;
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>
               <p className='text-gray-300'>{contactInfo.email}</p>            </motion.div>            >
+              className="text-center"
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-8 h-8 text-white" />
               </div>
@@ -614,6 +624,8 @@ export default function DeFiNexusPlatform() {;
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>Address</h3>
               <p className='text-gray-300'>{contactInfo.address}</p>            </motion.div>            >
+              className="text-center"
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>

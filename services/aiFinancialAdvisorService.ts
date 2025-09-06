@@ -94,7 +94,6 @@ export interface FinancialRequest {
     plan?: FinancialPlan;
 export class AIFinancialAdvisorService {
 
-export class AIFinancialAdvisorService {;
   private apiKey: string;
 
   private baseUrl: string

@@ -129,12 +129,12 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
     )}
     checked={checked}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
-      </DropdownMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <DropdownMenuPrimitive.ItemIndicator>;
+        <Check className=&quot;h - 4 w - 4&quot; />;
+      </DropdownMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
 
 
@@ -147,12 +147,12 @@ const DropdownMenuCheckboxItem = React.forwardRef<;
       className
     )}
     {...props}
-  >
-    <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-      <DropdownMenuPrimitive.ItemIndicator>
-        <Circle className="h-2 w-2 fill-current" />
-      </DropdownMenuPrimitive.ItemIndicator>
-    </span>
+  >;
+    <span className=&quot;absolute left - 2 flex h - 3.5 w - 3.5 items - center justify - center & quot;>;
+      <DropdownMenuPrimitive.ItemIndicator>;
+        <Circle className=&quot;h - 2 w - 2 fill - current & quot; />;
+      </DropdownMenuPrimitive.ItemIndicator>;
+    </span>;
     {children}
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Label> & {;
     inset?: boolean;

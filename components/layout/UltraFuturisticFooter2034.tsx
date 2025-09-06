@@ -240,6 +240,8 @@ export default function UltraFuturisticFooter2034() {
                 </p>
                 {/* Stats */}
                 <div className='grid grid-cols-2 gap-4'>                  {stats.map((stat, index) => (              >
+                className="space-y-6"
+              >
                 <div className="flex items-center space-x-3">
                   <div className="relative">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">

@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Layoutdynamic from '../components/Layout.dynamic';
+
 describe('Layoutdynamic', () => {
   test('renders without crashing', () => {
     render(<Layoutdynamic />);

@@ -351,8 +351,8 @@ export function WebhookManager() {;
                     </div>
                   </div>
                 </CardHeader>
-                <CardContent className="py-2">
-                  <div className="flex flex-col space-y-2">
+                <CardContent className='py-2'>
+                  <div className='flex flex-col space-y-2'>
                     <div>
                         </Button>;
                       </div>;

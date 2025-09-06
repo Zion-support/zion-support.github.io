@@ -466,6 +466,7 @@ export default function WebsitePerformanceMonitorPage() {;
           </div>;
         </div>;
       </section>;
+
       {/* Demo Analysis Section */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;

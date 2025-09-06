@@ -50,7 +50,6 @@ import React from 'react';
 
         {description}
       </p>
-
       {/* Footer */}
       <div className="flex items-center justify-between">
         <div className="inline-flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300 transition-colors duration-300">

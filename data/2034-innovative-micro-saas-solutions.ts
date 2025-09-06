@@ -123,7 +123,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	launchDate?: string
 }
 export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
-	{;
+	{
 		id: 'podcast-transcription-seo-suite';
 		name: 'Podcast Transcription & SEO Suite';
 		tagline: 'Turn episodes into SEO-optimized blogs in minutes'

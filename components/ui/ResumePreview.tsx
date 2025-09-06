@@ -51,6 +51,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({
   education?: Array<{
     institution: string
 };
+
 export type ResumePreviewProps = {;
   data: ResumeData;
   theme?: 'light' | 'dark';

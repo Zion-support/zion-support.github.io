@@ -395,12 +395,7 @@ export default function CaseStudyPage(req, res) {
             </div>
               <div
                 className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+
               />
             </div>
             <div className="text-center">

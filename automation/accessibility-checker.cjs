@@ -1,66 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
->>>>>>> origin/main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log('♿ Running accessibility check...');
-console.log('✅ Accessibility check completed');
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-#!/usr/bin/env node
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/main
 class AccessibilityChecker {
   constructor() {
     this.logsDir = path.join(__dirname, '../logs');
@@ -116,26 +57,17 @@ class AccessibilityChecker {
     }
 
     this.log('✅ Accessibility check completed');
-<<<<<<< HEAD
-    return { succes: s: true, results };
-=======
-<<<<<<< HEAD
-    return { succes: s: true, results };
-=======
     return { success: true, results };
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-=======
   }
   async generateReport() {
     this.log('📊 Generating accessibility report...');
     const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
+      timestamp: new Date().toISOString(),
+      accessibility: await this.checkAccessibility(),
+      summary: {
+        checksRun: 2,
+        successfulChecks: 0,
+        failedChecks: 0,
       },
     };
     // Calculate summary
@@ -176,20 +108,6 @@ if (require.main === module) {
       process.exit(1);
     });
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-#!/usr/bin/env node
-=======
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
->>>>>>> origin/main
   }
 
   async generateReport() {
@@ -247,13 +165,7 @@ if (require.main === module) {
       process.exit(1);
     });
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
 #!/usr/bin/env node
->>>>>>> origin/main
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -371,30 +283,7 @@ if (require.main === module) {
     });
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
 const reportFile = path.join(
   reportsDir,
   `accessibility-report-${Date.now()}.json`
@@ -402,22 +291,7 @@ const reportFile = path.join(
 fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
 
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
->>>>>>> origin/main
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -427,54 +301,18 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "name"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "status"
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-    "status"
-=======
-    "status"
-=======
-module.exports = AccessibilityChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> origin/main
     "status"
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
+    "status"
+module.exports = AccessibilityChecker;
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 console.log('♿ Running accessibility check...');
 console.log('✅ Accessibility check completed');
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
->>>>>>> origin/main
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7
->>>>>>> c6cd63e1e962b6dc38d5b78d347bc10b6a345663
-=======
     "status"
     "status"
     "status"
@@ -484,4 +322,3 @@ module.exports = AccessibilityChecker;
 module.exports = AccessibilityChecker;
     "status"
 module.exports = AccessibilityChecker;
->>>>>>> origin/main

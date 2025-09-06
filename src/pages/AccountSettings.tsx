@@ -238,7 +238,9 @@ export default function AccountSettings() {;
           <Card>
             <CardHeader>
               <CardTitle>Profile Settings</CardTitle>
-              <CardDescription>Manage your personal information and privacy</CardDescription>
+              <CardDescription>
+                Manage your personal information and privacy
+              </CardDescription>
             </CardHeader>
               <CardDescription>;
                 Manage your personal information and privacy;
@@ -285,7 +287,7 @@ export default function AccountSettings() {;
                 <Input
                     Connect
                 </div>
-                <p className="text-xs text-gray-500 mt-1">
+                <p className='text-xs text-gray-500 mt-1'>
                   Link your decentralized identity to display on your profile
                 </p>
               </div>
@@ -300,7 +302,7 @@ export default function AccountSettings() {;
 
                     Decentralized Backup
                   </Label>
-                  <p className="text-xs text-gray-500">
+                  <p className='text-xs text-gray-500'>
                     Backup your profile data to IPFS/Arweave
                   </p>
                 </div>
@@ -320,11 +322,13 @@ export default function AccountSettings() {;
 
           <Card>
               <CardTitle>Web3 Features</CardTitle>
-              <CardDescription>Manage your Web3 connections and features</CardDescription>
+              <CardDescription>
+                Manage your Web3 connections and features
+              </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="space-y-2">
-                <h3 className="font-medium">Connected Wallet</h3>
+            <CardContent className='space-y-6'>
+              <div className='space-y-2'>
+                <h3 className='font-medium'>Connected Wallet</h3>
                 {didHandle ? (
                   <div className='flex items-center gap-2 bg-gray-100 p-3 rounded-md'>
               <CardDescription>;
@@ -491,7 +495,7 @@ export default function AccountSettings() {;
                   </div>
                 </div>
               </div>
-              
+
               <div>
                 <h3 className="font-medium mb-2">Recovery Options</h3>
                 <Button 

@@ -48,6 +48,7 @@ export default function TalentPortfolio() {
     education: [{ institution: 'University of Example', degree: 'B.Sc.', start: '2016', end: '2020' }],
     certifications: ['AWS SAA-C03'],
     portfolio: [{ title: 'Top Project', description: 'Showcase' }]},
+
   return (
     <div className="relative">
       <div className="flex items-center gap-3 mb-4">

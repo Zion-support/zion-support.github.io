@@ -318,11 +318,13 @@ export default function UltraFuturisticFooter2028() {;
             </h3>
             </div>;
           </div>;
+
           {/* Quick Links */}
           <div className='lg:col-span-1'>;
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>;
               Quick Links;
             </h3>;
+
             {/* Company Links */}
             <div className='mb-6'>;
               <h4 className='font-medium text-purple-300 mb-3'>Company</h4>;

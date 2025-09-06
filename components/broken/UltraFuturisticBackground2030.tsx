@@ -185,6 +185,7 @@ if (return) {
           }}
 
         />;
+
         <motion&& motion.div
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30"
           style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
@@ -285,7 +286,6 @@ if (return) {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
 
           }}
 

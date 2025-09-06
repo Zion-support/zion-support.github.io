@@ -8,8 +8,6 @@ import CreatePostPage from "../pages/CreatePostPage",
 import EditPostPage from "../pages/EditPostPage";
 import CommunityProfilePage from "../pages/CommunityProfilePage";
 
-import EditPostPage from "../pages/EditPostPage",
-import CommunityProfilePage from "../pages/CommunityProfilePage",
 const CommunityRoutes = () => {
 const CommunityRoutes = () => {
 const CommunityRoutes = () => {;

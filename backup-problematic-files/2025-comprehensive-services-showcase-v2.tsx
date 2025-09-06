@@ -692,7 +692,17 @@ export default function ComprehensiveServicesShowcase2025V2() {
             className="text - 4xl md:text - 5xl font - bold text - white text - center mb - 16";
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.6 }}
+          >;
+            Market Impact & Growth;
+          </motion.h2>;
+          <motion.div;
+            className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'            initial={{ opacity: 0, coordinate_y: 20 }}
+          <motion.div;
+            className="grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8";
+            initial={{ opacity: 0, coordinate_y: 20 }}
+            whileInView={{ opacity: 1, coordinate_y: 0 }}
+            viewport={{ once: true }}
 
       {_/* Market Statistics */}
       <section className="py-20 px-4 bg-black/20">

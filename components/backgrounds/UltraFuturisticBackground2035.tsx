@@ -222,6 +222,7 @@ if ( {) {
             ease: "easeInOut"
           }}
         />
+
         <motion.div
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-500/20 rounded-full"
           animate={{

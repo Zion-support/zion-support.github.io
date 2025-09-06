@@ -1,5 +1,5 @@
   Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin;
-} from 'lucide-react',;
+} from 'lucide-react';
 // Import our new 2025 V2 innovative services;
                           {(service as any).pricing?.professional ?;
                             `Professional: ${(service as any).pricing.professional} | Enterprise: ${(service as any).pricing.enterprise}` :;
@@ -7,6 +7,7 @@
           >
             Our Comprehensive Service Portfolio
           </motion.h2>
+          
           <motion.div 
             className="space-y-20"
             variants={staggerContainer}
@@ -27,6 +28,7 @@
                     {category.description}
                   </p>
                 </div>
+                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {category.services.map((service) => (
                     <motion.div
@@ -40,6 +42,7 @@
                       <p className="text-gray-300 mb-4">
                         {service.description}
                       </p>
+                      
                       <div className="space-y-3 mb-6">
                         <div className="flex items-center text-sm text-cyan-400">
                           <TrendingUp className="w-4 h-4 mr-2" />
@@ -50,6 +53,7 @@
                           {service.growthRate}
                         </div>
                       </div>
+                      
                       <div className="mb-6">
                         <div className="text-2xl font-bold text-white mb-2">
                           Starting at {(service as any).pricing?.starter || service.price}

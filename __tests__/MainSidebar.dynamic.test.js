@@ -25,6 +25,6 @@ import MainSidebar from '../components/MainSidebar.dynamic';
 describe('MainSidebar', () => {
   test('renders without crashing', () => {
     render(<MainSidebar />);
-    expect(screen.getByTestId('main-sidebar')).toBeInTheDocument();
+    expect(screen.getByTestId('mainsidebar.dynamic')).toBeInTheDocument();
   });
 });

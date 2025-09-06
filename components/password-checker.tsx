@@ -160,6 +160,14 @@ export default function PasswordCheckerPage() {;
             Analyze your password security with our advanced strength checker.
             Get detailed feedback, suggestions, and generate strong passwords to
             protect your accounts and data.          </p>      </Head>
+    <>
+      <Head>
+        <title>Password Strength Checker - Zion Tech Group</title>
+        <meta name="description" content="Check your password strength with our advanced security analyzer. Get detailed feedback and suggestions to create stronger, more secure passwords." />
+        <meta property="og: title" content="Password Strength Checker - Zion Tech Group" />
+        <meta property="og:description" content="Advanced password strength analyzer with security recommendations." />
+      </Head>
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
         <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
@@ -186,8 +194,8 @@ export default function PasswordCheckerPage() {;
             </p>
           </div>
                 {/* Password Input */}
-                <div>;
-                  <labelclassName="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                <div>
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                     Enter Password
 ;
     // Ensure at least one of each required character type;

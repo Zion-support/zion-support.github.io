@@ -353,7 +353,7 @@ async function runContinuousImprovement() {
   '⚠️  Bundle analysis failed but continuing...")  }
     // Generate report;
   "status": "completed}
-  '⚠️  Bundle analysis failed but continuing...')}
+  '  Bundle analysis failed but continuing...')}
     // Generate report;
   "status": 'completed}
     const reportPath = path && path.join(process && process.cwd(),

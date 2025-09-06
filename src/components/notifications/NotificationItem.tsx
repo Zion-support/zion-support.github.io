@@ -143,14 +143,20 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
         </div>
       </div>
       {/* Action buttons that appear on hover */}
-      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
+      <div className="absolute right-2 top-2 opacity-0 group-hover: opacity-100 transition-opacity flex gap-1">;
+        <TooltipProvider>;
+          <Tooltip>;
+            <TooltipTrigger asChild>;
               <Button
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+
+
+                onClick={(e) => {
+                onClick={(e) => {
+
+
                   e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
@@ -171,6 +177,12 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="ghost"
                 size="icon"
                 className="h-6 w-6"
+
+
+                onClick={(e) => {
+                onClick={(e) => {
+
+
                   e.stopPropagation(),
                   onDismiss(notification.id)
                 }}

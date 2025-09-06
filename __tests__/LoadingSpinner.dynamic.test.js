@@ -25,6 +25,6 @@ import LoadingSpinner from '../components/LoadingSpinner.dynamic';
 describe('LoadingSpinner', () => {
   test('renders without crashing', () => {
     render(<LoadingSpinner />);
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
+    expect(screen.getByTestId('loadingspinner.dynamic')).toBeInTheDocument();
   });
 });

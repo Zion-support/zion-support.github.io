@@ -257,6 +257,7 @@ export default function CodeQualityCheckerPage() {;
           </div>;
         </div>;
       </section>;
+
       {/* Supported Languages Section */}
       <section className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
@@ -269,6 +270,7 @@ export default function CodeQualityCheckerPage() {;
               language-specific analysis rules and best practices.;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>;
             {supportedLanguages && supportedLanguages.map((language, index) => (;
                       {feature.icon}
@@ -338,6 +340,7 @@ export default function CodeQualityCheckerPage() {;
           </div>;
         </div>;
       </section>;
+
       {/* Demo Analysis Results */}
       {analysisResults && (;
         <section className='section-padding bg-gradient-cursor-accent'>;
@@ -518,6 +521,13 @@ export default function CodeQualityCheckerPage() {;
                     <span className='text-green-400 font-bold'>
                       {analysisResults.metrics.securityScore}
                     </span>                  </div>                  </div>
+              <Card className="border-gradient-teal">
+                <h3 className="text-2xl font-bold mb-6 text-white">Quality Metrics</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-400">Complexity</span>
+                    <span className="text-orange-400 font-bold">{analysisResults.metrics.complexity}</span>
+                  </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-400">Maintainability</span>
                     <span className="text-green-400 font-bold">{analysisResults.metrics.maintainability}</span>

@@ -30,22 +30,24 @@ export function EnterprisePricingTable() {
       users: "Up to 50 users",
       popular: true,
       features: [
-        { name: "Private hiring portal", included: true },
-        { name: "Dedicated talent pool", included: true },
-        { name: "Enhanced SLA (8h)", included: true },
-        { name: "Advanced branding", included: true },
-        { name: "Admin dashboard", included: true },
-        { name: "Team collaboration", included: true },
-        { name: "API access", included: true },
-        { name: "Custom integrations", included: false },
-        { name: "Dedicated success manager", included: false }]},
+        { name: 'Private hiring portal', included: true }
+        { name: 'Dedicated talent pool', included: true }
+        { name: 'Enhanced SLA (8h)', included: true }
+        { name: 'Advanced branding', included: true }
+        { name: 'Admin dashboard', included: true }
+        { name: 'Team collaboration', included: true }
+        { name: 'API access', included: true }
+        { name: 'Custom integrations', included: false }
+        { name: 'Dedicated success manager', included: false }
+      ]
+    }
     {
-      name: "Enterprise",
-      price: "Custom",
-      billing: "",
-      description: "For large organizations",
-      users: "Unlimited users",
-      popular: false,
+      name: 'Enterprise'
+      price: 'Custom'
+      billing: ''
+      description: 'For large organizations'
+      users: 'Unlimited users'
+      popular: false
       features: [
         { name: "Private hiring portal", included: true },
         { name: "Dedicated talent pool", included: true },
@@ -105,6 +107,7 @@ export function EnterprisePricingTable() {
                   ))}
                 </TableRow>
               ))}
+
             </TableBody>;
           </Table>;
         </div>;

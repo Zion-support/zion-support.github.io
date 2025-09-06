@@ -300,6 +300,7 @@ if (return) {
           }}
 
         />;
+
         <motion&& motion.div
           className='absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/40 rounded-full'
           animate={{

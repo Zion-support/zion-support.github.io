@@ -229,16 +229,6 @@ export default function UltraFuturisticFooter2029V2() {
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
-      {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>
-          {/* Company Info */}
-          <div className='lg:col-span-2 xl:col-span-1'>            <motion.div      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12">
-          {/* Company Info */}
-          <div className="lg:col-span-2 xl:col-span-1">
-            <motion.div
 
 ];
 

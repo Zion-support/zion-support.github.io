@@ -11,7 +11,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       ? v
       : v
           .split(',')
-          .map(s => s && s.trim())
+          .map(s => s.trim())
           .filter(Boolean);
   }
   const filters: OrgFilters = {
@@ -28,11 +28,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
     teamOnly: req && req.query.teamOnly === 'true' ? true : undefined};
 
   const filtered = filterOrgData(data, filters);
-  return res && res.status(200).json(filtered);
-  };
-
-  const filtered = filterOrgData(data, filters);
-  return res && res.status(200).json(filtered);  return res && res.status(200).json(filtered)
+  return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
 import {readOrgData, filterOrgData} from '../../../utils / org - data';
 import type { OrgFilters, RoleType } from '../../../types / org';

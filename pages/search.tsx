@@ -614,12 +614,14 @@ export default function SearchPage(req, res) {
     }),
     setSortBy('relevance')
   },
+
   return (
     <Layout>
       <Head>
         <title>Search - Zion Tech Group</title>
         <meta name="description" content="Search our website for information, guides, services, and more." />
       </Head>
+
       <div className="min-h-screen bg-gray-50">
     return matchesQuery && matchesCategory && matchesFilter;
   });

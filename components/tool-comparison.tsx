@@ -709,6 +709,7 @@ function ToolComparisonPage() {
               </tbody>;
             </table>;
           </div>;
+
           {sortedTools && sortedTools.length === 0 && (;
             <div className='text-center py-20'>;
               <Search className='w-16 h-16 text-gray-600 mx-auto mb-4' />;
@@ -724,6 +725,7 @@ function ToolComparisonPage() {
           )}
         </div>;
       </section>;
+
       {/* Detailed Comparison Cards */}
       <section className='py-24 bg-gray-900'>;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>;
@@ -735,6 +737,7 @@ function ToolComparisonPage() {
               best decision for your business.;
             </p>;
           </div>;
+
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
             {sortedTools && sortedTools.slice(0, 6).map((tool, index) => (;
               </tbody>

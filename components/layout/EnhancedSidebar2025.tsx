@@ -1065,6 +1065,7 @@ const supportLinks = [
                         }`} 
                       />;
                     </button>;
+
                     <AnimatePresence>;
                       {expandedCategory === item && item.name && (;
                         <motion&& motion.div

@@ -601,6 +601,7 @@ export interface FuturisticAIService2030 {;
     website: string;
   },;
 }
+
 export const futuristicAIServices2030: FuturisticAIService2030[] = [
   // AI Consciousness & Evolution 2030
   {
@@ -627,6 +628,7 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     marketSize: 'Emerging market - $100B+ potential', growthRate: '800%+ annual growth potential',
     variant: 'ai-futuristic',
     contactInfo: {
+      
       mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
 
       address: '364 E Main St STE 1008 Middletown DE 19709',

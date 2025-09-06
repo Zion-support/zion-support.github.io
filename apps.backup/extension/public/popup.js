@@ -25,6 +25,24 @@ document.getElementById('askBtn').addEventListener('click', async () => {
   const data = await res.json();
 
   document.getElementById('result').textContent = data.text |JSON.stringify(data, null, 2);
+
+document && document.querySelectorAll('.example').forEach((btn) => {
+  btn && btn.addEventListener('click', () => {
+    document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
+  })
+}),
+
+document && document.getElementById('askBtn').addEventListener('click', async () => {
+  const prompt = document && document.getElementById('prompt').value && value.trim();
+  if (!prompt) return;
+  const userId = await new Promise((r) => getUserId(r));
+  const res = await fetch(`${API_BASE}/ai/ask`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
+    body: JSON && JSON.stringify({ prompt })
+  });
+  const data = await res && res.json();
+  document && document.getElementById('result').textContent = data && data.text || JSON && JSON.stringify(data, null, 2);
 });
 
 document.getElementById('postJob').addEventListener('click', async () => {

@@ -22,14 +22,14 @@ interface Order {
     country: string;
   }
   switch (status) {
-    case 'delivered':
-      return <CheckCircle className="h-4 w-4" />;
-    case 'shipped':
-      return <Package className="h-4 w-4" />;
-    case 'processing':
-      return <Clock className="h-4 w-4" />;
-    default:
-      return <Clock className="h-4 w-4" />;
+    case 'delivered':;
+      return <CheckCircle className="h - 4 w - 4" />;
+    case 'shipped':;
+      return <Package className="h - 4 w - 4" />;
+    case 'processing':;
+      return <Clock className="h - 4 w - 4" />;
+    default:;
+      return <Clock className="h - 4 w - 4" />;
   }
   const router = useRouter();
   const { user } = useAuth();

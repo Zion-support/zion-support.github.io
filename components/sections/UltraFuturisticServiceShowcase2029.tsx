@@ -47,6 +47,7 @@ export default function UltraFuturisticServiceShowcase2029({
               key={service.id}
           </p>;
         </motion && motion.div>;
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
           {services && services.slice(0, 6).map((service, index) => (;
             <motion&& motion.div
@@ -86,6 +87,7 @@ export default function UltraFuturisticServiceShowcase2029({
           ))}
         <motion.div
         </div>;
+
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

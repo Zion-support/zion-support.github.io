@@ -668,6 +668,9 @@ function UltraFuturisticHero2030() {
             <div className='flex items-center space-x-2'>
               <TrendingUp className='w-5 h-5 text-blue-400' />
               <span className='text-gray-300 text-sm'>Industry Leader</span>            </div>        >
+          transition={{ duration: 0.8, delay: 2.2 }}
+          className="mt-16 text-center"
+        >
           <p className="text-gray-400 text-sm mb-4">Trusted by leading companies worldwide</p>
           <div className="flex items-center justify-center space-x-8 opacity-60">
             <div className="flex items-center space-x-2">

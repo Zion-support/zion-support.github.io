@@ -38,8 +38,8 @@ class CodeQualityMonitor {;
 ;
   log(message) {;
     const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}\n`;
-    console.log(logMessage.trim());
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
   }
   async runQualityChecks() {

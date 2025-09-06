@@ -19,9 +19,9 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
         }
-      });
+      })
     } else {
-      updateFormData ({
+      updateFormData({
         budget: {
         }
       })

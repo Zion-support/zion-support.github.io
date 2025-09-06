@@ -7,9 +7,9 @@
 } from '@heroicons/react/24/outline'
 const values = [
   {
-    name: 'Innovation First'
-    description: 'We push the boundaries of what\'s possible, constantly exploring new frontiers in AI and technology.'
-    icon: LightBulbIcon}
+    name: 'Innovation First',
+    description: 'We push the boundaries of what's possible, constantly exploring new frontiers in AI and technology.',
+    icon: LightBulbIcon},
   {
     name: 'Global Impact'
     description: 'Our solutions reach across borders, transforming industries and improving lives worldwide.'
@@ -42,6 +42,7 @@ const team = [;
   {
   return (
     <div className="bg-black">
+
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;

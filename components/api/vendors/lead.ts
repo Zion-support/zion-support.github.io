@@ -16,6 +16,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   try {
     const item = addPipelineItem(vendorId, title);
   const vendor = getVendorById(vendorId);
-  if (!vendor) return res && res.status(404).json({ error: 'Vendor not found' });
+  if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
   try {
     const item = addPipelineItem(vendorId, title);

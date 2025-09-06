@@ -253,6 +253,38 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
               {Math.round(metrics.firstInputDelay)}ms
             </div>
             <div className='text-xs text-white/60'>FID</div>          </div>
+          className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6"
+        >
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Clock className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.loadTime)}ms</div>
+            <div className="text-xs text-white/60">Load Time</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Activity className="w-6 h-6 text-green-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.firstContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">FCP</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <TrendingUp className="w-6 h-6 text-purple-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.largestContentfulPaint)}ms</div>
+            <div className="text-xs text-white/60">LCP</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Cpu className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{Math.round(metrics.timeToInteractive)}ms</div>
+            <div className="text-xs text-white/60">TTI</div>
+          </div>
+          
+          <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
+            <Database className="w-6 h-6 text-orange-400 mx-auto mb-2" />
+            <div className="text-lg font-bold text-white">{metrics.cumulativeLayoutShift.toFixed(3)}</div>
+            <div className="text-xs text-white/60">CLS</div>
+          </div>
+          
           <div className="text-center p-3 rounded-lg bg-white/5 border border-white/10">
             <Network className="w-6 h-6 text-red-400 mx-auto mb-2" />
             <div className="text-lg font-bold text-white">{Math.round(metrics.firstInputDelay)}ms</div>

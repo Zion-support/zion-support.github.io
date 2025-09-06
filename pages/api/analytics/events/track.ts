@@ -4,9 +4,8 @@ import path from 'path',;
 const LOG_DIR = path.join(process.cwd(), 'dataanalytics'),
 const LOG_FILE = path.join(LOG_DIR, 'events.log.jsonl'),
 
+import { ensureAdmin } from '../../../utils/auth';
 
-  if (!fs.existsSync(LOG_FILE)) fs.writeFileSync(LOG_FILE, '')
-}
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
@@ -27,22 +26,6 @@ function ensureLogFile() {
   if () fs.mkdir_sync (LOG_DIR, { recursive: true }), ) {
   $2
 }
-  if () fs.writeFileSync (LOG_FILE, '')) {
-  $2
-}
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: 'Method Not Allowed' }), ) {
-  $2
-}
-  const { name, page = '', user_type = 'guest', properties = {}, at } = req.body || {},
-  if (return res.status (400).json ({ error: 'Invalid event name' }), ) {
-  $2
-}
-  const now_iso = new Date ().toISOString (),
 
   const event = {
     name,

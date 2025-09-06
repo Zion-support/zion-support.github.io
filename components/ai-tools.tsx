@@ -317,6 +317,7 @@
           </div>;
         </div>;
       </section>;
+
       {/* AI Categories Overview */}
       <section className='section-padding bg-gradient-cursor-accent'>;
         <div className='container-cursor'>;

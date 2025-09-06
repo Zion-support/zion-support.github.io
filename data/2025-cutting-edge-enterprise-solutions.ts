@@ -86,10 +86,12 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     id: 'ai-powered-enterprise-risk-management', name: 'AI-Powered Enterprise Risk Management',
     tagline: 'Intelligent risk assessment and mitigation for enterprise',
     price: {
+      
       monthly: 899, yearly: 8990,
       currency: 'USD', trialDays: 30,
       setupTime: '2-3 weeks',
       enterprise: 'Custom enterprise pricing available'
+    
     },
     description: 'Advanced AI platform that identifies, assesses, and mitigates enterprise risks in real-time, providing comprehensive risk intelligence and automated response capabilities.',
     features: [
@@ -125,10 +127,12 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     id: 'autonomous-business-process-optimization', name: 'Autonomous Business Process Optimization',
     tagline: 'AI-powered business process automation and optimization',
     price: {
+      
       monthly: 699, yearly: 6990,
       currency: 'USD', trialDays: 21,
       setupTime: '2-3 weeks',
       enterprise: 'Custom enterprise pricing available'
+    
     },
     description: 'Intelligent platform that autonomously analyzes, optimizes, and automates business processes using AI, improving efficiency by up to 70% and reducing operational costs.',
     features: [

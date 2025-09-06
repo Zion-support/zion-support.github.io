@@ -3,20 +3,9 @@
  * Targeted Error Resolution Automation;
  * Focuses on specific error patterns and provides targeted error fixing;
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
->>>>>>> origin/main
-=======
-=======
 
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166
 const fs = require('fs')
 const path = require('path')
 const { execSync } = require('child_process')
@@ -38,17 +27,5 @@ const { execSync } = require('child_process')
       newContent = newContent.replace(/from ['"]\.\/([^'"]+)['"]/g, "
       newContent = newContent.replace(/([^"'])([a-zA-Z_$][a-zA-Z0-9_$]*):\s*([^"'])/g, '$1"$2"
   console.error(' Targeted error resolution "failed")
-<<<<<<< HEAD
     console.error(' Targeted error resolution interval "failed")
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     console.error(' Targeted error resolution interval "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> origin/main
-=======
-=======
-    console.error(' Targeted error resolution interval "failed")
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> pr-12166

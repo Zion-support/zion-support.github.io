@@ -278,9 +278,11 @@ const contact = {mobile: "+1 302 464 0950"
   tagline: string, description: string,
   category: string,
   price: {
+      
     monthly: number, yearly: number,
     currency: string, trialDays: number,
     setupTime: string
+  
     },
     features: string[], benefits: string[],
   targetAudience: string[], marketPosition: string,

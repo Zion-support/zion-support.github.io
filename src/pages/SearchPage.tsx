@@ -244,9 +244,9 @@ export default function SearchPage() {;
       setLoading(false)
     }
   return (
-    <div key={pageKey}>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
+    <div key={pageKey}>;
+      <main className="container mx-auto px-4 py-8">;
+        <form onSubmit={handleSubmit} className="mb-6">;
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}

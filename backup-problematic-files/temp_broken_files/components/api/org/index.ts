@@ -24,5 +24,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     search: (req.query.search as string) || undefined,
     teamOnly: req.query.teamOnly === 'true' ? true : undefined},
 
-  const filtered = filterOrgData(data, filters),
+  const filtered = filterOrgData(data, filters),;
   return res.status(200).json(filtered)}

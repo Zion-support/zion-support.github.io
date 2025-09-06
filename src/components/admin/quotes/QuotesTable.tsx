@@ -22,7 +22,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   toggleArchive,
   deleteQuote,
   onViewDetails
-}) => {
+},) => {
   return (
     <div className="overflow-x-auto">
       <Table>
@@ -71,7 +71,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                         <Button
                           variant="ghost"
                           size="icon"
-                          onClick={() => toggleArchive(quote.id, false)}
+                          onClick = {(,) => toggleArchive(quote.id, false),}
                         >
                           <Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>

@@ -19,12 +19,26 @@ const ScrollToTop: React.FC = () => {
       behavior: 'smooth'
     });
     };
+
+    window.addEventListener('scroll', toggleVisibility);
+
+  }, []);
+  const scrollToTop = () => {
+    window.scrollTo({
+
+      top: 0
+
+      behavior: 'smooth'
+    });
+    };
+
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
       } else {;
         setIsVisible(false);
       }
     };
+
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);    return () => window && window.removeEventListener('scroll', toggleVisibility);
   }, []);
@@ -56,8 +70,8 @@ const ScrollToTop: React.FC = () => {
     });  };      behavior: 'smooth'})
   }
   return (
-    <>;
-      {isVisible && (;
+    <>
+      {isVisible && (
         <button
           onClick={scrollToTop}
           aria-label='Scroll to top'>;

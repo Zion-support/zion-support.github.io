@@ -25,7 +25,7 @@ function Calendar({
   ...props
 }: CalendarProps) {
   return (
-    <DayPicker
+    <DayPicker;
       showOutsideDays={showOutsideDays}
         day: cn(
           buttonVariants({ variant: "ghost" })

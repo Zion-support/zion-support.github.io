@@ -8,8 +8,7 @@ function ensureStorage() {
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  ensureStorage()
-  ensureStorage(),;
+
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map(e => ({
     id: e.id

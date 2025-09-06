@@ -25,8 +25,8 @@ import ModernLayout from '../components/ModernLayout.dynamic';
 describe('ModernLayout', () => {
   test('renders without crashing', () => {
     render(<ModernLayout />);
-    expect(screen.getByTestId('modern-layout')).toBeInTheDocument();
+    expect(screen.getByTestId('modernlayout.dynamic')).toBeInTheDocument();
   });
-  
+
   test('displays correct content', () => {
 });

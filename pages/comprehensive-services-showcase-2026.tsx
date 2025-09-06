@@ -63,7 +63,6 @@ import { emergingTechServices2026 } from '../data/2026-emerging-tech-services';
     address: string;
 
     website: string;
-  }
 
   customers: number;
   rating: number;

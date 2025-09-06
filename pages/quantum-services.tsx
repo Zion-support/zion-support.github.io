@@ -113,7 +113,6 @@ function QuantumServicesPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
 
-}
   )
 }
 

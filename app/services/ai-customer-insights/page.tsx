@@ -2,7 +2,8 @@ import Link from "next/link";
 
 export const metadata = {
   title: "AI Customer Insights | Zion Tech Group",
-  description: "Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.",
+  description:
+    "Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. Drive growth with data-driven decisions.",
 };
 
 export default function AICustomerInsightsPage() {
@@ -13,14 +14,17 @@ export default function AICustomerInsightsPage() {
           AI Customer Insights
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Unlock customer behavior insights with AI-powered analytics, sentiment analysis, and predictive modeling. 
-          Drive growth with data-driven decisions and personalized customer experiences.
+          Unlock customer behavior insights with AI-powered analytics, sentiment
+          analysis, and predictive modeling. Drive growth with data-driven
+          decisions and personalized customer experiences.
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="space-y-6">
             <FeatureItem
               icon="🧠"
@@ -68,7 +72,7 @@ export default function AICustomerInsightsPage() {
                 "Basic analytics",
                 "Sentiment analysis",
                 "Email support",
-                "Standard reports"
+                "Standard reports",
               ]}
               popular={false}
             />
@@ -83,7 +87,7 @@ export default function AICustomerInsightsPage() {
                 "Predictive modeling",
                 "Priority support",
                 "Custom dashboards",
-                "API access"
+                "API access",
               ]}
               popular={true}
             />
@@ -98,7 +102,7 @@ export default function AICustomerInsightsPage() {
                 "Real-time processing",
                 "24/7 support",
                 "Custom integrations",
-                "Dedicated analyst"
+                "Dedicated analyst",
               ]}
               popular={false}
             />
@@ -107,7 +111,9 @@ export default function AICustomerInsightsPage() {
       </div>
 
       <div className="bg-gradient-to-r from-teal-50 to-blue-50 border border-teal-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Insight Categories</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Insight Categories
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <InsightCategory
             icon="💰"
@@ -143,7 +149,9 @@ export default function AICustomerInsightsPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Key Benefits</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Key Benefits
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <BenefitCard
             icon="📈"
@@ -179,7 +187,9 @@ export default function AICustomerInsightsPage() {
       </div>
 
       <div className="bg-gradient-to-r from-purple-50 to-teal-50 border border-purple-200 rounded-xl p-8 mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Data Sources</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">
+          Data Sources
+        </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <DataSourceCard name="CRM Systems" icon="👥" />
           <DataSourceCard name="E-commerce" icon="🛒" />
@@ -193,7 +203,9 @@ export default function AICustomerInsightsPage() {
       </div>
 
       <div className="mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Use Cases</h2>
+        <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+          Use Cases
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <UseCaseCard
             icon="🛍️"
@@ -223,7 +235,15 @@ export default function AICustomerInsightsPage() {
   );
 }
 
-function FeatureItem({ icon, title, description }: { icon: string; title: string; description: string }) {
+function FeatureItem({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="flex items-start space-x-4">
       <div className="text-2xl">{icon}</div>
@@ -235,7 +255,14 @@ function FeatureItem({ icon, title, description }: { icon: string; title: string
   );
 }
 
-function PricingCard({ title, price, period, description, features, popular }: {
+function PricingCard({
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
+}: {
   title: string;
   price: string;
   period: string;
@@ -244,7 +271,9 @@ function PricingCard({ title, price, period, description, features, popular }: {
   popular: boolean;
 }) {
   return (
-    <div className={`border rounded-xl p-6 ${popular ? 'border-teal-500 bg-teal-50' : 'border-gray-200 bg-white'}`}>
+    <div
+      className={`border rounded-xl p-6 ${popular ? "border-teal-500 bg-teal-50" : "border-gray-200 bg-white"}`}
+    >
       {popular && (
         <div className="bg-teal-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
           Most Popular
@@ -264,18 +293,28 @@ function PricingCard({ title, price, period, description, features, popular }: {
           </li>
         ))}
       </ul>
-      <button className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
-        popular 
-          ? 'bg-teal-600 text-white hover:bg-teal-700' 
-          : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-      }`}>
+      <button
+        className={`w-full mt-6 py-3 px-4 rounded-lg font-semibold transition-colors ${
+          popular
+            ? "bg-teal-600 text-white hover:bg-teal-700"
+            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+        }`}
+      >
         Start Free Trial
       </button>
     </div>
   );
 }
 
-function InsightCategory({ icon, title, description }: { icon: string; title: string; description: string }) {
+function InsightCategory({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -285,7 +324,15 @@ function InsightCategory({ icon, title, description }: { icon: string; title: st
   );
 }
 
-function BenefitCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function BenefitCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="text-center p-6 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -304,7 +351,15 @@ function DataSourceCard({ name, icon }: { name: string; icon: string }) {
   );
 }
 
-function UseCaseCard({ icon, title, description }: { icon: string; title: string; description: string }) {
+function UseCaseCard({
+  icon,
+  title,
+  description,
+}: {
+  icon: string;
+  title: string;
+  description: string;
+}) {
   return (
     <div className="p-6 border border-gray-200 rounded-lg hover:border-teal-300 transition-colors">
       <div className="text-4xl mb-4">{icon}</div>
@@ -321,8 +376,8 @@ function CTA() {
         Ready to Unlock Customer Insights?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-        Start your free trial today and discover the power of AI-driven customer analytics. 
-        Analyze your first 1,000 customers for free.
+        Start your free trial today and discover the power of AI-driven customer
+        analytics. Analyze your first 1,000 customers for free.
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a

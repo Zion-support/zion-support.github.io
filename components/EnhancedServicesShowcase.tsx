@@ -23,6 +23,7 @@
   TrendingUp,
   Clock,
   Star,
+
   Filter,;
   ChevronDown,;
 

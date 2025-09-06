@@ -39,5 +39,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }, FALLBACK),
     return res.status(200).json(updated.byTenant[tenantId])
   }
-
+;
   return res.status(405).json({ error: 'Method not allowed' })}

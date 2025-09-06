@@ -74,24 +74,7 @@ const defaultContent = {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
 
-export function EmptyState({
-  type,
-  title,
-  description,
-  action,
-  icon
-}: EmptyStateProps) {
-  const { t } = useTranslation(),
-  const content = defaultContent[type],
-  const displayTitle = title || content.title,
-  const displayDescription = description || content.description,
-  const displayIcon = icon || content.icon,
 
-  return (
-    <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
-      <div className="mb-4">
-        {displayIcon}
-      </div>
       
       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
         {displayTitle}
@@ -113,7 +96,7 @@ export function EmptyState({
 
       
       {type === 'error' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>If this issue continues, please contact our support team.</p>
         </div>
       )}
@@ -159,7 +142,7 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
   )
 
       {type === 'network' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className='mt-4 text-sm text-gray-500 dark:text-gray-400'>
           <p>
             {t('general.check_status_page')}
             {" "}

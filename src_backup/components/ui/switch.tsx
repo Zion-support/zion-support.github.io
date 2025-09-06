@@ -269,16 +269,22 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🚀</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Innovation First</h3>
-              <p className="text-gray-600">Cutting-edge AI and technology solutions</p>
+              <h3 className='text-xl font-semibold mb-2'>Innovation First</h3>
+              <p className='text-gray-600'>
+                Cutting-edge AI and technology solutions
+              </p>
             </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Enterprise Security</h3>
-              <p className="text-gray-600">SOC 2, HIPAA, GDPR compliant solutions</p>
+              <h3 className='text-xl font-semibold mb-2'>
+                Enterprise Security
+              </h3>
+              <p className='text-gray-600'>
+                SOC 2, HIPAA, GDPR compliant solutions
+              </p>
             </div>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
-              <p className="text-gray-600">Quick setup and implementation</p>
+              <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
+              <p className='text-gray-600'>Quick setup and implementation</p>
             </div>
             </h2>
             </h2>
@@ -354,6 +360,7 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
             </Link>
             </Link>
             <a 
+
               href="https://ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
@@ -363,25 +370,6 @@ import { ServiceCategory, ServiceSolution } from '@/types/services';
         </div>
       </div>
     </div>
-  );
-interface ServiceCardProps {
-  service: ServiceSolution;  )
-}
-interface ServiceCardProps {
-  service: ServiceSolution
-}
-function ServiceCard({ service }: ServiceCardProps) {
-  const [showDetails, setShowDetails] = useState(false);
-  const getPopularPlan = () => {
-    if (service.pricing.professional.popular)
-      return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional;  };    if (service.pricing.professional.popular) return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional
-  const popularPlan = getPopularPlan();
 
   )
       <div className="bg-white py-16">;
@@ -844,8 +832,6 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
           className="w-full h-full object-cover"
         />
 
-
-
         <div className="absolute top-4 right-4">
           <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
             {service.category}
@@ -1024,7 +1010,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
             href={`tel:+13024640950`}
           >
             Call Now
-          </Link>
+          </a>
         </div>
 
 
@@ -1166,7 +1152,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
-                  </Link>
+                  </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
                   >

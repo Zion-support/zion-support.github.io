@@ -36,9 +36,6 @@ export interface FormValues {;
   budgetMax: number
 }
 
-export function useHireRequestForm({ talent, onClose, initialJobTitle, userDetails }: UseHireRequestFormProps) {;
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { submitHireRequest } = useHireRequest();
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import { zodResolver } from "@hookform/resolvers/zod",;

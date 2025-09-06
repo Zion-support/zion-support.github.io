@@ -4,15 +4,17 @@ interface UploadSectionProps {
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
 
   return (
-    <div className="space-y-3">
-      <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">
-        <Upload className="h-8 w-8 text-zion-purple mb-2" />
-        <p className="text-sm text-zion-slate mb-2">
-          {customFile ? customFile.name : "Drag & drop your PDF or click to browse"}
-        </p>
-        <Button variant="outline" className="relative">
-          Browse Files
-          <input
+    <div className='space - y-3'>;
+      <div className='flex flex - col items - center justify - center border - 2 border - dashed border - zion - purple / 30 rounded - lg p - 6 bg - zion - blue - dark / 30'>;
+        <Upload className='h - 8 w - 8 text - zion - purple mb - 2' />;
+        <p className='text - sm text - zion - slate mb - 2'>;
+          {custom_file;
+            ? custom_file.name;
+            : 'Drag & drop your PDF or click to browse'}
+        </p>;
+        <Button variant='outline' className='relative'>;
+          Browse Files;
+
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"

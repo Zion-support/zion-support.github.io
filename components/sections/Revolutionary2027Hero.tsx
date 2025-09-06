@@ -339,7 +339,7 @@ const Revolutionary2027Hero = () => {;
             className='w - 1 h - 3 bg - gradient - to - b from - cyan - 400 to - purple - 400 rounded - full mt - 2';
             animate={{
             animate={{
-              y: [0, 12, 0]}}
+              coordinate_y: [0, 12, 0]}}
             transition={{
             }}
             transition={{

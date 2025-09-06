@@ -146,7 +146,6 @@ interface EnhancedServiceCardProps {;
           <div className="text-right">
             <div className="text-2xl font-bold text-white">{service.price}</div>
             <div className="text-sm text-gray-400">{service.period}</div>
-          </div>
         </div>
         {/* Title & Tagline */}
         <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>
@@ -172,6 +171,7 @@ interface EnhancedServiceCardProps {;
         <div className='mb-6'>
           <h4 className='text-sm font-semibold text-white mb-3 flex items-center gap-2'>
             <Zap className='w-4 h-4 text-yellow-400' />        <div className="grid grid-cols-2 gap-4 mb-6">
+        <div className="grid grid-cols-2 gap-4 mb-6">
           <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
             <div className="text-cyan-400 text-lg font-bold">{service.customers}+</div>
             <div className="text-xs text-gray-400">Customers</div>
@@ -270,6 +270,11 @@ interface EnhancedServiceCardProps {;
             <span className='text-xs text-yellow-400'>{service.roi}</span>          </div>
         </div>
         {/* Trial & Setup Info */}          </div>
+        <div className="mb-6 p-4 bg-gradient-to-r from-white/5 to-white/10 rounded-lg border border-white/10">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-xs font-semibold text-white">Market Size</span>
+            <span className="text-xs text-cyan-400">{service.marketSize}</span>
+          </div>
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs font-semibold text-white">Growth Rate</span>
             <span className="text-xs text-green-400">{service.growthRate}</span>
@@ -401,7 +406,6 @@ interface EnhancedServiceCardProps {;
           </div>;
         </div>;
       </div>;
-
       {/* Hover Effect Border */}
 }
 };

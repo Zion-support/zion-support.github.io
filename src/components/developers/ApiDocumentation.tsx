@@ -59,12 +59,12 @@ interface EndpointSectionProps {;
 
 export function ApiDocumentation() {
   return (
-    <Card className="bg-zinc-900 border-zinc-800 text-white">
+    <Card className='bg-zinc-900 border-zinc-800 text-white'>
       <CardHeader>
-        <CardTitle className="text-xl flex items-center">
-          <BookOpen className="mr-2" size={20} /> API Documentation
+        <CardTitle className='text-xl flex items-center'>
+          <BookOpen className='mr-2' size={20} /> API Documentation
         </CardTitle>
-        <CardDescription className="text-zinc-400">
+        <CardDescription className='text-zinc-400'>
           Reference documentation for integrating with the Zion Marketplace API.
         </CardDescription>
       </CardHeader>
@@ -427,12 +427,6 @@ print(data)`;
       "min": 5000
       "max": 10000
       "currency": "USD"
-    }
-    "deadline": "2025-06-30T23:59:59Z"
-  }'`
-                javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
-  method: 'POST'
-  headers: {
 
 
 const data = await response && response.json()
@@ -717,17 +711,10 @@ print (data)`,
         "description": "Built a modern e-commerce platform using React..."
         "technologies": ["react", "redux", "node.js"]
         "image_url": "https://example.com/portfolio/123.jpg"
-      ,}
-    ]
-    "certifications": [
-      {
-        "name": "AWS Certified Developer"
-        "issuing_organization": "Amazon Web Services"
-        "issue_date": "2024-01-15"
-      }
-    ]
+
+    ];
   }
-}`
+}`;
               }}
             />
           </TabsContent>
@@ -839,8 +826,6 @@ headers = {
     "status": "new",
     "created_at": "2025 - 05 - 16T14:30:15Z";
   }
-}`,              }}
-            />;
 
             <EndpointSection
               method='GET'
@@ -1099,27 +1084,43 @@ function verifyWebhookSignature(payload, signature, secret) {
 
 
                 <thead>
-                  <tr className="border-b border-zinc-800">
-                    <th className="py-2 px-4 text-left">Event Type</th>
-                    <th className="py-2 px-4 text-left">Description</th>
+                  <tr className='border-b border-zinc-800'>
+                    <th className='py-2 px-4 text-left'>Event Type</th>
+                    <th className='py-2 px-4 text-left'>Description</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">new_application</td>
-                    <td className="py-2 px-4">When a talent applies to one of your jobs</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      new_application
+                    </td>
+                    <td className='py-2 px-4'>
+                      When a talent applies to one of your jobs
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">quote_received</td>
-                    <td className="py-2 px-4">When you receive a quote from talent</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      quote_received
+                    </td>
+                    <td className='py-2 px-4'>
+                      When you receive a quote from talent
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">milestone_approved</td>
-                    <td className="py-2 px-4">When a project milestone is approved</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      milestone_approved
+                    </td>
+                    <td className='py-2 px-4'>
+                      When a project milestone is approved
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4 font-mono text-sm">talent_hired</td>
-                    <td className="py-2 px-4">When you hire talent for a project</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4 font-mono text-sm'>
+                      talent_hired
+                    </td>
+                    <td className='py-2 px-4'>
+                      When you hire talent for a project
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -1146,7 +1147,7 @@ function verifyWebhookSignature(payload, signature, secret) {
     "applied_at": "2025-05-16T15:28:30Z"
     "status": "new"
     "match_score": 85
-  }
+  ,}
 }`}
                 language="json"
                 showLineNumbers={true}
@@ -1167,47 +1168,101 @@ function verifyWebhookSignature(payload, signature, secret) {
 
 
                 <thead>
-                  <tr className="border-b border-zinc-800">
-                    <th className="py-2 px-4 text-left">Status Code</th>
-                    <th className="py-2 px-4 text-left">Description</th>
+                  <tr className='border-b border-zinc-800'>
+                    <th className='py-2 px-4 text-left'>Status Code</th>
+                    <th className='py-2 px-4 text-left'>Description</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">200 OK</code></td>
-                    <td className="py-2 px-4">The request was successful.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        200 OK
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>The request was successful.</td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">201 Created</code></td>
-                    <td className="py-2 px-4">The resource was successfully created.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        201 Created
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The resource was successfully created.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">400 Bad Request</code></td>
-                    <td className="py-2 px-4">The request was invalid or cannot be otherwise served.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        400 Bad Request
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request was invalid or cannot be otherwise served.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">401 Unauthorized</code></td>
-                    <td className="py-2 px-4">Authentication credentials were missing or invalid.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        401 Unauthorized
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      Authentication credentials were missing or invalid.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">403 Forbidden</code></td>
-                    <td className="py-2 px-4">The request is understood, but it has been refused or access is not allowed.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        403 Forbidden
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request is understood, but it has been refused or
+                      access is not allowed.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">404 Not Found</code></td>
-                    <td className="py-2 px-4">The requested resource does not exist.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        404 Not Found
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The requested resource does not exist.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">422 Unprocessable Entity</code></td>
-                    <td className="py-2 px-4">The request was well-formed but was unable to be followed due to semantic errors.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        422 Unprocessable Entity
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request was well-formed but was unable to be followed
+                      due to semantic errors.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">429 Too Many Requests</code></td>
-                    <td className="py-2 px-4">The request was rejected due to rate limiting.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        429 Too Many Requests
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      The request was rejected due to rate limiting.
+                    </td>
                   </tr>
-                  <tr className="border-b border-zinc-800">
-                    <td className="py-2 px-4"><code className="bg-zinc-800 px-1 py-0.5 rounded">500 Internal Server Error</code></td>
-                    <td className="py-2 px-4">Something went wrong on our end.</td>
+                  <tr className='border-b border-zinc-800'>
+                    <td className='py-2 px-4'>
+                      <code className='bg-zinc-800 px-1 py-0.5 rounded'>
+                        500 Internal Server Error
+                      </code>
+                    </td>
+                    <td className='py-2 px-4'>
+                      Something went wrong on our end.
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -1682,14 +1737,14 @@ function EndpointSection({;
 
 
       {params.length > 0 && (
-        <div className="border-t border-zinc-800 p-4">
-          <h4 className="font-medium mb-2">Parameters</h4>
-          <table className="w-full">
+        <div className='border-t border-zinc-800 p-4'>
+          <h4 className='font-medium mb-2'>Parameters</h4>
+          <table className='w-full'>
             <thead>
-              <tr className="text-left border-b border-zinc-800 text-sm">
-                <th className="pb-2">Name</th>
-                <th className="pb-2">Type</th>
-                <th className="pb-2">Description</th>
+              <tr className='text-left border-b border-zinc-800 text-sm'>
+                <th className='pb-2'>Name</th>
+                <th className='pb-2'>Type</th>
+                <th className='pb-2'>Description</th>
               </tr>
             </thead>
             <tbody>
@@ -1724,9 +1779,9 @@ function EndpointSection({;
 
 
                   className={`px-3 py-1 text-xs font-medium ${
-                    activeTab === lang 
-                      ? "bg-zinc-700 text-white" 
-                      : "text-zinc-400 hover:bg-zinc-800"
+                    activeTab === lang
+                      ? 'bg-zinc-700 text-white'
+                      : 'text-zinc-400 hover:bg-zinc-800'
                   }`}
                   onClick={() => setActiveTab(lang)}
                 >
@@ -1755,7 +1810,7 @@ function EndpointSection({;
           />
         </div>
       )}
-    </div>;
-  );
+    </div>
+  )
 }
 ;

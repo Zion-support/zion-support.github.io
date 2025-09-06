@@ -4,6 +4,7 @@ import React from 'react';
  </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
 
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
+
 import React from 'react';
 
  </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
@@ -137,6 +138,7 @@ const ReportsPage: React.FC = () => {
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
               Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making.;
             </motion && motion.p>;
+
             <motion&& motion.div
               className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
               initial={{ opacity: 0, y: 30 }}
@@ -157,6 +159,7 @@ const ReportsPage: React.FC = () => {
             </motion && motion.div>;
           </div>;
         </section>;
+
         {/* Featured Report */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">;
@@ -170,6 +173,7 @@ const ReportsPage: React.FC = () => {
                 Featured Report;
               </h2>;
             </motion && motion.div>;
+
             {reports && reports.filter(report => report && report.featured).map((report, index) => (;
               <motion&& motion.div
                 key={index}
@@ -205,6 +209,7 @@ const ReportsPage: React.FC = () => {
                     </div>;
                     <h3 className="text-3xl font-bold text-white mb-4">{report && report.title}</h3>;
                     <p className="text-xl text-gray-300 leading-relaxed mb-6">{report && report.excerpt}</p>;
+
                     <div className="flex flex-wrap items-center gap-6 mb-6">;
                       <span className="text-gray-400 text-sm flex items-center space-x-1">;
                         <User className="w-4 h-4" />;
@@ -223,6 +228,7 @@ const ReportsPage: React.FC = () => {
                         <span>{formatNumber(report && report.views)} views</span>;
                       </span>;
                     </div>;
+
                     <div className="flex flex-wrap gap-2 mb-6">;
                       {report && report.tags.map((tag, tagIndex) => (;
                         <span key={tagIndex} className="bg-gray-800/50 text-gray-300 px-3 py-1 rounded-full text-sm">;

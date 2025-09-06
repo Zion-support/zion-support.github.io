@@ -242,6 +242,14 @@ if (return) {
               value={restoreCid}
       set_status (e?.message || 'Backup failed');    }
   }
+;
+  const do_restore = async () => {
+    set_status (null);
+    try {
+      const res = await fetch (
+        `/api / backup / restore?cid=${encodeURIComponent (restore_cid || backup_cid)}`);      const data = await res.json ();
+      if (throw new Error (data?.error || 'Restore failed')) {
+  $2
 }
     } catch (e: any) {
       set_status (e?.message || 'Restore failed');    }

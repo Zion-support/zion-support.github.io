@@ -68,69 +68,23 @@ const ApplicationAvatar = ({ application }: { application: JobApplication }, ) =
     <AvatarPrimitive className='h - 8 w - 8'>;
       {' '}
       {/* Using Renamed AvatarPrimitive */}
-      {application.talent_profile?.profile_picture_url && !avatar_error ? (
-        <Image;
-          src = {application.talent_profile.profile_picture_url, }
-          alt = {talent_name, }
-          width={32} // for h - 8 w - 8;
-          height={32} // for h - 8 w - 8;
-          className='rounded - full object - cover';
-          on_error={() => setAvatarError (true)}
-          priority={false}        />) : (
-        <User className='h - 4 w - 4' />)}
-    </AvatarPrimitive>);
-}
-export /**
- * ApplicationsTable - Function description
- */
-function ApplicationsTable() {
-  const [hireModalOpen, setHireModalOpen] = useState (false);
-  const [selected_application, setSelectedApplication] =;
-    useState < JobApplication | null>(null);
-  const handleHireClick = (application: JobApplication) =>: any {
-    setSelectedApplication (application);
-    setHireModalOpen (true);
-  }
-  const handleHireConfirmed = () =>: any {
-    toast ({
-      title: 'Hiring process initiated',
-      description: 'Offer has been sent to the talent.',
-    });
+      {application && application.talent_profile?.profile_picture_url && !avatarError ? (;
+        <Image
+          src = {application && application.talent_profile.profile_picture_url,}
+          alt = {talentName,}
+          width={32} // for h-8 w-8
+          height={32} // for h-8 w-8
 
-  }
-    </AvatarPrimitive>;
-  );
-};
+      ) : (
+        <User className="h-4 w-4" />
+      )}
+    </AvatarPrimitive>
+  )
 
-export function ApplicationsTable(): any ({;
-  applications,;
-  processingId,;
-  onViewApplication,;
-  onStatusChange,;
-  onViewScore,;
-}: ApplicationsTableProps) {;
-  const [hireModalOpen, setHireModalOpen] = useState(false);
-  const [selectedApplication, setSelectedApplication] =;
-    useState<JobApplication | null>(null);
-
-  const handleHireClick = (application: JobApplication) => {;
-    setSelectedApplication(application);
-    setHireModalOpen(true);
-  };
-  const handleHireConfirmed = () => {;
-    toast({;
-      title: 'Hiring process initiated',;
-      description: 'Offer has been sent to the talent.',;
-    });
-  };
-
-export function ApplicationsTable({ 
-  applications, 
-  processingId, 
-  onViewApplication, 
   onStatusChange,
   onViewScore
 }: ApplicationsTableProps) {
+
   const [hireModalOpen, setHireModalOpen] = useState(false),
   const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),
   
@@ -145,7 +99,7 @@ export function ApplicationsTable({
       description: "Offer has been sent to the talent."
     })
   },
-  
+
   return (
     <>;
       <div className='rounded - md border'>;

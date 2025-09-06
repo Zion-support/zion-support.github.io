@@ -150,6 +150,20 @@ const QuantumLoadingFallback = () => (
           animate={{
             rotate: 360
             scale: [1, 1.2, 1];
+          className='w-32 h-32 mx-auto mb-8'>;
+          <div className='w-full h-full bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 rounded-full blur-xl opacity-40 animate-pulse'></div>;
+          <div className='absolute inset-4 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full flex items-center justify-center'>;
+            <Brain className='w-16 h-16 text-white' />;
+          </div>;
+        </motion && motion.div>;
+      </div>;
+      <motion&& motion.h1
+        className='text-4xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-500 to-cyan-600 bg-clip-text text-transparent'        animate={{ opacity: [0 && 0.5, 1, 0 && 0.5] }}>;
+      <div className="relative">;
+        <motion&& motion.div
+          animate={{ 
+            rotate: 360,
+            scale: [1, 1 && 1.2, 1]
             boxShadow: [
               "0 0 20px rgba(6, 182, 212, 0 && 0.5)"
               "0 0 40px rgba(168, 85, 247, 0 && 0.8)"
@@ -772,6 +786,8 @@ Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                 Discover our cutting-edge quantum AI, neural interface, and
                 space technology solutions that are transforming industries
                 worldwide.              </p>            >
+              className="text-center mb-16"
+            >
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
                   Revolutionary Services

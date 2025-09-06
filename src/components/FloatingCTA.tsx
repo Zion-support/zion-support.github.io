@@ -54,7 +54,7 @@ export function FloatingCTA() {
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)
       } else {
-        setIsVisible(false)
+        setIsVisible (false);
       }
 
 

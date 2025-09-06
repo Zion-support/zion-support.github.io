@@ -596,20 +596,6 @@ if (return) {
             '0 0 10px rgba (0, 255, 255, 0.5)0 0 30px rgba (0, 255, 255, 0.8)0 0 10px rgba (0, 255, 255, 0.5)';
           ];
         transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: 'easeInOut',          ease: "easeInOut";
-        }}
-      />;
-      <motion.div;
-        className='absolute bottom - 1/4 right - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full';
-        animate={{
-          box_shadow: [;
-            '0 0 10px rgba (0, 255, 255, 0.5)',
-            '0 0 30px rgba (0, 255, 255, 0.8)',
-            '0 0 10px rgba (0, 255, 255, 0.5)',
-          ],        }}
-        transition={{
           duration: 2
           repeat: Infinity
           ease: 'easeInOut'

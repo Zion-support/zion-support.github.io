@@ -313,6 +313,8 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             Discover our cutting-edge micro SAAS solutions, AI-powered
             platforms, and quantum-enhanced infrastructure services designed for
             the future of business.          </p>        >
+          className="text-center mb-16"
+        >
           <div className="flex items-center justify-center space-x-2 mb-4">
             <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Rocket className="w-5 h-5 text-white" />
@@ -401,6 +403,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
             {innovative2026AIServices.map((service, index) =>
               renderServiceCard(service, index)
             )}          </motion.div>        >
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mb-20"
+        >
           <div className="flex items-center space-x-3 mb-8">
             <Brain className="w-6 h-6 text-cyan-400" />
             <h3 className="text-2xl font-bold text-white">AI-Powered Services</h3>
@@ -568,6 +573,9 @@ className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className='bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white px-8 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-cyan-500/25'              >        >
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center mt-16"
+        >
           <div className="bg-gradient-to-r from-slate-900/80 to-slate-800/80 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?

@@ -28,7 +28,6 @@ export interface ContentGenerationResponse {
   type: string;
 export class AIContentGeneratorService {
 
-export class AIContentGeneratorService {;
   private apiKey: string;
 
   private baseUrl: string

@@ -41,6 +41,7 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
 
         </ul>;
       </section>;
+
       <section>;
         <h2 className="font-semibold text-lg mb-3">crates && crates.io</h2>;
         <ul className="grid md:grid-cols-2 gap-3">;
@@ -52,6 +53,7 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
           ))}
         </ul>;
       </section>;
+
       {langs && langs.map((lang) => (;
         <section key={lang}>;
           <h2 className="font-semibold text-lg mb-3">GitHub Trending: {lang}</h2>;

@@ -88,7 +88,9 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
 
               <div>
-                <Label className="block mb-2 text-zion-slate-light">End Date</Label>
+                <Label className='block mb-2 text-zion-slate-light'>
+                  End Date
+                </Label>
                 <Popover>
                   <PopoverTrigger asChild>
                     <Button
@@ -148,9 +150,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       onSelect={date => updateFormData({ endDate: date })}
                       initialFocus
                       className='p-3 pointer-events-auto'
-                      disabled={date =>
-                        date < (formData.startDate |new Date())
-                      }                    />
+                    />
                   </PopoverContent>
                 </Popover>
               </div>

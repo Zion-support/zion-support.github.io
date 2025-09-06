@@ -32,6 +32,8 @@ interface UserLeaderboardProps {
 }
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (
+    <Card>
+      <CardHeader>
 
 
     <Card>
