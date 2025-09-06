@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
@@ -9,6 +8,8 @@ export type NotificationType =
   | 'onboarding'
   | 'system';
 export interface Notification extends BaseNotification {
+
+export interface Notification extends BaseNotification {;
   type: NotificationType;
   action_url?: string
   action_text?: string
@@ -19,8 +20,23 @@ export type FilterType =
   | 'messages'
   | 'onboarding'
   | 'system';
-=======
-import {Notification, as, BaseNotification} from '@/types / notifications';
+export interface NotificationContextType {
+
+
+export interface NotificationContextType {;
+  notifications: Notification[];
+  filteredNotifications: Notification[];
+  unreadCount: number;
+  loading: boolean;
+  filter: FilterType;
+  markAsRead: (id: string) => Promise<void>;
+  markAllAsRead: () => Promise<void>;
+  dismissNotification: (id: string) => Promise<void>;
+  setFilter: (filter: FilterType) => void
+
+  fetchNotifications: () => Promise<void>
+import { Notification as BaseNotification } from '@/types/notifications',;
+
 export type NotificationType =;
   | 'message';
   | 'quote_request';
@@ -39,28 +55,25 @@ export type FilterType =;
   | 'unread';
   | 'messages';
   | 'onboarding';
-  | 'system';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-export interface NotificationContextType {
-  notifications: Notification[];
-  filtered_notifications: Notification[];
-  unread_count: number;
-  loading: boolean;
-  filter: FilterType;
-<<<<<<< HEAD
-  markAsRead: (id: string) => Promise<void>;
-  markAllAsRead: () => Promise<void>;
-  dismissNotification: (id: string) => Promise<void>;
-  setFilter: (filter: FilterType) => void
 
-  fetchNotifications: () => Promise<void>
-}
-=======
   markAsRead: (id: string) => Promise < void>;
   markAllAsRead: () => Promise < void>;
   dismiss_notification: (id: string) => Promise < void>;
   set_filter: (filter: FilterType) => void,
   fetch_notifications: () => Promise < void>;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+  | 'system',;
+export interface NotificationContextType {;
+  notifications: Notification[],;
+  filteredNotifications: Notification[],;
+  unreadCount: number,;
+  loading: boolean,;
+  filter: FilterType,;
+  markAsRead: (id: string) => Promise<void>,;
+  markAllAsRead: () => Promise<void>,;
+  dismissNotification: (id: string) => Promise<void>;
+  setFilter: (filter: FilterType) => void;
+  fetchNotifications: () => Promise<void>;
+}

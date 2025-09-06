@@ -1,28 +1,12 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-export default function ResourceCaseStudyPage() {
-  const caseStudy = {
-<<<<<<< HEAD
-    id: 'ai-automation-manufacturing'
-    title: 'AI-Powered Manufacturing Automation'
-    company: 'Global Manufacturing Corp'
-    industry: 'Manufacturing'
-    results: '40% increase in production efficiency, 60% reduction in downtime'
-    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  }
-=======
     id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
     results: '40% increase in production efficiency, 60% reduction in downtime',
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  }
+  },
   return (
     <>
       <Head>
@@ -34,15 +18,15 @@ export default function ResourceCaseStudyPage() {
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
+            {/* Breadcrumb */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <nav className="mb-8">
-<<<<<<< HEAD
-              <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
-=======
+
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                 ← Back to Resources
               </Link>
             </nav>
@@ -51,6 +35,19 @@ export default function ResourceCaseStudyPage() {
               <div className="mb-4">
                 <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
                   {caseStudy.industry}
+            {/* Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <header className="mb-12 text-center">
+              <div className="mb-4">
+                <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
+                  {caseStudy.industry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </span>
               </div>
               <h1 className="text-4xl font-bold text-white mb-4">{caseStudy.title}</h1>
@@ -58,6 +55,11 @@ export default function ResourceCaseStudyPage() {
               <p className="text-white/80 text-lg max-w-3xl mx-auto">{caseStudy.description}</p>
             </header>
             {/* Key Results */}
+            {/* Key Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
@@ -65,6 +67,11 @@ export default function ResourceCaseStudyPage() {
               </div>
             </section>
             {/* Detailed Analysis */}
+            {/* Detailed Analysis */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
@@ -74,12 +81,20 @@ export default function ResourceCaseStudyPage() {
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance
                     quality control, and production optimization. Each system was designed to work independently while
 
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+                    quality control, and production optimization. Each system was designed to work independently while
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance, 
+                    quality control, and production optimization. Each system was designed to work independently while 
+                    Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
+                    quality control, and production optimization. Each system was designed to work independently while
                     sharing data for comprehensive insights.
                   </p>
                 </div>
                 <div className="bg-purple-500/10 rounded-lg p-6 border border-purple-500/20">
                   <h3 className="text-xl font-semibold text-purple-400 mb-3">Technology Stack</h3>
                   <p className="text-white/90">
+                    We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and 
+                    predictive analytics to create a comprehensive automation solution that could adapt to changing 
                     We utilized advanced machine learning algorithms, computer vision systems, IoT sensors, and
                     predictive analytics to create a comprehensive automation solution that could adapt to changing
                     production requirements.
@@ -88,6 +103,8 @@ export default function ResourceCaseStudyPage() {
                 <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
                   <p className="text-white/90">
+                    The implementation resulted in significant improvements across all key metrics, with the most 
+                    notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime. 
                     The implementation resulted in significant improvements across all key metrics, with the most
                     notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime.
                     These improvements directly translated to increased profitability and customer satisfaction.
@@ -99,6 +116,15 @@ export default function ResourceCaseStudyPage() {
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <Link 
+            {/* Related Resources */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            <section className="mb-12">
+              <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
@@ -106,6 +132,8 @@ export default function ResourceCaseStudyPage() {
                   <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
                 </Link>
+                <Link
+                <Link 
                 <Link
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
@@ -116,10 +144,20 @@ export default function ResourceCaseStudyPage() {
               </div>
             </section>
             {/* Call to Action */}
+            {/* Call to Action */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
+                  This resource demonstrates the real impact of AI automation in manufacturing. 
+                  Let's discuss how we can help you achieve similar results.
+                </p>
+                <div className="flex flex-col sm: flex-row gap-4 justify-center">
+                  <Link 
                   This resource demonstrates the real impact of AI automation in manufacturing.
                   Let's discuss how we can help you achieve similar results.
                 </p>
@@ -130,6 +168,8 @@ export default function ResourceCaseStudyPage() {
                   >
                     Get Started
                   </Link>
+                  <Link
+                  <Link 
                   <Link
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
@@ -143,28 +183,20 @@ export default function ResourceCaseStudyPage() {
         </main>
       </div>
     </>
+  );
+};
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * ResourceCaseStudyPage - Function description
- */
-function ResourceCaseStudyPage() {
-  const case_study = {
-    id: 'ai - automation - manufacturing',
-    title: 'AI - Powered Manufacturing Automation',
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
-    results: '40% increase in production efficiency, 60% reduction in downtime',
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function ResourceCaseStudyPage(req, res) {
+  try {
+  const caseStudy = {;
+    id: 'ai-automation-manufacturing';
+    title: 'AI-Powered Manufacturing Automation';
+    company: 'Global Manufacturing Corp';
+    industry: 'Manufacturing';
+    results: '40% increase in production efficiency, 60% reduction in downtime',;
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.';
   },
   return (
@@ -278,7 +310,11 @@ function ResourceCaseStudyPage() {
           </div>;
         </main>;
       </div>;
-    </>);
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}

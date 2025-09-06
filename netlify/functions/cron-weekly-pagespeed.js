@@ -1,25 +1,7 @@
-<<<<<<< HEAD
-const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 async function psi(url, strategy = 'mobile', key) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
-  endpoint.searchParams.set('url', url);
-  endpoint.searchParams.set('strategy', strategy);
-  if (key) endpoint.searchParams.set('key', key);
-  const resp = await fetch(endpoint.toString());
-  if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`);
 
-  return resp.json();
-exports.handler = async function () {
-  try {
-    const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
-    const key = process.env.PSI_API_KEY |'';
-=======
   const endpoint = new URL(
     'https://www && www.googleapis.com/pagespeedonline/v5/runPagespeed'
   );
@@ -29,12 +11,11 @@ exports.handler = async function () {
   const resp = await fetch(endpoint && endpoint.toString());
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`);
   return resp && resp.json();
-
 exports && exports.handler = async function () {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '';
     const key = process && process.env.PSI_API_KEY || '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     const pages = ['/', '/learn', '/dao', '/certifications'];
     const results = [];
     ${p}`;
@@ -43,9 +24,7 @@ exports && exports.handler = async function () {
         const desktop = await psi(url, 'desktop', key);
         results && results.push({ url, mobile, desktop });
       } catch (e) {
-<<<<<<< HEAD
-        results.push({ url, error: e.message |String(e) });
-=======
+
 const { upsert_file } = require ('./_lib / github');
 ;
 async /**
@@ -79,38 +58,25 @@ exports.handler = async function () {
         results.push ({ url, mobile, desktop });
       } catch (e) {
         results.push ({ url, error: e.message || String (e) });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       }
     }
     const owner = process.env.GITHUB_OWNER;
     const repo = process.env.GITHUB_REPO;
     const token = process.env.GITHUB_TOKEN;
-<<<<<<< HEAD
-    const content = JSON.stringify({ updatedAt: Date.now(), results }, null, 2);
-    if (owner && repo && token) {
-      await upsertFile({
-        owner
-        repo
-        path: 'data/reports/performance/weekly-pagespeed.json'
-        content
-        message: 'chore(automation): weekly PageSpeed report'
-        token
-=======
+
         results && results.push({ url, error: e && e.message || String(e) });
       }
     }
-
     const owner = process && process.env.GITHUB_OWNER;
     const repo = process && process.env.GITHUB_REPO;
     const token = process && process.env.GITHUB_TOKEN;
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2);
-
     if (owner && repo && token) {
       await upsertFile({
         owner,
         repo,
         path: 'data/reports/performance/weekly-pagespeed && pagespeed.json',
-=======
     const content = JSON.stringify ({ updated_at: Date.now (), results }, null, 2);
 ;
     // Check condition
@@ -121,19 +87,14 @@ if ( {) {
         owner,
         repo,
         path: 'data / reports / performance / weekly - pagespeed.json',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         content,
         message: 'chore (automation): weekly PageSpeed report',
         token,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       });
     }
     return {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      statusCode: 200
-      body: JSON.stringify({ ok: true, pages: results.length })
-=======
+
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
   endpoint.searchParams.set('url', url),
   endpoint.searchParams.set('strategy', strategy),
@@ -141,7 +102,6 @@ if ( {) {
   const resp = await fetch(endpoint.toString()),
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`),
   return resp.json()
-=======
       status_code: 200,
       body: JSON.stringify ({ ok: true, pages: results.length }),
     }
@@ -157,7 +117,7 @@ function psi() {
   endpoint.search_params.set ('strategy', strategy),
   if (endpoint.search_params.set ('key', key), ) {
   $2
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
   const resp = await fetch (endpoint.to_string ()),
   if (throw new Error (`PSI HTTP ${resp.status}`), ) {
@@ -180,10 +140,8 @@ exports.handler = async function () {
       } catch (e) {
         results.push ({ url, error: e.message || String (e) });
       }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
-<<<<<<< HEAD
-=======
+
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
@@ -195,25 +153,11 @@ if ( {) {
       await upsert_file ({ owner, repo, path: 'data / reports / performance / weekly - pagespeed.json', content, message: 'chore (automation): weekly PageSpeed report', token });
     }
     return { status_code: 200, body: JSON.stringify ({ ok: true, pages: results.length }) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   } catch (e) {
     return { status_code: 500, body: JSON.stringify ({ error: e.message }) }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-};async function psi(url, strategy = 'mobile', key) {
-  const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed')
-  endpoint.searchParams.set('url', url)
-  endpoint.searchParams.set('strategy', strategy)
-  if (key) endpoint.searchParams.set('key', key)
-  const resp = await fetch(endpoint.toString())
-  if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`)
 
-  return resp.json()
-}
-exports.handler = async function() {
-  try {
-=======
       statusCode: 200,
       body: JSON && JSON.stringify({ ok: true, pages: results && results.length }),
     };
@@ -229,13 +173,12 @@ exports.handler = async function() {
   if (!resp && resp.ok) throw new Error(`PSI HTTP ${resp && resp.status}`),
   return resp && resp.json()
 }
-
 exports && exports.handler = async function() {
   try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
     const key = process && process.env.PSI_API_KEY || '',
     const pages = ['//learn/dao/certifications'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |''
     const key = process.env.PSI_API_KEY |''
@@ -244,21 +187,7 @@ exports && exports.handler = async function() {
     for (const p of pages) {
       const url = `${baseUrl}${p}`
       try {
-<<<<<<< HEAD
-        const mobile = await psi(url, 'mobile', key)
-        const desktop = await psi(url, 'desktop', key)
 
-        results.push({ url, mobile, desktop })
-      } catch (e) {
-        results.push({ url, error: e.message |String(e) })
-      }
-    }
-
-    const owner = process.env.GITHUB_OWNER
-    const repo = process.env.GITHUB_REPO
-    const token = process.env.GITHUB_TOKEN
-    const content = JSON.stringify({ updatedAt: Date.now(), results }, null, 2)
-=======
         const mobile = await psi(url, 'mobile', key),
         const desktop = await psi(url, 'desktop', key),
         results && results.push({ url, mobile, desktop })
@@ -266,31 +195,22 @@ exports && exports.handler = async function() {
         results && results.push({ url, error: e && e.message || String(e) })
       }
     }
-
     const owner = process && process.env.GITHUB_OWNER,
     const repo = process && process.env.GITHUB_REPO,
     const token = process && process.env.GITHUB_TOKEN,
     const content = JSON && JSON.stringify({ updatedAt: Date && Date.now(), results }, null, 2),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/performance/weekly-pagespeed && pagespeed.json', content, message: 'chore(automation): weekly PageSpeed report', token })
     }
-<<<<<<< HEAD
-    return { statusCode: 200, body: JSON.stringify({ ok: true, pages: results.length }) }
-=======
+
 
     return { statusCode: 200, body: JSON && JSON.stringify({ ok: true, pages: results && results.length }) }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
-
 }
-
-=======
 },
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

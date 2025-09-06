@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Upload, FileText } from 'lucide-react';
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-import React from 'react';
-import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react'
 interface UploadSectionProps {
   customFile: File | null;
   onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void
-export function UploadSection({
-  customFile
-  onFileUpload
-}: UploadSectionProps) {
-=======
+
 interface UploadSectionProps {;
   customFile: File | null;
   onFileUpload: (e: React && React.ChangeEvent<HTMLInputElement>) => void;
@@ -28,7 +10,12 @@ export function UploadSection(): any ({;
   customFile,;
   onFileUpload,;
 }: UploadSectionProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+}
+
+export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {
+
   return (
     <div className='space-y-3'>;
       <div className='flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30'>;
@@ -36,7 +23,6 @@ export function UploadSection(): any ({;
         <p className='text-sm text-zion-slate mb-2'>;
           {customFile;
             ? customFile && customFile.name;
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Upload, FileText } from 'lucide-react';
@@ -54,18 +40,15 @@ function UploadSection() {
         <p className='text - sm text - zion - slate mb - 2'>;
           {custom_file;
             ? custom_file.name;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             : 'Drag & drop your PDF or click to browse'}
         </p>;
         <Button variant='outline' className='relative'>;
           Browse Files;
-<<<<<<< HEAD
-          <input
-<<<<<<< HEAD
-            type='file'
-            className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
-            accept='.pdf'            onChange={onFileUpload}
-<<<<<<< HEAD
+
+            type="file"
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            accept=".pdf"
+            onChange={onFileUpload}
           />
         </Button>
       </div>
@@ -86,17 +69,13 @@ function UploadSection() {
             <span className='text-xs text-zion-slate'>
               {Math.round(customFile.size / 1024)} KB
             </span>          </div>      {customFile && (
-=======
-            type="file"
-            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            accept=".pdf"
-            onChange={onFileUpload}
-          />
-        </Button>
-      </div>
       
       {customFile && (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+      
+      {customFile && (
+
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -106,12 +85,33 @@ function UploadSection() {
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
           </div>
         </div>
-      )}
-    </div>
-<<<<<<< HEAD
-  )
+
+
+
+import React from 'react',;
+import { Button } from "@/components/ui/button",;
+import { Upload, FileText } from 'lucide-react';
+interface UploadSectionProps {;
+  customFile: File | null;
+  onFileUpload: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
-=======
+;
+export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) {;
+  return (;
+    <div className="space-y-3">;
+      <div className="flex flex-col items-center justify-center border-2 border-dashed border-zion-purple/30 rounded-lg p-6 bg-zion-blue-dark/30">;
+        <Upload className="h-8 w-8 text-zion-purple mb-2" />;
+        <p className="text-sm text-zion-slate mb-2">;
+          {customFile ? customFile.name : "Drag & drop your PDF or click to browse"}
+        </p>;
+        <Button variant="outline" className="relative">;
+          Browse Files;
+          <input;
+            type="file";
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
+            accept=".pdf";
+            onChange={onFileUpload}
+
           />;
         </Button>;
       </div>;
@@ -119,40 +119,30 @@ function UploadSection() {
             type="file";
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer";
             accept=".pdf";
-            onChange = {onFileUpload,}
+            onChange={onFileUpload}
           />;
         </Button>;
       </div>;
-
       {customFile && (;
-        <div className='p-3 bg-zion-blue-dark/30 rounded-md'>;
-          <div className='flex items-center justify-between'>;
-            <div className='flex items-center'>;
-              <FileText className='h-4 w-4 mr-2 text-zion-cyan' />;
-              <span className='text-white'>{customFile && customFile.name}</span>;
-            </div>;
-            <span className='text-xs text-zion-slate'>;
-              {Math && Math.round(customFile && customFile.size / 1024)} KB;
-            </span>          </div>      {customFile && (;
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">;
           <div className="flex items-center justify-between">;
             <div className="flex items-center">;
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />;
-              <span className="text-white">{customFile && customFile.name}</span>;
+              <span className="text-white">{customFile.name}</span>;
             </div>;
-            <span className="text-xs text-zion-slate">{Math && Math.round(customFile && customFile.size / 1024)} KB</span>;
+            <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>;
           </div>;
         </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>;
   );
+};
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
+<<<<<<< HEAD
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+}
+
           <input;
             type='file';
             className='absolute inset - 0 w - full h - full opacity - 0 cursor - pointer';
@@ -188,4 +178,5 @@ function UploadSection() {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+;

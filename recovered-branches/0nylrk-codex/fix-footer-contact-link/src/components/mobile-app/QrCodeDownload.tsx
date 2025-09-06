@@ -1,10 +1,13 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import React from "react";
+import {QrCode} from "lucide-react";
+import {AppStoreButtons} from "./AppStoreButtons";
 import React from "react",
 import { QrCode } from "lucide-react";
 import { AppStoreButtons } from "./AppStoreButtons";
 
+import { QrCode } from "lucide-react",
+import { AppStoreButtons } from "./AppStoreButtons",
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
@@ -26,6 +29,8 @@ export const QrCodeDownload: React.FC = () => {
               </p>
               <AppStoreButtons
                 className="mb-8"
+              <AppStoreButtons 
+                className="mb-8" 
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
@@ -52,10 +57,13 @@ export const QrCodeDownload: React.FC = () => {
   );
 }
 
-=======
-import React from "react";
-import {QrCode} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
+};
+  )
+},
+import React from "react",;
+import { QrCode } from "lucide-react",;
+import { AppStoreButtons } from "./AppStoreButtons",;
+
 export const QrCodeDownload: React.FC = () => {;
   // App store links - these would come from environment variables in production;
   const appStoreUrl = "#", // Replace with actual App Store URL;
@@ -141,13 +149,11 @@ export const QrCodeDownload: React.FC = () => {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+export default QrCodeDownload;

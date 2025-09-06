@@ -1,28 +1,21 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
 export async function getStaticProps() {
 	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
 }
 export default function AIAutonomousMarketingPlatform(props: any) {
 	return <ServicePage {...props} />
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]',;
 ;
-export async /**
- * getStaticProps - Function description
- */
-function getStaticProps() {
-return (getSlugStaticProps as any)({ params: { slug: 'ai - autonomous - marketing - platform' } });
+export async function getStaticProps() {
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } })
+import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[slug]';
+export async function getStaticProps() {;
+	return (getSlugStaticProps as any)({ params: { slug: 'ai-autonomous-marketing-platform' } });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 export default /**
  * AIAutonomousMarketingPlatform - Function description
@@ -30,5 +23,4 @@ export default /**
 function AIAutonomousMarketingPlatform() {
 return <ServicePage {...props} />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+;

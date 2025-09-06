@@ -1,33 +1,19 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import jwt from "jsonwebtoken";
 import { ethers } from "ethers";
-<<<<<<< HEAD
 const JWT_SECRET = process.env.JWT_SECRET |"dev-secret-change-me";
-=======
-const JWT_SECRET = process && process.env.JWT_SECRET || "dev-secret-change-me";
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
   if (req.method !== "POST") return res.status(405).end();
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
-=======
-  if (req && req.method !== "POST") return res && res.status(405).end();
-  const { message, signature, address, chainId } = req && req.body || {};
-  if (!message || !signature || !address)
-    return res && res.status(400).json({ error: "Missing fields" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -35,51 +21,11 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
-<<<<<<< HEAD
-    const cookieHeader = req.headers.cookie |"";
-    const match = cookieHeader.match(/siwe-nonce=([^]+)/);
-    if (!match) return res.status(400).json({ error: "Missing nonce" });
-    const nonce = match[1];
-    if (!String(message).includes(`Nonce: ${nonce}`))
-      return res.status(400).json({ error: "Nonce mismatch" });
-    const token = jwt.sign(
-      { sub: address.toLowerCase(), chain: "evm", chainId }
-      JWT_SECRET
-      { expiresIn: "7d" }
-    );
-    res.setHeader(
-      "Set-Cookie"
-      `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`
-    );
-    return res.status(200).json({ ok: true });
 
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message |"Verify failed" });
-=======
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res && res.status(400).json({ error: "Missing nonce" });
-<<<<<<< HEAD
-=======
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import jwt from 'jsonwebtoken';
-import { ethers } from 'ethers';
-const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end();
-  const { message, signature, address, chainId } = req.body || {};
-  if (!message || !signature || !address) return res.status(400).json({ error: 'Missing fields' });
-  try {
-    const recovered = ethers.utils.verifyMessage(message, signature).toLowerCase();
-    if (recovered !== String(address).toLowerCase()) {
-      return res.status(401).json({ error: 'Invalid signature' })
-    }
-    const cookieHeader = req.headers.cookie || '';
-    const match = cookieHeader.match(/siwe-nonce=([^]+)/);
-    if (!match) return res.status(400).json({ error: 'Missing nonce' });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
@@ -96,34 +42,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     );
     return res && res.status(200).json({ ok: true });
   } catch (e: any) {
-    return res && res.status(500).json({ error: e?.message || "Verify failed" });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  }
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import jwt from './jsonwebtoken';
-import { ethers  } from './ethers';
-const JWT_SECRET = process.env.JWT_SECRET || "dev - secret - change - me";
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).end ()) {
-  $2
-}
-  const { message, signature, address, chain_id } = req.body || {}
-  if (
-    return res.status (400).json ({ error: "Missing fields" })) {
-  $2
-}
+    return res.status(500).json({ error: e?.message |"Verify failed" });
+    return res.status(500).json({ error: e?.message || "Verify failed" });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import jwt from 'jsonwebtoken';
+import { ethers } from 'ethers';
+const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
+export default async function handler(req, res) {
   try {
     const recovered = ethers.utils;
       .verify_message (message, signature);
@@ -159,4 +84,10 @@ function handler() {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
 
-import React from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import Link from 'next/link';
 export default function Custom500() {
@@ -28,10 +22,17 @@ export default function Custom500() {
             </h2>
             <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
               Something went wrong on our end. We&apos,re working to fix it.
+              Something went wrong on our end. We're working to fix it.
+              Something went wrong on our end. We&apos,re working to fix it. 
+              Something went wrong on our end. We're working to fix it.
               Please try again in a few moments.
             </p>
           </div>
           <div className="space-y-4">
+            <Link
+              href="/"
+            <Link 
+              href="/" 
             <Link
               href="/"
               className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
@@ -41,16 +42,28 @@ export default function Custom500() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/about"
+              <Link 
+                href="/about" 
+              <Link
+                href="/about"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 About Us
               </Link>
               <Link
                 href="/services"
+              <Link 
+                href="/services" 
+              <Link
+                href="/services"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Services
               </Link>
+              <Link
+                href="/contact"
+              <Link 
+                href="/contact" 
               <Link
                 href="/contact"
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
@@ -63,22 +76,14 @@ export default function Custom500() {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import React from 'react',
-import Head from 'next / head',
-import Link from 'next / link',
-export default /**
- * Custom500 - Function description
- */
-function Custom500() {
-  return (
+};
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+export default function Custom500(req, res) {
+  try {
+  return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title > 500 - Server Error | Zion Tech Group</title>;
@@ -132,5 +137,3 @@ function Custom500() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

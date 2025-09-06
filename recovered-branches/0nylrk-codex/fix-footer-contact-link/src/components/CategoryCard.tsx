@@ -1,9 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+import React, { ReactNode } from "react";
+import {cn} from "@/lib/utils";
+import {slugify} from "@/lib/slugify";
+import {Link} from "react-router-dom";
 import React, { ReactNode } from "react",
 import { cn } from "@/lib/utils",
 import { slugify } from "@/lib/slugify";
 import { Link } from "react-router-dom";
+import { slugify } from "@/lib/slugify",
+import { Link } from "react-router-dom",
 interface CategoryCardProps {
 
   title: string
@@ -15,11 +19,44 @@ interface CategoryCardProps {
    * accent colour is used. Previously this prop was ignored which meant
    * callers could not customise the icon colour as intended.
    */
-=======
+
 import React, { ReactNode } from "react";
 import {cn} from "@/lib/utils";
 import {slugify} from "@/lib/slugify";
 import {Link} from "react-router-dom";
+=======
+  color?: string,
+  count?: number,
+  className?: string
+}
+export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
+  // Create a URL-friendly slug from the category title;
+  const slug = slugify(title);
+  // Create a URL-friendly slug from the category title
+  const slug = slugify(title),
+
+  const slug = slugify(title);
+  return (
+    <Link
+      to={`/category/${slug}`}
+      className={cn(
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
+        className
+      )}
+    >
+      <div
+        className={cn(
+          "mb-4 p-3 bg-zion-blue-dark rounded-full";
+
+          !color && "text-zion-cyan"
+          "mb-4 p-3 bg-zion-blue-dark rounded-full",
+          !color && "text-zion-cyan"
+import React, { ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { slugify } from "@/lib/slugify",;
+import { Link } from "react-router-dom",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CategoryCardProps {;
   title: string,;
   description: string,;
@@ -34,36 +71,28 @@ interface CategoryCardProps {;
   count?: number;
   className?: string;
 }
-<<<<<<< HEAD
-export function CategoryCard({ title, description, icon, color, count, className }: CategoryCardProps) {
-  // Create a URL-friendly slug from the category title
-=======
+
 
 export function CategoryCard(): any ({ title, description, icon, color, count, className }: CategoryCardProps) {;
   // Create a URL-friendly slug from the category title;
   const slug = slugify(title);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
   const slug = slugify(title);
   return (
     <Link
-<<<<<<< HEAD
-      to={`/category/${slug}`}
-=======
+
       to={`/category/${slug}`} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       className={cn(
         "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group"
         className
       )}>;
       <div
         className={cn(
-<<<<<<< HEAD
-          "mb-4 p-3 bg-zion-blue-dark rounded-full";
 
-=======
           "mb-4 p-3 bg-zion-blue-dark rounded-full"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           !color && "text-zion-cyan"
         )}
         style={color ? { color } : undefined}>;
@@ -109,9 +138,12 @@ function CategoryCard() {
         class_name)}
     >;
       <div;
-        className={cn (
-          "mb - 4 p - 3 bg - zion - blue - dark rounded - full";
-          !color && "text - zion - cyan")}
+
+        className={cn(;
+          "mb-4 p-3 bg-zion-blue-dark rounded-full";
+          !color && "text-zion-cyan";
+        )}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         style={color ? { color } : undefined}
       >;
         {icon}

@@ -1,8 +1,10 @@
-<<<<<<< HEAD
 
-export function slugify(title: string, separator = "-"): string {
+export function slugify(title: string, separator = "-"): string {;
   const sep = separator;
-  const escaped = sep && sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+export function slugify(title: string, separator = "-"): string {
+  const sep = separator,
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
 
   return title
     .trim()
@@ -26,11 +28,14 @@ export function unslugify(slug: string, separator = "-"): string {
     .filter(Boolean)
     .map(w => w && w.charAt(0).toUpperCase() + w && w.slice(1))
     .join(" ")
-=======
-export function slugify (title: string, separator = "-"): string {
-  const sep = separator;
-  const escaped = sep.replace (/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+
 ;
+export function slugify(title: string, separator = "-"): string {;
+  const sep = separator,;
+  const escaped = sep.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
   return title;
     .trim ();
     .replace (/_ / g, " ") // treat underscores like spaces;
@@ -49,9 +54,10 @@ export function slugify (title: string, separator = "-"): string {
 */;
 export function unslugify (slug: string, separator = "-"): string {
   return slug;
-    .split (separator);
-    .filter (Boolean);
-    .map (w => w.char_at (0).toUpperCase () + w.slice (1));
-    .join (" ");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    .split(separator);
+    .filter(Boolean);
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1));
+    .join(" ");
 }
+;

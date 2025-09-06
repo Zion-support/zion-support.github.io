@@ -1056,7 +1056,7 @@ body::after {
     transparent
   );
   animation: quantumSpin 8s linear infinite;
->>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
+
 }
 =======
 =======
@@ -1267,6 +1267,9 @@ body::after {
     filter: hue-rotate(10deg);
   }
 }
+<<<<<<< HEAD
+
+=======
 >>>>>>> origin/cursor/enhance-app-services-and-website-with-futuristic-design-bcf6
 <<<<<<< HEAD
 =======

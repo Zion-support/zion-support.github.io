@@ -1,48 +1,24 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge",
-import { ShieldAlert } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-=======
-import { Badge } from '@/components / ui / badge';
-import { ShieldAlert } from './lucide-react';
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components / ui / tooltip';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-interface DisputeStatusBadgeProps {
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
-}
-<<<<<<< HEAD
-export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
-
-  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
-  let message = "This item has an open dispute";
-  switch (status) {
-    case 'under_review':
-=======
 import {Badge} from "@/components/ui/badge";
 import {ShieldAlert} from "lucide-react";
 import {Tooltip, TooltipContent, TooltipTrigger} from "@/components/ui/tooltip";
+import { Badge } from "@/components/ui/badge",
+import { ShieldAlert } from "lucide-react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { ShieldAlert } from "lucide-react",
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",
 
-interface DisputeStatusBadgeProps {;
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
+interface DisputeStatusBadgeProps {
+  status: 'open' | 'under_review' | 'resolved' | 'closed'
 }
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
-export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive"
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
   let message = "This item has an open dispute";
-
-  switch (status) {;
-    case 'under_review':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-export /**
- * DisputeStatusBadge - Function description
- */
-function DisputeStatusBadge() {
   let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",
-  let message = "This item has an open dispute";
-;
+  let message = "This item has an open dispute",
+  
   switch (status) {
     case 'under_review':;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -57,9 +33,22 @@ function DisputeStatusBadge() {
       variant = "outline";
       message = "This dispute has been closed";
       break;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+      variant = "secondary",
+      message = "This dispute is under review by our team",
+      break,
+    case 'resolved':
+      variant = "outline",
+      message = "This dispute has been resolved",
+      break,
+    case 'closed':
+      variant = "outline";
+      message = "This dispute has been closed";
+      break;
+
+      variant = "outline",
+      message = "This dispute has been closed",
+      break,
     default:
       break
   }
@@ -77,7 +66,30 @@ function DisputeStatusBadge() {
     </Tooltip>
   )
 }
-=======
+import { Badge } from "@/components/ui/badge",;
+import { ShieldAlert } from "lucide-react",;
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip",;
+interface DisputeStatusBadgeProps {;
+  status: 'open' | 'under_review' | 'resolved' | 'closed';
+}
+;
+export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {;
+  let variant: "default" | "destructive" | "secondary" | "outline" = "destructive",;
+  let message = "This item has an open dispute",;
+  switch (status) {;
+    case 'under_review':;
+      variant = "secondary",;
+      message = "This dispute is under review by our team",;
+      break,;
+    case 'resolved':;
+      variant = "outline",;
+      message = "This dispute has been resolved",;
+      break,;
+    case 'closed':;
+      variant = "outline",;
+      message = "This dispute has been closed";
+      break;
+
     default:;
       break;
   }
@@ -104,12 +116,7 @@ function DisputeStatusBadge() {
       <TooltipContent>;
         <p>{message}</p>;
       </TooltipContent>;
-<<<<<<< HEAD
     </Tooltip>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Tooltip>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

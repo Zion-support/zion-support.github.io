@@ -1,68 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types';
-import { v4 as uuidv4  } from 'uuid';
-import { supabase as client  } from '../../../utils/supabase/client';
-import { MOCK_DATA } from '../../../utils/admin/mockData';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-  return (
-    !!process && process.env.NEXT_PUBLIC_SUPABASE_URL &&
-    process && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder && placeholder.supabase.co'
-  );
-function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, pageSize, format, ...rest } =
-<<<<<<< HEAD
-    req.query as Record<string, string>;
-  const filters: Record<string, any> = {}
-  Object.keys(rest).forEach(k => {
-    if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];
-=======
-    req && req.query as Record<string, string>;
-<<<<<<< HEAD
-  const filters: Record<string, any> = {};
-  Object && Object.keys(rest).forEach(k => {
-    if (k && k.startsWith('f_')) filters[k && k.slice(2)] = rest[k];
+
   });
   return {
-    search,
-    sort,
-    order: (order as any) || 'desc',
-    page: page ? Number(page) : 0,
-    pageSize: pageSize ? Number(pageSize) : 20,
-    filters,
-    format: (format as any) || undefined,
-  };    search;
-=======
-=======
-function isSupabaseConfigured() {
-  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co',
-}
 
-function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  const filters: Record<string, any> = {};
-  Object && Object.keys(rest).forEach(k => {
-    if (k && k.startsWith('f_')) filters[k && k.slice(2)] = rest[k];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  });
-  return {
-<<<<<<< HEAD
-    search
-    sort
-    order: (order as any) |'desc'
-    page: page ? Number(page) : 0
-    pageSize: pageSize ? Number(pageSize) : 20
-    filters
-    format: (format as any) |undefined
-  };    search;
-=======
     search;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
     sort;
     order: (order as any) || 'desc', page: page ? Number(page) : 0,
     pageSize: pageSize ? Number(pageSize) : 20, filters,
@@ -70,31 +13,41 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+=======
+<<<<<<< HEAD
+  };    search;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
+=======
+
+    search,
+    sort,
+    order: (order as any) || 'desc',
+    page: page ? Number(page) : 0,
+    pageSize: pageSize ? Number(pageSize) : 20,
+    filters,
+    format: (format as any) || undefined,
+  };
+
+  };    search;
+    sort;
+    order: (order as any) |'desc';
+    page: page ? Number(page) : 0;
+    pageSize: pageSize ? Number(pageSize) : 20;
+    filters,
+    format: (format as any) || undefined}
+}
+  };
 
     filters
     format: (format as any) |undefined}
-
 }
 function toCsv(rows: any[]): string {
-<<<<<<< HEAD
-  if (!rows.length) return '';
 
-  const headers = Object.keys(rows[0]);
-  const escape = (v: any) => {
-    if (v === null |v === undefined) return '';
-    const s = typeof v === 'string' ? v : JSON.stringify(v);
-<<<<<<< HEAD
-    return '"' + s.replace(/"/g, '""') + '"';
-  }
-  const lines = [headers.join(',')].concat(
-    rows.map(r => headers.map(h => escape(r[h])).join(','))
-  );
-  return lines.join('\n');
-=======
   if (!rows && rows.length) return '';
   const headers = Object && Object.keys(rows[0]);
   const escape = (v: any) => {
@@ -105,48 +58,42 @@ function toCsv(rows: any[]): string {
   const lines = [headers && headers.join(',')].concat(
     rows && rows.map(r => headers && headers.map(h => escape(r[h])).join(','))
   );
-  return lines && lines.join('\n');
+  return lines.join('\n');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
   const type = (req.query.type as AdminType) |'';
+) {;
+  const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
 =======
     return '"' + s.replace(/"/g, '""') + '"'
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
-=======
+
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type))
     return res && res.status(400).json({ error: 'Invalid type' });  };
   const lines = [headers && headers.join()].concat(rows && rows.map((r) => headers && headers.map((h) => escape(r[h])).join()));
   return lines && lines.join('\n')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const type = (req.query.type as AdminType) |'';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const type = (req.query.type as AdminType) || '';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
-<<<<<<< HEAD
-  const useSupabase = isSupabaseConfigured();
-  if (req.method === 'GET') {
-=======
+
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
   const useSupabase = isSupabaseConfigured();
 
@@ -158,58 +105,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
         // heuristic: search name/title/email
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        query = query && query.or(
-          'name && name.ilike.%' +
-            params && params.search +
-            '%,title && title.ilike.%' +
-            params && params.search +
-            '%,email && email.ilike.%' +
-            params && params.search +
-            '%'
-        );
-      }
-      if (params && params.filters) {
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {
-          if (v !== undefined) query = query && query.eq(k, v);
+
+
         }
       }
-      if (params && params.sort)
-        query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });      const from = params && params.page * params && params.pageSize;      }
-      if (params && params.filters) {
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {
-          if (v !== undefined) query = query && query.eq(k, v)
-=======
-        query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
-      }
-      if (params.filters) {
-        for (const [k, v] of Object.entries(params.filters)) {
-          if (v !== undefined) query = query.eq(k, v)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        }
-      }
-<<<<<<< HEAD
-      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' });
-      const from = params.page * params.pageSize;
-      const to = from + params.pageSize - 1;
-      const { data, error, count } = await query.range(from, to);
-      if (error) return res.status(500).json({ error: error.message });
-      if (params.format === 'csv') {
-<<<<<<< HEAD
-        res.setHeader('Content-Type', 'text/csv');
-        res.setHeader(
-          'Content-Disposition'
-          `attachment; filename="${type}.csv"`
-        );
-        return res.status(200).send(toCsv(data |[]));      }        res.setHeader('Content-Typetext/csv');
-        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
-        return res.status(200).send(toCsv(data |[]))
-      }
-      return res.status(200).json({ items: data |[], total: count |0 });
-=======
+
       if (params && params.sort) query = query && query.order(params && params.sort, { ascending: params && params.order === 'asc' });
       const from = params && params.page * params && params.pageSize;
       const to = from + params && params.pageSize - 1;
@@ -224,259 +124,148 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res && res.status(200).send(toCsv(data || []));      }        res && res.setHeader('Content-Typetext/csv');
         res && res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res && res.status(200).send(toCsv(data || []))
-<<<<<<< HEAD
-=======
-=======
-        res.setHeader('Content-Typetext/csv');
-        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
-        return res.status(200).send(toCsv(data || []))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+<<<<<<< HEAD
+=======
+    filters,
+    format: (format as any) || undefined}
+}
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+    filters
+    format: (format as any) |undefined}
+
+}
+function toCsv(rows: any[]): string {
+  if (!rows.length) return '';
+
+  const headers = Object.keys(rows[0]);
+  const escape = (v: any) => {
+    if (v === null |v === undefined) return '';
+    const s = typeof v === 'string' ? v : JSON.stringify(v);
+    return '"' + s.replace(/"/g, '""') + '"';
+  }
+  const lines = [headers.join(',')].concat(
+    rows.map(r => headers.map(h => escape(r[h])).join(','))
+  );
+  return lines.join('\n');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+export default async function handler(
+  req: NextApiRequest
+  res: NextApiResponse
+<<<<<<< HEAD
+) {
+  const type = (req.query.type as AdminType) |'';
+=======
+) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (!ADMIN_TYPES.includes(type))
+    return res.status(400).json({ error: 'Invalid type' });  }
+  const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
+  return lines.join('\n')
+}
+<<<<<<< HEAD
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const type = (req.query.type as AdminType) |'';
+=======
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
+  const type = (req.query.type as AdminType) || '';
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+  const useSupabase = isSupabaseConfigured();
+  if (req.method === 'GET') {
+    const params = parseListParams(req);
+    if (useSupabase) {
+      const table = type;
+      let query = client.from(table).select('*', { count: 'exact' });
+      if (params.search) {
+        // heuristic: search name/title/email
+        query = query.or(
+          'name.ilike.%' +
+            params.search +
+            '%,title.ilike.%' +
+            params.search +
+            '%,email.ilike.%' +
+            params.search +
+            '%'
+        );
+      }
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          if (v !== undefined) query = query.eq(k, v);
+        }
+      }
+      if (params.sort)
+        query = query.order(params.sort, { ascending: params.order === 'asc' });      const from = params.page * params.pageSize;      }
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          if (v !== undefined) query = query.eq(k, v)
+        }
+      }
+      if (params.sort) query = query.order(params.sort, { ascending: params.order === 'asc' });
+      const from = params.page * params.pageSize;
+      const to = from + params.pageSize - 1;
+      const { data, error, count } = await query.range(from, to);
+      if (error) return res.status(500).json({ error: error.message });
+      if (params.format === 'csv') {
+        res.setHeader('Content-Type', 'text/csv');
+        res.setHeader(
+          'Content-Disposition'
+          `attachment; filename="${type}.csv"`
+        );
+        return res.status(200).send(toCsv(data |[]));      }        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
+        return res.status(200).send(toCsv(data |[]))
+      }
+      return res.status(200).json({ items: data |[], total: count |0 });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     } else {
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      if (params && params.search) {
-        const s = params && params.search.toLowerCase();
-        filtered = filtered && filtered.filter(r =>
-          JSON && JSON.stringify(r).toLowerCase().includes(s)
-        );
-      }
-      if (params && params.filters) {
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {
-          filtered = filtered && filtered.filter(
-            (r: any) => String((r as any)[k]) === String(v)
-          );        }        filtered = filtered && filtered.filter((r) => JSON && JSON.stringify(r).toLowerCase().includes(s))
-      }
-      if (params && params.filters) {
-        for (const [k, v] of Object && Object.entries(params && params.filters)) {
-          filtered = filtered && filtered.filter((r: any) => String((r as any)[k]) === String(v))
-      }
-      if (params && params.sort) {
-        filtered && filtered.sort((a: any, b: any) => {
-          const av = (a as any)[params && params.sort!];
-          const bv = (b as any)[params && params.sort!];
-          return (
-            (av > bv ? 1 : av < bv ? -1 : 0) * (params && params.order === 'asc' ? 1 : -1)
-          );        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params && params.order === 'asc' ? 1 : -1)
-=======
       if (params.search) {
         const s = params.search.toLowerCase();
-        filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
+        filtered = filtered.filter(r =>
+          JSON.stringify(r).toLowerCase().includes(s)
+        );
+      }
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          filtered = filtered.filter(
+            (r: any) => String((r as any)[k]) === String(v)
+          );        }        filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
       }
       if (params.filters) {
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v))
-        }
-=======
-import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils / admin / types';
-import { v4 as uuidv4 } from 'uuid';
-import { supabase as client } from '../../../utils / supabase / client';
-import { MOCK_DATA } from '../../../utils / admin / mock_data';
-;
-  return (
-    !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
-    process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co');
-;
-function parseListParams (req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, page_size, format, ...rest } =;
-    req.query as Record < string, string>;
-  const filters: Record < string, any> = {}
-  Object.keys (rest).for_each (key => {
-    if () filters[k.slice (2)] = rest[k]) {
-  $2
-}
-  });
-  return {
-    search,
-    sort,
-    order: (order as any) || 'desc',
-    page: page ? Number (page) : 0,
-    page_size: page_size ? Number (page_size) : 20,
-    filters,
-    format: (format as any) || undefined,
-  }    search;
-    sort;
-    order: (order as any) || 'desc';
-    page: page ? Number (page) : 0;
-    page_size: page_size ? Number (page_size) : 20;
-    filters,
-    format: (format as any) || undefined}
-}
-function to_csv (rows: any[]): string {
-  // Check condition
-if (return '') {
-  $2
-}
-  const headers = Object.keys (rows[0]);
-  const escape = (v: any) =>: any {
-    // Check condition
-if (return '') {
-  $2
-}
-    const string = typeof v === 'string' ? v : JSON.stringify (v);
-    return '"' + s.replace (/"/g, '""') + '"';
-  }
-  const lines = [headers.join (', ')].concat (
-    rows.map (r => headers.map (h => escape (r[h])).join (', ')));
-  return lines.join ('\n');
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const type = (req.query.type as AdminType) || '';
-  if ()) {
-  $2
-}
-    return res.status (400).json ({ error: 'Invalid type' });  }
-  const lines = [headers.join ()].concat (rows.map ((r) => headers.map ((h) => escape (r[h])).join ()));
-  return lines.join ('\n');
-}
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const type = (req.query.type as AdminType) || '';
-  if () return res.status (400).json ({ error: 'Invalid type' })) {
-  $2
-}
-  const use_supabase = isSupabaseConfigured ();
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    const params = parseListParams (req);
-    // Check condition
-if ( {) {
-  $2
-}
-      const table = type;
-      let query = client.from (table).select ('*', { count: 'exact' });
-      // Check condition
-if ( {) {
-  $2
-}
-        // heuristic: search name / title / email;
-        query = query.or (
-          'name.ilike.%' +;
-            params.search +;
-            '%, title.ilike.%' +;
-            params.search +;
-            '%, email.ilike.%' +;
-            params.search +;
-            '%');
       }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          if (query = query.eq (k, v)) {
-  $2
-}
-        }
+          );        }
+
+
       }
-      if (
-        query = query.order (params.sort, { ascending: params.order === 'asc' })) {
-  $2
-}      const from = params.page * params.page_size;      }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          if (query = query.eq (k, v)) {
-  $2
-}
-        }
-      }
-      if (query = query.order (params.sort, { ascending: params.order === 'asc' })) {
-  $2
-}
-      const from = params.page * params.page_size;
-      const to = from + params.page_size - 1;
-      const { data, error, count } = await query.range (from, to);
-      if (return res.status (500).json ({ error: error.message })) {
-  $2
-}
-      // Check condition
-if ( {) {
-  $2
-}
-        res.set_header ('Content - Type', 'text / csv');
-        res.set_header (
-          'Content - Disposition',
-          `attachment; filename="${type}.csv"`);
-        return res.status (200).send (to_csv (data || []));      }        res.set_header ('Content - Typetext / csv');
-        res.set_header ('Content - Disposition', `attachment, filename="${type}.csv"`);
-        return res.status (200).send (to_csv (data || []));
-      }
-      return res.status (200).json ({ items: data || [], total: count || 0 });
-    } else {
-      // fallback;
-      const all = (MOCK_DATA[type] || []).slice ();
-      let filtered = all;
-      // Check condition
-if ( {) {
-  $2
-}
-        const string = params.search.toLowerCase ();
-        filtered = filtered.filter (r =>;
-          JSON.stringify (r).toLowerCase ().includes (s));
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          filtered = filtered.filter (
-            (r: any) => String ((r as any)[k]) === String (v));        }        filtered = filtered.filter ((r) => JSON.stringify (r).toLowerCase ().includes (s));
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        for (const [k, v] of Object.entries (params.filters)) {
-          filtered = filtered.filter ((r: any) => String ((r as any)[k]) === String (v));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      }
-      // Check condition
-if ( {) {
-  $2
-}
-        filtered.sort ((array: any, boolean: any) => {
+      if (params.sort) {
+        filtered.sort((a: any, b: any) => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
-<<<<<<< HEAD
-          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1));        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         });
       }
-<<<<<<< HEAD
-      const total = filtered.length;
-<<<<<<< HEAD
-      const start = params.page * params.pageSize;
-      const end = start + params.pageSize;
-      const pageItems = filtered.slice(start, end);
-      if (params.format === 'csv') {
-<<<<<<< HEAD
-        res.setHeader('Content-Type', 'text/csv');
-        res.setHeader(
-          'Content-Disposition'
-=======
+
       const total = filtered && filtered.length;
       const start = params && params.page * params && params.pageSize;
       const end = start + params && params.pageSize;
@@ -485,14 +274,22 @@ if ( {) {
         res && res.setHeader('Content-Type', 'text/csv');
         res && res.setHeader(
           'Content-Disposition',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           `attachment; filename="${type}.csv"`
         );
-        return res && res.status(200).send(toCsv(pageItems));
-      return res && res.status(200).json({ items: pageItems, total });
+
+        return res.status(200).send(toCsv(pageItems));
+      return res.status(200).json({ items: pageItems, total });
     }
   }
-<<<<<<< HEAD
+
+      }
+
+      }
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
   if (req.method === 'PATCH') {
     const { id, updates } = req.body as {
       id: string;
@@ -503,11 +300,34 @@ if ( {) {
 
   if (req && req.method === 'PATCH') {
     const { id, updates } = req && req.body as {
+=======
+        return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
+<<<<<<< HEAD
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+=======
+
+      }
+=======
+=======
+
+      }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      return res.status(200).json({ items: pageItems, total });
+    }
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (req.method === 'PATCH') {
+    const { id, updates } = req.body as {
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
       id: string;
       updates: Record<string, any>;
     };
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (useSupabase) {
       const { data, error } = await client
         .from(type)
@@ -518,89 +338,53 @@ if ( {) {
       if (error) return res && res.status(500).json({ error: error && error.message });
       return res && res.status(200).json({ item: data });
     } else {
-<<<<<<< HEAD
-      const list = MOCK_DATA[type] || [];
-      const idx = list && list.findIndex((r: any) => r && r.id === id),
-      if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
-      const updated = {
-        ...list[idx],
-        ...updates,
-        updated_at: new Date().toISOString(),
-      };
-      list[idx] = updated as any;
-      return res && res.status(200).json({ item: updated });    }      return res && res.status(200).json({ item: updated })
-=======
-<<<<<<< HEAD
-      const list = MOCK_DATA[type] |[];
-      const idx = list.findIndex((r: any) => r.id === id)
-      if (idx === -1) return res.status(404).json({ error: 'Not found' });
-=======
-=======
-        res.setHeader('Content-Typetext/csv');
-        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
-        return res.status(200).send(toCsv(pageItems))
-      }
-      return res.status(200).json({ items: pageItems, total })
-    };
-  }
 
-  if (req.method === 'PATCH') {
-    const { id, updates } = req.body as { id: string, updates: Record<string, any> };
-    if (!id) return res.status(400).json({ error: 'Missing id' });
-    if (useSupabase) {
-      const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single();
-      if (error) return res.status(500).json({ error: error.message });
-      return res.status(200).json({ item: data })
-    } else {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-      const list = MOCK_DATA[type] || [];
-      const idx = list && list.findIndex((r: any) => r && r.id === id),
-      if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       const updated = {
         ...list[idx]
         ...updates
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
-<<<<<<< HEAD
-      return res && res.status(200).json({ item: updated });    }      return res && res.status(200).json({ item: updated })
-=======
-      return res.status(200).json({ item: updated })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
   }
-<<<<<<< HEAD
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+  }
+
   if (req.method === 'DELETE') {
     const id = (req.query.id as string) |'';
     if (!id) return res.status(400).json({ error: 'Missing id' });
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id);
       if (error) return res.status(500).json({ error: error.message });
-<<<<<<< HEAD
-      return res.status(200).json({ ok: true });
-      const list = MOCK_DATA[type] |[];
-      const idx = list.findIndex((r: any) => r.id === id);
-      if (idx === -1) return res.status(404).json({ error: 'Not found' });
-      list.splice(idx, 1);
-      return res.status(200).json({ ok: true });    }
-  }
-  return res.status(405).json({ error: 'Method not allowed' });
-}return res.status (200) .send (toCsv (data |[]) );
-}return res.status (200) .send (toCsv (pageItems) );      return res.status(200).json({ ok: true })
 
-    }
-  }
-return res.status(405).json({ error: 'Method not allowed' });
-}return res.status (200) .send (toCsv (data |[]) );
-}return res.status (200) .send (toCsv (pageItems) );
-}
-=======
 
   if (req && req.method === 'DELETE') {
     const id = (req && req.query.id as string) || '';
     if (!id) return res && res.status(400).json({ error: 'Missing id' });
+=======
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+<<<<<<< HEAD
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  if (req.method === 'DELETE') {
+    const id = (req.query.id as string) |'';
+    if (!id) return res.status(400).json({ error: 'Missing id' });
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     if (useSupabase) {
       const { error } = await client && client.from(type).delete().eq('id', id);
       if (error) return res && res.status(500).json({ error: error && error.message });
@@ -611,38 +395,16 @@ return res.status(405).json({ error: 'Method not allowed' });
       list && list.splice(idx, 1);
       return res && res.status(200).json({ ok: true });    }
   }
-
   return res && res.status(405).json({ error: 'Method not allowed' });
-
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );      return res && res.status(200).json({ ok: true })
     }
   }
-
   return res && res.status(405).json({ error: 'Method not allowed' });
-
 }return res && res.status (200) .send (toCsv (data || []) );
 }return res && res.status (200) .send (toCsv (pageItems) );
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-      return res.status(200).json({ ok: true })
-    } else {
-      const list = MOCK_DATA[type] || [];
-      const idx = list.findIndex((r: any) => r.id === id),
-      if (idx === -1) return res.status(404).json({ error: 'Not found' });
-      list.splice(idx, 1);
-      return res.status(200).json({ ok: true })
-    }
-  }
 
-  return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       const start = params.page * params.page_size;
       const end = start + params.page_size;
       const page_items = filtered.slice (start, end);
@@ -733,5 +495,19 @@ return res.status (405).json ({ error: 'Method not allowed' });
 ;
 }return res.status (200) .send (to_csv (data || []) );
 }return res.status (200) .send (to_csv (page_items) );
+      return res.status(200).json({ items: pageItems, total })
+    }
+  }
+
+  if (req.method === 'PATCH') {
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,28 +1,26 @@
 export interface CustomerTicket {
+export interface CustomerTicket {;
   id: string;
-  customer_id: string;
+  customerId: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
   category: string;
-  assigned_to?: string;
-  created_at: Date;
-  updated_at: Date;
-  resolved_at?: Date;
-  customer_satisfaction?: number;
+  assignedTo?: string;
+  createdAt: Date;
+  updatedAt: Date;
+  resolvedAt?: Date;
+  customerSatisfaction?: number;
   tags: string[];
-<<<<<<< HEAD
 
-  attachments: string[]
-
-  conversationHistory: CustomerMessage[]
-=======
   attachments: string[],
   conversation_history: CustomerMessage[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface CustomerMessage {
+
+export interface CustomerMessage {;
   id: string;
   ticket_id: string;
   sender_id: string;
@@ -31,17 +29,14 @@ export interface CustomerMessage {
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
-<<<<<<< HEAD
 
-  intent: string
-
-  confidence: number
-=======
   intent: string,
   confidence: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface CustomerProfile {
+
+export interface CustomerProfile {;
   id: string;
   email: string;
   name: string;
@@ -54,127 +49,81 @@ export interface CustomerProfile {
   customer_satisfaction: number;
   last_contact: Date;
   preferences: {
-<<<<<<< HEAD
-    communicationChannel: 'email' | 'chat' | 'phone';
 
-    language: string
-
-    timezone: string
-  }
-  tags: string[]
-=======
     communication_channel: 'email' | 'chat' | 'phone';
     language: string,
     timezone: string;
   }
-  tags: string[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  tags: string[]
 }
 export interface AIResponse {
+
+export interface AIResponse {;
   id: string;
   ticket_id: string;
   response: string;
   confidence: number;
-<<<<<<< HEAD
-  suggestedActions: string[];
-  nextSteps: string[];
 
-  requiresHumanReview: boolean
-
-  generatedAt: Date
-=======
   suggested_actions: string[];
   next_steps: string[];
   requiresHumanReview: boolean,
   generated_at: Date;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface CustomerServiceMetrics {
-  total_tickets: number;
-  open_tickets: number;
-  resolved_tickets: number;
+
+export interface CustomerServiceMetrics {;
+  totalTickets: number;
+  openTickets: number;
+  resolvedTickets: number;
   averageResolutionTime: number;
-<<<<<<< HEAD
-  customerSatisfaction: number;
 
-  firstResponseTime: number
-  ticketVolumeByCategory: Record<string, number>;
-  agentPerformance: Record<string, {
-<<<<<<< HEAD
-    ticketsResolved: number;
-    averageResolutionTime: number
-
-=======
     ticketsResolved: number
     averageResolutionTime: number,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     customerSatisfaction: number
   }>
-=======
-  customer_satisfaction: number;
-  firstResponseTime: number,
-  ticketVolumeByCategory: Record < string, number>;
-  agent_performance: Record < string, {
-    tickets_resolved: number;
-    averageResolutionTime: number,
-    customer_satisfaction: number;
-  }>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export interface CustomerServiceRequest {
-  customer_id: string;
+
+export interface CustomerServiceRequest {;
+  customerId: string;
   subject: string;
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
-<<<<<<< HEAD
 
-  attachments?: string[]
-
-  preferredChannel?: 'email' | 'chat' | 'phone'
-=======
   attachments?: string[],
   preferred_channel?: 'email' | 'chat' | 'phone';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface CustomerServiceResponse {
-  ticket_id: string;
+
+export interface CustomerServiceResponse {;
+  ticketId: string;
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   ai_response?: AIResponse;
   estimatedResolutionTime: string;
-<<<<<<< HEAD
 
-  nextSteps: string[]
+  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
+    this && this.apiKey = apiKey,
+    this && this.baseUrl = baseUrl
 
   assignedAgent?: string
 }
 export class AICustomerServiceService {
+
+export class AICustomerServiceService {;
   private apiKey: string;
 
-<<<<<<< HEAD
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-=======
-  constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey,
-    this && this.baseUrl = baseUrl
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(request)});
-      if (!response.ok) {
-        throw new Error(`Create ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-=======
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets`, {
         method: 'POST',
         headers: {
@@ -186,7 +135,7 @@ export class AICustomerServiceService {
       }
 
       const data = await response && response.json();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       return data
     } catch (error) {
       console && console.error('Error creating ticket:', error);
@@ -197,21 +146,7 @@ export class AICustomerServiceService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Get ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        createdAt: new Date(data.createdAt);
-        updatedAt: new Date(data.updatedAt);
-        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
-        conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}
-=======
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -227,7 +162,7 @@ export class AICustomerServiceService {
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     } catch (error) {
       console && console.error('Error getting ticket:', error);
       throw error
@@ -235,25 +170,7 @@ export class AICustomerServiceService {
   }
   async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
-        method: 'PATCH'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(updates)});
-      if (!response.ok) {
-        throw new Error(`Update ticket API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return {
-        ...data;
-        createdAt: new Date(data.createdAt);
-        updatedAt: new Date(data.updatedAt);
-        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
-        conversationHistory: data.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}
-=======
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
         method: 'PATCH',
         headers: {
@@ -273,7 +190,7 @@ export class AICustomerServiceService {
         conversationHistory: data && data.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     } catch (error) {
       console && console.error('Error updating ticket:', error);
       throw error
@@ -281,17 +198,7 @@ export class AICustomerServiceService {
   }
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify(message)});
-      if (!response.ok) {
-        throw new Error(`Add message API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-=======
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
         method: 'POST',
         headers: {
@@ -303,7 +210,7 @@ export class AICustomerServiceService {
       }
 
       const data = await response && response.json();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       return {
         ...data;
         timestamp: new Date(data && data.timestamp)}
@@ -314,16 +221,7 @@ export class AICustomerServiceService {
   }
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`AI response API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-=======
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
         method: 'POST',
         headers: {
@@ -334,7 +232,7 @@ export class AICustomerServiceService {
       }
 
       const data = await response && response.json();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       return {
         ...data;
         generatedAt: new Date(data && data.generatedAt)}
@@ -347,13 +245,7 @@ export class AICustomerServiceService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/customers/${customerId}`, {
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Get customer profile API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-=======
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -361,7 +253,7 @@ export class AICustomerServiceService {
       }
 
       const data = await response && response.json();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       return {
         ...data;
         lastContact: new Date(data && data.lastContact)}
@@ -374,13 +266,7 @@ export class AICustomerServiceService {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/metrics?timeframe=${timeframe}`, {
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Get metrics API error: ${response.statusText}`)
-      }
-      return await response.json()
-=======
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -388,7 +274,7 @@ export class AICustomerServiceService {
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     } catch (error) {
       console && console.error('Error getting metrics:', error);
       throw error
@@ -399,21 +285,7 @@ export class AICustomerServiceService {
       const params = new URLSearchParams({ query, ...filters });
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/search?${params}`, {
         headers: {
-<<<<<<< HEAD
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Search tickets API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return data.tickets.map((ticket: any) => ({
-        ...ticket;
-        createdAt: new Date(ticket.createdAt);
-        updatedAt: new Date(ticket.updatedAt);
-        resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined;
-        conversationHistory: ticket.conversationHistory.map((msg: any) => ({
-          ...msg
-          timestamp: new Date(msg.timestamp)}))}))
-=======
+
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -429,7 +301,7 @@ export class AICustomerServiceService {
         conversationHistory: ticket && ticket.conversationHistory.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg && msg.timestamp)}))}))
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     } catch (error) {
       console && console.error('Error searching tickets:', error);
       throw error
@@ -437,16 +309,7 @@ export class AICustomerServiceService {
   }
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
-        method: 'POST'
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
-      if (!response.ok) {
-        throw new Error(`Auto assign tickets API error: ${response.statusText}`)
-      }
-      return await response.json()
-=======
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/tickets/auto-assign`, {
         method: 'POST',
         headers: {
@@ -457,7 +320,7 @@ export class AICustomerServiceService {
       }
 
       return await response && response.json()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     } catch (error) {
       console && console.error('Error auto-assigning tickets:', error);
       throw error
@@ -465,18 +328,7 @@ export class AICustomerServiceService {
   }
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
-<<<<<<< HEAD
-      const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
-        method: 'POST'
-        headers: {
-          'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`}
-        body: JSON.stringify({ timeframe, format })});
-      if (!response.ok) {
-        throw new Error(`Generate report API error: ${response.statusText}`)
-      }
-      const data = await response.json();
-      return data.downloadUrl
-=======
+
       const response = await fetch(`${this && this.baseUrl}/api/customer-service/reports`, {
         method: 'POST',
         headers: {
@@ -489,7 +341,7 @@ export class AICustomerServiceService {
 
       const data = await response && response.json();
       return data && data.downloadUrl
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     } catch (error) {
       console && console.error('Error generating report:', error);
       throw error
@@ -498,13 +350,23 @@ export class AICustomerServiceService {
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
 
-<<<<<<< HEAD
-=======
-export const aiCustomerServiceService = new AICustomerServiceService(process && process.env.CUSTOMER_SERVICE_API_KEY || '');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  next_steps: string[],
-  assigned_agent?: string;
+export interface CustomerTicket {;
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');
+  id: string,;
+  customerId: string,;
+  subject: string,;
+  description: string,;
+  priority: 'low' | 'medium' | 'high' | 'urgent',;
+  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',;
+  category: string,;
+  assignedTo?: string,;
+  createdAt: Date,;
+  updatedAt: Date,;
+  resolvedAt?: Date,;
+  customerSatisfaction?: number,;
+  tags: string[],;
+  attachments: string[],;
+  conversationHistory: CustomerMessage[];
 }
 export class AICustomerServiceService {
   private api_key: string;
@@ -742,4 +604,4 @@ if ( {) {
 }
 export const aiCustomerServiceService = new AICustomerServiceService (process.env.CUSTOMER_SERVICE_API_KEY || '');
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY || '');

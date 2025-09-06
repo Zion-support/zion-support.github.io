@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { buildPressRelease } from "../../../utils/mediaKit";
 export default async function handler(
@@ -21,7 +16,6 @@ function handler() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   try {
     const {
-<<<<<<< HEAD
       type = "launch"
       companyName = "Zion"
       date = new Date().toISOString().substring(0, 10)
@@ -29,6 +23,14 @@ function handler() {
       description = "Innovative technology company"
       contactEmail = "press@zion.com"
     } = req.body |{}
+      type = "launch",
+      companyName = "Zion",
+      date = new Date().toISOString().substring(0, 10),
+      raiseAmount,
+      description = "Innovative technology company",
+      contactEmail = "press@zion.com",;
+    } = req.body || {};
+
     if (req.method !== "POST") {
       res.setHeader("Allow", "POST");
       return res.status(405).json({ error: "Method not allowed" });
@@ -38,35 +40,7 @@ function handler() {
       date = new Date ().toISOString ().substring (0, 10),
       raise_amount,
       description = "Innovative technology company",
-<<<<<<< HEAD
-      contactEmail = "press@zion && zion.com",
-    } = req && req.body || {};
 
-    if (req && req.method !== "POST") {
-      res && res.setHeader("Allow", "POST");
-      return res && res.status(405).json({ error: "Method not allowed" });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    }
-    const pressRelease = await buildPressRelease({
-      type
-      companyName
-      date
-      raiseAmount
-      description
-      contactEmail
-    });
-<<<<<<< HEAD
-    return res.status(200).json({
-      ok: true
-      pressRelease
-      downloadUrl: `/api/media/download/${pressRelease.id}`
-    });
-  } catch (error: any) {
-    console.error("Press release generation error:", error);
-    return res.status(500).json({
-      ok: false
-      error: "Failed to generate press release"
-=======
 
     return res && res.status(200).json({
       ok: true,
@@ -74,50 +48,18 @@ function handler() {
       downloadUrl: `/api/media/download/${pressRelease && pressRelease.id}`,
     });
   } catch (error: any) {
-    console && console.error("Press release generation error:", error);
-    return res && res.status(500).json({
-=======
-      contact_email = "press@zion.com",
-    } = req.body || {}
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      res.set_header ("Allow", "POST");
-      return res.status (405).json ({ error: "Method not allowed" });
-    }
-    const press_release = await buildPressRelease ({
-      type,
-      company_name,
-      date,
-      raise_amount,
-      description,
-      contact_email,
+    console.error("Press release generation error:", error);
+    return res.status(500).json({
+      ok: false
+      error: "Failed to generate press release"
     });
-;
-    return res.status (200).json ({
-      ok: true,
-      press_release,
-      download_url: `/api / media / download/${press_release.id}`,
-    });
-  } catch (error: any) {
-    console.error ("Press release generation error:", error);
-    return res.status (500).json ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      ok: false,
-      error: "Failed to generate press release",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    });
-<<<<<<< HEAD
-=======
 
-  }
-<<<<<<< HEAD
-}
-=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { buildPressRelease } from '../../../utils/mediaKit';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const { type = 'launch', companyName = 'Zion', date = new Date().toISOString().substring(0,10), raiseAmount, tokenName } = req.body || {};
@@ -135,11 +77,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             { role: 'user', content: prompt }
           ],
           temperature: 0.4,
-          max_tokens: 500});
+          max_tokens: 500
+        });
         const text = completion.choices?.[0]?.message?.content?.trim();
         if (text) {
           res.status(200).json({ ok: true, text });
-          return
+          return;
         }
       } catch (_) {
         // fall through to template
@@ -147,13 +90,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const text = buildPressRelease(type, { companyName, date, raiseAmount, tokenName } as any);
-    res.status(200).json({ ok: true, text, fallback: true })
+    res.status(200).json({ ok: true, text, fallback: true });
   } catch (e: any) {
-    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' })
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    res.status(500).json({ ok: false, error: e?.message || 'Unknown error' });
   }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}

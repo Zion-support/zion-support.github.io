@@ -1,10 +1,14 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 export function CurrentSubscription() {
   // Mock subscription data
 
@@ -15,32 +19,24 @@ export function CurrentSubscription() {
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
     amount: "$1,999.00";
-    teamSeats: {
-      used: 32
-      total: 50
-=======
-import React from "react";
-import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Badge} from "@/components/ui/badge";
-export function CurrentSubscription() {;
-  // Mock subscription data;
-  const subscription = {;
-    plan: "Business",;
-    status: "active",;
+    plan: "Business",
+    status: "active",
     billingCycle: "Annual",;
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
-    amount: "$1,999 && 999.00";
-    teamSeats: {;
-      used: 32,;
-      total: 50;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    amount: "$1,999.00";
+    billingCycle: "Annual",
+    startDate: "May 1, 2025",
+    nextBillingDate: "May 1, 2026",
+    amount: "$1,999.00",
+    teamSeats: {
+      used: 32
+      total: 50
     }
   }
+  },
 
   return (
-<<<<<<< HEAD
     <Card>
       <CardHeader>
         <div className="flex items-center justify-between">
@@ -97,7 +93,26 @@ export function CurrentSubscription() {;
     </Card>
   )
 }
-=======
+import React from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+export function CurrentSubscription() {;
+  // Mock subscription data;
+  const subscription = {;
+    plan: "Business",;
+    status: "active",;
+    billingCycle: "Annual",;
+    startDate: "May 1, 2025",;
+    nextBillingDate: "May 1, 2026",;
+    amount: "$1,999.00",;
+    teamSeats: {;
+      used: 32;
+      total: 50;
+    }
+  };
+  return (;
+
     <Card>;
       <CardHeader>;
         <div className="flex items-center justify-between">;
@@ -218,13 +233,11 @@ function CurrentSubscription() {
           </div>;
         </div>;
       </CardContent>;
-<<<<<<< HEAD
-      <CardFooter className="flex justify-between">;
-        <Button variant="outline">Change Plan</Button>;
-        <Button variant="destructive">Cancel Subscription</Button>;
-      </CardFooter>;
-    </Card>;
-  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
@@ -232,6 +245,7 @@ function CurrentSubscription() {
         <Button variant="outline">Change Plan</Button>;
         <Button variant="destructive">Cancel Subscription</Button>;
       </CardFooter>;
-    </Card>);
+    </Card>;
+  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

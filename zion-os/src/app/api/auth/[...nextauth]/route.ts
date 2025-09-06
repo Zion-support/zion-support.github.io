@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
@@ -48,14 +47,15 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
     }}
   pages: {signIn: "/auth/signin";
     signUp: "/auth/signup"}});
-=======
-import NextAuth from './next - auth';,
-import CredentialsProvider from './next - auth / providers / credentials';,
-import { PrismaAdapter  } from '@auth / prisma - adapter';,
-import { prisma  } from '@/lib / prisma';,
-import bcrypt from './bcryptjs';,
-const handler = NextAuth ({
-  adapter: PrismaAdapter (prisma),
+export { handler as GET, handler as POST }
+import NextAuth from "next-auth",;
+import CredentialsProvider from "next-auth/providers/credentials",;
+import { PrismaAdapter } from "@auth/prisma-adapter",;
+import { prisma } from "@/lib/prisma",;
+import bcrypt from "bcryptjs",;
+const handler = NextAuth({;
+  adapter: PrismaAdapter(prisma),;
+
   providers: [;
     CredentialsProvider ({
       name: "credentials",
@@ -119,9 +119,9 @@ if ( {) {
         session.user.role = token.role;
       }
       return session;
-    }},
-  pages: {
-    sign_in: "/auth / signin",
-    sign_up: "/auth / signup"}}),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-export { handler as GET, handler as POST }
+
+    }},;
+  pages: {;
+    signIn: "/auth/signin",;
+    signUp: "/auth/signup"}}),;
+export { handler as GET, handler as POST };

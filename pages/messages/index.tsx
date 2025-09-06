@@ -1,29 +1,13 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import EmptyState from '../../components/ui/EmptyState';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 const Messages: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Messages - Zion</title>
       </Head>
-<<<<<<< HEAD
 
-      <h1 className="text-2xl font-semibold">Messages</h1>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <h1 className="text-2xl font-semibold">Messages</h1>
       <EmptyState
         title="No messages yet"
@@ -36,32 +20,26 @@ const Messages: NextPage = () => {
   )
 }
 export default Messages;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import type { NextPage } from 'next',
-import Head from 'next / head',
-import EmptyState from '../../components / ui / EmptyState',
-const Messages: NextPage = () => {
-  return (
-    <div className="space - y-6 pb - 16">;
-      <Head>;
-        <title > Messages - Zion</title>;
-      </Head>;
-      <h1 className="text - 2xl font - semibold">Messages</h1>;
-      <EmptyState;
-        title="No messages yet";
-        description="Start a conversation by requesting a quote or responding to an existing one.";
-        icon={<span>📫</span>}
-        primary_action={{ label: 'Explore talent', href: '/talent' }}
-        secondary_action={{ label: 'Browse services', href: '/services' }}
+export default Messages,;
+        icon={<span>📫</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        primaryAction={{ label: 'Explore talent', href: '/talent' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        secondaryAction={{ label: 'Browse services', href: '/services' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       />;
-    </div>);
-},
-export default Messages,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+    </div>;
+  );
+},;
+export default Messages;

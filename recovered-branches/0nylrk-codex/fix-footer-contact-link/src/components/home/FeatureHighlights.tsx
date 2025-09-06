@@ -1,127 +1,79 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import React from "react";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from "lucide-react";
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card",
+import { Check } from "lucide-react",
 export function FeatureHighlights() {
 
   const highlightsData = [
     {
       title: "For Talent Seekers"
-      features: [
-=======
-import React from "react";
-import {Card, CardContent} from "@/components/ui/card";
-import {Check} from "lucide-react";
-export function FeatureHighlights() {;
-  const highlightsData = [;
-    {;
-      title: "For Talent Seekers",;
+      title: "For Talent Seekers",
       features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         "AI-powered talent matching based on your specific project requirements";
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
-<<<<<<< HEAD
+      features: [
+        "AI-powered talent matching based on your specific project requirements";
+        "Verified profiles with skills validation and credential checking";
+        "Transparent pricing and no hidden fees";
+        "Direct communication with potential candidates";
         "Secure payment protection and dispute resolution"
         "Post jobs and receive AI-matched applicants"
       ]
     }
+        "AI-powered talent matching based on your specific project requirements",
+        "Verified profiles with skills validation and credential checking",
+        "Transparent pricing and no hidden fees",
+        "Direct communication with potential candidates",
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"
+      ]
+    },
     {
       title: "For Talent & Service Providers"
       features: [
-=======
-        "Secure payment protection and dispute resolution",;
-        "Post jobs and receive AI-matched applicants";
-      ];
-    };
-    {;
-      title: "For Talent & Service Providers",;
-      features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import React from './react';
-import { Card, CardContent } from '@/components / ui / card';
-import { Check } from './lucide-react';
-export /**
- * FeatureHighlights - Function description
- */
-function FeatureHighlights() {
-  const highlights_data = [;
-    {
-      title: "For Talent Seekers",
-      features: [;
-        "AI - powered talent matching based on your specific project requirements";
-        "Verified profiles with skills validation and credential checking";
-        "Transparent pricing and no hidden fees";
-        "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution",
-        "Post jobs and receive AI - matched applicants";
-      ];
-    }
-    {
-      title: "For Talent & Service Providers",
-      features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         "Create a professional profile showcasing your skills and experience";
         "Get matched with relevant projects that fit your expertise";
-        "Secure payment processing with on - time disbursements";
+        "Secure payment processing with on-time disbursements";
         "Build your reputation through client reviews and ratings";
-<<<<<<< HEAD
-<<<<<<< HEAD
         "Access to enterprise clients and high-value projects"
         "Professional development resources and community support"
       ]
     }
+        "Create a professional profile showcasing your skills and experience",
+        "Get matched with relevant projects that fit your expertise",
+        "Secure payment processing with on-time disbursements",
+        "Build your reputation through client reviews and ratings",
+        "Access to enterprise clients and high-value projects",
+        "Professional development resources and community support"
+      ]
+    },
     {
       title: "For Enterprise Clients"
       features: [
-=======
-        "Access to enterprise clients and high-value projects",;
-        "Professional development resources and community support";
-      ];
-    };
-    {;
-      title: "For Enterprise Clients",;
-      features: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         "White-labeled talent portal with your company branding";
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
-<<<<<<< HEAD
         "API access for seamless integration with your HR systems"
+        "White-labeled talent portal with your company branding",
+        "Dedicated account management and priority support",
+        "Custom talent pools and preferred provider networks",
+        "Advanced analytics and reporting capabilities",
+        "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"
       ]
-=======
-        "API access for seamless integration with your HR systems",;
-        "Customizable workflow and approval processes";
-      ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-        "Access to enterprise clients and high - value projects",
-        "Professional development resources and community support";
-      ];
     }
-    {
-      title: "For Enterprise Clients",
-      features: [;
-        "White - labeled talent portal with your company branding";
-        "Dedicated account management and priority support";
-        "Custom talent pools and preferred provider networks";
-        "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems",
-        "Customizable workflow and approval processes";
-      ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    }
-  ];
-;
+  ],
+
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -141,7 +93,47 @@ function FeatureHighlights() {
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
                     </li>
-=======
+import React from "react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Check } from "lucide-react",;
+export function FeatureHighlights() {;
+  const highlightsData = [;
+    {;
+      title: "For Talent Seekers",;
+      features: [;
+        "AI-powered talent matching based on your specific project requirements",;
+        "Verified profiles with skills validation and credential checking",;
+        "Transparent pricing and no hidden fees",;
+        "Direct communication with potential candidates",;
+        "Secure payment protection and dispute resolution",;
+        "Post jobs and receive AI-matched applicants";
+      ];
+    },;
+    {;
+      title: "For Talent & Service Providers",;
+      features: [;
+        "Create a professional profile showcasing your skills and experience",;
+        "Get matched with relevant projects that fit your expertise",;
+        "Secure payment processing with on-time disbursements",;
+        "Build your reputation through client reviews and ratings",;
+        "Access to enterprise clients and high-value projects",;
+        "Professional development resources and community support";
+      ];
+    },;
+    {;
+      title: "For Enterprise Clients",;
+      features: [;
+        "White-labeled talent portal with your company branding",;
+        "Dedicated account management and priority support",;
+        "Custom talent pools and preferred provider networks",;
+        "Advanced analytics and reporting capabilities",;
+        "API access for seamless integration with your HR systems";
+        "Customizable workflow and approval processes";
+      ];
+    }
+  ];
+  return (;
+
     <section className="py-16 bg-zion-blue">;
       <div className="container mx-auto px-4">;
         <div className="text-center mb-12">;
@@ -162,25 +154,18 @@ function FeatureHighlights() {
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0 && 0.5 flex-shrink-0" />;
                       <span className="text-zion-slate-light">{feature}</span>;
                     </li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   ))}
                 </ul>;
               </CardContent>;
             </Card>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </section>
-  )
-}
-=======
+
         </div>;
       </div>;
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;

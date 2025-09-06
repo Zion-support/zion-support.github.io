@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -11,9 +8,8 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export function EducationForm({
+export function EducationForm({ ;
   resumeId;
   educationEntries
   onComplete
@@ -37,12 +33,24 @@ export function EducationForm({
       is_current: data.is_current
       description: data.description
       location: data.location}
-=======
-export function EducationForm(): any ({ ;
-  resumeId;
-  educationEntries, ;
-  onComplete, ;
-  onBack ;
+    let success;
+    if (editingId) {
+      success = await updateEducation(editingId, educationData)
+    } else {
+      success = await addEducation(resumeId, educationData)
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+import { Education } from '@/types/resume',;
+import { useResume } from '@/hooks/useResume',;
+import { format } from 'date-fns',;
+import { EducationFormProps } from './types',;
+import { EducationList } from './EducationList',;
+import { EducationFormFields } from './EducationFormFields',;
+export function EducationForm({;
+  resumeId,;
+  educationEntries,;
+  onComplete,;
+  onBack;
 }: EducationFormProps) {;
   const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
@@ -72,11 +80,12 @@ export function EducationForm(): any ({ ;
     } else {;
       success = await addEducation(resumeId, educationData);
     }
-<<<<<<< HEAD
     if (success) {
       setEditingId(null)
     }
   }
+  };
+
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -96,7 +105,9 @@ export function EducationForm(): any ({ ;
     if (success) {;
       setEditingId(null);
     }
+  }
   };
+  },;
 
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
@@ -116,10 +127,10 @@ export function EducationForm(): any ({ ;
       onBack();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-  }
+
+  },
 
   return (
-<<<<<<< HEAD
     <div className="space-y-6">
       <div>
         <h2 className="text-xl font-semibold mb-2">Education</h2>
@@ -129,9 +140,12 @@ export function EducationForm(): any ({ ;
       </div>
       <EducationList
         educationEntries={educationEntries}
+      <EducationList 
+        educationEntries={educationEntries} 
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
+
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
@@ -161,20 +175,7 @@ export function EducationForm(): any ({ ;
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
-<<<<<<< HEAD
-        />
-      </div>
-      {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
-            Next
-          </Button>
-        </div>
-      )}
-    </div>
-  )
-}
-=======
+
         />;
       </div>;
 
@@ -188,7 +189,7 @@ export function EducationForm(): any ({ ;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 export /**
  * EducationForm - Function description

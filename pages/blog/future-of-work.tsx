@@ -1,78 +1,27 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
 
-import React from 'react'
 
-export default function FutureOfWork() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import Head from 'next/head';
-import Link from 'next/link';
-import React from 'react',;
-export default function FutureOfWork() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import Head from 'next / head';
-import Link from 'next / link';
 import React from 'react',
-export default /**
- * FutureOfWork - Function description
- */
-function FutureOfWork() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export default function FutureOfWork() {
   return (
-    <>;
-      <Head>;
-        <title>;
-<<<<<<< HEAD
-          The Future of Work: Human-AI Collaboration | Zion Tech Group;
-        </title>;
+    <>
+      <Head>
+        <title>
+          The Future of Work: Human-AI Collaboration | Zion Tech Group
+        </title>
         <meta
 
           name='description'
           content='How autonomous systems are reshaping the workplace and enhancing human capabilities.'
-        />;
+        />
         <meta
           property='og:title'
           content='The Future of Work: Human-AI Collaboration'
-        />;
+        />
         <meta
           property='og:description'
           content='How autonomous systems are reshaping the workplace and enhancing human capabilities.'
-<<<<<<< HEAD
         />
         <meta name='twitter:card' content='summary_large_image' />
       </Head>
@@ -117,8 +66,8 @@ function FutureOfWork() {
                   human-AI collaboration that amplifies human capabilities
                   rather than replacing them.
                 </p>
-                <p className='text-white/90 mb-4'>
-                  At Zion Tech Group, we believe the future of work lies in
+                <p className='text-white/90 mb-4'>;
+                  At Zion Tech Group, we believe the future of work lies in;
                   creating intelligent systems that work alongside humans;
 
                   handling routine tasks while humans focus on creative
@@ -291,7 +240,37 @@ function FutureOfWork() {
                   revolutionize your organization.
                 </p>
                 <div className='flex flex-wrap gap-4'>
-=======
+                  <Link
+                    href='/contact'
+                    className='px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'
+                  >
+                    Get Started
+                  </Link>
+                  <Link
+                    href='/services'
+                    className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'
+                  >
+                    Explore Solutions
+                  </Link>
+                </div>
+              </div>
+            </article>
+          </div>
+        </main>
+      </div>
+    </>
+  )
+}
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+export default function FutureOfWork(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>;
+
         />;
         <meta name='twitter:card' content='summary_large_image' />;
       </Head>;
@@ -465,41 +444,12 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   This collaboration model has proven to be 40% more effective;
                   than either humans or AI working alone.;
                 </p>;
               </section>;
-<<<<<<< HEAD
 
-              <section className='mb-12'>;
-                <h2 className='text-2xl font-semibold mb-6 text-green-400'>;
-                  New Roles and Opportunities;
-                </h2>;
-                <p className='text-white/90 mb-4'>;
-                  The rise of autonomous systems is creating entirely new job;
-                  categories and career paths:;
-                </p>;
-                <ul className='space-y-2 text-white/80 mb-6'>;
-                  <li>;
-                    • <strong>AI Trainers:</strong> Professionals who teach AI;
-                    systems to perform specific tasks;
-                  </li>;
-                  <li>;
-                    • <strong>Automation Architects:</strong> Experts who design;
-                    human-AI collaboration workflows;
-                  </li>;
-                  <li>;
-                    • <strong>Ethics Officers:</strong> Specialists who ensure;
-                    AI systems operate responsibly;
-                  </li>;
-                  <li>;
-                    • <strong>Human-AI Coordinators:</strong> Managers who;
-                    optimize team performance;
-                  </li>;
-                </ul>;
-                <p className='text-white/90 mb-4'>;
-=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - green - 400'>;
                   New Roles and Opportunities;
@@ -527,73 +477,13 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   These roles require a unique blend of technical skills and;
                   human understanding—qualities that are becoming increasingly;
                   valuable in the modern workplace.;
                 </p>;
               </section>;
-<<<<<<< HEAD
 
-              <section className='mb-12'>;
-                <h2 className='text-2xl font-semibold mb-6 text-blue-400'>;
-                  Skills for the Future;
-                </h2>;
-                <p className='text-white/90 mb-4'>;
-                  As the nature of work evolves, so do the skills required for;
-                  success. The most valuable employees will be those who can: </p>;
-                <ul className='space-y-2 text-white/80 mb-6'>;
-                  <li>;
-                    • <strong>Collaborate with AI:</strong> Understand AI;
-                    capabilities and limitations;
-                  </li>;
-                  <li>;
-                    • <strong>Think Critically:</strong> Evaluate AI;
-                    recommendations and make informed decisions;
-                  </li>;
-                  <li>;
-                    • <strong>Adapt Quickly:</strong> Learn new tools and;
-                    workflows as they emerge;
-                  </li>;
-                  <li>;
-                    • <strong>Communicate Effectively:</strong> Bridge the gap;
-                    between technical and non-technical stakeholders;
-                  </li>;
-                </ul>;
-                <p className='text-white/90 mb-4'>;
-                  We&apos,re investing heavily in training programs that help;
-                  employees develop these future-ready skills.;
-                </p>;
-              </section>;
-
-              <section className='mb-12'>;
-                <h2 className='text-2xl font-semibold mb-6 text-purple-400'>;
-                  Building Collaborative Workplaces;
-                </h2>;
-                <p className='text-white/90 mb-4'>;
-                  Creating effective human-AI collaboration requires thoughtful;
-                  design and implementation:;
-                </p>;
-                <ul className='space-y-2 text-white/80 mb-6'>;
-                  <li>;
-                    • <strong>Clear Role Definition:</strong> Understanding who;
-                    does what in the collaboration;
-                  </li>;
-                  <li>;
-                    • <strong>Transparent Communication:</strong> AI systems;
-                    that explain their reasoning;
-                  </li>;
-                  <li>;
-                    • <strong>Human Oversight:</strong> Mechanisms for humans to;
-                    review and override AI decisions;
-                  </li>;
-                  <li>;
-                    • <strong>Continuous Learning:</strong> Systems that improve;
-                    based on human feedback;
-                  </li>;
-                </ul>;
-                <p className='text-white/90 mb-4'>;
-=======
               <section className='mb - 12'>;
                 <h2 className='text - 2xl font - semibold mb - 6 text - blue - 400'>;
                   Skills for the Future;
@@ -651,80 +541,12 @@ function FutureOfWork() {
                   </li>;
                 </ul>;
                 <p className='text - white / 90 mb - 4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   Our workplace design principles ensure that AI systems enhance;
                   rather than disrupt human workflows.;
                 </p>;
               </section>;
-<<<<<<< HEAD
 
-              <section className='mb-12'>;
-                <h2 className='text-2xl font-semibold mb-6 text-yellow-400'>;
-                  Measuring Success;
-                </h2>;
-                <p className='text-white/90 mb-4'>;
-                  Success in human-AI collaboration isn&apos,t just about;
-                  efficiency—it&apos,s about creating better outcomes for;
-                  everyone:;
-                </p>;
-                <ul className='space-y-2 text-white/80 mb-6'>;
-                  <li>;
-                    • <strong>Productivity Metrics:</strong> Output quality and;
-                    quantity improvements;
-                  </li>;
-                  <li>;
-                    • <strong>Employee Satisfaction:</strong> Job satisfaction;
-                    and engagement levels;
-                  </li>;
-                  <li>;
-                    • <strong>Innovation Indicators:</strong> New ideas and;
-                    creative solutions generated;
-                  </li>;
-                  <li>;
-                    • <strong>Learning Outcomes:</strong> Skill development and;
-                    knowledge acquisition;
-                  </li>;
-                </ul>;
-                <p className='text-white/90 mb-4'>;
-                  We track these metrics to continuously improve our human-AI;
-                  collaboration systems.;
-                </p>;
-              </section>;
-
-              <div className='mt-12 p-6 bg-white/10 rounded-xl border border-white/20'>;
-                <h3 className='text-xl font-semibold mb-4 text-cyan-400'>;
-                  Shape the Future of Work;
-                </h3>;
-                <p className='text-white/80 mb-4'>;
-                  Ready to transform your workplace with intelligent automation?;
-                  Discover how our human-AI collaboration solutions can;
-                  revolutionize your organization.;
-                </p>;
-                <div className='flex flex-wrap gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                  <Link
-                    href='/contact'
-                    className='px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300'>;
-                    Get Started;
-                  </Link>;
-                  <Link
-                    href='/services'
-<<<<<<< HEAD
-                    className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'
-                  >
-                    Explore Solutions
-                  </Link>
-                </div>
-              </div>
-            </article>
-          </div>
-        </main>
-      </div>
-    </>
-  )
-}
-<<<<<<< HEAD
-=======
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
 =======
               <section className='mb - 12'>;
@@ -779,7 +601,7 @@ function FutureOfWork() {
                     href='/services';
                     className='px - 6 py - 3 border border - white / 20 text - white rounded - lg hover:border - cyan - 400 / 50 transition - all duration - 300';
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                     Explore Solutions;
                   </Link>;
                 </div>;
@@ -788,14 +610,11 @@ function FutureOfWork() {
           </div>;
         </main>;
       </div>;
-<<<<<<< HEAD
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

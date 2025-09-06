@@ -1,36 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import { Link } from 'react-router-dom'
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-import {
-  Home,
-  Users,
-  Settings,
-  DollarSign,
-  Phone,
-  Menu
-} from 'lucide-react';
 
-const Sidebar = () => {
-  const navigation = [
-    { name: 'Home', href: '/', icon: Home },
-    { name: 'About', href: '/about', icon: Users },
-    { name: 'Services', href: '/services', icon: Settings },
-    { name: 'Pricing', href: '/pricing', icon: DollarSign },
-    { name: 'Contact', href: '/contact', icon: Phone }
-<<<<<<< HEAD
-  ]
-=======
-  ];
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+const Sidebar: React.FC = () => {;
   return (
     <aside className="hidden lg:block w-64 bg-white shadow-lg min-h-screen">
       <div className="p-6">
@@ -54,81 +25,17 @@ const Sidebar = () => {
         </nav>
       </div>
     </aside>
-<<<<<<< HEAD
   )
 }
 export default Sidebar
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const Sidebar: React.FC = () => {;
-  return (
-    <div className="fixed left-0 top-0 h-full w-80 bg-white shadow-lg z-40 lg:block hidden">;
-      <div className="p-6">;
-        <h2 className="text-xl font-bold text-gray-900 mb-6">Navigation</h2>;
-        <nav className="space-y-2">;
-          <Link
-            to="/"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Home;
-          </Link>;
-          <Link
-            to="/about"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            About;
-          </Link>;
-          <Link
-            to="/services"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Services;
-          </Link>;
-          <Link
-            to="/contact"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Contact;
-          </Link>;
-          <Link
-            to="/pricing"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">;
-            Pricing;
-          </Link>;
-        </nav>;
-      </div>;
-    </div>;
+    </div>
   );
 };
 
-<<<<<<< HEAD
+
 export default Sidebar;
-=======
-export default Sidebar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+import React from 'react';
+
   };
 ,
   const navigationSections = [,
@@ -333,10 +240,6 @@ export default Sidebar;
     </motion.aside>,
   ),
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   );
 };
 export default Sidebar;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

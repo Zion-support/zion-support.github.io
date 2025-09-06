@@ -1,16 +1,24 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import {useState, useEffect} from "react";
+import {Globe} from "lucide-react";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
 import { useState, useEffect } from "react",
 import { Globe } from "lucide-react",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+
 interface CountrySelectorProps {
 
   onCountryChange: (country: CountryPricing | null) => void
 
   selectedCountry: CountryPricing | null
 }
+
+export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {;
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
 export function CountrySelector({ onCountryChange, selectedCountry }: CountrySelectorProps) {
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);
   // Set top/popular countries
@@ -18,15 +26,24 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
 
     const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"];
     const top = onsiteServicePricing.filter(item =>
+  const [topCountries, setTopCountries] = useState<CountryPricing[]>([]),
+  
+  // Set top/popular countries
+  useEffect(() => {
+    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
+    const top = onsiteServicePricing.filter(item => 
       popular.includes(item.country)
     ).sort((a, b) => a.country.localeCompare(b.country));
     setTopCountries(top)
   }, []);
+  }, []),
+  
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
     const country = onsiteServicePricing.find(item => item.country === countryName) |null
     onCountryChange(country)
   }
+  },
 
   return (
     <div className="mb-6">
@@ -36,6 +53,8 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
       </h3>
       <Select
         onValueChange={handleCountryChange}
+      <Select 
+        onValueChange={handleCountryChange} 
         value={selectedCountry?.country}
       >
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
@@ -46,13 +65,10 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
-                {item.country} - ${item.pricePerIncident.toFixed(2)}
-              </SelectItem>
-=======
-import {useState, useEffect} from "react";
-import {Globe} from "lucide-react";
-import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
-import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
+import { useState, useEffect } from "react",;
+import { Globe } from "lucide-react",;
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",;
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",;
 
 interface CountrySelectorProps {;
   onCountryChange: (country: CountryPricing | null) => void,;
@@ -93,23 +109,23 @@ export function CountrySelector(): any ({ onCountryChange, selectedCountry }: Co
         <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">;
           <div className="p-2 border-b border-zion-blue-light">;
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>;
-            {topCountries && topCountries.map((item) => (;
-              <SelectItem key={item && item.country} value={item && item.country} className="text-white">;
-                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
-              </SelectItem>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+            {topCountries.map((item) => (;
+              <SelectItem key={item.country} value={item.country} className="text-white">;
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
             ))}
-          </div>;
-          <div className="p-2">;
-            <p className="text-sm text-zion-slate-light pb-1">All Countries</p>;
-            {onsiteServicePricing;
-              .sort((a, b) => a && a.country.localeCompare(b && b.country));
-              .map((item) => (;
-              <SelectItem key={item && item.country} value={item && item.country} className="text-white">;
-                {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
-              </SelectItem>;
+          </div>
+          <div className="p-2">
+            <p className="text-sm text-zion-slate-light pb-1">All Countries</p>
+            {onsiteServicePricing
+              .sort((a, b) => a.country.localeCompare(b.country))
+              .map((item) => (
+              <SelectItem key={item.country} value={item.country} className="text-white">
+                {item.country} - ${item.pricePerIncident.toFixed(2)}
+              </SelectItem>
             ))}
-<<<<<<< HEAD
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </SelectContent>
       </Select>

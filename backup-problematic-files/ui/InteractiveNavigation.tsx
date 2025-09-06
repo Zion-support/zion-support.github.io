@@ -1,4 +1,4 @@
-<<<<<<< HEAD:backup-problematic-files/ui/InteractiveNavigation.tsx
+:backup-problematic-files/ui/InteractiveNavigation.tsx
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Menu, X } from 'lucide-react';
@@ -146,7 +146,6 @@ export default function InteractiveNavigation() {
 }
 const InteractiveNavigation = () => {},;
 export default InteractiveNavigation;
-=======
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -242,4 +241,4 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
 export default Component}
->>>>>>> main:components/ui/InteractiveNavigation.tsx
+main:components/ui/InteractiveNavigation.tsx

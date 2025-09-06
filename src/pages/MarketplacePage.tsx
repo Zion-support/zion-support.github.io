@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import { useRouter } from 'next/router'
-import { useState, useEffect, useCallback, useMemo } from 'react'
-import { useTranslation } from 'react-i18next'
-import { motion, AnimatePresence } from 'framer-motion'
-
 import { ArrowUp, Filter, SortAsc, Sparkles, TrendingUp, Star, ShoppingCart, AlertTriangle, RefreshCw } from 'lucide-react'
 import { NextSeo  } from '@/components/NextSeo';
 import { useInfiniteScrollPagination  } from '@/hooks/useInfiniteScroll';
@@ -18,8 +6,6 @@ import { SkeletonCard  } from '@/components/ui/skeleton';
 import { Button  } from '@/components/ui/button';
 import { Badge  } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader  } from '@/components/ui/card';
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -32,16 +18,18 @@ import { SkeletonCard } from '@/components/ui/skeleton';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import Spinner from '@/components/ui/spinner';
 import { MARKETPLACE_LISTINGS  } from '@/data/listingData';
 import { INITIAL_MARKETPLACE_PRODUCTS  } from '@/data/initialMarketplaceProducts';
 import { useCurrency  } from '@/hooks/useCurrency';
 import {logErrorToProduction} from '@/utils/productionLogger';
-<<<<<<< HEAD
 // Market insights component
 
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+
 const MarketplaceInsights = ({ stats }: { stats: any },) => (
+const MarketplaceInsights = ({ stats }: { stats: any }) => (
+
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
     <CardContent className="p-6">
       <div className="flex items-center gap-2 mb-4">
@@ -73,8 +61,10 @@ const MarketplaceInsights = ({ stats }: { stats: any },) => (
 const MarketplaceFilterControls = ({
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading
 }: any,) => (
+}: any) => (
+
+
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
-=======
 // Market insights component;
 const MarketplaceInsights = ({ stats }: { stats: any },) => (;
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">;
@@ -110,42 +100,33 @@ const MarketplaceFilterControls = ({;
   sortBy, setSortBy, filterCategory, setFilterCategory, categories, showRecommended, setShowRecommended, loading;
 }: any,) => (;
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary" />}
-    <div className="flex items-center gap-2">;
-      <Filter className="h-4 w-4 text-muted-foreground" />;
-      <select value={filterCategory} onChange={(e,) => setFilterCategory(e && e.target.value)} className="bg-background border border-border px-3 py-2 rounded">;
-        <option value="">All Categories</option>;
-        {categories && categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
-      </select>;
-    </div>;
-    <div className="flex items-center gap-2">;
-      <SortAsc className="h-4 w-4 text-muted-foreground" />;
-      <select value={sortBy} onChange={(e,) => setSortBy(e && e.target.value)} className="bg-background border border-border px-3 py-2 rounded">;
-        <option value="newest">Newest First</option>;
-        <option value="price-low">Price: Low to High</option>;
-        <option value="price-high">Price: High to Low</option>;
-        <option value="rating">Highest Rated</option>;
-        <option value="popular">Most Popular</option>;
-        <option value="ai-score">AI Score</option>;
-      </select>;
-    </div>;
-    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>;
-      <Sparkles className="h-4 w-4 mr-1" />;
+
+    <div className="flex items-center gap-2">
+      <Filter className="h-4 w-4 text-muted-foreground" />
+      <select value={filterCategory} onChange={(e,) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={filterCategory} onChange={(e) => setFilterCategory(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+        <option value="">All Categories</option>
+        {categories.map((cat: string,) => <option key={cat} value={cat}>{cat}</option>)}
+      </select>
+    </div>
+    <div className="flex items-center gap-2">
+      <SortAsc className="h-4 w-4 text-muted-foreground" />
+      <select value={sortBy} onChange={(e,) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+      <select value={sortBy} onChange={(e) => setSortBy(e.target.value)} className="bg-background border border-border px-3 py-2 rounded">
+
+        <option value="newest">Newest First</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="rating">Highest Rated</option>
+        <option value="popular">Most Popular</option>
+        <option value="ai-score">AI Score</option>
+      </select>
+    </div>
+    <Button variant={showRecommended ? "default" : "outline"} size="sm" onClick={() => setShowRecommended(!showRecommended)}>
+      <Sparkles className="h-4 w-4 mr-1" />
       {showRecommended ? "All Products" : "Recommended"}
-<<<<<<< HEAD
-    </Button>
-  </div>
-)
-import { useDispatch } from 'react-redux'
-import type { AppDispatch } from '@/store'
-import { addItem } from '@/store/cartSlice'
-import { useAuth } from '@/context/auth/AuthProvider'
-import { toast } from '@/hooks/use-toast'
-// Product card
-const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (id: string) => void, onAddToCart: () => void }) => {
-  const { formatPrice } = useCurrency();
-=======
+
     </Button>;
   </div>;
 ),;
@@ -157,20 +138,20 @@ import { toast } from '@/hooks/use-toast';
 // Product card;
 const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: ProductListing, onViewDetails: (,) => void, onAddToCart: () => void }) => {;
   const { formatPrice } = useCurrency(),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">;
-    <CardHeader className="pb-3">;
-      <div className="flex items-start justify-between">;
-        <div className="flex-1 min-w-0">;
-          <h3 className="font-semibold text-lg truncate">{product && product.title}</h3>;
-          <p className="text-sm text-muted-foreground">{product && product.category}</p>;
-          <div className="flex items-center gap-2 mt-2">;
-            <Badge variant="secondary" className="text-xs">{product && product.brand}</Badge>;
-            {product && product.aiScore && product && product.aiScore > 80 && (;
-              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">;
-                AI {product && product.aiScore}
-              </Badge>;
+  <Card className="h-full hover:shadow-lg transition-shadow">
+    <CardHeader className="pb-3">
+      <div className="flex items-start justify-between">
+        <div className="flex-1 min-w-0">
+          <h3 className="font-semibold text-lg truncate">{product.title}</h3>
+          <p className="text-sm text-muted-foreground">{product.category}</p>
+          <div className="flex items-center gap-2 mt-2">
+            <Badge variant="secondary" className="text-xs">{product.brand}</Badge>
+            {product.aiScore && product.aiScore > 80 && (
+              <Badge variant="default" className="text-xs bg-gradient-to-r from-blue-600 to-purple-600">
+                AI {product.aiScore}
+              </Badge>
             )}
           </div>;
         </div>;
@@ -178,7 +159,6 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           <div className="text-xl font-bold text-blue-600">{formatPrice(product && product.price ?? 0)}</div>;
           <Badge variant={product && product.availability === "Available" ? "default" : "outline"} className="text-xs">;
             {product && product.availability}
-=======
 ;
 import { use_router } from 'next / router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
@@ -281,28 +261,16 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           <div className="text - xl font - bold text - blue - 600">{format_price (product.price ?? 0)}</div>;
           <Badge variant={product.availability === "Available" ? "default" : "outline"} className="text - xs">;
             {product.availability}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </Badge>;
         </div>;
       </div>;
     </CardHeader>;
-<<<<<<< HEAD
-    <CardContent className="pt-0">;
-      <div className="flex items-center gap-4 mb-3">;
-        <div className="flex items-center gap-1">;
-          <Star className="h-4 w-4 text-yellow-500 fill-current" />;
-          <span className="text-sm font-medium">{product && product.rating?.toFixed(1)}</span>;
-          <span className="text-xs text-muted-foreground">({product && product.reviewCount} reviews)</span>;
-        </div>;
-      </div>;
-      <p className="text-sm text-muted-foreground mb-3 line-clamp-2">{product && product.description}</p>;
-      <div className="flex items-center justify-between gap-2">;
-        <Button
-          size="icon"
-          variant="outline"
-          onClick = {onAddToCart,}
+
+
+          onClick={onAddToCart}
+
+
           aria-label="Add to cart"
-<<<<<<< HEAD
           data-testid="add-to-cart-listing-button"
         >
           <ShoppingCart className="h-4 w-4" />
@@ -340,6 +308,32 @@ function MarketplacePageContent() {
       let processedDataset = fullDataset
       if (filterCategory) {
         processedDataset = processedDataset.filter(p => p.category === filterCategory)
+const MarketplaceLoadingGrid = ({ count = 8 }: { count?: number }) => (
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+    {Array.from({ length: count }).map((_, i) => <SkeletonCard key={i} />)}
+  </div>;
+),;
+// Main component;
+function MarketplacePageContent() {;
+  const router = useRouter(),;
+  const { t } = useTranslation(),;
+  const dispatch = useDispatch<AppDispatch>(),;
+  const { isAuthenticated } = useAuth(),;
+  const [sortBy, setSortBy] = useState('newest'),;
+  const [filterCategory, setFilterCategory] = useState(''),;
+  const [showRecommended, setShowRecommended] = useState(false),;
+  const fetchProducts = useCallback(async (page: number, limit: number) => {;
+    // Simulate API delay;
+    await new Promise(resolve => setTimeout(resolve, 300)),;
+    try {;
+      // Combine initial products with marketplace listings;
+      const fullDataset: ProductListing[] = [...INITIAL_MARKETPLACE_PRODUCTS, ...MARKETPLACE_LISTINGS],;
+      // Apply category filtering;
+      let processedDataset = fullDataset,;
+      if (filterCategory) {;
+        processedDataset = processedDataset.filter(p => p.category === filterCategory);
+
+
       }
       // Apply recommended filtering
       if (showRecommended) {
@@ -376,6 +370,8 @@ function MarketplacePageContent() {
       throw new Error('Failed to load marketplace data. Please try again.')
     }
   }, [sortBy, filterCategory, showRecommended])
+  }, [sortBy, filterCategory, showRecommended]),
+
   const {
     items: products
     loading
@@ -401,6 +397,9 @@ function MarketplacePageContent() {
       averagePrice: products.reduce((sum, p,) => sum + (p.price |0), 0) / products.length
       averageRating: products.reduce((sum, p,) => sum + (p.rating |0), 0) / products.length
       totalProducts: products.length
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,
+      totalProducts: products.length,
       availableCount: products.filter(p => p.availability === "Available").length
     }
   }, [products])
@@ -411,11 +410,17 @@ function MarketplacePageContent() {
   useEffect((,) => {
     const handleScroll = () => setShowScrollTop(window.scrollY > 800)
     window.addEventListener('scroll', handleScroll)
+  }, []),
+
+  const [showScrollTop, setShowScrollTop] = useState(false),
+  useEffect(() => {
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),
+    window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   // Loading state
   if (loading && products.length === 0) {
-=======
+
           data-testid="add-to-cart-listing-button">;
           <ShoppingCart className="h-4 w-4" />;
         </Button>;
@@ -495,8 +500,12 @@ function MarketplacePageContent() {;
       logErrorToProduction('Error in fetchProducts:', { data: error }),;
       throw new Error('Failed to load marketplace data. Please try again.');
     }
+    return (
+      <>
+        <NextSeo
+          title="Marketplace - Zion Tech Marketplace Solutions & Services"
+          description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
   }, [sortBy, filterCategory, showRecommended]),;
-
   const {;
     items: products,;
     loading,;
@@ -509,40 +518,55 @@ function MarketplacePageContent() {;
     scrollToTop,;
     loadMore;
   } = useInfiniteScrollPagination(fetchProducts, 12),;
-
   // Refresh when filters change;
-  useEffect((,) => {;
-    const timeoutId = setTimeout((,) => {;
+  useEffect(() => {;
+    const timeoutId = setTimeout(() => {;
       refresh();
     }, 100),;
-
     return () => clearTimeout(timeoutId);
   }, [sortBy, filterCategory, showRecommended, refresh]),;
-
-  const marketStats = useMemo((,) => {;
-    if (products && products.length === 0) return null,;
+  const marketStats = useMemo(() => {;
+    if (products.length === 0) return null,;
     return {;
-      averagePrice: products && products.reduce((sum, p,) => sum + (p && p.price || 0), 0) / products && products.length,;
-      averageRating: products && products.reduce((sum, p,) => sum + (p && p.rating || 0), 0) / products && products.length,;
-      totalProducts: products && products.length,;
-      availableCount: products && products.filter(p => p && p.availability === "Available").length;
+      averagePrice: products.reduce((sum, p) => sum + (p.price || 0), 0) / products.length,;
+      averageRating: products.reduce((sum, p) => sum + (p.rating || 0), 0) / products.length,;
+      totalProducts: products.length,;
+      availableCount: products.filter(p => p.availability === "Available").length;
     }
   }, [products]),;
-
-  const categories = useMemo((,) => {;
+  const categories = useMemo(() => {;
     return ["AI & Machine Learning", "Cloud Services", "Software Development", "Professional Services", "Hardware & Infrastructure"];
   }, []),;
-
   const [showScrollTop, setShowScrollTop] = useState(false),;
-  useEffect((,) => {;
-    const handleScroll = () => setShowScrollTop(window && window.scrollY > 800),;
-    window && window.addEventListener('scroll', handleScroll),;
-    return () => window && window.removeEventListener('scroll', handleScroll);
+  useEffect(() => {;
+    const handleScroll = () => setShowScrollTop(window.scrollY > 800),;
+    window.addEventListener('scroll', handleScroll),;
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []),;
-
   // Loading state;
-  if (loading && products && products.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+  if (loading && products.length === 0) {;
+    return (;
+      <>;
+        <NextSeo;
+          title="Marketplace - Zion Tech Marketplace Solutions & Services";
+          description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals.";
+          openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
+        />
+      <div className="container py-8">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">
+          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            {t('marketplace.hero_title')}
+          </h1>
+          <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
+        </motion.div>
+        <MarketplaceLoadingGrid />
+      </div>
+      </>
+    )
+  }
+  // Error state
+  if (error && products.length === 0) {
     return (
       <>;
         <NextSeo
@@ -562,16 +586,13 @@ function MarketplacePageContent() {;
       </>;
     );
   }
-<<<<<<< HEAD
-  // Error state
-  if (error && products.length === 0) {
-=======
+
 
   // Error state;
   if (error && products && products.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return (
-      <>;
+      <>
         <NextSeo
           title="Marketplace - Zion Tech Marketplace Solutions & Services"
           description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
@@ -588,7 +609,6 @@ function MarketplacePageContent() {;
               Try Again;
             </Button>;
             <Button onClick={(,) => window && window.location.reload()}>;
-=======
     <CardContent className="pt - 0">;
       <div className="flex items - center gap - 4 mb - 3">;
         <div className="flex items - center gap - 1">;
@@ -770,38 +790,17 @@ if ( {) {
               Try Again;
             </Button>;
             <Button on_click={(, ) => window.location.reload ()}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Refresh Page;
             </Button>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-      </>;
-    );
-  }
-  return (
-    <>;
-      <NextSeo
-        title="Marketplace - Zion Tech Marketplace Solutions & Services"
-        description="Visit our Zion Tech Marketplace to browse top-rated products, service packages, and exclusive offers. Start shopping with confidence today. Earn rewards and access limited deals."
-<<<<<<< HEAD
-        openGraph={{ images: [{ url: 'https://app.ziontechgroup.com/og.png' }] }}
-      />
-    <div className="container py-8">
-      <motion.div className="text-center mb-8" initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }}>
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-          {t('marketplace.hero_title')}
-        </h1>
-        <p className="text-muted-foreground text-lg">{t('marketplace.hero_subtitle')}</p>
-      </motion.div>
-      {marketStats && (
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          <MarketplaceInsights stats={marketStats} />
-        </motion.div>
-      )}
+
+
+
+
+
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-=======
         openGraph={{ images: [{ url: 'https://app && app.ziontechgroup.com/og && og.png' }] }}
       />;
     <div className="container py-8">;
@@ -819,7 +818,6 @@ if ( {) {
       )}
 
       <motion && motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0 && 0.3 }}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <MarketplaceFilterControls
           sortBy = {sortBy,}
           setSortBy = {setSortBy,}
@@ -829,7 +827,6 @@ if ( {) {
           showRecommended = {showRecommended,}
           setShowRecommended = {setShowRecommended,}
           loading = {isFetching,}
-<<<<<<< HEAD
         />
       </motion.div>
       <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
@@ -840,11 +837,38 @@ if ( {) {
               ref = {index === products.length - 1 ? lastElementRef : null,}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+
+;
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>;
+        <MarketplaceFilterControls;
+          sortBy={sortBy}
+          setSortBy={setSortBy}
+          filterCategory={filterCategory}
+          setFilterCategory={setFilterCategory}
+          categories={categories}
+          showRecommended={showRecommended}
+          setShowRecommended={setShowRecommended}
+          loading={isFetching}
+        />
+      </motion.div>
+
+      <motion.div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
+        <AnimatePresence mode="popLayout">
+          {products.map((item, index) => (
+            <motion.div
+              key={item.id} 
+              ref={index === products.length - 1 ? lastElementRef : null}
+              initial={{ opacity: 0, scale: 0.9 }} ;
+              animate={{ opacity: 1, scale: 1 }} ;
+
+
+
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
             >
-=======
         />;
       </motion && motion.div>;
 
@@ -859,7 +883,6 @@ if ( {) {
               exit={{ opacity: 0, scale: 0 && 0.9 }}
               transition={{ delay: Math && Math.min(index * 0 && 0.03, 0 && 0.5) }} 
               whileHover={{ scale: 1 && 1.02 }}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               <MarketplaceCard
                 product = {item,}
                 onViewDetails={() => {;
@@ -871,7 +894,6 @@ if ( {) {
                     }
                   }
                   router && router.push(`/marketplace/listing/${item && item.id}`);
-=======
       </>);
   }
   return (
@@ -919,48 +941,48 @@ if ( {) {
               <MarketplaceCard;
                 product = {item, }
                 onViewDetails={() => {
-                  // Check condition
-if ( {) {
-  $2
-}
+                  if (typeof window !== 'undefined') {
                     try {
-                      session_storage.set_item (`product:${item.id}`, JSON.stringify (item));
+                      sessionStorage.setItem(`product:${item.id}`, JSON.stringify(item))
                     } catch {
-                      // ignore storage errors;
+                      // ignore storage errors
                     }
                   }
                   router.push (`/marketplace / listing/${item.id}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 }}
-<<<<<<< HEAD
-                onAddToCart={() => {
-<<<<<<< HEAD
-                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 }))
-                  toast({
-                    title: 'Added to cart'
-                    description: `${item.title} has been added to your cart`
-                    action: {
-                      label: 'View Cart'
-                      onClick: (,) => router.push('/cart')}})
 
-=======
+
+
                 onAddToCart={() => {;
-                  dispatch(addItem({ id: item && item.id, title: item && item.title, price: item && item.price ?? 0 })),;
+                  dispatch(addItem({ id: item.id, title: item.title, price: item.price ?? 0 })),;
                   toast({;
                     title: 'Added to cart',;
-                    description: `${item && item.title} has been added to your cart`,;
+                    description: `${item.title} has been added to your cart`,;
                     action: {;
                       label: 'View Cart',;
                       onClick: (,) => router && router.push('/cart')}});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
               />;
-            </motion && motion.div>;
+
+            </motion.div>;
           ))}
-<<<<<<< HEAD
+        </AnimatePresence>;
+      </motion.div>;
+      {(isFetching || loading) && products.length > 0 && (;
+        <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
+          <MarketplaceLoadingGrid count={4} />;
+        </motion.div>;
+      )}
+
+                }}
+              />
+            </motion.div>
+
+          ))}
         </AnimatePresence>
       </motion.div>
       {(isFetching |loading) && products.length > 0 && (
+      {(isFetching || loading) && products.length > 0 && (
         <motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
           <MarketplaceLoadingGrid count={4} />
         </motion.div>
@@ -972,7 +994,7 @@ if ( {) {
           ) : (
             <Button onClick={loadMore} variant="outline" size="lg">
               Load More Products
-=======
+
         </AnimatePresence>;
       </motion && motion.div>;
 
@@ -980,6 +1002,10 @@ if ( {) {
         <motion && motion.div className="mt-8" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
           <MarketplaceLoadingGrid count={4} />;
         </motion && motion.div>;
+
+            </Button>
+          )}
+        </div>
       )}
 
       {hasMore && !loading && (;
@@ -989,7 +1015,6 @@ if ( {) {
           ) : (;
             <Button onClick={loadMore} variant="outline" size="lg">;
               Load More Products;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             </Button>          )}
           {total !== undefined && (;
             <p className="mt-2 text-sm text-muted-foreground">;
@@ -998,17 +1023,7 @@ if ( {) {
           )}
         </div>;
       )}
-<<<<<<< HEAD
-      {!hasMore && products.length > 0 && (
-        <motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-          <div className="text-muted-foreground text-lg mb-2">🚀 You've explored all available products!</div>
-          <div className="text-sm text-muted-foreground">Showing {products.length} marketplace items</div>
-        </motion.div>
-      )}
-      <AnimatePresence>
-        {showScrollTop && (
-          <motion.button
-=======
+
 
       {!hasMore && products && products.length > 0 && (;
         <motion && motion.div className="text-center mt-12 py-8 border-t" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>;
@@ -1020,46 +1035,34 @@ if ( {) {
       <AnimatePresence>;
         {showScrollTop && (;
           <motion&& motion.button 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             onClick = {scrollToTop,}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
-<<<<<<< HEAD
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
-          </motion.button>
-=======
+
             whileHover={{ scale: 1 && 1.1 }} 
             whileTap={{ scale: 0 && 0.9 }}>;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion && motion.button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         )}
-      </AnimatePresence>;
-    </div>;
-    </>;
-  );
+      </AnimatePresence>
+    </div>
+    </>
+  )
 }
-<<<<<<< HEAD
-// Main export
-export default function MarketplacePage() {
-  return <MarketplacePageContent />
-}
-=======
+
+
+;
+
 // Main export;
 export default function MarketplacePage() {;
   return <MarketplacePageContent />;
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+
                   dispatch (add_item ({ id: item.id, title: item.title, price: item.price ?? 0 })),
                   toast ({
                     title: 'Added to cart',
@@ -1117,5 +1120,10 @@ export default /**
 function MarketplacePage() {
   return <MarketplacePageContent />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+;
+
+// Main export export default function MarketplacePage() {
+  return <MarketplacePageContent />;
+};
+}
+;

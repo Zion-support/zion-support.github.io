@@ -1,34 +1,23 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
+;
+import React from 'react',
+import Head from 'next/head',
+import Layout from '../components/layout/Layout',
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
 export default function CybersecurityPage() {
   const features = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR']
-  const solutions = [
-    { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
-    { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' }
-    { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' }
-    { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }]
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'];
-
+    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <Layout>
       <Head>
@@ -48,6 +37,8 @@ export default function CybersecurityPage() {
             <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Security Assessment</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
+              <a href="/contact" className="px-8 py-4">Security Assessment</Link>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
             </div>
           </header>
           <section>
@@ -70,6 +61,12 @@ export default function CybersecurityPage() {
                   <p className="text-gray-300 text-sm">Learn more</p>
                 </a>
               ))}
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
@@ -83,24 +80,15 @@ export default function CybersecurityPage() {
         </div>
       </div>
     </Layout>
+  );
+};
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import React from 'react',
-import Head from 'next / head',
-import Layout from '../components / layout / Layout',
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-;
-export default /**
- * CybersecurityPage - Function description
- */
-function CybersecurityPage() {
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+export default function CybersecurityPage(req, res) {
+  try {
   const features = [;
     'Zero Trust architectures and identity - first segmentation_cloud posture hardening, secrets management, and key rotation_threat detection, incident response playbooks, and tabletop exercises_compliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
   const solutions = [;
@@ -159,7 +147,11 @@ function CybersecurityPage() {
           </section>;
         </div>;
       </div>;
-    </Layout>);
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}

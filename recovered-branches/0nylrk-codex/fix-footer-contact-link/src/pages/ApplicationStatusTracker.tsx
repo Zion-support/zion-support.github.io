@@ -1,6 +1,11 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import {AppLayout} from "@/layout/AppLayout";
+import {SEO} from "@/components/SEO";
+import {ApplicationsTracker} from "@/components/jobs/applications";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Briefcase, Inbox} from "lucide-react";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import {useIsMobile} from "@/hooks/use-mobile";
 import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
@@ -10,8 +15,12 @@ import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
 
-  const isMobile = useIsMobile();
 
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useIsMobile } from "@/hooks/use-mobile",
+function ApplicationStatusTrackerContent() {
+  const isMobile = useIsMobile(),
+  
   return (
     <>
       <SEO
@@ -50,14 +59,14 @@ export default function ApplicationStatusTracker() {
     </ProtectedRoute>
   )
 }
-=======
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {ApplicationsTracker} from "@/components/jobs/applications";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Briefcase, Inbox} from "lucide-react";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-import {useIsMobile} from "@/hooks/use-mobile";
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { ApplicationsTracker } from "@/components/jobs/applications",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Briefcase, Inbox } from "lucide-react",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
 
@@ -92,22 +101,6 @@ function ApplicationStatusTrackerContent() {;
     </>;
   );
 }
-
-export default function ApplicationStatusTracker() {;
-  return (
-=======
-import { AppLayout } from '@/layout / AppLayout';
-import { SEO } from '@/components / SEO';
-import { ApplicationsTracker } from '@/components / jobs / applications';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
-import { Briefcase, Inbox } from './lucide-react';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { useIsMobile } from '@/hooks / use - mobile';
-/**
- * ApplicationStatusTrackerContent - Function description
- */
-function ApplicationStatusTrackerContent() {
-  const is_mobile = useIsMobile ();
 ;
   return (
     <>;
@@ -142,17 +135,21 @@ export default /**
  */
 function ApplicationStatusTracker() {
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
-<<<<<<< HEAD
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </ProtectedRoute>);
+;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    </ProtectedRoute>);
+=======
+
+
+
+}
+;

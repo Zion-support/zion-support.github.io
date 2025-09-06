@@ -1,6 +1,14 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import React from "react";
+import {Header} from "@/components/Header";
+import {Footer} from "@/components/Footer";
+import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
+import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
+import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
+import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
+import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
+import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
+import {SEO} from "@/components/SEO";
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -11,6 +19,8 @@ import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",
 import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
 import { SEO } from "@/components/SEO";
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
+import { SEO } from "@/components/SEO",
 export default function EnterprisePlans() {
   return (
     <>
@@ -31,40 +41,17 @@ export default function EnterprisePlans() {
     </>
   )
 }
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",;
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",;
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",;
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",;
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",;
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",;
+import { SEO } from "@/components/SEO";
 
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
-import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
-import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
-import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
-import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
-import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
-import {SEO} from "@/components/SEO";
 export default function EnterprisePlans() {;
   return (
     <>;
@@ -106,12 +93,7 @@ function EnterprisePlans() {
         <EnterpriseCTA />;
       </main>;
       <Footer />;
-<<<<<<< HEAD
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

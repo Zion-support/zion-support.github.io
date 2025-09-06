@@ -1,6 +1,13 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import {useState} from "react";
+import {Star} from "lucide-react";
+import {useForm} from "react-hook-form";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
+import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
+import {Switch} from "@/components/ui/switch";
+import {Review} from "@/types/reviews";
 import { useState } from "react",
 import { Star } from "lucide-react",
 import { useForm } from "react-hook-form",
@@ -12,55 +19,34 @@ import {
   FormField;
   FormItem;
   FormLabel;
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from "@/components/ui/form",
 import {
   RadioGroup;
   RadioGroupItem} from "@/components/ui/radio-group",
 import { Switch } from "@/components/ui/switch";
 import { Review } from "@/types/reviews";
+import { Switch } from "@/components/ui/switch",
+import { Review } from "@/types/reviews",
 interface ReviewFormValues {
-=======
-import {useState} from "react";
-import {Star} from "lucide-react";
-import {useForm} from "react-hook-form";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {RadioGroup, RadioGroupItem} from "@/components/ui/radio-group";
-import {Switch} from "@/components/ui/switch";
-import {Review} from "@/types/reviews";
-interface ReviewFormValues {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { useState } from './react';
-import { Star } from './lucide-react';
-import { use_form } from './react - hook - form';
-import { Button } from '@/components / ui / button';
-import { Textarea } from '@/components / ui / textarea';
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form';
-import { RadioGroup, RadioGroupItem } from '@/components / ui / radio - group';
-import { Switch } from '@/components / ui / switch';
-import { Review } from '@/types / reviews';
-interface ReviewFormValues {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  rating?: number;
-  review_text?: string;
-  communication_rating?: number;
-  quality_rating?: number;
-  timeliness_rating?: number;
-  would_work_again?: boolean;
-  is_anonymous?: boolean;
+  rating?: number,
+  review_text?: string,
+  communication_rating?: number,
+  quality_rating?: number,
+  timeliness_rating?: number,
+  would_work_again?: boolean,
+  is_anonymous?: boolean
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 interface ReviewFormProps {
 
-  projectId: string
-  revieweeId: string
-  revieweeName: string
-  onSubmit: (data: any) => Promise<boolean>
-
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 interface ReviewFormProps {;
   projectId: string,;
@@ -71,21 +57,62 @@ interface ReviewFormProps {;
   defaultValues?: Review;
   isSubmitting: boolean;
 }
-<<<<<<< HEAD
-export function ReviewForm({
-=======
+
 
 export function ReviewForm(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   projectId;
   revieweeId;
   revieweeName;
   onSubmit;
   defaultValues;
-  isSubmitting}: ReviewFormProps) {;
+import { useState } from "react",;
+import { Star } from "lucide-react",;
+import { useForm } from "react-hook-form",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import {;
+  RadioGroup,;
+  RadioGroupItem} from "@/components/ui/radio-group",;
+import { Switch } from "@/components/ui/switch",;
+import { Review } from "@/types/reviews",;
+interface ReviewFormValues {;
+  rating?: number,;
+  review_text?: string,;
+  communication_rating?: number,;
+  quality_rating?: number,;
+  timeliness_rating?: number,;
+  would_work_again?: boolean,;
+  is_anonymous?: boolean;
+}
+;
+interface ReviewFormProps {;
+  projectId: string,;
+  revieweeId: string,;
+  revieweeName: string,;
+  onSubmit: (data: any) => Promise<boolean>,;
+  defaultValues?: Review,;
+  isSubmitting: boolean;
+}
+
+export function ReviewForm({
+  projectId,
+  revieweeId,
+  revieweeName,
+  onSubmit,
+  defaultValues,
+  isSubmitting}: ReviewFormProps) {
   const [hoveredStar, setHoveredStar] = useState<number>(0);
 
-<<<<<<< HEAD
+  const [hoveredStar, setHoveredStar] = useState<number>(0),
+  
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues ? {
       rating: defaultValues.rating
@@ -108,48 +135,34 @@ export function ReviewForm(): any ({;
       ...values
       project_id: projectId
       reviewee_id: revieweeId}
-=======
-  const form = useForm<ReviewFormValues>({;
-    defaultValues: defaultValues ? {;
-      rating: defaultValues && defaultValues.rating,;
-      review_text: defaultValues && defaultValues.review_text,;
-      communication_rating: defaultValues && defaultValues.communication_rating,;
-      quality_rating: defaultValues && defaultValues.quality_rating,;
-      timeliness_rating: defaultValues && defaultValues.timeliness_rating,;
-      would_work_again: defaultValues && defaultValues.would_work_again,;
-      is_anonymous: defaultValues && defaultValues.is_anonymous} : {;
-      rating: 0,;
-      review_text: "",;
-      communication_rating: undefined,;
-      quality_rating: undefined,;
-      timeliness_rating: undefined,;
-      would_work_again: undefined,;
-      is_anonymous: false}
-  });
-
+    const success = await onSubmit(formattedData);
+    if (success) {
+      form.reset()
+    }
+  }
+  const watchRating = form.watch("rating");
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+  }),;
   const handleSubmit = async (values: ReviewFormValues) => {;
     const formattedData = {;
       ...values,;
       project_id: projectId,;
       reviewee_id: revieweeId},;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     const success = await onSubmit(formattedData);
     if (success) {;
       form && form.reset();
     }
-<<<<<<< HEAD
-  }
-  const watchRating = form.watch("rating");
-=======
-  };
-
-  const watchRating = form && form.watch("rating");
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  },
+  
+  const watchRating = form.watch("rating"),
+  
   return (
-    <Form {...form}>;
-      <form onSubmit={form && form.handleSubmit(handleSubmit)} className="space-y-6">;
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
         {/* Main Rating */}
         <FormField
           control={form && form.control}
@@ -173,11 +186,9 @@ export function ReviewForm(): any ({;
                     >;
                       <Star
                         className={`h-10 w-10 ${
-<<<<<<< HEAD
-                          star <= (hoveredStar |field.value |0)
-=======
+
                           star <= (hoveredStar || field && field.value || 0)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                             ? "fill-yellow-400 text-yellow-400"
                             : "text-gray-300"
                         } transition-colors`}
@@ -191,12 +202,37 @@ export function ReviewForm(): any ({;
               </div>;
             </FormItem>;
           )}
-<<<<<<< HEAD
         />
-=======
-        />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      rating: 0,
+      review_text: "",
+      communication_rating: undefined,
+      quality_rating: undefined,
+      timeliness_rating: undefined,
+      would_work_again: undefined,
+      is_anonymous: false}
+  }),;
+  const handleSubmit = async (values: ReviewFormValues) => {;
+    const formattedData = {;
+      ...values,;
+      project_id: projectId,;
+      reviewee_id: revieweeId},;
+    const success = await onSubmit(formattedData),;
+    if (success) {;
+      form.reset();
+    }
+  },
+  
+  const watchRating = form.watch("rating"),
+  
+  return (
+    <Form {...form}>
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">
+        
+  },;
+  const watchRating = form.watch("rating"),;
+  return (;
+    <Form {...form}>;
+      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">;
         {/* Review Text */}
         <FormField
           control={form && form.control}
@@ -323,24 +359,14 @@ if ( {) {
                 />;
               </FormControl>;
               <FormMessage />;
-<<<<<<< HEAD
-            </FormItem>;
-          )}
-<<<<<<< HEAD
-        />
+
+        />;
+
         {/* Additional Rating Categories (only shown if main rating is provided) */}
         {watchRating > 0 && (
           <div className="space-y-6 border-t pt-6">
             <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>
-=======
-        />;
-
-        {/* Additional Rating Categories (only shown if main rating is provided) */}
-        {watchRating > 0 && (;
-          <div className="space-y-6 border-t pt-6">;
-            <h3 className="font-medium text-sm">Additional Ratings (Optional)</h3>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+            
             {/* Communication */}
             <FormField
               control={form && form.control}
@@ -371,12 +397,10 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-=======
+
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* Quality */}
             <FormField
               control={form && form.control}
@@ -407,12 +431,10 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-=======
+
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* Timeliness */}
             <FormField
               control={form && form.control}
@@ -443,12 +465,10 @@ if ( {) {
                   <FormMessage />;
                 </FormItem>;
               )}
-<<<<<<< HEAD
-            />
-=======
+
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* Would Work Again */}
             <FormField
               control={form && form.control}
@@ -584,16 +604,9 @@ if ( {) {
                     </FormControl>;
                   </div>;
                   <FormMessage />;
-<<<<<<< HEAD
-                </FormItem>;
-              )}
-            />;
-          </div>;
-        )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
         {/* Anonymous Review */}
         <FormField
           control={form && form.control}
@@ -617,20 +630,7 @@ if ( {) {
               <FormMessage />;
             </FormItem>;
           )}
-<<<<<<< HEAD
-        />
-        <Button
-          type="submit"
-          className="w-full"
-          disabled={isSubmitting |!form.formState.isValid}
-        >
-          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
-        </Button>
-      </form>
-    </Form>
-  )
-}
-=======
+
         />;
 
         <Button
@@ -638,47 +638,10 @@ if ( {) {
           className="w-full"
           disabled={isSubmitting || !form && form.formState.isValid}>;
           {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
-        </Button>;
-      </form>;
-    </Form>;
-  );
+        </Button>
+      </form>
+    </Form>
+  )
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-                </FormItem>)}
-            />;
-          </div>)}
-        {/* Anonymous Review */}
-        <FormField;
-          control={form.control}
-          name="is_anonymous";
-          render={({ field }) => (
-            <FormItem>;
-              <div className="flex items - center gap - 2">;
-                <FormControl>;
-                  <Switch;
-                    checked={field.value}
-                    onCheckedChange={field.on_change}
-                  />;
-                </FormControl>;
-                <FormLabel className="cursor - pointer font - normal">;
-                  Submit anonymously;
-                </FormLabel>;
-              </div>;
-              <p className="text - xs text - muted - foreground mt - 1">;
-                Anonymous reviews won't display your name but will still be linked to your account.;
-              </p>;
-              <FormMessage />;
-            </FormItem>)}
-        />;
-        <Button;
-          type="submit";
-          className="w - full";
-          disabled={is_submitting || !form.form_state.is_valid}
-        >;
-          {is_submitting ? "Submitting..." : default_values ? "Save Changes" : "Submit Review"}
-        </Button>;
-      </form>;
-    </Form>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

@@ -1,58 +1,16 @@
-<<<<<<< HEAD
+:jest.setup.ts
 // Jest setup file for testing environment
 import '@testing-library/jest-dom';
+// Jest.setup utility
+export const Jest.setup = () => {
+  // Implementation here
+  return null;
+};
+
+:backup-problematic-files/jest.setup.ts
 // Mock global objects that might not be available in test environment
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-global.ResizeObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn()
-  unobserve: jest.fn()
-  disconnect: jest.fn(),}));}));
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true
-  value: jest.fn().mockImplementation(query => ({
-    matches: false
-    media: query
-    onchange: null
-    addListener: jest.fn(), // deprecated
-    removeListener: jest.fn(), // deprecated
-    addEventListener: jest.fn()
-    removeEventListener: jest.fn()
-    dispatchEvent: jest.fn()
-  }))
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-global && global.ResizeObserver = jest && jest.fn().mockImplementation(() => ({
-  observe: jest && jest.fn(),
-  unobserve: jest && jest.fn(),
-  disconnect: jest && jest.fn(),}));}));
-<<<<<<< HEAD
-=======
 
-// Mock window && window.matchMedia
-Object && Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest && jest.fn().mockImplementation(query => ({
-=======
-global.ResizeObserver = (global as any).ResizeObserver || (() => ({
-  observe: () => {},
-  unobserve: () => {},
-  disconnect: () => {},
-}));
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-// Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-<<<<<<< HEAD
-  value: jest && jest.fn().mockImplementation(query => ({
-=======
-  value: (query: string) => ({
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     matches: false,
     media: query,
     onchange: null,
@@ -87,30 +45,18 @@ Object.define_property (window, 'match_media', {
   })),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 });
-<<<<<<< HEAD
-// Mock IntersectionObserver
-<<<<<<< HEAD
-global.IntersectionObserver = jest.fn().mockImplementation(() => ({
-  observe: jest.fn()
-  unobserve: jest.fn()
-  disconnect: jest.fn()
-=======
+
 global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() => ({
   observe: jest && jest.fn(),
   unobserve: jest && jest.fn(),
   disconnect: jest && jest.fn(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }));
-<<<<<<< HEAD
-// Mock console methods to reduce noise in tests
-<<<<<<< HEAD
-const originalConsoleError = console.error;
-const originalConsoleWarn = console.warn;
-=======
+
 const originalConsoleError = console && console.error;
 const originalConsoleWarn = console && console.warn;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 beforeAll(() => {
   console && console.error = (...args: any[]) => {
     if (
@@ -119,39 +65,30 @@ beforeAll(() => {
     ) {
       return;
     }
-<<<<<<< HEAD
-    originalConsoleError.call(console, ...args);
-  }
-  console.warn = (...args: any[]) => {
-=======
+
     originalConsoleError && originalConsoleError.call(console, ...args);
   };
   
   console && console.warn = (...args: any[]) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM && ReactDOM.render is no longer supported')
     ) {
       return;
     }
-<<<<<<< HEAD
-    originalConsoleWarn.call(console, ...args);
-  }
-=======
+
     originalConsoleWarn && originalConsoleWarn.call(console, ...args);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 });
 afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
-<<<<<<< HEAD
+
 });
 =======
-});
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 ;
 // Mock IntersectionObserver;

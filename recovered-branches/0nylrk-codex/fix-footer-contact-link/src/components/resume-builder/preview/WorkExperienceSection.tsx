@@ -1,20 +1,16 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { WorkExperience  } from '@/types/resume';
 import { format } from 'date-fns';
-=======
-import {WorkExperience} from '@/types / resume';
-import {format} from 'date - fns';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import {WorkExperience} from '@/types/resume';
+import {format} from 'date-fns';
 interface WorkExperienceSectionProps {
-  work_experience: WorkExperience[];
+  workExperience: WorkExperience[]
 }
-<<<<<<< HEAD
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
   // Sort work experience by date (newest first)
 
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
     const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date);
@@ -30,6 +26,31 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
   }
   if (sortedWorkExperience.length === 0) return null;
 
+import { WorkExperience } from '@/types/resume',;
+import { format } from 'date-fns',;
+interface WorkExperienceSectionProps {;
+  workExperience: WorkExperience[];
+}
+;
+export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {;
+  // Sort work experience by date (newest first);
+  const sortedWorkExperience = [...workExperience].sort((a, b) => {;
+    if (a.is_current && !b.is_current) return -1,;
+    if (!a.is_current && b.is_current) return 1,;
+    const dateA = a.start_date instanceof Date ? a.start_date : new Date(a.start_date),;
+    const dateB = b.start_date instanceof Date ? b.start_date : new Date(b.start_date),;
+    return dateB.getTime() - dateA.getTime();
+  }),;
+  const formatDate = (date: Date | string | undefined) => {;
+    if (!date) return '',;
+    if (typeof date === 'string') {;
+      return format(new Date(date), 'MMM yyyy');
+    }
+    return format(date, 'MMM yyyy')
+  },
+
+  if (sortedWorkExperience.length === 0) return null,
+  
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>
@@ -98,17 +119,12 @@ export function WorkExperienceSection(): any ({ workExperience }: WorkExperience
             )}
           </div>;
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-}
-=======
+
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 export /**
  * WorkExperienceSection - Function description

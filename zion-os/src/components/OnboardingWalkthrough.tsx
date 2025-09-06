@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState, useEffect } from "react";
 import { useAuth } from "@/contexts/AuthContext";
@@ -69,16 +68,15 @@ export function OnboardingWalkthrough() {const [currentStep, setCurrentStep] = u
   const currentStepData = walkthroughSteps[currentStep];
   if (!isVisible |isCompleted) {return null;
   }
-  return (;
-=======
-"use client",
-import { useState, useEffect  } from './react';,
-import { use_auth  } from '@/contexts / AuthContext';,
-interface WalkthroughStep {
-  id: string,
-  title: string,
-  description: string,
-  target?: string,
+"use client",;
+import { useState, useEffect } from "react",;
+import { useAuth } from "@/contexts/AuthContext",;
+interface WalkthroughStep {;
+  id: string,;
+  title: string,;
+  description: string,;
+  target?: string,;
+
   position: "top" | "bottom" | "left" | "right";
 }
 const walkthrough_steps: WalkthroughStep[] = [;
@@ -171,8 +169,10 @@ if ( {) {
 }
     return null;
   }
-  return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+;
+  return (;
+
     <>;
       {/* Overlay */}
       <div className="fixed inset - 0 bg - black / 50 z - 40" on_click={handle_skip} />;
@@ -229,11 +229,15 @@ if ( {) {
       {/* Highlight Target Element */}
       {currentStepData.target && (
         <div;
-<<<<<<< HEAD
+
           className="fixed z-30 pointer-events-none";
           style={{top: 0;
             left: 0;
             right: 0;
+          style={{;
+            top: 0,;
+            left: 0,;
+            right: 0,;
             bottom: 0}}
         >;
           <div;
@@ -241,21 +245,10 @@ if ( {) {
             style={{top: "50%";
               left: "50%";
               transform: "translate(-50%, -50%)";
-=======
-          className="fixed z - 30 pointer - events - none";
-          style={{
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0}}
-        >;
-          <div;
-            className="absolute border - 2 border - blue - 500 rounded - lg shadow - lg bg - blue - 500 / 10";
-            style={{
-              top: "50%",
-              left: "50%",
-              transform: "translate (-50%, -50%)",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+            style={{;
+              top: "50%",;
+              left: "50%",;
+              transform: "translate(-50%, -50%)",;
               width: "300px";
               height: "200px"}}
           />;
@@ -263,8 +256,11 @@ if ( {) {
     </>);
 }
 // Hook to add data attributes for walkthrough targeting;
-<<<<<<< HEAD
 export function useWalkthroughTarget(id: string) {return {;
+;
+// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget(id: string) {;
+  return {;
     "data-walkthrough-target": id;
 =======
 export /**
@@ -273,6 +269,15 @@ export /**
 function useWalkthroughTarget() {
   return {
     "data - walkthrough - target": id;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export function useWalkthroughTarget(id: string) {return {;
+=======
+;
+// Hook to add data attributes for walkthrough targeting;
+export function useWalkthroughTarget(id: string) {;
+  return {;
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    "data-walkthrough-target": id;
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     id}
 }

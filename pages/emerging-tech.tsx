@@ -1,36 +1,34 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react';
+
+  return (
+    <Layout>
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',;
+;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Rocket, Network, Boxes, CheckCircle } from 'lucide-react',
 export default function EmergingTechPage() {
   const features = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation']
-  const solutions = [
-    { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' }
-    { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' }
-    { name: '5G Private Networks', href: '/5g-private-network-solutions' }
-    { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }]
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'];
-
+    'Blockchain, tokenization, and smart contract auditsIoT and edge orchestration with zero-trust patterns5G private networks and campus connectivityMetaverse and spatial computing experimentation'],
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform' },
     { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration' },
     { name: '5G Private Networks', href: '/5g-private-network-solutions' },
     { name: 'Metaverse AI Platform', href: '/metaverse-ai-development-platform' }],
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  return (
-    <Layout>
+export default function EmergingTechPage() {_const _features = [
+    'Blockchain, _tokenization, _and smart contract audits', _'IoT and edge orchestration with zero-trust patterns', _'5G private networks and campus connectivity', _'Metaverse and spatial computing experimentation'];
+  const _solutions = [
+    { name: 'Blockchain Infrastructure', _href: '/blockchain-infrastructure-platform'},
+    {_name: 'Edge Computing Orchestration', _href: '/edge-computing-orchestration'},
+    {_name: '5G Private Networks', _href: '/5g-private-network-solutions'},
+    {_name: 'Metaverse AI Platform', _href: '/metaverse-ai-development-platform'}];
+ursor/fix-lint-push-and-merge-to-main-ce13
+  return (_<Layout>
       <Head>
         <title>Emerging Tech | Zion Tech Group</title>
         <meta name="description" content="Blockchain, IoT/edge, 5G, and metaverse initiatives with secure, scalable architectures." />
@@ -47,6 +45,8 @@ export default function EmergingTechPage() {
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Start a Pilot</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
+              <a href="/contact" className="px-8 py-4">Start a Pilot</Link>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
             </div>
           </header>
           <section>
@@ -75,13 +75,19 @@ export default function EmergingTechPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
+  );
+};
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from 'react',
 import Head from 'next / head',
@@ -141,7 +147,12 @@ function EmergingTechPage() {
           </section>;
         </div>;
       </div>;
-    </Layout>);
+
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}

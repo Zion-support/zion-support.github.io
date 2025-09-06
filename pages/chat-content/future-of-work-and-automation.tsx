@@ -1,12 +1,8 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
 import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
+import type { NextPage } from 'next',
+import Head from 'next/head',
 const FutureOfWorkAndAutomation: NextPage = () => {
   return (
     <div>
@@ -14,40 +10,18 @@ const FutureOfWorkAndAutomation: NextPage = () => {
         <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
         <meta name="description" content="FutureOfWorkAndAutomation page" />
       </Head>
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <main>
         <h1>FutureOfWorkAndAutomation</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      <main>;
-        <h1>FutureOfWorkAndAutomation</h1>;
-        <p>This page is under construction.</p>;
-      </main>;
-    </div>;
-  ),;
+  ),
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default FutureOfWorkAndAutomation;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import Head from 'next / head';
-      <main>;
-        <h1 > FutureOfWorkAndAutomation</h1>;
-        <p > This page is under construction.</p>;
-      </main>;
-    </div>),
+  )
 }
-;
 export default FutureOfWorkAndAutomation;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+},
+export default FutureOfWorkAndAutomation,

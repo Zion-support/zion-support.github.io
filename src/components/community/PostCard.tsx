@@ -1,19 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'
-import {formatDistanceToNow} from "date-fns"
-import Link from "next/link"
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { ForumPost } from "@/types/community";
+import { logInfo } from '@/utils/productionLogger';
+interface PostCardProps {
+  post: ForumPost,
+  compact?: boolean
+}
 
-import { formatDistanceToNow } from "date-fns"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-import { ForumPost } from "@/types/community"
-import { logInfo } from '@/utils/productionLogger'
+import React from 'react',
+import { formatDistanceToNow } from "date-fns",
+import Link from "next/link",
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react'
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
+import { ForumPost } from "@/types/community",
+import { logInfo } from '@/utils/productionLogger',
+
+
 interface PostCardProps {
   post: ForumPost
   compact?: boolean
@@ -27,70 +36,13 @@ export const PostCard = React.memo(PostCardComponent)
 PostCard.displayName = 'PostCard'
 export default PostCard
 
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import {formatDistanceToNow} from "date-fns";
-import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react';
 
-import React from 'react';
-import { formatDistanceToNow } from "date-fns";
-import Link from "next/link";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from 'lucide-react';
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { ForumPost } from "@/types/community";
-import { logInfo } from '@/utils/productionLogger';
-interface PostCardProps {;
-  post: ForumPost,;
-  compact?: boolean;
-}
 
-const PostCardComponent = ({ post, compact = false }: PostCardProps) => {;
-  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),;
 
-  return (
-    <Card data-testid="post-card" className={cn(;
-      "transition-shadow hover:shadow-md";
 
-export const PostCard = React && React.memo(PostCardComponent);
-PostCard && PostCard.displayName = 'PostCard';
-
-export default PostCard;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
       "transition-shadow hover: shadow-md",
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { formatDistanceToNow } from './date - fns';
 import Link from './next / link';
@@ -115,5 +67,9 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) =>: any {
 export const PostCard = React.memo (PostCardComponent);
 PostCard.display_name = 'PostCard';
 export default PostCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
+export default PostCard;
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+
+
+export default PostCard;

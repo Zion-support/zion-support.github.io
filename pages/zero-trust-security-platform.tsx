@@ -1,44 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react',
-import Head from 'next/head';
-import ServiceLanding from '../components/sections/ServiceLanding';
-export default function ZeroTrustSecurityPlatformPage() {
-
-=======
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-export default function ZeroTrustSecurityPlatformPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <Head>;
@@ -78,10 +42,11 @@ export default function ZeroTrustSecurityPlatformPage() {;
       />;
     </>;
   );
-<<<<<<< HEAD
-=======
 
-=======
+}
+import React from 'react',
+import Head from 'next/head',
+import ServiceLanding from '../components/sections/ServiceLanding',
 export default function ZeroTrustSecurityPlatformPage() {
 	return (
 		<>
@@ -111,53 +76,3 @@ export default function ZeroTrustSecurityPlatformPage() {
 		</>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import React from 'react';
-import Head from 'next / head';
-import ServiceLanding from '../components / sections / ServiceLanding';
-export default /**
- * ZeroTrustSecurityPlatformPage - Function description
- */
-function ZeroTrustSecurityPlatformPage() {
-  return (
-    <>;
-      <Head>;
-        <title > Zero Trust Security Platform | Zion Tech Group</title>;
-        <meta;
-          name='description';
-          content='Design and enforce zero trust architecture: identity - first access, microsegmentation, continuous verification, and least privilege.';
-        />;
-        <link;
-          rel='canonical';
-          href='https://ziontechgroup.com / zero - trust - security - platform';
-        />;
-      </Head>;
-      <ServiceLanding;
-        title='Zero Trust Security Platform';
-        description='Accelerate zero trust adoption with reference architectures, policy - as - code, identity - aware proxies, microsegmentation, and continuous verification across users, devices, and services.';
-        subtitle='Trust nothing, verify everything';
-        pricePerMonthUSD={3499}
-        implementation_weeks='4 - 8 weeks';
-        roi_note='Reduce breach impact and lateral movement risk; meet compliance faster';
-        features={[;
-          'Policy - as - code and enforcement',
-          'Identity - aware proxies and device posture',
-          'Microsegmentation and service mesh integration',
-          'Continuous authentication and authorization',
-          'Visibility and audit for compliance',
-          'Rollout playbooks and migration kits',
-        ]}
-        industries={[;
-          'Enterprise IT',
-          'Financial Services',
-          'Healthcare',
-          'SaaS',
-          'Public Sector',
-        ]}
-        canonical='https: //ziontechgroup.com / zero - trust - security - platform';
-      />;
-    </>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

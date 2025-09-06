@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const isGuest = !auth?.isAuthenticated
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return
-import React, {
-
-  useState
+useState
   useEffect
   useRef
   ReactNode
@@ -82,7 +72,6 @@ export function ChatAssistant({
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
-=======
   const is_guest = !auth?.is_authenticated;
   const handleSendMessage = async (message_content: string) => {
     if () return) {
@@ -160,12 +149,10 @@ if ( {) {
 }
         setDisplayGuestMessages (initial_messages),
         setStoredGuestMessages (initial_messages), // Persist if initial_messages are provided;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
-<<<<<<< HEAD
   }, [
     isGuest
     initialMessages
@@ -185,7 +172,7 @@ if ( {) {
     valueOrFn: Message[] | ((val: Message[],) => Message[])
   ) => {
     if (isGuest) {
-      const newMessages =
+      const newMessages = null;
         valueOrFn instanceof Function
           ? valueOrFn(displayGuestMessages)
           : valueOrFn
@@ -194,6 +181,8 @@ if ( {) {
     } else {
       const newMessages =
         valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
+      const newMessages = null;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
       setLoggedInMessages(newMessages)
     }
   }
@@ -255,8 +244,6 @@ if ( {) {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
   if (!isOpen) return null
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const isGuest = !auth?.isAuthenticated;
 
   const handleSendMessage = async (messageContent: string) => {;
@@ -444,7 +431,6 @@ export function ChatAssistant(): any ({;
   }, [isOpen, onClose]),;
 
   if (!isOpen) return null,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div
@@ -476,19 +462,19 @@ export function ChatAssistant(): any ({;
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
             onClick = {onClose,}
-<<<<<<< HEAD
+            onClick={onClose}
+
+
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
           </Button>
         </div>
-=======
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
@@ -498,19 +484,30 @@ export function ChatAssistant(): any ({;
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
-          aria-live="polite">;
-          {currentMessages && currentMessages.length === 0 ? (;
-            <div className="text-center text-zion-slate py-8 space-y-4">;
-              <p>Start a conversation with {recipient && recipient.name}</p>;
-              {starterQuestions && starterQuestions.length > 0 && (;
-                <div className="flex flex-wrap justify-center gap-2">;
-                  {starterQuestions && starterQuestions.map((q, idx,) => (;
+
+          aria-live="polite"
+        >
+          {currentMessages.length === 0 ? (
+            <div className="text-center text-zion-slate py-8 space-y-4">
+              <p>Start a conversation with {recipient.name}</p>
+              {starterQuestions.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-2">
+                  {starterQuestions.map((q, idx,) => (
                     <Button
                       key = {idx,}
                       variant="outline"
                       className="text-xs"
                       onClick = {(,) => handleSendMessage(q),}
+                    >
+                  {starterQuestions.map((q, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      className="text-xs"
+                      onClick={() => handleSendMessage(q)}
                     >;
+
+
                       {q}
                     </Button>;
                   ))}
@@ -522,16 +519,7 @@ export function ChatAssistant(): any ({;
               <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
             ));
           )}
-<<<<<<< HEAD
-          <div ref={messagesEndRef} />
-        </div>
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-      {showGuestModal && guestMessage && (
-=======
+
           <div ref={messagesEndRef} />;
         </div>;
 
@@ -542,7 +530,7 @@ export function ChatAssistant(): any ({;
       </div>;
 
       {showGuestModal && guestMessage && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
@@ -561,248 +549,31 @@ export function ChatAssistant(): any ({;
               <Button
                 variant="outline"
                 onClick = {handleModalCancel,}
-                className="text-white border-zion-purple hover:bg-zion-purple/10">;
-                Cancel;
-              </Button>;
+                onClick={handleModalCancel}
+                className="text-white border-zion-purple hover:bg-zion-purple/10"
+              >
+                Cancel
+              </Button>
               <Button
                 onClick = {handleModalSendConfirm,}
-                className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-=======
-  }, [;
-    is_guest,
-    initial_messages,
-    storedGuestMessages,
-    setStoredGuestMessages,
-    recipient.id]),
-  // Effect for logged - in user messages;
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      // Update state if initial_messages prop changes (e.g. new conversation loaded);
-      setLoggedInMessages (initial_messages);
-    }
-  }, [is_guest, initial_messages, recipient.id]),
-  // Determine current_messages and setCurrentMessages based on is_guest;
-  const current_messages = is_guest ? displayGuestMessages : loggedInMessages,
-  const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[], ) =>: any Message[]),
-  ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      const new_messages =;
-        valueOrFn instanceof Function;
-          ? valueOrFn (displayGuestMessages);
-          : valueOrFn,
-      setDisplayGuestMessages (new_messages),
-      setStoredGuestMessages (new_messages), // Always update local_storage for guests;
-    } else {
-      const new_messages =;
-        valueOrFn instanceof Function ? valueOrFn (loggedInMessages) : valueOrFn,
-      setLoggedInMessages (new_messages);
-    }
-  },
-  const debouncedApiCallParams = use_debounce (pendingApiCallParams, 3000),
-  useEffect ((, ) => {
-    // Check condition
-if ( {) {
-  $2
-}
-      onSendMessage (debouncedApiCallParams.message,
-        debouncedApiCallParams.conversation_id);
-    }
-  }, [debouncedApiCallParams, onSendMessage]),
-  useEffect ((, ) => {
-    scrollToBottom ();
-  }, [current_messages]), // current_messages will correctly refer to either guest or logged - in state;
-  const scrollToBottom = () =>: any {
-    messagesEndRef.current?.scrollIntoView ({ behavior: 'smooth' });
-  },
-  const handleSendMessage = async (message_content: string, ) => {
-    if () return, ) {
-  $2
-}
-    // Check condition
-if ( {) {
-  $2
-}
-      // Logged - in user;
-      const new_message: Message = {
-        id: Date.now ().to_string (),
-        role: 'user',
-        message: message_content,
-        timestamp: new Date ()},
-      setCurrentMessages ((prev: Message[], ) => [...prev, new_message]),
-      setPendingApiCallParams ({ message: message_content, conversation_id });
-    } else {
-      // Guest user;
-      setGuestMessage (message_content),
-      setShowGuestModal (true);
-    }
-  },
-  const handleModalSendConfirm = () =>: any {
-    // Check condition
-if (return, ) {
-  $2
-}
-    const new_message: Message = {
-      id: Date.now ().to_string (),
-      role: 'user',
-      message: guest_message,
-      timestamp: new Date ()},
-    setCurrentMessages ((prev: Message[], ) => [...prev, new_message]), // This will now use the guest - aware setCurrentMessages;
-    setPendingApiCallParams ({ message: guest_message, conversation_id }),
-    setShowGuestModal (false),
-    setGuestMessage (null);
-  },
-  const handleModalCancel = () =>: any {
-    setShowGuestModal (false),
-    setGuestMessage (null);
-  },
-  useEffect ((, ) => {
-    // Check condition
-if (return, ) {
-  $2
-}
-    const handleKeyDown = (e: KeyboardEvent, ) =>: any {
-      // Check condition
-if ( {) {
-  $2
-}
-        e.prevent_default (),
-        on_close ();
-      }
-    },
-    document.addEventListener ('keydown', handleKeyDown),
-    return () => document.removeEventListener ('keydown', handleKeyDown);
-  }, [is_open, on_close]),
-  // Check condition
-if (return null, ) {
-  $2
-}
-  return (
-    <div;
-      className="fixed inset - 0 bg - black / 50 z - 50 flex items - center justify - center p - 4";
-      role="dialog";
-      aria - modal="true";
-      aria - labelledby="chat - assistant - title";
-    >;
-      <div className="w - full max - w-xl bg - zion - blue rounded - lg shadow - xl overflow - hidden flex flex - col max - h-[80vh]">;
-        {/* Header */}
-        <div className="bg - zion - blue - dark p - 3 flex items - center justify - between border - b border - zion - purple / 20">;
-          <div className="flex items - center space - x-3">;
-            <Avatar className="h - 10 w - 10 border border - zion - purple / 20">;
-              <AvatarImage src={recipient.avatar_url} alt={recipient.name} />;
-              <AvatarFallback className="bg - zion - purple / 20 text - white">;
-                {recipient.name.char_at (0).toUpperCase ()}
-              </AvatarFallback>;
-            </Avatar>;
-            <div>;
-              <h2 id="chat - assistant - title" className="font - medium text - white">;
-                {recipient.name}
-              </h2>;
-              {recipient.role && (
-                <div className="text - xs text - zion - slate">{recipient.role}</div>)}
-            </div>;
-          </div>;
-          <Button;
-            variant="ghost";
-            size="icon";
-            className="text - white hover:bg - zion - purple / 10 rounded - full";
-            on_click = {on_close, }
-            aria - label="Close chat";
-          >;
-            <X className="h - 5 w - 5" />;
-          </Button>;
-        </div>;
-        {/* Context Header (Optional) */}
-        {context_header && (
-          <div className="border - b border - zion - purple / 20 bg - zion - blue - dark / 50 p - 3">;
-            {context_header}
-          </div>)}
-        {/* Messages */}
-        <div;
-          className="flex - 1 overflow - y-auto p - 4 space - y-4";
-          aria - live="polite";
-        >;
-          {current_messages.length === 0 ? (
-            <div className="text - center text - zion - slate py - 8 space - y-4">;
-              <p > Start a conversation with {recipient.name}</p>;
-              {starter_questions.length > 0 && (
-                <div className="flex flex - wrap justify - center gap - 2">;
-                  {starter_questions.map ((q, idx, ) => (
-                    <Button;
-                      key = {idx, }
-                      variant="outline";
-                      className="text - xs";
-                      on_click = {(, ) => handleSendMessage (q), }
-                    >;
-                      {q}
-                    </Button>))}
-                </div>)}
-            </div>) : (
-            current_messages.map ((msg, ) => (
-              <ChatMessage key={msg.id} role={msg.role} message={msg.message} />)))}
-          <div ref={messagesEndRef} />;
-        </div>;
-        {/* Input */}
-        <div className="p - 3 border - t border - zion - purple / 20 bg - zion - blue - dark / 30">;
-          <ChatInput on_send={handleSendMessage} />;
-        </div>;
-      </div>;
-      {showGuestModal && guest_message && (
-        <div;
-          className="fixed inset - 0 bg - black / 60 z-[100] flex items - center justify - center p - 4";
-          role="dialog";
-          aria - modal="true";
-          aria - labelledby="confirm - message - title";
-        >;
-          <div className="bg - zion - blue - darker p - 6 rounded - lg shadow - xl w - full max - w-md">;
-            <h3;
-              id="confirm - message - title";
-              className="text - lg font - semibold text - white mb - 4";
-            >;
-              Confirm Message;
-            </h3>;
-            <p className="text - zion - slate mb - 6 whitespace - pre - wrap break - words">;
-              {guest_message}
-            </p>;
-            <div className="flex justify - end space - x-3">;
-              <Button;
-                variant="outline";
-                on_click = {handleModalCancel, }
-                className="text - white border - zion - purple hover:bg - zion - purple / 10";
-              >;
-                Cancel;
-              </Button>;
-              <Button;
-                on_click = {handleModalSendConfirm, }
-                className="bg - zion - purple hover:bg - zion - purple - dark text - white";
-              >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                Send;
-              </Button>;
-            </div>;
-          </div>;
-<<<<<<< HEAD
-        </div>;
+                onClick={handleModalSendConfirm}
+
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+              >
+                Send
+              </Button>
+            </div>
+          </div>
+        </div>
       )}
     </div>;
   );
-}
-}
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+
         </div>)}
     </div>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+}

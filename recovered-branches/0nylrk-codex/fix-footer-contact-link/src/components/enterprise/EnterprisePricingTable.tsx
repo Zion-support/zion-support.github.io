@@ -1,6 +1,9 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Check, X} from "lucide-react";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
 import React from "react",
 import { Button } from "@/components/ui/button";
 import { Check, X } from "lucide-react";
@@ -12,6 +15,16 @@ import {
   TableHeader;
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button",
+import { Check, X } from "lucide-react",
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
 export function EnterprisePricingTable() {
 
   const plans = [
@@ -39,6 +52,14 @@ export function EnterprisePricingTable() {
       description: "Ideal for growing companies"
       users: "Up to 50 users"
       popular: true
+      name: "Business",;
+      price: "$1,999";
+      name: "Business",
+      price: "$1,999",
+      billing: "/month",
+      description: "Ideal for growing companies",
+      users: "Up to 50 users",
+      popular: true,
       features: [
         { name: "Private hiring portal", included: true }
         { name: "Dedicated talent pool", included: true }
@@ -86,12 +107,18 @@ export function EnterprisePricingTable() {
                     <div className="flex flex-col items-center">
                       {plan.popular && (
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>
-=======
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Check, X} from "lucide-react";
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Badge} from "@/components/ui/badge";
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Check, X } from "lucide-react",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Badge } from "@/components/ui/badge",;
+
 export function EnterprisePricingTable() {;
   const plans = [;
     {;
@@ -166,7 +193,6 @@ export function EnterprisePricingTable() {;
                     <div className="flex flex-col items-center">;
                       {plan && plan.popular && (;
                         <Badge className="mb-2 bg-zion-purple">Most Popular</Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       )}
                       <span className="font-bold text-xl">{plan && plan.name}</span>;
                       <div className="flex items-baseline mt-1">;
@@ -204,18 +230,7 @@ export function EnterprisePricingTable() {;
                   ))}
                 </TableRow>;
               ))}
-<<<<<<< HEAD
-            </TableBody>
-          </Table>
-        </div>
-        <div className="mt-8 text-center text-sm text-muted-foreground">
-          All plans include SSL security, 99.9% uptime SLA, and dedicated support
-        </div>
-      </div>
-    </section>
-  )
-}
-=======
+
             </TableBody>;
           </Table>;
         </div>;
@@ -227,7 +242,7 @@ export function EnterprisePricingTable() {;
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React from './react';
 import { Button } from '@/components / ui / button';

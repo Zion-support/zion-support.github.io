@@ -1,7 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { getAllTransactions } from "../../../../utils/token/service",;
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { userId } = req.query,
+  const txs = getAllTransactions(),
+  const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs,
+  res.status(200).json({ transactions: filtered });
+};
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getAllTransactions } from "../../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -11,25 +15,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
 
   res.status(200).json({ transactions: filtered })
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'GET') {
+      const { userId } = req.query;
+      const transactions = getAllTransactions(userId as string);
+      res.json({ transactions });
+    } else {
+      res.setHeader('Allow', 'GET');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { getAllTransactions  } from '../../../../utils / token / service';,
-export default /**
- * handler - Function description
- */
-function handler() {
-  const { user_id } = req.query,
-  const txs = getAllTransactions (),
-  const filtered = typeof user_id === "string" ? txs.filter ((t) => t.user_id === user_id) : txs,
-  res.status (200).json ({ transactions: filtered });
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

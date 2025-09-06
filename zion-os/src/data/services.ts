@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Service {id: string;
   name: string;
   category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
@@ -8,28 +7,6 @@ export interface Service {id: string;
     starter: string;
     professional: string;
     enterprise: string;
-    custom?: string;
-  }
-  technologyStack: string[];
-  benefits: string[];
-  useCases: string[];
-  status: 'active' | 'beta' | 'coming-soon';
-  priority: number;
-  demoUrl?: string;
-  documentationUrl?: string;
-  contactInfo: {email: string;
-    phone: string;
-=======
-export interface Service {
-  id: string,
-  name: string,
-  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',
-  description: string,
-  features: string[],
-  pricing: {
-    starter: string,
-    professional: string,
-    enterprise: string,
     custom?: string;
   },
   technology_stack: string[],
@@ -42,13 +19,12 @@ export interface Service {
   contact_info: {
     email: string,
     phone: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     address: string;
   }
 }
 export const services: Service[] = [;
   // AI Services;
-<<<<<<< HEAD
   {id: 'ai-code-assistant';
     name: 'ZionAI Code Assistant';
     category: 'AI Services';
@@ -360,12 +336,41 @@ export const getServicesByCategory = (category: Service['category']) => {return 
 export const getServiceById = (id: string) => {return services.find(service => service.id === id);
 }
 export const getCategories = () => {return Array.from(new Set(services.map(service => service.category)));
-=======
-  {
-    id: 'ai - code - assistant',
-    name: 'ZionAI Code Assistant',
-    category: 'AI Services',
-    description: 'Advanced AI - powered code generation, review, and optimization platform with context - aware suggestions and multi - language support.',
+}
+export interface Service {;
+  id: string,;
+  name: string,;
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics',;
+  description: string,;
+  features: string[],;
+  pricing: {;
+    starter: string,;
+    professional: string,;
+    enterprise: string,;
+    custom?: string;
+  },;
+  technologyStack: string[],;
+  benefits: string[],;
+  useCases: string[],;
+  status: 'active' | 'beta' | 'coming-soon',;
+  priority: number,;
+  demoUrl?: string,;
+  documentationUrl?: string,;
+  contactInfo: {;
+    email: string,;
+    phone: string,;
+    address: string;
+  }
+}
+;
+export const services: Service[] = [;
+  // AI Services;
+  {;
+    id: 'ai-code-assistant',;
+    name: 'ZionAI Code Assistant',;
+    category: 'AI Services',;
+    description: 'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.',;
+
     features: [;
       'Real - time code completion and suggestions_automated code review and optimization_multi - language support (Python, JavaScript, Go, Rust)Security vulnerability detection_code documentation generation_integration with popular IDEsCustom model fine - tuning for enterprise codebases';
     ],
@@ -688,14 +693,14 @@ export const getCategories = () => {return Array.from(new Set(services.map(servi
       address: '364 E Main St STE 1008 Middletown DE 19709';
     }
   }
-],
-export const getServicesByCategory = (category: Service['category']) =>: any {
-  return services.filter (service => service.category === category);
-},
-export const getServiceById = (id: string) =>: any {
-  return services.find (service => service.id === id);
-},
-export const get_categories = () =>: any {
-  return Array.from (new Set (services.map (service => service.category)));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+
+],;
+export const getServicesByCategory = (category: Service['category']) => {;
+  return services.filter(service => service.category === category);
+},;
+export const getServiceById = (id: string) => {;
+  return services.find(service => service.id === id);
+},;
+export const getCategories = () => {;
+  return Array.from(new Set(services.map(service => service.category)));
+};

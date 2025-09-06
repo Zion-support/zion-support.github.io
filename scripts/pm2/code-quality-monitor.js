@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 }}; async analyzeFile(filePath) {try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath); const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length
     issues: []}; // Check for common code quality issues; const lines = content.split('\n'); lines.forEach((line, index) = > {const lineNum = index + 1; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found'
     severity: 'low'})}; // Long lines (over 120 characters); if (line.length > 120) {analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`
@@ -22,8 +17,6 @@
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
 monitor.run().catch(error = > {process.exit(1)});
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs && fs.readFileSync(filePath, 'utf8'); const stats = fs && fs.statSync(filePath);
 ; const analysis = {; file: filePath, size: stats && stats.size, lines: content && content.split('\n').length,
@@ -86,40 +79,36 @@ monitor.run().catch(error = > {process.exit(1)});
 
 // Run the code quality monitor;
 const monitor = new CodeQualityMonitor();
-monitor && monitor.run().catch(error = > {; process && process.exit(1)});
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    };
-  };
-,
-  async analyzeFile(filePath) {,
-    try {,
-      const content = fs.readFileSync(filePath, 'utf8'),
-      const stats = fs.statSync(filePath),
-,
-      const analysis = {,
-        file: filePath,
-        size: stats.size,
-        lines: content.split('\n').length,
-        issues: [],
-      };
-,
-      // Check for common code quality issues,
-      const lines = content.split('\n'),
-,
-      lines.forEach((line, index) => {,
-        const lineNum = index + 1,
-,
-        // Trailing spaces,
-        if (line.match(/[ \t]+$/)) {,
-          analysis.issues.push({,
-            line: lineNum,
-            type: 'trailing-spaces',
-            message: 'Trailing spaces found',
-            severity: 'low',
-          }),
+monitor.run().catch(error = > {; process.exit(1)});
+};
+};
+;
+  async analyzeFile(filePath) {;
+    try {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      const stats = fs.statSync(filePath);
+;
+      const analysis = {;
+        file: filePath;
+        size: stats.size;
+        lines: content.split('\n').length;
+        issues: [];
+      ;
+;
+      // Check for common code quality issues;
+      const lines = content.split('\n');
+;
+      lines.forEach((line, index) => {;
+        const lineNum = index + 1;
+;
+        // Trailing spaces;
+        if (line.match(/[ \t]+$/)) {;
+          analysis.issues.push({;
+            line: lineNum;
+            type: 'trailing-spaces';
+            message: 'Trailing spaces found';
+            severity: 'low';
+          });
         };
 ,
         // Long lines (over 120 characters),
@@ -504,5 +493,15 @@ if ( {) {
 const monitor = new CodeQualityMonitor ();
 monitor.run ().catch (error = > { process.exit (1)});
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+    } catch (error) {,;
+      this.log(`❌ Error running code quality: monitor: ${error.message}`),;
+      process.exit(1);
+    }
+  }
+},;
+,;
+// Run the code quality monitor,;
+const monitor = new CodeQualityMonitor(),;
+monitor.run().catch(error => {,;
+  process.exit(1);
+});

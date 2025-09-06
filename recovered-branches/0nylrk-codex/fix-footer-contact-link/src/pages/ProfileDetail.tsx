@@ -1,33 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { useParams } from "react-router-dom",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { SEO } from "@/components/SEO",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { 
-  MapPin;
-  Clock;
-  Link as LinkIcon;
-  Github;
-  Twitter;
-  Linkedin;
-  CheckCircle2;
-  Mail;
-  Phone;
-  Globe
-} from "lucide-react",
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
-export default function ProfileDetail() {
-  // useParams is typed as `any` in this environment due to missing type
-  // definitions, so avoid passing a type argument to prevent TS2347.
-=======
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import {supabase} from "@/integrations/supabase/client";
@@ -44,54 +14,75 @@ import {HireNowCTA} from "@/components/profile/HireNowCTA";
 export default function ProfileDetail() {;
   // useParams is typed as `any` in this environment due to missing type;
   // definitions, so avoid passing a type argument to prevent TS2347.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const { profileId } = useParams();
+  const [profileData, setProfileData] = useState<any>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+import { useState, useEffect } from "react",
+import { useParams } from "react-router-dom",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { 
+  MapPin;
+  Clock;
+  Link as LinkIcon;
+  Github;
+  Twitter;
+  Linkedin;
+  CheckCircle2;
+  Mail;
+  Phone;
+  Globe
+} from "lucide-react",
+import { HireNowCTA } from "@/components/profile/HireNowCTA";
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
   const { profileId } = useParams();
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
+export default function ProfileDetail() {
+  // useParams is typed as `any` in this environment due to missing type
+  // definitions, so avoid passing a type argument to prevent TS2347.
+  const { profileId } = useParams(),
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
 
-<<<<<<< HEAD
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const fetchProfile = async () => {
-=======
-  useEffect(() => {;
-    const fetchProfile = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      setIsLoading(true);
-      setError(null);
-      try {;
-        if (!profileId) {;
-          setError("Profile ID is missing.");
-          return;
+      setIsLoading(true),
+      setError(null),
+      try {
+        if (!profileId) {
+          setError("Profile ID is missing."),
+          return
         }
-<<<<<<< HEAD
         const { data, error } = await supabase
           .from("talent_profiles")
           .select("*")
           .eq("id", profileId)
           .single();
+          .single(),
+
         if (error) {
           throw new Error(error.message)
         }
         if (!data) {
-=======
-
-        const { data, error } = await supabase;
-          .from("talent_profiles");
-          .select("*");
-          .eq("id", profileId);
-          .single();
-
-        if (error) {;
-          throw new Error(error && error.message);
+          setError("Profile not found."),
+          return
         }
-
-        if (!data) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          setError("Profile not found.");
-          return;
-        }
-<<<<<<< HEAD
         setProfileData(data)
       } catch (err: any) {
         setError(err.message |"Failed to fetch profile.")
@@ -99,79 +90,93 @@ export default function ProfileDetail() {;
           title: "Error"
           description: err.message |"Failed to fetch profile."
           variant: "destructive"})
-=======
-import { useState, useEffect } from './react';
-import { use_params } from './react-router-dom';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-import { SEO } from '@/components / SEO';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from './lucide-react';
-import { HireNowCTA } from '@/components / profile / HireNowCTA';
-export default /**
- * ProfileDetail - Function description
- */
-function ProfileDetail() {
-  // use_params is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
-  const { profile_id } = use_params ();
-  const [profile_data, setProfileData] = useState < any>(null);
-  const [is_loading, setIsLoading] = useState (true);
-  const [error, set_error] = useState < string | null>(null);
-;
-  useEffect (() => {
-    const fetch_profile = async () => {
-      setIsLoading (true);
-      set_error (null);
-      try {
-        // Check condition
-if ( {) {
-  $2
-}
-          set_error ("Profile ID is missing.");
-          return;
-        }
-        const { data, error } = await supabase;
-          .from ("talent_profiles");
-          .select ("*");
-          .eq ("id", profile_id);
-          .single ();
-;
-        // Check condition
-if ( {) {
-  $2
-}
-          throw new Error (error.message);
-        }
-        // Check condition
-if ( {) {
-  $2
-}
-          set_error ("Profile not found.");
-          return;
-        }
-        setProfileData (data);
-      } catch (err: any) {
-        set_error (err.message || "Failed to fetch profile."),
-        toast ({
-          title: "Error",
-          description: err.message || "Failed to fetch profile.",
-          variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } finally {
-        setIsLoading (false);
+        setIsLoading(false)
       }
     }
-<<<<<<< HEAD
     fetchProfile()
   }, [profileId]);
+    },
+
+    fetchProfile()
+  }, [profileId]),
+
   if (isLoading) {
-=======
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Loading profile...</p>
+      </div>
+    )
+  }
+  if (error) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Error: {error}</p>
+      </div>
+    )
+  }
+  if (!profileData) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <p>Profile not found.</p>
+      </div>
+    )
+  }
+import { useState, useEffect } from "react",;
+import { useParams } from "react-router-dom",;
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+import { SEO } from "@/components/SEO",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import {;
+  MapPin,;
+  Clock,;
+  Link as LinkIcon,;
+  Github,;
+  Twitter,;
+  Linkedin,;
+  CheckCircle2,;
+  Mail,;
+  Phone,;
+  Globe;
+} from "lucide-react",;
+import { HireNowCTA } from "@/components/profile/HireNowCTA",;
+export default function ProfileDetail() {;
+  // useParams is typed as `any` in this environment due to missing type;
+  // definitions, so avoid passing a type argument to prevent TS2347.;
+  const { profileId } = useParams(),;
+  const [profileData, setProfileData] = useState<any>(null),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  useEffect(() => {;
+    const fetchProfile = async () => {;
+      setIsLoading(true),;
+      setError(null),;
+      try {;
+        if (!profileId) {;
+          setError("Profile ID is missing."),;
+          return;
+        }
+;
+        const { data, error } = await supabase;
+          .from("talent_profiles");
+          .select("*");
+          .eq("id", profileId);
+          .single(),;
+        if (error) {;
+          throw new Error(error.message);
+        }
+;
+        if (!data) {;
+          setError("Profile not found."),;
+          return;
+        }
+;
 
         setProfileData(data);
       } catch (err: any) {;
@@ -196,157 +201,88 @@ if ( {) {
       </div>;
     );
   }
-<<<<<<< HEAD
-  if (error) {
-=======
+
 
   if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Error: {error}</p>;
       </div>;
     );
   }
-<<<<<<< HEAD
-  if (!profileData) {
-=======
+
 
   if (!profileData) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return (
       <div className="min-h-screen flex items-center justify-center">;
         <p>Profile not found.</p>;
       </div>;
     );
   }
+
   return (
     <>;
       <SEO
-<<<<<<< HEAD
+
         title={`${profileData.full_name} | Zion AI Marketplace`}
         description={profileData.bio |"Check out this talent's profile on Zion!"}
+        description={profileData.bio || "Check out this talent's profile on Zion!"}
       />
       <Header />
       <div className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-12 gap-6">
-=======
-        title={`${profileData && profileData.full_name} | Zion AI Marketplace`}
-        description={profileData && profileData.bio || "Check out this talent's profile on Zion!"}
-      />;
-      <Header />;
-      <div className="container mx-auto px-4 py-8">;
-        <div className="grid grid-cols-12 gap-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Main Content */}
-          <div className="col-span-12 lg:col-span-8">;
+          <div className="col-span-12 lg:col-span-8">
             {/* Profile Header */}
-            <Card className="mb-6 bg-zion-blue border-zion-blue-light">;
-              <CardHeader>;
-                <div className="flex items-center space-x-4">;
-                  <Avatar className="w-20 h-20">;
-                    {profileData && profileData.profile_picture_url ? (;
-                      <AvatarImage src={profileData && profileData.profile_picture_url} alt={profileData && profileData.full_name} />;
-                    ) : (;
-                      <AvatarFallback>{profileData && profileData.full_name?.charAt(0)}</AvatarFallback>;
+            <Card className="mb-6 bg-zion-blue border-zion-blue-light">
+              <CardHeader>
+                <div className="flex items-center space-x-4">
+                  <Avatar className="w-20 h-20">
+                    {profileData.profile_picture_url ? (
+                      <AvatarImage src={profileData.profile_picture_url} alt={profileData.full_name} />
+                    ) : (
+                      <AvatarFallback>{profileData.full_name?.charAt(0)}</AvatarFallback>
                     )}
-                  </Avatar>;
-                  <div>;
-                    <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">;
-                      {profileData && profileData.full_name}
-                      {profileData && profileData.is_verified && (;
-                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />;
+                  </Avatar>
+                  <div>
+                    <CardTitle className="text-2xl font-bold text-white flex items-center gap-2">
+                      {profileData.full_name}
+                      {profileData.is_verified && (
+                        <CheckCircle2 className="w-5 h-5 text-zion-cyan" />
                       )}
-                    </CardTitle>;
-                    <CardDescription className="text-zion-cyan">{profileData && profileData.professional_title}</CardDescription>;
-=======
-;
-    fetch_profile ();
-  }, [profile_id]);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="min - h-screen flex items - center justify - center">;
-        <p > Loading profile...</p>;
-      </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="min - h-screen flex items - center justify - center">;
-        <p > Error: {error}</p>;
-      </div>);
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="min - h-screen flex items - center justify - center">;
-        <p > Profile not found.</p>;
-      </div>);
-  }
-  return (
-    <>;
-      <SEO;
-        title={`${profile_data.full_name} | Zion AI Marketplace`}
-        description={profile_data.bio || "Check out this talent's profile on Zion!"}
-      />;
-      <Header />;
-      <div className="container mx - auto px - 4 py - 8">;
-        <div className="grid grid - cols - 12 gap - 6">;
-          {/* Main Content */}
-          <div className="col - span - 12 lg:col - span - 8">;
-            {/* Profile Header */}
-            <Card className="mb - 6 bg - zion - blue border - zion - blue - light">;
-              <CardHeader>;
-                <div className="flex items - center space - x-4">;
-                  <Avatar className="w - 20 h - 20">;
-                    {profile_data.profile_picture_url ? (
-                      <AvatarImage src={profile_data.profile_picture_url} alt={profile_data.full_name} />) : (
-                      <AvatarFallback>{profile_data.full_name?.char_at (0)}</AvatarFallback>)}
-                  </Avatar>;
-                  <div>;
-                    <CardTitle className="text - 2xl font - bold text - white flex items - center gap - 2">;
-                      {profile_data.full_name}
-                      {profile_data.is_verified && (
-                        <CheckCircle2 className="w - 5 h - 5 text - zion - cyan" />)}
-                    </CardTitle>;
-                    <CardDescription className="text - zion - cyan">{profile_data.professional_title}</CardDescription>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                  </div>;
-                </div>;
-              </CardHeader>;
-              <CardContent>;
-<<<<<<< HEAD
-                <div className="flex flex-wrap gap-4 text-sm">;
-                  {profileData && profileData.location && (;
-                    <div className="flex items-center text-zion-slate-light">;
-                      <MapPin className="h-4 w-4 mr-1" />;
-                      <span>{profileData && profileData.location}</span>;
-                    </div>;
+                    </CardTitle>
+                    <CardDescription className="text-zion-cyan">{profileData.professional_title}</CardDescription>
+                  </div>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  {profileData.location && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <MapPin className="h-4 w-4 mr-1" />
+                      <span>{profileData.location}</span>
+                    </div>
                   )}
-                  {profileData && profileData.availability && (;
-                    <div className="flex items-center text-zion-slate-light">;
-                      <Clock className="h-4 w-4 mr-1" />;
-                      <span>{profileData && profileData.availability}</span>;
-                    </div>;
+                  {profileData.availability && (
+                    <div className="flex items-center text-zion-slate-light">
+                      <Clock className="h-4 w-4 mr-1" />
+                      <span>{profileData.availability}</span>
+                    </div>
                   )}
-                  {profileData && profileData.hourly_rate && (;
-                    <div className="text-white font-bold">;
-                      ${profileData && profileData.hourly_rate}
-                      <span className="text-zion-slate-light font-normal">/hr</span>;
-                    </div>;
+                  {profileData.hourly_rate && (
+                    <div className="text-white font-bold">
+                      ${profileData.hourly_rate}
+                      <span className="text-zion-slate-light font-normal">/hr</span>
+                    </div>
                   )}
-<<<<<<< HEAD
                 </div>
               </CardContent>
             </Card>
+                </div>;
+              </CardContent>;
+            </Card>;
             {/* About Section */}
             <Card className="mb-6 bg-zion-blue border-zion-blue-light">
               <CardHeader>
@@ -454,35 +390,23 @@ if ( {) {
                         href={link && link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-<<<<<<< HEAD
                         className="text-zion-cyan hover:text-white flex items-center gap-2"
                       >
                         <LinkIcon className="h-4 w-4" />
                         {link.title |link.url}
                       </a>
-=======
-                        className="text-zion-cyan hover:text-white flex items-center gap-2">;
-                        <LinkIcon className="h-4 w-4" />;
-                        {link && link.title || link && link.url}
-                      </a>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+                        {link.title || link.url}
+                      </Link>
                     ))}
-                  </div>;
-                ) : (;
-                  <p className="text-zion-slate-light">No portfolio links provided.</p>;
+                  </div>
+                ) : (
+                  <p className="text-zion-slate-light">No portfolio links provided.</p>
                 )}
-<<<<<<< HEAD
               </CardContent>
             </Card>
           </div>
-=======
-              </CardContent>;
-            </Card>;
-          </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Sidebar with HireNowCTA */}
-          <div className="col-span-4 lg:col-span-1">;
+          <div className="col-span-4 lg:col-span-1">
             <HireNowCTA
               talentProfile={{
                 id: profileData?.id |''
@@ -490,6 +414,10 @@ if ( {) {
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
 
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
+                hourly_rate: profileData?.hourly_rate || 0
               }}
             />;
             {/* Contact Information */}
@@ -516,14 +444,10 @@ if ( {) {
                     </a>;
                   </div>;
                 )}
-<<<<<<< HEAD
               </div>
             </div>
-=======
               </div>;
             </div>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Social Links */}
             <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mt-6">;
               <h3 className="text-xl font-bold mb-4">Social</h3>;
@@ -546,17 +470,7 @@ if ( {) {
                     LinkedIn;
                   </a>;
                 )}
-<<<<<<< HEAD
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
+
 =======
                 <div className="flex flex - wrap gap - 4 text - sm">;
                   {profile_data.location && (
@@ -691,19 +605,33 @@ if ( {) {
                     <Linkedin className="h - 4 w - 4" />;
                     LinkedIn;
                   </a>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+                {profileData.linkedin_url && (
+                  <a href={profileData.linkedin_url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan">
+                    <Linkedin className="h-4 w-4" />
+                    LinkedIn
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </>
+  )
+}
+                  </Link>
+                )}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>;
             </div>;
           </div>;
         </div>;
       </div>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

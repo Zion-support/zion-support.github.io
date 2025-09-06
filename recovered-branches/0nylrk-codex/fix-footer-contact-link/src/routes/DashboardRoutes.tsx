@@ -1,5 +1,26 @@
-<<<<<<< HEAD
 
+import {Fragment} from "react";
+import {Route, Routes} from "react-router-dom";
+import {ProtectedRoute} from "@/components/ProtectedRoute";
+import Dashboard from "@/pages/Dashboard";
+import ClientDashboard from "@/pages/ClientDashboard";
+import TalentDashboard from "@/pages/TalentDashboard";
+import CreatorDashboard from "@/pages/CreatorDashboard";
+import Analytics from "@/pages/Analytics";
+import ProjectMilestones from "@/pages/ProjectMilestones";
+import ProjectDetails from "@/pages/ProjectDetails";
+import ProjectRoom from "@/pages/ProjectRoom";
+import MessagingInbox from "@/pages/MessagingInbox";
+import Payments from "@/pages/Payments";
+import Interviews from "@/pages/Interviews";
+import Notifications from "@/pages/Notifications";
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker";
+import HiringTracker from "@/pages/HiringTracker";
+import PortfolioBuilder from "@/pages/PortfolioBuilder";
+import Referrals from "@/pages/Referrals";
+import DeveloperPortal from "@/pages/DeveloperPortal";
+import WalletPage from "@/pages/Wallet";
+import ContractBuilder from "@/pages/ContractBuilder";
 import { Fragment } from "react",
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
@@ -22,17 +43,14 @@ import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-<<<<<<< HEAD
 
+import WalletPage from "@/pages/Wallet",
+import ContractBuilder from "@/pages/ContractBuilder",
 const DashboardRoutes = () => {
-=======
-const DashboardRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-    <Routes>;
+    <Routes>
       {/* Dashboard Routes */}
       <Route
-<<<<<<< HEAD
         path="/dashboard"
         element={
           <ProtectedRoute>
@@ -50,31 +68,11 @@ const DashboardRoutes = () => {;
       />
       <Route
         path="/talent-dashboard"
-=======
-        path="/dashboard" 
         element={
-          <ProtectedRoute>;
-            <Dashboard />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route
-        path="/client-dashboard" 
-        element={
-          <ProtectedRoute>;
-            <ClientDashboard />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route
-        path="/talent-dashboard" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        element={
-          <ProtectedRoute>;
-            <TalentDashboard />;
-          </ProtectedRoute>;
+          <ProtectedRoute>
+            <TalentDashboard />
+          </ProtectedRoute>
         }
-<<<<<<< HEAD
       />
       <Route
         path="/creator-dashboard"
@@ -100,53 +98,25 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>
         }
       />
-=======
-      />;
-      <Route
-        path="/creator-dashboard" 
-        element={
-          <ProtectedRoute>;
-            <CreatorDashboard />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route
-        path="/analytics" 
-        element={
-          <ProtectedRoute>;
-            <Analytics />;
-          </ProtectedRoute>;
-        } ;
-      />;
-      <Route
-        path="/project/:id/milestones" 
-        element={
-          <ProtectedRoute>;
-            <ProjectMilestones />;
-          </ProtectedRoute>;
-        } ;
-      />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Route
         path="/project/:id"
         element={
-          <ProtectedRoute>;
-            <ProjectDetails />;
-          </ProtectedRoute>;
+          <ProtectedRoute>
+            <ProjectDetails />
+          </ProtectedRoute>
         }
-      />;
+      />
       <Route
         path="/project/:id/room"
         element={
-          <ProtectedRoute>;
-            <ProjectRoom />;
-          </ProtectedRoute>;
+          <ProtectedRoute>
+            <ProjectRoom />
+          </ProtectedRoute>
         }
-      />;
+      />
       <Route
         path="/messages"
         element={
-<<<<<<< HEAD
           <ProtectedRoute>
             <MessagingInbox />
           </ProtectedRoute>
@@ -216,7 +186,145 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>
         }
       />
-=======
+      <Route
+        path="/developers"
+        element={
+          <ProtectedRoute>
+            <DeveloperPortal />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/wallet"
+        element={
+          <ProtectedRoute>
+            <WalletPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/dashboard/api-access"
+        element={
+          <ProtectedRoute>
+            <DeveloperPortal />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/contract-builder"
+        element={
+          <ProtectedRoute>
+            <ContractBuilder />
+          </ProtectedRoute>
+        }
+      />
+    </Routes>
+  )
+}
+export default DashboardRoutes;
+
+},
+
+export default DashboardRoutes,
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import Dashboard from "@/pages/Dashboard",;
+import ClientDashboard from "@/pages/ClientDashboard",;
+import TalentDashboard from "@/pages/TalentDashboard",;
+import CreatorDashboard from "@/pages/CreatorDashboard",;
+import Analytics from "@/pages/Analytics",;
+import ProjectMilestones from "@/pages/ProjectMilestones",;
+import ProjectDetails from "@/pages/ProjectDetails",;
+import ProjectRoom from "@/pages/ProjectRoom",;
+import MessagingInbox from "@/pages/MessagingInbox",;
+import Payments from "@/pages/Payments",;
+import Interviews from "@/pages/Interviews",;
+import Notifications from "@/pages/Notifications",;
+import ApplicationStatusTracker from "@/pages/ApplicationStatusTracker",;
+import HiringTracker from "@/pages/HiringTracker",;
+import PortfolioBuilder from "@/pages/PortfolioBuilder",;
+import Referrals from "@/pages/Referrals",;
+import DeveloperPortal from "@/pages/DeveloperPortal",;
+import WalletPage from "@/pages/Wallet",;
+import ContractBuilder from "@/pages/ContractBuilder",;
+const DashboardRoutes = () => {;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  return (
+    <Routes>;
+      {/* Dashboard Routes */}
+      <Route
+
+        path="/dashboard" 
+        element={
+          <ProtectedRoute>;
+            <Dashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
+        path="/client-dashboard" 
+        element={
+          <ProtectedRoute>;
+            <ClientDashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
+        path="/talent-dashboard" 
+
+        element={
+          <ProtectedRoute>;
+            <TalentDashboard />;
+          </ProtectedRoute>;
+        }
+
+      />;
+      <Route
+        path="/creator-dashboard" 
+        element={
+          <ProtectedRoute>;
+            <CreatorDashboard />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
+        path="/analytics" 
+        element={
+          <ProtectedRoute>;
+            <Analytics />;
+          </ProtectedRoute>;
+        } ;
+      />;
+      <Route
+        path="/project/:id/milestones" 
+        element={
+          <ProtectedRoute>;
+            <ProjectMilestones />;
+          </ProtectedRoute>;
+        } ;
+      />;
+
+      <Route
+        path="/project/:id"
+        element={
+          <ProtectedRoute>;
+            <ProjectDetails />;
+          </ProtectedRoute>;
+        }
+      />;
+      <Route
+        path="/project/:id/room"
+        element={
+          <ProtectedRoute>;
+            <ProjectRoom />;
+          </ProtectedRoute>;
+        }
+      />;
+      <Route
+        path="/messages"
+        element={
+
           <ProtectedRoute>;
             <MessagingInbox />;
           </ProtectedRoute>;
@@ -286,7 +394,7 @@ const DashboardRoutes = () => {;
           </ProtectedRoute>;
         } ;
       />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/developers"
         element={
@@ -306,24 +414,7 @@ const DashboardRoutes = () => {;
       <Route
         path="/dashboard/api-access"
         element={
-<<<<<<< HEAD
-          <ProtectedRoute>
-            <DeveloperPortal />
-          </ProtectedRoute>
-        }
-      />
-      <Route
-        path="/contract-builder"
-        element={
-          <ProtectedRoute>
-            <ContractBuilder />
-          </ProtectedRoute>
-        }
-      />
-    </Routes>
-  )
-}
-=======
+
           <ProtectedRoute>;
             <DeveloperPortal />;
           </ProtectedRoute>;
@@ -520,27 +611,14 @@ const DashboardRoutes = () =>: any {
       />;
       <Route;
         path="/contract - builder";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         element={
           <ProtectedRoute>;
             <ContractBuilder />;
           </ProtectedRoute>;
-<<<<<<< HEAD
         } ;
       />;
     </Routes>;
   );
-};
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+},;
 export default DashboardRoutes;
-
-=======
-        }
-      />;
-    </Routes>);
-}
-;
-export default DashboardRoutes;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

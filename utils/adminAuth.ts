@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-// Mock admin auth utility
-export function getSessionFromReq(req: any): any {
-  // Mock implementation - in a real app, this would parse JWT or session
-  return null;
-=======
-<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface Session {
-  user_id: string;
+
+export interface Session {;
+  userId: string;
   email: string;
   role: 'admin' | 'user' | 'guest';
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
-<<<<<<< HEAD
 export function getSessionFromReq(req: NextApiRequest): Session | null {
-  // Mock implementation - replace with actual session logic
+  // Mock implementation - replace with actual session logic;
   const authHeader = req.headers.authorization;
   if (!authHeader) {
     return null;
@@ -32,23 +22,18 @@ export function getSessionFromReq(req: NextApiRequest): Session | null {
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   // Check for internal agent headers or IPs
   const userAgent = req.headers['user-agent'] |'';
+  // Check for internal agent headers or IPs;
+  const userAgent = req.headers['user-agent'] || '';
   const internalAgents = ['zion-bot', 'internal-agent', 'automation'];
   return internalAgents.some(agent => userAgent.toLowerCase().includes(agent));
 }
-<<<<<<< HEAD
 
-export const isAdmin = () => {
-  // Placeholder implementation
-  return true;
-};
-<<<<<<< HEAD
-=======
 =======
 export const isAdmin = () => {
   // Placeholder implementation
   return true;
 }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 =======
 // Admin authentication utilities
 import { NextApiRequest, NextApiResponse } from 'next';
@@ -194,6 +179,6 @@ export const is_admin = () =>: any {
   // Placeholder implementation;
   return true;
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+};
+

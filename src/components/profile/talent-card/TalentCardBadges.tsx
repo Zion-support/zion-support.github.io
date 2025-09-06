@@ -1,82 +1,11 @@
-<<<<<<< HEAD
 import React from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Award } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import React from "react";
-import { Badge } from "@/components/ui/badge";
-import { Award } from 'lucide-react'
-interface TalentCardBadgesProps {
-  featured: boolean | undefined
-export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
-=======
-interface TalentCardBadgesProps {;
-  featured: boolean | undefined;
-
-export function TalentCardBadges(): any ({ featured }: TalentCardBadgesProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  if (!featured) return null;
+const TalentCardBadges = () => {
   return (
-<<<<<<< HEAD
-    <div className='absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10'>
-      <Badge className='bg-transparent border-0 flex items-center gap-1 text-white px-0'>
-        <Award className='h-3 w-3' />
-        <span>Featured</span>
-      </Badge>
+    <div>
+      {/* TalentCardBadges component */}
     </div>
-  );  )
-=======
-    <div className='absolute top-0 left-0 bg-gradient-to-r from-zion-purple to-zion-cyan p-2 rounded-tl-lg rounded-br-lg z-10'>;
-      <Badge className='bg-transparent border-0 flex items-center gap-1 text-white px-0'>;
-        <Award className='h-3 w-3' />;
-        <span>Featured</span>;
-      </Badge>;
-    </div>;
-  );  );
+  );
 };
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-<<<<<<< HEAD
-=======
-  )
-<<<<<<< HEAD
-}
-=======
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import React from 'react';
-import { Badge } from '@/components / ui / badge';
-import { Award } from 'lucide-react';
-interface TalentCardBadgesProps {
-  featured: boolean | undefined;
-export /**
- * TalentCardBadges - Function description
- */
-function TalentCardBadges() {
-  // Check condition
-if (return null) {
-  $2
-}
-  return (
-    <div className='absolute top - 0 left - 0 bg - gradient - to - r from - zion - purple to - zion - cyan p - 2 rounded - tl - lg rounded - br - lg z - 10'>;
-      <Badge className='bg - transparent border - 0 flex items - center gap - 1 text - white px - 0'>;
-        <Award className='h - 3 w - 3' />;
-        <span > Featured</span>;
-      </Badge>;
-    </div>));
-}
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+export default TalentCardBadges;

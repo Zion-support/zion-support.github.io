@@ -31,9 +31,8 @@ export function ResultsHeader({ isLoading, resultCount } ResultsHeaderProps) {;
   resultCount !== 1 ? 's' : '' ;
 }`) ;
 }</span>) ;
-<<<<<<< HEAD:temp_broken_files/talent/ResultsHeader.tsx
+:temp_broken_files/talent/ResultsHeader.tsx
 }</div>) ;"}'"
-=======
 }</div>) ;
 }'"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ResultsHeader.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/talent/ResultsHeader.tsx

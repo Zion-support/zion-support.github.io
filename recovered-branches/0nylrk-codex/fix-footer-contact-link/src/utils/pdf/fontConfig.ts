@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 
 import { jsPDF } from 'jspdf';
 export interface FontConfig {
+import {jsPDF} from 'jspdf';
+export interface FontConfig {;
   regular: ArrayBuffer;
   bold?: ArrayBuffer;
 
@@ -30,21 +31,17 @@ export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'defa
       default: doc && doc.setFont('helvetica')
     }
   } catch (error) {
-<<<<<<< HEAD
-    console.error('Error loading custom fonts:', error);
 
-=======
     console && console.error('Error loading custom fonts:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     // Fall back to default font
-    doc && doc.setFont('helvetica')
-=======
-import {jsPDF} from 'jspdf';
-export interface FontConfig {
-  regular: ArrayBuffer;
-  bold?: ArrayBuffer;
-  italic?: ArrayBuffer,
-  bold_italic?: ArrayBuffer;
+    doc.setFont('helvetica')
+import { jsPDF } from 'jspdf',;
+export interface FontConfig {;
+  regular: ArrayBuffer,;
+  bold?: ArrayBuffer,;
+  italic?: ArrayBuffer,;
+  boldItalic?: ArrayBuffer;
 }
 export type FontFamily = 'default' | 'montserrat' | 'open - sans' | 'roboto';
 ;
@@ -74,7 +71,7 @@ if (return, ) {
   } catch (error) {
     console.error ('Error loading custom fonts:', error);
     // Fall back to default font;
-    doc.set_font ('helvetica');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    doc.setFont('helvetica');
   }
 }

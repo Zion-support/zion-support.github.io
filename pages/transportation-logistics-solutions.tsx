@@ -1,9 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import Head from 'next/head';
+import React from 'react'
+import Head from 'next/head'
+import React from 'react',;
+import Head from 'next/head',;
+import React from 'react'
+import Head from 'next/head'
 export default function TransportationLogisticsSolutions() {
   return (
     <>
@@ -20,11 +22,12 @@ export default function TransportationLogisticsSolutions() {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
-=======
+};
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -49,5 +52,3 @@ function TransportationLogisticsSolutions() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

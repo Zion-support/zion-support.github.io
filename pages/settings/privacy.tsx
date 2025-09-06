@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 export default function PrivacySettingsPage() {
 
@@ -6,18 +5,17 @@ export default function PrivacySettingsPage() {
   const [optOut, setOptOut] = useState(false)
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
+import React, { useEffect, useState } from 'react',
+import React, { useEffect, useState } from 'react',;
+;
+import React, { useEffect, useState } from 'react',
+export default function PrivacySettingsPage() {
+  const [userId, setUserId] = useState(''),
+  const [optOut, setOptOut] = useState(false),
+  const [loading, setLoading] = useState(false),
+  const [message, setMessage] = useState(''),
   const load = async () => {
-<<<<<<< HEAD
-    if (!userId) return
-    setLoading(true)
-    setMessage('')
-    const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`)
-    const json = await res.json()
-    if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut)
-    else setMessage(json.error |'Failed to load')
-    setLoading(false)
-  }
-=======
+
     if (!userId) return;
     setLoading(true);
     setMessage('');
@@ -26,30 +24,14 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+  }
+  },
   const save = async () => {
     if (!userId) return
     setLoading(true)
     setMessage('')
     const res = await fetch('/api/fraud/settings/opt-out', {
-<<<<<<< HEAD
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-      body: JSON.stringify({ userId, optOut })})
-    const json = await res.json()
-    if (res.ok) setMessage('Saved')
-    else setMessage(json.error |'Save failed')
-    setLoading(false)
-  }
-  useEffect(() => {
-    const savedUser = localStorage.getItem('user-id')
-    if (savedUser) setUserId(savedUser)
-  }, [])
-  const onSaveUser = () => {
-    localStorage.setItem('user-id', userId)
-=======
+
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, optOut })});
@@ -57,22 +39,20 @@ export default function PrivacySettingsPage() {
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
-  };
-
+  }
+  },
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id');
     if (savedUser) setUserId(savedUser)
-  }, []);
-
+  }, [])
+  }, []),
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
     load()
   }
 
+  },
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -86,28 +66,25 @@ export default function PrivacySettingsPage() {
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
           <button disabled={!userId |loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId |loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-=======
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           {message && <div>{message}</div>}
         </div>
       </div>
     </div>
   )
-<<<<<<< HEAD
+          <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
+          <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
+  );
+};
+          {message && <div>{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React, { useEffect, useState } from 'react',
 ;
@@ -180,7 +157,11 @@ if (return, ) {
           {message && <div>{message}</div>}
         </div>;
       </div>;
-    </div>);
+    </div>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}

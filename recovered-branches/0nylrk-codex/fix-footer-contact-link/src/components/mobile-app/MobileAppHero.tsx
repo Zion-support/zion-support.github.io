@@ -1,12 +1,17 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import React from "react";
+import {Link} from "react-router-dom";
+import {ArrowRight, Phone} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {AppStoreButtons} from "./AppStoreButtons";
 import React from "react",
 import { Link } from "react-router-dom",
 import { ArrowRight, Phone } from "lucide-react",
 import { Button } from "@/components/ui/button";
 import { AppStoreButtons } from "./AppStoreButtons";
 
+import { Button } from "@/components/ui/button",
+import { AppStoreButtons } from "./AppStoreButtons",
 export const MobileAppHero: React.FC = () => {
   // These would come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -40,6 +45,7 @@ export const MobileAppHero: React.FC = () => {
               </Button>
             </Link>
           </div>
+          
           <div className="flex-1 flex justify-center">
             <div className="relative w-64 h-auto">
               <div className="absolute inset-0 bg-zion-cyan/20 rounded-3xl blur-xl"></div>
@@ -53,12 +59,12 @@ export const MobileAppHero: React.FC = () => {
   );
 }
 
-=======
-import React from "react";
-import {Link} from "react-router-dom";
-import {ArrowRight, Phone} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {AppStoreButtons} from "./AppStoreButtons";
+import React from "react",;
+import { Link } from "react-router-dom",;
+import { ArrowRight, Phone } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { AppStoreButtons } from "./AppStoreButtons",;
+
 export const MobileAppHero: React.FC = () => {;
   // These would come from environment variables or a config;
   const appStoreUrl = "#", // Replace with actual App Store URL when available;
@@ -145,13 +151,6 @@ export const MobileAppHero: React.FC = () => {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </section>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </section>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

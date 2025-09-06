@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 
 import React, { useState } from "react";
@@ -7,7 +6,19 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Button} from "@/components/ui/button";
 import {Gift, ArrowRight, ExternalLink} from "lucide-react";
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
-<<<<<<< HEAD
+import React, { useState } from "react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Gift, ArrowRight, ExternalLink } from "lucide-react",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger} from "@/components/ui/dialog",
+
 type RewardOption = {
   id: string
   title: string
@@ -15,6 +26,8 @@ type RewardOption = {
   cost: number
   type: 'credit' | 'feature' | 'course'
 }
+},
+
 const REWARD_OPTIONS: RewardOption[] = [
   {
     id: 'premium-week'
@@ -23,6 +36,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 100
     type: 'feature'
   }
+  },
   {
     id: 'resume-review'
     title: 'AI Resume Review'
@@ -30,6 +44,7 @@ const REWARD_OPTIONS: RewardOption[] = [
     cost: 50
     type: 'feature'
   }
+  },
   {
     id: 'platform-credit'
     title: '$5 Platform Credit'
@@ -41,11 +56,21 @@ const REWARD_OPTIONS: RewardOption[] = [
 export function RedeemTokensCard() {
   const { wallet, spendTokens } = useWallet();
   const [open, setOpen] = useState(false);
+],
+
+export function RedeemTokensCard() {;
+  const { wallet, spendTokens } = useWallet();
+  const [open, setOpen] = useState(false);
+export function RedeemTokensCard() {
+  const { wallet, spendTokens } = useWallet(),
+  const [open, setOpen] = useState(false),
+
   const handleRedeem = async (option: RewardOption) => {
     if (!wallet |wallet.balance < option.cost) return
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
+  },
 
   return (
     <Card>
@@ -80,7 +105,41 @@ export function RedeemTokensCard() {
                       size="sm"
                       variant={wallet && wallet.balance >= option.cost ? "default" : "outline"}
                       disabled={!wallet |wallet.balance < option.cost}
+
+
 =======
+                      onClick={() => handleRedeem(option)}
+                    >
+                      Redeem <ArrowRight className="ml-1 h-3 w-3" />
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="flex justify-between">
+              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
+              <Button variant="ghost" size="sm">
+                Learn More <ExternalLink className="ml-1 h-3 w-3" />
+              </Button>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </CardContent>
+    </Card>
+  )
+}
+import React, { useState } from "react",;
+import { useWallet } from "@/hooks/useWallet",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Gift, ArrowRight, ExternalLink } from "lucide-react",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogTrigger} from "@/components/ui/dialog",;
 
 type RewardOption = {;
   id: string,;
@@ -166,21 +225,7 @@ export function RedeemTokensCard() {;
                   </div>;
                 </div>;
               ))}
-<<<<<<< HEAD
-            </div>
-            <div className="flex justify-between">
-              <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>
-              <Button variant="ghost" size="sm">
-                Learn More <ExternalLink className="ml-1 h-3 w-3" />
-              </Button>
-            </div>
-          </DialogContent>
-        </Dialog>
-      </CardContent>
-    </Card>
-  )
-}
-=======
+
             </div>;
             <div className="flex justify-between">;
               <Button variant="outline" size="sm" onClick={() => setOpen(false)}>Close</Button>;
@@ -286,18 +331,13 @@ if (return, ) {
               <Button variant="outline" size="sm" on_click={() => set_open (false)}>Close</Button>;
               <Button variant="ghost" size="sm">;
                 Learn More <ExternalLink className="ml - 1 h - 3 w - 3" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               </Button>;
             </div>;
           </DialogContent>;
         </Dialog>;
       </CardContent>;
-<<<<<<< HEAD
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

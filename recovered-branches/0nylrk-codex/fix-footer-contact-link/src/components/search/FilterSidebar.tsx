@@ -1,11 +1,16 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import React from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Filter, X, Star} from "lucide-react";
+import {FilterOptions} from "@/types/search";
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
+import { Filter, X, Star } from "lucide-react",
+import { FilterOptions } from "@/types/search",
 interface FilterSidebarProps {
   filters: {
 
@@ -18,15 +23,44 @@ interface FilterSidebarProps {
   onFilterChange: (filterType: string, value: string) => void
   onRatingChange: (rating: number | null) => void
 
+  },
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void
 }
+
+export function FilterSidebar({;
+  filters;
+  filterOptions;
+  onFilterChange;
+  onRatingChange;
 export function FilterSidebar({
-=======
-import React from "react";
-import {Button} from "@/components/ui/button";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Filter, X, Star} from "lucide-react";
-import {FilterOptions} from "@/types/search";
+  filters,
+  filterOptions,
+  onFilterChange,
+  onRatingChange,
+  onClearFilters
+}: FilterSidebarProps) {
+  return (
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-medium text-white flex items-center">
+          <Filter className="mr-2 h-5 w-5" /> Filters
+        </h3>
+        <Button
+          variant="outline"
+          size="sm"
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import { Filter, X, Star } from "lucide-react",;
+import { FilterOptions } from "@/types/search",;
 interface FilterSidebarProps {;
   filters: {;
     selectedProductTypes: string[],;
@@ -41,24 +75,23 @@ interface FilterSidebarProps {;
 }
 
 export function FilterSidebar(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   filters;
   filterOptions;
   onFilterChange;
   onRatingChange;
   onClearFilters;
 }: FilterSidebarProps) {;
-  return (
-<<<<<<< HEAD
-    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-medium text-white flex items-center">
-          <Filter className="mr-2 h-5 w-5" /> Filters
-        </h3>
-        <Button
-          variant="outline"
-          size="sm"
-          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+  return (;
+    <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">;
+      <div className="flex items-center justify-between mb-4">;
+        <h3 className="text-lg font-medium text-white flex items-center">;
+          <Filter className="mr-2 h-5 w-5" /> Filters;
+        </h3>;
+        <Button;
+          variant="outline";
+          size="sm";
+          className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
           onClick={onClearFilters}
         >
           Clear All
@@ -236,17 +269,12 @@ export function FilterSidebar(): any ({;
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
-<<<<<<< HEAD
-              className={`${
-                filters.selectedRating === rating
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
-                  : "border-zion-blue-light text-zion-slate-light"
-=======
+
               className={`${;
                 filters && filters.selectedRating === rating ;
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
                   : "border-zion-blue-light text-zion-slate-light";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               }`}
             >;
               {rating === null ? (;
@@ -261,19 +289,13 @@ export function FilterSidebar(): any ({;
               )}
             </Button>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
+
         </div>;
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React from './react';
 import { Button } from '@/components / ui / button';

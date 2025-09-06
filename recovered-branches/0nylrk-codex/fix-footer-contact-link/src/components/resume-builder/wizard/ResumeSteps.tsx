@@ -1,8 +1,12 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { StepProps } from "./types";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { StepProps } from "./types",
+import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {StepProps} from "./types";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { StepProps } from "./types",
 interface ResumeStepsProps {
   steps: StepProps[];
   activeTab: string;
@@ -17,14 +21,24 @@ interface ResumeStepsProps {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
 export const ResumeSteps = ({
-<<<<<<< HEAD
-  steps
-  activeTab
-  onChange
-}: ResumeStepsProps) => {
-=======
+
 import {Tabs, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {StepProps} from "./types";
+=======
+  return (
+    <TabsList className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 mb-8">
+      {steps.map((step) => (
+        <TabsTrigger key={step.id} value={step.id}>
+          {step.label}
+        </TabsTrigger>
+      ))}
+    </TabsList>
+  );
+}
+
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { StepProps } from "./types",;
+
 interface ResumeStepsProps {;
   steps: StepProps[],;
   activeTab: string,;
@@ -40,28 +54,7 @@ export const ResumeSteps = ({ steps, activeTab, onChange }: ResumeStepsProps) =>
           {step && step.label}
         </TabsTrigger>;
       ))}
-<<<<<<< HEAD
-    </TabsList>
-  );
-}
 
-=======
     </TabsList>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  steps,
-  active_tab,
-  on_change,
-}: ResumeStepsProps) =>: any {
-  return (
-    <TabsList className="grid grid - cols - 2 md:grid - cols - 3 lg:grid - cols - 6 mb - 8">;
-      {steps.map ((step) => (
-        <TabsTrigger key={step.id} value={step.id}>;
-          {step.label}
-        </TabsTrigger>))}
-    </TabsList>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,8 +1,12 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { GradientHeading } from "@/components/GradientHeading";
 import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
+import {GradientHeading} from "@/components/GradientHeading";
+import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+import { GradientHeading } from "@/components/GradientHeading",
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm",
 export function NewsletterSection() {
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">
@@ -21,9 +25,10 @@ export function NewsletterSection() {
     </section>
   );
 }
-=======
-import {GradientHeading} from "@/components/GradientHeading";
-import {EnhancedNewsletterForm} from "@/components/EnhancedNewsletterForm";
+  )
+  )
+import { GradientHeading } from "@/components/GradientHeading",;
+import { EnhancedNewsletterForm } from "@/components/EnhancedNewsletterForm";
 export function NewsletterSection() {;
   return (
     <section className="py-20 bg-zion-blue-dark" id="newsletter">;
@@ -51,17 +56,12 @@ function NewsletterSection() {
             services, Google trending tech news, and marketplace opportunities.;
           </p>;
           <div className="max - w-md mx - auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             <EnhancedNewsletterForm />;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
     </section>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </section>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

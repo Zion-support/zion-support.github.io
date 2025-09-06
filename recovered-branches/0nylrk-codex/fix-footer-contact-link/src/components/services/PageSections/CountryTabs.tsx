@@ -1,6 +1,11 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import {useState} from "react";
+import {Search} from "lucide-react";
+import {Input} from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {CountryServiceCard} from "@/components/services/CountryServiceCard";
+import {CountryPricing} from "@/data/onsiteServicePricing";
 import { useState } from "react",
 import { Search } from "lucide-react",
 import { Input } from "@/components/ui/input",
@@ -8,6 +13,8 @@ import { Button } from "@/components/ui/button",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { CountryServiceCard } from "@/components/services/CountryServiceCard";
 import { CountryPricing } from "@/data/onsiteServicePricing";
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",
+import { CountryPricing } from "@/data/onsiteServicePricing",
 interface CountryTabsProps {
 
   popularCountries: string[]
@@ -20,11 +27,16 @@ interface CountryTabsProps {
 export function CountryTabs({
   popularCountries;
 
-  filteredCountries
-  handleCountrySelect
-  searchQuery
-  setSearchQuery
 
+
+export function CountryTabs({ ;
+  popularCountries;
+export function CountryTabs({ 
+  popularCountries,
+  filteredCountries, 
+  handleCountrySelect, 
+  searchQuery, 
+  setSearchQuery 
 }: CountryTabsProps) {
   return (
     <Tabs defaultValue="featured" className="w-full">
@@ -50,14 +62,16 @@ export function CountryTabs({
               <CountryServiceCard
                 key={country.country}
                 country={country}
-=======
-import {useState} from "react";
-import {Search} from "lucide-react";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import {CountryServiceCard} from "@/components/services/CountryServiceCard";
-import {CountryPricing} from "@/data/onsiteServicePricing";
+              <CountryServiceCard 
+                key={country.country} 
+                country={country} 
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
 interface CountryTabsProps {;
   popularCountries: string[],;
   filteredCountries: CountryPricing[],;
@@ -96,23 +110,15 @@ export function CountryTabs(): any ({ ;
           {filteredCountries;
             .filter(country => popularCountries && popularCountries.includes(country && country.country));
             .map(country => (;
-              <CountryServiceCard
-                key={country && country.country} 
-                country={country} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <CountryServiceCard;
+                key={country.country} ;
+                country={country} ;
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />;
             ));
           }
-<<<<<<< HEAD
-        </div>
-      </TabsContent>
-      <TabsContent value="all" className="mt-0">
-        <div className="mb-6 max-w-md mx-auto">
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />
-=======
+
         </div>;
       </TabsContent>;
 
@@ -120,13 +126,12 @@ export function CountryTabs(): any ({ ;
         <div className="mb-6 max-w-md mx-auto">;
           <div className="relative">;
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <Input
               type="text"
               placeholder="Search by country..."
               className="pl-10 bg-zion-blue border-zion-blue-light text-white"
               value={searchQuery}
-<<<<<<< HEAD
               onChange={(e) => setSearchQuery(e.target.value)}
             />
           </div>
@@ -136,32 +141,19 @@ export function CountryTabs(): any ({ ;
             <CountryServiceCard
               key={country.country}
               country={country}
-=======
-              onChange={(e) => setSearchQuery(e && e.target.value)}
-            />;
-          </div>;
-        </div>;
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">;
-          {filteredCountries && filteredCountries.slice(0, 12).map(country => (;
-            <CountryServiceCard
-              key={country && country.country} 
+            <CountryServiceCard 
+              key={country.country} 
               country={country} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               onSelect={handleCountrySelect}
               isPopular={popularCountries && popularCountries.includes(country && country.country)}
             />;
           ))}
-<<<<<<< HEAD
-        </div>
-        {filteredCountries.length > 12 && (
-          <div className="text-center mt-8">
-=======
+
         </div>;
 
         {filteredCountries && filteredCountries.length > 12 && (;
           <div className="text-center mt-8">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <Button
               onClick={() => document && document.getElementById('pricing-table')?.scrollIntoView({ behavior: 'smooth' })}
               variant="outline";
@@ -171,17 +163,12 @@ export function CountryTabs(): any ({ ;
             </Button>;
           </div>;
         )}
-<<<<<<< HEAD
-      </TabsContent>
-    </Tabs>
-  )
-}
-=======
+
       </TabsContent>;
     </Tabs>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { useState } from './react';
 import { Search } from './lucide-react';

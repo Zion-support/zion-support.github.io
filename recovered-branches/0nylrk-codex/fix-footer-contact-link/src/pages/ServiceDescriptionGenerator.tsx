@@ -1,38 +1,3 @@
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
-import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
-import { SEO } from "@/components/SEO",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-export default function ServiceDescriptionGenerator() {
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
@@ -43,11 +8,26 @@ import {SEO} from "@/components/SEO";
 import {useAuth} from "@/hooks/useAuth";
 import {Navigate} from "react-router-dom";
 export default function ServiceDescriptionGenerator() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const { isAuthenticated, isLoading } = useAuth();
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth";
+import { Navigate } from "react-router-dom";
+export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth();
 
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
-<<<<<<< HEAD
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+export default function ServiceDescriptionGenerator() {
+  const { isAuthenticated, isLoading } = useAuth(),
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
+  
   // Show loading while checking authentication
   if (isLoading) {
     return (
@@ -66,6 +46,7 @@ export default function ServiceDescriptionGenerator() {;
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
   }
+  },
 
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
@@ -84,8 +65,19 @@ export default function ServiceDescriptionGenerator() {;
           <div className="space-y-8">
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />
             {generatedDescription && (
-=======
-
+              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay 
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { ServiceDescriptionForm } from "@/components/services/ServiceDescriptionForm",;
+import { GeneratedDescriptionDisplay } from "@/components/services/GeneratedDescriptionDisplay",;
+import { SEO } from "@/components/SEO",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate } from "react-router-dom",;
+export default function ServiceDescriptionGenerator() {;
+  const { isAuthenticated, isLoading } = useAuth(),;
+  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),;
   // Show loading while checking authentication;
   if (isLoading) {;
     return (
@@ -126,21 +118,12 @@ export default function ServiceDescriptionGenerator() {;
             <ServiceDescriptionForm onDescriptionGenerated={setGeneratedDescription} />;
 
             {generatedDescription && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              <GeneratedDescriptionDisplay
+              <GeneratedDescriptionDisplay;
                 description={generatedDescription}
                 onSave={handleDescriptionSave}
               />;
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </div>
-  )
-}
-=======
+
 =======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
@@ -202,17 +185,12 @@ if ( {) {
                 description={generated_description}
                 on_save={handleDescriptionSave}
               />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           </div>;
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

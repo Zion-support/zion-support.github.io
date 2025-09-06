@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-};
-import React from "react";
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-import React from "react",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-<<<<<<< HEAD
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'
-import { FraudStats } from "@/types/fraud";
-=======
-}
-import React from './react';
-import { Card, CardHeader, CardTitle, CardDescription  } from '@/components / ui / card';
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats  } from '@/types / fraud';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-interface FraudStatsCardsProps {
-  stats: FraudStats;
-}
-<<<<<<< HEAD
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
-  return (
+return (
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
@@ -31,6 +7,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <CardDescription>Total Flags</CardDescription>
         </CardHeader>
       </Card>
+      
+
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -40,6 +19,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           {stats.pending_flags > 0 && <ShieldAlert className="h-5 w-5 text-amber-500" />}
         </CardHeader>
       </Card>
+      
+
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -49,6 +31,9 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
+      
+
+
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -58,12 +43,18 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
+      
+
+
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+      
+
+
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -71,12 +62,18 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
         </CardHeader>
       </Card>
     </div>
+  );
+};
+";
   )
 }
 "
 
-=======
-import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react'import { FraudStats } from "@/types/fraud";
+},
+import React from "react",;
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
+import { AlertTriangle, AlertCircle, ShieldAlert } from 'lucide-react';
+import { FraudStats } from "@/types/fraud",;
 interface FraudStatsCardsProps {;
   stats: FraudStats;
 }
@@ -137,14 +134,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
     </div>;
   );
 };
-<<<<<<< HEAD
-"
-=======
-"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
@@ -196,5 +186,5 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
     </div>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+  )

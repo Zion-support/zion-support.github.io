@@ -1,11 +1,23 @@
+
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { format  } from 'date-fns';
 import { cn  } from '@/lib/utils';
 import { Conversation  } from '@/types/messaging';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 interface ConversationItemProps {
+  conversation: Conversation,
+  isActive: boolean,
+  onClick: () => void
+import React from 'react',;
+import { format } from 'date-fns',;
+import { cn } from '@/lib/utils',;
+import { Conversation } from '@/types/messaging',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+interface ConversationItemProps {;
+  conversation: Conversation,;
+  isActive: boolean,;
+  onClick: () => void;
+}
 
   conversation: Conversation
   isActive: boolean
@@ -16,10 +28,16 @@ export function ConversationItem({ conversation, isActive, onClick }: Conversati
   return (
 
     <div
+    <div 
+      className={cn(;
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30",
       className={cn(
         "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors";
         isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover: bg-zion-blue-dark/30"
 
+        "flex items-start gap-3 p-3 cursor-pointer rounded-md transition-colors",
+        isActive ? "bg-zion-purple/10 border-l-2 border-zion-purple" : "hover:bg-zion-blue-dark/30",
         conversation.unread_count > 0 && "bg-zion-blue-dark/20"
       )}
       onClick={onClick}
@@ -82,24 +100,14 @@ function ConversationItem() {
         {conversation.context_data?.title && (
           <div className="text - xs mt - 1 text - zion - cyan truncate">;
             Re: {conversation.context_data.title}
-<<<<<<< HEAD
-          </div>
-        )}
-      </div>
-=======
+
           </div>)}
       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       {conversation.unread_count > 0 && (
         <div className="bg - zion - purple text - white rounded - full h - 5 min - w-5 flex items - center justify - center text - xs">;
           {conversation.unread_count}
-<<<<<<< HEAD
-        </div>
-      )}
-    </div>
-  )
-}
-=======
+
 import {format} from 'date-fns';
 import {cn} from '@/lib/utils';
 import {Conversation} from '@/types/messaging';
@@ -155,7 +163,7 @@ export function ConversationItem(): any ({ conversation, isActive, onClick }: Co
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
         </div>)}
     </div>);

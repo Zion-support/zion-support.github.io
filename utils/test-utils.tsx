@@ -1,49 +1,15 @@
 import React from 'react';
-<<<<<<< HEAD
-import { render, RenderOptions } from '@testing-library/react';
-import { ThemeProvider } from 'next-themes';
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
-=======
+
 import { render, RenderOptions } from '@testing - library / react';
 import { ThemeProvider } from 'next - themes';
 ;
 const AllTheProviders = ({ children }: { children: React.ReactNode }) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return (
-    <ThemeProvider attribute="class" default_theme="light">;
+    <ThemeProvider attribute="class" defaultTheme="light">
       {children}
-<<<<<<< HEAD
     </ThemeProvider>
   );
-}
-const customRender = (
-  ui: React.ReactElement
-  options?: Omit<RenderOptions, 'wrapper'>
-) => render(ui, { wrapper: AllTheProviders, ...options });
-export * from '@testing-library/react';
-export { customRender as render }
-export const mockNextRouter = () => ({
-  push: jest.fn()
-  replace: jest.fn()
-  prefetch: jest.fn()
-  back: jest.fn()
-  beforePopState: jest.fn()
-  events: {
-    on: jest.fn()
-    off: jest.fn()
-    emit: jest.fn()
-  }
-  isFallback: false
-  isLocale: false
-  isReady: true
-  defaultLocale: 'en'
-  domainLocales: []
-  isPreview: false
-});
-export const createMockProps = (overrides = {}) => ({
-  ...overrides
-=======
-    </ThemeProvider>);
 }
 ;
 const custom_render = (
@@ -60,19 +26,55 @@ export const mockNextRouter = () =>: any ({
   back: jest.fn (),
   beforePopState: jest.fn (),
   events: {
-    on: jest.fn (),
-    off: jest.fn (),
-    emit: jest.fn ();
+    on: jest.fn()
+    off: jest.fn()
+    emit: jest.fn()
+  }
+  isFallback: false
+  isLocale: false
+  isReady: true
+  defaultLocale: 'en'
+  domainLocales: []
+  isPreview: false
   },
-  is_fallback: false,
-  is_locale: false,
-  is_ready: true,
-  default_locale: 'en',
-  domain_locales: [],
-  is_preview: false;
+  isFallback: false,
+  isLocale: false,
+  isReady: true,
+  defaultLocale: 'en',
+  domainLocales: [],
+  isPreview: false;
 });
-;
-export const createMockProps = (overrides = {}) =>: any ({
+export const createMockProps = (overrides = {}) => ({
+  ...overrides
+    </ThemeProvider>;
+  );
+},;
+const customRender = (;
+  ui: React.ReactElement,;
+  options?: Omit<RenderOptions, 'wrapper'>;
+) => render(ui, { wrapper: AllTheProviders, ...options }),;
+export * from '@testing-library/react',;
+export { customRender as render },;
+export const mockNextRouter = () => ({;
+  push: jest.fn(),;
+  replace: jest.fn(),;
+  prefetch: jest.fn(),;
+  back: jest.fn(),;
+  beforePopState: jest.fn(),;
+  events: {;
+    on: jest.fn(),;
+    off: jest.fn(),;
+    emit: jest.fn();
+  },;
+  isFallback: false,;
+  isLocale: false,;
+  isReady: true,;
+  defaultLocale: 'en',;
+  domainLocales: [],;
+  isPreview: false;
+
+});
+export const createMockProps = (overrides = {}) => ({;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ...overrides;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 });

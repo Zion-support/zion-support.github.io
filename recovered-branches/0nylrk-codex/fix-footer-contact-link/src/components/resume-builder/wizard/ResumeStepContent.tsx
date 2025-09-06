@@ -1,6 +1,12 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
+import {TabsContent} from "@/components/ui/tabs";
+import {Resume} from "@/types/resume";
+import {BasicInfoForm} from '../forms/basic-info';
+import {WorkExperienceForm} from '../forms/WorkExperienceForm';
+import {EducationForm} from '../forms/EducationForm';
+import {SkillsForm} from '../forms/SkillsForm';
+import {CertificationsForm} from '../forms/CertificationsForm';
+import {PreviewResume} from '../PreviewResume';
 import { TabsContent } from "@/components/ui/tabs",
 import { Resume } from "@/types/resume";
 import { BasicInfoForm  } from '../forms/basic-info';
@@ -9,6 +15,13 @@ import { EducationForm  } from '../forms/EducationForm';
 import { SkillsForm  } from '../forms/SkillsForm';
 import { CertificationsForm  } from '../forms/CertificationsForm';
 import { PreviewResume } from '../PreviewResume';
+import { Resume } from "@/types/resume",
+import { BasicInfoForm } from '../forms/basic-info',
+import { WorkExperienceForm } from '../forms/WorkExperienceForm',
+import { EducationForm } from '../forms/EducationForm',
+import { SkillsForm } from '../forms/SkillsForm',
+import { CertificationsForm } from '../forms/CertificationsForm',
+import { PreviewResume } from '../PreviewResume',
 interface ResumeStepContentProps {
 
   activeTab: string
@@ -21,21 +34,39 @@ export const ResumeStepContent = ({
   resume
   onNextStep
   onPrevStep
+
+export const ResumeStepContent = ({ ;
+  activeTab;
+export const ResumeStepContent = ({ 
+  activeTab,
+  resume, 
+  onNextStep, 
+  onPrevStep 
 }: ResumeStepContentProps) => {
   return (
     <>
       <TabsContent value="basic-info">
         <BasicInfoForm
           resumeId={resume?.id!}
-=======
-import {TabsContent} from "@/components/ui/tabs";
-import {Resume} from "@/types/resume";
-import {BasicInfoForm} from '../forms/basic-info';
-import {WorkExperienceForm} from '../forms/WorkExperienceForm';
-import {EducationForm} from '../forms/EducationForm';
-import {SkillsForm} from '../forms/SkillsForm';
-import {CertificationsForm} from '../forms/CertificationsForm';
-import {PreviewResume} from '../PreviewResume';
+          initialData={resume?.basic_info}
+          onSave={(data) => {
+            // Here you would typically save the data to your backend
+            // // // console.log("Saving basic info:", data)
+          }}
+          onComplete={onNextStep}
+        />
+      </TabsContent>
+      <TabsContent value="work-experience">
+        <WorkExperienceForm
+        <WorkExperienceForm 
+import { TabsContent } from "@/components/ui/tabs",;
+import { Resume } from "@/types/resume",;
+import { BasicInfoForm } from '../forms/basic-info',;
+import { WorkExperienceForm } from '../forms/WorkExperienceForm',;
+import { EducationForm } from '../forms/EducationForm',;
+import { SkillsForm } from '../forms/SkillsForm',;
+import { CertificationsForm } from '../forms/CertificationsForm',;
+import { PreviewResume } from '../PreviewResume',;
 interface ResumeStepContentProps {;
   activeTab: string,;
   resume: Resume,;
@@ -54,75 +85,63 @@ export const ResumeStepContent = ({ ;
       <TabsContent value="basic-info">;
         <BasicInfoForm
           resumeId={resume?.id!} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           initialData={resume?.basic_info}
           onSave={(data) => {;
             // Here you would typically save the data to your backend;
             console && console.log("Saving basic info:", data);
           }}
-<<<<<<< HEAD
+
+          initialData={resume?.basic_info}
+          onSave={(data) => {
+            // Here you would typically save the data to your backend
+            // // // console.log("Saving basic info:", data)
+          }}
+
           onComplete={onNextStep}
         />
       </TabsContent>
       <TabsContent value="work-experience">
-=======
+
           onComplete={onNextStep} ;
         />;
       </TabsContent>;
 
       <TabsContent value="work-experience">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        <WorkExperienceForm
+        <WorkExperienceForm;
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
-<<<<<<< HEAD
         />
       </TabsContent>
       <TabsContent value="education">
-=======
-        />;
-      </TabsContent>;
-
-      <TabsContent value="education">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EducationForm
+        <EducationForm 
           resumeId={resume?.id!}
           educationEntries={resume?.education |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
-<<<<<<< HEAD
-        />
-      </TabsContent>
-      <TabsContent value="skills">
-=======
+
         />;
       </TabsContent>;
 
       <TabsContent value="skills">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
-<<<<<<< HEAD
         />
       </TabsContent>
       <TabsContent value="certifications">
-=======
-        />;
-      </TabsContent>;
-
-      <TabsContent value="certifications">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <CertificationsForm
+        <CertificationsForm 
           resumeId={resume?.id!}
           certifications={resume?.certifications |[]}
           onComplete={onNextStep}
           onBack={onPrevStep}
-<<<<<<< HEAD
         />
       </TabsContent>
       <TabsContent value="preview">
@@ -135,12 +154,7 @@ export const ResumeStepContent = ({ ;
   )
 }
 
-=======
-        />;
-      </TabsContent>;
-
-      <TabsContent value="preview">;
-        <PreviewResume
+        <PreviewResume 
           resume={resume as Resume} 
           onBack={onPrevStep}
         />;
@@ -148,80 +162,3 @@ export const ResumeStepContent = ({ ;
     </>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { TabsContent } from '@/components / ui / tabs';
-import { Resume } from '@/types / resume';
-import {BasicInfoForm} from '../forms / basic - info';
-import {WorkExperienceForm} from '../forms / WorkExperienceForm';
-import {EducationForm} from '../forms / EducationForm';
-import {SkillsForm} from '../forms / SkillsForm';
-import {CertificationsForm} from '../forms / CertificationsForm';
-import {PreviewResume} from '../PreviewResume';
-interface ResumeStepContentProps {
-  active_tab: string,
-  resume: Resume,
-  onNextStep: () => void,
-  onPrevStep: () => void;
-}
-export const ResumeStepContent = ({
-  active_tab;
-  resume,
-  onNextStep,
-  onPrevStep;
-}: ResumeStepContentProps) =>: any {
-  return (
-    <>;
-      <TabsContent value="basic - info">;
-        <BasicInfoForm;
-          resume_id={resume?.id!}
-          initial_data={resume?.basic_info}
-          on_save={(data) => {
-            // Here you would typically save the data to your backend;
-            console.log ("Saving basic info:", data);
-          }}
-          on_complete={onNextStep}
-        />;
-      </TabsContent>;
-      <TabsContent value="work - experience">;
-        <WorkExperienceForm;
-          resume_id={resume?.id!}
-          work_experiences={resume?.work_experience || []}
-          on_complete={onNextStep}
-          on_back={onPrevStep}
-        />;
-      </TabsContent>;
-      <TabsContent value="education">;
-        <EducationForm;
-          resume_id={resume?.id!}
-          education_entries={resume?.education || []}
-          on_complete={onNextStep}
-          on_back={onPrevStep}
-        />;
-      </TabsContent>;
-      <TabsContent value="skills">;
-        <SkillsForm;
-          resume_id={resume?.id!}
-          skills={resume?.skills || []}
-          on_complete={onNextStep}
-          on_back={onPrevStep}
-        />;
-      </TabsContent>;
-      <TabsContent value="certifications">;
-        <CertificationsForm;
-          resume_id={resume?.id!}
-          certifications={resume?.certifications || []}
-          on_complete={onNextStep}
-          on_back={onPrevStep}
-        />;
-      </TabsContent>;
-      <TabsContent value="preview">;
-        <PreviewResume;
-          resume={resume as Resume}
-          on_back={onPrevStep}
-        />;
-      </TabsContent>;
-    </>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

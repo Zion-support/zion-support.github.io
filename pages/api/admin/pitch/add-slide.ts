@@ -1,9 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { allowed } = await ensureAdminFromApi(req),
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' }),
+
+
+  return res.status(200).json({
+    title: 'Additional Insight',
+    content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'});
+};
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
+
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { allowed } = await ensureAdminFromApi(req)
@@ -13,30 +21,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     title: 'Additional Insight'
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { ensureAdminFromApi } from '../../../../utils / auth',
-export default async /**
- * handler - Function description
- */
-function handler() {
-  const { allowed } = await ensureAdminFromApi (req),
-  if (return res.status (403).json ({ error: 'Forbidden' }), ) {
-  $2
+  try {
+    const { allowed } = await ensureAdminFromApi(req);
+    if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'POST') {
+      const { title, content } = req.body;
+      if (!title || !content) return res.status(400).json({ error: 'Title and content required' });
+
+      // Mock slide creation
+      const slide = {
+        id: Date.now().toString(),
+        title,
+        content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.',
+        createdAt: new Date().toISOString()
+      };
+
+      res.json({ slide });
+    } else {
+      res.setHeader('Allow', 'POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-  if (return res.status (405).json ({ error: 'Method Not Allowed' }), ) {
-  $2
-}
-  return res.status (200).json ({
-    title: 'Additional Insight',
-    content: 'Add concise, investor - relevant content here (120 - 150 words). Use metrics, milestones, or strategic plans.'});
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

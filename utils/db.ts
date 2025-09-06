@@ -1,83 +1,34 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 // Mock database utility
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-
-function getFilePath(fileName: string): string {
-  return path.join(process.cwd(), 'data', fileName);
-}
-
-=======
 function getFilePath(fileName: string): string {
   return path.join(process.cwd(), 'data', `${fileName}.json`);
 }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
-<<<<<<< HEAD
-    if (fs.existsSync(filePath)) {
+    if (fs.existsSync(filePath)) {;
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
-=======
-    const fs = require('fs'),
-    if (fs && fs.existsSync(filePath)) {
-      const content = fs && fs.readFileSync(filePath, 'utf8');
-      return JSON && JSON.parse(content);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   } catch (error) {
-    console && console.error('Error reading file:', error);
-=======
-// Mock database utility;
-import fs from 'fs';
-import path from 'path';
-;
-function getFilePath (file_name: string): string {
-  return path.join (process.cwd (), 'data', `${file_name}.json`);
-}
-export function readJsonFile < T>(file_path: string, default_value: T): T {
-  try {
-    if () {) {
-  $2
-}
-      const content = fs.readFileSync (file_path, 'utf8');
-      return JSON.parse (content);
-    }
-  } catch (error) {
-    console.error ('Error reading file:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    console.error('Error reading file:', error);
   }
   return default_value;
 }
-<<<<<<< HEAD
 export function writeJsonFile<T>(fileName: string, data: T): void {
+
+export function writeJsonFile<T>(fileName: string, data: T): void {;
   const filePath = getFilePath(fileName);
   const tmpPath = `${filePath}.tmp`;
-<<<<<<< HEAD
   fs.writeFileSync(tmpPath, JSON.stringify(data, null, 2), 'utf-8');
   fs.renameSync(tmpPath, filePath);
 }
-<<<<<<< HEAD
-=======
-  fs && fs.writeFileSync(tmpPath, JSON && JSON.stringify(data, null, 2), 'utf-8');
-  fs && fs.renameSync(tmpPath, filePath);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items && items.push(item);
   writeJsonFile<T[]>(fileName, items);
-<<<<<<< HEAD
-=======
+
 }
-=======
 // Database utilities
 export interface DatabaseConfig {
   host: string;
@@ -87,30 +38,24 @@ export interface DatabaseConfig {
   password: string;
   ssl?: boolean;
 }
-
 export interface QueryResult<T = any> {
   rows: T[];
   rowCount: number;
   fields: any[];
 }
-
 export class DatabaseManager {
   private config: DatabaseConfig;
-
   constructor(config: DatabaseConfig) {
     this.config = config;
   }
-
   async connect(): Promise<void> {
     // Mock connection - in production, this would establish a real database connection
     console.log('Connected to database');
   }
-
   async disconnect(): Promise<void> {
     // Mock disconnection - in production, this would close the database connection
     console.log('Disconnected from database');
   }
-
   async query<T = any>(sql: string, params?: any[]): Promise<QueryResult<T>> {
     // Mock query execution - in production, this would execute real SQL
     console.log('Executing query:', sql, params);
@@ -120,7 +65,6 @@ export class DatabaseManager {
       fields: []
     };
   }
-
   async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
     // Mock transaction - in production, this would wrap the callback in a real transaction
     try {
@@ -128,9 +72,18 @@ export class DatabaseManager {
     } catch (error) {
       throw error;
     }
+=======
+    if (fs.existsSync(filePath)) {;
+      const content = fs.readFileSync(filePath, 'utf8');
+      return JSON.parse(content);
+    }
+  } catch (error) {
+    console.error('Error reading file:', error);
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   }
+  return defaultValue;
 }
-
+<<<<<<< HEAD
 // Default database configuration
 const defaultConfig: DatabaseConfig = {
   host: process.env.DB_HOST || 'localhost',
@@ -140,10 +93,9 @@ const defaultConfig: DatabaseConfig = {
   password: process.env.DB_PASSWORD || 'password',
   ssl: process.env.DB_SSL === 'true'
 };
-
 // Singleton database instance
 export const db = new DatabaseManager(defaultConfig);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 export function writeJsonFile < T>(file_name: string, data: T): void {
   const file_path = getFilePath (file_name);
@@ -158,3 +110,16 @@ export function appendToJsonArrayFile < T>(file_name: string, item: T): void {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
+  const items = readJsonFile<T[]>(fileName, []);
+  items.push(item);
+  writeJsonFile<T[]>(fileName, items);
+}
+import fs from 'fs';
+import path from 'path';
+
+}
+}

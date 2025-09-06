@@ -1,8 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import { cva, type, VariantProps } from "class-variance-authority";
+import * as React from "react"
+import * as LabelPrimitive from "@radix-ui/react-label"
+import {cva, type, VariantProps} from "class-variance-authority"
+
+import {cn} from "@/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
+
+import { cn } from "@/lib/utils"
 
 import { cn } from "@/lib/utils";
 const labelVariants = cva(
@@ -15,14 +21,22 @@ const Label = React.forwardRef<
     VariantProps<typeof labelVariants>
 >(({ className, ...props }, ref) => (
   <LabelPrimitive.Root
-=======
-import * as React from './react';
-import * as LabelPrimitive from "@radix - ui / react - label";
-import { cva, type, VariantProps  } from './class - variance - authority';
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+  />
+))
+Label.displayName = LabelPrimitive.Root.displayName
+
+export { Label };
 ;
-import { cn  } from '@/lib / utils';
-const label_variants = cva (
-  "text - sm font - medium leading - none peer - disabled: cursor - not - allowed peer - disabled:opacity - 70",
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { cva, type VariantProps } from "class-variance-authority";
+import { cn } from "@/lib/utils";
+const labelVariants = cva(;
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70";
+
 );
 ;
 const Label = React.forward_ref<;
@@ -31,16 +45,7 @@ const Label = React.forward_ref<;
     VariantProps < typeof label_variants>;
 >(({ class_name, ...props }, ref) => (
   <LabelPrimitive.Root;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    ref={ref}
-    className={cn (label_variants (), class_name)}
-    {...props}
-<<<<<<< HEAD
-  />
-));
-Label.displayName = LabelPrimitive.Root.displayName;
-export { Label }
-=======
+
 import React from 'react';
 import * as React from "react";
 import * as LabelPrimitive from "@radix-ui/react-label";
@@ -57,7 +62,16 @@ const Label = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof LabelPrimitive && LabelPrimitive.Root> &;
     VariantProps<typeof labelVariants>;
 >(({ className, ...props }, ref) => (;
-  <LabelPrimitive&& LabelPrimitive.Root
+  <LabelPrimitive.Root;
+    ref={ref}
+    className={cn(labelVariants(), className)}
+    {...props}
+  />
+));
+Label.displayName = LabelPrimitive.Root.displayName;
+export { Label }
+export { Label }
+;
     ref={ref}
     className={cn(labelVariants(), className)}
     {...props}
@@ -73,4 +87,3 @@ Label.display_name = LabelPrimitive.Root.display_name;
 ;
 export { Label }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

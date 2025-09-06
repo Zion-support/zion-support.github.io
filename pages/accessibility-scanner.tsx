@@ -1,7 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React from 'react';
+import SEO from '../components/SEO';
+import React from 'react',;
+import SEO from '../components/SEO',;
 import React from 'react';
 import SEO from '../components/SEO';
 export default function AccessibilityScannerPage() {
@@ -20,13 +20,8 @@ export default function AccessibilityScannerPage() {
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from 'react',
 import SEO from '../components / SEO',
@@ -51,3 +46,13 @@ return (
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+}

@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
-<<<<<<< HEAD
-=======
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface TokenSet {
-  colors: Record < string, string>;
-  typography: Record < string, any>;
-  spacing: Record < string, number>;
+
+export interface TokenSet {;
+  colors: Record<string, string>;
+  typography: Record<string, any>;
+  spacing: Record<string, number>;
 }
 export interface UIKit {
-  components: Record < string, any>;
+
+export interface UIKit {;
+  components: Record<string, any>;
   tokens: TokenSet;
 }
-<<<<<<< HEAD
 export async function buildTokenSet(fileId: string): Promise<TokenSet> {
   // Placeholder implementation
   return {
@@ -39,82 +34,11 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
       lg: 24
       xl: 32
     }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
     
     return this.props.children;
   }
 }
-// Mock design map utility
-export function getDesignMap() {
-  return {
-    components: [],
-    pages: [],
-    styles: []
-  };
-
-export type TokenSet = {
-  colors: Record<string, string>;
-  typography: {
-    fontSizes: Record<string, string>;
-  };
-};
-
-export async function buildTokenSet(): Promise<TokenSet> {
-  // Dynamically import Tailwind config for color extraction;
-  const tailwindConfig = require('../tailwind && tailwind.config.js');
-  const extendedColors = tailwindConfig?.theme?.extend?.colors || {};
-  const colors: Record<string, string> = {};
-
-  function flattenColors(prefix: string, obj: any) {
-    Object && Object.entries(obj || {}).forEach(([key, value]) => {
-      const newKey = prefix ? `${prefix}.${key}` : key;
-      if (typeof value === 'string') {
-        colors[newKey] = value;
-      } else if (typeof value === 'object') {
-        flattenColors(newKey, value);
-      }
-    });
-  }
-
-  flattenColors('', extendedColors);
-
-  const typography = {
-    fontSizes: tailwindConfig?.theme?.extend?.fontSize || {},
-  };
-
-  return { colors, typography };
-
-export type UIKitKind = 'tailwind' | 'chakra' | 'react';
-
-export function buildUIKit(kind: UIKitKind): Record<string, string> {
-  if (kind === 'tailwind') {
-    return {
-      'README && README.md':
-        '# Zion OS Tailwind UI Kit\n\nUse components with Tailwind classes from the design map.',
-      'components/Button && Button.tsx':
-        'export function Button({ children }: { children: React && React.ReactNode }) { return <button className="px-4 py-2 rounded bg-neon-blue text-black hover:opacity-90">{children}</button> }',
-      'components/Card && Card.tsx':
-        'export function Card({ children }: { children: React && React.ReactNode }) { return <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">{children}</div> }',
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
     };
   }
   if (kind === 'chakra') {
@@ -143,10 +67,8 @@ export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
     return (await res && res.json()) as Partial<TokenSet>;
   } catch {
     return null;
-<<<<<<< HEAD
-  }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 // Design mapping utilities
 export interface DesignElement {
@@ -209,275 +131,43 @@ export interface FigmaNode {
   };
 }
 
-export class DesignMapManager {
-  private designSystems: Map<string, DesignSystem> = new Map();
-  private figmaNodes: Map<string, FigmaNode> = new Map();
 
-  // Design System methods
-  createDesignSystem(id: string, name: string, version: string = '1.0.0'): DesignSystem {
-    const designSystem: DesignSystem = {
-      id,
-      name,
-      version,
-      components: [],
-      tokens: {},
-      assets: [],
-      lastUpdated: new Date()
-    };
-    
-    this.designSystems.set(id, designSystem);
-    return designSystem;
-  }
-
-  getDesignSystem(id: string): DesignSystem | null {
-    return this.designSystems.get(id) || null;
-  }
-
-  addComponent(designSystemId: string, component: DesignElement): boolean {
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return false;
-
-    designSystem.components.push(component);
-    designSystem.lastUpdated = new Date();
-    return true;
-  }
-
-  addToken(designSystemId: string, key: string, value: any): boolean {
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return false;
-
-    designSystem.tokens[key] = value;
-    designSystem.lastUpdated = new Date();
-    return true;
-  }
-
-  addAsset(designSystemId: string, asset: DesignElement): boolean {
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return false;
-
-    designSystem.assets.push(asset);
-    designSystem.lastUpdated = new Date();
-    return true;
-  }
-
-  // Figma integration methods
-  importFromFigma(figmaData: FigmaNode[], designSystemId: string): DesignElement[] {
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return [];
-
-    const elements: DesignElement[] = [];
-    
-    for (const node of figmaData) {
-      this.figmaNodes.set(node.id, node);
-      const element = this.convertFigmaNodeToDesignElement(node);
-      elements.push(element);
-    }
-
-    designSystem.components.push(...elements);
-    designSystem.lastUpdated = new Date();
-    return elements;
-  }
-
-  private convertFigmaNodeToDesignElement(node: FigmaNode): DesignElement {
-    const element: DesignElement = {
-      id: node.id,
-      type: this.mapFigmaTypeToElementType(node.type),
-      name: node.name,
-      figmaId: node.id,
-      properties: this.extractProperties(node),
-      children: node.children?.map(child => this.convertFigmaNodeToDesignElement(child))
-    };
-
-    return element;
-  }
-
-  private mapFigmaTypeToElementType(figmaType: string): DesignElement['type'] {
-    const typeMap: Record<string, DesignElement['type']> = {
-      'FRAME': 'layout',
-      'COMPONENT': 'component',
-      'INSTANCE': 'component',
-      'TEXT': 'component',
-      'RECTANGLE': 'component',
-      'ELLIPSE': 'component',
-      'VECTOR': 'asset',
-      'IMAGE': 'asset'
-    };
-
-    return typeMap[figmaType] || 'component';
-  }
-
-  private extractProperties(node: FigmaNode): Record<string, any> {
-    const properties: Record<string, any> = {};
-
-    if (node.absoluteBoundingBox) {
-      properties.bounds = node.absoluteBoundingBox;
-    }
-
-    if (node.fills && node.fills.length > 0) {
-      properties.fills = node.fills;
-    }
-
-    if (node.effects && node.effects.length > 0) {
-      properties.effects = node.effects;
-    }
-
-    if (node.characters) {
-      properties.text = node.characters;
-    }
-
-    if (node.style) {
-      properties.style = node.style;
-    }
-
-    return properties;
-  }
-
-  // Export methods
-  exportToCode(designSystemId: string, format: 'react' | 'vue' | 'html' | 'css' = 'react'): string {
-    const designSystem = this.designSystems.get(designSystemId);
-    if (!designSystem) return '';
-
-    switch (format) {
-      case 'react':
-        return this.exportToReact(designSystem);
-      case 'vue':
-        return this.exportToVue(designSystem);
-      case 'html':
-        return this.exportToHTML(designSystem);
-      case 'css':
-        return this.exportToCSS(designSystem);
-      default:
-        return '';
-    }
-  }
-
-  private exportToReact(designSystem: DesignSystem): string {
-    let code = `// ${designSystem.name} Design System\n`;
-    code += `// Generated on ${designSystem.lastUpdated.toISOString()}\n\n`;
-
-    // Export tokens as CSS variables
-    code += ':root {\n';
-    for (const [key, value] of Object.entries(designSystem.tokens)) {
-      code += `  --${key}: ${value};\n`;
-    }
-    code += '}\n\n';
-
-    // Export components
-    for (const component of designSystem.components) {
-      code += this.generateReactComponent(component);
-    }
-
-    return code;
-  }
-
-  private generateReactComponent(element: DesignElement): string {
-    const componentName = element.name.replace(/[^a-zA-Z0-9]/g, '');
-    let code = `export const ${componentName} = ({ children, ...props }) => {\n`;
-    code += `  return (\n`;
-    code += `    <div {...props}>\n`;
-    code += `      {children}\n`;
-    code += `    </div>\n`;
-    code += `  );\n`;
-    code += `};\n\n`;
-    return code;
-  }
-
-  private exportToVue(designSystem: DesignSystem): string {
-    // Similar to React but for Vue
-    return `// Vue components for ${designSystem.name}`;
-  }
-
-  private exportToHTML(designSystem: DesignSystem): string {
-    // Generate HTML structure
-    return `<!-- HTML for ${designSystem.name} -->`;
-  }
-
-  private exportToCSS(designSystem: DesignSystem): string {
-    // Generate CSS styles
-    return `/* CSS for ${designSystem.name} */`;
-  }
-
-  // Utility methods
-  getAllDesignSystems(): DesignSystem[] {
-    return Array.from(this.designSystems.values());
-  }
-
-  clearDesignSystem(id: string): boolean {
-    return this.designSystems.delete(id);
-  }
-
-  clearAll(): void {
-    this.designSystems.clear();
-    this.figmaNodes.clear();
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  }
-}
-export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
   const tokens = await buildTokenSet(fileId);
 =======
-export async function buildTokenSet (file_id: string): Promise < TokenSet> {
-  // Placeholder implementation;
-  return {
-    colors: {
-      primary: '#007AFF',
-      secondary: '#5856D6',
-      success: '#34C759',
-      warning: '#FF9500',
-      error: '#FF3B30';
-    },
-    typography: {
-      heading1: { font_size: 32, font_weight: 'bold' },
-      heading2: { font_size: 24, font_weight: 'bold' },
-      body: { font_size: 16, font_weight: 'normal' }
-    },
-    spacing: {
-      xs: 4,
-      sm: 8,
-      md: 16,
-      lg: 24,
-      xl: 32;
-    }
-  }
+    };
+  };
 }
-export async function buildUIKit (file_id: string, kind: UIKitKind): Promise < UIKit> {
-  const tokens = await buildTokenSet (file_id);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const tokens = await buildTokenSet(fileId);
   return {
-<<<<<<< HEAD
-    components: {
-      button: {
-        primary: {
-<<<<<<< HEAD
-          backgroundColor: tokens.colors.primary
-          padding: tokens.spacing.md
-        }
-      }
-    }
-    tokens
-  }
-}
-=======
+
     id,
     type,
     name,
     properties,
     children: []
+=======
+
+
+
+=======
+
   };
 }
 
-export function generateDesignId(): string {
-  return `design_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 =======
           background_color: tokens.colors.primary,
           padding: tokens.spacing.md;
         }
       }
-    },
-    tokens;
+    }
+    tokens
   }
+
+  };
+
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

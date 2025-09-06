@@ -1,21 +1,19 @@
-<<<<<<< HEAD
-import {useRouter} from 'next/router';
-import {useEffect, useState, FormEvent} from 'react';
-import Link from 'next/link';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
+import { useRouter } from 'next/router';
+import { useEffect, useState, FormEvent } from 'react';
+import Link from 'next/link';
+import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
-<<<<<<< HEAD
 import type {
   AuthError
   User
@@ -26,10 +24,9 @@ import {
   logInfo
   logWarn
   logErrorToProduction;
-=======
-import type {;
-  AuthError,;
-  User,;
+  AuthError,
+  User,
+
   AuthChangeEvent,;
   Session,;
 } from '@supabase/supabase-js';
@@ -37,182 +34,65 @@ import {;
   logInfo,;
   logWarn,;
   logErrorToProduction,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-<<<<<<< HEAD
 import {
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
-=======
-import {;
-  Card,;
-  CardContent,;
-  CardDescription,;
+  Card,
+  CardContent,
+  CardDescription,
   CardHeader,;
   CardTitle,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '@/components/ui/card';
-const LoginPage = () => {;
-<<<<<<< HEAD
-=======
-=======
-import { useRouter } from 'next/router';
-import { useEffect, useState, FormEvent } from 'react';
-import Link from 'next/link';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
-import Head from 'next/head';
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
+const LoginPage = () => {
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-
-const LoginPage = () => {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+const LoginPage = () => {;
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<AuthError | null>(null);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  const [isLoading, setIsLoading] = useState(false); // For login form submission;
-  const [user, setUser] = useState<User | null>(null);
-  const [isCheckingSession, setIsCheckingSession] = useState(true); // For initial session check;
-  const [sessionChecked, setSessionChecked] = useState(false); // New state: true after initial getSession completes  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
-<<<<<<< HEAD
-=======
-=======
-  const [isLoading, setIsLoading] = useState(false), // For login form submission
-  const [user, setUser] = useState<User | null>(null);
-  const [isCheckingSession, setIsCheckingSession] = useState(true), // For initial session check
-  const [sessionChecked, setSessionChecked] = useState(false), // New state: true after initial getSession completes
-  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
-<<<<<<< HEAD
   // States for the new proactive resend form
-=======
-
-  // States for the new proactive resend form;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
   const [isProactivelyResending, setIsProactivelyResending] = useState(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  const [proactiveResendMessage, setProactiveResendMessage] = useState<{;
-=======
-import {use_router} from 'next / router';
-import {useEffect, useState, FormEvent} from 'react';
-import Link from 'next / link';
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
-import Head from 'next / head';
-import { sign_in } from 'next - auth / react';
-import { supabase } from '@/utils / supabase / client';
-import type {
-  AuthError,
-  User,
-  AuthChangeEvent,
-  Session,
-} from '@supabase / supabase - js';
-import {
-  log_info,
-  log_warn,
-  logErrorToProduction,
-} from '@/utils / production_logger';
-import { use_translation } from 'react - i18next';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-const LoginPage = () =>: any {
-  const router = use_router ();
-  const { t } = use_translation ();
-  const [email, set_email] = useState ('');
-  const [password, set_password] = useState ('');
-  const [error, set_error] = useState < AuthError | null>(null);
-  const [is_loading, setIsLoading] = useState (false); // For login form submission;
-  const [user, set_user] = useState < User | null>(null);
-  const [isCheckingSession, setIsCheckingSession] = useState (true); // For initial session check;
-  const [session_checked, setSessionChecked] = useState (false); // New state: true after initial get_session completes  const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState (false);
-  const [isEmailUnverified, setIsEmailUnverified] = useState (false);
-  const [verificationEmailSent, setVerificationEmailSent] = useState (false);
-  const [isResendingVerification, setIsResendingVerification] = useState (false);
-;
-  // States for the new proactive resend form;
-  const [showProactiveResendForm, setShowProactiveResendForm] = useState (false);
-  const [proactiveResendEmail, setProactiveResendEmail] = useState ('');
-  const [isProactivelyResending, setIsProactivelyResending] = useState (false);
-  const [proactiveResendMessage, setProactiveResendMessage] = useState<{
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
     type: 'success' | 'error';
-<<<<<<< HEAD
-    text: string
-  } | null>(null);
-<<<<<<< HEAD
-=======
+
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   // Using centralized Supabase client (imported at top)
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
-<<<<<<< HEAD
     logInfo('LoginPage: Initial session check effect runs.')
     const sessionTimeoutId = setTimeout(() => {
       if (mounted) {
-=======
-    text: string,;
-  } | null>(null);
-  // Using centralized Supabase client (imported at top);
-
-  // Effect for initial session check and auth state changes;
-  useEffect(() => {;
-    let mounted = true;
-    logInfo('LoginPage: Initial session check effect runs.'),;
-
-    const sessionTimeoutId = setTimeout(() => {;
-      if (mounted) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         logWarn('LoginPage: Session check timeout after 5 seconds');
         setSessionCheckTimedOut(true);
-        setIsCheckingSession(false); // Allow form to render if timeout;
+        setIsCheckingSession(false); // Allow form to render if timeout
         setSessionChecked(true); // Mark check as complete even on timeout      }
     }, 5000);
-<<<<<<< HEAD
     const checkSessionAndListen = async () => {
-=======
-
-    const checkSessionAndListen = async () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       if (!mounted) return;
       setIsCheckingSession(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       try {
         logInfo('LoginPage: Calling supabase.auth.getSession()')
         const {
@@ -236,44 +116,16 @@ const LoginPage = () =>: any {
         if (mounted) {
           logErrorToProduction('LoginPage: Exception during getSession:', {
             data: e
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      try {;
-        logInfo('LoginPage: Calling supabase && supabase.auth.getSession()'),;
-        const {;
-          data: { session },;
-          error: sessionError,;
-        } = await supabase && supabase.auth.getSession();
-        clearTimeout(sessionTimeoutId); // Clear timeout once getSession completes;
-        if (!mounted) return;
-
-        if (sessionError) {;
-          logErrorToProduction('LoginPage: Error getting session:', {;
-            data: sessionError,;
-          });
-          setError(sessionError as any); // Cast to any if type is too strict;
-        } else {;
-          logInfo('LoginPage: getSession returned, user:', {;
-            data: session?.user?.id,;
-          });
-          setUser(session?.user ?? null);
-        }
-      } catch (e) {;
-        if (mounted) {;
-          logErrorToProduction('LoginPage: Exception during getSession:', {;
-            data: e,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           });
           clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
-      } finally {;
-        if (mounted) {;
+      } finally {
+        if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
-          logInfo(;
-            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true';
+          logInfo(
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
           );        }
       }
-<<<<<<< HEAD
       // Listener for auth state changes
       logInfo('LoginPage: Setting up onAuthStateChange listener.')
       const { data: authListener } = supabase.auth.onAuthStateChange(
@@ -282,24 +134,12 @@ const LoginPage = () =>: any {
           logInfo('LoginPage: onAuthStateChange event:', {
             event
             userId: session?.user?.id
-=======
-
-      // Listener for auth state changes;
-      logInfo('LoginPage: Setting up onAuthStateChange listener.'),;
-      const { data: authListener } = supabase && supabase.auth.onAuthStateChange(;
-        (event: AuthChangeEvent, session: Session | null) => {;
-          if (!mounted) return,;
-          logInfo('LoginPage: onAuthStateChange event:', {;
-            event,;
-            userId: session?.user?.id,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           });
           setUser(session?.user ?? null);
-          // If auth state changes after initial check, ensure sessionChecked is true;
-          // This handles cases like login/logout in another tab.;
-          if (!sessionChecked && event !== 'INITIAL_SESSION') {;
+          // If auth state changes after initial check, ensure sessionChecked is true
+          // This handles cases like login/logout in another tab.
+          if (!sessionChecked && event !== 'INITIAL_SESSION') {
             setSessionChecked(true);
-<<<<<<< HEAD
             logInfo(
               'LoginPage: onAuthStateChange updated sessionChecked to true.'
             )
@@ -308,34 +148,14 @@ const LoginPage = () =>: any {
       );
       return () => {
         // Cleanup for listener
-=======
-            logInfo(;
-              'LoginPage: onAuthStateChange updated sessionChecked to true.';
-            ),;
-          }
-        }
-      );
-
-      return () => {;
-        // Cleanup for listener;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
         authListener?.subscription?.unsubscribe();
-<<<<<<< HEAD
-      };    };
-=======
       };    }
     const unsubscribePromise = checkSessionAndListen();
-<<<<<<< HEAD
     return () => {
-=======
-
-    return () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       mounted = false;
-      clearTimeout(sessionTimeoutId); // Clear timeout on unmount;
+      clearTimeout(sessionTimeoutId); // Clear timeout on unmount
       logInfo('LoginPage: Unmounting, cleaning up auth listener.');
-<<<<<<< HEAD
       unsubscribePromise.then(cleanup => cleanup && cleanup());
     }
   }, []); // Run only once on mount
@@ -354,34 +174,10 @@ const LoginPage = () =>: any {
         } catch (e) {
           logWarn('Failed to decode returnTo parameter:', {
             data: router.query.returnTo
-=======
-      unsubscribePromise && unsubscribePromise.then(cleanup => cleanup && cleanup());
-    };
-  }, []); // Run only once on mount;
-
-  // Effect for handling redirection AFTER session is checked and user state is updated;
-  useEffect(() => {;
-    logInfo(;
-      `LoginPage: Redirection effect runs. sessionChecked: ${sessionChecked}, isLoading: ${isLoading}, user: ${user?.id}, pathname: ${router && router.pathname}`;
-    );
-
-    // Only redirect if the initial session check is complete, not currently submitting login form, and user exists;
-    if (sessionChecked && !isLoading && user) {;
-      // Get returnTo from query params, decode it if it exists;
-      let returnTo = '/dashboard'; // Default fallback;
-
-      if (router && router.query.returnTo && typeof router && router.query.returnTo === 'string') {;
-        try {;
-          returnTo = decodeURIComponent(router && router.query.returnTo);
-        } catch (e) {;
-          logWarn('Failed to decode returnTo parameter:', {;
-            data: router && router.query.returnTo,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           });
           returnTo = '/dashboard';
         }
       }
-<<<<<<< HEAD
       // Prevent redirecting back to auth pages or creating loops
       const authPages = [
         '/auth/login'
@@ -399,107 +195,193 @@ const LoginPage = () =>: any {
       }
       logInfo(
         `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`
-=======
-=======
-    logInfo('LoginPage: Initial session check effect runs.'),
-    const sessionTimeoutId = setTimeout(() => {
-      if (mounted) {
-        logWarn('LoginPage: Session check timeout after 5 seconds'),
-        setSessionCheckTimedOut(true);
-        setIsCheckingSession(false), // Allow form to render if timeout
-        setSessionChecked(true), // Mark check as complete even on timeout
+      );
+      // Add a small delay to ensure session is fully established
+      const redirectTimer = setTimeout(() => {
+        // Double-check that we're still logged in before redirecting
+        if (user && router.pathname === '/auth/login') {
+          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
+          router.replace(returnTo); // Use replace to avoid back button issues
+        }
+      }, 100); // Small delay to let session stabilize
+      return () => clearTimeout(redirectTimer);
+    }
+    // Return undefined for all other cases
+    return undefined;
+  }, [user, sessionChecked, isLoading, router, router.query.returnTo]); // Dependencies: user, sessionChecked, isLoading, router
+  const handleResendVerification = async () => {
+    if (!email) {
+      setError({
+        name: 'ValidationError'
+        message: 'Please enter your email address first'
+      } as AuthError);
+      return;
+    }
+    setIsResendingVerification(true);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email })
+      });
+      if (response.ok) {
+        setVerificationEmailSent(true);
+        setError(null);
+      } else {
+        const data = await response.json();
+        setError({
+          name: 'ResendError'
+          message: data.message |'Failed to resend verification email'
+        } as AuthError);
       }
-    }, 5000);
-
-=======
+    } catch (err) {
+      setError({
+        name: 'NetworkError'
+        message: 'Failed to resend verification email. Please try again.'
+      } as AuthError);
+    } finally {
+      setIsResendingVerification(false);    }
+  }
+  const handleProactiveResendVerification = async (e: FormEvent) => {
+    e.preventDefault()
+    if (!proactiveResendEmail) {
+      setProactiveResendMessage({
+        type: 'error'
+        text: 'Please enter your email address.'
+      });
+      return;    }
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
+    try {
+      const response = await fetch('/api/resend-verification-email', {
+        method: 'POST'
+        headers: { 'Content-Type': 'application/json' }
+        body: JSON.stringify({ email: proactiveResendEmail }),      });
+      const data = await response.json();
+      if (response.ok) {
+        setProactiveResendMessage({
+          type: 'success'
+          text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`
+        });
+      } else {
+        setProactiveResendMessage({
+          type: 'error'
+          text: data.message |'Failed to resend verification email.'
+        });
+      }
+    } catch (err) {
+      setProactiveResendMessage({
+        type: 'error'
+        text: 'An unexpected error occurred. Please try again.'
+      });
+    } finally {
+      setIsProactivelyResending(false);    }
+  }
+  const handleLogin = async (e: FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError(null);
+    setIsEmailUnverified(false);
+    setVerificationEmailSent(false)
+    try {
+      logInfo('Attempting Supabase login with email:', { data: email });
+      const { data, error: signInError } =
+        await supabase.auth.signInWithPassword({
+          email
+          password
+        });
+      if (signInError) {
+        logErrorToProduction('Supabase sign-in error:', { data: signInError });
+        // Check if error is related to email verification
+        const messageIncludesEmailNotConfirmed =
+          signInError.message?.toLowerCase().includes('email not confirmed') |
+          signInError.message?.toLowerCase().includes('email_not_confirmed') |
+          signInError.message?.toLowerCase().includes('verify') |
+          signInError.message?.toLowerCase().includes('confirm');
+        // As per issue description, check for a specific error code "email_not_verified"
+        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
+        const codeIsEmailNotVerified =
+          (signInError as any).code === 'email_not_verified';
+        if (messageIncludesEmailNotConfirmed |codeIsEmailNotVerified) {
+          setIsEmailUnverified(true);
+          setError({
+            name: 'EmailNotVerifiedError'
+            message:
+              'Please verify your email address before logging in. Check your inbox for a verification link.'
+          } as AuthError);
+          setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered
+  // States for the new proactive resend form;
+  const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
+  const [proactiveResendEmail, setProactiveResendEmail] = useState('');
+  const [isProactivelyResending, setIsProactivelyResending] = useState(false);
+  const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),;
   // Using centralized Supabase client (imported at top);
-  // Effect for initial session check and auth state changes;
-  useEffect (() => {
-    let mounted = true;
-    log_info ('LoginPage: Initial session check effect runs.'),
-    const sessionTimeoutId = set_timeout (() => {
-      // Check condition
-if ( {) {
-  $2
-}
-        log_warn ('LoginPage: Session check timeout after 5 seconds');
-        setSessionCheckTimedOut (true);
-        setIsCheckingSession (false); // Allow form to render if timeout;
-        setSessionChecked (true); // Mark check as complete even on timeout      }
-    }, 5000);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    const checkSessionAndListen = async () => {
-      // Check condition
-if (return) {
-  $2
-}
-      setIsCheckingSession (true);
-      try {
-<<<<<<< HEAD
-        logInfo('LoginPage: Calling supabase.auth.getSession()'),
-        const { data: { session }, error: sessionError } = await supabase.auth.getSession(),
-        clearTimeout(sessionTimeoutId), // Clear timeout once getSession completes
-        if (!mounted) return;
 
-        if (sessionError) {
-          logErrorToProduction('LoginPage: Error getting session:', { data: sessionError }),
-          setError(sessionError as any), // Cast to any if type is too strict
-        } else {
-          logInfo('LoginPage: getSession returned, user:', { data: session?.user?.id }),
-          setUser(session?.user ?? null)
-        }
-      } catch (e) {
-        if (mounted) {
-          logErrorToProduction('LoginPage: Exception during getSession:', { data: e }),
-          clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too
-        }
-      } finally {
-        if (mounted) {
+  // Effect for initial session check and auth state changes;
+  useEffect(() => {;
+    let mounted = true;
+    logInfo('LoginPage: Initial session check effect runs.'),;
+
+    const sessionTimeoutId = setTimeout(() => {;
+      if (mounted) {;
+
+        logWarn('LoginPage: Session check timeout after 5 seconds');
+        setSessionCheckTimedOut(true);
+        setIsCheckingSession(false); // Allow form to render if timeout;
+        setSessionChecked(true); // Mark check as complete even on timeout      }
+    }, 5000);
+
+
+    const checkSessionAndListen = async () => {;
+
+      if (!mounted) return;
+      setIsCheckingSession(true);
+
+
+          });
+          clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too        }
+      } finally {;
+        if (mounted) {;
           setIsCheckingSession(false);
           setSessionChecked(true);
-          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
-        }
+          logInfo(
+            'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
+          );        }
       }
 
-      // Listener for auth state changes
-      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
-      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
-        if (!mounted) return;
-        logInfo('LoginPage: onAuthStateChange event:', { 
-          event;
-          userId: session?.user?.id 
-        });
-        setUser(session?.user ?? null);
-        // If auth state changes after initial check, ensure sessionChecked is true
-        // This handles cases like login/logout in another tab.
-        if (!sessionChecked && event !== "INITIAL_SESSION") {
-           setSessionChecked(true);
-           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
-        }
-      });
-      
-      return () => { // Cleanup for listener
-        logInfo('LoginPage: Unsubscribing from onAuthStateChange.'),
-        authListener?.subscription?.unsubscribe()
-      }
-    };
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
+      // Listener for auth state changes;
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),;
+      const { data: authListener } = supabase && supabase.auth.onAuthStateChange(;
+        (event: AuthChangeEvent, session: Session | null) => {;
+          if (!mounted) return,;
+          logInfo('LoginPage: onAuthStateChange event:', {;
+            event,;
+            userId: session?.user?.id,;
+
+          });
+          setUser(session?.user ?? null);
+          // If auth state changes after initial check, ensure sessionChecked is true;
+          // This handles cases like login/logout in another tab.;
+          if (!sessionChecked && event !== 'INITIAL_SESSION') {;
+            setSessionChecked(true);
+
+            logInfo(;
+              'LoginPage: onAuthStateChange updated sessionChecked to true.';
+            ),;
+          }
+        }
+      );
+
+      return () => {;
+        // Cleanup for listener;
+
+        logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
+        authListener?.subscription?.unsubscribe();
+
+      };    }
     const unsubscribePromise = checkSessionAndListen();
 
-    return () => {
-      mounted = false;
-<<<<<<< HEAD
-      clearTimeout(sessionTimeoutId); // Clear timeout on unmount;
-=======
-      clearTimeout(sessionTimeoutId), // Clear timeout on unmount
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      logInfo('LoginPage: Unmounting, cleaning up auth listener.');
-      unsubscribePromise.then(cleanup => cleanup && cleanup())
-    }
-  }, []), // Run only once on mount
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       // Prevent redirecting back to auth pages or creating loops;
       const authPages = [;
@@ -517,32 +399,7 @@ if (return) {
       if (returnTo && returnTo.startsWith('http') || returnTo && returnTo.includes('://')) {;
         returnTo = '/dashboard';
       }
-<<<<<<< HEAD
 
-      logInfo(;
-        `LoginPage: Conditions met for redirect. Current path: ${router && router.pathname}, Target: ${returnTo}`;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      );
-      // Add a small delay to ensure session is fully established;
-      const redirectTimer = setTimeout(() => {;
-        // Double-check that we're still logged in before redirecting;
-        if (user && router && router.pathname === '/auth/login') {;
-          logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
-          router && router.replace(returnTo); // Use replace to avoid back button issues;
-        }
-<<<<<<< HEAD
-      }, 100); // Small delay to let session stabilize
-      return () => clearTimeout(redirectTimer);
-    }
-    // Return undefined for all other cases
-    return undefined;
-  }, [user, sessionChecked, isLoading, router, router.query.returnTo]); // Dependencies: user, sessionChecked, isLoading, router
-  const handleResendVerification = async () => {
-    if (!email) {
-      setError({
-        name: 'ValidationError'
-        message: 'Please enter your email address first'
-=======
       }, 100); // Small delay to let session stabilize;
 
       return () => clearTimeout(redirectTimer);
@@ -557,13 +414,11 @@ if (return) {
       setError({;
         name: 'ValidationError',;
         message: 'Please enter your email address first',;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       } as AuthError);
       return;
     }
-<<<<<<< HEAD
-    setIsResendingVerification(true);
-=======
+
 =======
       
       // Ensure returnTo is a relative path to prevent open redirect attacks
@@ -594,44 +449,21 @@ if (return) {
       return
     }
     
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
     setIsResendingVerification(true);
-<<<<<<< HEAD
-    try {
-      const response = await fetch('/api/resend-verification-email', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ email })
-      });
-      if (response.ok) {
-        setVerificationEmailSent(true);
-        setError(null);
-      } else {
-        const data = await response.json();
-        setError({
-          name: 'ResendError'
-          message: data.message |'Failed to resend verification email'
-        } as AuthError);
-      }
-    } catch (err) {
-      setError({
-        name: 'NetworkError'
-        message: 'Failed to resend verification email. Please try again.'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
     try {;
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email }),;
-<<<<<<< HEAD
-=======
+
 =======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
 
@@ -645,101 +477,18 @@ if (return) {
           message: data && data.message || 'Failed to resend verification email',;
         } as AuthError);
       }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    } catch (err) {;
-      setError({;
-        name: 'NetworkError',;
-        message: 'Failed to resend verification email. Please try again.',;
-<<<<<<< HEAD
-      } as AuthError);
-    } finally {;
-      setIsResendingVerification(false);    }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      } as AuthError);
-    } finally {;
-      setIsResendingVerification(false);    }
-<<<<<<< HEAD
-  }
-  const handleProactiveResendVerification = async (e: FormEvent) => {
-    e.preventDefault()
-    if (!proactiveResendEmail) {
-      setProactiveResendMessage({
-        type: 'error'
-        text: 'Please enter your email address.'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  };
 
-  const handleProactiveResendVerification = async (e: FormEvent) => {;
-    e && e.preventDefault(),;
-    if (!proactiveResendEmail) {;
-      setProactiveResendMessage({;
-        type: 'error',;
-        text: 'Please enter your email address.',;
-<<<<<<< HEAD
-      });
-      return;    }
 
     setIsProactivelyResending(true);
     setProactiveResendMessage(null);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      });
-      return;    }
-=======
-    } catch (err) {
-      setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError)
-    } finally {
-      setIsResendingVerification(false)
-    }
-  };
 
-  const handleProactiveResendVerification = async (e: FormEvent) => {
-    e.preventDefault();
-    if (!proactiveResendEmail) {
-      setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' }),
-      return
-    }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    setIsProactivelyResending(true);
-    setProactiveResendMessage(null);
-<<<<<<< HEAD
-    try {
-      const response = await fetch('/api/resend-verification-email', {
-<<<<<<< HEAD
-        method: 'POST'
-        headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({ email: proactiveResendEmail }),      });
-      const data = await response.json();
-      if (response.ok) {
-        setProactiveResendMessage({
-          type: 'success'
-          text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`
-        });
-      } else {
-        setProactiveResendMessage({
-          type: 'error'
-          text: data.message |'Failed to resend verification email.'
-        });
-      }
-    } catch (err) {
-      setProactiveResendMessage({
-        type: 'error'
-        text: 'An unexpected error occurred. Please try again.'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     try {;
       const response = await fetch('/api/resend-verification-email', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON && JSON.stringify({ email: proactiveResendEmail }),      });
-<<<<<<< HEAD
-=======
+
 =======
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -758,14 +507,40 @@ if (return) {
       setIsProactivelyResending(false)
     }
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-      const data = await response && response.json();
-      if (response && response.ok) {;
-        setProactiveResendMessage({;
-          type: 'success',;
-          text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`,;
+          logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      // Listener for auth state changes
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
+        if (!mounted) return,
+        logInfo('LoginPage: onAuthStateChange event:', {
+          event,
+          userId: session?.user?.id
+        }),
+        setUser(session?.user ?? null),
+        // If auth state changes after initial check, ensure sessionChecked is true
+        // This handles cases like login/logout in another tab.
+        if (!sessionChecked && event !== "INITIAL_SESSION") {
+           setSessionChecked(true),
+           logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
+;
+      // Listener for auth state changes;
+      logInfo('LoginPage: Setting up onAuthStateChange listener.');
+      const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {;
+        if (!mounted) return,;
+        logInfo('LoginPage: onAuthStateChange event:', {;
+          event,;
+          userId: session?.user?.id;
         });
       } else {;
         setProactiveResendMessage({;
@@ -777,142 +552,62 @@ if (return) {
       setProactiveResendMessage({;
         type: 'error',;
         text: 'An unexpected error occurred. Please try again.',;
-<<<<<<< HEAD
+
+
       });
     } finally {;
-      setIsProactivelyResending(false);    }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      });
-    } finally {;
-      setIsProactivelyResending(false);    }
-<<<<<<< HEAD
+      setIsResendingVerification(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-  const handleLogin = async (e: FormEvent) => {
+}
+  },;
+  const handleProactiveResendVerification = async (e: FormEvent) => {;
     e.preventDefault();
-    setIsLoading(true);
-    setError(null);
-    setIsEmailUnverified(false);
-<<<<<<< HEAD
-    setVerificationEmailSent(false)
+    if (!proactiveResendEmail) {;
+      setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' });
+      return;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    setIsProactivelyResending(true);
+    setProactiveResendMessage(null);
     try {
-      logInfo('Attempting Supabase login with email:', { data: email });
-      const { data, error: signInError } =
-        await supabase.auth.signInWithPassword({
-          email
-          password
-        });
-      if (signInError) {
-        logErrorToProduction('Supabase sign-in error:', { data: signInError });
-        // Check if error is related to email verification
-        const messageIncludesEmailNotConfirmed =
-          signInError.message?.toLowerCase().includes('email not confirmed') |
-          signInError.message?.toLowerCase().includes('email_not_confirmed') |
-          signInError.message?.toLowerCase().includes('verify') |
-          signInError.message?.toLowerCase().includes('confirm');
-        // As per issue description, check for a specific error code "email_not_verified"
-        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.
-        const codeIsEmailNotVerified =
-          (signInError as any).code === 'email_not_verified';
-        if (messageIncludesEmailNotConfirmed |codeIsEmailNotVerified) {
-          setIsEmailUnverified(true);
-          setError({
-            name: 'EmailNotVerifiedError'
-            message:
-              'Please verify your email address before logging in. Check your inbox for a verification link.'
-          } as AuthError);
-          setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered
-          // Auto-resend verification email
-          setTimeout(() => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  };
-
-  const handleLogin = async (e: FormEvent) => {;
-    e && e.preventDefault();
-    setIsLoading(true);
-    setError(null);
-    setIsEmailUnverified(false);
-    setVerificationEmailSent(false),;
-
-    try {;
-      logInfo('Attempting Supabase login with email:', { data: email });
-      const { data, error: signInError } =;
-        await supabase && supabase.auth.signInWithPassword({;
-          email,;
-          password,;
-        });
-
-      if (signInError) {;
-        logErrorToProduction('Supabase sign-in error:', { data: signInError });
-
-        // Check if error is related to email verification;
-        const messageIncludesEmailNotConfirmed =;
-          signInError && signInError.message?.toLowerCase().includes('email not confirmed') ||;
-          signInError && signInError.message?.toLowerCase().includes('email_not_confirmed') ||;
-          signInError && signInError.message?.toLowerCase().includes('verify') ||;
-          signInError && signInError.message?.toLowerCase().includes('confirm');
-        // As per issue description, check for a specific error code "email_not_verified";
-        // Assuming 'code' is a property on the error object. Supabase errors might have different structures.;
-        const codeIsEmailNotVerified =;
-          (signInError as any).code === 'email_not_verified';
-
-        if (messageIncludesEmailNotConfirmed || codeIsEmailNotVerified) {;
-          setIsEmailUnverified(true);
-          setError({;
-            name: 'EmailNotVerifiedError',;
-            message:;
-              'Please verify your email address before logging in. Check your inbox for a verification link.',;
-          } as AuthError);
-          setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered;
-
-          // Auto-resend verification email;
-          setTimeout(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            handleResendVerification();
-          }, 1000);
-        } else {;
-          // MODIFIED SECTION FOR BETTER ERROR MESSAGES;
-          let displayMessage =;
-            'Login failed. Please check your credentials and try again.'; // Default user-friendly message;
-          if (signInError && signInError.message) {;
-            if (;
-              signInError && signInError.message;
-                .toLowerCase();
-                .includes('invalid login credentials');
-            ) {;
-              displayMessage = 'Invalid email or password. Please try again.';
-            } else if (;
-              signInError && signInError.message;
-                .toLowerCase();
-                .includes('network request failed');
-            ) {;
-              displayMessage =;
-                'Network error. Please check your internet connection and try again.';
-            } else if (;
-              signInError && signInError.message.toLowerCase().includes('user disabled');
-            ) {;
-              displayMessage =;
-                'Your account has been disabled. Please contact support.';
-            }
-            // Add more specific checks here if needed for other Supabase error messages;
-          }
-<<<<<<< HEAD
-          setError({
-            name: signInError.name |'AuthApiError'
-            message: displayMessage
-=======
-          setError({;
-            name: signInError && signInError.name || 'AuthApiError',;
-            message: displayMessage,;
-<<<<<<< HEAD
-          } as AuthError);
-        }
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    setVerificationEmailSent(false);
-    
+      const response = await fetch('/api/resend-verification-email', {;
+        method: 'POST',;
+        headers: { 'Content-Type': 'application/json' },;
+        body: JSON.stringify({ email: proactiveResendEmail });
+      }),;
+      const data = await response.json();
+      if (response.ok) {;
+        setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` });
+      } else {;
+        setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' });
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+      setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' });
+    } finally {;
+      setIsProactivelyResending(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  },
+  const handleLogin = async (e: FormEvent) => {
+    e.preventDefault(),
+    setIsLoading(true),
+    setError(null),
+    setIsEmailUnverified(false),
+    setVerificationEmailSent(false),
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
@@ -934,21 +629,49 @@ if (return) {
           setIsEmailUnverified(true);
           setError({ 
             name: 'EmailNotVerifiedError',
-            message: 'Please verify your email address before logging in. Check your inbox for a verification link.' 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
+          } as AuthError),
+          setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
+          // Auto-resend verification email
+          setTimeout(() => {
+            handleResendVerification()
+          }, 1000)
+        } else {
+          // MODIFIED SECTION FOR BETTER ERROR MESSAGES
+          let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
+          if (signInError.message) {
+            if (
+              signInError.message
+                .toLowerCase()
+                .includes('invalid login credentials')
+            ) {
+              displayMessage = 'Invalid email or password. Please try again.';
+            } else if (
+              signInError.message
+                .toLowerCase()
+                .includes('network request failed')
+            ) {
+              displayMessage =
+                'Network error. Please check your internet connection and try again.';
+            } else if (
+              signInError.message.toLowerCase().includes('user disabled')
+            ) {
+              displayMessage =
+                'Your account has been disabled. Please contact support.';
+            }
+            // Add more specific checks here if needed for other Supabase error messages
+          }
+          setError({
+            name: signInError.name |'AuthApiError'
+            message: displayMessage
           } as AuthError);
         }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      } else if (data && data.user) {;
-        logInfo('Supabase sign-in successful, user:', { data: data && data.user });
-        setUser(data && data.user); // setUser to trigger useEffect for redirection        // Redirection is now handled by the useEffect hook;
-      } else {;
-        // Should not happen if signInError is null and data && data.user is null;
+      } else if (data.user) {
+        logInfo('Supabase sign-in successful, user:', { data: data.user });
+        setUser(data.user); // setUser to trigger useEffect for redirection        // Redirection is now handled by the useEffect hook
+      } else {
+        // Should not happen if signInError is null and data.user is null
         logWarn('Supabase sign-in returned no error but no user.');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         setError({
           name: 'UnknownAuthError'
           message: 'Login failed due to an unknown error. Please try again.'
@@ -957,100 +680,52 @@ if (return) {
     } catch (catchedError: any) {
       logErrorToProduction('Exception during Supabase sign-in:', {
         data: catchedError
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        setError({;
-          name: 'UnknownAuthError',;
-          message: 'Login failed due to an unknown error. Please try again.',;
-        } as AuthError);
-<<<<<<< HEAD
-=======
-=======
-      } else if (data.user) {
-        logInfo('Supabase sign-in successful, user:', { data: data.user }),
-        setUser(data.user), // setUser to trigger useEffect for redirection
-        // Redirection is now handled by the useEffect hook
-      } else {
-        // Should not happen if signInError is null and data.user is null
-        logWarn('Supabase sign-in returned no error but no user.');
-        setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      }
-    } catch (catchedError: any) {;
-      logErrorToProduction('Exception during Supabase sign-in:', {;
-        data: catchedError,;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       });
-      // Check if the caught error is a network error;
+      // Check if the caught error is a network error
       let exceptionMessage = 'An unexpected error occurred. Please try again.';
-      if (;
-        catchedError && catchedError.message &&;
-        catchedError && catchedError.message;
-          .toLowerCase();
-          .includes('networkerror when attempting to fetch resource');
-      ) {;
-        exceptionMessage =;
+      if (
+        catchedError.message &&
+        catchedError.message
+          .toLowerCase()
+          .includes('networkerror when attempting to fetch resource')
+      ) {
+        exceptionMessage =
           'Network error. Please check your internet connection and try again.';
-      } else if (catchedError && catchedError.message) {;
-        exceptionMessage = catchedError && catchedError.message;
+      } else if (catchedError.message) {
+        exceptionMessage = catchedError.message;
       }
-<<<<<<< HEAD
-      setError({;
-        name: 'ExceptionError',;
-        message: exceptionMessage,;
-      } as AuthError);
-    } finally {;
-      setIsLoading(false);    }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
       setError({
         name: 'ExceptionError'
         message: exceptionMessage
-=======
-      setError({;
-        name: 'ExceptionError',;
-        message: exceptionMessage,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       } as AuthError);
-    } finally {;
-      setIsLoading(false);    }
-<<<<<<< HEAD
-  }
-=======
-      setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError)
     } finally {
-      setIsLoading(false)
-    }
-  };
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+      setIsLoading(false);    }
+  }
   // Auto-redirect to verification status page for unverified users after showing message
   useEffect(() => {
     if (isEmailUnverified && verificationEmailSent && email) {
       const timer = setTimeout(() => {
-<<<<<<< HEAD
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+    return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
+
+              if (signInError.message.toLowerCase().includes('invalid login credentials')) {
+                  displayMessage = 'Invalid email or password. Please try again.'
+              } else if (signInError.message.toLowerCase().includes('network request failed')) {
+                  displayMessage = 'Network error. Please check your internet connection and try again.'
+              } else if (signInError.message.toLowerCase().includes('user disabled')) {
+                  displayMessage = 'Your account has been disabled. Please contact support.'
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   };
 
   // Auto-redirect to verification status page for unverified users after showing message;
   useEffect(() => {;
     if (isEmailUnverified && verificationEmailSent && email) {;
       const timer = setTimeout(() => {;
-        router && router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-<<<<<<< HEAD
-      }, 3000);
-      return () => clearTimeout(timer);
-    }
-    return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
         log_info ('LoginPage: Calling supabase.auth.get_session ()'),
         const {
@@ -1417,9 +1092,7 @@ if ( {) {
       return () => clear_timeout (timer);
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
         router.push(`/verify-status?email=${encodeURIComponent(email)}`)
       }, 3000);
       return () => clearTimeout(timer)
@@ -1427,13 +1100,23 @@ if ( {) {
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+=======
+        router.push(`/verify-status?email=${encodeURIComponent(email)}`);
+      }, 3000),;
+      return () => clearTimeout(timer);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return undefined, // Explicitly return undefined if condition is not met
+  }, [isEmailUnverified, verificationEmailSent, email, router]),
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 
   // --- Rendering Logic ---;
 
@@ -1452,16 +1135,12 @@ if ( {) {
         </div>;
       </div>;
     );  }
-<<<<<<< HEAD
-  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
-  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
-  if (sessionChecked && user && !isLoading) {
-=======
+
 
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
   if (sessionChecked && user && !isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
     return (
       <div className='min-h-screen flex items-center justify-center'>;
@@ -1472,14 +1151,7 @@ if ( {) {
         </div>;
       </div>;
     );  }
-<<<<<<< HEAD
-  // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
-  // This also covers the case where a user was present but a login attempt failed, clearing the user.
-  logInfo(
-    `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`
-  );
-<<<<<<< HEAD
-=======
+
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
   // This is a safeguard against the component's content persisting on other auth routes.
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
@@ -1496,9 +1168,13 @@ if ( {) {
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
       </div>
+    );  }
     )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
+}
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
@@ -1511,87 +1187,94 @@ if ( {) {
           <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
         </div>
       </div>
-    )
-  }
-
+    );  }
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
   // This also covers the case where a user was present but a login attempt failed, clearing the user.
-  logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`),
+  logInfo(
+    `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`
+  );
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
   // This is a safeguard against the component's content persisting on other auth routes.
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
-    logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
-    return null, // Or a minimal loader/empty div
-  }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+    logWarn(
+      `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
+    );
+    return null; // Or a minimal loader/empty div  }
 
+    )
+    return undefined, // Explicitly return undefined if condition is not met;
+  }, [isEmailUnverified, verificationEmailSent, email, router]),;
+  // --- Rendering Logic ---;
+  // 1. Primary Loading State: During initial session check;
+  if (isCheckingSession) {;
+    logInfo('LoginPage: Rendering "Checking authentication..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <p className="text-gray-600">Checking authentication...</p>;
+          <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  // 2. Redirecting State: If session is checked, user exists, and not currently submitting form;
+  // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.;
+  if (sessionChecked && user && !isLoading) {;
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
+    return (;
+      <div className="min-h-screen flex items-center justify-center">;
+        <div className="text-center">;
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-blue-600 mx-auto mb-4"></div>;
+          <h2 className="text-2xl font-bold mb-4">Already Logged In</h2>;
+          <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>;
+        </div>;
+      </div>;
+    );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading);
   // This also covers the case where a user was present but a login attempt failed, clearing the user.;
-  logInfo(;
-    `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router && router.pathname}`;
-  );
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-  // Defensive check: If router && router.pathname is not /auth/login, do not render the login form.;
+  logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`);
+  // Defensive check: If router.pathname is not /auth/login, do not render the login form.;
   // This is a safeguard against the component's content persisting on other auth routes.;
-  if (router && router.pathname !== '/auth/login' && router && router.pathname !== '/login') {;
-    logWarn(;
-      `LoginPage: Current pathname is ${router && router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`;
-<<<<<<< HEAD
-    );
-    return null; // Or a minimal loader/empty div  }
 
+  if (router.pathname !== '/auth/login' && router.pathname !== '/login') {;
+    logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
+    return null, // Or a minimal loader/empty div;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    );
-    return null; // Or a minimal loader/empty div  }
-  return (
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    <>;
-      <Head>;
-        <title>{`${t('auth && auth.sign_in')} - Zion Tech Marketplace`}</title>;
-        <meta
-          name='description'
-          content='Sign in to your Zion Tech Marketplace account'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        />
-      </Head>
-      <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
-        <Card className='w-full max-w-md'>          <CardHeader>
-=======
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
-      
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
+      <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
+        <Card className='w-full max-w-md'>          <CardHeader>
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-            <form onSubmit={handleLogin} className='space-y-4'>
-              {error && (
-                <div className='p-3 bg-red-50 border border-red-200 rounded-md'>
-                  <p className='text-sm text-red-600'>{error.message}</p>
-                </div>
-              )}
-              <div className='space-y-2'>
-                <label htmlFor='email' className='text-sm font-medium'>
-                  Email
-                </label>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
         />;
       </Head>;
 
@@ -1614,85 +1297,48 @@ if ( {) {
                 <label htmlFor='email' className='text-sm font-medium'>;
                   Email;
                 </label>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Input
                   id='email'
                   type='email'
                   value={email}
                   onChange={e => setEmail(e && e.target.value)}                  required;
-<<<<<<< HEAD
-                  disabled={isLoading}
+
 =======
 =======
+
             <form onSubmit={handleLogin} className="space-y-4">
               {error && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
                 </div>
               )}
-              
-              <div className="space-y-2">
-                <label htmlFor="email" className="text-sm font-medium">
+              <div className='space-y-2'>
+                <label htmlFor='email' className='text-sm font-medium'>
                   Email
                 </label>
                 <Input
-                  id="email"
-                  type="email"
+                  id='email'
+                  type='email'
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+                  onChange={e => setEmail(e.target.value)}                  required
                   disabled={isLoading}
-<<<<<<< HEAD
                 />
               </div>
-<<<<<<< HEAD
               <div className='space-y-2'>
                 <label htmlFor='password' className='text-sm font-medium'>
                   Password
                 </label>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                />;
-              </div>;
-
-              <div className='space-y-2'>;
-                <label htmlFor='password' className='text-sm font-medium'>;
-                  Password;
-                </label>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <Input
                   id='password'
                   type='password'
                   value={password}
-                  onChange={e => setPassword(e && e.target.value)}                  required;
-<<<<<<< HEAD
+                  onChange={e => setPassword(e.target.value)}                  required
                   disabled={isLoading}
-=======
-=======
-              
-              <div className="space-y-2">
-                <label htmlFor="password" className="text-sm font-medium">
-                  Password
-                </label>
-                <Input
-                  id="password"
-                  type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                  disabled={isLoading}
-<<<<<<< HEAD
                 />
               </div>
-<<<<<<< HEAD
               <Button
                 type='submit'
                 className='w-full'
@@ -1712,7 +1358,88 @@ if ( {) {
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
                 >                  Sign up
-=======
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+              <div className="space-y-2">
+                <label htmlFor="email" className="text-sm font-medium">
+                  Email
+                </label>
+                <Input
+                  id='email'
+                  type='email'
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <div className='space-y-2'>
+                <label htmlFor='password' className='text-sm font-medium'>
+                  Password
+                </label>
+                <Input
+                  id='password'
+                  type='password'
+                  value={password}
+                  onChange={e => setPassword(e.target.value)}                  required
+                  disabled={isLoading}
+                />
+              </div>
+              <Button
+                type='submit'
+                className='w-full'
+                disabled={isLoading || isEmailUnverified}
+              >
+                {isLoading
+                  ? 'Signing in...'
+                  : isEmailUnverified
+                    ? t('auth.email_verification_required')
+                    : t('auth.sign_in')}
+              </Button>
+            </form>
+            <div className='mt-6 text-center'>
+              <p className='text-sm text-gray-600'>
+                Don't have an account?{' '}
+                <Link
+                  href='/auth/register'
+                  className='text-blue-600 hover:underline'
+                >                  Sign up
+                  id="email"
+                  type="email"
+                  value={email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setEmail(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  required;
+                  disabled={isLoading  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                />
+              </div>
+              <div className="space-y-2">
+                <label htmlFor="password" className="text-sm font-medium">
+                  Password
+                </label>
+                <Input
+                  id="password"
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+
+                  disabled={isLoading}
+
               
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
@@ -1724,7 +1451,6 @@ if ( {) {
                 Don't have an account?{' '}
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </Link>
               </p>
             </div>
@@ -1732,10 +1458,13 @@ if ( {) {
         </Card>
       </div>
     </>
-<<<<<<< HEAD
 );
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+};export default LoginPage;
+
+  )
+},
+export default LoginPage,
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 />;
               </div>;
 
@@ -1757,8 +1486,7 @@ if ( {) {
                 <Link
                   href='/auth/register'
                   className='text-blue-600 hover:underline'>                  Sign up;
-<<<<<<< HEAD
-=======
+
 =======
 ;
   // --- Rendering Logic ---;
@@ -1872,7 +1600,7 @@ if ( {) {
                   href='/auth / register';
                   className='text - blue - 600 hover:underline';
                 >                  Sign up;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 </Link>;
               </p>;
@@ -1880,26 +1608,14 @@ if ( {) {
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-    </>;
-  );
-};export default LoginPage;
-=======
-<<<<<<< HEAD
-    </>;
-  );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-};export default LoginPage;
 
-=======
-  )
-};
 
-export default LoginPage;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
     </>);
 }export default LoginPage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+},;
+export default LoginPage;

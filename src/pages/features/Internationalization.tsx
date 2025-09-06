@@ -1,54 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { SEO } from "@/components/SEO",
-import { GradientHeading } from "@/components/GradientHeading",
-import { Button } from "@/components/ui/button";
-import Link from 'next/link';
-export default function Internationalization() {
-
-  const schema = {
-    '@context': 'https://schema.org'
-    '@type': 'WebPage'
-    name: 'Internationalization'
-    description:
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.'
-    url: 'https://app.ziontechgroup.com/features/internationalization',  };    "@context": "https://schema.org"
-    "@type": "WebPage"
-    "name": "Internationalization"
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings."
-    "url": "https://app.ziontechgroup.com/features/internationalization"
-=======
-import React from 'react';
-import { Header } from '@/components / Header';
-import { SEO } from '@/components / SEO';
-import { GradientHeading } from '@/components / GradientHeading';
-import { Button } from '@/components / ui / button';
-import Link from 'next / link';
-export default /**
- * Internationalization - Function description
- */
-function Internationalization() {
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Internationalization',
-    description:;
-      'Use Zion in multiple languages and attract clients worldwide with localized listings.',
-    url: 'https://app.ziontechgroup.com / features / internationalization',  }    "@context": "https://schema.org";
-    "@type": "WebPage";
-    "name": "Internationalization";
-    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
-    "url": "https://app.ziontechgroup.com / features / internationalization";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -90,9 +39,7 @@ export default function Internationalization() {;
     "name": "Internationalization";
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",;
     "url": "https://app && app.ziontechgroup.com/features/internationalization";
-<<<<<<< HEAD
-=======
-=======
+
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -101,102 +48,23 @@ import { Button } from "@/components/ui/button";
 import Link from 'next/link';
 export default function Internationalization() {
   const schema = {
-
-    "@context": "https: //schema.org",
+    "@context": "https://schema.org",
     "@type": "WebPage",
     "name": "Internationalization",
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
     "url": "https://app.ziontechgroup.com/features/internationalization"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
-<<<<<<< HEAD
-      <SEO
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        title='Internationalization'
-        description='Reach a global audience with multi-language support across the Zion platform.'
-        keywords='i18n, multi-language marketplace, localized listings'
-        canonical='https://app && app.ziontechgroup.com/features/internationalization'
-      />;
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type='application/ld+json'
-        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
-      <Header />;
-      <main className='bg-background text-white py-12'>;
-        <div className='container mx-auto px-4 md:px-6'>;
-          <GradientHeading className='mb-4 text-center'>;
-            Internationalization;
-          </GradientHeading>;
-          <p className='text-center text-zion-slate-light max-w-3xl mx-auto mb-8'>;
-            Our interface and search support multiple languages so you can;
-            collaborate without barriers.;
-          </p>;
-          <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>;
-            <img
-              src='https://placehold && placehold.co/800x400'
-              alt='Screenshot of language options'
-              className='object-cover'
-            />;
-          </div>;
-          <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
-          <ul className='list-disc list-inside space-y-2 mb-8 text-zion-slate-light'>;
-            <li>Publish product and service pages in your native language.</li>;
-            <li>Attract international clients and expand your reach.</li>;
-=======
-      <SEO;
-        title='Internationalization';
-        description='Reach a global audience with multi - language support across the Zion platform.';
-        keywords='i18n, multi - language marketplace, localized listings';
-        canonical='https://app.ziontechgroup.com / features / internationalization';
-      />;
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
-      <script;
-        type='application / ld + json';
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
-      ></script>;
-      <Header />;
-      <main className='bg - background text - white py - 12'>;
-        <div className='container mx - auto px - 4 md:px - 6'>;
-          <GradientHeading className='mb - 4 text - center'>;
-            Internationalization;
-          </GradientHeading>;
-          <p className='text - center text - zion - slate - light max - w-3xl mx - auto mb - 8'>;
-            Our interface and search support multiple languages so you can;
-            collaborate without barriers.;
-          </p>;
-          <div className='relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden'>;
-            <img;
-              src='https://placehold.co / 800x400';
-              alt='Screenshot of language options';
-              className='object - cover';
-            />;
-          </div>;
-          <h2 className='text - 2xl font - bold mb - 4'>Benefits &amp; Use Cases</h2>;
-          <ul className='list - disc list - inside space - y-2 mb - 8 text - zion - slate - light'>;
-            <li > Publish product and service pages in your native language.</li>;
-            <li > Attract international clients and expand your reach.</li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
             <li>;
               Automatic language detection ensures a localized experience.;
             </li>;
           </ul>;
-<<<<<<< HEAD
-          <h2 className='text-2xl font-bold mb-4'>;
-            Frequently Asked Questions;
-          </h2>;
-          <div className='space-y-4 mb-12'>;
-            <div>;
-              <p className='font-semibold'>Which languages are supported?</p>;
-              <p className='text-zion-slate-light'>;
-=======
+
           <h2 className='text - 2xl font - bold mb - 4'>;
             Frequently Asked Questions;
           </h2>;
@@ -204,57 +72,87 @@ export default function Internationalization() {
             <div>;
               <p className='font - semibold'>Which languages are supported?</p>;
               <p className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 The platform currently supports English, Spanish, Portuguese and;
                 more.;
               </p>;
             </div>;
             <div>;
-<<<<<<< HEAD
-              <p className='font-semibold'>Can I suggest new translations?</p>;
-              <p className='text-zion-slate-light'>;
-=======
+
               <p className='font - semibold'>Can I suggest new translations?</p>;
               <p className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 Yes, community contributions help us continually add new;
                 languages.;
               </p>;
             </div>;
           </div>;
-<<<<<<< HEAD
-          <div className='text-center'>;
-            <Button size='lg' className='bg-zion-purple text-white' asChild>;
-              <Link href='/'>Explore Zion</Link>            </Button>      />;
-<<<<<<< HEAD
-=======
-=======
+
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
+
+
+
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON && JSON.stringify(schema) }}></script>;
-      <Header />;
-      <main className="bg-background text-white py-12">;
-        <div className="container mx-auto px-4 md: px-6">;
-          <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>;
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">;
-            Our interface and search support multiple languages so you can collaborate without barriers.;
-          </p>;
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
+
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      ></script>
+      <Header />
+      <main className="bg-background text-white py-12">
+        <div className="container mx-auto px-4 md: px-6">
+          <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Our interface and search support multiple languages so you can collaborate without barriers.
+          </p>
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
             <img
-              src="https://placehold && placehold.co/800x400"
+              src="https://placehold.co/800x400"
               alt="Screenshot of language options"
               className="object-cover"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+            />
+          </div>
+          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
+          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
+            <li>Publish product and service pages in your native language.</li>
+            <li>Attract international clients and expand your reach.</li>
+            <li>Automatic language detection ensures a localized experience.</li>
+          </ul>
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-12">
+            <div>
+              <p className="font-semibold">Which languages are supported?</p>
+              <p className="text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p>
+            </div>
+            <div>
+              <p className="font-semibold">Can I suggest new translations?</p>
+              <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
+            </div>
+          </div>
+          <div className='text-center'>
+            <Button size='lg' className='bg-zion-purple text-white' asChild>
+              <Link href='/'>Explore Zion</Link>            </Button>      />
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      ></script>
+      <Header />
+      <main className="bg-background text-white py-12">
+        <div className="container mx-auto px-4 md: px-6">
+          <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
+            Our interface and search support multiple languages so you can collaborate without barriers.
+          </p>
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
+            <img
+              src="https://placehold.co/800x400"
+              alt="Screenshot of language options"
+              className="object-cover"
             />
           </div>
           <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
@@ -282,96 +180,56 @@ export default function Internationalization() {
         </div>
       </main>
     </>
-<<<<<<< HEAD
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-            />;
-          </div>;
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>;
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">;
-            <li>Publish product and service pages in your native language.</li>;
-            <li>Attract international clients and expand your reach.</li>;
-            <li>Automatic language detection ensures a localized experience.</li>;
-          </ul>;
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>;
-          <div className="space-y-4 mb-12">;
-            <div>;
-              <p className="font-semibold">Which languages are supported?</p>;
-              <p className="text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p>;
-            </div>;
-            <div>;
-              <p className="font-semibold">Can I suggest new translations?</p>;
-              <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>;
-            </div>;
-          </div>;
-          <div className="text-center">;
-            <Button size="lg" className="bg-zion-purple text-white" asChild>;
-<<<<<<< HEAD
-=======
-=======
-          <div className='text - center'>;
-            <Button size='lg' className='bg - zion - purple text - white' as_child>;
-              <Link href='/'>Explore Zion</Link>            </Button>      />;
-      {/* Use a normal script tag so JSON - LD is correctly parsed */}
+;
+
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { SEO } from "@/components/SEO",;
+import { GradientHeading } from "@/components/GradientHeading",;
+import { Button } from "@/components/ui/button",;
+import Link from 'next/link',;
+export default function Internationalization() {;
+  const schema = {;
+    "@context": "https://schema.org",;
+    "@type": "WebPage",;
+    "name": "Internationalization",;
+    "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.";
+    "url": "https://app.ziontechgroup.com/features/internationalization";
+  };
+  return (;
+    <>;
+      <SEO;
+        title="Internationalization";
+        description="Reach a global audience with multi-language support across the Zion platform.";
+        keywords="i18n, multi-language marketplace, localized listings";
+        canonical="https://app.ziontechgroup.com/features/internationalization";
+      />;
+      {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script;
-        type="application / ld + json";
-        dangerouslySetInnerHTML={{ __html: JSON.stringify (schema) }}
+        type="application/ld+json";
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
       <Header />;
-      <main className="bg - background text - white py - 12">;
-        <div className="container mx - auto px - 4 md: px - 6">;
-          <GradientHeading className="mb - 4 text - center">Internationalization</GradientHeading>;
-          <p className="text - center text - zion - slate - light max - w-3xl mx - auto mb - 8">;
+      <main className="bg-background text-white py-12">;
+        <div className="container mx-auto px-4 md: px-6">;
+          <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>;
+          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">;
             Our interface and search support multiple languages so you can collaborate without barriers.;
           </p>;
-          <div className="relative w - full h - auto aspect - video mx - auto mb - 12 rounded - lg shadow - xl overflow - hidden">;
-            <img;
-              src="https://placehold.co / 800x400";
-              alt="Screenshot of language options";
-              className="object - cover";
-            />;
-          </div>;
-          <h2 className="text - 2xl font - bold mb - 4">Benefits &amp, Use Cases</h2>;
-          <ul className="list - disc list - inside space - y-2 mb - 8 text - zion - slate - light">;
-            <li > Publish product and service pages in your native language.</li>;
-            <li > Attract international clients and expand your reach.</li>;
-            <li > Automatic language detection ensures a localized experience.</li>;
-          </ul>;
-          <h2 className="text - 2xl font - bold mb - 4">Frequently Asked Questions</h2>;
-          <div className="space - y-4 mb - 12">;
-            <div>;
-              <p className="font - semibold">Which languages are supported?</p>;
-              <p className="text - zion - slate - light">The platform currently supports English, Spanish, Portuguese and more.</p>;
-            </div>;
-            <div>;
-              <p className="font - semibold">Can I suggest new translations?</p>;
-              <p className="text - zion - slate - light">Yes, community contributions help us continually add new languages.</p>;
-            </div>;
-          </div>;
-          <div className="text - center">;
-            <Button size="lg" className="bg - zion - purple text - white" as_child>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">;
+            <img
+              src="https://placehold && placehold.co/800x400"
+              alt="Screenshot of language options"
+              className="object-cover"
+
+
               <Link href="/">Explore Zion</Link>;
             </Button>;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+;

@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
@@ -27,27 +25,30 @@ export function PartnerDashboard() {
     totalRevenue: 850.0
     pendingRevenue: 200.0
   }
-=======
+
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {BarChart, DollarSign, LineChart, TrendingUp, Users} from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",
 
-export function PartnerDashboard() {;
-  // Placeholder data - would come from API in real implementation;
-  const stats = {;
-    totalReferrals: 42,;
-    pendingReferrals: 8,;
-    completedReferrals: 34,;
-    conversionRate: 18 && 18.5,;
-    totalRevenue: 850 && 850.00,;
-    pendingRevenue: 200 && 200.00;
+export function PartnerDashboard() {
+  // Placeholder data - would come from API in real implementation
+  const stats = {
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
+    totalRevenue: 850.00,
+    pendingRevenue: 200.00;
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-
+    pendingRevenue: 200.00
+  },
+  
   return (
-    <div className="space-y-6">;
+    <div className="space-y-6">
       {/* Stats Overview */}
-<<<<<<< HEAD
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -134,7 +135,24 @@ export function PartnerDashboard() {;
     </div>
   );
 }
-=======
+  )
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { BarChart, DollarSign, LineChart, TrendingUp, Users } from "lucide-react",;
+export function PartnerDashboard() {;
+  // Placeholder data - would come from API in real implementation;
+  const stats = {;
+    totalReferrals: 42,;
+    pendingReferrals: 8,;
+    completedReferrals: 34,;
+    conversionRate: 18.5,;
+    totalRevenue: 850.00;
+    pendingRevenue: 200.00;
+  };
+  return (;
+    <div className="space-y-6">;
+      {/* Stats Overview */}
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">;
         <Card className="bg-zion-blue-dark border-zion-blue-light">;
           <CardHeader className="flex flex-row items-center justify-between pb-2">;
@@ -315,18 +333,13 @@ function PartnerDashboard() {
             <Users className="h - 16 w - 16 mx - auto text - zion - slate - light mb - 4" />;
             <p className="text - zion - slate - light mb - 4">No referrals yet</p>;
             <p className="text - xs text - zion - slate - light">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               Start sharing your referral links to earn rewards;
             </p>;
           </div>;
         </CardContent>;
       </Card>;
-<<<<<<< HEAD
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;

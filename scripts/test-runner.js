@@ -1,28 +1,11 @@
-<<<<<<< HEAD:scripts/test-runner.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
-=======
-<<<<<<< HEAD
-=======
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
 #!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); } } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this && this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs && testDirs.forEach(dir => { if (fs && fs.existsSync(dir)) { const files = fs && fs.readdirSync(dir); const testFiles = files && files.filter(file => file && file.includes('.test.') || file && file.includes('.spec.') ); testFilesFound += testFiles && testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this && this.results,summary: { testFilesFound: this && this.checkTestFiles(),testScriptExists: this && this.checkPackageJsonScripts() } fs && fs.writeFileSync('test-report && report.json',JSON && JSON.stringify(report,null,2)); } } if (require && require.main === module) { const runner = new TestRunner(); runner && runner.generateReport()} module && module.exports = TestRunner;
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this && this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs && testDirs.forEach(dir => { if (fs && fs.existsSync(dir)) { const files = fs && fs.readdirSync(dir); const testFiles = files && files.filter(file => file && file.includes('.test.') || file && file.includes('.spec.') ); testFilesFound += testFiles && testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this && this.results,summary: { testFilesFound: this && this.checkTestFiles(),testScriptExists: this && this.checkPackageJsonScripts() } fs && fs.writeFileSync('test-report && report.json',JSON && JSON.stringify(report,null,2)); } } if (require && require.main === module) { const runner = new TestRunner(); runner && runner.generateReport()} module && module.exports = TestRunner;
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this && this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs && testDirs.forEach(dir => { if (fs && fs.existsSync(dir)) { const files = fs && fs.readdirSync(dir); const testFiles = files && files.filter(file => file && file.includes('.test.') || file && file.includes('.spec.') ); testFilesFound += testFiles && testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this && this.results,summary: { testFilesFound: this && this.checkTestFiles(),testScriptExists: this && this.checkPackageJsonScripts() } fs && fs.writeFileSync('test-report && report.json',JSON && JSON.stringify(report,null,2)); } } if (require && require.main === module) { const runner = new TestRunner(); runner && runner.generateReport()} module && module.exports = TestRunner;
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this && this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs && testDirs.forEach(dir => { if (fs && fs.existsSync(dir)) { const files = fs && fs.readdirSync(dir); const testFiles = files && files.filter(file => file && file.includes('.test.') || file && file.includes('.spec.') ); testFilesFound += testFiles && testFiles.length} }); if (testFilesFound === 0) { } else { } return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.test) {  return false}  return true} catch (error) {  return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this && this.results,summary: { testFilesFound: this && this.checkTestFiles(),testScriptExists: this && this.checkPackageJsonScripts() } fs && fs.writeFileSync('test-report && report.json',JSON && JSON.stringify(report,null,2)); } } if (require && require.main === module) { const runner = new TestRunner(); runner && runner.generateReport()} module && module.exports = TestRunner;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/test-runner.js
 #!/usr/bin/env node
 const fs = // // require('fs');
 const path = // // require('path');
 class TestRunner {
   constructor() {
-    this && this.results = {
+    this.results = {
       "unit": { passed: 0, "failed": 0 },
       "integration": { passed: 0, "failed": 0 },
       "e2e": { passed: 0, "failed": 0 }
@@ -30,42 +13,27 @@ class TestRunner {
   checkTestFiles() {
     const testDirs = ['__tests__', 'src/__tests__', 'tests'];
     let testFilesFound = 0;
-    testDirs && testDirs.forEach(dir => {
-      if (fs && fs.existsSync(dir)) {
-        const files = fs && fs.readdirSync(dir);
-        const testFiles = files && files.filter(file => 
-          file && file.includes('.test.') || file && file.includes('.spec.')
+    testDirs.forEach(dir => {
+      if (fs.existsSync(dir)) {
+        const files = fs.readdirSync(dir);
+        const testFiles = files.filter(file => 
+          file.includes('.test.') || file.includes('.spec.')
         );
-        testFilesFound += testFiles && testFiles.length;
+        testFilesFound += testFiles.length;
       }
     });
     if (testFilesFound === 0) {
-<<<<<<< HEAD:scripts/test-runner.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('⚠️ No test files found');
-=======
-      console && console.log('⚠️ No test files found');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/test-runner.js
     } else {
-      console && console.log(`✅ Found ${testFilesFound} test files`);
+      console.log(`✅ Found ${testFilesFound} test files`);
     }
     return testFilesFound;
   }
-<<<<<<< HEAD:scripts/test-runner.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
       console.log('⚠️ No test files found')} else {
       console.log(`✅ Found ${testFilesFound} test files`)}
     return testFilesFound}
@@ -74,71 +42,39 @@ class TestRunner {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
         console.log('⚠️ No test script found in package.json');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         return false;
       }
       console.log('✅ Test script found in package.json');
-=======
-      console && console.log('⚠️ No test files found')} else {
-      console && console.log(`✅ Found ${testFilesFound} test files`)}
-    return testFilesFound}
-  checkPackageJsonScripts() {
-    try {
-      const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json', 'utf8'));
-      if (!packageJson && packageJson.scripts.test) {
-        console && console.log('⚠️ No test script found in package && package.json');
-        return false;
-      }
-    console && console.log('⚠️ No test script found in package && package.json'),
-            return false
-  }
-      console && console.log('✅ Test script found in package && package.json');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/test-runner.js
       return true;
     } catch (error) {
-      console && console.log('❌ Error reading package && package.json:', error && error.message);
+      console.log('❌ Error reading package.json:', error.message);
       return false;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
         return false}
-      console && console.log('✅ Test script found in package && package.json');
+      console.log('✅ Test script found in package.json');
       return true} catch (error) {
-      console && console.log('❌ Error reading package."json": ', error && error.message);
+      console.log('❌ Error reading package."json": ', error.message);
       return false}
   }
   generateReport() {
     const report = {
       "timestamp": new Date().toISOString(),
-      "results": this && this.results,
+      "results": this.results,
       "summary": {
-        testFilesFound: this && this.checkTestFiles(),
-        "testScriptExists": this && this.checkPackageJsonScripts()
+        testFilesFound: this.checkTestFiles(),
+        "testScriptExists": this.checkPackageJsonScripts()
       }
-    fs && fs.writeFileSync('test-report && report.json', JSON && JSON.stringify(report, null, 2));
-    console && console.log('Test report generated');
+    fs.writeFileSync('test-report.json', JSON.stringify(report, null, 2));
+    console.log('Test report generated');
   }
-<<<<<<< HEAD:scripts/test-runner.js
 
 if (require.main === module) {
   const runner = new TestRunner();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
   runner.generateReport();
 
 module.exports = TestRunner;
@@ -148,37 +84,17 @@ module.exports = TestRunner;
   runner.generateReport()}
 module.exports = TestRunner;
 #!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { console.log('⚠️ No test files found')} else { console.log(`✅ Found ${testFilesFound} test files`)} return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) { console.log('⚠️ No test script found in package.json'); return false} console.log('✅ Test script found in package.json'); return true} catch (error) { console.log('❌ Error reading package.json:',error.message); return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); console.log('Test report generated')} } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
   runner.generateReport()}
 module.exports = TestRunner;
 #!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { console.log('⚠️ No test files found')} else { console.log(`✅ Found ${testFilesFound} test files`)} return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) { console.log('⚠️ No test script found in package.json'); return false} console.log('✅ Test script found in package.json'); return true} catch (error) { console.log('❌ Error reading package.json:',error.message); return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); console.log('Test report generated')} } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
   runner.generateReport();
 }
 module.exports = TestRunner;
   runner.generateReport()}
 module.exports = TestRunner;
-<<<<<<< HEAD
 #!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { console.log('⚠️ No test files found')} else { console.log(`✅ Found ${testFilesFound} test files`)} return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) { console.log('⚠️ No test script found in package.json'); return false} console.log('✅ Test script found in package.json'); return true} catch (error) { console.log('❌ Error reading package.json:',error.message); return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); console.log('Test report generated')} } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
-=======
 #!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs.forEach(dir => { if (fs.existsSync(dir)) { const files = fs.readdirSync(dir); const testFiles = files.filter(file => file.includes('.test.') || file.includes('.spec.') ); testFilesFound += testFiles.length} }); if (testFilesFound === 0) { console.log('⚠️ No test files found')} else { console.log(`✅ Found ${testFilesFound} test files`)} return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON.parse(fs.readFileSync('package.json','utf8')); if (!packageJson.scripts.test) { console.log('⚠️ No test script found in package.json'); return false} console.log('✅ Test script found in package.json'); return true} catch (error) { console.log('❌ Error reading package.json:',error.message); return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this.results,summary: { testFilesFound: this.checkTestFiles(),testScriptExists: this.checkPackageJsonScripts() } fs.writeFileSync('test-report.json',JSON.stringify(report,null,2)); console.log('Test report generated')} } if (require.main === module) { const runner = new TestRunner(); runner.generateReport()} module.exports = TestRunner;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
-}
-if (require && require.main === module) {
-  const runner = new TestRunner();
-  runner && runner.generateReport();
-}
-module && module.exports = TestRunner;
-  runner && runner.generateReport()}
-module && module.exports = TestRunner;
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this && this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs && testDirs.forEach(dir => { if (fs && fs.existsSync(dir)) { const files = fs && fs.readdirSync(dir); const testFiles = files && files.filter(file => file && file.includes('.test.') || file && file.includes('.spec.') ); testFilesFound += testFiles && testFiles.length} }); if (testFilesFound === 0) { console && console.log('⚠️ No test files found')} else { console && console.log(`✅ Found ${testFilesFound} test files`)} return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.test) { console && console.log('⚠️ No test script found in package && package.json'); return false} console && console.log('✅ Test script found in package && package.json'); return true} catch (error) { console && console.log('❌ Error reading package && package.json:',error && error.message); return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this && this.results,summary: { testFilesFound: this && this.checkTestFiles(),testScriptExists: this && this.checkPackageJsonScripts() } fs && fs.writeFileSync('test-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Test report generated')} } if (require && require.main === module) { const runner = new TestRunner(); runner && runner.generateReport()} module && module.exports = TestRunner;
-  runner && runner.generateReport()}
-module && module.exports = TestRunner;
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this && this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs && testDirs.forEach(dir => { if (fs && fs.existsSync(dir)) { const files = fs && fs.readdirSync(dir); const testFiles = files && files.filter(file => file && file.includes('.test.') || file && file.includes('.spec.') ); testFilesFound += testFiles && testFiles.length} }); if (testFilesFound === 0) { console && console.log('⚠️ No test files found')} else { console && console.log(`✅ Found ${testFilesFound} test files`)} return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.test) { console && console.log('⚠️ No test script found in package && package.json'); return false} console && console.log('✅ Test script found in package && package.json'); return true} catch (error) { console && console.log('❌ Error reading package && package.json:',error && error.message); return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this && this.results,summary: { testFilesFound: this && this.checkTestFiles(),testScriptExists: this && this.checkPackageJsonScripts() } fs && fs.writeFileSync('test-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Test report generated')} } if (require && require.main === module) { const runner = new TestRunner(); runner && runner.generateReport()} module && module.exports = TestRunner;
-  runner && runner.generateReport()}
-module && module.exports = TestRunner;
-#!/usr/bin/env node const fs = const path = class TestRunner { constructor() { this && this.results = { unit: { passed: 0,failed: 0 },integration: { passed: 0,failed: 0 },e2e: { passed: 0,failed: 0 } } checkTestFiles() { const testDirs = ['__tests__','src/__tests__','tests']; let testFilesFound = 0; testDirs && testDirs.forEach(dir => { if (fs && fs.existsSync(dir)) { const files = fs && fs.readdirSync(dir); const testFiles = files && files.filter(file => file && file.includes('.test.') || file && file.includes('.spec.') ); testFilesFound += testFiles && testFiles.length} }); if (testFilesFound === 0) { console && console.log('⚠️ No test files found')} else { console && console.log(`✅ Found ${testFilesFound} test files`)} return testFilesFound} checkPackageJsonScripts() { try { const packageJson = JSON && JSON.parse(fs && fs.readFileSync('package && package.json','utf8')); if (!packageJson && packageJson.scripts.test) { console && console.log('⚠️ No test script found in package && package.json'); return false} console && console.log('✅ Test script found in package && package.json'); return true} catch (error) { console && console.log('❌ Error reading package && package.json:',error && error.message); return false} } generateReport() { const report = { timestamp: new Date().toISOString(),results: this && this.results,summary: { testFilesFound: this && this.checkTestFiles(),testScriptExists: this && this.checkPackageJsonScripts() } fs && fs.writeFileSync('test-report && report.json',JSON && JSON.stringify(report,null,2)); console && console.log('Test report generated')} } if (require && require.main === module) { const runner = new TestRunner(); runner && runner.generateReport()} module && module.exports = TestRunner;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/scripts/test-runner.js
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de

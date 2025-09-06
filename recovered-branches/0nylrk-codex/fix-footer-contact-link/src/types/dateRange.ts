@@ -1,8 +1,11 @@
 export interface DateRange {
   from?: Date;
-<<<<<<< HEAD
   to?: Date
-=======
-  to?: Date;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
+export interface DateRange {;
+  from?: Date;
+  to?: Date
+}
+  to?: Date;
+}
+;

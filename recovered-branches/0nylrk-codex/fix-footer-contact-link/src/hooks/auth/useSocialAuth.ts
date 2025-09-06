@@ -1,32 +1,44 @@
-<<<<<<< HEAD
 
 
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export const useSocialAuth = () => {
   const loginWithGoogle = async () => {
     try {
-      const { error } = await supabase && supabase.auth.signInWithOAuth({
+
+          description: error && error.message,
+
+=======
+      const { error } = await supabase.auth.signInWithOAuth({;
+        provider: "google"});
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+export const useSocialAuth = () => {
+  const loginWithGoogle = async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
         provider: "google"});
       if (error) {
         toast({
           title: "Google login failed";
-<<<<<<< HEAD
           description: error.message
-=======
-          description: error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        provider: "google"}),
+
+      if (error) {
+        toast({
+          title: "Google login failed",
+          description: error.message,
           variant: "destructive"})
       }
     } catch (error: any) {
       console && console.error("Google login error:", error);
       toast({
         title: "Google login failed";
-<<<<<<< HEAD
         description: error.message |"An unexpected error occurred"
-=======
-        description: error && error.message || "An unexpected error occurred",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"})
     }
   }
@@ -37,22 +49,29 @@ export const useSocialAuth = () => {
       if (error) {
         toast({
           title: "Facebook login failed";
-<<<<<<< HEAD
           description: error.message
-=======
-          description: error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        title: "Google login failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"})
+    }
+  },
+
+  const loginWithFacebook = async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "facebook"}),
+
+      if (error) {
+        toast({
+          title: "Facebook login failed",
+          description: error.message,
           variant: "destructive"})
       }
     } catch (error: any) {
       console && console.error("Facebook login error:", error);
       toast({
         title: "Facebook login failed";
-<<<<<<< HEAD
         description: error.message |"An unexpected error occurred"
-=======
-        description: error && error.message || "An unexpected error occurred",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"})
     }
   }
@@ -63,102 +82,97 @@ export const useSocialAuth = () => {
       if (error) {
         toast({
           title: "Twitter login failed";
-<<<<<<< HEAD
           description: error.message
-=======
-          description: error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+        title: "Facebook login failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"})
+    }
+  },
+
+  const loginWithTwitter = async () => {
+    try {
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "twitter"}),
+
+      if (error) {
+        toast({
+          title: "Twitter login failed",
+          description: error.message,
           variant: "destructive"})
       }
     } catch (error: any) {
       console && console.error("Twitter login error:", error);
       toast({
         title: "Twitter login failed";
-<<<<<<< HEAD
         description: error.message |"An unexpected error occurred"
-=======
-        description: error && error.message || "An unexpected error occurred",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         variant: "destructive"})
     }
   }
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 }
 
-=======
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-export const useSocialAuth = () =>: any {
-  const loginWithGoogle = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth ({
-        provider: "google"});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Google login failed";
-          description: error.message,
+        title: "Twitter login failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"})
+    }
+  };
+
+import { supabase } from "@/integrations/supabase/client",;
+import { toast } from "@/hooks/use-toast",;
+export const useSocialAuth = () => {;
+  const loginWithGoogle = async () => {;
+    try {;
+      const { error } = await supabase.auth.signInWithOAuth({;
+        provider: "google"}),;
+      if (error) {;
+        toast({;
+          title: "Google login failed",;
+          description: error.message,;
           variant: "destructive"});
       }
-    } catch (error: any) {
-      console.error ("Google login error:", error);
-      toast ({
-        title: "Google login failed";
-        description: error.message || "An unexpected error occurred",
+    } catch (error: any) {;
+      console.error("Google login error:", error),;
+      toast({;
+        title: "Google login failed",;
+        description: error.message || "An unexpected error occurred",;
         variant: "destructive"});
     }
-  }
-;
-  const loginWithFacebook = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth ({
-        provider: "facebook"});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Facebook login failed";
-          description: error.message,
+  },;
+  const loginWithFacebook = async () => {;
+    try {;
+      const { error } = await supabase.auth.signInWithOAuth({;
+        provider: "facebook"}),;
+      if (error) {;
+        toast({;
+          title: "Facebook login failed",;
+          description: error.message,;
           variant: "destructive"});
       }
-    } catch (error: any) {
-      console.error ("Facebook login error:", error);
-      toast ({
-        title: "Facebook login failed";
-        description: error.message || "An unexpected error occurred",
+    } catch (error: any) {;
+      console.error("Facebook login error:", error),;
+      toast({;
+        title: "Facebook login failed",;
+        description: error.message || "An unexpected error occurred",;
         variant: "destructive"});
     }
-  }
-;
-  const loginWithTwitter = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth ({
-        provider: "twitter"});
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        toast ({
-          title: "Twitter login failed";
-          description: error.message,
+  },;
+  const loginWithTwitter = async () => {;
+    try {;
+      const { error } = await supabase.auth.signInWithOAuth({;
+        provider: "twitter"}),;
+      if (error) {;
+        toast({;
+          title: "Twitter login failed",;
+          description: error.message,;
           variant: "destructive"});
       }
-    } catch (error: any) {
-      console.error ("Twitter login error:", error);
-      toast ({
-        title: "Twitter login failed";
-        description: error.message || "An unexpected error occurred",
+    } catch (error: any) {;
+      console.error("Twitter login error:", error),;
+      toast({;
+        title: "Twitter login failed",;
+        description: error.message || "An unexpected error occurred",;
         variant: "destructive"});
     }
-  }
-;
+  };
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+};

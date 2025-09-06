@@ -1,50 +1,43 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-</div>) )
-=======
-</div>) );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }</div> </div>) import fs from 'fs';
-=======
 import fs from 'fs';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
-<<<<<<< HEAD
-import {TALENT_PROFILES} from '../../data/talent';
-type TalentSummary = { slug: string, summary: string }
-export async function getServerSideProps() {
-  const file = path.join(process.cwd(), 'datatalent_ai.json');
-  let generatedAt = '';
-  let summaries: TalentSummary[] = [];  try {
-    const raw = fs.readFileSync(file, 'utf-8');
-    const json = JSON.parse(raw);
-    generatedAt = json.generatedAt |'';
-    summaries = json.summaries |[]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
  </div>) ) ;
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
-type TalentSummary = { slug: string, summary: string },;
+type TalentSummary = { slug: string, summary: string }
+export async function getServerSideProps() {
+</div>) ) 
+ </div>) ) 
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {;
-  const file = path && path.join(process && process.cwd(), 'datatalent_ai && datatalent_ai.json');
+  const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
   let summaries: TalentSummary[] = [];  try {;
     const raw = fs && fs.readFileSync(file, 'utf-8');
     const json = JSON && JSON.parse(raw);
     generatedAt = json && json.generatedAt || '';
     summaries = json && json.summaries || [];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   } catch {}
   return { props: { generatedAt, summaries } }
 }
-<<<<<<< HEAD
+
+
+    generatedAt = json.generatedAt || '';
+    summaries = json.summaries || []
+  } catch {}
+  return { props: { generatedAt, summaries } }
+}
+
 export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {
+export default function TalentUpdatesPage({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
   const map = new Map(summaries.map(s => [s.slug, s.summary]));
 
   return (
@@ -63,30 +56,9 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
     </div>
 );
 }
-=======
-
-export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { generatedAt: string, summaries: TalentSummary[] }) {;
-  const map = new Map(summaries && summaries.map(s => [s && s.slug, s && s.summary]));
-  return (
-    <div className="space-y-6">;
-      <h1 className="text-2xl font-semibold">AI Automation: Talent Summaries</h1>;
-      <p className="text-gray-600">Profiles are periodically enriched with AI-generated summaries.</p>;
-      <div className="text-xs text-gray-500">Last updated: {generatedAt ? new Date(generatedAt).toLocaleString() : '—'}</div>;
-      <div className="grid grid-cols-1 gap-4">;
-        {TALENT_PROFILES && TALENT_PROFILES.map(t => (;
-          <div key={t && t.slug} className="border rounded p-4 space-y-1">;
-            <div className="font-medium">{t && t.name} — {t && t.title}</div>;
-            <div className="text-sm text-gray-700">{map && map.get(t && t.slug) || 'No AI summary yet.'}</div>;
-          </div>;
-        ))}
-      </div>;
-    </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import {TALENT_PROFILES} from '../../data / talent';
 type TalentSummary = { slug: string, summary: string },
@@ -122,5 +94,49 @@ function TalentUpdatesPage() {
           </div>))}
       </div>;
     </div>);
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+</div>) )
+=======
+ </div>) ) 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+type TalentSummary = { slug: string, summary: string }
+export async function getServerSideProps() {
+=======
+</div>) ) 
+=======
+ </div>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}</div> </div>) import fs from 'fs';
+import path from 'path';
+import {TALENT_PROFILES} from '../../data/talent';
+type TalentSummary = { slug: string, summary: string },
+export async function getServerSideProps() {;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const file = path.join(process.cwd(), 'datatalent_ai.json');
+  let generatedAt = '';
+  let summaries: TalentSummary[] = [];  try {
+    const raw = fs.readFileSync(file, 'utf-8');
+    const json = JSON.parse(raw);
+<<<<<<< HEAD
+    generatedAt = json.generatedAt |'';
+    summaries = json.summaries |[]
+=======
+    generatedAt = json.generatedAt || '';
+    summaries = json.summaries || []
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+  } catch {}
+  return { props: { generatedAt, summaries } }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

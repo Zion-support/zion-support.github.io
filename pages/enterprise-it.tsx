@@ -1,36 +1,34 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
+
+  return (
+    <Layout>
+import React from 'react',;
+import Head from 'next/head',;
+import Layout from '../components/layout/Layout',;
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',;
+;
+import React from 'react'
+import Head from 'next/head'
+import Layout from '../components/layout/Layout'
+import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
 export default function EnterpriseITPage() {
   const features = [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
-  const solutions = [
-    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
-    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
-    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
-    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
-
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'];
-
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'],
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const solutions = [
     { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  return (
-    <Layout>
+export default function EnterpriseITPage() {_const _features = [
+    'Cloud migration and landing zones with cost governance', _'DevOps automation, _CI/CD, _and platform engineering', _'Data platforms, _lineage, _and quality monitoring', _'Observability, _SLOs, _and incident automation'];
+  const _solutions = [
+    { name: 'Cloud Landing Zone', _href: '/cloud-landing-zone'},
+    {_name: 'Cloud Cost Optimizer', _href: '/cloud-cost-optimizer'},
+    {_name: 'Data Pipeline Observability', _href: '/data-pipeline-observability'},
+    {_name: 'Uptime & SLO Monitor', _href: '/uptime-slo-monitor'}];
+ursor/fix-lint-push-and-merge-to-main-ce13
+  return (_<Layout>
       <Head>
         <title>Enterprise IT | Zion Tech Group</title>
         <meta name="description" content="Cloud, DevOps, data platforms, and SRE with cost, performance, and reliability in focus." />
@@ -47,6 +45,8 @@ export default function EnterpriseITPage() {
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="/contact" className="px-8 py-4">Get a Roadmap</a>
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</a>
+              <a href="/contact" className="px-8 py-4">Get a Roadmap</Link>
+              <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
             </div>
           </header>
           <section>
@@ -75,13 +75,19 @@ export default function EnterpriseITPage() {
       </div>
     </Layout>
   )
-<<<<<<< HEAD
+  );
+};
+                </Link>
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from 'react',
 import Head from 'next / head',
@@ -141,7 +147,12 @@ function EnterpriseITPage() {
           </section>;
         </div>;
       </div>;
-    </Layout>);
+
+    </Layout>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+}

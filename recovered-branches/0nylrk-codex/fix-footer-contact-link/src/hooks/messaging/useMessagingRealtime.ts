@@ -1,47 +1,23 @@
-<<<<<<< HEAD
 
 import { useEffect  } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
+import {useEffect} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {UserProfile, UserDetails} from '@/types/auth';
+import {Message, Conversation} from '@/types/messaging';
+import {toast} from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 export function useMessagingRealtime(
-=======
-import {useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {UserProfile, UserDetails} from '@/types / auth';
-import {Message, Conversation} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-export function useMessagingRealtime (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+export function useMessagingRealtime(;
   user: UserWithProfile;
   active_conversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
-<<<<<<< HEAD
-  fetchConversations: () => Promise<void>
-) {
-  // Setup real-time subscription when user is logged in
-  useEffect(() => {
-    if (!user) return
-    // Subscribe to new messages
-    const subscription = supabase
-      .channel('messages')
-      .on(
-<<<<<<< HEAD
-        'postgres_changes'
-        {
-          event: 'INSERT'
-          schema: 'public'
-          table: 'messages'
-          filter: `recipient_id=eq.${user.id}`
-        }
-=======
+
         'postgres_changes', 
         { 
           event: 'INSERT', 
@@ -49,7 +25,7 @@ export function useMessagingRealtime (
           table: 'messages', 
           filter: `recipient_id=eq.${user && user.id}` 
         }, 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         (payload) => {
           // Update messages if the conversation is selected
           if (activeConversation && payload && payload.new.sender_id === activeConversation && activeConversation.other_user.id) {
@@ -59,30 +35,33 @@ export function useMessagingRealtime (
           fetchConversations();
           // Show toast notification for new message
           toast({
-<<<<<<< HEAD
-            title: `New message from ${payload.new.sender_name |'Someone'}`;
-            description: payload.new.content.substring(0, 50) + (payload.new.content.length > 50 ? '...' : '')
-=======
+
             title: `New message from ${payload && payload.new.sender_name || 'Someone'}`;
             description: payload && payload.new.content && content.substring(0, 50) + (payload && payload.new.content && content.length > 50 ? '...' : '')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           })
         }
       )
       .subscribe();
 
     return () => {
-      supabase && supabase.removeChannel(subscription)
-    }
-  }, [user, activeConversation, fetchConversations, setActiveMessages])
-=======
-  fetch_conversations: () => Promise < void>) {
-  // Setup real - time subscription when user is logged in;
-  useEffect (() => {
-    // Check condition
-if (return, ) {
-  $2
-}
+      supabase.removeChannel(subscription)
+import { useEffect } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { UserProfile, UserDetails } from '@/types/auth',;
+import { Message, Conversation } from '@/types/messaging',;
+import { toast } from '@/hooks/use-toast',;
+// Allow either UserProfile or UserDetails;
+type UserWithProfile = UserProfile | UserDetails | null,;
+export function useMessagingRealtime(;
+  user: UserWithProfile,;
+  activeConversation: Conversation | null,;
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,;
+  fetchConversations: () => Promise<void>;
+) {;
+  // Setup real-time subscription when user is logged in;
+  useEffect(() => {;
+    if (!user) return,;
     // Subscribe to new messages;
     const subscription = supabase;
       .channel ('messages');
@@ -112,10 +91,10 @@ if ( {) {
           });
         }
       );
-      .subscribe ();
-;
-    return () => {
-      supabase.remove_channel (subscription);
+
+      .subscribe();
+    return () => {;
+      supabase.removeChannel(subscription);
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

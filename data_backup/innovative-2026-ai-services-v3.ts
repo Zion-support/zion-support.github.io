@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
 export interface Innovative2026AiServiceV3 {
   "id": string;
   name: string;
@@ -48,22 +36,15 @@ address: string};export const "innovative2026AIServicesV3": Innovative2026AiServ
 export interface Innovative2026AiServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ { id: "2026-innovative-ai-v3",name: "2026 Innovative AI Platform V3",tagline: "Third generation innovative AI",price: "$349/month",description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",features[ "Third generation AI","Enhanced capabilities","Advanced features","Improved performance","Better integration" ],link: "/services/2026-innovative-ai-v3",category: "Innovative 2026 AI V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface Innovative2026AiServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ { id: "2026-innovative-ai-v3",name: "2026 Innovative AI Platform V3",tagline: "Third generation innovative AI",price: "$349/month",description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",features[ "Third generation AI","Enhanced capabilities","Advanced features","Improved performance","Better integration" ],link: "/services/2026-innovative-ai-v3",category: "Innovative 2026 AI V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 export interface Innovative2026AiServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ { id: "2026-innovative-ai-v3",name: "2026 Innovative AI Platform V3",tagline: "Third generation innovative AI",price: "$349/month",description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",features[ "Third generation AI","Enhanced capabilities","Advanced features","Improved performance","Better integration" ],link: "/services/2026-innovative-ai-v3",category: "Innovative 2026 AI V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+export interface Innovative2026AiServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ { id: "2026-innovative-ai-v3",name: "2026 Innovative AI Platform V3",tagline: "Third generation innovative AI",price: "$349/month",description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",features[ "Third generation AI","Enhanced capabilities","Advanced features","Improved performance","Better integration" ],link: "/services/2026-innovative-ai-v3",category: "Innovative 2026 AI V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 export interface Innovative2026AiServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ { id: "2026-innovative-ai-v3",name: "2026 Innovative AI Platform V3",tagline: "Third generation innovative AI",price: "$349/month",description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",features[ "Third generation AI","Enhanced capabilities","Advanced features","Improved performance","Better integration" ],link: "/services/2026-innovative-ai-v3",category: "Innovative 2026 AI V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 export interface Innovative2026AiServiceV3 {
   "id": string;
   name: string;
@@ -98,9 +79,7 @@ address: string};export const "innovative2026AIServicesV3": Innovative2026AiServ
       "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 1008 Middletown DE 19709"
 ]}}}
-<<<<<<< HEAD
 export interface Innovative2026AiServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ { id: "2026-innovative-ai-v3",name: "2026 Innovative AI Platform V3",tagline: "Third generation innovative AI",price: "$349/month",description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",features[ "Third generation AI","Enhanced capabilities","Advanced features","Improved performance","Better integration" ],link: "/services/2026-innovative-ai-v3",category: "Innovative 2026 AI V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
-=======
 export interface Innovative2026AiServiceV3 { id: string; name: string; tagline: string; price: string; description: string; features: string[]; link: string; category: string; realImplementation: boolean; contactInfo: { mobile: string; email: string; address: string};export const innovative2026AIServicesV3: Innovative2026AiServiceV3[] = [ { id: "2026-innovative-ai-v3",name: "2026 Innovative AI Platform V3",tagline: "Third generation innovative AI",price: "$349/month",description: "Third generation of the 2026 innovative AI platform with enhanced capabilities and features.",features[ "Third generation AI","Enhanced capabilities","Advanced features","Improved performance","Better integration" ],link: "/services/2026-innovative-ai-v3",category: "Innovative 2026 AI V3",realImplementation: true,contactInfo: { mobile: "+1 302 464 0950",email: "kleber@ziontechgroup.com",address: "364 E Main St STE 1008 Middletown DE 19709" ]}}}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de

@@ -1,23 +1,15 @@
-<<<<<<< HEAD
 
 import React from "react";
-<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-interface TalentCardAvatarProps {
-=======
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import React from "react",
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 
-interface TalentCardAvatarProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  profilePicture?: string;
-  fullName: string;
+interface TalentCardAvatarProps {
+  profilePicture?: string,
+  fullName: string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-<<<<<<< HEAD
-export function TalentCardAvatar({
-  profilePicture
-  fullName
-}: TalentCardAvatarProps) {
-  // Get initials for avatar fallback
 
   const getInitials = (name: string) => {
     return name
@@ -34,11 +26,34 @@ export function TalentCardAvatar({
         {getInitials(fullName)}
       </AvatarFallback>
     </Avatar>
-  );
-}
-=======
+      .split(' ')
+      .map(part => part[0])
+      .join('')
+      .toUpperCase();
+  };
+      .toUpperCase()
+  },
 
-export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCardAvatarProps) {;
+  return (
+    <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
+      <AvatarImage 
+        src={profilePicture || undefined} 
+        alt={fullName} 
+      />
+      <AvatarFallback className="bg-zion-purple/20 text-zion-purple">
+        {getInitials(fullName)}
+      </AvatarFallback>
+    </Avatar>
+  )
+}
+import React from "react",;
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",;
+interface TalentCardAvatarProps {;
+  profilePicture?: string,;
+  fullName: string;
+}
+;
+export function TalentCardAvatar({ profilePicture, fullName }: TalentCardAvatarProps) {;
   // Get initials for avatar fallback;
   const getInitials = (name: string) => {;
     return name;
@@ -60,13 +75,6 @@ export function TalentCardAvatar(): any ({ profilePicture, fullName }: TalentCar
     </Avatar>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import React from './react';
-import { Avatar, AvatarImage, AvatarFallback  } from '@/components / ui / avatar';
-interface TalentCardAvatarProps {
-  profile_picture?: string;
-  full_name: string;
 }
 export /**
  * TalentCardAvatar - Function description
@@ -81,12 +89,3 @@ function TalentCardAvatar() {
       .toUpperCase ();
   }
 ;
-  return (
-    <Avatar className="w - 14 h - 14 border - 2 border - zion - blue - light">;
-      <AvatarImage src={profile_picture || undefined} alt={full_name} />;
-      <AvatarFallback className="bg - zion - purple / 20 text - zion - purple">;
-        {get_initials (full_name)}
-      </AvatarFallback>;
-    </Avatar>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

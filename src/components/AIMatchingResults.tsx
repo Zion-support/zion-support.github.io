@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react'
-import { MatchResultItem } from '@/lib/ai-matchmaking'
-import { Card, CardContent } from '@/components/ui/card'
-import { Badge } from '@/components/ui/badge'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
-import Skeleton from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
 
   matches: MatchResultItem[]
@@ -26,6 +12,7 @@ interface AIMatchingResultsProps {
 
   serviceType?: string
 }
+
 export function AIMatchingResults({
 
   matches
@@ -37,45 +24,6 @@ export function AIMatchingResults({
   const [activeTab, setActiveTab] = useState('all')
   // Group matches by category
   const categories = {
-    all: matches
-    talent: matches.filter(match =>
-      match.category.toLowerCase().includes('talent')
-    )
-    services: matches.filter(match =>
-      match.category.toLowerCase().includes('service')
-    )
-    equipment: matches.filter(match =>
-      match.category.toLowerCase().includes('equipment')
-    )
-=======
-import { useState } from 'react';
-import { MatchResultItem } from '@/lib / ai - matchmaking';
-import { Card, CardContent } from '@/components / ui / card';
-import { Badge } from '@/components / ui / badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from '@/components / ui / skeleton';
-import { cn } from '@/lib / utils';
-interface AIMatchingResultsProps {
-  matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem) => void;
-  is_loading?: boolean;
-  project_description?: string;
-  service_type?: string;interface AIMatchingResultsProps {
-  matches: MatchResultItem[],
-  onSelectMatch?: (match: MatchResultItem, ) => void,
-  is_loading?: boolean,
-  project_description?: string,
-  service_type?: string;
-}
-export /**
- * AIMatchingResults - Function description
- */
-function AIMatchingResults() {
-  const [active_tab, setActiveTab] = useState ('all');
-  // Group matches by category;
-  const categories = {
     all: matches,
     talent: matches.filter (match =>;
       match.category.toLowerCase ().includes ('talent')),
@@ -83,7 +31,7 @@ function AIMatchingResults() {
       match.category.toLowerCase ().includes ('service')),
     equipment: matches.filter (match =>;
       match.category.toLowerCase ().includes ('equipment')),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
   // Get the icon for a category;
   const getCategoryIcon = (category: string) =>: any {
@@ -110,10 +58,8 @@ if ( {) {
         </div>;
       </div>);
   }
-<<<<<<< HEAD
-  if (matches.length === 0) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -181,7 +127,6 @@ export function AIMatchingResults(): any ({;
   }
 
   if (matches && matches.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Card className='bg-zion-blue-dark border-zion-blue-light text-center p-6'>;
         <CardContent className='pt-6'>;
@@ -197,15 +142,11 @@ export function AIMatchingResults(): any ({;
               <p className='text-sm text-white'>{projectDescription}</p>;
             </div>;
           )}
-<<<<<<< HEAD
-        </CardContent>
-      </Card>
-    )
-=======
+
         </CardContent>;
       </Card>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   }
   return (
     <div className='space-y-4'>;
@@ -232,24 +173,7 @@ export function AIMatchingResults(): any ({;
           </TabsTrigger>;
           <TabsTrigger
             value='equipment'
-<<<<<<< HEAD
-            className='data-[state=active]:bg-zion-purple/20'
-          >
-            Equipment ({categories.equipment.length})
-          </TabsTrigger>
-        </TabsList>
-        {Object.entries(categories).map(([tab, items]) => (
-          <TabsContent key={tab} value={tab} className='mt-4 space-y-3'>
-            {items.length > 0 ? (
-              items.map(match => {
-                const CategoryIcon = getCategoryIcon(match.category)
-                    onClick={() => onSelectMatch && onSelectMatch(match)}                  >
-                    <div className='flex'>
-                      <div
-                        className={cn(
-                          'w-2'
-                          match.category.toLowerCase().includes('talent')
-=======
+
             className='data-[state=active]:bg-zion-purple/20'>;
             Equipment ({categories && categories.equipment.length});
           </TabsTrigger>;
@@ -267,26 +191,19 @@ export function AIMatchingResults(): any ({;
                         className={cn(
                           'w-2',
                           match && match.category.toLowerCase().includes('talent')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                             ? 'bg-zion-cyan'
                             : match && match.category.toLowerCase().includes('service')
                               ? 'bg-zion-purple'
                               : 'bg-green-500'
                         )}
-<<<<<<< HEAD
-                      />
-                      <div className='flex-1 p-4'>
-                        <div className='flex items-start gap-4'>
-                          <Avatar className='h-12 w-12 border border-zion-blue-light'>
 
-                            {match.image ? (
-=======
                       />;
                       <div className='flex-1 p-4'>;
                         <div className='flex items-start gap-4'>;
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>;
                             {match && match.image ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                               <AvatarImage
                                 src={match && match.image}
                                 alt={match && match.title}
@@ -296,13 +213,7 @@ export function AIMatchingResults(): any ({;
                                 <CategoryIcon className='h-6 w-6 text-zion-purple' />;
                               </AvatarFallback>;
                             )}
-<<<<<<< HEAD
-                          </Avatar>
-                          <div className='flex-1'>
-                            <div className='flex justify-between'>
-                              <div>
-                                <h3 className='font-medium text-white'>
-=======
+
   // Check condition
 if ( {) {
   $2
@@ -381,62 +292,47 @@ if ( {) {
                               <AvatarImage;
                                 src={match.image}
                                 alt={match.title}
-                              />) : (
-                              <AvatarFallback className='bg - zion - purple / 20'>;
-                                <CategoryIcon className='h - 6 w - 6 text - zion - purple' />;
-                              </AvatarFallback>)}
-                          </Avatar>;
-                          <div className='flex - 1'>;
-                            <div className='flex justify - between'>;
-                              <div>;
-                                <h3 className='font - medium text - white'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+                              />
+                            ) : (
+                              <AvatarFallback className='bg-zion-purple/20'>
+                                <CategoryIcon className='h-6 w-6 text-zion-purple' />
+                              </AvatarFallback>
+                            )}
+                          </Avatar>
+                          <div className='flex-1'>
+                            <div className='flex justify-between'>
+                              <div>
+                                <h3 className='font-medium text-white'>
                                   {match.title}
-                                </h3>;
-                                <p className='text - zion - slate - light text - sm'>;
+                                </h3>
+                                <p className='text-zion-slate-light text-sm'>
                                   {match.description}
-                                </p>;
-                              </div>;
+                                </p>
+                              </div>
                               {match.price && (
-                                <div className='text - right ml - 2'>;
-                                  <div className='font - medium text - white'>;
+                                <div className='text-right ml-2'>
+                                  <div className='font-medium text-white'>
                                     ${match.price}
-<<<<<<< HEAD
                                   </div>
                                   <div className='text-xs text-zion-slate-light'>
                                     {match.category
                                       .toLowerCase()
                                       .includes('talent')
                                       ? '/hour'
-=======
-                          </Avatar>;
-
-                          <div className='flex-1'>;
-                            <div className='flex justify-between'>;
-                              <div>;
-                                <h3 className='font-medium text-white'>;
-                                  {match && match.title}
-                                </h3>;
-                                <p className='text-zion-slate-light text-sm'>;
-                                  {match && match.description}
-                                </p>;
-                              </div>;
-                              {match && match.price && (;
-                                <div className='text-right ml-2'>;
-                                  <div className='font-medium text-white'>;
-                                    ${match && match.price}
-                                  </div>;
-                                  <div className='text-xs text-zion-slate-light'>;
-                                    {match && match.category;
-                                      .toLowerCase();
-                                      .includes('talent');
-                                      ? '/hour';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                                       : ''}
                                   </div>;
                                 </div>;
                               )}
-<<<<<<< HEAD
+
+
+
+
+
+
+
+                                  </div>
+                                </div>
+                              )}
                             </div>
                             <div className='mt-2 flex flex-wrap gap-1'>
                               <Badge variant='outline'>{match.category}</Badge>
@@ -459,7 +355,16 @@ if ( {) {
               <div className='text-center py-8 text-zion-slate-light'>
                 No {tab} matches found.
               </div>
-=======
+                            
+                            <div className="mt-2 flex flex-wrap gap-1">
+                              <Badge variant="outline">
+                                {match.category}
+                              </Badge>
+                              {match.skills && match.skills.slice(0, 3).map((skill: string, i: number) => (
+                                <Badge key={i} variant="outline">
+                                  {skill}
+                                </Badge>;
+                              ))}
                             </div>;
 
                             <div className='mt-2 flex flex-wrap gap-1'>;
@@ -472,7 +377,6 @@ if ( {) {
                                       {skill}
                                     </Badge>;
                                   ))}                            </div>;
-=======
                                   </div>;
                                   <div className='text - xs text - zion - slate - light'>;
                                     {match.category;
@@ -492,40 +396,29 @@ if ( {) {
                                     <Badge key={i} variant='outline'>;
                                       {skill}
                                     </Badge>))}                            </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           </div>;
                         </div>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-                  </Card>;
-                );
-              });
-            ) : (;
-              <div className='text-center py-8 text-zion-slate-light'>;
-                No {tab} matches found.;
-              </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+
             )}
           </TabsContent>;
         ))}
-<<<<<<< HEAD
       </Tabs>
     </div>
   )
+};
+;
 }
-=======
       </Tabs>;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
+
                   </Card>);
               })) : (
               <div className='text - center py - 8 text - zion - slate - light'>;
@@ -535,5 +428,3 @@ if ( {) {
       </Tabs>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

@@ -1,26 +1,14 @@
-<<<<<<< HEAD
 
 import React, { createContext, useContext, useState } from "react";
-<<<<<<< HEAD
-=======
-import React, { create_context, useContext, useState } from './react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React, { createContext, useContext, useState } from "react",
+
 interface SidebarContextType {
   is_open: boolean;
   toggle: () => void;
   open: () => void;
   close: () => void
 }
-<<<<<<< HEAD
 
-const SidebarContext = createContext<SidebarContextType>({
-  isOpen: true
-  toggle: () => {}
-  open: () => {}
-  close: () => {}
-});
-export const useSidebar = (): SidebarContextType => useContext(SidebarContext);
-=======
 const SidebarContext = create_context < SidebarContextType>({
   is_open: true,
   toggle: () => {},
@@ -30,17 +18,33 @@ const SidebarContext = create_context < SidebarContextType>({
 ;
 export const use_sidebar = (): SidebarContextType => useContext (SidebarContext);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 interface SidebarProviderProps {
   children: React.ReactNode;
   default_open?: boolean;
 }
-<<<<<<< HEAD
 export function SidebarProvider({
   children
   defaultOpen = true
 }: SidebarProviderProps) {
-=======
+
+
+export function SidebarProvider({ 
+  children, 
+  defaultOpen = true 
+}: SidebarProviderProps) {;
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const toggle = () => setIsOpen(!isOpen);
+  const open = () => setIsOpen(true);
+  const close = () => setIsOpen(false);
+
+  return (
+    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
+      <div
+        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
+      >
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>
+import React, { createContext, useContext, useState } from "react",;
 
 interface SidebarContextType {;
   isOpen: boolean,;
@@ -72,44 +76,14 @@ export function SidebarProvider(): any ({ ;
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
 
-  return (
-<<<<<<< HEAD
-    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
-      <div
-        className={`grid ${isOpen ? "grid-cols-[auto_1fr]" : "grid-cols-[auto_1fr]"} min-h-screen w-full`}
-      >
+  return (;
+    <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
+      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
         {children}
       </div>
     </SidebarContext.Provider>
   );
 }
-=======
-    <SidebarContext && SidebarContext.Provider value={{ isOpen, toggle, open, close }}>;
-      <div className={`grid ${isOpen ? 'grid-cols-[auto_1fr]' : 'grid-cols-[auto_1fr]'} min-h-screen w-full`}>;
-        {children}
-      </div>;
-    </SidebarContext && SidebarContext.Provider>;
-  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-export /**
- * SidebarProvider - Function description
- */
-function SidebarProvider() {
-  const [is_open, setIsOpen] = useState (default_open);
 ;
-  const toggle = () =>: any setIsOpen (!is_open);
-  const open = () =>: any setIsOpen (true);
-  const close = () =>: any setIsOpen (false);
 ;
-  return (
-    <SidebarContext.Provider value={{ is_open, toggle, open, close }}>;
-      <div;
-        className={`grid ${is_open ? "grid - cols-[auto_1fr]" : "grid - cols-[auto_1fr]"} min - h-screen w - full`}
-      >;
-        {children}
-      </div>;
-    </SidebarContext.Provider>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

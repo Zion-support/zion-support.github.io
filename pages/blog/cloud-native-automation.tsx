@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -185,6 +179,7 @@ export default function CloudNativeAutomation() {
                 <p className='text-white/90 mb-4'>
                   As we continue to evolve our cloud-native automation
                   infrastructure, we&apos,re exploring emerging technologies
+                  infrastructure, we're exploring emerging technologies
                   like: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>• Serverless computing for event-driven automation</li>
@@ -227,22 +222,14 @@ export default function CloudNativeAutomation() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import Head from 'next / head',
-import Link from 'next / link',
-import React from 'react',
-export default /**
- * CloudNativeAutomation - Function description
- */
-function CloudNativeAutomation() {
-  return (
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+export default function CloudNativeAutomation(req, res) {
+  try {
+  return (;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <>;
       <Head>;
         <title>;
@@ -456,5 +443,5 @@ function CloudNativeAutomation() {
       </div>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+;

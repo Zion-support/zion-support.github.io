@@ -1,10 +1,18 @@
-export * from './use_conversations';
-export * from './use_messages';
+
+=======
+// Index utility
+export const Index = () => {
+  // Implementation here
+  return null;
+};
+
+export * from './useConversations';
+export * from './useMessages';
 export * from './useMessagingOperations';
 export * from './useMessagingRealtime';
-<<<<<<< HEAD
 export * from './useConversationState';
-=======
+export * from './useConversations',;
+export * from './useMessages',;
+export * from './useMessagingOperations',;
+export * from './useMessagingRealtime',;
 export * from './useConversationState';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

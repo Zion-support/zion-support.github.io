@@ -1,9 +1,16 @@
-<<<<<<< HEAD
 
 import {Badge} from "@/components/ui/badge";
 import {QuoteStatus} from "@/types/quotes";
-<<<<<<< HEAD
 const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {
+import { Badge } from "@/components/ui/badge",
+import { QuoteStatus } from "@/types/quotes",
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {
+  new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },
+  in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },
+  accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },
+  responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" },
+  closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" },
+  archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }},
 
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" }
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" }
@@ -11,38 +18,24 @@ const statusConfig: Record<QuoteStatus, { label: string, className: string }> = 
   responded: { label: "Responded", className: "bg-purple-500 hover:bg-purple-600" }
   closed: { label: "Closed", className: "bg-gray-500 hover:bg-gray-600" }
   archived: { label: "Archived", className: "bg-gray-400 hover:bg-gray-500" }}
-=======
-import { Badge } from '@/components / ui / badge';
-import { QuoteStatus } from '@/types / quotes';
-const status_config: Record < QuoteStatus, { label: string, class_name: string }> = {
-  new: { label: "New", class_name: "bg - blue - 500 hover:bg - blue - 600" },
-  in_review: { label: "In Review", class_name: "bg - yellow - 500 hover:bg - yellow - 600" },
-  accepted: { label: "Accepted", class_name: "bg - green - 500 hover:bg - green - 600" },
-  responded: { label: "Responded", class_name: "bg - purple - 500 hover:bg - purple - 600" },
-  closed: { label: "Closed", class_name: "bg - gray - 500 hover:bg - gray - 600" },
-  archived: { label: "Archived", class_name: "bg - gray - 400 hover:bg - gray - 500" }},
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 interface QuoteStatusBadgeProps {
-  status: QuoteStatus;
+  status: QuoteStatus
 }
-<<<<<<< HEAD
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
+
+export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
   const config = statusConfig[status];
-=======
-export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) =>: any {
-  const config = status_config[status];
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <Badge className={config.class_name}>;
+    <Badge className={config.className}>
       {config.label}
-<<<<<<< HEAD
     </Badge>
   )
 }
 
-=======
-const statusConfig: Record<QuoteStatus, { label: string, className: string }> = {;
+import { Badge } from "@/components/ui/badge",;
+import { QuoteStatus } from "@/types/quotes",;
+const statusConfig: Record<QuoteStatus { label: string, className: string }> = {;
+
   new: { label: "New", className: "bg-blue-500 hover:bg-blue-600" },;
   in_review: { label: "In Review", className: "bg-yellow-500 hover:bg-yellow-600" },;
   accepted: { label: "Accepted", className: "bg-green-500 hover:bg-green-600" },;
@@ -63,9 +56,3 @@ export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {;
     </Badge>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </Badge>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

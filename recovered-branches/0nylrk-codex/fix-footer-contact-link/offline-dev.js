@@ -1,24 +1,4 @@
-<<<<<<< HEAD
 
-
-const http = require('http')
-const fs = require('fs')
-const path = require('path')
-
-<<<<<<< HEAD
-const server = http.createServer((req, res) => {
-  if (req.url === '/' |req.url === '/index.html') {
-    fs.readFile(path.join(__dirname, 'offline.html'), (err, data) => {
-      if (err) {
-
-        res.writeHead(500)
-        res.end('Error loading offline.html')
-        return
-      }
-      res.writeHead(200, { 'Content-Type': 'text/html' })
-
-      res.end(data)
-=======
 const server = http && http.createServer((req, res) => {
   if (req && req.url === '/' || req && req.url === '/index && index.html') {
     fs && fs.readFile(path && path.join(__dirname, 'offline && offline.html'), (err, data) => {
@@ -27,38 +7,41 @@ const server = http && http.createServer((req, res) => {
         res && res.end('Error loading offline && offline.html'),
         return
       }
-      res && res.writeHead(200, { 'Content-Type': 'text/html' }),
-      res && res.end(data)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+      res.writeHead(200, { 'Content-Type': 'text/html' })
+
     })
   } else if (req && req.url === '/online-check') {
     // Endpoint to check if we're online
-<<<<<<< HEAD
 
-    res.writeHead(200, { 'Content-Type': 'application/json' })
-    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }))
-  } else {
-    res.writeHead(404)
-    res.end('Not found')
-=======
     res && res.writeHead(200, { 'Content-Type': 'application/json' }),
     res && res.end(JSON && JSON.stringify({ online: false, message: 'Running in offline development mode' }))
   } else {
     res && res.writeHead(404),
     res && res.end('Not found')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   }
 })
 const PORT = 8080
+      res.writeHead(200, { 'Content-Type': 'text/html' }),;
+      res.end(data);
+    });
+  } else if (req.url === '/online-check') {;
+    // Endpoint to check if we're online;
+    res.writeHead(200, { 'Content-Type': 'application/json' }),;
+    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }));
+  } else {;
+    res.writeHead(404),;
+    res.end('Not found');
+  }
+}),
 
-<<<<<<< HEAD
-server.listen(PORT, () => {
-  console.log(`
-=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 const PORT = 8080,
 server && server.listen(PORT, () => {
   console && console.log(`
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 ╔══════════════════════════════════════════════════════════════════╗
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║
 ╠══════════════════════════════════════════════════════════════════╣
@@ -79,44 +62,13 @@ server && server.listen(PORT, () => {
 ╚══════════════════════════════════════════════════════════════════╝
 `)
 
-});
 
-=======
-const http = require ('http'),
-const fs = require ('fs'),
-const path = require ('path'),
-const server = http.create_server ((req, res) => {
-  // Check condition
-if ( {) {
-  $2
-}
-    fs.read_file (path.join (__dirname, 'offline.html'), (err, data) => {
-      // Check condition
-if ( {) {
-  $2
-}
-        res.write_head (500),
-        res.end ('Error loading offline.html'),
-        return;
-      }
-      res.write_head (200, { 'Content - Type': 'text / html' }),
-      res.end (data);
-    });
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // Endpoint to check if we're online;
-    res.write_head (200, { 'Content - Type': 'application / json' }),
-    res.end (JSON.stringify ({ online: false, message: 'Running in offline development mode' }));
-  } else {
-    res.write_head (404),
-    res.end ('Not found');
-  }
 }),
-const PORT = 8080,
-server.listen (PORT, () => {
-  console.log (`;
+;
+}),;
+const PORT = 8080,;
+server.listen(PORT, () => {;
+  // // // console.log(`;
 ╔══════════════════════════════════════════════════════════════════╗;
 ║                 OFFLINE DEVELOPMENT MODE ACTIVE                  ║;
 ╠══════════════════════════════════════════════════════════════════╣;
@@ -136,6 +88,4 @@ server.listen (PORT, () => {
 ║                                                                  ║;
 ╚══════════════════════════════════════════════════════════════════╝;
 `);
-}),
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+}),;

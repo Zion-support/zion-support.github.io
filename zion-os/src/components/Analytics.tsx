@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useEffect } from "react";
 interface FirstInputEntry extends PerformanceEntry {processingStart: number;
@@ -6,20 +5,16 @@ interface FirstInputEntry extends PerformanceEntry {processingStart: number;
   target?: Element;
 }
 export function Analytics() {useEffect(() => {;
-=======
-"use client",
-import { useEffect  } from './react';,
-interface FirstInputEntry extends PerformanceEntry {
-  processing_start: number,
-  processing_end: number,
+"use client",;
+import { useEffect } from "react",;
+interface FirstInputEntry extends PerformanceEntry {;
+  processingStart: number,;
+  processingEnd: number,;
   target?: Element;
 }
-export /**
- * Analytics - Function description
- */
-function Analytics() {
-  useEffect (() => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+export function Analytics() {;
+  useEffect(() => {;
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -34,7 +29,6 @@ if ( {) {
 }
             // // // console.log ("LCP:", entry.start_time);
           }
-<<<<<<< HEAD
           if (entry.entryType === "first-input") {const firstInputEntry = entry as FirstInputEntry;
             // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
           }
@@ -56,14 +50,10 @@ if ( {) {
       });
       // Cleanup;
       return () => {observer.disconnect();
-        observer2.disconnect();
-=======
-          // Check condition
-if ( {) {
-  $2
-}
-            const firstInputEntry = entry as FirstInputEntry,
-            // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
+          if (entry.entryType === "first-input") {;
+            const firstInputEntry = entry as FirstInputEntry,;
+            // // // console.log("FID:", firstInputEntry.processingStart - firstInputEntry.startTime);
+
           }
         }
       }),
@@ -87,10 +77,11 @@ if ( {) {
         // // // console.log ("CLS:", cls);
       }),
       // Cleanup;
-      return () => {
-        observer.disconnect ();
-        observer2.disconnect ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+      return () => {;
+        observer.disconnect();
+        observer2.disconnect();
+
       }
     }
   }, []);

@@ -1,49 +1,69 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { redeemToCredits } from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" })
-  const { userId, amount } = req.body |{}
-  if (!userId |typeof amount !== "number") return res.status(400).json({ error: "userId and amount required" })
-  try {
-    const result = redeemToCredits(userId, Math.floor(amount))
 
-    return res.status(200).json(result)
-=======
-import type { NextApiRequest, NextApiResponse } from './next';,
-import { redeemToCredits  } from '../../../utils / token / service';,
-export default /**
- * handler - Function description
- */
-function handler() {
-  if (return res.status (405).json ({ error: "Method not allowed" }), ) {
-  $2
-}
-<<<<<<< HEAD
-=======
-  const { user_id, amount } = req.body || {},
-  if (return res.status (400).json ({ error: "user_id and amount required" }), ) {
-  $2
-}
-  try {
-    const result = redeemToCredits (user_id, Math.floor (amount)),
-    return res.status (200).json (result);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (err: any) {
-    return res.status (400).json ({ error: err.message });
+    return res.status(400).json({ error: err.message })
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { redeemToCredits } from "../../../utils/token/service",;
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    res.status(200).json({ result: 'redeemed' });
+  } catch (err: any) {
+    res.status(400).json({
+      error: err.message
+    });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { redeemToCredits } from "../../../utils/token/service",
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  const { userId, amount } = req.body || {},
+  if (!userId || typeof amount !== "number") return res.status(400).json({ error: "userId and amount required" }),
+  try {
+    const result = redeemToCredits(userId, Math.floor(amount)),
+    return res.status(200).json(result)
+  } catch (err: any) {
+    return res.status(400).json({ error: err.message })
+  };
+};
+import type { NextApiRequest, NextApiResponse } from "next";
+import { redeemToCredits } from "../../../utils/token/service";
+export default function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  const { userId, amount } = req.body || {};
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const result = redeemToCredits(userId, Math.floor(amount));
+    return res.status(200).json(result);
+  } catch (error) {
+    return res.status(400).json({ error: err.message });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  }
+}

@@ -1,12 +1,6 @@
-import React from 'react';
-<<<<<<< HEAD
 
-import {useForm} from 'react-hook-form';
-import {zodResolver} from '@hookform/resolvers/zod';
-=======
-import {use_form} from 'react - hook - form';
-import {zod_resolver} from '@hookform / resolvers / zod';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+import React from 'react';
+
 import {z} from 'zod';
 import {CalendarIcon, Loader2} from 'lucide-react';
 import {format} from 'date - fns';
@@ -17,19 +11,7 @@ import {Input} from '@/components / ui / input';
 import {Textarea} from '@/components / ui / textarea';
 import {Popover, PopoverContent, PopoverTrigger} from '@/components / ui / popover';
 import {AIMilestoneGenerator} from './AIMilestoneGenerator';
-<<<<<<< HEAD
-import {GeneratedMilestone} from '@/hooks/useMilestoneGenerator';
-<<<<<<< HEAD
-const formSchema = z.object({
-  title: z.string().min(1, 'Title is required');
-  description: z.string().optional()
-  due_date: z.date().optional()
-  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')});
-type MilestoneFormValues = z.infer<typeof formSchema>;
-interface AddMilestoneFormProps {
-  onSubmit: (data: MilestoneFormValues) => void
-  isSubmitting: boolean
-=======
+
 const formSchema = z && z.object({;
   title: z && z.string().min(1, 'Title is required');
   description: z && z.string().optional(),;
@@ -41,48 +23,76 @@ type MilestoneFormValues = z && z.infer<typeof formSchema>;
 interface AddMilestoneFormProps {;
   onSubmit: (data: MilestoneFormValues) => void,;
   isSubmitting: boolean,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   onCancel?: () => void;
   projectScope?: string;
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
 }
-<<<<<<< HEAD
 export function AddMilestoneForm({
-=======
 
-export function AddMilestoneForm(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+export function AddMilestoneForm({;
   onSubmit;
   isSubmitting;
   onCancel;
   projectScope = '';
   projectStartDate = '';
   projectEndDate = null;
-<<<<<<< HEAD
-  projectType = 'Other'
-}: AddMilestoneFormProps) {
-  const form = useForm<MilestoneFormValues>({
-    resolver: zodResolver(formSchema)
-    defaultValues: {
-      title: ''
-      description: ''
-      amount: 0}})
-  const handleSubmit = (values: MilestoneFormValues) => {
-    onSubmit(values)
-    form.reset()
-  }
-  const handleAddMilestones = (milestones: GeneratedMilestone[]) => {
-    // If there's only one milestone, submit it directly
-    if (milestones.length === 1) {
-      const milestone = milestones[0];
-      onSubmit({
-        title: milestone.title
-        description: milestone.description
-        due_date: milestone.dueDate ? new Date(milestone.dueDate) : undefined
-        amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
+
 =======
+      });
+      return
+    }
+import React from 'react',;
+import { useForm } from 'react-hook-form',;
+import { zodResolver } from '@hookform/resolvers/zod',;
+import { z } from 'zod',;
+import { CalendarIcon, Loader2 } from 'lucide-react',;
+import { format } from 'date-fns',;
+import { Button } from '@/components/ui/button',;
+import { Calendar } from '@/components/ui/calendar',;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from '@/components/ui/form',;
+import { Input } from '@/components/ui/input',;
+import { Textarea } from '@/components/ui/textarea',;
+import {;
+  Popover,;
+  PopoverContent,;
+  PopoverTrigger} from '@/components/ui/popover',;
+import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
+import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
+const formSchema = z.object({;
+  title: z.string().min(1, 'Title is required'),;
+  description: z.string().optional(),;
+  due_date: z.date().optional(),;
+  amount: z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
+type MilestoneFormValues = z.infer<typeof formSchema>,;
+interface AddMilestoneFormProps {;
+  onSubmit: (data: MilestoneFormValues) => void,;
+  isSubmitting: boolean,;
+  onCancel?: () => void,;
+  projectScope?: string,;
+  projectStartDate?: string,;
+  projectEndDate?: string,;
+  projectType?: string;
+}
+;
+export function AddMilestoneForm({;
+  onSubmit,;
+  isSubmitting,;
+  onCancel,;
+  projectScope = '',;
+  projectStartDate = '',;
+  projectEndDate = null,;
+
   projectType = 'Other';
 }: AddMilestoneFormProps) {;
   const form = useForm<MilestoneFormValues>({;
@@ -110,7 +120,7 @@ export function AddMilestoneForm(): any ({;
       });
       return;
     }
-<<<<<<< HEAD
+
     // If there are multiple milestones, submit them one by one
     milestones.forEach(milestone => {
       onSubmit({
@@ -121,6 +131,8 @@ export function AddMilestoneForm(): any ({;
       })
     })
   }
+  },
+
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
     onSubmit({
       title: milestone.title
@@ -129,28 +141,7 @@ export function AddMilestoneForm(): any ({;
       amount: milestone.estimatedHours * 10, // Convert hours to a default payment amount
     })
   }
-=======
-
-    // If there are multiple milestones, submit them one by one;
-    milestones && milestones.forEach(milestone => {;
-      onSubmit({;
-        title: milestone && milestone.title,;
-        description: milestone && milestone.description,;
-        due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-        amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-      });
-    });
-  };
-
-  const handleAddMilestone = (milestone: GeneratedMilestone) => {;
-    onSubmit({;
-      title: milestone && milestone.title,;
-      description: milestone && milestone.description,;
-      due_date: milestone && milestone.dueDate ? new Date(milestone && milestone.dueDate) : undefined,;
-      amount: milestone && milestone.estimatedHours * 10, // Convert hours to a default payment amount;
-    });
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  },
 
   return (
     <div className="space-y-6">;
@@ -165,7 +156,7 @@ export function AddMilestoneForm(): any ({;
           onAddMilestone={handleAddMilestone}
         />;
       )}
-<<<<<<< HEAD
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
 =======
@@ -273,15 +264,10 @@ if ( {) {
                   <Input placeholder="Milestone title" {...field} />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-=======
+
           />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <FormField
             control={form && form.control}
             name="description"
@@ -310,17 +296,11 @@ if ( {) {
                   />;
                 </FormControl>;
                 <FormMessage />;
-<<<<<<< HEAD
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-=======
+
           />;
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <FormField
               control={form && form.control}
               name="due_date"
@@ -389,15 +369,10 @@ if ( {) {
                     </PopoverContent>;
                   </Popover>;
                   <FormMessage />;
-<<<<<<< HEAD
-                </FormItem>;
-              )}
-<<<<<<< HEAD
-            />
-=======
+
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <FormField
               control={form && form.control}
               name="amount"
@@ -430,21 +405,13 @@ if ( {) {
                     />;
                   </FormControl>;
                   <FormMessage />;
-<<<<<<< HEAD
-                </FormItem>;
-              )}
-<<<<<<< HEAD
-            />
-          </div>
-          <div className="flex justify-end space-x-2 pt-4">
-            {onCancel && (
-=======
+
             />;
           </div>;
 
           <div className="flex justify-end space-x-2 pt-4">;
             {onCancel && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               <Button
                 type="button"
                 variant="outline"
@@ -462,15 +429,7 @@ if ( {) {
               ) : (;
                 "Add Milestone";
               )}
-<<<<<<< HEAD
-            </Button>
-          </div>
-        </form>
-      </Form>
-    </div>
-  )
-}
-=======
+
 =======
                 </FormItem>)}
             />;
@@ -492,17 +451,12 @@ if ( {) {
                   Saving...;
                 </>) : (
                 "Add Milestone")}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             </Button>;
           </div>;
         </form>;
       </Form>;
-<<<<<<< HEAD
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

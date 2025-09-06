@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const metadata = {title: 'Careers - Zion Tech Group';
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.';
   keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'}
@@ -50,22 +49,19 @@ export default function CareersPage() {const openPositions = [;
       icon: '💰'}
     {title: 'Health & Wellness';
       description: 'Comprehensive health coverage and wellness programs.';
-=======
-export const metadata = {
-  title: 'Careers - Zion Tech Group',
-  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
-  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'},
-export default /**
- * CareersPage - Function description
- */
-function CareersPage() {
-  const open_positions = [;
-    {
-      title: 'Senior AI Research Engineer',
-      department: 'Research & Development',
-      location: 'Remote / Global',
-      type: 'Full - time',
-      description: 'Lead cutting - edge research in AI consciousness, autonomous systems, and quantum neural networks.',
+export const metadata = {;
+  title: 'Careers - Zion Tech Group',;
+  description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',;
+  keywords: 'careers, jobs, Zion Tech Group, AI jobs, technology careers, quantum computing jobs'},;
+export default function CareersPage() {;
+  const openPositions = [;
+    {;
+      title: 'Senior AI Research Engineer',;
+      department: 'Research & Development',;
+      location: 'Remote / Global',;
+      type: 'Full-time',;
+      description: 'Lead cutting-edge research in AI consciousness, autonomous systems, and quantum neural networks.',;
+
       requirements: [;
         'PhD in Computer Science, AI, or related field5+ years experience in AI research_expertise in machine learning and neural networks_experience with quantum computing concepts']},
     {
@@ -93,30 +89,30 @@ function CareersPage() {
       requirements: [;
         '5+ years experience in cybersecurity_expertise in threat detection and prevention_knowledge of AI security and adversarial attacks_relevant certifications (CISSP, CEH, etc.)']}],
   const benefits = [;
-    {
-      title: 'Remote First',
-      description: 'Work from anywhere in the world with our distributed team.',
-      icon: '🌍'},
-    {
-      title: 'Cutting - Edge Technology',
-      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',
-      icon: '🚀'},
-    {
-      title: 'Flexible Hours',
-      description: 'Work when you're most productive with flexible scheduling.',
-      icon: '⏰'},
-    {
-      title: 'Learning & Development',
-      description: 'Continuous learning opportunities and professional development.',
-      icon: '📚'},
-    {
-      title: 'Competitive Compensation',
-      description: 'Attractive salary packages with equity options.',
-      icon: '💰'},
-    {
-      title: 'Health & Wellness',
-      description: 'Comprehensive health coverage and wellness programs.',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    {;
+      title: 'Remote First',;
+      description: 'Work from anywhere in the world with our distributed team.',;
+      icon: '🌍'},;
+    {;
+      title: 'Cutting-Edge Technology',;
+      description: 'Work with the latest AI, quantum computing, and blockchain technologies.',;
+      icon: '🚀'},;
+    {;
+      title: 'Flexible Hours',;
+      description: 'Work when you\'re most productive with flexible scheduling.',;
+      icon: '⏰'},;
+    {;
+      title: 'Learning & Development',;
+      description: 'Continuous learning opportunities and professional development.',;
+      icon: '📚'},;
+    {;
+      title: 'Competitive Compensation',;
+      description: 'Attractive salary packages with equity options.',;
+      icon: '💰'},;
+    {;
+      title: 'Health & Wellness',;
+      description: 'Comprehensive health coverage and wellness programs.',;
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

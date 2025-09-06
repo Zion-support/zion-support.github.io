@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link',
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+import React from 'react';
 import Head from 'next/head';
 
 import Link from 'next/link';
@@ -14,13 +9,9 @@ import Head from 'next / head';
 import Link from 'next / link';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 import {
-<<<<<<< HEAD
   Server
   Shield
   Cloud
@@ -57,17 +48,6 @@ import {
   Brain
   DollarSign
   Rocket
-} from 'lucide-react';
-const itServices = [{
-    title: 'Cloud Infrastructure Management'
-    description: 'Comprehensive cloud solutions including AWS, Azure, and Google Cloud Platform management.'
-    icon: Cloud
-    features: ['Multi-cloud Strategy', 'Cost Optimization', 'Auto-scaling', 'Disaster Recovery']
-    pricing: '$6,000 - $30,000/project'
-    category: 'Cloud'
-    popular: true
-  }
-=======
   Server,
   Shield,
   Cloud,
@@ -116,23 +96,19 @@ const it_services = [{
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
-<<<<<<< HEAD
     title: 'Cybersecurity Solutions',
-    description: 'Enterprise - grade security services to protect your digital assets and data.',
+    description: 'Enterprise-grade security services to protect your digital assets and data.',
     icon: Shield,
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
-<<<<<<< HEAD
     pricing: '$5,000 - $40,000/project',
-<<<<<<< HEAD
     category: 'Security',
-=======
     title: 'Cybersecurity Solutions'
     description: 'Enterprise-grade security services to protect your digital assets and data.'
     icon: Shield
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/main
     popular: true
   }
   {
@@ -1720,26 +1696,7 @@ function ITServicesPage() {
                   <meta name="keywords" content="IT services, cloud infrastructure, cybersecurity, network management, system administration" />;
                   </Head>;
       {/* Hero Section */}
-<<<<<<< HEAD
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">;
-<div className="absolute inset-0">;
-                  <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">;
-                  </div>;
-                  <div className="absolute top-40 right-10 w-72 h-72 bg-emerald-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000">;
-                  </div>;
-                  </div>;
-                  <div className="container mx-auto px-4 relative z-10">;
-                  <motion&& motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            className="text-center">;
-<div className="flex items-center justify-center mb-6">;
-                  <Server className="h-16 w-16 text-green-400 mr-4" />;
-                  <h1 className="text-4xl md:text-6xl font-bold">;
-                IT{' '}
-                <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">;
-=======
+
       <section className="relative bg - gradient - to - br from - green - 900 via - emerald - 900 to - teal - 900 text - white py - 20 overflow - hidden">;
 <div className="absolute inset - 0">;
                   <div className="absolute top - 20 left - 10 w - 72 h - 72 bg - green - 500 rounded - full mix - blend - multiply filter blur - xl opacity - 20 animate - pulse">;
@@ -1759,51 +1716,12 @@ function ITServicesPage() {
                   <h1 className="text - 4xl md:text - 6xl font - bold">;
                 IT{' '}
                 <span className="bg - gradient - to - r from - green - 400 to - emerald - 400 bg - clip - text text - transparent">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   Services;
                 </span>;
 </h1>;
                   </div>;
-<<<<<<< HEAD
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">;
-              Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we&apos;ve got you covered.;
-            </p>;
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                  <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">;
-                Get IT Consultation;
-              </Link>;
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">;
-                View All Services;
-              </Link>;
-                  </div>;
-                  </motion && motion.div>;
-                  </div>;
-                  </section>;
-      {/* Services Grid */}
-      <section className="py-20 bg-gray-50">;
-                  <div className="container mx-auto px-4">;
-                  <motion&& motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-<h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">;
-              Our IT Solutions;
-            </h2>;
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">;
-              End-to-end IT services designed to optimize your infrastructure and ensure business continuity.;
-            </p>;
-                  </motion && motion.div>;
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {itServices && itServices.map((service, index) => {;
-              const IconComponent = service && service.icon;
-              return (
-                <motion&& motion.div
-                  key={index}
-className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group
-<<<<<<< HEAD
-=======
+
                   <p className="text - xl md:text - 2xl text - gray - 300 mb - 8 max - w-4xl mx - auto">;
               Comprehensive IT solutions to keep your business running smoothly. From cloud infrastructure to cybersecurity, we & apos;ve got you covered.;
             </p>;
@@ -1842,22 +1760,13 @@ className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dura
                 <motion.div;
                   key={index}
 className="bg - white p - 8 rounded - xl shadow - lg hover:shadow - xl transition - all duration - 300 group;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 import React from 'react';
 import Head from 'next / head';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/automation-improvements-final
-=======
-import React from 'react'
-import Head from 'next/head'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 import { 
   Server, 
   Shield, 
@@ -1915,12 +1824,12 @@ import {
   Award,
   Star,
   Zap,
-  Search,
-  ShoppingCart,
-  BookOpen,
-  Rocket,
-<<<<<<< HEAD
+
 =======
+  Search, 
+  ShoppingCart, 
+  BookOpen, 
+  Rocket,
 import {
   Server
   Shield
@@ -1958,17 +1867,16 @@ import {
   ShoppingCart
   BookOpen
   Rocket
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/main
+  Rocket,;
   Laptop;
 } from 'lucide-react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
-=======
+
   Laptop
 } from 'lucide-react'
 import Layout from '../components/Layout'
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 const itServices = [
   {
     title: 'Cloud Infrastructure Management'
@@ -1987,35 +1895,18 @@ import Layout from '../components / Layout';
 ;
 const it_services = [;
   {
-    title: 'Cloud Infrastructure Management',
-    description: 'Comprehensive cloud infrastructure setup, management, and optimization services',
-    icon: Cloud,
-    features: ['AWS / Azure / GCP Setup', 'Server Management', 'Auto - scaling', 'Cost Optimization'],
-    pricing: '$2, 000 - $10, 000 / month',
-    category: 'Cloud Computing',
-    popular: true,
-    benefits: ['Reduced infrastructure costs', 'Improved scalability', 'Enhanced security', '24 / 7 monitoring'],
-    market_price: '$5, 000 / month',
-    link: '/contact';
-  },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  {
-<<<<<<< HEAD
     title: 'Cybersecurity Solutions',
     description: 'Comprehensive security services to protect your business from cyber threats',
     icon: Shield,
     features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance'],
-<<<<<<< HEAD
     pricing: '$1,500 - $8,000/month',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
     marketPrice: '$4,000/month',
-=======
     title: 'Cybersecurity Solutions'
     description: 'Comprehensive security services to protect your business from cyber threats'
     icon: Shield
@@ -2025,7 +1916,7 @@ const it_services = [;
     popular: true
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
     marketPrice: '$4,000/month'
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+origin/main
     link: '/contact'
 =======
     pricing: '$1, 500 - $8, 000 / month',
@@ -2060,13 +1951,10 @@ const it_services = [;
     marketPrice: '$2,500/month'
     link: '/contact'
   }
-<<<<<<< HEAD
-];
-<<<<<<< HEAD
-=======
+
 ]
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 const industries = [
   { name: 'Healthcare', icon: Shield, description: 'Secure and compliant IT solutions for healthcare organizations' }
   { name: 'Finance', icon: TrendingUp, description: 'Robust IT infrastructure for financial services' }
@@ -2074,10 +1962,10 @@ const industries = [
   { name: 'Retail', icon: ShoppingCart, description: 'E-commerce and retail technology solutions' }
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
-]
+];
 
 export default function ITServices() {
-<<<<<<< HEAD
+export default function ITServices() {;
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
@@ -2100,7 +1988,6 @@ export default function ITServices() {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);  }, []);
   const contact: ContactInfo = {
-<<<<<<< HEAD
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -2367,19 +2254,23 @@ export default function ITServices() {
       ]
     }
   ];
+
   const filteredServices =
     selectedCategory === 'all'
       ? services
       : services.filter(service => service.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
     <Layout>
-      <Head>
-        <title>IT Services - Zion Tech Group</title>
-=======
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState('all')
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function ITServices(req, res) {
+  try {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
   useEffect(() => {;
     const timer = setTimeout(() => setIsLoaded(true), 100);
@@ -2661,10 +2552,11 @@ export default function ITServices() {
       : services && services.filter(service => service && service.category === selectedCategory);
 
   return (
-    <Layout>;
-      <Head>;
-        <title>IT Services - Zion Tech Group</title>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+    <>
+      <Head>
+        <title>IT Services - Zion Tech Group</title>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta
           name='description'
           content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
@@ -2672,7 +2564,6 @@ export default function ITServices() {
         <meta
           name='keywords'
           content='IT services, cloud computing, cybersecurity, DevOps, blockchain, quantum computing, enterprise solutions, infrastructure'
-<<<<<<< HEAD
         />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <meta name='robots' content='index, follow' />
@@ -2680,29 +2571,19 @@ export default function ITServices() {
       </Head>
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
-=======
-        />;
-        <meta name='viewport' content='width=device-width, initial-scale=1 && 1.0' />;
-        <meta name='robots' content='index, follow' />;
-        <link rel='canonical' href={`${contact && contact.site}/it-services`} />;
-      </Head>;
-
-      <ErrorBoundary level='page'>;
-        <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           {/* Hero Section */}
-          <section className='py-20 px-4 text-center' role='banner'>;
-            <div className='max-w-4xl mx-auto'>;
+          <section className='py-20 px-4 text-center' role='banner'>
+            <div className='max-w-4xl mx-auto'>
               <h1                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-              >;
-                IT Services;
-              </h1>;
+              >
+                IT Services
+              </h1>
               <p
-                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
-                100+ Comprehensive IT Solutions;
-              </p>;
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                100+ Comprehensive IT Solutions
+              </p>
               <p
-<<<<<<< HEAD
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 Transform your business with our enterprise-grade IT services.
@@ -2711,7 +2592,54 @@ export default function ITServices() {
                 and drive innovation.              </p>
             </div>
           </section>
-=======
+          {/* Category Filter */}
+          <section className='py-8 px-4'>
+            <div className='max-w-6xl mx-auto'>
+              <div className='flex flex-wrap justify-center gap-4 mb-8'>
+                {categories.map(category => (                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      selectedCategory === category.id
+                        ? 'bg-green-600 text-white'
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Services Grid */}
+          <section className='py-16 px-4' role='main'>
+            <div className='max-w-7xl mx-auto'>
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-20 px-4 text-center" role="banner">
+            <div className="max-w-4xl mx-auto">
+              <h1
+                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              >;
+                IT Services;
+              </h1>;
+              <p
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
+                100+ Comprehensive IT Solutions;
+              </p>;
+              <p
+
                 className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>;
                 Transform your business with our enterprise-grade IT services.;
                 From cloud infrastructure to quantum computing, we provide;
@@ -2720,7 +2648,7 @@ export default function ITServices() {
             </div>;
           </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           {/* Category Filter */}
           <section className='py-8 px-4'>;
             <div className='max-w-6xl mx-auto'>;
@@ -2732,38 +2660,39 @@ export default function ITServices() {
                       selectedCategory === category && category.id;
                         ? 'bg-green-600 text-white';
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700';
-<<<<<<< HEAD
-=======
+
                     }`}
                   >;
                     {category && category.name} ({category && category.count});
                   </button>;
-                ))}
-<<<<<<< HEAD
-              </div>
-            </div>
-          </section>
-=======
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
             </div>;
           </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          {/* Services Grid */}
-          <section className='py-16 px-4' role='main'>;
-            <div className='max-w-7xl mx-auto'>;
-              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-                {filteredServices && filteredServices.map((service, index) => (;
-                  <div                    key={service && service.id}
+          {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4" role="main">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredServices.map((service, index) => (
+                  <div                    key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
-                  >;
-                    {service && service.popular && (;
-                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>;
-                        Popular;
-                      </div>;
+                  >
+                    {service.popular && (
+                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
+                        Popular
+                      </div>
                     )}
-<<<<<<< HEAD
+                    )}
+
                     <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
                     <p className='text-slate-300 mb-4 text-sm'>
                       {service.description}
@@ -2778,6 +2707,11 @@ export default function ITServices() {
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
                           </li>
                         ))}
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className='flex items-center'>
+                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
+                          </li>
+                        ))}
                       </ul>
                     </div>
                     <div className='mb-4'>
@@ -2786,39 +2720,12 @@ export default function ITServices() {
                       </h4>
                       <div className='flex flex-wrap gap-1'>
                         {service.benefits.map((benefit, benefitIndex) => (
-=======
-
-                    <h3 className='text-xl font-bold mb-3'>{service && service.name}</h3>;
-                    <p className='text-slate-300 mb-4 text-sm'>;
-                      {service && service.description}
-                    </p>;
-
-                    <div className='mb-4'>;
-                      <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                        Key Features:;
-                      </h4>;
-                      <ul className='text-slate-400 text-sm space-y-1'>;
-                        {service && service.features.map((feature, featureIndex) => (;
-                          <li key={featureIndex} className='flex items-center'>;
-                            <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
-                          </li>;
-                        ))}
-                      </ul>;
-                    </div>;
-
-                    <div className='mb-4'>;
-                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
-                        Benefits:;
-                      </h4>;
-                      <div className='flex flex-wrap gap-1'>;
-                        {service && service.benefits.map((benefit, benefitIndex) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                           <span
                             key={benefitIndex}
-                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'>                            {benefit}
-                          </span>;
+                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
+                          >                            {benefit}
+                          </span>
                         ))}
-<<<<<<< HEAD
                       </div>
                     </div>
                     <div className='flex items-center justify-between mb-4'>
@@ -2831,8 +2738,94 @@ export default function ITServices() {
                     </div>
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
-=======
-<<<<<<< HEAD
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+          {/* Technology Stack Section */}
+          <section className='py-16 px-4 bg-slate-900/40'>
+            <div className='max-w-6xl mx-auto'>
+              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
+                Our Technology Stack
+              </h2>
+              <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+                <div className='text-center'>
+                  <div className='w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+                    <svg
+                      className='w-8 h-8 text-white'
+                      fill='none'
+                      stroke='currentColor'
+                      viewBox='0 0 24 24'
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        strokeWidth={2}
+                        d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
+                      />
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    <h3 className="text-xl font-bold mb-3">{service.name}</h3>
+                    <p className="text-slate-300 mb-4 text-sm">{service.description}</p>
+                    <div className="mb-4">
+                      <h4 className="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
+                      <ul className="text-slate-400 text-sm space-y-1">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center">
+                            <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
+                            {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </li>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </ul>
+                    </div>
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                        Benefits:
+                      </h4>
+                      <div className='flex flex-wrap gap-1'>
+                        {service.benefits.map((benefit, benefitIndex) => (
+                          <span
+                            key={benefitIndex}
+                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
+                          >                            {benefit}
+                          </span>
+                        ))}
+                          <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
+                            {benefit  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                          </span>;
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      </div>
+                    </div>
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='text-2xl font-bold text-green-400'>
+                        {service.price}
+                      </span>
+                      <span className='text-xs text-slate-500 capitalize'>
+                        {service.category.replace('-', ' ')}
+                      </span>
+                    </div>
+                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
+                    </button>
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                   <Head>
                   <title>IT Services - Zion Tech Group</title>
@@ -2843,12 +2836,14 @@ export default function ITServices() {
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
                   <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
->>>>>>> origin/automation-improvements-final
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
                   </div>
                 ))}
               </div>
             </div>
           </section>
+
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -2900,8 +2895,40 @@ export default function ITServices() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-<<<<<<< HEAD
                       />
+                      </div>;
+                    </div>;
+                    <div className="flex items-center justify-between mb-4">;
+                      <span className="text-2xl font-bold text-green-400">{service.price}</span>;
+                      <span className="text-xs text-slate-500 capitalize">{service.category.replace('- ')}</span>;
+                    </div>;
+                    <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">;
+                      Learn More;
+                    </button>;
+                  </div>;
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              </div>;
+            </div>;
+          </section>;
+          {/* Technology Stack Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4 bg-slate-900/40">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                Our Technology Stack
+              </h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>
@@ -2911,19 +2938,6 @@ export default function ITServices() {
                 </div>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>;
-                  <p className='text-slate-400'>;
-                    AWS, Azure, GCP, and hybrid cloud solutions;
-                  </p>;
-                </div>;
-
-                <div className='text-center'>;
-                  <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2933,9 +2947,12 @@ export default function ITServices() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-<<<<<<< HEAD
                         d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
                       />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Security</h3>
@@ -2945,20 +2962,6 @@ export default function ITServices() {
                 </div>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
-                        d='M9 12l2 2 4-4m5 && 4m5.618-4 && 4.016A11.955 11 && 11.955 0 0112 2 && 2.944a11.955 11 && 11.955 0 01-8 && 8.618 3 && 3.04A12.02 12 && 12.02 0 003 9c0 5 && 5.591 3 && 3.824 10 && 10.29 9 11 && 11.622 5 && 5.176-1 && 1.332 9-6 && 6.03 9-11 && 11.622 0-1 && 1.042-.133-2 && 2.052-.382-3 && 3.016z'
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text-xl font-bold mb-2'>Security</h3>;
-                  <p className='text-slate-400'>;
-                    Zero-trust architecture and advanced threat protection;
-                  </p>;
-                </div>;
-
-                <div className='text-center'>;
-                  <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -2975,8 +2978,12 @@ export default function ITServices() {
                         strokeLinejoin='round'
                         strokeWidth={2}
                         d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
-<<<<<<< HEAD
                       />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>DevOps</h3>
@@ -2986,19 +2993,6 @@ export default function ITServices() {
                 </div>
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-=======
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text-xl font-bold mb-2'>DevOps</h3>;
-                  <p className='text-slate-400'>;
-                    CI/CD pipelines and infrastructure automation;
-                  </p>;
-                </div>;
-
-                <div className='text-center'>;
-                  <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <svg
                       className='w-8 h-8 text-white'
                       fill='none'
@@ -3008,9 +3002,12 @@ export default function ITServices() {
                         strokeLinecap='round'
                         strokeLinejoin='round'
                         strokeWidth={2}
-<<<<<<< HEAD
                         d='M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1'
                       />
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Blockchain</h3>
@@ -3024,6 +3021,14 @@ export default function ITServices() {
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <h2 className='text-3xl md:text-4xl font-bold mb-8'>
+          {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold mb-8">
                 Ready to Transform Your IT Infrastructure?
               </h2>
               <p className='text-lg text-slate-300 mb-8'>
@@ -3032,33 +3037,8 @@ export default function ITServices() {
                 accelerate your digital transformation.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-=======
-                        d='M13 && M13.828 10 && 10.172a4 4 0 00-5 && 5.656 0l-4 4a4 4 0 105 && 105.656 5 && 5.656l1.102-1 && 1.101m-.758-4 && 4.899a4 4 0 005 && 005.656 0l4-4a4 4 0 00-5 && 5.656-5 && 5.656l-1 && 1.1 1 && 1.1'
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text-xl font-bold mb-2'>Blockchain</h3>;
-                  <p className='text-slate-400'>;
-                    Smart contracts and decentralized applications;
-                  </p>                </div>;
-              </div>;
-            </div>;
-          </section>;
-
-          {/* CTA Section */}
-          <section className='py-16 px-4'>;
-            <div className='max-w-4xl mx-auto text-center'>;
-              <h2 className='text-3xl md:text-4xl font-bold mb-8'>;
-                Ready to Transform Your IT Infrastructure?;
-              </h2>;
-              <p className='text-lg text-slate-300 mb-8'>;
-                Contact our IT experts to discuss how our comprehensive;
-                technology solutions can modernize your infrastructure and;
-                accelerate your digital transformation.;
-              </p>;
-
-              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>;
@@ -3066,21 +3046,13 @@ export default function ITServices() {
                   <ArrowRight className="ml-2 w-4 h-4" />;
                 </Link>;
                 <a
-                  href={`tel:${contact && contact.phone.replace(/[^\d+]/g, '')}`}
-                  className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'>;
-                  Call {contact && contact.phone}
-                </a>;
-                <a
-<<<<<<< HEAD
-                  href={`mailto:${contact.email}`}
-                  className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'                >
-                  Email Us
+                  href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
+                  className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'
+                >
+                  Call {contact.phone}
                 </a>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-=======
+                <a
+
                   href={`mailto:${contact && contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'>;
                   Email Us;
@@ -3090,7 +3062,7 @@ export default function ITServices() {
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         {/* Services Grid */}
         <section className="py-16 px-4">;
           <div className="max-w-7xl mx-auto">;
@@ -3099,18 +3071,7 @@ export default function ITServices() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0 && 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our IT Services</h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Comprehensive IT solutions designed to enhance your business operations and security.
-              </p>
-            </motion.div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {itServices.map((service, index) => (
-                <motion.div
-=======
+
               className="text-center mb-12">;
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Our IT Services</h2>;
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">;
@@ -3121,36 +3082,14 @@ export default function ITServices() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">;
               {itServices && itServices.map((service, index) => (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   key={index}
                   className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-whileHover={{ y: -5 }} ">
-                  <div className="flex items-center justify-between mb-4">
-                  <div className="text-green-600 group-hover:text-emerald-600 transition-colors">
-                  <IconComponent className="w-10 h-10" />
-                  </div>
-                  <span className="text-xs font-semibold text-green-600 bg-green-100 px-2 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    {service.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  <div className="mb-4">
-<h4 className="font-semibold text-gray-900 mb-2 text-sm">Key "Features": </h4>
-                  <ul className="space-y-1">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-xs text-gray-600">
-<CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
-=======
+
 whileHover={{ y: -5 }} ">;
                   <div className="flex items-center justify-between mb-4">;
                   <div className="text-green-600 group-hover:text-emerald-600 transition-colors">;
@@ -3172,7 +3111,7 @@ whileHover={{ y: -5 }} ">;
                       {service && service.features.map((feature, featureIndex) => (;
                         <li key={featureIndex} className="flex items-center text-xs text-gray-600">;
                   <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                           {feature}
                         </li>;
                       ))}
@@ -3297,10 +3236,8 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 }`}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -3310,8 +3247,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 </p>
                   <div className="text-3xl font-bold text-green-600 mb-6">
                   {level.pricing}
-=======
-=======
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -3334,29 +3269,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
               <h1
-=======
-=======
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-
-  const categories = [
-    { id: 'all', name: 'All IT Services', count: 100 },
-    { id: 'cloud', name: 'Cloud & Infrastructure', count: 25 },
-    { id: 'security', name: 'Cybersecurity', count: 20 },
-    { id: 'devops', name: 'DevOps & Automation', count: 15 },
-    { id: 'blockchain', name: 'Blockchain & Web3', count: 15 },
-    { id: 'quantum', name: 'Quantum Computing', count: 10 },
-    { id: 'enterprise', name: 'Enterprise Solutions', count: 15 }
-  ];
-
-  const services = [
-    {
-      id: 1,
-      name: 'Quantum Computing Consulting',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
       category: 'quantum',
       features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
@@ -3498,10 +3410,169 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
             <div className="max-w-4xl mx-auto">
               <h1 
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+              >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {level.name}
+                </h3>
+                  <p className="text-gray-600 mb-6">
+                  {level.description}
+                </p>
+                  <div className="text-3xl font-bold text-green-600 mb-6">
+                  {level.pricing}
+                </div>
+                  <ul className="space-y-3 mb-8">
+                  {level.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center text-gray-600">
+                  <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+                  <Link
+                  href="/contact"
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
+                    index === 1
+? 'bg-green-600 hover: bg-green-700 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+                  }`}
+                >
+                  <span>Choose Plan</span>
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                  </motion.div>
+            ))}
+          </div>
+                  </div>
+                  </section>
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+<div className="container mx-auto px-4 text-center">
+                  <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let our expert team help you build a robust, secure, and scalable IT environment.
+            </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Get IT Assessment
+              </Link>
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
+      {/* Contact Information Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Started with IT Services Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>
+              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
+              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
+                Call Now: +1 302 464 0950
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+            <motion.div
+              className="text-center p-6 bg-white rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Building className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>
+              <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>
+              <address className="text-green-600 font-semibold not-italic">
+                364 E Main St STE 1008<br />
+                Middletown, DE 19709
+              </address>
+            </motion.div>
+          </div>
+          <motion.div
+            className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
+            <p className="text-lg mb-6">
+              Join 500+ successful businesses that trust Zion Tech Group for their IT infrastructure needs. Let&apos;s build the perfect technology solution for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Start Building
+              </Link>
+              <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+            </div>
+ursor/integrate-build-improve-and-re-verify-8f7d
               >
                 IT Services
               </h1>
+              <p
+                className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                100+ Comprehensive IT Solutions
+              </p>
+              <p
+                className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              >
+                Transform your business with our enterprise-grade IT services.
+                From cloud infrastructure to quantum computing, we provide
+                cutting-edge technology solutions that scale with your business
+                and drive innovation.
               <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 100+ Comprehensive IT Solutions
               </p>
@@ -3511,21 +3582,25 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 business and drive innovation.
               </p>
             </div>
-<<<<<<< HEAD
           </motion.div>
         </div>
       </section>
                   </div>
-=======
+  );
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </section>
 
           {/* Category Filter */}
-          <section className="py-8 px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                {categories.map((category) => (
-                  <button
-=======
+          <section className='py-8 px-4'>
+            <div className='max-w-6xl mx-auto'>
+              <div className='flex flex-wrap justify-center gap-4 mb-8'>
+                {categories.map(category => (
+ursor/integrate-build-improve-and-re-verify-8f7d
+
 ;
 const industries = [;
   { name: 'Healthcare', icon: Shield, description: 'Secure and compliant IT solutions for healthcare organizations' },
@@ -3865,7 +3940,65 @@ function ITServices() {
             <div className='max - w-6xl mx - auto'>;
               <div className='flex flex - wrap justify - center gap - 4 mb - 8'>;
                 {categories.map (category => (                  <button;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+        {/* Industries Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Our IT solutions are tailored for various industries and business requirements.
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
+                >
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                    <industry.icon className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{industry.name}</h3>
+                  <p className="text-gray-600">{industry.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-blue-600">
+          <div className="max-w-7xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+                Ready to Enhance Your IT Infrastructure?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss how our IT services can improve your business operations and security.
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+          <section className="py-8 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                {categories.map((category) => (
+                  <button
                     key={category.id}
                     on_click={() => setSelectedCategory (category.id)}
                     className={`px - 6 py - 3 rounded - lg font - semibold transition - all duration - 300 ${
@@ -3881,37 +4014,11 @@ function ITServices() {
             </div>;
           </section>;
           {/* Services Grid */}
-<<<<<<< HEAD
-          <section className='py-16 px-4' role='main'>;
-            <div className='max-w-7xl mx-auto'>;
-              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>;
-                {filteredServices && filteredServices.map((service, index) => (;
-                  <div                    key={service && service.id}
-                    className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >;
-                    {service && service.popular && (;
-                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>;
-                        Popular;
-                      </div>;
-                    )}
-
-                    <h3 className='text-xl font-bold mb-3'>{service && service.name}</h3>;
-                    <p className='text-slate-300 mb-4 text-sm'>;
-                      {service && service.description}
-                    </p>;
-
-                    <div className='mb-4'>;
-                      <h4 className='text-sm font-semibold text-green-400 mb-2'>;
-                        Key Features:;
-                      </h4>;
-                      <ul className='text-slate-400 text-sm space-y-1'>;
-                        {service && service.features.map((feature, featureIndex) => (;
-                          <li key={featureIndex} className='flex items-center'>;
-                            <span className='w-1 && 1.5 h-1 && 1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
-                          </li>;
-=======
-<<<<<<< HEAD
+          <section className='py-16 px-4' role='main'>
+            <div className='max-w-7xl mx-auto'>
+              <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                {filteredServices.map((service, index) => (
+                  <div
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -3922,6 +4029,20 @@ function ITServices() {
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     {service.popular && (
+                      <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
+                        Popular
+                      </div>
+                    )}
+
+
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-green-400 mb-2'>
+                        Key Features:
+                      </h4>
+                      <ul className='text-slate-400 text-sm space-y-1'>
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className='flex items-center'>
+                            <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
                       <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
@@ -3938,39 +4059,20 @@ function ITServices() {
                             <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
                             {feature}
                           </li>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                         ))}
                       </ul>
                     </div>
 
-<<<<<<< HEAD
-                    <div className='mb-4'>;
-                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>;
-                        Benefits:;
-                      </h4>;
-                      <div className='flex flex-wrap gap-1'>;
-                        {service && service.benefits.map((benefit, benefitIndex) => (;
+                    <div className='mb-4'>
+                      <h4 className='text-sm font-semibold text-blue-400 mb-2'>
+                        Benefits:
+                      </h4>
+                      <div className='flex flex-wrap gap-1'>
+                        {service.benefits.map((benefit, benefitIndex) => (
                           <span
                             key={benefitIndex}
-                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'>                            {benefit}
-                          </span>;
-                        ))}
-                      </div>;
-                    </div>;
-
-                    <div className='flex items-center justify-between mb-4'>;
-                      <span className='text-2xl font-bold text-green-400'>;
-                        {service && service.price}
-                      </span>;
-                      <span className='text-xs text-slate-500 capitalize'>;
-                        {service && service.category.replace('-', ' ')}
-                      </span>;
-                    </div>;
-
-                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More;
-                    </button>;
-                  </div>;
-=======
+                            className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
+                          >
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Benefits:</h4>
                       <div className="flex flex-wrap gap-1">
@@ -3981,6 +4083,17 @@ function ITServices() {
                         ))}
                       </div>
                     </div>
+
+                    <div className='flex items-center justify-between mb-4'>
+                      <span className='text-2xl font-bold text-green-400'>
+                        {service.price}
+                      </span>
+                      <span className='text-xs text-slate-500 capitalize'>
+                        {service.category.replace('-', ' ')}
+                      </span>
+                    </div>
+
+                    <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>
                     
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
@@ -3991,28 +4104,17 @@ function ITServices() {
                       Learn More
                     </button>
                   </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
               </div>
             </div>
           </section>
 
           {/* Technology Stack Section */}
-<<<<<<< HEAD
-          <section className='py-16 px-4 bg-slate-900/40'>;
-            <div className='max-w-6xl mx-auto'>;
-              <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>;
-                Our Technology Stack;
-              </h2>;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
                 Our Technology Stack
               </h2>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
               <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='text-center'>
@@ -4035,7 +4137,7 @@ function ITServices() {
                   <p className='text-slate-400'>
                     AWS, Azure, GCP, and hybrid cloud solutions
                   </p>
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
                 </div>
                   <ul className="space-y-3 mb-8">
                   {level.features.map((feature, featureIndex) => (
@@ -4074,475 +4176,87 @@ function ITServices() {
                   </Link>;
                   </motion && motion.div>;
             ))}
-=======
-          <section className='py - 16 px - 4' role='main'>;
-            <div className='max - w-7xl mx - auto'>;
-              <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>;
-                {filtered_services.map ((service, index) => (
-                  <div                    key={service.id}
-                    className={`p - 6 bg - slate - 900 / 60 rounded - xl border border - white / 10 hover:border - green - 500 / 40 transition - all duration - 300 hover:scale - 105 ${is_loaded ? 'opacity - 100 translate - y-0' : 'opacity - 0 translate - y-8'}`}
-                    style={{ transition_delay: `${index * 100}ms` }}
-                  >;
-                    {service.popular && (
-                      <div className='absolute -top - 2 -right - 2 bg - green - 600 text - white text - xs font - bold px - 2 py - 1 rounded - full'>;
-                        Popular;
-                      </div>)}
-                    <h3 className='text - xl font - bold mb - 3'>{service.name}</h3>;
-                    <p className='text - slate - 300 mb - 4 text - sm'>;
-                      {service.description}
-                    </p>;
-                    <div className='mb - 4'>;
-                      <h4 className='text - sm font - semibold text - green - 400 mb - 2'>;
-                        Key Features:;
-                      </h4>;
-                      <ul className='text - slate - 400 text - sm space - y-1'>;
-                        {service.features.map ((feature, feature_index) => (
-                          <li key={feature_index} className='flex items - center'>;
-                            <span className='w - 1.5 h - 1.5 bg - green - 400 rounded - full mr - 2 flex - shrink - 0'></span>                            {feature}
-                          </li>))}
-                      </ul>;
-                    </div>;
-                    <div className='mb - 4'>;
-                      <h4 className='text - sm font - semibold text - blue - 400 mb - 2'>;
-                        Benefits:;
-                      </h4>;
-                      <div className='flex flex - wrap gap - 1'>;
-                        {service.benefits.map ((benefit, benefit_index) => (
-                          <span;
-                            key={benefit_index}
-                            className='text - xs bg - slate - 800 text - slate - 300 px - 2 py - 1 rounded';
-                          >                            {benefit}
-                          </span>))}
-                      </div>;
-                    </div>;
-                    <div className='flex items - center justify - between mb - 4'>;
-                      <span className='text - 2xl font - bold text - green - 400'>;
-                        {service.price}
-                      </span>;
-                      <span className='text - xs text - slate - 500 capitalize'>;
-                        {service.category.replace ('-', ' ')}
-                      </span>;
-                    </div>;
-                    <button className='w - full py - 2 bg - green - 600 hover:bg - green - 700 rounded - lg font - semibold transition - colors'>                      Learn More;
-                    </button>;
-                  </div>))}
-              </div>;
-            </div>;
-          </section>;
-          {/* Technology Stack Section */}
-          <section className='py - 16 px - 4 bg - slate - 900 / 40'>;
-            <div className='max - w-6xl mx - auto'>;
-              <h2 className='text - 3xl md:text - 4xl font - bold text - center mb - 12'>;
-                Our Technology Stack;
-              </h2>;
-              <div className='grid md:grid - cols - 2 lg:grid - cols - 4 gap - 8'>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - green - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M3 15a4 4 0 004 4M9 5a2 2 0 012 - 2h2a2 2 0 012 2m - 6 9l2 2 4 - 4m6 2a9 9 0 11 - 18 0 9 9 0 0118 0z';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>Cloud Platforms</h3>;
-                  <p className='text - slate - 400'>;
-                    AWS, Azure, GCP, and hybrid cloud solutions;
-                  </p>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - blue - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M9 12l2 2 4 - 4m5.618 - 4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01 - 8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176 - 1.332 9 - 6.03 9 - 11.622 0 - 1.042-.133 - 2.052-.382 - 3.016z';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>Security</h3>;
-                  <p className='text - slate - 400'>;
-                    Zero - trust architecture and advanced threat protection;
-                  </p>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - purple - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M10.325 4.317c.426 - 1.756 2.924 - 1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00 - 1.066 2.573c.94 1.543-.826 3.31 - 2.37 2.37a1.724 1.724 0 00 - 2.572 1.065c-.426 1.756 - 2.924 1.756 - 3.35 0a1.724 1.724 0 00 - 2.573 - 1.066c - 1.543.94 - 3.31-.826 - 2.37 - 2.37a1.724 1.724 0 00 - 1.065 - 2.572c - 1.756-.426 - 1.756 - 2.924 0 - 3.35a1.724 1.724 0 001.066 - 2.573c-.94 - 1.543.826 - 3.31 2.37 - 2.37.996.608 2.296.07 2.572 - 1.065z';
-                      />;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M15 12a3 3 0 11 - 6 0 3 3 0 016 0z';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>DevOps</h3>;
-                  <p className='text - slate - 400'>;
-                    CI / CD pipelines and infrastructure automation;
-                  </p>;
-                </div>;
-                <div className='text - center'>;
-                  <div className='w - 16 h - 16 bg - orange - 600 rounded - full flex items - center justify - center mx - auto mb - 4'>;
-                    <svg;
-                      className='w - 8 h - 8 text - white';
-                      fill='none';
-                      stroke='current_color';
-                      view_box='0 0 24 24';
-                    >;
-                      <path;
-                        stroke_linecap='round';
-                        stroke_linejoin='round';
-                        stroke_width={2}
-                        d='M13.828 10.172a4 4 0 00 - 5.656 0l - 4 4a4 4 0 105.656 5.656l1.102 - 1.101m-.758 - 4.899a4 4 0 005.656 0l4 - 4a4 4 0 00 - 5.656 - 5.656l - 1.1 1.1';
-                      />;
-                    </svg>;
-                  </div>;
-                  <h3 className='text - xl font - bold mb - 2'>Blockchain</h3>;
-                  <p className='text - slate - 400'>;
-                    Smart contracts and decentralized applications;
-                  </p>                </div>;
-              </div>;
-            </div>;
-          </section>;
-          {/* CTA Section */}
-          <section className='py - 16 px - 4'>;
-            <div className='max - w-4xl mx - auto text - center'>;
-              <h2 className='text - 3xl md:text - 4xl font - bold mb - 8'>;
-                Ready to Transform Your IT Infrastructure?;
-              </h2>;
-              <p className='text - lg text - slate - 300 mb - 8'>;
-                Contact our IT experts to discuss how our comprehensive;
-                technology solutions can modernize your infrastructure and;
-                accelerate your digital transformation.;
-              </p>;
-              <div className='flex flex - col sm:flex - row items - center justify - center gap - 4'>;
-                <Link;
-                  href='/contact';
-                  className='px - 8 py - 3 bg - green - 600 hover:bg - green - 700 rounded - lg font - semibold transition - colors';
-                >;
-                  Get Started;
-                  <ArrowRight className="ml - 2 w - 4 h - 4" />;
-                </Link>;
-                <a;
-                  href={`tel:${contact.phone.replace (/[^\d+]/g, '')}`}
-                  className='px - 8 py - 3 bg - blue - 600 hover:bg - blue - 700 rounded - lg font - semibold transition - colors';
-                >;
-                  Call {contact.phone}
-                </a>;
-                <a;
-                  href={`mailto:${contact.email}`}
-                  className='px - 8 py - 3 bg - slate - 800 hover:bg - slate - 700 border border - white / 10 rounded - lg font - semibold transition - colors'                >;
-                  Email Us;
-                </a>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-        {/* Services Grid */}
-        <section className="py - 16 px - 4">;
-          <div className="max - w-7xl mx - auto">;
-            <motion.div;
-              initial={{ opacity: 0, coordinate_y: 20 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text - center mb - 12";
-            >;
-              <h2 className="text - 3xl md:text - 4xl font - bold mb - 4">Our IT Services</h2>;
-              <p className="text - lg text - gray - 600 max - w-2xl mx - auto">;
-                Comprehensive IT solutions designed to enhance your business operations and security.;
-              </p>;
-            </motion.div>;
-            <div className="grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-              {it_services.map ((service, index) => (
-                <motion.div;
-                  key={index}
-                  className="bg - white p - 6 rounded - lg shadow - lg hover:shadow - xl transition - shadow";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-while_hover={{ coordinate_y: -5 }} ">;
-                  <div className="flex items - center justify - between mb - 4">;
-                  <div className="text - green - 600 group - hover:text - emerald - 600 transition - colors">;
-                  <IconComponent className="w - 10 h - 10" />;
-                  </div>;
-                  <span className="text - xs font - semibold text - green - 600 bg - green - 100 px - 2 py - 1 rounded - full">;
-                      {service.category}
-                    </span>;
-                  </div>;
-                  <h3 className="text - xl font - bold text - gray - 900 mb - 3">;
-                    {service.title}
-                  </h3>;
-                  <p className="text - gray - 600 mb - 4 leading - relaxed">;
-                    {service.description}
-                  </p>;
-                  <div className="mb - 4">;
-<h4 className="font - semibold text - gray - 900 mb - 2 text - sm">Key "Features": </h4>;
-                  <ul className="space - y-1">;
-                      {service.features.map ((feature, feature_index) => (
-                        <li key={feature_index} className="flex items - center text - xs text - gray - 600">;
-<CheckCircle className="w - 3 h - 3 text - green - 500 mr - 2 flex - shrink - 0" />;
-                          {feature}
-                        </li>))}
-                    </ul>;
-                  </div>;
-                  <div className="mb - 4">;
-                  <span className="text - sm font - semibold text - green - 600">{service.pricing}</span>;
-                  </div>;
-                  <Link;
-                    href="/contact";
-                    className="w - full bg - green - 600 hover:bg - green - 700 text - white py - 2 px - 4 rounded - lg font - semibold transition - colors inline - flex items - center justify - center text - sm";
-                  >;
-                    <span > Get Quote</span>;
-                  <ArrowRight className="w - 3 h - 3 ml - 1" />;
-                  </Link>;
-                  </motion.div>);
-            })}
-          </div>;
-                  </div>;
-                  </section>;
-      {/* Technologies Section */}
-      <section className="py - 20 bg - white">;
-                  <div className="container mx - auto px - 4">;
-                  <motion.div;
-            className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-<h2 className="text - 3xl sm:text - 4xl font - bold text - gray - 900 mb - 4">Technologies We Work With</h2>;
-            <p className="text - lg text - gray - 600 max - w-2xl mx - auto">;
-              We leverage cutting - edge technologies to deliver robust IT solutions.;
-            </p>;
-                  </motion.div>;
-                  <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
-            {technologies.map ((tech, index) => {
-              const IconComponent = tech.icon;
-              return (
-                <motion.div;
-                  key={index}
-className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - colors;
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }} transition={{ duration: 0.8, delay: index * 0.1 }} viewport={{ once: true }}">;
-                  <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                  <IconComponent className="w - 8 h - 8 text - green - 600" />;
-                  </div>;
-                  <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
-                    {tech.name}
-                  </h3>;
-                  <p className="text - gray - 600">;
-                    {tech.description}
-                  </p>;
-                  </motion.div>);
-            })}
-          </div>;
-                  </div>;
-                  </section>;
-      {/* Benefits Section */}
-      <section className="py - 20 bg - gray - 50">;
-                  <div className="container mx - auto px - 4">;
-                  <motion.div;
-            className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-<h2 className="text - 3xl sm:text - 4xl font - bold text - gray - 900 mb - 4">Why Choose Our IT Services?</h2>;
-            <p className="text - lg text - gray - 600 max - w-2xl mx - auto">;
-              Proven expertise and measurable results for your technology infrastructure.;
-            </p>;
-                  </motion.div>;
-                  <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
-            {benefits.map ((benefit, index) => {
-              const IconComponent = benefit.icon;
-              return (
-                <motion.div;
-                  key={index}
-                  className="text - center";
-                  initial={{ opacity: 0, coordinate_y: 30 }}
-                  whileInView={{ opacity: 1, coordinate_y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >;
-                  <div className="bg - green - 100 w - 16 h - 16 rounded - full flex items - center justify - center mx - auto mb - 4">;
-                  <IconComponent className="w - 8 h - 8 text - green - 600" />;
-                  </div>;
-                  <div className="text - 3xl font - bold text - green - 600 mb - 2">;
-                    {benefit.stat}
-                  </div>;
-                  <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
-                    {benefit.title}
-                  </h3>;
-                  <p className="text - gray - 600">;
-                    {benefit.description}
-                  </p>;
-                  </motion.div>);
-            })}
-          </div>;
-                  </div>;
-                  </section>;
-      {/* Support Levels Section */}
-      <section className="py - 20 bg - white">;
-                  <div className="container mx - auto px - 4">;
-                  <motion.div;
-            className="text - center mb - 16";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            whileInView={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >;
-<h2 className="text - 3xl sm:text - 4xl font - bold text - gray - 900 mb - 4">Support Levels</h2>;
-            <p className="text - lg text - gray - 600 max - w-2xl mx - auto">;
-              Choose the support level that best fits your business needs.;
-            </p>;
-                  </motion.div>;
-                  <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
-            {support_levels.map ((level, index) => (
-              <motion.div;
-                key={index}
-                className={`p - 8 rounded - xl shadow - lg ${
-                  index === 1 ? 'bg - green - 50 border - 2 border - green - 200' : 'bg - white';
-                }`}
-                initial={{ opacity: 0, coordinate_y: 30 }}
-                whileInView={{ opacity: 1, coordinate_y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >;
-                  <h3 className="text - 2xl font - bold text - gray - 900 mb - 2">;
-                  {level.name}
-                </h3>;
-                  <p className="text - gray - 600 mb - 6">;
-                  {level.description}
-                </p>;
-                  <div className="text - 3xl font - bold text - green - 600 mb - 6">;
-                  {level.pricing}
-                </div>;
-                  <ul className="space - y-3 mb - 8">;
-                  {level.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 600">;
-                  <CheckCircle className="w - 5 h - 5 text - green - 500 mr - 3 flex - shrink - 0" />;
-                      {feature}
-                    </li>))}
-                </ul>;
-                  <Link;
-                  href="/contact";
-                  className={`w - full py - 3 px - 6 rounded - lg font - semibold transition - colors inline - flex items - center justify - center ${
-                    index === 1;
-? 'bg - green - 600 hover: bg - green - 700 text - white';
-                      : 'bg - gray - 100 hover:bg - gray - 200 text - gray - 900';
-                  }`}
-                >;
-                  <span > Choose Plan</span>;
-                  <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                  </Link>;
-                  </motion.div>))}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-          </div>;
-                  </div>;
-                  </section>;
+          </div>
+                  </div>
+                  </section>
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">;
-<div className="container mx-auto px-4 text-center">;
-                  <motion&& motion.div
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+<div className="container mx-auto px-4 text-center">
+                  <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>;
-            <p className="text-xl mb-8 max-w-2xl mx-auto">;
-              Let our expert team help you build a robust, secure, and scalable IT environment.;
-            </p>;
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">;
-                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">;
-                Get IT Assessment;
-              </Link>;
-                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">;
-                View All Services;
-              </Link>;
-                  </div>;
-                  </motion && motion.div>;
-                  </div>;
-                  </section>;
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Optimize Your IT Infrastructure?</h2>
+            <p className="text-xl mb-8 max-w-2xl mx-auto">
+              Let our expert team help you build a robust, secure, and scalable IT environment.
+            </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
+                Get IT Assessment
+              </Link>
+                  <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">
+                View All Services
+              </Link>
+                  </div>
+                  </motion.div>
+                  </div>
+                  </section>
       {/* Contact Information Section */}
-      <section className="py-20 bg-gray-50">;
-        <div className="container mx-auto px-4">;
-          <motion&& motion.div
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0 && 0.8 }}
-            viewport={{ once: true }}>;
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">;
-              Get Started with IT Services Today;
-            </h2>;
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">;
-              Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.;
-            </p>;
-          </motion && motion.div>;
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
-            <motion&& motion.div
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Get Started with IT Services Today
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+              Ready to transform your IT infrastructure? Our expert team is here to help you build, secure, and optimize your technology environment. Contact us for a free consultation and discover how we can accelerate your digital transformation.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.1 }}
-              viewport={{ once: true }}>;
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <MessageSquare className="w-8 h-8 text-green-600" />;
-              </div>;
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>;
-              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>;
-              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">;
-                Call Now: +1 302 464 0950;
-              </a>;
-            </motion && motion.div>;
-            <motion&& motion.div
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MessageSquare className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Free IT Consultation</h3>
+              <p className="text-gray-600 mb-4">Get expert advice on your IT project with our complimentary 30-minute consultation.</p>
+              <a href="tel:+13024640950" className="text-green-600 font-semibold hover:text-green-700">
+                Call Now: +1 302 464 0950
+              </a>
+            </motion.div>
+            <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}
-              viewport={{ once: true }}>;
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Mail className="w-8 h-8 text-green-600" />;
-              </div>;
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>;
-              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>;
-              <a href="mailto:kleber@ziontechgroup && ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">;
-                kleber@ziontechgroup && ziontechgroup.com;
-              </a>;
-            </motion && motion.div>;
-            <motion&& motion.div
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Mail className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
+              <p className="text-gray-600 mb-4">Send us your IT project details and we'll respond within 24 hours with a detailed proposal.</p>
+              <a href="mailto:kleber@ziontechgroup.com" className="text-green-600 font-semibold hover:text-green-700">
+                kleber@ziontechgroup.com
+              </a>
+            </motion.div>
+            <motion.div
               className="text-center p-6 bg-white rounded-lg shadow-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
@@ -4557,7 +4271,6 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
               </address>
             </motion.div>
           </div>
-<<<<<<< HEAD
           <motion.div
             className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -4581,111 +4294,69 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
         </div>
       </section>
                   </div>
-=======
         </section>
       </div>
     </Layout>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
-}
-<<<<<<< HEAD
-=======
-=======
-          <section className="py-16 px-4 bg-slate-900/40">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-                Our Technology Stack
-              </h2>
-              
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Cloud Platforms</h3>
-                  <p className="text-slate-400">AWS, Azure, GCP, and hybrid cloud solutions</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Security</h3>
-                  <p className="text-slate-400">Zero-trust architecture and advanced threat protection</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">DevOps</h3>
-                  <p className="text-slate-400">CI/CD pipelines and infrastructure automation</p>
-                </div>
-                
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold mb-2">Blockchain</h3>
-                  <p className="text-slate-400">Smart contracts and decentralized applications</p>
-                </div>
-              </div>
-            </div>
-          </section>
 
-          {/* CTA Section */}
-          <section className="py-16 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-8">
-                Ready to Transform Your IT Infrastructure?
-              </h2>
-              <p className="text-lg text-slate-300 mb-8">
-                Contact our IT experts to discuss how our comprehensive technology solutions 
-                can modernize your infrastructure and accelerate your digital transformation.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link 
-                  href="/contact" 
-                  className="px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors"
-                >
-                  Get IT Consultation
-                </Link>
-                <a 
-                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
-                  className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-                >
-                  Call {contact.phone}
-                </a>
-                <a 
-                  href={`mailto:${contact.email}`} 
-                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
-                >
-                  Email Us
-                </a>
-              </div>
             </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+            </div>
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/main
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-=======
-              transition={{ duration: 0 && 0.8, delay: 0 && 0.3 }}
-              viewport={{ once: true }}>;
-              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">;
-                <Building className="w-8 h-8 text-green-600" />;
+}
+}
+}
+          <section className="py-16 px-4 bg-slate-900/40">;
+            <div className="max-w-6xl mx-auto">;
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
+                Our Technology Stack;
+              </h2>;
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Cloud Platforms</h3>;
+                  <p className="text-slate-400">AWS, Azure, GCP, and hybrid cloud solutions</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Security</h3>;
+                  <p className="text-slate-400">Zero-trust architecture and advanced threat protection</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">DevOps</h3>;
+                  <p className="text-slate-400">CI/CD pipelines and infrastructure automation</p>;
+                </div>;
+                <div className="text-center">;
+                  <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">;
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">;
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />;
+                    </svg>;
+                  </div>;
+                  <h3 className="text-xl font-bold mb-2">Blockchain</h3>;
+                  <p className="text-slate-400">Smart contracts and decentralized applications</p>;
+                </div>;
               </div>;
               <h3 className="text-xl font-bold text-gray-900 mb-2">Visit Our Office</h3>;
               <p className="text-gray-600 mb-4">Schedule an in-person meeting at our headquarters in Middletown, Delaware.</p>;
@@ -4719,19 +4390,7 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
                   </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-          </section>;
-        </main>;
-      </ErrorBoundary>;
-    </>;
-  );
-<<<<<<< HEAD
-}
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
       <section className="py - 20 bg - gradient - to - r from - green - 600 to - emerald - 600 text - white">;
 <div className="container mx - auto px - 4 text - center">;
@@ -4852,12 +4511,11 @@ className="text - center p - 6 rounded - lg hover:bg - gray - 50 transition - co
           </section>;
         </main>;
       </ErrorBoundary>;
-    </>);
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+ursor/fix-lint-push-and-merge-to-main-ae4e

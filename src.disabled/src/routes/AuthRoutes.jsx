@@ -23,8 +23,6 @@ class ErrorBoundary extends React.Component {
 }
 import React from \"react\"; ); export default function Authroutes() {; return ( <div className=\"min-h-screen bg-white\"> <div className=\"max-w-4xl mx-auto px-6 py-16\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-8\">Authroutes></div> <p className=\"text-lg text-gray-600 mb-8\"> This is a placeholder component for authroutes.; ></div> ></div> );}
 const React from "react"; ); export default function Authroutes() {; return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Authroutes></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for authroutes.; ></div> ></div> );}""
-<<<<<<< HEAD
+
 import _React from "react"; ); export default function Authroutes() {; return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Authroutes></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for authroutes.; ></div> ></div> );}
-=======
-import _React from "react"; ); export default function Authroutes() {; return ( <div className="min-h-screen bg-white"> <div className="max-w-4xl mx-auto px-6 py-16"> <h1 className="text-4xl font-bold text-gray-900 mb-8">Authroutes></div> <p className="text-lg text-gray-600 mb-8"> This is a placeholder component for authroutes.; ></div> ></div> );}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+

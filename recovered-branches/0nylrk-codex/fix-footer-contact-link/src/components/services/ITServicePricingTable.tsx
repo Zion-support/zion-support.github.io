@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import { useState, useMemo } from "react";
 import {
   onsiteServicePricing
@@ -18,8 +16,22 @@ import {
 
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-export function ITServicePricingTable() {
+import {useState, useMemo} from "react";
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Globe, Search, ArrowUpDown} from "lucide-react";
+import {Button} from "@/components/ui/button";
+export function ITServicePricingTable() {;
   const [searchQuery, setSearchQuery] = useState("");
+import { useState, useMemo } from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Globe, Search, ArrowUpDown } from "lucide-react",
+import { Button } from "@/components/ui/button",
+export function ITServicePricingTable() {
+  const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
 =======
 import { useState, useMemo  } from './react';
@@ -48,13 +60,14 @@ function ITServicePricingTable() {
     key: keyof CountryPricing;
     direction: "ascending" | "descending"
   }>({
-<<<<<<< HEAD
 
     key: "country"
     direction: "ascending"
   });
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing];
+    let filteredData = [...onsiteServicePricing],
+    
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
@@ -97,21 +110,7 @@ if ( {) {
 }
         return sort_config.direction === "ascending" ? 1 : -1;
       }
-      return 0;
-    });
-<<<<<<< HEAD
-    return filteredData;
-  }, [onsiteServicePricing, searchQuery, sortConfig]);
-  const handleSort = (key: keyof CountryPricing) => {
-    setSortConfig({
-      key
-      direction:
-        sortConfig.key === key && sortConfig.direction === "ascending"
-          ? "descending"
-          : "ascending"
-    });
-  }
-=======
+
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -150,16 +149,29 @@ export function ITServicePricingTable() {;
 
     return filteredData;
   }, [onsiteServicePricing, searchQuery, sortConfig]);
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key
+      direction:
+        sortConfig.key === key && sortConfig.direction === "ascending"
+          ? "descending"
+          : "ascending"
+    });
+  }
+      return 0
+    }),
+    
+    return filteredData
+  }, [onsiteServicePricing, searchQuery, sortConfig]),
 
-  const handleSort = (key: keyof CountryPricing) => {;
-    setSortConfig({;
-      key,;
-      direction: ;
-        sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === "ascending" ;
-          ? "descending" ;
-          : "ascending"});
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+  const handleSort = (key: keyof CountryPricing) => {
+    setSortConfig({
+      key,
+      direction: 
+        sortConfig.key === key && sortConfig.direction === "ascending" 
+          ? "descending" 
+          : "ascending"})
+  },
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
@@ -169,7 +181,6 @@ export function ITServicePricingTable() {;
           <Input
             placeholder="Search by country..."
             value={searchQuery}
-<<<<<<< HEAD
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white"
           />
@@ -226,15 +237,59 @@ export function ITServicePricingTable() {;
                   No countries match your search
                 </TableCell>
               </TableRow>
-            )}
-          </TableBody>
-        </Table>
-      </div>
-    </div>
-  );
-}
-=======
-            onChange={(e) => setSearchQuery(e && e.target.value)}
+import { useState, useMemo } from "react",;
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
+import { Input } from "@/components/ui/input",;
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
+import { Globe, Search, ArrowUpDown } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+export function ITServicePricingTable() {;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [sortConfig, setSortConfig] = useState<{;
+    key: keyof CountryPricing,;
+    direction: "ascending" | "descending";
+  }>({;
+    key: "country",;
+    direction: "ascending"}),;
+  const sortedData = useMemo(() => {;
+    let filteredData = [...onsiteServicePricing],;
+    // Filter by search query;
+    if (searchQuery) {;
+      filteredData = filteredData.filter(item =>;
+        item.country.toLowerCase().includes(searchQuery.toLowerCase());
+      );
+    }
+;
+    // Sort data;
+    filteredData.sort((a, b) => {;
+      if (a[sortConfig.key] < b[sortConfig.key]) {;
+        return sortConfig.direction === "ascending" ? -1 : 1;
+      }
+      if (a[sortConfig.key] > b[sortConfig.key]) {;
+        return sortConfig.direction === "ascending" ? 1 : -1;
+      }
+      return 0;
+    }),;
+    return filteredData;
+  }, [onsiteServicePricing, searchQuery, sortConfig]),;
+  const handleSort = (key: keyof CountryPricing) => {;
+    setSortConfig({;
+      key;
+      direction:;
+        sortConfig.key === key && sortConfig.direction === "ascending";
+          ? "descending";
+          : "ascending"});
+  };
+  return (;
+    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">;
+      <div className="flex items-center mb-6">;
+        <div className="relative flex-1">;
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate-light" />;
+          <Input;
+            placeholder="Search by country...";
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+
             className="pl-10 bg-zion-blue border-zion-blue-light focus:border-zion-purple text-white";
           />;
         </div>;

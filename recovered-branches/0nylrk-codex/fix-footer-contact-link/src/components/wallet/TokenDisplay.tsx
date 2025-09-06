@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay && TokenDisplay.tsx;
+
+:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
 
 import React from "react";
 import {BadgeDollarSign} from "lucide-react";
@@ -7,15 +7,20 @@ import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
-<<<<<<< HEAD
 
 export function TokenDisplay() {
-=======
 export function TokenDisplay() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const { wallet, loading } = useWallet();
+import React from "react",
+import { BadgeDollarSign } from "lucide-react",
+import { useWallet } from "@/hooks/useWallet",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Skeleton } from "@/components/ui/skeleton",
+export function TokenDisplay() {
+  const { wallet, loading } = useWallet(),
+
   return (
-<<<<<<< HEAD
     <Card>
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <div>
@@ -42,7 +47,21 @@ export function TokenDisplay() {;
               </Button>
             </div>
           </div>
-=======
+        )}
+      </CardContent>
+    </Card>
+  )
+}
+import React from "react",;
+import { BadgeDollarSign } from "lucide-react",;
+import { useWallet } from "@/hooks/useWallet",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Skeleton } from "@/components/ui/skeleton",;
+export function TokenDisplay() {;
+  const { wallet, loading } = useWallet();
+  return (;
+
     <Card>;
       <CardHeader className="flex flex-row items-center justify-between pb-2">;
         <div>;
@@ -104,16 +123,12 @@ function TokenDisplay() {
                 View Wallet;
               </Button>;
             </div>;
-<<<<<<< HEAD
-          </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        )}
-      </CardContent>;
-    </Card>;
-  );
-=======
+
           </div>)}
       </CardContent>;
     </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
+=======
+}
+;
