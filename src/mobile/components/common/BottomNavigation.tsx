@@ -1,5 +1,3 @@
-
-
 import { Home, ShoppingBag, Users, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -39,10 +37,8 @@ export function BottomNavigation() {;
 }
 
 
-=======
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
-=======
           <Link;
             key={item.path}
             href={item.path}
@@ -53,7 +49,6 @@ export function BottomNavigation() {;
             <div className="h - 5 w - 5">;
               {React.clone_element (item.icon as React.ReactElement, {
                 class_name: cn ("h - 5 w - 5", is_active ? "stroke - primary" : "stroke - muted - foreground");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               })}
             </div>;
             <span className="text - xs mt - 1">{item.label}</span>;
@@ -63,9 +58,4 @@ export function BottomNavigation() {;
     </div>);
 }
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,13 +1,9 @@
-
-
-            <div
-=======
+<div
 
 interface TimelineStepProps {
   formData: QuoteFormData
   updateFormData: (data: Partial<QuoteFormData>) => void
 
-=======
 
 import { format } from "date-fns",
 import { Calendar } from "@/components/ui/calendar",
@@ -21,19 +17,15 @@ interface TimelineStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
 
     <div className="space-y-6">
       <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'fixed'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -49,7 +41,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
 
 
             <div
-=======
 
               onClick={() => updateFormData({ timeline: "fixed" })}
             >
@@ -59,8 +50,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             
             <div 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className={`flex-1 p-4 rounded-lg border-2 cursor-pointer transition-colors ${
                 formData && formData.timeline === 'flexible'
                   ? 'bg-zion-purple/20 border-zion-purple'
@@ -74,7 +63,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   Start Date
@@ -86,7 +74,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             >;
               <h4 className='font-medium text-white'>Flexible Timeline</h4>;
               <p className='text-sm text-zion-slate-light'>;
-=======
 import { format } from 'date - fns';
 import { Calendar } from '@/components / ui / calendar';
 import { Button } from '@/components / ui / button';
@@ -164,8 +151,6 @@ function TimelineStep() {
                       initialFocus
                       className="p-3 pointer-events-auto"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     />
                   </PopoverContent>
                 </Popover>
@@ -175,7 +160,6 @@ function TimelineStep() {
               
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>
                 <Label className='block mb-2 text-zion-slate-light'>
                   End Date
@@ -187,11 +171,9 @@ function TimelineStep() {
                       selected={formData && formData.startDate}
                       onSelect={date => updateFormData({ startDate: date })}                      initialFocus;
                       className='p-3 pointer-events-auto';
-=======
 
 
 
-=======
           {form_data.timeline === 'fixed' && (
             <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 4 mt - 6'>;
               <div>;
@@ -220,7 +202,6 @@ function TimelineStep() {
                       selected={form_data.start_date}
                       on_select={date => updateFormData ({ start_date: date })}                      initial_focus;
                       className='p - 3 pointer - events - auto';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     />;
                   </PopoverContent>;
                 </Popover>;
@@ -231,7 +212,6 @@ function TimelineStep() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       )}
                     </Button>;
                   </PopoverTrigger>;
@@ -244,8 +224,6 @@ function TimelineStep() {
                       className='p-3 pointer-events-auto';
                       disabled={date =>;
                         date < (formData && formData.startDate || new Date());
-=======
-=======
 
                       mode="single"
 
@@ -300,7 +278,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
           </div>;
           {formData.timeline === "fixed" && (;
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div>;
                 <Label className='block mb - 2 text - zion - slate - light'>;
                   End Date;
@@ -330,26 +307,16 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {;
                       className='p - 3 pointer - events - auto';
                       disabled={date =>;
                         date < (form_data.start_date || new Date ());
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                       }                    />;
                   </PopoverContent>;
                 </Popover>;
               </div>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             </div>)}
         </div>;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

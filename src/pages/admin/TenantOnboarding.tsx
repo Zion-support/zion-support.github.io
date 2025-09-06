@@ -1,6 +1,4 @@
-
-
-  const [formData, setFormData] = useState({
+const [formData, setFormData] = useState({
 
     brand_name: ""
     subdomain: ""
@@ -21,7 +19,6 @@
   );
 };
 
-=======
   }),
   
   // Check if user has admin role
@@ -108,7 +105,6 @@
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO 
@@ -360,7 +356,6 @@ import {toast} from "sonner";
 import {supabase} from "@/integrations/supabase/client";
 import {Switch} from "@/components/ui/switch";
 import {logErrorToProduction} from '@/utils/productionLogger';
-=======
 
 import React, { useState } from "react",;
 import { Header } from "@/components/Header",;
@@ -377,7 +372,6 @@ import { toast } from "sonner",;
 import { supabase } from "@/integrations/supabase/client",;
 import { Switch } from "@/components/ui/switch",;
 import { logErrorToProduction } from '@/utils/productionLogger',;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function TenantOnboarding() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("company");
@@ -402,9 +396,6 @@ export default function TenantOnboarding() {;
 }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React, { useState } from './react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -443,10 +434,4 @@ function TenantOnboarding() {
       }
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

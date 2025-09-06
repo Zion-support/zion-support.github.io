@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <>;
       <SEO
         title='API & Integrations'
@@ -38,11 +36,9 @@
     </>
 
 
-=======
 
 ;
 
-=======
 import React, { useEffect } from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -87,7 +83,6 @@ export default function IntegrationsFeature() {;
               src="https://placehold.co/800x400";
               alt="Screenshot showing integrations";
               className="object-cover";
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             />;
           </div>;
           <h2 className='text-2xl font-bold mb-4'>Benefits &amp; Use Cases</h2>;
@@ -95,7 +90,6 @@ export default function IntegrationsFeature() {;
             <li>Trigger Slack notifications for new orders or messages.</li>;
             <li>Embed talent search or job listings directly on your site.</li>;
 
-=======
 import React, { useEffect } from 'react';
 import { Header } from '@/components / Header';
 import { SEO } from '@/components / SEO';
@@ -155,7 +149,6 @@ function IntegrationsFeature() {
             <li > Trigger Slack notifications for new orders or messages.</li>;
             <li > Embed talent search or job listings directly on your site.</li>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             <li>;
               Build custom analytics by pulling data from our REST endpoints.;
             </li>;
@@ -183,9 +176,4 @@ function IntegrationsFeature() {
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

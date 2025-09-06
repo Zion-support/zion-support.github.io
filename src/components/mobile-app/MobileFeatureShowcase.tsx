@@ -1,6 +1,4 @@
-
-
-    {
+{
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
       description: "Get matched with the perfect talent or jobs using our advanced AI algorithm."
@@ -9,7 +7,6 @@
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       icon: <CheckCircle className="h-8 w-8 text-zion-cyan" />
       title: "Track Milestones"
@@ -19,7 +16,6 @@
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       icon: <Mail className="h-8 w-8 text-zion-purple" />
       title: "Instant Messaging"
@@ -29,7 +25,6 @@
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />
       title: "Biometric Security"
@@ -65,8 +60,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
       icon: <Smartphone className="h-8 w-8 text-zion-cyan" />,;
       title: "Biometric Security",;
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
       icon: <Users className="h - 8 w - 8 text - zion - cyan" />,
       title: "Hire from Anywhere",
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
@@ -90,22 +83,17 @@ export const MobileFeatureShowcase: React.FC = () => {;
       icon: <Smartphone className="h - 8 w - 8 text - zion - cyan" />,
       title: "Biometric Security",
       description: "Login quickly and securely with Face ID or Touch ID on supported devices.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   ];
-=======
     }
 
   ],
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
 
-=======
         
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -114,9 +102,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
               key={index} 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="mb-4">
-=======
     <section id="features" className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
@@ -133,10 +119,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
               key={index}
               className="bg - zion - blue - dark border border - zion - blue - light p - 6 rounded - lg hover: border - zion - purple / 50 transition - all duration - 300"            >;
               <div className="mb - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {feature.icon}
 
-=======
               </div>
               <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
               <p className="text-zion-slate-light">{feature.description}</p>
@@ -146,7 +130,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
 ;
 };
 
-=======
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react';
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -209,16 +192,6 @@ export const MobileFeatureShowcase: React.FC = () => {;
 };
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 '"},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

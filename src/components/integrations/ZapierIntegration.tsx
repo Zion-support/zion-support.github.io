@@ -1,5 +1,3 @@
-
-
 import { Check, Copy, ExternalLink } from 'lucide-react'
 export function ZapierIntegration() {
 
@@ -49,7 +47,6 @@ export function ZapierIntegration() {;
             <div className='flex items-center justify-between'>;
               <h3 className='text-lg font-semibold'>Zapier Connection</h3>;
               <Badge variant='outline' className='bg-blue-100 text-blue-800'>;
-=======
 import React, { useState } from 'react';
 import { Badge } from '@/components / ui / badge';
 import { Button } from '@/components / ui / button';
@@ -86,9 +83,7 @@ function ZapierIntegration() {
     set_copied (true),
     set_timeout ((, ) => set_copied (false), 2000),
     toast.success ("API key copied to clipboard");
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   },
   return (
     <div className='space - y-6'>;
@@ -98,7 +93,6 @@ function ZapierIntegration() {
             <div className='flex items - center justify - between'>;
               <h3 className='text - lg font - semibold'>Zapier Connection</h3>;
               <Badge variant='outline' className='bg - blue - 100 text - blue - 800'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Active;
               </Badge>;
             </div>;
@@ -108,7 +102,6 @@ function ZapierIntegration() {
 
 
                     {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </Button>
                 </div>
               </div>
@@ -116,11 +109,8 @@ function ZapierIntegration() {
           </CardContent>
 
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <CardFooter className="flex flex-col items-start">
             <Button variant="outline" className="gap-2">
               <ExternalLink className="h-4 w-4" />
@@ -129,7 +119,6 @@ function ZapierIntegration() {
           </CardFooter>
         </Card>
 
-=======
 
 
         
@@ -155,9 +144,7 @@ function ZapierIntegration() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Check className="h-4 w-4 text-green-500" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <span>Create calendar events for interviews</span>
               </li>
             </ul>
@@ -168,7 +155,6 @@ function ZapierIntegration() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <ExternalLink className="h-4 w-4" />
               <span>Explore Zion Zaps</span>
             </Button>
@@ -180,7 +166,6 @@ function ZapierIntegration() {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader>
           <h3 className='text-lg font-semibold'>Zapier Webhook Triggers</h3>
@@ -200,7 +185,6 @@ function ZapierIntegration() {
           <p className="text-sm text-muted-foreground mb-4">
             Use these webhook triggers to start Zaps when events happen in your Zion account.
           </p>
-=======
 
 
           
@@ -219,7 +203,6 @@ function ZapierIntegration() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Triggers when a talent applies to your job.
               </p>
               <Button size="sm" variant="outline">Set Up Trigger</Button>
@@ -235,7 +218,6 @@ function ZapierIntegration() {
 };
 }
 
-=======
 
             
             <div className="border rounded-md p-4">
@@ -254,13 +236,10 @@ function ZapierIntegration() {
       </Card>
     </div>
 
-=======
             <p className='text - sm text - muted - foreground mb - 4'>;
               Connect Zion with 3, 000+ apps via Zapier. Use your API key below;
               to set up integrations.;
-=======
 
-=======
 
 import React, { useState } from "react",;
 import { Badge } from "@/components/ui/badge",;
@@ -310,7 +289,6 @@ export function ZapierIntegration() {;
                       <Check className='h - 4 w - 4' />) : (
                       <Copy className='h - 4 w - 4' />)}                  </Button>                  <Button size="sm" variant="outline" on_click={handleCopyApiKey}>;
                     {copied ? <Check className="h - 4 w - 4" /> : <Copy className="h - 4 w - 4" />}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   </Button>;
                 </div>;
               </div>;
@@ -332,7 +310,6 @@ export function ZapierIntegration() {;
           </CardFooter>;
         </Card>;
 
-=======
         <Card>;
           <CardHeader>;
             <h3 className='text - lg font - semibold'>Popular Zaps</h3>;
@@ -355,7 +332,6 @@ export function ZapierIntegration() {;
                 <Check className="h - 4 w - 4 text - green - 500" />;
                 <span > Create calendar events for interviews</span>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               </li>;
             </ul>;
           </CardContent>;
@@ -394,9 +370,4 @@ export function ZapierIntegration() {;
       </Card>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

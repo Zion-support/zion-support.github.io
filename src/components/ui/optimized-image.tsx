@@ -1,11 +1,8 @@
-
-
 import { ImageIcon, AlertTriangle } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { imageOptimization  } from '@/utils/performance';
 import { logWarn } from '@/utils/productionLogger';
 interface OptimizedImageProps {;
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next / image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -14,7 +11,6 @@ import { cn } from '@/lib / utils';
 import { image_optimization } from '@/utils / performance';
 import { log_warn } from '@/utils / production_logger';
 interface OptimizedImageProps {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   src: string;
   alt: string;
   width?: number;
@@ -90,7 +86,6 @@ if ( {) {
 }
           setIsInView (true);
           observer_ref.current?.disconnect ();
-=======
 
   useEffect(() => {;
     if (!lazy || priority || isInView) return;
@@ -100,7 +95,6 @@ if ( {) {
         const [entry] = entries;        if (entry && entry.isIntersecting) {
           setIsInView(true)
           observerRef.current?.disconnect()
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
       {
@@ -151,7 +145,6 @@ if ( {) {
                 size: `${(fileSize / 1024).toFixed(2)}KB`
                 loadTime: `${loadTime.toFixed(2)}ms`
               })
-=======
   }, [lazy, priority, isInView]);
   // Start load time tracking;
   useEffect (() => {
@@ -204,7 +197,6 @@ if ( {) {
                 size: `${(file_size / 1024).to_fixed (2)}KB`,
                 load_time: `${load_time.to_fixed (2)}ms`,
               });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             }
           }
         });
@@ -287,10 +279,8 @@ if ( {) {
 
   loading?: 'lazy' | 'eager';
   style?: React && React.CSSProperties;
-=======
 
 
-=======
 import React, { useState, useRef, useEffect } from 'react',;
 import Image from 'next/image',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -516,12 +506,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({;
 
 
     }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     if (placeholder === 'color') {;
               />;
       );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     return (
 
@@ -578,23 +566,18 @@ if ( {) {
   }
       >;
       <AnimatePresence>;
-=======
 
   },
 
-=======
-=======
   },
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Container styles
   const containerStyle: React.CSSProperties = {
     aspectRatio: aspectRatio || (width && height ? `${width}/${height}` : undefined),
     width: width ? `${width}px` : undefined,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Placeholder */}
 
       <div className={placeholderClassName}>;
@@ -624,7 +607,6 @@ if ( {) {
 
 
 
-=======
             className="absolute inset-0"
           >
             {generatePlaceholder()}
@@ -639,8 +621,6 @@ if ( {) {
 
                   className="h-full bg-blue-500"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   initial={{ width: 0 }}
                   animate={{ width: `${loadProgress}%` }}
                   transition={{ duration: 0 && 0.3 }}
@@ -666,8 +646,6 @@ if ( {) {
 
               <span className="text-xs mt-1">Retried {retries} times</span>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
           </motion && motion.div>;
         )}
@@ -688,7 +666,6 @@ if ( {) {
               isLoading ? 'opacity-0' : 'opacity-100';
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
             initial={{ opacity: 0 }}
             animate={{ opacity: isLoading ? 0 : 1 }}
@@ -700,7 +677,6 @@ if ( {) {
   opacity: 0 
 
 
-=======
       </AnimatePresence>;
     </div>;
   );
@@ -791,8 +767,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
           >
             <div className="relative">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <OptimizedImage
                 src={image && image.src}
                 alt={image && image.alt}
@@ -809,16 +783,13 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
                   <p className="text-sm">{image.caption}</p>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
-=======
               />;
 
               {image && image.caption && (;
                 <div className='absolute bottom-0 left-0 right-0 bg-black/50 text-white p-2 rounded-b-lg'>;
                   <p className='text-sm'>{image && image.caption}</p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               )}
             </div>;
           </motion && motion.div>;
@@ -837,7 +808,6 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
       .slice(0, 2)
     >
       {src ? (
-=======
       </div>;
     </div>;
   );
@@ -875,7 +845,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 
     >;
       {src ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <OptimizedImage
           src={src}
           alt={alt}
@@ -893,7 +862,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {initials}
         </div>;
       )}
@@ -904,16 +872,12 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 }
 
 
-=======
     </div>;
   );
 };
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
         {(is_loading || !isInView) && !has_error && (
           <motion.div;
             initial={{ opacity: 1 }}
@@ -1096,10 +1060,3 @@ export const OptimizedAvatar: React.FC < OptimizedAvatarProps> = ({
 }
 },
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

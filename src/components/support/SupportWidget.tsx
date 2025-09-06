@@ -1,7 +1,4 @@
-
-
-
-  const [isOpen, setIsOpen] = useState(false)
+const [isOpen, setIsOpen] = useState(false)
   const { theme } = useTheme()
   const router = useRouter()
   return (
@@ -66,7 +63,6 @@
   );
 }
 
-=======
 import React, { useState } from 'react';
 import { use_router } from 'next / router';
 import { Button } from '@/components / ui / button';
@@ -135,9 +131,6 @@ function SupportWidget() {
         </div>)}
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
 import React, { useState } from "react",
@@ -195,7 +188,6 @@ export function SupportWidget() {;
               <MessageSquare className="h-5 w-5 text-zion-cyan mr-2" />
               <h3 className={cn("font-semibold", theme === "dark" ? "text-white" : "text-gray-800")}>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Zion Support
               </h3>
             </div>
@@ -203,7 +195,6 @@ export function SupportWidget() {;
               <Button
 
 
-=======
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8 rounded-full"
@@ -224,7 +215,6 @@ export function SupportWidget() {;
             </div>
           </div>
           
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <ChatBotPanel />
         </div>
       )}
@@ -233,6 +223,3 @@ export function SupportWidget() {;
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,3 @@
-
-
-=======
 import React from 'react';
 import { useOnboardingStatus } from '@/hooks / useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
@@ -37,8 +34,6 @@ function ClientOnboardingSteps() {
       action: "Check Dashboard"}],
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 
   const steps: OnboardingStep[] = [
@@ -58,6 +53,3 @@ function ClientOnboardingSteps() {
       id: "response",
       label: "Receive your first application",
       completed: onboardingStatus.responseReceived,
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

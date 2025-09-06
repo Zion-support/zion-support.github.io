@@ -1,6 +1,4 @@
-
-
-  return (
+return (
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
       <Card>
@@ -14,7 +12,6 @@
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -29,7 +26,6 @@
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -44,7 +40,6 @@
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -59,7 +54,6 @@
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.actioned_count}</CardTitle>
@@ -71,7 +65,6 @@
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">{stats.false_positives}</CardTitle>
@@ -142,7 +135,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
   );
 };
 
-=======
 export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) => {
   return (
     <div className="grid grid - cols - 1 sm:grid - cols - 2 lg:grid - cols - 3 xl:grid - cols - 6 gap - 4 mb - 8">;
@@ -194,10 +186,5 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }, ) =
     </div>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

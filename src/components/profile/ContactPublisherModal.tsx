@@ -1,4 +1,3 @@
-
 import React from 'react'
 import FocusLock from 'react-focus-lock'
 import {
@@ -46,7 +45,6 @@ import api from '@/services/apiClient'
   publisherName: string
   publisherEmail?: string
   productId?: string
-=======
 import React from 'react';
 import FocusLock from 'react - focus - lock';
 import {
@@ -91,7 +89,6 @@ import api from '@/services / api_client';
   publisher_name: string;
   publisher_email?: string;
   product_id?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 type FormValues = {
   subject: string;
   message: string }
@@ -174,7 +171,6 @@ if ( {) {
       e.stop_propagation ();
       on_close ();
   }
-=======
 import React from 'react';
 import FocusLock from 'react-focus-lock';
 
@@ -211,7 +207,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   <SendIcon className='mr-2' />;
 
                   {isSubmitting ? 'Sending...' : 'Send Message'}
-=======
       <Dialog open={is_open} onOpenChange={on_close}>;
         <FocusLock disabled={!is_open} return_focus>;
           <DialogContent;
@@ -281,7 +276,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
                 >;
                   <SendIcon className='mr - 2' />;
                   {is_submitting ? 'Sending...' : 'Send Message'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </Button>;
               </form>;
             </Form>;
@@ -289,7 +283,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </FocusLock>;
       </Dialog>;
 
-=======
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       e.stopPropagation();
@@ -303,7 +296,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
     <Dialog open={isOpen} onOpenChange={onClose}>
       <FocusLock disabled={!isOpen} returnFocus>
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         <DialogContent
           className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md"
 
@@ -320,7 +312,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
               Contact Publisher
             </DialogTitle>
           </DialogHeader>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {error && <p className="text-red-500 mb-2">{error}</p>}
           {publisherEmail && (;
             <div className="mb-4 text-zion-slate-light">;
@@ -343,7 +334,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Input
                       placeholder="Subject"
                       className="bg-zion-blue border-zion-blue-light text-white"
@@ -367,7 +357,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
                   <FormLabel>Message</FormLabel>
                   <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Textarea
                       placeholder={`Message to ${publisherName}...`}
                       className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
@@ -381,7 +370,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
               disabled = {!form && form.formState.isValid || isSubmitting,}>;
               <SendIcon className="mr-2" />;
               {isSubmitting ? 'Sending...' : 'Send Message'}
-=======
 
     </>;
   ) </>;
@@ -389,7 +377,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 };
 
 
-=======
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
       <FocusLock disabled={!is_open} return_focus>;
         <DialogContent;
@@ -449,7 +436,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
               disabled = {!form.form_state.is_valid || is_submitting, }            >;
               <SendIcon className="mr - 2" />;
               {is_submitting ? 'Sending...' : 'Send Message'}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </Button>;
           </form>;
         </Form>;
@@ -458,14 +444,7 @@ import { LoginModal } from '@/components/auth/LoginModal';
     </Dialog>;
 
 
-=======
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

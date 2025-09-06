@@ -1,6 +1,4 @@
-
-
-            </div>
+</div>
             <div>
               <h3 className='text-white font-medium'>Transportation to Site</h3>
               <p className='text-zion-slate-light'>
@@ -17,7 +15,6 @@
               <Check className="h-5 w-5 text-zion-cyan" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>First Hour of Service</h3>
@@ -34,7 +31,6 @@
               <Check className="h-5 w-5 text-zion-cyan" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>Technical Assessment</h3>
@@ -53,7 +49,6 @@
               <Check className="h-5 w-5 text-zion-cyan" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>
@@ -72,7 +67,6 @@
               <Check className="h-5 w-5 text-zion-cyan" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>Network Connectivity</h3>
@@ -144,7 +138,6 @@ export function ServiceIncludes() {
               <Check className="h-5 w-5 text-zion-cyan" />
             </div>
             <div>
-=======
 
           
           <div className="flex items-start">
@@ -153,8 +146,6 @@ export function ServiceIncludes() {
             </div>
             <div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
             </div>
@@ -320,7 +311,6 @@ export function ServiceIncludes() {;
             <div>;
               <h3 className="text-white font-medium">Service Documentation</h3>;
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>;
-=======
 import { Check } from 'lucide-react';
 export /**
  * ServiceIncludes - Function description
@@ -467,7 +457,6 @@ function ServiceIncludes() {
             <div>;
               <h3 className="text - white font - medium">Service Documentation</h3>;
               <p className="text - zion - slate - light">Detailed report of work performed and recommendations.</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </div>;
           </div>;
         </div>;
@@ -476,10 +465,5 @@ function ServiceIncludes() {
   );
 }
 
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

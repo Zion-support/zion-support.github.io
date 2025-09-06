@@ -1,6 +1,3 @@
-
-
-
 export function GlobalServiceSection() {;
   return (
 
@@ -46,7 +43,6 @@ export function GlobalServiceSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {services.map((service, index) => (
             <div key={index} className="bg-zion-blue-light p-6 rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300">
               <div className="text-zion-cyan mb-4">
@@ -55,7 +51,6 @@ export function GlobalServiceSection() {
               <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
               <p className="text-zion-slate-light mb-4">{service.description}</p>
 
-=======
 
 
             </div>
@@ -66,7 +61,6 @@ export function GlobalServiceSection() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">
             Get Your Free Commercial Proposal
           </Button>
@@ -94,7 +88,6 @@ export function GlobalServiceSection() {
         <div className='flex justify-center mt-12'>;
           <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8'>        <div className="flex justify-center mt-12">;
           <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white text-lg py-6 px-8">;
-=======
 import { GradientHeading } from './GradientHeading';
 import {
   Server,
@@ -193,10 +186,5 @@ function GlobalServiceSection() {
   );
 }
 
-=======
     </section>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

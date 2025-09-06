@@ -1,8 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  const showTagline = router.pathname === '/'
+const showTagline = router.pathname === '/'
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [loginOpen, setLoginOpen] = useState(false)
   const isMobile = useIsMobile()
@@ -20,8 +16,6 @@
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.
     setLoginOpen(true)
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
   const showTagline = router && router.pathname === '/';
 
@@ -45,7 +39,6 @@ import React from 'react';
     setLoginOpen(true);
   },;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <header
@@ -65,7 +58,6 @@ import React from 'react';
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
               {t('home.header_tagline')}
             </span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
 
           <div className="ml-6 flex-1 hidden md:block">;
@@ -92,7 +84,6 @@ import React from 'react';
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
                 <Menu className="block h-6 w-6" aria-hidden="true" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
 
             </button>;
@@ -108,7 +99,6 @@ import React from 'react';
 
 
 
-=======
                 aria-label={t('auth.login')}
                 data-testid="login-link"
                 onClick={(e) => {
@@ -117,14 +107,11 @@ import React from 'react';
 
                   e.preventDefault(),
                   // For the main login link, we might not have a specific returnTo beyond current page,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   // or we could default to dashboard.
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true })
 
                   openLoginModal(router.asPath)
-=======
                 onClick={(e,) => {;
                   e && e.preventDefault(),;
                   // For the main login link, we might not have a specific returnTo beyond current page,;
@@ -132,7 +119,6 @@ import React from 'react';
                   // For consistency with how sub-menus now set it:;
                   router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),;
                   openLoginModal(router && router.asPath);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 }}
               >;
                 {t('auth && auth.login')}
@@ -150,7 +136,6 @@ import React from 'react';
                 {t('auth.signup')}
               </Link>
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
           {/* User avatar menu */}
           {isLoggedIn && (;
@@ -702,7 +687,6 @@ import React from 'react';
               </AnimatePresence>
             </div>
           </nav>
-=======
                             </span>;
                           </Link>))}
                       </div>;
@@ -711,7 +695,6 @@ import React from 'react';
               </AnimatePresence>;
             </div>;
           </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Right side - Search, User, Mobile menu */}
           <div className="flex items - center space - x-4">;
             {/* Search */}
@@ -728,7 +711,6 @@ import React from 'react';
                   onBlur={() => setSearchFocused(false)}
                   className={`w-64 px-4 py-2 pl-10 bg-zion-slate/20 border border-zion-cyan/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan transition-all duration-200 ${
                     searchFocused ? 'w-80' : ''
-=======
             <div className="relative hidden md:block">;
               <form on_submit={handle_search} className="relative">;
                 <input;
@@ -740,7 +722,6 @@ import React from 'react';
                   on_blur={() => setSearchFocused (false)}
                   className={`w - 64 px - 4 py - 2 pl - 10 bg - zion - slate / 20 border border - zion - cyan / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:ring - 2 focus:ring - zion - cyan / 50 focus:border - zion - cyan transition - all duration - 200 ${
                     search_focused ? 'w - 80' : '';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }`}
                 />;
                 <Search className="absolute left - 3 top - 1/2 transform -translate - y-1 / 2 w - 4 h - 4 text - zion - slate - light" />;
@@ -862,7 +843,6 @@ import React from 'react';
               </div>
             ))}
           </nav>
-=======
                           className="flex items - center w - full p - 3 rounded - lg hover:bg - zion - slate / 50 transition - colors text - white hover:text - zion - cyan">;
                           <LogOut className="w - 4 h - 4 mr - 3" />;
                           Logout;
@@ -872,7 +852,6 @@ import React from 'react';
                 </AnimatePresence>;
               </div>))}
           </nav>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Right side actions */}
           <div className="flex items - center space - x-4">;
             {/* Search */}
@@ -918,7 +897,6 @@ import React from 'react';
           <div className="flex items-center">;
             <Link to="/" className="flex-shrink-0">;
               <h1 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">;
-=======
           <div className="flex items - center">;
             <Link to="/" className="flex - shrink - 0">;
               <h1 className="text - 2xl font - bold bg - gradient - to - r from - cyan - 400 via - blue - 500 to - purple - 600 bg - clip - text text - transparent">;
@@ -1011,7 +989,6 @@ import React from 'react';
                       <Link
                         to="/services"
                         className="block text-center text-cyan-400 hover:text-cyan-300 text-sm font-medium transition-colors">;
-=======
                             </div>;
                           </div>;
                         </Link>))}
@@ -1047,7 +1024,6 @@ import React from 'react';
               </div>;
             )}
 
-=======
                 </div>)}
             </div>;
           </nav>;
@@ -1071,7 +1047,6 @@ import React from 'react';
                   Get Started;
                 </Link>;
               </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           {/* Right side actions */}
           <div className="ml - 6 flex items - center space - x-4">;
             {/* Notifications */}
@@ -1338,10 +1313,7 @@ import React from 'react';
     </header>  )
 
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                   to={item.href}
                   className="text - slate - 300 hover:text - cyan - 400 block px - 3 py - 2 text - base font - medium transition - colors duration - 200";
                   on_click={() => setMobileMenuOpen (false)}
@@ -1463,8 +1435,6 @@ import React from 'react';
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
       )}
@@ -1477,9 +1447,4 @@ import React from 'react';
 }
 ;
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,13 +1,10 @@
-
-
-      if (!id) return;
+if (!id) return;
       try {;
         const res = await fetch(`/api/products/${id}`);
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       } catch (err) {
         // Fail silently and fall back to local data
@@ -26,7 +23,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
   }, [id]), // id is now from router.query
@@ -52,7 +48,6 @@
     }
   }, [id]), // id is now from router && router.query;
 
-=======
 
     return <div className="p-6 text-white">Product not found</div>
   }, [id]), // id is now from router.query;
@@ -75,13 +70,10 @@
       payload: { id: product && product.id, name: product && product.title, price: product && product.price ?? 0, quantity: 1 }
     });
     toast && toast.success(`1× ${product && product.title} added`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setTimeout(() => setAdding(false), 500);
   };
-=======
     setTimeout(() => setAdding(false), 500)
   }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
   return (
     <>;
@@ -89,7 +81,6 @@
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
       <div className="min-h-screen bg-zion-blue p-6 text-white">
         <h1 className="text-2xl font-bold mb-4">{product.title}</h1>
@@ -100,12 +91,10 @@
               src = {product.images[0] |'/placeholder.svg',}
               alt = {product.title,}
 
-=======
 
               src={product.images[0] || '/placeholder.svg'}
               alt={product.title}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="object-cover rounded-md"
               fill
             />
@@ -141,10 +130,7 @@
 //Only fetch if id is available (from router) ;
 
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import Image from 'next / image';
 import {Button} from '@/components / ui / button';
 import {NEW_PRODUCTS} from '@/data / newProductsData';
@@ -282,10 +268,3 @@ product.title ;
 }/> </Button> </div> </>) ;
 }';
 }
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

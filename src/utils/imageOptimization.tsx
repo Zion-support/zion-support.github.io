@@ -1,9 +1,4 @@
-
-
-
-  const imgRef = useRef<HTMLDivElement>(null);
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+const imgRef = useRef<HTMLDivElement>(null);
 
 
 
@@ -33,7 +28,6 @@
         if (entry && entry.isIntersecting) {
           setIsInView(true)
           observer.disconnect()
-=======
 const observer = new IntersectionObserver ( ([entry]) => {
   // Check condition
 if ( {) {
@@ -96,8 +90,6 @@ if (||) {
     // Generate a simple gray blur placeholder
     return `data: image/svg+xml,base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
@@ -117,13 +109,10 @@ if (||) {
       ref={imgRef}
       className={cn('relative overflow-hidden', className)}
       style={{ width, height }}
-=======
     ).toString('base64')}`
   }
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
     >
       {isInView && !hasError && (
-=======
   // Intersection Observer for lazy loading;
   useEffect(() => {;
     if (!lazy || priority || isInView) return;
@@ -196,9 +185,7 @@ if (||) {
         <Image;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           src={getOptimizedSrc(src)}
-=======
   // Generate blur placeholder;
   const generateBlurDataURL = () =>: any {
     // Check condition
@@ -221,7 +208,6 @@ if (return blurDataURL) {
       {isInView && !has_error && (
         <Image;
           src={getOptimizedSrc (src)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           alt={alt}
           width={width}
           height={height}
@@ -232,18 +218,15 @@ if (return blurDataURL) {
 
           className={cn(            'transition-opacity duration-300'
 
-=======
 
           className={cn(            'transition-opacity duration-300',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             isLoading ? 'opacity-0' : 'opacity-100'
           )}
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {...props}
         />;
       )}
@@ -254,7 +237,6 @@ if (return blurDataURL) {
         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
       {/* Error fallback */}
       {hasError && (;
@@ -280,7 +262,6 @@ if (return blurDataURL) {
               </svg>;
               <span className='text-xs'>Image not available</span>;
             </div>;
-=======
 
               className="max-w-full max-h-full object-contain"
               onLoad={handleLoad}
@@ -300,9 +281,7 @@ if (return blurDataURL) {
               </svg>
               <span className="text-xs">Image not available</span>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>;
       )}
@@ -377,12 +356,9 @@ export function getImageDimensions(
 }
 
 
-=======
-=======
       {!isInView && lazy && !priority && (
 
 
-=======
         <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
       )}
     </div>;
@@ -415,7 +391,6 @@ export function preloadImage(src: string): Promise<void> {;
   });
 }
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Utility to get image dimensions;
 export function getImageDimensions(): any (;
   src: string;
@@ -435,10 +410,7 @@ export function getImageDimensions(): any (;
 } ;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           on_load={handle_load}
           on_error={handle_error}
           className={cn (            'transition - opacity duration - 300',
@@ -510,10 +482,3 @@ export function getImageDimensions (
     img.src = src;
   });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

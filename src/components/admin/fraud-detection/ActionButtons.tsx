@@ -1,6 +1,4 @@
-
-
-      >
+>
         <Eye className="h-4 w-4" />
       </Button>
       <Button
@@ -11,7 +9,6 @@
   );
 };
 
-=======
 
         variant="ghost"
         size="icon"
@@ -46,7 +43,6 @@
         <Button
           variant="ghost"
           size="sm"
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           onClick={() => onAction(flagId, 'ignore')}
         >
           Ignore
@@ -62,7 +58,6 @@
 
 
 
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react';
@@ -133,10 +128,3 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
 '"},
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

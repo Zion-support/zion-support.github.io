@@ -1,5 +1,3 @@
-
-
 // Component to show service details for the selected country
 export function ServiceDetails({ country }: ServiceDetailsProps) {
   // Get datacenters for regions (simplified - in production this would come from a real database)
@@ -103,7 +101,6 @@ import {;
   CardHeader,;
   CardTitle,;
 } from '@/components/ui/card';
-=======
 
     const dataCenters: Record<string string[]> = {
       "United States": ["New York", "Los Angeles", "Chicago", "Dallas", "Seattle"],
@@ -152,7 +149,6 @@ import {;
         
         <div className="space-y-4">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <h4 className="text-lg font-medium text-white mb-2 flex items-center">
               <MapPin className="mr-2 h-4 w-4 text-zion-purple" />
@@ -166,7 +162,6 @@ import {;
                   className="bg-zion-blue p-2 rounded border border-zion-blue-light text-center text-zion-slate-light"
                 >
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Server, Clock, MapPin } from 'lucide-react';
 import Image from 'next/image';
 interface ServiceDetailsProps {;
@@ -251,7 +246,6 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
   };
 
   const datacenters = getDatacenters(country);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <Card className='bg-zion-blue-dark border-zion-blue-light'>;
@@ -282,7 +276,6 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
               Service Locations;
             </h4>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {dc}
                 </div>;
               ))}
@@ -291,7 +284,6 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <h4 className='text-lg font-medium text-white mb-2 flex items-center'>
               <Clock className='mr-2 h-4 w-4 text-zion-purple' />
@@ -309,7 +301,6 @@ export function ServiceDetails(): any ({ country }: ServiceDetailsProps) {;
             <ul className="list-disc list-inside text-zion-slate-light space-y-1">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <li>Transportation to your site</li>
               <li>First hour of onsite technical support</li>
               <li>Basic hardware diagnosis</li>
@@ -380,7 +371,6 @@ return (<Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader
 }</div> </div> <div> <h4 className="text-lg font-medium text-white mb-2 flex items-center" > <Clock className="mr-2 h-4 w-4 text-zion-purple" /> Service Instructions </h4> </p> </div> <div className="bg-zion-blue rounded-lg p-4 border border-zion-blue-light" > <h4 className="text-lg font-medium text-white mb-2" >What's Included</h4> <ul className="list-disc list-inside text-zion-slate-light space-y-1" > <li>Transportation to your site</li> <li>First hour of onsite technical support</li> <li>Basic hardware diagnosis</li> <li>Network connectivity troubleshooting</li> <li>Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>) ;
 }'"}
 
-=======
   const datacenters = get_datacenters (country);
   return (
     <Card className='bg - zion - blue - dark border - zion - blue - light'>;
@@ -459,9 +449,3 @@ return (<Card className="bg - zion - blue - dark border - zion - blue - light" >
 }</div>) ) ";
 }</div> </div> <div> <h4 className="text - lg font - medium text - white mb - 2 flex items - center" > <Clock className="mr - 2 h - 4 w - 4 text - zion - purple" /> Service Instructions </h4> </p> </div> <div className="bg - zion - blue rounded - lg p - 4 border border - zion - blue - light" > <h4 className="text - lg font - medium text - white mb - 2" >What's Included</h4> <ul className="list - disc list - inside text - zion - slate - light space - y-1" > <li > Transportation to your site</li> <li > First hour of onsite technical support</li> <li > Basic hardware diagnosis</li> <li > Network connectivity troubleshooting</li> <li > Equipment installation assistance</li> </ul> </div> </div> </CardContent> </p> </CardFooter> </Card>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

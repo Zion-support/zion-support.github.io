@@ -1,5 +1,3 @@
-
-
 import { Message } from '@/types/messaging';
 
 
@@ -51,7 +49,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         "max-w-[75%] rounded-lg px-4 py-2"
 
 
-=======
 interface MessageBubbleProps {;
   message: Message;
   isUserMessage: boolean;
@@ -94,7 +91,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         <div className="whitespace-pre-wrap">{message.content}</div>
         {message.attachment_url && (
           <a
-=======
   message: Message
   isUserMessage: boolean
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
@@ -117,8 +113,6 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
 
         {message.attachment_url && (
           <a 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             href={message.attachment_url}
             target="_blank"
             rel="noopener noreferrer"
@@ -179,11 +173,8 @@ export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleP
   );  );
 }
 
-=======
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { format } from 'date - fns';
 import { PaperclipIcon } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -252,9 +243,5 @@ function MessageBubble() {
       </div>;
     </div>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
             {message.attachment_name || 'Attachment'}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

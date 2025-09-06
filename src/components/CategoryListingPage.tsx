@@ -1,9 +1,5 @@
-
-
 // Example listing type
 interface Listing {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React from 'react';
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -22,8 +18,6 @@ import { safeStorage } from '@/utils/safeStorage';
 
 // Example listing type;
 interface Listing {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components / GradientHeading';
 import { ListingScoreCard } from '@/components / ListingScoreCard';
@@ -40,7 +34,6 @@ import ListingGridSkeleton from '@/components / skeletons / ListingGridSkeleton'
 import { safe_storage } from '@/utils / safe_storage';
 // Example listing type;
 interface Listing {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   id: string;
   title: string;
   description: string;
@@ -237,7 +230,6 @@ export function CategoryListingPage(): any ({;
         default:;
           return 0;
 
-=======
             new Date (a.created_at).get_time () - new Date (b.created_at).get_time ());
         case 'rating - high':;
           return (b.rating || 0) - (a.rating || 0);
@@ -249,7 +241,6 @@ export function CategoryListingPage(): any ({;
           return b.title.locale_compare (a.title);
         default:;
           return 0;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     });
   return (
@@ -279,7 +270,6 @@ export function CategoryListingPage(): any ({;
                     ) : null}
                     <span>;
                       {sortOptions && sortOptions.find(option => option && option.value === selectedSort);
-=======
       <div className='min - h-screen bg - zion - blue py - 12 px - 4'>;
         <div className='container mx - auto'>;
           <div className='text - center mb - 12'>;
@@ -316,7 +306,6 @@ export function CategoryListingPage(): any ({;
                   </div>;
                 </SelectTrigger>;
 
-=======
 
           <div className="bg-zion-blue-dark rounded-lg p-6 mb-8 border border-zion-blue-light">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -366,7 +355,6 @@ export function CategoryListingPage(): any ({;
                 </SelectTrigger>;
                 <SelectContent className='bg-zion-blue-dark border border-zion-blue-light'>;
                   {filterOptions && filterOptions.map(option => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <SelectItem
                       key={option && option.value}
                       value={option && option.value}
@@ -375,10 +363,8 @@ export function CategoryListingPage(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
-=======
                 <SelectContent className='bg - zion - blue - dark border border - zion - blue - light'>;
                   {sort_options.map (option => (
                     <SelectItem;
@@ -419,12 +405,10 @@ export function CategoryListingPage(): any ({;
 
 
               Showing {processedListings.length} results
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {searchQuery && ` for "${searchQuery}"`}
 
             </p>;
           </div>;
-=======
 
 
 
@@ -450,7 +434,6 @@ export function CategoryListingPage(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>;
             ) : (;
@@ -465,7 +448,6 @@ export function CategoryListingPage(): any ({;
 
 
 
-=======
                   variant="outline"
                   onClick={() => {
                     setSearchQuery(""),
@@ -475,13 +457,11 @@ export function CategoryListingPage(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 >
                   Clear all filters
                 </Button>
               </div>
 
-=======
 
               </div>;
             ) : (;
@@ -507,11 +487,8 @@ export function CategoryListingPage(): any ({;
   );
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           {/* Results Count */}
           <div className='mb - 6'>;
             <p className='text - zion - slate - light'>;
@@ -648,10 +625,4 @@ case 'z - a': return (<> <div className="min - h-screen bg - zion - blue py - 12
 }className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
 }</div> </div> </div> </>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

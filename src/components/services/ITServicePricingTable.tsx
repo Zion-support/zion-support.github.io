@@ -1,5 +1,3 @@
-
-
 import { useState, useMemo } from 'react';
 import {;
   onsiteServicePricing,;
@@ -58,7 +56,6 @@ export function ITServicePricingTable() {;
           : 'ascending',;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -104,8 +101,6 @@ export function ITServicePricingTable() {;
 
       <div className="rounded-md border border-zion-blue-light overflow-hidden">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Table>
           <TableHeader className='bg-zion-blue'>
             <TableRow>
@@ -136,7 +131,6 @@ export function ITServicePricingTable() {;
                   className='hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light'                >;
                   <span>Price Per Incident</span>;
                   <ArrowUpDown className='h-4 w-4' />;
-=======
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 4 w - full'>;
       <div className='flex items - center mb - 6'>;
         <div className='relative flex - 1'>;
@@ -168,8 +162,6 @@ export function ITServicePricingTable() {;
                   className='hover:bg - zion - blue - dark p - 0 flex items - center justify - end space - x-1 w - full text - zion - cyan hover:text - zion - cyan - light'                >;
                   <span > Price Per Incident</span>;
                   <ArrowUpDown className='h - 4 w - 4' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
               <TableHead className="text-zion-cyan font-medium">
                 <Button 
@@ -178,7 +170,6 @@ export function ITServicePricingTable() {;
                   className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
                 >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
@@ -191,7 +182,6 @@ export function ITServicePricingTable() {;
                   className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
                 >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
@@ -209,7 +199,6 @@ export function ITServicePricingTable() {;
                   </TableCell>
                   <TableCell className="text-right font-medium text-white">${item.pricePerIncident.toFixed(2)}</TableCell>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </TableRow>
               ))
             ) : (
@@ -224,7 +213,6 @@ export function ITServicePricingTable() {;
   );
 };
 
-=======
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -303,7 +291,6 @@ export function ITServicePricingTable() {;
                 >;
                   <span>Price Per Incident</span>;
                   <ArrowUpDown className="h-4 w-4" />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Button>;
               </TableHead>;
             </TableRow>;
@@ -331,7 +318,6 @@ export function ITServicePricingTable() {;
               </TableRow>;
             )}
 
-=======
 
           </TableBody>;
         </Table>;
@@ -341,10 +327,7 @@ export function ITServicePricingTable() {;
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           <TableBody className='bg - zion - blue - dark'>;
             {sorted_data.length > 0 ? (
               sorted_data.map (item => (
@@ -372,11 +355,4 @@ export function ITServicePricingTable() {;
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

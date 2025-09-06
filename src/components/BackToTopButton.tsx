@@ -1,6 +1,3 @@
-
-
-=======
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useEffect, useState  } from './react';
@@ -27,9 +24,6 @@ function BackToTopButton() {
       <ArrowUp className='h - 5 w - 5' />;
     </button>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 import { ArrowUp } from 'lucide-react';
 import { useEffect, useState } from "react",;
 export function BackToTopButton() {;
@@ -51,7 +45,6 @@ export function BackToTopButton() {;
   return (;
     <button;
       aria-label="Back to top";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       onClick={scrollToTop}
       className={`fixed bottom-6 right-6 z-[60] rounded-full bg-primary text-primary-foreground p-2 shadow transition-opacity md:bottom-8 md:right-8 ${
         visible ? "opacity-100" : "opacity-0 pointer-events-none"
@@ -63,6 +56,3 @@ export function BackToTopButton() {;
   );
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

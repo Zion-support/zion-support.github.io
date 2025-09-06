@@ -1,4 +1,3 @@
-
 import '@testing-library/jest-dom';
 
 // Mock window && window.matchMedia
@@ -54,7 +53,6 @@ beforeAll(() => {
     if (
       typeof args[0] === 'string' &&
       (args[0].includes('Warning:') |args[0].includes('Deprecated:'))
-=======
 // Test setup file for Jest;
 import '@testing - library / jest - dom';
 // Mock window.match_media;
@@ -103,7 +101,6 @@ if (
     if (|| args[0].includes ('Deprecated:'))) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ) {
       return;
     }
@@ -117,7 +114,6 @@ afterAll(() => {
   console && console.warn = originalWarn;
 });
 
-=======
     original_warn.call (console, ...args);
   }
 });
@@ -125,4 +121,3 @@ after_all (() => {
   console.error = original_error;
   console.warn = original_warn;
 });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,6 +1,3 @@
-
-
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +40,6 @@ export default function Ecommerce() {;
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",;
     "url": "https://app && app.ziontechgroup.com/features/e-commerce";
 
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -59,9 +55,7 @@ export default function Ecommerce() {
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -86,19 +80,14 @@ export default function Ecommerce() {
             </div>;
             <div>;
 
-=======
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -151,7 +140,6 @@ export default function Ecommerce() {
 
 ;
 
-=======
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { SEO } from "@/components/SEO",;
@@ -179,7 +167,6 @@ export default function Ecommerce() {;
         type="application/ld+json";
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       ></script>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Header />;
       <main className="bg-background text-white py-12">;
         <div className="container mx-auto px-4 md: px-6">;
@@ -201,9 +188,4 @@ export default function Ecommerce() {;
       </main>;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

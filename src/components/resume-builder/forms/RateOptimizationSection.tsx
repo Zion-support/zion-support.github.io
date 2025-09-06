@@ -1,8 +1,4 @@
-
-
-=======
 } import {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   FormField;
   FormItem;
   FormLabel;
@@ -33,7 +29,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 
 
-=======
   control,
   setValue,
   skills,
@@ -42,8 +37,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 
   location,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   rateType
 },) => {
   const handleSuggestionApplied = (rate: number,) => {
@@ -74,13 +67,10 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
     set_value ("hourly_rate", rate);
 
   }
-=======
-=======
 
   },
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-4">
       <FormField
@@ -103,7 +93,6 @@ import {;
   FormLabel,;
   FormControl,;
   FormDescription,;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   FormMessage;
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -130,7 +119,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
     setValue("hourlyRate", rate);
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <div className="space - y-4">;
@@ -146,7 +134,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
                 min="1";
                 step="0.01";
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {...field}
               />;
             </FormControl>;
@@ -162,14 +149,12 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
           <TalentRateRecommender
 
-=======
 
   );
 };
 "};
 };
 
-=======
             skills={skills}
             yearsExperience={yearsExperience}
             location={location}
@@ -184,10 +169,7 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 };
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
           </FormItem>)}
       />;
       <Card>;
@@ -205,10 +187,3 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 }
 "},
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

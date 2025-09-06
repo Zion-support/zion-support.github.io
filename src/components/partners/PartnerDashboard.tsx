@@ -1,5 +1,3 @@
-
-
 import {;
   Card,;
   CardContent,;
@@ -17,10 +15,8 @@ import {;
   Users,;
 } from 'lucide-react';
 
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react';
@@ -42,7 +38,6 @@ export function PartnerDashboard() {
     conversionRate: 18.5,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       {/* Stats Overview */}
@@ -72,12 +67,9 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 
-=======
 
             <div className="text-2xl font-bold">{stats.totalReferrals}</div>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <p className="text-xs text-zion-slate-light">
               {stats.completedReferrals} completed, {stats.pendingReferrals} pending
             </p>
@@ -88,7 +80,6 @@ export function PartnerDashboard() {
         
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Conversion Rate</CardTitle>
@@ -104,17 +95,11 @@ export function PartnerDashboard() {
 
         
 
-=======
 
         
 
-=======
             <p className='text-xs text-zion-slate-light'>              ${stats.pendingRevenue} pending payout        
-=======
         
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
             <CardTitle className="text-sm font-medium">Total Earnings</CardTitle>
@@ -128,7 +113,6 @@ export function PartnerDashboard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </p>
           </CardContent>
         </Card>
@@ -139,7 +123,6 @@ export function PartnerDashboard() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle>Performance Overview</CardTitle>
@@ -163,7 +146,6 @@ export function PartnerDashboard() {
           <Button variant="outline" size="sm">View All</Button>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </CardHeader>
         <CardContent className='flex justify-center items-center p-6'>
           <div className='text-center p-12 border border-dashed border-zion-blue-light rounded-lg w-full'>
@@ -208,14 +190,12 @@ export function PartnerDashboard() {
               Total Referrals;
             </CardTitle>;
             <Users className='h-4 w-4 text-zion-cyan' />;
-=======
 
       </Card>;
     </div>;
   );
 };
 
-=======
     </div>
   )
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
@@ -352,7 +332,6 @@ export function PartnerDashboard() {;
           <div>;
             <CardTitle>Recent Referrals</CardTitle>;
             <CardDescription>Your latest partner referrals</CardDescription>;
-=======
   Card,
   CardContent,
   CardDescription,
@@ -499,7 +478,6 @@ function PartnerDashboard() {
           <div>;
             <CardTitle > Recent Referrals</CardTitle>;
             <CardDescription > Your latest partner referrals</CardDescription>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           </div>;
           <Button variant='outline' size='sm'>;
             View All;
@@ -523,13 +501,6 @@ function PartnerDashboard() {
   );
 }
 
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

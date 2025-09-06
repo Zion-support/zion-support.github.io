@@ -1,8 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
-  useState
+useState
   useEffect
   useRef
   ReactNode
@@ -76,7 +72,6 @@ export function ChatAssistant({
       if (initialMessages && initialMessages.length > 0) {
         setDisplayGuestMessages(initialMessages)
         setStoredGuestMessages(initialMessages), // Persist if initialMessages are provided
-=======
   const is_guest = !auth?.is_authenticated;
   const handleSendMessage = async (message_content: string) => {
     if () return) {
@@ -154,7 +149,6 @@ if ( {) {
 }
         setDisplayGuestMessages (initial_messages),
         setStoredGuestMessages (initial_messages), // Persist if initial_messages are provided;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setDisplayGuestMessages (storedGuestMessages);
       }
@@ -226,8 +220,6 @@ if ( {) {
     return () => document.removeEventListener('keydown', handleKeyDown)
   }, [isOpen, onClose])
   if (!isOpen) return null
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const isGuest = !auth?.isAuthenticated;
 
   const handleSendMessage = async (messageContent: string) => {;
@@ -415,7 +407,6 @@ export function ChatAssistant(): any ({;
   }, [isOpen, onClose]),;
 
   if (!isOpen) return null,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div
@@ -451,19 +442,16 @@ export function ChatAssistant(): any ({;
             onClick={onClose}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
           </Button>
         </div>
-=======
             aria-label="Close chat">;
             <X className="h-5 w-5" />;
           </Button>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Context Header (Optional) */}
         {contextHeader && (;
           <div className="border-b border-zion-purple/20 bg-zion-blue-dark/50 p-3">;
@@ -491,7 +479,6 @@ export function ChatAssistant(): any ({;
                     >;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {q}
                     </Button>;
                   ))}
@@ -765,7 +752,6 @@ if (return null, ) {
 
                 onClick={handleModalSendConfirm}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -773,24 +759,15 @@ if (return null, ) {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
     </div>;
   );
 
-=======
 
 
-=======
         </div>)}
     </div>);
 }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

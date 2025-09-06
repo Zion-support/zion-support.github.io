@@ -1,6 +1,4 @@
-
-
-  status: 'open' | 'under_review' | 'resolved' | 'closed';
+status: 'open' | 'under_review' | 'resolved' | 'closed';
 
 export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) {;
   let variant: 'default' | 'destructive' | 'secondary' | 'outline' =;
@@ -67,7 +65,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
 
     default:
       break
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return (
 
@@ -76,7 +73,6 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
         <Badge variant={variant} className='flex items-center gap-1'>;
           <ShieldAlert className='h-3 w-3' />;
           <span>Under Dispute</span>;
-=======
   }
   return (
     <Tooltip>;
@@ -92,19 +88,11 @@ export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {
       </TooltipContent>;
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </Tooltip>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
       </TooltipContent>
     </Tooltip>
   )
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

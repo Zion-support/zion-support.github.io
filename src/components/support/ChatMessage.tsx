@@ -1,5 +1,3 @@
-
-
 import { useTheme } from "@/hooks/useTheme";
 interface ChatMessageProps {;
   message: string;
@@ -21,10 +19,8 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
   );
 
 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className={cn('flex items-start gap-3', isUser && 'flex-row-reverse')}>;
       <Avatar className='h-8 w-8'>;
@@ -54,12 +50,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       <div
         className={cn(
           'max-w-[80%] rounded-lg px-4 py-2 text-sm'
-=======
       </Avatar>
 
           'max-w-[80%] rounded-lg px-4 py-2 text-sm',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           isUser
             ? 'bg-zion-purple text-white'
             : theme === 'dark'
@@ -70,7 +64,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
       >
 
 
-=======
       
       <div className={cn(
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
@@ -91,8 +84,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
               : "text-gray-500"
         )}>
           {format(timestamp, "h:mm a")}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
       </div>
     </div>
@@ -102,14 +93,11 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 },
 
 
-=======
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
-=======
 },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy
 // dependency like DOMPurify for now and instead escape the five critical
 // characters. This ensures any user-supplied string is rendered harmless
@@ -117,9 +105,7 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({;
 function escapeHtml(unsafe: string): string {
   return unsafe
 
-=======
 
-=======
 
     .replace(/&/g, "&amp,")
     .replace(/</g, "<")
@@ -268,13 +254,10 @@ function formatMessageWithLinks(message: string): string {;
   );
 
   return formattedMessage;  return formattedMessage;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
-=======
 
 
-=======
 import React, { useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
 import { cn } from '@/lib / utils';
@@ -371,10 +354,4 @@ function formatMessageWithLinks (message: string): string {
     '<a href="/help/$1" class="text - zion - cyan underline hover:text - zion - cyan / 80">$1</a>');
   return formatted_message; return formatted_message;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

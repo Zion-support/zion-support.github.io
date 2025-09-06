@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <>;
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
@@ -9,11 +7,9 @@
   const isMobile = useIsMobile();
 
 
-=======
 
   const isMobile = useIsMobile()
 
-=======
 
 import { SEO } from "@/components/SEO",
 import { ApplicationsTracker } from "@/components/jobs/applications",
@@ -27,7 +23,6 @@ function ApplicationStatusTrackerContent() {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO 
@@ -41,7 +36,6 @@ function ApplicationStatusTrackerContent() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
@@ -55,22 +49,18 @@ function ApplicationStatusTrackerContent() {
           <Card>
             <CardHeader className="border-b bg-muted/50">
 
-=======
           <Card>
             <CardHeader className='border-b bg-muted/50'>
               <CardTitle className='flex items-center text-lg'>
                 <Inbox className='mr-2 h-5 w-5' /> Your Applications              </CardTitle>            <CardHeader className="border-b bg-muted/50">
-=======
 
         <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </CardTitle>
             </CardHeader>
             <CardContent className={`p-${isMobile ? '3' : '6'}`}>
@@ -91,7 +81,6 @@ export default function ApplicationStatusTracker() {
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
 
-=======
   )
 
       <ApplicationStatusTrackerContent />;
@@ -99,7 +88,6 @@ export default function ApplicationStatusTracker() {
   );
 };
 
-=======
 import { SEO } from "@/components/SEO",;
 import { ApplicationsTracker } from "@/components/jobs/applications",;
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
@@ -158,7 +146,6 @@ export default function ApplicationStatusTracker() {;
   );
 }
 
-=======
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
@@ -213,10 +200,4 @@ function ApplicationStatusTracker() {
       <ApplicationStatusTrackerContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

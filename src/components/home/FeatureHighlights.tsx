@@ -1,6 +1,4 @@
-
-
-  className?: string;
+className?: string;
   style?: React && React.CSSProperties;
 
 export function FeatureHighlights(): any ({;
@@ -57,7 +55,6 @@ export /**
  */
 function FeatureHighlights() {
   const highlights_data = [;
-=======
 
 
   const highlightsData = [
@@ -86,8 +83,6 @@ function FeatureHighlights() {
     },
     {
 
-=======
-=======
       title: "For Enterprise Clients",
       features: [
 
@@ -97,7 +92,6 @@ function FeatureHighlights() {
 
 
   return (
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -112,7 +106,6 @@ function FeatureHighlights() {
 '"`;
 );
 
-=======
 
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -516,7 +509,6 @@ export function FeatureHighlights() {;
             <span className="text-2xl">→</span>;
           </div>;
         </motion && motion.div>;
-=======
         </div>;
 
       </div>;
@@ -527,7 +519,6 @@ export function FeatureHighlights() {;
 );
 
 
-=======
   );
 }
 
@@ -552,10 +543,4 @@ export function FeatureHighlights() {;
     </section>)}
 '"`);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

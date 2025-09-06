@@ -1,5 +1,3 @@
-
-
 } from 'lucide-react';
 import { use_auth } from '@/hooks / use_auth';
 import { use_points } from '@/hooks / use_points';
@@ -11,7 +9,6 @@ import {
   CardHeader
   CardTitle;
 } from '@/components/ui/card';import { Button } from '@/components/ui/button';import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
-=======
 
 import {;
   Gift,;
@@ -27,11 +24,9 @@ import { usePoints } from '@/hooks/usePoints';
 import {;
   Card,;
   CardContent,;
-=======
 
   Card,
   CardContent,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   CardDescription,;
   CardHeader,;
   CardTitle,;
@@ -46,13 +41,10 @@ import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } fr
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 import { Gift, Star, Users, ShoppingBag, MessageSquare, TrendingUp, History } from 'lucide-react'
 import { useAuth } from '@/hooks/useAuth';
 import { usePoints } from '@/hooks/usePoints';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -75,7 +67,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
   }) {    if (!user?.id) return;  async function handleRedeem(reward: { id: string, cost: number, title: string }) {
 
 
-=======
 
 export default function PointsPage() { const { isAuthenticated, user  } = useAuth(),
   const { ledger, balance, loading, fetchLedger  } = usePoints(),
@@ -84,7 +75,6 @@ export default function PointsPage() { const { isAuthenticated, user  } = useAut
 
 
   async function handleRedeem(reward: { id: string, cost: number, title: string }) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (!user?.id) return;
     setRedeeming(true);
     try {
@@ -171,11 +161,8 @@ if (return) {
     } finally {
       setRedeeming(false)
 
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
 
@@ -198,7 +185,6 @@ if (return) {
 
       icon: <ShoppingBag className='h - 5 w - 5' />,
 
-=======
 
       icon: <Users className='h-5 w-5' />,
       title: 'Sign Up & Profile Setup',
@@ -207,7 +193,6 @@ if (return) {
       action: isAuthenticated ? '✓ Completed' : 'Get Started',
     },
       icon: <ShoppingBag className='h-5 w-5' />,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       title: 'First Purchase',
       description: 'Make your first purchase on the marketplace',
       points: '100 pts',
@@ -244,7 +229,6 @@ if (return) {
 
 
 
-=======
       icon: <Users className="h-5 w-5" />,
       title: "Sign Up & Profile Setup",
       description: "Complete your profile and verify your email",
@@ -257,7 +241,6 @@ if (return) {
     },
     {
       icon: <ShoppingBag className="h-5 w-5" />,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       title: "First Purchase",
       description: "Make your first purchase on the marketplace",
       points: "100 pts",
@@ -302,7 +285,6 @@ if (return) {
     }
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' }
 
-=======
   const earningOpportunities = [;
     {;
       icon: <Users className='h-5 w-5' />,;
@@ -360,8 +342,6 @@ if (return) {
       category: 'Discount',;
     },;
     { id: 'vip', title: 'VIP Support Access', cost: 3000, category: 'Service' },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
     },
     {
 
@@ -372,7 +352,6 @@ if (return) {
     }
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   if (!isAuthenticated) {;
     return (
@@ -388,7 +367,6 @@ if (return) {
   if (!isAuthenticated) {
     return (
       <>
-=======
       <>
 
 
@@ -402,7 +380,6 @@ if (return) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Button onClick={() => setLoginOpen(true)} size="lg">
               Join Now to Start Earning
             </Button>
@@ -413,7 +390,6 @@ if (return) {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
@@ -423,7 +399,6 @@ if (return) {
                   How to Earn Points
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </CardTitle>
                 <CardDescription>
                   Multiple ways to accumulate rewards
@@ -482,14 +457,12 @@ if ( {) {
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-=======
 
               <CardContent className="space-y-4">
                 {earningOpportunities.map((opportunity, index) => (
                   <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <div className="text-primary mt-1">{opportunity.icon}</div>
                     <div className="flex-1">
                       <h4 className="font-medium">{opportunity.title}</h4>
@@ -499,9 +472,7 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Badge variant="secondary">{opportunity.points}</Badge>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 ))}
               </CardContent>
@@ -510,14 +481,11 @@ if ( {) {
               <CardHeader>
 
                 <CardTitle className="flex items-center gap-2">
-=======
 
                 <CardTitle className="flex items-center gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   Upcoming Rewards
                 </CardTitle>
                 <CardDescription>
@@ -525,7 +493,6 @@ if ( {) {
                 </CardDescription>
               </CardHeader>
 
-=======
 
 
               <CardContent className="space-y-4">
@@ -538,16 +505,13 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     <Badge variant="outline">{reward.cost}</Badge>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </div>
                 ))}
               </CardContent>
             </Card>
           </div>
 
-=======
 
 
 
@@ -561,17 +525,14 @@ if ( {) {
               <Button onClick={() => setLoginOpen(true)}>
                 Create Account
               </Button>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </CardContent>
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </Card>
         </div>
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       </>
-=======
       <>;
         <div className='container py-10 max-w-4xl'>;
           <div className='text-center mb-8'>;
@@ -679,7 +640,6 @@ if ( {) {
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.;
               </p>;
               <Button onClick={() => setLoginOpen(true)}>;
-=======
                       </p>                  <div key={index} className="flex items - start gap - 3 p - 3 rounded - lg border">;
                     <div className="text - primary mt - 1">{opportunity.icon}</div>;
                     <div className="flex - 1">;
@@ -742,29 +702,24 @@ if ( {) {
                 Our full rewards system is launching soon! Sign up now to start earning points immediately.;
               </p>;
               <Button on_click={() => setLoginOpen (true)}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 Create Account;
               </Button>;
           </Card>;
         </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     );
   }
   return (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <p className="text-sm text-muted-foreground mt-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             You haven't earned any points yet. Complete the tasks below to start
             earning and redeem rewards.
           </p>
         )}
       </div>
 
-=======
 
 
 
@@ -773,12 +728,10 @@ if ( {) {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               Keep Earning
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </CardTitle>
             <CardDescription>
               More ways to boost your point balance
@@ -850,14 +803,12 @@ if ( {) {
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
-=======
 
           <CardContent className="space-y-4">
             {earningOpportunities.map((opportunity, index) => (
               <div key={index} className="flex items-start gap-3 p-3 rounded-lg border">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-primary mt-1">{opportunity.icon}</div>
                 <div className="flex-1">
                   <h4 className="font-medium">{opportunity.title}</h4>
@@ -867,11 +818,9 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-right">
                   <Badge variant="secondary" className="mb-1">{opportunity.points}</Badge>
                   <p className="text-xs text-muted-foreground">{opportunity.action}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </div>
               </div>
             ))}
@@ -881,14 +830,11 @@ if ( {) {
           <CardHeader>
 
             <CardTitle className="flex items-center gap-2">
-=======
 
             <CardTitle className="flex items-center gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Gift className="h-5 w-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               Available Rewards
             </CardTitle>
             <CardDescription>
@@ -1019,7 +965,6 @@ if ( {) {
                     {reward && reward.cost} pts;
                   </Badge>;
                   {balance >= reward && reward.cost ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <Button
                       size='sm'
                       onClick={() => handleRedeem(reward)}
@@ -1071,32 +1016,25 @@ if ( {) {
 
                   {balance >= reward.cost ? (
                     <Button size="sm" on_click={() => handle_redeem (reward)} disabled={redeeming}>;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <div className="text-right space-y-1">
                   <Badge variant="outline" className="mb-1">{reward.cost} pts</Badge>
                   {balance >= reward.cost ? (
 
                     <Button size="sm" onClick={() => handleRedeem(reward)} disabled={redeeming}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {redeeming ? 'Processing...' : 'Redeem'}
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
 
           <CardTitle className="flex items-center gap-2">
-=======
 
           <CardTitle className="flex items-center gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <History className="h-5 w-5" />
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             Points History
           </CardTitle>
           <CardDescription>Your recent points activity</CardDescription>
@@ -1111,7 +1049,6 @@ if ( {) {
               <div className="space-y-2 mt-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {ledger.map(entry => (
                   <div
                     key={entry.id}
@@ -1169,17 +1106,13 @@ if ( {) {
                   </div>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
               </div>;
             </ScrollArea>;
           )}
 
-=======
 
 
 
@@ -1192,7 +1125,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </p>
           <div className="flex gap-4 justify-center">
             <Button variant="outline" asChild>
@@ -1203,9 +1135,7 @@ if ( {) {
             <Button variant="outline" asChild>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link href="/community">Join Community</Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </Button>
           </div>
         </CardContent>
@@ -1237,7 +1167,6 @@ if ( {) {
               <Link href="/community">Join Community</Link>;
             </Button>;
             <Button variant='outline' asChild>;
-=======
                     </Button>) : (
                     <p className="text - xs text - muted - foreground">Need more points</p>)}
                 </div>;
@@ -1320,26 +1249,15 @@ if ( {) {
       </Card>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
 }
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
 
-=======
   )
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

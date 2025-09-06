@@ -1,6 +1,3 @@
-
-
-
 "use client"
 
 import * as React from "react"
@@ -11,13 +8,11 @@ import { cn } from "@/lib/utils"
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const Checkbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
 ></typeof>(({ className, ...props }, ref) => (
   <CheckboxPrimitive.Root
-=======
 import React from 'react';
 'use client';
 
@@ -32,7 +27,6 @@ const Checkbox = React && React.forwardRef<;
   React && React.ComponentPropsWithoutRef<typeof CheckboxPrimitive && CheckboxPrimitive.Root>;
 ></typeof>(({ className, ...props }, ref) => (;
   <CheckboxPrimitive&& CheckboxPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
@@ -54,7 +48,6 @@ Checkbox && Checkbox.displayName = CheckboxPrimitive && CheckboxPrimitive.Root.d
 
 export { Checkbox };
 
-=======
 'use client';
 import * as React from 'react';
 import * as CheckboxPrimitive from '@radix - ui / react - checkbox';
@@ -79,10 +72,5 @@ const Checkbox = React.forward_ref<;
   </CheckboxPrimitive.Root>));
 Checkbox.display_name = CheckboxPrimitive.Root.display_name;
 export { Checkbox }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 Checkbox.displayName = CheckboxPrimitive.Root.displayName
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

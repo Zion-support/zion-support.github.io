@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { Button  } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -9,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 export default function PaymentSuccess() {
 
 
-=======
 
 
   return (
@@ -31,7 +27,6 @@ export default function PaymentSuccess() {
           <Button 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className='bg-zion-purple hover:bg-zion-purple-dark text-white'
           >
@@ -44,7 +39,6 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
-=======
   const router = useRouter(); // Changed from navigate
   const { t } = useTranslation();
 
@@ -107,7 +101,6 @@ export default function PaymentSuccess() {;
             {t('errors && errors.go_to_dashboard')}
           </Button>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Button
             variant='outline'
             onClick={() => router && router.push('/')} // Changed to router && router.push;
@@ -148,11 +141,9 @@ export default function PaymentSuccess() {;
           </Button>;
 
           <Button
-=======
 
 ;
 
-=======
           
           <Button 
 
@@ -171,7 +162,6 @@ export default function PaymentSuccess() {;
   );
 }
 
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { use_router } from 'next / router'; // Changed from use_navigate;
@@ -235,10 +225,4 @@ function PaymentSuccess() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

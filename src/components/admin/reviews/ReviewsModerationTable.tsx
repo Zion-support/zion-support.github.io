@@ -1,6 +1,4 @@
-
-
-  Dialog,
+Dialog,
   DialogContent,
   DialogDescription,
   DialogFooter,
@@ -206,11 +204,9 @@ export function ReviewsModerationTable(): any ({;
       </div>);
 
   }
-=======
       </div>;
     );
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
@@ -235,7 +231,6 @@ export function ReviewsModerationTable(): any ({;
                           getInitials(review.reviewer_profile.display_name)
                         ) : (
                           <User className='h-4 w-4' />
-=======
                         src={review && review.reviewer_profile.avatar_url}
                         alt={review && review.reviewer_profile.display_name || ''}                      />;
                     ) : (;
@@ -244,7 +239,6 @@ export function ReviewsModerationTable(): any ({;
                           getInitials(review && review.reviewer_profile.display_name);
                         ) : (;
                           <User className='h-4 w-4' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                       </AvatarFallback>;
                     )}
@@ -255,7 +249,6 @@ export function ReviewsModerationTable(): any ({;
 
 
                       </span>
-=======
                   </Avatar>;
                   <div>;
                     {review && review.is_anonymous ? (;
@@ -264,7 +257,6 @@ export function ReviewsModerationTable(): any ({;
                       <span className='text-sm font-medium'>;
                         {review && review.reviewer_profile?.display_name || 'User'}
                       </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
                   </div>;
                 </div>;
@@ -310,7 +302,6 @@ export function ReviewsModerationTable(): any ({;
                         >                          Mark as approved;
                         </DropdownMenuItem>;
                       )}
-=======
             <TableHead > Reviewer</TableHead>;
             <TableHead > Rating</TableHead>;
             <TableHead > Date</TableHead>;
@@ -412,7 +403,6 @@ export function ReviewsModerationTable(): any ({;
                           }
                         >                          Mark as approved;
                         </DropdownMenuItem>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
@@ -471,14 +461,12 @@ export function ReviewsModerationTable(): any ({;
                           Mark as approved
                         </DropdownMenuItem>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       )}
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
               </TableCell>
             </TableRow>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
 
 
@@ -488,7 +476,6 @@ export function ReviewsModerationTable(): any ({;
                 <div className="flex items-center gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Avatar>
                     {selectedReview.reviewer_profile?.avatar_url ? (
                       <AvatarImage
@@ -506,7 +493,6 @@ export function ReviewsModerationTable(): any ({;
                           )
                         ) : (
                           <User className='h-4 w-4' />
-=======
         </TableBody>;
       </Table>;
 
@@ -537,14 +523,12 @@ export function ReviewsModerationTable(): any ({;
                           );
                         ) : (;
                           <User className='h-4 w-4' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                         )}
                       </AvatarFallback>;
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
 
@@ -570,12 +554,10 @@ export function ReviewsModerationTable(): any ({;
                 <div className="flex flex-wrap gap-2">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {selectedReview.communication_rating && (
                     <Badge variant='outline'>
                       Communication: {selectedReview.communication_rating}/5
                     </Badge>
-=======
                   </Avatar>;
                   <div>;
                     <div className='font-medium'>;
@@ -603,7 +585,6 @@ export function ReviewsModerationTable(): any ({;
                     <Badge variant='outline'>;
                       Communication: {selectedReview && selectedReview.communication_rating}/5;
                     </Badge>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   )}
                   {selectedReview && selectedReview.quality_rating && (;
                     <Badge variant='outline'>;
@@ -625,7 +606,6 @@ export function ReviewsModerationTable(): any ({;
 
 
                     </Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
 
                 </div>;
@@ -652,14 +632,12 @@ export function ReviewsModerationTable(): any ({;
                     variant='destructive'
                     onClick={() => handleReject(selectedReview && selectedReview.id)}
                     disabled={isPending}                  >;
-=======
                   <Button
 
                     variant="destructive"
                     onClick={() => handleReject(selectedReview.id)}
                     disabled={isPending}
                   >;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     Reject;
                   </Button>;
                   <Button
@@ -701,7 +679,6 @@ export function ReviewsModerationTable(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </DialogFooter>;
           </DialogContent>;
@@ -717,7 +694,6 @@ export function ReviewsModerationTable(): any ({;
 
 };"
 return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <TableHead>Rating</TableHead> <TableHead>Date</TableHead> <TableHead>Status</TableHead> <TableHead>Reports</TableHead> <TableHead className="text-right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-=======
             </TableRow>))}
         </TableBody>;
       </Table>;
@@ -860,7 +836,6 @@ if ( {") {
 }</div>);
 }";
 return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <TableHead > Rating</TableHead> <TableHead > Date</TableHead> <TableHead > Status</TableHead> <TableHead > Reports</TableHead> <TableHead className="text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   reviews.map ( (review) => (<TableRow key= {
   review.id ";
 }> <TableCell> <div className="flex items - center gap - 2"> <Avatar className="h - 8 w - 8"> {
@@ -913,15 +888,11 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>)
 }</>)
 }"}
-=======
     </>;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   review.status.char_at (0) .toUpperCase () + review.status.slice (1) ";
 }</Badge> </TableCell> <TableCell>) : (" None") ";
 }</TableCell> <Button size=" sm"variant=" outline"className=" h - 8 w - 8 p - 0"on_click={
@@ -968,11 +939,4 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead > Reviewer</TableHead> <T
 }</DialogFooter> </DialogContent> </Dialog>);
 }</>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 function ReviewsModerationContent() {
   const [active_tab, setActiveTab] = useState ('pending');
   const [reviews, set_reviews] = useState ([]);
@@ -38,10 +36,7 @@ function ReviewsModerationContent() {
   }, [active_tab]),
   const handle_refresh = () =>: any {
     fetch_reviews ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { SEO } from '@/components/SEO';
 import { ReviewsModerationTable } from '@/components/admin/reviews/ReviewsModerationTable';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
@@ -96,9 +91,7 @@ function ReviewsModerationContent() {;
 
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
 
-=======
             <Tabs defaultValue="pending" value={activeTab} onValueChange={setActiveTab}>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <TabsList className="mb-6">
                 <TabsTrigger value="pending">Pending Reviews</TabsTrigger>
                 <TabsTrigger value="reported">Reported Reviews</TabsTrigger>
@@ -146,10 +139,8 @@ function ReviewsModerationContent() {;
               <TabsContent value="pending" className="mt-0">;
 
                 <ReviewsModerationTable
-=======
                 <ReviewsModerationTable 
                   reviews={reviews}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
                   reviews = {reviews,}
@@ -158,7 +149,6 @@ function ReviewsModerationContent() {;
 
               
 
-=======
 
               
               <TabsContent value="pending" className="mt-0">
@@ -170,8 +160,6 @@ function ReviewsModerationContent() {;
               </TabsContent>
               
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <TabsContent value="reported" className="mt-0">
                 <div className="text-center py-12 border rounded-lg">
                   <AlertTriangle className="h-10 w-10 text-amber-500 mx-auto mb-2" />
@@ -183,7 +171,6 @@ function ReviewsModerationContent() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </div>
               </TabsContent>
             </Tabs>
@@ -197,7 +184,6 @@ function ReviewsModerationContent() {;
 
 
 export default function ReviewsModeration() {
-=======
       <SEO;
         title='Review Moderation | Zion AI Marketplace';
         description='Moderate and manage reviews in the Zion AI Marketplace';
@@ -209,13 +195,11 @@ export default function ReviewsModeration() {
             <p className='text - muted - foreground mt - 1'>;
               Manage, approve, or reject reviews;
             </p>;
-=======
   )
 
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"};
 ;
 
-=======
 import { SEO } from "@/components/SEO",;
 import { ReviewsModerationTable } from "@/components/admin/reviews/ReviewsModerationTable",;
 import { ProtectedRoute } from "@/components/ProtectedRoute",;
@@ -263,13 +247,11 @@ function ReviewsModerationContent() {;
           <div>;
             <h1 className="text-3xl font-bold">Review Moderation</h1>;
             <p className="text-muted-foreground mt-1">Manage, approve, or reject reviews</p>;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
         <Card>;
           <CardHeader>;
 
-=======
             <CardTitle className="flex items-center gap-2">;
               <Star className="h-5 w-5" />;
               Review Management;
@@ -324,7 +306,6 @@ export default function ReviewsModeration() {;
   );
 
 
-=======
 return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" /> <main className="container mx - auto px - 4 py - 8" > <div className="flex justify - between items - center mb - 8" > <div> <h1 className="text - 3xl font - bold" >Review Moderation</h1> <p className="text - muted - foreground mt - 1" >Manage, approve, or reject reviews</p> </div> </div> <Card> <CardHeader> <CardTitle className="flex items - center gap - 2" > <Star className="h - 5 w - 5" /> Review Management </CardTitle> <CardDescription> Review and moderate user - submitted reviews before they go live </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="mt - 0" > <ReviewsModerationTable reviews= {
   reviews;
 }is_loading= {
@@ -337,12 +318,5 @@ return (<> <SEO title="Review Moderation | Zion AI Marketplace" description="Mod
  */
 function ReviewsModeration() {
   return (<ProtectedRoute> <ReviewsModerationContent /> </ProtectedRoute> '"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 import Link from 'next/link';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
@@ -7,7 +5,6 @@ import { LoadingSpinner  } from '@/components/ui/enhanced-loading-states';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
-=======
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-domimport { useFormik } from 'formik'
@@ -21,7 +18,6 @@ import { Alert, AlertDescription } from '@/components/ui/alert'
 import { PasswordStrengthMeter } from '@/components/PasswordStrengthMeter'
 import { AuthButtons } from '@/components/AuthButtons'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 
 
@@ -43,7 +39,6 @@ export default function Signup() {;
   // Check if this is a partner signup
   const isPartnerSignup = router.query.type === 'partner'
   const signupSource = (router.query.source as string) |'direct'
-=======
 import { useState, useEffect } from 'react';
 import { use_router } from 'next / router'; // Changed from react-router-domimport { use_formik } from 'formik';
 import * as Yup from 'yup';
@@ -91,7 +86,6 @@ function Signup() {
   // Check if this is a partner signup;
   const isPartnerSignup = router.query.type === 'partner';
   const signup_source = (router.query.source as string) || 'direct';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   const performHealthCheck = async () => {
     setHealthCheckLoading (true);
     setHealthCheckError (null);
@@ -116,7 +110,6 @@ if ( {) {
         setHealthCheckError(
           'Authentication service is temporarily unavailable'
         )
-=======
       logErrorToProduction ('Auth service health check failed', { data: err });
       setAuthServiceAvailable (false);
       // Set a more specific error message based on the error type;
@@ -132,7 +125,6 @@ if ( {) {
 }
         setHealthCheckError (
           'Authentication service is temporarily unavailable');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } else {
         setHealthCheckError ('Unable to verify authentication service status');
       }
@@ -270,7 +262,6 @@ if ( {) {
           // Set the error on password field if it's password-related
           if (errorMsg.toLowerCase().includes('password')) {
             setErrors({ password: errorMsg })
-=======
             : 'No config',
         });
         const status = err.response?.status;
@@ -304,7 +295,6 @@ if ( {) {
   $2
 }
             set_errors ({ password: error_msg });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           } else {
             set_errors ({ confirm: error_msg });
           }
@@ -613,7 +603,6 @@ export default function Signup() {;
         </div>;
       </AuthLayout>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
     <AuthLayout>;
@@ -887,7 +876,6 @@ export default function Signup() {;
               />;
               <label htmlFor='terms' className='text-sm'>;
 
-=======
                 </div>)}
             </div>;
             <div className='flex items - center space - x-2'>;
@@ -901,7 +889,6 @@ export default function Signup() {;
                 disabled={loading || emailVerificationRequired}
               />;
               <label html_for='terms' className='text - sm'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 I agree to the{' '}
                 <Link href='/terms' className='underline'>;
                   Terms of Service;
@@ -918,13 +905,11 @@ export default function Signup() {;
 
               <Button
                 type='submit'
-=======
             {formik.touched.terms && formik.errors.terms && (
               <div className='text - red - 500 text - sm'>{formik.errors.terms}</div>)}
             {!emailVerificationRequired ? (
               <Button;
                 type='submit';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 disabled={loading}
                 data - testid='signup - submit';
                 className={
@@ -966,7 +951,6 @@ export default function Signup() {;
                     setEmailVerificationRequired(false);
                     setSuccessMessage('');
 
-=======
                 <Button;
                   type='button';
                   variant='ghost';
@@ -974,7 +958,6 @@ export default function Signup() {;
                   on_click={() => {
                     setEmailVerificationRequired (false);
                     setSuccessMessage ('');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   }}
                 >;
                   Try Different Email;
@@ -1170,7 +1153,6 @@ export default function Signup() {;
               </Button>
 
 
-=======
               <Button
                 type="button"
                 variant="ghost"
@@ -1194,8 +1176,6 @@ export default function Signup() {;
           )}
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>
@@ -1436,7 +1416,6 @@ if (return) {
       // Check condition
 if ( {) {
   $2
-=======
 
           form.setError("root", { message: sessionError.message || "Failed to set session. Please try logging in." })
           toast.error(sessionError.message || "Failed to set session. Please try logging in.")
@@ -1447,7 +1426,6 @@ if ( {) {
         form.set_error ('email', { message: res_data.message });
         toast.error ('Email already registered – please login.');
         return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
       // Check for successful response;
       // Check condition
@@ -1676,7 +1654,6 @@ export default function Signup() {;
     if (firstError) {;
       form && form.setFocus(firstError);
 
-=======
   const on_invalid = (errors: any) =>: any {
     const first_error = Object.keys (errors)[0] as keyof SignupFormValues;
     // Check condition
@@ -1684,7 +1661,6 @@ if ( {) {
   $2
 }
       form.set_focus (first_error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }
   }
   // Redirect if user is already logged in and has completed profile;
@@ -1726,24 +1702,16 @@ const Signup = () => {;
               <div className="bg-white p-6 rounded-lg shadow-md">;
                 <h2 className="text-2xl font-semibold mb-4">Why Choose Us</h2>;
                 <ul className="text-gray-600 space-y-2">;
-=======
     return <Navigate to="/" />;
 }
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }};
 };
 
-=======
         </div>;
       </div>;
     </AuthLayout>;
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

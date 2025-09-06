@@ -1,6 +1,3 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter()
   const { id: rawId } = router.query
@@ -181,7 +178,6 @@ const WhitepaperViewPage: React.FC = () => {;
   }
 
   if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex flex-col justify-center items-center h-screen text-red-600">;
         <p>Error: {error}</p>;
@@ -251,7 +247,6 @@ const WhitepaperViewPage: React.FC = () => {;
 
 export default WhitepaperViewPage,;
 
-=======
     },
     fetch_whitepaper ();
   }, [id]),
@@ -323,11 +318,6 @@ if ( {) {
 },
 export default WhitepaperViewPage,
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
         setError("No whitepaper ID provided."),
         setLoading(false),
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,3 @@
-
-
-
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 
 import Link from 'next / link'; // Changed from react-router-dom;
@@ -14,11 +11,8 @@ import {
   TableCell
   TableHead
   TableHeader
-=======
 
 
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
 
 
 export default function OrdersPage() {;
@@ -50,17 +44,14 @@ export default function OrdersPage() {;
         )
 
       default:
-=======
           <Badge variant='destructive' className='flex items-center gap-1'>;
             <ShieldAlert className='h-3 w-3' /> Disputed;
           </Badge>;
         ),;
       default:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return status;
     }
   }
-=======
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react'
 import Link from 'next/link', // Changed from react-router-dom
 import { useAuth } from '@/hooks/useAuth',
@@ -98,7 +89,6 @@ import {
 
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
 
@@ -147,7 +137,6 @@ import {
           description="You haven't purchased anything yet."
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         />
       ) : (
         <Table>
@@ -168,7 +157,6 @@ import {
                 <TableCell className="font-medium">{order.orderId}</TableCell>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <TableCell>{formatDate(order.date)}</TableCell>
                 <TableCell>{order.total}</TableCell>
                 <TableCell>{getStatusBadge(order.status)}</TableCell>
@@ -181,7 +169,6 @@ import {
                   </Link>
                 </TableCell>
               </TableRow>
-=======
           title='No Orders'          description="You haven't purchased anything yet.";
         />;
       ) : (;
@@ -209,13 +196,11 @@ import {
                   </Link>;
                 </TableCell>;
               </TableRow>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
 
 
 ;
 
-=======
 
           </TableBody>;
         </Table>;
@@ -224,9 +209,7 @@ import {
   );
 }
 
-=======
 
-=======
 ;
   TableRow,
 
@@ -333,11 +316,4 @@ function OrdersPage() {
         </Table>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

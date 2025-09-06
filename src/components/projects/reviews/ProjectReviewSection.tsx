@@ -1,7 +1,3 @@
-
-
-
-
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth(),
   const { reviews, userReview, isLoading, reportReview } = useReviews(project.id),
@@ -26,8 +22,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card className='mt-6'>
       <CardHeader>
@@ -43,7 +37,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
 
 
 
-=======
       
 
       <CardContent>
@@ -51,8 +44,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
           <div className="space-y-6">
             {(isClient || isTalent) && (
               <div className="border-b pb-4 mb-4">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {canLeaveReview ? (
                   <div className='bg-muted/20 rounded-lg p-4 text-center'>
                     <h3 className='font-medium mb-2'>Share your experience</h3>
@@ -66,7 +57,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
                 ) : hasLeftReview ? (
 
 import { useState } from 'react';
-=======
                   <div className="bg-muted/20 rounded-lg p-4 text-center">
                     <h3 className="font-medium mb-2">Thank you for your review!</h3>
                     <p className="text-sm text-muted-foreground mb-3">
@@ -153,7 +143,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
                       Thank you for your review!;
                     </h3>;
                     <p className='text-sm text-muted-foreground mb-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                       Your review is{' '}
                       {userReview && userReview.status === 'approved';
                         ? 'published';
@@ -168,7 +157,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 ) : null}
@@ -204,7 +192,6 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 
 }
 
-=======
 ;
             <ReviewsList;
               reviews={reviews}
@@ -229,13 +216,8 @@ export function ProjectReviewSection(): any ({ project }: ProjectReviewSectionPr
 };
 };
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { Project } from '@/types / projects';
 import { useState } from 'react';
 import { Star } from 'lucide-react';
@@ -347,7 +329,3 @@ function ProjectReviewSection() {
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,13 +1,9 @@
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  // Get suggestion color
+// Get suggestion color
   const getSuggestionColor = (suggestion: string | undefined,) => {
     switch (suggestion) {
 
       case "Strongly Recommended": return "bg-green-100 text-green-800",
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800"
       case "Low Match":
@@ -49,7 +45,6 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         return "bg-gray-100 text-gray-800";
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   }
   // Trigger the scoring process
@@ -158,7 +153,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
           toast && toast.info("Scoring is taking longer than expected. Check back later.");
         }
       },;
-=======
 
           setIsScoring(false),
           toast.error("Failed to check scoring status"),
@@ -183,7 +177,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
     }
   },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
       setTimeout(checkScore, 3000);
 
@@ -192,7 +185,6 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
       toast && toast.error(`Failed to score resume: ${error && error.message}`);
     }
   },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   // Render the score result or button to score;
   return (
@@ -273,22 +265,17 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
 
 
                       </div>;
-=======
-=======
                       </div>;
 
 
                     )}
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {application.match_breakdown.experience_match && (
                       <div>
                         <p className="font-medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>
                         <p>{application.match_breakdown.experience_match.analysis}</p>
                       </div>
                     )}
-=======
 import { useState  } from './react';
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
@@ -451,7 +438,6 @@ if ( {) {
                         <p className="font - medium">Experience Match: {application.match_breakdown.experience_match.score}/100</p>;
                         <p>{application.match_breakdown.experience_match.analysis}</p>;
                       </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     {application.match_breakdown.certifications_match && (
                       <div>;
                         <p className="font - medium">Certifications Match: {application.match_breakdown.certifications_match.score}/100</p>;
@@ -461,21 +447,16 @@ if ( {) {
 
 
                       </div>;
-=======
-=======
                       </div>;
 
 
                     )}
                     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {application.match_breakdown.education_match && (
                       <div>
                         <p className="font-medium">Education Match: {application.match_breakdown.education_match.score}/100</p>
                         <p>{application.match_breakdown.education_match.analysis}</p>
                       </div>
-=======
                       </div>;
                     )}
 
@@ -496,7 +477,6 @@ if ( {) {
                           <p>Missing certs: {application && application.match_breakdown.certifications_match && certifications_match.missing.join(", ")}</p>;
                         )}
                       </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     )}
 
                     {application && application.match_breakdown.education_match && (;
@@ -528,19 +508,16 @@ if ( {) {
                 </>;
               ) : (;
                 "Score Resume";
-=======
 
             <Button 
               onClick={handleScore} 
               disabled={isScoring}
 
-=======
             <Button 
 
               onClick={handleScore} 
               disabled={isScoring}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full"
             >
               {isScoring ? (
@@ -550,7 +527,6 @@ if ( {) {
                 </>
               ) : (
                 "Score Resume"
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </Button>;
           </div>;
@@ -561,7 +537,6 @@ if ( {) {
   );
 }
 
-=======
                           <p > Missing certs: {application.match_breakdown.certifications_match.missing.join (", ")}</p>)}
                       </div>)}
                     {application.match_breakdown.education_match && (
@@ -593,11 +568,5 @@ if ( {) {
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
