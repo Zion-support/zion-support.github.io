@@ -19,7 +19,12 @@ export default function HomePage() {
 origin/main
 import Link from 'next/link';
 import Head from 'next/head';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import Image from 'next/image';
+import { Suspense } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
 
 
         {/* Features Section */}
@@ -169,10 +174,15 @@ function HomePage() {
     <>
       <Head>
         <title>Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions</title>
+<<<<<<< HEAD
         <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 350+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions." />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps, enterprise software, digital transformation" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+=======
+        <meta name="description" content="Leading provider of micro SaaS products, AI services, and IT solutions. 350+ innovative services including quantum computing, AI automation, blockchain, edge computing, and enterprise technology solutions. Transform your business with cutting-edge technology." />
+        <meta name="keywords" content="micro SaaS, AI services, IT solutions, cloud computing, automation, machine learning, DevOps, cybersecurity, quantum computing, blockchain, edge computing, 5G, IoT, MLOps, DevSecOps, business automation, digital transformation" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
         <link rel="canonical" href={contact.site} />
         <link rel="alternate" type="application/rss+xml" title="Zion Tech Group RSS Feed" href="/rss.xml" />
         <meta property="og:title" content="Zion Tech Group - Innovative Micro SaaS, AI & IT Solutions" />
@@ -318,8 +328,13 @@ function HomePage() {
                 <h3 className="text-2xl font-bold text-blue-400 mb-2" aria-label="150 plus micro SaaS products">150+</h3>
                 <p className="text-slate-300">Micro SaaS Products</p>
               </div>
+<<<<<<< HEAD
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105">
                 <h3 className="text-2xl font-bold text-purple-400 mb-2" aria-label="100 plus AI services">100+</h3>
+=======
+              <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10">
+                <h3 className="text-2xl font-bold text-purple-400 mb-2">100+</h3>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-347d
                 <p className="text-slate-300">AI Services</p>
               </div>
               <div className="p-6 bg-slate-900/60 rounded-lg border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105">
