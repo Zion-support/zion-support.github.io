@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-06T22:41:57.808Z",
+  "timestamp": "2025-09-06T23:48:53.496Z",
   "securityIssues": [
     {
       "type": "sensitive-env",
@@ -142,25 +142,7 @@
     },
     {
       "type": "input-validation",
-      "file": "/workspace/src/components/AnalyticsDashboard.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/AuthButtons.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
       "file": "/workspace/src/components/BackToTopButton.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/BenefitsSection.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
     },
@@ -472,6 +454,12 @@
     },
     {
       "type": "input-validation",
+      "file": "/workspace/src/components/GlobalErrorHandler.tsx",
+      "issue": "Missing input validation",
+      "recommendation": "Add proper input validation for user inputs"
+    },
+    {
+      "type": "input-validation",
       "file": "/workspace/src/components/GlobalPresenceSection.js.jsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
@@ -581,12 +569,6 @@
     {
       "type": "input-validation",
       "file": "/workspace/src/components/ListingScoreCard.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/LoadingSpinner.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
     },
@@ -923,18 +905,6 @@
     {
       "type": "input-validation",
       "file": "/workspace/src/components/admin/whitelabel/TenantsList.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/admin/zion-gpt/ModelManager.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/advanced/DynamicComponentLoader.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
     },
@@ -1426,12 +1396,6 @@
     },
     {
       "type": "input-validation",
-      "file": "/workspace/src/components/onboarding/ProfileSetup.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
       "file": "/workspace/src/components/onboarding/UserTypeSelection.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
@@ -1492,12 +1456,6 @@
     },
     {
       "type": "input-validation",
-      "file": "/workspace/src/components/profile/ProfileRatings.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
       "file": "/workspace/src/components/profile/ServiceProviderRegistrationForm.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
@@ -1552,12 +1510,6 @@
     },
     {
       "type": "input-validation",
-      "file": "/workspace/src/components/projects/milestones/MilestonesList.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
       "file": "/workspace/src/components/projects/reviews/ProjectReviewSection.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
@@ -1600,18 +1552,6 @@
     },
     {
       "type": "input-validation",
-      "file": "/workspace/src/components/resume-builder/forms/certifications/CertificationsForm.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/resume-builder/forms/skills/BulkAddSkills.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
       "file": "/workspace/src/components/resume-builder/portfolio/PortfolioBuilder.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
@@ -1619,6 +1559,12 @@
     {
       "type": "input-validation",
       "file": "/workspace/src/components/resume-builder/portfolio/ProjectCard.tsx",
+      "issue": "Missing input validation",
+      "recommendation": "Add proper input validation for user inputs"
+    },
+    {
+      "type": "input-validation",
+      "file": "/workspace/src/components/resume-builder/portfolio/ProjectForm.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
     },
@@ -1637,12 +1583,6 @@
     {
       "type": "input-validation",
       "file": "/workspace/src/components/resume-builder/wizard/ResumeVersionSelector.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/resume-builder/wizard/ResumeWizard.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
     },
@@ -1703,12 +1643,6 @@
     {
       "type": "input-validation",
       "file": "/workspace/src/components/services/PageSections/CountryTabs.tsx",
-      "issue": "Missing input validation",
-      "recommendation": "Add proper input validation for user inputs"
-    },
-    {
-      "type": "input-validation",
-      "file": "/workspace/src/components/services/ServiceDescriptionForm.tsx",
       "issue": "Missing input validation",
       "recommendation": "Add proper input validation for user inputs"
     },
@@ -2032,7 +1966,7 @@
     }
   ],
   "summary": {
-    "totalIssues": 336,
+    "totalIssues": 325,
     "vulnerabilities": 0,
     "codeIssues": 2,
     "envIssues": 1,
