@@ -10,6 +10,7 @@ import globals from 'globals';
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
   recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all
 });
 
 export default [
@@ -137,7 +138,7 @@ export default [
       'pages_disabled/**',
       'src.pages.disabled/**',
       'vite.config-backup.ts'
-    ],
+    ]
   },
   {
     files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
@@ -154,21 +155,22 @@ export default [
         beforeEach: 'readonly',
         afterEach: 'readonly',
         beforeAll: 'readonly',
-        afterAll: 'readonly',
+        afterAll: 'readonly'
       },
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true,
-        },
-      },
+          jsx: true
+        }
+      }
     },
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks,
+      '@next/next': nextPlugin
       // '@next/next': nextPlugin, // Not needed for Vite project
     },
     rules: {
@@ -178,21 +180,21 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       'react/display-name': 'off',
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/ban-ts-comment': 'off',
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       'no-unused-vars': 'off',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
       'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
+      'react-hooks/exhaustive-deps': 'warn'
     },
     settings: {
       react: {
-        version: 'detect',
-      },
-    },
+        version: 'detect'
+      }
+    }
   },
   {
     files: ['**/*.js'],
@@ -206,11 +208,14 @@ export default [
         global: 'readonly',
         module: 'readonly',
         require: 'readonly',
-        exports: 'readonly',
-      },
+        exports: 'readonly'
+      }
     },
     rules: {
-      'no-console': 'off',
-    },
-  },
+      'no-console': 'off'
+    }
+  }
+      'no-console': 'off'
+    }
+  }
 ];

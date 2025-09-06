@@ -1,12 +1,4 @@
-import React from 'react',;
-import Head from 'next/head',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import Card from '../components/ui/Card',;
-import Link from 'next/link',;
-;
-export default function DocsPage() {;
-	return (;
-		<UltraFuturisticBackground variant="quantum" intensity="medium">;
+import React from 'react',import Head from 'next/head',import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',import Card from '../components/ui/Card',import Link from 'next/link',export default function DocsPage() {return (<UltraFuturisticBackground variant="quantum" intensity="medium">;
 			<Head>;
 				<title>Documentation | Zion Tech Group</title>;
 				<meta name="description" content="Developer documentation, API reference, and implementation guides for Zion Tech Group services." />;
@@ -31,5 +23,4 @@ export default function DocsPage() {;
 				</div>;
 			</div>;
 		</UltraFuturisticBackground>;
-	);
-}
+	)}

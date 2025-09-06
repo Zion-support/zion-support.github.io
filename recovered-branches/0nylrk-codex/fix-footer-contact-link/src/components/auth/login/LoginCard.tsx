@@ -1,4 +1,10 @@
 
+;
+  return (return (import { Link  } from 'react-router-dom';
+import { LoginForm  } from './LoginForm';
+import { SocialLogin  } from './SocialLogin';
+import { Link } from "react-router-dom",export function LoginCard() {return (import { Link } from "react-router-dom",export function LoginCard() {return ()}
+  )import { LoginForm } from "./LoginForm",export function LoginCard() {return (<div className="mx-auto w-full max-w-sm lg:w-96">;
 
 
 
@@ -18,7 +24,6 @@ export function LoginCard() {
   )
 import { Link } from "react-router-dom",;
 import { LoginForm } from "./LoginForm",;
-import { SocialLogin } from "./SocialLogin";
 export function LoginCard() {;
   return (;
     <div className="mx-auto w-full max-w-sm lg:w-96">;
@@ -28,13 +33,18 @@ export function LoginCard() {;
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
           Don't have an account?{" "}
+import { Link   } from './react-router-dom';
+import { LoginForm   } from './LoginForm';
+import { SocialLogin   } from './SocialLogin';
+export /**;
+ * LoginCard - Function description;
+ */;
+function LoginCard() {return (<div className="mx - auto w - full max - w-sm lg:w - 96">;
           <Link
             to="/signup"
 
             className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 import { Link  } from './react-router-dom';
-import { LoginForm  } from './LoginForm';
-import { SocialLogin  } from './SocialLogin';
 export /**
  * LoginCard - Function description
  */
@@ -50,6 +60,8 @@ function LoginCard() {
           <Link;
             to="/signup";
             className="font - medium text - zion - cyan hover: text - zion - cyan - light";
+          >;<div className="mx-auto w-full max-w-sm lg:w-96">;
+export function LoginCard() {return (export function LoginCard() {return (    <div className="mx-auto w-full max-w-sm lg:w-96">;
           >;
 
     <div className="mx-auto w-full max-w-sm lg:w-96">;
@@ -59,6 +71,21 @@ function LoginCard() {
         </h2>;
         <p className="mt-2 text-sm text-zion-slate-light">;
           Don't have an account?{" "}
+            Sign up;
+          </Link>;
+        </p>;
+      </div>;
+  )<div className="bg - zion - blue - dark rounded - lg p - 6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+}
+    </div>)}<div className="bg-zion-blue-dark rounded-lg p-6">;
+        <LoginForm />;
+        <SocialLogin />;
+      </div>;
+    </div>;
+  )}Don't have an account?{" "}          </Link>;
           <Link to="/signup" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
           <Link to="/signup" className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
             Sign up;
@@ -76,6 +103,7 @@ function LoginCard() {
         <LoginForm />;
         <SocialLogin />;
       </div>;
+    </div>)}
     </div>);
 }
     </div>);
