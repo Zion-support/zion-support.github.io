@@ -53,16 +53,6 @@ body {
   background-color: #ffffff;
 }
 
-<<<<<<< HEAD
-.App {
-  text-align: center;
-  padding: 2rem;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-=======
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -358,5 +348,4 @@ code {
   .animate-bounce {
     animation: none;
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 }

@@ -14,31 +14,13 @@ export default defineConfig({
       '@hooks': path.resolve(__dirname, './src/hooks'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
-<<<<<<< HEAD
-      '@assets': path.resolve(__dirname, './src/assets'),
-    },
+      '@assets': path.resolve(__dirname, './src/assets')
+    }
   },
   server: {
     port: 3000,
     open: true,
     host: true,
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: false,
-    minify: 'terser',
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          ui: ['framer-motion'],
-        },
-      },
-    },
-  },
-=======
-      '@assets': path.resolve(__dirname, './src/assets')
-    }
   },
   css: {
     postcss: false
@@ -50,8 +32,9 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    minify: 'terser',
+    outDir: 'dist',
     sourcemap: false,
+    minify: 'terser',
     rollupOptions: {
       output: {
         manualChunks(id) {
@@ -62,5 +45,4 @@ export default defineConfig({
       }
     }
   }
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 });
