@@ -1,11 +1,6 @@
 import dynamic from 'next/dynamic',
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-import { useWallet  } from '../../hooks/useWallet';
-import { fetchDepinActivities, calculateRewards, DepinReward  } from '../../utils/depins';
-import { CHAINS } from '../../utils/chains';
-const ClientOnlyBridge = null;
-=======
+
 import { useWallet } from '../../hooks/useWallet';
 import {
   fetchDepinActivities
@@ -84,7 +79,7 @@ export default function TokenIntegrationsPage() {
                   {r.network} — {r.reason}
                 </span>
                 <span className='font-medium'>+{r.points} ZION$</span>              </div>    const data = await res.json();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setSuggestion(data)
   }
   return (

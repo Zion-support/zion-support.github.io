@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import dynamic from 'next/dynamic',
-import { useAuth } from "@/hooks/useAuth",
-import { useRequireAuth } from "@/hooks/useAuthGuard",
-import { Button } from "@/components/ui/button",
-import { Header } from "@/components/Header",
-import { Badge } from "@/components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings, FileText, Heart, Key, ShoppingBag } from 'lucide-react'
-import { useGetOrdersQuery  } from '@/hooks/useOrders';
-import { useFavorites  } from '@/hooks/useFavorites';
-import { useToast } from "@/hooks/use-toast",
-import { EmptyState } from "@/components/ui/empty-state";
-import Link from 'next/link';
-// Lazy load heavy components to prevent router abort
-const CommunityDiscussion = null;
-                            variant: "destructive"})
-=======
+
 import React from 'react'
 import dynamic from 'next/dynamic'
 import { useAuth } from '@/hooks/useAuth'
@@ -291,7 +274,7 @@ export default function Dashboard() {
                             description: 'Please try again'
                             variant: 'destructive'
                           })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         }
                       }}
                     >

@@ -6,16 +6,7 @@ import { Filter, X, Star } from "lucide-react";
 import { FilterOptions } from "@/types/search";
 interface FilterSidebarProps {
   filters: {
-<<<<<<< HEAD
-    selectedProductTypes: string[];
-    selectedLocations: string[];
-    selectedAvailability: string[];
-    selectedRating: number | null
-  },
-  filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
-=======
+
     selectedProductTypes: string[]
     selectedLocations: string[]
     selectedAvailability: string[]
@@ -24,7 +15,7 @@ interface FilterSidebarProps {
   filterOptions: FilterOptions
   onFilterChange: (filterType: string, value: string) => void
   onRatingChange: (rating: number | null) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onClearFilters: () => void
 }
 export function FilterSidebar({

@@ -7,22 +7,14 @@ import { AIMatchingResults } from "@/components/AIMatchingResults",
 import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
 import { toast } from "@/hooks/use-toast";
 interface SummaryStepProps {
-<<<<<<< HEAD
-  formData: QuoteFormData;
-=======
+
   formData: QuoteFormData
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);
-<<<<<<< HEAD
-  const [matches, setMatches] = useState<MatchResult[]>([]),
-  
-  // Run AI matching when the component mounts
-  useEffect(() => {
-    const runMatching = null;
-=======
+
   const [matches, setMatches] = useState<MatchResult[]>([]);
   // Run AI matching when the component mounts
   useEffect(() => {
@@ -77,7 +69,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       handleSelectMatch(matchResult)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>

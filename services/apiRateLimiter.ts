@@ -2,11 +2,9 @@ export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
-<<<<<<< HEAD
-  burstLimit: number;
-=======
+
   burstLimit: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   windowSize: number
 }
 export interface RateLimitRule {
@@ -16,11 +14,9 @@ export interface RateLimitRule {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
   config: RateLimitConfig;
   enabled: boolean;
-<<<<<<< HEAD
-  createdAt: Date;
-=======
+
   createdAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   updatedAt: Date
 }
 export interface RateLimitStats {
@@ -32,11 +28,9 @@ export interface RateLimitStats {
   lastRequest: Date;
   currentUsage: {
     minute: number;
-<<<<<<< HEAD
-    hour: number;
-=======
+
     hour: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     day: number
   }
 }
@@ -47,11 +41,9 @@ export interface APIKey {
   permissions: string[];
   rateLimit: RateLimitConfig;
   createdAt: Date;
-<<<<<<< HEAD
-  lastUsed: Date;
-=======
+
   lastUsed: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isActive: boolean
 }
 export interface RateLimitViolation {
@@ -61,19 +53,14 @@ export interface RateLimitViolation {
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-<<<<<<< HEAD
-  ipAddress: string;
-=======
+
   ipAddress: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   userAgent: string
 }
 export class APIRateLimiterService {
   private apiKey: string;
-<<<<<<< HEAD
-  private baseUrl: string;
-  constructor(apiKey: string, baseUrl: string;
-=======
+
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
@@ -419,4 +406,4 @@ export const API_RATE_LIMITER_PRICING = {
     ]
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

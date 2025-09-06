@@ -1,19 +1,5 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { useForm } from "react-hook-form",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { z } from "zod",
-import { Loader2 } from "lucide-react",
-import { ContractFormValues } from "@/components/contracts/components/ContractForm",
-import { ContractTemplate } from "@/types/contracts",
-import { useContractTemplates } from "@/hooks/useContractTemplates",
-import { Button } from "@/components/ui/button",
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-const formSchema = null;
-=======
+
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -72,7 +58,7 @@ export function TemplateSaveForm({
       setSaving(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

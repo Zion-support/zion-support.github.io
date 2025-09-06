@@ -1,10 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
-  const state = null;
-=======
+
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
   const events = filterEventsByScope(state.events, state.config.scope)
@@ -31,6 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     lastSyncedAt: state.lastSyncedAt})
 }

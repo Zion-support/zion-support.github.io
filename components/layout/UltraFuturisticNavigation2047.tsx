@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, ChevronDown, X, Phone, Mail, ArrowRight;
-=======
+
 import {
   Menu
   ChevronDown
@@ -68,7 +66,7 @@ interface NavigationItem {
   name: string;
   href: string;  icon?: React.ReactNode;import {
   Menu, ChevronDown, X, Phone, Mail, ArrowRight;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain, Rocket, Target, Atom, Shield;
   DollarSign, BarChart3, Globe, Grid, Heart, Database;
   Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
@@ -76,18 +74,12 @@ interface NavigationItem {
   Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon;
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin
-<<<<<<< HEAD
- } from 'lucide-react';
-interface NavigationItem {
-  name: string;
-  href: string;
-  icon?: React.ReactNode;
-=======
+
 } from 'lucide-react';
 interface NavigationItem {
   name: string
   href: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   description?: string;
   children?: NavigationItem[];
   badge?: string;
@@ -98,11 +90,7 @@ interface NavigationItem {
 }
 const navigationItems: NavigationItem[] = [
   {
-<<<<<<< HEAD
-    name: 'Home & Core';
-    href: '/';
-    icon: <Home className;
-=======
+
     name: 'Home & Core'
     href: '/'
     icon: <Home className='w-5 h-5' />,    description: 'Main pages and core information'
@@ -822,4 +810,4 @@ const UltraFuturisticNavigation2047 = () => {
 export default UltraFuturisticNavigation2047;  )
 }
 export default UltraFuturisticNavigation2047;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

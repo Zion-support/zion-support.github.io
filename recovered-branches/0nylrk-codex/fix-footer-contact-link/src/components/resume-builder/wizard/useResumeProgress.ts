@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import { useState, useEffect  } from 'react';
-import { Resume } from '@/types/resume';
-export const useResumeProgress = null;
-=======
 import { useState, useEffect } from "react";
 import { Resume } from "@/types/resume";
 export const useResumeProgress = (resume: Resume | null) => {
@@ -38,4 +33,4 @@ export const useResumeProgress = (resume: Resume | null) => {
   }, [resume]);
   return progress;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

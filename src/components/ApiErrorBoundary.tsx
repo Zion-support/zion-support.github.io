@@ -10,19 +10,7 @@ interface ApiErrorBoundaryProps {
   queryClient?: QueryClient;
   fallback?: ReactNode
 }
-<<<<<<< HEAD
 
-interface ApiErrorBoundaryState {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: any;
-  isRetrying: boolean;
-  isOnline: boolean
-}
-
-export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
-  private retryTimeoutId: NodeJS.Timeout | null;
-=======
 render () {
   if (this.state.hasError) {'
   //Check if it's a network-related error const isNetworkError = this.state.error?.message?.includes ('fetch') |this.state.error?.message?.includes ('network') |this.state.error?.message?.includes ('timeout') |!this.state.isOnline
@@ -224,4 +212,4 @@ export const useApiErrorHandler = () => {
 }
   return { handleApiError }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

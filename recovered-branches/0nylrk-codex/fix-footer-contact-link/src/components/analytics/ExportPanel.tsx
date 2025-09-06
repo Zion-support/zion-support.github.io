@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-=======
 import React from "react";
 import {
   Card
@@ -11,14 +7,12 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 export function ExportPanel() {
   const { toast } = useToast();
-<<<<<<< HEAD
-  const handleExport = null;
-=======
+
   const handleExport = (format: "csv" | "json") => {
     // Placeholder for actual export functionality
     (toast({
@@ -33,7 +27,7 @@ export function ExportPanel() {
         });
       }, 1500));
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light">
       <CardHeader>

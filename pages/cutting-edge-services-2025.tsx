@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion  } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, ExternalLink  } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices2025  } from '../data/2025-cutting-edge-ai-services';
-import { cuttingEdgeITServices2025  } from '../data/2025-cutting-edge-it-services';
-import { cuttingEdgeMicroSaasServices2025  } from '../data/2025-cutting-edge-micro-saas';
-import { cuttingEdgeEmergingTechServices2025 } from '../data/2025-cutting-edge-emerging-tech';
-const contactInfo = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -96,7 +84,7 @@ export default function CuttingEdgeServices2025() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
               Experience the future of technology with our revolutionary services that combine AI consciousness
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

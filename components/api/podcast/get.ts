@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-=======
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -29,6 +27,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!episode) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ episode });  const episode = episodes.find((e) => e.id === id);
   if (!episode) return res.status(404).json({ error: 'Not found' });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ episode })
 }

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const cuttingEdgeAIServices2025 = null;
-=======
+
 export const cuttingEdgeAIServices2025 = [
   {
     id: 'ai-consciousness-evolution-pro'
@@ -438,4 +436,4 @@ export const cuttingEdgeAIServices2025 = [
     compliance: ['SOC2ISO 27001GDPRCCPAIntellectual property protection']
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

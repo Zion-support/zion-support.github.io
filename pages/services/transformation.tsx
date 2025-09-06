@@ -1,15 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Rocket, Zap, Shield, Cpu, Database, Users;
-  ArrowRight, CheckCircle, Star, Clock, TrendingUp, Globe
- } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function DigitalTransformationPage() {
-  const services = null;
-=======
+
 import {
   Rocket
   Zap
@@ -89,7 +81,7 @@ export default function DigitalTransformationPage() {
     { number: '300%', label: 'ROI Improvement', icon: Star }
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>

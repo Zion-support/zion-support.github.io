@@ -7,19 +7,13 @@ import { Loader2, Sparkles, Check  } from 'lucide-react';
 import { Badge  } from '@/components/ui/badge';
 import { format, parseISO } from 'date-fns';
 interface MilestoneSuggestionsProps {
-<<<<<<< HEAD
-  projectName: string;
-  scopeSummary: string;
-  startDate: Date;
-  endDate?: Date;
-  projectType: string;
-=======
+
   projectName: string
   scopeSummary: string
   startDate: Date
   endDate?: Date;
   projectType: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void
 }
 export function MilestoneSuggestions({
@@ -32,9 +26,7 @@ export function MilestoneSuggestions({
 }: MilestoneSuggestionsProps) {
   const { generateMilestones, generatedMilestones, isGenerating } = useMilestoneGenerator();
   const [showSuggestions, setShowSuggestions] = useState(false);
-<<<<<<< HEAD
-  const handleGenerateMilestones = null;
-=======
+
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
       scope: `${projectName}: ${scopeSummary}`
@@ -57,7 +49,7 @@ export function MilestoneSuggestions({
       return dateString
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       {!showSuggestions && (

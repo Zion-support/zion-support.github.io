@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react";
-import { QrCode } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons";
-export const QrCodeDownload: React.FC;
-=======
 }
 import React from "react"
 import { QrCode } from 'lucide-react'import { AppStoreButtons } from "./AppStoreButtons"
@@ -52,4 +46,4 @@ export const QrCodeDownload: React.FC = () => {
   )
 }
 "
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -5,11 +5,7 @@ import { format } from 'date-fns';
  * @returns Formatted date string
  */
 export function formatDate(date: Date | string | undefined): string {
-<<<<<<< HEAD
-  if (!date) return '-';
-  try {
-    if (typeof date;
-=======
+
   if (!date) return '-'
   try {
     if (typeof date === 'string') {
@@ -55,7 +51,7 @@ export async function trackReferral(userId: string, email: string) {
         email
         ipAddress: '', // This will be captured by the server
       })});
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (response.ok) {
       // Clear the stored referral code
       localStorage.removeItem('referral_code')

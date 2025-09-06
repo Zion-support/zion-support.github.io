@@ -1,15 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  ArrowRight, Star, TrendingUp, Users, Award, Play;
-  CheckCircle, DollarSign, Clock, Target, Crown
- } from 'lucide-react';
-export default function UltraFuturisticHero2028() {
-  const features = null;
-            and Autonomous AI Civilization. We're building tomorrow's solutions today.
-=======
+
 import {
   Rocket
   Brain
@@ -184,7 +176,7 @@ export default function UltraFuturisticHero2028() {
             Civilization. We're building tomorrow's solutions today.          </p>
           <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-5xl mx-auto leading-relaxed">
             Experience revolutionary 2028 technology with AI Consciousness Evolution, Quantum Time Manipulation, and Autonomous AI Civilization. We're building tomorrow's solutions today.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </p>
         </motion.div>
         {/* CTA Buttons */}

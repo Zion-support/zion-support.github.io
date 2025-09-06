@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const usersPath = null;
-=======
+
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
 function readJson(p: string) {
@@ -32,7 +30,7 @@ res.setHeader('AllowPOST')
     user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map((l: any) => l.id) }
     users[userId] = user
     writeJson(usersPath, users)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(200).json({ ok: true, user })
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Failed to complete course' })

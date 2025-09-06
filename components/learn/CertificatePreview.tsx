@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-export default function CertificatePreview({ courseId, userId;
-=======
+
 import React from "react";
 export default function CertificatePreview({
   courseId
@@ -11,7 +8,7 @@ export default function CertificatePreview({
   userId?: string;
 }) {
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="border rounded p-4">
       <div className="text-sm text-gray-600">Zion Certificate</div>

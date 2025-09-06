@@ -10,27 +10,20 @@ import { toast } from "@/hooks/use-toast",
 import { KanbanColumn } from "./KanbanColumn";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface DnDLocation {
-<<<<<<< HEAD
-  droppableId: string;
-=======
+
   droppableId: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   index: number
 }
 interface DropResult {
-<<<<<<< HEAD
-  draggableId: string;
-  source: DnDLocation;
-=======
+
   draggableId: string
   source: DnDLocation
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   destination?: DnDLocation | null
 }
 // Define the kanban board columns based on application statuses
-<<<<<<< HEAD
-const COLUMNS = null;
-=======
+
 const COLUMNS = [
   {
     id: "new"
@@ -107,7 +100,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
         variant: "destructive"})
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>

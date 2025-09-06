@@ -16,9 +16,7 @@ function InterviewsContent() {
   const [activeTab, setActiveTab] = useState("upcoming");
   useEffect(() => {
     // Modified to handle Promise<Interview[]> return type
-<<<<<<< HEAD
-    const loadInterviews = null;
-=======
+
     const loadInterviews = async () => {
       await fetchInterviews()
     }
@@ -84,7 +82,7 @@ function InterviewsContent() {
         </div>
       ))
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

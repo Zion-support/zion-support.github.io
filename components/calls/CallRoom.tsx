@@ -1,10 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets  } from 'livekit-client';
-import ParticipantTile from './ParticipantTile';
-import Controls from './Controls';
-export type StartMode = any;
-=======
+
 import {
   Room
   RoomEvent
@@ -134,7 +129,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     if (count <= 4) return 'grid-cols-2 md:grid-cols-2';
     return 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4';
   }, [participants.length]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'>
       <div className='p-4 flex items-center justify-between border-b border-gray-800'>

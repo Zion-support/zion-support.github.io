@@ -8,12 +8,7 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
 interface AIMatchingResultsProps {
-<<<<<<< HEAD
-  matches: MatchResultItem[];
-  onSelectMatch?: (match: MatchResultItem) => void;
-  isLoading?: boolean;
-  projectDescription?: string;
-=======
+
   matches: MatchResultItem[]
   onSelectMatch?: (match: MatchResultItem) => void
   isLoading?: boolean
@@ -23,22 +18,11 @@ interface AIMatchingResultsProps {
   onSelectMatch?: (match: MatchResultItem,) => void
   isLoading?: boolean
   projectDescription?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   serviceType?: string
 }
 export function AIMatchingResults({
-<<<<<<< HEAD
-  matches;
-  onSelectMatch;
-  isLoading;
-                        match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
-                        match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
-                        "bg-green-500"
-                      )} />
-                      <div className="flex-1 p-4">
-                        <div className="flex items-start gap-4">
-                          <Avatar className="h-12 w-12 border border-zion-blue-light">
-=======
+
   matches
   onSelectMatch
   isLoading = false
@@ -152,7 +136,7 @@ export function AIMatchingResults({
                       <div className='flex-1 p-4'>
                         <div className='flex items-start gap-4'>
                           <Avatar className='h-12 w-12 border border-zion-blue-light'>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                             {match.image ? (
                               <AvatarImage
                                 src={match.image}

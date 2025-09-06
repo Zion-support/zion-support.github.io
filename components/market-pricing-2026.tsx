@@ -1,10 +1,6 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-=======
+
 import { motion } from 'framer-motion';
 import {
   TrendingUp
@@ -23,7 +19,7 @@ import {
   Award;
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
@@ -32,9 +28,7 @@ export default function MarketPricing2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [priceRange, setPriceRange] = useState('all');
   // Combine all 2026 services
-<<<<<<< HEAD
-  const allServices = null;
-=======
+
   const allServices = [
     ...revolutionary2026Services
     ...emergingTech2026Services
@@ -259,7 +253,7 @@ export default function MarketPricing2026() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Comprehensive pricing analysis and competitive positioning for our revolutionary AI
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 quantum computing, and emerging technology services
               </p>
               {/* Pricing Statistics */}

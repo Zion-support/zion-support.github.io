@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = null;
-      currency: 'USD'})
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -58,7 +52,7 @@ export default async function handler(
       payout_amount: total_profile_completions * 50
       currency: "USD"
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }

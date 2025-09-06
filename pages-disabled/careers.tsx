@@ -6,9 +6,7 @@ import { Users, Rocket, Brain, Atom, Shield, Cloud;
  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 export default function CareersPage() {
-<<<<<<< HEAD
-  const openPositions = null;
-=======
+
   const openPositions = [
     {
       title: "Senior AI Engineer"
@@ -338,7 +336,7 @@ export default function CareersPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       <EnhancedFooter />
     </div>
   )

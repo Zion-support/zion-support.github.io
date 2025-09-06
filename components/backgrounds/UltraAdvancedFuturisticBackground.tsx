@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface UltraAdvancedFuturisticBackgroundProps {
-  children: React.ReactNode;
-  intensity?: 'low' | 'medium' | 'high' | 'extreme';
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'quantum-fusion';
-  particleCount?: number;
-  animationSpeed?: number;
-  enableHolographic?: boolean;
-  enableQuantumEffects?: boolean
-}
 
-export default function UltraAdvancedFuturisticBackground({ 
-  children;
-  intensity;
-=======
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 const particles: Array< {
@@ -455,7 +439,7 @@ export default function UltraAdvancedFuturisticBackground({
   );      }
     }
   }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="relative min-h-screen">
       <canvas

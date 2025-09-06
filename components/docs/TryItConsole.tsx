@@ -1,8 +1,7 @@
 import React, { useMemo, useState } from 'react';
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-<<<<<<< HEAD
-=======
+
   path: string; // full URL or relative
   requiresAuth: boolean;
 export default function TryItConsole({
@@ -11,23 +10,18 @@ export default function TryItConsole({
   requiresAuth
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-<<<<<<< HEAD
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os');
-  const [token, setToken] = useState('');
-=======
+
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-  const url = null;
-=======
+
   const url = useMemo(() => {
     if (path.startsWith('http')) return path;
     return baseUrl.replace(/\/$/, '') + path;  }, [baseUrl, path]);    return baseUrl.replace(/\/$/, '') + path
@@ -63,7 +57,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         headers;
         body: method === 'GET' |method === 'DELETE' ? undefined : body |undefined})
       const text = await res.text();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       setResponse(text)
     } catch (e: any) {
       setResponse(String(e?.message |e))

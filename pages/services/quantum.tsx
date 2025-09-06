@@ -1,15 +1,7 @@
 import React from 'react',
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Atom, Cpu, Shield, Rocket, Zap, Database;
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
- } from 'lucide-react';
-import EnhancedNavigation from '../../components/EnhancedNavigation';
-import EnhancedFooter from '../../components/EnhancedFooter';
-export default function QuantumServicesPage() {
-  const services = null;
-=======
+
 import {
   Atom
   Cpu
@@ -89,7 +81,7 @@ export default function QuantumServicesPage() {
     { number: '10x', label: 'Performance Boost', icon: TrendingUp }
     { number: '24/7', label: 'Quantum Support', icon: Clock }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>
       <Head>

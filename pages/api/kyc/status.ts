@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { KycProfile } from '../../../utils/kyc';
-import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
-import fs from 'fs';
-import path from 'path';
-const DATA_DIR = null;
-    optionalDocuments: getOptionalDocuments(profile.role)})
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
@@ -38,4 +29,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     optionalDocuments: getOptionalDocuments(profile.role)
   });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

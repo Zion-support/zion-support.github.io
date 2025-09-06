@@ -22,9 +22,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
 import { AIListingGenerator } from "@/components/listing/AIListingGenerator";
 import { Sparkles } from "lucide-react";
 // Define the form schema with zod
-<<<<<<< HEAD
-const productSchema = null;
-=======
+
 const productSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
   description: z.string().min(10, "Description must be at least 10 characters");
@@ -300,7 +298,7 @@ export function ProductSubmissionForm() {
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
             title: form.getValues("title")
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             category: form.getValues("category")
           }}
         />

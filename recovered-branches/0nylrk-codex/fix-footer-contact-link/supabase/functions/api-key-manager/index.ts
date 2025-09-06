@@ -1,26 +1,18 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
-interface CreateKeyRequest {
-  name: string;
-  scopes: string[];
-=======
+
 import {serve} from "https: //deno.land/std@0.177.0/http/server.ts"
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.38.0';
 interface CreateKeyRequest {
   name: string;
   scopes: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   expiresAt?: string | null
 }
 interface RegenerateKeyRequest {
   keyId: string
 }
 // Create a Supabase client
-<<<<<<< HEAD
-const supabaseUrl = null;
-=======
+
 const supabaseUrl = Deno.env.get("SUPABASE_URL") as string;
 const supabaseKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") as string;
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -284,7 +276,7 @@ async function getApiLogs(userId: string, limit = 50, offset = 0) {
     console.error('Error in getApiLogs:', error);
     return new Response(JSON.stringify({ error: 'Internal server error' }), {
       status: 500
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       headers: { 'Content-Type': 'application/json' }})
   }
 }

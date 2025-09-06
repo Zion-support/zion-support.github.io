@@ -19,11 +19,9 @@ declare const globalThis: {
   console?: SafeConsole;
   process?: {
     env: {
-<<<<<<< HEAD
-      PORT?: string;
-=======
+
       PORT?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       [key: string]: string | undefined
     }
   }
@@ -32,18 +30,14 @@ declare const globalThis: {
 class MockApp {
   private commandHandlers: Record<string, Function> = {}
   command(commandName: string, handler: Function) {
-<<<<<<< HEAD
-    this.commandHandlers[commandName] = handler;
-=======
+
     this.commandHandlers[commandName] = handler
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return this
   }
   async start(port?: number): Promise<void> {
     // Safely log without direct console reference
-<<<<<<< HEAD
-    const safeConsole = null;
-=======
+
     const safeConsole = typeof globalThis !== 'undefined' ? globalThis.console : undefined;
     if (safeConsole && safeConsole.log) {
       safeConsole.log(`⚡️ Mock Zion Slack bot is running on port ${port |3000}!`)
@@ -98,4 +92,4 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
   await app.start(port)
 })();
 export default app;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

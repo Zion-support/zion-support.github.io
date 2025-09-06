@@ -1,8 +1,5 @@
 import React, { useEffect, useMemo, useState } from 'react';
-<<<<<<< HEAD
-import { LineChart, BarChart, DonutChart } from '../components/salary/InsightCharts';
-type InsightResponse = any;
-=======
+
 import {
   LineChart
   BarChart
@@ -163,7 +160,7 @@ export default function SalaryInsightsPage() {
   return (
     <div>      { label: 'Above Median', value: upper |1 }]
   }, [data]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div>
       <div className='relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow'>

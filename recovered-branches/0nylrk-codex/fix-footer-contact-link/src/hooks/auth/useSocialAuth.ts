@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-export const useSocialAuth = null;
-=======
+
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
 export const useSocialAuth = () => {
@@ -63,4 +59,4 @@ export const useSocialAuth = () => {
   }
   return { loginWithGoogle, loginWithFacebook, loginWithTwitter }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AiFinancialPlanningPlatform() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Financial Planning Platform"
 			description="Forecast revenue, optimize budgets, and model scenarios with AI-driven planning and real-time financial intelligence."
 			subtitle="Smarter, faster financial decisions"
@@ -20,7 +18,7 @@ export default function AiFinancialPlanningPlatform() {
 				"Budget vs. actuals with alerting"
 				"Integrations: NetSuite, QuickBooks, Stripe, Snowflake"
 				"Executive dashboards and board-ready reports"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Headcount planning and hiring plans"
 			]}
 			industries={["SaaS", "Ecommerce", "Fintech", "Professional Services"]}

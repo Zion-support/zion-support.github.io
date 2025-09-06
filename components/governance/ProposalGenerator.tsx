@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import EnhancedLayout from '../layout/EnhancedLayout';
-<<<<<<< HEAD
-export type ProposalType = 'Workforce Dev' | 'AI Ethics' | 'Digital ID' | 'Education';
-export type ProposalForm = any;
-=======
+
 export type ProposalType =
   | 'Workforce Dev'
   | 'AI Ethics'
@@ -141,7 +138,7 @@ export default function ProposalGenerator() {
       setStatusMessage(`Submitted. Status: ${data.status |'queued'}. IPFS: ${data.ipfsCid |'N/A'}`)
     } catch (e) {
       console.error(e);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       setStatusMessage('Submission failed')
     }
   }

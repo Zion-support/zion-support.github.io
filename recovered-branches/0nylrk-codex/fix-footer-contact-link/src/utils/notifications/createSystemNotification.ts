@@ -8,9 +8,7 @@ export async function createSystemNotification({
   userId;
   title;
   message;
-<<<<<<< HEAD
-  actionUrl;
-=======
+
   actionUrl = null;
   actionText = null;
   sendEmail = false
@@ -22,7 +20,7 @@ export async function createSystemNotification({
     type: 'system';
     sendEmail;
     actionUrl
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     actionText
   })
 }

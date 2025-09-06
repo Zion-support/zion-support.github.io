@@ -7,9 +7,7 @@ import { Shield, Lock, Eye, AlertTriangle, Zap, Cpu;
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function QuantumCybersecurityPage() {
-<<<<<<< HEAD
-  const features = null;
-=======
+
   const features = [
     {
       icon: Shield
@@ -129,7 +127,7 @@ export default function QuantumCybersecurityPage() {
       popular: false
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

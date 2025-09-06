@@ -29,15 +29,11 @@ export interface ComprehensiveInnovativeService {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-    website: string
-  },
-=======
+
     address: string
     website: string
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -45,13 +41,7 @@ export interface ComprehensiveInnovativeService {
   rating: number;
   reviews: number;
   benefits: string[];
-<<<<<<< HEAD
-  capabilities: string[];
-  marketAdvantage: string
-}
 
-const contact = null;
-=======
   capabilities: string[]
   marketAdvantage: string
 }
@@ -478,4 +468,4 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
   }
 ];
 export default comprehensiveInnovativeServices;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -5,12 +5,7 @@ import { useAuth } from '@/hooks/useAuth';
 export function useFetchResume() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
-  const [resume, setResume] = useState<Resume | null>(null),
-  
-  const fetchResume = null;
-=======
+
   const [error, setError] = useState<string | null>(null);
   const [resume, setResume] = useState<Resume | null>(null);
   const fetchResume = async (resumeId?: string) => {
@@ -100,6 +95,6 @@ export function useFetchResume() {
     isLoading;
     error;
     resume;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     fetchResume}
 }

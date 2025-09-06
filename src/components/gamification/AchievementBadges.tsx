@@ -1,11 +1,7 @@
 import { BadgeCheck } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 export interface Achievement {
-<<<<<<< HEAD
-  id: string;
-  title: string;
-  description: string;
-=======
+
   id: string
   title: string
   description: string
@@ -18,7 +14,7 @@ export interface Achievement {
   id: string
   title: string
   description: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   achieved: boolean
 }
 interface AchievementBadgesProps {

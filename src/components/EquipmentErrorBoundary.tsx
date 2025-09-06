@@ -1,10 +1,6 @@
 import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react'
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-import {logErrorToProduction} from '@/utils/productionLogger';
-=======
+
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { logErrorToProduction } from '@/utils/productionLogger'
@@ -21,16 +17,14 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
   error?: Error
 }
 import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface Props {
   children: React.ReactNode
 }
 interface State {
-<<<<<<< HEAD
-  hasError: boolean;
-=======
+
   hasError: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   error?: Error
 }
 export class EquipmentErrorBoundary extends React.Component<Props, State> {

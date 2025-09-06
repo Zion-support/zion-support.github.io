@@ -10,13 +10,10 @@ export interface InnovativeAIService {
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
-    enterprise: number
-  },
-=======
+
     enterprise: number;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -39,29 +36,7 @@ export interface InnovativeAIService {
   rating: number;
   reviews: number;
   marketSize: string;
-<<<<<<< HEAD
-  growthRate: string
-}
 
-export const innovativeAIServicesV2: InnovativeAIService[] = [
-  {
-    id: 'ai-emotional-intelligence-platform';
-    name: 'AI Emotional Intelligence Platform';
-    tagline: 'Advanced AI that understands and responds to human emotions';
-    description: 'Revolutionary AI platform that analyzes emotional context, sentiment, and behavioral patterns to provide empathetic and contextually appropriate responses.',
-    category: 'AI & Consciousness';
-    price: {
-      monthly: 299;
-      yearly: 2990;
-      currency: 'USD';
-      trialDays: 14;
-      setupTime: '2 hours';
-      enterprise: 1299
-    },
-    features: [
-      'Emotional state recognitionSentiment analysis engineBehavioral pattern learningContext-aware responsesMulti-modal emotion detectionPersonality profilingEmotional intelligence scoringReal-time adaptation';
-      'Custom emotion modelsAPI for integration'
-=======
   growthRate: string;
 export const innovativeAIServicesV2: InnovativeAIService[] = [
   {
@@ -458,7 +433,7 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     growthRate: '28% annually'
   }
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     ];
     benefits: [
       'Improve customer satisfaction by 40%Enhance user engagement by 60%Reduce customer service escalationsCreate more personalized experiencesBuild stronger emotional connections'
@@ -674,11 +649,9 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
     customers: 950;
     rating: 4.6;
     reviews: 220;
-<<<<<<< HEAD
-    marketSize: '$15B AI governance market';
-=======
+
     marketSize: '$15B AI governance market'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     growthRate: '28% annually'
   }
 ];

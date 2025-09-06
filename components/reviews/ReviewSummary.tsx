@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import type { ReviewsSummary } from '../../types/reviews';
-import StarRating from './StarRating';
-type Props = any;
-export default ReviewSummary;
-=======
+
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -51,4 +45,4 @@ export default ReviewSummary;      <div>
 export default ReviewSummary;  )
 }
 export default ReviewSummary;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

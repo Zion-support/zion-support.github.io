@@ -2,14 +2,7 @@ import { useState, useEffect  } from 'react';
 import { GetServerSideProps  } from 'next';
 import fs from 'fs',
 import path from 'path';
-<<<<<<< HEAD
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw  } from 'lucide-react';
-=======
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -30,7 +23,7 @@ import {
   Download
   RefreshCw;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface LogEntry {
   id: string;
@@ -51,34 +44,20 @@ interface LogEntry {
     name: string;
     message: string;
     stack?: string;
-<<<<<<< HEAD
-    cause?: unknown
-  },
-=======
+
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   performance?: {
     memory?: number;
-<<<<<<< HEAD
-    timing?: number;
-    fps?: number
-  }
-}
 
-=======
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface LogsPageProps {
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
-<<<<<<< HEAD
-  lastUpdated: string
-}
 
-const LogLevelIcon = null;
-=======
   lastUpdated: string;
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
@@ -440,4 +419,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
     }
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

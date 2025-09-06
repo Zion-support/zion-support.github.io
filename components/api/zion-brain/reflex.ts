@@ -1,11 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
-function isAuthorized(req: NextApiRequest): boolean {
-  const token = null;
-      return res.status(500).json({ error: 'Reflex failure' })
-    }
-=======
+
 import {
   appendLog
   evaluateReflexes
@@ -58,7 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         payload: { error: e?.message |'unknown' }
       });
       return res.status(500).json({ error: 'Reflex failure' });    }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });

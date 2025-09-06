@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const advancedAIServices2025 = null;
-=======
+
 export const advancedAIServices2025 = [
   {
     id: 'ai-powered-business-intelligence-suite'
@@ -601,4 +599,4 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced threat detection with 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

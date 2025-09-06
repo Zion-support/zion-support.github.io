@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react';
-<<<<<<< HEAD
-type Note = any;
-=======
+
 type Note = {
   id: string
   targetType: string
@@ -28,7 +26,7 @@ export default function AdminNotesConsole() {
     }
     if (isAdmin) load()
   }, [isAdmin])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">

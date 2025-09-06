@@ -21,11 +21,9 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
         <div className="flex items-center">
           <Loader2 className="h-4 w-4 animate-spin mr-2" />
 interface ResultsHeaderProps {
-<<<<<<< HEAD
-  isLoading: boolean;
-=======
+
   isLoading: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   resultCount: number
 }
 export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {

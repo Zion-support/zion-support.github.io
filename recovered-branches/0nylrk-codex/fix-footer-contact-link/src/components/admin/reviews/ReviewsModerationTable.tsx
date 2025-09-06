@@ -1,37 +1,4 @@
-<<<<<<< HEAD
-import { useState } from "react",
-import { useMutation } from "@tanstack/react-query",
-import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
-import { format } from "date-fns",
-import { toast } from "@/hooks/use-toast",
-import { supabase } from "@/integrations/supabase/client";
-import { Review, ReviewStatus } from "@/types/reviews";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle} from "@/components/ui/dialog",
-import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-interface ReviewsModerationTableProps {
-  reviews: Review[];
-  isLoading: boolean;
-=======
+
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -48,7 +15,7 @@ import {Button} from "@/components/ui/button";
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onRefresh: () => void
 }
 export function ReviewsModerationTable({
@@ -59,15 +26,11 @@ export function ReviewsModerationTable({
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
-<<<<<<< HEAD
-      reviewId;
-      status}: {
-      reviewId: string;
-=======
+
       reviewId
       status}: {
       reviewId: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       status: ReviewStatus
     }) => {
       const { error } = await supabase
@@ -79,26 +42,16 @@ export function ReviewsModerationTable({
     }
     onSuccess: (data) => {
       toast({
-<<<<<<< HEAD
-        title: "Review updated";
-        description: `Review has been ${data.status}.`});
-=======
+
         title: "Review updated"
         description: `Review has been ${data.status}.`})
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       onRefresh();
       setViewDetailsOpen(false)
     }
     onError: (error: Error) => {
       toast({
-<<<<<<< HEAD
-        title: "Error";
-        description: `Failed to update review: ${error.message}`,
-        variant: "destructive"})
-    }});
 
-  const getStatusColor = null;
-=======
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
@@ -161,7 +114,7 @@ export function ReviewsModerationTable({
       </div>
     )
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Table>

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react";
-import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
-import { cn } from "@/lib/utils";
-type BadgeType = any;
-      className
-    )}>
-      <Icon className="w-3 h-3" />
-=======
 import React from 'react'
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -42,7 +33,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const { icon: Icon, text, colors } = badgeConfig[type]
     >
       <Icon className='w-3 h-3' />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       <span>{text}</span>
     </div>
   )

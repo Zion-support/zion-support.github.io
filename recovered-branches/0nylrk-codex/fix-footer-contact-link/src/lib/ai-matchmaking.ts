@@ -6,21 +6,17 @@ export interface MatchResultItem {
   description: string;
   category: string;
   price?: number;
-<<<<<<< HEAD
-  skills?: string[];
-=======
+
   skills?: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   image?: string
 }
 export interface MatchResult {
   item: MatchResultItem;
   score: number;
-<<<<<<< HEAD
-  matchedSkills: string[];
-=======
+
   matchedSkills: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   reason: string
 }
 // Sample data for testing when API is not available
@@ -30,11 +26,9 @@ const sampleData: MatchResultItem[] = [
     title: "Senior AI Engineer";
     description: "Experienced AI engineer with expertise in machine learning and computer vision";
     category: "Talent - Engineering";
-<<<<<<< HEAD
-    price: 120;
-=======
+
     price: 120
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     skills: ["Machine Learning", "Computer Vision", "TensorFlow", "Python"]
   }
   {
@@ -42,11 +36,9 @@ const sampleData: MatchResultItem[] = [
     title: "AI Model Training";
     description: "Custom AI model training service with data preparation and deployment";
     category: "Services - AI Development";
-<<<<<<< HEAD
-    price: 5000;
-=======
+
     price: 5000
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     skills: ["Machine Learning", "Model Training", "AI Deployment"]
   }
   {
@@ -54,20 +46,16 @@ const sampleData: MatchResultItem[] = [
     title: "NVIDIA A100 GPU Server";
     description: "High-performance GPU server for AI model training and inference";
     category: "Equipment - Hardware";
-<<<<<<< HEAD
-    price: 15000;
-=======
+
     price: 15000
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     skills: ["GPU Computing", "High Performance", "AI Hardware"]
   }
 ];
 // Function to find matches based on query and type
 export async function findMatches(
   query: string;
-<<<<<<< HEAD
-  type: string;
-=======
+
   type: string = ""
   limit: number = 5
 ): Promise<MatchResult[]> {
@@ -94,7 +82,7 @@ export async function findMatches(
     return matches.sort((a, b) => b.score - a.score).slice(0, limit)
   } catch (error) {
     console.error("Error in matchmaking:", error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return []
   }
 }

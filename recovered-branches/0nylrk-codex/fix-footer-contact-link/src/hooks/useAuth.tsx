@@ -20,23 +20,7 @@ export interface UserDetails {
   updatedAt?: string
 }
 export interface AuthContextType {
-<<<<<<< HEAD
-  user: UserDetails | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  signIn: (email: string, password: string) => Promise<{ error: any }>,
-  signOut: () => Promise<void>;
-  signUp: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,
-  // Aliases for compatibility with other components
-  login: (email: string, password: string) => Promise<{ error: any }>,
-  logout: () => Promise<void>;
-  signup: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>,
-  resetPassword: (email: string) => Promise<{ error: any }>,
-  updateProfile: (data: Partial<UserDetails>) => Promise<{ error: any }>,
-  loginWithGoogle: () => Promise<void>;
-  loginWithFacebook: () => Promise<void>;
-  loginWithTwitter: () => Promise<void>;
-=======
+
   user: UserDetails | null
   isAuthenticated: boolean
   isLoading: boolean
@@ -52,7 +36,7 @@ export interface AuthContextType {
   loginWithGoogle: () => Promise<void>
   loginWithFacebook: () => Promise<void>
   loginWithTwitter: () => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   loginWithWeb3: () => Promise<void>
 }
 // Create a provider component
@@ -60,9 +44,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<UserDetails | null>(null),
   const [isLoading, setIsLoading] = useState(true);
   // Mock auth functions for now - these would connect to Supabase in a real implementation
-<<<<<<< HEAD
-  const signIn = null;
-=======
+
   const signIn = async (email: string, password: string) => {
     // This would be replaced with actual Supabase auth
     console.log("Sign in attempted with:", email);
@@ -200,7 +182,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
   const context = useContext(AuthContext);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (context === undefined) {
     throw new Error("useAuth must be used within an AuthProvider")
   }

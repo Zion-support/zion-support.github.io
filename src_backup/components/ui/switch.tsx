@@ -1,10 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { SERVICE_CATEGORIES;
-  ALL_SERVICES;
-  AI_SERVICES;
-  IT_SERVICES;
-=======
+
 import {
   SERVICE_CATEGORIES
   ALL_SERVICES
@@ -18,7 +13,7 @@ import {
   ALL_SERVICES
   AI_SERVICES
   IT_SERVICES
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   MICRO_SAAS_SERVICES;
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
@@ -28,9 +23,7 @@ import { ServiceCategory, ServiceSolution  } from '@/types/services';
 export function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
-<<<<<<< HEAD
-  const filteredServices = null;
-=======
+
   const filteredServices = ALL_SERVICES.filter(service => {
     const matchesCategory =
       selectedCategory === 'all' |service.category === selectedCategory;
@@ -378,7 +371,7 @@ function ServiceCard({ service }: ServiceCardProps) {
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional
   const popularPlan = getPopularPlan();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
       {/* Service Image */}

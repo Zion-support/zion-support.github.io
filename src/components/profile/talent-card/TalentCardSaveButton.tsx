@@ -10,19 +10,7 @@ interface TalentCardSaveButtonProps {
   onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean
 export function TalentCardSaveButton({
-<<<<<<< HEAD
-  profileId;
-  profileName;
-  isSaved;
-  onToggleSave;
-  isAuthenticated
-}: TalentCardSaveButtonProps) {
-  const { toast } = useToast();
-  const router = null;
-          localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
-        )} 
-      />
-=======
+
   profileId
   profileName
   isSaved
@@ -64,7 +52,7 @@ export function TalentCardSaveButton({
           'h-4 w-4 transition-colors'
           localIsSaved ? 'fill-red-500 text-red-500' : 'text-zion-slate'
         )}      />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     </button>
   )
 }variant: "default"

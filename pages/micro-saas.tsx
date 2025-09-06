@@ -1,10 +1,52 @@
 <<<<<<< HEAD
-import Link from 'next/link',
-import Head from 'next/head';
-import { useState, useEffect  } from 'react';
-import { ContactInfo  } from '../types';
-import ErrorBoundary from '../components/ErrorBoundary';
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+import React from 'react';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import {
+  ArrowRight,
+  Building2,
+  Rocket,
+  Factory,
+  Brain,
+  Cloud,
+  Shield,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  DollarSign,
+  Award,
+  Globe,
+  Lock,
+  Cpu,
+  Bot,
+  FileText,
+  Image,
+  Video,
+  Mic,
+  Code,
+  Settings,
+  Monitor,
+  Smartphone,
+  Server,
+  Network,
+  Car,
+  Rocket as RocketIcon,
+  Heart,
+  Building,
+  Database,
+  Sprout
+} from 'lucide-react';
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
@@ -175,16 +217,38 @@ import {
   Home;
 } from 'lucide-react';
 import Layout from '../components/Layout';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
-<<<<<<< HEAD
-    const timer = null;
-=======
+
     const timer = setTimeout(() => setIsLoaded(true), 100);
+<<<<<<< HEAD
     return () => clearTimeout(timer);  }, []);
+<<<<<<< HEAD
+=======
+    return () => clearTimeout(timer);
+=======
+import Link from 'next/link';
+import Head from 'next/head';
+import { useState, useEffect } from 'react';
+import { ContactInfo } from '../types';
+import ErrorBoundary from '../components/ErrorBoundary';
+export default function MicroSaaS() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100);
+    return () => clearTimeout(timer)
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const contact: ContactInfo = {
     phone: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -198,6 +262,46 @@ export default function MicroSaaS() {
     { id: 'security', name: 'Security', count: 20 }
     { id: 'productivity', name: 'Productivity', count: 15 }
     { id: 'marketing', name: 'Marketing', count: 15 },  ];
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+export default function MicroSaasPage() {
+  return (
+    <Layout
+      title="Micro SaaS Solutions - Zion Tech Group"
+      description="Discover our innovative micro SaaS solutions designed to solve specific business problems with powerful, focused tools."
+      keywords="micro saas, saas solutions, business tools, automation, productivity"
+    >
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                Micro SaaS Solutions
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+                Powerful, focused tools that solve specific business problems with precision and efficiency
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Get Started
+                </Link>
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  View Demo
+                </Link>
+              </div>
+=======
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   const products = [
     {
       id: 1
@@ -385,7 +489,7 @@ export default function MicroSaaS() {
       ? products
       : products.filter(product => product.category === selectedCategory);
 export default function MicroSaas() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>
@@ -612,9 +716,22 @@ export default function MicroSaas() {
                   Email Us
                 </a>
               </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         {/* Products Grid */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -636,10 +753,40 @@ export default function MicroSaas() {
               {microSaasProducts.map((product, index) => (
                 <motion.div
                   key={product.id}
+<<<<<<< HEAD
+=======
+=======
+        {/* Solutions Grid */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Micro SaaS Solutions</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Focused, powerful solutions that address specific business challenges with AI and automation.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasSolutions.map((solution, index) => (
+                <motion.div
+                  key={solution.id}
+                  className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
                   className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 >
                   <div className="flex items-center mb-4">
@@ -667,22 +814,80 @@ export default function MicroSaas() {
                       </div>
                     ))}
                   </div>
+<<<<<<< HEAD
+=======
+=======
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <solution.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{solution.title}</h3>
+                  <p className="text-gray-600 mb-4">{solution.description}</p>
+                  
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-blue-600">{solution.pricing}</span>
+                    {solution.marketPrice && (
+                      <span className="text-gray-500 ml-2">(Market: {solution.marketPrice})</span>
+                    )}
+                  </div>
+
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
+                    <ul className="text-sm text-gray-600 space-y-1">
+                      {solution.features.slice(0, 4).map((feature, idx) => (
+                        <li key={idx} className="flex items-center">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
                   <Link
                     href="/contact"
                     className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block"
                   >
+<<<<<<< HEAD
                     Learn More
+=======
+<<<<<<< HEAD
+                    Learn More
+=======
+                    Get Started
+                    <ArrowRight className="ml-2 w-4 h-4" />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
                   </Link>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
         {/* Categories */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
+<<<<<<< HEAD
+=======
+=======
+        {/* Industries Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -732,8 +937,21 @@ Ready to Transform Your Business?
                 <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                   Get Started Today
                 </Link>
+<<<<<<< HEAD
                 <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Schedule Demo
+=======
+<<<<<<< HEAD
+                <Link href="/demo" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule Demo
+=======
+                <Link
+                  href="/it-services"
+                  className="inline-flex items-center px-8 py-3 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold"
+                >
+                  View IT Services
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
                 </Link>
               </div>
             </motion.div>
@@ -743,10 +961,29 @@ Ready to Transform Your Business?
     </Layout>
   );
 }
+<<<<<<< HEAD
+=======
+=======
+
+=======
+            </div>
+>>>>>>> origin/automation-improvements-final
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
 }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 }
+=======
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+=======
+>>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+}
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

@@ -5,9 +5,7 @@ export default function ManifestoPage(): JSX.Element {
     <>
       <Head>
         <title>Zion Manifesto</title>
-<<<<<<< HEAD
-        <meta name;
-=======
+
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -40,7 +38,7 @@ export default function ManifestoPage(): JSX.Element {
             <h2 id="ai-for-empowerment">AI for Empowerment, Not Exploitation</h2>
             <p>
               AI should amplify human capability and agency—not replace it or capture its value. Zion is AI-native by design: matching
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               scoping, verification, and reputation signals are assisted by models, yet decisions remain human-sovereign. We prioritize
               transparency, auditability, and consent. Your data powers your outcomes, not someone else’s moat.
             </p>

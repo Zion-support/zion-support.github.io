@@ -1,23 +1,14 @@
-<<<<<<< HEAD
-import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts';
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
-=======
+
 import {serve} from 'https: //deno.land/std@0.208.0/http/server.ts'
 import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface TenantInfo {
   id: string;
   brand_name: string;
   subdomain: string;
   custom_domain: string | null;
   primary_color: string;
-<<<<<<< HEAD
-  logo_url: string | null;
-  theme_preset: string
-}
 
-const corsHeaders = null;
-=======
   logo_url: string | null
   theme_preset: string
 }
@@ -115,4 +106,4 @@ serve(async (req) => {
     )
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

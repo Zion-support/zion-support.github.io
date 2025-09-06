@@ -20,9 +20,7 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation
-<<<<<<< HEAD
-const workExperienceSchema = null;
-=======
+
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required');
   role_title: z.string().min(1, 'Job title is required');
@@ -302,7 +300,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                       start_date: format(new Date(), 'yyyy-MM-dd');
                       is_current: false
                       description: ''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                       location: ''})
                   } else {
                     onBack()

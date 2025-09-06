@@ -1,14 +1,5 @@
 
-<<<<<<< HEAD
-import { useQuery } from "@tanstack/react-query",
-import { supabase } from "@/integrations/supabase/client",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Skeleton } from "@/components/ui/skeleton",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
-import { useState } from "react";
-import { AnalyticsChart } from "./AnalyticsChart";
-type TimeRange = any;
-=======
+
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -127,7 +118,7 @@ interface EventTypeCardProps {
   description: string
   count: number
   icon: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isLoading: boolean
 }
 function EventTypeCard({ title, description, count, icon, isLoading }: EventTypeCardProps) {

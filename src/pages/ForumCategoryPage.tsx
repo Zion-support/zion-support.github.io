@@ -20,85 +20,7 @@ import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'luc
 // Mock category data
 const categoriesInfo: Record<string, ForumCategoryInfo> = {
   "getting-hired": {
-<<<<<<< HEAD
-    id: "getting-hired";
-    name: "Getting Hired";
-    description: "Tips, strategies, and questions about getting hired on the platform.",
-    adminOnly: false;
-    icon: "Briefcase"
-  }
-  "project-help": {
-    id: "project-help";
-    name: "Project Help";
-    description: "Get help with your ongoing projects and collaboration.";
-    adminOnly: false;
-    icon: "MessageSquare"
-  }
-  "ai-tools": {
-    id: "ai-tools";
-    name: "AI Tools Discussion";
-    description: "Discuss AI tools, frameworks, and best practices.",
-    adminOnly: false;
-    icon: "Code"
-  }
-  "feedback": {
-    id: "feedback";
-    name: "Feedback & Feature Requests";
-    description: "Share your feedback and suggest new features.";
-    adminOnly: false;
-    icon: "FileText"
-  }
-  "announcements": {
-    id: "announcements";
-    name: "Announcements";
-    description: "Official announcements from the Zion team.";
-    adminOnly: true;
-    icon: "Megaphone"
-  }
-},
 
-const iconMap = null;
-  if (!categoryId || !category) {
-    return <NotFound />
-  }
-
-  if (!hasAccess) {
-    return (
-      <div className="container py-8">
-        <div className="text-center py-12">
-          <h1 className="text-2xl font-bold mb-4">Access Restricted</h1>
-          <p className="text-muted-foreground mb-4">
-            This category is only accessible to administrators.
-          </p>
-          <Button asChild>
-            <Link href="/community">Back to Community</Link>
-          </Button>
-        </div>
-      </div>
-    )
-  }
-
-  if (!IconComponent) {
-    return <NotFound />
-  }
-
-  return (
-    <>
-      <SEO
-        title={`${category.name} | Community Forum | Zion AI Marketplace`}
-        description={category.description}
-        keywords={`community, forum, ${category.name.toLowerCase()}, discussion`}
-        canonical={`https://app.ziontechgroup.com/community/category/${categoryId}`}
-      />
-      
-      <CategoryContent
-        categoryId={categoryId}
-        category={category}
-        IconComponent={IconComponent}
-        user={user}
-      />
-    </>
-=======
     id: "getting-hired"
     name: "Getting Hired"
     description: "Tips, strategies, and questions about getting hired on the platform."
@@ -189,6 +111,6 @@ function CategoryContent({
   const category = categoryId ? categoriesInfo[categoryId] : null
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   )
 }

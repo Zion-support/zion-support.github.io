@@ -10,9 +10,7 @@ import { Stethoscope, Brain, Eye, Heart;
   Activity, Zap, Pill, Syringe, Hospital, Ambulance
  } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-const AIHealthcareDiagnosticsPro: React.FC;
-=======
+
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {
@@ -675,4 +673,4 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
   )
 }
 export default AIHealthcareDiagnosticsPro;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

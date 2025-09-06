@@ -1,13 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-import { getSessionFromReq, isInternalAgentRequest } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = null;
-  res.status(200).json({ status, insights })
-}
-=======
+
 import {
   getSessionFromReq
   isInternalAgentRequest;
@@ -31,4 +25,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { items: [], updatedAt: null }
 res.status(200).json({ status, insights });  res.status(200).json({ status, insights })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,10 +1,6 @@
 import React, { useState } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Check, X, AlertTriangle, Info, Zap as ZapIcon, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Code as CodeIcon, BookOpen as BookIcon, Activity as ActivityIcon, Database as DatabaseIcon2, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon, Eye, Heart, Share2, Download, Bookmark, ThumbsUp, MessageCircle, Share, Users as UsersIcon2, Target as TargetIcon, Zap as ZapIcon2  } from 'lucide-react';
-import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
-=======
+
 import { motion } from 'framer-motion';
 import {
   Star
@@ -125,17 +121,13 @@ import {
   Zap as ZapIcon2;
 } from 'lucide-react';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionaryAI2025Services  } from '../data/revolutionary-2025-ai-services';
 import { revolutionaryITInfrastructure2025Services  } from '../data/revolutionary-2025-it-infrastructure';
 import { revolutionary2025MicroSaasServices  } from '../data/revolutionary-2025-micro-saas';
 export default function Revolutionary2025Pricing() {
-<<<<<<< HEAD
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const contactInfo = null;
-=======
+
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'
   );  const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -283,7 +275,7 @@ export default function Revolutionary2025Pricing() {
     averageROI: '500%'
     timeToValue: '< 30 days'
     globalReach: '150+ countries',  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className='min-h-screen'>

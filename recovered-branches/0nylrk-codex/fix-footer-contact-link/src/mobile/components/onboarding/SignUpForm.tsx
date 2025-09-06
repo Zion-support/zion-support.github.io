@@ -8,9 +8,7 @@ import { useAuth } from "@/hooks/useAuth",
 import { AlertCircle } from "lucide-react";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 export function SignUpForm() {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const { signup, login, loginWithGoogle } = useAuth();
   const [formData, setFormData] = useState({
@@ -57,7 +55,7 @@ export function SignUpForm() {
       setError(err.message)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4 px-4">
       <h2 className="text-xl font-medium text-center">

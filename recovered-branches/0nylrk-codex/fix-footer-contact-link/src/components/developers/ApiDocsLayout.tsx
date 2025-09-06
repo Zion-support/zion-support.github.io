@@ -8,9 +8,7 @@ interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-<<<<<<< HEAD
-  const location = null;
-=======
+
   const location = useLocation();
   const currentPath = location.pathname;
   const navigationItems = [
@@ -66,4 +64,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   )
 }
 export default ApiDocsLayout;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

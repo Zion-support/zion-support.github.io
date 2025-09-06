@@ -1,8 +1,5 @@
 import { useState } from 'react';
-<<<<<<< HEAD
-export type FeedbackContext = any;
-    onClose(true)
-=======
+
 export type FeedbackContext = { actionType?: string; metadata?: any }
 export default function FeedbackModal({
   isOpen
@@ -49,7 +46,7 @@ export default function FeedbackModal({
       });
     setLoading(false);
     onClose(true);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>

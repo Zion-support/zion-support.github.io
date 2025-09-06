@@ -1,20 +1,12 @@
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/wallet/TokenDisplay.tsx
-<<<<<<< HEAD
 
-import React from "react",
-import { BadgeDollarSign } from "lucide-react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { Skeleton } from "@/components/ui/skeleton";
-=======
 import React from "react";
 import {BadgeDollarSign} from "lucide-react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Skeleton} from "@/components/ui/skeleton";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function TokenDisplay() {
   const { wallet, loading } = useWallet();
   return (

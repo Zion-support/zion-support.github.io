@@ -1,17 +1,7 @@
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
 import {
-<<<<<<< HEAD
-  Sidebar;
-  SidebarContent;
-  SidebarGroup;
-  SidebarMenu;
-  SidebarMenuItem;
-  SidebarMenuButton;
-  SidebarGroupLabel;
-  SidebarGroupContent} from "@/components/ui/sidebar",
 
-=======
   Bell
   FileText
   Home
@@ -30,7 +20,7 @@ import {
   SidebarGroupLabel
   SidebarGroupContent
 } from "@/components/ui/sidebar";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function AppSidebar() {
   return (
     <Sidebar>

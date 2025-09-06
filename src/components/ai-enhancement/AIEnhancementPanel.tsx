@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter  } from '@/components/ui/card';
-import { Textarea  } from '@/components/ui/textarea';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
-=======
 import React, { useState } from 'react'
 import {
   Card
@@ -24,7 +15,7 @@ import { Sparkles, Loader2, Copy, Check } from 'lucide-react'
   useAIContentEnhancer
   AIEnhancementOptions
 } from '@/hooks/useAIContentEnhancer'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface AIEnhancementPanelProps {
   title: string;
   defaultOptions: AIEnhancementOptions;
@@ -33,13 +24,7 @@ interface AIEnhancementPanelProps {
   showInstructions?: boolean;
   initialContent?: string
 export function AIEnhancementPanel({
-<<<<<<< HEAD
-  title;
-  defaultOptions;
-  onApply;
-  onClose;
-  showInstructions;
-=======
+
   title
   defaultOptions
   onApply
@@ -78,7 +63,7 @@ export function AIEnhancementPanel({
     setCopied(true)
     setTimeout(() => setCopied(false), 2000)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className='w-full max-w-2xl mx-auto'>
       <CardHeader>

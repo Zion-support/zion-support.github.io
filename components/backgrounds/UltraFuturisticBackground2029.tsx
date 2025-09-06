@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-interface Particle {
-  x: number;
-  y: number;
-  vx: number;
-  vy: number;
-  size: number;
-  opacity: number;
-  color: string;
-  type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'
-}
-export default function UltraFuturisticBackground2029() {
-  const canvasRef = null;
-              delay: i * 0.3
-=======
+
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 // Initialize particles
@@ -518,7 +502,7 @@ export default function UltraFuturisticBackground2029() {
               repeat: Infinity
               ease: 'easeInOut'
               delay: i * 0.3,            }}              delay: i * 0.3
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             }}
           />
         ))}

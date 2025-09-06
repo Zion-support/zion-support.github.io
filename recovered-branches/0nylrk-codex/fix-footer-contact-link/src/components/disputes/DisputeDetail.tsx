@@ -18,10 +18,7 @@ import { toast } from "sonner";
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
-<<<<<<< HEAD
-  const { disputeId } = useParams() as { disputeId?: string };
-  const navigate = null;
-=======
+
   const { disputeId } = useParams() as { disputeId?: string }
   const navigate = useNavigate();
   const { user } = useAuth();
@@ -429,7 +426,7 @@ export function DisputeDetail() {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
                                 getDisputeMessages(disputeId!).then(setMessages);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                                 setMessage("")
                               })
                             }

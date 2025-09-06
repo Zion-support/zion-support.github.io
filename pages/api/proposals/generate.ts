@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { OpenAI } from '[^']*';
-import { createProposal } from '[^']*';
-const SYSTEM_PROMPT = null;
-    return res.status(200).json({ meta, markdown: contentMarkdown })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { OpenAI } from "openai";
 import { createProposal } from "../../../utils/data/proposals";
@@ -51,7 +45,7 @@ export default async function handler(
       language
     });
     return res.status(200).json({ meta, markdown: contentMarkdown });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (error: any) {
     return res
       .status(500)

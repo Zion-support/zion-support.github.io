@@ -5,30 +5,16 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 export interface Message {
-<<<<<<< HEAD
-  id: string;
-  role: 'user' | 'assistant';
-  message: string;
-  timestamp: Date;
-=======
+
   id: string
   role: 'user' | 'assistant'
   message: string
   timestamp: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   read?: boolean
 }
 export interface ChatAssistantProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  recipient: {
-    id: string;
-    name: string;
-    avatarUrl?: string;
-    role?: string
-  },
-=======
+
   isOpen: boolean
   onClose: () => void
   recipient: {
@@ -37,7 +23,7 @@ export interface ChatAssistantProps {
     avatarUrl?: string;
     role?: string
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   conversationId?: string;
   initialMessages?: Message[],
   onSendMessage: (message: string, conversationId?: string) => Promise<void>,
@@ -48,9 +34,7 @@ export function ChatAssistant({
   onClose;
   recipient;
   conversationId;
-<<<<<<< HEAD
-  initialMessages;
-=======
+
   initialMessages = [];
   onSendMessage;
   contextHeader
@@ -82,7 +66,7 @@ export function ChatAssistant({
     await onSendMessage(message, conversationId)
   }
   if (!isOpen) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">

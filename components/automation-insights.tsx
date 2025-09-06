@@ -2,9 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AutomationInsightsPage() {
-<<<<<<< HEAD
-  const automationTrends = null;
-=======
+
   const automationTrends = [
     {
       id: 'ai-automation-2025'
@@ -103,7 +101,7 @@ export default function AutomationInsightsPage() {
     },  ];      description: 'Content created autonomously'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

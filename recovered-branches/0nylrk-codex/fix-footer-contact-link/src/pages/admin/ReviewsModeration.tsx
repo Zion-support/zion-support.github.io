@@ -13,9 +13,7 @@ function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const fetchReviews = null;
-=======
+
   const fetchReviews = async () => {
     setIsLoading(true);
     try {
@@ -39,7 +37,7 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {
     fetchReviews()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

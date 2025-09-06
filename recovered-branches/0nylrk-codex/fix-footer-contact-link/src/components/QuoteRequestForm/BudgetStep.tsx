@@ -2,17 +2,13 @@ import { QuoteFormData } from "@/types/quotes",
 import { Label } from "@/components/ui/label";
 import { Slider } from "@/components/ui/slider";
 interface BudgetStepProps {
-<<<<<<< HEAD
-  formData: QuoteFormData;
-=======
+
   formData: QuoteFormData
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
 export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
-<<<<<<< HEAD
-  const handleBudgetTypeSelect = null;
-=======
+
   const handleBudgetTypeSelect = (type: "fixed" | "hourly" | "range") => {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
@@ -135,7 +131,7 @@ export function BudgetStep({ formData, updateFormData }: BudgetStepProps) {
                       budget: {
                         ...formData.budget
                         amount: newAmount
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount
                       }
                     })

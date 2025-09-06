@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',
-import Card from '../../components/ui/Card';
-import Link from 'next/link';
-import { enhancedRealMicroSaasServices  } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices  } from '../../data/additional-real-services';
-import { extraServices  } from '../../data/extra-services';
-import { newlyAddedServices  } from '../../data/newly-added-services';
-import { curatedMarketServices  } from '../../data/curated-market-services';
-import { realMarketServices  } from '../../data/real-market-services';
-import { new2025Services  } from '../../data/new-2025-services';
-import { marketValidatedServices  } from '../../data/market-validated-services';
-import { moreRealServices2025  } from '../../data/more-real-services-2025';
-import { realOperationalServices  } from '../../data/real-operational-services';
-import { verified2025Additions  } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025  } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025  } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2  } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025  } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions  } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3  } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025  } from '../../data/real-services-q2-2025';
-=======
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
@@ -48,20 +23,12 @@ import { additionalLiveServices2025 } from '../../data/additional-live-services-
 import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
 import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
 import { realServicesQ22025 } from '../../data/real-services-q2-2025';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { realServicesQ32025 } from '../../data/real-services-q3-2025';
 import { realServicesQ42025 } from '../../data/real-services-q4-2025';
 // Define a common service interface
 interface Service {
-<<<<<<< HEAD
-  id?: string;
-  name: string;
-  description?: string;
-  price?: string;
-  category?: string;
-  popular?: boolean;
-  launchDate?: string;
-=======
+
   id?: string
   name: string
   description?: string
@@ -69,22 +36,12 @@ interface Service {
   category?: string
   popular?: boolean
   launchDate?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   [key: string]: unknown, // Allow additional properties
 }
 // Define a unified service interface
 interface Service {
-<<<<<<< HEAD
-  id: string;
-  name: string;
-  tagline: string;
-  description: string;
-  price: string;
-  category: string;
-  features: string[];
-  popular?: boolean;
-  icon?: string;
-=======
+
   id: string
   name: string
   tagline: string
@@ -94,22 +51,13 @@ interface Service {
   features: string[]
   popular?: boolean
   icon?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   link?: string
 }
 // Sample services for now
 const sampleServices: Service[] = [
   {
-<<<<<<< HEAD
-    id: 'ai-services';
-    name: 'AI & Machine Learning';
-    tagline: 'Advanced AI solutions for enterprise';
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
-    price: '$2,999/month',
-    category: 'AI';
-    features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'];
-    popular: true;
-=======
+
     id: 'ai-services'
     name: 'AI & Machine Learning'
     tagline: 'Advanced AI solutions for enterprise'
@@ -118,19 +66,11 @@ const sampleServices: Service[] = [
     category: 'AI'
     features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support']
     popular: true
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     link: '/ai-services'
   }
   {
-<<<<<<< HEAD
-    id: 'quantum-computing';
-    name: 'Quantum Computing';
-    tagline: 'Next-generation quantum solutions';
-    description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.';
-    price: '$9,999/month',
-    category: 'Quantum';
-    features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'];
-=======
+
     id: 'quantum-computing'
     name: 'Quantum Computing'
     tagline: 'Next-generation quantum solutions'
@@ -138,19 +78,11 @@ const sampleServices: Service[] = [
     price: '$9,999/month'
     category: 'Quantum'
     features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support']
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     link: '/quantum-computing'
   }
   {
-<<<<<<< HEAD
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    tagline: 'Enterprise security solutions';
-    description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.';
-    price: '$1,999/month',
-    category: 'Security';
-    features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'];
-=======
+
     id: 'cybersecurity'
     name: 'Cybersecurity'
     tagline: 'Enterprise security solutions'
@@ -158,19 +90,11 @@ const sampleServices: Service[] = [
     price: '$1,999/month'
     category: 'Security'
     features: ['Threat DetectionIncident ResponseComplianceSecurity Audits']
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     link: '/cybersecurity'
   }
   {
-<<<<<<< HEAD
-    id: 'cloud-platform';
-    name: 'Cloud Platform';
-    tagline: 'Scalable cloud infrastructure';
-    description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.';
-    price: '$1,499/month',
-    category: 'Cloud';
-    features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'];
-=======
+
     id: 'cloud-platform'
     name: 'Cloud Platform'
     tagline: 'Scalable cloud infrastructure'
@@ -178,19 +102,11 @@ const sampleServices: Service[] = [
     price: '$1,499/month'
     category: 'Cloud'
     features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools']
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     link: '/cloud-platform'
   }
   {
-<<<<<<< HEAD
-    id: 'space-technology';
-    name: 'Space Technology';
-    tagline: 'Innovative space solutions';
-    description: 'Cutting-edge space technology services for satellite operations and space missions.';
-    price: '$24,999/month',
-    category: 'Space';
-    features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'];
-=======
+
     id: 'space-technology'
     name: 'Space Technology'
     tagline: 'Innovative space solutions'
@@ -198,14 +114,12 @@ const sampleServices: Service[] = [
     price: '$24,999/month'
     category: 'Space'
     features: ['Satellite OperationsMission ControlData AnalyticsGround Systems']
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     link: '/space-tech'
   }
 ]
 export default function ServicesIndexPage() {
-<<<<<<< HEAD
-  const all = null;
-=======
+
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
       extraServices as unknown[]
@@ -445,7 +359,7 @@ export default function ServicesIndexPage() {
               {categories.map((category) => {
                 const categoryServices = servicesByCategory[category]
                 if (!categoryServices |categoryServices.length === 0) return null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 return (
                   <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
                     <h3 className="text-2xl font-bold mb-6 text-white flex items-center gap-3">

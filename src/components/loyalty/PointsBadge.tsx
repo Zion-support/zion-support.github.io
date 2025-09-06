@@ -1,21 +1,6 @@
 import React, { useState } from 'react';
 import { Gift, RefreshCw } from 'lucide-react'
-<<<<<<< HEAD
-import { usePoints  } from '@/hooks/usePoints';
-import { useAuth  } from '@/hooks/useAuth';
-import Link from 'next/link';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger  } from '@/components/ui/tooltip';
-import { LoginModal  } from '@/components/auth/LoginModal';
-import { Button  } from '@/components/ui/button';
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function PointsBadge() {
 
-  const { isAuthenticated } = useAuth();
-  const { ledger, balance, loading, fetchLedger } = usePoints();
-  const [loginOpen, setLoginOpen] = useState(false);
-  const [isRefreshing, setIsRefreshing] = useState(false);
-  const points = null;
-=======
 import { usePoints } from '@/hooks/usePoints'
 import { useAuth } from '@/hooks/useAuth'
 import Link from 'next/link'
@@ -60,7 +45,7 @@ export function PointsBadge() {
       setIsRefreshing(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <TooltipProvider>
       <div className='flex items-center gap-1'>

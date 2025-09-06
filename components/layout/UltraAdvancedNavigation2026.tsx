@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-  BookOpen, MessageCircle 
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 import {
   Menu
   X
@@ -826,4 +819,4 @@ export default UltraAdvancedNavigation2026;    </>
   );
 }
 export default UltraAdvancedNavigation2026;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

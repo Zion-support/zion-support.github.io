@@ -2,6 +2,44 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
+<<<<<<< HEAD
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  ArrowRight,
+  Building,
+  Users,
+  ShoppingCart,
+  Shield,
+  Zap,
+  Globe,
+<<<<<<< HEAD
+  BarChart3,
+  Search,
+} from "lucide-react";
+import SearchModal from "./SearchModal";
+=======
+<<<<<<< HEAD
+  BarChart3,
+  Search
+} from 'lucide-react';
+import SearchModal from './SearchModal';
+=======
+  BarChart3
+} from 'lucide-react;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
   Menu
   X
   ChevronDown
@@ -25,6 +63,7 @@ import {
   Search
 } from "lucide-react";
 import SearchModal from "./SearchModal";
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -448,6 +487,14 @@ export default function Navigation() {
                 Pricing
               </Link>
             </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">
               <button
@@ -460,6 +507,16 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+<<<<<<< HEAD
+=======
+=======
+            {/* CTA Buttons */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <Link
+                href=/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
               >
                 Get Started
               </Link>

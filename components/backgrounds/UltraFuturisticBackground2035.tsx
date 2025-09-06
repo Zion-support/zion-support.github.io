@@ -1,10 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 export default function UltraFuturisticBackground2035() {
-<<<<<<< HEAD
-  const canvasRef = null;
-                ease: "easeInOut"
-=======
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -495,7 +492,7 @@ export default function UltraFuturisticBackground2035() {
                 repeat: Infinity
                 delay: Math.random() * 2
                 ease: 'easeInOut',              }}                ease: "easeInOut"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               }}
             />
           ))}

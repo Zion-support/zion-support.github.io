@@ -2,14 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Activity, Zap, TrendingUp, AlertTriangle, CheckCircle, ArrowRight, Monitor, Gauge, BarChart3, Clock } from 'lucide-react';
-export default function WebsitePerformanceMonitorPage() {
-  const [isAnalyzing, setIsAnalyzing] = useState(false);
-  const [analysisResults, setAnalysisResults] = useState(null);
-  const features = null;
-            and AI-powered optimization recommendations. Never let performance issues impact your users again.
-=======
+
 import {
   Activity
   Zap
@@ -310,7 +303,7 @@ export default function WebsitePerformanceMonitorPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations. Never let performance issues impact your users again.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button

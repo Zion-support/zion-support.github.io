@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { formatDistanceToNow } from "date-fns",
-import { JobApplication } from "@/types/jobs",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'
-import Link from "next/link",
-import { StatusBadge } from "./StatusBadge",
-import { ApplicationProgress } from "./ApplicationProgress";
-import { toast } from "sonner";
-=======
 import { useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
@@ -42,7 +30,7 @@ import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download }
 import { StatusBadge } from "./StatusBadge"
 import { ApplicationProgress } from "./ApplicationProgress"
 import { toast } from "sonner"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ApplicationCardProps {
   application: JobApplication
 export function ApplicationCard({ application }: ApplicationCardProps) {
@@ -55,10 +43,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   application: JobApplication
 }
 export function ApplicationCard({ application }: ApplicationCardProps) {
-<<<<<<< HEAD
-  const [expanded, setExpanded] = useState(false);
-  const handleDownloadResume = null;
-=======
+
   const [expanded, setExpanded] = useState(false)
   const handleDownloadResume = () => {
     // This would typically download the resume file
@@ -92,7 +77,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
         return null
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className='overflow-hidden'>
       <CardHeader className='pb-3'>

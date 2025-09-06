@@ -1,7 +1,14 @@
-import React from 'react';
-import Head from 'next/head';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+import { motion } from 'framer-motion';
+=======
+import React from 'react';
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+import Head from 'next/head';
+
 import Link from 'next/link';
 import {
   ArrowRight
@@ -40,6 +47,19 @@ const apiEndpoints = [
     endpoint: '/api/it-services'
   }
 ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+import React from 'react';
+import Head from 'next/head';
+<<<<<<< HEAD
+import Layout from '../components/Layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default function APIDocsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -48,6 +68,14 @@ export default function APIDocsPage() {
         <meta name="description" content="Comprehensive API documentation for Zion Tech Group services. Access our RESTful APIs for AI, IT, and micro SaaS solutions." />
         <meta name="keywords" content="API documentation, developer resources, REST API, integration, SDK" />
       </Head>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
         <div className="absolute inset-0">
@@ -151,11 +179,27 @@ export default function APIDocsPage() {
         </div>
       </section>
     </div>
+<<<<<<< HEAD
+=======
+=======
+      <div className='container mx-auto px-4 py-16 text-gray-200'>
+        <h1 className='text-4xl md:text-6xl font-bold mb-4'>API Docs</h1>
+        <p className='text-gray-300'>
+          See{' '}
+          <a href='/api-docs' className='text-cyan-400 underline'>
+            API Documentation
+          </a>{' '}
+          for the full reference.
+        </p>
+      </div>
+    </Layout>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   );
 }
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function ApiDocsPage() {
   return (
     <>

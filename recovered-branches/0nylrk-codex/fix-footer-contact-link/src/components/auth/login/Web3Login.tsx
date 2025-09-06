@@ -7,9 +7,7 @@ import { toast } from "sonner";
 export function Web3Login() {
   const { loginWithWeb3 } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const handleWeb3Login = null;
-=======
+
   const handleWeb3Login = async () => {
     try {
       setIsLoading(true);
@@ -29,7 +27,7 @@ export function Web3Login() {
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Button
       type="button"

@@ -6,15 +6,7 @@ import { Button  } from '@/components/ui/button';
 import { Label  } from '@/components/ui/label';
 import { ShieldAlert, Info } from 'lucide-react';
 import {
-<<<<<<< HEAD
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion",
-import { toast  } from '@/hooks/use-toast';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-=======
+
   Card
   CardContent
   CardDescription
@@ -34,16 +26,14 @@ import {
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function FraudDetectionSettings() {
   const { user } = useAuth();
   const [messageScanningEnabled, setMessageScanningEnabled] = useState(true);
   const [activityMonitoringEnabled, setActivityMonitoringEnabled] = useState(true);
   const [aiAnalysisEnabled, setAiAnalysisEnabled] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
-<<<<<<< HEAD
-  const handleSavePreferences = null;
-=======
+
   const handleSavePreferences = async () => {
     if (!user?.id) return;
     setIsSaving(true);
@@ -66,7 +56,7 @@ export function FraudDetectionSettings() {
       setIsSaving(false);
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="mb-8">
       <CardHeader className="space-y-1">

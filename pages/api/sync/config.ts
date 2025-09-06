@@ -2,9 +2,7 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../utils/sync/storage";
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  const state = null;
-=======
+
   const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
@@ -26,7 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (scope) state.config.scope = scope
     if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId
     writeState(state)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(200).json({ config: state.config })
   }
   return res.status(405).json({ error: "Method not allowed" })

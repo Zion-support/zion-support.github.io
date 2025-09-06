@@ -2,9 +2,7 @@ import React, { useState } from "react";
 export interface TreeNode {
   name: string;
   path: string;
-<<<<<<< HEAD
-  type: "folder" | "file";
-=======
+
   type: 'folder' | 'file';
   exists?: boolean;
   children?: TreeNode[];
@@ -29,24 +27,19 @@ export interface TreeNode {
   name: string
   path: string
   type: "folder" | "file"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   exists?: boolean;
   children?: TreeNode[]
 }
 interface TreeProps {
-<<<<<<< HEAD
-  nodes: TreeNode[];
-=======
+
   nodes: TreeNode[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onDeploy?: (path: string) => void
 }
 function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, onDeploy?: (path: string) => void }) {
   const [open, setOpen] = useState<boolean>(false);
-<<<<<<< HEAD
 
-  const hasChildren = null;
-=======
   const hasChildren = Array.isArray(node.children) && node.children.length > 0;
   const toggle = () => setOpen((v) => !v);
   const copyPath = async () => {
@@ -189,4 +182,4 @@ export default Tree;
 }</div>)
 }export default Tree;}
 export default Tree;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

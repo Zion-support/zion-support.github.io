@@ -1,9 +1,7 @@
 
 import { supabase } from "@/integrations/supabase/client";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-<<<<<<< HEAD
-export const quoteRequestService = null;
-=======
+
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
@@ -95,4 +93,4 @@ export const quoteRequestService = {
     return true
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

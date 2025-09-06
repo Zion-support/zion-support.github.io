@@ -2,13 +2,7 @@ import React from 'react',
 import Layout from './layout/Layout',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Star;
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
-  Users, Building, Rocket, CheckCircle, Phone, Mail
- } from 'lucide-react';
-const Homepage2026: React.FC;
-=======
+
 import {
   ArrowRight
   Star
@@ -673,4 +667,4 @@ const Homepage2026: React.FC = () => {
 export default Homepage2026;  )
 }
 export default Homepage2026;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

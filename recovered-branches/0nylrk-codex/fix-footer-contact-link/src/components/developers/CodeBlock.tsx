@@ -3,20 +3,16 @@ import { useState  } from 'react';
 import { Check, Copy  } from 'lucide-react';
 import { cn } from "@/lib/utils";
 interface CodeBlockProps {
-<<<<<<< HEAD
-  code: string;
-=======
+
   code: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   language?: string;
   showLineNumbers?: boolean;
   className?: string
 }
 export function CodeBlock({
   code;
-<<<<<<< HEAD
-  language;
-=======
+
   language = 'bash';
   showLineNumbers = false;
   className
@@ -65,4 +61,4 @@ export function CodeBlock({
   )
 }
 export default CodeBlock;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

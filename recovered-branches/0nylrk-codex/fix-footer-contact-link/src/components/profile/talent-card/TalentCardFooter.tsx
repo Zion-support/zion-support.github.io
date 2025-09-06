@@ -9,21 +9,16 @@ import { useAuthStatus } from "@/hooks/talent",
 import { UserProfile } from "@/types/auth";
 import { useNavigate } from "react-router-dom";
 interface TalentCardFooterProps {
-<<<<<<< HEAD
-  profile: TalentProfile;
-  onViewProfile: (id: string) => void;
-=======
+
   profile: TalentProfile
   onViewProfile: (id: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onRequestHire?: (profile: TalentProfile) => void
 }
 export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: TalentCardFooterProps) {
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   // Create a compatible UserProfile from UserDetails
   const userProfile: UserProfile = {
@@ -55,7 +50,7 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
       onViewProfile(profile.id |'')
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">

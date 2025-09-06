@@ -2,8 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear();
-<<<<<<< HEAD
-=======
+
   return (
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
@@ -22,7 +21,7 @@ const EnhancedFooter = () => {
               their digital presence with cutting-edge AI, cloud architecture
               and innovative development services.            </p>const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
@@ -138,13 +137,9 @@ const EnhancedFooter = () => {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  )
-};
-export default EnhancedFooter;
-=======
+
 );
 }
 export default EnhancedFooter;}
 export default EnhancedFooter;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

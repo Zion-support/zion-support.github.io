@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIPredictiveMaintenancePlatform() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Predictive Maintenance Platform"
 			description="Predict equipment failures, schedule maintenance proactively, and reduce downtime with sensor analytics and AI models."
 			subtitle="Reliability at lower cost"
@@ -20,7 +18,7 @@ export default function AIPredictiveMaintenancePlatform() {
 				"Digital twin modeling"
 				"Edge and cloud deployment"
 				"Visualizations and alerting"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"APIs and event webhooks"
 			]}
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]}

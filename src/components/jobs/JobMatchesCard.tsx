@@ -17,11 +17,7 @@ interface JobMatchCardProps {
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
-<<<<<<< HEAD
-}
 
-export function JobMatchesCard({ match, onApply, onDecline, showApplied;
-=======
 export function JobMatchesCard({
   match
   onApply
@@ -30,7 +26,7 @@ export function JobMatchesCard({
 }: JobMatchCardProps) {
   const job = match.job
   if (!job) return null
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className='overflow-hidden border-l-4 border-l-blue-500'>
       <CardHeader className='p-4 pb-2'>

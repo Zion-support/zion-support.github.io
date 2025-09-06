@@ -5,9 +5,7 @@ import { UserProfile, UserDetails  } from '@/types/auth';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
 // Allow either UserProfile or UserDetails
-<<<<<<< HEAD
-type UserWithProfile = any;
-=======
+
 type UserWithProfile = UserProfile | UserDetails | null;
 export function useMessagingRealtime(
   user: UserWithProfile;
@@ -44,7 +42,7 @@ export function useMessagingRealtime(
         }
       )
       .subscribe();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return () => {
       supabase.removeChannel(subscription)
     }

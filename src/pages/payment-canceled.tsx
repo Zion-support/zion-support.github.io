@@ -1,13 +1,8 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { useRouter } from 'next/router'; // Changed from useNavigate
-<<<<<<< HEAD
 
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router', // Changed from useNavigate
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { XCircle } from 'lucide-react'
 import { useRouter } from 'next/router', // Changed from useNavigate
 export default function PaymentCanceled() {

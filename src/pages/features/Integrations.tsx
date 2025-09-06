@@ -6,9 +6,7 @@ import { Button } from "@/components/ui/button",
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
-<<<<<<< HEAD
-  const schema = null;
-=======
+
   const schema = {
     '@context': 'https://schema.org'
     '@type': 'WebPage'
@@ -21,7 +19,7 @@ export default function IntegrationsFeature() {
   useEffect(() => {
     markSlackConnected()
   }, [markSlackConnected])
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

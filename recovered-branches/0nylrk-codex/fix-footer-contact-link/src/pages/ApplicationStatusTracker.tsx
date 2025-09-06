@@ -7,11 +7,9 @@ import { Briefcase, Inbox } from "lucide-react",
 import { ProtectedRoute } from "@/components/ProtectedRoute";
 import { useIsMobile } from "@/hooks/use-mobile";
 function ApplicationStatusTrackerContent() {
-<<<<<<< HEAD
-  const isMobile = null;
-=======
+
   const isMobile = useIsMobile();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

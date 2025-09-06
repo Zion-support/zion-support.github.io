@@ -19,9 +19,7 @@ import { useState  } from 'react';
 import { EducationFormFieldsProps  } from './types';
 import { Education } from '@/types/resume';
 // Define schema for form validation
-<<<<<<< HEAD
-const educationSchema = null;
-=======
+
 const educationSchema = z.object({
   institution: z.string().min(1, 'Institution is required');
   degree: z.string().min(1, 'Degree is required');
@@ -60,7 +58,7 @@ export function EducationFormFields({
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">

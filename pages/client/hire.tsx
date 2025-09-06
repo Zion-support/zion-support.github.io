@@ -14,11 +14,7 @@ export default function ClientHirePage() {
   async function sendOffer() {
     setLoading(true);
     setResult(null);
-<<<<<<< HEAD
-    const paymentTerms = null;
-      setShowFeedback(true)
-    }
-=======
+
     const paymentTerms =
       termsType === 'hourly'
         ? { type: 'hourly', hourlyRateUsd }
@@ -47,7 +43,7 @@ export default function ClientHirePage() {
     } else {
       setResult(json.offer);
       setShowFeedback(true);    }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='max-w-3xl mx-auto p-6 space-y-6'>

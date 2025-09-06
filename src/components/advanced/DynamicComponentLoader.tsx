@@ -33,10 +33,7 @@ const EnhancedLoading: React.FC<{
   progress?: number
   message?: string
   showProgress?: boolean
-<<<<<<< HEAD
-}> = ({ 
-  progress;
-=======
+
 }> = ({
   progress = 0
   message = 'Loading component...'
@@ -296,7 +293,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
 //   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">

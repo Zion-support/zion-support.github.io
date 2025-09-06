@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const dataPath = null;
-=======
+
 const dataPath = path.join(process.cwd(), 'datalearncourses.json')
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -12,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { id } = req.query
     const course = courses.find((c: any) => c.id === id)
     if (!course) return res.status(404).json({ error: 'Course not found' })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     res.status(200).json({ course })
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to load course' })

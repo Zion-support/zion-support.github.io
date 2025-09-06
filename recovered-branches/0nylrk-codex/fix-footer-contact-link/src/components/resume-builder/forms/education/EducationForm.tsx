@@ -1,25 +1,5 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Education  } from '@/types/resume';
-import { useResume  } from '@/hooks/useResume';
-import { format  } from 'date-fns';
-import { EducationFormProps  } from './types';
-import { EducationList  } from './EducationList';
-import { EducationFormFields } from './EducationFormFields';
-export function EducationForm({ 
-  resumeId;
-  educationEntries;
-  onComplete;
-  onBack 
-}: EducationFormProps) {
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume();
-  const [editingId, setEditingId] = useState<string | null>(null),
-  
-  // Helper function to format dates to string
-  const formatDateValue = null;
-=======
+
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Education} from '@/types/resume';
@@ -78,7 +58,7 @@ export function EducationForm({
       onBack()
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div>

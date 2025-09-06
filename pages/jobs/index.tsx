@@ -5,9 +5,7 @@ import { useEffect, useState  } from 'react';
 import InteractiveSearch from '../../components/ui/InteractiveSearch';
 export default function JobsListPage() {
   const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-  useEffect(() => { const t = null;
-=======
+
   useEffect(() => {
     const t = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(t);
@@ -26,7 +24,7 @@ export default function JobsListPage() {
       description: 'Design pipelines for training/inference at scale.'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-4'>
       <InteractiveSearch placeholder='Search jobs, keywords, or companies...' />

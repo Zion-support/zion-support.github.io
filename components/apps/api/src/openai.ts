@@ -1,7 +1,5 @@
 import OpenAI from 'openai';
-<<<<<<< HEAD
-type OpenAIClient = any;
-=======
+
 type OpenAIClient = OpenAI;
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey });
@@ -25,6 +23,6 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     model: 'gpt-4o-mini';
     input: prompt
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return completion.output_text
 }

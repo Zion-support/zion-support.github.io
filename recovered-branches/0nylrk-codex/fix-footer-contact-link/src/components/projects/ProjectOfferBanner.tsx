@@ -7,10 +7,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { useProjects } from "@/hooks/useProjects";
 import { Project } from "@/types/projects";
 export function ProjectOfferBanner() {
-<<<<<<< HEAD
-  const navigate = null;
-  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-=======
+
   const navigate = useNavigate();
   const { projects, isLoading } = useProjects();
   const [pendingOffers, setPendingOffers] = useState<Project[]>([]);
@@ -33,7 +30,7 @@ export function ProjectOfferBanner() {
     navigate(`/project/${projectId}`)
   }
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return null
   }
   return (

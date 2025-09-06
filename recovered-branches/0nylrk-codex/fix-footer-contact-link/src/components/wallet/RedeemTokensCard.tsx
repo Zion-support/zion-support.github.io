@@ -1,20 +1,5 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useWallet } from "@/hooks/useWallet",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Button } from "@/components/ui/button";
-import { Gift, ArrowRight, ExternalLink } from "lucide-react";
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-  DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog",
 
-type RewardOption = any;
-=======
 import React, { useState } from "react";
 import {useWallet} from "@/hooks/useWallet";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
@@ -59,7 +44,7 @@ export function RedeemTokensCard() {
     await spendTokens(option.cost, `Redeemed: ${option.title}`)
     setOpen(false)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

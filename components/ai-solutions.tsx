@@ -2,9 +2,7 @@ import React from 'react',
 import Head from 'next/head';
 import Link from 'next/link';
 export default function AISolutionsPage() {
-<<<<<<< HEAD
-  const aiSolutions = null;
-=======
+
   const aiSolutions = [
     {
       id: 'machine-learning'
@@ -136,7 +134,7 @@ export default function AISolutionsPage() {
   const technologies = [
     'TensorFlowPyTorchScikit-learnOpenAI GPTBERTYOLOKerasPandas'
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

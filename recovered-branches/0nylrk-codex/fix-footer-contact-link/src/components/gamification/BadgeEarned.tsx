@@ -2,11 +2,9 @@
 import React from "react";
 import { getBadgeMeta, BadgeKey } from "./badgeConfig";
 interface BadgeEarnedProps {
-<<<<<<< HEAD
-  badge: BadgeKey;
-=======
+
   badge: BadgeKey
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   size?: number;
   showName?: boolean;
   showDesc?: boolean;
@@ -14,9 +12,7 @@ interface BadgeEarnedProps {
 }
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   badge;
-<<<<<<< HEAD
-  size;
-=======
+
   size = 44;
   showName = true;
   showDesc = false
@@ -56,4 +52,4 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

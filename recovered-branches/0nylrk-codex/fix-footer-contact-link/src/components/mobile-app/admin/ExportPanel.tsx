@@ -6,17 +6,13 @@ import { Download } from "lucide-react",
 import { AppPlatform, AppMetadataValues } from "./MetadataManager";
 import { toast } from "sonner";
 interface ExportPanelProps {
-<<<<<<< HEAD
-  platform: AppPlatform;
-=======
+
   platform: AppPlatform
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   metadata: AppMetadataValues
 }
 export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) => {
-<<<<<<< HEAD
-  const handleExport = null;
-=======
+
   const handleExport = (format: 'json' | 'csv') => {
     try {
       let content: string
@@ -96,4 +92,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platform, metadata }) 
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -32,9 +32,7 @@ export function ModeToggle() {
     setIsClient(true)
   }, [])
   // Determine the actual resolved theme for display purposes
-<<<<<<< HEAD
-  const resolvedTheme = null;
-=======
+
   const resolvedTheme = (() => {
     if (!isClient) return 'light'; // Default for SSR
     if (theme === 'system') {
@@ -91,7 +89,7 @@ export function ModeToggle() {
       })
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
       >

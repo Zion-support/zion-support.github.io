@@ -1,9 +1,6 @@
 import useSWR from 'swr';
 import Link from 'next/link';
-<<<<<<< HEAD
-const fetcher = null;
-    mutate()
-=======
+
 const fetcher = (url: string) => fetch(url).then(r => r.json())
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
@@ -16,7 +13,7 @@ export default function ClientDashboard() {
       body: JSON.stringify({ status: 'Closed' })
     });
     mutate();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='space-y-4'>

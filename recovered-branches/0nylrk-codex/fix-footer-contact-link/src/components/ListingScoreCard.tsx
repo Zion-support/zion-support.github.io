@@ -4,17 +4,12 @@ import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button";
 import { StarIcon } from "lucide-react";
 interface ListingScoreCardProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  image?: string;
-  category: string;
-=======
+
   title: string
   description: string
   image?: string;
   category: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   tags?: string[];
   author?: string;
   authorImage?: string;
@@ -25,17 +20,7 @@ interface ListingScoreCardProps {
 }
 export function ListingScoreCard({
   title;
-<<<<<<< HEAD
-  description;
-  image;
-  category;
-  tags;
-  author;
-  authorImage;
-  aiScore;
-                    star <= Math.round(rating) 
-                      ? "text-zion-cyan fill-zion-cyan" 
-=======
+
   description
   image
   category
@@ -86,7 +71,7 @@ export function ListingScoreCard({
                     "h-4 w-4"
                     star <= Math.round(rating)
                       ? "text-zion-cyan fill-zion-cyan"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                       : "text-zion-slate-light"
                   )}
                 />

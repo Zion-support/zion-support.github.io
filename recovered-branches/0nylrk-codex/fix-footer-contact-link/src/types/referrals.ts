@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type ReferralStatus = any;
-=======
+
 export type ReferralStatus = 'pending' | 'completed' | 'expired';
 export interface ReferralCode {
   id: string;
@@ -38,6 +36,6 @@ export interface ReferralStats {
   totalReferrals: number;
   pendingReferrals: number;
   completedReferrals: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   totalRewards: number
 }

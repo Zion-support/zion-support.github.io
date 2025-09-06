@@ -16,9 +16,7 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast();
   const { user } = useAuth();
-<<<<<<< HEAD
-  const handleConnectWallet = null;
-=======
+
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
@@ -73,7 +71,7 @@ export function OnChainExport() {
       setIsExporting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

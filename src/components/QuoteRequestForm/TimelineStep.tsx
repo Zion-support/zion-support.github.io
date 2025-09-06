@@ -3,11 +3,7 @@ import { Calendar } from '@/components/ui/calendar'
 import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { CalendarIcon } from 'lucide-react'
-<<<<<<< HEAD
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { cn } from "@/lib/utils";
-import { QuoteFormData } from "@/types/quotes";
-=======
+
 import {
   Popover
   PopoverContent
@@ -15,16 +11,13 @@ import {
 } from '@/components/ui/popover'
 import { cn } from '@/lib/utils'
 import { QuoteFormData } from '@/types/quotes'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface TimelineStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-                        !formData.endDate && "text-zion-slate-light"
-=======
+
     <div className='space-y-6'>
       <div>
         <h3 className='text-xl font-semibold text-white mb-4'>
@@ -110,7 +103,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                         format(formData.endDate, 'PPP')
                       ) : (
                         <span>Pick a date</span>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                       )}
                     </Button>
                   </PopoverTrigger>

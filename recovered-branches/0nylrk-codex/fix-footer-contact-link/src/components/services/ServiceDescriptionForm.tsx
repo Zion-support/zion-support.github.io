@@ -10,10 +10,7 @@ import { supabase } from "@/integrations/supabase/client",
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
 import { useForm } from "react-hook-form",
 import z from "zod";
-<<<<<<< HEAD
-import { zodResolver } from "@hookform/resolvers/zod";
-const formSchema = null;
-=======
+
 import {zodResolver} from "@hookform/resolvers/zod";
 const formSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters");
@@ -64,7 +61,7 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">
       <CardHeader>

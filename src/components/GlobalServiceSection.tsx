@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import { GradientHeading } from "./GradientHeading";
-import { Server, HardDrive, Network, Clock, Recycle, Truck } from 'lucide-react'
-import { Button } from "./ui/button";
-const services = null;
-=======
 import { GradientHeading } from './GradientHeading'
 import {
   Server
@@ -53,7 +47,7 @@ const services = [
     icon: <Truck className='h-10 w-10' />
   }
 ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function GlobalServiceSection() {
   return (
     <section className='py-20 bg-zion-blue' id='global-services'>

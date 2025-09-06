@@ -9,12 +9,7 @@ export function useUIState() {
     skills: true;
     availability: true;
     region: true;
-<<<<<<< HEAD
-    experience: true;
-    price: true});
-  // Toggle expanded sections in the sidebar
-  const toggleSection = null;
-=======
+
     experience: true
     price: true});
   // Toggle expanded sections in the sidebar
@@ -39,6 +34,6 @@ export function useUIState() {
     setSelectedTalent;
     expandedSections;
     toggleSection;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     closeMobileFilter}
 }

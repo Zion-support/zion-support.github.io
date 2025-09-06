@@ -4,9 +4,7 @@ import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
-<<<<<<< HEAD
-import Link from "next/link";
-=======
+
 import Link from 'next/link'
 import React from "react"
 import { Card, CardContent } from "@/components/ui/card"
@@ -66,7 +64,7 @@ export function ClientDashboard() {
                 <Button size='sm' variant='outline'>
                   View Details
                 </Button>              </div>import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">

@@ -8,10 +8,7 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
   severity
 }) => {
   return (
-<<<<<<< HEAD
-    <SeverityIndicator 
-      severity;
-=======
+
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"}
       showIcon={true}
@@ -19,4 +16,4 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({
     />
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

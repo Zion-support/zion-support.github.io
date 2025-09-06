@@ -5,11 +5,9 @@ export interface Attachment {
   mimeType: string;
   size: number;
   url: string;
-<<<<<<< HEAD
-  uploadedAt: Date;
-=======
+
   uploadedAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   uploadedBy: string
 }
 export interface SupportTicket {
@@ -26,11 +24,9 @@ export interface SupportTicket {
   messages: TicketMessage[];
   createdAt: Date;
   updatedAt: Date;
-<<<<<<< HEAD
-  resolvedAt?: Date;
-=======
+
   resolvedAt?: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   firstResponseTime?: number, // in minutes
   resolutionTime?: number, // in hours
 }
@@ -40,11 +36,9 @@ export interface TicketMessage {
   senderType: 'customer' | 'agent' | 'system';
   senderId: string;
   isInternal: boolean;
-<<<<<<< HEAD
-  createdAt: Date;
-=======
+
   createdAt: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   attachments: Attachment[]
 }
 export interface Customer {
@@ -54,17 +48,12 @@ export interface Customer {
   company?: string;
   plan: 'free' | 'basic' | 'pro' | 'enterprise';
   totalTickets: number;
-<<<<<<< HEAD
-  resolvedTickets: number;
-  averageResponseTime: number, // in minutes
-  satisfactionScore: number, // 1-5
-  lastContactDate: Date;
-=======
+
   resolvedTickets: number
   averageResponseTime: number, // in minutes
   satisfactionScore: number, // 1-5
   lastContactDate: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   createdAt: Date
 }
 export interface SupportAgent {
@@ -75,19 +64,15 @@ export interface SupportAgent {
   skills: string[];
   isAvailable: boolean;
   currentTickets: number;
-<<<<<<< HEAD
-  maxTickets: number;
-=======
+
   maxTickets: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   performance: AgentPerformance
 }
 export interface AgentPerformance {
-<<<<<<< HEAD
-  ticketsResolved: number;
-=======
+
   ticketsResolved: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   averageResolutionTime: number, // in hours
   customerSatisfaction: number, // 1-5
   firstResponseTime: number, // in minutes
@@ -102,11 +87,9 @@ export interface ChatbotSession {
   intent: string;
   confidence: number;
   resolved: boolean;
-<<<<<<< HEAD
-  escalated: boolean;
-=======
+
   escalated: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   satisfaction: number, // 1-5
 }
 export interface ChatbotMessage {
@@ -114,11 +97,9 @@ export interface ChatbotMessage {
   content: string;
   sender: 'customer' | 'bot';
   timestamp: Date;
-<<<<<<< HEAD
-  intent?: string;
-=======
+
   intent?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   confidence?: number
 }
 export interface KnowledgeBaseArticle {
@@ -130,11 +111,9 @@ export interface KnowledgeBaseArticle {
   views: number;
   helpful: number;
   notHelpful: number;
-<<<<<<< HEAD
-  lastUpdated: Date;
-=======
+
   lastUpdated: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   createdBy: string
 }
 export interface SupportAnalytics {
@@ -144,13 +123,10 @@ export interface SupportAnalytics {
   averageResolutionTime: number;
   averageFirstResponseTime: number;
   customerSatisfaction: number;
-<<<<<<< HEAD
-  chatbotResolutionRate: number;
-  topCategories: Array<{ category: string, count: number }>,
-=======
+
   chatbotResolutionRate: number
   topCategories: Array<{ category: string, count: number }>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   agentPerformance: Array<{ agentId: string, ticketsResolved: number, satisfaction: number }>
 }
 export interface AIRecommendation {
@@ -158,11 +134,9 @@ export interface AIRecommendation {
   title: string;
   description: string;
   impact: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
-  confidence: number;
-=======
+
   confidence: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   actionItems: string[]
 }
 class AICustomerSupportService {
@@ -173,18 +147,14 @@ class AICustomerSupportService {
   private knowledgeBase: KnowledgeBaseArticle[] = [];
   private analytics: SupportAnalytics;
   constructor() {
-<<<<<<< HEAD
-    this.initializeSampleData();
-=======
+
     this.initializeSampleData()
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     this.updateAnalytics()
   }
   private initializeSampleData() {
     // Initialize sample customers
-<<<<<<< HEAD
-    this.customers;
-=======
+
     this.customers = [
       {
         id: 'cust_001';
@@ -566,4 +536,4 @@ class AICustomerSupportService {
   }
 }
 export const aiCustomerSupportService = new AICustomerSupportService();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

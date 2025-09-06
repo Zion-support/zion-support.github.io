@@ -2,14 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Star, Users, TrendingUp, Zap, Shield;
-  CheckCircle, Clock, Award, Target, Globe, Sparkles;
-  Cpu, Lock, Cloud, BarChart3, Eye, Heart, Lightbulb;
-  ArrowRight, Phone, Mail, MapPin, Globe as GlobeIcon
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 import {
   Brain
   Star
@@ -915,7 +908,7 @@ export default function AIConsciousnessEvolution2025() {
               {[
                 { icon: <Phone className="w-6 h-6" />, label: 'Call Us', value: contactInfo.mobile }
                 { icon: <Mail className="w-6 h-6" />, label: 'Email Us', value: contactInfo.email }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 { icon: <MapPin className="w-6 h-6" />, label: 'Visit Us', value: contactInfo.address }
                 <motion.div
                   key={contact.label}

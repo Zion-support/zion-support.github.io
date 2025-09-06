@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = {
   category: string;
   level: string;
@@ -27,7 +25,7 @@ export default function FilterBar({
   isFree: string
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function FilterBar({ category, level, isFree, onChange }: Props) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">

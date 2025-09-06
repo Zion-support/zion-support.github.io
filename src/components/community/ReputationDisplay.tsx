@@ -3,11 +3,7 @@ import { Progress } from "@/components/ui/progress";
 interface ReputationDisplayProps {
   reputation: number;
   size?: 'sm' | 'md' | 'lg'
-<<<<<<< HEAD
-}
 
-export const ReputationDisplay = null;
-=======
 export const ReputationDisplay = ({
   reputation
   size = 'md',}: ReputationDisplayProps) => {
@@ -87,4 +83,4 @@ export default ReputationDisplay
 }
 export default ReputationDisplay
 '
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

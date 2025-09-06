@@ -13,9 +13,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
-<<<<<<< HEAD
-  const fetchSuggestedTalents = null;
-=======
+
   const fetchSuggestedTalents = async () => {
     setIsLoading(true);
     try {
@@ -97,7 +95,7 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       skills: talent.talent_profile?.skills |[]
     }
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="border-zion-blue-light bg-zion-blue">
       <CardHeader>

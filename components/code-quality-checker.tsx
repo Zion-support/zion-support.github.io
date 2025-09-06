@@ -2,9 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
-=======
+
 import {
   Code
   CheckCircle
@@ -17,15 +15,12 @@ import {
   Clock
   TrendingUp;
 } from 'lucide-react';import { Code, CheckCircle, AlertTriangle, Zap, BarChart3, ArrowRight, Play, Shield, Clock, TrendingUp } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function CodeQualityCheckerPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
   const [codeInput, setCodeInput] = useState('');
-<<<<<<< HEAD
-  const features = null;
-            security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
-=======
+
   const features = [
     {
       icon: <Code className='w-8 h-8 text-white' />
@@ -275,7 +270,7 @@ export default function CodeQualityCheckerPage() {
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </p>
           {/* Code Input Form */}
           <div className="max-w-4xl mx-auto mb-8">

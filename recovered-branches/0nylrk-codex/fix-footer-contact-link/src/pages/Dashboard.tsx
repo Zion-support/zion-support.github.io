@@ -13,9 +13,7 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
   if (!user) return null;
-<<<<<<< HEAD
-  const handleTestNotification = null;
-=======
+
   const handleTestNotification = async () => {
     const result = await createTestNotification(user.id);
     if (result.success) {
@@ -124,7 +122,7 @@ export default function Dashboard() {
                         });
                         toast({
                           title: "System notification sent"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                           description: "Check your notification center"
                         })
                       }}

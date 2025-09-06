@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-export default function InteractiveSearch({ placeholder;
-=======
+
 export default function InteractiveSearch({
   placeholder = 'Search talent, skills, or jobs...'
 }: {
@@ -19,7 +17,7 @@ export default function InteractiveSearch({
         <button
           onClick={() => setValue('')}
           className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'        >  const [value, setValue] = useState('');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
       <input

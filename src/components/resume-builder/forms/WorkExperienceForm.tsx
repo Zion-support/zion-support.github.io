@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { format } from 'date-fns';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { WorkExperience  } from '@/types/resume';
-=======
+
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -33,17 +16,14 @@ import {
   FormLabel
   FormMessage
 } from '@/components/ui/form'; import { WorkExperience } from '@/types/resume'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Loader2, Edit, Trash2 } from 'lucide-react'
 import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation
-<<<<<<< HEAD
-const workExperienceSchema = null;
-                      location: ''})
-=======
+
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required')
   role_title: z.string().min(1, 'Job title is required')
@@ -357,7 +337,7 @@ export function WorkExperienceForm({
                       description: ''
                       location: ''
                     })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   } else {
                     onBack()
                   }

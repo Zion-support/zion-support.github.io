@@ -3,18 +3,12 @@ import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {List, RefreshCw} from "lucide-react";
 import {useApiKeys, type, ApiLog} from "@/hooks/useApiKeys";
-<<<<<<< HEAD
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Badge } from "@/components/ui/badge";
-=======
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Badge} from "@/components/ui/badge";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function ApiLogs() {
   const { logs, totalLogs, loading, fetchApiLogs } = useApiKeys();
   const [pageSize, setPageSize] = useState(25);
@@ -23,10 +17,7 @@ export function ApiLogs() {
   useEffect(() => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }, [pageSize, currentPage]);
-<<<<<<< HEAD
-  
-  const handleRefresh = null;
-=======
+
   const handleRefresh = () => {
     fetchApiLogs(pageSize, currentPage * pageSize)
   }
@@ -68,7 +59,7 @@ export function ApiLogs() {
               value={pageSize.toString()}
               onValueChange={(value) => {
                 setPageSize(Number(value));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 setCurrentPage(0), // Reset to first page when changing page size
               }}
             >

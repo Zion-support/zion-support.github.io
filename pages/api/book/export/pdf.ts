@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import puppeteer from 'puppeteer';
-<<<<<<< HEAD
-export const config = null;
-=======
+
 export const config = {
   api: {
     bodyParser: {
@@ -27,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await browser.close()
     res.setHeader('Content-Typeapplication/pdf')
     res.setHeader('Content-Dispositionattachment, filename="zion-os-book.pdf"')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     res.status(200).send(pdfBuffer)
   } catch (e: any) {
     try { await browser.close() } catch {}

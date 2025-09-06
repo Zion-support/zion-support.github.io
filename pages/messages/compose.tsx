@@ -2,9 +2,7 @@ import React from 'react';
 import { useRouter  } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
 export default function ComposePage() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const {
     type
@@ -60,7 +58,7 @@ export default function ComposePage() {
     if (data?.conversation?.id)
       router.replace(`/messages/${data.conversation.id}`);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-gray-50'>
       <div className='max-w-2xl mx-auto p-4'>

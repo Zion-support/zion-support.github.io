@@ -29,23 +29,7 @@ interface Listing {
   price?: number | null;
   createdAt: string
 interface CategoryListingPageProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  listings: Listing[];
-  sortOptions?: { label: string, value: string }[],
-  filterOptions?: { label: string, value: string }[]
-}
 
-export function CategoryListingPage({ 
-  title;
-  description;
-  listings: initialListings;
-  sortOptions;
-                    setSelectedFilter(filterOptions[0]?.value || 'all')
-                  }}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-=======
   title: string
   description: string
   listings: Listing[]
@@ -256,7 +240,7 @@ export function CategoryListingPage({
                     setSearchQuery('')
                     setSelectedFilter(filterOptions[0]?.value |'all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 >
                   Clear all filters
                 </Button>

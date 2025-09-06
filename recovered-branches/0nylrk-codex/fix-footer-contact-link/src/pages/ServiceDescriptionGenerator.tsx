@@ -9,14 +9,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { Navigate } from "react-router-dom";
 export default function ServiceDescriptionGenerator() {
   const { isAuthenticated, isLoading } = useAuth();
-<<<<<<< HEAD
-  const [generatedDescription, setGeneratedDescription] = useState<string | null>(null),
-  
-  // Show loading while checking authentication
-  if (isLoading) {
-    return (
-      <div className;
-=======
+
   const [generatedDescription, setGeneratedDescription] = useState<string | null>(null);
   // Show loading while checking authentication
   if (isLoading) {
@@ -36,7 +29,7 @@ export default function ServiceDescriptionGenerator() {
     setGeneratedDescription(editedDescription)
     // Here you could also save to database if needed
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="min-h-screen flex flex-col bg-zion-blue">
       <SEO

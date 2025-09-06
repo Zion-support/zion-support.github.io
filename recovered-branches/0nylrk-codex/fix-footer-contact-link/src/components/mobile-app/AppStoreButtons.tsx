@@ -11,9 +11,7 @@ interface AppStoreButtonsProps {
 }
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className;
-<<<<<<< HEAD
-  appStoreUrl;
-=======
+
   appStoreUrl = "#";
   googlePlayUrl = "#";
   onAppStoreClick
@@ -73,4 +71,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

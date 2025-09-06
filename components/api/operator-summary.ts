@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const r = null;
-    res.status(200).json({ summary, timestamp: new Date().toISOString() })
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -33,7 +28,7 @@ export default async function handler(
       `Treasury stable and contributors earning consistently across regions`
     ];
     res.status(200).json({ summary, timestamp: new Date().toISOString() });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary' });
   }

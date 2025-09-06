@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export type EnterpriseITSolution = any;
-=======
+
 export type EnterpriseITSolution = {
   id: string;
   name: string;
@@ -302,4 +300,4 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		realService: true
 	}
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

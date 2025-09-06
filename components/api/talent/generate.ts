@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-const openai = null;
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -51,7 +49,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
       title: parsed.title |title |'Professional';
       category: parsed.category |null;
       summary: parsed.summary |''
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })

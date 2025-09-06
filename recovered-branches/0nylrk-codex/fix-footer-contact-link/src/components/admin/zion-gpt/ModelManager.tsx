@@ -8,11 +8,9 @@ import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react
 import { supabase  } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
 interface ModelVersionData extends ModelConfig {
-<<<<<<< HEAD
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-=======
+
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   errorMessage?: string
 }
 export function ZionGPTModelManager() {
@@ -23,10 +21,7 @@ export function ZionGPTModelManager() {
   useEffect(() => {
     fetchModels()
   }, []);
-<<<<<<< HEAD
 
-  const fetchModels = null;
-=======
   const fetchModels = async () => {
     try {
       setIsLoading(true);
@@ -104,7 +99,7 @@ export function ZionGPTModelManager() {
       console.error('Error toggling model active state:', error)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="w-full">
       <CardHeader className="flex flex-row items-center justify-between">

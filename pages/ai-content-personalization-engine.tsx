@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIContentPersonalizationEngine() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Content Personalization Engine"
 			slug="ai-content-personalization-engine"
 			description="Deliver tailored content, offers, and UX per user in real-time. Optimize journeys across web, email, and in-app to maximize engagement and conversions."
@@ -19,7 +17,7 @@ export default function AIContentPersonalizationEngine() {
 				"A/B/n and multi-armed bandit experimentation"
 				"Journey orchestration across channels"
 				"Privacy-safe profiling and consent management"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Integrations: CDP, ESP, CMS, Web SDK"
 			]}
 			industries={["E‑commerce", "Media", "SaaS", "Education"]}

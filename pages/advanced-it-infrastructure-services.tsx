@@ -11,10 +11,7 @@ import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
   Wifi, Building, Cpu as CpuIcon
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -156,7 +153,7 @@ const testimonials = [
     rating: 5
     avatar: '👩‍🔒'
   },];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>

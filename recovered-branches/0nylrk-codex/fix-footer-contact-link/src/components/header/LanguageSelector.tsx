@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import { useTranslation  } from 'react-i18next';
-import { Button  } from '@/components/ui/button';
-import { Globe } from 'lucide-react';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
-=======
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
@@ -21,7 +10,7 @@ import {
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function LanguageSelector() {
   const { t } = useTranslation();
   const { currentLanguage, changeLanguage, supportedLanguages } = useLanguage();

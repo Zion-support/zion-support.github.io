@@ -1,9 +1,9 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
-=======
+
 import React from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
@@ -84,7 +84,7 @@ const stats = [
   { number: "99.9%", label: "Success Rate" }
   { number: "24/7", label: "Support Available" }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -278,8 +278,14 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </MainLayout>
+<<<<<<< HEAD
   );
 }
+=======
+=======
+import Head from 'next/head';
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
 import Link from 'next/link';
 import Layout from '../components/Layout';
 export default function CaseStudiesPage() {
@@ -302,6 +308,10 @@ export default function CaseStudiesPage() {
         </p>
       </section>
     </Layout>
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   );
  </Head> </section> </Layout>
 	return (

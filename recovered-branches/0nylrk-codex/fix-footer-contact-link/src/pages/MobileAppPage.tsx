@@ -1,16 +1,5 @@
 
-<<<<<<< HEAD
-import React from "react",
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { MobileAppHero } from "@/components/mobile-app/MobileAppHero",
-import { AppFeatures } from "@/components/mobile-app/AppFeatures",
-import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",
-import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
-import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
-import { DownloadSection } from "@/components/mobile-app/DownloadSection";
-const MobileAppPage: React.FC;
-=======
+
 import React from "react";
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
@@ -38,4 +27,4 @@ const MobileAppPage: React.FC = () => {
   )
 }
 export default MobileAppPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

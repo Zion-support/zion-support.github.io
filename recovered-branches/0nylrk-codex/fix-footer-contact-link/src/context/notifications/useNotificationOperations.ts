@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { useState, useCallback  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { Notification, FilterType, NotificationContextType } from './types';
-export const useNotificationOperations = null;
-=======
+
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {Notification, FilterType, NotificationContextType} from './types';
@@ -96,4 +91,4 @@ export const useNotificationOperations = (userId?: string): NotificationContextT
     setFilter;
     fetchNotifications}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

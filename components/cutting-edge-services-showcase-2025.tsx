@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
-=======
+
 import {
   Brain
   Atom
@@ -33,7 +31,7 @@ import {
   Mail
   MapPin;} from 'lucide-react';import {
   Brain, Atom, Shield, Rocket, Star, Award, TrendingUp;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   CheckCircle, ArrowRight, Zap, Target, Microscope;
   Lock, Cloud, BarChart3, Settings, Eye, Code, Palette;
   Search, Filter, Grid, List, ExternalLink, Phone, Mail, MapPin
@@ -43,9 +41,7 @@ import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services
 import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantum-services';
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it';
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
 import { Zap, Star } from 'lucide-react';
 const contactInfo = {
   mobile: '+1 302 464 0950'
@@ -594,7 +590,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <button
                   onClick={() => {
                     setSearchTerm('');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     setSelectedCategory('all')
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"

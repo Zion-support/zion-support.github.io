@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { cn  } from '@/lib/utils';
-=======
+
 import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -21,7 +13,7 @@ import {
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { cn } from '@/lib/utils'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 // Enhanced loading spinner with different variants
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
@@ -30,9 +22,7 @@ interface LoadingSpinnerProps {
   showText?: boolean;
   text?: string
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-<<<<<<< HEAD
-  size;
-=======
+
   size = 'md'
   variant = 'default'
   className
@@ -407,4 +397,4 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
 }
 }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

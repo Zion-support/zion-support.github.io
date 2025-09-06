@@ -1,24 +1,20 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 return (<UltraAdvancedFuturisticBackground> <Head> </li>) )
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> Start Free Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Star  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumAICognitivePage() {
-<<<<<<< HEAD
-  const service = null;
-=======
+
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-ai-cognitive'));
   if (!service) {
     return null
   }
   const contactInfo = service.contactInfo;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>

@@ -11,20 +11,7 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Navigate } from "react-router-dom",
 import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-import {
-  QuoteStatusCards;
-  QuotesFilter;
-  QuotesTable
-} from "@/components/admin/quotes",
 
-export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = null;
-=======
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {QuoteDetails} from "@/components/quotes/QuoteDetails";
 import {ExportToCSV} from "@/components/quotes/ExportToCSV";
@@ -139,7 +126,7 @@ export default function QuoteManager() {
           isOpen={showDetails}
           onClose={() => {
             setShowDetails(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             setSelectedQuote(null)
           }}
         />

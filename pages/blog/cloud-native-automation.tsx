@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import Head from 'next/head',
-=======
+
 import Head from 'next/head';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Link from 'next/link';
 import React from 'react';
 export default function CloudNativeAutomation() {
@@ -13,9 +11,7 @@ export default function CloudNativeAutomation() {
           Building Cloud-Native Automation Infrastructure | Zion Tech Group
         </title>
         <meta
-<<<<<<< HEAD
-          name;
-=======
+
           name='description'
           content='A deep dive into our cloud-native approach to building scalable, reliable automation systems.'
         />
@@ -105,7 +101,7 @@ export default function CloudNativeAutomation() {
                 </ul>
                 <p className='text-white/90 mb-4'>
                   Our Kubernetes clusters automatically handle load balancing
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   service discovery, and failover, ensuring high availability
                   and performance.
                 </p>

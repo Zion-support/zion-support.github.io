@@ -1,7 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
-<<<<<<< HEAD
-type UserRole = any;
-=======
+
 type UserRole = 'talent' | 'client';
 type AuthContextType = {
   role: UserRole;
@@ -34,7 +32,7 @@ const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: ()
       document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`
     } catch {}
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AuthContext.Provider value={{ role, setRole }}>
       {children}

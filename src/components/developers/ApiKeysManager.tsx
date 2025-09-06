@@ -1,36 +1,6 @@
 import { useState } from 'react'
 import { Check, Clock, Key, MoreVertical, RefreshCw, X } from 'lucide-react'
-<<<<<<< HEAD
-import { format } from "date-fns",
-import { useApiKeys, type ApiKeyScope } from "@/hooks/useApiKeys",
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog";
-import CodeBlock from "./CodeBlock";
-export function ApiKeysManager() {
-  const { 
-    keys;
-    loading;
-    newApiKey;
-    fetchApiKeys;
-    createApiKey;
-    regenerateApiKey;
-    revokeApiKey;
-    clearNewApiKey
-  } = useApiKeys();
-  const [showCreateDialog, setShowCreateDialog] = useState(false);
-  const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null>(null),
-  const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<string | null>(null),
-  
-=======
 import { format } from 'date-fns'
 import { useApiKeys, type ApiKeyScope } from '@/hooks/useApiKeys'
 import { Button } from '@/components/ui/button'
@@ -91,7 +61,7 @@ export function ApiKeysManager() {
   const [showRegenerateConfirm, setShowRegenerateConfirm] = useState<
     string | null
   >(null)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Create key form state
   const [keyName, setKeyName] = useState("");
   const [selectedScopes, setSelectedScopes] = useState<ApiKeyScope[]>([]),
@@ -99,11 +69,7 @@ export function ApiKeysManager() {
   // Load keys on mount
   useState(() => {
     fetchApiKeys()
-<<<<<<< HEAD
-  }),
-  
-  const handleCreateKey = null;
-=======
+
   })
   const handleCreateKey = async () => {
     if (keyName.trim() === '' |selectedScopes.length === 0) return
@@ -188,7 +154,7 @@ export function ApiKeysManager() {
     setKeyName('')
     setShowCreateDialog(false)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className='bg-zinc-900 border-zinc-800 text-white'>
       <CardHeader>

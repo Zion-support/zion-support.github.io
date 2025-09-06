@@ -9,10 +9,7 @@ import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
   platform: AppPlatform
 }
-<<<<<<< HEAD
 
-type ChangelogEntry = any;
-=======
 type ChangelogEntry = {
   id: string
   version: string
@@ -101,4 +98,4 @@ type ChangelogEntry = {
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

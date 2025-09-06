@@ -1,20 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-<<<<<<< HEAD
-export default defineConfig({
-  testDir: 'tests/e2e';
-  use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3000';
-    trace: 'on-first-retry'},
-  projects: [
-    {
-      name: 'Desktop Chrome';
-      use: {
-        browserName: 'chromium';
-        channel: 'chrome'}
-    },
-    {
-      name: 'Desktop Firefox';
-=======
+
 import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({testDir:'tests/e2e';
   use:{;
@@ -63,34 +48,21 @@ import { defineConfig, devices } from '@playwright/test';
     }
     {
       name: "Desktop Firefox"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       use: {
         browserName: 'firefox'
 }
     }
     {
-<<<<<<< HEAD
-      name: 'Desktop Safari';
-=======
+
       name: "Desktop Safari"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       use: {
         browserName: 'webkit'
 }
     }
     {
-<<<<<<< HEAD
-      name: 'Mobile Chrome';
-      use: {
-        browserName: 'chromium';
-        ...devices['Pixel 5']}
-    },
-    {
-      name: 'Mobile Safari';
-      use: {
-        browserName: 'webkit';
-        ...devices['iPhone 12']}
-=======
+
       name: "Mobile Chrome"
       use: {
         browserName: 'chromium'
@@ -103,16 +75,12 @@ import { defineConfig, devices } from '@playwright/test';
         browserName: 'webkit'
         ...devices['iPhone 12']
       }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
   ]
   reporter: [
-<<<<<<< HEAD
-    ['list'];
-    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
-});
-=======
+
     ['list']
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
 ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

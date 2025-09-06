@@ -3,16 +3,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Eye, Info, AlertTriangle, Ban } from 'lucide-react'
 interface ActionButtonsProps {
-<<<<<<< HEAD
-  flagId: string;
-  status: string;
-  onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void
-}
 
-export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
-  return (
-    <div className;
-=======
   flagId: string
   status: string
   onAction: (
@@ -82,4 +73,4 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({
 '"}
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

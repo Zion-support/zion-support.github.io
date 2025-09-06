@@ -11,19 +11,7 @@ interface AIListingFormProps {
     category: string;
     keyFeatures: string;
     targetAudience: string
-<<<<<<< HEAD
-  }) => void;
-  isLoading: boolean;
-  initialValues?: {
-    title?: string;
-    category?: string;
-    keyFeatures?: string;
-    targetAudience?: string
-  }
-}
 
-export function AIListingForm({ onSubmit, isLoading, initialValues;
-=======
   }) => void
   isLoading: boolean;  initialValues?: {
     title?: string
@@ -79,7 +67,7 @@ export function AIListingForm({
       targetAudience
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-4'>
       <div className='space-y-2'>

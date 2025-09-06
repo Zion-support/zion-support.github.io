@@ -1,13 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket  } from 'lucide-react';
-import { innovative2026AIServices  } from '../../data/innovative-2026-ai-services';
-import { innovative2026ITInfrastructureServices  } from '../../data/innovative-2026-it-infrastructure';
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas';
-export default function Enhanced2026ServiceShowcase() {
-  const containerVariants = null;
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -207,7 +199,7 @@ import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micr
       </motion.div>
     </motion.div>
   )
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className='py-20 relative overflow-hidden'>
       {/* Background effects */}

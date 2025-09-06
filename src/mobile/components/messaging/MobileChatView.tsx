@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useRouter  } from 'next/router';
-import { toast } from "sonner";
-=======
 import React, { useState } from 'react'
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
@@ -24,7 +14,7 @@ import {
 import { cn } from '@/lib/utils'
 import { useRouter } from 'next/router'
 import { toast } from 'sonner'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface Message {
   id: string;
   content: string;
@@ -43,15 +33,7 @@ interface MobileChatViewProps {
   messages: Message[];
   onBack: () => void;
   onSendMessage: (content: string) => void
-<<<<<<< HEAD
-}
 
-export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-  const [newMessage, setNewMessage] = useState("");
-  const router = null;
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
-=======
 export function MobileChatView({
   contact
   messages
@@ -158,7 +140,7 @@ export function MobileChatView({
                     : 'text-muted-foreground'
                 )}
               >
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 {message.timestamp}
                 {message.isMe && message.status && (
                   <span className='ml-1'>

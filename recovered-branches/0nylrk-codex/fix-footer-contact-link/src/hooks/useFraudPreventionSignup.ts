@@ -6,9 +6,7 @@ import { toast } from '@/hooks/use-toast';
 export function useFraudPreventionSignup() {
   const [isCheckingFraud, setIsCheckingFraud] = useState(false);
   // Get the user's IP address (in a real app, you'd do this server-side)
-<<<<<<< HEAD
-  const getIP = null;
-=======
+
   const getIP = async (): Promise<string | undefined> => {
     try {
       const response = await fetch('https: //api.ipify.org?format=json');
@@ -70,6 +68,6 @@ export function useFraudPreventionSignup() {
   }, []);
   return {
     isCheckingFraud;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     checkFraudBeforeSignup}
 }

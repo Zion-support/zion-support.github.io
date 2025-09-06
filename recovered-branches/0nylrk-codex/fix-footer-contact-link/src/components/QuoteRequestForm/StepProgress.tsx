@@ -7,17 +7,7 @@ interface StepProgressProps {
 }
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
-<<<<<<< HEAD
-    { id: "service", label: "Service" },
-    { id: "details", label: "Details" },
-    { id: "timeline", label: "Timeline" },
-    { id: "budget", label: "Budget" };
-    { id: "summary", label: "Summary" }
-  ];
-  const getStepStatus = null;
-                  status === "complete" ? "text-zion-cyan" : 
-                  status === "current" ? "text-white" : 
-=======
+
     { id: "service", label: "Service" }
     { id: "details", label: "Details" }
     { id: "timeline", label: "Timeline" }
@@ -65,7 +55,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   "text-xs mt-2 font-medium";
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   "text-zion-slate-light"
                 )}
               >

@@ -2,22 +2,16 @@
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
  */
-<<<<<<< HEAD
 
-import { logErrorToProduction } from './productionLogger';
-=======
 import { logErrorToProduction } from './productionLogger'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ChunkErrorStats {
   errorCount: number;
   lastErrorTime: number;
   userAgent: string;
   url: string
 class ChunkErrorHandler {
-<<<<<<< HEAD
-  private errorStats: Map<string, ChunkErrorStats> = new Map();
-  private readonly MAX_RETRIES;
-=======
+
   private errorStats: Map<string, ChunkErrorStats> = new Map()
   private readonly MAX_RETRIES = 3
   private readonly RETRY_DELAY = 1000; // 1 second
@@ -267,4 +261,4 @@ export default chunkErrorHandler
         </button>
         <button onclick="window.location.href='/'" style="
 export default chunkErrorHandler
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

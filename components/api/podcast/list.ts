@@ -1,9 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-=======
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -42,6 +40,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     createdAt: e.createdAt;
     summary: e.bestQuote |''
     audio: e.audio |{}}));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ episodes: simplified })
 }

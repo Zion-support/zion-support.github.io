@@ -3,11 +3,7 @@ import { v4 as uuidv4  } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-const EPISODES_PATH = null;
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
-};
-=======
+
 const EPISODES_PATH = path.join(
   process.cwd()
   'data'
@@ -142,6 +138,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
   } catch (error: any) {
     console.error(error);
     return res.status(500).json({ error: error?.message |'Unknown error' })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 }

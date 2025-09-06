@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
 export default function PrivacySettingsPage() {
-<<<<<<< HEAD
-  const [userId, setUserId] = useState('');
-  const [optOut, setOptOut] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
-  const load = null;
-=======
+
   const [userId, setUserId] = useState('')
   const [optOut, setOptOut] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -42,7 +36,7 @@ export default function PrivacySettingsPage() {
     localStorage.setItem('user-id', userId)
     load()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>

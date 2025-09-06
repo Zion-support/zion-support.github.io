@@ -2,9 +2,7 @@
 import React from 'react';
 // This file fixes the ref type issues in sidebar components
 // Export a placeholder to ensure the file is recognized as a module
-<<<<<<< HEAD
-export const SIDEBAR_REF_TYPE_FIX = null;
-=======
+
 export const SIDEBAR_REF_TYPE_FIX = true;
 // Define a type that makes the ref forwards compatible
 export type ForwardRefComponent<T, P = {}> = React.ForwardRefExoticComponent<
@@ -36,4 +34,4 @@ export type SidebarContext = {
   isMobile: boolean;
   toggleSidebar: () => void;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

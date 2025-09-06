@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-=======
+
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
 }</div>) import { useEffect, useState } from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function AutomationStatusPage() {
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
   useEffect(() => {

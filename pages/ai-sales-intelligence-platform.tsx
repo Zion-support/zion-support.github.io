@@ -2,9 +2,7 @@ import ServicePage, { getStaticProps as getSlugStaticProps } from './services/[s
 export default function AISalesIntelligencePlatform() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Sales Intelligence Platform"
 			slug="ai-sales-intelligence-platform"
 			description="Auto-prioritize leads, generate personalized outreach, and forecast pipeline with high accuracy. Empower SDRs and AEs with AI copilots embedded in their daily workflows."
@@ -18,7 +16,7 @@ export default function AISalesIntelligencePlatform() {
 				"Meeting prep briefs and objection handling"
 				"Forecasting with scenario simulations"
 				"CRM automations for notes, tasks, and next steps"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Integrations: Salesforce, HubSpot, Gmail/Outlook, Gong, Zoom"
 			]}
 			industries={["B2B SaaS", "Professional Services", "Manufacturing"]}

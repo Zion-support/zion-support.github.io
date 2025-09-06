@@ -2,9 +2,7 @@
 import { useFetchResume  } from './useFetchResume';
 import { useResumeActions } from './useResumeActions';
 export function useResumeBasic() {
-<<<<<<< HEAD
-  const fetchResumeOperations = null;
-=======
+
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   return {
@@ -16,6 +14,6 @@ export function useResumeBasic() {
     // From useResumeActions
     createResume: resumeActions.createResume;
     updateBasicInfo: resumeActions.updateBasicInfo
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     setActiveResume: resumeActions.setActiveResume}
 }

@@ -1,29 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity  } from 'lucide-react';
-import Button from '../components/ui/Button',
-import Card from '../components/ui/Card',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { innovative2026MicroSaasServicesV2  } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2  } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2  } from '../data/enterprise-it-2026-services-v2';
-import { innovative2026AIServicesV3  } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3  } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-export default function Services2026ShowcaseEnhancedPage() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
 
-  // Map service variants to supported card variants
-  const mapServiceVariantToCardVariant = null;
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -188,7 +163,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     financialServices: all2026Services.filter(s => s.category.includes('Financial') |s.category.includes('Trading')).length
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') |s.category.includes('IoT')).length
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen">

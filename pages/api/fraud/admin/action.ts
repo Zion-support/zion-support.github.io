@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '[^']*';
-import { AdminActionType } from '[^']*';
-function ensureAdmin(req: NextApiRequest): boolean {
-  const token = null;
-  res.status(200).json({ ok: true, status: newStatus })
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 import { AdminActionType } from "../../../../utils/fraud/types";
@@ -37,4 +29,4 @@ export default async function handler(
   store.addAdminAction(adminAction);
   return res.status(200).json({ success: true, action: adminAction });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

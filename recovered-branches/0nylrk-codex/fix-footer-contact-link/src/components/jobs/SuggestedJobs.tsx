@@ -10,9 +10,7 @@ interface SuggestedJobsProps {
 }
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
-<<<<<<< HEAD
-  const currentTalentId = null;
-=======
+
   const currentTalentId = talentId |user?.id;
   const {
     isLoading;
@@ -30,7 +28,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">

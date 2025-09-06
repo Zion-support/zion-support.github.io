@@ -19,9 +19,7 @@ export default function JobDetails() {
   const { jobId } = useParams() as { jobId?: string }
   const { job, isLoading, error } = useJobDetails(jobId);
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const { isWhitelabel, brandName } = useWhitelabel();
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
@@ -173,7 +171,7 @@ export default function JobDetails() {
             description: job.description
             company_name: job.company_name |"Company"
             budget: job.budget
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             client_id: job.client_id
           }}
           isOpen={isApplyModalOpen}

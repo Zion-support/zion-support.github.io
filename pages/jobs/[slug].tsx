@@ -6,9 +6,7 @@ import useResponsive from '../../hooks/useResponsive';
 import { useToast  } from '../../components/ui/NotificationSystem';
 import { useEffect, useState } from 'react';
 export default function JobDetailsPage() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const { slug } = router.query as { slug?: string }
   const { isMobile } = useResponsive();
@@ -24,7 +22,7 @@ export default function JobDetailsPage() {
       'success'
     );
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='relative'>
       {loading ? (

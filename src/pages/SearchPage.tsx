@@ -12,23 +12,15 @@ import {
   TabsTrigger} from "@/components/ui/tabs",
 import { Loader2 } from 'lucide-react'
 interface SearchResult {
-<<<<<<< HEAD
-  id: string;
-  type: "product" | "service" | "talent" | "blog" | "doc";
-  title: string;
-=======
+
   id: string
   type: "product" | "service" | "talent" | "blog" | "doc"
   title: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   description: string
 }
 function highlight(text: string, term: string) {
-<<<<<<< HEAD
-  if (!term) return text;
-  const escaped = null;
-              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
-=======
+
   if (!term) return text
   const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
   const regex = new RegExp(`(${escaped})`, "gi")
@@ -120,7 +112,7 @@ export default function SearchPage() {
             onSelectSuggestion={(suggestion) => {
               const searchTerm = suggestion.text.trim()
               setQuery(searchTerm);              router.push(`/search?q=${encodeURIComponent(searchTerm)}`)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             }}
             searchSuggestions = {suggestions,}
             placeholder="Search talent, jobs, and projects..."

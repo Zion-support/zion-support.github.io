@@ -1,25 +1,4 @@
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Textarea  } from '@/components/ui/textarea';
-import {logErrorToProduction} from '@/utils/productionLogger';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react'
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio  } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
-// Define schema for form validation
-const projectSchema = null;
-=======
+
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -112,7 +91,7 @@ export function ProjectForm({
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-4'>

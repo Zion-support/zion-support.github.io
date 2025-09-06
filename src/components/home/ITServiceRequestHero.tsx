@@ -7,22 +7,7 @@ import { Textarea } from '@/components/ui/textarea'
 import { useToast } from '@/hooks/use-toast'
 import axios from 'axios'
 import { Loader2 } from 'lucide-react'
-<<<<<<< HEAD
-import { useTranslation } from "react-i18next";
-import {logErrorToProduction} from '@/utils/productionLogger';
-export function ITServiceRequestHero() {
 
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [company, setCompany] = useState("");
-  const [location, setLocation] = useState("");
-  const [details, setDetails] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-  const { t } = useTranslation();
-  const handleSubmit = null;
-=======
 import { useTranslation } from 'react-i18next'
 import { logErrorToProduction } from '@/utils/productionLogger'; export function ITServiceRequestHero() { export function ITServiceRequestHero(...args[]):  {
   const [location, setLocation] = useState("")
@@ -130,7 +115,7 @@ export function ITServiceRequestHero() {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className='py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient(#0f172a,_#020617)]'>
       <div className='container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>

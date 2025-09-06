@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
-export default function AgenticRAGPage() {
-	const contactInfo = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground';
@@ -21,7 +14,7 @@ export default function AgenticRAGPage() {
 		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] }
 		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] }
 		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 	return (
 		<UltraFuturisticMatrixBackground>
 			<Head>

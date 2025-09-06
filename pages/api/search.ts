@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '[^']*';
-import { searchAll, suggestDidYouMean } from '[^']*';
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { AccessLevel } from "../../utils/search/filter";
 import { parseQueryToFilters } from "../../utils/search/parser";
 import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   try {
-<<<<<<< HEAD
-    const q = null;
-      results})
-=======
+
     const q = (req.query.q as string) |"";
     const access = ((req.headers["x-access-level"] as string) |
       "public") as AccessLevel;
@@ -42,7 +33,7 @@ export default async function handler(
       }
       results
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
   }

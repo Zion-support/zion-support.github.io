@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-// Mock whitepaper data - in a real app, this would come from an API or database
-const whitepapers = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -65,7 +58,7 @@ export default function WhitepaperPage() {
   const router = useRouter()
   const { id } = router.query
   const whitepaper = whitepapers[id as keyof typeof whitepapers]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!whitepaper) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">

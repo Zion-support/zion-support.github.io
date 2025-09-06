@@ -1,34 +1,23 @@
 
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.38.4";
-import { corsHeaders } from "../_shared/cors.ts";
-interface AnalyzeRequest {
-  content: string;
-  contentType: string;
-=======
+
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.38.4"
 import {corsHeaders} from "../_shared/cors.ts";
 interface AnalyzeRequest {
   content: string;
   contentType: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   flagId?: string
 }
 interface AnalysisResult {
   classification: string;
-<<<<<<< HEAD
-  explanation: string;
-=======
+
   explanation: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   success: boolean
 }
 // Initialize environment and clients
-<<<<<<< HEAD
-const initializeServices = null;
-=======
+
 const initializeServices = () => {
   const supabaseUrl = Deno.env.get("SUPABASE_URL");
   const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
@@ -182,4 +171,4 @@ serve(async (req) => {
     )
   }
 });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

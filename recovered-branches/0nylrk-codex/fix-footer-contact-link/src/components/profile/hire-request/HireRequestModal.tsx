@@ -1,9 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
-import { HireRequestForm } from "./HireRequestForm",
-=======
 import React from "react";
 import {
   Dialog
@@ -12,7 +7,7 @@ import {
   DialogTitle
 } from "@/components/ui/dialog";
 import { HireRequestForm } from "./HireRequestForm";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { TalentProfile } from "@/types/talent";
 import { UserProfile } from "@/types/auth";
 interface HireRequestModalProps {
@@ -21,11 +16,7 @@ interface HireRequestModalProps {
   onClose: () => void;
   userDetails?: UserProfile
 }
-<<<<<<< HEAD
 
-export function HireRequestModal({ talent, isOpen, onClose, userDetails }: HireRequestModalProps) {
-  const handleClose = null;
-=======
 export function HireRequestModal({
   talent
   isOpen
@@ -36,7 +27,7 @@ export function HireRequestModal({
     onClose();
   }
   if (!talent) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">

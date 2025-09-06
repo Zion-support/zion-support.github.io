@@ -1,12 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { ArrowRight, Smartphone } from 'lucide-react'
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button",
-import { AppStoreButtons } from "./AppStoreButtons";
-import { Card, CardContent } from "@/components/ui/card";
-export const MobileLaunchHero: React.FC;
-=======
+
 import { Button } from '@/components/ui/button'
 import { AppStoreButtons } from './AppStoreButtons'
 import { Card, CardContent } from '@/components/ui/card'
@@ -92,4 +87,4 @@ export const MobileLaunchHero: React.FC = () => {
 }
 "  )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

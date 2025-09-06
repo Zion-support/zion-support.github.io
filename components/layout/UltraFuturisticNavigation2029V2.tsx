@@ -1,9 +1,7 @@
 import React, { useState } from 'react',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, X, Search, ChevronDown, ChevronRight;
-=======
+
 import {
   Menu
   X
@@ -64,7 +62,7 @@ import {
   Clock
   CheckCircle;} from 'lucide-react';import {
   Menu, X, Search, ChevronDown, ChevronRight;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Home, Users, Settings, HelpCircle, Mail, Phone, MapPin;
   BookOpen, MessageCircle, Star, TrendingUp;
   Layers, Cpu, Database, Cloud, Lock, Shield;
@@ -74,10 +72,7 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye, Globe2;
   Zap, Rocket, Brain, Sparkles, ShieldCheck, Target;
   Users2, Briefcase, Lightbulb, Award, Clock, CheckCircle
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -376,7 +371,7 @@ export default function UltraFuturisticNavigation2029V2() {
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-500/20'>
       {/* Main Navigation Bar */}

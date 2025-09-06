@@ -3,13 +3,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 export default function GrantsAdminPage() {
   const [token, setToken] = useState('');
-<<<<<<< HEAD
-  const [items, setItems] = useState<GrantApplication[]>([]),
-  const [selected, setSelected] = useState<GrantApplication | null>(null),
-  const [milestones, setMilestones] = useState<Milestone[]>([]),
 
-  const headers = null;
-=======
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
@@ -78,7 +72,7 @@ export default function GrantsAdminPage() {
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>

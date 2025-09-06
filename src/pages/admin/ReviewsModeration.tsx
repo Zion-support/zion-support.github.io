@@ -14,12 +14,7 @@ import { Star, AlertTriangle } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { logErrorToProduction } from '@/utils/productionLogger';
 function ReviewsModerationContent() {
-<<<<<<< HEAD
-  const [activeTab, setActiveTab] = useState("pending");
-  const [reviews, setReviews] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const fetchReviews = null;
-=======
+
   const [activeTab, setActiveTab] = useState('pending')
   const [reviews, setReviews] = useState([])
   const [isLoading, setIsLoading] = useState(true)
@@ -58,7 +53,7 @@ function ReviewsModerationContent() {
   const handleRefresh = () => {
     fetchReviews()
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

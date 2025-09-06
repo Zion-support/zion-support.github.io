@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-import { ProductListingCard  } from '@/components/ProductListingCard';
-import { useAuth  } from '@/hooks/useAuth';
-import { fetchRecommendations  } from '@/api/recommendations';
-import type { ProductListing } from '@/types/listings';
-import { Dialog, DialogContent, DialogHeader, DialogTitle  } from '@/components/ui/dialog';
-import { Button  } from '@/components/ui/button';
-=======
+
 import {useEffect, useState} from 'react'
 import {ProductListingCard} from '@/components/ProductListingCard'
 import {useAuth} from '@/hooks/useAuth'
@@ -19,18 +11,12 @@ import {
   DialogTitle
 } from '@/components/ui/dialog'
 import { Button } from '@/components/ui/button'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Loader2 } from 'lucide-react'
 import Link from 'next/link';
 import { ErrorState } from '@/components/jobs/applications';
 export default function EquipmentRecommendations() {
-<<<<<<< HEAD
-  const { isAuthenticated, user } = useAuth();
-  const [listings, setListings] = useState<ProductListing[]>([]),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<boolean>(false),
 
-=======
   const { isAuthenticated, user } = useAuth()
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
@@ -41,7 +27,7 @@ export default function EquipmentRecommendations() {
   const [listings, setListings] = useState<ProductListing[]>([])
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<boolean>(false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   useEffect((,) => {
     if (isAuthenticated && user?.id) {
       setLoading(true);

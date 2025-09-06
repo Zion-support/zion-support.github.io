@@ -6,10 +6,7 @@ interface SidebarContextType {
   open: () => void;
   close: () => void
 }
-<<<<<<< HEAD
 
-const SidebarContext = null;
-=======
 const SidebarContext = createContext<SidebarContextType>({
   isOpen: true
   toggle: () => {}
@@ -29,7 +26,7 @@ export function SidebarProvider({
   const toggle = () => setIsOpen(!isOpen);
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <SidebarContext.Provider value={{ isOpen, toggle, open, close }}>
       <div

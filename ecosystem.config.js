@@ -1,4 +1,10 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+module.exports = {;
+  apps:[;
+=======
 module.exports = {apps:[;
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     {;
       name:'error-fixer';
       script:'automation/lint-error-fixer.cjs';
@@ -84,7 +90,15 @@ module.exports = {apps:[;
       time: true
     }
   ]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
+},
+=======
 }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 export default {
   apps: [
     {
@@ -284,4 +298,14 @@ module.exports = {
     log_file: "./logs/combined.log"
     time: true
   }]
+<<<<<<< HEAD
+};
+<<<<<<< HEAD
+=======
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
 }
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

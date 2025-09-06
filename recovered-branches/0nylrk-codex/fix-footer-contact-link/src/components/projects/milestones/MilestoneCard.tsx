@@ -9,16 +9,7 @@ import { useDisputeCheck  } from '@/hooks/useDisputeCheck';
 import { DisputeStatusBadge  } from '@/components/disputes/DisputeStatusBadge';
 import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
 interface MilestoneCardProps {
-<<<<<<< HEAD
-  id: string;
-  projectId: string;
-  title: string;
-  description?: string;
-  amount: number;
-  status: string;
-  dueDate?: string;
-  onApprove?: (id: string) => Promise<void>;
-=======
+
   id: string
   projectId: string
   title: string
@@ -27,23 +18,18 @@ interface MilestoneCardProps {
   status: string
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onReject?: (id: string) => Promise<void>
 }
 export function MilestoneCard({
   id;
   projectId;
-<<<<<<< HEAD
-  title;
-  description;
-  amount;
-  status;
-=======
+
   title
   description
   amount
   status
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   dueDate;
   onApprove;
   onReject

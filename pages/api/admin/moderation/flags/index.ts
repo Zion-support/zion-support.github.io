@@ -1,20 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdmin, parseUserFromRequest } from '../../../../../utils/auth';
 import { createFlag, readAllFlags } from '../../../../../utils/moderationDb';
-<<<<<<< HEAD
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = parseUserFromRequest(req);
-  try {
-    ensureAdmin(user);
-  } catch (error: any) {
-    return res.status(error.statusCode || 403).json({ error: 'Forbidden' });
-  }
-
-  if (req.method === 'GET') {
-    const flags = await readAllFlags();
-    return res.status(200).json({ flags });
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = parseUserFromRequest(req)
   try { ensureAdmin(user) } catch (e: any) { return res.status(e.statusCode |403).json({ error: 'Forbidden' }) }
@@ -28,17 +15,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       (!contentType |f.contentType === contentType)
 )
     return res.status(200).json({ flags: filtered })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   if (req.method === 'POST') {
-<<<<<<< HEAD
-    const flag = await createFlag(req.body);
-    return res.status(201).json({ flag });
-  }
 
-  return res.status(405).end('Method Not Allowed');
-}
-=======
     const init = req.body |{}
     try {
       const flag = await createFlag(init)
@@ -50,4 +30,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowGET,POST')
   return res.status(405).end('Method Not Allowed')
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

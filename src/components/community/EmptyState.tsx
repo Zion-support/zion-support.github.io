@@ -1,10 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-=======
+
 import { Button } from '@/components/ui/button'
 import {
   Tooltip
@@ -13,20 +10,14 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface EmptyStateProps {
   title: string;
   subtitle: string;
   cta: string;
   href: string;
   hasSession: boolean
-<<<<<<< HEAD
-}
 
-const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
-  return (
-    <div className;
-=======
 const EmptyState: React.FC<EmptyStateProps> = ({
   title
   subtitle
@@ -59,4 +50,4 @@ const EmptyState: React.FC<EmptyStateProps> = ({
   )
 }
 export default EmptyState
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

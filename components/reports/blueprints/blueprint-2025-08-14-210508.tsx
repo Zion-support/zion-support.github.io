@@ -1,9 +1,7 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-export default function Page(){
-=======
+
 export default function Page() {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='min-h-screen bg-slate-950 text-white'>
       <Head>

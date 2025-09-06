@@ -2,21 +2,15 @@
 import React from "react";
 import { SearchSuggestion, SearchHighlight } from "@/types/search";
 interface AutocompleteSuggestionsProps {
-<<<<<<< HEAD
-  suggestions: SearchSuggestion[];
-  searchTerm: string;
-  onSelectSuggestion: (suggestion: string) => void;
-=======
+
   suggestions: SearchSuggestion[]
   searchTerm: string
   onSelectSuggestion: (suggestion: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   visible: boolean
 }
 // Helper function to highlight matching text
-<<<<<<< HEAD
-const highlightMatch = null;
-=======
+
 const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
     return { before: '', match: text, after: '' }
@@ -45,7 +39,7 @@ export function AutocompleteSuggestions({
       <ul className="py-2 max-h-60 overflow-y-auto">
         {suggestions.map((suggestion, index) => {
           const highlight = highlightMatch(suggestion.text, searchTerm);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           return (
             <li key={`${suggestion.type}-${index}`}
                 className="px-4 py-2 hover:bg-zion-blue-light/20 cursor-pointer"

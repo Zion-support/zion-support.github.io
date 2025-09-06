@@ -17,10 +17,7 @@ import { UserProfile } from "@/types/auth",
 import { toast } from "@/hooks/use-toast";
 export default function TalentProfilePage() {
   // Cast to specify the expected route param type since useParams may be untyped
-<<<<<<< HEAD
-  const { id } = useParams() as { id?: string };
-  const navigate = null;
-=======
+
   const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
@@ -85,7 +82,7 @@ export default function TalentProfilePage() {
     }
     setIsMessageModalOpen(true)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="min-h-screen bg-zion-blue pb-12">
       <TalentProfile

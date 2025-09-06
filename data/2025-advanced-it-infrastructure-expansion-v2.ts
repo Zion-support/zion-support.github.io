@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const advancedITInfrastructureExpansion2025V2 = null;
-=======
+
 export const advancedITInfrastructureExpansion2025V2 = [
   {
     name: 'Autonomous DevOps Platform'
@@ -629,4 +627,4 @@ export const advancedITInfrastructureExpansion2025V2 = [
     ]
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

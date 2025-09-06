@@ -4,9 +4,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { Atom, CheckCircle, Shield, Sparkles } from 'lucide-react';
 export default function QuantumServicesPage() {
-<<<<<<< HEAD
-  const features = null;
-=======
+
   const features = [
     'Quantum-inspired optimization & annealing strategies'
     'Hybrid quantum-classical pipelines (QAOA, VQE) where applicable'
@@ -24,7 +22,7 @@ export default function QuantumServicesPage() {
       href: '/quantum-cloud-infrastructure'
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground colorScheme='quantum' intensity='high'>
       <Head>

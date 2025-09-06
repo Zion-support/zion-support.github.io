@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIConsciousnessEvolution2025() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Consciousness Evolution 2025"
 			slug="ai-consciousness-evolution-2025"
 			description="Applied research and productization of affective computing, theory-of-mind modeling, and reflective agents. Build empathetic systems that understand context and intent."
@@ -19,7 +17,7 @@ export default function AIConsciousnessEvolution2025() {
 				"Safety layers for alignment and guardrails"
 				"Evaluation harness for subjective tasks"
 				"Multi-modal context fusion (text, voice, UI)"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Partnered research roadmap and governance"
 			]}
 			industries={["R&D", "Healthcare", "Education", "Assistive Tech"]}

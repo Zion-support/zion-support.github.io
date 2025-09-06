@@ -11,9 +11,7 @@ export function useReviews(projectId?: string) {
   const [userReview, setUserReview] = useState<Review | null>(null),
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Fetch reviews for a project
-<<<<<<< HEAD
-  const fetchProjectReviews = null;
-=======
+
   const fetchProjectReviews = async (projectId: string) => {
     if (!projectId) return;
     setIsLoading(true)
@@ -209,6 +207,6 @@ export function useReviews(projectId?: string) {
     fetchUserReviews;
     submitReview;
     updateReview;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     reportReview}
 }

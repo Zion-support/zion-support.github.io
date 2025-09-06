@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast  } from 'sonner';
-import { useRecordActivity } from './useRecordActivity';
-export const useUploadDeliverable = null;
-=======
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
@@ -67,4 +60,4 @@ export const useUploadDeliverable = () => {
     isSubmitting
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

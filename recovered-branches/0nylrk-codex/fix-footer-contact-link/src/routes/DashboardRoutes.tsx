@@ -21,9 +21,7 @@ import Referrals from "@/pages/Referrals",
 import DeveloperPortal from "@/pages/DeveloperPortal",
 import WalletPage from "@/pages/Wallet";
 import ContractBuilder from "@/pages/ContractBuilder";
-<<<<<<< HEAD
-const DashboardRoutes = null;
-=======
+
 const DashboardRoutes = () => {
   return (
     <Routes>
@@ -200,4 +198,4 @@ const DashboardRoutes = () => {
   )
 }
 export default DashboardRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

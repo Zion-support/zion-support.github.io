@@ -6,9 +6,7 @@ import TalentProfilePage from "../pages/TalentProfilePage",
 import SavedTalentsPage from "../pages/SavedTalentsPage",
 import CreateTalentProfile from "../pages/CreateTalentProfile";
 import ProfilePage from "../pages/ProfilePage";
-<<<<<<< HEAD
-const TalentRoutes = null;
-=======
+
 const TalentRoutes = () => {
   return (
     <Routes>
@@ -37,4 +35,4 @@ const TalentRoutes = () => {
   )
 }
 export default TalentRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

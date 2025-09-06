@@ -2,11 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Activity, BarChart3, AlertTriangle, Clock, Database, Globe, Lock, Shield, TrendingUp, Users, Zap, ArrowRight, Play, CheckCircle, Star, Server, Cloud, Eye, Bell, Settings, Code } from 'lucide-react';
-export default function CloudMonitoringPage() {
-  const features = null;
-=======
+
 import {
   Activity
   BarChart3
@@ -261,7 +257,7 @@ export default function CloudMonitoringPage() {
     },  ];      benefits: ['Regulatory complianceFraud detectionRisk managementCustomer trust']
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

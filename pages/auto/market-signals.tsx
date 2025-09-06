@@ -1,9 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-const MarketSignals: NextPage;
-=======
+
 const MarketSignals: NextPage = () => {
   return (
     <div>
@@ -22,4 +20,4 @@ const MarketSignals: NextPage = () => {
   )
 }
 export default MarketSignals;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

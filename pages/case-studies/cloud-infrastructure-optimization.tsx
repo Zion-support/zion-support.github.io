@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function CaseStudyPage() {
@@ -10,9 +8,7 @@ export default function CaseStudyPage() {
     <>
       <Head>
         <title>Cloud Infrastructure Optimization - Case Study | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name;
-=======
+
         <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
         <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
       </Head>
@@ -101,7 +97,7 @@ export default function CaseStudyPage() {
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Self-Healing, Auto-Scaling Infrastructure</h3>
                 <p className="text-white/90 text-lg mb-6">
                   We built a comprehensive cloud infrastructure solution that automatically scales
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   monitors, and heals itself while optimizing costs and performance.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

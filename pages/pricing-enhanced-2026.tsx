@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head';
-import { motion, AnimatePresence  } from 'framer-motion';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity  } from 'lucide-react';
-import Button from '../components/ui/Button',
-import Card from '../components/ui/Card',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices  } from '../data/enhanced-real-micro-saas-services';
-import { nextGenerationAIServices  } from '../data/next-generation-ai-services';
-import { cuttingEdgeITServices  } from '../data/cutting-edge-it-services';
-import { innovativeMicroSaasV2Services  } from '../data/innovative-micro-saas-v2';
-import { innovative2026MicroSaasServicesV2  } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2  } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2  } from '../data/enterprise-it-2026-services-v2';
-import { innovative2026AIServicesV3  } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3  } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3  } from '../data/enterprise-it-2026-services-v3';
-export default function PricingEnhanced2026Page() {
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
-  const contactInfo = null;
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -210,7 +187,7 @@ export default function PricingEnhanced2026Page() {
       color: 'from-blue-500 to-cyan-600'
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">

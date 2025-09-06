@@ -13,13 +13,10 @@ export interface Company {
   theme?: {
     primaryColor: string;
     backgroundColor: string;
-<<<<<<< HEAD
-    textColor: string
-  },
-=======
+
     textColor: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   plan: string;
   teamSize: number;
   teamLimit: number;

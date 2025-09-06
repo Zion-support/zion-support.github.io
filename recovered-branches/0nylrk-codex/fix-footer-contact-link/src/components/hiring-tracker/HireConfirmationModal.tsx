@@ -16,30 +16,18 @@ import { TalentProfile } from "@/types/talent",
 import { useAuth } from "@/hooks/useAuth";
 import { JobApplication } from "@/types/jobs";
 export interface HireConfirmationModalProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  candidateData?: TalentProfile;
-  application?: JobApplication;
-  onConfirm: () => void;
-=======
+
   isOpen: boolean
   onClose: () => void
   candidateData?: TalentProfile;
   application?: JobApplication;
   onConfirm: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isSubmitting?: boolean
 }
 export function HireConfirmationModal({
   isOpen;
-<<<<<<< HEAD
-  onClose;
-  candidateData;
-  application;
-  onConfirm;
-  isSubmitting;
-=======
+
   onClose
   candidateData
   application;
@@ -157,7 +145,7 @@ export function HireConfirmationModal({
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px]">

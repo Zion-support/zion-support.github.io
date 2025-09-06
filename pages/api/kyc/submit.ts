@@ -4,11 +4,7 @@ import { validateKycSubmission } from '[^']*';
 import { getAmlProvider } from '[^']*';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const DATA_DIR = null;
-  res.status(200).json({ ok: true, profile, aml: amlResult })
-}
-=======
+
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 function load(): Record<string, KycProfile> {
   try {
@@ -101,4 +97,4 @@ export default async function handler(
   save(db);
 res.status(200).json({ ok: true, profile, aml: amlResult });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

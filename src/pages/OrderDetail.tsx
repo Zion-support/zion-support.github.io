@@ -1,19 +1,5 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-import { useRouter  } from 'next/router';
-import { Button  } from '@/components/ui/button';
-import { Clipboard } from 'lucide-react'
-import Skeleton from '@/components/ui/skeleton';
-import { useGetOrderQuery  } from '@/hooks/useOrder';
-import { generateInvoicePdf  } from '@/utils/generateInvoicePdf';
-import { useAuth  } from '@/hooks/useAuth';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast  } from '@/hooks/use-toast';
-import { OrderTimeline } from '@/components/orders/OrderTimeline';
-export default function OrderDetailPage() {
-  const router = null;
-  if (isLoading || !order) {
-=======
+
 import { useAuth } from '@/hooks/useAuth';
 interface OrderItem {
   id: string;
@@ -110,7 +96,7 @@ export default function OrderDetail() {
     setLoading(false);
   }, [router.query.id]);
   if (loading) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="animate-pulse">
@@ -277,37 +263,5 @@ export default function OrderDetail() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
-}
-`Order #$ {order.orderId ;
-}`;
-`Date: $ {new Date (order.date) .toLocaleDateString () ;
-}`;';
-'';';
-'Items:';
-...order.items.map ( (i) => `$ {i.name ;
-}x$ {i.quantity ;
-}- $$ {i.price.toFixed (2) ;
-}`);';
-'';
-`Total: $$ {order.total.toFixed (2) ;
-}`;';
-'';';
-'Shipping Address: ';
-order.shippingAddress.name;
-order.shippingAddress.street;
-await navigator.clipboard.writeText (summary);';
-toast.success ('Order summary copied to clipboard') ;
-}
-</li>) ) ;
-}</ul> </div> <div> </div> <Link href="/orders" className="text-zion-purple underline" > Back to orders </Link> </div>) ;
-}'"
-}
-}
-=======
-}
->>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+

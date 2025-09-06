@@ -1,8 +1,6 @@
 
 // Define the types for our sitemap structure
-<<<<<<< HEAD
-export type SitemapItem = any;
-=======
+
 export type SitemapItem = {
   path: string;
   label: string;
@@ -312,4 +310,4 @@ export const getAccessibleRoutes = (
   }
   return accessibleRoutes
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

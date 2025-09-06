@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type JobStatus = any;
-=======
+
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 export type JobCategory =
   | 'development'
@@ -116,6 +114,6 @@ export interface JobApplication {
   }
   match_suggestion?: string;
   scored_at?: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   notes?: string,  // New field for client notes
 }

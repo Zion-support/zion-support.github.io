@@ -1,27 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star;
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network;
-  Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
-  DollarSign, Calendar, Users as UsersIcon, Zap as ZapIcon
- } from 'lucide-react';
-import EnhancedNavigation from '../components/EnhancedNavigation',
-import EnhancedFooter from '../components/EnhancedFooter';
-import { advancedInnovativeServices  } from '../data/2025-advanced-innovative-services-expansion';
-import { emergingTechInnovations } from '../data/2025-emerging-tech-innovations';
-export default function AdvancedServicesShowcase2025() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),
-  const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]),
 
-  // Combine all services
-  const allServices = null;
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -403,7 +380,7 @@ export default function AdvancedServicesShowcase2025() {
                 onClick={() => {
                   setSearchTerm('')
                   setSelectedCategory('all')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   setPriceRange([0, 10000])
                 }}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300"

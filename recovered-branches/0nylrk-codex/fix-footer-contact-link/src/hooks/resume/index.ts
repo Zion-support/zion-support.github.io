@@ -10,9 +10,7 @@ import { useCertifications  } from './useCertifications';
 import { useResumeList  } from './useResumeList';
 export function useResume() {
   const [resume, setResume] = useState<Resume | null>(null);
-<<<<<<< HEAD
-  const fetchResumeOperations = null;
-=======
+
   const fetchResumeOperations = useFetchResume();
   const resumeActions = useResumeActions();
   const workOperations = useWorkExperience();
@@ -83,4 +81,4 @@ export * from './useSkills';
 export * from './useCertifications';
 export * from './useResumeList';
 export * from './useResumeUtils';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

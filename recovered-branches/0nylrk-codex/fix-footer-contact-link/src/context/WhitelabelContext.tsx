@@ -2,16 +2,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useWhitelabelTenant, WhitelabelTenant } from '@/hooks/useWhitelabelTenant';
 export interface WhitelabelContextType {
-<<<<<<< HEAD
-  isWhitelabel: boolean;
-  primaryColor: string;
-  logoUrl: string | null;
-  brandName: string;
-  themePreset: 'light' | 'dark' | 'neon' | 'corporate' | 'startup';
-  landingPageCopy: {
-    headline: string;
-    subtitle: string;
-=======
+
   isWhitelabel: boolean
   primaryColor: string
   logoUrl: string | null
@@ -20,15 +11,12 @@ export interface WhitelabelContextType {
   landingPageCopy: {
     headline: string
     subtitle: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     cta: string
   }
   tenant: WhitelabelTenant | null
 }
-<<<<<<< HEAD
 
-const defaultContext: WhitelabelContextType;
-=======
 const defaultContext: WhitelabelContextType = {
   isWhitelabel: false
   primaryColor: '#9b87f5', // Default Zion purple
@@ -79,4 +67,4 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
     </WhitelabelContext.Provider>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-'use client',
 
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
-const ContactForm: React.FC;
-=======
 'use client';
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -478,4 +471,4 @@ const ContactForm: React.FC = () => {
 export default ContactForm;  )
 }
 export default ContactForm;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

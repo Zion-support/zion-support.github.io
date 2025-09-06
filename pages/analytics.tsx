@@ -1,10 +1,6 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { BarChart3, TrendingUp, PieChart, Activity, ArrowRight, Check, Eye } from 'lucide-react';
-export default function AnalyticsPage() {
-  const features = null;
-=======
+
 import {
   BarChart3
   TrendingUp
@@ -44,7 +40,7 @@ export default function AnalyticsPage() {
     'Monitor system health'
     'Track business metrics'
     'Generate actionable insights',  ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

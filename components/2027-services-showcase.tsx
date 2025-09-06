@@ -2,11 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Search, Star, Users, TrendingUp, DollarSign, Clock;
-  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
-  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
-=======
+
 import {
   Search
   Star
@@ -39,7 +35,7 @@ import {
   Search, Star, Users, TrendingUp, DollarSign, Clock
   CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe
   Zap, Sparkles, Shield, Target, Cpu, Database, Cloud
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
@@ -48,15 +44,7 @@ import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticN
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {
   const [searchTerm, setSearchTerm] = useState('');
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState<string>('all'),
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
-  const [sortBy, setSortBy] = useState<string>('name'),
 
-  // Sort options
-  const sortOptions = null;
-                  setSelectedPriceRange('all')
-=======
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
@@ -661,7 +649,7 @@ export default function ServicesShowcase2027() {
                   setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >

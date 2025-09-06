@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-=======
+
 import {
   ArrowRight
   Play
@@ -31,7 +29,7 @@ import {
   Gamepad2
   Palette;} from 'lucide-react';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
  } from 'lucide-react';
@@ -41,9 +39,7 @@ import { innovative2025MicroSaasBatch  } from '../data/innovative-2025-micro-saa
 import { innovative2025ITEnterpriseBatch  } from '../data/innovative-2025-it-enterprise-batch';
 import { innovative2025AIServicesBatch } from '../data/innovative-2025-ai-services-batch';
 // Loading fallback component
-<<<<<<< HEAD
-const LoadingFallback = null;
-=======
+
 const LoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gray-900'>    <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -656,4 +652,4 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 export default Homepage2035;  )
 }
 export default Homepage2035;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

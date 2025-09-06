@@ -1,23 +1,5 @@
 
-<<<<<<< HEAD
-import { useState, useEffect } from "react",
-import { format } from "date-fns",
-import { Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X } from "lucide-react",
-import { useWebhooks, type WebhookEventType } from "@/hooks/useWebhooks",
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",
-import { Input } from "@/components/ui/input",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Label } from "@/components/ui/label",
-import { Badge } from "@/components/ui/badge",
-import { Switch } from "@/components/ui/switch",
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu",
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from "@/components/ui/alert-dialog",
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-=======
 import {useState, useEffect} from "react";
 import {format} from "date-fns";
 import {Globe, MoreVertical, PlayCircle, Plus, RefreshCw, Webhook, X} from "lucide-react";
@@ -34,7 +16,7 @@ import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function WebhooksManager() {
   const {
     webhooks;
@@ -55,22 +37,15 @@ export function WebhooksManager() {
   const [webhookName, setWebhookName] = useState("");
   const [webhookUrl, setWebhookUrl] = useState("");
   const [webhookSecret, setWebhookSecret] = useState("");
-<<<<<<< HEAD
-  const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]),
-  const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application'),
 
-=======
   const [selectedEvents, setSelectedEvents] = useState<WebhookEventType[]>([]);
   const [testEventType, setTestEventType] = useState<WebhookEventType>('new_application');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Load webhooks on mount
   useEffect(() => {
     fetchWebhooks()
   }, []);
-<<<<<<< HEAD
 
-  const handleCreateWebhook = null;
-=======
   const handleCreateWebhook = async () => {
     if (webhookName.trim() === "" |webhookUrl.trim() === "" |selectedEvents.length === 0) return;
     await createWebhook(
@@ -394,7 +369,7 @@ export function WebhooksManager() {
                 </Button>
                 <Button variant="outline" onClick={() => {
                   setShowTestResult(false);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   clearTestResult()
                 }}>
                   Test Another Event

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award } from 'lucide-react'
-interface LeaderboardEntry {
-  rank: number;
-  name: string;
-=======
 import {
   Card
   CardContent
@@ -20,7 +13,7 @@ interface LeaderboardEntry {
   referrals: number
   rank: number
   name: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   referrals: number
 }
 export function ReferralLeaderboard() {

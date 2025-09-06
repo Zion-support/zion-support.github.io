@@ -5,14 +5,7 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { toast } from "@/hooks/use-toast";
 import {
-<<<<<<< HEAD
-  Card;
-  CardContent;
-  CardDescription;
-  CardFooter;
-  CardHeader;
-  CardTitle} from "@/components/ui/card",
-=======
+
   Card
   CardContent
   CardDescription
@@ -20,20 +13,18 @@ import {
   CardHeader
   CardTitle
 } from '@/components/ui/card'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Sparkles } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
 export function UsageStats() {
-<<<<<<< HEAD
-  const handleSaveChanges = null;
-=======
+
   const handleSaveChanges = () => {
     toast({
       title: 'Limits updated'
       description: 'The new usage limits have been saved successfully.'
     })
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-8'>
       <div>

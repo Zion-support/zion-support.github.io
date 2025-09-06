@@ -1,15 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-interface UltraFuturisticBackground2038Props {
-  intensity?: 'low' | 'medium' | 'high',
-  theme?: 'quantum' | 'neon' | 'holographic' | 'cyberpunk' | 'space' | 'consciousness';
-  children?: React.ReactNode
-}
 
-export default function UltraFuturisticBackground2038({ 
-  intensity;
-=======
 import { motion } from 'framer-motion';
   intensity?: 'low' | 'medium' | 'high';
   theme?:
@@ -652,7 +642,7 @@ export default function UltraFuturisticBackground2038({
                 transition={{
                   duration: 6 + i * 0.5
                   repeat: Infinity
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   ease: "easeInOut"
                 }}
                 animate={{

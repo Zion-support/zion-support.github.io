@@ -13,13 +13,7 @@ export default function VerifyPage() {
   const [businessName, setBusinessName] = useState('');
   const [businessReg, setBusinessReg] = useState('');
   const [busy, setBusy] = useState(false);
-<<<<<<< HEAD
-  const [message, setMessage] = useState<string>(''),
 
-  const progress = null;
-                    return (
-                      <div key={k} className="flex items-center justify-between border rounded p-3">
-=======
   const [message, setMessage] = useState<string>('');
   const progress = useMemo(() => {
     if (!profile) return 0;
@@ -216,7 +210,7 @@ export default function VerifyPage() {
                       d => d.kind === k
                     );
                       >
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         <div>
                           <div className='text-sm font-medium'>{k}</div>
                           <div className='text-xs text-gray-500'>

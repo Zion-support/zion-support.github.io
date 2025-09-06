@@ -1,7 +1,5 @@
 // Stub talent data - placeholder for missing functionality
-<<<<<<< HEAD
-export const TALENT_PROFILES = null;
-=======
+
 export const TALENT_PROFILES = [
   {
     id: '1'
@@ -29,4 +27,4 @@ export const TALENT_PROFILES = [
 translations: {}
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

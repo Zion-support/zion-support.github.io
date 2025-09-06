@@ -1,9 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Zap, Globe, Phone, Mail, MapPin, ArrowRight;
-=======
+
 import {
   Zap
   Globe
@@ -58,16 +56,13 @@ import {
   Video
   Headphones;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2;
   Palette, Music, Film, BookOpenCheck, HelpCircle, FileText, Video, Headphones
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -661,4 +656,4 @@ const UltraFuturisticFooter2035: React.FC = () => {
 export default UltraFuturisticFooter2035;  )
 }
 export default UltraFuturisticFooter2035;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,6 +1,28 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+=======
+import React, { ReactNode } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
 import Header from '../Header';
 import Footer from '../Footer';
+<<<<<<< HEAD
+
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+import React, { ReactNode } from 'react';
+import Header from './Header';
+import Footer from './Footer';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 interface LayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -12,11 +34,16 @@ interface LayoutProps {
   ogImage?: string;
   noIndex?: boolean;
 }
-export default function Layout({
 <<<<<<< HEAD
-  children;
-  title;
+
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+export default function Layout({
+
   children
   title = "Zion Tech Group - AI, IT & Micro SaaS Solutions"
   description = "Leading provider of AI services, IT solutions, and innovative micro SaaS products for modern businesses."
@@ -26,8 +53,14 @@ export default function Layout({
   ogDescription
   ogImage
   noIndex = false
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }: LayoutProps) {
+<<<<<<< HEAD
+=======
+=======
+const Layout: React.FC<LayoutProps> = ({ children }) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
   return (
     <div className="min-h-screen bg-white">
       <Header />

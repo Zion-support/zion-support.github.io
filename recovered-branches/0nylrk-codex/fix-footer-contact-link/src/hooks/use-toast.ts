@@ -1,12 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-import {
-  useToast as useToastHook;
-  Toast} from "@/components/ui/toast",
 
-// Extend the Toast component props with common toast options
-export type ToastOptions = any;
-=======
 import {useToast, as, useToastHook, Toast} from "@/components/ui/toast";
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
@@ -40,4 +33,4 @@ export const toast = baseToast as typeof baseToast & {
   error: (error: string) => void
   success: (message: string) => void
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

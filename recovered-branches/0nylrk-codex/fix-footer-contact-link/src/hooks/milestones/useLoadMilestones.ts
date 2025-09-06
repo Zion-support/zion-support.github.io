@@ -1,12 +1,5 @@
 
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { useAuth  } from '@/hooks/useAuth';
-import { toast  } from 'sonner';
-import { Milestone, MilestoneActivity } from './types';
-export const useLoadMilestones = null;
-=======
+
 import {useState, useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useAuth} from '@/hooks/useAuth';
@@ -70,4 +63,4 @@ export const useLoadMilestones = (projectId?: string) => {
     refetch: fetchMilestones
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

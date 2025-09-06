@@ -1,22 +1,4 @@
-<<<<<<< HEAD
 
-import {
-  Carousel;
-  CarouselContent;
-  CarouselItem;
-  CarouselNext;
-  CarouselPrevious} from "@/components/ui/carousel",
-import { Card, CardContent, CardFooter } from "@/components/ui/card",
-import { Avatar } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Quote } from 'lucide-react'
-import Link from "next/link",
-import Image from "next/image";
-import { CASE_STUDIES } from "@/data/case-studies";
-const testimonials = null;
-              loop: true}}
-            className="w-full"
-=======
 import {  Carousel,  Carousel
   CarouselContent
   CarouselItem
@@ -59,7 +41,7 @@ export function TestimonialCarousel() {
               loop: true
             }}
             className='w-full'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           >
             <CarouselContent>
               {testimonials.map((testimonial, index) => (

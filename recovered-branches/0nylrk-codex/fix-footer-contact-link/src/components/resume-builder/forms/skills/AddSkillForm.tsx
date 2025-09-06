@@ -6,13 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '
 import { Skill  } from '@/types/resume';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 interface AddSkillFormProps {
-<<<<<<< HEAD
-  resumeId: string;
-  onAddSkill: (skill: Skill) => Promise<boolean>
-}
 
-export const AddSkillForm = null;
-=======
   resumeId: string
   onAddSkill: (skill: Skill) => Promise<boolean>
 }
@@ -99,4 +93,4 @@ export const AddSkillForm = ({ resumeId, onAddSkill }: AddSkillFormProps) => {
     </form>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

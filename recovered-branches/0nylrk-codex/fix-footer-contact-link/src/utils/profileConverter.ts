@@ -13,15 +13,7 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     user_id: profile.id;
     full_name: profile.name;
     professional_title: profile.title;
-<<<<<<< HEAD
-    bio: profile.bio || '';
-    summary: profile.bio?.substring(0, 150);
-    profile_picture_url: profile.avatarUrl;
-    years_experience: 3, // Default value
-    skills: profile.skills?.map((skill: { name: string }) => skill.name) || [],
-    availability_type: profile.availability?.status;
-    average_rating: profile.rating || 0
-=======
+
     bio: profile.bio |''
     summary: profile.bio?.substring(0, 150);
     profile_picture_url: profile.avatarUrl
@@ -33,6 +25,6 @@ export function convertProfileToTalentProfile(profile: ProfileData | any): Talen
     hourly_rate: profile.hourlyRate |0;
     rating_count: profile.reviewCount |0
     average_rating: profile.rating |0
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
 }

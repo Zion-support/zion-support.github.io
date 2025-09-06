@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Badge  } from '@/components/ui/badge';
-import { Button  } from '@/components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { AlertTriangle, CheckCircle, XCircle, Clock, TrendingUp, Activity } from 'lucide-react'
 
-=======
 import React, { useState, useEffect } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
@@ -20,7 +12,7 @@ import {
   TrendingUp
   Activity
 } from 'lucide-react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface HealthData {
   status: 'healthy' | 'warning' | 'critical';
   timestamp: string;
@@ -56,11 +48,7 @@ interface HealthData {
     }>
     byCategory: { [category: string]: number }
   }
-<<<<<<< HEAD
-}
 
-const HealthDashboard: React.FC;
-=======
 const HealthDashboard: React.FC = () => {
   const [healthData, setHealthData] = useState<HealthData | null>(null)
   const [loading, setLoading] = useState(true)
@@ -433,4 +421,4 @@ const HealthDashboard: React.FC = () => {
 export default HealthDashboard
 export default HealthDashboard
 export default HealthDashboard
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

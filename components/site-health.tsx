@@ -1,10 +1,7 @@
 import Head from 'next/head';
 export default function SiteHealth() {
   return (
-<<<<<<< HEAD
-    <div className;
-              { title: 'Link Integrity', desc: 'Broken links identified and prevented.', href: '/reports/links' }].map((card) => (
-=======
+
     <div className='relative min-h-screen overflow-hidden bg-slate-950 text-white'>
       <Head>
         <title>Site Health — A11y, Performance, Links</title>
@@ -102,7 +99,7 @@ export default function SiteHealth() {
                 href: '/reports/links'
               }
             ].map(card => (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               <Link key={card.title} href={card.href}>
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30'>
                   <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />

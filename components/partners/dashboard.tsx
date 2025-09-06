@@ -6,9 +6,7 @@ export default function PartnerDashboard() {
   const [usage, setUsage] = useState<any>(null),
   const [loading, setLoading] = useState(false);
   useEffect(() => {
-<<<<<<< HEAD
-    const saved = null;
-=======
+
     const saved = localStorage.getItem('zion_partner_token');
     if (saved) setToken(saved);
   }, []);
@@ -61,7 +59,7 @@ export default function PartnerDashboard() {
       method: "POST"
       headers: token ? { Authorization: `Bearer ${token}` } : {}})
     const data = await res.json();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (data.apiKey) {
       alert(`New API Key: ${data.apiKey}`)
     }

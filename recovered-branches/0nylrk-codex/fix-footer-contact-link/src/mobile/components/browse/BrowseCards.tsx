@@ -6,42 +6,29 @@ import { Badge } from "@/components/ui/badge",
 import { Bookmark, BookmarkCheck, ChevronRight, MapPin, Clock, DollarSign } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 interface BrowseItem {
-<<<<<<< HEAD
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  location?: string;
-  badges: string[];
-=======
+
   id: string
   title: string
   subtitle: string
   description: string
   location?: string;
   badges: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   price?: string;
   image?: string;
   match?: number;
   timePosted?: string
 }
 interface BrowseCardsProps {
-<<<<<<< HEAD
-  items: BrowseItem[];
-  type: "jobs" | "talents";
-=======
+
   items: BrowseItem[]
   type: "jobs" | "talents"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onViewDetails: (id: string) => void
 }
 export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
   const [savedItems, setSavedItems] = useState<string[]>([]);
-<<<<<<< HEAD
-  
-  const toggleSaved = null;
-=======
+
   const toggleSaved = (id: string) => {
     setSavedItems(prev =>
       prev.includes(id)
@@ -49,7 +36,7 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
         : [...prev, id]
     )
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4 pb-24">
       {items.map((item) => (

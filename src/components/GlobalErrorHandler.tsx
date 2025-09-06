@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { toast  } from '@/hooks/use-toast';
-import { Button  } from '@/components/ui/button';
-=======
+
 import React, {
   createContext
   useContext
@@ -12,7 +8,7 @@ import React, {
 } from 'react'
 import { toast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { RefreshCw, AlertTriangle, Wifi, WifiOff, Shield } from 'lucide-react'
 import * as Sentry from '@sentry/nextjs';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -22,11 +18,7 @@ interface ErrorContextType {
   showNetworkError: (retryAction?: () => void) => void;
   showAuthError: (loginAction?: () => void) => void;
   clearAllErrors: () => void
-<<<<<<< HEAD
-}
 
-const ErrorContext = null;
-=======
 }, [])
 export function GlobalErrorHandler({ children }: GlobalErrorHandlerProps) {
   const [retryCount, setRetryCount] = useState<Record<string, number>>({})
@@ -208,6 +200,6 @@ export function useErrorHandler() {
     handleAsyncOperation
   };    reportError
     handleApiError
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     handleAsyncOperation}
 }

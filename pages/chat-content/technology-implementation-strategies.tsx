@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-<<<<<<< HEAD
-const TechnologyImplementationStrategies: NextPage;
-=======
+
       <main>
         <h1>TechnologyImplementationStrategies</h1>
         <p>This page is under construction.</p>
@@ -11,4 +9,4 @@ const TechnologyImplementationStrategies: NextPage;
   )
 }
 export default TechnologyImplementationStrategies;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

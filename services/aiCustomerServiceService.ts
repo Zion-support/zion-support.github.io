@@ -12,11 +12,9 @@ export interface CustomerTicket {
   resolvedAt?: Date;
   customerSatisfaction?: number;
   tags: string[];
-<<<<<<< HEAD
-  attachments: string[];
-=======
+
   attachments: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   conversationHistory: CustomerMessage[]
 }
 export interface CustomerMessage {
@@ -28,11 +26,9 @@ export interface CustomerMessage {
   timestamp: Date;
   attachments?: string[];
   sentiment: 'positive' | 'neutral' | 'negative';
-<<<<<<< HEAD
-  intent: string;
-=======
+
   intent: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   confidence: number
 }
 export interface CustomerProfile {
@@ -49,11 +45,9 @@ export interface CustomerProfile {
   lastContact: Date;
   preferences: {
     communicationChannel: 'email' | 'chat' | 'phone';
-<<<<<<< HEAD
-    language: string;
-=======
+
     language: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     timezone: string
   }
   tags: string[]
@@ -65,11 +59,9 @@ export interface AIResponse {
   confidence: number;
   suggestedActions: string[];
   nextSteps: string[];
-<<<<<<< HEAD
-  requiresHumanReview: boolean;
-=======
+
   requiresHumanReview: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   generatedAt: Date
 }
 export interface CustomerServiceMetrics {
@@ -78,19 +70,13 @@ export interface CustomerServiceMetrics {
   resolvedTickets: number;
   averageResolutionTime: number;
   customerSatisfaction: number;
-<<<<<<< HEAD
-  firstResponseTime: number;
-  ticketVolumeByCategory: Record<string, number>,
-  agentPerformance: Record<string, {
-    ticketsResolved: number;
-    averageResolutionTime: number;
-=======
+
   firstResponseTime: number
   ticketVolumeByCategory: Record<string, number>;
   agentPerformance: Record<string, {
     ticketsResolved: number;
     averageResolutionTime: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     customerSatisfaction: number
   }>
 }
@@ -100,11 +86,9 @@ export interface CustomerServiceRequest {
   description: string;
   priority: 'low' | 'medium' | 'high' | 'urgent';
   category: string;
-<<<<<<< HEAD
-  attachments?: string[];
-=======
+
   attachments?: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   preferredChannel?: 'email' | 'chat' | 'phone'
 }
 export interface CustomerServiceResponse {
@@ -112,19 +96,14 @@ export interface CustomerServiceResponse {
   status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
   aiResponse?: AIResponse;
   estimatedResolutionTime: string;
-<<<<<<< HEAD
-  nextSteps: string[];
-=======
+
   nextSteps: string[]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   assignedAgent?: string
 }
 export class AICustomerServiceService {
   private apiKey: string;
-<<<<<<< HEAD
-  private baseUrl: string;
-  constructor(apiKey: string, baseUrl: string;
-=======
+
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey
@@ -318,4 +297,4 @@ export class AICustomerServiceService {
   }
 }
 export const aiCustomerServiceService = new AICustomerServiceService(process.env.CUSTOMER_SERVICE_API_KEY |'');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

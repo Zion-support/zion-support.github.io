@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react";
-import { Brain, Clock, Award, Zap } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-const features = null;
-=======
 }
 const features = [
   {
@@ -83,4 +77,4 @@ export const AppFeatures: React.FC = () => {"
 }</div> </div> </section>)
 }
 "
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,10 +1,6 @@
 import React, { useState, useMemo } from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target  } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-=======
+
 import { motion } from 'framer-motion';
 import {
   Search
@@ -25,7 +21,7 @@ import {
   Target;
 } from 'lucide-react';import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { revolutionary2026Services  } from '../data/revolutionary-2026-services';
 import { emergingTech2026Services  } from '../data/emerging-tech-2026-services';
@@ -35,10 +31,7 @@ export default function ServicesShowcase2026() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
   // Combine all 2026 services
-<<<<<<< HEAD
-  const allServices = null;
-                emerging technologies, and comprehensive IT solutions
-=======
+
   const allServices = [
     ...revolutionary2026Services
     ...emergingTech2026Services
@@ -239,7 +232,7 @@ export default function ServicesShowcase2026() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover the future of technology with our revolutionary AI, quantum computing, emerging technologies, and comprehensive IT solutions
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               </p>
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">

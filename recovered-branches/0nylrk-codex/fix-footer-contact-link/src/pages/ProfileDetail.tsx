@@ -28,13 +28,7 @@ export default function ProfileDetail() {
   const { profileId } = useParams();
   const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
-<<<<<<< HEAD
-  const [error, setError] = useState<string | null>(null),
 
-  useEffect(() => {
-    const fetchProfile = null;
-                hourly_rate: profileData?.hourly_rate || 0
-=======
   const [error, setError] = useState<string | null>(null);
   useEffect(() => {
     const fetchProfile = async () => {
@@ -224,7 +218,7 @@ export default function ProfileDetail() {
                 full_name: profileData?.full_name |''
                 professional_title: profileData?.professional_title |''
                 hourly_rate: profileData?.hourly_rate |0
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               }}
             />
             {/* Contact Information */}

@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle  } from 'lucide-react';
-import Button from '../ui/Button';
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -16,33 +12,23 @@ import {
   Rocket
   CheckCircle;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface EnhancedHero2026Props {
   contactInfo: {
     mobile: string;
     email: string;
     address: string;
-<<<<<<< HEAD
-    website: string
-  },
-=======
+
     website: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   serviceStats: {
     totalServices: number;
     aiServices: number;
     emergingTech: number;
     itSolutions: number;
     microSaas: number;
-<<<<<<< HEAD
-    revolutionaryServices: number
-  }
-}
 
-export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
-  const containerVariants = null;
-=======
     revolutionaryServices: number;
   }
 export default function EnhancedHero2026({
@@ -223,7 +209,7 @@ export default function EnhancedHero2026({
               { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' }
               { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' }
               { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
               <motion.div
                 key={stat.label}

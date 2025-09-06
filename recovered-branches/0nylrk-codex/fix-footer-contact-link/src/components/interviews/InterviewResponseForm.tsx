@@ -16,9 +16,7 @@ export function InterviewResponseForm({
   isLoading
 }: InterviewResponseFormProps) {
   // Format interview date and time
-<<<<<<< HEAD
-  const interviewDate = null;
-=======
+
   const interviewDate = parseISO(interview.scheduled_date);
   const formattedDate = format(interviewDate, "EEEE, MMMM d");
   const formattedTime = format(interviewDate, "h: mm a");
@@ -26,7 +24,7 @@ export function InterviewResponseForm({
   const endTime = new Date(interviewDate);
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
   const formattedEndTime = format(endTime, "h: mm a");
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <div className="p-4 bg-zion-blue-light/20 rounded-md">

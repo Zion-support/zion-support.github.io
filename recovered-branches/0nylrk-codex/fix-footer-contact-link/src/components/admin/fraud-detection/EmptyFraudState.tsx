@@ -6,15 +6,7 @@ interface EmptyFraudStateProps {
   hasFilters: boolean;
   onResetFilters: () => void
 }
-<<<<<<< HEAD
 
-export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ 
-  hasFilters;
-  onResetFilters 
-}) => {
-  return (
-    <div className;
-=======
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters
   onResetFilters
@@ -36,4 +28,4 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export type CuttingEdgeAIService = any;
-=======
+
 export type CuttingEdgeAIService = {
   id: string;
   name: string;
@@ -137,4 +135,4 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		realService: true
 	}
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

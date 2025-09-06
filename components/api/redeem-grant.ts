@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next",
-import fs from "fs-extra";
-import path from "path";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-import { v4 as uuidv4 } from "uuid";
-const REDEMPTIONS_FILE = null;
-  return res.status(201).json({ id: record.id, redeemedAt: now })
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -81,4 +72,4 @@ redeemedAt: now
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
   return res.status(201).json({ id: record.id, redeemedAt: now });  return res.status(201).json({ id: record.id, redeemedAt: now })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

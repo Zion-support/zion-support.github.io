@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
-=======
+
 import {
   ArrowRight
   Play
@@ -53,7 +49,7 @@ import Link from 'next/link';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket
   Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
   Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
  } from 'lucide-react';
@@ -63,9 +59,7 @@ import { innovative2046AIServices  } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices  } from '../data/innovative-2046-it-services';
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
 // Enhanced loading component with quantum effects
-<<<<<<< HEAD
-const QuantumLoadingFallback = null;
-=======
+
 const QuantumLoadingFallback = () => (
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
     {/* Quantum particle effects */}
@@ -722,4 +716,4 @@ const Homepage2046: React.FC = () => {
 export default Homepage2046;  )
 }
 export default Homepage2046;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

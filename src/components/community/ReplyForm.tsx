@@ -4,15 +4,7 @@ import { useForm, ControllerRenderProps } from "react-hook-form",
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import {
-<<<<<<< HEAD
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormMessage
-} from "@/components/ui/form",
-import { Card, CardContent } from "@/components/ui/card";
-=======
+
   Form
   FormControl
   FormField
@@ -20,17 +12,13 @@ import { Card, CardContent } from "@/components/ui/card";
   FormMessage
 } from '@/components/ui/form'
 import { Card, CardContent } from '@/components/ui/card'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ReplyFormProps {
   onSubmit: (content: string) => Promise<void>;
   parentId?: string
 interface ReplyFormValues {
   content: string
-<<<<<<< HEAD
-}
 
-export const ReplyForm = null;
-=======
 export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const form = useForm<ReplyFormValues>({
@@ -78,4 +66,4 @@ export const ReplyForm = ({ onSubmit, parentId }: ReplyFormProps) => {
   )
 }
 export default ReplyForm
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

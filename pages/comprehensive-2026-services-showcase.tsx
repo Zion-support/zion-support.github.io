@@ -1,26 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Shield;
-  Globe, Database, Cloud, Lock, Palette, Target, Layers;
-  Sparkles, Atom, Microscope, Satellite, CheckCircle;
-  ArrowRight, Phone, Mail, MapPin, Rocket, Users;
-  BarChart3, Award, Clock, DollarSign
- } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { nextGenAIServices2026  } from '../data/next-gen-ai-services-2026';
-import { revolutionaryITInfrastructure2026  } from '../data/revolutionary-it-infrastructure-2026';
-import { innovativeMicroSaas2026 } from '../data/innovative-micro-saas-2026';
-export default function Comprehensive2026ServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('popularity');
-  const [viewMode, setViewMode] = useState('grid');
-  const contactInfo = null;
-=======
+
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -388,7 +366,7 @@ export default function Comprehensive2026ServicesShowcase() {
                 <button
                   onClick={() => {
                     setSearchTerm('')
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     setSelectedCategory('all')
                   }}
                   className="bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-xl transition-colors"

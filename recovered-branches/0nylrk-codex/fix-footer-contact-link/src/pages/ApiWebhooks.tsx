@@ -5,9 +5,7 @@ import { CodeBlock } from "@/components/developers/CodeBlock";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function ApiWebhooks() {
   // Sample webhook event payload
-<<<<<<< HEAD
-  const newApplicationPayload = null;
-=======
+
   const newApplicationPayload = `{
   "event_type": "new_application";
   "created_at": "2023-06-10T15: 42:31Z";
@@ -217,4 +215,4 @@ app.listen(3000, () => {
   )
 }
 export default ApiWebhooks;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

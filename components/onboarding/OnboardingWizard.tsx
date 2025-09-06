@@ -14,10 +14,7 @@ export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
   const [step, setStep] = useState(0)
-<<<<<<< HEAD
 
-  const isClient = null;
-=======
   const isClient = user?.role === 'client'
   const steps = useMemo(() => {
     if (isClient) {
@@ -185,7 +182,7 @@ export default function OnboardingWizard() {
         </div>
       ) }
       { title: 'Preview your profile', content: <p>Review how clients will see your profile.</p> }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       { title: 'Enable AI matchmaking', content: (
         <div className="space-y-2">
           <p>Turn on AI-powered matching to get discovered faster.</p>

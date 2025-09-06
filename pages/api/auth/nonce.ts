@@ -1,9 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 
-function randomString(length: number) {
-  const charset = null;
-=======
 function randomString(length: number) {
   const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   let res = ''
@@ -15,6 +11,6 @@ function randomString(length: number) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const nonce = randomString(16)
   res.setHeader('Set-Cookie', `siwe-nonce=${nonce}, HttpOnly, Path=/, SameSite=Lax`)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(200).json({ nonce })
 }

@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-import { readJson } from '[^']*';
-import { HelpArticle, matchIntent } from '[^']*';
-import { logSupportEventToOperator } from '[^']*';
-const SYSTEM_PROMPT = null;
-        links: matchedArticles.map((a) => ({ title: a.title, href: `/help/${a.slug}` }))}})
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
 import { readJson } from "../../../utils/fsDb";
@@ -68,7 +60,7 @@ export default async function handler(
         }))
       }
     });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res.status(200).json({
       assistantMessage:

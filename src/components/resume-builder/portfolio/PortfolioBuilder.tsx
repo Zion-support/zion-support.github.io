@@ -8,17 +8,7 @@ import { ProjectForm  } from './ProjectForm';
 import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
 export function PortfolioBuilder() {
-<<<<<<< HEAD
-  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
-  const [showAddProject, setShowAddProject] = useState(false);
-  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),
-  
-  useEffect((,) => {
-    fetchProjects()
-  }, [fetchProjects]),
-  
-  const handleAddSuccess = null;
-=======
+
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio()
   const [showAddProject, setShowAddProject] = useState(false)
   const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null)
@@ -79,7 +69,7 @@ export function PortfolioBuilder() {
               onCancel={() => {
                 setShowAddProject(false)
                 setEditingProject(null);                setEditingProject(null)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 setEditingProject(null)
               }}
             />

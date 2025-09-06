@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
-import crypto from 'crypto';
-import { getProposal, updateProposalMeta, updateArtifacts } from '[^']*';
 
-async function submitByEmail(to: string, subject: string, text: string, attachments: any[] = []) {
-  const host = null;
-    return res.status(200).json({ meta: updated })
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
@@ -68,7 +59,7 @@ export default async function handler(
       status: "Submitted"
     }));
     return res.status(200).json({ meta: updated });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (error: any) {
     return res
       .status(500)

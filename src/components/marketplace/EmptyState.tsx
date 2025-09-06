@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import * as React from 'react';
-import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
-=======
+
 import * as React from 'react'
 import {
   RefreshCw
@@ -18,7 +12,7 @@ import {
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { useTranslation } from 'react-i18next'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export interface EmptyStateProps {
   type: 'products' | 'categories' | 'talent' | 'equipment' | 'search' | 'error' | 'network' | 'loading';
   title?: string;
@@ -28,17 +22,7 @@ export interface EmptyStateProps {
     onClick: () => void
   }
   icon?: React.ReactNode
-<<<<<<< HEAD
-}
 
-const defaultContent = null;
-  return (
-    <EmptyState 
-      type="products" 
-      action={action}
-      description={customDescription}
-    />
-=======
 const defaultContent = {
   products: {
     icon: <ShoppingCart className='w-16 h-16 text-gray-400' />
@@ -158,7 +142,7 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
       />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
       />

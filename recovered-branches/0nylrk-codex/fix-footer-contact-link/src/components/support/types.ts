@@ -22,10 +22,7 @@ export interface SupportTicket {
   status: "open" | "in-progress" | "resolved" | "closed";
   priority: "low" | "medium" | "high";
   createdAt: string;
-<<<<<<< HEAD
-  updatedAt: string
-}
-=======
+
   updatedAt: string;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

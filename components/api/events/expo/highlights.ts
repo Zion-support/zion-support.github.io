@@ -1,10 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { agendaItems } from '../../../../data/expo/agenda';
-<<<<<<< HEAD
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const top = null;
-=======
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -31,7 +27,7 @@ export default async function handler(
       .status(500)
       .json({ error: e.message |'Failed to generate highlights' });
   }    const content = chat.choices?.[0]?.message?.content |baseSummary;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return res.status(200).json({ summary: content, provider: 'openai' })
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'Failed to generate highlights' })

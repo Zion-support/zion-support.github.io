@@ -25,21 +25,17 @@ interface PasswordStrengthResult {
     hasLowercase: boolean;
     hasNumbers: boolean;
     hasSymbols: boolean;
-<<<<<<< HEAD
-    hasCommonPatterns: boolean;
-=======
+
     hasCommonPatterns: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     entropy: number
   }
   suggestions: string[]
 }
 export default async function handler(
-<<<<<<< HEAD
-  req: NextApiRequest;
-=======
+
   req: NextApiRequest
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -47,17 +43,13 @@ export default async function handler(
   }
   try {
     const { password } = req.body;
-<<<<<<< HEAD
-    if (!password || typeof password !== 'string') {
-=======
+
     if (!password |typeof password !== 'string') {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       return res.status(400).json({ error: 'Password is required' });
     }
     // Password analysis
-<<<<<<< HEAD
-    const length = null;
-=======
+
     const length = password.length;
     const hasUppercase = /[A-Z]/.test(password);
     const hasLowercase = /[a-z]/.test(password);
@@ -193,7 +185,7 @@ export default async function handler(
     res.status(200).json(result)
   } catch (error) {
     console.error('Password strength check error:', error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     res.status(500).json({ error: 'Internal server error' })
   }
 }

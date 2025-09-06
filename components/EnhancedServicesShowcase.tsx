@@ -1,9 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import { Brain, Shield, Rocket, Cpu, Database, Atom, Users;
-  CheckCircle, TrendingUp, Clock, Star, Filter, ChevronDown
- } from 'lucide-react';
-=======
+
 import {
   Brain
   Shield
@@ -19,7 +15,7 @@ import {
   Filter
   ChevronDown;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface Service {
   id: string;
   name: string;
@@ -36,12 +32,7 @@ interface Service {
   growthRate: string;
   popular?: boolean;
   icon: React.ComponentType<any>;
-<<<<<<< HEAD
-  color: string
-}
 
-const EnhancedServicesShowcase: React.FC;
-=======
   color: string;} from 'lucide-react';
 interface Service {
   id: string
@@ -599,4 +590,4 @@ const EnhancedServicesShowcase: React.FC = () => {
 export default EnhancedServicesShowcase;  )
 }
 export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

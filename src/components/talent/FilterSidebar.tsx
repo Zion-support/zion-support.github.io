@@ -10,27 +10,7 @@ import { ExperienceFilter } from "./filters/ExperienceFilter",
 import { PriceFilter } from "./filters/PriceFilter";
 import { FilterSidebarProps } from "@/types/filters";
 export function FilterSidebar({
-<<<<<<< HEAD
-  searchTerm;
-  setSearchTerm;
-  selectedSkills;
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
-  expandedSections;
-  toggleSection;
-  sortOption;
-  setSortOption;
-  clearFilters;
-  isMobileFilterOpen
-}: FilterSidebarProps) {
-=======
+
   searchTerm
   setSearchTerm
   selectedSkills
@@ -49,7 +29,7 @@ export function FilterSidebar({
   setSortOption
   clearFilters
   isMobileFilterOpen,}: FilterSidebarProps) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       {/* Filter header */}

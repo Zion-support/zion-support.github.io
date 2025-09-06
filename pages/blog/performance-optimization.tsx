@@ -1,10 +1,8 @@
 import Head from 'next/head',
 import Link from 'next/link';
-<<<<<<< HEAD
-import React from 'react';
-=======
+
 import React from 'react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function PerformanceOptimization() {
   return (
     <>

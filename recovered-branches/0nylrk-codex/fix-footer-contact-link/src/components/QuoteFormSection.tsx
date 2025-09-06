@@ -6,9 +6,7 @@ import { useState } from "react";
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
-  const handleSubmit = null;
-=======
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -17,7 +15,7 @@ export function QuoteFormSection() {
       (setIsSubmitting(false), setIsSubmitted(true));
     }, 1000);
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-20 bg-zion-blue">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

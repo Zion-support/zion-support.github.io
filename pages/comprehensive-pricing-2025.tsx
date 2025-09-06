@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom;
-  ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
- } from 'lucide-react';
-import { comprehensiveMicroSaasServices  } from '../data/comprehensive-2025-micro-saas-expansion';
-import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-export default function ComprehensivePricingPage() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
-  const [expandedService, setExpandedService] = useState<string | null>(null),
 
-  // Combine all services
-  const allServices = null;
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -63,7 +47,7 @@ export default function ComprehensivePricingPage() {
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

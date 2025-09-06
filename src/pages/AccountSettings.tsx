@@ -7,22 +7,7 @@ import { useAuth  } from '@/hooks/useAuth';
 import { Button  } from '@/components/ui/button';
 import { Input  } from '@/components/ui/input';
 import { Wallet, Database, Save } from 'lucide-react'
-<<<<<<< HEAD
-import { Card, CardContent, CardDescription, CardHeader, CardTitle  } from '@/components/ui/card';
-import { Separator  } from '@/components/ui/separator';
-import { Switch  } from '@/components/ui/switch';
-import { Label  } from '@/components/ui/label';
-import { toast  } from 'sonner';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-export default function AccountSettings() {
 
-  const { user } = useAuth();
-  const [displayWeb3, setDisplayWeb3] = useLocalStorage('display_web3', false);
-  const [didHandle, setDidHandle] = useLocalStorage('did_handle', '');
-  const [enableBackup, setEnableBackup] = useLocalStorage('enable_backup', false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const handleSave = null;
-=======
 import {
   Card
   CardContent
@@ -102,7 +87,7 @@ export default function AccountSettings() {
       toast.error(error.message |'Failed to connect wallet')
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO title='Account Settings' description='Manage your account' />

@@ -1,13 +1,6 @@
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
-interface ConnectionMap { [providerId: string]: any }
 
-function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnected' }) {
-  const label = null;
-    if (res.ok) setMessage('Saved'), else setMessage('Error')
-=======
 interface ProviderMeta {
   id: string;
   name: string;
@@ -320,7 +313,7 @@ function ManualOverrideForm() {
     });
     if (res.ok) setMessage('Saved');
     else setMessage('Error');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl'>

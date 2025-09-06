@@ -4,9 +4,7 @@ import { PaperclipIcon } from 'lucide-react'
 import { cn  } from '@/lib/utils';
 import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
-<<<<<<< HEAD
-  message: Message;
-=======
+
   message: Message
   isUserMessage: boolean
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
@@ -38,16 +36,12 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         <div className="text-xs opacity-70 text-right mt-1">
 interface MessageBubbleProps {
   message: Message
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isUserMessage: boolean
 }
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
   return (
-<<<<<<< HEAD
-    <div className;
-        isUserMessage 
-          ? "bg-zion-purple text-white" 
-=======
+
     <div className={cn(
       "flex"
       isUserMessage ? "justify-end" : "justify-start"
@@ -56,7 +50,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         "max-w-[75%] rounded-lg px-4 py-2"
         isUserMessage
           ? "bg-zion-purple text-white"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           : "bg-zion-blue-dark text-white"
       )}>
         <div className="whitespace-pre-wrap">{message.content}</div>

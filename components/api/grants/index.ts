@@ -29,9 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 function readAllGrants(): GrantApplication[] {
   ensureDir();
-<<<<<<< HEAD
-  const files = null;
-=======
+
   const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'));
   return files.map((file) => {
     const full = path.join(GRANTS_DIR, file);
@@ -112,6 +110,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return
   }
   res.setHeader('AllowGET, POST');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(405).end('Method Not Allowed')
 }

@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { useRouter  } from 'next/router';
-import { useState  } from 'react';
-import EnhancedButton from '../../components/ui/EnhancedButton';
-import { TrustBadge, MicroTestimonial } from '../../components/ui/Badges';
-const TalentProfile: NextPage;
-=======
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -97,4 +89,4 @@ const TalentProfile: NextPage = () => {
   );
 }
 export default TalentProfile;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

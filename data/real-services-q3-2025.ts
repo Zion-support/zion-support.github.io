@@ -1,8 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-export interface Q3Service {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
+
   id: string;
   name: string;
   tagline: string;
@@ -31,12 +29,7 @@ export interface Q3Service {
   variant?: ServiceVariant;
   customers?: number;
   rating?: number;
-<<<<<<< HEAD
-  reviews?: number
-}
 
-const contact = null;
-=======
   reviews?: number;
 const contact = {
   mobile: '+1 302 464 0950'
@@ -337,4 +330,4 @@ export const realServicesQ32025: Q3Service[] = [
   },];    contactInfo: contact
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

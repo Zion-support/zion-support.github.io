@@ -7,15 +7,11 @@ import { Input  } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check  } from '@/components/icons';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementPanelProps {
-<<<<<<< HEAD
-  title: string;
-  defaultOptions: AIEnhancementOptions;
-  onApply: (content: string) => void;
-=======
+
   title: string
   defaultOptions: AIEnhancementOptions
   onApply: (content: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string
@@ -25,9 +21,7 @@ export function AIEnhancementPanel({
   defaultOptions;
   onApply;
   onClose;
-<<<<<<< HEAD
-  showInstructions;
-=======
+
   showInstructions = true;
   initialContent = ''
 }: AIEnhancementPanelProps) {
@@ -60,7 +54,7 @@ export function AIEnhancementPanel({
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="w-full max-w-2xl mx-auto">
       <CardHeader>

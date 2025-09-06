@@ -1,8 +1,5 @@
 import type { DefaultSeoProps } from 'next-seo';
-<<<<<<< HEAD
-const config: DefaultSeoProps;
-export default config;
-=======
+
   defaultTitle: 'Zion Tech Solutions';
   titleTemplate: '%s | Zion Tech Solutions'
   description: 'Engineering services, AI/ML, DevOps, and product development by Zion.';
@@ -19,4 +16,4 @@ export default config;
 { name: 'viewport', content: 'width=device-width, initial-scale=1' }
     { name: 'theme-color', content: '#111827' }]}
 export default config;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

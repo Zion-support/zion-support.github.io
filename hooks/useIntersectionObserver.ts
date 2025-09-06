@@ -6,9 +6,7 @@ interface UseIntersectionObserverProps {
   freezeOnceVisible?: boolean
 }
 export function useIntersectionObserver({
-<<<<<<< HEAD
-  threshold;
-=======
+
   threshold = 0;
   root = null;
   rootMargin = '0%';
@@ -42,6 +40,6 @@ export function useIntersectionObserver({
     }
     prevNode.current = node
   }, [node]);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return [setNode, entry] as const
 }

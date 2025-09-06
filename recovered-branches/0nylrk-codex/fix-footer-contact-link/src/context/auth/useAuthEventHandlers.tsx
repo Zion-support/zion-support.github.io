@@ -7,12 +7,7 @@ import { useNavigate } from 'react-router-dom';
  * Custom hook for auth event handling
  */
 export function useAuthEventHandlers(
-<<<<<<< HEAD
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>;
-  setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
-) {
-  const navigate = null;
-=======
+
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>
   setOnboardingStep: React.Dispatch<React.SetStateAction<string | null>>
 ) {
@@ -46,7 +41,7 @@ export function useAuthEventHandlers(
   }
   return {
     handleSignedIn;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     handleSignedOut
   }
 }

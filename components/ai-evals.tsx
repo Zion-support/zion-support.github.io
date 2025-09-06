@@ -1,21 +1,6 @@
 import React from 'react',
 import Head from 'next/head';
-<<<<<<< HEAD
-import { Check, ShieldCheck, TrendingUp, Clock, Phone, Mail, MapPin, ExternalLink  } from 'lucide-react';
-import QuantumHolographicMatrixBackground from '../components/ui/QuantumHolographicMatrixBackground',
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-export default function AIEvalsPage() {
-	const contactInfo = null;
-	return (
-		<QuantumHolographicMatrixBackground>
-			<Head>
-				<title>AI Evals & Observability | Zion Tech Group</title>
-				<meta name="description" content="Ship reliable AI with continuous evaluation, red‑teaming, regression tests and live observability. Guardrails, datasets, dashboards and CI gates included." />
-				<link rel="canonical" href="https://ziontechgroup.com/ai-evals" />
-			</Head>
 
-=======
 import {
   Check
   ShieldCheck
@@ -53,7 +38,7 @@ export default function AIEvalsPage() {
         />
         <link rel='canonical' href='https://ziontechgroup.com/ai-evals' />
       </Head>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       <section className='min-h-screen pt-28 pb-20 px-4'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-12'>

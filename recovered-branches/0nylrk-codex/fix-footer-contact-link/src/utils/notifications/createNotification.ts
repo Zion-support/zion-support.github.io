@@ -9,9 +9,7 @@ export async function createNotification({
   title;
   message;
   type;
-<<<<<<< HEAD
-  relatedId;
-=======
+
   relatedId = null;
   sendEmail = false;
   actionUrl = null;
@@ -39,7 +37,7 @@ export async function createNotification({
     return { success: true, notificationId: data }
   } catch (error) {
     console.error('Error creating notification:', error);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return { success: false, error }
   }
 }

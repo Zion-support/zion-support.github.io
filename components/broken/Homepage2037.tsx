@@ -3,13 +3,7 @@ import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { ArrowRight, Star, Users, Award, Clock;
-  Brain, Atom, Shield, Rocket, Zap;
-  TrendingUp, Globe, Cpu, Database, Cloud;
-  Lock, Palette, Target, CheckCircle, Sparkles
- } from 'lucide-react';
-=======
+
 import {
   ArrowRight
   Star
@@ -35,14 +29,12 @@ import {
   Brain, Atom, Shield, Rocket, Zap;
   TrendingUp, Globe, Cpu, Database, Cloud;
   Lock, Palette, Target, CheckCircle, Sparkles
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 // Import new service data
 import { realMicroSaasServices2025  } from '../data/real-micro-saas-services-2025';
 import { realITServices2025  } from '../data/real-it-services-2025';
 import { realAIServices2025 } from '../data/real-ai-services-2025';
-<<<<<<< HEAD
-const Homepage2037: React.FC;
-=======
+
 const Homepage2037: React.FC = () => {
   // Get featured services from each category
   const featuredMicroSaas = realMicroSaasServices2025
@@ -743,4 +735,4 @@ const Homepage2037: React.FC = () => {
 export default Homepage2037;  )
 }
 export default Homepage2037;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

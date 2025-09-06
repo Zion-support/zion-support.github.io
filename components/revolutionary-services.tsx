@@ -93,11 +93,7 @@ export default function RevolutionaryServicesPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [showFilters, setShowFilters] = useState(false);
-<<<<<<< HEAD
-  const [selectedService, setSelectedService] = useState<any>(null),
 
-  const priceRanges = null;
-=======
   const [selectedService, setSelectedService] = useState<any>(null);
   const priceRanges = [
     { value: 'All', label: 'All Prices' }
@@ -975,7 +971,7 @@ export default function RevolutionaryServicesPage() {
                            onClick={() => {
                              setSearchQuery('');
                              setSelectedCategory('All');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                              setPriceRange('All')
                            }}
                          >

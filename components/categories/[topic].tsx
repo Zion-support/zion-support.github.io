@@ -5,9 +5,7 @@ import { BlogPost  } from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
@@ -98,4 +96,4 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { topic, posts } }
 }
 export default TopicPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

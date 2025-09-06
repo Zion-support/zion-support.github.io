@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = { vendors: Vendor[] }
 export default function VendorsPage({ vendors }: Props) {
   return (
@@ -97,4 +95,4 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   return { props: { vendors } }
 };  return { props: { vendors } }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

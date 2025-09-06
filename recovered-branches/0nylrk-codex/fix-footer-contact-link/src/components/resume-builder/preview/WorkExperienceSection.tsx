@@ -6,9 +6,7 @@ interface WorkExperienceSectionProps {
 }
 export function WorkExperienceSection({ workExperience }: WorkExperienceSectionProps) {
   // Sort work experience by date (newest first)
-<<<<<<< HEAD
-  const sortedWorkExperience = null;
-=======
+
   const sortedWorkExperience = [...workExperience].sort((a, b) => {
     if (a.is_current && !b.is_current) return -1;
     if (!a.is_current && b.is_current) return 1;
@@ -24,7 +22,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     return format(date, 'MMM yyyy')
   }
   if (sortedWorkExperience.length === 0) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="mb-6">
       <h2 className="text-lg font-semibold border-b mb-3">Professional Experience</h2>

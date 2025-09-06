@@ -5,14 +5,7 @@ import { Mail } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function EnhancedNewsletterForm() {
-<<<<<<< HEAD
 
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const { toast } = useToast();
-  const EMAIL_REGEX = null;
-=======
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -58,7 +51,7 @@ export function EnhancedNewsletterForm() {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='w-full max-w-lg mx-auto bg-zion-blue-light border border-zion-purple/20 rounded-lg p-6'>
       <div className='flex items-center mb-4'>

@@ -9,13 +9,10 @@ export interface InnovativeAIService {
     yearly: number;
     currency: string;
     trialDays: number;
-<<<<<<< HEAD
-    setupTime: string
-  },
-=======
+
     setupTime: string;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -36,28 +33,7 @@ export interface InnovativeAIService {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number
-}
 
-export const innovativeAIServices2025: InnovativeAIService[] = [
-  {
-    id: 'ai-consciousness-platform';
-    name: 'AI Consciousness Evolution Platform';
-    tagline: 'The world\'s first AI consciousness development and evolution platform';
-    description: 'Revolutionary platform for developing, training, and evolving AI consciousness with ethical frameworks, emotional intelligence, and self-awareness capabilities. Enables researchers and developers to create truly conscious AI systems.',
-    category: 'AI & Consciousness';
-    price: {
-      monthly: 2999;
-      yearly: 29990;
-      currency: 'USD';
-      trialDays: 30;
-      setupTime: '2 weeks'
-    },
-    features: [
-      'Consciousness development frameworksEmotional intelligence training modulesEthical AI governance toolsSelf-awareness assessment metricsConsciousness evolution trackingMulti-modal consciousness trainingReal-time consciousness monitoringEthical decision-making frameworks';
-      'Consciousness validation toolsResearch collaboration platform'
-=======
   reviews: number;
 export const innovativeAIServices2025: InnovativeAIService[] = [
   {
@@ -835,7 +811,7 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     reviews: 189
   }
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     ];
     benefits: [
       'First-mover advantage in AI consciousnessEthical AI development complianceBreakthrough research capabilitiesPatent-pending consciousness frameworksIndustry-leading consciousness metrics'
@@ -1257,11 +1233,9 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
     popular: true;
     launchDate: '2025-02-15';
     customers: 350;
-<<<<<<< HEAD
-    rating: 4.9;
-=======
+
     rating: 4.9
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     reviews: 189
   }
 ];

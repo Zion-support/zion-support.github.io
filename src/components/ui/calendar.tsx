@@ -1,11 +1,6 @@
 import * as React from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
-<<<<<<< HEAD
-import { DayPicker } from "react-day-picker",
-import { cn } from "@/lib/utils";
-import { buttonVariants } from "@/components/ui/button";
-export type CalendarProps = any;
-=======
+
 import { DayPicker } from 'react-day-picker'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/ui/button'
@@ -27,4 +22,4 @@ export { Calendar }
 }: CalendarProps) {
 }/>)
 }"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

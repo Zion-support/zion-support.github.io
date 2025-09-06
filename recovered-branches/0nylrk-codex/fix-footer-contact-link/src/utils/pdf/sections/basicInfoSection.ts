@@ -9,11 +9,7 @@ export function addBasicInfoSection(
 ): number {
   // Add header with name and title
   doc.setFontSize(24);
-<<<<<<< HEAD
-  doc.setTextColor(colors.heading);
-  doc.text(basicInfo.title || 'Resume', 20, 20);
-  let yPos = null;
-=======
+
   doc.setTextColor(colors.heading)
   doc.text(basicInfo.title |'Resume', 20, 20);
   let yPos = 30;
@@ -35,7 +31,7 @@ export function addBasicInfoSection(
     // Split text into multiple lines to fit within page width
     const summaryLines = doc.splitTextToSize(basicInfo.summary, 170);
     doc.text(summaryLines, 20, yPos);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     yPos += (summaryLines.length * 6) + 10
   }
   return yPos

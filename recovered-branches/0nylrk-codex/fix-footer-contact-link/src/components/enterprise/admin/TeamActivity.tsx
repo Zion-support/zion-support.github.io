@@ -1,16 +1,7 @@
 
 import React from "react";
 import {
-<<<<<<< HEAD
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table",
-import { Badge } from "@/components/ui/badge",
-import { CalendarIcon, Search } from "lucide-react",
-=======
+
   Table
   TableBody
   TableCell
@@ -20,14 +11,12 @@ import { CalendarIcon, Search } from "lucide-react",
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 export function TeamActivity() {
   // Mock activity data
-<<<<<<< HEAD
-  const activities = null;
-=======
+
   const activities = [
     {
       id: 1
@@ -107,7 +96,7 @@ export function TeamActivity() {
     }
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">

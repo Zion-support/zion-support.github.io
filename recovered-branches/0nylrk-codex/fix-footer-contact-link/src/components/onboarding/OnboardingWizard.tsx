@@ -8,40 +8,28 @@ import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { FileText, Users, Calendar, Eye, MessageSquare  } from 'lucide-react';
 import { cn } from '@/lib/utils';
 interface WizardStep {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  action: {
-    text: string;
-=======
+
   title: string
   description: string
   icon: React.ReactNode
   action: {
     text: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     url: string
   }
   skipText?: string
 }
 interface OnboardingWizardProps {
-<<<<<<< HEAD
-  type: 'client' | 'talent';
-  onComplete: () => void;
-  onSkip: () => void;
-=======
+
   type: 'client' | 'talent'
   onComplete: () => void
   onSkip: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   className?: string
 }
 export function OnboardingWizard({ type, onComplete, onSkip, className }: OnboardingWizardProps) {
   const [currentStep, setCurrentStep] = useState(0);
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const { user } = useAuth();
   // Define steps based on user type
@@ -156,7 +144,7 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
                 key={index}
                 className={cn(
                   "h-2 w-2 rounded-full mx-1";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   index === currentStep
                     ? "bg-zion-purple scale-125"
                     : index < currentStep

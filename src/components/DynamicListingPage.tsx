@@ -6,18 +6,7 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input";
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
-<<<<<<< HEAD
-  Select;
-  SelectValue;
-  SelectTrigger;
-  SelectContent;
-  SelectItem} from "@/components/ui/select",
-import { Checkbox } from "@/components/ui/checkbox",
-import Skeleton from "react-loading-skeleton",
-import "react-loading-skeleton/dist/skeleton.css",
-import { Slider } from "@/components/ui/slider",
-import { ProductListing, ListingView } from "@/types/listings",
-=======
+
   Select
   SelectValue
   SelectTrigger
@@ -29,40 +18,12 @@ import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
 import { Slider } from '@/components/ui/slider'
 import { ProductListing, ListingView } from '@/types/listings'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Search, Filter, LayoutGrid, List, Star } from 'lucide-react'
 import { toast } from "@/hooks/use-toast";
 import { captureException } from "@/utils/sentry";
 interface PriceRange {
-<<<<<<< HEAD
-  min: number;
-  max: number
-}
 
-interface DynamicListingPageProps {
-  title: string;
-  description: string;
-  categorySlug: string;
-  listings: ProductListing[];
-  categoryFilters: { label: string, value: string }[],
-  initialPrice?: PriceRange;
-  /**
-   * Base path for listing detail pages. Defaults to `/marketplace/listing`.
-   */
-  detailBasePath?: string
-}
-
-export function DynamicListingPage({
-  title;
-  description;
-  categorySlug;
-  listings: allListings;
-  categoryFilters;
-  initialPrice;
-                    setSelectedAvailability("all")
-                  }}
-                  className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-=======
   min: number
 max: number
 }interface DynamicListingPageProps {
@@ -528,7 +489,7 @@ export function DynamicListingPage({
                     setSpecQuery('')
                     setSelectedAvailability('all') }}
                   className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 >
                   Clear All
                 </Button>

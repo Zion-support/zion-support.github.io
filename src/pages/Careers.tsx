@@ -6,9 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import Link from "next/link";
 import { CAREER_JOBS } from "@/data/careersJobs";
 export default function Careers() {
-<<<<<<< HEAD
-  const applyEmail = null;
-=======
+
   const applyEmail = 'careers@ziontechgroup.com'
   const jobs = CAREER_JOBS
   const whyWork =
@@ -121,7 +119,7 @@ export default function Careers() {
       )
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <SEO

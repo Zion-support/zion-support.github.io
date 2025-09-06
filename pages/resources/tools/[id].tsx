@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-export default function ToolResourcePage() {
-  const router = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -178,7 +171,7 @@ export default function ToolResourcePage() {
     }
   ]
   const tool = tools.find(t => t.id === id)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (!tool) {
     return (
       <>

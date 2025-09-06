@@ -16,9 +16,7 @@ export default function TokenManager() {
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
   const [userId, setUserId] = useState('');
   const [amount, setAmount] = useState(0);
-<<<<<<< HEAD
-  const isAdmin = null;
-=======
+
   const isAdmin = user?.userType === 'admin';
   useEffect(() => {
     if (isAdmin) fetchTransactions()
@@ -52,7 +50,7 @@ export default function TokenManager() {
       })
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <ProtectedRoute adminOnly>
       <div>

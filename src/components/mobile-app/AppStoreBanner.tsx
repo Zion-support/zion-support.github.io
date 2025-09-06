@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState, useEffect } from "react",
-import { safeStorage } from "@/utils/safeStorage";
-import { X } from 'lucide-react'
-import { useIsMobile } from "@/hooks/use-mobile";
-export const AppStoreBanner: React.FC;
-=======
 }
 import React, { useState, useEffect } from "react"
 import { safeStorage } from "@/utils/safeStorage"
@@ -59,4 +52,4 @@ export const AppStoreBanner: React.FC = () => {
 }
 '"}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

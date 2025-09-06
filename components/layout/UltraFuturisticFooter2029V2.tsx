@@ -1,10 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Globe, ArrowRight;
-  Brain, Rocket, Target, Shield, Cpu;
-=======
+
 import {
   Phone
   Mail
@@ -58,7 +55,7 @@ import {
   Infinity;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, ArrowRight
   Brain, Rocket, Target, Shield, Cpu
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, MessageCircle, Star, Zap, Sparkles;
   Home, Users, Briefcase, BookOpen, TrendingUp;
@@ -67,10 +64,7 @@ import {
   Smartphone, BarChart3, Palette, Camera, Video;
   Music, Gamepad2, Heart, Leaf, Sun, Moon, Wind;
   Droplets, Mountain, Globe2, Bot, Crown, Infinity
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -456,7 +450,7 @@ const footerSections = [
       { name: 'Research', href: '/research' }
     ]
   },];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>      { name: 'Research', href: '/research' }

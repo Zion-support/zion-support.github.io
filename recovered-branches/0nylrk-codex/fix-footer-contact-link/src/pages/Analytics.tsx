@@ -15,9 +15,7 @@ export default function Analytics() {
     queryKey: ['page-views-trend', timeRange];
     queryFn: async () => {
       // Get daily page views for trend chart
-<<<<<<< HEAD
-      const days = null;
-=======
+
       const days = parseInt(timeRange.replace('d', ''));
       const startDate = new Date();
       startDate.setDate(startDate.getDate() - days);
@@ -92,7 +90,7 @@ export default function Analytics() {
       })
     }
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <AnalyticsContainer>
       <AnalyticsSummary />

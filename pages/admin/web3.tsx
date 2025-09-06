@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',
-import Head from 'next/head';
-export default function AdminWeb3Page() {
-  const [users, setUsers] = useState<{ id: string, enabled: boolean, chain?: string }[]>([]);
-  useEffect(() => {
-    const raw = null;
-=======
+
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
@@ -24,7 +17,7 @@ export default function AdminWeb3Page() {
     sol: users.filter(u => u.chain === 'sol').length
     enabled: users.filter(u => u.enabled).length
     disabled: users.filter(u => !u.enabled).length}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head><title>Admin — Web3</title></Head>

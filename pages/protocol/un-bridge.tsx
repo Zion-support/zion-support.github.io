@@ -1,23 +1,7 @@
 import React, { useState } from 'react';
 export default function UNBridge() {
   const [form, setForm] = useState({
-<<<<<<< HEAD
-    title: 'Zion DAO x Digital Labor Initiative';
-    targetInstitution: 'UN Development Programme';
-    type: 'Workforce Dev';
-    regionalScope: 'Global South';
-    budgetOrResolution: 'USD 3M over 24 months';
-    supportingMultiverses: 'Digital Labor, AI Ethics',
-    promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
-    language: 'en'});
-  const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState<any>(null),
-  const [translated, setTranslated] = useState<string>(''),
 
-  const onChange = null;
-      setResult((r: any) => ({ ...r, meta: data.meta }))
-    } finally { setLoading(false) }
-=======
     title: 'Zion DAO x Digital Labor Initiative'
     targetInstitution: 'UN Development Programme'
     type: 'Workforce Dev'
@@ -101,7 +85,7 @@ export default function UNBridge() {
     } finally {
       setLoading(false);
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   return (
     <div className='space-y-6'>

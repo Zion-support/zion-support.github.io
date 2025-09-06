@@ -25,18 +25,7 @@ interface ServiceLandingTemplateProps {
   ctaLink: string
 }
 export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-<<<<<<< HEAD
-  title;
-  subtitle;
-  heroImage;
-  description;
-  benefits;
-  testimonials;
-  ctaText;
-  ctaLink}) => {
-  return (
-    <div className;
-=======
+
   title
   subtitle
   description
@@ -135,4 +124,4 @@ export const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

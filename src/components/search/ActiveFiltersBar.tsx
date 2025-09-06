@@ -1,47 +1,30 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
+
 
 export default ActiveFiltersBar; import React from 'react'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 interface SearchFilters {
-<<<<<<< HEAD
-  types: string[];
-  category: string;
-  minPrice: number;
-  maxPrice: number;
-  minRating: number;
-=======
+
   types: string[]
   category: string
   minPrice: number
   maxPrice: number
   minRating: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   sort: string
 }
 interface ActiveFiltersBarProps {
-<<<<<<< HEAD
-  filters: SearchFilters;
-  onFiltersChange: (filters: SearchFilters) => void;
-  onClearAll: () => void;
-=======
+
   filters: SearchFilters
   onFiltersChange: (filters: SearchFilters,) => void
   onClearAll: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   className?: string
 }
 export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
-<<<<<<< HEAD
-  filters;
-  onFiltersChange;
-  onClearAll;
-  className;
-=======
+
   filters
   onFiltersChange
   onClearAll
@@ -169,4 +152,4 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
     </div>
   )}
 '"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

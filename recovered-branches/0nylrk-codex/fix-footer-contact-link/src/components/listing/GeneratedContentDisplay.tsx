@@ -3,9 +3,7 @@ import React from "react",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-=======
+
 import {
   Card
   CardContent
@@ -13,21 +11,17 @@ import {
   CardHeader
   CardTitle
 } from "@/components/ui/card";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface GeneratedContent {
   description: string;
   tags: string[];
   suggestedPrice: {
     min: number;
-<<<<<<< HEAD
-    max: number
-  },
-  keyPoints: string[]
-=======
+
     max: number;
   }
   keyPoints: string[];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 interface GeneratedContentDisplayProps {
   content: GeneratedContent;

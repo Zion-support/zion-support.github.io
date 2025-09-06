@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles  } from 'lucide-react';
-=======
+
 import { motion } from 'framer-motion';
 import {
   ArrowRight
@@ -17,16 +14,14 @@ import {
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';import { ArrowRight, Star, TrendingUp, Zap, Brain, Rocket, Globe, Sparkles } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Link from 'next/link';
 import { aiAutonomousServices2026  } from '../../data/2026-ai-autonomous-services';
 import { quantumSpaceTechServices2026  } from '../../data/2026-quantum-space-tech-services';
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services';
 export default function Revolutionary2026ServicesShowcase() {
   // Get featured services from each category
-<<<<<<< HEAD
-  const featuredAIServices = null;
-=======
+
   const featuredAIServices = aiAutonomousServices2026.slice(0, 3);
   const featuredQuantumServices = quantumSpaceTechServices2026.slice(0, 3);
   const featuredMetaverseServices = metaverseDigitalRealityServices2026.slice(
@@ -64,7 +59,7 @@ export default function Revolutionary2026ServicesShowcase() {
         <div className='absolute bottom-0 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>
       </div>
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Enhanced Header */}  }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
       {/* Enhanced Background Effects */}

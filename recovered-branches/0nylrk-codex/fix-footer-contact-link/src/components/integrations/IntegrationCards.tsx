@@ -5,15 +5,11 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 interface IntegrationCardProps {
-<<<<<<< HEAD
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-=======
+
   title: string
   description: string
   icon: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   status?: "connected" | "disconnected" | "pending";
   href?: string;
   onConnect?: () => void

@@ -1,7 +1,5 @@
 // Common skills for filtering
-<<<<<<< HEAD
-export const COMMON_SKILLS = null;
-=======
+
 export const COMMON_SKILLS = [
   'Machine Learning'
   'Python'
@@ -39,4 +37,4 @@ export const REGIONS = [
   "South America";
   "Middle East";
   "Africa"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

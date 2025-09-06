@@ -1,21 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
-import { Input } from "@/components/ui/input",
-import { Textarea } from "@/components/ui/textarea",
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select",
-import { Calendar } from "@/components/ui/calendar",
-import { Popover, PopoverTrigger, PopoverContent } from "@/components/ui/popover",
-import { TalentProfile } from "@/types/talent",
-import type { UserProfile } from "@/types/auth",
-import { cn } from "@/lib/utils",
-import { zodResolver } from "@hookform/resolvers/zod",
-import { useForm, ControllerRenderProps } from "react-hook-form",
-import { z } from "zod",
-import { format, addDays } from "date-fns";
-=======
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import {
@@ -46,7 +29,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm, ControllerRenderProps } from 'react-hook-form'
 import { z } from 'zod'
 import { format, addDays } from 'date-fns'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { CalendarIcon } from 'lucide-react'
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
@@ -55,14 +38,7 @@ interface InterviewRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
   userDetails?: UserProfile
-<<<<<<< HEAD
-}
 
-const formSchema = null;
-                          !field.value && "text-muted-foreground"
-                        )}
-                      >
-=======
 const formSchema = z.object({
   date: z
     .date({
@@ -219,7 +195,7 @@ export function InterviewRequestForm({
                           'w-full pl-3 text-left font-normal'
                           !field.value && 'text-muted-foreground'
                         )}                      >
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         {field.value ? (
                           format(field.value, 'PPP')
                         ) : (

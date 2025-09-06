@@ -5,9 +5,7 @@
  * It prevents the "Cannot read properties of undefined (reading 'env')" error.
  */
 // Define safe defaults for environment variables
-<<<<<<< HEAD
-const defaultEnv = null;
-=======
+
 const defaultEnv = {
   NODE_ENV: 'production', // Default to production for safety
   NEXT_PUBLIC_APP_URL: ''
@@ -82,4 +80,4 @@ console.log('✅ Environment polyfill loaded successfully')
 export default safeEnv
 export default safeEnv
 export default safeEnv
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
-import { Button } from "@/components/ui/button";
-=======
+
 import React, {
   useState
   useRef
@@ -10,7 +7,7 @@ import React, {
   KeyboardEvent
 } from 'react'
 import { Button } from '@/components/ui/button'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Send } from 'lucide-react'
 interface ChatInputProps {
   onSend: (message: string) => void
@@ -28,13 +25,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     inputRef.current?.focus() }, [])
     inputRef.current?.focus()
 interface ChatInputProps {
-<<<<<<< HEAD
-  onSend: (message: string) => void;
-  disabled?: boolean
-}
 
-export function ChatInput({ onSend, disabled;
-=======
   onSend: (message: string) => void
   disabled?: boolean
 }
@@ -60,7 +51,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       }
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <form onSubmit={handleSubmit} className='flex items-end gap-2'>
       <textarea

@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs-extra";
-import path from "path";
-import { authenticateRequest, enforceRateLimit, recordRequest } from "../../utils/api/partnerAuth";
-const TALENTS_FILE = null;
-  return res.status(200).json({ verified })
-}
-=======
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -73,4 +65,4 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });  return res.status(200).json({ verified })
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

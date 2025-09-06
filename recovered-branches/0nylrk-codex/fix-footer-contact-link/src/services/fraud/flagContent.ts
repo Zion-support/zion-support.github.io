@@ -6,9 +6,7 @@ import { FlagResult } from './types';
 /**
  * Flag content for review
  */
-<<<<<<< HEAD
-export const flagContent = null;
-=======
+
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;
@@ -49,4 +47,4 @@ export const flagContent = async (
     }
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

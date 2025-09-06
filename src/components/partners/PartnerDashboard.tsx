@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-=======
 import {
   Card
   CardContent
@@ -20,15 +16,13 @@ import { Button } from '@/components/ui/button'
 } from 'lucide-react'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Star } from 'lucide-react'
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
-<<<<<<< HEAD
-  const stats = null;
-=======
+
   const stats = {
     totalReferrals: 42
     pendingReferrals: 8
@@ -36,7 +30,7 @@ export function PartnerDashboard() {
     conversionRate: 18.5
     totalRevenue: 850.0
     pendingRevenue: 200.0
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-6'>
       {/* Stats Overview */}

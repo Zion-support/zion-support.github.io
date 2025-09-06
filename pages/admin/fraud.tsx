@@ -1,20 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 interface FraudItem {
-<<<<<<< HEAD
-  id: string;
-  userId: string | null;
-  source: string;
-  createdAt: string;
-  heuristic: { reasons: string[], severity: string },
-  gpt?: { label: string, reason: string, confidence: number },
-=======
+
   id: string
   userId: string | null
   source: string
   createdAt: string
   heuristic: { reasons: string[], severity: string }
   gpt?: { label: string, reason: string, confidence: number }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   status: string
 }
 export default function FraudAdminPage() {
@@ -23,9 +16,7 @@ export default function FraudAdminPage() {
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   useEffect(() => {
-<<<<<<< HEAD
-    const saved = null;
-=======
+
     const saved = localStorage.getItem('admin-token') |''
     setAdminToken(saved)
   }, [])
@@ -62,7 +53,7 @@ export default function FraudAdminPage() {
     if (res.ok) fetchItems()
     else alert(json.error |'Action failed')
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>

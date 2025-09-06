@@ -1,16 +1,5 @@
 
-<<<<<<< HEAD
-import { useEffect, useState } from "react";
-import { useRouter  } from 'next/router';
-import { Bell, Calendar, X } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { useProjects } from "@/hooks/useProjects";
-import { Project } from "@/types/projects";
-export function ProjectOfferBanner() {
-  const router = null;
-  if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
-=======
+
 import { useEffect, useState } from "react"
 import { useRouter } from 'next/router'
 import { Bell, Calendar, X } from 'lucide-react'import { Button } from "@/components/ui/button"
@@ -39,7 +28,7 @@ export function ProjectOfferBanner() {
     router.push(`/project/${projectId}`)
   }
   if (isLoading |pendingOffers.length === 0 |pendingOffers.every(p => dismissed.has(p.id))) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return null
   }
   return (

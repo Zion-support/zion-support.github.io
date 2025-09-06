@@ -1,7 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Star, Quote, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
-=======
+
 import {
   Star
   Quote
@@ -10,7 +8,7 @@ import {
   TrendingUp
   CheckCircle;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface Testimonial {
   id: string;
   name: string;
@@ -19,12 +17,7 @@ interface Testimonial {
   content: string;
   rating: number;
   avatar: string;
-<<<<<<< HEAD
-  category: string
-}
 
-const EnhancedTestimonialsSection: React.FC;
-=======
   category: string;  id: string
   name: string
   title: string
@@ -342,4 +335,4 @@ const EnhancedTestimonialsSection: React.FC = () => {
 export default EnhancedTestimonialsSection;  )
 }
 export default EnhancedTestimonialsSection;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

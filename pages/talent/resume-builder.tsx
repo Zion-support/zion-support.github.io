@@ -2,9 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 import AIAssistant from '../../components/ui/AIAssistant';
-<<<<<<< HEAD
-const ResumeBuilder: NextPage;
-=======
+
 const ResumeBuilder: NextPage = () => {
   const [role, setRole] = useState('Data Scientist')
   const [experienceYears, setExperienceYears] = useState(5)
@@ -95,4 +93,4 @@ const ResumeBuilder: NextPage = () => {
   )
 }
 export default ResumeBuilder;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

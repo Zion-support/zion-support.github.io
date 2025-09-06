@@ -9,9 +9,7 @@ import { Brain, DollarSign, TrendingUp, Shield, Zap;
   BarChart, PieChart, LineChart, Activity
  } from 'lucide-react';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-const contactInfo = null;
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -536,4 +534,4 @@ const NeuralFinanceAI: React.FC = () => {
   )
 }
 export default NeuralFinanceAI;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

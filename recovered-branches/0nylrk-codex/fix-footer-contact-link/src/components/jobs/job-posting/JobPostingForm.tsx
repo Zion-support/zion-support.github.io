@@ -17,10 +17,7 @@ interface JobPostingFormProps {
   onSuccess?: () => void
 }
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
-<<<<<<< HEAD
-  const navigate = null;
-  if (isLoading || isFormLoading) {
-=======
+
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
@@ -105,7 +102,7 @@ export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
     }
   }
   if (isLoading |isFormLoading) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return <div className="flex items-center justify-center p-8">Loading...</div>
   }
   return (

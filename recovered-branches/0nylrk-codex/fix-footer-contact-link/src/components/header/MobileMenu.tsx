@@ -9,10 +9,7 @@ export interface MobileMenuProps {
   unreadCount?: number;
   onClose: () => void
 }
-<<<<<<< HEAD
 
-export function MobileMenu({ unreadCount;
-=======
 export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
   const location = useLocation();
   const { user } = useAuth();
@@ -78,7 +75,7 @@ export function MobileMenu({ unreadCount = 0, onClose }: MobileMenuProps) {
             to={item.href}
             className={cn(
               "flex items-center px-6 py-3 text-base font-medium";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               item.matches(location.pathname)
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan"
                 : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"

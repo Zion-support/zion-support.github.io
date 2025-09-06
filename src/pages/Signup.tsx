@@ -11,27 +11,7 @@ import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { PasswordStrengthMeter  } from '@/components/PasswordStrengthMeter';
 import { AuthButtons  } from '@/components/AuthButtons';
 import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
-<<<<<<< HEAD
-import { toast  } from '@/hooks/use-toast';
-import { AuthLayout  } from '@/layout';
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-const SignupSchema = null;
-                  setSuccessMessage('')
-                }}
-              >
-                Try Different Email
-              </Button>
-            </div>
-          )}
-          
-          {/* Additional help text when service issues are detected */}
-          {healthCheckError && (
-            <div className="text-center text-xs text-muted-foreground mt-4 p-3 bg-muted rounded">
-              <p>⚠️ We detected some authentication service issues.</p>
-              <p>If signup fails, please try again in a few minutes or contact support.</p>
-            </div>
-          )}
-=======
+
 import { toast } from '@/hooks/use-toast'
 import { AuthLayout } from '@/layout'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger'
@@ -506,7 +486,7 @@ export default function Signup() {
                 </p>
               </div>
             )}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           </form>
           {!emailVerificationRequired && (
             <div className='mt-6'>

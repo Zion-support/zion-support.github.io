@@ -5,12 +5,7 @@ import { Button } from "@/components/ui/button",
 import { ChatAssistant } from "@/components/ChatAssistant";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function ChatAssistantTrigger() {
-<<<<<<< HEAD
 
-  const [isOpen, setIsOpen] = useState(false);
-  // Handle sending messages to the AI chat assistant
-  const handleSendMessage = null;
-=======
   const [isOpen, setIsOpen] = useState(false)
   // Handle sending messages to the AI chat assistant
   const handleSendMessage = async (message: string): Promise<void> => {
@@ -51,7 +46,7 @@ export function ChatAssistantTrigger() {
             id: 'ai-assistant'
             name: 'AI Assistant'
             avatarUrl: 'https://placehold.co/64x64?text=AI'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             role: 'Virtual Assistant'
           }}
           onSendMessage = {handleSendMessage,}

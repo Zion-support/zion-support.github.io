@@ -8,10 +8,7 @@ import { toast } from "sonner";
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
-<<<<<<< HEAD
 
-type Screenshot = any;
-=======
 type Screenshot = {
   id: string
   url: string
@@ -138,4 +135,4 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

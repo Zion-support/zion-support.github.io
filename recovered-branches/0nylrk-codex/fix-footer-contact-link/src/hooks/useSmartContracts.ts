@@ -9,11 +9,7 @@ import { ContractFormValues } from "@/components/contracts/components/ContractFo
 export function useSmartContracts() {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
-<<<<<<< HEAD
-  const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle'),
-  
-  const generateSolidityContract = null;
-=======
+
   const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'>('idle');
   const generateSolidityContract = async (
     values: ContractFormValues
@@ -90,7 +86,7 @@ export function useSmartContracts() {
     generateSolidityContract;
     deploySmartContract;
     isLoading;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     deploymentStatus
   }
 }

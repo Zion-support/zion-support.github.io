@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { Menu } from 'lucide-react'
-<<<<<<< HEAD
-import Link from "next/link";
-=======
+
 import Link from 'next/link'
   const [ open, setOpen ] = useState(false)
   return (
@@ -51,7 +49,7 @@ import Link from 'next/link'
                 Contact Us
               </Link>            </li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false);
   return (

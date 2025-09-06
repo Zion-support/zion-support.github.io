@@ -15,9 +15,7 @@ import { toast  } from '@/hooks/use-toast';
 import { Share, Users  } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 export default function ReferralsPage() {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const { isAuthenticated } = useAuth();
   const {
@@ -39,7 +37,7 @@ export default function ReferralsPage() {
     }
   }, [isAuthenticated, navigate]);
   const referralLink = getReferralLink();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="container max-w-7xl py-10">
       <div className="mb-8 flex flex-col md:flex-row justify-between md:items-center gap-4">

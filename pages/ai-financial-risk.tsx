@@ -4,9 +4,7 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import Button from '../components/ui/Button';
 import { innovativeAIServices } from '../data/innovative-ai-services';
 export default function AIFinancialRiskPage() {
-<<<<<<< HEAD
-  const service = null;
-=======
+
   const service = innovativeAIServices.find(s =>
     (s.link |'').endsWith('/ai-financial-risk')
   );
@@ -16,7 +14,7 @@ export default function AIFinancialRiskPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709'
   }
 const AIFinancialRisk: React.FC = () => {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <UltraAdvancedFuturisticBackground>
       <NextHead>

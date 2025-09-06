@@ -19,12 +19,7 @@ export default function HelpCenter() {
     setSelectedArticle(articleId)
   }
 export default function HelpCenter() {
-<<<<<<< HEAD
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
-  const handleCategorySelect = null;
-=======
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null)
   const [searchQuery, setSearchQuery] = useState("")
@@ -42,7 +37,7 @@ export default function HelpCenter() {
   const handleBackToArticles = () => {
     setSelectedArticle(null)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <div className='container mx-auto px-4 py-8'>

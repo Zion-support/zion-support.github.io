@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { safeSessionStorage } from '@/utils/safeStorage';
-const SHOWN_KEY = null;
-=======
+
 import { Button } from '@/components/ui/button'
 import { safeSessionStorage } from '@/utils/safeStorage'
 const SHOWN_KEY = 'pwaInstallShown'
@@ -112,4 +108,4 @@ export const InstallPrompt: React.FC = () => {
   )
 }
 export default InstallPrompt;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

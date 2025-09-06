@@ -13,13 +13,7 @@ import { addPortfolioSection } from './sections/portfolioSection';
 export interface ExportOptions {
   theme: 'light' | 'dark';
   includePortfolio?: boolean;
-<<<<<<< HEAD
-  maxProjects?: number;
-  fontFamily?: FontFamily
-}
 
-const defaultOptions: ExportOptions;
-=======
   maxProjects?: number
   fontFamily?: FontFamily
 }
@@ -56,7 +50,7 @@ export async function exportResumeToPDF(
   currentY = addWorkExperienceSection(doc, resume.work_experience, colors, currentY);
   currentY = addEducationSection(doc, resume.education, colors, currentY);
   currentY = addCertificationsSection(doc, resume.certifications, colors, currentY);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   // Add portfolio projects if needed
   if (includePortfolio && resume.portfolio_projects && resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(doc, resume.portfolio_projects, colors, currentY, maxProjects)

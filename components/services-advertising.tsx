@@ -1,16 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-const ext = null;
-                { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
-              ].map((o) => (
-                <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
-                  <div className="text-sm text-gray-400 mb-1">From</div>
-                  <div className="text-2xl font-bold text-white">{o.price}</div>
-                  <div className="text-gray-200 mt-2">{o.name}</div>
-                </a>
-              ))}
-=======
+
   <a
     className='text-cyan-400 underline'
     href={`/out?u=${encodeURIComponent(url)}`}
@@ -2795,7 +2785,7 @@ export default function ServicesAdvertisingPage() {
               >
                 Learn more
               </a>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </div>
           </section>
           <section id='multi-tenant-rate-limiter' className='space-y-2'>

@@ -4,17 +4,12 @@ import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
 interface AIEnhancementButtonProps {
-<<<<<<< HEAD
-  currentContent: string;
-  enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general';
-  context?: string;
-  onEnhanced: (enhancedContent: string) => void;
-=======
+
   currentContent: string
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general'
   context?: string;
   onEnhanced: (enhancedContent: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   buttonText?: string;
   className?: string
 }
@@ -23,9 +18,7 @@ export function AIEnhancementButton({
   enhancementType;
   context;
   onEnhanced;
-<<<<<<< HEAD
-  buttonText;
-=======
+
   buttonText = "Enhance with AI";
   className
 }: AIEnhancementButtonProps) {
@@ -46,7 +39,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Button
       type="button"

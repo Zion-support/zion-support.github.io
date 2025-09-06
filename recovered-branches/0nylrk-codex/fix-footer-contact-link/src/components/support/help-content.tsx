@@ -1,22 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { HelpCategory } from "./types";
-import { 
-  HelpCircle;
-  CreditCard;
-  Users;
-  Calendar;
-  Briefcase 
-} from "lucide-react",
 
-export const HELP_CATEGORIES: HelpCategory[] = [
-  {
-    id: "getting-started";
-    name: "Getting Started";
-    description: "Learn the basics of using the Zion AI Marketplace";
-    icon: <HelpCircle className;
-=======
 import {HelpCategory} from "./types";
 import {HelpCircle, CreditCard, Users, Calendar, Briefcase} from "lucide-react";
 export const HELP_CATEGORIES: HelpCategory[] = [
@@ -173,4 +157,4 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

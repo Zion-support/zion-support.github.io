@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type InterviewStatus = any;
-=======
+
 export type InterviewStatus =
   | 'requested'
   | 'confirmed'
@@ -46,6 +44,6 @@ export interface InterviewResponse {
   interview_id: string;
   status: InterviewStatus;
   alternative_date?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   message?: string
 }

@@ -11,13 +11,7 @@ import { useTranslationService } from "@/hooks/useTranslationService",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { toast } from "@/components/ui/use-toast";
 interface TranslatableJobFormProps {
-<<<<<<< HEAD
-  onSubmit: (formData: any) => void;
-  isSubmitting?: boolean
-}
 
-export function TranslatableJobForm({ onSubmit, isSubmitting;
-=======
   onSubmit: (formData: any) => void
   isSubmitting?: boolean
 }
@@ -147,7 +141,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       await Promise.all(promises)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>

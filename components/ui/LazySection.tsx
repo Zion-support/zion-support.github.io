@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import React, { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
-interface LazySectionProps {
-  children: React.ReactNode;
-  className?: string;
-  threshold?: number;
-  delay?: number;
-  direction?: 'up' | 'down' | 'left' | 'right'
-}
 
-export const LazySection: React.FC<LazySectionProps> = ({
-  children;
-  className;
-=======
 const getInitialPosition = () => {
   switch (direction) {
   case 'up':
@@ -80,4 +66,4 @@ export default LazySection;      case 'down':
   )
 }
 export default LazySection;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

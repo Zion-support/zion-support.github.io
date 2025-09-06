@@ -4,11 +4,7 @@ let particles: Array< {
 window.addEventListener ('resize', resizeCanvas);
 //Color schemes Math.random () > 0.5 ? 'holographic' : Math.random () > 0.3 ? 'neon' : 'fusion';
 particles.push ({
-<<<<<<< HEAD
-  x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic : 
 
-interface UltraAdvancedFuturisticBackgroundProps {
-=======
   x: Math.random () * canvas.width, y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animationSpeed, vy: (Math.random () - 0.5) * 2 * animationSpeed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :
 const UltraAdvancedFuturisticBackground: React.FC<
   UltraAdvancedFuturisticBackgroundProps
@@ -20,7 +16,7 @@ const UltraAdvancedFuturisticBackground: React.FC<
   enableHolographic = true
   enableQuantumEffects = true
   children,}) => {interface UltraAdvancedFuturisticBackgroundProps {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   intensity?: 'low' | 'medium' | 'high';
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic' | 'quantum-ai';
   particleCount?: number;
@@ -30,9 +26,7 @@ const UltraAdvancedFuturisticBackground: React.FC<
   children: React.ReactNode
 }
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-<<<<<<< HEAD
-  intensity;
-=======
+
   intensity = 'high'
   colorScheme = 'quantum-fusion'
   particleCount = 300
@@ -442,4 +436,4 @@ export default UltraAdvancedFuturisticBackground;
   )
 }
 export default UltraAdvancedFuturisticBackground;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

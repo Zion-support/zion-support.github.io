@@ -18,29 +18,20 @@ import { useResumeProgress  } from './useResumeProgress';
 import { ResumeVersionSelector  } from './ResumeVersionSelector';
 import { RESUME_STEPS } from './constants';
 export function ResumeWizard() {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const { 
-    isLoading;
-    error;
-    resume;
-    fetchResume;
-=======
+
   const { user } = useAuth()
   const {
     isLoading
     error
     resume
     fetchResume
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     createResume
   } = useResume();
   const [activeTab, setActiveTab] = useState('basic-info');
   const [showNewResumeForm, setShowNewResumeForm] = useState(false);
   // Use the extracted hook for progress calculation
-<<<<<<< HEAD
-  const progress = null;
-=======
+
   const progress = useResumeProgress(resume)
   useEffect((,) => {
     if (user) {
@@ -75,7 +66,7 @@ export function ResumeWizard() {
   const handleResumeChange = (resumeId: string,) => {
     fetchResume(resumeId)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">

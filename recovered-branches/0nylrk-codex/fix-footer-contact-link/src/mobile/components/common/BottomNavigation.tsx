@@ -4,9 +4,7 @@ import { Link, useLocation } from "react-router-dom",
 import { Home, Search, Briefcase, MessageSquare, User } from "lucide-react";
 import { cn } from "@/lib/utils";
 export function BottomNavigation() {
-<<<<<<< HEAD
-  const location = null;
-=======
+
   const location = useLocation();
   const navItems = [
     { path: "/mobile", icon: <Home />, label: "Home" }
@@ -24,7 +22,7 @@ export function BottomNavigation() {
             to={item.path}
             className={cn(
               "flex flex-col items-center justify-center flex-1 py-1 px-2";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               isActive ? "text-primary" : "text-muted-foreground"
             )}
           >

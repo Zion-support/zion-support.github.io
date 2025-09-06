@@ -5,8 +5,7 @@ import { isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
-<<<<<<< HEAD
-=======
+
     return;
   }
   if (!isInternalAgentRequest(req)) {
@@ -29,16 +28,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return
   }
   if (!isInternalAgentRequest(req)) {
     res.status(401).json({ error: 'Unauthorized' });
     return
   }
-<<<<<<< HEAD
-  const body = null;
-=======
+
   const body = req.body |{}
   const dataDir = path.join(process.cwd(), 'dataadmin');
   if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
@@ -49,6 +46,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ...body;
     updatedAt: new Date().toISOString()}
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(200).json({ ok: true })
 }

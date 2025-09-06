@@ -4,9 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 export function RecentActivity() {
   // Mock activity data
-<<<<<<< HEAD
-  const activities = null;
-=======
+
   const activities = [
     {
       id: "act-1"
@@ -54,7 +52,7 @@ export function RecentActivity() {
         return <Badge variant="outline">Activity</Badge>
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

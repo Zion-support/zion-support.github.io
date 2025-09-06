@@ -1,34 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { FaRocket;
-  FaBrain;
-  FaCloud;
-  FaShieldAlt;
-  FaChartLine;
-  FaCogs;
-  FaLightbulb;
-  FaGlobe;
-  FaMobile;
-  FaDatabase;
-  FaNetworkWired;
-  FaRobot;
-  FaSearch
- } from 'react-icons/fa';
-import { SiNextdotjs;
-  SiReact;
-  SiTypescript;
-  SiTailwindcss;
-  SiPrisma;
-  SiSupabase;
-  SiVercel;
-  SiDocker;
-  SiKubernetes;
-  SiAws;
-  SiGooglecloud;
-  SiMicrosoftazure
- } from 'react-icons/si';
-=======
+
 import {
   FaRocket
   FaBrain
@@ -57,7 +29,7 @@ import {
   SiGooglecloud
   SiMicrosoftazure;
 } from 'react-icons/si';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface Service {
   id: string;
   title: string;
@@ -68,42 +40,28 @@ interface Service {
   pricing: {
     starter: number;
     professional: number;
-<<<<<<< HEAD
-    enterprise: number
-  },
-  technologies: string[];
-  benefits: string[]
-}
 
-=======
     enterprise: number;
   }
   technologies: string[];
   benefits: string[];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface ServiceCategory {
   id: string;
   name: string;
   description: string;
   icon: React.ReactNode;
-<<<<<<< HEAD
-=======
+
   color: string;  id: string
   name: string
   description: string
   icon: React.ReactNode
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   color: string
 }
 const serviceCategories: ServiceCategory[] = [
   {
-<<<<<<< HEAD
-    id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    description: 'Cutting-edge artificial intelligence and machine learning solutions';
-    icon: <FaBrain className;
-export default EnhancedServicesShowcase2025;
-=======
+
     id: 'ai-ml'
     name: 'AI & Machine Learning'
     description:
@@ -847,4 +805,4 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 export default EnhancedServicesShowcase2025;  )
 }
 export default EnhancedServicesShowcase2025;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

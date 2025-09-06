@@ -1,14 +1,4 @@
-<<<<<<< HEAD
 
-import Link from "next/link";
-import { 
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu",
-import { Button } from "@/components/ui/button";
-=======
 import Link from 'next/link'
 import {
   DropdownMenu
@@ -17,22 +7,11 @@ import {
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
 import { Button } from '@/components/ui/button'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
-<<<<<<< HEAD
-  application: JobApplication;
-  processingId: string | null;
-  onViewApplication: (applicationId: string) => Promise<void>;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
-}
 
-export function ApplicationActions({
-  application;
-  processingId;
-  onViewApplication;
-=======
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
@@ -44,7 +23,7 @@ export function ApplicationActions({
   application
   processingId
   onViewApplication
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onStatusChange
 }: ApplicationActionsProps) {
   return (

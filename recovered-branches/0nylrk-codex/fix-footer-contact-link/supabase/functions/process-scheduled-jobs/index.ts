@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-const corsHeaders = null;
-=======
+
 import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const corsHeaders = {
@@ -204,7 +200,7 @@ async function processContentGeneration(supabase, contentType) {
           title: "Newsletter Draft Ready";
           message: "AI-generated newsletter draft has been sent to your email for review.";
           type: "system"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           read: false
         })
       }

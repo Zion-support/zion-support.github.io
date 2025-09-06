@@ -11,13 +11,10 @@ import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth";
 import { Sparkles } from "lucide-react";
 interface ClientBudgetRecommenderProps {
-<<<<<<< HEAD
-  jobTitle: string;
-  category: string;
-=======
+
   jobTitle: string
   category: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   timeline?: string;
   scope?: string;
   experienceLevel?: string;
@@ -28,18 +25,14 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   category;
   timeline;
   scope;
-<<<<<<< HEAD
-  experienceLevel;
-=======
+
   experienceLevel
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onSuggestionApplied}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null),
   const { user } = useAuth();
-<<<<<<< HEAD
-  const generateSuggestion = null;
-=======
+
   const generateSuggestion = async () => {
     if (!jobTitle |!category) {
       return
@@ -100,4 +93,4 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

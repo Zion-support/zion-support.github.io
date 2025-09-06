@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import fs from 'fs',
-import path from 'path';
-import { IntegrationsState } from './types';
-const DATA_DIR = null;
-  return current
-}
-=======
+
 import fs from "fs";
 import path from "path";
 import { IntegrationsState } from "./types";
@@ -43,4 +36,4 @@ export function writeState(
     fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), "utf8"));
   return current;
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,12 +1,6 @@
 declare module 'react' {
   const React: any;
-<<<<<<< HEAD
-  export default React;
-  // Basic overloads for useRef to handle common cases
-  export function useRef<T>(initialValue: T): { current: T },
-  export function useRef<T>(initialValue: T | null): { current: T | null },
-  export function useRef<T;
-=======
+
   export default React
   // Basic overloads for useRef to handle common cases
   export function useRef<T>(initialValue: T): { current: T }
@@ -58,6 +52,6 @@ declare module 'react-dom' {
 declare module 'react/jsx-runtime' {
   export const jsx: any;
   export const jsxs: any
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   export const Fragment: any
 }

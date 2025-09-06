@@ -10,9 +10,7 @@ interface ServiceTypeStepProps {
 }
 // Sample data - would come from an API in a real application
 const SAMPLE_LISTINGS: ListingItem[] = [
-<<<<<<< HEAD
-  { id: "service-1", title: "AI Development", category: "Services", image: "https://images.unsplash.com/photo-1516192518150-0d8fee5425e3?w;
-=======
+
   {
     id: "service-1"
     title: "AI Development"
@@ -84,7 +82,7 @@ export function ServiceTypeStep({
       item.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
   });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <div>

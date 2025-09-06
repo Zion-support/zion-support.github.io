@@ -24,9 +24,7 @@ export default function JSONFormatterPage() {
   const [indentSize, setIndentSize] = useState(2);
   const [compactMode, setCompactMode] = useState(false);
   const [showLineNumbers, setShowLineNumbers] = useState(true);
-<<<<<<< HEAD
-  const formatJSON = null;
-=======
+
   const formatJSON = () => {
     if (!inputJson.trim()) {
       setFormattedJson('');
@@ -154,7 +152,7 @@ export default function JSONFormatterPage() {
     const lines = text.split('\n');
     return lines.map((_, index) => index + 1).join('\n');    return lines.map((_, index) => index + 1).join('\n')
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

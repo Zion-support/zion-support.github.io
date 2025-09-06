@@ -2,9 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
-<<<<<<< HEAD
-  const rows = null;
-=======
+
   const rows = [
     ['Metric', 'Value', 'Trend%']
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8.2']
@@ -28,6 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ['Churn rate2.4%-0.3'];
     ['CAC/LTV ratio1: 5.60.4']], const csv = rows.map(r => r.map(v => String(v)).join()).join('\n'),  res.setHeader('Content-Typetext/csv');
   res.setHeader('Content-Dispositionattachment, filename="ipo-metrics.csv"');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   res.status(200).send(csv)
 }

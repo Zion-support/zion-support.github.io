@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
-  Building, Factory, Camera, Video, Music, Gamepad2
- } from 'lucide-react';
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028';
-import { futuristic2028Services  } from '../data/2028-futuristic-innovations';
-import { emergingTech2028Services } from '../data/2028-emerging-tech-services';
-const contactInfo = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -300,7 +285,7 @@ export default function ServicesShowcase2028() {
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
                 Our services target markets with exponential growth potential
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>

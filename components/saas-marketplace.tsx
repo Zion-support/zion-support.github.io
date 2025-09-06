@@ -2,17 +2,7 @@ import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-import { Zap;
-  Shield;
-  BarChart3;
-  Globe;
-  Users;
-  Lock;
-  TrendingUp;
-  Code;
-  Database;
-=======
+
 import {
   Zap
   Shield
@@ -37,17 +27,13 @@ import {
   TrendingUp
   Code
   Database
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Cloud;
   ArrowRight;
   Star;
   Check;
   ExternalLink
-<<<<<<< HEAD
- } from 'lucide-react';
-export default function SaaSMarketplacePage() {
-  const microSaasServices = null;
-=======
+
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {
@@ -310,7 +296,7 @@ export default function SaaSMarketplacePage() {
         );  const filteredServices = selectedCategory === 'All'
     ? microSaasServices
     : microSaasServices.filter(service => service.category === selectedCategory);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

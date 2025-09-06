@@ -1,9 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-type Props = any;
-    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
-=======
+
 type Props = {
   content: string | null;
   generatedAt: string | null;}
@@ -52,7 +49,7 @@ export async function getStaticProps() {
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }

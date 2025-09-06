@@ -9,9 +9,7 @@ export async function createOnboardingNotification({
   missingMilestone;
   userRole
 }: OnboardingNotificationParams) {
-<<<<<<< HEAD
-  let title = null;
-=======
+
   let title = '';
   let message = '';
   let actionUrl = '';
@@ -66,7 +64,7 @@ export async function createOnboardingNotification({
     type: 'onboarding';
     sendEmail: false;
     actionUrl
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     actionText
   })
 }

@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-async function fetchFromGitHub(): Promise<any | null> {
-  try {
-    const pkg = null;
-    return res.status(200).json(null)
-  } catch (e: any) {
-    return res.status(500).json({ error: e.message || 'Internal error' })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
@@ -30,7 +20,7 @@ export default async function handler(
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   try {
     const localPath = path.join(process.cwd(), "data", "homepage.json");

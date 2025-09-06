@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getServerSupabase } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const code = null;
-    return res.status(200).send(csv)
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
 export default async function handler(
@@ -46,7 +40,7 @@ export default async function handler(
       `attachment; filename="${code}-referrals.csv"`
     );
     return res.status(200).send(csv);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }

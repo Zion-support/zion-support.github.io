@@ -3,10 +3,7 @@ import { useQuery, useMutation, useQueryClient  } from '@tanstack/react-query';
 import { quoteRequestService  } from '@/services/quoteRequestService';
 import { useAuth  } from '@/hooks/useAuth';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
-<<<<<<< HEAD
-import { useToast } from '@/hooks/use-toast';
-export const useTalentQuotes = null;
-=======
+
 import {useToast} from '@/hooks/use-toast';
 export const useTalentQuotes = () => {
   const { user } = useAuth();
@@ -102,4 +99,4 @@ export const useTalentQuotes = () => {
     toggleArchive: (id: string, isArchived: boolean) =>
       toggleArchiveMutation.mutate({ id, isArchived })}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

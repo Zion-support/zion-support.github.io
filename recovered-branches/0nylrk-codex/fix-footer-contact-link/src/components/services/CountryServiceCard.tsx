@@ -5,20 +5,15 @@ import { Badge } from "@/components/ui/badge",
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
 import { CountryPricing } from "@/data/onsiteServicePricing";
 interface CountryServiceCardProps {
-<<<<<<< HEAD
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
-=======
+
   country: CountryPricing
   onSelect: (country: CountryPricing) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isPopular?: boolean
 }
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes)
-<<<<<<< HEAD
-  const getRegionEmoji = null;
-=======
+
   const getRegionEmoji = (countryName: string): string => {
     const emojiMap: Record<string, string> = {
       "United States": "🇺🇸";
@@ -52,7 +47,7 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
       return "8-24 hours"
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
       isPopular

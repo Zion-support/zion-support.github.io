@@ -1,21 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-interface LazyImageProps {
-  src: string;
-  alt: string;
-  className?: string;
-  placeholder?: string;
-  threshold?: number;
-  width?: number;
-  height?: number
-}
 
-export const LazyImage: React.FC<LazyImageProps> = ({
-  src;
-  alt;
-  className;
-=======
 useEffect ( () => {
   const observer = new IntersectionObserver ( ([entry]) => {
   if (entry.isIntersecting) {
@@ -101,4 +84,4 @@ export default LazyImage;          className="w-full h-full object-cover"
 export default LazyImage;  )
 }
 export default LazyImage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

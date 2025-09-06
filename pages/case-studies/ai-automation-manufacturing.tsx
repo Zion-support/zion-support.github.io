@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import Link from 'next/link';
-export default function CaseStudyPage() {
-  const caseStudy = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -24,7 +18,7 @@ export default function CaseStudyPage() {
     teamSize: '8 engineers'
     featured: true
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <>
       <Head>

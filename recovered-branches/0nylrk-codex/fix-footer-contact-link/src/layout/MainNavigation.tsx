@@ -8,11 +8,7 @@ interface MainNavigationProps {
   unreadCount?: number;
   className?: string
 }
-<<<<<<< HEAD
 
-export function MainNavigation({ isAdmin;
-                location.pathname === "/messages" || location.pathname === "/inbox"
-=======
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: MainNavigationProps) {
   const { user } = useAuth();
   const isAuthenticated = !!user;
@@ -91,7 +87,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
               className={cn(
                 "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative";
                 location.pathname === "/messages" |location.pathname === "/inbox"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   ? "bg-zion-purple/20 text-zion-cyan"
                   : "text-white hover:bg-zion-purple/10 hover:text-zion-cyan"
               )}

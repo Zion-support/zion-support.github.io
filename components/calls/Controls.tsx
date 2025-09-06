@@ -1,8 +1,6 @@
 import React from 'react';
 import type { Room } from 'livekit-client';
-<<<<<<< HEAD
-type Props = any;
-=======
+
 type Props = {
   room: Room | null;
   onLeave: () => void;
@@ -41,7 +39,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {
     } catch (e) {
       console.warn('Screen share failed', e)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='flex items-center gap-3'>
       <button

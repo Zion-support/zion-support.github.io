@@ -11,9 +11,7 @@ import {
   TableRow} from "@/components/ui/table",
 import { Badge } from "@/components/ui/badge";
 export function EnterprisePricingTable() {
-<<<<<<< HEAD
-  const plans = null;
-=======
+
   const plans = [
     {
       name: "Teams"
@@ -66,7 +64,7 @@ export function EnterprisePricingTable() {
         { name: "API access", included: true }
         { name: "Custom integrations", included: true }
         { name: "Dedicated success manager", included: true }]}]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
       <div className="container mx-auto max-w-7xl">

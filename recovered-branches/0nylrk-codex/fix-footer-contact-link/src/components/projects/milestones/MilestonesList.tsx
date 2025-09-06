@@ -10,18 +10,7 @@ import { Card, CardContent  } from '@/components/ui/card';
 import { Plus  } from '@/components/icons';
 import { EmptyState } from '@/components/ui/empty-state';
 interface MilestonesListProps {
-<<<<<<< HEAD
-  milestones: Milestone[];
-  activities: Record<string, MilestoneActivity[]>,
-  isLoading: boolean;
-  isClient: boolean;
-  onCreateMilestone: (data: any) => Promise<Milestone | null>;
-  onUpdateStatus: (id: string, status: MilestoneStatus, comment?: string) => Promise<boolean>,
-  onDeleteMilestone: (id: string) => Promise<boolean>;
-  onUploadDeliverable: (id: string, file: File) => Promise<any>;
-  isSubmitting: boolean;
-  onApprove?: (id: string) => Promise<void>;
-=======
+
   milestones: Milestone[]
   activities: Record<string, MilestoneActivity[]>;
   isLoading: boolean
@@ -32,7 +21,7 @@ interface MilestonesListProps {
   onUploadDeliverable: (id: string, file: File) => Promise<any>
   isSubmitting: boolean
   onApprove?: (id: string) => Promise<void>
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onReject?: (id: string) => Promise<void>
 }
 export const MilestonesList: React.FC<MilestonesListProps> = ({
@@ -45,13 +34,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
   onDeleteMilestone;
   onUploadDeliverable;
   isSubmitting;
-<<<<<<< HEAD
-  onApprove;
-  onReject
-}) => {
-  const [showAddForm, setShowAddForm] = useState(false);
-  const handleSubmit = null;
-=======
+
   onApprove
   onReject
 }) => {
@@ -133,4 +116,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

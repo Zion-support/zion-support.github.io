@@ -1,20 +1,5 @@
 'use client';
-<<<<<<< HEAD
 
-import React from 'react',
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Brain;
-  Cloud;
-  RefreshCw;
-  Wifi;
-  Shield;
-  BarChart3;
-  ArrowRight;
-  Zap
- } from 'lucide-react';
-const ServicesSection: React.FC;
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -348,4 +333,4 @@ const ServicesSection: React.FC = () => {
 export default ServicesSection;  )
 }
 export default ServicesSection;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

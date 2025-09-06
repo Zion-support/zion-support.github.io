@@ -3,15 +3,7 @@ interface FilterSidebarProps {
   className?: string;
   children?: React.ReactNode
 }
-<<<<<<< HEAD
 
-export const FilterSidebar: React.FC<FilterSidebarProps> = ({ 
-  className;
-  children 
-}) => {
-  return (
-    <div className;
-=======
 export const FilterSidebar: React.FC<FilterSidebarProps> = ({
   className
   children
@@ -82,4 +74,4 @@ export function FilterSidebar({
     </>
   )}
 '"`
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

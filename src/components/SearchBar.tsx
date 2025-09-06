@@ -15,31 +15,25 @@ interface SearchBarProps {
   /**
    * The current value of the search input
    */
-<<<<<<< HEAD
-  value: string;
-=======
+
   value: string;  value: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   /**
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
-<<<<<<< HEAD
-  onChange: (val: string) => void;
-=======
+
   onChange: (val: string) => void;  /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */  onChange: (val: string,) => void
   onChange: (val: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
-<<<<<<< HEAD
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
-=======
+
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void
   /**
    * The placeholder text for the search input
@@ -48,7 +42,7 @@ interface SearchBarProps {
 /**
  * SearchBar component that allows users to search for content.
  */  onSelectSuggestion?: (suggestion: SearchSuggestion) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   /**
    * The placeholder text for the search input
    */
@@ -57,10 +51,7 @@ interface SearchBarProps {
 /**
  * SearchBar component that allows users to search for content.
  */
-<<<<<<< HEAD
-export function SearchBar({ value, onChange, onSelectSuggestion, placeholder;
-              default: break
-=======
+
 export function SearchBar({
   value
   onChange
@@ -249,7 +240,7 @@ export function SearchBar({
                 break
               default:
                 break }              default: break
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             }
           }}
         />

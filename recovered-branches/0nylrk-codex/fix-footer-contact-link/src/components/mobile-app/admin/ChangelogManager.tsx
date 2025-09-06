@@ -9,10 +9,7 @@ import { AppPlatform } from "./MetadataManager";
 interface ChangelogManagerProps {
   platform: AppPlatform;
 }
-<<<<<<< HEAD
 
-type ChangelogEntry = any;
-=======
 type ChangelogEntry = {
   id: string;
   version: string;
@@ -130,4 +127,4 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
     </Card>
   );
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

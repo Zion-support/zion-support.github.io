@@ -8,19 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Sparkles, Search } from 'lucide-react'
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 interface AIMatchmakerProps {
-<<<<<<< HEAD
-  serviceType?: string;
-  onMatchSelect?: (match: any) => void;
-  className?: string
-}
 
-export function AIMatchmaker({ serviceType;
-  return (
-    <Card className={`border border-zion-blue-light bg-zion-blue-dark ${className || ""}`}>
-      <CardHeader className="pb-2">
-        <CardTitle className="flex items-center text-white">
-          <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" />
-=======
   serviceType?: string
 onMatchSelect?: (match: any) => void
 className?: string
@@ -102,7 +90,7 @@ export function AIMatchmaker({
       <CardHeader className='pb-2'>
         <CardTitle className='flex items-center text-white'>
           <Sparkles className='h-5 w-5 mr-2 text-zion-cyan' />
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
           AI Matchmaker
         </CardTitle>
         <p className='text-sm text-zion-slate-light'>

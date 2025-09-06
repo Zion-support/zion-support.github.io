@@ -18,13 +18,7 @@ import { PartnerResources } from '@/components/partners/PartnerResources';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-<<<<<<< HEAD
 
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react'
-=======
 export default function Partners() {
   logInfo('PartnersPage rendering');
   const [activeTab, setActiveTab] = useState('overview');
@@ -37,7 +31,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle, FileDown, FileText, PieChart, Users } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { useState, useEffect } from "react";
 import { useTranslation  } from 'react-i18next';
 import Link from 'next/link',
@@ -50,14 +44,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { useRouter  } from 'next/router';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 export default function Partners() {
-<<<<<<< HEAD
 
-  logInfo('PartnersPage rendering');
-  const [activeTab, setActiveTab] = useState("overview");
-  const { t } = useTranslation();
-  const { user, isAuthenticated } = useAuth();
-  const router = null;
-=======
   logInfo('PartnersPage rendering')
   const [activeTab, setActiveTab] = useState("overview")
   const { t } = useTranslation()
@@ -316,7 +303,7 @@ export default function Partners() {
   }
   // Authenticated user view - Partner Dashboard
   logInfo('PartnersPage rendering Authenticated View. User:', { data: user });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='container max-w-7xl py-10'>
       <h1>DEBUG: Partners Page - Authenticated View</h1>

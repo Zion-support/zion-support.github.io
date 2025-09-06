@@ -5,9 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 export function CurrentSubscription() {
   // Mock subscription data
-<<<<<<< HEAD
-  const subscription = null;
-=======
+
   const subscription = {
     plan: "Business"
     status: "active"
@@ -20,7 +18,7 @@ export function CurrentSubscription() {
       total: 50
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

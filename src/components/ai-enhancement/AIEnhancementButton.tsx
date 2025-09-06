@@ -1,19 +1,4 @@
-<<<<<<< HEAD
 
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions  } from '@/hooks/useAIContentEnhancer';
-import { toast } from '@/hooks/use-toast';
-interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions;
-  onEnhanced: (enhancedContent: string) => void;
-  buttonText?: string;
-  className?: string;
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link";
-  size?: "default" | "sm" | "lg" | "icon";
-  contentLength?: number
-=======
   import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
@@ -26,14 +11,10 @@ interface AIEnhancementButtonProps {
   className?: string
   variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
   size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export function AIEnhancementButton({
-<<<<<<< HEAD
-  options;
-  onEnhanced;
-  buttonText;
-=======
+
   options
   onEnhanced
   buttonText = "Enhance with AI"
@@ -78,7 +59,7 @@ export function AIEnhancementButton({
     setShowActions(false)
     setGeneratedContent(null)
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (showActions) {
     return (
       <div className="flex gap-2 items-center">

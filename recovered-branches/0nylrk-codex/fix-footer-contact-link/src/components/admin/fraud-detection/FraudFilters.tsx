@@ -5,16 +5,7 @@ import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Search, Filter } from "lucide-react";
 interface FraudFiltersProps {
-<<<<<<< HEAD
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
-  statusFilter: string | null;
-  setStatusFilter: (value: string | null) => void;
-  severityFilter: string | null;
-  setSeverityFilter: (value: string | null) => void;
-  contentTypeFilter: string | null;
-  setContentTypeFilter: (value: string | null) => void;
-=======
+
   searchQuery: string
   setSearchQuery: (value: string) => void
   statusFilter: string | null
@@ -23,7 +14,7 @@ interface FraudFiltersProps {
   setSeverityFilter: (value: string | null) => void
   contentTypeFilter: string | null
   setContentTypeFilter: (value: string | null) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
@@ -34,12 +25,7 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   severityFilter;
   setSeverityFilter;
   contentTypeFilter;
-<<<<<<< HEAD
-  setContentTypeFilter;
-  resetFilters}) => {
-  return (
-    <div className;
-=======
+
   setContentTypeFilter
   resetFilters}) => {
   return (
@@ -95,4 +81,4 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

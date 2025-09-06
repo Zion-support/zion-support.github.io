@@ -5,16 +5,9 @@ import { CurrentSubscription } from "./CurrentSubscription",
 import { PaymentMethods } from "./PaymentMethods",
 import { InvoiceHistory } from "./InvoiceHistory";
 import { UsageOverview } from "./UsageOverview";
-<<<<<<< HEAD
-import {
-  Tabs;
-  TabsContent;
-  TabsList;
-  TabsTrigger} from "@/components/ui/tabs",
 
-=======
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function BillingDashboard() {
   return (
     <div className="container mx-auto max-w-7xl py-8 px-4 md: px-6">

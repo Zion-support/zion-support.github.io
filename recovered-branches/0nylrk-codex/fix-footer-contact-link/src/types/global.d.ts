@@ -6,11 +6,9 @@ declare module '@/components/FeatureCard' {
     title: string;
     description: string;
     icon: ReactNode;
-<<<<<<< HEAD
-    className?: string;
-=======
+
     className?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     key?: number | string
   }
 }
@@ -27,11 +25,9 @@ declare module '@/components/ListingScoreCard' {
     aiScore?: number;
     rating?: number;
     reviewCount?: number;
-<<<<<<< HEAD
-    key?: string | number;
-=======
+
     key?: string | number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     variant?: string
   }
 }
@@ -40,11 +36,9 @@ declare module '@/components/ChatAssistant/ChatMessage' {
   export interface ChatMessageProps {
     role: 'user' | 'assistant';
     message: string;
-<<<<<<< HEAD
-    timestamp?: Date;
-=======
+
     timestamp?: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     key?: string | number
   }
 }
@@ -53,11 +47,9 @@ declare module '@/components/ProductListingCard' {
   export interface ProductListingCardProps {
     listing: any;
     view: any;
-<<<<<<< HEAD
-    onRequestQuote: (listingId: string) => void;
-=======
+
     onRequestQuote: (listingId: string) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     key?: string | number
   }
 }

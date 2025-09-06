@@ -8,21 +8,13 @@ interface TalentCardHeaderProps {
   profilePicture?: string;
   availabilityType: string;
   yearsExperience: number
-<<<<<<< HEAD
-}
 
-export function TalentCardHeader({ 
-  fullName;
-  professionalTitle;
-  profilePicture;
-  availabilityType;
-=======
 export function TalentCardHeader({
   fullName
   professionalTitle
   profilePicture
   availabilityType
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   yearsExperience
 }: TalentCardHeaderProps) {
   return (

@@ -5,9 +5,7 @@ import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 export function UsageOverview() {
   // Mock usage data
-<<<<<<< HEAD
-  const usage = null;
-=======
+
   const usage = {
     jobPosts: {
       used: 32
@@ -30,7 +28,7 @@ export function UsageOverview() {
       percentage: 24
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card>
       <CardHeader>

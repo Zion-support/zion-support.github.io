@@ -9,19 +9,13 @@ import { ContractPreview } from "./components/ContractPreview",
 import { TemplateManager } from "./templates/TemplateManager";
 import { SmartContractBuilder } from "./SmartContractBuilder";
 interface ContractBuilderProps {
-<<<<<<< HEAD
-  isOpen: boolean;
-  onClose: () => void;
-  talent: TalentProfile;
-  clientName: string;
-  onContractGenerated?: (contractContent: string) => void
-=======
+
   isOpen: boolean
   onClose: () => void
   talent: TalentProfile
   clientName: string
   onContractGenerated?: (contractContent: string,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 export function ContractBuilder({
   isOpen;

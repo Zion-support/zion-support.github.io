@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast } from '@/hooks/use-toast';
-type EnhancementType = any;
-=======
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {toast} from '@/hooks/use-toast';
@@ -61,7 +56,7 @@ export function useAIContentEnhancer() {
   return {
     enhanceContent;
     isEnhancing;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     error
   }
 }

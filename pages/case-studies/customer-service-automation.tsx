@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 import React from 'react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Head from 'next/head';
 import Link from 'next/link';
 export default function CaseStudyPage() {
@@ -10,9 +8,7 @@ export default function CaseStudyPage() {
     <>
       <Head>
         <title>Intelligent Customer Service Automation - Case Study | Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name;
-=======
+
         <meta name="description" content="Discover how a Financial Services Provider achieved 80% reduction in response time with AI-powered chatbots and automated ticket routing. Read our detailed case study." />
         <meta name="keywords" content="customer service automation, chatbots, AI automation, ticket routing, sentiment analysis" />
       </Head>
@@ -51,7 +47,7 @@ export default function CaseStudyPage() {
                 <h3 className="text-2xl font-semibold text-green-400 mb-4">Financial Services Provider</h3>
                 <p className="text-white/90 text-lg mb-4">
                   A leading financial services company serving millions of customers with banking
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   investment, and insurance products. The company faced challenges with high customer service costs and long response times.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">

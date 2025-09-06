@@ -2,13 +2,7 @@
 import { GradientHeading } from "./GradientHeading",
 import { Button } from "./ui/button";
 import { CheckCircle2 } from 'lucide-react'
-<<<<<<< HEAD
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "./ui/table";
-export function ComparisonSection() {
-  return (
-    <section className;
-                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
-=======
+
 import {
   Table
   TableBody
@@ -98,7 +92,7 @@ export function ComparisonSection() {
                       {item.savings}
                     </TableCell>                  </TableRow>
                   { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (                  { service: "Marketplace Listings", traditional: "$99/mo", zion: "Free", savings: "100%" }].map((item, index) => (
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   <TableRow key={index} className="border-b border-zion-blue">
                     <TableCell className="font-medium text-white">{item.service}</TableCell>
                     <TableCell className="text-center text-zion-slate-light">{item.traditional}</TableCell>

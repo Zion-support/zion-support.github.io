@@ -10,9 +10,7 @@ export function useInterviews() {
   const [error, setError] = useState<string | null>(null),
   const { user } = useAuth();
   // Request an interview as a client
-<<<<<<< HEAD
-  const requestInterview = null;
-=======
+
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
@@ -268,6 +266,6 @@ export function useInterviews() {
     requestInterview;
     fetchInterviews;
     respondToInterview;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     cancelInterview}
 }

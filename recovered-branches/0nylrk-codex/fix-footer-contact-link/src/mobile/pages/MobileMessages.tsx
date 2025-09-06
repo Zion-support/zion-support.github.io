@@ -5,9 +5,7 @@ import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileConversationList } from "../components/messaging/MobileConversationList";
 import { MobileChatView } from "../components/messaging/MobileChatView";
 // Mock data for demonstration
-<<<<<<< HEAD
-const mockConversations = null;
-=======
+
 const mockConversations = [
   {
     id: "1"
@@ -99,7 +97,7 @@ export function MobileMessages() {
           contact={{
             id: currentContact?.id |""
             name: currentContact?.name |""
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             status: "Online"
           }}
           messages={messages}

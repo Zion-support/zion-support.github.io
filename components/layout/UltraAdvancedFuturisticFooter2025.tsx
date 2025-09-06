@@ -1,12 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Mail, Phone, MapPin, Globe;
-  Twitter, Linkedin, Github;
-  ArrowUp, Crown, Zap, Brain, Rocket;
-  Shield, Users, BookOpen, Briefcase, Atom
- } from 'lucide-react';
-=======
+
 import {
   Mail
   Phone
@@ -26,15 +20,14 @@ import {
   Briefcase
   Atom;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import Link from 'next/link';
 import { AnimatePresence } from 'framer-motion';
 interface FooterLink {
   label: string;
   href: string;
   description?: string;
-<<<<<<< HEAD
-=======
+
   external?: boolean;
 interface FooterSection {
   title: string;
@@ -45,24 +38,20 @@ interface FooterLink {
   label: string
   href: string
   description?: string;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   external?: boolean
 }
 interface FooterSection {
-<<<<<<< HEAD
-  title: string;
-=======
+
   title: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   links: FooterLink[]
 }
 const footerSections: FooterSection[] = [
   {
-<<<<<<< HEAD
-    title: 'Services';
-=======
+
     title: 'Services'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     links: [
       {
         label: 'AI & Machine Learning'
@@ -107,11 +96,9 @@ const footerSections: FooterSection[] = [
     ]
   }
   {
-<<<<<<< HEAD
-    title: 'Solutions';
-=======
+
     title: 'Solutions'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     links: [
       {
         label: 'Healthcare & Biotech'
@@ -146,10 +133,7 @@ const footerSections: FooterSection[] = [
   {
     title: 'Solutions'
     links: [
-<<<<<<< HEAD
-      { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' },
-      { label: 'Financial Services', href: '/solutions?industry;
-=======
+
       { label: 'Healthcare & Biotech', href: '/healthcare-solutions', description: 'Medical technology' }
       { label: 'Financial Services', href: '/solutions?industry=financial', description: 'Fintech solutions' }
       { label: 'Manufacturing', href: '/solutions?industry=manufacturing', description: 'Industry 4.0' }
@@ -741,4 +725,4 @@ export default UltraAdvancedFuturisticFooter2025;      </motion.button>
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

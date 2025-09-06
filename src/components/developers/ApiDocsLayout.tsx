@@ -14,9 +14,7 @@ interface ApiDocsLayoutProps {
   children: React.ReactNode
 }
 export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter()
   const currentPath = router.pathname
   const [searchValue, setSearchValue] = useState("")
@@ -97,4 +95,4 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
 }</div> </div>)
 }export default ApiDocsLayout
 "export default ApiDocsLayout
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

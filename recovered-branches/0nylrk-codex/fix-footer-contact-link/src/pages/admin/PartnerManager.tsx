@@ -14,16 +14,7 @@ import { toast } from "@/hooks/use-toast",
 import { Check, Flag, Search, Settings, X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 interface PartnerProfile {
-<<<<<<< HEAD
-  id: string;
-  user_id: string;
-  name: string;
-  status: 'pending' | 'approved' | 'rejected';
-  created_at: string;
-  niche: string;
-  audience_size: string;
-  social_media?: Record<string, string>,
-=======
+
   id: string
   user_id: string
   name: string
@@ -32,7 +23,7 @@ interface PartnerProfile {
   niche: string
   audience_size: string
   social_media?: Record<string, string>;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   website?: string;
   bio?: string;
   payout_method?: string;
@@ -50,9 +41,7 @@ export default function PartnerManager() {
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
@@ -577,7 +566,7 @@ function PartnerTable({
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   getFraudFlagBadge
 }: PartnerTableProps) {
   if (isLoading) {

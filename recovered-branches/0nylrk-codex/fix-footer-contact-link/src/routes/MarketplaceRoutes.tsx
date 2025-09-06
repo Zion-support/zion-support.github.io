@@ -19,9 +19,7 @@ import ITOnsiteServicesPage from "@/pages/ITOnsiteServicesPage",
 import SearchPage from "@/pages/SearchPage",
 import ProjectRoom from "@/pages/ProjectRoom";
 import VideoCall from "@/pages/VideoCall";
-<<<<<<< HEAD
-const MarketplaceRoutes = null;
-=======
+
 const MarketplaceRoutes = () => {
   return (
     <Routes>
@@ -86,4 +84,4 @@ const MarketplaceRoutes = () => {
   )
 }
 export default MarketplaceRoutes;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

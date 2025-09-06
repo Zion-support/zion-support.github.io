@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-=======
+
 import {
   Menu
   X
@@ -34,15 +32,13 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package;
   Bot, Car, Building2, DollarSign, Monitor, Users;
   Cpu, Zap, Atom, Database, Cloud, Lock, Code
  } from 'lucide-react';
 import Link from 'next/link';
-<<<<<<< HEAD
-const UltraAdvancedNavigation: React.FC;
-=======
+
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -619,4 +615,4 @@ const UltraAdvancedNavigation: React.FC;
 export default UltraAdvancedNavigation;  )
 }
 export default UltraAdvancedNavigation;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

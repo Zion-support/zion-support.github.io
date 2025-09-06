@@ -1,13 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { readJson, writeJson } from '[^']*';
-import { logSupportEventToOperator } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { sessionId, eventType, payload } = req.body as { sessionId: string, eventType: string, payload?: any },
-  if (!sessionId || !eventType) return res.status(400).json({ error: 'sessionId and eventType required' });
-  const log = null;
-=======
+
 import { readJson, writeJson } from '../../../utils/fsDb';
 import { logSupportEventToOperator } from '../../../utils/operator';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -19,6 +11,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   log.push(entry)
   writeJson('support/sessions.json', log)
   await logSupportEventToOperator({ type: eventType, sessionId, payload })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return res.status(200).json({ ok: true })
 }

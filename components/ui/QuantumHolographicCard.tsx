@@ -1,8 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Star, Zap, Shield, TrendingUp, ArrowRight, ExternalLink, Check, Users, Clock, DollarSign } from 'lucide-react';
-=======
+
 import { motion } from 'framer-motion';
 import {
   Star
@@ -16,7 +13,7 @@ import {
   Clock
   DollarSign;
 } from 'lucide-react';
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface QuantumHolographicCardProps {
   service: {
     id: string;
@@ -49,26 +46,16 @@ interface QuantumHolographicCardProps {
       mobile: string;
       email: string;
       address: string;
-<<<<<<< HEAD
-      website: string
-    },
-=======
+
       website: string;
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     realImplementation: boolean;
     implementationDetails: string;
     launchDate: string;
     customers: number;
     rating: number;
-<<<<<<< HEAD
-    reviews: number
-  },
-  className?: string
-}
 
-const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({ service, className;
-=======
     reviews: number;
   }
   className?: string;
@@ -431,4 +418,4 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
 export default QuantumHolographicCard;  )
 }
 export default QuantumHolographicCard;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -1,13 +1,9 @@
 
 export interface CountryPricing {
   country: string;
-<<<<<<< HEAD
-  pricePerIncident: number
-}
 
-=======
   pricePerIncident: number;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Afghanistan', pricePerIncident: 131.04 }
   { country: 'Albania', pricePerIncident: 110.41 }

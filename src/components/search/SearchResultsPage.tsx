@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useMemo } from 'react';
-import { useRouter  } from 'next/router';
-import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react'
-import { Button  } from '@/components/ui/button';
-import { Input  } from '@/components/ui/input';
-import { Badge  } from '@/components/ui/badge';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue  } from '@/components/ui/select';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { Slider  } from '@/components/ui/slider';
-import { Separator  } from '@/components/ui/separator';
-import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger  } from '@/components/ui/sheet';
-import { EnhancedSearchInput  } from './EnhancedSearchInput';
-import { generateSearchSuggestions  } from '@/data/marketplaceData';
-import { logErrorToProduction, logInfo } from '@/utils/productionLogger';
-=======
+
 import React, { useState, useEffect, useMemo } from 'react'
 import { useRouter } from 'next/router'
 import {
@@ -47,7 +32,7 @@ import { Separator } from '@/components/ui/separator'
 import { EnhancedSearchInput } from './EnhancedSearchInput'
 import { generateSearchSuggestions } from '@/data/marketplaceData'
 import { logErrorToProduction, logInfo } from '@/utils/productionLogger'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface SearchResult {
   id: string;
   title: string;
@@ -76,12 +61,7 @@ interface SearchResponse {
   query: string;
   hasMore: boolean
 // Highlight search terms in text
-<<<<<<< HEAD
-const HighlightText: React.FC<{ text: string, searchTerm: string, className?: string }> = ({ 
-  text;
-  searchTerm;
-  className;
-=======
+
 const HighlightText: React.FC<{
   text: string
   searchTerm: string
@@ -697,4 +677,4 @@ export default SearchResultsPage
 '"
 export default SearchResultsPage
 export default SearchResultsPage
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

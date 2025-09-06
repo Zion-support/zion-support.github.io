@@ -1,11 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 function rand(min: number, max: number) {
-<<<<<<< HEAD
-  return Math.floor(Math.random() * (max - min + 1)) + min
-}
 
-function generateSeries(n: number, base: number, volatility;
-=======
   return Math.floor(Math.random() * (max - min + 1)) + min;
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = [];
@@ -164,7 +159,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json(response);        marketplace: marketplace.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         dao: dao.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
         token: token.map((m) => ({ ...m, value: Math.round(m.value * factor) }));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
         multiverse: multiverse.map((m) => ({ ...m, value: Math.round(m.value * factor) }))}}
   }
   res.status(200).json(response)

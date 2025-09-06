@@ -27,20 +27,13 @@ class PerformanceMonitor {
   }
   generateReport() {
     const report = {
-<<<<<<< HEAD
-      timestamp: this.metrics.timestamp,
-      bundleSize: this.metrics.bundleSize;
-      memoryUsage: this.metrics.memoryUsage;
-      recommendations: []
-    };
 
-=======
       timestamp: this.metrics.timestamp
       bundleSize: this.metrics.bundleSize
       memoryUsage: this.metrics.memoryUsage
       recommendations: []
     }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     if (this.metrics.bundleSize > 1000000) {
       report.recommendations.push(
         "Consider code splitting to reduce bundle size"

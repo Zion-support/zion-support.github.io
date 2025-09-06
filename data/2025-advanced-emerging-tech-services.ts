@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const advancedEmergingTechServices2025 = null;
-=======
+
 export const advancedEmergingTechServices2025 = [
   {
     id: 'space-mining-operations-platform'
@@ -644,4 +642,4 @@ export const advancedEmergingTechServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -12,9 +12,7 @@ export function ApplicationProgress({
   className
 }: ApplicationProgressProps) {
   // Define the progress value based on status
-<<<<<<< HEAD
-  const getProgressValue = null;
-=======
+
   const getProgressValue = () => {
     switch (status) {
       case "new":
@@ -80,7 +78,7 @@ function StatusIcon({
   }
   const currentRank = statusRank[current];
   const statusRank_ = statusRank[status];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (currentRank < statusRank_) {
     // This step is complete
     return <CheckCircle2 className="h-4 w-4 text-green-500" />;

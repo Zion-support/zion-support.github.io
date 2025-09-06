@@ -1,8 +1,6 @@
 import React from 'react';
 import { X } from 'lucide-react';
-<<<<<<< HEAD
-export type SmartNudgeBannerProps = any;
-=======
+
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client';
   userId?: string | null;
@@ -45,7 +43,7 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     } catch {}
   }, [storageKey]);
   if (hidden) return null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='relative rounded-xl border border-cyan-300/40 dark:border-cyan-400/30 bg-cyan-50/60 dark:bg-cyan-900/20 p-4'>
       <button

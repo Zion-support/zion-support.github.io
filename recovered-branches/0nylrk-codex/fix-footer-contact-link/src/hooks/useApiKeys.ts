@@ -1,11 +1,5 @@
 
-<<<<<<< HEAD
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-export type ApiKeyScope = any;
-=======
+
 import {useState} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {supabase} from "@/integrations/supabase/client";
@@ -266,7 +260,7 @@ export function useApiKeys() {
     regenerateApiKey;
     revokeApiKey;
     fetchApiLogs;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     clearNewApiKey: () => setNewApiKey(null)
   }
 }

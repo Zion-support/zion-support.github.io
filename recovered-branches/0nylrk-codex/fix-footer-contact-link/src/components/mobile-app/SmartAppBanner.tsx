@@ -11,9 +11,7 @@ interface SmartAppBannerProps {
   delay?: number, // Delay in milliseconds before showing the banner
 }
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-<<<<<<< HEAD
-  appName;
-=======
+
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download";
@@ -80,4 +78,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
     </div>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

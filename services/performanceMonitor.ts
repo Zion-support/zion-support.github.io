@@ -11,11 +11,9 @@ export interface PerformanceMetrics {
   speedIndex: number;
   performanceScore: number;
   accessibilityScore: number;
-<<<<<<< HEAD
-  bestPracticesScore: number;
-=======
+
   bestPracticesScore: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   seoScore: number
 }
 export interface PerformanceAlert {
@@ -26,11 +24,9 @@ export interface PerformanceAlert {
   metric: string;
   threshold: number;
   currentValue: number;
-<<<<<<< HEAD
-  timestamp: Date;
-=======
+
   timestamp: Date
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   resolved: boolean
 }
 export interface MonitoringConfig {
@@ -39,29 +35,22 @@ export interface MonitoringConfig {
   thresholds: {
     loadTime: number;
     firstContentfulPaint: number;
-<<<<<<< HEAD
-    largestContentfulPaint: number;
-=======
+
     largestContentfulPaint: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     cumulativeLayoutShift: number
   }
   notifications: {
     email: boolean;
-<<<<<<< HEAD
-    slack: boolean;
-=======
+
     slack: boolean
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     webhook: boolean
   }
 }
 export class PerformanceMonitorService {
   private apiKey: string;
-<<<<<<< HEAD
-  private baseUrl: string;
-  constructor(apiKey: string, baseUrl: string;
-=======
+
   private baseUrl: string
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
@@ -264,4 +253,4 @@ export const PERFORMANCE_MONITOR_PRICING = {
     ]
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

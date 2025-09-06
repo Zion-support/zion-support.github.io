@@ -10,9 +10,7 @@ export function TalentCardAvatar({
   fullName
 }: TalentCardAvatarProps) {
   // Get initials for avatar fallback
-<<<<<<< HEAD
-  const getInitials = null;
-=======
+
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -20,7 +18,7 @@ export function TalentCardAvatar({
       .join("")
       .toUpperCase();
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Avatar className="w-14 h-14 border-2 border-zion-blue-light">
       <AvatarImage src={profilePicture |undefined} alt={fullName} />

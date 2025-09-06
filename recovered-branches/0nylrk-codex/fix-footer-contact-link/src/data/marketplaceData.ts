@@ -4,19 +4,7 @@ import { SearchSuggestion, FilterOptions } from "@/types/search";
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
-<<<<<<< HEAD
-    id: "ai-model-1";
-    title: "GPT-4 API Integration Package";
-    description: "Complete integration solution for GPT-4 API with ready-made templates, connectors, and usage optimization tools. Includes 10 hours of expert implementation support.",
-    category: "AI Models & APIs";
-    price: 1999;
-    currency: "$";
-    tags: ["GPT-4", "API Integration", "NLP"],
-    author: {
-      name: "AI Solutions Inc.";
-      id: "ai-solutions";
-      avatarUrl: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto;
-=======
+
     id: 'ai-model-1'
     title: 'GPT-4 API Integration Package'
     description:
@@ -452,4 +440,4 @@ availabilityOptions: availability.map (item => ({
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

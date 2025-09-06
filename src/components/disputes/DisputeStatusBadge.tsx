@@ -1,15 +1,13 @@
 
 import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from 'lucide-react'
-<<<<<<< HEAD
-import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
-=======
+
 import {
   Tooltip
   TooltipContent
   TooltipTrigger
 } from '@/components/ui/tooltip'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface DisputeStatusBadgeProps {
   status: 'open' | 'under_review' | 'resolved' | 'closed'
 export function DisputeStatusBadge({ status }: DisputeStatusBadgeProps) {

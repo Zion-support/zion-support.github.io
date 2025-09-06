@@ -3,9 +3,7 @@ import { useRouter  } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication } from '../../types/grants';
 export default function GrantDetailPage() {
-<<<<<<< HEAD
-  const router = null;
-=======
+
   const router = useRouter();
   const { id } = router.query as { id: string };  const [item, setItem] = useState<GrantApplication | null>(null);export default function GrantDetailPage() {
   const router = useRouter();
@@ -49,7 +47,7 @@ export default function GrantDetailPage() {
         <div>Not found</div>
       </EnhancedLayout>
     );
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <EnhancedLayout>
       <div className='flex items-center justify-between mb-4'>

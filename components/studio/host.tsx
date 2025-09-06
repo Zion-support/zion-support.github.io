@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-type PersonaConfig = any;
-=======
+
 type PersonaConfig = {
   voice: 'Visionary' | 'Grounded' | 'Technical';
   language: string;
@@ -104,7 +102,7 @@ export default function StudioHostPage() {
       setPublishing(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='space-y-8'>
       <h1 className='text-3xl font-bold'>Podcast Studio Host</h1>

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { Pool, PoolClient } from 'pg';
-let pool: Pool | null;
-    throw err
-=======
+
 let pool: Pool | null = null;
 }return pool
 export async function withUser<T>(
@@ -21,7 +17,7 @@ export async function withUser<T>(
   } catch (err) {
     await client.query('ROLLBACK');
     throw err;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } finally {
     client.release();
   }

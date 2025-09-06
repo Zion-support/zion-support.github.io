@@ -11,23 +11,7 @@ import { Badge } from "@/components/ui/badge",
 import { Separator } from "@/components/ui/separator";
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
-<<<<<<< HEAD
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form",
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound, Globe } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { supabase } from "@/integrations/supabase/client";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-// Define form schema
-const serviceProfileSchema = null;
-=======
+
   Form
   FormControl
   FormDescription
@@ -348,7 +332,7 @@ export function ServiceProviderRegistrationForm() {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='max-w-4xl mx-auto p-4 md:p-6'>
       <Card className='bg-zion-blue-dark border-zion-blue-light'>

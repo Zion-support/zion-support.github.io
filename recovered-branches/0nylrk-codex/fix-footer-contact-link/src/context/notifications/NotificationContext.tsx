@@ -6,9 +6,7 @@ import { NotificationContextType } from './types';
 // Default context used when React type definitions are missing. Providing a
 // fully-typed object here avoids TypeScript errors that occur when an untyped
 // `createContext` call returns `{}` instead of the expected shape.
-<<<<<<< HEAD
-const defaultContext: NotificationContextType;
-=======
+
 const defaultContext: NotificationContextType = {
   notifications: []
   filteredNotifications: []
@@ -65,4 +63,4 @@ export const NotificationProvider = ({ children }: { children: ReactNode }): JSX
     </NotificationContext.Provider>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

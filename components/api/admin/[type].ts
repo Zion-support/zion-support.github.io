@@ -3,20 +3,7 @@ import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types'
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
 import { MOCK_DATA } from '../../../utils/admin/mockData';
-<<<<<<< HEAD
-function isSupabaseConfigured() {
-  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co'
-}
 
-function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
-  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>;
-  const filters: Record<string, any> = {};
-  Object.keys(rest).forEach((k) => {
-    if (k.startsWith('f_')) filters[k.slice(2)] = rest[k]
-  });
-  return {
-    search;
-=======
   return (
     !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
     process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
@@ -37,25 +24,19 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters
     format: (format as any) |undefined
   };    search;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     sort;
     order: (order as any) |'desc';
     page: page ? Number(page) : 0;
     pageSize: pageSize ? Number(pageSize) : 20;
-<<<<<<< HEAD
-    filters;
-    format: (format as any) || undefined}
-=======
+
     filters
     format: (format as any) |undefined}
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 }
 function toCsv(rows: any[]): string {
   if (!rows.length) return '';
-<<<<<<< HEAD
-  const headers = null;
-      return res.status(200).json({ ok: true })
-=======
+
   const headers = Object.keys(rows[0]);
   const escape = (v: any) => {
     if (v === null |v === undefined) return '';
@@ -212,7 +193,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(405).json({ error: 'Method not allowed' });
 }return res.status (200) .send (toCsv (data |[]) );
 }return res.status (200) .send (toCsv (pageItems) );      return res.status(200).json({ ok: true })
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     }
   }
 return res.status(405).json({ error: 'Method not allowed' });

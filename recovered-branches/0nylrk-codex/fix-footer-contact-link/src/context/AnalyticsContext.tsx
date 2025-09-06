@@ -4,9 +4,7 @@ import { useLocation  } from 'react-router-dom';
 import { useAuth  } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 // Analytics event types
-<<<<<<< HEAD
-export type AnalyticsEventType = any;
-=======
+
 export type AnalyticsEventType =
   | 'page_view'
   | 'button_click'
@@ -115,4 +113,4 @@ export const useAnalytics = (): AnalyticsContextType => {
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.
   return context as AnalyticsContextType
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

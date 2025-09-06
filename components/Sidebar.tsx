@@ -1,24 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import { 
-  X;
-  Building2;
-  Code;
-  Smartphone;
-  Cloud;
-  Shield;
-  Zap;
-  ShoppingCart;
-  Heart;
-  GraduationCap;
-  Factory;
-  Truck;
-  CreditCard;
-  Phone;
-  Mail;
-=======
+
 import {
   X
   Building2
@@ -35,7 +18,7 @@ import {
   CreditCard
   Phone
   Mail
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ExternalLink
 } from 'lucide-react';
 interface SidebarProps {
@@ -48,14 +31,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
         ? prev.filter(item => item !== title)
         : [...prev, title];
     );
-<<<<<<< HEAD
-  };
 
-  const navigation = null;
-  };
-
-  const quickLinks = null;
-=======
   }
   const navigation = {
     'Services': [
@@ -86,7 +62,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {const [openDro
     { name: 'Blog', href: '/blog' }
     { name: 'Careers', href: '/careers' }
     { name: 'Contact', href: '/contact' }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   ];
   return (
     <AnimatePresence>

@@ -1,23 +1,15 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdminFromApi } from '../../../../utils/auth';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
-<<<<<<< HEAD
-  const data = null;
-  res.status(200).json(data)
-}
-=======
+
   const data = {
     activeUsers30d: 12840
     gmv: 1450000
@@ -44,4 +36,4 @@ export default async function handler(
   }
   res.status(200).json(data);
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

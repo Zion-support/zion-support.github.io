@@ -8,27 +8,20 @@ import { GeneratedContentDisplay } from "./GeneratedContentDisplay",
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface GeneratedContent {
-<<<<<<< HEAD
-  description: string;
-  tags: string[];
-  suggestedPrice: {
-    min: number;
-=======
+
   description: string
   tags: string[]
   suggestedPrice: {
     min: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     max: number
   }
   keyPoints: string[]
 }
 interface AIListingGeneratorProps {
-<<<<<<< HEAD
-  onApplyGenerated?: (content: GeneratedContent) => void;
-=======
+
   onApplyGenerated?: (content: GeneratedContent,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   initialValues?: {
     title?: string;
     category?: string;
@@ -36,10 +29,7 @@ interface AIListingGeneratorProps {
     targetAudience?: string
   }
 }
-<<<<<<< HEAD
 
-export function AIListingGenerator({ onApplyGenerated, initialValues;
-=======
 export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIListingGeneratorProps) {
   const { toast } = useToast()
   const [isLoading, setIsLoading] = useState(false)
@@ -91,7 +81,7 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       })
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6">
       <Card className="border border-zion-blue-light bg-zion-blue-dark">

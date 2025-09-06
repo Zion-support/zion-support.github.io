@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-export type IntegrationCategory = any;
-  events: ZapierEvent[]
-}
-=======
+
 export type IntegrationCategory = 'crm' | 'ats';
 export type IntegrationProviderId = | 'salesforce' | 'hubspot' | 'zoho' | 'pipedrive' | 'greenhouse' | 'lever' | 'workable' | 'bamboohr';export type SyncStatus = 'connected' | 'warning' | 'disconnected';
 export type IntegrationProviderId =
@@ -56,4 +52,4 @@ export interface IntegrationsState {
   overrides: ManualOverride[];
   events: ZapierEvent[];  events: ZapierEvent[]
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

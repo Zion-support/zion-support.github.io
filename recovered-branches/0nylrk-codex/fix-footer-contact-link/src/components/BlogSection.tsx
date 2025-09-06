@@ -5,9 +5,7 @@ import { Button } from "./ui/button",
 import { Link } from "react-router-dom";
 import { BLOG_POSTS } from "@/data/blog-posts";
 // Get the 3 most recent blog posts
-<<<<<<< HEAD
-const recentPosts = null;
-=======
+
 const recentPosts = [...BLOG_POSTS]
   .sort((a, b) => {
     return (
@@ -51,7 +49,7 @@ export function BlogSection() {
                     e: React.SyntheticEvent<HTMLImageElement, Event>
                   ) => {
                     const target = e.currentTarget as HTMLImageElement;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                     target.src =
                       "https: //images.unsplash.com/photo-1581089778245-3ce67677f718?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3";
                   }}

@@ -3,9 +3,7 @@ import ServiceLanding from '../components/sections/ServiceLanding';
 export default function AIEthicsGovernanceFramework() {
 	return (
 		<ServiceLanding
-<<<<<<< HEAD
-			title;
-=======
+
 			title="AI Ethics & Governance Framework"
 			slug="ai-ethics-governance-framework"
 			description="Operationalize responsible AI with policies, risk assessments, model monitoring, and documentation. Align with global standards and regulatory expectations."
@@ -19,7 +17,7 @@ export default function AIEthicsGovernanceFramework() {
 				"Model cards, data sheets, and change logs"
 				"Prompt governance and access controls"
 				"Regulatory mapping (EU AI Act, NIST AI RMF)"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 				"Training and incident response runbooks"
 			]}
 			industries={["Finance", "Healthcare", "Public Sector", "SaaS"]}

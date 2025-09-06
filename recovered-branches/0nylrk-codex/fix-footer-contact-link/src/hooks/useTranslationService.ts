@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
-type ContentType = any;
-=======
+
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {useLanguage, SupportedLanguage} from '@/context/LanguageContext';
@@ -68,7 +63,7 @@ export function useTranslationService() {
   return {
     translateContent;
     isTranslating;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     getTranslation
   }
 }

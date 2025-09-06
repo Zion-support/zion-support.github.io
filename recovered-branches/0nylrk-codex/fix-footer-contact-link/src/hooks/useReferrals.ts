@@ -13,14 +13,10 @@ export function useReferrals() {
   const [stats, setStats] = useState<ReferralStats>({
     totalReferrals: 0;
     pendingReferrals: 0;
-<<<<<<< HEAD
-    completedReferrals: 0;
-    totalRewards: 0}),
 
-=======
     completedReferrals: 0
     totalRewards: 0});
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   useEffect(() => {
     if (user) {
       fetchReferralCode();
@@ -29,10 +25,7 @@ export function useReferrals() {
       fetchRewards()
     }
   }, [user]);
-<<<<<<< HEAD
 
-  const fetchReferralCode = null;
-=======
   const fetchReferralCode = async () => {
     try {
       setIsLoading(true);
@@ -200,7 +193,7 @@ export function useReferrals() {
     copyReferralLink;
     shareOnSocialMedia;
     fetchReferralStats;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     fetchReferrals, // Added this method for refreshing referrals
     fetchRewards,   // Added this method for refreshing rewards
   }

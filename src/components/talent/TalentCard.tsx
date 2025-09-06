@@ -10,15 +10,7 @@ import { RatingStars  } from '@/components/RatingStars';
 import { useAuth  } from '@/context/auth/AuthProvider';
 import { useCart } from '@/context/CartContext';
 export interface TalentCardProps {
-<<<<<<< HEAD
-  talent: TalentProfile;
-  onViewProfile: (id: string) => void;
-  onRequestHire: (talent: TalentProfile) => void;
-  isAuthenticated: boolean
-}
 
-const TalentCardComponent = null;
-=======
   talent: TalentProfile
   onViewProfile: (id: string,) => void
   onRequestHire: (talent: TalentProfile,) => void
@@ -166,4 +158,4 @@ export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
 export const TalentCard = React.memo(TalentCardComponent)
 TalentCard.displayName = 'TalentCard'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

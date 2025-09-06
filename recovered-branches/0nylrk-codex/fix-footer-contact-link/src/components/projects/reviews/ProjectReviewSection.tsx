@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { Star } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { ReviewsList } from "@/components/reviews/ReviewsList",
-import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal",
-import { useReviews } from "@/hooks/useReviews",
-=======
 import { useState } from "react";
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -21,7 +12,7 @@ import {
 import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { LeaveReviewModal } from "@/components/reviews/LeaveReviewModal";
 import { useReviews } from "@/hooks/useReviews";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 import { Project } from "@/types/projects";
 import { useAuth } from "@/hooks/useAuth";
 interface ProjectReviewSectionProps {
@@ -29,11 +20,7 @@ interface ProjectReviewSectionProps {
 }
 export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const { user } = useAuth();
-<<<<<<< HEAD
-  const { reviews, userReview, isLoading, reportReview } = useReviews(project.id);
-  const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
-  const isCompleted = null;
-=======
+
   const { reviews, userReview, isLoading, reportReview } = useReviews(
     project.id
   );
@@ -50,7 +37,7 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
     : clientProfile?.display_name |"Client";
   const canLeaveReview = isCompleted && (isClient |isTalent) && !userReview;
   const hasLeftReview = userReview != null;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Card className="mt-6">
       <CardHeader>

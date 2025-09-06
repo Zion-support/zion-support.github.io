@@ -1,20 +1,6 @@
 
 import React from "react";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { 
-  ArrowRight;
-  Search;
-  Users;
-  Briefcase;
-  Settings;
-  MessageSquare;
-  Smartphone 
-} from "lucide-react",
 
-export function QuickAccess() {
-  const quickLinks = null;
-=======
 import {Link} from "react-router-dom";
 import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone} from "lucide-react";
 export function QuickAccess() {
@@ -56,7 +42,7 @@ export function QuickAccess() {
       link: "/mobile-launch"
     }
   ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <section className="py-12 bg-zion-blue-dark">
       <div className="container mx-auto px-4">

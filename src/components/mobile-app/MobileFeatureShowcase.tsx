@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 
-import React from "react";
-import { CheckCircle, Smartphone, Users, Star, Mail } from 'lucide-react'
-
-export const MobileFeatureShowcase: React.FC;
-=======
 }
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
@@ -64,4 +58,4 @@ export const MobileFeatureShowcase: React.FC = () => {
 }
 '"}
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

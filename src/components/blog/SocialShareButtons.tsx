@@ -5,9 +5,7 @@ import { toast } from '@/hooks/use-toast';
 interface SocialShareButtonsProps {
   title: string
 export function SocialShareButtons({ title }: SocialShareButtonsProps) {
-<<<<<<< HEAD
-  const shareUrl = null;
-=======
+
   const shareUrl =
     typeof window !== 'undefined'
       ? encodeURIComponent(window.location.href)
@@ -60,7 +58,7 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
       onClick: copyLink
     }
   ]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='mt-12 flex flex-wrap gap-2'>
       {buttons.map(btn => (

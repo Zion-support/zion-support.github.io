@@ -11,19 +11,13 @@ import { format, parseISO  } from 'date-fns';
 import { MilestoneInput, GeneratedMilestone, useMilestoneGenerator  } from '@/hooks/useMilestoneGenerator';
 import { Badge } from '@/components/ui/badge';
 interface AIMilestoneGeneratorProps {
-<<<<<<< HEAD
-  scope: string;
-  startDate: string;
-  endDate: string | null;
-  projectType: string;
-  onAddMilestones: (milestones: GeneratedMilestone[]) => void;
-=======
+
   scope: string
   startDate: string
   endDate: string | null
   projectType: string
   onAddMilestones: (milestones: GeneratedMilestone[]) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onAddMilestone: (milestone: GeneratedMilestone) => void
 }
 export function AIMilestoneGenerator({
@@ -35,11 +29,7 @@ export function AIMilestoneGenerator({
   onAddMilestone
 }: AIMilestoneGeneratorProps) {
   const { generateMilestones, generatedMilestones, isGenerating, clearGeneratedMilestones } = useMilestoneGenerator();
-<<<<<<< HEAD
-  const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({}),
 
-  const handleGenerateMilestones = null;
-=======
   const [selectedMilestones, setSelectedMilestones] = useState<Record<string, boolean>>({});
   const handleGenerateMilestones = async () => {
     if (!scope |!startDate |!projectType) {
@@ -149,7 +139,7 @@ export function AIMilestoneGenerator({
                       size="sm"
                       onClick={(e) => {
                         e.stopPropagation();
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"

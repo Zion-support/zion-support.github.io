@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const real2036AIServices = null;
-=======
+
 export const real2036AIServices = [
   {
     id: 'ai-emotion-intelligence-platform'
@@ -335,4 +333,4 @@ export const real2036AIServices = [
     ]
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

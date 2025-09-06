@@ -1,9 +1,7 @@
 import React from 'react',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Phone, Mail, MapPin, Globe, Zap, Brain, Atom;
-=======
+
 import {
   Phone
   Mail
@@ -42,7 +40,7 @@ import {
   MessageCircle as MessageCircleIcon
   Star as StarIcon;} from 'lucide-react';import {
   Phone, Mail, MapPin, Globe, Zap, Brain, Atom
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   Rocket, Shield, Cpu, Target, Microscope, Users;
   Facebook, Twitter, Linkedin, Instagram, Youtube;
   Github, ArrowRight, Heart, Star, Award, CheckCircle;
@@ -50,11 +48,7 @@ import {
   TrendingUp, Target as TargetIcon, Users as UsersIcon;
   Briefcase as BriefcaseIcon, BookOpen as BookOpenIcon;
   MessageCircle as MessageCircleIcon, Star as StarIcon
-<<<<<<< HEAD
- } from 'lucide-react';
-const contactInfo = null;
-                and autonomous systems development. Join our community of future technology pioneers.
-=======
+
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -625,7 +619,7 @@ export default function UltraFuturisticFooter2032() {
               </h3>
               <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
                 Get the latest insights on AI breakthroughs, quantum computing advances, space technology innovations, and autonomous systems development. Join our community of future technology pioneers.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               </p>
               <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                 <input

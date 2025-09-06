@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-export const advancedITServices2025 = null;
-=======
+
 export const advancedITServices2025 = [
   {
     id: 'quantum-cloud-infrastructure-platform'
@@ -625,4 +623,4 @@ export const advancedITServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

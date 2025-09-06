@@ -3,9 +3,7 @@ import { useAuth  } from './useAuth';
 import { getAccessibleRoutes  } from '@/config/sitemap';
 import type { SitemapItem } from '@/config/sitemap';
 // Define the allowed user types
-<<<<<<< HEAD
-type UserType = any;
-=======
+
 type UserType = 'employer' | 'buyer' | 'jobSeeker' | 'creator' | 'admin';
 export function useSitemap() {
   const { user, isAuthenticated } = useAuth();
@@ -38,7 +36,7 @@ export function useSitemap() {
   return {
     accessibleRoutes;
     findRouteByPath;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     canAccessRoute
   }
 }

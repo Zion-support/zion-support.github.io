@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from "react";
-export type Badge = any;
-=======
+
 import React from 'react';
   id: string;
 label: string;
@@ -33,7 +30,7 @@ export default function Badges({ balance }: { balance: number }) {
 }
 export default function Badges({ balance }: { balance: number }) {
   const active = currentBadge(balance);
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='flex gap-2 items-center flex-wrap'>
       {BADGES.map(b => (    <div className="flex gap-2 items-center flex-wrap">

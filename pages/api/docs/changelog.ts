@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-const filePath = null;
-  res.status(405).end('Method Not Allowed')
-}
-=======
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
@@ -36,4 +29,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader("Allow", "GET, POST");
   res.status(405).end("Method Not Allowed");
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

@@ -10,36 +10,18 @@ import { SeverityIndicator } from "../common/SeverityIndicator",
 import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 interface Milestone {
-<<<<<<< HEAD
-  id: string;
-  title: string;
-  dueDate: string;
-  status: "completed" | "in_progress" | "pending";
-  paymentStatus: "paid" | "pending" | "overdue";
-=======
+
   id: string
   title: string
   dueDate: string
   status: "completed" | "in_progress" | "pending"
   paymentStatus: "paid" | "pending" | "overdue"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   amount: string
 }
 interface ProjectViewProps {
   project: {
-<<<<<<< HEAD
-    id: string;
-    title: string;
-    client: {
-      name: string;
-      avatar?: string
-    },
-    startDate: string;
-    endDate?: string;
-    status: string;
-    totalAmount: string;
-    progress: number;
-=======
+
     id: string
     title: string
     client: {
@@ -51,15 +33,13 @@ interface ProjectViewProps {
     status: string
     totalAmount: string
     progress: number
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     description: string
   }
   milestones: Milestone[]
 }
 export function MobileProjectView({ project, milestones }: ProjectViewProps) {
-<<<<<<< HEAD
-  const navigate = null;
-=======
+
   const navigate = useNavigate();
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
@@ -74,7 +54,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     });
     // Navigate to messaging with this client
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-6 px-4 pb-24">
       <Card>

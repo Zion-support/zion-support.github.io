@@ -3,11 +3,7 @@ import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-const DATA_DIR = null;
-    optionalDocuments: getOptionalDocuments(role)})
-}
-=======
+
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 function load(): Record<string, KycProfile> {
   try {
@@ -69,4 +65,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 optionalDocuments: getOptionalDocuments(role)
   });
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

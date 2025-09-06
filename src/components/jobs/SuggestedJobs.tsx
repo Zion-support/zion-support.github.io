@@ -1,27 +1,16 @@
-<<<<<<< HEAD
 
-import { useAuth } from "@/hooks/useAuth",
-import { Loader2 } from 'lucide-react'
-import { Badge } from "@/components/ui/badge",
-import { useJobSuggestions } from "@/hooks/useJobSuggestions",
-import { JobMatchesCard } from "./JobMatchesCard";
-import { NoJobsCard } from "./NoJobsCard";
-=======
     updateJobMatchStatus
 import { useAuth } from "@/hooks/useAuth"
 import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/badge"
 import { useJobSuggestions } from "@/hooks/useJobSuggestions"
 import { JobMatchesCard } from "./JobMatchesCard"
 import { NoJobsCard } from "./NoJobsCard"
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface SuggestedJobsProps {
   talentId?: string
 }
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
-<<<<<<< HEAD
-  const { user } = useAuth();
-  const currentTalentId = null;
-=======
+
   const { user } = useAuth()
   const currentTalentId = talentId |user?.id
   const {
@@ -39,7 +28,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const handleDecline = (matchId: string) => {
     updateJobMatchStatus(matchId, 'declined')
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center p-6">

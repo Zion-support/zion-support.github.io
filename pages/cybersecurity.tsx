@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import Layout from '../components/layout/Layout';
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
-export default function CybersecurityPage() {
-  const features = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -18,7 +11,7 @@ export default function CybersecurityPage() {
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' }
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' }
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Layout>
       <Head>

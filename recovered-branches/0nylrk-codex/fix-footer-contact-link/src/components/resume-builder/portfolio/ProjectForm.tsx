@@ -17,9 +17,7 @@ import { PortfolioProject  } from '@/types/resume';
 import { usePortfolio  } from '@/hooks/usePortfolio';
 import { useAuth } from '@/hooks/useAuth';
 // Define schema for form validation
-<<<<<<< HEAD
-const projectSchema = null;
-=======
+
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required');
   description: z.string().optional()
@@ -84,7 +82,7 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
       setIsLoading(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">

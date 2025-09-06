@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-import { GradientHeading } from "./GradientHeading";
-import { Check, Handshake, Search, Send } from "lucide-react";
-const steps = null;
-=======
+
 import {GradientHeading} from "./GradientHeading";
 import {Check, Handshake, Search, Send} from "lucide-react";
 const steps = [
@@ -23,7 +19,7 @@ const steps = [
     title: "Done"
     description: "Enjoy hassle-free delivery and support for your technology solutions."
     icon: Check}]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function HowItWorksSection() {
   return (
     <section className="py-20 bg-zion-blue">

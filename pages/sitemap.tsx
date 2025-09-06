@@ -3,15 +3,26 @@ import Head from 'next/head',
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 <<<<<<< HEAD
-import { Home, Search, Rocket, FileText, Users, Mail, Map;
-  ArrowRight, ExternalLink, ChevronRight, Globe, Building
- } from 'lucide-react';
-import SmartHeader from '../components/SmartHeader';
-import SmartFooter from '../components/SmartFooter';
-export default function SitemapPage() {
-  const mainPages = null;
-              resources, and information available at Zion Tech Group.
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+import { 
+  Home, 
+  Brain, 
+  Network, 
+  Target, 
+  Users, 
+  Shield, 
+  Cloud, 
+  BarChart3, 
+  Settings, 
+  Globe, 
+  ArrowRight 
+} from 'lucide-react';
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 import {
   Home
   Brain
@@ -129,7 +140,15 @@ export default function SitemapPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
   );
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/automation-improvements-final
+<<<<<<< HEAD
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }
 import {
   Home
@@ -350,7 +369,7 @@ export default function SitemapPage() {
               Navigate our comprehensive website and discover all the AI-powered
               technology solutions, resources, and information available at Zion
               Tech Group.
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a
@@ -665,7 +684,18 @@ export default function SitemapPage() {
       </section>
       <SmartFooter />
     </div>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  ),
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+  );
+>>>>>>> origin/automation-improvements-final
+
+=======
   )
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 }animate= {
   {
   opacity: 1, y: 0

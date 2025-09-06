@@ -2,8 +2,13 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 <<<<<<< HEAD
-const SolutionsPage: NextPage;
+<<<<<<< HEAD
 =======
+<<<<<<< HEAD
+>>>>>>> origin/automation-improvements-final
+=======
+
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 import { motion } from 'framer-motion';
 import {
   Shield
@@ -18,6 +23,16 @@ import {
   Target
 } from 'lucide-react';
 import Layout from '../../components/Layout';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> origin/automation-improvements-final
+
+=======
+>>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 const solutions = [
   {
     title: "Enterprise Solutions"
@@ -282,4 +297,4 @@ export default function SolutionsPage() {
   )
 }
 export default SolutionsPage;
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

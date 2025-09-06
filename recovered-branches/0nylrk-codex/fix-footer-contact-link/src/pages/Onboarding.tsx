@@ -13,10 +13,7 @@ import { toast } from "@/hooks/use-toast";
 export default function Onboarding() {
   const { user, updateProfile, isLoading } = useAuth();
   const [currentStep, setCurrentStep] = useState(0);
-<<<<<<< HEAD
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
-  const navigate = null;
-=======
+
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
   const navigate = useNavigate();
   // Convert our user types to match what's expected in the database
@@ -91,7 +88,7 @@ export default function Onboarding() {
     { label: "Create Profile", description: "Tell us about yourself" }]
   if (!user) {
     navigate('/login');
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     return null
   }
   return (

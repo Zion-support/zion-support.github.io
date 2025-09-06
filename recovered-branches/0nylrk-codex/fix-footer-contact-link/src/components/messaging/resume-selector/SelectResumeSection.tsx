@@ -5,17 +5,12 @@ import { ResumeOption  } from '../resume-selector/types';
 import { ResumePreviewCard  } from './ResumePreviewCard';
 import { Resume } from '@/types/resume';
 interface SelectResumeSectionProps {
-<<<<<<< HEAD
-  resumeOptions: ResumeOption[];
-  selectedResume: ResumeOption | null;
-  handleResumeSelect: (resumeId: string) => void;
-  handleDownloadResume: () => void;
-=======
+
   resumeOptions: ResumeOption[]
   selectedResume: ResumeOption | null
   handleResumeSelect: (resumeId: string) => void
   handleDownloadResume: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   isLoading: boolean
 }
 export function SelectResumeSection({

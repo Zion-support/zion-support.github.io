@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { readReviews, readProjects } from '[^']*';
-import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
-import { TALENT_PROFILES } from '[^']*';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' })
-=======
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readReviews, readProjects } from "../../../utils/dataStore";
 import type { PublicReview, ReviewsSummary } from "../../../types/reviews";
@@ -17,29 +9,22 @@ export default async function handler(
 ) {
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   }
   try {
-<<<<<<< HEAD
-    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
-    if (!targetType || !targetId) {
-=======
+
     const { targetType, targetId } = req.query as {
       targetType?: string;
       targetId?: string;
     }
     if (!targetType |!targetId) {
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       return res.status(400).json({ error: "Missing targetType or targetId" });
     }
     if (targetType !== "talent" && targetType !== "client") {
       return res.status(400).json({ error: "Invalid targetType" });
     }
-<<<<<<< HEAD
 
-    const all = null;
-    return res.status(200).json({ summary, reviews: publicReviews })
-=======
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
     const filtered = all.filter((r) => {
@@ -96,7 +81,7 @@ export default async function handler(
       mostRecent: publicReviews.slice(0, 5)
     }
     return res.status(200).json({ summary, reviews: publicReviews });
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   } catch (error: any) {
     return res
       .status(500)

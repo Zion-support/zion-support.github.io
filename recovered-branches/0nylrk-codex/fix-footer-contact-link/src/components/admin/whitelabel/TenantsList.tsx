@@ -1,25 +1,4 @@
-<<<<<<< HEAD
 
-import React, { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow 
- } from '@/components/ui/table';
-import { Button } from '@/components/ui/button';
-import { DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
-import { Badge  } from '@/components/ui/badge';
-import { toast  } from '@/hooks/use-toast';
-import { WhitelabelTenant  } from '@/hooks/useWhitelabelTenant';
-import { Edit, MoreHorizontal, ExternalLink, Power, PowerOff, Users, RefreshCcw  } from '@/components/icons';
-import { format  } from 'date-fns';
-=======
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -50,17 +29,14 @@ import {
   RefreshCcw
 } from "@/components/icons";
 import { format } from "date-fns";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     loadTenants();
   }, []);
-<<<<<<< HEAD
 
-  const loadTenants = null;
-=======
   const loadTenants = async () => {
     try {
       setIsLoading(true);
@@ -135,7 +111,7 @@ export function TenantsList() {
       });
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className="space-y-4">
       <div className="flex justify-between items-center">

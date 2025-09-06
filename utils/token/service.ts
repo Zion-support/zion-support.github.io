@@ -6,30 +6,7 @@ export function getConfig() {
     totalSupply: 1000000
   };
 }
-<<<<<<< HEAD
 
-export async function issueTokens(userId: string, amount: number, reason: string) {
-  // Mock implementation
-  return {
-    id: Date.now().toString(),
-    userId,
-    amount,
-    reason,
-    timestamp: new Date().toISOString()
-  };
-}
-
-export async function revokeTokens(userId: string, amount: number, reason: string) {
-  // Mock implementation
-  return {
-    id: Date.now().toString(),
-    userId,
-    amount,
-    reason,
-    timestamp: new Date().toISOString()
-  };
-}
-=======
 // Mock data storage - replace with actual database
 let transactions: TokenTransaction[] = [];
 export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
@@ -63,4 +40,4 @@ export function setConfig(
   // Update the configuration
   Object.assign(current, partial);
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

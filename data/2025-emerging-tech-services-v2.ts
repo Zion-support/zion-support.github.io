@@ -10,13 +10,10 @@ export interface EmergingTechService {
     currency: string;
     trialDays: number;
     setupTime: string;
-<<<<<<< HEAD
-    enterprise: number
-  },
-=======
+
     enterprise: number;
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   features: string[];
   benefits: string[];
   targetAudience: string[];
@@ -39,29 +36,7 @@ export interface EmergingTechService {
   rating: number;
   reviews: number;
   marketSize: string;
-<<<<<<< HEAD
-  growthRate: string
-}
 
-export const emergingTechServicesV2: EmergingTechService[] = [
-  {
-    id: 'space-mining-platform';
-    name: 'Space Mining Platform';
-    tagline: 'Revolutionary asteroid mining and space resource extraction';
-    description: 'Advanced platform that enables automated asteroid mining, resource extraction, and space resource management using cutting-edge robotics and AI technology.',
-    category: 'Space & Emerging Tech';
-    price: {
-      monthly: 999;
-      yearly: 9990;
-      currency: 'USD';
-      trialDays: 7;
-      setupTime: '24 hours';
-      enterprise: 4999
-    },
-    features: [
-      'Asteroid identification and mappingAutomated mining operationsResource extraction systemsSpace logistics managementReal-time monitoringResource processingTransportation coordinationMarket analysis';
-      'Risk assessmentRegulatory compliance tools'
-=======
   growthRate: string;
 export const emergingTechServicesV2: EmergingTechService[] = [
   {
@@ -470,7 +445,7 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     growthRate: '75% annually'
   }
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     ];
     benefits: [
       'Access to rare earth elementsReduce Earth resource dependencyEnable space colonizationCreate new economic opportunitiesAdvance space technology'
@@ -686,11 +661,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     customers: 180;
     rating: 4.9;
     reviews: 65;
-<<<<<<< HEAD
-    marketSize: '$35B autonomous vehicle market';
-=======
+
     marketSize: '$35B autonomous vehicle market'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
     growthRate: '75% annually'
   }
 ];

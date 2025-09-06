@@ -7,27 +7,17 @@ import { Badge } from "@/components/ui/badge",
 import { Loader2, Info, ThumbsUp } from "lucide-react";
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
 interface PricingSuggestionBoxProps {
-<<<<<<< HEAD
-  suggestion: PricingSuggestion | null;
-  isLoading: boolean;
-  onApplySuggestion: () => void;
-=======
+
   suggestion: PricingSuggestion | null
   isLoading: boolean
   onApplySuggestion: () => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   rateType: "hourly" | "fixed"
 }
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion;
   isLoading;
-<<<<<<< HEAD
-  onApplySuggestion;
-  rateType}) => {
-  if (isLoading) {
-    return (
-      <Card className;
-=======
+
   onApplySuggestion
   rateType}) => {
   if (isLoading) {
@@ -97,4 +87,4 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     </Card>
   )
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

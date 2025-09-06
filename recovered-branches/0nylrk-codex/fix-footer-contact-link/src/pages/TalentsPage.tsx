@@ -3,19 +3,7 @@ import { ProductListing } from "@/types/listings";
 // Sample talent listings
 const TALENT_LISTINGS: ProductListing[] = [
   {
-<<<<<<< HEAD
-    id: "talent-1";
-    title: "Senior AI Engineer";
-    description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems.";
-    category: "Engineering";
-    price: 150;
-    currency: "$";
-    tags: ["Machine Learning", "TensorFlow", "Python", "Computer Vision"],
-    author: {
-      name: "Alexandra Chen";
-      id: "alexandra-chen";
-      avatarUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto;
-=======
+
     id: "talent-1"
     title: "Senior AI Engineer"
     description: "Expert in machine learning algorithms and neural networks with 8+ years of experience building production-ready AI systems."
@@ -123,7 +111,7 @@ const TALENT_FILTERS = [
   { label: 'Security', value: 'security' }
   { label: 'Development', value: 'development' }
   { label: 'Consulting', value: 'consulting' }]
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function TalentsPage() {
   return (
     <DynamicListingPage

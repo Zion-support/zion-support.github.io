@@ -1,10 +1,6 @@
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
-<<<<<<< HEAD
 
-const noop = null;
-// All exports are already defined above
-=======
 const noop = () => {}
 const noopReturn = () => null
 const noopPromise = () => Promise.resolve()
@@ -175,4 +171,4 @@ export const Severity = mockSentry.Severity
 // Additional exports for compatibility
 export { mockSentry as Sentry }
 // All exports are already defined above
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

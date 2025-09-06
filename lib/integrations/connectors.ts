@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import { ProviderConnection, SyncLogEntry  } from './types';
-import { v4 as uuidv4 } from 'uuid';
-export async function simulateAction<T;
-=======
+
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -51,4 +47,4 @@ export const ats = {
     return mockProviderCall(connection, "update_status", { status });
   }
 }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

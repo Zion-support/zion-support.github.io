@@ -1,25 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Tree, { TreeNode } from "../../components/ui/Tree";
 interface ApiResponse {
-<<<<<<< HEAD
-  nodes: TreeNode[];
-  status: { gitConnected: boolean, gitBranch?: string }
-}
 
-=======
   nodes: TreeNode[]
 status: {
   gitConnected: boolean, gitBranch?: string
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 export default function DevTreePage() {
   const [nodes, setNodes] = useState<TreeNode[] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [git, setGit] = useState<ApiResponse['status'] | null>(null);
   const [adminToken, setAdminToken] = useState<string>('');
-<<<<<<< HEAD
 
-  const fetchTree = null;
-=======
   const fetchTree = async (token?: string) => {
     try {
       const resp = await fetch('/api/dev/source-map', {
@@ -61,7 +53,7 @@ export default function DevTreePage() {
     } catch (e: any) {
       setError(e.message |'Deploy failed');    }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <div className='p-6 max-w-5xl mx-auto'>
       <div className='flex items-center gap-4 mb-4'>

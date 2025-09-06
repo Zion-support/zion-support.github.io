@@ -14,20 +14,15 @@ import { formatDistanceToNow } from "date-fns",
 import { Job } from "@/types/jobs";
 import { toast } from "sonner";
 interface ApplyToJobFormProps {
-<<<<<<< HEAD
-  job: Job;
-=======
+
   job: Job
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   onSuccess?: () => void
 }
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
   const { applyToJob } = useJobApplications();
-<<<<<<< HEAD
-  const { resumes, isLoading: isResumesLoading } = useResume();
-  const navigate = null;
-=======
+
   const { resumes, isLoading: isResumesLoading } = useResume()
   const navigate = useNavigate();
   const [coverLetter, setCoverLetter] = useState(`I'm interested in the "${job.title}" position and would like to apply. My skills and experience align well with this role.`);
@@ -62,7 +57,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setIsSubmitting(false)
     }
   }
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>

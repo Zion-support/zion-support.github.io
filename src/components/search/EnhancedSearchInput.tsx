@@ -1,49 +1,25 @@
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useMemo } from "react",
-import { useTranslation } from "react-i18next",
-import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
-import { SearchSuggestion } from "@/types/search",
-import { useDebounce } from "@/hooks/useDebounce",
-import { useRouter } from "next/router",
-import { slugify } from "@/lib/slugify",
-import { debounce } from "lodash";
-import { logInfo, logWarn } from '@/utils/productionLogger';
-interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
-=======
+
 
 import { logInfo, logWarn } from '@/utils/productionLogger'
 interface EnhancedSearchInputProps {
   value: string
   onChange: (value: string,) => void
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
   /**
    * Optional callback when a suggestion is selected. This allows parent
    * components to perform actions such as navigation.
    */
-<<<<<<< HEAD
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
-  placeholder?: string;
-  /**
-=======
+
   onSelectSuggestion?: (suggestion: SearchSuggestion) => void
   placeholder?: string;  /**
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
    * Optional list of fallback suggestions (e.g. recent searches).
    * If provided, these will be shown when the input is empty.
    */
   searchSuggestions?: SearchSuggestion[]
 }
 export function EnhancedSearchInput({
-<<<<<<< HEAD
-  value;
-  onChange;
-  onSelectSuggestion;
-  placeholder;
-=======
+
   value
   onChange
   onSelectSuggestion
@@ -324,7 +300,7 @@ export function EnhancedSearchInput({
           onBlur={(e) => {
             const relatedTarget = e.relatedTarget as HTMLElement;            if (!containerRef.current |!containerRef.current.contains(relatedTarget as Node)) {
               setIsFocused(false)
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
               setHighlightedIndex(-1)
             ,}
             setValueOnFocus(null)

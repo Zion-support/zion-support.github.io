@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Brain, Rocket, Target, Cpu, Globe, Eye;
-  ChevronRight, Star, TrendingUp, Zap, Shield;
-  ArrowRight, Search, Filter, Grid, List;
-  Phone, Mail, MapPin, ExternalLink, Sparkles
- } from 'lucide-react';
-import UltraFuturisticBackground2029 from '../components/ui/UltraFuturisticBackground2029',
-import UltraFuturisticNavigation2029V2 from '../components/layout/UltraFuturisticNavigation2029V2',
-import UltraFuturisticFooter2029V2 from '../components/layout/UltraFuturisticFooter2029V2';
-import ComprehensiveServicesShowcase2029 from '../components/sections/ComprehensiveServicesShowcase2029';
-const contactInfo = null;
-=======
+
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -241,7 +227,7 @@ export default function InnovationsPage() {
                   icon: Shield
                   title: 'Future-Proofing'
                   description: 'Solutions designed for the next decade of technological advancement'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   stats: '2029+ Future-ready'
                 }
               ].map((item, index) => (

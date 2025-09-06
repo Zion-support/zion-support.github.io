@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
-export type IntegrationType = any;
-=======
+
 export type IntegrationType = "crm" | "ats" | "webhook" | "zapier";
 export type IntegrationStatus = "connected" | "warning" | "disconnected";
 export interface Integration {
@@ -33,4 +31,4 @@ export type AtsIntegrationEvents =
   | "interview_scheduled"
   | "resume_uploaded"
   | "job_posted";
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+

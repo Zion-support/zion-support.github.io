@@ -1,9 +1,7 @@
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts";
 // Get openAI API key from environment variables
-<<<<<<< HEAD
-const openAiApiKey = null;
-=======
+
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") |"";
 /**
  * Normalizes skills using OpenAI
@@ -152,7 +150,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
       talentId: talent.id;
       score: matchScore;
       matchedSkills: matchedSkills
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
       reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`
     }
   })

@@ -1,15 +1,4 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from 'lucide-react'
-
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
-import { WebhooksManager } from "@/components/developers/WebhooksManager",
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
-=======
 import { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import {
@@ -26,7 +15,7 @@ import { ApiKeysManager } from '@/components/developers/ApiKeysManager'
 import { WebhooksManager } from '@/components/developers/WebhooksManager'
 import { ApiDocumentation } from '@/components/developers/ApiDocumentation'
 import { ApiLogs } from '@/components/developers/ApiLogs'
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
 interface TabDefinition {
   id: string;
   label: string;
@@ -43,13 +32,7 @@ export function DeveloperPortal() {
     { id: 'logs', label: 'Logs', icon: List }
   ]
   return (
-<<<<<<< HEAD
-    <div className;
-            return (
-              <button
-                key={tab.id}
-                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
-=======
+
     <div className='w-full max-w-7xl mx-auto p-4 md:p-8'>
       <div className='mb-8'>
         <h1 className='text-3xl font-bold text-white flex items-center'>
@@ -66,7 +49,7 @@ export function DeveloperPortal() {
           {tabs.map(tab => {
             const Icon = tab.icon
                 onClick={() => setActiveTab(tab.id)}                className={`inline-flex items-center px-4 py-3 border-b-2 text-sm font-medium ${
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-7db5
+
                   activeTab === tab.id
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
