@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-09-06T09:33:59.641Z",
+  "filesFixed": 5,
+  "errors": 0,
+  "fixedFiles": [
+    "lib/integrations/connectors.ts",
+    "pages/api/integrations/zapier/jobs-posted.ts",
+    "pages/api/integrations/zapier/talent-matched.ts",
+    "pages/api/jobs.ts",
+    "pages/api/jobs/[id].ts"
+  ]
+}

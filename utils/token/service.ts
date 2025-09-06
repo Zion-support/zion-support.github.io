@@ -36,5 +36,7 @@ export function getConfig() {
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
-  const current = tokenStore.getConfig();
-  tokenStore.setConfig({ ...current, ...partial });
+  const current = getConfig();
+  // Update the configuration
+  Object.assign(current, partial);
+}

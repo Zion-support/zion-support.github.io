@@ -16,6 +16,7 @@ export function getGitStatus() {
 export function getSourceMapWithExistence(): SourceNode[] {
   const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
+}
 
 export interface DeployTemplateResult {
   createdPaths: string[];
