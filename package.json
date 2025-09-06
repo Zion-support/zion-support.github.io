@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
     "dev": "vite",
     "build": "vite build",
+=======
+    "dev": "next dev",
+    "build": "next build",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     "build:netlify": "node scripts/build-with-error-handling.js",
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
@@ -296,8 +301,13 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
+=======
+    "@reduxjs/toolkit": "^2.8.2",
+    "@stripe/stripe-js": "^2.3.0",
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
     "@sendgrid/mail": "^8.1.5",
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",

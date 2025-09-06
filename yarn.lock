@@ -2168,10 +2168,14 @@
     webpack-bundle-analyzer "4.7.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 "@next/env@15.5.2":
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/env/-/env-15.5.2.tgz"
   integrity sha512-Qe06ew4zt12LeO6N7j8/nULSOe3fMXE4dM6xgpBQNvdzyK1sv5y4oAP3bq4LamrvGCZtmRYnW8URFCeX5nFgGg==
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2185,6 +2189,8 @@
   resolved "https://registry.npmjs.org/@next/env/-/env-14.2.32.tgz"
   integrity sha512-n9mQdigI6iZ/DF6pCTwMKeWgF2e8lg7qgt5M7HXMLtyhZYMnf/u905M18sSpPmHL9MKp9JHo56C6jrD2EvWxng==
 >>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 <<<<<<< HEAD
 =======
@@ -2220,6 +2226,7 @@
     glob "10.3.10"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 "@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
 =======
 <<<<<<< HEAD
@@ -2234,6 +2241,9 @@
 "@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
 >>>>>>> main
 >>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
+=======
+"@next/swc-linux-x64-gnu@^15.5.2", "@next/swc-linux-x64-gnu@15.5.2":
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   version "15.5.2"
   resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-15.5.2.tgz"
   integrity sha512-o1RV/KOODQh6dM6ZRJGZbc+MOAHww33Vbs5JC9Mp1gDk8cpEO+cYC/l7rweiEalkSm5/1WGa4zY7xrNwObN4+Q==
@@ -3158,7 +3168,7 @@
   resolved "https://registry.npmjs.org/@radix-ui/rect/-/rect-1.1.1.tgz"
   integrity sha512-HPwpGIzkl28mWyZqG52jiqDJ12waP11Pa1lGoiyUkIEuMLBP0oeK/C89esbXrxsky5we7dfd8U58nm0SgAWpVw==
 
-"@reduxjs/toolkit@^2.9.0":
+"@reduxjs/toolkit@^2.8.2":
   version "2.9.0"
   resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.9.0.tgz"
   integrity sha512-fSfQlSRu9Z5yBkvsNhYF2rPS8cGXn/TZVrlwN1948QyZ8xMZ0JvP50S2acZNaf+o63u6aEeMjipFyksjIcWrog==
@@ -3334,10 +3344,10 @@
   resolved "https://registry.npmjs.org/@standard-schema/utils/-/utils-0.3.0.tgz"
   integrity sha512-e7Mew686owMaPJVNNLs55PUvgz371nKgwsc4vxE49zsODpJEnxgxRo2y/OKrqueavXgZNMDVj3DdHFlaSAeU8g==
 
-"@stripe/stripe-js@^7.9.0":
-  version "7.9.0"
-  resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-7.9.0.tgz"
-  integrity sha512-ggs5k+/0FUJcIgNY08aZTqpBTtbExkJMYMLSMwyucrhtWexVOEY1KJmhBsxf+E/Q15f5rbwBpj+t0t2AW2oCsQ==
+"@stripe/stripe-js@^2.3.0":
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/@stripe/stripe-js/-/stripe-js-2.4.0.tgz"
+  integrity sha512-WFkQx1mbs2b5+7looI9IV1BLa3bIApuN3ehp9FP58xGg7KL9hCHDECgW3BwO9l9L+xBPVAD7Yjn1EhGe6EDTeA==
 
 "@supabase/auth-js@2.71.1":
   version "2.71.1"
@@ -3654,6 +3664,7 @@
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -3684,6 +3695,8 @@
 >>>>>>> main
 >>>>>>> main
 >>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 "@types/mysql@2.15.26":
   version "2.15.26"
   resolved "https://registry.npmjs.org/@types/mysql/-/mysql-2.15.26.tgz"
@@ -3691,6 +3704,7 @@
   dependencies:
     "@types/node" "*"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@types/node@*", "@types/node@>=13.7.0":
 =======
@@ -3751,6 +3765,9 @@
 
 "@types/node@*", "@types/node@^18.0.0", "@types/node@>=13.7.0":
 >>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
+=======
+"@types/node@*", "@types/node@>=13.7.0":
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   version "18.19.124"
   resolved "https://registry.npmjs.org/@types/node/-/node-18.19.124.tgz"
   integrity sha512-hY4YWZFLs3ku6D2Gqo3RchTd9VRCcrjqp/I0mmohYeUVA5Y8eCXKJEasHxLAJVZRJuQogfd1GiJ9lgogBgKeuQ==
@@ -3800,6 +3817,7 @@
     "@types/react" "*"
     date-fns "^3.3.1"
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 "@types/react@*":
 =======
@@ -3861,6 +3879,9 @@
 >>>>>>> main
 >>>>>>> main
 >>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
+=======
+"@types/react@*":
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   version "18.3.24"
   resolved "https://registry.npmjs.org/@types/react/-/react-18.3.24.tgz"
   integrity sha512-0dLEBsA1kI3OezMBF8nSsb7Nk19ZnsyE1LLhB8r27KbgU5H4pvuqZLdtE+aUkJVoXgTVuA+iLIwmZ0TuK4tx6A==
@@ -4685,6 +4706,7 @@ buffer@4.9.2:
     isarray "^1.0.0"
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 busboy@1.6.0:
   version "1.6.0"
   resolved "https://registry.npmjs.org/busboy/-/busboy-1.6.0.tgz"
@@ -4694,6 +4716,8 @@ busboy@1.6.0:
 =======
 >>>>>>> main
 
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 bytes@^3.1.2, bytes@3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/bytes/-/bytes-3.1.2.tgz"
@@ -6518,7 +6542,7 @@ fd-slicer@~1.1.0:
   dependencies:
     pend "~1.2.0"
 
-fdir@^6.4.4, fdir@^6.5.0:
+fdir@^6.5.0:
   version "6.5.0"
   resolved "https://registry.npmjs.org/fdir/-/fdir-6.5.0.tgz"
   integrity sha512-tIbYtZbucOs0BRGqPJkshJUYdL+SDH7dVM8gjy+ERp3WAUjLEFJE+02kanyHtwjWOnwrKYBiwAmM0p4kLJAnXg==
@@ -8708,6 +8732,7 @@ mongodb-connection-string-url@^3.0.0:
     whatwg-url "^14.1.0 || ^13.0.0"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 mongodb@^6.19.0:
 =======
 <<<<<<< HEAD
@@ -8724,6 +8749,9 @@ mongodb@*, mongodb@^6.19.0:
 >>>>>>> main
 >>>>>>> main
 >>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
+=======
+mongodb@^6.19.0:
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   version "6.19.0"
   resolved "https://registry.npmjs.org/mongodb/-/mongodb-6.19.0.tgz"
   integrity sha512-H3GtYujOJdeKIMLKBT9PwlDhGrQfplABNF1G904w6r5ZXKWyv77aB0X9B+rhmaAwjtllHzaEkvi9mkGVZxs2Bw==
@@ -10986,6 +11014,7 @@ source-map@^0.6.0, source-map@^0.6.1, source-map@~0.6.1:
   integrity sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -11001,6 +11030,8 @@ source-map@^0.7.3:
   integrity sha512-i5uvt8C3ikiWeNZSVZNWcfZPItFQOsYTUAOkcUPGd8DqDy1uOUikjt5dG+uRlwyvR108Fb9DOd4GvXfT0N2/uQ==
 
 >>>>>>> b5606b5ed4a293e410649915eb139bcf35adbc01
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 sparse-bitfield@^3.0.3:
   version "3.0.3"
   resolved "https://registry.npmjs.org/sparse-bitfield/-/sparse-bitfield-3.0.3.tgz"
@@ -11525,12 +11556,12 @@ thread-stream@^3.0.0:
     real-require "^0.2.0"
 
 tinyglobby@^0.2.13, tinyglobby@^0.2.14:
-  version "0.2.14"
-  resolved "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.14.tgz"
-  integrity sha512-tX5e7OM1HnYr2+a2C/4V0htOcSQcoSTH9KgJnVvNm5zm/cyEWKJ7j7YutsH9CxMdtOkkLFy2AHrMci9IM8IPZQ==
+  version "0.2.15"
+  resolved "https://registry.npmjs.org/tinyglobby/-/tinyglobby-0.2.15.tgz"
+  integrity sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==
   dependencies:
-    fdir "^6.4.4"
-    picomatch "^4.0.2"
+    fdir "^6.5.0"
+    picomatch "^4.0.3"
 
 tldts-core@^6.1.86:
   version "6.1.86"

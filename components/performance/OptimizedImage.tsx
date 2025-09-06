@@ -47,7 +47,11 @@ export default OptimizedImage;
       quality={quality}
       style={style}
 
+<<<<<<< HEAD
 quality={quality}
       style={style}
   );
 }
+=======
+export default OptimizedImage;
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c

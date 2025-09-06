@@ -5,7 +5,10 @@ import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
+<<<<<<< HEAD
 import globals from 'globals';
+=======
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
 
 const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
@@ -16,6 +19,7 @@ const compat = new FlatCompat({
 export default [
   ...compat.extends('next/core-web-vitals'),
   {
+<<<<<<< HEAD
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -102,6 +106,10 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
       },
+=======
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       parser: typescriptParser,
       parserOptions: {
         ecmaVersion: 'latest',
@@ -113,11 +121,16 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
+<<<<<<< HEAD
       'react': react,
+=======
+      react,
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
       'react-hooks': reactHooks,
       '@next/next': nextPlugin,
     },
     rules: {
+<<<<<<< HEAD
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
@@ -158,5 +171,14 @@ export default [
     rules: {
       'no-console': 'off',
     },
+=======
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+    },
+>>>>>>> origin/cursor/automate-test-improve-and-merge-code-646c
   },
 ];
