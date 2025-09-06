@@ -1,6 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-
 export default function AccessibilityScannerPage() {
 	return (
 		<>
@@ -17,4 +16,8 @@ export default function AccessibilityScannerPage() {
 			</section>
 		</>
 	)
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

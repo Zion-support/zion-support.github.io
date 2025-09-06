@@ -1,16 +1,16 @@
 import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
-import { 
-  Brain, Zap, Target, BarChart3, Users, TrendingUp, 
+import {
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
   MessageSquare, Mail, Phone, MapPin, ArrowRight,
   Star, CheckCircle, Rocket, Globe, Shield, Cpu,
   FileText, Image, Video, Music, Palette, Type,
   User, Search, Eye, Heart, ShoppingCart, Code,
-  Database, Users2, Award, Lock, Server, Network, 
-  Monitor, Settings, RefreshCw, Play, Pause, 
-  AlertTriangle, CheckCircle2, Building, Wifi, 
-  HardDrive, Cloud, Smartphone, Blocks, Wallet, 
+  Database, Users2, Award, Lock, Server, Network,
+  Monitor, Settings, RefreshCw, Play, Pause,
+  AlertTriangle, CheckCircle2, Building, Wifi,
+  HardDrive, Cloud, Smartphone, Blocks, Wallet,
   CreditCard, PiggyBank, Building2, Activity,
   Waves, BrainCircuit, CpuIcon, MonitorHeart,
   Film, Headphones, Camera, Gamepad2, Tv, Radio,
@@ -18,7 +18,6 @@ import {
   Calendar, Clock, FileText2, PieChart, Atom,
   Truck, ChevronRight, Home
 } from 'lucide-react',
-
 export default function ZionTechGroupPage() {
   return (
     <>
@@ -29,9 +28,12 @@ export default function ZionTechGroupPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Navigation */}
+        {/* Navigation */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <nav className="bg-black/20 backdrop-blur-md border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex justify-between items-center h-16">
@@ -56,8 +58,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </nav>
-
-        {/* Breadcrumb */}
+        {/* Breadcrumb */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="bg-black/20 border-b border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <nav className="flex" aria-label="Breadcrumb">
@@ -80,8 +85,11 @@ export default function ZionTechGroupPage() {
             </nav>
           </div>
         </div>
-
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="relative overflow-hidden py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
@@ -95,8 +103,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-        {/* Mission & Vision Section */}
+        {/* Mission & Vision Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -112,7 +123,6 @@ export default function ZionTechGroupPage() {
                   We believe that technology should serve humanity, not replace it. Our solutions are designed to augment human capabilities, enhance decision-making, and create a more sustainable and prosperous future for all.
                 </p>
               </div>
-
               <div>
                 <div className="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
                   <Eye className="h-8 w-8 text-white" />
@@ -128,8 +138,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-        {/* Core Values Section */}
+        {/* Core Values Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -138,7 +151,6 @@ export default function ZionTechGroupPage() {
                 These principles guide everything we do and shape the culture of our organization.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -149,7 +161,6 @@ export default function ZionTechGroupPage() {
                   We constantly push the boundaries of what's possible, embracing cutting-edge technologies and unconventional thinking.
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-8 w-8 text-white" />
@@ -159,7 +170,6 @@ export default function ZionTechGroupPage() {
                   We develop technology with a deep commitment to ethical principles, ensuring our solutions benefit humanity and protect our future.
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-white" />
@@ -169,7 +179,6 @@ export default function ZionTechGroupPage() {
                   Every solution we create is designed with human needs at the center, ensuring technology serves people, not the other way around.
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Globe className="h-8 w-8 text-white" />
@@ -179,7 +188,6 @@ export default function ZionTechGroupPage() {
                   We think globally and act locally, creating solutions that can scale to benefit communities around the world.
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Award className="h-8 w-8 text-white" />
@@ -189,7 +197,6 @@ export default function ZionTechGroupPage() {
                   We maintain the highest standards of quality in everything we do, from research and development to customer support.
                 </p>
               </div>
-
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Rocket className="h-8 w-8 text-white" />
@@ -202,8 +209,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-        {/* Technology Stack Section */}
+        {/* Technology Stack Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -212,7 +222,6 @@ export default function ZionTechGroupPage() {
                 We leverage the most advanced technologies available to create revolutionary solutions.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -223,7 +232,6 @@ export default function ZionTechGroupPage() {
                   Next-generation quantum processors and algorithms for unprecedented computational power.
                 </p>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Cpu className="h-6 w-6 text-white" />
@@ -233,7 +241,6 @@ export default function ZionTechGroupPage() {
                   Advanced machine learning, neural networks, and AI systems that learn and adapt.
                 </p>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Server className="h-6 w-6 text-white" />
@@ -243,7 +250,6 @@ export default function ZionTechGroupPage() {
                   Scalable, secure cloud platforms built for the most demanding applications.
                 </p>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-6 w-6 text-white" />
@@ -256,8 +262,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-        {/* Company Stats Section */}
+        {/* Company Stats Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -266,7 +275,6 @@ export default function ZionTechGroupPage() {
                 Our impact in numbers - showcasing the scale and reach of our technology solutions.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-400 mb-2">500+</div>
@@ -287,8 +295,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-        {/* Team Section */}
+        {/* Team Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -297,7 +308,6 @@ export default function ZionTechGroupPage() {
                 Meet the visionaries and experts who are driving innovation at Zion Tech Group.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -309,7 +319,6 @@ export default function ZionTechGroupPage() {
                   Visionary leader with over a decade of experience in quantum computing and AI innovation.
                 </p>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Brain className="h-10 w-10 text-white" />
@@ -320,7 +329,6 @@ export default function ZionTechGroupPage() {
                   Quantum computing expert with PhD from MIT and 15+ years in advanced AI research.
                 </p>
               </div>
-
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 text-center">
                 <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="h-10 w-10 text-white" />
@@ -334,8 +342,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-        {/* CTA Section */}
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="bg-purple-600">
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
@@ -355,8 +366,11 @@ export default function ZionTechGroupPage() {
             </div>
           </div>
         </div>
-
-        {/* Footer */}
+        {/* Footer */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <footer className="bg-black/40">
           <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -416,9 +430,9 @@ export default function ZionTechGroupPage() {
       </div>
     </>
   )
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import {;
   Brain, Zap, Target, BarChart3, Users, TrendingUp,;
   MessageSquare, Mail, Phone, MapPin, ArrowRight,;
@@ -436,7 +450,8 @@ import {;
   Calendar, Clock, FileText2, PieChart, Atom,;
   Truck, ChevronRight, Home;
 } from 'lucide-react';
-export default function ZionTechGroupPage() {;
+export default function ZionTechGroupPage(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -447,7 +462,11 @@ export default function ZionTechGroupPage() {;
         <link rel="icon" href="/favicon.ico" />;
       </Head>;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">;
-        {/* Navigation */}
+        {/* Navigation */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <nav className="bg-black/20 backdrop-blur-md border-b border-white/10">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="flex justify-between items-center h-16">;
@@ -472,7 +491,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </nav>;
-        {/* Breadcrumb */}
+        {/* Breadcrumb */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="bg-black/20 border-b border-white/10">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">;
             <nav className="flex" aria-label="Breadcrumb">;
@@ -495,7 +518,11 @@ export default function ZionTechGroupPage() {;
             </nav>;
           </div>;
         </div>;
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="relative overflow-hidden py-24">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center">;
@@ -509,7 +536,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </div>;
-        {/* Mission & Vision Section */}
+        {/* Mission & Vision Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16 bg-black/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">;
@@ -540,7 +571,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </div>;
-        {/* Core Values Section */}
+        {/* Core Values Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-12">;
@@ -607,7 +642,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </div>;
-        {/* Technology Stack Section */}
+        {/* Technology Stack Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16 bg-black/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-12">;
@@ -656,7 +695,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </div>;
-        {/* Company Stats Section */}
+        {/* Company Stats Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-12">;
@@ -685,7 +728,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </div>;
-        {/* Team Section */}
+        {/* Team Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="py-16 bg-black/20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">;
             <div className="text-center mb-12">;
@@ -728,7 +775,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </div>;
-        {/* CTA Section */}
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="bg-purple-600">;
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">;
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">;
@@ -748,7 +799,11 @@ export default function ZionTechGroupPage() {;
             </div>;
           </div>;
         </div>;
-        {/* Footer */}
+        {/* Footer */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <footer className="bg-black/40">;
           <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8">;
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">;
@@ -808,4 +863,8 @@ export default function ZionTechGroupPage() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

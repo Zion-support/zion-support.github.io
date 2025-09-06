@@ -4,7 +4,6 @@ const Page: NextPage = () => {
   return (
 import type {_NextPage} from 'next';
 import Head from 'next/head';
-
 const Page: NextPage = () => {_return (
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
     <>
@@ -19,6 +18,5 @@ const Page: NextPage = () => {_return (
     </>
   )
 },
->>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231;
 export default Page

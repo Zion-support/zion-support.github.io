@@ -4,7 +4,6 @@ import Revolutionary2026UltimateNavigation from '../components/layout/Revolution
 import Revolutionary2026UltimateHero from '../components/sections/Revolutionary2026UltimateHero',
 import Revolutionary2026UltimateServicesShowcase from '../components/sections/Revolutionary2026UltimateServicesShowcase',
 import { Phone, Mail } from 'lucide-react',
-
 export default function Revolutionary2026ServicesPage() {
   return (
     <>
@@ -13,28 +12,40 @@ export default function Revolutionary2026ServicesPage() {
         <meta name="description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services. Transform your business with autonomous intelligence and quantum-powered solutions." />
         <meta name="keywords" content="AI services, quantum computing, emerging technology, healthcare biotech, fintech blockchain, 2026 technology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
-        {/* Open Graph */}
+        {/* Open Graph */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <meta property="og:title" content="Revolutionary 2026 Services - Zion Tech Group" />
         <meta property="og:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/revolutionary-2026-services" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
-        
-        {/* Twitter */}
+        {/* Twitter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Revolutionary 2026 Services - Zion Tech Group" />
         <meta name="twitter:description" content="Experience the future with our cutting-edge AI, quantum computing, and emerging technology services." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image-revolutionary-2026.jpg" />
-        
-        {/* Additional Meta */}
+        {/* Additional Meta */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="contact" content="kleber@ziontechgroup.com" />
         <meta name="phone" content="+1 302 464 0950" />
         <meta name="address" content="364 E Main St STE 1008 Middletown DE 19709" />
-        
-        {/* Structured Data */}
+        {/* Structured Data */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -63,23 +74,45 @@ export default function Revolutionary2026ServicesPage() {
                 "https://github.com/Zion-Holdings"
               ]
             })
-          }}
+          }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         />
       </Head>
-
       <main className="min-h-screen bg-gray-900">
-        {/* Navigation */}
+        {/* Navigation */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <Revolutionary2026UltimateNavigation />;
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <Revolutionary2026UltimateHero />;
-        {/* Services Showcase */}
+        {/* Services Showcase */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <Revolutionary2026UltimateServicesShowcase />;
-        {/* Additional Content Sections */}
+        {/* Additional Content Sections */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10"></div>
-          
           <div className="max-w-7xl mx-auto relative z-10">
-            {/* Why Choose Zion Tech Group */}
+            {/* Why Choose Zion Tech Group */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -87,12 +120,15 @@ export default function Revolutionary2026ServicesPage() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers in the future of AI, quantum computing, 
+                We're not just another technology company. We're pioneers in the future of AI, quantum computing,
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
-
-            {/* Features Grid */}
+            {/* Features Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
                 {
@@ -130,38 +166,54 @@ export default function Revolutionary2026ServicesPage() {
                   title: 'Global Impact',
                   description: 'Serving 2,500+ customers worldwide with transformative technology solutions.',
                   color: 'from-indigo-500 to-purple-500'
-                }
+                  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               ].map((feature, index) => (
                 <div key={index} className="group">
                   <div className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-105">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform`}>
-                      {feature.icon}
+                      {feature.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{feature.description}</p>
                   </div>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
-            {/* Call to Action */}
+            {/* Call to Action */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-900/20 to-cyan-900/20 rounded-3xl p-12 border border-purple-500/20">
                 <h3 className="text-3xl md: text-4xl font-bold text-white mb-6">
                   Ready to Experience the Future?
                 </h3>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Join thousands of forward-thinking companies already using our revolutionary services 
+                  Join thousands of forward-thinking companies already using our revolutionary services
                   to gain competitive advantages and accelerate innovation.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
+                  <a
                     href="tel:+13024640950"
                     className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 flex items-center justify-center gap-2"
                   >
                     <Phone className="w-5 h-5" />
                     Call +1 302 464 0950
                   </Link>
-                  <a 
+                  <a
                     href="mailto:kleber@ziontechgroup.com"
                     className="border border-purple-500/50 text-purple-400 hover:bg-purple-500/10 font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                   >
@@ -208,4 +260,8 @@ export default function Revolutionary2026ServicesPage() {
       </main>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

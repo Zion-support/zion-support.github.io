@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Search, Filter, Grid, List, ArrowRight, ExternalLink,;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
@@ -8,28 +8,29 @@ import {;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon,;
   X, Sliders, SortAsc, SortDesc;
 } from 'lucide-react',;
-import SmartHeader from '../components/SmartHeader',;
-import SmartFooter from '../components/SmartFooter',;
-export default function SearchPage() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [searchResults, setSearchResults] = useState<any[]>([]),;
-  const [isSearching, setIsSearching] = useState(false),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function SearchPage(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filters, setFilters] = useState({;
-    category: 'all',;
+    category: 'all';
     status: 'all',;
     priceRange: 'all',;
     technology: 'all';
-  }),;
-  const [sortBy, setSortBy] = useState('relevance'),;
-  const [showFilters, setShowFilters] = useState(false),;
+  });
+  const [sortBy, setSortBy] = useState('relevance');
+  const [showFilters, setShowFilters] = useState(false);
   // Mock data for search;
   const allServices = [;
     {;
-      id: 'ai-business-intelligence',;
-      title: 'AI Business Intelligence',;
-      description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling',;
-      category: 'AI & Machine Learning',;
+      id: 'ai-business-intelligence';
+      title: 'AI Business Intelligence';
+      description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling';
+      category: 'AI & Machine Learning';
       status: 'active',;
       price: '$499/month',;
       technology: 'AI/ML',;
@@ -164,7 +165,11 @@ export default function SearchPage() {;
       icon: TrendingUp,;
       color: 'from-emerald-500 to-green-500',;
       relevance: 68;
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const categories = [;
     { id: 'all', name: 'All Categories', icon: '📂' },;
@@ -175,20 +180,32 @@ export default function SearchPage() {;
     { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐' },;
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },;
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },;
-    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
+    { id: 'Financial Technology', name: 'Financial Technology', icon: '💰'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const statuses = [;
     { id: 'all', name: 'All Statuses', icon: '📊' },;
     { id: 'active', name: 'Active', icon: '✅' },;
     { id: 'beta', name: 'Beta', icon: '🧪' },;
-    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
+    { id: 'coming-soon', name: 'Coming Soon', icon: '🚧'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const priceRanges = [;
     { id: 'all', name: 'All Prices', icon: '💰' },;
     { id: 'under-500', name: 'Under $500/month', icon: '💵' },;
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },;
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },;
-    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
+    { id: 'over-2500', name: 'Over $2,500/month', icon: '💵'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const technologies = [;
     { id: 'all', name: 'All Technologies', icon: '🔧' },;
@@ -197,44 +214,60 @@ export default function SearchPage() {;
     { id: 'Edge', name: 'Edge', icon: '🌐' },;
     { id: 'Space', name: 'Space', icon: '🚀' },;
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },;
-    { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
+    { id: 'DevOps', name: 'DevOps', icon: '⚙️'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   // Search function;
   const performSearch = () => {;
     if (!searchTerm.trim()) {;
-      setSearchResults([]),;
+      setSearchResults([]);
       return;
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-    setIsSearching(true),;
+    setIsSearching(true);
     // Simulate search delay;
     setTimeout(() => {;
       const results = allServices.filter(service => {;
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                             service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                            service.technology.toLowerCase().includes(searchTerm.toLowerCase()),;
-        const matchesCategory = filters.category === 'all' || service.category === filters.category,;
-        const matchesStatus = filters.status === 'all' || service.status === filters.status,;
-        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology,;
-        let matchesPrice = true,;
+                            service.technology.toLowerCase().includes(searchTerm.toLowerCase());
+        const matchesCategory = filters.category === 'all' || service.category === filters.category;
+        const matchesStatus = filters.status === 'all' || service.status === filters.status;
+        const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
+        let matchesPrice = true;
         if (filters.priceRange !== 'all') {;
           const price = parseInt(service.price.replace(/[^0-9]/g, '')),;
           switch (filters.priceRange) {;
             case 'under-500':;
-              matchesPrice = price < 500,;
+              matchesPrice = price < 500;
               break,;
             case '500-1000':;
-              matchesPrice = price >= 500 && price < 1000,;
+              matchesPrice = price >= 500 && price < 1000;
               break,;
             case '1000-2500':;
-              matchesPrice = price >= 1000 && price < 2500,;
+              matchesPrice = price >= 1000 && price < 2500;
               break,;
             case 'over-2500':;
-              matchesPrice = price >= 2500,;
+              matchesPrice = price >= 2500;
               break;
-          }
-        }
+            } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
         return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice;
       }),;
@@ -248,13 +281,17 @@ export default function SearchPage() {;
           case 'price-high':;
             return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, '')),;
           case 'name':;
-            return a.title.localeCompare(b.title),;
+            return a.title.localeCompare(b.title);
           case 'status':;
-            return a.status.localeCompare(b.status),;
+            return a.status.localeCompare(b.status);
           default: return 0;
-        }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       }),;
-      setSearchResults(sortedResults),;
+      setSearchResults(sortedResults);
       setIsSearching(false);
     }, 500);
   },;
@@ -262,15 +299,22 @@ export default function SearchPage() {;
   const handleKeyPress = (e: React.KeyboardEvent) => {;
     if (e.key === 'Enter') {;
       performSearch();
-    }
-  },;
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
   // Update search when filters change;
   useEffect(() => {;
     if (searchTerm.trim()) {;
       performSearch();
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }, [filters, sortBy]),
-
   // Clear all filters
   const clearFilters = () => {
     setFilters({
@@ -281,7 +325,6 @@ export default function SearchPage() {;
     }),
     setSortBy('relevance')
   },
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -291,33 +334,54 @@ export default function SearchPage() {;
         <meta property="og:description" content="Advanced search across all services and solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/search" />
       </Head>
-
       <SmartHeader />
-
-      {/* Hero Section */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Search Our Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Find the perfect AI and technology solutions for your business needs. 
+              Find the perfect AI and technology solutions for your business needs.
               Search across our comprehensive service catalog with advanced filtering options.
             </p>
           </motion.div>
         </div>
       </section>
-
-      {/* Search Interface */}
+      {/* Search Interface */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
-            {/* Search Bar */}
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
               <div className="flex-1 max-w-2xl">
                 <div className="relative">
@@ -325,57 +389,111 @@ export default function SearchPage() {;
                   <input
                     type="text"
                     placeholder="Search for services, technologies, or solutions..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    onKeyPress={handleKeyPress}
+                    value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onKeyPress={handleKeyPress  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all text-lg"
                   />
                   <button
-                    onClick={performSearch}
+                    onClick={performSearch  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
                   >
                     Search
                   </button>
                 </div>
               </div>
-
-              {/* View Mode Toggle */}
+              {/* View Mode Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="flex items-center gap-2">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20';
-                  }`}
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={() => setViewMode('list')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className={`p-2 rounded-lg transition-all duration-300 ${;
                     viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20';
-                  }`}
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
                   <List className="w-5 h-5" />
                 </button>
               </div>
             </div>
-
-            {/* Filters and Sort */}
+            {/* Filters and Sort */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
                 <button
-                  onClick={() => setShowFilters(!showFilters)}
+                  onClick={() => setShowFilters(!showFilters)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
                 >
                   <Sliders className="w-4 h-4" />
                   Filters
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  )}
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </button>;
                 <select;
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
                   <option value="relevance">Sort by Relevance</option>
@@ -385,106 +503,237 @@ export default function SearchPage() {;
                   <option value="status">Sort by Status</option>
                 </select>
               </div>
-
               {Object.values(filters).some(f => f !== 'all') && (
                 <button
-                  onClick={clearFilters}
+                  onClick={clearFilters  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   <X className="w-4 h-4" />
                   Clear Filters
                 </button>
-              )}
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
-            {/* Expanded Filters */}
+            {/* Expanded Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             {showFilters && (;
               <motion.div;
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
+                initial={{ opacity: 0, height: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, height: 'auto' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                exit={{ opacity: 0, height: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="mt-6 pt-6 border-t border-white/20"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  {/* Category Filter */}
+                  {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div>
                     <label className="block text-white font-medium mb-2">Category</label>
                     <select
-                      value={filters.category}
-                      onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
+                      value={filters.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
-                          {category.icon} {category.name}
+                          {category.icon} {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </option>;
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </select>;
                   </div>;
-                  {/* Status Filter */}
+                  {/* Status Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div>
                     <label className="block text-white font-medium mb-2">Status</label>
                     <select
-                      value={filters.status}
-                      onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
+                      value={filters.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {statuses.map(status => (
                         <option key={status.id} value={status.id} className="bg-slate-800 text-white">
-                          {status.icon} {status.name}
+                          {status.icon} {status.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </option>;
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </select>;
                   </div>;
-                  {/* Price Range Filter */}
+                  {/* Price Range Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div>
                     <label className="block text-white font-medium mb-2">Price Range</label>
                     <select
-                      value={filters.priceRange}
-                      onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
+                      value={filters.priceRange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {priceRanges.map(range => (
                         <option key={range.id} value={range.id} className="bg-slate-800 text-white">
-                          {range.icon} {range.name}
+                          {range.icon} {range.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </option>;
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </select>;
                   </div>;
-                  {/* Technology Filter */}
+                  {/* Technology Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <div>
                     <label className="block text-white font-medium mb-2">Technology</label>
                     <select
-                      value={filters.technology}
-                      onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
+                      value={filters.technology  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {technologies.map(tech => (
                         <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
-                          {tech.icon} {tech.name}
+                          {tech.icon} {tech.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </option>;
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </select>;
                   </div>;
                 </div>;
               </motion.div>;
-            )}
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* Search Results */}
+      {/* Search Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
-          {/* Results Header */}
+          {/* Results Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
-              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'}
+              {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </h2>
             <p className="text-white/60">
-              {isSearching ? 'Searching...' : `${searchResults.length} services found`}
-              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
+              {isSearching ? 'Searching...' : `${searchResults.length} services found`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              {Object.values(filters).some(f => f !== 'all') && ' (filtered)'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </p>;
           </div>;
-          {/* Loading State */}
+          {/* Loading State */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {isSearching && (
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
@@ -492,9 +741,17 @@ export default function SearchPage() {;
               </div>
               <p className="text-white/60">Searching our services...</p>
             </div>
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-          {/* No Results */}
+          {/* No Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {!isSearching && searchTerm && searchResults.length === 0 && (
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -505,29 +762,61 @@ export default function SearchPage() {;
                 Try adjusting your search terms or filters
               </p>
               <button
-                onClick={clearFilters}
+                onClick={clearFilters  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
               >
                 Clear All Filters
               </button>
             </div>
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-          {/* Search Results */}
+          {/* Search Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {!isSearching && searchResults.length > 0 && (
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
                 {searchResults.map((service, index) => (
                   <motion.div
-                    key={service.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className={`group relative ${;
                       viewMode === 'grid';
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300';
-                    }`}
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
@@ -541,21 +830,30 @@ export default function SearchPage() {;
                             service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
                             'bg-blue-500/20 text-blue-300'
                           }`}>
-                            {service.status}
+                            {service.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </span>
                           <span className="text-xs text-white/40">{service.technology}</span>
                         </div>
                       </div>
-                      
                       <h3 className="text-xl font-bold mb-3 text-white">{service.title}</h3>
                       <p className="text-white/70 leading-relaxed mb-4">{service.description}</p>
-                      
-                      {/* Price */}
+                      {/* Price */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className="mb-4">
                         <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
                       </div>
-                      
-                      {/* Features */}
+                      {/* Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className="mb-6">
                         <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
                         <div className="space-y-2">
@@ -564,13 +862,20 @@ export default function SearchPage() {;
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
                             </div>
-                          ))}
+                          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </div>
                       </div>
-                      
                       <div className="flex items-center justify-between">
                         <a
-                          href={service.link}
+                          href={service.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"
                         >
                           <span className="text-sm font-medium">Learn More</span>
@@ -585,12 +890,24 @@ export default function SearchPage() {;
                       </div>
                     </div>
                   </motion.div>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
             </AnimatePresence>;
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-          {/* Initial State - Show all services when no search */}
+          {/* Initial State - Show all services when no search */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {!isSearching && !searchTerm && (
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -617,22 +934,46 @@ export default function SearchPage() {;
                 <span className="text-sm text-white/40">Popular searches:</span>;
                 {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (;
                   <button;
-                    key={term}
+                    key={term  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     onClick={() => {;
                       setSearchTerm(term);
                       performSearch();
-                    }}
+                    }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
                   >
-                    {term}
+                    {term  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </button>;
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
             </div>;
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>;
       </section>;
       <SmartFooter />;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

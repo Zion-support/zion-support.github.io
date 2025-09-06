@@ -1,4 +1,4 @@
-import Link from 'next/link',;
+import Link from 'next/link';
 const features = [;
   { key: 'private_portal', label: 'Private hiring portal' },;
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },;
@@ -7,9 +7,9 @@ const features = [;
   { key: 'admin_dashboards', label: 'Admin dashboards' }],;
 const tiers = [;
   {;
-    id: 'teams',;
-    name: 'Teams',;
-    price: '$199/mo',;
+    id: 'teams';
+    name: 'Teams';
+    price: '$199/mo';
     blurb: 'Up to 10 users, core collaboration features',;
     highlights: ['10 seatsPrivate portalAdmin dashboard'],;
     includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }},;
@@ -27,7 +27,8 @@ const tiers = [;
     blurb: 'Unlimited users, custom contracts and SLAs',;
     highlights: ['Unlimited seatsCustom SLADedicated CSM'],;
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}];
-export default function EnterprisePlans() {;
+export default function EnterprisePlans(req, res) {
+  try {
   return (;
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>;
       <header style={{ textAlign: 'center', marginBottom: '2rem' }}>;
@@ -43,7 +44,11 @@ export default function EnterprisePlans() {;
             <ul style={{ marginTop: 8 }}>;
               {t.highlights.map(h => (;
                 <li key={h}>• {h}</li>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </ul>
             <div style={{ marginTop: 16, display: 'flex', gap: 8 }}>
               <Link href="/enterprise" passHref legacyBehavior>
@@ -52,7 +57,11 @@ export default function EnterprisePlans() {;
               <a href="mailto:sales@zion.ai" style={{ padding: '0.5rem 0.75rem', border: '1px solid #111827', borderRadius: 8 }}>Schedule a Demo</Link>
             </div>
           </div>
-        ))}
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       </section>;
       <section style={{ marginTop: '2rem' }}>;
         <h2>Feature comparison</h2>;
@@ -63,7 +72,11 @@ export default function EnterprisePlans() {;
                 <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Feature</th>;
                 {tiers.map(t => (;
                   <th key={t.id} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #e5e7eb' }}>{t.name}</th>;
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </tr>;
             </thead>;
             <tbody>;
@@ -72,16 +85,27 @@ export default function EnterprisePlans() {;
                   <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>;
                   {tiers.map(t => (;
                     <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>;
-                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'}
+                      {t.includes[f.key as keyof typeof t.includes] ? '✓' : '—'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </td>;
-                  ))}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </tr>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </tbody>
           </table>
         </div>
       </section>
-
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -94,4 +118,8 @@ export default function EnterprisePlans() {;
       </section>
     </main>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

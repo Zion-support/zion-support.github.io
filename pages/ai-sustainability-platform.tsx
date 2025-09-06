@@ -10,5 +10,9 @@ export default function AISustainabilityPlatformPage() {
       </div>
     </div>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

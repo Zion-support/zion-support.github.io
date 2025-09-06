@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
-  try {
     const map = { design: 'map' };
     const tokens = { colors: {}, typography: {} };
     res.status(200).json({
@@ -15,8 +14,8 @@ export default async function handler(req, res) {
     });
 import JSZip from 'jszip';
 import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  try {;
+export default async function handler(req, res) {
+  try {
     const kit = (req.query.kit as string) || 'tailwind';
     const kind = (['tailwindchakrareact'].includes(kit) ? kit : 'tailwind') as UIKitKind;
     const zip = new JSZip();
@@ -35,8 +34,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.setHeader('Content-Typeapplication/zip');
     res.setHeader('Content-Disposition', `attachment, filename=zion-design-${kind}.zip`);
     res.status(200).send(buffer);
-  } catch (e: any) {;
+  } catch (error) {
     res.status(500).json({ error: e?.message || 'Export failed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

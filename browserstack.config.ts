@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test',;
+import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({;
   testDir: 'tests/e2e',;
   use: {;
@@ -9,30 +9,54 @@ export default defineConfig({;
       name: 'Desktop Chrome',;
       use: {;
         browserName: 'chromium',;
-        channel: 'chrome'}
+        channel: 'chrome'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },;
     {;
       name: 'Desktop Firefox',;
       use: {;
-        browserName: 'firefox'}
+        browserName: 'firefox'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },;
     {;
       name: 'Desktop Safari',;
       use: {;
-        browserName: 'webkit'}
+        browserName: 'webkit'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },;
     {;
       name: 'Mobile Chrome',;
       use: {;
         browserName: 'chromium',;
-        ...devices['Pixel 5']}
+        ...devices['Pixel 5']  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },;
     {;
       name: 'Mobile Safari',;
       use: {;
         browserName: 'webkit',;
-        ...devices['iPhone 12']}
-    }
+        ...devices['iPhone 12']  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   reporter: [;
     ['list'];

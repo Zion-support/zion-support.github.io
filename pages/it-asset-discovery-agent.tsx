@@ -36,11 +36,12 @@ export default function ITAssetDiscoveryAgentPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-import React from 'react',;
-import Head from 'next/head',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
+import React from 'react';
+import Head from 'next/head';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
-export default function ITAssetDiscoveryAgentPage() {;
+export default function ITAssetDiscoveryAgentPage(req, res) {
+  try {
 	return (;
 		<UltraFuturisticBackground variant="space" intensity="high">;
 			<Head>;
@@ -74,5 +75,9 @@ export default function ITAssetDiscoveryAgentPage() {;
 			</div>;
 		</UltraFuturisticBackground>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

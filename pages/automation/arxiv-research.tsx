@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore
+// @ts-ignore;
 import data from '../../data/arxiv-research.json',
 export default function ArxivResearchPage() {
   const items: any[] = (data?.items || []).slice(0, 40),
@@ -12,14 +12,26 @@ export default function ArxivResearchPage() {
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
               <a href={it.link} target="_blank" rel="noreferrer" className="font-medium underline">
-                {it.title}
+                {it.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">{(it.authors || []).join(', ')}</div>
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.summary}</p>
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ul>;
       </div>;
     </EnhancedLayout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

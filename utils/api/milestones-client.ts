@@ -1,9 +1,13 @@
 export async function fetchMilestones(projectId: string) {;
   const res = await fetch(`/api/projects/${projectId}/milestones`, {;
     headers: { 'Content-Type': 'application/json' },;
-    credentials: 'include'}),;
-  if (!res.ok) throw new Error('Failed to load milestones'),;
+    credentials: 'include'});
+  if (!res.ok) throw new Error('Failed to load milestones');
   return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export async function createMilestone(projectId: string, payload: any) {;
@@ -14,6 +18,10 @@ export async function createMilestone(projectId: string, payload: any) {;
     body: JSON.stringify(payload)}),;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
@@ -24,4 +32,8 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     body: JSON.stringify(body)}),;
   if (!res.ok) throw new Error(await res.text());
   return res.json();
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

@@ -1,13 +1,16 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
 export default function FAQ() {
   const contact = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
   const faqs = [
     {
       question: "What services does Zion Tech Group offer ? ",
@@ -48,9 +51,12 @@ export default function FAQ() {
     {
       question: "Do you work with small businesses?",
       answer: "Yes, we work with businesses of all sizes, from startups to enterprises. Our micro SaaS products are particularly well-suited for small and medium businesses looking for cost-effective solutions."
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ]
-
   return (
     <>
       <Head>
@@ -59,9 +65,12 @@ export default function FAQ() {
         <meta name="keywords" content="FAQ, frequently asked questions, zion tech group, micro SaaS, AI services, IT solutions" />
         <link rel="canonical" href={`${contact.site}/faq`} />
       </Head>
-      
       <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6">
@@ -71,13 +80,16 @@ export default function FAQ() {
               Get Answers to Common Questions
             </p>
             <p className="text-lg text-slate-400 mb-12 max-w-3xl mx-auto">
-              Find answers to the most common questions about our services, pricing, 
+              Find answers to the most common questions about our services, pricing,
               implementation, and support. Can&apos;t find what you&apos;re looking for? Contact us directly.
             </p>
           </div>
         </section>
-
-        {/* FAQ Section */}
+        {/* FAQ Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
@@ -86,28 +98,42 @@ export default function FAQ() {
                   <h3 className="text-xl font-bold mb-4 text-blue-400">{faq.question}</h3>
                   <p className="text-slate-300 leading-relaxed">{faq.answer}</p>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </div>
         </section>
-
-        {/* Contact CTA */}
+        {/* Contact CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-16 px-4 bg-slate-900/40">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">
               Still Have Questions?
             </h2>
             <p className="text-lg text-slate-300 mb-8">
-              Our team is here to help. Contact us for personalized answers to your specific questions 
+              Our team is here to help. Contact us for personalized answers to your specific questions
               and to discuss how we can help your business.
             </p>
-            
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">
-                Call {contact.phone}
+                Call {contact.phone  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </a>
               <a href={`mailto:${contact.email}`} className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors">
-                Email {contact.email}
+                Email {contact.email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </a>
               <Link href="/contact" className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors">
                 Contact Form
@@ -118,4 +144,8 @@ export default function FAQ() {
       </main>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

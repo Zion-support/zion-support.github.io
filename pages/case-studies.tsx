@@ -15,10 +15,11 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-export default function CaseStudiesPage() {;
+export default function CaseStudiesPage(req, res) {
+  try {
 	return (;
 		<Layout>;
 			<Head>;
@@ -32,5 +33,9 @@ export default function CaseStudiesPage() {;
 			</section>;
 		</Layout>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

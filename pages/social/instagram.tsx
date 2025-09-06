@@ -1,10 +1,15 @@
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-export default function InstagramRedirect() {;
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+export default function InstagramRedirect(req, res) {
+  try {
 	useEffect(() => {;
 		if (typeof window !== 'undefined') {;
 			window.location.replace('https: //instagram.com/ziontechgroup');
-		}
+		  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 	}, []),
 	return (
 		<>
@@ -37,4 +42,8 @@ export default function InstagramRedirect() {;
 			</div>;
 		</>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

@@ -1,15 +1,20 @@
-import { useEffect, useState } from 'react',;
-export default function AdminPartners() {;
-  const [partners, setPartners] = useState<any[]>([]),;
-  const [selected, setSelected] = useState<string>(''),;
-  const [flags, setFlags] = useState<any[]>([]),;
+import { useEffect, useState } from 'react';
+export default function AdminPartners(req, res) {
+  try {
+  const [partners, setPartners] = useState<any[]>([]);
+  const [selected, setSelected] = useState<string>('');
+  const [flags, setFlags] = useState<any[]>([]);
   useEffect(() => {;
     (async () => {;
-      try {;
-        const res = await fetch('/api/admin/partners/list'),;
-        const json = await res.json(),;
+      try {
+        const res = await fetch('/api/admin/partners/list');
+        const json = await res.json();
         setPartners(json.partners || []);
-      } catch {}
+      } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     })();
   }, []),;
   async function updatePartner(code: string, updates: any) {;
@@ -17,18 +22,25 @@ export default function AdminPartners() {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify({ code, ...updates })}),;
-    const res = await fetch('/api/admin/partners/list'),;
-    const json = await res.json(),;
+    const res = await fetch('/api/admin/partners/list');
+    const json = await res.json();
     setPartners(json.partners || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 ;
   async function viewFlags(code: string) {;
-    setSelected(code),;
+    setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
     const json = await res.json();
     setFlags(json.flags || []);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
+}
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
@@ -52,11 +64,31 @@ export default function AdminPartners() {;
                 <td className="py-2 pr-4">
                   <input
                     type="number"
-                    defaultValue={p.commission_rate}
-                    min={0}
-                    max={1}
-                    step={0.01}
-                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })}
+                    defaultValue={p.commission_rate  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    min={0  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    max={1  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    step={0.01  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onBlur={(e) => updatePartner(p.code, { commission_rate: Number(e.target.value) })  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-24 border rounded px-2 py-1"
                   />
                 </td>
@@ -66,24 +98,47 @@ export default function AdminPartners() {;
                   <button className="px-2 py-1 rounded border" onClick={() => viewFlags(p.code)}>Fraud Flags</button>
                 </td>
               </tr>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </tbody>
         </table>
       </div>
-
       {selected && (
         <div className="p-4 rounded border">
           <h2 className="font-semibold mb-2">Fraud Flags • {selected}</h2>
           <ul className="list-disc pl-6">
             {flags.map((f, idx) => (
               <li key={idx}>
-                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>}
+                <span className="font-medium">{f.type}</span> — {f.severity} {f.note && <span className="text-gray-500">({f.note})</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </li>
-            ))}
-            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            {flags.length === 0 && <li className="text-gray-500 list-none">No flags</li>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </ul>
         </div>
-      )}
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

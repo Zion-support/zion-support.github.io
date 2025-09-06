@@ -14,6 +14,14 @@ function bad(res: NextApiResponse, message: string, code = 400) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,6 +57,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
@@ -61,18 +77,42 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
       if (user.role === "talent") {;
-        const offers = listOffers({ talentSlug: user.talentSlug }),;
+        const offers = listOffers({ talentSlug: user.talentSlug });
         return return res.json({ ok: true, offers });
         } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
       return bad(res, "Unknown role", 403)
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -84,6 +124,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields")
         } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -101,6 +149,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       saveOffer(offer),
       return res.status(201).json({ ok: true, offer })
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -141,6 +197,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
       if (action === "request_changes") {
@@ -152,15 +216,31 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
       if (action === "decline") {;
-        if (user.role !== "talent") return bad(res, "Only talent can decline", 403),;
-        existing.status = "DECLINED",;
+        if (user.role !== "talent") return bad(res, "Only talent can decline", 403);
+        existing.status = "DECLINED";
         saveOffer(existing);
         return return res.json({ ok: true, offer: existing });
         } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -168,6 +248,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ;
       return bad(res, "Unknown action");
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -178,9 +266,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
 ;
     return bad(res, "Method not allowed", 405);
-  } catch (e: any) {;
+  } catch (error) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

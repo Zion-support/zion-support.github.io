@@ -18,9 +18,8 @@ module.exports = {;
       )};
     return config};
 };
-
 ;
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'),;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {,;
   "webpack": (config { isServer }) => {,;
     if ( {,;

@@ -4,20 +4,20 @@ export type MilestoneStatus =;
   | 'Submitted';
   | 'Approved';
   | 'Paid',;
-export type MilestoneAttachment = {;
-  id: string,;
-  type: 'link' | 'file',;
-  url: string,;
+export type MilestoneAttachment = {
+  id: string;
+  type: 'link' | 'file';
+  url: string;
   label?: string,;
-  uploadedByUserId: string,;
+  uploadedByUserId: string;
   uploadedAt: string, // ISO date;
-},;
-export type Milestone = {;
-  id: string,;
-  title: string,;
-  description?: string,;
+};
+export type Milestone = {
+  id: string;
+  title: string;
+  description?: string;
   dueDate: string, // ISO date;
-  amountUsd: number,;
+  amountUsd: number;
   status: MilestoneStatus,;
   attachments?: MilestoneAttachment[],;
   submittedByUserId?: string,;
@@ -25,18 +25,18 @@ export type Milestone = {;
   paidAt?: string, // ISO date;
   createdAt: string, // ISO date;
   updatedAt: string, // ISO date;
-},;
-export type ProjectParticipantRole = 'client' | 'talent',;
-export type ProjectParticipants = {;
-  clientUserId: string,;
+};
+export type ProjectParticipantRole = 'client' | 'talent';
+export type ProjectParticipants = {
+  clientUserId: string;
   talentUserId: string;
-},;
-export type Project = {;
-  id: string,;
-  name: string,;
-  participants: ProjectParticipants,;
-  milestones: Milestone[],;
-  createdAt: string,;
+};
+export type Project = {
+  id: string;
+  name: string;
+  participants: ProjectParticipants;
+  milestones: Milestone[];
+  createdAt: string;
   updatedAt: string;
 };
 export function isMilestoneStatus(value: string): value is MilestoneStatus {;
@@ -47,4 +47,8 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {;
     value === 'Approved' ||;
     value === 'Paid';
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

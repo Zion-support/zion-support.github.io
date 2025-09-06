@@ -21,5 +21,4 @@ const LanguageSync: NextPage = () => {
     </div>
   )
 },
-
 export default LanguageSync,

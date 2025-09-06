@@ -3,13 +3,19 @@ export interface ContactInfo {
   email: string;
   address: string;
   site: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface AnimationState {
   isLoaded: boolean;
   hasError: boolean;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface Service {
   id: string;
   title: string;
@@ -21,8 +27,11 @@ export interface Service {
     pro: number;
     enterprise: number;
   };
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface Testimonial {
   id: string;
   name: string;
@@ -30,8 +39,11 @@ export interface Testimonial {
   content: string;
   rating: number;
   avatar?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface BlogPost {
   id: string;
   title: string;
@@ -41,8 +53,11 @@ export interface BlogPost {
   publishedAt: string;
   tags: string[];
   slug: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface CaseStudy {
   id: string;
   title: string;
@@ -53,8 +68,11 @@ export interface CaseStudy {
   results: string[];
   technologies: string[];
   image?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface TeamMember {
   id: string;
   name: string;
@@ -66,15 +84,21 @@ export interface TeamMember {
     twitter?: string;
     github?: string;
   };
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface FAQ {
   id: string;
   question: string;
   answer: string;
   category: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface PricingPlan {
   id: string;
   name: string;
@@ -83,22 +107,31 @@ export interface PricingPlan {
   features: string[];
   popular?: boolean;
   cta: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface ApiResponse<T = any> {
   success: boolean;
   data?: T;
   error?: string;
   message?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface PaginationParams {
   page: number;
   limit: number;
   sortBy?: string;
   sortOrder?: 'asc' | 'desc';
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export interface PaginatedResponse<T> extends ApiResponse<T[]> {
   pagination: {
     page: number;
@@ -106,4 +139,8 @@ export interface PaginatedResponse<T> extends ApiResponse<T[]> {
     total: number;
     totalPages: number;
   };
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

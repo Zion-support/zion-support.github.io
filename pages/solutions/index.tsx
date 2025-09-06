@@ -33,7 +33,11 @@ const SolutionsPage: NextPage = () => {
           pricing: "$20,000 - $80,000",
           link: "https://ziontechgroup.com/solutions/telemedicine",
           icon: "💻"
-        }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ]
     },
     // Financial Services Solutions
@@ -66,7 +70,11 @@ const SolutionsPage: NextPage = () => {
           pricing: "$35,000 - $100,000",
           link: "https://ziontechgroup.com/solutions/regtech-compliance",
           icon: "📋"
-        }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ]
     },
     // Manufacturing & Industry 4.0
@@ -99,7 +107,11 @@ const SolutionsPage: NextPage = () => {
           pricing: "$60,000 - $250,000",
           link: "https://ziontechgroup.com/solutions/digital-twin",
           icon: "🔄"
-        }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ]
     },
     // Retail & E-commerce Solutions
@@ -132,7 +144,11 @@ const SolutionsPage: NextPage = () => {
           pricing: "$45,000 - $180,000",
           link: "https://ziontechgroup.com/solutions/ar-vr-shopping",
           icon: "🥽"
-        }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ]
     },
     // Education & Training Solutions
@@ -165,7 +181,11 @@ const SolutionsPage: NextPage = () => {
           pricing: "$15,000 - $60,000",
           link: "https://ziontechgroup.com/solutions/learning-analytics",
           icon: "📊"
-        }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ]
     },
     // Government & Public Sector
@@ -198,11 +218,18 @@ const SolutionsPage: NextPage = () => {
           pricing: "$75,000 - $300,000",
           link: "https://ziontechgroup.com/solutions/digital-identity",
           icon: "🆔"
-        }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ];
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-purple-50">
       <Head>
@@ -210,80 +237,131 @@ const SolutionsPage: NextPage = () => {
         <meta name="description" content="Discover industry-specific technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors. Tailored solutions for your business needs." />
         <meta name="keywords" content="healthcare solutions, fintech, manufacturing 4.0, retail technology, education tech, government solutions, industry solutions" />
       </Head>
-      
       <main className="container mx-auto px-4 py-16">
-        {/* Header Section */}
+        {/* Header Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
             Industry-Specific Solutions
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-            We deliver tailored technology solutions designed specifically for your industry. 
-            From healthcare AI to smart manufacturing, our solutions address real business challenges 
+            We deliver tailored technology solutions designed specifically for your industry.
+            From healthcare AI to smart manufacturing, our solutions address real business challenges
             and drive measurable results.
           </p>
         </div>
-
-        {/* Solutions Grid */}
+        {/* Solutions Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="space-y-16">
           {solutions.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl p-8">
               <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-                {category.category}
+                {category.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {category.solutions.map((solution, solutionIndex) => (
                   <div key={solutionIndex} className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-purple-100">
                     <div className="text-4xl mb-4">{solution.icon}</div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
-                      {solution.name}
+                      {solution.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">
-                      {solution.description}
+                      {solution.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </p>
-                    
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Use Cases:</h4>
                       <ul className="space-y-1">
                         {solution.useCases.map((useCase, useCaseIndex) => (
                           <li key={useCaseIndex} className="text-sm text-gray-600 flex items-center">
                             <span className="text-purple-500 mr-2">•</span>
-                            {useCase}
+                            {useCase  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </li>;
-                        ))}
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Key Benefits:</h4>
                       <ul className="space-y-1">
                         {solution.benefits.map((benefit, benefitIndex) => (
                           <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
                             <span className="text-green-500 mr-2">✓</span>
-                            {benefit}
+                            {benefit  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </li>;
-                        ))}
+                        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </ul>
                     </div>
-
                     <div className="mb-4">
                       <span className="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-semibold">
-                        Starting at {solution.pricing}
+                        Starting at {solution.pricing  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </span>;
                     </div>;
                     <Link;
-                      href={solution.link}
+                      href={solution.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
                     >
                       Learn More
                     </Link>
                   </div>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
             </div>;
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>;
-        {/* Success Stories Section */}
+        {/* Success Stories Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">
           <h2 className="text-3xl font-bold mb-4">
             Success Stories
@@ -305,21 +383,24 @@ const SolutionsPage: NextPage = () => {
               <p>80% reduction in fraud losses with AI risk assessment</p>
             </div>
           </div>
-          <Link 
+          <Link
             href="/contact"
             className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             View Case Studies
           </Link>
         </div>
-
-        {/* Custom Solutions Section */}
+        {/* Custom Solutions Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Need a Custom Solution?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Can't find exactly what you need? Our expert team can design and develop 
+            Can't find exactly what you need? Our expert team can design and develop
             custom solutions tailored to your specific requirements and industry challenges.
           </p>
           <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -339,31 +420,34 @@ const SolutionsPage: NextPage = () => {
               <p className="text-gray-600">Comprehensive training and ongoing support</p>
             </div>
           </div>
-          <Link 
+          <Link
             href="/contact"
             className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Discuss Custom Solutions
           </Link>
         </div>
-
-        {/* Contact Section */}
+        {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mt-16 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Let's discuss how our industry-specific solutions can address your unique challenges 
+            Let's discuss how our industry-specific solutions can address your unique challenges
             and drive measurable business outcomes.
           </p>
           <div className="flex justify-center gap-4 mb-8">
-            <Link 
+            <Link
               href="/contact"
               className="bg-purple-600 hover: bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Schedule Consultation
             </Link>
-            <Link 
+            <Link
               href="/contact"
               className="bg-transparent border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors"
             >
@@ -389,7 +473,6 @@ const SolutionsPage: NextPage = () => {
     </div>
   )
 },
-
 export default SolutionsPage,
         <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 mt-16 text-center text-white">;
           <h2 className="text-3xl font-bold mb-4">;
@@ -419,7 +502,11 @@ export default SolutionsPage,
             View Case Studies;
           </Link>;
         </div>;
-        {/* Custom Solutions Section */}
+        {/* Custom Solutions Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mt-16 text-center">;
           <h2 className="text-3xl font-bold text-gray-900 mb-8">;
             Need a Custom Solution?;
@@ -452,7 +539,11 @@ export default SolutionsPage,
             Discuss Custom Solutions;
           </Link>;
         </div>;
-        {/* Contact Section */}
+        {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mt-16 text-center">;
           <h2 className="text-3xl font-bold text-gray-900 mb-8">;
             Ready to Transform Your Business?;

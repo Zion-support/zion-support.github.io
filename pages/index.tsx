@@ -4,27 +4,28 @@ import { useState, useEffect, Suspense } from 'react';
 import { ContactInfo, AnimationState, Service } from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 import LoadingSpinner from '../components/LoadingSpinner';
-
 export default function Home() {
   const [animationState, setAnimationState] = useState<AnimationState>({
     isLoaded: false,
     hasError: false
   });
-
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimationState(prev => ({ ...prev, isLoaded: true }));
     }, 100);
     return () => clearTimeout(timer);
   }, []);
-
   if (animationState.hasError) {
     return (
       <div className="min-h-screen bg-slate-950 flex items-center justify-center">
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Something went wrong</h1>
-          <button 
-            onClick={() => window.location.reload()} 
+          <button
+            onClick={() => window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="px-4 py-2 bg-blue-600 rounded-lg hover:bg-blue-700"
           >
             Reload Page
@@ -32,15 +33,17 @@ export default function Home() {
         </div>
       </div>
     );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
+}
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   };
-
   const featuredServices: Service[] = [
     {
       id: 'ai-automation',
@@ -62,9 +65,12 @@ export default function Home() {
       description: 'Focused software solutions that address specific business needs with minimal complexity.',
       category: 'Micro SaaS',
       features: ['Rapid Development', 'User-friendly Design', 'API Integration', 'Scalable Architecture']
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ];
-
   return (
     <>
       <Head>
@@ -97,11 +103,14 @@ export default function Home() {
         <meta name="twitter:site" content="@ziontechgroup" />
         <meta name="twitter:creator" content="@ziontechgroup" />
       </Head>
-
       <ErrorBoundary>
         <Suspense fallback={<LoadingSpinner />}>
           <div className="min-h-screen bg-slate-950 text-white">
-            {/* Hero Section */}
+            {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
               <div className="relative container mx-auto px-4 py-20">
@@ -113,7 +122,7 @@ export default function Home() {
                     Pioneering the future with innovative Micro SaaS, AI & IT Solutions
                   </p>
                   <p className="text-lg mb-12 text-gray-400 max-w-2xl mx-auto">
-                    We deliver cutting-edge technology solutions that transform businesses through intelligent automation, 
+                    We deliver cutting-edge technology solutions that transform businesses through intelligent automation,
                     scalable cloud infrastructure, and purpose-built micro applications.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center animate-scale-in">
@@ -127,8 +136,11 @@ export default function Home() {
                 </div>
               </div>
             </section>
-
-            {/* Stats Section */}
+            {/* Stats Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="py-16 bg-slate-900/50">
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -151,8 +163,11 @@ export default function Home() {
                 </div>
               </div>
             </section>
-
-            {/* Featured Services */}
+            {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="py-20">
               <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
@@ -161,7 +176,6 @@ export default function Home() {
                     Comprehensive technology solutions designed to accelerate your business growth
                   </p>
                 </div>
-                
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {featuredServices.map((service, index) => (
                     <div key={service.id} className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105">
@@ -172,19 +186,25 @@ export default function Home() {
                         <h3 className="text-2xl font-semibold mb-3 text-white">{service.title}</h3>
                         <p className="text-gray-300 mb-4">{service.description}</p>
                       </div>
-                      
                       <div className="mb-6">
                         <h4 className="text-sm font-semibold text-blue-400 mb-3 uppercase tracking-wide">Key Features</h4>
                         <ul className="space-y-2">
                           {service.features.map((feature, idx) => (
                             <li key={idx} className="flex items-center text-gray-300">
                               <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                              {feature}
+                              {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                             </li>
-                          ))}
+                          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </ul>
                       </div>
-                      
                       <Link href="/services" className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold transition-colors">
                         Learn More
                         <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -192,37 +212,49 @@ export default function Home() {
                         </svg>
                       </Link>
                     </div>
-                  ))}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </div>
               </div>
             </section>
-
-            {/* Technology Stack */}
+            {/* Technology Stack */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="py-20 bg-slate-900/30">
               <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl font-bold mb-4">Technology Stack</h2>
                   <p className="text-xl text-gray-400">Built with cutting-edge technologies</p>
                 </div>
-                
                 <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
                   {['React', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'AWS', 'Docker', 'Kubernetes', 'PostgreSQL', 'MongoDB', 'Redis', 'GraphQL'].map((tech, index) => (
                     <div key={tech} className="text-center p-4 bg-slate-800/50 rounded-lg hover:bg-slate-700/50 transition-colors">
                       <div className="text-2xl font-bold text-blue-400 mb-2">{tech}</div>
                     </div>
-                  ))}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </div>
               </div>
             </section>
-
-            {/* Contact Section */}
+            {/* Contact Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <section className="py-20">
               <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl font-bold mb-4">Get In Touch</h2>
                   <p className="text-xl text-gray-400">Ready to transform your business? Let's talk.</p>
                 </div>
-                
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
                   <div className="text-center p-6 bg-slate-800/50 rounded-xl">
                     <div className="w-12 h-12 bg-blue-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
@@ -233,7 +265,6 @@ export default function Home() {
                     <h3 className="font-semibold text-white mb-2">Phone</h3>
                     <p className="text-gray-300">{contact.phone}</p>
                   </div>
-                  
                   <div className="text-center p-6 bg-slate-800/50 rounded-xl">
                     <div className="w-12 h-12 bg-purple-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -243,7 +274,6 @@ export default function Home() {
                     <h3 className="font-semibold text-white mb-2">Email</h3>
                     <p className="text-gray-300">{contact.email}</p>
                   </div>
-                  
                   <div className="text-center p-6 bg-slate-800/50 rounded-xl">
                     <div className="w-12 h-12 bg-cyan-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -254,7 +284,6 @@ export default function Home() {
                     <h3 className="font-semibold text-white mb-2">Address</h3>
                     <p className="text-gray-300 text-sm">{contact.address}</p>
                   </div>
-                  
                   <div className="text-center p-6 bg-slate-800/50 rounded-xl">
                     <div className="w-12 h-12 bg-green-500 rounded-lg mx-auto mb-4 flex items-center justify-center">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,4 +301,8 @@ export default function Home() {
       </ErrorBoundary>
     </>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

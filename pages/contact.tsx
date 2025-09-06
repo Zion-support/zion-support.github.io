@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { ContactInfo } from '../types';
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,17 +10,14 @@ export default function Contact() {
     service: '',
     message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     site: 'https://ziontechgroup.com'
   };
-
   const services = [
     'AI Automation Platform',
     'Cloud Infrastructure',
@@ -31,7 +27,6 @@ export default function Contact() {
     'Blockchain Solutions',
     'Other'
   ];
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -39,11 +34,9 @@ export default function Contact() {
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
@@ -60,9 +53,12 @@ export default function Contact() {
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   };
-
   return (
     <>
       <Head>
@@ -72,9 +68,12 @@ export default function Contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://ziontechgroup.com/contact" />
       </Head>
-
       <div className="min-h-screen bg-slate-950 text-white">
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
           <div className="relative container mx-auto px-4 py-20">
@@ -86,31 +85,39 @@ export default function Contact() {
                 Ready to transform your business? Let's talk.
               </p>
               <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                Get in touch with our team to discuss your project requirements and discover 
+                Get in touch with our team to discuss your project requirements and discover
                 how our technology solutions can accelerate your business growth.
               </p>
             </div>
           </div>
         </section>
-
         <div className="container mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Contact Form */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="bg-slate-800/50 backdrop-blur-sm p-8 rounded-xl border border-slate-700">
               <h2 className="text-3xl font-bold mb-6">Send us a message</h2>
-              
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg">
                   <p className="text-green-400">Thank you! Your message has been sent successfully. We'll get back to you soon.</p>
                 </div>
-              )}
-
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               {submitStatus === 'error' && (
                 <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg">
                   <p className="text-red-400">Sorry, there was an error sending your message. Please try again.</p>
                 </div>
-              )}
-
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -121,14 +128,21 @@ export default function Contact() {
                       type="text"
                       id="name"
                       name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
+                      value={formData.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={handleInputChange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       required
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                       placeholder="Your full name"
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                       Email Address *
@@ -137,15 +151,22 @@ export default function Contact() {
                       type="email"
                       id="email"
                       name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
+                      value={formData.email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={handleInputChange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       required
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                       placeholder="your@email.com"
                     />
                   </div>
                 </div>
-
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
@@ -155,13 +176,20 @@ export default function Contact() {
                       type="text"
                       id="company"
                       name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
+                      value={formData.company  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={handleInputChange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                       placeholder="Your company name"
                     />
                   </div>
-                  
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
                       Phone Number
@@ -170,14 +198,21 @@ export default function Contact() {
                       type="tel"
                       id="phone"
                       name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
+                      value={formData.phone  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                      onChange={handleInputChange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400"
                       placeholder="+1 (555) 123-4567"
                     />
                   </div>
                 </div>
-
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                     Service Interest
@@ -185,17 +220,28 @@ export default function Contact() {
                   <select
                     id="service"
                     name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
+                    value={formData.service  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={handleInputChange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
                   >
                     <option value="">Select a service</option>
                     {services.map((service) => (
                       <option key={service} value={service}>{service}</option>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </select>
                 </div>
-
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                     Message *
@@ -203,35 +249,56 @@ export default function Contact() {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
+                    value={formData.message  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={handleInputChange  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     required
-                    rows={6}
+                    rows={6  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white placeholder-gray-400 resize-none"
                     placeholder="Tell us about your project requirements..."
                   />
                 </div>
-
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed rounded-lg font-semibold transition-all duration-300 transform hover:scale-105"
                 >
-                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {isSubmitting ? 'Sending...' : 'Send Message'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </button>
               </form>
             </div>
-
-            {/* Contact Information */}
+            {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="space-y-8">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Get in touch</h2>
                 <p className="text-lg text-gray-400 mb-8">
-                  We're here to help you succeed. Reach out to us through any of the channels below, 
+                  We're here to help you succeed. Reach out to us through any of the channels below,
                   and we'll respond within 24 hours.
                 </p>
               </div>
-
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -245,7 +312,6 @@ export default function Contact() {
                     <p className="text-sm text-gray-400">Mon-Fri 9AM-6PM EST</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -258,7 +324,6 @@ export default function Contact() {
                     <p className="text-sm text-gray-400">We'll respond within 24 hours</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -272,7 +337,6 @@ export default function Contact() {
                     <p className="text-sm text-gray-400">Middletown, DE 19709</p>
                   </div>
                 </div>
-
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -286,7 +350,6 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
-
               <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                 <h3 className="text-xl font-semibold text-white mb-4">Why choose us?</h3>
                 <ul className="space-y-3">
@@ -314,4 +377,8 @@ export default function Contact() {
       </div>
     </>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

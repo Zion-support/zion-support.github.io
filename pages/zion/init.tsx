@@ -1,23 +1,23 @@
-import { useState } from 'react',;
-import type { NextPage } from 'next',;
-type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid',;
-type DeployFormState = {;
-  instanceName: string,;
-  defaultLanguage: string,;
-  deploymentRegion: string,;
-  tokenActivation: boolean,;
-  governanceMode: GovernanceMode,;
+import { useState } from 'react';
+import type { NextPage } from 'next';
+type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
+type DeployFormState = {
+  instanceName: string;
+  defaultLanguage: string;
+  deploymentRegion: string;
+  tokenActivation: boolean;
+  governanceMode: GovernanceMode;
   branding: {;
-    logoUrl: string,;
-    primaryColor: string,;
-    secondaryColor: string,;
+    logoUrl: string;
+    primaryColor: string;
+    secondaryColor: string;
     subdomain: string;
-  },;
-  modules: Record<string boolean>,;
-  bonusModules: Record<string boolean>;
+  };
+  modules: Record<string, boolean>,;
+  bonusModules: Record<string, boolean>;
 },;
 const defaultModules: DeployFormState['modules'] = {;
-  marketplace: true,;
+  marketplace: true;
   gpt: true,;
   academy: true,;
   token: true,;
@@ -29,7 +29,7 @@ const defaultModules: DeployFormState['modules'] = {;
   'api-docs-wiki': true,;
   'zion-brain': true},;
 const defaultBonus: DeployFormState['bonusModules'] = {;
-  'global-map': false,;
+  'global-map': false;
   'franchise-onboarding': false,;
   'referral-ambassadors': false,;
   'grant-portal': false,;
@@ -37,7 +37,7 @@ const defaultBonus: DeployFormState['bonusModules'] = {;
   'book-store': false},;
 const InitPage: NextPage = () => {;
   const [state, setState] = useState<DeployFormState>({;
-    instanceName: '',;
+    instanceName: '';
     defaultLanguage: 'en',;
     deploymentRegion: 'us-east-1',;
     tokenActivation: true,;
@@ -45,41 +45,43 @@ const InitPage: NextPage = () => {;
     branding: { logoUrl: '', primaryColor: '#4f46e5', secondaryColor: '#0ea5e9', subdomain: '' },;
     modules: defaultModules,;
     bonusModules: defaultBonus}),;
-  const [submitting, setSubmitting] = useState(false),;
-  const [result, setResult] = useState<any>(null),;
-  const [error, setError] = useState<string | null>(null),;
+  const [submitting, setSubmitting] = useState(false);
+  const [result, setResult] = useState<any>(null);
+  const [error, setError] = useState<string | null>(null);
   const handleToggle = (group: 'modules' | 'bonusModules', key: string) => {;
     setState((prev) => ({;
       ...prev,;
       [group]: { ...prev[group], [key]: !prev[group][key] }}));
   },;
   const handleSubmit = async (e: React.FormEvent) => {;
-    e.preventDefault(),;
-    setSubmitting(true),;
-    setError(null),;
-    setResult(null),;
-    try {;
+    e.preventDefault();
+    setSubmitting(true);
+    setError(null);
+    setResult(null);
+    try {
       const res = await fetch('/api/deploy/genesis', {;
         method: 'POST',;
         headers: { 'Content-Type': 'application/json' },;
         body: JSON.stringify(state)}),;
-      const json = await res.json(),;
-      if (!res.ok) throw new Error(json?.error || 'Deployment failed'),;
+      const json = await res.json();
+      if (!res.ok) throw new Error(json?.error || 'Deployment failed');
       setResult(json);
-    } catch (err: any) {;
+    } catch (error) {
       setError(err.message || 'Unexpected error');
     } finally {;
       setSubmitting(false);
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   },
-
   return (
     <div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
       </div>
-
       <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-6 max-w-4xl">
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
@@ -110,7 +112,6 @@ const InitPage: NextPage = () => {;
             </select>
           </div>
         </section>
-
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium">Logo URL</label>
@@ -129,7 +130,6 @@ const InitPage: NextPage = () => {;
             <input className="mt-1 w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white/60 dark:bg-black/40 px-3 py-2" value={state.branding.subdomain} onChange={(e) => setState({ ...state, branding: { ...state.branding, subdomain: e.target.value } })} />
           </div>
         </section>
-
         <section className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
             <h3 className="font-semibold mb-3">Auto-Deploy Modules</h3>
@@ -139,7 +139,11 @@ const InitPage: NextPage = () => {;
                   <input type="checkbox" checked={state.modules[key]} onChange={() => handleToggle('modules', key)} />
                   <span>/{key}</span>
                 </label>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </div>
           <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
@@ -150,25 +154,39 @@ const InitPage: NextPage = () => {;
                   <input type="checkbox" checked={state.bonusModules[key]} onChange={() => handleToggle('bonusModules', key)} />
                   <span>/{key}</span>
                 </label>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </div>
         </section>
-
         <div className="flex items-center gap-3">
           <button disabled={submitting} className="inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60">
-            {submitting ? 'Deploying…' : 'Deploy Genesis'}
+            {submitting ? 'Deploying…' : 'Deploy Genesis'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </button>
-          {error && <span className="text-sm text-red-500">{error}</span>}
+          {error && <span className="text-sm text-red-500">{error}</span>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>
       </form>
-
       {result && (
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
           <h3 className="font-semibold">Deployment Result</h3>
           <pre className="mt-2 text-xs whitespace-pre-wrap">{JSON.stringify(result, null, 2)}</pre>
         </div>
-      )}
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     </div>;
   );
 },;

@@ -12,6 +12,14 @@ export default function AIPredictiveMaintenancePlatform() {
 			pricePerMonthUSD={499  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 			implementationWeeks="2-4 weeks"
@@ -28,9 +36,25 @@ export default function AIPredictiveMaintenancePlatform() {
 			]  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 			industries={["Manufacturing", "Utilities", "Oil & Gas", "Transportation"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -41,6 +65,14 @@ export default function AIPredictiveMaintenancePlatform() {
 			canonical="https: //ziontechgroup.com/ai-predictive-maintenance-platform";
 		/>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

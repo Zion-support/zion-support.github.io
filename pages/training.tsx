@@ -1,7 +1,7 @@
-import React, { useState } from 'react',;
-import SEO from '../components/SEO',;
-import Layout from '../components/layout/Layout',;
-import { motion } from 'framer-motion',;
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import Layout from '../components/layout/Layout';
+import { motion } from 'framer-motion';
 import {;
   GraduationCap, Users, Clock, Award, BookOpen, Video,;
   Headphones, Code, Brain, Atom, Rocket, Shield, Zap,;
@@ -9,17 +9,21 @@ import {;
   Play, Download, ExternalLink, Calendar, MapPin, DollarSign,;
   TrendingUp, Target, Lightbulb, Building, Globe, Server;
 } from 'lucide-react',;
-export default function TrainingPage() {;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [expandedProgram, setExpandedProgram] = useState<number | null>(null),;
+export default function TrainingPage(req, res) {
+  try {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedProgram, setExpandedProgram] = useState<number | null>(null);
   const trainingCategories = [;
     { id: 'all', name: 'All Programs', count: 24 },;
     { id: 'ai-consciousness', name: 'AI Consciousness', count: 8 },;
     { id: 'quantum-computing', name: 'Quantum Computing', count: 6 },;
     { id: 'autonomous-ops', name: 'Autonomous Operations', count: 5 },;
-    { id: 'enterprise-it', name: 'Enterprise IT', count: 5 }
+    { id: 'enterprise-it', name: 'Enterprise IT', count: 5   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const featuredPrograms = [
     {
       id: 1,
@@ -68,9 +72,12 @@ export default function TrainingPage() {;
       highlights: [
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
       ]
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const allPrograms = [
     // AI Consciousness Programs
     {
@@ -121,7 +128,6 @@ export default function TrainingPage() {;
       students: '789',
       icon: <Code className="w-8 h-8" />
     },
-
     // Quantum Computing Programs
     {
       id: 8,
@@ -159,7 +165,6 @@ export default function TrainingPage() {;
       students: '678',
       icon: <Shield className="w-8 h-8" />
     },
-
     // Autonomous Operations Programs
     {
       id: 11,
@@ -185,7 +190,6 @@ export default function TrainingPage() {;
       students: '567',
       icon: <Target className="w-8 h-8" />
     },
-
     // Enterprise IT Programs
     {
       id: 13,
@@ -222,13 +226,15 @@ export default function TrainingPage() {;
       rating: 4.8,
       students: '756',
       icon: <Zap className="w-8 h-8" />
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
-  const filteredPrograms = allPrograms.filter(program => 
+  const filteredPrograms = allPrograms.filter(program =>
     selectedCategory === 'all' || program.category === selectedCategory
   ),
-
   const getCategoryIcon = (category: string) => {
     const icons = {
       'ai-consciousness': <Brain className="w-6 h-6" />,
@@ -238,34 +244,46 @@ export default function TrainingPage() {;
     },
     return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />
   },
-
   const getCategoryColor = (category: string) => {
     const colors = {
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue'
     },
     return colors[category as keyof typeof colors] || 'gray'
   },
-
   const toggleProgram = (id: number) => {
     setExpandedProgram(expandedProgram === id ? null : id)
   },
-
   return (
     <Layout>
-      <SEO 
+      <SEO
         title="Training & Certification - Zion Tech Group"
         description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career."
       />
-      
       <div className="min-h-screen">
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="relative py-20 lg:py-32 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />
           <div className="relative z-10 container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Training & Certification
@@ -290,8 +308,11 @@ export default function TrainingPage() {;
             </motion.div>
           </div>
         </section>
-
-        {/* Category Filters */}
+        {/* Category Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-10">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center gap-3">
@@ -300,10 +321,10 @@ export default function TrainingPage() {;
   ],;
   const featuredPrograms = [;
     {;
-      id: 1,;
-      title: 'AI Consciousness Developer Certification',;
-      description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.',;
-      category: 'ai-consciousness',;
+      id: 1;
+      title: 'AI Consciousness Developer Certification';
+      description: 'Master the fundamentals of AI consciousness development and earn industry-recognized certification.';
+      category: 'ai-consciousness';
       duration: '12 weeks',;
       level: 'Intermediate to Advanced',;
       price: '$2,999',;
@@ -346,15 +367,19 @@ export default function TrainingPage() {;
       highlights: [;
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies';
       ];
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const allPrograms = [;
     // AI Consciousness Programs;
     {;
-      id: 4,;
-      title: 'AI Consciousness Fundamentals',;
-      description: 'Introduction to artificial consciousness concepts and basic implementation.',;
-      category: 'ai-consciousness',;
+      id: 4;
+      title: 'AI Consciousness Fundamentals';
+      description: 'Introduction to artificial consciousness concepts and basic implementation.';
+      category: 'ai-consciousness';
       duration: '6 weeks',;
       level: 'Beginner',;
       price: '$1,299',;
@@ -496,29 +521,33 @@ export default function TrainingPage() {;
       rating: 4.8,;
       students: '756',;
       icon: <Zap className="w-8 h-8" />;
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const filteredPrograms = allPrograms.filter(program =>;
     selectedCategory === 'all' || program.category === selectedCategory;
-  ),;
+  );
   const getCategoryIcon = (category: string) => {;
     const icons = {;
-      'ai-consciousness': <Brain className="w-6 h-6" />,;
-      'quantum-computing': <Atom className="w-6 h-6" />,;
-      'autonomous-ops': <Rocket className="w-6 h-6" />,;
+      'ai-consciousness': <Brain className="w-6 h-6" />;
+      'quantum-computing': <Atom className="w-6 h-6" />;
+      'autonomous-ops': <Rocket className="w-6 h-6" />;
       'enterprise-it': <Building className="w-6 h-6" />;
-    },;
+    };
     return icons[category as keyof typeof icons] || <GraduationCap className="w-6 h-6" />;
   },;
   const getCategoryColor = (category: string) => {;
     const colors = {;
       'ai-consciousness': 'cyanquantum-computing': 'purpleautonomous-ops': 'greenenterprise-it': 'blue';
-    },;
+    };
     return colors[category as keyof typeof colors] || 'gray';
-  },;
+  };
   const toggleProgram = (id: number) => {;
     setExpandedProgram(expandedProgram === id ? null : id);
-  },;
+  };
   return (;
     <Layout>;
       <SEO;
@@ -526,14 +555,30 @@ export default function TrainingPage() {;
         description="Master AI consciousness, quantum computing, and autonomous operations with our comprehensive training programs. Earn industry-recognized certifications and advance your career.";
       />;
       <div className="min-h-screen">;
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="relative py-20 lg:py-32 overflow-hidden">;
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10" />;
           <div className="relative z-10 container mx-auto px-4 text-center">;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >;
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">;
                 Training & Certification;
@@ -558,34 +603,74 @@ export default function TrainingPage() {;
             </motion.div>;
           </div>;
         </section>;
-        {/* Category Filters */}
+        {/* Category Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-10">;
           <div className="container mx-auto px-4">;
             <div className="flex flex-wrap justify-center gap-3">;
               {trainingCategories.map((category) => (;
                 <button;
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
                     selectedCategory === category.id;
                       ? 'bg-cyan-500 text-white';
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600';
-                  }`}
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >;
                   {category.name} ({category.count});
                 </button>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </div>;
         </section>;
-        {/* Featured Programs */}
+        {/* Featured Programs */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -595,36 +680,74 @@ export default function TrainingPage() {;
                 Our most popular and comprehensive training programs
               </p>
             </motion.div>
-            
             <div className="grid lg:grid-cols-3 gap-8 mb-16">
               {featuredPrograms.map((program, index) => (
                 <motion.div
-                  key={program.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  key={program.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                    {program.icon}
+                    {program.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-3">
                       <span className={`px-3 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded-full text-sm border border-${getCategoryColor(program.category)}-500/30`}>
-                        {program.category.replace('- ')}
+                        {program.category.replace('- ')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </span>
                       <span className="text-gray-400 text-sm">
-                        {program.level}
+                        {program.level  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">
-                      {program.title}
+                      {program.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </h3>
                     <p className="text-gray-300 mb-4">
-                      {program.description}
+                      {program.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </p>
-                    
                     <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                       <div className="flex items-center gap-1">
                         <Clock className="w-4 h-4" />
@@ -635,7 +758,6 @@ export default function TrainingPage() {;
                         <span>{program.students} students</span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-1">
                         <Star className="w-4 h-4 text-yellow-400 fill-current" />
@@ -643,16 +765,18 @@ export default function TrainingPage() {;
                       </div>
                       <span className="text-2xl font-bold text-cyan-400">{program.price}</span>
                     </div>
-                    
                     <div className="space-y-2 mb-6">
                       {program.highlights.slice(0, 3).map((highlight, highlightIndex) => (
                         <div key={highlightIndex} className="flex items-center gap-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           <span>{highlight}</span>
                         </div>
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
-                    
                     <a
                       href="#"
                       className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
@@ -662,18 +786,42 @@ export default function TrainingPage() {;
                     </Link>
                   </div>
                 </motion.div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </div>;
         </section>;
-        {/* All Programs */}
+        {/* All Programs */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 bg-black/50">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -683,40 +831,76 @@ export default function TrainingPage() {;
                 Comprehensive collection of training programs across all technology domains
               </p>
             </motion.div>
-            
             <div className="space-y-4">
               {filteredPrograms.map((program, index) => (
                 <motion.div
-                  key={program.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  key={program.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
                 >
                   <div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        {program.icon}
+                        {program.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </div>
-                      
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
                           <span className={`px-2 py-1 bg-${getCategoryColor(program.category)}-500/20 text-${getCategoryColor(program.category)}-400 rounded text-xs border border-${getCategoryColor(program.category)}-500/30`}>
-                            {program.category.replace('- ')}
+                            {program.category.replace('- ')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </span>
                           <span className="text-gray-400 text-xs">
-                            {program.level}
+                            {program.level  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </span>
                         </div>
-                        
                         <h3 className="text-lg font-bold text-white mb-2">
-                          {program.title}
+                          {program.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </h3>
                         <p className="text-gray-300 text-sm mb-3">
-                          {program.description}
+                          {program.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </p>
-                        
                         <div className="flex items-center gap-4 text-xs text-gray-400 mb-3">
                           <div className="flex items-center gap-1">
                             <Clock className="w-3 h-3" />
@@ -732,29 +916,56 @@ export default function TrainingPage() {;
                           </div>
                         </div>
                       </div>
-                      
                       <div className="text-right flex-shrink-0">
                         <div className="text-2xl font-bold text-cyan-400 mb-2">
-                          {program.price}
+                          {program.price  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </div>;
                         <button;
-                          onClick={() => toggleProgram(program.id)}
+                          onClick={() => toggleProgram(program.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           className="text-gray-400 hover:text-white transition-colors duration-300"
                         >
                           {expandedProgram === program.id ? (
                             <ChevronUp className="w-5 h-5" />
                           ) : (
                             <ChevronDown className="w-5 h-5" />
-                          )}
+                          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </button>;
                       </div>;
                     </div>;
                     {expandedProgram === program.id && (;
                       <motion.div;
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
+                        initial={{ opacity: 0, height: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        animate={{ opacity: 1, height: 'auto' }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        exit={{ opacity: 0, height: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                        transition={{ duration: 0.3 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         className="mt-4 pt-4 border-t border-gray-700"
                       >
                         <div className="grid md:grid-cols-2 gap-6">
@@ -779,7 +990,6 @@ export default function TrainingPage() {;
                               </li>
                             </ul>
                           </div>
-                          
                           <div>
                             <h4 className="text-white font-semibold mb-3">Program Details</h4>
                             <div className="space-y-2 text-sm text-gray-300">
@@ -802,7 +1012,6 @@ export default function TrainingPage() {;
                             </div>
                           </div>
                         </div>
-                        
                         <div className="mt-6 flex gap-3">
                           <a
                             href="#"
@@ -819,21 +1028,49 @@ export default function TrainingPage() {;
                           </Link>
                         </div>
                       </motion.div>
-                    )}
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>;
                 </motion.div>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </div>;
         </section>;
-        {/* Learning Paths */}
+        {/* Learning Paths */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold text-white mb-4">
@@ -843,7 +1080,6 @@ export default function TrainingPage() {;
                 Structured learning journeys to master complete technology domains
               </p>
             </motion.div>
-            
             <div className="grid lg:grid-cols-3 gap-8">
               {[
                 {
@@ -881,25 +1117,61 @@ export default function TrainingPage() {;
                   path: [
                     'Business Process AnalysisAutomation StrategySystem ImplementationChange ManagementPerformance Optimization'
                   ]
-                }
+                  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               ].map((path, index) => (;
                 <motion.div;
-                  key={path.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  key={path.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.8, delay: index * 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="text-center mb-6">
                     <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                      {path.icon}
+                      {path.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-3">
-                      {path.title}
+                      {path.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </h3>
                     <p className="text-gray-300 mb-4">
-                      {path.description}
+                      {path.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </p>
                     <div className="flex items-center justify-center gap-4 text-sm text-gray-400">
                       <div className="flex items-center gap-1">
@@ -912,38 +1184,72 @@ export default function TrainingPage() {;
                       </div>
                     </div>
                   </div>
-                  
                   <div className="space-y-3 mb-6">
                     {path.path.map((step, stepIndex) => (
                       <div key={stepIndex} className="flex items-center gap-3 text-sm">
                         <div className="w-6 h-6 bg-cyan-500/20 text-cyan-400 rounded-full flex items-center justify-center text-xs font-bold">
-                          {stepIndex + 1}
+                          {stepIndex + 1  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </div>
                         <span className="text-gray-300">{step}</span>
                       </div>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
-                  
                   <a
                     href="#"
-                    className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`}
+                    className={`w-full inline-flex items-center justify-center gap-2 bg-${path.color}-500/20 text-${path.color}-400 font-bold py-3 px-6 rounded-xl border border-${path.color}-500/30 hover:bg-${path.color}-500 hover:text-white transition-all duration-300`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >
                     Start Learning Path
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                 </motion.div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </div>;
         </section>;
-        {/* CTA Section */}
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10">
           <div className="container mx-auto px-4 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Career?
@@ -972,7 +1278,6 @@ export default function TrainingPage() {;
     </Layout>
   )
 },
-
 export default Training,
             >;
               <h2 className="text-4xl font-bold text-white mb-6">;

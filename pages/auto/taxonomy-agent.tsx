@@ -16,5 +16,4 @@ const TaxonomyAgent: NextPage = () => {
     </div>
   )
 },
-
 export default TaxonomyAgent,

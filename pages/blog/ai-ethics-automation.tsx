@@ -1,7 +1,8 @@
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
-export default function AIEthicsAutomation() {;
+export default function AIEthicsAutomation(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -245,5 +246,9 @@ export default function AIEthicsAutomation() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

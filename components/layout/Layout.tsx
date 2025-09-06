@@ -7,6 +7,14 @@ interface LayoutProps {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export default function Layout({
@@ -20,6 +28,14 @@ export default function Layout({
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export default function Layout({ children }: LayoutProps) {
@@ -28,10 +44,26 @@ export default function Layout({ children }: LayoutProps) {
       {children  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     </div>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

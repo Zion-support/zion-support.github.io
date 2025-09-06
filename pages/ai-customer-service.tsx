@@ -16,9 +16,10 @@ export default function AICustomerService() {
       </div>
     </>
   )
-import React from 'react',;
+import React from 'react';
 import Head from 'next/head';
-export default function AICustomerService() {;
+export default function AICustomerService(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -34,5 +35,9 @@ export default function AICustomerService() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

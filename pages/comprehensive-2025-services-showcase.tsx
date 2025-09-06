@@ -1,20 +1,21 @@
-import React, { useState, useEffect } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState, useEffect } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   ArrowRight, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network,;
   Search, Filter, Grid, List, Star as StarIcon, Eye, Heart, Share2;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3',;
-export default function Comprehensive2025ServicesShowcase() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),;
-  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity'),;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+export default function Comprehensive2025ServicesShowcase(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
   const categories = [;
     { id: 'all', name: 'All Services', count: innovative2025MicroSaasExpansionV3.length },;
     { id: 'AI & Analytics', name: 'AI & Analytics', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('AI') && !s.category.includes('Healthcare') && !s.category.includes('HR') && !s.category.includes('Content') && !s.category.includes('Energy')).length },;
@@ -26,14 +27,18 @@ export default function Comprehensive2025ServicesShowcase() {;
     { id: 'Cybersecurity & Quantum', name: 'Cybersecurity & Quantum', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Cybersecurity') || s.category.includes('Quantum')).length },;
     { id: 'Edge Computing & IoT', name: 'Edge Computing & IoT', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Edge') || s.category.includes('IoT')).length },;
     { id: 'Space Technology & Innovation', name: 'Space Technology & Innovation', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Space')).length },;
-    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length }
+    { id: 'Neural Technology & BCI', name: 'Neural Technology & BCI', count: innovative2025MicroSaasExpansionV3.filter(s => s.category.includes('Neural')).length   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const filteredServices = innovative2025MicroSaasExpansionV3;
     .filter(service => {;
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),;
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),;
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
       return matchesSearch && matchesCategory;
     });
     .sort((a, b) => {;
@@ -47,17 +52,29 @@ export default function Comprehensive2025ServicesShowcase() {;
         case 'newest':;
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),;
         default: return 0;
-      }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     }),;
   const containerVariants = {;
-    hidden: { opacity: 0 },;
+    hidden: { opacity: 0 };
     visible: {;
-      opacity: 1,;
+      opacity: 1;
       transition: {;
         staggerChildren: 0.1;
-      }
-    }
-  },;
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
   const itemVariants = {;
     hidden: { opacity: 0, y: 20 },;
     visible: {;
@@ -65,10 +82,17 @@ export default function Comprehensive2025ServicesShowcase() {;
       y: 0,;
       transition: {;
         duration: 0.5;
-      }
-    }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   },
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
       <Head>
@@ -78,24 +102,37 @@ export default function Comprehensive2025ServicesShowcase() {;
         <meta property="og:description" content="Explore our comprehensive collection of innovative micro SAAS services, AI solutions, quantum technologies, and cutting-edge IT services." />
         <meta name="keywords" content="micro SAAS, AI services, quantum computing, cybersecurity, edge computing, space technology, neural interfaces, Zion Tech Group" />
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2025-services-showcase" />
-      
         <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Comprehensive 2025 Innovative Services Showcase — Zion Tech Group","url":"https://ziontechgroup.com/comprehensive-2025-services-showcase","isPartOf":{"@type":"WebSite","name":"Zion Tech Group","url":"https://ziontechgroup.com"}}</script></Head>
-
       <EnhancedNavigation />
-
-      {/* Hero Section */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="relative py-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions, 
+              Discover our comprehensive collection of cutting-edge micro SAAS services, AI solutions,
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -112,63 +149,124 @@ export default function Comprehensive2025ServicesShowcase() {;
           </motion.div>
         </div>
       </section>
-
-      {/* Search and Filter Section */}
+      {/* Search and Filter Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-8 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-            {/* Search Bar */}
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
+                value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent"
               />
             </div>
-
-            {/* Category Filter */}
+            {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
                 <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${;
                     selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white';
-                  }`}
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >;
                   {category.name} ({category.count});
                 </button>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
-            {/* View Mode and Sort */}
+            {/* View Mode and Sort */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="flex items-center gap-4">
               <div className="flex items-center bg-white/10 rounded-lg p-1">
                 <button
-                  onClick={() => setViewMode('grid')}
+                  onClick={() => setViewMode('grid')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className={`p-2 rounded transition-all duration-300 ${;
                     viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white';
-                  }`}
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
                   <Grid className="w-5 h-5" />
                 </button>
                 <button
-                  onClick={() => setViewMode('list')}
+                  onClick={() => setViewMode('list')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className={`p-2 rounded transition-all duration-300 ${;
                     viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white';
-                  }`}
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
                   <List className="w-5 h-5" />
                 </button>
               </div>
-
               <select
-                value={sortBy}
-                onChange={(e) => setSortBy(e.target.value as any)}
+                value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onChange={(e) => setSortBy(e.target.value as any)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
               >
                 <option value="popularity">Most Popular</option>
@@ -180,45 +278,87 @@ export default function Comprehensive2025ServicesShowcase() {;
           </div>
         </div>
       </section>
-
-      {/* Services Grid */}
+      {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            variants={containerVariants}
+            variants={containerVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >;
             {filteredServices.map((service, index) => (;
               <motion.div;
-                key={service.id}
-                variants={itemVariants}
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variants={itemVariants  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className={`group relative ${;
                   viewMode === 'grid';
                     ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl';
                     : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300';
-                }`}
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               >;
-                {/* Popular Badge */}
+                {/* Popular Badge */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 {service.popular && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold rounded-full">
                     POPULAR
                   </div>
-                )}
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-                {/* Service Header */}
+                {/* Service Header */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center text-2xl`}>
-                    {service.icon}
+                    {service.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-white/70 text-sm leading-relaxed">{service.tagline}</p>
                   </div>
                 </div>
-
-                {/* Price and Rating */}
+                {/* Price and Rating */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center gap-2">
                     <span className="text-3xl font-bold text-cyan-400">{service.price}</span>
@@ -230,11 +370,17 @@ export default function Comprehensive2025ServicesShowcase() {;
                     <span className="text-white/60 text-sm">({service.reviews})</span>
                   </div>
                 </div>
-
-                {/* Description */}
+                {/* Description */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <p className="text-white/80 leading-relaxed mb-6">{service.description}</p>
-
-                {/* Key Features */}
+                {/* Key Features */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <div className="grid grid-cols-1 gap-2">
@@ -243,15 +389,27 @@ export default function Comprehensive2025ServicesShowcase() {;
                         <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         <span>{feature}</span>
                       </div>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     {service.features.length > 3 && (
                       <div className="text-cyan-400 text-sm font-medium">
                         +{service.features.length - 3} more features
                       </div>
-                    )}
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>;
                 </div>;
-                {/* Market Info */}
+                {/* Market Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="grid grid-cols-2 gap-4 mb-6 text-sm">
                   <div>
                     <span className="text-white/60">Market Size:</span>
@@ -262,8 +420,11 @@ export default function Comprehensive2025ServicesShowcase() {;
                     <div className="text-white font-medium">{service.growthRate}</div>
                   </div>
                 </div>
-
-                {/* ROI and Setup */}
+                {/* ROI and Setup */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-lg border border-cyan-400/20">
                   <div className="text-cyan-400 font-semibold mb-2">🚀 Expected ROI:</div>
                   <p className="text-white/80 text-sm">{service.roi}</p>
@@ -271,11 +432,18 @@ export default function Comprehensive2025ServicesShowcase() {;
                     Setup Time: {service.setupTime} | Trial: {service.trialDays} days
                   </div>
                 </div>
-
-                {/* Action Buttons */}
+                {/* Action Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
-                    href={service.link}
+                    href={service.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg font-semibold text-white text-center transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
@@ -287,23 +455,42 @@ export default function Comprehensive2025ServicesShowcase() {;
                     Contact Sales
                   </button>
                 </div>
-
-                {/* Contact Info */}
+                {/* Contact Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="mt-6 pt-4 border-t border-white/10 text-center">
                   <div className="text-white/60 text-sm mb-2">Ready to get started?</div>
                   <div className="flex items-center justify-center gap-4 text-sm">
                     <a href={`tel:${service.contactInfo.mobile}`} className="text-cyan-400 hover:text-cyan-300">
-                      📞 {service.contactInfo.mobile}
+                      📞 {service.contactInfo.mobile  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </Link>
                     <a href={`mailto:${service.contactInfo.email}`} className="text-cyan-400 hover:text-cyan-300">
-                      ✉️ {service.contactInfo.email}
+                      ✉️ {service.contactInfo.email  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </Link>
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </motion.div>;
-          {/* No Results */}
+          {/* No Results */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {filteredServices.length === 0 && (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">🔍</div>
@@ -313,29 +500,57 @@ export default function Comprehensive2025ServicesShowcase() {;
                 onClick={() => {
                   setSearchTerm(''),
                   setSelectedCategory('all')
-                }}
+                }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold text-white hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
               >
                 Clear Filters
               </button>
             </div>
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>;
       </section>;
-      {/* CTA Section */}
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
-              Our team of experts is ready to help you implement these cutting-edge solutions 
+              Our team of experts is ready to help you implement these cutting-edge solutions
               and drive innovation in your organization.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -356,7 +571,6 @@ export default function Comprehensive2025ServicesShowcase() {;
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
   )
@@ -389,4 +603,8 @@ export default function Comprehensive2025ServicesShowcase() {;
       <EnhancedFooter />;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

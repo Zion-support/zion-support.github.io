@@ -7,7 +7,6 @@ const ResetPassword: NextPage = () => {
         <title>ResetPassword - Zion Tech Solutions</title>
         <meta name="description" content="ResetPassword page" />
       </Head>
-      
       <main>
         <h1>ResetPassword</h1>
         <p>This page is under construction.</p>
@@ -15,5 +14,4 @@ const ResetPassword: NextPage = () => {
     </div>
   )
 },
-
 export default ResetPassword,

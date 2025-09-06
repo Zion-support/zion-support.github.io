@@ -4,7 +4,6 @@ const AutomationsIndex: NextPage = () => {
   const items = [
     { href: '/automations/top-talents', title: 'Top Talents (Auto)', desc: 'Aggregated from approved reviews, updated on schedule' },
     { href: '/automations/sitemap-status', title: 'Sitemap Status (Auto)', desc: 'Nightly sitemap and weekly pings to search engines' }],
-
   return (
     <main className="space-y-6">
       <h1 className="text-3xl font-bold">Autonomous Automations</h1>
@@ -17,7 +16,11 @@ const AutomationsIndex: NextPage = () => {
               <p className="text-sm text-gray-600 mt-1">{it.desc}</p>
             </div>
           </Link>
-        ))}
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       </div>;
     </main>;
   );

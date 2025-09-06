@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react',
-
 export default function PrivacySettingsPage() {
   const [userId, setUserId] = useState(''),
   const [optOut, setOptOut] = useState(false),
   const [loading, setLoading] = useState(false),
   const [message, setMessage] = useState(''),
-
   const load = async () => {
     if (!userId) return,
     setLoading(true),
@@ -16,7 +14,6 @@ export default function PrivacySettingsPage() {
     else setMessage(json.error || 'Failed to load'),
     setLoading(false)
   },
-
   const save = async () => {
     if (!userId) return,
     setLoading(true),
@@ -30,17 +27,14 @@ export default function PrivacySettingsPage() {
     else setMessage(json.error || 'Save failed'),
     setLoading(false)
   },
-
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id'),
     if (savedUser) setUserId(savedUser)
   }, []),
-
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId),
     load()
   },
-
   return (
     <div className="p-6 max-w-2xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Privacy Settings</h1>
@@ -56,9 +50,17 @@ export default function PrivacySettingsPage() {
         <div className="flex items-center gap-2">
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
-          {message && <div>{message}</div>}
+          {message && <div>{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>;
       </div>;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

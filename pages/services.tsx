@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import { Service } from '../types';
-
 export default function Services() {
   const services: Service[] = [
     {
@@ -13,7 +12,11 @@ export default function Services() {
         basic: 999,
         pro: 2999,
         enterprise: 9999
-      }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },
     {
       id: 'cloud-optimization',
@@ -25,7 +28,11 @@ export default function Services() {
         basic: 1999,
         pro: 4999,
         enterprise: 14999
-      }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },
     {
       id: 'micro-saas',
@@ -37,7 +44,11 @@ export default function Services() {
         basic: 2999,
         pro: 7999,
         enterprise: 19999
-      }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },
     {
       id: 'cybersecurity',
@@ -49,7 +60,11 @@ export default function Services() {
         basic: 1499,
         pro: 3999,
         enterprise: 9999
-      }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },
     {
       id: 'data-analytics',
@@ -61,7 +76,11 @@ export default function Services() {
         basic: 2499,
         pro: 5999,
         enterprise: 12999
-      }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },
     {
       id: 'blockchain',
@@ -73,12 +92,18 @@ export default function Services() {
         basic: 4999,
         pro: 12999,
         enterprise: 29999
-      }
-    }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ];
-
   const categories = ['All', 'AI Services', 'IT Solutions', 'Micro SaaS', 'Security', 'Analytics', 'Blockchain'];
-
   return (
     <>
       <Head>
@@ -88,9 +113,12 @@ export default function Services() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://ziontechgroup.com/services" />
       </Head>
-
       <div className="min-h-screen bg-slate-950 text-white">
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-slate-900/20"></div>
           <div className="relative container mx-auto px-4 py-20">
@@ -102,14 +130,17 @@ export default function Services() {
                 Comprehensive technology solutions designed to accelerate your business growth
               </p>
               <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-                From AI automation to blockchain development, we provide end-to-end technology services 
+                From AI automation to blockchain development, we provide end-to-end technology services
                 that transform businesses and drive innovation.
               </p>
             </div>
           </div>
         </section>
-
-        {/* Services Grid */}
+        {/* Services Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -122,22 +153,32 @@ export default function Services() {
                     <h3 className="text-2xl font-semibold mb-3 text-white">{service.title}</h3>
                     <p className="text-gray-300 mb-4">{service.description}</p>
                     <span className="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-sm font-medium">
-                      {service.category}
+                      {service.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </span>
                   </div>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-blue-400 mb-3 uppercase tracking-wide">Key Features</h4>
                     <ul className="space-y-2">
                       {service.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center text-gray-300">
                           <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
-                          {feature}
+                          {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </li>
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </ul>
                   </div>
-
                   {service.pricing && (
                     <div className="mb-6">
                       <h4 className="text-sm font-semibold text-green-400 mb-3 uppercase tracking-wide">Pricing</h4>
@@ -156,18 +197,28 @@ export default function Services() {
                         </div>
                       </div>
                     </div>
-                  )}
-                  
+                  )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   <button className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
                     Get Started
                   </button>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </div>
         </section>
-
-        {/* CTA Section */}
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 bg-slate-900/50">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Get Started?</h2>
@@ -187,4 +238,8 @@ export default function Services() {
       </div>
     </>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

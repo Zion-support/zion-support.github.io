@@ -27,7 +27,8 @@ export default function Reports() {
     </div>
   )
 import Link from 'next/link';
-export default function Reports() {;
+export default function Reports(req, res) {
+  try {
   return (;
     <div className="space-y-6">;
       <h1 className="text-2xl font-bold">Automations Reports</h1>;
@@ -54,4 +55,8 @@ export default function Reports() {;
       </div>;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

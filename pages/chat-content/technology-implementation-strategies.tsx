@@ -7,7 +7,6 @@ const TechnologyImplementationStrategies: NextPage = () => {
         <title>TechnologyImplementationStrategies - Zion Tech Solutions</title>
         <meta name="description" content="TechnologyImplementationStrategies page" />
       </Head>
-      
       <main>
         <h1>TechnologyImplementationStrategies</h1>
         <p>This page is under construction.</p>
@@ -15,5 +14,4 @@ const TechnologyImplementationStrategies: NextPage = () => {
     </div>
   )
 },
-
 export default TechnologyImplementationStrategies,

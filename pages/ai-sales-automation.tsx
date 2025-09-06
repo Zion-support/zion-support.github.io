@@ -46,6 +46,14 @@ export default function AISalesAutomationPage() {
                 ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
               </ul>
@@ -70,6 +78,14 @@ export default function AISalesAutomationPage() {
       </div>
     </Layout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

@@ -7,7 +7,6 @@ const SustainableTechnologyPractices: NextPage = () => {
         <title>SustainableTechnologyPractices - Zion Tech Solutions</title>
         <meta name="description" content="SustainableTechnologyPractices page" />
       </Head>
-      
       <main>
         <h1>SustainableTechnologyPractices</h1>
         <p>This page is under construction.</p>
@@ -15,5 +14,4 @@ const SustainableTechnologyPractices: NextPage = () => {
     </div>
   )
 },
-
 export default SustainableTechnologyPractices,

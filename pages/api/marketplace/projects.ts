@@ -14,12 +14,28 @@ function bad(res: NextApiResponse, message: string, code = 400) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 function canAccess(user: ReturnType<typeof getDemoUser>, project: Project) {
   if (user.role === "client" && user.id === project.clientId) return true,
   if (user.role === "talent" && user.talentSlug === project.talentSlug) return true,
   return false
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -47,6 +63,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
@@ -60,6 +84,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "GET") {
       return res.json({ ok: true, project })
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -81,6 +113,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
       if (action === "add_document") {
@@ -97,6 +137,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
       if (action === "update_timeline") {
@@ -107,14 +155,30 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
       if (action === "mark_completed") {;
-        project.status = "COMPLETED",;
+        project.status = "COMPLETED";
         saveProject(project);
         return return res.json({ ok: true, project });
         } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -122,6 +186,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ;
       return bad(res, "Unknown action");
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -132,9 +204,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(status).json({ ok: false, error: e?.message || "Server error" })
 ;
     return bad(res, "Method not allowed", 405);
-  } catch (e: any) {;
+  } catch (error) {
     const status = e?.statusCode || 500;
     return res.status(status).json({ ok: false, error: e?.message || "Server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

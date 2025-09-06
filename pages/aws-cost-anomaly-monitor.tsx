@@ -16,7 +16,11 @@ export default function AwsCostAnomalyMonitorPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[ 'Anomaly detection & budgetsSlack triage workflowsService/tag breakdownsMonthly savings report' ].map((f) => (
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-500/30 text-slate-200">{f}</div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</Link>
@@ -26,10 +30,11 @@ export default function AwsCostAnomalyMonitorPage() {
       </div>
     </Layout>
   )
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-export default function AwsCostAnomalyMonitorPage() {;
+export default function AwsCostAnomalyMonitorPage(req, res) {
+  try {
   return (;
     <Layout>;
       <Head>;
@@ -44,7 +49,11 @@ export default function AwsCostAnomalyMonitorPage() {;
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
             {[ 'Anomaly detection & budgetsSlack triage workflowsService/tag breakdownsMonthly savings report' ].map((f) => (;
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-cyan-500/30 text-slate-200">{f}</div>;
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
           <div className="flex gap-3">;
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Start from $199/mo</a>;
@@ -54,5 +63,9 @@ export default function AwsCostAnomalyMonitorPage() {;
       </div>;
     </Layout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

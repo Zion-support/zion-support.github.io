@@ -9,7 +9,6 @@ const LandingPageGenerator: NextPage = () => {
         <title>LandingPageGenerator - Zion Tech Solutions</title>
         <meta name="description" content="LandingPageGenerator service" />
       </Head>
-      
       <main className="space-y-4">
         <h1>LandingPageGenerator</h1>
         <p>Service details coming soon...</p>
@@ -19,5 +18,4 @@ const LandingPageGenerator: NextPage = () => {
     </div>
   )
 },
-
 export default LandingPageGenerator,

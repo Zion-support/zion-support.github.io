@@ -7,7 +7,11 @@ export default function FintechSolutions() {
 			slug="fintech-solutions"
 			description="AI solutions for fraud detection, risk scoring, KYC/AML automation, and real-time decisioning. Improve compliance and customer experience across the lifecycle."
 			subtitle="Smarter finance with lower risk and faster time to yes."
-			pricePerMonthUSD={2799}
+			pricePerMonthUSD={2799  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Reduce fraud loss 15–35% and manual review by 30–50%"
 			features={[
@@ -17,12 +21,24 @@ export default function FintechSolutions() {
 				"Collections optimization and next-best-action",
 				"Realtime rules with feature store integration",
 				"Integrations: Core banking, KYC, payments, CRMs"
-			]}
-			industries={["Fintech", "Banking", "Lending", "Payments"]}
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Fintech", "Banking", "Lending", "Payments"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 			canonical="https: //ziontechgroup.com/fintech-solutions"
 		/>
 	)
 			canonical="https: //ziontechgroup.com/fintech-solutions";
 		/>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

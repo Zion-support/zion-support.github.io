@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore
+// @ts-ignore;
 import data from '../../data/hf-spaces.json',
 export default function HfSpacesPage() {
   const items: any[] = (data?.items || []).slice(0, 60),
@@ -14,9 +14,17 @@ export default function HfSpacesPage() {
               <a className="font-medium underline" href={`https://huggingface.co/spaces/${it.spaceId}`} target="_blank" rel="noreferrer">{it.spaceId}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Likes {it.likes} · {it.runtime}</div>
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ul>;
       </div>;
     </EnhancedLayout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

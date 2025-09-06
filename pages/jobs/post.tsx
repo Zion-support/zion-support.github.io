@@ -7,15 +7,12 @@ const PostJob: NextPage = () => {
   const [description, setDescription] = useState(''),
   const [budget, setBudget] = useState(''),
   const [preview, setPreview] = useState(false),
-
   return (
     <div className="space-y-6 pb-20">
       <Head>
         <title>Post a Job - Zion</title>
       </Head>
-
       <h1 className="text-2xl font-semibold">Post a Job</h1>
-
       <div className="grid md:grid-cols-2 gap-6">
         <form className="space-y-4">
           <div>
@@ -32,12 +29,15 @@ const PostJob: NextPage = () => {
           </div>
           <div className="flex gap-2">
             <EnhancedButton type="button" variant="secondary" onClick={() => setPreview((p) => !p)}>
-              {preview ? 'Edit' : 'Preview'}
+              {preview ? 'Edit' : 'Preview'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </EnhancedButton>
             <EnhancedButton type="submit">Post Job</EnhancedButton>
           </div>
         </form>
-
         <aside className="border rounded-md p-4">
           <h2 className="font-semibold mb-2">Preview</h2>
           {preview ? (
@@ -57,7 +57,11 @@ const PostJob: NextPage = () => {
             </div>
           ) : (
             <p className="text-sm opacity-80">Click Preview to see how your job will appear to talent.</p>
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </aside>;
       </div>;
     </div>;

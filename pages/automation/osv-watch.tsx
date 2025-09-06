@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore
+// @ts-ignore;
 import data from '../../data/security/osv-report.json',
 export default function OsvWatchPage() {
   const results: any[] = (data?.results || []).slice(0, 50),
@@ -18,13 +18,29 @@ export default function OsvWatchPage() {
                 <ul className="list-disc ml-5 mt-2">
                   {r.vulns.slice(0, 5).map((v, i) => (
                     <li key={i} className="text-sm"><a className="underline" href={`https://osv.dev/vulnerability/${v.id}`} target="_blank" rel="noreferrer">{v.id}</Link> — {v.summary || ''}</li>
-                  ))}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </ul>;
               </li>;
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </ul>;
-        )}
+        )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       </div>;
     </EnhancedLayout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

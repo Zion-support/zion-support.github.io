@@ -1,7 +1,8 @@
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from 'next/link';
 import React from 'react';
-export default function PerformanceOptimization() {;
+export default function PerformanceOptimization(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -264,5 +265,9 @@ export default function PerformanceOptimization() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

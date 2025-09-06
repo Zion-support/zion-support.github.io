@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore
+// @ts-ignore;
 import data from '../../data/dao-leaderboard.json',
 export default function DaoLeaderboardPage() {
   const items: any[] = (data?.items || []).slice(0, 25),
@@ -17,9 +17,17 @@ export default function DaoLeaderboardPage() {
               </div>
               <div className="text-sm font-semibold">Score {it.totalScore}</div>
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ul>;
       </div>;
     </EnhancedLayout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

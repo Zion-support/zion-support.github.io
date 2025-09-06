@@ -7,7 +7,8 @@ import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import {logErrorToProduction} from '@/utils/productionLogger';
-export default function OfflinePage() {;
+export default function OfflinePage(req, res) {
+  try {
   const [isOnline, setIsOnline] = useState(false);
   const [lastUpdate, setLastUpdate] = useState<string>('');
   const [retryCount, setRetryCount] = useState(0);
@@ -17,8 +18,16 @@ export default function OfflinePage() {;
       setIsOnline(navigator.onLine);
       if (navigator.onLine) {;
         setLastUpdate(new Date().toLocaleTimeString());
-      }
-    }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
     // Set initial status;
     updateOnlineStatus();
@@ -28,23 +37,35 @@ export default function OfflinePage() {;
     return () => {;
       window.removeEventListener('online', updateOnlineStatus);
       window.removeEventListener('offline', updateOnlineStatus);
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }, []);
   const handleRetry = () => {;
-    try {;
+    try {
       setRetryCount(prev => prev + 1);
       window.location.reload();
-    } catch (err) {;
+    } catch (error) {
       logErrorToProduction('Failed to reload page', err);
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
   const quickActions = [;
     {;
-      title: 'Browse Cached Equipment',;
-      description: 'View recently visited equipment listings',;
-      icon: Search,;
-      href: '/equipment',;
+      title: 'Browse Cached Equipment';
+      description: 'View recently visited equipment listings';
+      icon: Search;
+      href: '/equipment';
       available: true;
     },;
     {;
@@ -67,9 +88,12 @@ export default function OfflinePage() {;
       icon: Home;
       href: '/';
       available: true;
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ]
-
   return (
     <>
       <Head>
@@ -77,69 +101,131 @@ export default function OfflinePage() {;
         <meta name="description" content="You're currently offline. Some features may not be available." />
         <meta name="robots" content="noindex, nofollow" />
       </Head>
-
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900">
         <div className="container mx-auto px-4 py-8">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="text-center mb-8"
           >
-            {/* Connection Status */}
+            {/* Connection Status */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="mb-6">
               <motion.div
-                animate={isOnline ? { scale: [1, 1.1, 1] } : { rotate: [0, -10, 10, -10, 0] }}
-                transition={{ duration: isOnline ? 0.6 : 2, repeat: isOnline ? 1 : Infinity }}
+                animate={isOnline ? { scale: [1, 1.1, 1] } : { rotate: [0, -10, 10, -10, 0] }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: isOnline ? 0.6 : 2, repeat: isOnline ? 1 : Infinity }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className={`mx-auto w-24 h-24 rounded-full flex items-center justify-center mb-4 ${;
                   isOnline;
                     ? 'bg-green-100 dark:bg-green-900/20';
                     : 'bg-orange-100 dark:bg-orange-900/20';
-                }`}
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               >
                 <WifiOff className={`w-12 h-12 ${
                   isOnline ? 'text-green-600' : 'text-orange-600'
                 }`} />
               </motion.div>
-              
-              <Badge 
-                variant={isOnline ? "default" : "secondary"}
+              <Badge
+                variant={isOnline ? "default" : "secondary"  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="text-sm px-3 py-1"
               >
-                {isOnline ? 'Connection Restored' : 'Offline Mode'}
+                {isOnline ? 'Connection Restored' : 'Offline Mode'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </Badge>
             </div>
-
             <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              {isOnline ? 'You\'re Back Online!' : 'You\'re Offline'}
+              {isOnline ? 'You\'re Back Online!' : 'You\'re Offline'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </h1>
-            
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-              {isOnline 
+              {isOnline
                 ? 'Your internet connection has been restored. You can now access all features.'
                 : 'No internet connection detected. Don\'t worry - you can still access cached content and use offline features.'
-              }
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </p>
-
             {lastUpdate && (
               <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
                 <Clock className="w-4 h-4" />
-                Last updated: {lastUpdate}
+                Last updated: {lastUpdate  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </p>;
-            )}
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </motion.div>;
-          {/* Action Buttons */}
+          {/* Action Buttons */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              onClick={handleRetry}
+            <Button
+              onClick={handleRetry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               size="lg"
               className="flex items-center gap-2"
-              disabled={isOnline}
+              disabled={isOnline  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >
               <RefreshCw className="w-5 h-5" />
-              {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'}
+              {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </Button>
-            
           <Button
             asChild
             variant="outline"
@@ -151,7 +237,6 @@ export default function OfflinePage() {;
               Go to Homepage
             </Link>
           </Button>
-
           <Button
             asChild
             variant="outline"
@@ -164,37 +249,67 @@ export default function OfflinePage() {;
             </Link>
           </Button>
         </div>
-
-          {/* Quick Actions */}
+          {/* Quick Actions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <motion.div;
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            initial={{ opacity: 0, y: 40 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6, delay: 0.3 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h2 className="text-2xl font-bold text-center mb-8">Available Offline Features</h2>
-            
             <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {quickActions.map((action, index) => (
                 <motion.div
-                  key={action.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  key={action.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >
                   <Card className={`h-full transition-all duration-300 hover:shadow-lg ${
-                    action.available 
-                      ? 'hover:scale-105 cursor-pointer' 
+                    action.available
+                      ? 'hover:scale-105 cursor-pointer'
                       : 'opacity-60 cursor-not-allowed'
                   }`}>
                     <CardHeader className="text-center">
                       <div className={`mx-auto w-12 h-12 rounded-full flex items-center justify-center mb-3 ${
-                        action.available 
-                          ? 'bg-blue-100 dark:bg-blue-900/20' 
+                        action.available
+                          ? 'bg-blue-100 dark:bg-blue-900/20'
                           : 'bg-gray-100 dark:bg-gray-800'
                       }`}>
                         <action.icon className={`w-6 h-6 ${
-                          action.available 
-                            ? 'text-blue-600 dark:text-blue-400' 
+                          action.available
+                            ? 'text-blue-600 dark:text-blue-400'
                             : 'text-gray-400'
                         }`} />
                       </div>
@@ -212,18 +327,42 @@ export default function OfflinePage() {;
                         <Button disabled size="sm" className="w-full">
                           Requires Internet
                         </Button>
-                      )}
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </CardContent>;
                   </Card>;
                 </motion.div>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </motion.div>;
-          {/* Tips Section */}
+          {/* Tips Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <motion.div;
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6, delay: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mt-16"
           >
             <Card className="max-w-2xl mx-auto">
@@ -252,12 +391,23 @@ export default function OfflinePage() {;
               </CardContent>
             </Card>
           </motion.div>
-
-          {/* Auto-refresh when online */}
+          {/* Auto-refresh when online */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           {isOnline && (;
             <motion.div;
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, scale: 0.9 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, scale: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="fixed bottom-6 right-6 z-50"
             >
               <Card className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800">
@@ -269,7 +419,11 @@ export default function OfflinePage() {;
                     </span>
                     <Button
                       size="sm"
-                      onClick={() => window.location.reload()}
+                      onClick={() => window.location.reload()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="bg-green-600 hover:bg-green-700"
                     >
                       Refresh
@@ -278,7 +432,11 @@ export default function OfflinePage() {;
                 </CardContent>
               </Card>
             </motion.div>
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>;
       </div>;
     </>;

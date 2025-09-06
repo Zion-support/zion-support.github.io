@@ -7,7 +7,6 @@ export default function InfrastructureDriftDetectorPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/infrastructure-drift-detector'))
   if (!service) return null,
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-
   return (
     <Layout>
       <Head>
@@ -28,7 +27,11 @@ export default function InfrastructureDriftDetectorPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-indigo-400 mt-0.5"><Check /><span>{feat}</span></li>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-indigo-500/30 p-6 h-fit">
@@ -51,5 +54,9 @@ export default function InfrastructureDriftDetectorPage() {
       </div>
     </Layout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

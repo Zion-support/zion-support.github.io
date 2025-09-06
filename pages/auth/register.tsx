@@ -1,34 +1,36 @@
-import React, { useEffect } from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import SignupForm from '@/components/auth/SignupForm',;
-import { AuthButtons } from '@/components/AuthButtons',;
-import { fireEvent } from '@/lib/analytics',;
-import { logInfo } from '@/utils/productionLogger',;
-import { useRouter } from 'next/router',;
+import React, { useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import SignupForm from '@/components/auth/SignupForm';
+import { AuthButtons } from '@/components/AuthButtons';
+import { fireEvent } from '@/lib/analytics';
+import { logInfo } from '@/utils/productionLogger';
+import { useRouter } from 'next/router';
 const RegisterPage = () => {;
-  const router = useRouter(),;
+  const router = useRouter();
   useEffect(() => {;
     fireEvent('signup_page_view');
   }, []),;
   const handleSuccess = ({ email, emailVerificationRequired }: {;
-    email: string,;
+    email: string;
     emailVerificationRequired: boolean;
   }) => {;
     if (emailVerificationRequired) {;
       router.push(`/verify-status?email=${encodeURIComponent(email)}`);
     } else {;
       router.push('/auth/login?registrationSuccess=true');
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   },
-
   return (
     <>
       <Head>
         <title>Create Account - Zion Tech Marketplace</title>
         <meta name="description" content="Create your Zion Tech Marketplace account" />
       </Head>
-
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
@@ -36,18 +38,34 @@ const RegisterPage = () => {;
               className="mx-auto h-12 w-auto"
               src="/logos/zion-logo.png"
               alt="Zion Tech"
-              width={48}
-              height={48}
+              width={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              height={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               onError={(e) => {;
-                const target = e.currentTarget as HTMLImageElement,;
+                const target = e.currentTarget as HTMLImageElement;
                 target.style.display = 'none';
-              }}
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               Create your account
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
-              Or{' '}
+              Or{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -56,10 +74,12 @@ const RegisterPage = () => {;
               </Link>
             </p>
           </div>
-
           <SignupForm onSuccess={handleSuccess} />
-
-          {/* Social signup options */}
+          {/* Social signup options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -71,14 +91,25 @@ const RegisterPage = () => {;
             </div>
             <AuthButtons providers={["google", "github"]} />
           </div>
-
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
-              By creating an account, you agree to our{' '}
+              By creating an account, you agree to our{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
                 Terms of Service
-              </Link>{' '}
-              and{' '}
+              </Link>{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              and{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -89,14 +120,17 @@ const RegisterPage = () => {;
     </>
   )
 },
-
 export default RegisterPage,
             />;
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">;
               Create your account;
             </h2>;
             <p className="mt-2 text-center text-sm text-gray-600">;
-              Or{' '}
+              Or{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <Link;
                 href="/auth/login";
                 className="font-medium text-blue-600 hover:text-blue-500 underline";
@@ -106,7 +140,11 @@ export default RegisterPage,
             </p>;
           </div>;
           <SignupForm onSuccess={handleSuccess} />;
-          {/* Social signup options */}
+          {/* Social signup options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="mt-6">;
             <div className="relative">;
               <div className="absolute inset-0 flex items-center">;
@@ -120,11 +158,23 @@ export default RegisterPage,
           </div>;
           <div className="text-center mt-4">;
             <p className="text-xs text-gray-500">;
-              By creating an account, you agree to our{' '}
+              By creating an account, you agree to our{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">;
                 Terms of Service;
-              </Link>{' '}
-              and{' '}
+              </Link>{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              and{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">;
                 Privacy Policy;
               </Link>;

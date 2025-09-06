@@ -1,17 +1,18 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-export default function CaseStudyResourcePage() {;
-  const router = useRouter(),;
-  const { id } = router.query,;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+export default function CaseStudyResourcePage(req, res) {
+  try {
+  const router = useRouter();
+  const { id } = router.query;
   // Case studies data - this should match the data in resources.tsx;
   const caseStudies = [;
     {;
-      id: 'ai-automation-manufacturing',;
-      title: 'AI-Powered Manufacturing Automation',;
-      company: 'Global Manufacturing Corp',;
-      industry: 'Manufacturing',;
+      id: 'ai-automation-manufacturing';
+      title: 'AI-Powered Manufacturing Automation';
+      company: 'Global Manufacturing Corp';
+      industry: 'Manufacturing';
       results: '40% increase in production efficiency, 60% reduction in downtime',;
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',;
       fullContent: `;
@@ -177,11 +178,13 @@ export default function CaseStudyResourcePage() {;
         The self-healing, auto-scaling infrastructure now supports continued business growth while maintaining;
         optimal performance and cost efficiency.</p>;
       `;
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const caseStudy = caseStudies.find(study => study.id === id),
-
   if (!caseStudy) {
     return (
       <>
@@ -195,7 +198,7 @@ export default function CaseStudyResourcePage() {;
               <p className="text-xl text-white/80 mb-8">
                 The case study resource you're looking for doesn't exist.
               </p>
-              <Link 
+              <Link
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -206,8 +209,11 @@ export default function CaseStudyResourcePage() {;
         </div>
       </>
     )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
+}
   return (
     <>
       <Head>
@@ -216,7 +222,6 @@ export default function CaseStudyResourcePage() {;
         <meta property="og:title" content={`${caseStudy.title} | Zion Tech Group`} />
         <meta property="og:description" content={caseStudy.description} />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -225,32 +230,36 @@ export default function CaseStudyResourcePage() {;
                 ← Back to Resources
               </Link>
             </nav>
-            
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
-                  {caseStudy.industry}
+                  {caseStudy.industry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>
               <p className="text-xl text-cyan-400 font-semibold mb-2">{caseStudy.company}</p>
               <p className="text-white/80 text-lg">{caseStudy.description}</p>
             </header>
-            
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20 mb-8">
               <h2 className="text-2xl font-bold mb-4 text-white">Key Results</h2>
               <p className="text-green-400 font-semibold text-lg">{caseStudy.results}</p>
             </div>
-            
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
-              <div 
+              <div
                 className="prose prose-invert max-w-none"
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               />
             </div>
-            
             <div className="text-center">
-              <Link 
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -288,7 +297,11 @@ export default function CaseStudyResourcePage() {;
         </div>;
       </>;
     );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 ;
   return (;
     <>;
@@ -309,7 +322,11 @@ export default function CaseStudyResourcePage() {;
             <header className="mb-12">;
               <div className="mb-6">;
                 <span className="px-3 py-1 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">;
-                  {caseStudy.industry}
+                  {caseStudy.industry  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </span>;
               </div>;
               <h1 className="text-4xl font-bold mb-4 text-white">{caseStudy.title}</h1>;
@@ -323,7 +340,11 @@ export default function CaseStudyResourcePage() {;
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">;
               <div;
                 className="prose prose-invert max-w-none";
-                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }}
+                dangerouslySetInnerHTML={{ __html: caseStudy.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               />;
             </div>;
             <div className="text-center">;
@@ -339,4 +360,8 @@ export default function CaseStudyResourcePage() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

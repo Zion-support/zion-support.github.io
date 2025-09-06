@@ -2,7 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Brain, Zap, Shield, Users, Target, Globe, Heart, CheckCircle } from 'lucide-react';
-
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -40,17 +39,23 @@ const AboutPage: React.FC = () => {
       title: "Integrity",
       description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
       color: "from-pink-500 to-rose-500"
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ];
-
 export default function AboutPage() {
   const stats = [
     { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
     { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
-    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
+    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const values = [
     {
       icon: Brain,
@@ -75,18 +80,24 @@ export default function AboutPage() {
       title: 'Client Success',
       description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
       color: 'from-emerald-500 to-teal-500'
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const technologies = [
     { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
     { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
     { name: 'Cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions', color: 'from-red-500 to-orange-500' },
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
-    { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
+    { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const team = [
     {
       name: 'Kleber',
@@ -115,9 +126,12 @@ export default function AboutPage() {
       description: 'Experts in threat detection and zero-trust security architectures',
       image: '/api/placeholder/150/150',
       color: 'from-red-500 to-orange-500'
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const milestones = [
     {
       year: '2020',
@@ -148,13 +162,15 @@ export default function AboutPage() {
       year: '2025',
       title: 'Future Vision',
       description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
 import React from 'react',
 import Head from 'next/head',
 import Button from '../components/ui/Button',
-
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
@@ -163,14 +179,12 @@ export default function AboutPage() {
         <meta name="description" content="About Zion Tech Group: AI, micro SaaS, and enterprise IT innovators." />
         <link rel="canonical" href="https://ziontechgroup.com/about" />
       </Head>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
           <header className="text-center">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4">About Zion Tech Group</h1>
             <p className="text-gray-300 text-lg">We build real, outcome-oriented AI, micro SaaS, and enterprise IT solutions.</p>
           </header>
-
           <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <div className="text-sm text-gray-400 mb-2">What we do</div>
@@ -185,7 +199,6 @@ export default function AboutPage() {
               <div className="text-gray-200">Startups to enterprises across healthcare, fintech, manufacturing, media, and public sector.</div>
             </div>
           </section>
-
           <section className="grid grid-cols-1 md: grid-cols-2 gap-6">
             <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
               <h2 className="text-2xl font-semibold mb-3">Contact</h2>
@@ -210,5 +223,4 @@ export default function AboutPage() {
     </>
   )
 },
-
 export default AboutPage,

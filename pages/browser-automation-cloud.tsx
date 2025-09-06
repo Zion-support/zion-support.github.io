@@ -1,7 +1,6 @@
 import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
-
 export default function BrowserAutomationCloudPage() {
 	return (
 		<>
@@ -45,10 +44,11 @@ export default function BrowserAutomationCloudPage() {
 			</main>
 		</>
 	)
-import React from 'react',;
-import SEO from '../components/SEO',;
+import React from 'react';
+import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-export default function BrowserAutomationCloudPage() {;
+export default function BrowserAutomationCloudPage(req, res) {
+  try {
 	return (;
 		<>;
 			<Head>;
@@ -91,5 +91,9 @@ export default function BrowserAutomationCloudPage() {;
 			</main>;
 		</>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

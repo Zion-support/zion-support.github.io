@@ -21,12 +21,15 @@ export default function DeveloperPage() {
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-
 export default function DeveloperPage() {_return (
     <>
       <Head>
@@ -45,5 +48,9 @@ export default function DeveloperPage() {_return (
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231

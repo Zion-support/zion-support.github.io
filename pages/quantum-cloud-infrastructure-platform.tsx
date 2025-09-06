@@ -13,7 +13,11 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 				title="Quantum Cloud Infrastructure Platform"
 				description="Quantum compute accelerators, advanced security protocols, real-time monitoring, cost optimization, DR, and compliance—delivered as managed foundations."
 				subtitle="Next-gen compute for critical workloads"
-				pricePerMonthUSD={28999}
+				pricePerMonthUSD={28999  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				implementationWeeks="1-2 weeks"
 				roiNote="Accelerate analytics and simulations by 10-100x with lower total cost"
 				features={[
@@ -23,8 +27,16 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 					"Automated cost controls",
 					"Cross-region DR and backup",
 					"Compliance and audit kits"
-				]}
-				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]}
+				]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				industries={["Financial Services", "Life Sciences", "Government", "Energy", "Media"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				canonical="https: //ziontechgroup.com/quantum-cloud-infrastructure-platform"
 			/>
 		</>
@@ -33,4 +45,8 @@ export default function QuantumCloudInfrastructurePlatformPage() {
 			/>;
 		</>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

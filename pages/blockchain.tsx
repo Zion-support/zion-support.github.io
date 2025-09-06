@@ -26,11 +26,16 @@ export default function Blockchain() {
       </ErrorBoundary>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import ErrorBoundary from '../components/ErrorBoundary';
-export default function Blockchain() {;
+export default function Blockchain(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -50,4 +55,8 @@ export default function Blockchain() {;
       </ErrorBoundary>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

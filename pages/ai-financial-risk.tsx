@@ -10,7 +10,6 @@ export default function AIFinancialRiskPage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'
   },
-
   return (
     <UltraAdvancedFuturisticBackground>
       <NextHead>
@@ -22,7 +21,11 @@ export default function AIFinancialRiskPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-10">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3">
-              <DollarSign className="w-10 h-10" />{service?.name || 'AI Financial Risk Management'}
+              <DollarSign className="w-10 h-10" />{service?.name || 'AI Financial Risk Management'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </h1>
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service?.tagline || 'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}</p>
           </div>
@@ -33,7 +36,11 @@ export default function AIFinancialRiskPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detectionExplainable AIStress testingModel governanceReal-time alerts']).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">
@@ -54,15 +61,16 @@ export default function AIFinancialRiskPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
-import NextHead from 'next/head',;
-import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react',;
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',;
-import Button from '../components/ui/Button',;
-import { innovativeAIServices } from '../data/innovative-ai-services',;
-export default function AIFinancialRiskPage() {;
-  const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk')),;
+import NextHead from 'next/head';
+import { DollarSign, Check, Phone, Mail, MapPin } from 'lucide-react';
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
+import Button from '../components/ui/Button';
+import { innovativeAIServices } from '../data/innovative-ai-services';
+export default function AIFinancialRiskPage(req, res) {
+  try {
+  const service = innovativeAIServices.find(s => (s.link || '').endsWith('/ai-financial-risk'));
   const contactInfo = {;
-    mobile: '+1 302 464 0950',;
+    mobile: '+1 302 464 0950';
     email: 'kleber@ziontechgroup.com';
     address: '364 E Main St STE 1008 Middletown DE 19709';
   };
@@ -77,7 +85,11 @@ export default function AIFinancialRiskPage() {;
         <div className="max-w-6xl mx-auto">;
           <div className="text-center mb-10">;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent flex items-center justify-center gap-3">;
-              <DollarSign className="w-10 h-10" />{service?.name || 'AI Financial Risk Management'}
+              <DollarSign className="w-10 h-10" />{service?.name || 'AI Financial Risk Management'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </h1>;
             <p className="mt-4 text-xl text-slate-300 max-w-3xl mx-auto">{service?.tagline || 'Real-time risk scoring, fraud detection, and stress scenarios with explainable AI.'}</p>;
           </div>;
@@ -88,7 +100,11 @@ export default function AIFinancialRiskPage() {;
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">;
                 {(service?.features?.slice(0, 12) || ['Credit/market riskAnomaly detectionExplainable AIStress testingModel governanceReal-time alerts']).map((feat, i) => (;
                   <li key={i} className="flex items-start space-x-3 text-slate-200"><Check className="w-5 h-5 text-cyan-400 mt-0.5" /><span>{feat}</span></li>;
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit">;
@@ -109,5 +125,9 @@ export default function AIFinancialRiskPage() {;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

@@ -1,7 +1,6 @@
 import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
-
 export default defineConfig({
   plugins: [
     react({
@@ -172,20 +171,24 @@ export default defineConfig({
         return { js: `__ASSET__${filename}__` };
       } else {
         return { relative: true };
-      }
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },
   },
 });
-import { defineConfig, splitVendorChunkPlugin } from 'vite',;
-import react from '@vitejs/plugin-react',;
-import path from 'node: path',;
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import react from '@vitejs/plugin-react';
+import path from 'node: path';
 export default defineConfig({;
   plugins: [;
     react({;
       include: '**/*.{jsx,js,ts,tsx}',;
       fastRefresh: true,;
       jsxRuntime: 'automatic';
-    }),;
+    });
     splitVendorChunkPlugin();
   ],;
   resolve: {;
@@ -223,8 +226,16 @@ export default defineConfig({;
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]',;
           if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]',;
           return 'assets/[name]-[hash].[ext]';
-        }
-      }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },;
     terserOptions: {;
       compress: {;
@@ -243,8 +254,16 @@ export default defineConfig({;
         safari10: true,;
         properties: {;
           regex: /^_/;
-        }
-      }
+          } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     },;
     chunkSizeWarningLimit: 1000,;
     reportCompressedSize: false,;
@@ -264,7 +283,11 @@ export default defineConfig({;
     exclude: ['@radix-ui/react-icons'],;
     esbuildOptions: {;
       target: 'esnext';
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   },;
   css: {;
     devSourcemap: false;
@@ -282,7 +305,11 @@ export default defineConfig({;
     },;
     fs: {;
       allow: ['..'];
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   },;
   preview: {;
     port: 4173,;
@@ -290,18 +317,38 @@ export default defineConfig({;
     open: true;
   },;
   define: {;
-    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),;
-    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),;
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development');
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production');
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV);
   },;
   envPrefix: ['VITE_ZION_'];
   experimental: {;
     renderBuiltUrl(filename, { hostType }) {;
       if (hostType === 'js') {;
-        return { js: `__ASSET__${filename}__` }
-      } else {;
-        return { relative: true }
-      }
-    }
+        return { js: `__ASSET__${filename}__`   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
+      } else {;
+        return { relative: true   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 });

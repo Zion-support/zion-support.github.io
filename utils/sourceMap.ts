@@ -1,44 +1,68 @@
-import fs from "fs",;
-import path from "path",;
-export type SourceNodeType = "folder" | "file",;
+import fs from "fs";
+import path from "path";
+export type SourceNodeType = "folder" | "file";
 export interface SourceNode {;
-  name: string,;
+  name: string;
   path: string, // repo-relative path starting with '/';
   type: SourceNodeType,;
   children?: SourceNode[],;
   exists?: boolean;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export interface SourceMapStatus {;
-  gitConnected: boolean,;
+  gitConnected: boolean;
   gitBranch?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export interface SourceMapResponse {;
-  nodes: SourceNode[],;
+  nodes: SourceNode[];
   status: SourceMapStatus;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
-const ROOT = process.cwd(),;
+const ROOT = process.cwd();
 function withPath(base: string, segment: string): string {;
   if (base === "/") return `/${segment}`,;
   return `${base}/${segment}`;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 function folder(name: string, basePath: string, children: string[] = []): SourceNode {;
-  const fullPath = withPath(basePath, name),;
+  const fullPath = withPath(basePath, name);
   return {;
     name,;
     path: fullPath,;
     type: "folder",;
-    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))}
+    children: children.map((child) => ({ name: child, path: withPath(fullPath, child), type: "folder" }))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export function buildZionSourceMap(): SourceNode[] {;
   const map: SourceNode[] = [;
     // 1. /core;
     {;
-      name: "core",;
+      name: "core";
       path: "/core",;
       type: "folder",;
       children: [;
@@ -127,57 +151,101 @@ export function buildZionSourceMap(): SourceNode[] {;
         { name: "integrations", path: "/api/integrations", type: "folder" },;
         { name: "webhooks", path: "/api/webhooks", type: "folder" }]}],;
   return map;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 function markExistenceRecursive(node: SourceNode): SourceNode {;
-  const absolutePath = path.join(ROOT, node.path),;
-  const exists = fs.existsSync(absolutePath),;
+  const absolutePath = path.join(ROOT, node.path);
+  const exists = fs.existsSync(absolutePath);
   const withExists: SourceNode = {;
-    ...node,;
-    exists},;
+    ...node;
+    exists};
   if (node.children && node.children.length > 0) {;
     withExists.children = node.children.map(markExistenceRecursive);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
   return withExists;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export function getSourceMapWithExistence(): SourceNode[] {;
-  const nodes = buildZionSourceMap(),;
+  const nodes = buildZionSourceMap();
   return nodes.map(markExistenceRecursive);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export interface DeployTemplateResult {;
-  createdPaths: string[],;
+  createdPaths: string[];
   skippedPaths: string[];
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export function ensureDirectory(dirPath: string): void {;
   if (!fs.existsSync(dirPath)) {;
     fs.mkdirSync(dirPath, { recursive: true });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
 export function deployBasicTemplateForPath(repoRelativePath: string): DeployTemplateResult {;
-  const absoluteDir = path.join(ROOT, repoRelativePath),;
-  const createdPaths: string[] = [],;
-  const skippedPaths: string[] = [],;
-  ensureDirectory(absoluteDir),;
-  const keepFile = path.join(absoluteDir, ".keep"),;
+  const absoluteDir = path.join(ROOT, repoRelativePath);
+  const createdPaths: string[] = [];
+  const skippedPaths: string[] = [];
+  ensureDirectory(absoluteDir);
+  const keepFile = path.join(absoluteDir, ".keep");
   if (!fs.existsSync(keepFile)) {;
-    fs.writeFileSync(keepFile, ""),;
+    fs.writeFileSync(keepFile, "");
     createdPaths.push(keepFile);
   } else {;
     skippedPaths.push(keepFile);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 ;
-  const readmeFile = path.join(absoluteDir, "README.md"),;
+  const readmeFile = path.join(absoluteDir, "README.md");
   if (!fs.existsSync(readmeFile)) {;
     const readme = `# ${path.basename(absoluteDir)}\n\nThis module is part of the Zion OS modular source tree. Customize as needed.\n`;
     fs.writeFileSync(readmeFile, readme);
     createdPaths.push(readmeFile);
   } else {;
     skippedPaths.push(readmeFile);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 ;
-  return { createdPaths, skippedPaths }
+  return { createdPaths, skippedPaths   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

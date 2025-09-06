@@ -2,20 +2,29 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
   res.status(200).json({ message: 'Review submitted' });
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { v4 as uuidv4 } from 'uuid',;
-import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore',;
-import type { Review } from '../../../types/reviews',;
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {;
-  if (req.method !== 'POST') {;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { findProjectById, hasExistingReview, upsertReview, counterpartRole } from '../../../utils/dataStore';
+import type { Review } from '../../../types/reviews';
+export default async function handler(req, res) {
+  try {
+  if (req.method !== '$1') {
     return res.status(405).json({ error: 'Method not allowed' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-  try {;
+  try {
     const {;
       projectId,;
       fromRole,;
@@ -24,17 +33,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text,;
       categories,;
       anonymous} = req.body as {;
-      projectId: string,;
+      projectId: string;
       fromRole: 'client' | 'talent',;
-      fromId: string,;
-      rating: number,;
-      text: string,;
+      fromId: string;
+      rating: number;
+      text: string;
       categories?: Review['categories'],;
       anonymous?: boolean;
     },;
     if (!projectId || !fromRole || !fromId) {;
       return res.status(400).json({ error: 'Missing required fields' });
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -44,6 +61,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     if (!text || String(text).trim().length === 0) {;
@@ -51,13 +76,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-    const project = await findProjectById(projectId),;
+    const project = await findProjectById(projectId);
     if (!project) {;
       return res.status(404).json({ error: 'Project not found' });
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -67,41 +108,65 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-    const toRole = counterpartRole(fromRole),;
-    const toId = toRole === 'talent' ? project.talentSlug : project.clientId,;
-    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug,;
+    const toRole = counterpartRole(fromRole);
+    const toId = toRole === 'talent' ? project.talentSlug : project.clientId;
+    const expectedFromId = fromRole === 'client' ? project.clientId : project.talentSlug;
     if (expectedFromId !== fromId) {;
       return res.status(403).json({ error: 'Invalid reviewer for this project' });
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-;
-    const existing = await hasExistingReview(projectId, fromRole, fromId),;
-    if (existing) {;
-      return res.status(409).json({ error: 'You have already submitted a review for this project' });
-      } catch (error) {
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-    const now = new Date().toISOString(),;
+    const existing = await hasExistingReview(projectId, fromRole, fromId);
+    if (existing) {;
+      return res.status(409).json({ error: 'You have already submitted a review for this project' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+    const now = new Date().toISOString();
     const review: Review = {;
-      id: uuidv4(),;
-      projectId,;
-      fromRole,;
-      fromId,;
+      id: uuidv4();
+      projectId;
+      fromRole;
+      fromId;
       toRole,;
       toId,;
       rating,;
       text: String(text).trim(),;
       categories,;
-      anonymous: Boolean(anonymous),;
+      anonymous: Boolean(anonymous);
       approved: false, // requires admin approval;
       reported: false,;
       reports: [],;
@@ -109,8 +174,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       createdAt: now};
     await upsertReview(review);
     return res.status(201).json({ message: 'Review submitted', reviewId: review.id });
-  } catch (error: any) {;
+  } catch (error) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

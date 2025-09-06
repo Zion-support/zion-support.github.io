@@ -1,24 +1,25 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { motion, AnimatePresence } from 'framer-motion',;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion, AnimatePresence } from 'framer-motion';
 import {;
   Search, Filter, Grid, List, ArrowRight, ChevronRight,;
   Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star,;
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server,;
   TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
 } from 'lucide-react',;
-import SmartHeader from '../components/SmartHeader',;
-import SmartFooter from '../components/SmartFooter',;
-export default function ExplorePage() {;
-  const [searchTerm, setSearchTerm] = useState(''),;
-  const [selectedCategory, setSelectedCategory] = useState('all'),;
-  const [sortBy, setSortBy] = useState('popularity'),;
+import SmartHeader from '../components/SmartHeader';
+import SmartFooter from '../components/SmartFooter';
+export default function ExplorePage(req, res) {
+  try {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('popularity');
   const categories = [;
     {;
-      id: 'ai',;
-      name: 'AI & Machine Learning',;
-      icon: Brain,;
-      description: 'Revolutionary AI consciousness and machine learning solutions',;
+      id: 'ai';
+      name: 'AI & Machine Learning';
+      icon: Brain;
+      description: 'Revolutionary AI consciousness and machine learning solutions';
       color: 'from-purple-500 to-pink-500',;
       serviceCount: 25,;
       featured: true;
@@ -103,14 +104,18 @@ export default function ExplorePage() {;
       color: 'from-emerald-500 to-green-500',;
       serviceCount: 17,;
       featured: false;
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const featuredServices = [;
     {;
-      id: 'ai-consciousness-evolution',;
-      title: 'AI Consciousness Evolution',;
-      category: 'ai',;
-      description: 'Revolutionary AI consciousness platform with emotional intelligence',;
+      id: 'ai-consciousness-evolution';
+      title: 'AI Consciousness Evolution';
+      category: 'ai';
+      description: 'Revolutionary AI consciousness platform with emotional intelligence';
       status: 'beta',;
       price: '$1,999/month',;
       icon: Brain,;
@@ -145,28 +150,35 @@ export default function ExplorePage() {;
       price: '$2,499/month',;
       icon: Rocket,;
       color: 'from-indigo-500 to-purple-500';
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   // Filter categories based on search;
   const filteredCategories = categories.filter(category => {;
     const matchesSearch = category.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         category.description.toLowerCase().includes(searchTerm.toLowerCase()),;
-    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory,;
+                         category.description.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesFilter = selectedCategory === 'all' || category.id === selectedCategory;
     return matchesSearch && matchesFilter;
-  }),;
+  });
   // Sort categories;
   const sortedCategories = [...filteredCategories].sort((a, b) => {;
     switch (sortBy) {;
       case 'popularity':;
         return b.serviceCount - a.serviceCount,;
       case 'name':;
-        return a.name.localeCompare(b.name),;
+        return a.name.localeCompare(b.name);
       case 'featured':;
         return (b.featured ? 1 : 0) - (a.featured ? 1 : 0),;
       default: return 0;
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   }),
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -176,22 +188,36 @@ export default function ExplorePage() {;
         <meta property="og:description" content="Comprehensive technology categories and innovative solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/explore" />
       </Head>
-
       <SmartHeader />
-
-      {/* Hero Section */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Explore Technology Categories
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive range of cutting-edge technology solutions across AI, 
+              Discover our comprehensive range of cutting-edge technology solutions across AI,
               quantum computing, cybersecurity, space technology, and more
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -206,31 +232,57 @@ export default function ExplorePage() {;
           </motion.div>
         </div>
       </section>
-
-      {/* Search and Filters */}
+      {/* Search and Filters */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-              {/* Search */}
+              {/* Search */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="flex-1 max-w-md">
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-white/40 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search categories..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/40 focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                   />
                 </div>
               </div>
-
-              {/* Sort Options */}
+              {/* Sort Options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="flex items-center gap-4">
                 <select
-                  value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
+                  value={sortBy  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSortBy(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
                   <option value="popularity">Sort by Popularity</option>
@@ -242,14 +294,29 @@ export default function ExplorePage() {;
           </div>
         </div>
       </section>
-
-      {/* Featured Services */}
+      {/* Featured Services */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="px-6 pb-16">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -259,14 +326,29 @@ export default function ExplorePage() {;
               Explore our most innovative and cutting-edge technology solutions
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {featuredServices.map((service, index) => (
               <motion.div
-                key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
@@ -274,27 +356,31 @@ export default function ExplorePage() {;
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  
                   <div className="flex items-center justify-between mb-3">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                       service.status === 'active' ? 'bg-green-500/20 text-green-300' :
                       service.status === 'beta' ? 'bg-yellow-500/20 text-yellow-300' :
                       'bg-blue-500/20 text-blue-300'
                     }`}>
-                      {service.status}
+                      {service.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </span>
                     <span className="text-xs text-white/40">{service.category}</span>
                   </div>
-                  
                   <h3 className="text-lg font-bold mb-2 text-white">{service.title}</h3>
                   <p className="text-sm text-white/70 mb-4 leading-relaxed">{service.description}</p>
-                  
                   <div className="mb-4">
                     <span className="text-xl font-bold text-cyan-400">{service.price}</span>
                   </div>
-                  
                   <a
-                    href={`/services#${service.id}`}
+                    href={`/services#${service.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="inline-flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium"
                   >
                     Learn More
@@ -302,17 +388,37 @@ export default function ExplorePage() {;
                   </Link>
                 </div>
               </motion.div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* Categories Grid */}
+      {/* Categories Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-12"
           >
             <h2 className="text-3xl font-bold text-white mb-4">
@@ -322,13 +428,24 @@ export default function ExplorePage() {;
               {sortedCategories.length} categories available for exploration
             </p>
           </motion.div>
-
           <AnimatePresence mode="wait">
             {sortedCategories.length === 0 ? (
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+                initial={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                animate={{ opacity: 1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                exit={{ opacity: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="text-center py-20"
               >
                 <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
@@ -339,7 +456,11 @@ export default function ExplorePage() {;
                   Try adjusting your search terms
                 </p>
                 <button
-                  onClick={() => setSearchTerm('')}
+                  onClick={() => setSearchTerm('')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
                 >
                   Clear Search
@@ -349,37 +470,84 @@ export default function ExplorePage() {;
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {sortedCategories.map((category, index) => (
                   <motion.div
-                    key={category.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
-                    onClick={() => window.location.href = `/category/${category.id}`}
+                    onClick={() => window.location.href = `/category/${category.id}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
-                      {/* Featured Badge */}
+                      {/* Featured Badge */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       {category.featured && (
                         <div className="absolute top-4 right-4">
                           <span className="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white">
                             ⭐ Featured
                           </span>
                         </div>
-                      )}
+                      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-                      {/* Category Icon */}
+                      {/* Category Icon */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${category.color} p-5 mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                         <category.icon className="w-10 h-10 text-white" />
                       </div>
-                      
-                      {/* Category Info */}
+                      {/* Category Info */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <h3 className="text-2xl font-bold mb-3 text-white group-hover:text-cyan-300 transition-colors duration-300">
-                        {category.name}
+                        {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </h3>
                       <p className="text-white/70 leading-relaxed mb-6">
-                        {category.description}
+                        {category.description  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </p>;
-                      {/* Stats */}
+                      {/* Stats */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className="flex items-center justify-between mb-6">
                         <div className="text-center">
                           <div className="text-2xl font-bold text-cyan-400">{category.serviceCount}</div>
@@ -387,14 +555,26 @@ export default function ExplorePage() {;
                         </div>
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">
-                            {category.featured ? '⭐' : '🚀'}
+                            {category.featured ? '⭐' : '🚀'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </div>
                           <div className="text-xs text-white/60">
-                            {category.featured ? 'Featured' : 'Active'}
+                            {category.featured ? 'Featured' : 'Active'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           </div>;
                         </div>;
                       </div>;
-                      {/* CTA */}
+                      {/* CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       <div className="flex items-center justify-between">
                         <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
                           Explore Category
@@ -403,20 +583,48 @@ export default function ExplorePage() {;
                       </div>
                     </div>
                   </motion.div>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
-            )}
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </AnimatePresence>;
         </div>;
       </section>;
-      {/* Technology Trends */}
+      {/* Technology Trends */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 px-6 bg-gradient-to-r from-white/5 to-white/10">
         <div className="max-w-7xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
@@ -426,7 +634,6 @@ export default function ExplorePage() {;
               Stay ahead of the curve with our insights into the latest technology developments
             </p>
           </motion.div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
@@ -470,20 +677,43 @@ export default function ExplorePage() {;
                 description: 'Self-improving AI systems and autonomous business operations',
                 trend: 'Growing',
                 color: 'from-emerald-500 to-green-500'
-              }
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             ].map((trend, index) => (;
               <motion.div;
-                key={trend.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={trend.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.5, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
-                
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="text-xl font-bold text-white">{trend.title}</h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -494,24 +724,51 @@ export default function ExplorePage() {;
                     trend.trend === 'Experimental' ? 'bg-purple-500/20 text-purple-300' :
                     'bg-cyan-500/20 text-cyan-300'
                   }`}>
-                    {trend.trend}
+                    {trend.trend  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </span>
                 </div>
-                
                 <p className="text-white/70 leading-relaxed">{trend.description}</p>
               </motion.div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */}
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Explore?
@@ -537,7 +794,6 @@ export default function ExplorePage() {;
           </motion.div>
         </div>
       </section>
-
       <SmartFooter />
     </div>
   )
@@ -569,4 +825,8 @@ export default function ExplorePage() {;
       <SmartFooter />;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

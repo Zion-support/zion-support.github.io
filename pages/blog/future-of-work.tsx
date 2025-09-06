@@ -1,7 +1,8 @@
-import Head from 'next/head',;
-import Link from 'next/link',;
-import React from 'react',;
-export default function FutureOfWork() {;
+import Head from 'next/head';
+import Link from 'next/link';
+import React from 'react';
+export default function FutureOfWork(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -256,5 +257,9 @@ export default function FutureOfWork() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

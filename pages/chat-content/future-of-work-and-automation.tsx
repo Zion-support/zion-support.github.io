@@ -7,7 +7,6 @@ const FutureOfWorkAndAutomation: NextPage = () => {
         <title>FutureOfWorkAndAutomation - Zion Tech Solutions</title>
         <meta name="description" content="FutureOfWorkAndAutomation page" />
       </Head>
-      
       <main>
         <h1>FutureOfWorkAndAutomation</h1>
         <p>This page is under construction.</p>
@@ -15,5 +14,4 @@ const FutureOfWorkAndAutomation: NextPage = () => {
     </div>
   )
 },
-
 export default FutureOfWorkAndAutomation,

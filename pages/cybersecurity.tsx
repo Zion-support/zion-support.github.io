@@ -2,17 +2,14 @@ import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',
-
 export default function CybersecurityPage() {
   const features = [
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],
-
   const solutions = [
     { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
-
   return (
     <Layout>
       <Head>
@@ -34,7 +31,6 @@ export default function CybersecurityPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Key Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -43,10 +39,13 @@ export default function CybersecurityPage() {
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Highlighted Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -55,7 +54,11 @@ export default function CybersecurityPage() {
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>
                   <p className="text-gray-300 text-sm">Learn more</p>
                 </Link>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>
                 <p className="text-gray-300 text-sm">Learn more</p>
@@ -70,11 +73,12 @@ export default function CybersecurityPage() {
       </div>
     </Layout>
   )
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Shield, CheckCircle, Lock, Activity } from 'lucide-react',;
-export default function CybersecurityPage() {;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
+export default function CybersecurityPage(req, res) {
+  try {
   const features = [;
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'],;
   const solutions = [;
@@ -111,7 +115,11 @@ export default function CybersecurityPage() {;
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />;
                   <span className="text-gray-200">{f}</span>;
                 </div>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </section>;
           <section>;
@@ -122,7 +130,11 @@ export default function CybersecurityPage() {;
                   <div className="text-gray-200 font-semibold mb-2">{s.name}</div>;
                   <p className="text-gray-300 text-sm">Learn more</p>;
                 </a>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <a href="/vulnerability-assessment-penetration-testing" className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40 transition-colors">;
                 <div className="text-gray-200 font-semibold mb-2">Vulnerability Assessment & Pentest (VAPT)</div>;
                 <p className="text-gray-300 text-sm">Learn more</p>;
@@ -137,4 +149,8 @@ export default function CybersecurityPage() {;
       </div>;
     </Layout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

@@ -1,32 +1,55 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ usage: [] });
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import { store } from '../../../../../utils/data/enterpriseStore',;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  const { companyId } = req.query,;
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { store } from '../../../../../utils/data/enterpriseStore';
+export default function handler(req, res) {
+  try {
+  const { companyId } = req.query;
   if (!companyId || typeof companyId !== 'string') {;
     return res.status(400).json({ error: 'companyId required' });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  const company = store.getCompanyById(companyId),;
-  if (!company) return res.status(404).json({ error: 'company_not_found' }),;
-  if (req.method === 'GET') {;
-    return res.status(200).json(company.plan.usageLimits);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const company = store.getCompanyById(companyId);
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-  if (req.method === 'PATCH') {;
+  if (req.method === 'GET') {
     const { monthlyJobPosts, budgetCapUsd } = req.body || {};
     if (typeof monthlyJobPosts !== 'number' || typeof budgetCapUsd !== 'number') {;
       return res.status(400).json({ error: 'monthlyJobPosts and budgetCapUsd must be numbers' });
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -36,10 +59,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
   return res.status(405).json({ error: 'method_not_allowed' });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

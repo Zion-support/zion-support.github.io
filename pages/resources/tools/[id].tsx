@@ -1,17 +1,18 @@
-import React from 'react',;
-import Head from 'next/head',;
-import Link from 'next/link',;
-import { useRouter } from 'next/router',;
-export default function ToolResourcePage() {;
-  const router = useRouter(),;
-  const { id } = router.query,;
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+export default function ToolResourcePage(req, res) {
+  try {
+  const router = useRouter();
+  const { id } = router.query;
   // Tools data - this should match the data in resources.tsx;
   const tools = [;
     {;
-      id: 'automation-assessment',;
-      title: 'Automation Readiness Assessment',;
-      description: 'Evaluate your organization\'s readiness for AI automation implementation.',;
-      type: 'Interactive Tool',;
+      id: 'automation-assessment';
+      title: 'Automation Readiness Assessment';
+      description: 'Evaluate your organization\'s readiness for AI automation implementation.';
+      type: 'Interactive Tool';
       estimatedTime: '15 minutes',;
       fullContent: `;
         <h2>About This Tool</h2>;
@@ -167,11 +168,13 @@ export default function ToolResourcePage() {;
       features: [;
         'Industry benchmark databasePerformance gap analysisTrend analysis toolsAction planning frameworkProgress tracking';
       ];
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const tool = tools.find(t => t.id === id),
-
   if (!tool) {
     return (
       <>
@@ -185,7 +188,7 @@ export default function ToolResourcePage() {;
               <p className="text-xl text-white/80 mb-8">
                 The tool resource you're looking for doesn't exist.
               </p>
-              <Link 
+              <Link
                 href="/resources"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -196,8 +199,11 @@ export default function ToolResourcePage() {;
         </div>
       </>
     )
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
+}
   return (
     <>
       <Head>
@@ -206,7 +212,6 @@ export default function ToolResourcePage() {;
         <meta property="og:title" content={`${tool.title} | Zion Tech Group`} />
         <meta property="og:description" content={tool.description} />
       </Head>
-      
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
@@ -215,11 +220,14 @@ export default function ToolResourcePage() {;
                 ← Back to Resources
               </Link>
             </nav>
-            
             <header className="mb-12">
               <div className="mb-6">
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">
-                  {tool.type}
+                  {tool.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </span>
               </div>
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>
@@ -228,17 +236,19 @@ export default function ToolResourcePage() {;
                 <span>Estimated time: {tool.estimatedTime}</span>
               </div>
             </header>
-            
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
               <div className="lg:col-span-2">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
-                  <div 
+                  <div
                     className="prose prose-invert max-w-none"
-                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   />
                 </div>
               </div>
-              
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Features</h3>
@@ -272,7 +282,11 @@ export default function ToolResourcePage() {;
         </div>;
       </>;
     );
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 ;
   return (;
     <>;
@@ -293,7 +307,11 @@ export default function ToolResourcePage() {;
             <header className="mb-12">;
               <div className="mb-6">;
                 <span className="px-3 py-1 bg-green-400/20 text-green-400 text-sm rounded-full border border-green-400/30">;
-                  {tool.type}
+                  {tool.type  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </span>;
               </div>;
               <h1 className="text-4xl font-bold mb-4 text-white">{tool.title}</h1>;
@@ -307,7 +325,11 @@ export default function ToolResourcePage() {;
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">;
                   <div;
                     className="prose prose-invert max-w-none";
-                    dangerouslySetInnerHTML={{ __html: tool.fullContent }}
+                    dangerouslySetInnerHTML={{ __html: tool.fullContent }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   />;
                 </div>;
               </div>;
@@ -318,12 +340,19 @@ export default function ToolResourcePage() {;
                     {tool.features.map((feature, index) => (;
                       <li key={index} className="text-white/80 flex items-center gap-3">;
                         <div className="w-2 h-2 bg-green-400 rounded-full"></div>;
-                        {feature}
+                        {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </li>;
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>
                 </div>
-                
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Tool Details</h3>
                   <div className="space-y-3">
@@ -339,9 +368,8 @@ export default function ToolResourcePage() {;
                 </div>
               </div>
             </div>
-            
             <div className="text-center">
-              <Link 
+              <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-300"
               >
@@ -383,4 +411,8 @@ export default function ToolResourcePage() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

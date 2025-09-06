@@ -11,7 +11,8 @@ export default function Pm2RedundancyRedirect() {
     </>
   )
 import Head from 'next/head';
-export default function Pm2RedundancyRedirect() {;
+export default function Pm2RedundancyRedirect(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -22,5 +23,9 @@ export default function Pm2RedundancyRedirect() {;
       </main>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

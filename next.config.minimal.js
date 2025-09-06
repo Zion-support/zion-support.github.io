@@ -11,5 +11,4 @@ const nextConfig = {
   trailingSlash: false,
   distDir: '.next',
 };
-
 module.exports = nextConfig;

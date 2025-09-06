@@ -20,7 +20,11 @@ export default function AIAssistantPage() {
               'Research and summarize documents and web sourcesDraft emails, posts, briefs, and reportsAuto-schedule meetings and follow-upsIntegrations: Gmail, Google Drive, Slack, CalendarTeam approvals and audit trailStarting at $99/mo'
             ].map((f) => (
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
@@ -29,4 +33,8 @@ export default function AIAssistantPage() {
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

@@ -11,7 +11,8 @@ export default function SecurityDocRedirect() {
     </>
   )
 import Head from 'next/head';
-export default function SecurityDocRedirect() {;
+export default function SecurityDocRedirect(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -22,5 +23,9 @@ export default function SecurityDocRedirect() {;
       </main>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

@@ -1,16 +1,14 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
-import { 
-  HelpCircle, MessageCircle, Phone, Mail, Clock, 
+import {
+  HelpCircle, MessageCircle, Phone, Mail, Clock,
   BookOpen, Video, FileText, Search, Filter,
-  CheckCircle, ArrowRight, Brain, Atom, Rocket, 
+  CheckCircle, ArrowRight, Brain, Atom, Rocket,
   Shield, Zap, Users, Star, TrendingUp, Code
 } from 'lucide-react',
-
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
-
   const supportCategories = [
     {
       id: 'ai-services',
@@ -53,9 +51,12 @@ export default function Support() {
       icon: <Code className="w-8 h-8 text-orange-400" />,
       description: 'Bug reports and technical troubleshooting',
       articles: 42
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const quickActions = [
     {
       title: 'Live Chat',
@@ -88,14 +89,18 @@ export default function Support() {
       action: 'Schedule Call',
       color: 'from-orange-500 to-red-600',
       available: true
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const popularArticles = [;
     {;
-      title: 'Getting Started with AI Consciousness Platform',;
-      category: 'AI Services',;
-      readTime: '5 min read',;
-      views: '2.4k',;
+      title: 'Getting Started with AI Consciousness Platform';
+      category: 'AI Services';
+      readTime: '5 min read';
+      views: '2.4k';
       helpful: '98%';
     },;
     {;
@@ -125,16 +130,20 @@ export default function Support() {
       readTime: '3 min read',;
       views: '1.5k',;
       helpful: '89%';
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const supportHours = [;
     {;
-      day: 'Monday - Friday',;
-      hours: '9:00 AM - 8:00 PM EST',;
+      day: 'Monday - Friday';
+      hours: '9:00 AM - 8:00 PM EST';
       status: 'Available';
-    },;
+    };
     {;
-      day: 'Saturday',;
+      day: 'Saturday';
       hours: '10:00 AM - 6:00 PM EST',;
       status: 'Available';
     },;
@@ -142,47 +151,75 @@ export default function Support() {
       day: 'Sunday',;
       hours: '12:00 PM - 6:00 PM EST',;
       status: 'Limited';
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
-  const filteredCategories = selectedCategory === 'all' 
-    ? supportCategories 
+  const filteredCategories = selectedCategory === 'all'
+    ? supportCategories
     : supportCategories.filter(cat => cat.id === selectedCategory),
-
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Hero Section */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20" />
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="text-center max-w-4xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get the support you need for our AI consciousness, quantum computing, 
+              Get the support you need for our AI consciousness, quantum computing,
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
-            
-            {/* Search Bar */}
+            {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             <div className="max-w-2xl mx-auto mb-8">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search for help articles, guides, and solutions..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
+                  value={searchQuery  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onChange={(e) => setSearchQuery(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"
                 />
               </div>
             </div>
-            
             <div className="flex flex-wrap justify-center gap-6">
               <div className="flex items-center gap-2 text-cyan-400">
                 <HelpCircle className="w-6 h-6" />
@@ -200,14 +237,29 @@ export default function Support() {
           </motion.div>
         </div>
       </section>
-
-      {/* Quick Actions */}
+      {/* Quick Actions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -215,40 +267,81 @@ export default function Support() {
             </h2>
             <p className="text-xl text-gray-400">Choose your preferred support method</p>
           </motion.div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {quickActions.map((action, index) => (
               <motion.div
-                key={action.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={action.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {action.icon}
+                    {action.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
-                  
                   <h3 className="text-xl font-bold text-white mb-3 text-center">{action.title}</h3>
                   <p className="text-gray-300 mb-4 text-center leading-relaxed">{action.description}</p>
-                  
                   <button className={`w-full py-3 px-4 bg-gradient-to-r ${action.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}>
-                    {action.action}
+                    {action.action  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </button>;
                 </div>;
               </motion.div>;
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* Support Categories */}
+      {/* Support Categories */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -256,43 +349,89 @@ export default function Support() {
             </h2>
             <p className="text-xl text-gray-400">Find solutions organized by topic and service area</p>
           </motion.div>
-          
-          {/* Category Filter */}
+          {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="flex justify-center mb-12">
             <div className="flex flex-wrap gap-3">
               <button
-                onClick={() => setSelectedCategory('all')}
+                onClick={() => setSelectedCategory('all')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
                   selectedCategory === 'all';
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50';
-                }`}
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               >;
                 All Categories;
               </button>;
               {supportCategories.map((category) => (;
                 <button;
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
+                  key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${;
                     selectedCategory === category.id;
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white';
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50';
-                  }`}
+                  }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 >;
-                  {category.name}
+                  {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </button>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredCategories.map((category, index) => (
               <motion.div
-                key={category.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/30 to-black/30 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
@@ -300,12 +439,15 @@ export default function Support() {
                     <div className="flex-shrink-0">{category.icon}</div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                        {category.name}
+                        {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed">{category.description}</p>
                     </div>
                   </div>
-                  
                   <div className="flex items-center justify-between pt-4 border-t border-gray-800/50">
                     <span className="text-sm text-gray-400">{category.articles} articles</span>
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
@@ -315,16 +457,36 @@ export default function Support() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </section>;
-        {/* Support Channels */}
+        {/* Support Channels */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -334,18 +496,37 @@ export default function Support() {
                 Multiple support channels to meet your needs
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {supportChannels.map((channel, index) => (
                 <motion.div
-                  key={channel.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={channel.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="text-center p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex justify-center mb-4">
-                    {channel.icon}
+                    {channel.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3">{channel.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{channel.description}</p>
@@ -364,50 +545,101 @@ export default function Support() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </div>;
         </section>;
-        {/* Search and Filter */}
+        {/* Search and Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex flex-col lg:flex-row gap-6 items-center">
-              {/* Search Bar */}
+              {/* Search Bar */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="flex-1 w-full lg:w-auto">
                 <div className="relative">
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                   <input
                     type="text"
                     placeholder="Search for help topics, questions, or solutions..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    value={searchTerm  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onChange={(e) => setSearchTerm(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
               </div>
-
-              {/* Category Filter */}
+              {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               <div className="flex flex-wrap gap-2">
                 {supportCategories.map((category) => (
                   <button
-                    key={category.id}
-                    onClick={() => setSelectedCategory(category.id)}
+                    key={category.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    onClick={() => setSelectedCategory(category.id)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className={`px-4 py-2 rounded-lg border transition-all duration-300 flex items-center gap-2 ${;
                       selectedCategory === category.id;
                         ? 'bg-cyan-500/20 border-cyan-500/50 text-cyan-400';
                         : 'bg-gray-800/50 border-gray-600 text-gray-300 hover:bg-cyan-500/20 hover:border-cyan-500/50';
-                    }`}
+                    }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   >;
-                    {category.icon}
-                    {category.name}
+                    {category.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    {category.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     <span className="text-sm text-gray-400">({category.count})</span>
                   </button>
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
             </div>;
           </div>;
         </section>;
-        {/* FAQ Section */}
+        {/* FAQ Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               {
@@ -433,28 +665,64 @@ export default function Support() {
               {
                 question: "What support do you offer for enterprise deployments?",
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."
-              }
+                } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">
                 <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
                 <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
-      {/* FAQs */}
+      {/* FAQs */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Popular Articles */}
+      {/* Popular Articles */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section id="knowledge-base" className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -464,7 +732,6 @@ export default function Support() {
                 Quick answers to common questions and solutions
               </p>
             </motion.div>
-
             {filteredFAQs.length === 0 ? (
               <div className="text-center py-20">
                 <HelpCircle className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -475,10 +742,26 @@ export default function Support() {
               <div className="space-y-6">
                 {filteredFAQs.map((faq, index) => (
                   <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30"
                   >
                     <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
@@ -486,26 +769,62 @@ export default function Support() {
                     <div className="flex flex-wrap gap-2">
                       {faq.tags.map((tag) => (
                         <span
-                          key={tag}
+                          key={tag  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                           className="px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm border border-cyan-500/30"
                         >
-                          {tag}
+                          {tag  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </span>;
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>;
                   </motion.div>;
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
-            )}
+            )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </section>;
-        {/* Support Resources */}
+        {/* Support Resources */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="text-center mb-16"
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -515,34 +834,65 @@ export default function Support() {
                 Comprehensive documentation and learning materials
               </p>
             </motion.div>
-
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {resources.map((resource, index) => (
                 <motion.div
-                  key={resource.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={resource.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   className="p-6 bg-gradient-to-br from-gray-800/30 to-gray-900/30 rounded-2xl border border-gray-700/30 hover:border-cyan-500/50 transition-all duration-300"
                 >
                   <div className="flex justify-center mb-4">
-                    {resource.icon}
+                    {resource.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">{resource.title}</h3>
                   <p className="text-gray-300 text-sm mb-4">{resource.description}</p>
                   <div className="flex items-center justify-between">
                     <span className="px-2 py-1 bg-gray-700/50 text-gray-300 rounded-full text-xs">
-                      {resource.category}
+                      {resource.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </span>;
                     <a;
-                      href={resource.link}
+                      href={resource.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium"
                     >
                       Access
                     </Link>
                   </div>
                 </motion.div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
             className="text-center mb-16"
           >
@@ -551,30 +901,57 @@ export default function Support() {
             </h2>
             <p className="text-xl text-gray-400">Most viewed and helpful support content</p>
           </motion.div>
-          
           <div className="max-w-4xl mx-auto space-y-4">
             {popularArticles.map((article, index) => (
               <motion.div
-                key={article.title}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                key={article.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.8, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="group cursor-pointer"
               >
                 <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
-                        {article.title}
+                        {article.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </h3>
                       <div className="flex items-center gap-4 text-sm text-gray-400">
                         <span className="flex items-center gap-1">
                           <BookOpen className="w-4 h-4" />
-                          {article.category}
+                          {article.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </span>
                         <span className="flex items-center gap-1">
                           <Clock className="w-4 h-4" />
-                          {article.readTime}
+                          {article.readTime  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </span>
                         <span className="flex items-center gap-1">
                           <TrendingUp className="w-4 h-4" />
@@ -586,7 +963,6 @@ export default function Support() {
                         </span>
                       </div>
                     </div>
-                    
                     <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
                       <span className="text-sm font-medium">Read</span>
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -594,27 +970,46 @@ export default function Support() {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* Support Hours & Contact */}
+      {/* Support Hours & Contact */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-gradient-to-r from-gray-900/50 to-black">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: -20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Support Hours & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Our expert support team is available to help you succeed with our 
+                Our expert support team is available to help you succeed with our
                 revolutionary technology solutions.
               </p>
-              
               <div className="space-y-4">
                 {supportHours.map((schedule, index) => (
                   <div key={schedule.day} className="flex items-center justify-between p-4 bg-gray-800/30 rounded-xl">
@@ -623,29 +1018,48 @@ export default function Support() {
                       <p className="text-gray-400">{schedule.hours}</p>
                     </div>
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                      schedule.status === 'Available' 
-                        ? 'bg-green-500/20 text-green-400' 
+                      schedule.status === 'Available'
+                        ? 'bg-green-500/20 text-green-400'
                         : 'bg-yellow-500/20 text-yellow-400'
                     }`}>
-                      {schedule.status}
+                      {schedule.status  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </span>;
                   </div>;
-                ))}
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </div>;
             </motion.div>;
             <motion.div;
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, x: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, x: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="relative"
             >
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
                   our team is available around the clock.
                 </p>
-                
                 <div className="space-y-4">
                   <div className="flex items-center gap-3">
                     <Phone className="w-5 h-5 text-cyan-400" />
@@ -660,7 +1074,6 @@ export default function Support() {
                     <span className="text-white">Live Chat Available</span>
                   </div>
                 </div>
-                
                 <div className="mt-6 pt-6 border-t border-cyan-500/20">
                   <a
                     href="/contact"
@@ -675,20 +1088,35 @@ export default function Support() {
           </div>
         </div>
       </section>
-
-      {/* Contact CTA */}
+      {/* Contact CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
         <div className="container mx-auto px-4 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Still Need Help?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our support team is dedicated to ensuring your success with our 
+              Our support team is dedicated to ensuring your success with our
               revolutionary technology solutions. Don't hesitate to reach out.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
@@ -712,18 +1140,32 @@ export default function Support() {
     </div>
   )
 },
-
 export default Support,
           </div>
         </section>
-
-        {/* Contact Support */}
+        {/* Contact Support */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Still Need Help?
@@ -761,7 +1203,6 @@ export default Support,
     </Layout>
   )
 },
-
 export default SupportPage,
               className="relative";
             >;
@@ -799,13 +1240,29 @@ export default SupportPage,
           </div>;
         </div>;
       </section>;
-      {/* Contact CTA */}
+      {/* Contact CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
         <div className="container mx-auto px-4 text-center">;
           <motion.div;
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >;
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
               Still Need Help?;
@@ -838,13 +1295,29 @@ export default SupportPage,
 export default Support,;
           </div>;
         </section>;
-        {/* Contact Support */}
+        {/* Contact Support */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <section id="contact-support" className="py-20 px-4 bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion.div;
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.6 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             >;
               <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">;
                 Still Need Help?;

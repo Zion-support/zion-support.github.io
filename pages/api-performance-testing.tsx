@@ -1,19 +1,16 @@
 import React from 'react',
 import SEO from '../components/SEO',
 import { Check, ExternalLink } from 'lucide-react',
-
 export default function ApiPerformanceTestingPage() {
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	],
-
 	return (
 		<div className="relative isolate">
 			<section className="px-6 lg:px-10 py-16 lg:py-24">
 				<div className="max-w-6xl mx-auto">
 					<h1 className="text-3xl lg:text-5xl font-bold tracking-tight bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-emerald-400 bg-clip-text text-transparent">API Performance Testing</h1>
 					<p className="mt-4 text-gray-300 max-w-3xl">Load, latency, reliability and regression testing for APIs with synthetic traffic generation, SLO tracking, distributed load injectors, and CI/CD integration. Benchmark providers, catch performance drift, and ship with confidence.</p>
-
 					<div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 						{[
 							{ title: 'Distributed Load', desc: 'Run tests from multiple regions with coordinated ramp-up and soak phases.' },
@@ -26,9 +23,12 @@ export default function ApiPerformanceTestingPage() {
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>
 							</div>
-						))}
+						))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 					</div>
-
 					<div className="mt-14">
 						<h2 className="text-2xl font-semibold">Pricing</h2>
 						<div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -50,7 +50,6 @@ export default function ApiPerformanceTestingPage() {
 						</div>
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://k6.io/pricing/" target="_blank" rel="noreferrer">Grafana k6</a>, <a className="underline hover:text-cyan-300" href="https://www.loadmill.com/pricing" target="_blank" rel="noreferrer">Loadmill</a>, <a className="underline hover: text-cyan-300" href="https://www.blazemeter.com/pricing" target="_blank" rel="noreferrer">BlazeMeter</a>.</p>
 					</div>
-
 					<div className="mt-14 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-500 text-black font-semibold">Talk to Sales</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</Link>
@@ -60,13 +59,14 @@ export default function ApiPerformanceTestingPage() {
 			</section>
 		</div>
 	)
-import React from 'react',;
-import SEO from '../components/SEO',;
-import { Check, ExternalLink } from 'lucide-react',;
-export default function ApiPerformanceTestingPage() {;
+import React from 'react';
+import SEO from '../components/SEO';
+import { Check, ExternalLink } from 'lucide-react';
+export default function ApiPerformanceTestingPage(req, res) {
+  try {
 	const features = [;
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging';
-	],;
+	];
 	return (;
 		<div className="relative isolate">;
 			<section className="px-6 lg:px-10 py-16 lg:py-24">;
@@ -85,7 +85,11 @@ export default function ApiPerformanceTestingPage() {;
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>;
 								<p className="mt-2 text-sm text-gray-300">{f.desc}</p>;
 							</div>;
-						))}
+						))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 					</div>;
 					<div className="mt-14">;
 						<h2 className="text-2xl font-semibold">Pricing</h2>;
@@ -117,4 +121,8 @@ export default function ApiPerformanceTestingPage() {;
 			</section>;
 		</div>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

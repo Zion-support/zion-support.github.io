@@ -16,9 +16,10 @@ export default function ImageOptimizerCDNPage() {
 			</section>
 		</>
 	)
-import React from 'react',;
+import React from 'react';
 import SEO from '../components/SEO';
-export default function ImageOptimizerCDNPage() {;
+export default function ImageOptimizerCDNPage(req, res) {
+  try {
 	return (;
 		<>;
 			<SEO title="Image Optimizer CDN" description="Optimize and deliver images globally with smart caching." canonical="/image-optimizer-cdn" />;
@@ -34,4 +35,8 @@ export default function ImageOptimizerCDNPage() {;
 			</section>;
 		</>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

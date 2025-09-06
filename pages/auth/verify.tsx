@@ -7,7 +7,6 @@ const Verify: NextPage = () => {
         <title>Verify - Zion Tech Solutions</title>
         <meta name="description" content="Verify page" />
       </Head>
-      
       <main>
         <h1>Verify</h1>
         <p>This page is under construction.</p>
@@ -15,5 +14,4 @@ const Verify: NextPage = () => {
     </div>
   )
 },
-
 export default Verify,

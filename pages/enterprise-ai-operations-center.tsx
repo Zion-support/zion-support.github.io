@@ -33,10 +33,11 @@ export default function EnterpriseAIOpsPage() {
       </div>
     </Layout>
   )
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-export default function EnterpriseAIOpsPage() {;
+export default function EnterpriseAIOpsPage(req, res) {
+  try {
   return (;
     <Layout>;
       <Head>;
@@ -68,5 +69,9 @@ export default function EnterpriseAIOpsPage() {;
       </div>;
     </Layout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

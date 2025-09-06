@@ -38,7 +38,7 @@ console.log(`Fixed merge conflicts in ${fixedCount} files`);
   traverse(dir),;
   return files},;
 // Find and fix files with merge conflicts,;
-const conflictedFiles = findFilesWithConflicts('.'),;
+const conflictedFiles = findFilesWithConflicts('.');
 console.log(`Found ${conflictedFiles.length} files with merge conflicts`),;
 for (const file of conflictedFiles) {,;
   fixMergeConflicts(file)},;

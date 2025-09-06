@@ -1,30 +1,33 @@
-import { useEffect, useState } from 'react',;
-type Holder = { address: string, amount: string },;
-type Metrics = {;
-  updatedAt: number,;
+import { useEffect, useState } from 'react';
+type Holder = { address: string, amount: string };
+type Metrics = {
+  updatedAt: number;
   tokenDistribution: { address: string, percent: number }[],;
-  topHolders: Holder[],;
-  activeProposals: any[],;
-  governanceParticipationRate: number,;
+  topHolders: Holder[];
+  activeProposals: any[];
+  governanceParticipationRate: number;
   cached?: boolean;
 },;
-export default function DaoMetrics() {;
-  const [data, setData] = useState<Metrics | null>(null),;
-  const [loading, setLoading] = useState(true),;
+export default function DaoMetrics(req, res) {
+  try {
+  const [data, setData] = useState<Metrics | null>(null);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {;
     async function load() {;
-      setLoading(true),;
-      const resp = await fetch('/api/dao/metrics'),;
-      const json = await resp.json(),;
-      setData(json),;
+      setLoading(true);
+      const resp = await fetch('/api/dao/metrics');
+      const json = await resp.json();
+      setData(json);
       setLoading(false);
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     load()
   }, []),
-
   if (loading) return <div>Loading...</div>,
   if (!data) return <div>Error loading data</div>,
-
   return (
     <div className="space-y-6">
       <div className="flex items-end justify-between">
@@ -33,7 +36,6 @@ export default function DaoMetrics() {;
           <div className="text-xs text-gray-500">Updated {new Date(data.updatedAt).toLocaleString()} {data.cached ? '(cached)' : ''}</div>
         </div>
       </div>
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Token Distribution (top ~sample)</div>
@@ -48,10 +50,13 @@ export default function DaoMetrics() {;
                   <div className="h-2 bg-emerald-600 rounded" style={{ width: `${Math.min(100, d.percent)}%` }} />
                 </div>
               </div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
         </div>
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Top Holders (approx)</div>
           <table className="w-full text-sm">
@@ -67,12 +72,15 @@ export default function DaoMetrics() {;
                   <td className="py-1 pr-2 truncate max-w-[10rem]">{h.address}</td>
                   <td className="py-1">{h.amount}</td>
                 </tr>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </tbody>
           </table>
         </div>
       </section>
-
       <section className="grid lg:grid-cols-2 gap-6">
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Active Proposals</div>
@@ -80,13 +88,20 @@ export default function DaoMetrics() {;
             <ul className="list-disc pl-5 text-sm">
               {data.activeProposals.map((p, i) => (
                 <li key={i}>{JSON.stringify(p)}</li>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </ul>
           ) : (
             <div className="text-sm text-gray-600">No active proposals.</div>
-          )}
+          )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>
-
         <div className="border rounded p-4">
           <div className="font-medium mb-2">Governance Participation Rate</div>
           <div className="text-3xl font-semibold">{data.governanceParticipationRate}%</div>
@@ -98,4 +113,8 @@ export default function DaoMetrics() {;
       </section>
     </div>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

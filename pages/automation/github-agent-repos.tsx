@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore
+// @ts-ignore;
 import data from '../../data/github-agent-repos.json',
 export default function GithubAgentReposPage() {
   const items: any[] = (data?.items || []).slice(0, 50),
@@ -15,9 +15,17 @@ export default function GithubAgentReposPage() {
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">★ {it.stargazers_count} · Forks {it.forks_count} · {it.language || '—'}</div>
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ul>;
       </div>;
     </EnhancedLayout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

@@ -10,6 +10,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   try {
@@ -17,22 +25,47 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json(summary)
   } catch (err: any) {
     return res.status(500).json({ error: err.message || "Unknown error" })
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { getWalletSummary } from "../../../utils/token/service",;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getWalletSummary } from "../../../utils/token/service";
+export default function handler(req, res) {
+  try {
   const { userId } = req.query;
   if (!userId || typeof userId !== "string") {;
     return res.status(400).json({ error: "Missing userId" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-  try {;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  try {
     const summary = getWalletSummary(userId);
     return res.status(200).json(summary);
-  } catch (err: any) {;
+  } catch (error) {
     return res.status(500).json({ error: err.message || "Unknown error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

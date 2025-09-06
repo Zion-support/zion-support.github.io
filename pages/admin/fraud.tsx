@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from 'react';
-
 interface FraudItem {
   id: string,
   userId: string | null,
@@ -8,19 +7,20 @@ interface FraudItem {
   heuristic: { reasons: string[], severity: string },
   gpt?: { label: string, reason: string, confidence: number },
   status: string
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export default function FraudAdminPage() {
   const [items, setItems] = useState<FraudItem[]>([]);
   const [adminToken, setAdminToken] = useState<string>('');
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-
   useEffect(() => {
     const saved = localStorage.getItem('admin-token') || '';
     setAdminToken(saved);
   }, []);
-
   const fetchItems = async () => {
     setLoading(true);
     setError(null);
@@ -33,19 +33,20 @@ export default function FraudAdminPage() {
       setError(e.message || 'Failed to load');
     } finally {
       setLoading(false);
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   };
-
   useEffect(() => {
     fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [adminToken]);
-
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken);
     fetchItems();
   };
-
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST',
@@ -59,25 +60,37 @@ export default function FraudAdminPage() {
     if (res.ok) fetchItems();
     else alert(json.error || 'Action failed');
   };
-
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
-
       <div className="flex items-center gap-2 mb-4">
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
-          value={adminToken}
-          onChange={(e) => setAdminToken(e.target.value)}
+          value={adminToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          onChange={(e) => setAdminToken(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
-
-      {loading && <div>Loading...</div>}
-      {error && <div className="text-red-600">{error}</div>}
-
+      {loading && <div>Loading...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -101,7 +114,11 @@ export default function FraudAdminPage() {
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -119,10 +136,18 @@ export default function FraudAdminPage() {
                   </div>
                 </td>
               </tr>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </tbody>
         </table>
       </div>
     </div>
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

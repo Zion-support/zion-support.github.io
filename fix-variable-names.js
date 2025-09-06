@@ -19,8 +19,7 @@ function fixedCount = 0;
 };
 };
   return fixedCount};
-
-},;
+};
       return numberWords[match] || match}),;
     .replace(/[-_](.)/g, (match, group1) => group1.toUpperCase()),;
     .replace(/^(.)/, (match) => match.toUpperCase())},;
@@ -30,8 +29,8 @@ function fixedCount = 0;
     return false}
 },;
 function fixedCount = 0,;
-  for (const filePath = path.join(dir, file),;
-    const stat = fs.statSync(filePath),;
+  for (const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
     if (stat.isDirectory()) {,;
       fixedCount += findAndFixFiles(filePath)} else if (file.endsWith('.tsx') && file.includes('-')) {,;
       if (fixFile(filePath)) {,;

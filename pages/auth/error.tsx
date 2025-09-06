@@ -4,15 +4,17 @@ import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
-const errorMessages: Record<string string> = {;
+const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] || errorMessages.default
-
   return (
     <>
       <Head>
@@ -42,5 +44,9 @@ export default function AuthErrorPage() {
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

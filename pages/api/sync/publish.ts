@@ -16,6 +16,14 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 export default async function handler(req, res) {
@@ -25,6 +33,14 @@ export default async function handler(req, res) {
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
     } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -37,6 +53,14 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   const event = payload as SyncEvent & { propagate?: boolean },
@@ -45,12 +69,28 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
   if (!isAllowedByScope(event.type, state.config.scope)) {;
     return res.status(403).json({ error: "Event type not allowed by current scope" });
     } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -63,6 +103,14 @@ export default async function handler(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     const computed = computeMerkleRootFromVotes(votes),
@@ -71,9 +119,25 @@ export default async function handler(req, res) {
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -84,7 +148,7 @@ export default async function handler(req, res) {
   writeState(currentState),
   const alreadyPropagated = payload.propagate === false,
   if (!alreadyPropagated && currentState.config.peers.length > 0) {
-    const headers: Record<string string> = {},
+    const headers: Record<string, string> = {},
     const localBody = { ...event, propagate: false },
     const baseSignature = require("../../../utils/sync/signature"),
     const sig = baseSignature.signPayload(localBody),
@@ -100,19 +164,35 @@ export default async function handler(req, res) {
             // ignore peer failure
 ;
   if (event.type === "proposal") {;
-    const votes = (event as any).payload?.votes,;
-    const providedRoot = event.merkleRoot,;
+    const votes = (event as any).payload?.votes;
+    const providedRoot = event.merkleRoot;
     if (!Array.isArray(votes) || !providedRoot) {;
       return res.status(400).json({ error: "Proposal events require votes[] and merkleRoot" });
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-    const computed = computeMerkleRootFromVotes(votes),;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {;
       return res.status(400).json({ error: "Merkle root mismatch" });
       } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -120,30 +200,46 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
-  const entityId = getEntityId(event),;
-  const currentState = readState(),;
-  upsertEvent(currentState, event),;
-  writeState(currentState),;
-  const alreadyPropagated = payload.propagate === false,;
+  const entityId = getEntityId(event);
+  const currentState = readState();
+  upsertEvent(currentState, event);
+  writeState(currentState);
+  const alreadyPropagated = payload.propagate === false;
   if (!alreadyPropagated && currentState.config.peers.length > 0) {;
-    const headers: Record<string string> = {},;
+    const headers: Record<string, string> = {};
     const localBody = { ...event, propagate: false },;
-    const baseSignature = require("../../../utils/sync/signature"),;
-    const sig = baseSignature.signPayload(localBody),;
+    const baseSignature = require("../../../utils/sync/signature");
+    const sig = baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
     await Promise.all(;
       currentState.config.peers;
         .filter((p) => !p.paused);
         .map(async (peer) => {;
           const url = new URL("/api/sync/publish", peer.baseUrl).toString();
-          try {;
+          try {
             await axios.post(url, localBody, { headers, timeout: 5000 });
           } catch {;
             // ignore peer failure;
             } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -153,11 +249,27 @@ export default async function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   return res.status(200).json({ status: "accepted", entityId })
 ;
   return res.status(200).json({ status: "accepted", entityId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

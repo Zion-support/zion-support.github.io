@@ -1,12 +1,16 @@
-export type UserRole = 'client' | 'talent' | 'admin',;
+export type UserRole = 'client' | 'talent' | 'admin';
 export interface UserSummary {;
-  id: string,;
-  name: string,;
+  id: string;
+  name: string;
   role: UserRole,;
   avatarUrl?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
-export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite',;
+export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite';
 export interface ConversationContext {;
   type: ConversationContextType,;
   jobId?: string,;
@@ -14,27 +18,39 @@ export interface ConversationContext {;
   talentId?: string,;
   talentName?: string,;
   proposalLink?: string;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export interface Conversation {;
-  id: string,;
+  id: string;
   participants: string[], // [clientId, talentId] or any two users;
   context?: ConversationContext,;
   lastMessageAt: string, // ISO;
   unreadBy: string[], // userIds who have unread messages;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
-export type MessageStatus = 'sent' | 'delivered' | 'read',;
+export type MessageStatus = 'sent' | 'delivered' | 'read';
 export interface Message {;
-  id: string,;
-  conversationId: string,;
-  senderId: string,;
-  recipientId: string,;
-  body: string,;
+  id: string;
+  conversationId: string;
+  senderId: string;
+  recipientId: string;
+  body: string;
   attachmentUrl?: string, // saved under /public/uploads;
   linkUrl?: string,;
   createdAt: string, // ISO;
   status: MessageStatus;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export interface InboxItem {;
@@ -42,15 +58,23 @@ export interface InboxItem {;
   otherParticipant: UserSummary,;
   lastMessage?: Message,;
   unreadCount: number;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export interface NewMessageInput {;
   conversationId?: string,;
-  senderId: string,;
-  recipientId: string,;
-  body: string,;
+  senderId: string;
+  recipientId: string;
+  body: string;
   linkUrl?: string;
   attachmentBase64?: string, // data URL or raw base64;
   attachmentName?: string, // optional filename;
   context?: ConversationContext;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

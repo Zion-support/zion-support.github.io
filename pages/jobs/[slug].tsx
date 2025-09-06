@@ -5,20 +5,16 @@ import EnhancedLoading from '../../components/ui/EnhancedLoading',
 import useResponsive from '../../hooks/useResponsive',
 import { useToast } from '../../components/ui/NotificationSystem',
 import { useEffect, useState } from 'react',
-
 export default function JobDetailsPage() {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string },
   const { isMobile } = useResponsive(),
   const { notify } = useToast(),
   const [loading, setLoading] = useState(true),
-
   useEffect(() => { const t = setTimeout(() => setLoading(false), 600), return () => clearTimeout(t) }, []),
-
   const onApply = () => {
     notify('Application submitted! We’ll notify you when it’s viewed.success')
   },
-
   return (
     <div className="relative">
       {loading ? (
@@ -33,15 +29,17 @@ export default function JobDetailsPage() {
               </div>
               {!isMobile && (
                 <EnhancedButton onClick={onApply} variant="primary">Apply Now</EnhancedButton>
-              )}
+              )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </EnhancedCard>
-
           <EnhancedCard>
             <h2 className="font-semibold mb-2">Description</h2>
             <p className="text-sm text-gray-700 dark:text-gray-300">You will design, build, and scale AI features using LLMs and modern tooling.</p>
           </EnhancedCard>
-
           <EnhancedCard>
             <h2 className="font-semibold mb-2">Requirements</h2>
             <ul className="list-disc pl-5 space-y-1 text-sm text-gray-700 dark:text-gray-300">
@@ -51,16 +49,32 @@ export default function JobDetailsPage() {
             </ul>
           </EnhancedCard>
         </div>
-      )}
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
-      {/* Sticky mobile apply CTA */}
+      {/* Sticky mobile apply CTA */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       {isMobile && (
         <div className="fixed inset-x-0 bottom-0 z-30 bg-white/90 dark:bg-black/80 backdrop-blur border-t border-gray-200 dark:border-gray-800 p-3">
           <div className="container mx-auto px-2">
             <EnhancedButton onClick={onApply} variant="primary" fullWidth>Apply Now</EnhancedButton>
           </div>
         </div>
-      )}
+      )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

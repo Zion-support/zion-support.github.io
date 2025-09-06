@@ -14,9 +14,10 @@ export default function ApiDocsPage() {
       </div>
     </>
   )
-import React from 'react',;
+import React from 'react';
 import Head from 'next/head';
-export default function ApiDocsPage() {;
+export default function ApiDocsPage(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -30,4 +31,8 @@ export default function ApiDocsPage() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

@@ -17,7 +17,8 @@ export default function Page() {
     </div>
   )
 import Head from 'next/head';
-export default function Page() {;
+export default function Page(req, res) {
+  try {
   return (;
     <div className="min-h-screen bg-slate-950 text-white">;
       <Head>;
@@ -34,5 +35,9 @@ export default function Page() {;
       </main>;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

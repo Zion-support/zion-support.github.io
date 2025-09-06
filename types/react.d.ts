@@ -15,12 +15,20 @@ declare module "react" {;
     type: T,;
     props: P,;
     key: React.Key | null;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 ;
   // Function Component (very trimmed-down).;
   export interface FC<P = Record<string, unknown>> {;
     (props: P): ReactElement | null;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
 ;
   // Common hooks we rely on.;
   export function useMemo<T>(factory: () => T, deps: readonly unknown[]): T,;
@@ -31,6 +39,10 @@ declare module "react" {;
     useMemo: typeof useMemo;
   } & Record<string, unknown>;
   export default React;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 declare namespace React {;
@@ -38,5 +50,13 @@ declare namespace React {;
   // errors when `@types/react` is not present.;
   export interface IntrinsicElements {;
     [elemName: string]: any;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }

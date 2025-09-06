@@ -14,7 +14,8 @@ export default function JobSuccessPage() {
     </div>
   )
 import Link from 'next/link';
-export default function JobSuccessPage() {;
+export default function JobSuccessPage(req, res) {
+  try {
   return (;
     <div className="max-w-xl text-center mx-auto py-16">;
       <div className="mx-auto mb-6 h-20 w-20 rounded-full bg-green-100 dark: bg-green-900/30 flex items-center justify-center">;
@@ -28,4 +29,8 @@ export default function JobSuccessPage() {;
       </div>;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

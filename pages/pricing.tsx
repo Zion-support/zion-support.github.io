@@ -1,37 +1,38 @@
-import React, { useState } from 'react',;
-import Head from 'next/head',;
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react',;
-import Button from '../components/ui/Button',;
-import Card from '../components/ui/Card',;
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',;
-import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',;
-import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services',;
-import { nextGenerationAIServices } from '../data/next-generation-ai-services',;
-import { cuttingEdgeITServices } from '../data/cutting-edge-it-services',;
-import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2',;
-export default function PricingPage() {;
-  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),;
-  const [selectedPlan, setSelectedPlan] = useState<string | null>(null),;
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as BookOpenIcon, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon, Atom as AtomIcon, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from 'lucide-react';
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
+import { enhancedRealMicroSaasServices, getServicesByCategory, getPopularServices } from '../data/enhanced-real-micro-saas-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+export default function PricingPage(req, res) {
+  try {
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
   const contactInfo = {;
-    mobile: '+1 302 464 0950',;
-    email: 'kleber@ziontechgroup.com',;
-    address: '364 E Main St STE 1008 Middletown DE 19709',;
+    mobile: '+1 302 464 0950';
+    email: 'kleber@ziontechgroup.com';
+    address: '364 E Main St STE 1008 Middletown DE 19709';
     website: 'https://ziontechgroup.com';
-  },;
-  const popularServices = getPopularServices(),;
+  };
+  const popularServices = getPopularServices();
   // Combine all services for comprehensive pricing;
   const allServices = [;
-    ...enhancedRealMicroSaasServices,;
-    ...nextGenerationAIServices,;
-    ...cuttingEdgeITServices,;
+    ...enhancedRealMicroSaasServices;
+    ...nextGenerationAIServices;
+    ...cuttingEdgeITServices;
     ...innovativeMicroSaasV2Services;
-  ],;
+  ];
   // Enhanced service categories with pricing;
   const serviceCategories = [;
     {;
-      name: 'Next-Generation AI',;
-      description: 'Revolutionary AI platforms',;
-      services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],;
+      name: 'Next-Generation AI';
+      description: 'Revolutionary AI platforms';
+      services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'];
       avgPrice: '$3,199/month',;
       savings: 'Save 60-80% vs. competitors';
     },;
@@ -62,9 +63,12 @@ export default function PricingPage() {;
       services: ['Cloud MigrationDevOps AutomationSecurity Hardening'],;
       avgPrice: '$2,999/month',;
       savings: 'Save 45-65% vs. competitors';
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -113,9 +117,12 @@ export default function PricingPage() {;
       popular: false,
       cta: 'Contact Sales',
       ctaVariant: 'primary' as const
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   // Service category pricing examples
   const serviceCategoryPricing = [
     {
@@ -153,9 +160,12 @@ export default function PricingPage() {;
       services: ['Satellite ManagementSpace Data AnalyticsMission Planning AI'],
       startingPrice: '$299/month',
       icon: <Rocket className="w-6 h-6" />
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   // Value propositions
   const valuePropositions = [
     {
@@ -185,9 +195,12 @@ export default function PricingPage() {;
       icon: <Shield className="w-8 h-8" />,
       metric: '99.99%',
       detail: 'Uptime SLA'
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">
       <Head>
@@ -196,23 +209,32 @@ export default function PricingPage() {;
         <meta name="keywords" content="pricing, micro SaaS pricing, AI services pricing, quantum computing pricing, enterprise pricing" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
-        
-        {/* Open Graph */}
+        {/* Open Graph */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <meta property="og:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
         <meta property="og:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/pricing" />
         <meta property="og:image" content="https://ziontechgroup.com/og-image.jpg" />
-        
-        {/* Twitter */}
+        {/* Twitter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Pricing - Zion Tech Group | Transparent Pricing for Revolutionary AI & Quantum Services" />
         <meta name="twitter:description" content="Transparent pricing for 500+ revolutionary micro SaaS services. Choose from Starter ($49/month), Professional ($149/month), or Enterprise ($499/month) plans." />
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image.jpg" />
       </Head>
-
       <div className="container mx-auto px-4 py-12">
-        {/* Hero Section */}
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             Transparent Pricing
@@ -220,8 +242,11 @@ export default function PricingPage() {;
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
             Choose the perfect plan for your business. All plans include generous free trials and access to our revolutionary AI & quantum computing services.
           </p>
-
-          {/* New 2026 Pricing Link */}
+          {/* New 2026 Pricing Link */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="mb-8 p-6 bg-gradient-to-r from-purple-800/60 to-pink-800/60 border border-purple-700/50 rounded-2xl max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-white mb-4">
               🚀 New for 2026: Revolutionary Services
@@ -229,8 +254,8 @@ export default function PricingPage() {;
             <p className="text-gray-300 mb-6">
               Experience our cutting-edge AI consciousness simulation, quantum neural interfaces, and advanced cybersecurity solutions with comprehensive pricing and detailed comparisons.
             </p>
-            <Button 
-              href="/comprehensive-pricing-2026" 
+            <Button
+              href="/comprehensive-pricing-2026"
               variant="primary"
               size="lg"
               className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30"
@@ -241,20 +266,31 @@ export default function PricingPage() {;
               </span>
             </Button>
           </div>
-          
-          {/* Billing Toggle */}
+          {/* Billing Toggle */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`text-lg ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}>
               Monthly
             </span>
             <button
-              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
+              onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
             >
               <span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
-                }`}
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               />
             </button>
             <span className={`text-lg ${billingCycle === 'yearly' ? 'text-white' : 'text-gray-400'}`}>
@@ -263,17 +299,40 @@ export default function PricingPage() {;
             </span>
           </div>
         </div>
-
-        {/* Pricing Tiers */}
+        {/* Pricing Tiers */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {pricingTiers.map((tier, index) => (
               <UltraFuturisticCard
-                key={tier.name}
-                variant={tier.variant}
-                interactive={true}
-                glowIntensity={tier.popular ? 'high' : 'medium'}
-                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
+                key={tier.name  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variant={tier.variant  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                interactive={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                glowIntensity={tier.popular ? 'high' : 'medium'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               >
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -282,16 +341,21 @@ export default function PricingPage() {;
                       Most Popular
                     </span>
                   </div>
-                )}
-                
+                )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 <div className="text-center p-8">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-6">
-                    {tier.icon}
+                    {tier.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
                   <p className="text-gray-300 mb-6">{tier.description}</p>
-                  
                   <div className="mb-6">
                     <div className="flex items-baseline justify-center">
                       <span className="text-5xl font-bold text-cyan-400">${tier.price}</span>
@@ -299,83 +363,156 @@ export default function PricingPage() {;
                     </div>
                     {tier.savings && (
                       <div className="text-green-400 text-sm mt-2">{tier.savings}</div>
-                    )}
+                    )  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
-                  
                   <ul className="text-left space-y-3 mb-8">
                     {tier.features.map((feature, idx) => (
                       <li key={idx} className="flex items-start">
                         <Check className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
                       </li>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>;
                   <Button;
-                    href={tier.name === 'Enterprise' ? '/contact' : '/services'}
-                    variant={tier.ctaVariant}
+                    href={tier.name === 'Enterprise' ? '/contact' : '/services'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                    variant={tier.ctaVariant  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     size="lg"
                     className="w-full"
                   >
-                    {tier.cta}
+                    {tier.cta  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     <ArrowRight className="ml-2 w-5 h-5" />
                   </Button>
                 </div>
               </UltraFuturisticCard>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
-        {/* Value Propositions */}
+        {/* Value Propositions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Why Choose Zion Tech Group?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {valuePropositions.map((proposition, index) => (
               <UltraFuturisticCard
-                key={index}
-                variant={index % 2 === 0 ? 'quantum' : 'holographic'}
-                interactive={true}
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variant={index % 2 === 0 ? 'quantum' : 'holographic'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                interactive={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="text-center p-6"
               >
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
-                  {proposition.icon}
+                  {proposition.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2">{proposition.title}</h3>
                 <p className="text-gray-300 text-sm mb-4">{proposition.description}</p>
                 <div className="text-3xl font-bold text-cyan-400 mb-2">{proposition.metric}</div>
                 <div className="text-sm text-gray-400">{proposition.detail}</div>
               </UltraFuturisticCard>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
-        {/* Service Category Pricing Examples */}
+        {/* Service Category Pricing Examples */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {serviceCategoryPricing.map((category, index) => (
               <UltraFuturisticCard
-                key={index}
-                variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
-                interactive={true}
+                key={index  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                interactive={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="p-6"
               >
                 <div className="flex items-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
-                    {category.icon}
+                    {category.icon  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>
                   <div>
                     <h3 className="text-lg font-bold text-white">{category.category}</h3>
                     <div className="text-cyan-400 font-semibold">{category.startingPrice}</div>
                   </div>
                 </div>
-                
                 <ul className="space-y-2 mb-4">
                   {category.services.map((service, idx) => (
                     <li key={idx} className="text-sm text-gray-300 flex items-center">
                       <Check className="w-4 h-4 text-green-400 mr-2" />
-                      {service}
+                      {service  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </li>;
-                  ))}
+                  ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </ul>
-                
                 <Button
                   href="/services"
                   variant="secondary"
@@ -386,18 +523,38 @@ export default function PricingPage() {;
                   <ChevronRight className="ml-2 w-4 h-4" />
                 </Button>
               </UltraFuturisticCard>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
-        {/* Popular Services Pricing */}
+        {/* Popular Services Pricing */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Popular Services Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {popularServices.slice(0, 6).map((service, index) => (
               <UltraFuturisticCard
-                key={service.id}
-                variant={service.variant as any}
-                interactive={true}
+                key={service.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                variant={service.variant as any  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                interactive={true  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="p-6"
               >
                 <div className="text-center mb-4">
@@ -406,20 +563,31 @@ export default function PricingPage() {;
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
                   <div className="text-sm text-gray-400">{service.category}</div>
                 </div>
-                
                 <div className="mb-4">
                   <div className="text-xs text-gray-400 mb-2">Key Features:</div>
                   <ul className="text-xs text-gray-300 space-y-1">
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className="flex items-center">
                         <Check className="w-3 h-3 text-green-400 mr-2" />
-                        {feature}
+                        {feature  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </li>;
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>;
                 </div>;
                 <Button;
-                  href={service.link}
+                  href={service.link  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   variant="primary"
                   size="sm"
                   className="w-full"
@@ -428,10 +596,18 @@ export default function PricingPage() {;
                   <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
               </UltraFuturisticCard>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
-        {/* FAQ Section */}
+        {/* FAQ Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Frequently Asked Questions</h2>
           <div className="max-w-4xl mx-auto space-y-4">
@@ -439,25 +615,25 @@ export default function PricingPage() {;
               <h3 className="text-lg font-bold text-white mb-3">What's included in the free trial?</h3>
               <p className="text-gray-300">All plans include a generous free trial period with full access to the selected services. No credit card required to start your trial.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="holographic" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Can I change my plan later?</h3>
               <p className="text-gray-300">Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="neural" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">What support is included?</h3>
               <p className="text-gray-300">All plans include 24/7 support. Professional and Enterprise plans include priority support with dedicated account managers.</p>
             </UltraFuturisticCard>
-            
             <UltraFuturisticCard variant="quantum" className="p-6">
               <h3 className="text-lg font-bold text-white mb-3">Is there a setup fee?</h3>
               <p className="text-gray-300">No setup fees for any plan. All services are designed for instant deployment with our AI-powered setup wizards.</p>
             </UltraFuturisticCard>
           </div>
         </div>
-
-        {/* Contact Information */}
+        {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -467,14 +643,12 @@ export default function PricingPage() {;
               <p className="text-cyan-400 text-lg font-semibold">{contactInfo.mobile}</p>
               <p className="text-gray-400 text-sm mt-2">Available 24/7</p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant="holographic" className="text-center p-6">
               <Mail className="w-12 h-12 text-purple-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3">Email</h3>
               <p className="text-purple-400 text-lg font-semibold">{contactInfo.email}</p>
               <p className="text-gray-400 text-sm mt-2">Quick response guaranteed</p>
             </UltraFuturisticCard>
-
             <UltraFuturisticCard variant="neural" className="text-center p-6">
               <MapPin className="w-12 h-12 text-green-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-3">Address</h3>
@@ -483,18 +657,20 @@ export default function PricingPage() {;
             </UltraFuturisticCard>
           </div>
         </div>
-
-        {/* CTA Section */}
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Start your free trial today and experience the power of revolutionary AI & quantum computing services. 
+              Start your free trial today and experience the power of revolutionary AI & quantum computing services.
               No credit card required, instant setup, and full support included.
             </p>
-            
             <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">
               <Button
                 href="/services"
@@ -515,7 +691,6 @@ export default function PricingPage() {;
                 <MessageSquare className="ml-2 w-5 h-5" />
               </Button>
             </div>
-            
             <div className="text-sm text-gray-400">
               <p>✓ 30-90 Day Free Trials • ✓ No Credit Card Required • ✓ Instant Setup</p>
               <p className="mt-2">✓ 24/7 Support • ✓ 99.99% Uptime SLA • ✓ Global Infrastructure</p>
@@ -546,7 +721,11 @@ export default function PricingPage() {;
             </UltraFuturisticCard>;
           </div>;
         </div>;
-        {/* Contact Information */}
+        {/* Contact Information */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="mb-16">;
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Get In Touch</h2>;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">;
@@ -570,7 +749,11 @@ export default function PricingPage() {;
             </UltraFuturisticCard>;
           </div>;
         </div>;
-        {/* CTA Section */}
+        {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         <div className="text-center">;
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">;
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">;
@@ -609,4 +792,8 @@ export default function PricingPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

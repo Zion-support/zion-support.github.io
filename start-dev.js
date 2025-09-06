@@ -1,4 +1,4 @@
-const { spawn } = require('child_process'),;
+const { spawn } = require('child_process');
 console.log('🚀 Starting development server...'),;
 // Start the development server;
 const devProcess = spawn('npm', ['rundev'], {;

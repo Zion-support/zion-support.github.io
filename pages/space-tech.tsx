@@ -2,12 +2,10 @@ import React from 'react'
 import Head from 'next/head'
 import Layout from '../components/layout/Layout'
 import { Satellite, CheckCircle, Globe2 } from 'lucide-react',
-
 export default function SpaceTechPage() {
   const features = [
     'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly responseGround station integrations and data delivery SLAsSecure communications and zero-trust segmentation'],
 >>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
-
   return (_<Layout>
       <Head>
         <title>Space Technology | Zion Tech Group</title>
@@ -27,7 +25,6 @@ export default function SpaceTechPage() {
               <a href="/market-pricing" className="px-8 py-4">See Market Pricing</Link>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Capabilities</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -36,10 +33,13 @@ export default function SpaceTechPage() {
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />
                   <span className="text-gray-200">{f}</span>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
-
           <section className="text-center">
             <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">
               <Globe2 className="w-4 h-4" />
@@ -50,11 +50,12 @@ export default function SpaceTechPage() {
       </div>
     </Layout>
   )
-import React from 'react',;
-import Head from 'next/head',;
-import Layout from '../components/layout/Layout',;
-import { Satellite, CheckCircle, Globe2 } from 'lucide-react',;
-export default function SpaceTechPage() {;
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout/Layout';
+import { Satellite, CheckCircle, Globe2 } from 'lucide-react';
+export default function SpaceTechPage(req, res) {
+  try {
   const features = [;
     'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly responseGround station integrations and data delivery SLAsSecure communications and zero-trust segmentation'];
   return (;
@@ -85,7 +86,11 @@ export default function SpaceTechPage() {;
                   <CheckCircle className="w-5 h-5 text-emerald-400 mt-0.5" />;
                   <span className="text-gray-200">{f}</span>;
                 </div>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </section>;
           <section className="text-center">;
@@ -98,4 +103,8 @@ export default function SpaceTechPage() {;
       </div>;
     </Layout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

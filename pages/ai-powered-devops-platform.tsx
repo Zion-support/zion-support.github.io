@@ -13,7 +13,11 @@ export default function AIPoweredDevOpsPlatformPage() {
 				title="AI-Powered DevOps Platform"
 				description="Accelerate software delivery with autonomous pipeline optimization, flaky test triage, change-risk prediction, incident prevention, and automated release orchestration."
 				subtitle="Ship faster with higher reliability"
-				pricePerMonthUSD={2499}
+				pricePerMonthUSD={2499  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				implementationWeeks="2-4 weeks"
 				roiNote="Cut MTTR by 40% and increase deployment frequency 3-5x"
 				features={[
@@ -23,8 +27,16 @@ export default function AIPoweredDevOpsPlatformPage() {
 					"Automated canary and feature flags",
 					"Rollback orchestration with blast radius limits",
 					"Incident prediction, runbooks, and guardrails"
-				]}
-				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]}
+				]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				industries={["SaaS", "E-commerce", "Fintech", "Media", "Enterprise IT"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				canonical="https: //ziontechgroup.com/ai-powered-devops-platform"
 			/>
 		</>
@@ -33,4 +45,8 @@ export default function AIPoweredDevOpsPlatformPage() {
 			/>;
 		</>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

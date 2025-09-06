@@ -13,7 +13,11 @@ export default function ZeroTrustSecurityPlatformPage() {
 				title="Zero Trust Security Platform"
 				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services."
 				subtitle="Trust nothing, verify everything"
-				pricePerMonthUSD={3499}
+				pricePerMonthUSD={3499  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				implementationWeeks="4-8 weeks"
 				roiNote="Reduce breach impact and lateral movement risk, meet compliance faster"
 				features={[
@@ -23,10 +27,11 @@ export default function ZeroTrustSecurityPlatformPage() {
 					"Continuous authentication and authorization",
 					"Visibility and audit for compliance",
 					"Rollout playbooks and migration kits"
-import React from 'react',;
-import Head from 'next/head',;
-import ServiceLanding from '../components/sections/ServiceLanding',;
-export default function ZeroTrustSecurityPlatformPage() {;
+import React from 'react';
+import Head from 'next/head';
+import ServiceLanding from '../components/sections/ServiceLanding';
+export default function ZeroTrustSecurityPlatformPage(req, res) {
+  try {
 	return (;
 		<>;
 			<Head>;
@@ -38,7 +43,11 @@ export default function ZeroTrustSecurityPlatformPage() {;
 				title="Zero Trust Security Platform";
 				description="Accelerate zero trust adoption with reference architectures, policy-as-code, identity-aware proxies, microsegmentation, and continuous verification across users, devices, and services.";
 				subtitle="Trust nothing, verify everything";
-				pricePerMonthUSD={3499}
+				pricePerMonthUSD={3499  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				implementationWeeks="4-8 weeks";
 				roiNote="Reduce breach impact and lateral movement risk, meet compliance faster";
 				features={[;
@@ -48,8 +57,16 @@ export default function ZeroTrustSecurityPlatformPage() {;
 					"Continuous authentication and authorization";
 					"Visibility and audit for compliance";
 					"Rollout playbooks and migration kits";
-				]}
-				industries={["Enterprise IT", "Financial Services", "Healthcare", "SaaS", "Public Sector"]}
+				]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+				industries={["Enterprise IT", "Financial Services", "Healthcare", "SaaS", "Public Sector"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				canonical="https: //ziontechgroup.com/zero-trust-security-platform"
 			/>
 		</>
@@ -58,4 +75,8 @@ export default function ZeroTrustSecurityPlatformPage() {;
 			/>;
 		</>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

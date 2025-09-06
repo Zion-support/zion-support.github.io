@@ -13,6 +13,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     paths: {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   };
@@ -20,13 +28,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next',;
-import v1 from '../../../data/api-docs/v1',;
-import { EndpointSpec } from '../../../data/api-docs/types',;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+import type { NextApiRequest, NextApiResponse } from 'next';
+import v1 from '../../../data/api-docs/v1';
+import { EndpointSpec } from '../../../data/api-docs/types';
 function toOpenApi() {;
-  const paths: Record<string any> = {},;
+  const paths: Record<string, any> = {};
   v1.sections.forEach((section) => {;
     section.endpoints.forEach((ep: EndpointSpec) => {;
       paths[ep.path] = paths[ep.path] || {},;
@@ -43,6 +59,14 @@ function toOpenApi() {;
         security: ep.auth && ep.auth.length > 0 && !ep.auth.includes('none') ? [{ bearerAuth: [] }] : []  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
     });
@@ -55,6 +79,22 @@ function toOpenApi() {;
     components: { securitySchemes: { bearerAuth: { type: 'http', scheme: 'bearer', bearerFormat: 'JWT' } } }  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
   } catch (error) {
@@ -63,9 +103,18 @@ function toOpenApi() {;
   }
 }
 ;
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
+export default function handler(req, res) {
+  try {
   res.setHeader('Content-Typeapplication/json');
   res.status(200).json(toOpenApi());
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });

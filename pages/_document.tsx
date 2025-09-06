@@ -1,5 +1,4 @@
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document';
-
 export default function Document() {
   return (
     <Html lang="en">
@@ -17,4 +16,8 @@ export default function Document() {
       </body>
     </Html>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

@@ -14,5 +14,9 @@ export default function Placeholder() {
       </div>
     </main>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

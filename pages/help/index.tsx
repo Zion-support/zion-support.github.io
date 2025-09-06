@@ -1,11 +1,18 @@
-import Link from 'next/link',;
-import { readJson } from '../../utils/fsDb',;
-import type { HelpArticle } from '../../utils/support',;
+import Link from 'next/link';
+import { readJson } from '../../utils/fsDb';
+import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {;
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
-  return { props: { articles } }
+  return { props: { articles }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map((a) => a.category))),
   return (
@@ -24,10 +31,22 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
                     <div className="text-xs opacity-70 mt-1">Last updated {new Date(a.updatedAt).toLocaleDateString()}</div>
                   </Link>
                 </Link>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
-      ))}
+      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

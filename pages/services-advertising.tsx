@@ -3,20 +3,21 @@ import SEO from '../components/SEO',
 const ext = (url: string) => (
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>
 ),
-
 export default function ServicesAdvertisingPage() {
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" url="https://ziontechgroup.com/services-advertising/" />
 			<div className="max-w-6xl mx-auto space-y-10">
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Services Advertising</h1>
-
   const benefits = [
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'
   ],
-
-				{/* New: Core micro SaaS and AI additions */}
+				{/* New: Core micro SaaS and AI additions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
@@ -26,7 +27,6 @@ export default function ServicesAdvertisingPage() {
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</Link></li>
 					</ul>
 				</section>
-
   const pricingRefs = [
     {
       title: 'AI Platforms',
@@ -39,12 +39,13 @@ export default function ServicesAdvertisingPage() {
         { name: 'Groq', href: 'https://wow.groq.com/pricing' },
         { name: 'OpenRouter', href: 'https://openrouter.ai/models' },
         { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
-import React from 'react',;
-import SEO from '../components/SEO',;
+import React from 'react';
+import SEO from '../components/SEO';
 const ext = (url: string) => (;
 	<a className="text-cyan-400 underline" href={`/out?u=${encodeURIComponent(url)}`} target="_blank" rel="nofollow noopener noreferrer">{url.replace('https://', '')}</a>;
 ),;
-export default function ServicesAdvertisingPage() {;
+export default function ServicesAdvertisingPage(req, res) {
+  try {
 	return (;
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
 			<SEO title="Services Advertising | Zion Tech Group" description="Features, benefits, and market references for Zion Tech Group services" url="https://ziontechgroup.com/services-advertising/" />;
@@ -54,7 +55,11 @@ export default function ServicesAdvertisingPage() {;
     '1000% ROI target with measurable KPIsTransparent pricing with market referencesFast onboarding with templates and playbooksEnterprise-grade security and compliance24/7 support with SLAsProven architectures and reference implementationsNo long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',;
     'Flexible deployment: SaaS or self-hosted options';
   ],;
-				{/* New: Core micro SaaS and AI additions */}
+				{/* New: Core micro SaaS and AI additions */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 				<section className="space-y-6">;
 					<h2 className="text-2xl font-semibold text-white">AI Social Media Manager</h2>;
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>;
@@ -66,7 +71,7 @@ export default function ServicesAdvertisingPage() {;
 				</section>;
   const pricingRefs = [;
     {;
-      title: 'AI Platforms',;
+      title: 'AI Platforms';
       links: [;
         { name: 'OpenAI', href: 'https://openai.com/api/pricing' },;
         { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },;
@@ -76,7 +81,11 @@ export default function ServicesAdvertisingPage() {;
         { name: 'Groq', href: 'https://wow.groq.com/pricing' },;
         { name: 'OpenRouter', href: 'https://openrouter.ai/models' },;
         { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },;
-        { name: 'Humanloop', href: 'https://humanloop.com/pricing' }
+        { name: 'Humanloop', href: 'https://humanloop.com/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $100–$2,000/mo. Enterprise: $5k–$100k+/mo depending on volume and models.';
     },;
@@ -88,7 +97,11 @@ export default function ServicesAdvertisingPage() {;
         { name: 'HashiCorp Vault', href: 'https://www.hashicorp.com/products/vault/pricing' },;
         { name: 'Cloudflare Zero Trust', href: 'https://www.cloudflare.com/products/zero-trust/pricing/' },;
         { name: 'Snyk', href: 'https://snyk.io/plans/' },;
-        { name: 'Okta', href: 'https://www.okta.com/pricing/' }
+        { name: 'Okta', href: 'https://www.okta.com/pricing/'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $200–$5,000/mo. Enterprise: $10k–$250k/yr+ for broader suites.';
     },;
@@ -99,7 +112,11 @@ export default function ServicesAdvertisingPage() {;
         { name: 'Weaviate', href: 'https://weaviate.io/pricing' },;
         { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' },;
         { name: 'Elasticsearch Serverless', href: 'https://www.elastic.co/pricing/' },;
-        { name: 'Milvus', href: 'https://zilliz.com/pricing' }
+        { name: 'Milvus', href: 'https://zilliz.com/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $50–$1,000/mo. Enterprise: $2k–$50k+/mo depending on throughput/latency.';
     },;
@@ -111,7 +128,11 @@ export default function ServicesAdvertisingPage() {;
         { name: 'Google Cloud', href: 'https://cloud.google.com/pricing' },;
         { name: 'Cloudflare', href: 'https://www.cloudflare.com/plans/' },;
         { name: 'Netlify', href: 'https://www.netlify.com/pricing/' },;
-        { name: 'Vercel', href: 'https://vercel.com/pricing' }
+        { name: 'Vercel', href: 'https://vercel.com/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $200–$10,000/mo.';
     },;
@@ -120,7 +141,11 @@ export default function ServicesAdvertisingPage() {;
       links: [;
         { name: 'Mixpanel', href: 'https://mixpanel.com/pricing/' },;
         { name: 'Amplitude', href: 'https://amplitude.com/pricing' },;
-        { name: 'PostHog', href: 'https://posthog.com/pricing' }
+        { name: 'PostHog', href: 'https://posthog.com/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $0–$1,500/mo.';
     },;
@@ -129,7 +154,11 @@ export default function ServicesAdvertisingPage() {;
       links: [;
         { name: 'PagerDuty', href: 'https://www.pagerduty.com/pricing/' },;
         { name: 'Opsgenie', href: 'https://www.atlassian.com/software/opsgenie/pricing' },;
-        { name: 'Better Stack', href: 'https://betterstack.com/status/pricing' }
+        { name: 'Better Stack', href: 'https://betterstack.com/status/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $10–$1,000/mo.';
     },;
@@ -138,7 +167,11 @@ export default function ServicesAdvertisingPage() {;
       links: [;
         { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },;
         { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },;
-        { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
+        { name: 'Postmark', href: 'https://postmarkapp.com/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $15–$500/mo.';
     },;
@@ -147,12 +180,19 @@ export default function ServicesAdvertisingPage() {;
       links: [;
         { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },;
         { name: 'New Relic', href: 'https://newrelic.com/pricing' },;
-        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
+        { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       ],;
       note: 'SMB budgets: $50–$2,000/mo.';
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Document Summarizer</h2>
 					<p className="text-slate-300">Concise summaries with citations for PDFs, docs, and URLs with export options.</p>
@@ -162,7 +202,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>Try: <a href="/services/ai-document-summarizer" className="text-cyan-400 underline">ziontechgroup.com/services/ai-document-summarizer</Link></li>
 					</ul>
 				</section>
-
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-12">
           <header className="text-center">
@@ -179,29 +218,39 @@ export default function ServicesAdvertisingPage() {;
               </Button>
             </div>
           </header>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[ 
+              {[
                 { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checksPII detection'] },
                 { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readinessWeekly reports'] },
                 { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web VitalsAlerts'] },
                 { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizingBudgets'] },
-                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map'] }
+                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOsDeps map']   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2 mb-3">{o.name}</div>
                   <ul className="text-sm text-gray-300 space-y-1 list-disc list-inside">
-                    {o.points.map((p) => (<li key={p}>{p}</li>))}
+                    {o.points.map((p) => (<li key={p}>{p}</li>))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>
                 </Link>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Why Zion Tech Group</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -212,10 +261,13 @@ export default function ServicesAdvertisingPage() {;
                     <p className="text-gray-200">{b}</p>
                   </div>
                 </div>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Browser Automation Cloud</h2>
 					<p className="text-slate-300">Scale Playwright/Puppeteer jobs with proxy pools, recorder-to-code and webhooks.</p>
@@ -225,7 +277,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>Try: <a href="/services/browser-automation-cloud" className="text-cyan-400 underline">ziontechgroup.com/services/browser-automation-cloud</Link></li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Performance Testing</h2>
 					<p className="text-slate-300">Load, latency and regression testing with CI gates and dashboards.</p>
@@ -235,7 +286,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>Try: <a href="/services/api-performance-testing" className="text-cyan-400 underline">ziontechgroup.com/services/api-performance-testing</Link></li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Email Deliverability Monitor</h2>
 					<p className="text-slate-300">DMARC/SPF/DKIM health, blocklists, and inbox placement with alerts.</p>
@@ -245,7 +295,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>Try: <a href="/services/email-deliverability-monitor" className="text-cyan-400 underline">ziontechgroup.com/services/email-deliverability-monitor</Link></li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Podcast Transcription & Insights</h2>
 					<p className="text-slate-300">Transcripts, chapters, show notes, and SEO-ready blog pages.</p>
@@ -255,7 +304,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>Try: <a href="/services/podcast-transcription-insights" className="text-cyan-400 underline">ziontechgroup.com/services/podcast-transcription-insights</Link></li>
 					</ul>
 				</section>
-
 				<section id="ai-evaluation-orchestrator" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Evaluation Orchestrator</h2>
 					<p className="text-slate-300">Automate LLM evals, regression tests, red-teaming, and leaderboards across OpenAI, Anthropic, Groq, and more.</p>
@@ -264,7 +312,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://openai.com/pricing')}, {ext('https://www.anthropic.com/pricing')}, {ext('https://openrouter.ai/models')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Vector Search Starter</h2>
 					<p className="text-slate-300">Production RAG starter with Pinecone/Weaviate/Elastic, eval harness, and observability.</p>
@@ -273,7 +320,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://www.pinecone.io/pricing/')}, {ext('https://console.weaviate.cloud/pricing')}, {ext('https://www.elastic.co/pricing')}</li>
 					</ul>
 				</section>
-
 				<section id="managed-postgres-ha" className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Managed Postgres HA</h2>
 					<p className="text-slate-300">SRE-backed high availability Postgres with PITR backups, failover, and tuning.</p>
@@ -282,7 +328,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://cloud.google.com/sql/pricing')}, {ext('https://aws.amazon.com/rds/postgresql/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">AI Guardrails & Safety</h2>
 					<p className="text-slate-300">Policy engine, PII detection, jailbreak protection, and audit logs for LLM apps.</p>
@@ -291,7 +336,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://platform.openai.com/docs/guides/safety-best-practices')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
 					</ul>
 				</section>
-				
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">Identity & SSO/SCIM</h2>
 					<p className="text-slate-300">Enterprise SSO and user lifecycle with Okta/Auth0/WorkOS.</p>
@@ -300,7 +344,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
 					</ul>
 				</section>
-
 				<section className="space-y-6">
 					<h2 className="text-2xl font-semibold text-white">API Observability Starter</h2>
 					<p className="text-slate-300">Distributed tracing, golden signals dashboards, opinionated SLOs and alerting. Go live in under 60 minutes.</p>
@@ -309,7 +352,6 @@ export default function ServicesAdvertisingPage() {;
 						<li>References: {ext('https://www.honeycomb.io/pricing/')}, {ext('https://www.datadoghq.com/pricing/')}, {ext('https://newrelic.com/pricing')}</li>
 					</ul>
 				</section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Micro SaaS & IT Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -323,7 +365,11 @@ export default function ServicesAdvertisingPage() {;
                 { name: 'Podcast Transcription Pro', price: '$15/mo', href: '/podcast-transcription-pro', refs: [{ n: 'Rev', u: 'https://www.rev.com/pricing' }] },
                 { name: 'Freelancer Portfolio Builder', price: '$9/mo', href: '/freelancer-portfolio-builder', refs: [{ n: 'Webflow', u: 'https://webflow.com/pricing' }] },
                 { name: 'Micro CRM for Local Business', price: '$19/mo', href: '/micro-crm-local-business', refs: [{ n: 'Zoho Bigin', u: 'https://www.zoho.com/bigin/pricing/' }] },
-                { name: 'AI SEO Content Optimizer', price: '$59/mo', href: '/ai-seo-content-optimizer', refs: [{ n: 'Surfer SEO', u: 'https://surferseo.com/pricing/' }] }
+                { name: 'AI SEO Content Optimizer', price: '$59/mo', href: '/ai-seo-content-optimizer', refs: [{ n: 'Surfer SEO', u: 'https://surferseo.com/pricing/' }]   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               ].map((o) => (
                 <div key={o.name} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <a href={o.href} className="block group">
@@ -336,49 +382,88 @@ export default function ServicesAdvertisingPage() {;
                   <div className="mt-3 text-sm text-gray-400 flex flex-wrap gap-3">
                     {o.refs.map((r) => (
                       <a key={r.n} href={r.u} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-gray-300 hover:text-white">
-                        <ExternalLink className="w-4 h-4" /> {r.n}
+                        <ExternalLink className="w-4 h-4" /> {r.n  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                       </Link>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </div>;
                 </div>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Average Market Price Ranges</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[ 
+              {[
                 { title: 'AI Evaluations & Prompting', range: '$50–$800/mo', links: [
                   { name: 'Weights & Biases', href: 'https://wandb.ai/site/pricing' },
                   { name: 'Humanloop', href: 'https://humanloop.com/pricing' },
-                  { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing' }
+                  { name: 'Promptfoo', href: 'https://www.promptfoo.dev/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 ]},;
                 { title: 'LLM Platforms', range: '$100–$2,000/mo', links: [;
                   { name: 'OpenAI', href: 'https://openai.com/api/pricing' },;
                   { name: 'Anthropic', href: 'https://www.anthropic.com/pricing' },;
-                  { name: 'OpenRouter', href: 'https://openrouter.ai/models' }
+                  { name: 'OpenRouter', href: 'https://openrouter.ai/models'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 ]},;
                 { title: 'Observability/APM', range: '$50–$2,000/mo', links: [;
                   { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },;
                   { name: 'New Relic', href: 'https://newrelic.com/pricing' },;
-                  { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' }
+                  { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 ]},;
                 { title: 'Security & Compliance', range: '$200–$5,000/mo', links: [;
                   { name: 'Wiz', href: 'https://www.wiz.io/pricing' },;
                   { name: 'Prisma Cloud', href: 'https://www.paloaltonetworks.com/prisma/cloud/pricing' },;
-                  { name: 'Vault', href: 'https://www.hashicorp.com/products/vault/pricing' }
+                  { name: 'Vault', href: 'https://www.hashicorp.com/products/vault/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 ]},;
                 { title: 'Vector DB & Retrieval', range: '$20–$1,000/mo', links: [;
                   { name: 'Pinecone', href: 'https://www.pinecone.io/pricing/' },;
                   { name: 'Weaviate', href: 'https://weaviate.io/pricing' },;
-                  { name: 'Qdrant', href: 'https://qdrant.tech/pricing/' }
+                  { name: 'Qdrant', href: 'https://qdrant.tech/pricing/'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 ]},;
                 { title: 'Email Deliverability', range: '$50–$300/mo', links: [;
                   { name: 'Mailgun', href: 'https://www.mailgun.com/pricing/' },;
                   { name: 'SendGrid', href: 'https://sendgrid.com/pricing/' },;
-                  { name: 'Postmark', href: 'https://postmarkapp.com/pricing' }
-                ]}
+                  { name: 'Postmark', href: 'https://postmarkapp.com/pricing'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                ]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               ].map((group) => (
                 <div key={group.title} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
                   <div className="flex items-center justify-between mb-2">
@@ -388,27 +473,41 @@ export default function ServicesAdvertisingPage() {;
                   <ul className="text-slate-300 space-y-1">
                     {group.links.map((l) => (
                       <li key={l.href}><a className="text-cyan-400 underline" href={l.href} target="_blank" rel="noopener noreferrer">{l.name}</Link></li>
-                    ))}
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </ul>;
                 </div>;
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
             <div className="text-center mt-6">
               <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">More Market References</Button>
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Explore by Category</h2>
             <div className="flex flex-wrap items-center justify-center gap-3">
               {anchors.map((a) => (
                 <a key={a.title} href={a.href} className="px-4 py-2 rounded-full bg-gradient-to-r from-cyan-600/20 to-purple-600/20 border border-cyan-500/30 text-gray-200">
-                  {a.title}
+                  {a.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </Link>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">Contact Us</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -426,7 +525,6 @@ export default function ServicesAdvertisingPage() {;
               </Link>
             </div>
           </section>
-
           <section>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">More Featured Solutions</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -436,19 +534,31 @@ export default function ServicesAdvertisingPage() {;
                 { name: 'Domain & DNS Monitor', price: '$89/mo', href: '/domain-dns-monitor' },
                 { name: 'Uptime & SLO Monitor', price: '$99/mo', href: '/uptime-slo-monitor' },
                 { name: 'PDF Render API', price: '$49/mo', href: '/pdf-render-api' },
-                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor' }
+                { name: 'Database Performance Monitor', price: '$299/mo', href: '/database-performance-monitor'   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40">
                   <div className="text-sm text-gray-400 mb-1">From</div>
                   <div className="text-2xl font-bold text-white">{o.price}</div>
                   <div className="text-gray-200 mt-2">{o.name}</div>
                 </Link>
-              ))}
+              ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             </div>;
           </section>;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

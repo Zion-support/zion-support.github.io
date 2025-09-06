@@ -1,5 +1,5 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore
+// @ts-ignore;
 import data from '../../data/hf-models.json',
 export default function HfModelsPage() {
   const items: any[] = (data?.items || []).slice(0, 60),
@@ -14,9 +14,17 @@ export default function HfModelsPage() {
               <a className="font-medium underline" href={`https://huggingface.co/${it.modelId}`} target="_blank" rel="noreferrer">{it.modelId}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">Downloads {it.downloads} · Likes {it.likes} · {it.pipeline_tag}</div>
             </li>
-          ))}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </ul>;
       </div>;
     </EnhancedLayout>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

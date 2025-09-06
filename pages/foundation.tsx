@@ -19,13 +19,11 @@ export default function FoundationPage() {
             <a className="underline" href="#mou">Partnership MOUs</Link>
           </div>
         </section>
-
         <section className="space-y-4" id="charter">
           <h2 className="text-2xl font-semibold">Foundation Charter</h2>
           <p className="text-gray-600 dark:text-gray-300">Legal-neutral charter for a decentralized AI protocol committed to sovereignty, open knowledge, and trust.</p>
           <CharterGenerator />
         </section>
-
         <section className="space-y-4" id="reports">
           <h2 className="text-2xl font-semibold">Transparency Reports</h2>
           <p className="text-gray-600 dark:text-gray-300">Quarterly financials, grants, and impact metrics. Initial placeholders shown until reports are published.</p>
@@ -35,10 +33,13 @@ export default function FoundationPage() {
                 <div className="font-medium">Report Q{q} 2025</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>
               </div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>
         </section>
-
         <section className="space-y-4" id="grants">
           <h2 className="text-2xl font-semibold">Grants Issued</h2>
           <p className="text-gray-600 dark:text-gray-300">Cross-multiverse grants across chains, rollups, and alternate compute realms.</p>
@@ -48,7 +49,6 @@ export default function FoundationPage() {
             <li>Agent interoperability standards and sandbox — RFP (Open)</li>
           </ul>
         </section>
-
         <section className="space-y-4" id="mou">
           <h2 className="text-2xl font-semibold">Partnership MOU Archive</h2>
           <p className="text-gray-600 dark: text-gray-300">Public archive of Memoranda of Understanding (MOUs). Redactions may apply where legally required.</p>
@@ -57,10 +57,11 @@ export default function FoundationPage() {
       </div>
     </>
   )
-import Head from 'next/head',;
-import Link from 'next/link',;
+import Head from 'next/head';
+import Link from 'next/link';
 import CharterGenerator from '../components/foundation/CharterGenerator';
-export default function FoundationPage() {;
+export default function FoundationPage(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -92,7 +93,11 @@ export default function FoundationPage() {;
                 <div className="font-medium">Report Q{q} 2025</div>;
                 <div className="text-sm text-gray-600 dark:text-gray-400">Status: Draft</div>;
               </div>;
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </section>;
         <section className="space-y-4" id="grants">;
@@ -112,4 +117,8 @@ export default function FoundationPage() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

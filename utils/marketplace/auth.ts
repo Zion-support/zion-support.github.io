@@ -1,30 +1,50 @@
-import { NextApiRequest } from "next",;
-type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string },;
+import { NextApiRequest } from "next";
+type DemoUser = { id: string, role: "client" | "talent", talentSlug?: string };
 export function getDemoUser(req: NextApiRequest): DemoUser {;
   // Prefer headers for server-side calls, fallback to cookies-like header or defaults;
-  const role = (req.headers["x-demo-user-role"] as string) || "client",;
-  const id = (req.headers["x-demo-user-id"] as string) || (role === "client" ? "client-1" : "talent-1"),;
-  const talentSlug = (req.headers["x-demo-talent-slug"] as string) || undefined,;
-  return { id, role: role === "talent" ? "talent" : "client", talentSlug }
+  const role = (req.headers["x-demo-user-role"] as string) || "client";
+  const id = (req.headers["x-demo-user-id"] as string) || (role === "client" ? "client-1" : "talent-1");
+  const talentSlug = (req.headers["x-demo-talent-slug"] as string) || undefined;
+  return { id, role: role === "talent" ? "talent" : "client", talentSlug   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export function assertClient(req: NextApiRequest): DemoUser {;
-  const u = getDemoUser(req),;
+  const u = getDemoUser(req);
   if (u.role !== "client") {;
-    const err = new Error("Client role required"),;
+    const err = new Error("Client role required");
     // @ts-ignore add code;
-    err.statusCode = 403,;
+    err.statusCode = 403;
     throw err;
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
   return u;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export function assertTalentOrClientForOffer(req: NextApiRequest, offer: { clientId: string, talentSlug: string }, talentSlugHeader?: string): DemoUser {;
-  const u = getDemoUser(req),;
-  if (u.role === "client" && u.id === offer.clientId) return u,;
-  if (u.role === "talent" && (u.talentSlug || talentSlugHeader) === offer.talentSlug) return u,;
+  const u = getDemoUser(req);
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+  if (u.role === "talent" && (u.talentSlug || talentSlugHeader) === offer.talentSlug) return u;
   const err = new Error("Not authorized for this offer");
   // @ts-ignore;
   err.statusCode = 403;
   throw err;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

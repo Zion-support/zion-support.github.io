@@ -7,7 +7,11 @@ export default function RetailTechnologySolutions() {
 			slug="retail-technology-solutions"
 			description="Optimize merchandising, pricing, demand forecasting, and omni-channel experiences with AI. Personalize at scale while reducing waste and stockouts."
 			subtitle="Higher margins and better experiences powered by AI."
-			pricePerMonthUSD={1999}
+			pricePerMonthUSD={1999  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 			implementationWeeks="Implementation: 4–8 weeks"
 			roiNote="Lift gross margin 2–4 pts and reduce stockouts 10–20%"
 			features={[
@@ -17,12 +21,24 @@ export default function RetailTechnologySolutions() {
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration",
 				"Integrations: POS, eCom, WMS, ESP, CDP"
-			]}
-			industries={["Retail", "CPG", "E‑commerce"]}
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Retail", "CPG", "E‑commerce"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
 			canonical="https: //ziontechgroup.com/retail-technology-solutions";
 		/>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

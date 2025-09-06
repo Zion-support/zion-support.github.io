@@ -1,8 +1,8 @@
 import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
-import { 
-  Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
+import {
+  Rocket, Brain, Atom, Shield, Cloud, BarChart3,
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
@@ -74,24 +74,27 @@ export default function PortfolioPage() {
       image: "/api/placeholder/600/400",
       icon: Rocket,
       color: "from-yellow-500 to-orange-500"
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const stats = [
     { number: "500+", label: "Projects Delivered", icon: Rocket },
     { number: "50+", label: "Enterprise Clients", icon: Users },
     { number: "99.9%", label: "Client Satisfaction", icon: Star },
-    { number: "2500%", label: "Average ROI", icon: TrendingUp }
+    { number: "2500%", label: "Average ROI", icon: TrendingUp   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],
-
   const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"],
-
   const [selectedCategory, setSelectedCategory] = React.useState("All"),
-
-  const filteredProjects = selectedCategory === "All" 
-    ? projects 
+  const filteredProjects = selectedCategory === "All"
+    ? projects
     : projects.filter(project => project.category === selectedCategory),
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
@@ -101,16 +104,30 @@ export default function PortfolioPage() {
         <meta property="og:description" content="Explore our portfolio of innovative technology projects and solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/portfolio" />
       </Head>
-
       <EnhancedNavigation />
-
-      {/* Hero Section */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -120,43 +137,58 @@ export default function PortfolioPage() {
               Innovative technology solutions that drive business transformation and growth
             </p>
           </motion.div>
-
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
-              Discover how we've helped organizations leverage cutting-edge technology to solve 
+              Discover how we've helped organizations leverage cutting-edge technology to solve
               complex challenges and achieve remarkable results.
             </p>
           </motion.div>
         </div>
       </section>
-
-      {/* Stats Section */}
+      {/* Stats Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
-              <motion.div
-import React from 'react',;
-import Head from 'next/head',;
-import { motion } from 'framer-motion',;
+              <motion.div;
+import React from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
 import {;
   Rocket, Brain, Atom, Shield, Cloud, BarChart3,;
   ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp;
 } from 'lucide-react',;
-import EnhancedNavigation from '../components/EnhancedNavigation',;
-import EnhancedFooter from '../components/EnhancedFooter',;
-export default function PortfolioPage() {;
+import EnhancedNavigation from '../components/EnhancedNavigation';
+import EnhancedFooter from '../components/EnhancedFooter';
+export default function PortfolioPage(req, res) {
+  try {
   const projects = [;
     {;
-      title: "AI-Powered Financial Analytics Platform",;
-      description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling",;
-      category: "AI & Machine Learning",;
-      client: "Fortune 500 Financial Institution",;
+      title: "AI-Powered Financial Analytics Platform";
+      description: "Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling";
+      category: "AI & Machine Learning";
+      client: "Fortune 500 Financial Institution";
       technologies: ["Python", "TensorFlow", "React", "AWS", "PostgreSQL"],;
       results: ["40% improvement in prediction accuracy", "Real-time processing of 1M+ data points", "ROI of 300% in first year"],;
       image: "/api/placeholder/600/400",;
@@ -217,13 +249,21 @@ export default function PortfolioPage() {;
       image: "/api/placeholder/600/400",;
       icon: Rocket,;
       color: "from-yellow-500 to-orange-500";
-    }
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const stats = [;
     { number: "500+", label: "Projects Delivered", icon: Rocket },;
     { number: "50+", label: "Enterprise Clients", icon: Users },;
     { number: "99.9%", label: "Client Satisfaction", icon: Star },;
-    { number: "2500%", label: "Average ROI", icon: TrendingUp }
+    { number: "2500%", label: "Average ROI", icon: TrendingUp   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   ],;
   const categories = ["All", "AI & Machine Learning", "Quantum Computing", "Cybersecurity", "Cloud Infrastructure", "Data Analytics", "Digital Transformation"],;
   const [selectedCategory, setSelectedCategory] = React.useState("All");
@@ -240,13 +280,29 @@ export default function PortfolioPage() {;
         <link rel="canonical" href="https://ziontechgroup.com/portfolio" />;
       </Head>;
       <EnhancedNavigation />;
-      {/* Hero Section */}
+      {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="relative pt-32 pb-20 px-6">;
         <div className="max-w-7xl mx-auto text-center">;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-8";
           >;
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">;
@@ -257,9 +313,21 @@ export default function PortfolioPage() {;
             </p>;
           </motion.div>;
           <motion.div;
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8, delay: 0.2 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
             className="mb-12";
           >;
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">;
@@ -269,17 +337,41 @@ export default function PortfolioPage() {;
           </motion.div>;
         </div>;
       </section>;
-      {/* Stats Section */}
+      {/* Stats Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-16 px-6">;
         <div className="max-w-7xl mx-auto">;
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">;
             {stats.map((stat, index) => (;
               <motion.div;
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={stat.label  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 20 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -288,41 +380,93 @@ export default function PortfolioPage() {;
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* Category Filter */}
+      {/* Category Filter */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
               <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
+                key={category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                onClick={() => setSelectedCategory(category)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${;
                   selectedCategory === category;
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white';
                     : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white';
-                }`}
+                }`  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               >;
-                {category}
+                {category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
               </button>;
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* Projects Grid */}
+      {/* Projects Grid */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {filteredProjects.map((project, index) => (
               <motion.div
-                key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
+                key={project.title  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                transition={{ duration: 0.6, delay: index * 0.1 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-8">
@@ -331,36 +475,52 @@ export default function PortfolioPage() {;
                       <project.icon className="w-6 h-6 text-white" />
                     </div>
                     <span className="text-sm text-white/60 bg-white/5 px-3 py-1 rounded-full">
-                      {project.category}
+                      {project.category  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </span>
                   </div>
-                  
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span key={tech} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">
-                          {tech}
+                          {tech  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </span>;
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </div>
                   </div>
-                  
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Results</h4>
                     <ul className="space-y-1">
                       {project.results.map((result) => (
                         <li key={result} className="text-sm text-white/80 flex items-center">
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
-                          {result}
+                          {result  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                         </li>;
-                      ))}
+                      ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </ul>
                   </div>
-                  
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
@@ -369,18 +529,42 @@ export default function PortfolioPage() {;
                   </div>
                 </div>
               </motion.div>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </div>;
         </div>;
       </section>;
-      {/* CTA Section */}
+      {/* CTA Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            whileInView={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            viewport={{ once: true }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
@@ -399,7 +583,6 @@ export default function PortfolioPage() {;
           </motion.div>
         </div>
       </section>
-
       <EnhancedFooter />
     </div>
   )
@@ -424,5 +607,9 @@ export default function PortfolioPage() {;
       <EnhancedFooter />;
     </div>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;

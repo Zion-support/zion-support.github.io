@@ -9,8 +9,11 @@ import Head from 'next/head';
 import type { User as SupabaseUser } from '@supabase/supabase-js';
 interface PrivatePageProps {;
   user: SupabaseUser;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export default function PrivatePage({ user }: PrivatePageProps) {
   return (
     <>
@@ -18,7 +21,6 @@ export default function PrivatePage({ user }: PrivatePageProps) {
         <title>Private Profile - Zion Tech Marketplace</title>
         <meta name="description" content="Private user profile page" />
       </Head>
-      
       <div className="container max-w-4xl mx-auto py-8">
         <Card>
           <CardHeader>
@@ -42,44 +44,62 @@ export default function PrivatePage({ user }: PrivatePageProps) {
                     <Mail className="h-4 w-4 text-muted-foreground" />
                     <span className="text-sm">{user.email}</span>
                     <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>
-                      {user.email_confirmed_at ? "Verified" : "Unverified"}
+                      {user.email_confirmed_at ? "Verified" : "Unverified"  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </Badge>
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar className="h-4 w-4 text-muted-foreground" />
                     <span className="text-sm">
-                      Joined {new Date(user.created_at).toLocaleDateString()}
+                      Joined {new Date(user.created_at).toLocaleDateString()  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-sm">User ID: </span>
                     <code className="px-2 py-1 bg-muted rounded text-xs font-mono">
-                      {user.id}
+                      {user.id  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                     </code>
                   </div>
                 </div>
               </div>
             </div>
-
             <div className="p-4 bg-muted/50 rounded-lg">
               <h4 className="font-medium mb-2">Authentication Details</h4>
               <div className="grid gap-2 text-sm">
                 <div>
                   <span className="font-medium">Last Sign In: </span>
-                  {user.last_sign_in_at 
+                  {user.last_sign_in_at
                     ? new Date(user.last_sign_in_at).toLocaleString()
                     : 'Never'
-                  }
+                    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                 </div>
                 <div>
                   <span className="font-medium">App Metadata: </span>
                   <code className="text-xs">
-                    {JSON.stringify(user.app_metadata, null, 2)}
+                    {JSON.stringify(user.app_metadata, null, 2)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
                   </code>
                 </div>
               </div>
             </div>
-
             <div className="flex gap-2">
               <Button asChild>
                 <Link href="/dashboard">
@@ -97,6 +117,10 @@ export default function PrivatePage({ user }: PrivatePageProps) {
       </div>
     </>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
 ;
 export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {;
@@ -106,10 +130,22 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
     return {;
       redirect: {;
         destination: '/auth/login';
-        permanent: false}}
+        permanent: false}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 ;
   return {;
     props: {;
-      user: data.user}}
+      user: data.user}  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
 } ;

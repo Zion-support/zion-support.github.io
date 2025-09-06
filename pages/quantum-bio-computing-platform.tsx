@@ -21,10 +21,11 @@ export default function QuantumBioComputingPlatformPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-export default function QuantumBioComputingPlatformPage() {;
+export default function QuantumBioComputingPlatformPage(req, res) {
+  try {
 	return (;
 		<UltraFuturisticBackground>;
 			<Head>;
@@ -44,4 +45,8 @@ export default function QuantumBioComputingPlatformPage() {;
 			</div>;
 		</UltraFuturisticBackground>;
 	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }

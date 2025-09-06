@@ -28,10 +28,11 @@ export default function IndustrySolutions() {
       </div>
     </>
   )
-import React from 'react',;
-import Head from 'next/head',;
+import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
-export default function IndustrySolutions() {;
+export default function IndustrySolutions(req, res) {
+  try {
   return (;
     <>;
       <Head>;
@@ -58,4 +59,8 @@ export default function IndustrySolutions() {;
       </div>;
     </>;
   );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
