@@ -1,6 +1,11 @@
-import fs from 'fs';
-
 // Mock database utility
+import fs from 'fs';
+import path from 'path';
+
+function getFilePath(fileName: string): string {
+  return path.join(process.cwd(), 'data', `${fileName}.json`);
+}
+
 export function readJsonFile<T>(filePath: string, defaultValue: T): T {
   try {
     if (fs.existsSync(filePath)) {
@@ -24,8 +29,4 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {
   const items = readJsonFile<T[]>(fileName, []);
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
-}
-
-function getFilePath(fileName: string): string {
-  return `./data/${fileName}`;
 }
