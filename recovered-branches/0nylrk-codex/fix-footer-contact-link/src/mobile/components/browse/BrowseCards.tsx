@@ -130,4 +130,3 @@ export function BrowseCards({ items, type, onViewDetails }: BrowseCardsProps) {
     </div>
   )
 }
-;

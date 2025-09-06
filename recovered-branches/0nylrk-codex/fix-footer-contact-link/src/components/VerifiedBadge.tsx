@@ -31,4 +31,3 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
     </TooltipProvider>
   )
 }
-;

@@ -47,4 +47,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })
   }
-};
+}

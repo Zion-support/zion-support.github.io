@@ -219,4 +219,3 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     </>
   );
 }
-;

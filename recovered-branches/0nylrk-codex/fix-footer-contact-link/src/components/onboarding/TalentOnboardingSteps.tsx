@@ -36,4 +36,3 @@ export function TalentOnboardingSteps() {
   
   return <OnboardingTracker steps={steps} />
 }
-;

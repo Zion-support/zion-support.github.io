@@ -88,4 +88,3 @@ export default function SitemapPage() {
     </div>
   );
 }
-;

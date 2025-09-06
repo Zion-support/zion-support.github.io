@@ -98,4 +98,3 @@ export function ResumeVersionSelector({ currentResume, onResumeChange }: ResumeV
     </div>
   )
 }
-;

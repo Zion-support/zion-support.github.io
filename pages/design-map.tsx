@@ -104,4 +104,4 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
       </div>
     </div>
   )
-};
+}
