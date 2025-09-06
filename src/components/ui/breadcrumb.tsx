@@ -207,7 +207,7 @@ const BreadcrumbEllipsis = ({
 >>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {...props}
   >
-    &#8230;
+    &#8230,
   </span>
 <<<<<<< HEAD
 <<<<<<< HEAD
