@@ -233,13 +233,13 @@ class IntelligentMonitor {
     let confidence = 0.9;
 
     if (cpuUsage > 80 || memoryUsage > 85) {
-      status = 'warning';
-      confidence = 0.7;
-    }
+    status = 'warning',
+    confidence = 0.7
+  }
     if (cpuUsage > 95 || memoryUsage > 95 || errorCount > 20) {
-      status = 'critical';
-      confidence = 0.5;
-    }
+    status = 'critical',
+    confidence = 0.5
+  }
 
     return { status, confidence, cpuUsage, memoryUsage, errorCount };
   }
@@ -394,7 +394,7 @@ class IntelligentMonitor {
     console.log(`❌ Errors: ${this.metrics.errors?.length || 0}`);
 
     if (predictions?.recommendations?.length > 0) {
-      console.log('\n💡 Recommendations:');
+      console.log('\n💡 Recommendations: '),
       predictions.recommendations.forEach(rec => {
         console.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
         console.log(`    → ${rec.action}`);
@@ -408,8 +408,8 @@ class IntelligentMonitor {
 
 // Run if called directly
 if (require.main === module) {
-  const monitor = new IntelligentMonitor();
-  monitor.run();
-}
+    const monitor = new IntelligentMonitor(),
+    monitor.run()
+  }
 
 module.exports = IntelligentMonitor;

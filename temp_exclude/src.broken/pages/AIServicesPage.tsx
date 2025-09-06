@@ -1,42 +1,36 @@
  export default function AIServicesPage () {
   const aiServices = [ {
-  benefits: [ "10x faster content creation";
-"Improved SEO rankings";
+  benefits: [ "10x faster content creation", "Improved SEO rankings",
 "Consistent brand voice";
 "Reduced content costs";
 "24/7 content generation" ];
 website: "https://ziontechgroup.com/ai-content-generation" 
 };
-benefits: [ "24/7 customer support";
-"Reduced response times";
+benefits: [ "24/7 customer support", "Reduced response times",
 "Lower support costs";
 "Improved customer satisfaction";
 "Scalable support operations" ];
 website: "https://ziontechgroup.com/ai-customer-service" 
 };
-benefits: [ "Increased conversion rates";
-"Better lead prioritization";
+benefits: [ "Increased conversion rates", "Better lead prioritization",
 "Improved sales forecasting";
 "Higher revenue per salesperson";
 "Data-driven sales decisions" ];
 website: "https://ziontechgroup.com/ai-sales-intelligence" 
 };
-benefits: [ "Instant information retrieval";
-"Improved research efficiency";
+benefits: [ "Instant information retrieval", "Improved research efficiency",
 "Better decision making";
 "Reduced information silos";
 "Enhanced knowledge sharing" ];
 website: "https://ziontechgroup.com/ai-search-rag" 
 };
-benefits: [ "Reduced AI risks";
-"Compliance assurance";
+benefits: [ "Reduced AI risks", "Compliance assurance",
 "Ethical AI deployment";
 "Improved trust and transparency";
 "Risk mitigation" ];
 website: "https://ziontechgroup.com/ai-security-guardrails" 
 };
-benefits: [ "Improved AI model quality";
-"Faster model deployment";
+benefits: [ "Improved AI model quality", "Faster model deployment",
 "Reduced AI risks";
 "Better performance tracking";
 "Comprehensive evaluation" ];

@@ -500,8 +500,8 @@ class IntelligentDeploymentManager {
 
 // Run the manager
 if (require.main === module) {
-  const manager = new IntelligentDeploymentManager();
-  manager.run();
-}
+    const manager = new IntelligentDeploymentManager(),
+    manager.run()
+  }
 
 module.exports = IntelligentDeploymentManager;

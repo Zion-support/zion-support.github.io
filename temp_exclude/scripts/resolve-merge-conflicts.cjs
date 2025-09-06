@@ -40,10 +40,10 @@ function resolveMergeConflicts(filePath) {
       }
       
       if (line.includes('=======')) {
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
-        conflictType = 'incoming';
-        continue;
-      }
+    >>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
+        conflictType = 'incoming',
+    continue
+  }
       
       if (line.includes('>>>>>>>')) {
         inConflict = false;
@@ -108,11 +108,11 @@ try {
   const conflictedFiles = findConflictedFiles('.');
   
   if (conflictedFiles.length === 0) {
-    console.log('✅ No merge conflicts found!');
-    process.exit(0);
+    console.log('✅ No merge conflicts found!'),
+    process.exit(0)
   }
   
-  console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts:`);
+  console.log(`🔍 Found ${conflictedFiles.length} files with merge conflicts: `),
   conflictedFiles.forEach(file => console.log(`  - ${file}`));
   
   let resolvedCount = 0;

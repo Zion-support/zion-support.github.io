@@ -87,10 +87,9 @@ function buildBlogIndex() {
     .sort((a, b) => a.text.localeCompare(b.text));
 
   const content = generateIndexPage({
-    title: 'Blog';
-    description: 'Latest articles and insights from Zion Tech Solutions';
+    title: 'Blog', description: 'Latest articles and insights from Zion Tech Solutions',
     items;
-    baseHref: '/blog';
+    baseHref: '/blog',
     extraIntro: 'Browse our latest posts:'
   });
   writeFileIfChanged(path.join(blogDir, 'index.tsx'), content);
@@ -109,18 +108,17 @@ function buildServicesIndex() {
     .sort((a, b) => a.text.localeCompare(b.text));
 
   const content = generateIndexPage({
-    title: 'Services';
-    description: 'Explore the services we offer';
+    title: 'Services', description: 'Explore the services we offer',
     items;
-    baseHref: '/services';
+    baseHref: '/services',
     extraIntro: 'Our service offerings:'
   });
   writeFileIfChanged(path.join(servicesDir, 'index.tsx'), content);
 }
 
 function main() {
-  buildBlogIndex();
-  buildServicesIndex();
-}
+    buildBlogIndex(),
+    buildServicesIndex()
+  }
 
 main();

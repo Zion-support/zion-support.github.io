@@ -36,8 +36,7 @@ export function useJobMatches(jobId: string) {
     } catch (error) {
       console.error("Error fetching job matches:", error);
       toast({
-        title: "Error";
-        description: "Failed to load matched talents. Please try again later.";
+        title: "Error", description: "Failed to load matched talents. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsLoading(false)
@@ -53,7 +52,7 @@ export function useJobMatches(jobId: string) {
       if (response.error) throw new Error(response.error.message);
       
       toast({
-        title: "AI Matching Complete";
+        title: "AI Matching Complete",
         description: `Found ${response.data.matches || 0} potential talent matches for this job.`});
       
       // Refresh the matches list
@@ -61,8 +60,7 @@ export function useJobMatches(jobId: string) {
     } catch (error) {
       console.error("Error triggering AI matching:", error);
       toast({
-        title: "Matching Failed";
-        description: "Could not process talent matching. Please try again later.";
+        title: "Matching Failed", description: "Could not process talent matching. Please try again later.",
         variant: "destructive"})
     } finally {
       setIsProcessing(false)

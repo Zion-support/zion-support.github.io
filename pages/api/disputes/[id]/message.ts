@@ -20,8 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const now = new Date().toISOString();
     dispute.messages.push({
       id: `${Date.now()}`;
-      authorUserId: user.id;
-      authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent'));
+      authorUserId: user.id, authorRole: (user.role === 'admin' ? 'admin' : (user.id === dispute.clientUserId ? 'client' : 'talent')),
       body;
       createdAt: now});
     dispute.updatedAt = now;

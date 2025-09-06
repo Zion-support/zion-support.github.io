@@ -1,23 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 interface PasswordStrengthResult {
-  password: string;
-  strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
-  score: number;
-  feedback: string[];
+  password: string, strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong',
+  score: number, feedback: string[],
   details: {
-    length: number;
-    hasUppercase: boolean;
-    hasLowercase: boolean;
-    hasNumbers: boolean;
-    hasSymbols: boolean;
-    hasCommonPatterns: boolean;
+    length: number, hasUppercase: boolean,
+    hasLowercase: boolean, hasNumbers: boolean,
+    hasSymbols: boolean, hasCommonPatterns: boolean,
     entropy: number
   };
   suggestions: string[]
 }
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<PasswordStrengthResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -62,16 +57,14 @@ export default async function handler(
     score -= hasCommonPatterns ? 20 : 0, // Penalty for common patterns
 
     // Determine strength level
-    let strength: PasswordStrengthResult['strength'];
-    if (score < 30) strength = 'very-weak';
+    let strength: PasswordStrengthResult['strength'], if (score < 30) strength = 'very-weak',
     else if (score < 50) strength = 'weak';
     else if (score < 70) strength = 'medium';
     else if (score < 90) strength = 'strong';
     else strength = 'very-strong';
 
     // Generate feedback
-    const feedback: string[] = [];
-    if (length < 8) feedback.push('Password is too short (minimum 8 characters)');
+    const feedback: string[] = [], if (length < 8) feedback.push('Password is too short (minimum 8 characters)'),
     if (!hasUppercase) feedback.push('Add uppercase letters');
     if (!hasLowercase) feedback.push('Add lowercase letters');
     if (!hasNumbers) feedback.push('Add numbers');
@@ -80,7 +73,7 @@ export default async function handler(
     if (entropy < 30) feedback.push('Password is too predictable');
 
     // Generate suggestions
-    const suggestions: string[] = [];
+    const suggestions: string[] = [],
     if (score < 50) {
       suggestions.push('Use a mix of uppercase, lowercase, numbers, and symbols');
       suggestions.push('Make it at least 12 characters long');

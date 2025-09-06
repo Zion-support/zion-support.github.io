@@ -9,14 +9,14 @@ export default function DevOpsAutomationPage() {
     {
       icon: <GitBranch className="w-6 h-6" />,
       title: 'CI/CD Pipelines',
-      description: 'Automated build, test, and deployment workflows';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
+      description: 'Automated build, test, and deployment workflows',
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     };
     {
       icon: <Zap className="w-6 h-6" />,
       title: 'Infrastructure as Code',
-      description: 'Terraform, CloudFormation, and Kubernetes automation';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600'
+      description: 'Terraform, CloudFormation, and Kubernetes automation',
+    color: 'bg-gradient-to-br from-green-500 to-emerald-600'
     };
     {
       icon: <Shield className="w-6 h-6" />,

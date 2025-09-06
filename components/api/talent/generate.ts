@@ -8,8 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const { name, title, bio, experience, skills } = req.body as {
-    name: string;
-    title?: string;
+    name: string, title?: string,
     bio?: string;
     experience?: string;
     skills?: string
@@ -23,7 +22,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperience: ${experience || ''}\nSkills: ${skills || ''}`;
 
     const completion = await openai.chat.completions.create({
-      model: process.env.OPENAI_MODEL || 'gpt-4o-mini';
+      model: process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You produce only valid JSON. No commentary.' };
         { role: 'user', content: prompt }];
@@ -35,9 +34,8 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
 
     return res.status(200).json({
       name;
-      title: parsed.title || title || 'Professional';
-      category: parsed.category || null;
-      summary: parsed.summary || '';
+      title: parsed.title || title || 'Professional', category: parsed.category || null,
+      summary: parsed.summary || '',
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
     return res.status(500).json({ error: e.message || 'OpenAI error' })

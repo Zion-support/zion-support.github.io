@@ -16,8 +16,8 @@ export function PartnerResources() {
     {
       id: 'logo-pack',
       title: 'Zion AI Logo Pack',
-      description: 'Official logos in various formats (PNG, SVG, JPG)';
-      type: 'image',
+      description: 'Official logos in various formats (PNG, SVG, JPG)',
+    type: 'image',
       icon: <FileImage className="h-10 w-10 text-zion-purple" />,
       url: '#'
     };

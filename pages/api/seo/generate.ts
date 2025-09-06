@@ -24,7 +24,7 @@ Audience: buyers looking to hire talent or rent equipment
 Tone: professional, modern, trustworthy`;
 
     const response = await openai.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system };
         { role: 'user', content: user }];
@@ -35,7 +35,7 @@ Tone: professional, modern, trustworthy`;
 
     // FAQ generation
     const faqResp = await openai.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'Generate 4 concise Q&A pairs as JSON array [{"q":"","a":""}], focus on buyer concerns for the topic.' };
         { role: 'user', content: `Topic: ${prompt} in ${region || 'global'} for ${service || 'general'}` }];
@@ -56,9 +56,8 @@ Tone: professional, modern, trustworthy`;
       payload: {
         title;
         h1;
-        bodyHtml: content;
-        region: region || undefined;
-        service: service || undefined;
+        bodyHtml: content, region: region || undefined,
+        service: service || undefined,
         faq}})
   } catch (e) {
     console.error(e);

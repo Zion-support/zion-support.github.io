@@ -7,8 +7,7 @@ import { EmailAnalysisResult } from './types';
  */
 export const analyzeEmail = (email: string): EmailAnalysisResult => {
   const domain = email.split('@')[1]?.toLowerCase();
-  const reasons: string[] = [];
-  
+  const reasons: string[] = [],
   if (!domain) return { isSuspicious: true, reasons: ['Invalid email format'] };
   
   // Check for suspicious domains
@@ -20,7 +19,7 @@ export const analyzeEmail = (email: string): EmailAnalysisResult => {
   }
   
   return {
-    isSuspicious: reasons.length > 0;
+    isSuspicious: reasons.length > 0,
     reasons
   }
 };

@@ -4,7 +4,7 @@
     this.log(`Errors: ${this.results.errors.length}`);
     
     const recommendations = this.generateRecommendations();
-    this.log('\n💡 Recommendations:');
+    this.log('\n💡 Recommendations: '),
     recommendations.forEach((rec, index) => {
       this.log(`  ${index + 1}. ${rec}`);
     });

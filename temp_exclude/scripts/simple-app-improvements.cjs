@@ -109,9 +109,8 @@ export default function PerformanceMonitor() {
 import React, { useState, useEffect } from 'react';
 interface SecurityIssue {;
   "id": string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-  title: string;
-  description: string;
+  severity: 'low' | 'medium' | 'high' | 'critical', title: string,
+  description: string,
   status: 'open' | 'resolved'}
 ;
 export default function SecurityAudit() {;
@@ -139,10 +138,7 @@ export default function SecurityAudit() {;
         {issues.map((issue) => (;
           <div key={issue.id} className="border rounded-lg p-4">;
             <h3 className="font-semibold">{issue.title}</h3>;
-            <p className="text-gray-600">{issue.description}</p>;
-            <span className="text-sm text-blue-600">"Severity": {issue.severity}</span>;
-          </div>;
-        ))}
+            <p className="text-gray-600">{issue.description}</p>, <span className="text-sm text-blue-600">"Severity": {issue.severity}</span>, </div>))}
       </div>;
     </div>;
   )}
@@ -160,39 +156,24 @@ export default function SecurityAudit() {;
 "name": CI/CD Pipeline;
 on:;
   push:;
-    branches: [main ];
-  pull_request:;
-    branches: [main ];
-jobs:;
+    branches: [main ], pull_request:,
+    branches: [main ], jobs:,
   test:;
-    runs-on: ubuntu-latest;
-    steps:;
-    - uses: actions/checkout@v3;
-    - name: Setup Node.js;
-      uses: actions/setup-node@v3;
-      with:;
-        node-version: '18';
-        cache: 'npm';
-    - name: Install dependencies;
-      run: npm ci;
-    - name: Run tests;
-      run: npm test;
-    - name: Run linting;
-      run: npm run lint;
+    runs-on: ubuntu-latest, steps:,
+    - uses: actions/checkout@v3, - name: Setup Node.js,
+      uses: actions/setup-node@v3, with:,
+        node-version: '18', cache: 'npm',
+    - name: Install dependencies, run: npm ci,
+    - name: Run tests, run: npm test,
+    - name: Run linting, run: npm run lint,
   build:;
-    needs: test;
-    runs-on: ubuntu-latest;
+    needs: test, runs-on: ubuntu-latest,
     steps:;
-    - uses: actions/checkout@v3;
-    - name: Setup Node.js;
-      uses: actions/setup-node@v3;
-      with:;
-        node-version: '18';
-        cache: 'npm';
-    - name: Install dependencies;
-      run: npm ci;
-    - name: Build application;
-      run: npm run build;
+    - uses: actions/checkout@v3, - name: Setup Node.js,
+      uses: actions/setup-node@v3, with:,
+        node-version: '18', cache: 'npm',
+    - name: Install dependencies, run: npm ci,
+    - name: Build application, run: npm run build,
 ";
       // Ensure .github/workflows directory exists;
       if (!fs.existsSync('.github/workflows')) {;
@@ -226,8 +207,7 @@ export default function SystemHealthMonitor() {;
   return (;
     <div className="space-y-6">;
       <h2 className="text-2xl font-bold">System Health Monitor</h2>;
-      <div className="grid grid-cols-1 "md": grid-cols-2 lg: grid-cols-4 gap-4">;
-        <div className="bg-white p-4 rounded-lg shadow">;
+      <div className="grid grid-cols-1 "md": grid-cols-2 lg: grid-cols-4 gap-4">, <div className="bg-white p-4 rounded-lg shadow">,
           <h3 className="font-semibold">Status</h3>;
           <p className="text-2xl font-bold text-green-600">{health.status}</p>;
         </div>;

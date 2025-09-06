@@ -19,7 +19,7 @@ const runCommand = (command, description) => {}
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
-      cwd: process.cwd();
+      cwd: process.cwd(),
     }
 });
     log(`Completed: ${description}`);
@@ -82,15 +82,15 @@ const main = async () => {}
   
   // Generate comprehensive report;
   const results = {}
-    linkCheck: linkCheckResults;
+    linkCheck: linkCheckResults,
   };
   
   const report = generateLinkReport(results);
   
   if (report.overall.status === 'PASS') {}
-    log('Link checking passed: No broken links found');
+    log('Link checking passed: No broken links found'),
   } else {}
-    log('Link checking failed: Issues detected');
+    log('Link checking failed: Issues detected'),
   };
   log('Link Checker Process completed');
 };

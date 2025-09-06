@@ -203,15 +203,15 @@ class ESLintErrorFixer {}
         stdio: 'pipe'
       });
       if (result) {
-        const parsed = JSON.parse(result);
-        return parsed || [];
-      }
+    const parsed = JSON.parse(result),
+    return parsed || []
+  }
       return [];
     } catch (error) {
-      // Parse stderr for errors
-      const stderr = error.stderr ? error.stderr.toString() : '';
-      return this.parseESLintErrors(stderr);
-    }
+    // Parse stderr for errors
+      const stderr = error.stderr ? error.stderr.toString() : '',
+    return this.parseESLintErrors(stderr)
+  }
   }
   parseESLintErrors(stderr) {
     const errors = [];
@@ -244,9 +244,9 @@ class ESLintErrorFixer {}
   }
   async fixFileESLintErrors(filePath, fileErrors) {
     if (!fs.existsSync(filePath)) {
-      this.fixesSkipped++;
-      return;
-    }
+    this.fixesSkipped++,
+    return
+  }
     this.log('info', `Fixing ESLint errors in: ${filePath}`);
     try {
 >>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23
@@ -373,15 +373,15 @@ class ESLintErrorFixer {}
       const sortedErrors = fileErrors.sort((a, b) => b.line - a.line);
       for (const error of sortedErrors) {
         if (error.line > lines.length) {
-          this.fixesSkipped++;
-          continue;
-        }
+    this.fixesSkipped++,
+    continue
+  }
         const lineIndex = error.line - 1;
         const line = lines[lineIndex];
         if (this.shouldSkipLine(line)) {
-          this.fixesSkipped++;
-          continue;
-        }
+    this.fixesSkipped++,
+    continue
+  }
         const fixedLine = await this.fixESLintError(line, error, lines, lineIndex);
         if (fixedLine !== line) {
           lines[lineIndex] = fixedLine;

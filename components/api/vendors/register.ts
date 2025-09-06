@@ -10,10 +10,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const vendor = registerVendor({
       slug;
       name;
-      servicesOffered: Array.isArray(servicesOffered) ? servicesOffered : [];
-      teamSize: Number(teamSize || 0);
+      servicesOffered: Array.isArray(servicesOffered) ? servicesOffered : [], teamSize: Number(teamSize || 0),
       about;
-      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [];
+      verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : [],
       caseStudies: Array.isArray(caseStudies) ? caseStudies : []});
     res.status(201).json({ vendor })
   } catch (e: any) {

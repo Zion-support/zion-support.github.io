@@ -32,7 +32,7 @@ export function TestimonialCarousel() {
         <div className="max-w-5xl mx-auto px-8">
           <Carousel
             opts={{
-              align: "start";
+              align: "start",
               loop: true}}
             className="w-full"
           >

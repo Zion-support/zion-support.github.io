@@ -21,8 +21,8 @@ const Solutions: NextPage = () => {
       name: 'Healthcare Solutions',
       description: 'AI-powered healthcare technology solutions',
       features: ['Patient Care OptimizationDiagnostic AIHealthcare AnalyticsCompliance Management'],
-      price: '$3,999';
-      period: 'month',
+      price: '$3,999',
+    period: 'month',
       popular: true,
       icon: <Heart className="w-8 h-8" />
     };
@@ -31,8 +31,8 @@ const Solutions: NextPage = () => {
       name: 'Financial Solutions',
       description: 'Advanced financial technology and services',
       features: ['Risk ManagementFraud DetectionTrading SystemsCompliance Automation'],
-      price: '$2,999';
-      period: 'month',
+      price: '$2,999',
+    period: 'month',
       popular: false,
       icon: <TrendingUp className="w-8 h-8" />
     };
@@ -41,8 +41,8 @@ const Solutions: NextPage = () => {
       name: 'Manufacturing Solutions',
       description: 'Smart manufacturing and Industry 4.0',
       features: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationIoT Integration'],
-      price: '$2,799';
-      period: 'month',
+      price: '$2,799',
+    period: 'month',
       popular: false,
       icon: <Settings className="w-8 h-8" />
     };
@@ -51,8 +51,8 @@ const Solutions: NextPage = () => {
       name: 'Retail Solutions',
       description: 'Digital transformation for retail businesses',
       features: ['E-commerce PlatformsCustomer AnalyticsInventory ManagementOmnichannel Solutions'],
-      price: '$2,499';
-      period: 'month',
+      price: '$2,499',
+    period: 'month',
       popular: false,
       icon: <ShoppingCart className="w-8 h-8" />
     };
@@ -61,8 +61,8 @@ const Solutions: NextPage = () => {
       name: 'Government Solutions',
       description: 'Technology solutions for public sector',
       features: ['Digital ServicesSecurity & ComplianceData ManagementCitizen Engagement'],
-      price: '$3,499';
-      period: 'month',
+      price: '$3,499',
+    period: 'month',
       popular: false,
       icon: <Building className="w-8 h-8" />
     };
@@ -71,8 +71,8 @@ const Solutions: NextPage = () => {
       name: 'Education Solutions',
       description: 'Innovative educational technology',
       features: ['Learning PlatformsStudent AnalyticsAdministrative SystemsVirtual Classrooms'],
-      price: '$1,999';
-      period: 'month',
+      price: '$1,999',
+    period: 'month',
       popular: false,
       icon: <BookOpenCheck className="w-8 h-8" />
     }

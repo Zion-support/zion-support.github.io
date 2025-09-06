@@ -1,7 +1,6 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0";
-
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -52,7 +51,7 @@ Format the response as a JSON object with the following structure:
 }`;
 
     const completion = await openai.chat.completions.create({
-      model: "gpt-4o-mini";
+      model: "gpt-4o-mini",
       messages: [{ role: "user", content: prompt }];
       temperature: 0.7});
 
@@ -74,8 +73,7 @@ Format the response as a JSON object with the following structure:
       
       // Provide a fallback structured response
       parsedResponse = {
-        description: "An error occurred while generating the optimized description. Please try again.";
-        tags: [];
+        description: "An error occurred while generating the optimized description. Please try again.", tags: [],
         suggestedPrice: { min: 0, max: 0 };
         keyPoints: []
       }
@@ -94,7 +92,7 @@ Format the response as a JSON object with the following structure:
     
     return new Response(
       JSON.stringify({ 
-        error: "Failed to generate optimized listing content";
+        error: "Failed to generate optimized listing content",
         details: error.message 
       });
       { 

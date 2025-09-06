@@ -20,8 +20,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
-            active && "bg-accent font-medium text-accent-foreground";
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent", active && "bg-accent font-medium text-accent-foreground",
             className
           )}
         >
@@ -39,8 +38,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
         ref={ref}
         type="button"
         className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
-          active && "bg-accent font-medium text-accent-foreground";
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent", active && "bg-accent font-medium text-accent-foreground",
           className
         )}
         {...props}

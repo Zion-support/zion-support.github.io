@@ -62,8 +62,7 @@ export async function createOnboardingNotification({
     userId;
     title;
     message;
-    type: 'onboarding';
-    sendEmail: false;
+    type: 'onboarding', sendEmail: false,
     actionUrl;
     actionText
   })

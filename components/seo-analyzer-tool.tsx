@@ -13,8 +13,8 @@ export default function SEOAnalyzerToolPage() {
     {
       icon: <Search className="w-8 h-8 text-white" />,
       title: 'Comprehensive SEO Analysis',
-      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      description: 'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',
+    color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <Target className="w-8 h-8 text-white" />,

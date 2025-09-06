@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import LoadingSpinner from './LoadingSpinner';
 interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  phone: string;
-  service: string;
+  name: string, email: string,
+  company: string, phone: string,
+  service: string,
   message: string,
 };
 const ContactForm: React.FC = () => {

@@ -9,7 +9,7 @@ export function useResumeEnhancer() {
   
   const enhanceContent = async (
     content: string, 
-    type: EnhancementType = 'general';
+    type: EnhancementType = 'general',
     context?: string
   ): Promise<string | null> => {
     setIsEnhancing(true);
@@ -19,7 +19,7 @@ export function useResumeEnhancer() {
       const { data, error } = await supabase.functions.invoke('resume-enhancer', {
         body: { 
           content, 
-          enhancementType: type;
+          enhancementType: type,
           context
         }
       });

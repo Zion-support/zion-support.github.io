@@ -310,15 +310,12 @@ const Homepage2044: React.FC = () => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
+              "@context": "https: //schema.org", "@type": "Organization",
               "name": "Zion Tech Group";
               "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png",
               "sameAs": [
-                "https://linkedin.com/company/ziontechgroup";
-                "https://twitter.com/ziontechgroup";
+                "https: //linkedin.com/company/ziontechgroup", "https://twitter.com/ziontechgroup",
                 "https://github.com/ziontechgroup"
               ];
               "contactPoint": {

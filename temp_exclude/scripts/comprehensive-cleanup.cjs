@@ -251,7 +251,6 @@ otherFilesToRemove.forEach(file => {
 });
 
 console.log('✅ Comprehensive cleanup completed!');
-console.log('🎯 Next steps:');
-console.log('1. Run npm run lint:check to verify remaining issues');
+console.log('🎯 Next steps: '), console.log('1. Run npm run lint:check to verify remaining issues'),
 console.log('2. Run npm run build to test the application');
 console.log('3. Commit the cleanup changes');

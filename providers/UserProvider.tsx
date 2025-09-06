@@ -9,18 +9,14 @@ import React, {
 export type UserRole = 'client' | 'talent';
 
 export type User = {
-  id: string;
-  name: string;
-  role: UserRole;
-  avatarUrl?: string;
-  onboardingCompleted: boolean;
+  id: string, name: string,
+  role: UserRole, avatarUrl?: string,
+  onboardingCompleted: boolean,
 };
 
 export type UserContextValue = {
-  user: User | null;
-  setUser: (user: User | null) => void;
-  logout: () => void;
-  completeOnboarding: () => void;
+  user: User | null, setUser: (user: User | null) => void,
+  logout: () => void, completeOnboarding: () => void,
 };
 
 const UserContext = createContext<UserContextValue | undefined>(undefined);
@@ -35,7 +31,7 @@ const DEFAULT_USER: User = {
 export function UserProvider({
   children
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode,
 }) {
   const [user, setUser] = useState<User | null>(null);
 

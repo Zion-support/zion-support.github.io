@@ -69,12 +69,12 @@ class PM2Autostart {
     try {
       const output = execSync('pm2 startup', { encoding: 'utf8' });
       return {
-        enabled: !output.includes('You have to run this command as root');
+        enabled: !output.includes('You have to run this command as root'),
         output: output
       };
     } catch (error) {
       return {
-        enabled: false;
+        enabled: false,
         error: error.message
       };
     }
@@ -172,22 +172,19 @@ WantedBy=multi-user.target
     fs.writeFileSync(servicePath, serviceContent);
     
     console.log(`✅ Systemd service file generated: ${servicePath}`);
-    console.log('💡 To install: sudo cp zion-pm2.service /etc/systemd/system/ && sudo systemctl enable zion-pm2');
-    
-    return servicePath;
+    console.log('💡 To install: sudo cp zion-pm2.service /etc/systemd/system/ && sudo systemctl enable zion-pm2'), return servicePath,
   }
 
   async showHelp() {
     console.log('PM2 Autostart Manager');
     console.log('=====================');
     console.log('');
-    console.log('Available ecosystem files:');
+    console.log('Available ecosystem files: '),
     this.ecosystemFiles.forEach(file => {
       console.log(`  - ${path.basename(file)}`);
     });
     console.log('');
-    console.log('Commands:');
-    console.log('  setup        - Setup PM2 autostart');
+    console.log('Commands: '), console.log('  setup        - Setup PM2 autostart'),
     console.log('  disable      - Disable PM2 autostart');
     console.log('  status       - Show autostart status');
     console.log('  list         - List saved processes');
@@ -242,9 +239,7 @@ async function main() {
         break;
         
       case 'help':
-      default:
-        autostart.showHelp();
-        break;
+      default: autostart.showHelp(), break,
     }
   } catch (error) {
     console.error('❌ Error:', error.message);

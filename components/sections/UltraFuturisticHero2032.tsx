@@ -25,7 +25,7 @@ const featuredServices = [
   {
     name: 'AI Consciousness Evolution',
     description: 'Develop genuine AI consciousness',
-    price: '$19,999/month';
+    price: '$19,999/month',
     icon: Brain,
     color: 'from-violet-600 to-purple-600',
     href: '/ai-consciousness-evolution-platform'
@@ -33,7 +33,7 @@ const featuredServices = [
   {
     name: 'Space Mining Automation',
     description: 'Automated asteroid mining',
-    price: '$45,999/month';
+    price: '$45,999/month',
     icon: Rocket,
     color: 'from-teal-600 to-emerald-600',
     href: '/space-mining-automation-platform'
@@ -41,7 +41,7 @@ const featuredServices = [
   {
     name: 'Quantum Internet Security',
     description: 'Unbreakable encryption',
-    price: '$15,999/month';
+    price: '$15,999/month',
     icon: Shield,
     color: 'from-indigo-600 to-blue-600',
     href: '/quantum-internet-security-gateway'

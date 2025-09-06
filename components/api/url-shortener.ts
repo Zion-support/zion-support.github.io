@@ -1,23 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface ShortUrl {
-  id: string;
-  originalUrl: string;
-  shortCode: string;
-  shortUrl: string;
-  createdAt: string;
-  clicks: number;
+  id: string, originalUrl: string,
+  shortCode: string, shortUrl: string,
+  createdAt: string, clicks: number,
   isActive: boolean
 }
 
 interface UrlShortenerRequest {
-  originalUrl: string;
+  originalUrl: string,
   customCode?: string
 }
 
 interface UrlShortenerResponse {
-  success: boolean;
-  data?: ShortUrl;
+  success: boolean, data?: ShortUrl,
   error?: string
 }
 
@@ -45,7 +41,7 @@ function isValidUrl(url: string): boolean {
 }
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<UrlShortenerResponse>
 ) {
   if (req.method === 'POST') {
@@ -55,14 +51,14 @@ export default async function handler(
 
       if (!originalUrl) {
         return res.status(400).json({
-          success: false;
+          success: false,
           error: 'Original URL is required'
         })
       }
 
       if (!isValidUrl(originalUrl)) {
         return res.status(400).json({
-          success: false;
+          success: false,
           error: 'Invalid URL format'
         })
       }
@@ -74,7 +70,7 @@ export default async function handler(
 
       if (existingUrl) {
         return res.status(200).json({
-          success: true;
+          success: true,
           data: existingUrl
         })
       }
@@ -88,25 +84,23 @@ export default async function handler(
       }
 
       const shortUrl: ShortUrl = {
-        id: Date.now().toString();
-        originalUrl;
+        id: Date.now().toString(), originalUrl,
         shortCode;
         shortUrl: `${req.headers.host}/api/url-shortener/${shortCode}`;
-        createdAt: new Date().toISOString();
-        clicks: 0;
+        createdAt: new Date().toISOString(), clicks: 0,
         isActive: true
       };
 
       urlStorage.set(shortCode, shortUrl);
 
       res.status(201).json({
-        success: true;
+        success: true,
         data: shortUrl
       })
     } catch (error) {
       console.error('URL shortening error:', error);
       res.status(500).json({
-        success: false;
+        success: false,
         error: 'Internal server error'
       })
     }
@@ -114,12 +108,12 @@ export default async function handler(
     // Get all URLs (for demo purposes)
     const urls = Array.from(urlStorage.values());
     res.status(200).json({
-      success: true;
+      success: true,
       data: urls as any
     })
   } else {
     res.status(405).json({
-      success: false;
+      success: false,
       error: 'Method not allowed'
     })
   }
@@ -143,7 +137,7 @@ export async function getServerSideProps({ params }: { params: { shortCode: stri
   // Redirect to original URL
   return {
     redirect: {
-      destination: shortUrl.originalUrl;
+      destination: shortUrl.originalUrl,
       permanent: false
     }
   };

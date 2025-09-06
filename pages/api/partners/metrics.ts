@@ -9,12 +9,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (usingPlaceholder) {
       return res.status(200).json({
-        total_signups: 12;
-        total_visits: 180;
-        total_profile_completions: 7;
-        total_job_creations: 5;
-        conversion_rate: 7 / 12;
-        payout_amount: 210;
+        total_signups: 12, total_visits: 180,
+        total_profile_completions: 7, total_job_creations: 5,
+        conversion_rate: 7 / 12, payout_amount: 210,
         currency: 'USD'})
     }
 
@@ -45,8 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       total_visits;
       total_profile_completions;
       total_job_creations;
-      conversion_rate: total_signups ? total_profile_completions / total_signups : 0;
-      payout_amount;
+      conversion_rate: total_signups ? total_profile_completions / total_signups : 0, payout_amount,
       currency: 'USD'})
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })

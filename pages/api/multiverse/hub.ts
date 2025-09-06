@@ -5,12 +5,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (req.method === "GET") {
     return res.status(200).json({
-      route: "/multiverse/hub";
-      instanceId: state.config.instanceId;
-      peers: state.config.peers;
-      scope: state.config.scope;
-      optIn: state.config.optIn;
-      paused: state.config.paused;
+      route: "/multiverse/hub", instanceId: state.config.instanceId,
+      peers: state.config.peers, scope: state.config.scope,
+      optIn: state.config.optIn, paused: state.config.paused,
       lastSyncedAt: state.lastSyncedAt})
   }
 

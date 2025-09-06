@@ -2,10 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
 interface SearchResult {
-  title: string;
-  description: string;
-  url: string;
-  type: 'service' | 'page' | 'category';
+  title: string, description: string,
+  url: string, type: 'service' | 'page' | 'category',
 }
 
 const SearchBar: React.FC = () => {
@@ -85,15 +83,15 @@ const SearchBar: React.FC = () => {
   };
 
   const handleResultClick = () => {
-    setIsOpen(false);
-    setQuery('');
+    setIsOpen(false),
+    setQuery('')
   };
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-      setIsOpen(false);
-      inputRef.current?.blur();
-    }
+    setIsOpen(false),
+    inputRef.current?.blur()
+  }
   };
 
   useEffect(() => {

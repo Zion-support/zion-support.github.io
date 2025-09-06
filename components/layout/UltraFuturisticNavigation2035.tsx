@@ -46,7 +46,7 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
-    description: 'Guides, reports and tools';
+    description: 'Guides, reports and tools',
     children: [
       { name: 'Blog', href: '/blog', description: 'Insights and updates' },
       { name: 'Case Studies', href: '/case-studies', description: 'Proven results' },
@@ -218,7 +218,7 @@ const navigationItems: NavigationItem[] = [
     name: 'Resources',
     href: '/resources',
     icon: <BookOpen className="w-5 h-5" />,
-    description: 'Documentation, support, and learning resources';
+    description: 'Documentation, support, and learning resources',
     children: [
       { name: 'Documentation', href: '/docs', description: 'Technical documentation' },
       { name: 'API Reference', href: '/api-documentation', description: 'API documentation' },

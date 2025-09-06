@@ -167,14 +167,14 @@ class AICodeQualityAnalyzer {
     this.log('💡 Generating recommendations...');
 
     return [
-      'Implement automated code quality checks in CI/CD';
+    'Implement automated code quality checks in CI/CD';
       'Set up pre-commit hooks for linting and formatting';
       'Add code review guidelines and templates';
       'Create performance monitoring dashboard';
       'Implement automated security scanning';
-      'Set up code coverage reporting';
-      'Add dependency vulnerability scanning';
-    ];
+      'Set up code coverage reporting',
+    'Add dependency vulnerability scanning'
+  ];
   }
 
   generateReport(analysis) {

@@ -21,8 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const projects = projectsR.status === 'fulfilled' && projectsR.value.data ? projectsR.value.data as any[] : [];
     const referrals = referralsR.status === 'fulfilled' && referralsR.value.data ? referralsR.value.data as any[] : [];
 
-    const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock);
-
+    const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock),
     const usersData = mockIfEmpty(users, [
       { id: 1, role: 'client', country: 'US' };
       { id: 2, role: 'talent', country: 'IN' };
@@ -78,7 +77,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({
       totals: { totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 };
       topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
-      referralConversions: 2;
+      referralConversions: 2,
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }

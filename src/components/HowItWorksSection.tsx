@@ -11,20 +11,16 @@ interface HowItWorksSectionProps {
 
 const getSteps = (t: any) => [
   {
-    title: t('how_it_works.post');
-    description: t('how_it_works.post_desc');
+    title: t('how_it_works.post'), description: t('how_it_works.post_desc'),
     icon: Send},
   {
-    title: t('how_it_works.match');
-    description: t('how_it_works.match_desc');
+    title: t('how_it_works.match'), description: t('how_it_works.match_desc'),
     icon: Search},
   {
-    title: t('how_it_works.hire_buy');
-    description: t('how_it_works.hire_buy_desc');
+    title: t('how_it_works.hire_buy'), description: t('how_it_works.hire_buy_desc'),
     icon: Handshake},
   {
-    title: t('how_it_works.done');
-    description: t('how_it_works.done_desc');
+    title: t('how_it_works.done'), description: t('how_it_works.done_desc'),
     icon: Check}],
 
 
@@ -50,7 +46,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : "";
+                  index % 2 === 0 ? "md: flex-row-reverse" : "",
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">

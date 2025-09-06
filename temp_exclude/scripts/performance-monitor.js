@@ -21,7 +21,7 @@ const performanceChecks = {
   bundleAnalysis: false,
   lighthouseScore: false,
   loadTime: false,
-  memoryUsage: false;
+  memoryUsage: false,
 };
 =======
 =======
@@ -143,7 +143,7 @@ const report = {
   timestamp: new Date().toISOString(),
   score: performanceScore,
   checks: performanceChecks,
-  recommendations: [];
+  recommendations: [],
 };
 if (performanceScore < 80) {
   report.recommendations.push('Consider optimizing build size');

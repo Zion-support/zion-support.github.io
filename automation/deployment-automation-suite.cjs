@@ -8,8 +8,8 @@ console.log('🚀 Starting Deployment Automation Suite...');
 
 class DeploymentAutomation {
   constructor() {
-    this.deploymentSteps = [];
-    this.startTime = Date.now();
+    this.deploymentSteps = [],
+    this.startTime = Date.now()
   }
 
   async runDeployment() {
@@ -239,8 +239,8 @@ class DeploymentAutomation {
 
 // Run the deployment automation
 if (require.main === module) {
-  const deployment = new DeploymentAutomation();
-  deployment.runDeployment().catch(console.error);
-}
+    const deployment = new DeploymentAutomation(),
+    deployment.runDeployment().catch(console.error)
+  }
 
 module.exports = DeploymentAutomation;

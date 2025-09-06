@@ -150,9 +150,8 @@ class AutoFixer {}
   async runAllFixes() {}
     this.log("info", "Starting comprehensive auto-fix process...");
     const results = {"timestamp": new Date().toISOString(),"mergeConflicts": await this.fixMergeConflicts(),"syntaxErrors": await this.fixSyntaxErrors();}
-      importErrors: await this.fixImportErrors();
-      typescriptErrors: await this.fixTypeScriptErrors();
-      totalFixes: 0;
+      importErrors: await this.fixImportErrors(), typescriptErrors: await this.fixTypeScriptErrors(),
+      totalFixes: 0,
       duration: 0};
     results.totalFixes = results.mergeConflicts + results.syntaxErrors + results.importErrors + results.typescriptErrors;
     results.duration = Date.now() - this.startTime.getTime();

@@ -52,7 +52,7 @@ const services = [
     title: 'AI-Powered Medical Diagnostics',
     description: 'Advanced machine learning algorithms for accurate disease detection and diagnosis.',
     icon: Brain,
-    features: [;
+    features: [,
       'Medical image analysis,',
       'Symptom pattern recognition',',
       'Risk assessment algorithms',',
@@ -63,7 +63,7 @@ const services = [
     title: 'Telemedicine Platforms,',
     description: 'Comprehensive virtual healthcare delivery systems for remote patient care.,',
     icon: Phone,
-    features: [;
+    features: [,
       'Video consultation systems,',
       'Remote patient monitoring',',
       'Digital prescription management',',
@@ -74,7 +74,7 @@ const services = [
     title: 'Electronic Health Records (EHR),',
     description: 'Secure, interoperable health information management systems.',',
     icon: Database,
-    features: [;
+    features: [,
       'Patient data management,',
       'Interoperability standards',',
       'Clinical decision support',',
@@ -85,7 +85,7 @@ const services = [
     title: 'Medical Imaging AI,',
     description: 'AI-enhanced medical imaging for improved diagnostic accuracy.,',
     icon: Camera,
-    features: [;
+    features: [,
       'Radiology image analysis,',
       'Pathology image processing',',
       '3D imaging reconstruction',',
@@ -96,7 +96,7 @@ const services = [
     title: 'Healthcare Analytics,',
     description: 'Data-driven insights for improved patient outcomes and operational efficiency.,',
     icon: BarChart3,
-    features: [;
+    features: [,
       'Population health analytics,',
       'Predictive modeling',',
       'Cost optimization analysis',',
@@ -107,7 +107,7 @@ const services = [
     title: 'Patient Management Systems,',
     description: 'Comprehensive patient care coordination and management platforms.,',
     icon: Users,
-    features: [;
+    features: [,
       'Appointment scheduling,',
       'Care plan management',',
       'Patient communication tools',',
@@ -121,7 +121,7 @@ const benefits = [;
   {}
     title: 'Improved Patient Outcomes,',
     description: 'AI-powered diagnostics and personalized treatment plans lead to better health results.,',
-    icon: Heart;
+    icon: Heart,
 =======
 =======
 ];
@@ -134,17 +134,17 @@ const benefits = [
   {}
     title: 'Enhanced Efficiency,',
     description: 'Streamlined workflows and automated processes reduce administrative burden.,',
-    icon: Activity;
+    icon: Activity,
   },
   {}
     title: 'Cost Reduction,',
     description: 'Optimized resource allocation and preventive care reduce overall healthcare costs.,',
-    icon: BarChart3;
+    icon: BarChart3,
   },
   {}
     title: 'Regulatory Compliance,',
     description: 'Built-in compliance tools ensure adherence to healthcare regulations and standards.,',
-    icon: Shield;
+    icon: Shield,
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -200,8 +200,7 @@ export default function HealthcarePage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Heart className="w-12 h-12 text-red-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Healthcare;
+                <h1 className="text-5xl md: text-6xl font-bold">", Healthcare,
                   <span className="block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -211,12 +210,10 @@ export default function HealthcarePage() {
                 Revolutionizing healthcare delivery with cutting-edge AI, telemedicine, and digital health solutions. 
                 Improve patient outcomes, enhance efficiency, and ensure regulatory compliance.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Get Healthcare Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
-                  View Healthcare Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-red-600 transition-all duration-300 font-semibold">", View Healthcare Case Studies,
                 </Link>;
               </div>;
             </motion.div>;
@@ -282,15 +279,14 @@ export default function HealthcarePage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Healthcare Technology Services;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Healthcare Technology Services,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive technology solutions designed specifically for healthcare organizations, 
                 from hospitals to private practices.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
 =======
@@ -365,15 +361,14 @@ export default function HealthcarePage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Healthcare Solutions?;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Healthcare Solutions?,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our healthcare technology solutions deliver measurable improvements in patient care, 
                 operational efficiency, and regulatory compliance.,
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
@@ -425,15 +420,14 @@ export default function HealthcarePage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Healthcare Success Stories;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Healthcare Success Stories,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Real results from healthcare organizations that have transformed their operations;
                 with our technology solutions.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">",
               {caseStudies.map((study, index) => (,
                 <motion.div}),
 =======
@@ -501,19 +495,16 @@ export default function HealthcarePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Healthcare?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Healthcare?,
               </h2>;
               <p className="text-xl text-red-100 mb-8 max-w-3xl mx-auto">";
                 Let our healthcare technology experts help you implement solutions that improve;
                 patient care and operational efficiency.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-red-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Start Your Healthcare Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-red-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-red-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,
                 </Link>;
               </div>;
             </motion.div>;

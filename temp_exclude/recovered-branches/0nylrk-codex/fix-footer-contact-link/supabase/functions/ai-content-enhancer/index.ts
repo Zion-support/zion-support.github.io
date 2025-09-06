@@ -1,7 +1,7 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -42,7 +42,7 @@ serve(async (req) => {
       case "proposal": systemPrompt = "You are an expert freelance proposal writer who knows how to win client projects with persuasive pitches.";
         userPrompt = `Write a persuasive proposal for a freelancer applying to this job: ${context || 'the described position'}. ${content ? `The freelancer has these qualifications: ${content}.` : ''} Focus on matching skills to requirements, highlighting relevant experience, and conveying reliability.`;
         break;
-      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.";
+      default: systemPrompt = "You are a professional content enhancement assistant. Improve the given text to be more impactful and professional.",
         userPrompt = `Enhance this professional text to be more impactful: ${content}. ${context ? `Additional context: ${context}` : ''}`
     }
 
@@ -53,18 +53,18 @@ serve(async (req) => {
 
     // Call OpenAI API
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"};
       body: JSON.stringify({
-        model: "gpt-4o-mini";
+        model: "gpt-4o-mini",
         messages: [
           {
-            role: "system";
+            role: "system",
             content: systemPrompt};
           {
-            role: "user";
+            role: "user",
             content: userPrompt}];
         temperature: 0.7})});
 
@@ -88,7 +88,7 @@ serve(async (req) => {
       JSON.stringify({
         error: error.message});
       {
-        status: 500;
+        status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   }

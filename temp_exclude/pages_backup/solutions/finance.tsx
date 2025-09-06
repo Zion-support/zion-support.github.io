@@ -21,18 +21,17 @@ const features = [;
   {}
     icon: TrendingUp,
     title: 'Risk Management,',
-    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'';
+    description: 'Advanced risk assessment and management tools powered by AI and machine learning.'',
   },
   {}
     icon: Users,
     title: 'Customer Experience,',
-    description: 'Digital banking and financial services platforms that enhance customer engagement.'';
+    description: 'Digital banking and financial services platforms that enhance customer engagement.'',
   },
   {}
     icon: Database,
     title: 'Fraud Detection,',
-    description: 'Real-time fraud detection and prevention systems using advanced analytics.'';
-import Layout from '../../components/Layout';
+    description: 'Real-time fraud detection and prevention systems using advanced analytics.'', import Layout from '../../components/Layout',
 import { DollarSign, Shield, TrendingUp, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
 =======
@@ -90,7 +89,8 @@ const features = [
     description: 'Complete transaction and activity audit trails'
   }
 ;];
-const solutions = [;
+const solutions = [
+    ;
   'Digital Banking Platforms',',
   'Payment Processing Systems',',
   'Risk Management Solutions',',
@@ -100,8 +100,10 @@ const solutions = [;
   'Trading Platforms',',
   'Insurance Technology',',
   'Cryptocurrency Solutions',',
-  'Financial Mobile Applications'';
-;];
+  'Financial Mobile Applications'',
+    
+
+  ];
 export default function FinanceSolutionsPage() {
   return (;
     <Layout );
@@ -113,8 +115,7 @@ export default function FinanceSolutionsPage() {
         <section className="relative py-20 overflow-hidden">"
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto text-center">";
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
-                Financial Services;
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">", Financial Services,
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";
                   Solutions;
                 </span>;
@@ -124,13 +125,11 @@ export default function FinanceSolutionsPage() {
                 From digital banking to fraud detection, we help financial institutions deliver;
                 exceptional customer experiences while maintaining regulatory compliance.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">",
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />";
                 </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium">";
-                  View Case Studies;
+                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: bg-gray-800 transition-colors font-medium">", View Case Studies,
                 </button>;
               </div>;
             </div>;
@@ -148,7 +147,7 @@ export default function FinanceSolutionsPage() {
                 improve efficiency, and ensure compliance with financial regulations.,
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -260,7 +259,7 @@ export default function FinanceSolutionsPage() {
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Financial Services Solutions;
               </h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",
                 {solutions.map((solution, index) => (,
                   <div key={index} className="flex items-center space-x-3">"
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
@@ -284,8 +283,7 @@ export default function FinanceSolutionsPage() {
                   ensuring your financial data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Shield className="w-8 h-8 text-white" />";
                   </div>;
@@ -321,12 +319,10 @@ export default function FinanceSolutionsPage() {
                 Let our financial technology experts help you implement solutions that;
                 enhance security, improve efficiency, and ensure regulatory compliance.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",
                   Schedule Consultation;
                 </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Financial Guide;
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Financial Guide,
                 </button>;
               </div>;
             </div>;

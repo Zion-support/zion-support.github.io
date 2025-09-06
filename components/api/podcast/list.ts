@@ -13,11 +13,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map((e) => ({
-    id: e.id;
-    title: e.title;
-    inviteeName: e.invitee?.name || 'Guest';
-    createdAt: e.createdAt;
-    summary: e.bestQuote || '';
+    id: e.id, title: e.title,
+    inviteeName: e.invitee?.name || 'Guest', createdAt: e.createdAt,
+    summary: e.bestQuote || '',
     audio: e.audio || {}}));
   return res.status(200).json({ episodes: simplified })
 }

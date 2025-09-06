@@ -28,7 +28,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 ;
 <<<<<<< HEAD
-class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0; maintainability: 0; testCoverage: 0; performance: 0; lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
+class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
@@ -47,19 +47,16 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0; ma
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics = > {; if (metrics) {; console.log("Metrics: ", metrics)}}),`;
 ; const scriptPath = path.join(__dirname, "code-quality-monitor.js"); fs.writeFileSync(scriptPath, script);
-; this.scripts.set("code-quality", {; file: "code-quality-monitor.js"; description: "Enhanced code quality monitoring with detailed metrics"; path: scriptPath; status: "available"; lastRun: null; successCount: 0; errorCount: 0});
+; this.scripts.set("code-quality", {; file: "code-quality-monitor.js", description: "Enhanced code quality monitoring with detailed metrics", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0});
 ; this.log("Generated enhanced code quality monitor script")};
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;
 =======
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
-      complexity: 0;
-      maintainability: 0;
-      testCoverage: 0;
-      performance: 0;
-      lastUpdated: new Date().toISOString();
-    ;
+      complexity: 0, maintainability: 0,
+      testCoverage: 0, performance: 0,
+      lastUpdated: new Date().toISOString(), ,
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
 };
 ;
@@ -169,13 +166,10 @@ monitor.analyzeCodeQuality().then(metrics => {;
     fs.writeFileSync(scriptPath, script);
 ;
     this.scripts.set("code-quality", {;
-      file: "code-quality-monitor.js";
-      description: "Enhanced code quality monitoring with detailed metrics";
-      path: scriptPath;
-      status: "available";
-      lastRun: null;
-      successCount: 0;
-      errorCount: 0;
+      file: "code-quality-monitor.js", description: "Enhanced code quality monitoring with detailed metrics",
+      path: scriptPath, status: "available",
+      lastRun: null, successCount: 0,
+      errorCount: 0,
     });
 ;
     this.log("Generated enhanced code quality monitor script");
@@ -195,25 +189,30 @@ class PerformanceOptimizer {; constructor() {; this.optimizations = []; this.log
 ; // Analyze bundle size; const bundleAnalysis = this.analyzeBundleSize();
 ; // Optimize images; const imageOptimization = this.optimizeImages();
 ; // Check for unused dependencies; const dependencyAnalysis = this.analyzeDependencies();
-; // Generate optimization report; const report = {; timestamp: new Date().toISOString(); bundleSize: bundleAnalysis; imageOptimization: imageOptimization; dependencies: dependencyAnalysis; recommendations: this.generateRecommendations()};
+; // Generate optimization report; const report = {; timestamp: new Date().toISOString(), bundleSize: bundleAnalysis, imageOptimization: imageOptimization, dependencies: dependencyAnalysis, recommendations: this.generateRecommendations()};
 ; this.saveReport(report); this.log("Performance optimization completed"); return report} catch (error) {; this.log(\`Performance optimization failed: \${error.message}\`, "ERROR"); return null}};
-; analyzeBundleSize() {; try {; // Placeholder for bundle analysis; return {; totalSize: "2.1MB"; gzippedSize: "650KB"; recommendations: ["Consider code splitting", "Remove unused dependencies"]}} catch (error) {; return { error: error.message }}};
+; analyzeBundleSize() {; try {; // Placeholder for bundle analysis; return {; totalSize: "2.1MB", gzippedSize: "650KB", recommendations: ["Consider code splitting", "Remove unused dependencies"]}} catch (error) {; return { error: error.message }}};
 ; optimizeImages() {; try {; // Placeholder for image optimization; return { optimized: 0, totalImages: 0, savings: "0KB" }} catch (error) {; return { error: error.message }}};
 ; analyzeDependencies() {; try {; const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../package.json"), "utf8")); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});
-; return {; totalDependencies: dependencies.length + devDependencies.length; productionDependencies: dependencies.length; devDependencies: devDependencies.length; potentialUnused: this.findUnusedDependencies()}} catch (error) {; return { error: error.message }}};
+; return {; totalDependencies: dependencies.length + devDependencies.length, productionDependencies: dependencies.length, devDependencies: devDependencies.length,
+    potentialUnused: this.findUnusedDependencies()}} catch (error) {; return { error: error.message }}};
 ; findUnusedDependencies() {; // Placeholder for unused dependency detection; return ["example-unused-package"]};
-; generateRecommendations() {; return [; "Implement code splitting for better performance"; "Optimize images using WebP format"; "Remove unused dependencies"; "Enable gzip compression"; "Use React.memo for expensive components"; ]};
+; generateRecommendations() {; return [
+    ; "Implement code splitting for better performance"; "Optimize images using WebP format"; "Remove unused dependencies"; "Enable gzip compression",
+    "Use React.memo for expensive components"
+  ]};
 ; saveReport(report) {; const reportFile = path.join(__dirname, "logs", "performance-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2))}};
 ;
 const optimizer = new PerformanceOptimizer();
 optimizer.optimizePerformance().then(report = > {; if (report) {; console.log("Performance report: ", report)}}),`;
 ; const scriptPath = path.join(__dirname, "performance-optimizer.js"); fs.writeFileSync(scriptPath, script);
-; this.scripts.set("performance-optimizer", {; file: "performance-optimizer.js"; description: "Performance optimization with bundle analysis and recommendations"; path: scriptPath; status: "available"; lastRun: null; successCount: 0; errorCount: 0});
+; this.scripts.set("performance-optimizer", {; file: "performance-optimizer.js", description: "Performance optimization with bundle analysis and recommendations", path: scriptPath, status: "available", lastRun: null, successCount: 0, errorCount: 0});
 ; this.log("Generated performance optimizer script")};
 ; async runScript(scriptName, options = {}) {; if (!this.scripts.has(scriptName)) {; this.log(`Script "${scriptName}" not found`, "ERROR"); return false};
 ; const script = this.scripts.get(scriptName); const startTime = Date.now();
 ; try {; this.log(`Starting script: ${scriptName}`); this.runningScripts.set(scriptName, { startTime, pid: null }); this.saveStatus();
-; const child = spawn("node", [script.path], {; stdio: "pipe"; cwd: __dirname});
+; const child = spawn("node", [script.path], {; stdio: "pipe",
+    cwd: __dirname});
 ; this.runningScripts.set(scriptName, { startTime, pid: child.pid }); this.saveStatus();
 ; return new Promise((resolve) = > {; child.on("close", (code) = > {; const duration = Date.now() - startTime; this.runningScripts.delete(scriptName);
 ; if (code = = = 0) {; script.successCount++; this.log(`Script "${scriptName}" completed successfully in ${duration}ms`)} else {; script.errorCount++; this.log(`Script "${scriptName}" failed with code ${code}`, "ERROR")};
@@ -251,12 +250,9 @@ class PerformanceOptimizer {;
 ;
       // Generate optimization report;
       const report = {;
-        timestamp: new Date().toISOString();
-        bundleSize: bundleAnalysis;
-        imageOptimization: imageOptimization;
-        dependencies: dependencyAnalysis;
-        recommendations: this.generateRecommendations();
-      ;
+        timestamp: new Date().toISOString(), bundleSize: bundleAnalysis,
+        imageOptimization: imageOptimization, dependencies: dependencyAnalysis,
+        recommendations: this.generateRecommendations(), ,
 ;
       this.saveReport(report);
       this.log("Performance optimization completed");
@@ -271,21 +267,20 @@ class PerformanceOptimizer {;
     try {;
       // Placeholder for bundle analysis;
       return {;
-        totalSize: "2.1MB";
-        gzippedSize: "650KB";
+        totalSize: "2.1MB", gzippedSize: "650KB",
         recommendations: ["Consider code splitting", "Remove unused dependencies"];
       };
     } catch (error) {;
-      return { error: error.message ;
+      return { error: error.message ,
 };
 };
 ;
   optimizeImages() {;
     try {;
       // Placeholder for image optimization;
-      return { optimized: 0, totalImages: 0, savings: "0KB" ;
+      return { optimized: 0, totalImages: 0, savings: "0KB" ,
     } catch (error) {;
-      return { error: error.message ;
+      return { error: error.message ,
 };
 };
 ;
@@ -296,13 +291,11 @@ class PerformanceOptimizer {;
       const devDependencies = Object.keys(packageJson.devDependencies || {});
 ;
       return {;
-        totalDependencies: dependencies.length + devDependencies.length;
-        productionDependencies: dependencies.length;
-        devDependencies: devDependencies.length;
-        potentialUnused: this.findUnusedDependencies();
+        totalDependencies: dependencies.length + devDependencies.length, productionDependencies: dependencies.length,
+        devDependencies: devDependencies.length, potentialUnused: this.findUnusedDependencies(),
       ;
     } catch (error) {;
-      return { error: error.message ;
+      return { error: error.message ,
 };
 };
 ;
@@ -312,13 +305,14 @@ class PerformanceOptimizer {;
 };
 ;
   generateRecommendations() {;
-    return [;
+    return [
+    ;
       "Implement code splitting for better performance";
       "Optimize images using WebP format";
       "Remove unused dependencies";
-      "Enable gzip compression";
-      "Use React.memo for expensive components";
-    ];
+      "Enable gzip compression",
+    "Use React.memo for expensive components"
+  ];
 };
 ;
   saveReport(report) {;
@@ -338,13 +332,10 @@ optimizer.optimizePerformance().then(report => {;
     fs.writeFileSync(scriptPath, script);
 ;
     this.scripts.set("performance-optimizer", {;
-      file: "performance-optimizer.js";
-      description: "Performance optimization with bundle analysis and recommendations";
-      path: scriptPath;
-      status: "available";
-      lastRun: null;
-      successCount: 0;
-      errorCount: 0;
+      file: "performance-optimizer.js", description: "Performance optimization with bundle analysis and recommendations",
+      path: scriptPath, status: "available",
+      lastRun: null, successCount: 0,
+      errorCount: 0,
     });
 ;
     this.log("Generated performance optimizer script");
@@ -365,8 +356,7 @@ optimizer.optimizePerformance().then(report => {;
       this.saveStatus();
 ;
       const child = spawn("node", [script.path], {;
-        stdio: "pipe";
-        cwd: __dirname;
+        stdio: "pipe", cwd: __dirname,
       });
 ;
       this.runningScripts.set(scriptName, { startTime, pid: child.pid });

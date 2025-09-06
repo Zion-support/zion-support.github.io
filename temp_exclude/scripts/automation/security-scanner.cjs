@@ -269,10 +269,10 @@ class SecurityScanner {}
             "value": 'max-age=31536000; includeSubDomains'},
           {}
             "key": 'Content-Security-Policy',
-            "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:; frame-ancestors 'none';"}]}]},";
+            "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:, font-src 'self' data:, connect-src 'self' https:; frame-ancestors 'none';"}]}]},";
             
             // Insert security headers before the closing brace;
-            const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf;i;g;)/, "$1${securityHeaders}$1$2");
+            const updatedConfig = nextConfig.replace(/(\s*)(module\.exports\s*=\s*nextConf, i, g)/, "$1${securityHeaders}$1$2");
             fs.writeFileSync(nextConfigPath, updatedConfig);
             this.log('Security headers added to Next.js config')};
         return { "status": 'success' }};

@@ -1,7 +1,6 @@
 #!/usr/bin/env node;
 import fs from 'fs';
-import { execSync } from 'node:child_process';
-
+import { execSync } from 'node: child_process',
 function run(cmd) {}
   try {}
     const out = execSync(cmd, { stdio: ['ignore', 'pipe', 'pipe'] }).toString();
@@ -11,14 +10,10 @@ function run(cmd) {}
 const results = {};
 
 
-results.health = run('npm run -s automation:health');
-
-
-results.security = run('npm run -s automation:security');
+results.health = run('npm run -s automation: health'), results.security = run('npm run -s automation:security'),
 
 ');
-results.performance = run('npm run -s automation:performance');
-
+results.performance = run('npm run -s automation: performance'),
 const summary = {}
   timestamp: new Date().toISOString(),
   ok: Object.values(results).every(r => r.ok),

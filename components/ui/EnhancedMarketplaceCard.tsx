@@ -9,11 +9,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 interface EnhancedMarketplaceCardProps {
-  title: string;
-  description: string;
+  title: string, description: string,
   price?: string;
-  href: string;
-  image?: string;
+  href: string, image?: string,
   category?: string;
   rating?: number;
   reviews?: number;

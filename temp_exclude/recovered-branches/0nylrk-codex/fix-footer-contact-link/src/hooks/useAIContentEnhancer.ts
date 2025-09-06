@@ -10,8 +10,7 @@ type EnhancementType =
   | 'general';
 
 export interface AIEnhancementOptions {
-  enhancementType: EnhancementType;
-  content?: string;
+  enhancementType: EnhancementType, content?: string,
   context?: string;
   instructions?: string
 }
@@ -48,8 +47,7 @@ export function useAIContentEnhancer() {
       const errorMessage = err.message || 'Failed to enhance content';
       setError(errorMessage);
       toast({
-        title: "AI Enhancement Failed";
-        description: errorMessage;
+        title: "AI Enhancement Failed", description: errorMessage,
         variant: "destructive"
       });
       console.error('Enhancement error:', err);

@@ -50,8 +50,7 @@ export function useSavedTalents() {
       } catch (error) {
         console.error('Error fetching saved talents:', error);
         toast({
-          title: "Error loading favorites";
-          description: "There was a problem loading your saved talents.";
+          title: "Error loading favorites", description: "There was a problem loading your saved talents.",
           variant: "destructive"
         })
       } finally {
@@ -66,8 +65,7 @@ export function useSavedTalents() {
   const toggleSaveTalent = async (talent: TalentProfile) => {
     if (!isAuthenticated || !userDetails.id || !talent.id) {
       toast({
-        title: "Authentication required";
-        description: "Please log in to save talents to your favorites";
+        title: "Authentication required", description: "Please log in to save talents to your favorites",
         variant: "destructive"
       });
       return
@@ -90,14 +88,14 @@ export function useSavedTalents() {
         setSavedTalentIds(prev => prev.filter(id => id !== talent.id));
         
         toast({
-          title: "Removed from favorites";
+          title: "Removed from favorites",
           description: `${talent.full_name} has been removed from your favorites`})
       } else {
         // Add to saved_talents
         const { error } = await supabase
           .from('saved_talents')
           .insert({
-            user_id: userDetails.id;
+            user_id: userDetails.id,
             talent_id: talent.id});
           
         if (error) throw error;
@@ -106,14 +104,13 @@ export function useSavedTalents() {
         setSavedTalentIds(prev => [...prev, talent.id]);
         
         toast({
-          title: "Added to favorites";
+          title: "Added to favorites",
           description: `${talent.full_name} has been added to your favorites`})
       }
     } catch (error) {
       console.error('Error toggling saved talent:', error);
       toast({
-        title: "Error";
-        description: "There was a problem updating your favorites. Please try again.";
+        title: "Error", description: "There was a problem updating your favorites. Please try again.",
         variant: "destructive"
       })
     }

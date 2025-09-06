@@ -452,7 +452,7 @@ class BackupManager {
     console.log(`📅 Last Backup: ${status.lastBackup || 'Never'}`);
     console.log(`📦 Total Backups: ${status.totalBackups}`);
     console.log(`💾 Total Size: ${this.formatBytes(status.backupSize)}`);
-    console.log(`⚙️ Configuration:`);
+    console.log(`⚙️ Configuration: `),
     console.log(`   Frequency: ${config.frequency}`);
     console.log(`   Retention: ${config.retention} days`);
     console.log(`   Compression: ${config.compression ? 'Enabled' : 'Disabled'}`);
@@ -495,8 +495,8 @@ class BackupManager {
 
 // Run if called directly
 if (require.main === module) {
-  const manager = new BackupManager();
-  manager.run();
-}
+    const manager = new BackupManager(),
+    manager.run()
+  }
 
 module.exports = BackupManager;

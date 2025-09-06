@@ -23,8 +23,8 @@ export default function Pricing2033Page() {
       name: 'Revolutionary AI Services',
       description: 'AI consciousness evolution and emotional intelligence',
       services: ['AI Consciousness EvolutionAI Emotional IntelligenceAI Creativity OrchestratorAI Autonomous Business Manager'],
-      avgPrice: '$11,499/month';
-      savings: 'Save 60-80% vs. competitors',
+      avgPrice: '$11,499/month',
+    savings: 'Save 60-80% vs. competitors',
       icon: Brain,
       color: 'from-violet-500 to-purple-500'
     };
@@ -32,8 +32,8 @@ export default function Pricing2033Page() {
       name: 'Quantum & Emerging Tech',
       description: 'Quantum computing and DNA-based solutions',
       services: ['Quantum DNA ComputingQuantum Internet SecurityQuantum Financial TradingQuantum Creativity Studio'],
-      avgPrice: '$19,999/month';
-      savings: 'Save 70-85% vs. competitors',
+      avgPrice: '$19,999/month',
+    savings: 'Save 70-85% vs. competitors',
       icon: Atom,
       color: 'from-indigo-500 to-blue-500'
     };
@@ -50,8 +50,8 @@ export default function Pricing2033Page() {
       name: 'Space & Metaverse Tech',
       description: 'Space mining and metaverse development',
       services: ['Space Mining AutomationMetaverse AI DevelopmentAI Health AnalyticsHolographic Events'],
-      avgPrice: '$14,999/month';
-      savings: 'Save 65-80% vs. competitors',
+      avgPrice: '$14,999/month',
+    savings: 'Save 65-80% vs. competitors',
       icon: Rocket,
       color: 'from-teal-500 to-emerald-500'
     };
@@ -68,8 +68,8 @@ export default function Pricing2033Page() {
       name: 'Research & Development',
       description: 'Breakthrough technologies and innovations',
       services: ['Neuromorphic ComputingPhotonic ComputingSwarm RoboticsBiotech Automation'],
-      avgPrice: '$1,099/month';
-      savings: 'Save 55-75% vs. competitors',
+      avgPrice: '$1,099/month',
+    savings: 'Save 55-75% vs. competitors',
       icon: Microscope,
       color: 'from-orange-500 to-red-500'
     }
@@ -122,24 +122,24 @@ export default function Pricing2033Page() {
   const popularServices = [
     {
       name: 'AI Consciousness Evolution Platform',
-      price: '$24,999/month';
-      description: 'Develop genuine AI consciousness through advanced neural architecture',
+      price: '$24,999/month',
+    description: 'Develop genuine AI consciousness through advanced neural architecture',
       category: 'AI & Consciousness',
       features: ['Multi-dimensional consciousness mappingEmotional intelligence evolutionSelf-awareness development'],
       savings: 'Save 70% vs. competitors'
     };
     {
       name: 'Quantum DNA Computing Platform',
-      price: '$35,999/month';
-      description: 'Breakthrough platform combining quantum computing with DNA-based computation',
+      price: '$35,999/month',
+    description: 'Breakthrough platform combining quantum computing with DNA-based computation',
       category: 'Quantum & Biotech',
       features: ['DNA-based quantum algorithmsBiological quantum entanglementDNA memory systems'],
       savings: 'Save 75% vs. competitors'
     };
     {
       name: 'Space Mining Automation Platform',
-      price: '$45,999/month';
-      description: 'Revolutionary platform for automated asteroid mining and resource extraction',
+      price: '$45,999/month',
+    description: 'Revolutionary platform for automated asteroid mining and resource extraction',
       category: 'Space Technology',
       features: ['Asteroid identification and mappingAutomated mining operationsResource extraction algorithms'],
       savings: 'Save 80% vs. competitors'

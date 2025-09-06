@@ -6,16 +6,16 @@ const accessibilityChecks = { colorContrast: () => {  return true},keyboardNav: 
 console.log('♿ Enhanced Accessibility Monitor Starting...');
 const accessibilityChecks = {
   "colorContrast": () => {
-    console.log('🎨 Checking color contrast...');
-    return true;
+    console.log('🎨 Checking color contrast...'),
+    return true
   },
   "keyboardNav": () => {
-    console.log('⌨️ Checking keyboard navigation...');
-    return true;
+    console.log('⌨️ Checking keyboard navigation...'),
+    return true
   },
   "ariaLabels": () => {
-    console.log('🏷️ Checking ARIA labels...');
-    return true;
+    console.log('🏷️ Checking ARIA labels...'),
+    return true
   }
 };
 Object.entries(accessibilityChecks).forEach(([name, check]) => {

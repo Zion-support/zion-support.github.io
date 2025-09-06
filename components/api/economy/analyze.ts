@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 export type AnalyzeRequestBody = {
-  operatorPrompt: string;
+  operatorPrompt: string,
   context?: Record<string, unknown>
 };
 
@@ -10,7 +10,7 @@ export type AnalyzeResponse = {
 };
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<AnalyzeResponse | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -40,11 +40,11 @@ export default async function handler(
       .join('\n');
 
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system };
         { role: 'user', content: user }];
-      temperature: 0.3;
+      temperature: 0.3,
       max_tokens: 300});
 
     const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';

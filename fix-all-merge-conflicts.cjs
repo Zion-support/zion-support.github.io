@@ -29,9 +29,9 @@ function fixMergeConflicts(filePath) {
         }
 
         if (line.includes('=======')) {
-          keepContent = true;
-          continue;
-        }
+    keepContent = true,
+    continue
+  }
 
         if (line.includes('>>>>>>>')) {
           inConflict = false;

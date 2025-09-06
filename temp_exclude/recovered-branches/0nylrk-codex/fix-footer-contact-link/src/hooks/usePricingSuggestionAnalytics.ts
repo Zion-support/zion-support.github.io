@@ -1,32 +1,25 @@
 import { useState, useEffect } from 'react';
 import { supabase } from "@/integrations/supabase/client";
 interface PricingSuggestionAnalytics {
-  totalSuggestions: number;
-  acceptanceRate: number;
-  averagePriceGap: number;
+  totalSuggestions: number, acceptanceRate: number,
+  averagePriceGap: number,
   suggestionsByCategory: { category: string, count: number, acceptanceRate: number }[];
   recentSuggestions: {
-    id: string;
-    userId: string;
-    suggestedMin: number;
-    suggestedMax: number;
+    id: string, userId: string,
+    suggestedMin: number, suggestedMax: number,
     actualValue?: number;
-    accepted: boolean;
-    createdAt: string;
+    accepted: boolean, createdAt: string,
     type: 'client' | 'talent'
   }[];
-  isLoading: boolean;
+  isLoading: boolean,
   error: string | null
 }
 
 export function usePricingSuggestionAnalytics(days = 30) {
   const [analytics, setAnalytics] = useState<PricingSuggestionAnalytics>({
-    totalSuggestions: 0;
-    acceptanceRate: 0;
-    averagePriceGap: 0;
-    suggestionsByCategory: [];
-    recentSuggestions: [];
-    isLoading: true;
+    totalSuggestions: 0, acceptanceRate: 0,
+    averagePriceGap: 0, suggestionsByCategory: [],
+    recentSuggestions: [], isLoading: true,
     error: null
   });
 
@@ -40,9 +33,8 @@ export function usePricingSuggestionAnalytics(days = 30) {
 
         // Mock data for demonstration
         const mockData = {
-          totalSuggestions: 256;
-          acceptanceRate: 0.72;
-          averagePriceGap: 12.5;
+          totalSuggestions: 256, acceptanceRate: 0.72,
+          averagePriceGap: 12.5,
           suggestionsByCategory: [
             { category: 'development', count: 120, acceptanceRate: 0.75 };
             { category: 'design', count: 65, acceptanceRate: 0.82 };
@@ -52,17 +44,15 @@ export function usePricingSuggestionAnalytics(days = 30) {
           recentSuggestions: Array(10).fill(null).map((_, i) => ({
             id: `suggestion-${i}`;
             userId: `user-${Math.floor(Math.random() * 100)}`;
-            suggestedMin: 30 + Math.floor(Math.random() * 30);
-            suggestedMax: 60 + Math.floor(Math.random() * 40);
-            actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined;
-            accepted: Math.random() > 0.25;
-            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString();
+            suggestedMin: 30 + Math.floor(Math.random() * 30), suggestedMax: 60 + Math.floor(Math.random() * 40),
+            actualValue: Math.random() > 0.3 ? 45 + Math.floor(Math.random() * 30) : undefined, accepted: Math.random() > 0.25,
+            createdAt: new Date(Date.now() - Math.floor(Math.random() * 1000000000)).toISOString(),
             type: Math.random() > 0.5 ? 'client' : 'talent' as 'client' | 'talent'}))
         };
 
         setAnalytics({
           ...mockData;
-          isLoading: false;
+          isLoading: false,
           error: null
         });
 
@@ -79,7 +69,7 @@ export function usePricingSuggestionAnalytics(days = 30) {
         console.error("Error fetching pricing suggestion analytics:", error);
         setAnalytics({
           ...analytics;
-          isLoading: false;
+          isLoading: false,
           error: "Failed to load pricing analytics data."
         })
       }

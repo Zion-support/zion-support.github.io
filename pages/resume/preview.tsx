@@ -76,7 +76,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const initialData: ResumeData = {
     name: 'Your Name',
     contact: { email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' },
-    summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
+    summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',
     skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'],
     technologies: ['OpenAISupabasePostgresVercelDocker'],
     experience: [

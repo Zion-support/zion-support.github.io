@@ -150,11 +150,11 @@ class EnhancedHealthMonitor {
     };
 
     return {
-      overal: l: Object.values(services).every(s => s.status === 'healthy')
+    overal: l: Object.values(services).every(s => s.status === 'healthy')
         ? 'healthy'
-        : 'degraded';
-      services;
-    };
+        : 'degraded',
+    services
+  };
   }
 
   async checkNetworkHealth() {
@@ -203,12 +203,12 @@ class EnhancedHealthMonitor {
 
   calculateOverallStatus(healthCheck) {
     const statuses = [
-      healthCheck.system.status;
+    healthCheck.system.status;
       healthCheck.application.status;
       healthCheck.database.status;
-      healthCheck.services.overall;
-      healthCheck.network.status;
-    ];
+      healthCheck.services.overall,
+    healthCheck.network.status
+  ];
 
     if (statuses.every(s => s === 'healthy')) return 'healthy';
     if (statuses.some(s => s === 'unhealthy')) return 'unhealthy';

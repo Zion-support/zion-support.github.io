@@ -204,11 +204,11 @@ class HealthChecker {}
   async generateHealthReport() {}
     const report = {}
       "timestamp": new Date().toISOString();
-      overall: this.healthStatus.overall;
+      overall: this.healthStatus.overall,
       summary: {totalChecks: this.healthStatus.checks.length,"passed": this.healthStatus.checks.filter(c => c.status === "pass").length,"warnings": this.healthStatus.checks.filter(c => c.status === "warn").length;}
         failed: this.healthStatus.checks.filter(c => c.status === "fail").length};
       "checks": this.healthStatus.checks;
-      issues: this.healthStatus.issues;
+      issues: this.healthStatus.issues,
       recommendations: this.healthStatus.recommendations};
     const reportPath = path.join(this.projectRoot, "health-checker-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

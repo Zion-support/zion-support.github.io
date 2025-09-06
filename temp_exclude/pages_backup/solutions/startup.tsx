@@ -84,25 +84,20 @@ export default function StartupSolutionsPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Rocket className="w-16 h-16 text-green-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>";
+                <h1 className="text-5xl md: text-6xl font-bold">", Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">Solutions</span>",
                 </h1>;
               </div>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
-                Rapid development and scaling solutions designed specifically for startups and growing businesses;
+              <p className="text-xl md: text-2xl text-gray-300 mb-8">", Rapid development and scaling solutions designed specifically for startups and growing businesses,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact"";
-                  className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
+                  className="px-8 py-4 bg-green-600 hover: bg-green-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"", >,
                   Start Your MVP;
                   <ArrowRight className="ml-2 w-5 h-5" />";
                 </Link>;
                 <Link;
                   href="/case-studies"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
-                >;
+                  className="px-8 py-4 border border-white text-white hover: bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"", >,
                   Success Stories;
                 </Link>;
               </div>;
@@ -113,7 +108,7 @@ export default function StartupSolutionsPage() {
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
@@ -139,15 +134,14 @@ export default function StartupSolutionsPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>";
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Advantages</span>",
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
@@ -189,15 +183,14 @@ export default function StartupSolutionsPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>";
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">Services</span>",
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive startup services designed to help you build, launch, and scale your business,
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}
@@ -222,24 +215,20 @@ export default function StartupSolutionsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Launch Your Startup?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Launch Your Startup?,
               </h2>;
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
                 Let's turn your idea into a successful product with our rapid development and scaling solutions';
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact"";
-                  className="px-8 py-4 bg-white text-green-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
+                  className="px-8 py-4 bg-white text-green-600 hover: bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"", >,
                   Start Your Project;
                   <ArrowRight className="ml-2 w-5 h-5" />";
                 </Link>;
                 <Link;
                   href="/solutions"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"";
-                >;
+                  className="px-8 py-4 border border-white text-white hover: bg-white hover:text-green-600 rounded-lg font-semibold transition-colors"", >,
                   View All Solutions;
                 </Link>;
               </div>;

@@ -13,8 +13,7 @@
 import React from 'react';
 
 
-  notifications: Notification[];
-  onDismiss?: (id: string) => void;
+  notifications: Notification[], onDismiss?: (id: string) => void,
 
   className?: string;
 }
@@ -36,7 +35,6 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({
         return 'bg-yellow-50 border-yellow-200 text-yellow-800';
       case 'info':
         return 'bg-blue-50 border-blue-200 text-blue-800';
-      default:
-        return 'bg-gray-50 border-gray-200 text-gray-800';
+      default: return 'bg-gray-50 border-gray-200 text-gray-800',
     }
   };

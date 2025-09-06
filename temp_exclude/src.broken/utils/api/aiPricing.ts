@@ -3,10 +3,10 @@
   case 'junior': return 0.8;
 case 'mid': return 1.0;
 case 'senior': return 1.3;
-default: modelUsed: 'heuristic-v1';
+default: modelUsed: 'heuristic-v1',
 source: 'heuristic' 
 }
-}modelUsed: 'heuristic-v1';
+}modelUsed: 'heuristic-v1',
 source: 'heuristic' 
 }
 }Contract: - Title: $ {
@@ -27,14 +27,14 @@ return {
 }Heuristic cross-check around $$ {
   roundMoney ( (heuristic.min + heuristic.max) / 2) 
 }for sanity.`;
-modelUsed: llm.modelUsed;
+modelUsed: llm.modelUsed,
 source: 'hybrid' 
 }
 }return {
   currency: 'USD', hourlyRate: hourly, min, max, confidence, rationale: `$ {
   llm.rationale 
 }Heuristic cross-check for consistency with location and experience bands.`;
-modelUsed: llm.modelUsed;
+modelUsed: llm.modelUsed,
 source: 'hybrid' 
 }
 }

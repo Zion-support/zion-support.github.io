@@ -9,8 +9,7 @@ import path from 'path';
 function buildIpfsClient() {
   const projectId = process.env.IPFS_PROJECT_ID;
   const projectSecret = process.env.IPFS_PROJECT_SECRET;
-  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
-  if (!projectId || !projectSecret) return null;
+  const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0', if (!projectId || !projectSecret) return null,
   const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
   return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
 }
@@ -28,8 +27,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
     .split('\n')
     .flatMap((line) => {
       const words = line.split(' ');
-      const wrapped: string[] = [];
-      let current = '';
+      const wrapped: string[] = [], let current = '',
       for (const word of words) {
         const test = current.length ? current + ' ' + word : word;
         const width = font.widthOfTextAtSize(test, fontSize);
@@ -78,15 +76,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     hasher.update(markdown);
     const digest = '0x' + hasher.digest('hex');
 
-    let signature: string | undefined;
-    const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
+    let signature: string | undefined, const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY,
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
       signature = await wallet.signMessage(ethers.getBytes(digest))
     }
 
-    let ipfsCid: string | undefined;
-    const ipfs = buildIpfsClient();
+    let ipfsCid: string | undefined, const ipfs = buildIpfsClient(),
     if (ipfs) {
       try {
         const { cid } = await ipfs.add(markdown);

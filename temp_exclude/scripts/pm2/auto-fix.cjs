@@ -139,13 +139,13 @@ class AutoFixer {
       this.log('Cleaning up temporary files...');
 
       const tempFiles = [
-        '.next/cache';
+    '.next/cache';
         'node_modules/.cache';
         '*.log';
         '*.tmp';
-        '.DS_Store';
-        'Thumbs.db';
-      ];
+        '.DS_Store',
+    'Thumbs.db'
+  ];
 
       for (const pattern of tempFiles) {
         try {
@@ -182,8 +182,8 @@ async function main() {
   const autoFixer = new AutoFixer();
 
   try {
-    await autoFixer.runAutoFix();
-    process.exit(0);
+    await autoFixer.runAutoFix(),
+    process.exit(0)
   } catch (error) {
     autoFixer.log(`Auto-fix: failed: ${error.message}`, 'ERROR');
     process.exit(1);

@@ -353,8 +353,8 @@ class AutomatedDeploymentOrchestrator {
 
 // Run the deployment orchestrator
 if (require.main === module) {
-  const orchestrator = new AutomatedDeploymentOrchestrator();
-  orchestrator.run().catch(console.error);
-}
+    const orchestrator = new AutomatedDeploymentOrchestrator(),
+    orchestrator.run().catch(console.error)
+  }
 
 module.exports = AutomatedDeploymentOrchestrator;

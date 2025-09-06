@@ -1,41 +1,30 @@
 export interface ShortUrl {
-  id: string;
-  originalUrl: string;
-  shortCode: string;
-  shortUrl: string;
-  createdAt: Date;
-  expiresAt?: Date;
-  isActive: boolean;
+  id: string, originalUrl: string,
+  shortCode: string, shortUrl: string,
+  createdAt: Date, expiresAt?: Date,
+  isActive: boolean,
   userId?: string
 }
 
 export interface UrlAnalytics {
-  totalClicks: number;
-  uniqueVisitors: number;
-  referrers: string[];
-  countries: string[];
-  devices: string[];
-  browsers: string[];
-  lastClicked: Date;
+  totalClicks: number, uniqueVisitors: number,
+  referrers: string[], countries: string[],
+  devices: string[], browsers: string[],
+  lastClicked: Date,
   clickHistory: ClickEvent[]
 }
 
 export interface ClickEvent {
-  id: string;
-  timestamp: Date;
-  ipAddress: string;
-  userAgent: string;
-  referrer: string;
-  country: string;
-  city: string;
-  device: string;
-  browser: string;
+  id: string, timestamp: Date,
+  ipAddress: string, userAgent: string,
+  referrer: string, country: string,
+  city: string, device: string,
+  browser: string,
   os: string
 }
 
 export interface CreateShortUrlRequest {
-  originalUrl: string;
-  customCode?: string;
+  originalUrl: string, customCode?: string,
   expiresAt?: Date;
   userId?: string
 }
@@ -53,25 +42,20 @@ class UrlShortenerService {
     }
 
     const shortUrl: ShortUrl = {
-      id: this.generateId();
-      originalUrl: request.originalUrl;
+      id: this.generateId(), originalUrl: request.originalUrl,
       shortCode;
       shortUrl: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app'}/s/${shortCode}`;
-      createdAt: new Date();
-      expiresAt: request.expiresAt;
-      isActive: true;
+      createdAt: new Date(), expiresAt: request.expiresAt,
+      isActive: true,
       userId: request.userId
     };
 
     this.urls.set(shortCode, shortUrl);
     this.analytics.set(shortCode, {
-      totalClicks: 0;
-      uniqueVisitors: 0;
-      referrers: [];
-      countries: [];
-      devices: [];
-      browsers: [];
-      lastClicked: new Date();
+      totalClicks: 0, uniqueVisitors: 0,
+      referrers: [], countries: [],
+      devices: [], browsers: [],
+      lastClicked: new Date(),
       clickHistory: []
     });
     this.clicks.set(shortCode, []);
@@ -96,7 +80,7 @@ class UrlShortenerService {
     if (!url) return;
 
     const clickEvent: ClickEvent = {
-      id: this.generateId();
+      id: this.generateId(),
       ...clickData
     };
 
@@ -164,8 +148,7 @@ class UrlShortenerService {
   // Utility methods for data persistence (in a real app, this would use a database)
   async exportData(): Promise<any> {
     return {
-      urls: Array.from(this.urls.entries());
-      analytics: Array.from(this.analytics.entries());
+      urls: Array.from(this.urls.entries()), analytics: Array.from(this.analytics.entries()),
       clicks: Array.from(this.clicks.entries())
     }
   }

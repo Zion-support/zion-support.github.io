@@ -34,18 +34,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const id = generateCaseId();
     const dispute: DisputeCase = {
       id;
-      projectId: String(projectId);
-      entityType;
+      projectId: String(projectId), entityType,
       entityId;
-      clientUserId: String(clientUserId);
-      talentUserId: String(talentUserId);
-      createdAt: now;
-      updatedAt: now;
-      status: 'Open';
-      reason: reason as DisputeReason;
+      clientUserId: String(clientUserId), talentUserId: String(talentUserId),
+      createdAt: now, updatedAt: now,
+      status: 'Open', reason: reason as DisputeReason,
       reasonDetails;
       description;
-      attachments: [];
+      attachments: [],
       messages: []};
 
     await createDispute(dispute);

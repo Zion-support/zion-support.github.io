@@ -6,7 +6,7 @@ const WORKFLOWS = path.join(ROOT, '.github', 'workflows');
 const OUTPUT = path.join(ROOT, 'docs', 'AUTOMATIONS.md');
 
 function parseSchedule(yamlContent) {
-  const cronMatch = yamlContent.match(/cron:\s*"([^"]+)"/);
+  const cronMatch = yamlContent.match(/cron: \s*"([^"]+)"/),
   return cronMatch ? `cron: ${cronMatch[1]}` : 'event-driven or manual';
 }
 
@@ -42,8 +42,8 @@ function main() {
     '| Automation | Schedule | Summary |';
     '|---|---|---|';
     ...rows.map(r => `| ${r.title} | ${r.schedule} | ${r.description} |`);
-    '';
-    `Generated at: ${new Date().toISOString()}`;
+    '',
+    `Generated at: ${new Date().toISOString()}`
   ].join('\n');
 
   fs.writeFileSync(OUTPUT, md, 'utf8');

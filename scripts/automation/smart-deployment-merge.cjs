@@ -55,9 +55,9 @@ class SmartDeploymentMerge {
     try {
       // Check if deployment is needed
       if (!(await this.shouldDeploy())) {
-        console.log('✅ No deployment needed at this time');
-        return;
-      }
+    console.log('✅ No deployment needed at this time'),
+    return
+  }
 
       // Run quality gates
       const qualityCheck = await this.runQualityGates();
@@ -74,9 +74,9 @@ class SmartDeploymentMerge {
       // Deploy to staging
       const stagingResult = await this.deployToStaging();
       if (!stagingResult.success) {
-        console.log('❌ Staging deployment failed');
-        return;
-      }
+    console.log('❌ Staging deployment failed'),
+    return
+  }
 
       // Run integration tests
       const testResult = await this.runIntegrationTests();
@@ -89,9 +89,9 @@ class SmartDeploymentMerge {
       // Deploy to production
       const productionResult = await this.deployToProduction();
       if (productionResult.success) {
-        console.log('✅ Production deployment successful!');
-        await this.postDeploymentTasks();
-      } else {
+    console.log('✅ Production deployment successful!'),
+    await this.postDeploymentTasks()
+  } else {
         console.log('❌ Production deployment failed, rolling back');
         await this.rollbackDeployment();
       }
@@ -323,9 +323,9 @@ class SmartDeploymentMerge {
         .map(line => line.split(' ').pop());
 
       if (conflictedFiles.length === 0) {
-        console.log('✅ No conflicts to resolve');
-        return;
-      }
+    console.log('✅ No conflicts to resolve'),
+    return
+  }
 
       console.log(
         `🔧 Resolving conflicts in ${conflictedFiles.length} files...`
@@ -364,14 +364,14 @@ class SmartDeploymentMerge {
         const line = lines[i];
 
         if (line.startsWith('<<<<<<<')) {
-          inConflict = true;
-          conflictType = 'ours';
-        } else if (line.startsWith('=======')) {
+    inConflict = true,
+    conflictType = 'ours'
+  } else if (line.startsWith('=======')) {
           conflictType = 'theirs';
         } else if (line.startsWith('>>>>>>>')) {
-          inConflict = false;
-          conflictType = '';
-        } else if (!inConflict) {
+    inConflict = false,
+    conflictType = ''
+  } else if (!inConflict) {
           resolvedLines.push(line);
         } else if (inConflict && conflictType === 'ours') {
           // Keep our version (simple strategy)
@@ -476,9 +476,9 @@ class SmartDeploymentMerge {
 
   async rollbackDeployment() {
     if (!this.config.rollbackEnabled) {
-      console.log('⚠️  Rollback is disabled');
-      return;
-    }
+    console.log('⚠️  Rollback is disabled'),
+    return
+  }
 
     console.log('🔄 Rolling back deployment...');
 

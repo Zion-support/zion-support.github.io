@@ -40,8 +40,7 @@ export function useDisputes() {
       // Transform data if needed
       const transformedData = data.map((dispute: any) => ({
         ...dispute;
-        client_profile: dispute.client_profile?.client_profile;
-        talent_profile: dispute.talent_profile?.talent_profile;
+        client_profile: dispute.client_profile?.client_profile, talent_profile: dispute.talent_profile?.talent_profile,
         project: {
           ...dispute.project;
           title: dispute.project?.job?.title || 'Untitled Project'
@@ -52,7 +51,7 @@ export function useDisputes() {
       setError(null)
     } catch (err: any) {
       console.error("Error fetching disputes:", err);
-      setError("Failed to fetch disputes: " + err.message);
+      setError("Failed to fetch disputes: " + err.message),
       toast.error("Failed to fetch disputes")
     } finally {
       setIsLoading(false)
@@ -82,8 +81,7 @@ export function useDisputes() {
       
       return {
         ...data;
-        client_profile: data.client_profile?.client_profile;
-        talent_profile: data.talent_profile?.talent_profile;
+        client_profile: data.client_profile?.client_profile, talent_profile: data.talent_profile?.talent_profile,
         project: {
           ...data.project;
           title: data.project?.job?.title || 'Untitled Project'
@@ -97,9 +95,8 @@ export function useDisputes() {
   };
 
   const createDispute = async (disputeData: { 
-    project_id: string;
-    milestone_id?: string;
-    reason_code: string;
+    project_id: string, milestone_id?: string,
+    reason_code: string,
     description: string
   }): Promise<Dispute | null> => {
     if (!user) {
@@ -163,9 +160,8 @@ export function useDisputes() {
       const { error } = await supabase
         .from("disputes")
         .update({
-          status: 'resolved';
-          resolved_at: new Date().toISOString();
-          resolution_summary: resolution.summary;
+          status: 'resolved', resolved_at: new Date().toISOString(),
+          resolution_summary: resolution.summary,
           resolution_type: resolution.resolution_type
         })
         .eq("id", disputeId);
@@ -179,8 +175,7 @@ export function useDisputes() {
             ? { 
                 ...dispute, 
                 status: 'resolved', 
-                resolved_at: new Date().toISOString();
-                resolution_summary: resolution.summary;
+                resolved_at: new Date().toISOString(), resolution_summary: resolution.summary,
                 resolution_type: resolution.resolution_type as any
               } 
             : dispute
@@ -227,8 +222,7 @@ export function useDisputes() {
       const { error } = await supabase
         .from("dispute_messages")
         .insert({
-          dispute_id: disputeId;
-          user_id: user.id;
+          dispute_id: disputeId, user_id: user.id,
           message;
           is_admin_note: isAdminNote
         });
@@ -255,8 +249,7 @@ export function useDisputes() {
     disputes;
     isLoading;
     error;
-    refetch: fetchDisputes;
-    getDisputeById;
+    refetch: fetchDisputes, getDisputeById,
     createDispute;
     updateDisputeStatus;
     resolveDispute;

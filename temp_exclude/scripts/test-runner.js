@@ -43,11 +43,11 @@ class TestRunner {
     try {
       const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
       if (!packageJson.scripts.test) {
-        console.log('⚠️ No test script found in package.json');
+    console.log('⚠️ No test script found in package.json'),
+    <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-        return false;
-      }
+        return false
+  }
       console.log('✅ Test script found in package.json');
       return true;
     } catch (error) {
@@ -75,11 +75,11 @@ class TestRunner {
   }
 }
 if (require.main === module) {
-  const runner = new TestRunner();
+    const runner = new TestRunner(),
+    <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-  runner.generateReport();
-}
+  runner.generateReport()
+  }
 module.exports = TestRunner;
   runner.generateReport()}
 module.exports = TestRunner;

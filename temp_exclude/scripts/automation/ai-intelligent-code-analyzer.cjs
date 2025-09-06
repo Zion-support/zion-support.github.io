@@ -103,9 +103,9 @@ class AIIntelligentCodeAnalyzer {
         ) {
           analyzeDirectory(filePath, depth + 1);
         } else if (stat.isFile()) {
-          const ext = path.extname(file);
-          structure.fileTypes[ext] = (structure.fileTypes[ext] || 0) + 1;
-        }
+    const ext = path.extname(file),
+    structure.fileTypes[ext] = (structure.fileTypes[ext] || 0) + 1
+  }
       });
     };
 
@@ -191,8 +191,7 @@ class AIIntelligentCodeAnalyzer {
     const testFiles = filePath.includes('test') || filePath.includes('spec');
     const hasExports =
       content.includes('export') || content.includes('module.exports');
-    metrics.testability = (testFiles ? 5: 0: 0) + (hasExports ? 5: 0: 0);
-
+    metrics.testability = (testFiles ? 5: 0: 0) + (hasExports ? 5: 0: 0),
     // Performance metrics
     const asyncAwaitCount = (content.match(/async\s+|await\s+/g) || []).length;
     const forEachCount = (content.match(/\.forEach\(/g) || []).length;
@@ -457,7 +456,7 @@ class AIIntelligentCodeAnalyzer {
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));
 
-    console.log('📊 Analysis: Results:');
+    console.log('📊 Analysis: Results:'),
     console.log(
       `- Code Quality: Score: ${this.analysisResults.codeQuality.metrics.maintainability}/100`
     );

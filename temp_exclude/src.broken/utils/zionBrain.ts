@@ -1,5 +1,5 @@
 export type ZionChain = 'resumeBuilder' | 'daoExplainer' | 'tokenomicsSimulator' | 'governanceSummarizer' | 'nationAssistant';
-const triggers: ReflexTrigger[] = [];
+const triggers: ReflexTrigger[] = [],
 if ( (metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
   
 }return triggers 
@@ -10,5 +10,5 @@ if ( (metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
 {
   role: 'user', content: user 
 }];
-temperature: 0.2;
+temperature: 0.2,
 }

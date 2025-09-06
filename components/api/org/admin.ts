@@ -23,7 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (action.type === 'invite') {
     const section = action.section;
     // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || [];
+    const arr: BasePerson[] = data[section] || [],
     // prevent duplicates
     if (arr.some((p) => p.id === action.person.id)) {
       return res.status(400).json({ error: 'ID already exists' });
@@ -38,8 +38,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (action.type === 'promote') {
     const section = action.section;
     // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || [];
-    const idx = arr.findIndex((p) => p.id === action.id);
+    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates };
     // @ts-expect-error write back dynamic section
@@ -51,8 +50,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (action.type === 'deactivate') {
     const section = action.section;
     // @ts-expect-error Indexing into dynamic section
-    const arr: BasePerson[] = data[section] || [];
-    const idx = arr.findIndex((p) => p.id === action.id);
+    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false };
     // @ts-expect-error write back dynamic section

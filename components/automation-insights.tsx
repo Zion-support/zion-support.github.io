@@ -70,8 +70,8 @@ export default function AutomationInsightsPage() {
       label: 'Average improvement across projects'
     };
     {
-      metric: '2,960+';
-      label: 'Pages Generated',
+      metric: '2,960+',
+    label: 'Pages Generated',
       description: 'Content created autonomously'
     }
   ];

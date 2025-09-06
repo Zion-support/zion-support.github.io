@@ -8,7 +8,7 @@ const path = require("path");
 const { execSync } = require("child_process");
 ;
 <<<<<<< HEAD
-class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0; maintainability: 0; testCoverage: 0; performance: 0; lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
+class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, maintainability: 0, testCoverage: 0, performance: 0, lastUpdated: new Date().toISOString()}; this.logFile = path.join(__dirname, "logs", "code-quality.log")};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; console.log(message); fs.appendFileSync(this.logFile, logMessage)};
 ; async analyzeCodeQuality() {; try {; this.log("Starting code quality analysis...");
 ; this.metrics.complexity = this.calculateComplexity(); this.metrics.maintainability = this.calculateMaintainability(); this.metrics.testCoverage = this.calculateTestCoverage(); this.metrics.performance = this.calculatePerformance(); this.metrics.lastUpdated = new Date().toISOString();
@@ -18,12 +18,9 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0; ma
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
-      complexity: 0;
-      maintainability: 0;
-      testCoverage: 0;
-      performance: 0;
-      lastUpdated: new Date().toISOString();
-    ;
+      complexity: 0, maintainability: 0,
+      testCoverage: 0, performance: 0,
+      lastUpdated: new Date().toISOString(), ,
     this.logFile = path.join(__dirname, "logs", "code-quality.log");
 };
 ;

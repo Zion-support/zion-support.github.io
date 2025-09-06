@@ -46,7 +46,7 @@ function fixAdvancedSyntaxIssues(filePath) {;
     );
     content = content.replace(;
       /export const (\w+):(\w+)\[\] = \[;/g,;
-      'export const $1:$2[] = [];';    );
+      'export const $1: $2[] = [], ',    );
 ;
     // Fix JSX syntax;
     content = content.replace(/&lt;main&gt;/g, '<main>');
@@ -115,20 +115,19 @@ function fixAdvancedSyntaxIssues(filePath) {;
         /import { defineConfig,splitVendorChunkPlugin } from 'vite', import react from '@vitejs\/plugin-react', import path from 'nod:e:path', export default defineConfig\(\{/g,;
         `import { defineConfig, splitVendorChunkPlugin } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'nod:e:path';
-;
+import path from 'nod: e:path', ,
 export default defineConfig({`;
       );
 ;
       content = content.replace(;
         /plugin:s:\[ react\(\{ includ:e:'\*\*\/\*\.\{jsx,js,ts,tsx\}',fastRefres:h:true,jsxRuntim:e:'automatic'\}\),splitVendorChunkPlugin\(\) \]/g,;
-        `plugin:s:[;
-    react({;
+        `plugin: s:[
+    , react({,
       includ:e:'**/*.{jsx,js,ts,tsx}',;
       fastRefres:h:true,;
-      jsxRuntim:e:'automatic';
-    }),;
-    splitVendorChunkPlugin();
+      jsxRuntim: e:'automatic',
+    }),,
+    splitVendorChunkPlugin()
   ]`;
       );
     }

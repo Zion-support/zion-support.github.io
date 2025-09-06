@@ -12,20 +12,33 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 ;
 <<<<<<< HEAD
-class ComprehensiveAutomationRunner {; constructor() {; this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"); this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"); this.ensureDirectories(); this.results = {; timestamp: new Date().toISOString(); tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: { status: "unknown", score: 0 }}}})};
+class ComprehensiveAutomationRunner {; constructor() {; this.logFile = path.join(__dirname, "logs", "comprehensive-automation.log"); this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json"); this.ensureDirectories(); this.results = {; timestamp: new Date().toISOString(),
+    tests: {}; builds: {}; linting: {}; performance: {}; security: {}; overall: { status: "unknown", score: 0 }}}})};
 ; log(message, level = "INFO") {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] [${level}] ${message}\n`; console.log(`[${level}] ${message}`); fs.appendFileSync(this.logFile, logMessage)};
-; async runCommand(command, description) {; try {; this.log(`Running: ${description}`); const startTime = Date.now(); const output = execSync(command, {; stdio: 'pipe'; cwd: process.cwd(); timeout: 300000 // 5 minutes}); const duration = Date.now() - startTime; this.log(`✓ ${description} completed in ${duration}ms`); return { success: true, output: output.toString(), duration }} catch (error) {; this.log(`✗ ${description} failed: ${error.message}`, "ERROR"); return {; success: false; error: error.message; output: error.stdout?.toString() || error.stderr?.toString() || ""}}};
+; async runCommand(command, description) {; try {; this.log(`Running: ${description}`); const startTime = Date.now(); const output = execSync(command, {; stdio: 'pipe', cwd: process.cwd(), timeout: 300000 // 5 minutes}); const duration = Date.now() - startTime; this.log(`✓ ${description} completed in ${duration}ms`); return { success: true, output: output.toString(), duration }} catch (error) {; this.log(`✗ ${description} failed: ${error.message}`, "ERROR"); return {; success: false, error: error.message, output: error.stdout?.toString() || error.stderr?.toString() || ""}}};
 ; async runBuildTests() {; this.log(" = = = RUNNING BUILD TESTS = = = ");
-; const buildTests = [; { cmd:"npm run build", desc: "Production build" }; { cmd:"npm run lint", desc: "Linting check" }; { cmd:"npm run type-check", desc: "TypeScript type checking" }; { cmd:"npm run test: smoke", desc: "Smoke tests" }; ];
+; const buildTests = [
+    ; { cmd:"npm run build", desc: "Production build" }; { cmd:"npm run lint", desc: "Linting check" }; { cmd:"npm run type-check", desc: "TypeScript type checking" },
+    { cmd:"npm run test: smoke", desc: "Smoke tests" }
+  ];
 ; for (const test of buildTests) {; const result = await this.runCommand(test.cmd, test.desc); this.results.builds[test.desc] = result}};
 ; async runPerformanceTests() {; this.log(" = = = RUNNING PERFORMANCE TESTS = = = ");
-; const perfTests = [; { cmd:"npm run build: analyze", desc: "Bundle analysis" }; { cmd:"npm run perf: audit", desc: "Performance audit" }; ];
+; const perfTests = [
+    ; { cmd:"npm run build: analyze", desc: "Bundle analysis" },
+    { cmd:"npm run perf: audit", desc: "Performance audit" }
+  ];
 ; for (const test of perfTests) {; const result = await this.runCommand(test.cmd, test.desc); this.results.performance[test.desc] = result}};
 ; async runSecurityTests() {; this.log(" = = = RUNNING SECURITY TESTS = = = ");
-; const securityTests = [; { cmd:"npm audit", desc: "Security audit" }; { cmd:"npm run security: audit", desc: "Enhanced security audit" }; ];
+; const securityTests = [
+    ; { cmd:"npm audit", desc: "Security audit" },
+    { cmd:"npm run security: audit", desc: "Enhanced security audit" }
+  ];
 ; for (const test of securityTests) {; const result = await this.runCommand(test.cmd, test.desc); this.results.security[test.desc] = result}};
 ; async runQualityTests() {; this.log(" = = = RUNNING QUALITY TESTS = = = ");
-; const qualityTests = [; { cmd:"npm run lint: check", desc: "Lint check" }; { cmd:"npm run format: check", desc: "Format check" }; { cmd:"npm run test: coverage", desc: "Test coverage" }; ];
+; const qualityTests = [
+    ; { cmd:"npm run lint: check", desc: "Lint check" }; { cmd:"npm run format: check", desc: "Format check" },
+    { cmd:"npm run test: coverage", desc: "Test coverage" }
+  ];
 ; for (const test of qualityTests) {; const result = await this.runCommand(test.cmd, test.desc); this.results.tests[test.desc] = result}};
 ; calculateOverallScore() {; let totalScore = 0; let maxScore = 0;
 ; // Build tests (40% weight); const buildScore = this.calculateCategoryScore(this.results.builds); totalScore + = buildScore * 0.4; maxScore + = 100 * 0.4;
@@ -62,13 +75,10 @@ class ComprehensiveAutomationRunner {;
     this.resultsFile = path.join(__dirname, "reports", "comprehensive-results.json");
     this.ensureDirectories();
     this.results = {;
-      timestamp: new Date().toISOString();
-      tests: {;
-      builds: {;
-      linting: {;
-      performance: {;
-      security: {;
-      overall: { status: "unknown", score: 0 ;
+      timestamp: new Date().toISOString(), tests: {,
+      builds: {, linting: {,
+      performance: {, security: {,
+      overall: { status: "unknown", score: 0 ,
 };
       };
     });
@@ -86,9 +96,8 @@ class ComprehensiveAutomationRunner {;
       this.log(`Running: ${description}`);
       const startTime = Date.now();
       const output = execSync(command, {;
-        stdio: 'pipe';
-        cwd: process.cwd();
-        timeout: 300000 // 5 minutes;
+        stdio: 'pipe', cwd: process.cwd(),
+        timeout: 300000 // 5 minutes,
       });
       const duration = Date.now() - startTime;
       this.log(`✓ ${description} completed in ${duration}ms`);
@@ -96,10 +105,8 @@ class ComprehensiveAutomationRunner {;
     } catch (error) {;
       this.log(`✗ ${description} failed: ${error.message}`, "ERROR");
       return {;
-        success: false;
-        error: error.message;
-        output: error.stdout?.toString() || error.stderr?.toString() || "";
-      ;
+        success: false, error: error.message,
+        output: error.stdout?.toString() || error.stderr?.toString() || "", ,
 };
 };
 ;
@@ -107,11 +114,10 @@ class ComprehensiveAutomationRunner {;
     this.log("=== RUNNING BUILD TESTS ===");
 ;
     const buildTests = [;
-      { cmd: "npm run build", desc: "Production build" ;
-      { cmd: "npm run lint", desc: "Linting check" ;
-      { cmd: "npm run type-check", desc: "TypeScript type checking" ;
-      { cmd: "npm run test:smoke", desc: "Smoke tests" ;
-    ];
+      { cmd: "npm run build", desc: "Production build" ,
+      { cmd: "npm run lint", desc: "Linting check" ,
+      { cmd: "npm run type-check", desc: "TypeScript type checking" ,
+      { cmd: "npm run test:smoke", desc: "Smoke tests" , ],
 ;
     for (const test of buildTests) {;
       const result = await this.runCommand(test.cmd, test.desc);
@@ -123,9 +129,8 @@ class ComprehensiveAutomationRunner {;
     this.log("=== RUNNING PERFORMANCE TESTS ===");
 ;
     const perfTests = [;
-      { cmd: "npm run build:analyze", desc: "Bundle analysis" ;
-      { cmd: "npm run perf:audit", desc: "Performance audit" ;
-    ];
+      { cmd: "npm run build:analyze", desc: "Bundle analysis" ,
+      { cmd: "npm run perf:audit", desc: "Performance audit" , ],
 ;
     for (const test of perfTests) {;
       const result = await this.runCommand(test.cmd, test.desc);
@@ -137,9 +142,8 @@ class ComprehensiveAutomationRunner {;
     this.log("=== RUNNING SECURITY TESTS ===");
 ;
     const securityTests = [;
-      { cmd: "npm audit", desc: "Security audit" ;
-      { cmd: "npm run security:audit", desc: "Enhanced security audit" ;
-    ];
+      { cmd: "npm audit", desc: "Security audit" ,
+      { cmd: "npm run security:audit", desc: "Enhanced security audit" , ],
 ;
     for (const test of securityTests) {;
       const result = await this.runCommand(test.cmd, test.desc);
@@ -151,10 +155,9 @@ class ComprehensiveAutomationRunner {;
     this.log("=== RUNNING QUALITY TESTS ===");
 ;
     const qualityTests = [;
-      { cmd: "npm run lint:check", desc: "Lint check" ;
-      { cmd: "npm run format:check", desc: "Format check" ;
-      { cmd: "npm run test:coverage", desc: "Test coverage" ;
-    ];
+      { cmd: "npm run lint:check", desc: "Lint check" ,
+      { cmd: "npm run format:check", desc: "Format check" ,
+      { cmd: "npm run test:coverage", desc: "Test coverage" , ],
 ;
     for (const test of qualityTests) {;
       const result = await this.runCommand(test.cmd, test.desc);

@@ -26,7 +26,7 @@ const solutions = [
     title: "Enterprise Solutions",
     description: "Comprehensive technology solutions for large organizations with complex requirements and enterprise-grade security.",
     icon: Building,
-    href: "/solutions/enterprise"];
+    href: "/solutions/enterprise"],
     features: ["Scalable Architecture"", "Enterprise Security", "24/7 Support", "Custom Integration"],
     benefits: [Reduced IT Costs", "Improved Efficiency", "Enhanced Security", "Better Compliance"],
   {

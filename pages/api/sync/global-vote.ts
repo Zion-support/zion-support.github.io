@@ -20,12 +20,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes);
   const version = (state.latestVersionByEntityId[proposalId] || 0) + 1;
   const event = {
-    eventId: uuidv4();
-    type: "proposal" as const;
+    eventId: uuidv4(), type: "proposal" as const,
     payload: { id: proposalId, proposalId, title, votes };
-    originInstanceId: state.config.instanceId;
-    version;
-    timestamp: Date.now();
+    originInstanceId: state.config.instanceId, version,
+    timestamp: Date.now(),
     merkleRoot};
 
   upsertEvent(state, event);

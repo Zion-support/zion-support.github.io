@@ -15,7 +15,7 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs";
 interface ApplicationActionsProps {
   application: JobApplication,
   processingId: string | null,
-  onViewApplication: (applicationId: string) => Promise<void>;
+  onViewApplication: (applicationId: string) => Promise<void>,
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
 

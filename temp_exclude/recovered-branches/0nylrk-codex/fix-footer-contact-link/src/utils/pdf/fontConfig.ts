@@ -1,8 +1,7 @@
 
 import { jsPDF } from 'jspdf';
 export interface FontConfig {
-  regular: ArrayBuffer;
-  bold?: ArrayBuffer;
+  regular: ArrayBuffer, bold?: ArrayBuffer,
   italic?: ArrayBuffer;
   boldItalic?: ArrayBuffer
 }

@@ -63,11 +63,9 @@ class DependencyManager {
       this.log(`📊 ${Object.keys(outdatedPackages).length} packages have updates available`);
       this.log(`🛡️ ${Object.keys(vulnerabilities).length} packages have security vulnerabilities`);
       return {"success": true,"totalDependencies": Object.keys(allDeps).length,"dependencies": Object.keys(dependencies).length;
-        devDependencies: Object.keys(devDependencies).length;
-        outdatedPackages: Object.keys(outdatedPackages).length;
-        vulnerabilities: Object.keys(vulnerabilities).length;
-        outdatedDetails: outdatedPackages;
-        vulnerabilityDetails: vulnerabilities;
+        devDependencies: Object.keys(devDependencies).length, outdatedPackages: Object.keys(outdatedPackages).length,
+        vulnerabilities: Object.keys(vulnerabilities).length, outdatedDetails: outdatedPackages,
+        vulnerabilityDetails: vulnerabilities,
         timestamp: new Date().toISOString()}} catch (error) {
       this.log(`❌ Dependency analysis "failed": ${error.message}`);
       return {"success": false,"error": error.message;

@@ -226,19 +226,19 @@ const benefits = [
 const values = [;
   {}
     title: "Innovation First","
-    description: "We encourage creative thinking and embrace new technologies to solve complex problems."";
+    description: "We encourage creative thinking and embrace new technologies to solve complex problems."",
   },
   {}
     title: "Collaboration","
-    description: "We believe in the power of teamwork and diverse perspectives to achieve great results."";
+    description: "We believe in the power of teamwork and diverse perspectives to achieve great results."",
   },
   {}
     title: "Continuous Learning","
-    description: "We invest in our people's growth and provide opportunities for professional development."";
+    description: "We invest in our people's growth and provide opportunities for professional development."",
   },
   {}
     title: "Client Success","
-    description: "Our success is measured by our clients' success and satisfaction with our solutions."";
+    description: "Our success is measured by our clients' success and satisfaction with our solutions."",
   }
 ;];
 

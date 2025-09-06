@@ -24,11 +24,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const version = nextVersionFor(state, entityKey);
 
   const event = {
-    eventId: uuidv4();
-    type: "leaderboard_entry" as const;
+    eventId: uuidv4(), type: "leaderboard_entry" as const,
     payload: { id: entityKey, subjectId, score, category, period, rank };
-    originInstanceId: state.config.instanceId;
-    version;
+    originInstanceId: state.config.instanceId, version,
     timestamp: Date.now()};
 
   upsertEvent(state, event);

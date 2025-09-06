@@ -6,7 +6,10 @@
 ; async checkDependencies() {; try {; this.log("Checking for unused dependencies..."); const packageJson = JSON.parse(fs.readFileSync(path.join(process.cwd(), "package.json"), "utf8")); const dependencies = Object.keys(packageJson.dependencies || {}); const devDependencies = Object.keys(packageJson.devDependencies || {});
 ; this.log(`Found ${dependencies.length} production dependencies`); this.log(`Found ${devDependencies.length} dev dependencies`);
 ; this.optimizations.push(`Analyzed ${dependencies.length + devDependencies.length} dependencies`)} catch (error) {; this.log(`Dependency check failed: ${error.message}`, "ERROR")}};
-; async generateReport() {; const report = {; timestamp: new Date().toISOString(); optimizations: this.optimizations; recommendations: [; "Consider implementing code splitting"; "Optimize images using WebP format"; "Remove unused dependencies"; "Enable gzip compression"; "Use React.memo for expensive components"; ]};
+; async generateReport() {; const report = {; timestamp: new Date().toISOString(), optimizations: this.optimizations, recommendations: [
+    , "Consider implementing code splitting", "Optimize images using WebP format"; "Remove unused dependencies"; "Enable gzip compression",
+    "Use React.memo for expensive components"
+  ]};
 ; const reportFile = path.join(__dirname, "reports", "performance-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`Performance report saved to: ${reportFile}`)};
 ; async run() {; this.log("⚡ Starting Performance Optimizer");
 ; try {; await this.optimizeBundle(); await this.optimizeImages(); await this.checkDependencies(); await this.generateReport();

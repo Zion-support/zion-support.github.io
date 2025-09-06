@@ -1,15 +1,13 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { Resend } from "npm: resend@2.0.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { Resend } from "npm: resend@2.0.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 interface SendNewsletterRequest {
-  subject: string;
-  previewText: string;
-  body: string;
-  testMode?: boolean;
+  subject: string, previewText: string,
+  body: string, testMode?: boolean,
   testEmail?: string
 }
 
@@ -30,10 +28,9 @@ serve(async (req) => {
     // If test mode, send to test email only
     if (testMode && testEmail) {
       const emailResponse = await resend.emails.send({
-        from: "Zion Marketplace <newsletter@ziontechgroup.com>";
-        to: [testEmail];
+        from: "Zion Marketplace <newsletter@ziontechgroup.com>", to: [testEmail],
         subject: `[TEST] ${subject}`;
-        html: body;
+        html: body,
         text: previewText});
 
       return new Response(JSON.stringify(emailResponse), {
@@ -45,7 +42,7 @@ serve(async (req) => {
     // and send the newsletter to all subscribers
     // This is just a placeholder for now
     const emailResponse = {
-      id: "test-email-id";
+      id: "test-email-id",
       message: "Email would be sent to all subscribers in production"
     };
 

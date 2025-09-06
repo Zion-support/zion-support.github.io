@@ -24,7 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
-    const course = courses.find((c: any) => c.id === courseId);
+    const course = courses.find((c: any) => c.id === courseId),
     if (!course) return res.status(404).json({ error: 'Course not found' });
 
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };

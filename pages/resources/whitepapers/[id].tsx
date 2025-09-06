@@ -7,14 +7,14 @@ const whitepapers = {
   'autonomous-systems-guide': {
     id: 'autonomous-systems-guide',
     title: 'The Complete Guide to Autonomous Systems',
-    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.';
+    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
     category: 'Technology',
     pages: '45',
     author: 'Zion Tech Group Research Team',
     publishDate: 'January 2025',
     content: {
-      executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.';
-      keyTopics: [
+      executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
+    keyTopics: [
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
       ];
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'

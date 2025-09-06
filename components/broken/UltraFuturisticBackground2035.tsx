@@ -289,7 +289,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: 'easeInOut';
+            ease: 'easeInOut',
           }}
         />
         

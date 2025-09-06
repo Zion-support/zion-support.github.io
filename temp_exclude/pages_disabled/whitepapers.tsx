@@ -12,7 +12,7 @@ export default function WhitepapersPage() {
       date: "March 2024","
       category: "Artificial Intelligence","
       downloadCount: "2,500+","
-      pages: "45"";
+      pages: "45"",
     },
     {}
       title: "Cloud Security Architecture: Best Practices and Implementation","
@@ -21,7 +21,7 @@ export default function WhitepapersPage() {
       date: "February 2024","
       category: "Cybersecurity","
       downloadCount: "1,800+","
-      pages: "32"";
+      pages: "32"",
     },
     {}
       title: "Micro SaaS Success: Building Scalable Software Solutions","
@@ -30,7 +30,7 @@ export default function WhitepapersPage() {
       date: "January 2024","
       category: "Micro SaaS","
       downloadCount: "3,200+","
-      pages: "38"";
+      pages: "38"",
     },
     {}
       title: "Digital Transformation Roadmap: A Strategic Framework","
@@ -39,7 +39,7 @@ export default function WhitepapersPage() {
       date: "December 2023","
       category: "Digital Transformation","
       downloadCount: "2,100+","
-      pages: "52"";
+      pages: "52"",
     }
 ;  ];
 
@@ -85,10 +85,9 @@ export default function WhitepapersPage() {
               transition={{ duration: 0.8 }}
               className="text-center""
             >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                White Papers;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">", White Papers,
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",
                 Access our comprehensive collection of white papers on cutting-edge technologies. 
                 Deep insights from industry experts to help you stay ahead.;
               </p>;
@@ -106,15 +105,14 @@ export default function WhitepapersPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >,
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">";
-                Featured White Papers;
+              <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">", Featured White Papers,
               </h2>;
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">";
                 Download our latest research and insights on emerging technologies and industry trends.;
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
               {whitepapers.map((paper, index) => (,
                 <motion.div}),
                   key={index}
@@ -151,8 +149,7 @@ export default function WhitepapersPage() {
                       <span>{paper.downloadCount} downloads</span>,
                     </div>;
                   </div>;
-                  <button className="w-full bg-gradient-to-r from-slate-600 to-blue-600 text-white py-2 px-4 rounded-lg hover:from-slate-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">";
-                    <Download className="w-4 h-4 mr-2" />";
+                  <button className="w-full bg-gradient-to-r from-slate-600 to-blue-600 text-white py-2 px-4 rounded-lg hover: from-slate-700 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">", <Download className="w-4 h-4 mr-2" />",
                     Download PDF;
                   </button>;
                 </motion.div>;
@@ -164,7 +161,7 @@ export default function WhitepapersPage() {
         {/* Features Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {whitepaperFeatures.map((feature, index) => {}
                 const IconComponent = feature.icon;
                 return (;
@@ -203,15 +200,14 @@ export default function WhitepapersPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-slate-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Stay Updated with Our Research;
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Stay Updated with Our Research,
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Subscribe to our newsletter to get notified about new white papers and research publications.;
             </p>;
             <motion.a;
               href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-slate-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
+              className="inline-flex items-center px-8 py-4 bg-white text-slate-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
               whileHover={{ scale: 1.05 }}
             >,
               Subscribe to Research Updates;

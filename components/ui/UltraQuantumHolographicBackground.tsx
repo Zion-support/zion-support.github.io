@@ -28,32 +28,32 @@ export default function UltraQuantumHolographicBackground({
       secondary: '#ff00ff',
       tertiary: '#ffff00',
       accent: '#00ff00',
-      background: 'rgba(0, 0, 0, 0.95)';
-      overlay: 'rgba(0, 0, 0, 0.3)'
+      background: 'rgba(0, 0, 0, 0.95)',
+    overlay: 'rgba(0, 0, 0, 0.3)'
     };
     holographic: {
       primary: '#ff0080',
       secondary: '#8000ff',
       tertiary: '#00ffff',
       accent: '#ffff00',
-      background: 'rgba(0, 0, 0, 0.92)';
-      overlay: 'rgba(0, 0, 0, 0.25)'
+      background: 'rgba(0, 0, 0, 0.92)',
+    overlay: 'rgba(0, 0, 0, 0.25)'
     };
     cyberpunk: {
       primary: '#ff0040',
       secondary: '#00ffff',
       tertiary: '#ffff00',
       accent: '#ff00ff',
-      background: 'rgba(0, 0, 0, 0.94)';
-      overlay: 'rgba(0, 0, 0, 0.35)'
+      background: 'rgba(0, 0, 0, 0.94)',
+    overlay: 'rgba(0, 0, 0, 0.35)'
     };
     neon: {
       primary: '#00ff00',
       secondary: '#ff00ff',
       tertiary: '#ffff00',
       accent: '#00ffff',
-      background: 'rgba(0, 0, 0, 0.93)';
-      overlay: 'rgba(0, 0, 0, 0.28)'
+      background: 'rgba(0, 0, 0, 0.93)',
+    overlay: 'rgba(0, 0, 0, 0.28)'
     }
   };
 
@@ -381,7 +381,7 @@ export default function UltraQuantumHolographicBackground({
           className="absolute inset-0"
           animate={{
             background: [
-              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`;
+              `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http: //www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`,
               `url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)'/%3E%3C/svg%3E")`
             ]
           }}

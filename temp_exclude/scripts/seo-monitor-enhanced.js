@@ -6,16 +6,16 @@ const seoChecks = { metaTags: () => {  return true},sitemap: () => {  return tru
 console.log('🔍 Enhanced SEO Monitor Starting...');
 const seoChecks = {
   "metaTags": () => {
-    console.log('🏷️ Checking meta tags...');
-    return true;
+    console.log('🏷️ Checking meta tags...'),
+    return true
   },
   "sitemap": () => {
-    console.log('🗺️ Checking sitemap...');
-    return true;
+    console.log('🗺️ Checking sitemap...'),
+    return true
   },
   "robots": () => {
-    console.log('🤖 Checking robots.txt...');
-    return true;
+    console.log('🤖 Checking robots.txt...'),
+    return true
   }
 };
 Object.entries(seoChecks).forEach(([name, check]) => {

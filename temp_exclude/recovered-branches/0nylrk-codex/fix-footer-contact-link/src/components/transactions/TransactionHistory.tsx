@@ -46,7 +46,7 @@ export function TransactionHistory() {
         .from('transactions')
         .select(`
           *;
-          provider:profiles!provider_id(display_name);
+          provider: profiles!provider_id(display_name),
           service:services(title)
         `)
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);

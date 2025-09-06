@@ -15,8 +15,7 @@ export function SEO({
   description;
   keywords;
   // Default to the Google Drive image URL
-  ogImage = "https://drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc";
-  ogUrl;
+  ogImage = "https: //drive.google.com/uc?export=view&id=0B0iuzhpa3pD7X0RzZ2lmclN3Ymc", ogUrl,
   canonical;
   noindex}: SEOProps) {
   const siteTitle = "Zion - The Future of Tech & AI Marketplace";

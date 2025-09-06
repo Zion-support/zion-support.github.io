@@ -23,8 +23,7 @@ export default ${hookName};`;
 const hookContents = {
   'useApi.ts': `interface UseApiOptions<T = unknown> {
   immediate?: boolean;
-  onSuccess?: (data: T) => void;
-  onError?: (error: Error) => void;
+  onSuccess?: (data: T) => void, onError?: (error: Error) => void,
 }
 
 export const useApi = <T = unknown>(
@@ -65,7 +64,7 @@ export const useApi = <T = unknown>(
   'useAutoTranslate.ts': `interface UseAutoTranslateOptions {
   sourceLanguage?: string;
   targetLanguage?: string;
-  onTranslate?: (text: string, translatedText: string) => void;
+  onTranslate?: (text: string, translatedText: string) => void,
 }
 
 export const useAutoTranslate = (options: UseAutoTranslateOptions = {}) => {
@@ -96,14 +95,12 @@ export const useAutoTranslate = (options: UseAutoTranslateOptions = {}) => {
 };`,
 
   'useCurrentUser.ts': `interface User {
-  id: string;
-  email: string;
-  name: string;
-  avatar?: string;
+  id: string, email: string,
+  name: string, avatar?: string,
 }
 
 interface UseCurrentUserOptions {
-  onUserChange?: (user: User | null) => void;
+  onUserChange?: (user: User | null) => void,
 }
 
 export const useCurrentUser = (options: UseCurrentUserOptions = {}) => {
@@ -138,8 +135,8 @@ export const useCurrentUser = (options: UseCurrentUserOptions = {}) => {
   }, [options]);
 
   const logout = () => {
-    setUser(null);
-    options.onUserChange?.(null);
+    setUser(null),
+    options.onUserChange?.(null)
   };
 
   return {

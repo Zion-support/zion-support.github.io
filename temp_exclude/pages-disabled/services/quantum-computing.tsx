@@ -175,12 +175,12 @@ export default function QuantumComputingPage() {},
                           <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
                           {feature},
   {
-                        </div>
-                      );
-                    </div>
+    </div>
+                      ),
+    </div>
                   </motion.div>
-                );
-              })},
+                )
+  })},
   {
             </div>
           </div>

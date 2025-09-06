@@ -16,23 +16,22 @@ const features = [;
   {}
     icon: Shield,
     title: 'Healthcare Security,',
-    description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.'';
+    description: 'Advanced cybersecurity solutions designed specifically for healthcare environments.'',
   },
   {}
     icon: Database,
     title: 'Electronic Health Records,',
-    description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.'';
+    description: 'Custom EHR solutions that integrate seamlessly with existing healthcare workflows.'',
   },
   {}
     icon: Users,
     title: 'Telemedicine Platforms,',
-    description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'';
+    description: 'Remote consultation and patient monitoring systems for modern healthcare delivery.'',
   },
   {}
     icon: Activity,
     title: 'Health Analytics,',
-    description: 'AI-powered analytics for population health management and predictive insights.'';
-import Layout from '../../components/Layout';
+    description: 'AI-powered analytics for population health management and predictive insights.'', import Layout from '../../components/Layout',
 import { Heart, Shield, Activity, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 <<<<<<< HEAD
 =======
@@ -90,7 +89,8 @@ const features = [
     description: 'Built-in quality metrics and compliance monitoring'
   }
 ;];
-const solutions = [;
+const solutions = [
+    ;
   'HIPAA-Compliant Cloud Infrastructure',',
   'Electronic Health Record (EHR) Systems',',
   'Telemedicine & Remote Patient Monitoring',',
@@ -100,8 +100,10 @@ const solutions = [;
   'Healthcare Mobile Applications',',
   'Interoperability Solutions (FHIR)',',
   'Healthcare Cybersecurity',',
-  'Population Health Management'';
-;];
+  'Population Health Management'',
+    
+
+  ];
 export default function HealthcareSolutionsPage() {
   return (;
     <Layout );
@@ -113,8 +115,7 @@ export default function HealthcareSolutionsPage() {
         <section className="relative py-20 overflow-hidden">"
           <div className="container mx-auto px-4">";
             <div className="max-w-4xl mx-auto text-center">";
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">";
-                Healthcare;
+              <h1 className="text-5xl md: text-6xl font-bold text-white mb-6">", Healthcare,
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">";
                   Solutions;
                 </span>;
@@ -124,13 +125,11 @@ export default function HealthcareSolutionsPage() {
                 From EHR systems to telemedicine platforms, we help healthcare organizations;
                 deliver better patient care through innovative technology.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">",
                   Get Started;
                   <ArrowRight className="w-5 h-5 ml-2" />";
                 </button>;
-                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors font-medium">";
-                  View Case Studies;
+                <button className="border border-gray-600 text-white px-8 py-4 rounded-lg hover: bg-gray-800 transition-colors font-medium">", View Case Studies,
                 </button>;
               </div>;
             </div>;
@@ -148,7 +147,7 @@ export default function HealthcareSolutionsPage() {
                 streamline operations, and ensure compliance with healthcare regulations.,
               </p>;
             </div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {features.map((feature, index) => (,
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700 hover:border-blue-500 transition-colors">"
                   <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">";
@@ -260,7 +259,7 @@ export default function HealthcareSolutionsPage() {
               <h2 className="text-3xl font-bold text-white text-center mb-12">";
                 Our Healthcare Solutions;
               </h2>;
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">";
+              <div className="grid grid-cols-1 md: grid-cols-2 gap-6">",
                 {solutions.map((solution, index) => (,
                   <div key={index} className="flex items-center space-x-3">"
                     <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />";
@@ -284,8 +283,7 @@ export default function HealthcareSolutionsPage() {
                   ensuring your patient data is protected and your organization meets regulatory requirements.;
                 </p>;
               </div>;
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">";
-                <div className="text-center">";
+              <div className="grid grid-cols-1 md: grid-cols-3 gap-8">", <div className="text-center">",
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">";
                     <Shield className="w-8 h-8 text-white" />";
                   </div>;
@@ -321,12 +319,10 @@ export default function HealthcareSolutionsPage() {
                 Let our healthcare technology experts help you implement solutions that;
                 improve patient care while ensuring compliance and security.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <button className="bg-white text-blue-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium">",
                   Schedule Consultation;
                 </button>;
-                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium">";
-                  Download Healthcare Guide;
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg hover: bg-white hover:text-blue-600 transition-colors font-medium">", Download Healthcare Guide,
                 </button>;
               </div>;
             </div>;

@@ -1,8 +1,7 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const openAIApiKey = Deno.env.get('OPENAI_API_KEY');
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1", const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '';
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '';
 
@@ -12,22 +11,19 @@ const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
 interface Service {
-  id: string;
-  title: string;
+  id: string, title: string,
   category: string
 }
 
 interface QuoteDetails {
-  description: string;
-  email: string;
-  budget: string;
-  timeframe: string;
+  description: string, email: string,
+  budget: string, timeframe: string,
   startDate?: string;
   endDate?: string
 }
 
 interface RequestBody {
-  service: Service | null;
+  service: Service | null,
   quoteDetails: QuoteDetails
 }
 
@@ -63,19 +59,19 @@ serve(async (req) => {
     try {
       if (openAIApiKey) {
         const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-          method: 'POST';
+          method: 'POST',
           headers: {
             'Authorization': `Bearer ${openAIApiKey}`;
             'Content-Type': 'application/json'};
           body: JSON.stringify({
-            model: 'gpt-4o-mini';
+            model: 'gpt-4o-mini',
             messages: [
               {
-                role: 'system';
+                role: 'system',
                 content: 'You are an AI assistant that helps analyze service requests and generate tags and summaries for them.'
               };
               {
-                role: 'user';
+                role: 'user',
                 content: `Analyze this service request and provide:
                 1. A concise summary (max 100 words)
                 2. 3-5 relevant tags for categorization
@@ -109,17 +105,12 @@ serve(async (req) => {
       .from('service_quotes')
       .insert([
         {
-          user_id: userId;
-          service_id: service?.id;
-          service_title: service?.title || 'Custom Service';
-          service_category: service?.category;
-          description: quoteDetails.description;
-          email: quoteDetails.email;
-          budget: quoteDetails.budget;
-          timeframe: quoteDetails.timeframe;
-          start_date: quoteDetails.startDate;
-          end_date: quoteDetails.endDate;
-          ai_analysis: aiAnalysis;
+          user_id: userId, service_id: service?.id,
+          service_title: service?.title || 'Custom Service', service_category: service?.category,
+          description: quoteDetails.description, email: quoteDetails.email,
+          budget: quoteDetails.budget, timeframe: quoteDetails.timeframe,
+          start_date: quoteDetails.startDate, end_date: quoteDetails.endDate,
+          ai_analysis: aiAnalysis,
           status: 'pending'
         }
       ])
@@ -132,7 +123,7 @@ serve(async (req) => {
   } catch (error) {
     console.error('Error in process-quote function:', error);
     return new Response(JSON.stringify({ success: false, error: error.message }), {
-      status: 500;
+      status: 500,
       headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
   }
 });

@@ -160,7 +160,7 @@ function main() {
     }
   }
   
-  console.log('\n📊 Summary:');
+  console.log('\n📊 Summary: '),
   console.log(`✅ Files fixed: ${fixedCount}`);
   console.log(`📁 Total files processed: ${totalFiles}`);
   

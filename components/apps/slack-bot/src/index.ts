@@ -3,12 +3,10 @@ import dotenv from 'dotenv';
 import fetch from 'node-fetch';
 dotenv.config();
 
-const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000';
-
+const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000',
 const app = new App({
-  token: process.env.SLACK_BOT_TOKEN;
-  signingSecret: process.env.SLACK_SIGNING_SECRET;
-  appToken: process.env.SLACK_APP_LEVEL_TOKEN;
+  token: process.env.SLACK_BOT_TOKEN, signingSecret: process.env.SLACK_SIGNING_SECRET,
+  appToken: process.env.SLACK_APP_LEVEL_TOKEN,
   socketMode: true
 });
 
@@ -32,7 +30,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
     if (sub === 'post-job') {
       const role = rest.join(' ') || 'Cloud Engineer';
       const res = await fetch(`${apiBase}/jobs/generate`, {
-        method: 'POST';
+        method: 'POST',
         headers: { 'content-type': 'application/jsonx-user-id': userId };
         body: JSON.stringify({ role })
       });

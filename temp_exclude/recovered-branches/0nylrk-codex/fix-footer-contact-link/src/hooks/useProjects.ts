@@ -26,7 +26,7 @@ export function useProjects() {
         .select(`
           *;
           job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url);
+          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
         .order("created_at", { ascending: false });
@@ -54,7 +54,7 @@ export function useProjects() {
       setError(null)
     } catch (err: any) {
       console.error("Error fetching projects:", err);
-      setError("Failed to fetch projects: " + err.message);
+      setError("Failed to fetch projects: " + err.message),
       toast.error("Failed to fetch projects")
     } finally {
       setIsLoading(false)
@@ -68,7 +68,7 @@ export function useProjects() {
         .select(`
           *;
           job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url);
+          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url)
         `)
         .eq("id", projectId)
@@ -127,8 +127,7 @@ export function useProjects() {
     projects;
     isLoading;
     error;
-    refetch: fetchProjects;
-    getProjectById;
+    refetch: fetchProjects, getProjectById,
     updateProjectStatus
   }
 }

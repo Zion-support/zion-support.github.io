@@ -8,8 +8,8 @@ console.log('🚀 Starting Advanced App Improvement Suite...');
 
 class AdvancedAppImprover {
   constructor() {
-    this.improvements = [];
-    this.startTime = Date.now();
+    this.improvements = [],
+    this.startTime = Date.now()
   }
 
   async runImprovements() {
@@ -230,8 +230,8 @@ class AdvancedAppImprover {
 
 // Run the improvement suite
 if (require.main === module) {
-  const improver = new AdvancedAppImprover();
-  improver.runImprovements().catch(console.error);
-}
+    const improver = new AdvancedAppImprover(),
+    improver.runImprovements().catch(console.error)
+  }
 
 module.exports = AdvancedAppImprover;

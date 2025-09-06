@@ -3,8 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 type EventRow = {
-  name: string;
-  page?: string;
+  name: string, page?: string,
   userType?: string;
   properties?: Record<string, any>;
   at: string
@@ -19,7 +18,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     const lines = raw.split('\n').filter(Boolean);
     const start = startIso ? new Date(startIso) : null;
     const end = endIso ? new Date(endIso) : null;
-    const rows: EventRow[] = [];
+    const rows: EventRow[] = [],
     for (const line of lines) {
       try {
         const obj = JSON.parse(line);

@@ -33,10 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return
     }
     const created = addMilestone(project, {
-      title: body.title;
-      description: body.description;
-      dueDate: body.dueDate;
-      amountUsd: body.amountUsd;
+      title: body.title, description: body.description,
+      dueDate: body.dueDate, amountUsd: body.amountUsd,
       attachments: body.attachments || []});
     res.status(201).json({ milestone: created });
     return

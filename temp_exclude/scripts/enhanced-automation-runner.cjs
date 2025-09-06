@@ -126,9 +126,7 @@ if (require.main === module) {
     case "report":
       runner.generateReport();
       break;
-    default:
-      console.log("Usage: node enhanced-automation-runner.cjs [run|report]");
-      process.exit(1);
+    default: console.log("Usage: node enhanced-automation-runner.cjs [run|report]"), process.exit(1),
   }
 }
 

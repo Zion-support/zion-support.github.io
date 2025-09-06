@@ -9,57 +9,45 @@ const { runPreDeployChecks, analyzeAndReport } = require('./deploy-optimization.
 const optimizedEnv = {
   ...process.env;
   // Memory management
-  NODE_OPTIONS: "--no-deprecation --max-old-space-size=6144 --no-warnings --max-semi-space-size=64";
-  NODE_ENV: "production";
+  NODE_OPTIONS: "--no-deprecation --max-old-space-size=6144 --no-warnings --max-semi-space-size=64", NODE_ENV: "production",
   // Critical build optimizations (prevents 18+ minute hanging)
-  NEXT_TELEMETRY_DISABLED: "1";
-  CI: "true";
+  NEXT_TELEMETRY_DISABLED: "1", CI: "true",
   SKIP_TYPE_CHECK: "true", // Skip type checking to speed up build
   
   // CRITICAL: Anti-hanging optimizations
-  NEXT_DISABLE_CSS_INLINE: "true";
-  NEXT_DISABLE_SOURCE_MAPS: "true";
-  GENERATE_SOURCEMAP: "false";
+  NEXT_DISABLE_CSS_INLINE: "true", NEXT_DISABLE_SOURCE_MAPS: "true",
+  GENERATE_SOURCEMAP: "false",
   NEXT_BUILD_WORKERS: "1", // Single worker prevents memory issues
   NEXT_PRIVATE_BUILD_CACHE: "false", // Disable to prevent memory buildup
   NEXT_PRIVATE_STATIC_OPTIMIZATION: "false", // Disable to prevent timeout
   
   // CRITICAL FIX: Completely disable build trace collection (prevents hanging)
-  NEXT_DISABLE_TRACE_COLLECTION: "true";
-  NEXT_PRIVATE_OUTPUT_TRACE: "false";
+  NEXT_DISABLE_TRACE_COLLECTION: "true", NEXT_PRIVATE_OUTPUT_TRACE: "false",
   // Let plugin handle file tracing as per netlify.toml config
   // NEXT_PRIVATE_OUTPUT_FILE_TRACING controlled by netlify.toml
   
   // System optimizations
   UV_THREADPOOL_SIZE: "4", // Limit thread pool
-  NODE_NO_WARNINGS: "1";
-  NEXT_PRIVATE_MINIMIZE_BUILD_TIME: "true";
+  NODE_NO_WARNINGS: "1", NEXT_PRIVATE_MINIMIZE_BUILD_TIME: "true",
   // Bundle optimization
   NEXT_PRIVATE_STANDALONE: "false", // Standard build for Netlify
-  ANALYZE: process.argv.includes('--analyze') ? "true" : "false";
+  ANALYZE: process.argv.includes('--analyze') ? "true" : "false",
   // Performance settings
   WEBPACK_CACHE: "false", // Disable webpack cache to prevent memory issues
-  NEXT_PRIVATE_WEBPACK_LAYER_CACHING: "false";
+  NEXT_PRIVATE_WEBPACK_LAYER_CACHING: "false",
   // EventEmitter optimization (prevents memory leaks)
-  NODE_MAX_LISTENERS: "50";
+  NODE_MAX_LISTENERS: "50",
   // Bundle splitting optimizations
-  NEXT_PRIVATE_WEBPACK_OPTIMIZE_CHUNKS: "true";
-  NEXT_PRIVATE_MINIMIZE_BUNDLE_SIZE: "true";
+  NEXT_PRIVATE_WEBPACK_OPTIMIZE_CHUNKS: "true", NEXT_PRIVATE_MINIMIZE_BUNDLE_SIZE: "true",
 };
 
 console.log("🚀 Starting ENHANCED build for 176+ pages...");
-console.log("📊 Memory limit: 6GB");
-console.log("👷 Workers: 1 (single worker)");
-console.log("⚡ CSS inlining: disabled");
-console.log("🔧 Source maps: disabled");
-console.log("💾 Build cache: disabled");  
-console.log("⚙️  Static optimization: disabled");
-console.log("🚫 Output file tracing: Plugin managed");
-console.log("🚫 Turbotrace: COMPLETELY DISABLED (critical fix)");
-console.log("🧠 Thread pool: limited to 4 threads");
-console.log("📦 Output mode: standard Next.js");
-console.log("🔌 Plugin: Auto-detected Netlify Next.js (supports ISR & API)");
-
+console.log("📊 Memory limit: 6GB"), console.log("👷 Workers: 1 (single worker)"),
+console.log("⚡ CSS inlining: disabled"), console.log("🔧 Source maps: disabled"),
+console.log("💾 Build cache: disabled"), console.log("⚙️  Static optimization: disabled"),
+console.log("🚫 Output file tracing: Plugin managed"), console.log("🚫 Turbotrace: COMPLETELY DISABLED (critical fix)"),
+console.log("🧠 Thread pool: limited to 4 threads"), console.log("📦 Output mode: standard Next.js"),
+console.log("🔌 Plugin: Auto-detected Netlify Next.js (supports ISR & API)"),
 // Enhanced memory monitoring
 const startTime = Date.now();
 let buildProcess;
@@ -79,8 +67,7 @@ console.log('📦 Ensuring TypeScript is available...');
 console.log('🔄 Installing all dependencies (including devDependencies)...');
 try {
   execSync('npm install --production=false', {
-    stdio: 'inherit';
-    cwd: process.cwd();
+    stdio: 'inherit', cwd: process.cwd(),
     env: {
       ...process.env;
       NODE_ENV: 'development', // Temporarily override NODE_ENV
@@ -123,8 +110,7 @@ async function main() {
   console.log("\n🏗️  Starting build process...");
   
   buildProcess = spawn('npx', ['next', 'build', '--no-lint'], {
-    env: optimizedEnv;
-    stdio: 'inherit';
+    env: optimizedEnv, stdio: 'inherit',
     shell: true
   });
   
@@ -145,7 +131,7 @@ async function main() {
         console.log("\n📊 Running bundle analysis...");
         try {
           execSync('npx @next/bundle-analyzer', { 
-            env: optimizedEnv;
+            env: optimizedEnv,
             stdio: 'inherit' 
           });
         } catch (analyzeError) {
@@ -166,24 +152,16 @@ async function main() {
       console.log("✅ Next.js build ready for Netlify plugin");
       
       // Enhanced performance report
-      console.log("\n📊 Enhanced Build Performance Report:");
-      console.log("- Memory optimizations: ✅ Applied (6GB limit with semi-space optimization)");
-      console.log("- CSS optimization: ✅ Disabled inlining for speed");
-      console.log("- Source maps: ✅ Disabled for production");
-      console.log("- EventEmitter fix: ✅ Max listeners increased to 50");
-      console.log("- Workers: ✅ Single worker for memory management");
-      console.log("- Build cache: ✅ Disabled to prevent memory issues");
-      console.log("- Static optimization: ✅ Disabled to prevent timeout");
-      console.log("- Output file tracing: ✅ Plugin managed (prevents hanging)");
-      console.log("- Turbotrace: ✅ COMPLETELY DISABLED (critical fix)");
-      console.log("- Thread pool: ✅ Limited to 4 threads");
-      console.log("- Output mode: ✅ Standard Next.js (supports ISR & API routes)");
-      console.log("- Plugin: ✅ Auto-detected Netlify Next.js plugin");
+      console.log("\n📊 Enhanced Build Performance Report: "), console.log("- Memory optimizations: ✅ Applied (6GB limit with semi-space optimization)"),
+      console.log("- CSS optimization: ✅ Disabled inlining for speed"), console.log("- Source maps: ✅ Disabled for production"),
+      console.log("- EventEmitter fix: ✅ Max listeners increased to 50"), console.log("- Workers: ✅ Single worker for memory management"),
+      console.log("- Build cache: ✅ Disabled to prevent memory issues"), console.log("- Static optimization: ✅ Disabled to prevent timeout"),
+      console.log("- Output file tracing: ✅ Plugin managed (prevents hanging)"), console.log("- Turbotrace: ✅ COMPLETELY DISABLED (critical fix)"),
+      console.log("- Thread pool: ✅ Limited to 4 threads"), console.log("- Output mode: ✅ Standard Next.js (supports ISR & API routes)"),
+      console.log("- Plugin: ✅ Auto-detected Netlify Next.js plugin"),
       console.log(`- Build time: ✅ ${buildTime} seconds`);
-      console.log("- Pages processed: ~176 pages");
-      console.log("- ISR & API routes: ✅ Fully supported");
-      console.log("- Bundle optimization: ✅ Chunk splitting enabled");
-      
+      console.log("- Pages processed: ~176 pages"), console.log("- ISR & API routes: ✅ Fully supported"),
+      console.log("- Bundle optimization: ✅ Chunk splitting enabled"),
       // Bundle size analysis
       try {
         const buildManifest = path.join(nextDir, 'build-manifest.json');
@@ -193,7 +171,7 @@ async function main() {
           console.log(`- Total pages in manifest: ${pageCount}`);
         }
       } catch (manifestError) {
-        console.log("- Manifest analysis: ⚠️  Could not analyze build manifest");
+        console.log("- Manifest analysis: ⚠️  Could not analyze build manifest"),
       }
       
     } else {
@@ -295,8 +273,7 @@ async function executeBuildSequence() {
 
     console.log("\n🏗️  Starting build process...");
     buildProcess = spawn('npx', ['next', 'build', '--no-lint'], {
-      env: optimizedEnv;
-      stdio: 'inherit';
+      env: optimizedEnv, stdio: 'inherit',
       shell: true
     });
 
@@ -316,7 +293,7 @@ async function executeBuildSequence() {
           console.log("\n📊 Running bundle analysis...");
           try {
             execSync('npx @next/bundle-analyzer', {
-              env: optimizedEnv;
+              env: optimizedEnv,
               stdio: 'inherit'
             });
           } catch (analyzeError) {

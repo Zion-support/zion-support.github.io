@@ -24,8 +24,8 @@ const ReportsPage: React.FC = () => {
   const reports = [
     {
       title: 'The Future of Quantum Computing in Enterprise: 2024-2030',
-      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.';
-      date: '2024-01-15',
+      excerpt: 'Comprehensive analysis of quantum computing adoption trends, market opportunities, and strategic implications for businesses across industries.',
+    date: '2024-01-15',
       author: 'Dr. Sarah Chen & Quantum Research Team',
       category: 'Technology Trends',
       tags: ['Quantum ComputingEnterpriseMarket AnalysisFuture Tech'],
@@ -38,8 +38,8 @@ const ReportsPage: React.FC = () => {
     };
     {
       title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',
-      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.';
-      date: '2024-01-10',
+      excerpt: 'In-depth study of artificial intelligence implementation success stories, return on investment metrics, and strategic recommendations.',
+    date: '2024-01-10',
       author: 'AI Research Division',
       category: 'Business Intelligence',
       tags: ['AIROIFortune 500Best Practices'],
@@ -52,8 +52,8 @@ const ReportsPage: React.FC = () => {
     };
     {
       title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape',
-      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.';
-      date: '2024-01-08',
+      excerpt: 'Analysis of emerging cybersecurity challenges, AI-powered threats, and defense strategies for modern organizations.',
+    date: '2024-01-08',
       author: 'Cybersecurity Research Team',
       category: 'Security',
       tags: ['CybersecurityAI ThreatsThreat LandscapeDefense'],
@@ -66,8 +66,8 @@ const ReportsPage: React.FC = () => {
     };
     {
       title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding',
-      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.';
-      date: '2024-01-05',
+      excerpt: 'Comprehensive overview of technology investment patterns, emerging sectors, and funding opportunities worldwide.',
+    date: '2024-01-05',
       author: 'Market Research Team',
       category: 'Market Analysis',
       tags: ['Venture CapitalInvestmentInnovationGlobal Markets'],
@@ -80,8 +80,8 @@ const ReportsPage: React.FC = () => {
     };
     {
       title: 'Edge Computing & IoT: Transforming Industries in Real-Time',
-      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.';
-      date: '2024-01-03',
+      excerpt: 'Research on edge computing adoption, Internet of Things integration, and industry transformation opportunities.',
+    date: '2024-01-03',
       author: 'IoT Research Division',
       category: 'Emerging Tech',
       tags: ['Edge ComputingIoTIndustry 4.0Real-time'],
@@ -94,8 +94,8 @@ const ReportsPage: React.FC = () => {
     };
     {
       title: 'Sustainable Technology: Green Computing & Environmental Impact',
-      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.';
-      date: '2024-01-01',
+      excerpt: 'Analysis of sustainable technology practices, environmental impact assessment, and green computing solutions.',
+    date: '2024-01-01',
       author: 'Sustainability Research Team',
       category: 'Sustainability',
       tags: ['Green ComputingSustainabilityEnvironmental ImpactClean Tech'],

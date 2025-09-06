@@ -13,19 +13,24 @@ class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.
 ; try {; fs.appendFileSync(this.logFile, logMessage)} catch (error) {; console.error('Error writing to log file: ', error.message)}};
 ; async runTests() {; try {; this.log('🧪 Running test suite...');
 ; const startTime = Date.now();
-; // Run tests; const testResult = execSync('npm test', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});
+; // Run tests; const testResult = execSync('npm test', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
 ; const duration = Date.now() - startTime;
-; return {; success: true; output: testResult; duration: duration}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''; duration: 0}}};
+; return {; success: true, output: testResult, duration: duration}} catch (error) {; return {; success: false, error: error.message, output: error.stdout || error.stderr || '',
+    duration: 0}}};
 ; async runLintTests() {; try {; this.log('🔍 Running lint tests...');
-; const lintResult = execSync('npm run lint', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});
-; return {; success: true; output: lintResult}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''}}};
+; const lintResult = execSync('npm run lint', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
+; return {; success: true,
+    output: lintResult}} catch (error) {; return {; success: false, error: error.message, output: error.stdout || error.stderr || ''}}};
 ; async runTypeCheck() {; try {; this.log('📝 Running type check...');
-; const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot; stdio: 'pipe'; encoding: 'utf8'});
-; return {; success: true; output: typeResult}} catch (error) {; return {; success: false; error: error.message; output: error.stdout || error.stderr || ''}}};
-; async generateReport(testResults, lintResults, typeResults) {; const report = {; timestamp: new Date().toISOString(); summary: {; tests: testResults.success ? 'passed': 'failed'; lint: lintResults.success ? 'passed': 'failed'; typeCheck: typeResults.success ? 'passed': 'failed'; overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'}; details: {; tests: testResults; lint: lintResults; typeCheck: typeResults}; recommendations: []};
-; // Generate recommendations; if (!testResults.success) {; report.recommendations.push({; priority: 'high'; message: 'Tests are failing'; action: 'Fix failing tests before deployment'})};
-; if (!lintResults.success) {; report.recommendations.push({; priority: 'medium'; message: 'Lint issues detected'; action: 'Run npm run lint: fix to auto-fix issues'})};
-; if (!typeResults.success) {; report.recommendations.push({; priority: 'high'; message: 'TypeScript errors detected'; action: 'Fix TypeScript errors before deployment'})};
+; const typeResult = execSync('npm run type-check', {; cwd: this.projectRoot, stdio: 'pipe', encoding: 'utf8'});
+; return {; success: true,
+    output: typeResult}} catch (error) {; return {; success: false, error: error.message, output: error.stdout || error.stderr || ''}}};
+; async generateReport(testResults, lintResults, typeResults) {; const report = {; timestamp: new Date().toISOString(), summary: {, tests: testResults.success ? 'passed': 'failed', lint: lintResults.success ? 'passed': 'failed', typeCheck: typeResults.success ? 'passed': 'failed',
+    overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed': 'failed'}; details: {, tests: testResults, lint: lintResults,
+    typeCheck: typeResults}; recommendations: []};
+; // Generate recommendations; if (!testResults.success) {; report.recommendations.push({; priority: 'high', message: 'Tests are failing', action: 'Fix failing tests before deployment'})};
+; if (!lintResults.success) {; report.recommendations.push({; priority: 'medium', message: 'Lint issues detected', action: 'Run npm run lint: fix to auto-fix issues'})};
+; if (!typeResults.success) {; report.recommendations.push({; priority: 'high', message: 'TypeScript errors detected', action: 'Fix TypeScript errors before deployment'})};
 ; return report};
 ; async saveReport(report) {; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })};
 ; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {; this.log(`Error saving report: ${error.message}`)}};
@@ -36,7 +41,7 @@ class TestAutomation {; constructor() {; this.projectRoot = process.cwd(); this.
 ; // Save report; await this.saveReport(report);
 ; const duration = Date.now() - this.startTime;
 ; // Log summary; this.log('\n📊 Test Automation Summary: '); this.log(`Tests: ${report.summary.tests}`); this.log(`Lint: ${report.summary.lint}`); this.log(`Type Check: ${report.summary.typeCheck}`); this.log(`Overall: ${report.summary.overall}`); this.log(`Duration: ${duration}ms`);
-; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {; this.log('\n✨ All tests passed!')};
+; if (report.recommendations.length > 0) {; this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)})} else {; this.log('\n✨ All tests passed!')};
 } catch (error) {; this.log(`❌ Error running test automation: ${error.message}`); process.exit(1)}}};
 ;
 // Run the test automation;
@@ -70,24 +75,19 @@ class TestAutomation {;
 ;
       // Run tests;
       const testResult = execSync('npm test', {;
-        cwd: this.projectRoot;
-        stdio: 'pipe';
-        encoding: 'utf8';
+        cwd: this.projectRoot, stdio: 'pipe',
+        encoding: 'utf8',
       });
 ;
       const duration = Date.now() - startTime;
 ;
       return {;
-        success: true;
-        output: testResult;
-        duration: duration;
-      ;
+        success: true, output: testResult,
+        duration: duration, ,
     } catch (error) {;
       return {;
-        success: false;
-        error: error.message;
-        output: error.stdout || error.stderr || '';
-        duration: 0;
+        success: false, error: error.message,
+        output: error.stdout || error.stderr || '', duration: 0,
       ;
 };
 };
@@ -97,21 +97,17 @@ class TestAutomation {;
       this.log('🔍 Running lint tests...');
 ;
       const lintResult = execSync('npm run lint', {;
-        cwd: this.projectRoot;
-        stdio: 'pipe';
-        encoding: 'utf8';
+        cwd: this.projectRoot, stdio: 'pipe',
+        encoding: 'utf8',
       });
 ;
       return {;
-        success: true;
-        output: lintResult;
+        success: true, output: lintResult,
       ;
     } catch (error) {;
       return {;
-        success: false;
-        error: error.message;
-        output: error.stdout || error.stderr || '';
-      ;
+        success: false, error: error.message,
+        output: error.stdout || error.stderr || '', ,
 };
 };
 ;
@@ -120,63 +116,50 @@ class TestAutomation {;
       this.log('📝 Running type check...');
 ;
       const typeResult = execSync('npm run type-check', {;
-        cwd: this.projectRoot;
-        stdio: 'pipe';
-        encoding: 'utf8';
+        cwd: this.projectRoot, stdio: 'pipe',
+        encoding: 'utf8',
       });
 ;
       return {;
-        success: true;
-        output: typeResult;
+        success: true, output: typeResult,
       ;
     } catch (error) {;
       return {;
-        success: false;
-        error: error.message;
-        output: error.stdout || error.stderr || '';
-      ;
+        success: false, error: error.message,
+        output: error.stdout || error.stderr || '', ,
 };
 };
 ;
   async generateReport(testResults, lintResults, typeResults) {;
     const report = {;
-      timestamp: new Date().toISOString();
-      summary: {;
-        tests: testResults.success ? 'passed' : 'failed';
-        lint: lintResults.success ? 'passed' : 'failed';
-        typeCheck: typeResults.success ? 'passed' : 'failed';
-        overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed';
+      timestamp: new Date().toISOString(), summary: {,
+        tests: testResults.success ? 'passed' : 'failed', lint: lintResults.success ? 'passed' : 'failed',
+        typeCheck: typeResults.success ? 'passed' : 'failed', overall: (testResults.success && lintResults.success && typeResults.success) ? 'passed' : 'failed',
       ;
-      details: {;
-        tests: testResults;
-        lint: lintResults;
-        typeCheck: typeResults;
+      details: {, tests: testResults,
+        lint: lintResults, typeCheck: typeResults,
       ;
-      recommendations: [];
-    ;
+      recommendations: [], ,
 ;
     // Generate recommendations;
     if (!testResults.success) {;
       report.recommendations.push({;
-        priority: 'high';
-        message: 'Tests are failing';
-        action: 'Fix failing tests before deployment';
+        priority: 'high', message: 'Tests are failing',
+        action: 'Fix failing tests before deployment',
       });
 };
 ;
     if (!lintResults.success) {;
       report.recommendations.push({;
-        priority: 'medium';
-        message: 'Lint issues detected';
-        action: 'Run npm run lint:fix to auto-fix issues';
+        priority: 'medium', message: 'Lint issues detected',
+        action: 'Run npm run lint:fix to auto-fix issues',
       });
 };
 ;
     if (!typeResults.success) {;
       report.recommendations.push({;
-        priority: 'high';
-        message: 'TypeScript errors detected';
-        action: 'Fix TypeScript errors before deployment';
+        priority: 'high', message: 'TypeScript errors detected',
+        action: 'Fix TypeScript errors before deployment',
       });
 };
 ;
@@ -223,7 +206,7 @@ class TestAutomation {;
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Test Automation Summary: ');
+      this.log('\n📊 Test Automation Summary: '),
       this.log(`Tests: ${report.summary.tests}`);
       this.log(`Lint: ${report.summary.lint}`);
       this.log(`Type Check: ${report.summary.typeCheck}`);
@@ -231,8 +214,7 @@ class TestAutomation {;
       this.log(`Duration: ${duration}ms`);
 ;
       if (report.recommendations.length > 0) {;
-        this.log('\n💡 Recommendations: ');
-        report.recommendations.forEach(rec => {;
+        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });

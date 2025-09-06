@@ -14,15 +14,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
 
     res.status(200).json({
-      ok: true;
-      query: q;
+      ok: true, query: q,
       parsed;
       keywords;
       didYouMean;
       counts: {
-        all: results.all.length;
-        talent: results.talent.length;
-        jobs: results.jobs.length;
+        all: results.all.length, talent: results.talent.length,
+        jobs: results.jobs.length,
         projects: results.projects.length};
       results})
   } catch (e: any) {

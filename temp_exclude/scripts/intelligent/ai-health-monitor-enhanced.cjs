@@ -446,9 +446,9 @@ class EnhancedAIHealthMonitor {
     
     // Force garbage collection if available
     if (global.gc) {
-      global.gc();
-      console.log('Forced garbage collection');
-    }
+    global.gc(),
+    console.log('Forced garbage collection')
+  }
     
     // Restart processes with high memory usage
     try {

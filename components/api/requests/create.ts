@@ -23,7 +23,7 @@ async function summarizeWithOpenAI(description: string) {
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const prompt = `Summarize the following project description in 2-3 sentences and classify the request type (e.g., web app, AI/ML, data, cloud, security):\n\n"""${description}"""`;
     const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are a helpful assistant.' };
         { role: 'user', content: prompt }];
@@ -52,14 +52,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     id;
     name;
     email;
-    budget: normalizedBudget;
-    timeline: String(timeline || '');
-    description: String(description);
-    talentSlug: talentSlug || null;
-    aiSummary: ai.summary;
-    aiType: ai.type;
-    status: 'new';
-    createdAt: now;
+    budget: normalizedBudget, timeline: String(timeline || ''),
+    description: String(description), talentSlug: talentSlug || null,
+    aiSummary: ai.summary, aiType: ai.type,
+    status: 'new', createdAt: now,
     updatedAt: now};
   requests.push(record);
   await saveRequests(requests);

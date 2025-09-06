@@ -12,7 +12,7 @@ function resolveConflicts() {
     // Get list of conflicted files
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean);
     
-    console.log(`Found ${conflictedFiles.length} conflicted files:`);
+    console.log(`Found ${conflictedFiles.length} conflicted files: `),
     conflictedFiles.forEach(file => console.log(`  - ${file}`));
     
     // For each conflicted file, accept the incoming changes (from the PR)
@@ -129,7 +129,7 @@ async function main() {
   
   // Show final status
   try {
-    console.log('\n📊 Final git status:');
+    console.log('\n📊 Final git status: '),
     execSync('git status --short', { stdio: 'inherit' });
   } catch (error) {
     console.error('Error getting git status:', error.message);

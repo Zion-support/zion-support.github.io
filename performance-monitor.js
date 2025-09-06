@@ -16,9 +16,9 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       if (fs.existsSync(buildDir)) {
-        const stats = fs.statSync(buildDir);
-        this.metrics.bundleSize = stats.size;
-      }
+    const stats = fs.statSync(buildDir),
+    this.metrics.bundleSize = stats.size
+  }
     } catch(error) {
       console.error('Error measuring bundle size:', error);
     }

@@ -28,11 +28,9 @@ export const useUploadDeliverable = () => {
       // For this example, instead of actually uploading files (which would require storage setup);
       // we'll just store the file metadata in the deliverables JSONB field
       const newDeliverable = {
-        id: crypto.randomUUID();
-        filename: file.name;
-        size: file.size;
-        type: file.type;
-        added_at: new Date().toISOString();
+        id: crypto.randomUUID(), filename: file.name,
+        size: file.size, type: file.type,
+        added_at: new Date().toISOString(),
         added_by: user.id
       };
       
@@ -59,7 +57,7 @@ export const useUploadDeliverable = () => {
       return newDeliverable
     } catch (err: any) {
       console.error("Error uploading deliverable:", err);
-      toast.error("Failed to upload deliverable: " + err.message);
+      toast.error("Failed to upload deliverable: " + err.message),
       return null
     } finally {
       setIsSubmitting(false)

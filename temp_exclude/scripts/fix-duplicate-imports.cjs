@@ -5,8 +5,8 @@ const path = require('path');
 
 class DuplicateImportsFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+    this.projectRoot = process.cwd(),
+    this.fixedFiles = []
   }
 
   log(message, type = 'INFO') {
@@ -92,7 +92,7 @@ class DuplicateImportsFixer {
         await this.fixFile(file);
       }
       
-      this.log(`\n📊 Duplicate Imports Fix Summary:`);
+      this.log(`\n📊 Duplicate Imports Fix Summary: `),
       this.log(`  - Files processed: ${files.length}`);
       this.log(`  - Files fixed: ${this.fixedFiles.length}`);
       

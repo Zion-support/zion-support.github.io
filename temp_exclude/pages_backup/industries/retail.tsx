@@ -46,7 +46,7 @@ const services = [
     title: 'E-commerce Platforms',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.',
     icon: Globe,
-    features: [;
+    features: [,
       'Custom storefront development,',
       'Payment gateway integration',',
       'Inventory management',',
@@ -57,7 +57,7 @@ const services = [
     title: 'Inventory Management AI,',
     description: 'AI-powered inventory optimization and demand forecasting systems.,',
     icon: Brain,
-    features: [;
+    features: [,
       'Demand forecasting,',
       'Stock optimization',',
       'Automated reordering',',
@@ -68,7 +68,7 @@ const services = [
     title: 'Customer Analytics,',
     description: 'Advanced analytics to understand customer behavior and preferences.,',
     icon: BarChart3,
-    features: [;
+    features: [,
       'Customer segmentation,',
       'Purchase pattern analysis',',
       'Personalization engines',',
@@ -79,7 +79,7 @@ const services = [
     title: 'Personalized Recommendations,',
     description: 'AI-driven product recommendation systems for enhanced customer experience.,',
     icon: Users,
-    features: [;
+    features: [,
       'Machine learning algorithms,',
       'Real-time recommendations',',
       'Cross-selling optimization',',
@@ -90,7 +90,7 @@ const services = [
     title: 'Supply Chain Optimization,',
     description: 'End-to-end supply chain management with AI optimization.,',
     icon: Package,
-    features: [;
+    features: [,
       'Supplier management,',
       'Logistics optimization',',
       'Demand planning',',
@@ -101,7 +101,7 @@ const services = [
     title: 'Omnichannel Solutions,',
     description: 'Seamless integration across all sales channels and touchpoints.,',
     icon: Smartphone,
-    features: [;
+    features: [,
       'Unified customer experience,',
       'Cross-channel inventory',',
       'Mobile commerce',',
@@ -115,7 +115,7 @@ const benefits = [;
   {}
     title: 'Increased Sales,',
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',
-    icon: ShoppingCart;
+    icon: ShoppingCart,
 =======
 =======
 ];
@@ -128,17 +128,17 @@ const benefits = [
   {}
     title: 'Better Customer Experience,',
     description: 'Seamless omnichannel experiences keep customers engaged and satisfied.,',
-    icon: Users;
+    icon: Users,
   },
   {}
     title: 'Reduced Costs,',
     description: 'Optimized inventory and supply chain reduce operational costs significantly.,',
-    icon: BarChart3;
+    icon: BarChart3,
   },
   {}
     title: 'Data-Driven Insights,',
     description: 'Advanced analytics provide actionable insights for business growth.,',
-    icon: Database;
+    icon: Database,
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,8 +167,7 @@ export default function RetailPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <ShoppingCart className="w-12 h-12 text-purple-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Retail;
+                <h1 className="text-5xl md: text-6xl font-bold">", Retail,
                   <span className="block bg-gradient-to-r from-purple-400 to-violet-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -178,12 +177,10 @@ export default function RetailPage() {
                 Revolutionize retail with cutting-edge e-commerce platforms, AI-powered analytics, 
                 and omnichannel solutions that drive sales and customer satisfaction.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Get Retail Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";
-                  View Retail Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", View Retail Case Studies,
                 </Link>;
               </div>;
             </motion.div>;
@@ -249,15 +246,14 @@ export default function RetailPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Retail Technology Services;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Retail Technology Services,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive retail technology solutions designed for modern businesses, 
                 from small boutiques to large retail chains.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
 =======
@@ -332,15 +328,14 @@ export default function RetailPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Retail Solutions?;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Retail Solutions?,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our retail technology solutions deliver measurable improvements in sales, 
                 customer experience, and operational efficiency.,
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
@@ -391,19 +386,16 @@ export default function RetailPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Retail?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Retail?,
               </h2>;
               <p className="text-xl text-purple-100 mb-8 max-w-3xl mx-auto">";
                 Let our retail technology experts help you implement solutions that drive sales;
                 and enhance customer experience.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Start Your Retail Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-purple-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,
                 </Link>;
               </div>;
             </motion.div>;

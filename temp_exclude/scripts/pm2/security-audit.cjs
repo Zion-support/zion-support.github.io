@@ -20,7 +20,7 @@ const runCommand = (command, description) => {}
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
-      cwd: process.cwd();
+      cwd: process.cwd(),
     }
 });
     log(`Completed: ${description}`);
@@ -123,7 +123,7 @@ const checkFilePermissions = () => {}
 });
     
     if (result.trim()) {}
-      log('Warning: Files with overly permissive permissions found');
+      log('Warning: Files with overly permissive permissions found'),
       return { success: false, permissiveFiles: result.trim().split('\n').length };
     } else {}
       log('File permissions look good');
@@ -176,7 +176,7 @@ const main = async () => {}
     npmAudit: npmAuditResults,
     dependencies: dependencyResults,
     secrets: secretsResults,
-    filePermissions: filePermissionResults;
+    filePermissions: filePermissionResults,
   };
   
   const report = generateSecurityReport(results);
@@ -195,7 +195,7 @@ const main = async () => {}
       runCommand('npm update', 'Updating dependencies');
     };
   } else {}
-    log('Security audit passed: No issues found');
+    log('Security audit passed: No issues found'),
   };
   log('Security Audit Process completed');
 };

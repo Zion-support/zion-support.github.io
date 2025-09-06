@@ -284,7 +284,7 @@ class CollaborativeProcessManager extends EventEmitter {
       // Optimize target process configuration
       await this.optimizeProcessConfiguration(opportunity.target.name);
       
-      this.log(`✅ Resource sharing completed: memory optimization`);
+      this.log(`✅ Resource sharing completed: memory optimization`),
     }
   }
 
@@ -298,7 +298,7 @@ class CollaborativeProcessManager extends EventEmitter {
       // Scale up target process
       await this.scaleProcess(opportunity.target.name, 'up');
       
-      this.log(`✅ Load sharing completed: CPU redistribution`);
+      this.log(`✅ Load sharing completed: CPU redistribution`),
     }
   }
 
@@ -314,7 +314,7 @@ class CollaborativeProcessManager extends EventEmitter {
         // Apply successful configurations from source to target
         await this.applyConfigurationOptimizations(opportunity.target.name, sourceConfig.optimizations);
         
-        this.log(`✅ Knowledge sharing completed: best practices transfer`);
+        this.log(`✅ Knowledge sharing completed: best practices transfer`),
       }
     }
   }
@@ -335,9 +335,9 @@ class CollaborativeProcessManager extends EventEmitter {
     return new Promise((resolve, reject) => {
       pm2.list((err, processes) => {
         if (err) {
-          reject(err);
-          return;
-        }
+    reject(err),
+    return
+  }
 
         const process = processes.find(p => p.name === processName);
         if (!process) {
@@ -682,8 +682,8 @@ class CollaborativeProcessManager extends EventEmitter {
 
 // Run the manager
 if (require.main === module) {
-  const manager = new CollaborativeProcessManager();
-  manager.run();
-}
+    const manager = new CollaborativeProcessManager(),
+    manager.run()
+  }
 
 module.exports = CollaborativeProcessManager;

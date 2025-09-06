@@ -32,7 +32,7 @@ export const useMilestones = (projectId?: string) => {
     updateMilestoneStatus;
     updateMilestone;
     deleteMilestone;
-    uploadDeliverable: handleUploadDeliverable;
+    uploadDeliverable: handleUploadDeliverable,
     refetch
   }
 };

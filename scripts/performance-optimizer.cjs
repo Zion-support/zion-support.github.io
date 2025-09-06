@@ -99,8 +99,7 @@ function createPerformanceOptimizations() {
   const performanceMonitorContent = `import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  memoryUsage: number;
+  loadTime: number, memoryUsage: number,
   renderTime: number}
 
 const PerformanceMonitor: React.FC = () => {
@@ -163,9 +162,8 @@ function createBundleAnalyzer() {
   const bundleAnalyzerContent = `import React, { useEffect, useState } from 'react';
 
 interface BundleInfo {
-  totalSize: number;
-  jsSize: number;
-  cssSize: number;
+  totalSize: number, jsSize: number,
+  cssSize: number,
   imageSize: number}
 
 const BundleAnalyzer: React.FC = () => {
@@ -297,9 +295,9 @@ const BundleAnalyzer: React.FC = () => {
     const files = this.getFilesRecursively(dir);
     
     return files.filter(file => {
-      const ext = path.extname(file).toLowerCase();
-      return imageExtensions.includes(ext);
-    });
+    const ext = path.extname(file).toLowerCase(),
+    return imageExtensions.includes(ext)
+  });
   }
 
   getImageRecommendations(imageFiles) {
@@ -419,7 +417,7 @@ optimizer.optimizePerformance().then(report => {
     console.log(`Total Images: ${report.imageOptimization.totalImages || 0}`);
     console.log(`Optimized Images: ${report.imageOptimization.optimizedImages || 0}`);
     console.log(`Total Dependencies: ${report.dependencies.totalDependencies || 0}`);
-    console.log(`\nRecommendations:`);
+    console.log(`\nRecommendations: `),
     report.recommendations.forEach((rec, index) => {
       console.log(`${index + 1}. ${rec}`);
     });

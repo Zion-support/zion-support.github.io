@@ -23,14 +23,10 @@ export function useWorkExperience() {
       const { error } = await supabase
         .from('work_history')
         .insert({
-          resume_id: resumeId;
-          company_name: work.company_name;
-          role_title: work.role_title;
-          start_date: formatDateForDB(work.start_date);
-          end_date: work.is_current ? null : formatDateForDB(work.end_date);
-          is_current: work.is_current;
-          description: work.description;
-          company_logo_url: work.company_logo_url;
+          resume_id: resumeId, company_name: work.company_name,
+          role_title: work.role_title, start_date: formatDateForDB(work.start_date),
+          end_date: work.is_current ? null : formatDateForDB(work.end_date), is_current: work.is_current,
+          description: work.description, company_logo_url: work.company_logo_url,
           location: work.location
         });
       
@@ -57,13 +53,10 @@ export function useWorkExperience() {
       const { error } = await supabase
         .from('work_history')
         .update({
-          company_name: work.company_name;
-          role_title: work.role_title;
-          start_date: formatDateForDB(work.start_date);
-          end_date: work.is_current ? null : formatDateForDB(work.end_date);
-          is_current: work.is_current;
-          description: work.description;
-          company_logo_url: work.company_logo_url;
+          company_name: work.company_name, role_title: work.role_title,
+          start_date: formatDateForDB(work.start_date), end_date: work.is_current ? null : formatDateForDB(work.end_date),
+          is_current: work.is_current, description: work.description,
+          company_logo_url: work.company_logo_url,
           location: work.location
         })
         .eq('id', workId);

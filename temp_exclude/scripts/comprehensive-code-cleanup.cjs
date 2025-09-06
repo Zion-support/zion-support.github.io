@@ -120,13 +120,13 @@ class ComprehensiveCodeCleanup {
         await this.cleanFile(file);
       }
       
-      this.log(`\n📊 Cleanup Summary:`);
+      this.log(`\n📊 Cleanup Summary: `),
       this.log(`  - Files processed: ${files.length}`);
       this.log(`  - Files fixed: ${this.fixedFiles.length}`);
       this.log(`  - Errors: ${this.errors.length}`);
       
       if (this.errors.length > 0) {
-        this.log(`\n❌ Errors encountered:`);
+        this.log(`\n❌ Errors encountered: `),
         this.errors.forEach(err => {
           this.log(`  - ${err.file}: ${err.error}`, 'ERROR');
         });

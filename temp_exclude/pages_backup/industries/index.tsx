@@ -60,7 +60,7 @@ const industries = [
 } from 'lucide-react';
     href: '/industries/healthcare,',
     features: ['AI Diagnostics, 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],',
-    color: 'from-red-500 to-pink-500'';
+    color: 'from-red-500 to-pink-500'',
   },
   {
     name: 'Finance',
@@ -75,7 +75,7 @@ const industries = [
 =======
     href: '/industries/finance,',
     features: ['Blockchain Solutions, 'Fraud Detection', 'Trading Systems', 'Regulatory Compliance'],',
-    color: 'from-green-500 to-emerald-500'';
+    color: 'from-green-500 to-emerald-500'',
   },
   {
     name: 'Manufacturing',
@@ -90,7 +90,7 @@ const industries = [
 =======
     href: '/industries/manufacturing,',
     features: ['IoT Integration, 'Predictive Maintenance', 'Smart Factories', 'Quality Control'],',
-    color: 'from-blue-500 to-cyan-500'';
+    color: 'from-blue-500 to-cyan-500'',
   },
   {
     name: 'Retail',
@@ -105,7 +105,7 @@ const industries = [
 =======
     href: '/industries/retail,',
     features: ['Personalization, 'Inventory Management', 'Omnichannel', 'Customer Analytics'],',
-    color: 'from-purple-500 to-violet-500'';
+    color: 'from-purple-500 to-violet-500'',
   },
   {
     name: 'Education',
@@ -120,7 +120,7 @@ const industries = [
 =======
     href: '/industries/education,',
     features: ['AI Tutoring, 'Virtual Classrooms', 'Personalized Learning', 'Assessment Tools'],',
-    color: 'from-orange-500 to-yellow-500'';
+    color: 'from-orange-500 to-yellow-500'',
   },
   {
     name: 'Government',
@@ -143,7 +143,7 @@ const stats = [
 =======
     href: '/industries/government,',
     features: ['Citizen Portals, 'Data Analytics', 'Digital Services', 'Security Compliance'],',
-    color: 'from-gray-500 to-slate-500'';
+    color: 'from-gray-500 to-slate-500'',
   }
 ;];
 
@@ -283,22 +283,19 @@ export default function Industries() {
               className="text-center mb-16"
               className="text-center""
             >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">",
                 Industry-Specific{' '}',
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">";
                   Technology Solutions;
                 </span>;
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
-                We understand the unique challenges and requirements of different industries. Our specialized solutions;
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">", We understand the unique challenges and requirements of different industries. Our specialized solutions,
                 are designed to address sector-specific needs while ensuring compliance, security, and scalability.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">",
                   Get Industry Consultation;
                 </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">";
-                  View All Solutions;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-gray-900 transition-all duration-300 font-semibold">", View All Solutions,
                 </Link>;
               </div>;
             </motion.div>;
@@ -351,11 +348,9 @@ export default function Industries() {
                     key={index}
                     className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
             >,
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
-                Industries We Serve;
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">", Industries We Serve,
               </h2>;
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">";
-                Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges;
+              <p className="text-lg sm: text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">", Our deep industry expertise allows us to deliver tailored solutions that address specific sector challenges,
                 and drive measurable business outcomes.;
               </p>;
             </motion.div>;
@@ -375,7 +370,7 @@ export default function Industries() {
 
 =======
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => {}
                 const IconComponent = industry.icon;
                 return (;
@@ -432,8 +427,7 @@ export default function Industries() {
                             className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
                           >
                     <div className="mb-6">";
-                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions:</h4>";
-                      <div className="flex flex-wrap gap-2">";
+                      <h4 className="text-sm font-semibold text-gray-700 mb-3">Key Solutions: </h4>", <div className="flex flex-wrap gap-2">",
                         {industry.features.map((feature, idx) => (,
                           <span}),
                             key={idx}
@@ -472,8 +466,7 @@ export default function Industries() {
                       className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
                     >;
                       <span>Learn More</span>;
-                      <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />";
-                    </Link>;
+                      <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />", </Link>,
                   </motion.div>;
                     <div className="space-y-2 mb-6">
                       {industry.features.map((feature, idx) => (
@@ -528,11 +521,9 @@ export default function Industries() {
 =======
 =======
             >,
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">";
-                Why Choose Our Industry Solutions?;
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">", Why Choose Our Industry Solutions?,
               </h2>;
-              <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">";
-                We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.;
+              <p className="text-lg sm: text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">", We combine deep industry knowledge with cutting-edge technology to deliver solutions that truly understand your business.,
               </p>;
             </motion.div>;
 <<<<<<< HEAD
@@ -649,7 +640,7 @@ export default function Industries() {
 =======
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={index}
@@ -677,7 +668,7 @@ export default function Industries() {
 =======
 =======
                 >,
-                  <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">";
+                  <div className="text-3xl md: text-4xl font-bold text-blue-600 mb-2">",
                     {stat.number}
                   </div>,
                   <div className="text-gray-600 font-medium">{stat.label}</div>"
@@ -717,18 +708,15 @@ export default function Industries() {
                 </Link>
               </div>
             >,
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-                Ready to Transform Your Industry?;
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">", Ready to Transform Your Industry?,
               </h2>;
               <p className="text-xl mb-8 max-w-2xl mx-auto">";
                 Let our industry experts help you leverage technology to solve your sector-specific challenges.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Get Industry Consultation;
                 </Link>;
-                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                  Explore Solutions;
+                <Link href="/solutions" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Explore Solutions,
                 </Link>;
               </div>;
             </motion.div>;

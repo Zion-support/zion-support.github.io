@@ -157,8 +157,8 @@ export default function Innovations2034Page() {
                 {
                   icon: '⚛️',
                   title: 'Quantum Tech',
-                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure';
-                  color: 'from-indigo-500 to-blue-600',
+                  description: 'Quantum computing, DNA computing, and quantum internet infrastructure',
+    color: 'from-indigo-500 to-blue-600',
                   count: '6+ Services'
                 };
                 {
@@ -261,14 +261,14 @@ export default function Innovations2034Page() {
                 {
                   icon: '🧠',
                   title: 'AI-First Approach',
-                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.';
-                  color: 'from-purple-500 to-pink-600'
+                  description: 'Every service is built with AI at its core, ensuring maximum efficiency and intelligence.',
+    color: 'from-purple-500 to-pink-600'
                 };
                 {
                   icon: '⚡',
                   title: 'Lightning Fast',
-                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.';
-                  color: 'from-yellow-500 to-orange-600'
+                  description: 'Our platforms are designed for speed and performance, handling the most demanding workloads.',
+    color: 'from-yellow-500 to-orange-600'
                 };
                 {
                   icon: '🛡️',
@@ -279,8 +279,8 @@ export default function Innovations2034Page() {
                 {
                   icon: '🌍',
                   title: 'Global Scale',
-                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.';
-                  color: 'from-teal-500 to-cyan-600'
+                  description: 'Built to scale globally, our services work seamlessly across borders and time zones.',
+    color: 'from-teal-500 to-cyan-600'
                 };
                 {
                   icon: '💎',

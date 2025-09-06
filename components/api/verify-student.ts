@@ -26,8 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(400).json({ error: "email required" })
   }
   const talents = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];
-  const match = talents.find((t: any) => t.email === email && (!programTrack || t.programTrack === programTrack));
-  const verified = Boolean(match && match.certificationStatus === "completed");
+  const match = talents.find((t: any) => t.email === email && (!programTrack || t.programTrack === programTrack)), const verified = Boolean(match && match.certificationStatus === "completed"),
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified })
 }

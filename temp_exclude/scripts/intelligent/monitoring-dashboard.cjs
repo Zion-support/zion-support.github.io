@@ -64,36 +64,36 @@ class IntelligentMonitoringDashboard {
     
     this.app.get('/api/processes', async (req, res) => {
       try {
-        const processes = await this.getProcessMetrics();
-        res.json(processes);
-      } catch (error) {
+    const processes = await this.getProcessMetrics(),
+    res.json(processes)
+  } catch (error) {
         res.status(500).json({ error: error.message });
       }
     });
     
     this.app.get('/api/deployments', async (req, res) => {
       try {
-        const deployments = await this.getDeploymentHistory();
-        res.json(deployments);
-      } catch (error) {
+    const deployments = await this.getDeploymentHistory(),
+    res.json(deployments)
+  } catch (error) {
         res.status(500).json({ error: error.message });
       }
     });
     
     this.app.get('/api/alerts', async (req, res) => {
       try {
-        const alerts = await this.getAlerts();
-        res.json(alerts);
-      } catch (error) {
+    const alerts = await this.getAlerts(),
+    res.json(alerts)
+  } catch (error) {
         res.status(500).json({ error: error.message });
       }
     });
     
     this.app.get('/api/performance', async (req, res) => {
       try {
-        const performance = await this.getPerformanceMetrics();
-        res.json(performance);
-      } catch (error) {
+    const performance = await this.getPerformanceMetrics(),
+    res.json(performance)
+  } catch (error) {
         res.status(500).json({ error: error.message });
       }
     });
@@ -112,9 +112,9 @@ class IntelligentMonitoringDashboard {
       this.clients.add(ws);
       
       ws.on('close', () => {
-        console.log('📡 WebSocket connection closed');
-        this.clients.delete(ws);
-      });
+    console.log('📡 WebSocket connection closed'),
+    this.clients.delete(ws)
+  });
       
       ws.on('error', (error) => {
         console.error('WebSocket error:', error);
@@ -131,9 +131,9 @@ class IntelligentMonitoringDashboard {
       }
       
       try {
-        await this.collectMetrics();
-        this.broadcastMetrics();
-      } catch (error) {
+    await this.collectMetrics(),
+    this.broadcastMetrics()
+  } catch (error) {
         console.error('Error collecting metrics:', error);
       }
     }, 5000);
@@ -280,171 +280,141 @@ class IntelligentMonitoringDashboard {
     <title>Intelligent Monitoring Dashboard</title>
     <style>
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0, padding: 0,
+            box-sizing: border-box,
         }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
-            min-height: 100vh;
+            color: #333, min-height: 100vh,
         }
         
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
+            max-width: 1400px, margin: 0 auto,
+            padding: 20px,
         }
         
         .header {
-            text-align: center;
-            margin-bottom: 30px;
-            color: white;
+            text-align: center, margin-bottom: 30px,
+            color: white,
         }
         
         .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem, margin-bottom: 10px,
         }
         
         .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1.2rem, opacity: 0.9,
         }
         
         .dashboard-grid {
-            display: grid;
+            display: grid,
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-bottom: 30px;
+            gap: 20px, margin-bottom: 30px,
         }
         
         .card {
-            background: white;
-            border-radius: 10px;
-            padding: 20px;
+            background: white, border-radius: 10px,
+            padding: 20px,
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease,
         }
         
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px),
         }
         
         .card h3 {
-            color: #4a5568;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
+            color: #4a5568, margin-bottom: 15px,
+            font-size: 1.3rem,
         }
         
         .metric {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #e2e8f0;
+            display: flex, justify-content: space-between,
+            align-items: center, padding: 10px 0,
+            border-bottom: 1px solid #e2e8f0,
         }
         
         .metric:last-child {
-            border-bottom: none;
+            border-bottom: none,
         }
         
         .metric-label {
-            font-weight: 500;
-            color: #2d3748;
+            font-weight: 500, color: #2d3748,
         }
         
         .metric-value {
-            font-weight: 600;
-            color: #4a5568;
+            font-weight: 600, color: #4a5568,
         }
         
         .status {
-            display: inline-block;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            display: inline-block, padding: 4px 8px,
+            border-radius: 4px, font-size: 0.8rem,
+            font-weight: 600, text-transform: uppercase,
         }
         
         .status.online {
-            background: #c6f6d5;
-            color: #22543d;
+            background: #c6f6d5, color: #22543d,
         }
         
         .status.errored {
-            background: #fed7d7;
-            color: #742a2a;
+            background: #fed7d7, color: #742a2a,
         }
         
         .status.stopped {
-            background: #f7fafc;
-            color: #4a5568;
+            background: #f7fafc, color: #4a5568,
         }
         
         .chart-container {
-            height: 200px;
-            background: #f7fafc;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #718096;
+            height: 200px, background: #f7fafc,
+            border-radius: 8px, display: flex,
+            align-items: center, justify-content: center,
+            color: #718096,
         }
         
         .alerts-container {
-            max-height: 300px;
-            overflow-y: auto;
+            max-height: 300px, overflow-y: auto,
         }
         
         .alert {
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 6px;
-            border-left: 4px solid #e53e3e;
-            background: #fed7d7;
-            color: #742a2a;
+            padding: 10px, margin: 5px 0,
+            border-radius: 6px, border-left: 4px solid #e53e3e,
+            background: #fed7d7, color: #742a2a,
         }
         
         .alert.warning {
-            border-left-color: #ed8936;
-            background: #fbd38d;
-            color: #7b341e;
+            border-left-color: #ed8936, background: #fbd38d,
+            color: #7b341e,
         }
         
         .alert.info {
-            border-left-color: #3182ce;
-            background: #bee3f8;
-            color: #2c5282;
+            border-left-color: #3182ce, background: #bee3f8,
+            color: #2c5282,
         }
         
         .refresh-indicator {
-            position: fixed;
-            top: 20px;
-            right: 20px;
+            position: fixed, top: 20px,
+            right: 20px,
             background: rgba(255, 255, 255, 0.9);
-            padding: 10px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #4a5568;
+            padding: 10px 15px, border-radius: 20px,
+            font-size: 0.9rem, color: #4a5568,
         }
         
         .loading {
-            text-align: center;
-            padding: 40px;
-            color: #718096;
+            text-align: center, padding: 40px,
+            color: #718096,
         }
         
         @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+            0%, 100% { opacity: 1
+  }
+            50% { opacity: 0.5
+  }
         }
         
         .pulse {
-            animation: pulse 2s infinite;
+            animation: pulse 2s infinite,
         }
     </style>
 </head>
@@ -515,8 +485,7 @@ class IntelligentMonitoringDashboard {
         let reconnectInterval;
         
         function connectWebSocket() {
-            ws = new WebSocket('ws://localhost:8080');
-            
+            ws = new WebSocket('ws: //localhost:8080'),
             ws.onopen = function() {
                 console.log('WebSocket connected');
                 document.getElementById('refreshIndicator').textContent = '🟢 Connected';
@@ -622,9 +591,9 @@ class IntelligentMonitoringDashboard {
         
         function updateAlerts(alerts) {
             if (!alerts || alerts.length === 0) {
-                document.getElementById('alertsContainer').innerHTML = '<div class="loading">No recent alerts</div>';
-                return;
-            }
+    document.getElementById('alertsContainer').innerHTML = '<div class="loading">No recent alerts</div>',
+    return
+  }
             
             const container = document.getElementById('alertsContainer');
             container.innerHTML = alerts.slice(-10).map(alert => \`

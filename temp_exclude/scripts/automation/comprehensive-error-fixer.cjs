@@ -284,20 +284,13 @@ for (const filePath of filesToFix) {
       try {
   // Step "1": Fix merge conflicts;
         await this.fixMergeConflicts();
-        // Step 2: Fix TypeScript errors;
-        await this.fixTypeScriptErrors();
-        // Step 3: Fix ESLint errors;
-        await this.fixESLintErrors();
-        // Step 4: Fix import/export issues;
-        await this.fixImportExportIssues();
-        // Step 5: Fix file extension issues;
-        await this.fixFileExtensionIssues();
-        // Step 6: Fix syntax errors;
-        await this.fixSyntaxErrors();
-        // Step 7: Fix dependency issues;
-        await this.fixDependencyIssues();
-        // Step 8: Generate error report;
-        await this.generateErrorReport();
+        // Step 2: Fix TypeScript errors, await this.fixTypeScriptErrors(),
+        // Step 3: Fix ESLint errors, await this.fixESLintErrors(),
+        // Step 4: Fix import/export issues, await this.fixImportExportIssues(),
+        // Step 5: Fix file extension issues, await this.fixFileExtensionIssues(),
+        // Step 6: Fix syntax errors, await this.fixSyntaxErrors(),
+        // Step 7: Fix dependency issues, await this.fixDependencyIssues(),
+        // Step 8: Generate error report, await this.generateErrorReport(),
         this.log("Comprehensive error fixing completed successfully!")} catch (error) {
   this.log("Error during "automation": ${error.message  }")} catch (error) {
   this.log("Error during "automation": ${error.message  }");
@@ -358,20 +351,13 @@ this.errorReport.errorsFound.push({
       try {
   // Step "1": Fix merge conflicts;
         await this.fixMergeConflicts();
-        // Step 2: Fix TypeScript errors;
-        await this.fixTypeScriptErrors();
-        // Step 3: Fix ESLint errors;
-        await this.fixESLintErrors();
-        // Step 4: Fix import/export issues;
-        await this.fixImportExportIssues();
-        // Step 5: Fix file extension issues;
-        await this.fixFileExtensionIssues();
-        // Step 6: Fix syntax errors;
-        await this.fixSyntaxErrors();
-        // Step 7: Fix dependency issues;
-        await this.fixDependencyIssues();
-        // Step 8: Generate error report;
-        await this.generateErrorReport();
+        // Step 2: Fix TypeScript errors, await this.fixTypeScriptErrors(),
+        // Step 3: Fix ESLint errors, await this.fixESLintErrors(),
+        // Step 4: Fix import/export issues, await this.fixImportExportIssues(),
+        // Step 5: Fix file extension issues, await this.fixFileExtensionIssues(),
+        // Step 6: Fix syntax errors, await this.fixSyntaxErrors(),
+        // Step 7: Fix dependency issues, await this.fixDependencyIssues(),
+        // Step 8: Generate error report, await this.generateErrorReport(),
         this.log("Comprehensive error fixing completed successfully!")} catch (error) {
   this.log("Error during "automation": ${error.message}");
         this.errorReport.errorsFound.push({
@@ -403,18 +389,12 @@ this.errorReport.errorsFound.push({
     try {
   // Step "1": Fix syntax errors;
       this.fixSyntaxErrors();
-      // Step 2: Fix import issues;
-      this.fixImportIssues();
-      // Step 3: Fix component issues;
-      this.fixComponentIssues();
-      // Step 4: Fix dependency issues;
-      await this.fixDependencyIssues();
-      // Step 5: Fix build issues;
-      await this.fixBuildIssues();
-      // Step 6: Run type check;
-      const typeCheckPassed = await this.runTypeCheck();
-      // Step 7: Run lint;
-      const lintPassed = await this.runLint();
+      // Step 2: Fix import issues, this.fixImportIssues(),
+      // Step 3: Fix component issues, this.fixComponentIssues(),
+      // Step 4: Fix dependency issues, await this.fixDependencyIssues(),
+      // Step 5: Fix build issues, await this.fixBuildIssues(),
+      // Step 6: Run type check, const typeCheckPassed = await this.runTypeCheck(),
+      // Step 7: Run lint, const lintPassed = await this.runLint(),
       // Generate report;
       const report = await this.generateReport();
       this.log("Comprehensive Error Fixer completed. Fixed ${this.fixCount} errors.");

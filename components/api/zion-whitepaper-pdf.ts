@@ -7,7 +7,7 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
   doc.fontSize(20).fillColor('#111111').text(title, { underline: true });
   doc.moveDown();
   doc.fontSize(11).fillColor('#222222').text(content, {
-    width: 480;
+    width: 480,
     align: 'left'})
 }
 

@@ -1,9 +1,7 @@
 
 export interface TalentProfile {
-  id: string;
-  user_id: string;
-  full_name: string;
-  professional_title: string;
+  id: string, user_id: string,
+  full_name: string, professional_title: string,
   profile_picture_url?: string;
   bio?: string;
   summary?: string;
@@ -17,7 +15,7 @@ export interface TalentProfile {
   rating_count?: number;
   is_verified?: boolean;
   key_projects?: {
-    title: string;
+    title: string,
     description: string
   }[]
 }
@@ -32,21 +30,17 @@ export interface TalentProfileFilters {
 }
 
 export interface HireRequest {
-  id: string;
-  clientId: string;
-  talentId: string;
-  projectTitle: string;
-  projectDescription: string;
+  id: string, clientId: string,
+  talentId: string, projectTitle: string,
+  projectDescription: string,
   budget: {
-    min: number;
-    max: number;
+    min: number, max: number,
     currency: string
   };
   timeline: {
-    startDate: string;
-    endDate?: string;
+    startDate: string, endDate?: string,
     estimatedDuration?: string
   };
-  status: 'pending' | 'accepted' | 'rejected' | 'completed';
+  status: 'pending' | 'accepted' | 'rejected' | 'completed',
   createdAt: string
 }

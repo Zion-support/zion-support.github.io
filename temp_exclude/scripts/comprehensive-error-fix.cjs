@@ -431,10 +431,10 @@ export default nextConfig;`;
 
 // Run if called directly
 if (require.main === module) {
-  const fixer = new ComprehensiveErrorFix();
-  fixer.run()
+    const fixer = new ComprehensiveErrorFix(),
+    fixer.run()
     .then(() => fixer.generateReport())
-    .catch(console.error);
-}
+    .catch(console.error)
+  }
 
 module.exports = ComprehensiveErrorFix;

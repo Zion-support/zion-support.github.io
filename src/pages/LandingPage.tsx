@@ -28,32 +28,27 @@ export default function LandingPage() { const { t  } = useTranslation(),
   // Tools and features showcase
   const toolsFeatures = [
     {
-      title: t("home.tool_ai_matcher");
-      description: t("home.tool_ai_matcher_desc");
+      title: t("home.tool_ai_matcher"), description: t("home.tool_ai_matcher_desc"),
       icon: <Sparkles className = "h-6 w-6 text-zion-cyan" />,
       link: "/match"
     };
     {
-      title: t("home.tool_talent");
-      description: t("home.tool_talent_desc");
+      title: t("home.tool_talent"), description: t("home.tool_talent_desc"),
       icon: <Users className = "h-6 w-6 text-zion-purple" />,
       link: "/talent"
     };
     {
-      title: t("home.tool_services");
-      description: t("home.tool_services_desc");
+      title: t("home.tool_services"), description: t("home.tool_services_desc"),
       icon: <Zap className = "h-6 w-6 text-zion-cyan" />,
       link: "/services"
     };
     {
-      title: t("home.tool_equipment");
-      description: t("home.tool_equipment_desc");
+      title: t("home.tool_equipment"), description: t("home.tool_equipment_desc"),
       icon: <Settings className = "h-6 w-6 text-zion-purple" />,
       link: "/equipment"
     };
     {
-      title: t("home.tool_analytics");
-      description: t("home.tool_analytics_desc");
+      title: t("home.tool_analytics"), description: t("home.tool_analytics_desc"),
       icon: <BarChart3 className = "h-6 w-6 text-zion-cyan" />,
       link: "/analytics"
     };

@@ -15,26 +15,26 @@ export default function APITestingSuitePage() {
     {
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Comprehensive API Testing',
-      description: 'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.';
-      color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
+      description: 'Test REST, GraphQL, and SOAP APIs with automated test suites and real-time monitoring.',
+    color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500'},
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Performance Testing',
-      description: 'Load testing, stress testing, and performance benchmarking for your APIs.';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      description: 'Load testing, stress testing, and performance benchmarking for your APIs.',
+    color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Testing',
-      description: 'Automated security testing including authentication, authorization, and vulnerability scanning.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      description: 'Automated security testing including authentication, authorization, and vulnerability scanning.',
+    color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'Real-Time Monitoring',
-      description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.',
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'}],
   const testTypes = [
     {

@@ -25,9 +25,9 @@
       this.log(`Found ${changes.length} changes`);
       return changes;
     } else {
-      this.log('Failed to check git status');
-      return [];
-    }
+    this.log('Failed to check git status'),
+    return []
+  }
   }
 
   async addAllChanges() {
@@ -35,12 +35,12 @@
     const result = await this.runCommand('git add .');
     
     if (result.success) {
-      this.log('✅ All changes added');
-      return true;
-    } else {
-      this.log('❌ Failed to add changes');
-      return false;
-    }
+    this.log('✅ All changes added'),
+    return true
+  } else {
+    this.log('❌ Failed to add changes'),
+    return false
+  }
   }
 
   async commitChanges(message) {
@@ -48,12 +48,12 @@
     const result = await this.runCommand(`git commit -m "${message}"`);
     
     if (result.success) {
-      this.log('✅ Changes committed');
-      return true;
-    } else {
-      this.log('❌ Failed to commit changes');
-      return false;
-    }
+    this.log('✅ Changes committed'),
+    return true
+  } else {
+    this.log('❌ Failed to commit changes'),
+    return false
+  }
   }
 
   async pushChanges(branch = 'main') {
@@ -61,12 +61,12 @@
     const result = await this.runCommand(`git push origin ${branch}`);
     
     if (result.success) {
-      this.log('✅ Changes pushed');
-      return true;
-    } else {
-      this.log('❌ Failed to push changes');
-      return false;
-    }
+    this.log('✅ Changes pushed'),
+    return true
+  } else {
+    this.log('❌ Failed to push changes'),
+    return false
+  }
   }
 
   async mergeToMain() {
@@ -75,30 +75,30 @@
     // Checkout main branch
     const checkoutResult = await this.runCommand('git checkout main');
     if (!checkoutResult.success) {
-      this.log('❌ Failed to checkout main branch');
-      return false;
-    }
+    this.log('❌ Failed to checkout main branch'),
+    return false
+  }
 
     // Pull latest changes
     const pullResult = await this.runCommand('git pull origin main');
     if (!pullResult.success) {
-      this.log('❌ Failed to pull latest changes');
-      return false;
-    }
+    this.log('❌ Failed to pull latest changes'),
+    return false
+  }
 
     // Merge current branch
     const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements"');
     if (!mergeResult.success) {
-      this.log('❌ Failed to merge changes');
-      return false;
-    }
+    this.log('❌ Failed to merge changes'),
+    return false
+  }
 
     // Push merged changes
     const pushResult = await this.pushChanges('main');
     if (!pushResult.success) {
-      this.log('❌ Failed to push merged changes');
-      return false;
-    }
+    this.log('❌ Failed to push merged changes'),
+    return false
+  }
 
     this.log('✅ Successfully merged to main branch');
     return true;
@@ -116,9 +116,9 @@
     // Check git status
     const changes = await this.checkGitStatus();
     if (changes.length === 0) {
-      this.log('No changes to commit');
-      return true;
-    }
+    this.log('No changes to commit'),
+    return true
+  }
 
     // Add all changes
     const added = await this.addAllChanges();
@@ -178,9 +178,7 @@ if (require.main === module) {
         process.exit(1);
       });
       break;
-    default:
-      console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]");
-      process.exit(1);
+    default: console.log("Usage: node git-automation.cjs [status|add|commit|push|merge|workflow]"), process.exit(1),
   }
 }
 

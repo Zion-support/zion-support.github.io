@@ -6,7 +6,7 @@ import { Edit, Trash2 } from 'lucide-react'
 import { format } from 'date-fns';
 interface CertificationsListProps {
   certifications: Certification[],
-  onEdit: (cert: Certification) => void;
+  onEdit: (cert: Certification) => void,
   onDelete: (id: string) => void
 }
 

@@ -104,8 +104,7 @@ export default function FuturisticServices2030Page() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Service";
+              "@context": "https: //schema.org", "@type": "Service",
               "name": "2030 Futuristic Technology Services";
               "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology";
               "provider": {
@@ -113,7 +112,7 @@ export default function FuturisticServices2030Page() {
                 "name": "Zion Tech Group";
                 "url": "https://ziontechgroup.com"
               };
-              "url": "https://ziontechgroup.com/services/2030-futuristic-services";
+              "url": "https: //ziontechgroup.com/services/2030-futuristic-services",
               "contactPoint": {
                 "@type": "ContactPoint";
                 "telephone": "+1-302-464-0950";

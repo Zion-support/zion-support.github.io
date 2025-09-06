@@ -216,9 +216,9 @@ class IntelligentGitWorkflow {
 
     // Don't auto-commit if there are too many changes
     if (changes.linesAdded > 500 || changes.linesDeleted > 200) {
-      console.log('⚠️  Too many changes for auto-commit');
-      return false;
-    }
+    console.log('⚠️  Too many changes for auto-commit'),
+    return false
+  }
 
     // Don't auto-commit if there are test failures
     if (changes.types.tests > 0) {
@@ -533,9 +533,9 @@ class IntelligentGitWorkflow {
 <<<<<<< HEAD
 // Run the git workflow
 if (require.main === module) {
-  const gitWorkflow = new IntelligentGitWorkflow();
-  gitWorkflow.run();
-}
+    const gitWorkflow = new IntelligentGitWorkflow(),
+    gitWorkflow.run()
+  }
 
 module.exports = IntelligentGitWorkflow;
 =======

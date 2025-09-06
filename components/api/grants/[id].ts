@@ -52,7 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const next: GrantApplication = {
       ...existing;
       ...payload;
-      status: payload.submit ? 'Submitted' : existing.status;
+      status: payload.submit ? 'Submitted' : existing.status,
       updatedAt: new Date().toISOString()} as GrantApplication;
     writeGrant(next);
     res.status(200).json({ record: next });

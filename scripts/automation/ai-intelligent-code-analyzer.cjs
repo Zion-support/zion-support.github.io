@@ -103,9 +103,9 @@ class AIIntelligentCodeAnalyzer {
         ) {
           analyzeDirectory(filePath, depth + 1);
         } else if (stat.isFile()) {
-          const ext = path.extname(file);
-          structure.fileTypes[ext] = (structure.fileTypes[ext] || 0) + 1;
-        }
+    const ext = path.extname(file),
+    structure.fileTypes[ext] = (structure.fileTypes[ext] || 0) + 1
+  }
       });
     };
 
@@ -457,7 +457,7 @@ class AIIntelligentCodeAnalyzer {
     );
     fs.writeFileSync(reportFile, JSON.stringify(this.analysisResults, null, 2));
 
-    console.log('📊 Analysis Results:');
+    console.log('📊 Analysis Results: '),
     console.log(
       `- Code Quality Score: ${this.analysisResults.codeQuality.metrics.maintainability}/100`
     );

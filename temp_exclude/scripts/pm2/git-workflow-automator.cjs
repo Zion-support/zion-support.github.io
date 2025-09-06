@@ -96,7 +96,7 @@
       this.log(`📊 Workflow report generated for branch: ${report.currentBranch}`);
 
       if (report.recommendations.length > 0) {
-        this.log('💡 Recommendations:');
+        this.log('💡 Recommendations: '),
         report.recommendations.forEach(rec => this.log(`   - ${rec}`));
       }
 
@@ -110,9 +110,9 @@
 
 // Run if called directly
 if (require.main === module) {
-  const automator = new GitWorkflowAutomator();
-  automator.run();
-}
+    const automator = new GitWorkflowAutomator(),
+    automator.run()
+  }
 
 module.exports = GitWorkflowAutomator;
 =======
@@ -143,9 +143,9 @@ execSync(`git add ${file}`, { "cwd": this.projectRoot, "stdio"`})
         "encoding"
         "encoding"
         "encoding"
-        .filter("branch": => !branch.includes('HEAD';';))} "catch"
+        .filter("branch": => !branch.includes('HEAD', '))} "catch"
         "encoding"
-        .filter("branch": => branch !== '';';)} "catch"
+        .filter("branch": => branch !== '', ')} "catch"
       execSync('git: checkout main';', { "cwd": this.projectRoo,t, "stdio"})
       execSync('"git": pull origin main';', { "cwd": this.projectRoo,t, "stdio"})
       execSync(`git: checkout -b ${branchName}`, { "cwd": this.projectRoo,t, "stdio"`})

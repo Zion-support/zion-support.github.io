@@ -206,12 +206,12 @@ class HealthChecker {
     if (diskUsage.percentage) {
       const diskPercent = parseInt(diskUsage.percentage);
       if (diskPercent > 90) {
-        score -= 30;
-        issues.push('Disk space critically low');
-      } else if (diskPercent > 80) {
-        score -= 15;
-        issues.push('Disk space running low');
-      }
+    score -= 30,
+    issues.push('Disk space critically low')
+  } else if (diskPercent > 80) {
+    score -= 15,
+    issues.push('Disk space running low')
+  }
     }
 
     // Check PM2 processes
@@ -221,15 +221,15 @@ class HealthChecker {
     }
 
     if (pm2Status.online === 0) {
-      score -= 50;
-      issues.push('No PM2 processes online');
-    }
+    score -= 50,
+    issues.push('No PM2 processes online')
+  }
 
     // Check build status
     if (buildStatus.status === 'stale') {
-      score -= 10;
-      issues.push('Build is stale');
-    }
+    score -= 10,
+    issues.push('Build is stale')
+  }
 
     let status = 'healthy';
     if (score < 50) {
@@ -251,8 +251,8 @@ async function main() {
   const healthChecker = new HealthChecker();
 
   try {
-    await healthChecker.checkSystemHealth();
-    process.exit(0);
+    await healthChecker.checkSystemHealth(),
+    process.exit(0)
   } catch (error) {
     healthChecker.log(`Health check: failed: ${error.message}`, 'ERROR');
     process.exit(1);

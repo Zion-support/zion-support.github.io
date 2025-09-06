@@ -1,102 +1,73 @@
 export interface CustomerTicket {
-  id: string;
-  customerId: string;
-  subject: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed';
-  category: string;
-  assignedTo?: string;
-  createdAt: Date;
-  updatedAt: Date;
+  id: string, customerId: string,
+  subject: string, description: string,
+  priority: 'low' | 'medium' | 'high' | 'urgent', status: 'open' | 'in_progress' | 'waiting_customer' | 'resolved' | 'closed',
+  category: string, assignedTo?: string,
+  createdAt: Date, updatedAt: Date,
   resolvedAt?: Date;
   customerSatisfaction?: number;
-  tags: string[];
-  attachments: string[];
+  tags: string[], attachments: string[],
   conversationHistory: CustomerMessage[]
 }
 
 export interface CustomerMessage {
-  id: string;
-  ticketId: string;
-  senderId: string;
-  senderType: 'customer' | 'agent' | 'ai';
-  message: string;
-  timestamp: Date;
+  id: string, ticketId: string,
+  senderId: string, senderType: 'customer' | 'agent' | 'ai',
+  message: string, timestamp: Date,
   attachments?: string[];
-  sentiment: 'positive' | 'neutral' | 'negative';
-  intent: string;
+  sentiment: 'positive' | 'neutral' | 'negative', intent: string,
   confidence: number
 }
 
 export interface CustomerProfile {
-  id: string;
-  email: string;
-  name: string;
-  phone?: string;
+  id: string, email: string,
+  name: string, phone?: string,
   company?: string;
-  plan: string;
-  totalTickets: number;
-  resolvedTickets: number;
-  averageResolutionTime: number;
-  customerSatisfaction: number;
-  lastContact: Date;
+  plan: string, totalTickets: number,
+  resolvedTickets: number, averageResolutionTime: number,
+  customerSatisfaction: number, lastContact: Date,
   preferences: {
-    communicationChannel: 'email' | 'chat' | 'phone';
-    language: string;
+    communicationChannel: 'email' | 'chat' | 'phone', language: string,
     timezone: string
   };
   tags: string[]
 }
 
 export interface AIResponse {
-  id: string;
-  ticketId: string;
-  response: string;
-  confidence: number;
-  suggestedActions: string[];
-  nextSteps: string[];
-  requiresHumanReview: boolean;
+  id: string, ticketId: string,
+  response: string, confidence: number,
+  suggestedActions: string[], nextSteps: string[],
+  requiresHumanReview: boolean,
   generatedAt: Date
 }
 
 export interface CustomerServiceMetrics {
-  totalTickets: number;
-  openTickets: number;
-  resolvedTickets: number;
-  averageResolutionTime: number;
-  customerSatisfaction: number;
-  firstResponseTime: number;
+  totalTickets: number, openTickets: number,
+  resolvedTickets: number, averageResolutionTime: number,
+  customerSatisfaction: number, firstResponseTime: number,
   ticketVolumeByCategory: Record<string, number>;
   agentPerformance: Record<string, {
-    ticketsResolved: number;
-    averageResolutionTime: number;
+    ticketsResolved: number, averageResolutionTime: number,
     customerSatisfaction: number
   }>
 }
 
 export interface CustomerServiceRequest {
-  customerId: string;
-  subject: string;
-  description: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  category: string;
-  attachments?: string[];
+  customerId: string, subject: string,
+  description: string, priority: 'low' | 'medium' | 'high' | 'urgent',
+  category: string, attachments?: string[],
   preferredChannel?: 'email' | 'chat' | 'phone'
 }
 
 export interface CustomerServiceResponse {
-  ticketId: string;
-  status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated';
+  ticketId: string, status: 'created' | 'ai_responding' | 'assigned_to_agent' | 'escalated',
   aiResponse?: AIResponse;
-  estimatedResolutionTime: string;
-  nextSteps: string[];
+  estimatedResolutionTime: string, nextSteps: string[],
   assignedAgent?: string
 }
 
 export class AICustomerServiceService {
-  private apiKey: string;
-  private baseUrl: string;
+  private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
     this.apiKey = apiKey;
@@ -106,7 +77,7 @@ export class AICustomerServiceService {
   async createTicket(request: CustomerServiceRequest): Promise<CustomerServiceResponse> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`};
         body: JSON.stringify(request)});
@@ -136,9 +107,8 @@ export class AICustomerServiceService {
       const data = await response.json();
       return {
         ...data;
-        createdAt: new Date(data.createdAt);
-        updatedAt: new Date(data.updatedAt);
-        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
+        createdAt: new Date(data.createdAt), updatedAt: new Date(data.updatedAt),
+        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
         conversationHistory: data.conversationHistory.map((msg: any) => ({
           ...msg;
           timestamp: new Date(msg.timestamp)}))}
@@ -151,7 +121,7 @@ export class AICustomerServiceService {
   async updateTicket(ticketId: string, updates: Partial<CustomerTicket>): Promise<CustomerTicket> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}`, {
-        method: 'PATCH';
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`};
         body: JSON.stringify(updates)});
@@ -163,9 +133,8 @@ export class AICustomerServiceService {
       const data = await response.json();
       return {
         ...data;
-        createdAt: new Date(data.createdAt);
-        updatedAt: new Date(data.updatedAt);
-        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined;
+        createdAt: new Date(data.createdAt), updatedAt: new Date(data.updatedAt),
+        resolvedAt: data.resolvedAt ? new Date(data.resolvedAt) : undefined,
         conversationHistory: data.conversationHistory.map((msg: any) => ({
           ...msg;
           timestamp: new Date(msg.timestamp)}))}
@@ -178,7 +147,7 @@ export class AICustomerServiceService {
   async addMessage(ticketId: string, message: Omit<CustomerMessage, 'id' | 'timestamp'>): Promise<CustomerMessage> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/messages`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`};
         body: JSON.stringify(message)});
@@ -200,7 +169,7 @@ export class AICustomerServiceService {
   async generateAIResponse(ticketId: string): Promise<AIResponse> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/${ticketId}/ai-response`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
 
@@ -269,9 +238,8 @@ export class AICustomerServiceService {
       const data = await response.json();
       return data.tickets.map((ticket: any) => ({
         ...ticket;
-        createdAt: new Date(ticket.createdAt);
-        updatedAt: new Date(ticket.updatedAt);
-        resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined;
+        createdAt: new Date(ticket.createdAt), updatedAt: new Date(ticket.updatedAt),
+        resolvedAt: ticket.resolvedAt ? new Date(ticket.resolvedAt) : undefined,
         conversationHistory: ticket.conversationHistory.map((msg: any) => ({
           ...msg;
           timestamp: new Date(msg.timestamp)}))}))
@@ -284,7 +252,7 @@ export class AICustomerServiceService {
   async autoAssignTickets(): Promise<{ assigned: number, failed: number }> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/tickets/auto-assign`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`}});
 
@@ -302,7 +270,7 @@ export class AICustomerServiceService {
   async generateCustomerServiceReport(timeframe: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
       const response = await fetch(`${this.baseUrl}/api/customer-service/reports`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Content-Type': 'application/jsonAuthorization': `Bearer ${this.apiKey}`};
         body: JSON.stringify({ timeframe, format })});

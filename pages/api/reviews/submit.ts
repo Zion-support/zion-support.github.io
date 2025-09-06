@@ -16,12 +16,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       text;
       categories;
       anonymous} = req.body as {
-      projectId: string;
-      fromRole: 'client' | 'talent';
-      fromId: string;
-      rating: number;
-      text: string;
-      categories?: Review['categories'];
+      projectId: string, fromRole: 'client' | 'talent',
+      fromId: string, rating: number,
+      text: string, categories?: Review['categories'],
       anonymous?: boolean
     };
 
@@ -58,20 +55,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const now = new Date().toISOString();
     const review: Review = {
-      id: uuidv4();
-      projectId;
+      id: uuidv4(), projectId,
       fromRole;
       fromId;
       toRole;
       toId;
       rating;
-      text: String(text).trim();
-      categories;
-      anonymous: Boolean(anonymous);
+      text: String(text).trim(), categories,
+      anonymous: Boolean(anonymous),
       approved: false, // requires admin approval
-      reported: false;
-      reports: [];
-      removed: false;
+      reported: false, reports: [],
+      removed: false,
       createdAt: now};
 
     await upsertReview(review);

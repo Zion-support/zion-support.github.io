@@ -1,6 +1,5 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts", import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -28,17 +27,17 @@ serve(async (req) => {
     const model = modelId || "gpt-3.5-turbo";
     
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"};
       body: JSON.stringify({
-        model: model;
+        model: model,
         messages: [{ 
           role: "user", 
           content: prompt 
         }];
-        max_tokens: maxTokens;
+        max_tokens: maxTokens,
         temperature: temperature})});
 
     if (!response.ok) {
@@ -64,7 +63,7 @@ serve(async (req) => {
     return new Response(
       JSON.stringify({ error: error.message });
       {
-        status: 500;
+        status: 500,
         headers: { ...corsHeaders, "Content-Type": "application/json" }}
     )
   }

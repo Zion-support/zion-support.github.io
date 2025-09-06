@@ -26,8 +26,8 @@ export default function MicroSaasServicesPage() {
     {
       id: 'ai-content-generator',
       name: 'AI Content Generator',
-      description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.';
-      icon: <Brain className="w-8 h-8 text-white" />,
+      description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
+    icon: <Brain className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       features: [
@@ -49,8 +49,8 @@ export default function MicroSaasServicesPage() {
     {
       id: 'performance-monitor',
       name: 'Website Performance Monitor',
-      description: 'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.';
-      icon: <Monitor className="w-8 h-8 text-white" />,
+      description: 'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.',
+    icon: <Monitor className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
       features: [
@@ -72,8 +72,8 @@ export default function MicroSaasServicesPage() {
     {
       id: 'seo-analytics',
       name: 'SEO Analytics Dashboard',
-      description: 'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.';
-      icon: <Search className="w-8 h-8 text-white" />,
+      description: 'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',
+    icon: <Search className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
       features: [
@@ -95,8 +95,8 @@ export default function MicroSaasServicesPage() {
     {
       id: 'api-rate-limiter',
       name: 'API Rate Limiter',
-      description: 'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.';
-      icon: <Shield className="w-8 h-8 text-white" />,
+      description: 'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.',
+    icon: <Shield className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
       features: [
@@ -118,8 +118,8 @@ export default function MicroSaasServicesPage() {
     {
       id: 'email-marketing',
       name: 'Email Marketing Automation',
-      description: 'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.';
-      icon: <Mail className="w-8 h-8 text-white" />,
+      description: 'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.',
+    icon: <Mail className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
       features: [
@@ -141,8 +141,8 @@ export default function MicroSaasServicesPage() {
     {
       id: 'social-media-scheduler',
       name: 'Social Media Scheduler',
-      description: 'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.';
-      icon: <Share2 className="w-8 h-8 text-white" />,
+      description: 'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',
+    icon: <Share2 className="w-8 h-8 text-white" />,
       color: 'bg-gradient-to-br from-pink-500 to-rose-600',
       gradient: 'from-pink-400 to-rose-500',
       features: [

@@ -2216,7 +2216,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
               <h3 className="text-xl font-bold text-gray-900 mb-2">Free Consultation</h3>
               <p className="text-gray-600 mb-4">Get expert advice on your micro SaaS project with our complimentary 30-minute consultation.</p>
               <a href="tel:+13024640950" className="text-purple-600 font-semibold hover:text-purple-700">
-                Call Now: +1 302 464 0950;
+                Call Now: +1 302 464 0950,
               </a>
             </motion.div>
 

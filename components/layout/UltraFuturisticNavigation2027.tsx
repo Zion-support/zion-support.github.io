@@ -146,22 +146,22 @@ export default function UltraFuturisticNavigation2027() {
           name: 'AI Consciousness Platform',
           href: '/services/ai-consciousness-platform',
           description: 'Advanced AI consciousness simulation',
-          price: '$5,999/month';
-          icon: '🧠'
+          price: '$5,999/month',
+    icon: '🧠'
         };
         { 
           name: 'Quantum Machine Learning',
           href: '/services/quantum-machine-learning',
           description: 'Quantum-powered ML platform',
-          price: '$12,999/month';
-          icon: '⚛️'
+          price: '$12,999/month',
+    icon: '⚛️'
         };
         { 
           name: 'Autonomous AI Agents',
           href: '/services/autonomous-ai-agents',
           description: 'Self-operating AI systems',
-          price: '$4,999/month';
-          icon: '🤖'
+          price: '$4,999/month',
+    icon: '🤖'
         };
         { 
           name: 'AI Content Factory',
@@ -189,29 +189,29 @@ export default function UltraFuturisticNavigation2027() {
           name: 'Quantum Neural Interface',
           href: '/services/quantum-neural-interface',
           description: 'Quantum + Neural Networks',
-          price: '$8,999/month';
-          icon: '⚛️'
+          price: '$8,999/month',
+    icon: '⚛️'
         };
         { 
           name: 'Quantum Financial Trading',
           href: '/services/quantum-financial-trading',
           description: 'Quantum-powered trading',
-          price: '$9,999/month';
-          icon: '💰'
+          price: '$9,999/month',
+    icon: '💰'
         };
         { 
           name: 'Quantum Internet Protocol',
           href: '/services/quantum-internet-protocol',
           description: 'Quantum communication network',
-          price: '$7,999/month';
-          icon: '🌐'
+          price: '$7,999/month',
+    icon: '🌐'
         };
         { 
           name: 'Quantum Sensors Network',
           href: '/services/quantum-sensors-network',
           description: 'Ultra-precise quantum sensors',
-          price: '$9,999/month';
-          icon: '📡'
+          price: '$9,999/month',
+    icon: '📡'
         };
         { 
           name: 'View All Quantum Services',
@@ -232,29 +232,29 @@ export default function UltraFuturisticNavigation2027() {
           name: 'Holographic Metaverse',
           href: '/services/holographic-metaverse-platform',
           description: '3D immersive experiences',
-          price: '$3,999/month';
-          icon: '🎭'
+          price: '$3,999/month',
+    icon: '🎭'
         };
         { 
           name: 'Neuromorphic Computing',
           href: '/services/neuromorphic-computing',
           description: 'Brain-inspired computing',
-          price: '$8,999/month';
-          icon: '🧠'
+          price: '$8,999/month',
+    icon: '🧠'
         };
         { 
           name: 'Synthetic Biology',
           href: '/services/synthetic-biology-platform',
           description: 'AI-powered bioengineering',
-          price: '$15,999/month';
-          icon: '🧬'
+          price: '$15,999/month',
+    icon: '🧬'
         };
         { 
           name: 'Brain-Computer Interface',
           href: '/services/brain-computer-interface',
           description: 'Direct brain communication',
-          price: '$19,999/month';
-          icon: '💻'
+          price: '$19,999/month',
+    icon: '💻'
         };
         { 
           name: 'View All Emerging Tech',
@@ -318,29 +318,29 @@ export default function UltraFuturisticNavigation2027() {
           name: 'Cyber-Physical Security',
           href: '/services/cyber-physical-security',
           description: 'Digital + Physical protection',
-          price: '$6,999/month';
-          icon: '🛡️'
+          price: '$6,999/month',
+    icon: '🛡️'
         };
         { 
           name: 'Quantum Internet Security',
           href: '/services/quantum-internet-security',
           description: 'Unhackable quantum security',
-          price: '$7,999/month';
-          icon: '🔐'
+          price: '$7,999/month',
+    icon: '🔐'
         };
         { 
           name: 'Zero Trust Architecture',
           href: '/services/zero-trust-network-architecture',
           description: 'Continuous verification',
-          price: '$4,999/month';
-          icon: '✅'
+          price: '$4,999/month',
+    icon: '✅'
         };
         { 
           name: 'AI Threat Detection',
           href: '/services/ai-threat-detection',
           description: 'Intelligent security monitoring',
-          price: '$3,999/month';
-          icon: '👁️'
+          price: '$3,999/month',
+    icon: '👁️'
         };
         { 
           name: 'View All Security Solutions',
@@ -368,22 +368,22 @@ export default function UltraFuturisticNavigation2027() {
           name: 'Edge Computing Orchestration',
           href: '/services/edge-computing-orchestration',
           description: 'Distributed edge management',
-          price: '$3,499/month';
-          icon: '🌐'
+          price: '$3,499/month',
+    icon: '🌐'
         };
         { 
           name: 'AI Operations Center',
           href: '/services/enterprise-ai-operations-center',
           description: 'Centralized AI management',
-          price: '$8,999/month';
-          icon: '🏢'
+          price: '$8,999/month',
+    icon: '🏢'
         };
         { 
           name: 'Infrastructure Drift Detection',
           href: '/services/infrastructure-drift-detector',
           description: 'Automated infrastructure monitoring',
-          price: '$2,999/month';
-          icon: '🔍'
+          price: '$2,999/month',
+    icon: '🔍'
         };
         { 
           name: 'View All Enterprise Solutions',

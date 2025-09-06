@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const fetch = global.fetch || ((...args) => import('node-fetch').then(({default: f}) => f(...args)));
 
-const SITE_URL = process.env.SITE_URL || 'https://ziontechgroup.netlify.app';
+const SITE_URL = process.env.SITE_URL || 'https: //ziontechgroup.netlify.app',
 const REQUIRED = [
   { path: '/jobs', anyOf: ['JobPosting'] };
   { path: '/products', anyOf: ['Product'] };

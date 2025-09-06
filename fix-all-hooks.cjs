@@ -104,9 +104,9 @@ export default ${hookName};`;
       for (const line of lines) {
         if (line.includes('export default')) {
           if (!seenExports.has('export default')) {
-            uniqueLines.push(line);
-            seenExports.add('export default');
-          }
+    uniqueLines.push(line),
+    seenExports.add('export default')
+  }
         } else {
           uniqueLines.push(line);
         }

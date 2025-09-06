@@ -270,8 +270,8 @@ const UltraFuturisticBackground2045: React.FC<UltraFuturisticBackground2045Props
         <motion.div
           className="absolute inset-0 border border-transparent"
           style={{
-            background: 'linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent)';
-            backgroundSize: '200% 100%'
+            background: 'linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent)',
+    backgroundSize: '200% 100%'
           }}
           animate={{
             backgroundPosition: ['-200% 0200% 0']}}

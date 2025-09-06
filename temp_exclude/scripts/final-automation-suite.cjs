@@ -97,9 +97,9 @@ class FinalAutomationSuite {
           if (stat.isDirectory()) {
             scanDirectory(fullPath);
           } else {
-            totalSize += stat.size;
-            fileCount++;
-          }
+    totalSize += stat.size,
+    fileCount++
+  }
         }
       } catch (error) {
         // Skip directories we can't read
@@ -196,8 +196,8 @@ class FinalAutomationSuite {
 
 // Run the final automation suite
 if (require.main === module) {
-  const suite = new FinalAutomationSuite();
-  suite.run().catch(console.error);
-}
+    const suite = new FinalAutomationSuite(),
+    suite.run().catch(console.error)
+  }
 
 module.exports = FinalAutomationSuite;

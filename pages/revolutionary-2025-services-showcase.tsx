@@ -37,7 +37,7 @@ const serviceCategories = [
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond';
+    description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from-blue-500 to-cyan-500',
     services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),

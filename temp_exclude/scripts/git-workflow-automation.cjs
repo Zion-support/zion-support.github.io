@@ -134,9 +134,9 @@ class GitWorkflowAutomation {
     this.log(`Found ${conflictedFiles.length} conflicted files`);
     
     for (const file of conflictedFiles) {
-      const fileName = file.split(' ')[1];
-      await this.resolveFileConflicts(fileName);
-    }
+    const fileName = file.split(' ')[1],
+    await this.resolveFileConflicts(fileName)
+  }
     
     return { success: true };
   }
@@ -177,8 +177,7 @@ class GitWorkflowAutomation {
       if (status.length > 0) {
         // Stage and commit changes
         await this.stageChanges();
-        await this.commitChanges('Automated commit: Error fixes and PM2 automation setup');
-        
+        await this.commitChanges('Automated commit: Error fixes and PM2 automation setup'),
         // Push changes
         await this.pushChanges(currentBranch);
         
@@ -201,8 +200,8 @@ class GitWorkflowAutomation {
 
 // Run if called directly
 if (require.main === module) {
-  const automation = new GitWorkflowAutomation();
-  automation.runWorkflow().catch(console.error);
-}
+    const automation = new GitWorkflowAutomation(),
+    automation.runWorkflow().catch(console.error)
+  }
 
 module.exports = GitWorkflowAutomation;

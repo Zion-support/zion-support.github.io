@@ -15,9 +15,8 @@ export function useTranslationService() {
   const { currentLanguage } = useLanguage();
   
   const translateContent = async (
-    content: string;
-    contentType: ContentType = 'general';
-    sourceLanguage: SupportedLanguage = 'en';
+    content: string, contentType: ContentType = 'general',
+    sourceLanguage: SupportedLanguage = 'en',
     targetLanguages: SupportedLanguage[] = ['enesptar']
   ): Promise<TranslationResponse> => {
     setIsTranslating(true);
@@ -37,9 +36,8 @@ export function useTranslationService() {
       if (error) {
         console.error('Translation error:', error);
         const initialTranslations: Record<SupportedLanguage, string> = {
-          en: content;
-          es: '';
-          pt: '';
+          en: content, es: '',
+          pt: '',
           ar: ''
         };
         initialTranslations[sourceLanguage] = content;
@@ -52,15 +50,14 @@ export function useTranslationService() {
       console.error('Translation service error:', err);
       
       const initialTranslations: Record<SupportedLanguage, string> = {
-        en: content;
-        es: '';
-        pt: '';
+        en: content, es: '',
+        pt: '',
         ar: ''
       };
       initialTranslations[sourceLanguage] = content;
       
       return { 
-        translations: initialTranslations;
+        translations: initialTranslations,
         error: err instanceof Error ? err.message : 'Unknown translation error' 
       }
     }

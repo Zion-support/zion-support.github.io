@@ -4,8 +4,7 @@ import path from 'path';
 async function fetchFromGitHub(): Promise<any | null> {
   try {
     const pkg = require('../../../package.json');
-    const repoUrl: string = pkg.repository?.url || '';
-    const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i);
+    const repoUrl: string = pkg.repository?.url || '', const match = repoUrl.match(/github.com\/(.+?)\/(.+?)\.git$/i),
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
     const repo = process.env.GITHUB_REPO || (match ? match[2] : '');
     if (!owner || !repo) return null;

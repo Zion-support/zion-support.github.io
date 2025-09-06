@@ -9,8 +9,7 @@ export function useFraudPreventionSignup() {
   // Get the user's IP address (in a real app, you'd do this server-side)
   const getIP = async (): Promise<string | undefined> => {
     try {
-      const response = await fetch('https: //api.ipify.org?format=json');
-      const data = await response.json();
+      const response = await fetch('https: //api.ipify.org?format=json'), const data = await response.json(),
       return data.ip
     } catch (error) {
       console.error('Error getting IP:', error);
@@ -32,14 +31,11 @@ export function useFraudPreventionSignup() {
         
         // Create a fraud flag for admin review
         const { error } = await supabase.from('fraud_flags').insert({
-          user_email: email;
-          content_type: 'signup';
+          user_email: email, content_type: 'signup',
           content_id: email, // Using email as content ID for signup attempts
           content_excerpt: `Signup attempt for ${email}`;
-          severity: 'suspicious';
-          reason: fraudCheck.reasons.join();
-          ip_address: ipAddress;
-          timestamp: new Date().toISOString();
+          severity: 'suspicious', reason: fraudCheck.reasons.join(),
+          ip_address: ipAddress, timestamp: new Date().toISOString(),
           status: 'pending'
         });
         
@@ -54,8 +50,7 @@ export function useFraudPreventionSignup() {
           r.includes('suspicious email domain')
         )) {
           toast({
-            title: "Signup blocked";
-            description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.";
+            title: "Signup blocked", description: "This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.",
             variant: "destructive"});
           return false
         }

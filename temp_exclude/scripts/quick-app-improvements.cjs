@@ -74,9 +74,9 @@ class PerformanceImprover {
 }
 
 if (require.main === module) {
-  const improver = new PerformanceImprover();
-  improver.improve();
-}
+    const improver = new PerformanceImprover(),
+    improver.improve()
+  }
 
 module.exports = PerformanceImprover;`;
 
@@ -122,9 +122,9 @@ class SecurityImprover {
 }
 
 if (require.main === module) {
-  const improver = new SecurityImprover();
-  improver.improve();
-}
+    const improver = new SecurityImprover(),
+    improver.improve()
+  }
 
 module.exports = SecurityImprover;`;
 
@@ -153,8 +153,8 @@ module.exports = SecurityImprover;`;
 }
 
 if (require.main === module) {
-  const improver = new QuickAppImprovements();
-  improver.run().catch(console.error);
-}
+    const improver = new QuickAppImprovements(),
+    improver.run().catch(console.error)
+  }
 
 module.exports = QuickAppImprovements;

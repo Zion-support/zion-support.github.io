@@ -28,13 +28,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const records = (await fs.pathExists(TALENTS_FILE)) ? await fs.readJSON(TALENTS_FILE) : [];
   const now = new Date().toISOString();
   const record = {
-    id: uuidv4();
-    name;
+    id: uuidv4(), name,
     email;
-    skills: skills || [];
-    programTrack: programTrack || null;
-    certificationStatus: certificationStatus || "pending";
-    partnerId: auth.partner.id;
+    skills: skills || [], programTrack: programTrack || null,
+    certificationStatus: certificationStatus || "pending", partnerId: auth.partner.id,
     createdAt: now};
   records.push(record);
   await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });

@@ -5,8 +5,7 @@ import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 interface ReportingData {
   byTenant: Record<string, {
     funnel: { stage: string, count: number }[];
-    timeToHireDays: number;
-    costPerHireUsd?: number;
+    timeToHireDays: number, costPerHireUsd?: number,
     updatedAt: string
   }>
 }
@@ -31,9 +30,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr.byTenant || {};
       next[tenantId] = {
-        funnel: funnel || next[tenantId]?.funnel || [];
-        timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays || 0);
-        costPerHireUsd: typeof costPerHireUsd === 'number' ? costPerHireUsd : next[tenantId]?.costPerHireUsd;
+        funnel: funnel || next[tenantId]?.funnel || [], timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays || 0),
+        costPerHireUsd: typeof costPerHireUsd === 'number' ? costPerHireUsd : next[tenantId]?.costPerHireUsd,
         updatedAt: new Date().toISOString()};
       return { byTenant: next }
     }, FALLBACK);

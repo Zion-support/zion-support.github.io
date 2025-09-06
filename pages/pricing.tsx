@@ -36,15 +36,15 @@ export default function PricingPage() {
       name: 'Next-Generation AI',
       description: 'Revolutionary AI platforms',
       services: ['AI Multimodal FusionAI Autonomous Decision EngineAI Emotional Intelligence'],
-      avgPrice: '$3,199/month';
-      savings: 'Save 60-80% vs. competitors'
+      avgPrice: '$3,199/month',
+    savings: 'Save 60-80% vs. competitors'
     };
     {
       name: 'Cutting-Edge IT Infrastructure',
       description: 'Advanced infrastructure solutions',
       services: ['Zero Trust ArchitectureEdge Computing Orchestration5G Private Networks'],
-      avgPrice: '$4,999/month';
-      savings: 'Save 50-70% vs. competitors'
+      avgPrice: '$4,999/month',
+    savings: 'Save 50-70% vs. competitors'
     };
     {
       name: 'Innovative Micro SaaS',
@@ -57,15 +57,15 @@ export default function PricingPage() {
       name: 'Quantum & Space Technology',
       description: 'Quantum computing and space solutions',
       services: ['Quantum AI HybridSpace Technology PlatformQuantum Cybersecurity'],
-      avgPrice: '$5,999/month';
-      savings: 'Save 70-85% vs. competitors'
+      avgPrice: '$5,999/month',
+    savings: 'Save 70-85% vs. competitors'
     };
     {
       name: 'Enterprise IT Services',
       description: 'Comprehensive enterprise solutions',
       services: ['Cloud MigrationDevOps AutomationSecurity Hardening'],
-      avgPrice: '$2,999/month';
-      savings: 'Save 45-65% vs. competitors'
+      avgPrice: '$2,999/month',
+    savings: 'Save 45-65% vs. competitors'
     }
   ];
 

@@ -27,32 +27,29 @@ class ContinuousCloudAgents {
         const defaultConfig = {
           agents: [
             {
-              name: 'cloud-crawler';
-              script: './automation/cloud-site-crawler.cjs';
-              args: ['continuous'];
+              name: 'cloud-crawler', script: './automation/cloud-site-crawler.cjs',
+              args: ['continuous'],
               interval: 300000, // 5 minutes
-              maxMemory: '512M';
+              maxMemory: '512M',
               autoRestart: true
             };
             {
-              name: 'cloud-factory';
-              script: './automation/cloud-content-factory.cjs';
-              args: ['continuous'];
+              name: 'cloud-factory', script: './automation/cloud-content-factory.cjs',
+              args: ['continuous'],
               interval: 600000, // 10 minutes
-              maxMemory: '1G';
+              maxMemory: '1G',
               autoRestart: true
             };
             {
-              name: 'cloud-advertiser';
-              script: './automation/cloud-content-advertiser.cjs';
-              args: ['continuous'];
+              name: 'cloud-advertiser', script: './automation/cloud-content-advertiser.cjs',
+              args: ['continuous'],
               interval: 900000, // 15 minutes
-              maxMemory: '512M';
+              maxMemory: '512M',
               autoRestart: true
             }
           ];
           monitoring: {
-            enabled: true;
+            enabled: true,
             healthCheckInterval: 60000, // 1 minute
             logRetention: 7 // days
           }
@@ -104,10 +101,8 @@ class ContinuousCloudAgents {
 
       // Store agent info
       this.agents.set(agentName, {
-        process: agentProcess;
-        config: agentConfig;
-        startTime: new Date();
-        logStream;
+        process: agentProcess, config: agentConfig,
+        startTime: new Date(), logStream,
         errorStream;
         status: 'running'
       });
@@ -177,17 +172,15 @@ class ContinuousCloudAgents {
 
   async getStatus() {
     const status = {
-      isRunning: this.isRunning;
-      agents: [];
+      isRunning: this.isRunning, agents: [],
       timestamp: new Date().toISOString()
     };
 
     for (const [name, agent] of this.agents) {
       status.agents.push({
         name;
-        status: agent.status;
-        startTime: agent.startTime;
-        uptime: Date.now() - agent.startTime.getTime();
+        status: agent.status, startTime: agent.startTime,
+        uptime: Date.now() - agent.startTime.getTime(),
         memory: agent.process.memoryUsage()
       });
     }
@@ -198,25 +191,24 @@ class ContinuousCloudAgents {
   async healthCheck() {
     const status = await this.getStatus();
     const health = {
-      status: 'healthy';
+      status: 'healthy',
       checks: {
-        running: status.isRunning;
-        agents: status.agents.length > 0;
+        running: status.isRunning, agents: status.agents.length > 0,
         memory: true
       };
-      issues: [];
+      issues: [],
       timestamp: new Date().toISOString()
     };
 
     if (!health.checks.running) {
-      health.status = 'stopped';
-      health.issues.push('Service is not running');
-    }
+    health.status = 'stopped',
+    health.issues.push('Service is not running')
+  }
 
     if (!health.checks.agents) {
-      health.status = 'warning';
-      health.issues.push('No agents are running');
-    }
+    health.status = 'warning',
+    health.issues.push('No agents are running')
+  }
 
     // Check memory usage
     for (const agent of status.agents) {
@@ -265,12 +257,9 @@ async function main() {
         await cloudAgents.startAllAgents();
         break;
         
-      default:
-        console.log('Continuous Cloud Agents Manager');
-        console.log('==============================');
+      default: console.log('Continuous Cloud Agents Manager'), console.log('=============================='),
         console.log('');
-        console.log('Usage:');
-        console.log('  node continuous-cloud-agents.cjs start    - Start all agents');
+        console.log('Usage: '), console.log('  node continuous-cloud-agents.cjs start    - Start all agents'),
         console.log('  node continuous-cloud-agents.cjs stop     - Stop all agents');
         console.log('  node continuous-cloud-agents.cjs restart  - Restart all agents');
         console.log('  node continuous-cloud-agents.cjs status  - Show agent status');

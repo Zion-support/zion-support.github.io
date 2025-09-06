@@ -423,8 +423,8 @@ class IntelligentMonitoringSystem {
 }
 
 if (require.main === module) {
-  const monitoring = new IntelligentMonitoringSystem();
-  monitoring.run().catch(console.error);
-}
+    const monitoring = new IntelligentMonitoringSystem(),
+    monitoring.run().catch(console.error)
+  }
 
 module.exports = IntelligentMonitoringSystem;

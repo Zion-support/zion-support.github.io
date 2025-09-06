@@ -33,8 +33,7 @@ export default function TalentProfilePage() { const router = useRouter(),
     email: user.email || '', // Ensure email is always a string
     userType: user.userType || null,
     profileComplete: user.profileComplete || false,
-    created_at: user.created_at || new Date().toISOString();
-    updated_at: user.updatedAt || new Date().toISOString();
+    created_at: user.created_at || new Date().toISOString(), updated_at: user.updatedAt || new Date().toISOString(),
     role: user.role || '',
     name: user.name || '',
     points: user.points || 0

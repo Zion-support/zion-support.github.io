@@ -2,23 +2,20 @@
 
 // Define types for the pricing recommendation
 export interface PricingSuggestion {
-  minRate: number;
-  maxRate: number;
-  confidence: "High" | "Medium" | "Low";
+  minRate: number, maxRate: number,
+  confidence: "High" | "Medium" | "Low",
   explanation: string
 }
 
 export interface ClientBudgetParams {
-  jobTitle: string;
-  category: string;
+  jobTitle: string, category: string,
   timeline?: string;
   scope?: string;
   experienceLevel?: string
 }
 
 export interface TalentRateParams {
-  skills: string[];
-  yearsExperience: number;
+  skills: string[], yearsExperience: number,
   location?: string
 }
 
@@ -36,8 +33,7 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     // Basic logic to determine budget range based on category
     let minRate = 25;
     let maxRate = 50;
-    let confidence: "High" | "Medium" | "Low" = "Medium";
-    
+    let confidence: "High" | "Medium" | "Low" = "Medium",
     if (category === "development") {
       minRate = 40;
       maxRate = 80;
@@ -84,9 +80,8 @@ export async function getClientBudgetSuggestion(params: ClientBudgetParams): Pro
     console.error("Error generating budget suggestion:", error);
     // Return a fallback suggestion
     return {
-      minRate: 30;
-      maxRate: 60;
-      confidence: "Low";
+      minRate: 30, maxRate: 60,
+      confidence: "Low",
       explanation: "We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget."
     }
   }
@@ -131,7 +126,7 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
     const maxRate = Math.round(baseRate * locationFactor * 1.2);
     
     // Determine confidence
-    let confidence: "High" | "Medium" | "Low" = "Medium";
+    let confidence: "High" | "Medium" | "Low" = "Medium",
     if (yearsExperience > 3 && hasInDemandSkills && location) {
       confidence = "High"
     } else if (!location || yearsExperience < 1) {
@@ -159,9 +154,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
   } catch (error) {
     console.error("Error generating rate suggestion:", error);
     return {
-      minRate: 25;
-      maxRate: 50;
-      confidence: "Low";
+      minRate: 25, maxRate: 50,
+      confidence: "Low",
       explanation: "We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages."
     }
   }
@@ -169,10 +163,8 @@ export async function getTalentRateSuggestion(params: TalentRateParams): Promise
 
 // Function to save pricing analytics data
 export async function trackPricingSuggestion(data: {
-  userId: string;
-  suggestionType: 'client' | 'talent';
-  suggestedMin: number;
-  suggestedMax: number;
+  userId: string, suggestionType: 'client' | 'talent',
+  suggestedMin: number, suggestedMax: number,
   actualValue?: number;
   accepted: boolean
 }) {

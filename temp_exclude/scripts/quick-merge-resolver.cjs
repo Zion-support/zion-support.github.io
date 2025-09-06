@@ -41,8 +41,7 @@ try {
     const prs = execSync('gh pr list --state open --json number,title', { encoding: 'utf8' }
 });
     const prList = JSON.parse(prs);
-    console.log(`Found ${prList.length} open PRs:`);
-    
+    console.log(`Found ${prList.length} open PRs: `),
     for (const pr of prList) {
       console.log(`- PR #${pr.number}: ${pr.title}`);
     }

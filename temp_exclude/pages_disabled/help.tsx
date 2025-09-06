@@ -188,18 +188,18 @@ const helpCategories = [
   {}
     title: "Billing & Account","
     icon: FileText,
-    articles: [;
+    articles: [,
       {}
         title: "Understanding Your Bill","
         description: "Learn how to read and understand your billing statement","
         type: "Guide","
-        readTime: "5 min"";
+        readTime: "5 min"",
       },
       {}
         title: "Payment Methods","
         description: "How to add and manage payment methods","
         type: "Tutorial","
-        readTime: "8 min"";
+        readTime: "8 min"",
       },
       {
         title: "Account Settings",
@@ -294,8 +294,7 @@ export default function HelpPage() {
                   className="bg-gray-50 rounded-lg p-6 text-center hover:bg-blue-50 hover:shadow-lg transition-all group""
                   whileHover={{ y: -2 }}
                 >,
-                  <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover:text-blue-700" />";
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">";
+                  <link.icon className="w-8 h-8 text-blue-600 mx-auto mb-3 group-hover: text-blue-700" />", <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">",
                     {link.title}
                   </h3>,
                 </motion.a>;
@@ -346,7 +345,7 @@ export default function HelpPage() {
                         className="overflow-hidden""
                       >;
                         <div className="px-6 pb-6">";
-                          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">";
+                          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">",
                             {category.articles.map((article, articleIndex) => (,
                               <motion.div}),
                                 key={articleIndex}
@@ -361,7 +360,7 @@ export default function HelpPage() {
                                     {article.readTime}
                                   </span>,
                                 </div>;
-                                <h4 className="font-semibold text-gray-900 mb-2 group-hover:text-blue-600">";
+                                <h4 className="font-semibold text-gray-900 mb-2 group-hover: text-blue-600">",
                                   {article.title}
                                 </h4>
                                 <p className="text-sm text-gray-600">

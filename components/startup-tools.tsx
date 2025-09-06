@@ -26,8 +26,8 @@ export default function StartupToolsPage() {
   const startupTools = [
     {
       name: 'HubSpot',
-      description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.';
-      category: 'Marketing & Sales',
+      description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
+    category: 'Marketing & Sales',
       pricing: 'Free - $45/month',
       rating: 4.7,
       users: '135K+',
@@ -44,8 +44,8 @@ export default function StartupToolsPage() {
     };
     {
       name: 'Mailchimp',
-      description: 'Email marketing platform that helps businesses create, send, and track email campaigns with ease.';
-      category: 'Email Marketing',
+      description: 'Email marketing platform that helps businesses create, send, and track email campaigns with ease.',
+    category: 'Email Marketing',
       pricing: 'Free - $59/month',
       rating: 4.5,
       users: '12M+',
@@ -55,8 +55,8 @@ export default function StartupToolsPage() {
         'Email templatesAutomation workflowsA/B testingAnalytics & reportingIntegration ecosystemFree tier available'
       ];
       website: 'https://mailchimp.com',
-      useCase: 'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.';
-      pros: ['Free tierEasy to useGood templatesAffordable'],
+      useCase: 'Ideal for startups that need to build email lists, nurture leads, and communicate with customers.',
+    pros: ['Free tierEasy to useGood templatesAffordable'],
       cons: ['Limited free featuresBasic automationCan be expensive'],
       bestFor: 'E-commerce, content creators, small businesses'
     };
@@ -73,8 +73,8 @@ export default function StartupToolsPage() {
         'Automated schedulingCalendar integrationCustom booking pagesTeam schedulingAnalytics & reportingFree tier available'
       ];
       website: 'https://calendly.com',
-      useCase: 'Essential for startups that need to schedule sales calls, investor meetings, and team collaborations efficiently.';
-      pros: ['Free tierEasy integrationProfessional appearanceTime-saving'],
+      useCase: 'Essential for startups that need to schedule sales calls, investor meetings, and team collaborations efficiently.',
+    pros: ['Free tierEasy integrationProfessional appearanceTime-saving'],
       cons: ['Limited free featuresBasic customizationCan be expensive'],
       bestFor: 'Sales teams, consultants, remote teams'
     };
@@ -91,15 +91,15 @@ export default function StartupToolsPage() {
         'Design templatesStock photos & iconsBrand kitTeam collaborationSocial media formatsFree tier available'
       ];
       website: 'https://canva.com',
-      useCase: 'Perfect for startups that need to create marketing materials, social media content, and presentations.';
-      pros: ['Free tierEasy to useGreat templatesAffordable'],
+      useCase: 'Perfect for startups that need to create marketing materials, social media content, and presentations.',
+    pros: ['Free tierEasy to useGreat templatesAffordable'],
       cons: ['Limited customizationWatermark on freeBasic features'],
       bestFor: 'Marketing teams, content creators, small businesses'
     };
     {
       name: 'Buffer',
-      description: 'Social media management platform that helps businesses schedule posts, analyze performance, and manage multiple accounts.';
-      category: 'Social Media',
+      description: 'Social media management platform that helps businesses schedule posts, analyze performance, and manage multiple accounts.',
+    category: 'Social Media',
       pricing: 'Free - $15/month',
       rating: 4.4,
       users: '140K+',
@@ -116,8 +116,8 @@ export default function StartupToolsPage() {
     };
     {
       name: 'Notion',
-      description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.';
-      category: 'Productivity',
+      description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
+    category: 'Productivity',
       pricing: 'Free - $8/month',
       rating: 4.7,
       users: '20M+',
@@ -127,15 +127,15 @@ export default function StartupToolsPage() {
         'Note-taking & docsProject managementTeam collaborationDatabase & tablesTemplates libraryAPI integration'
       ];
       website: 'https://notion.so',
-      useCase: 'Perfect for startup teams that need a flexible workspace for documentation, project management, and knowledge sharing.';
-      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
+      useCase: 'Perfect for startup teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
+    pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
       cons: ['Learning curveLimited offline accessCan be overwhelming'],
       bestFor: 'Remote teams, project managers, knowledge workers'
     };
     {
       name: 'Stripe',
-      description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.';
-      category: 'Payments',
+      description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',
+    category: 'Payments',
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
       users: '1M+',
@@ -145,8 +145,8 @@ export default function StartupToolsPage() {
         'Global payment methodsSubscription billingFraud protectionCompliance toolsDeveloper-friendly APIAnalytics dashboard'
       ];
       website: 'https://stripe.com',
-      useCase: 'Essential for any startup that needs to accept payments, especially SaaS companies and e-commerce businesses.';
-      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
+      useCase: 'Essential for any startup that needs to accept payments, especially SaaS companies and e-commerce businesses.',
+    pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
       cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],
       bestFor: 'SaaS companies, e-commerce, online businesses'
     };
@@ -181,15 +181,15 @@ export default function StartupToolsPage() {
         'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
       ];
       website: 'https://mixpanel.com',
-      useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.';
-      pros: ['Powerful analyticsReal-time dataGood documentationFlexible'],
+      useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
+    pros: ['Powerful analyticsReal-time dataGood documentationFlexible'],
       cons: ['Complex setupExpensive at scaleSteep learning curve'],
       bestFor: 'Product teams, growth hackers, data analysts'
     };
     {
       name: 'Vercel',
-      description: 'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.';
-      category: 'Development',
+      description: 'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.',
+    category: 'Development',
       pricing: 'Free - $20/month',
       rating: 4.8,
       users: '100K+',

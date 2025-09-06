@@ -17,13 +17,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   try {
-    let aiSummary: string | null = null;
-    let aiTags: string[] = [];
+    let aiSummary: string | null = null, let aiTags: string[] = [],
 
     if (openai) {
       const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange || 'N/A'}\nTimeline: ${timeline?.start || 'N/A'} to ${timeline?.end || 'N/A'}\nDescription: ${description}`;
       const resp = await openai.responses.create({
-        model: 'gpt-4.1-mini';
+        model: 'gpt-4.1-mini',
         input: prompt});
       const text = resp.output_text?.trim() || '';
       aiSummary = text.split('\n')[0] || text;
@@ -31,17 +30,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       aiTags = tagsLine ? tagsLine.split().map((t) => t.trim()).filter(Boolean) : []
     }
 
-    let saved: any = null;
+    let saved: any = null,
     if (supabase) {
       const { data, error } = await supabase.from('quote_requests').insert({
         service;
         description;
-        timeline_start: timeline?.start || null;
-        timeline_end: timeline?.end || null;
-        budget_range: budgetRange || null;
-        email;
-        ai_summary: aiSummary;
-        ai_tags: aiTags;
+        timeline_start: timeline?.start || null, timeline_end: timeline?.end || null,
+        budget_range: budgetRange || null, email,
+        ai_summary: aiSummary, ai_tags: aiTags,
         status: 'new'}).select('*').single();
       if (error) throw error;
       saved = data

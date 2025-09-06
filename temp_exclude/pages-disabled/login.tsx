@@ -9,7 +9,7 @@ export default function LoginPage() {}
   const [formData, setFormData] = useState({})
     email: '',
     password: '',
-    remember: false;
+    remember: false,
   }
 });
 

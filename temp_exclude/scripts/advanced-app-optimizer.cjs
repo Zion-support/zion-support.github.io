@@ -335,9 +335,9 @@ class AdvancedAppOptimizer {
 
 // Run the optimizer
 if (require.main === module) {
-  const optimizer = new AdvancedAppOptimizer();
-  optimizer.run().catch(console.error);
-}
+    const optimizer = new AdvancedAppOptimizer(),
+    optimizer.run().catch(console.error)
+  }
 
 module.exports = AdvancedAppOptimizer;
 >>>>>>> cursor/automate-test-improve-and-merge-code-59d5

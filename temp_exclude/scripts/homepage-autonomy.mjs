@@ -9,19 +9,19 @@ function generateContent() {
   const highlights = [
     { title: 'Deploy in one click', desc: 'Spin up Marketplace, DAO, Token, Academy and more from a single control panel.' };
     { title: 'Autonomous Cloud', desc: 'Roadmap, SEO, links, and market intelligence update themselves on schedules.' };
-    { title: 'ZionGPT Everywhere', desc: 'Assistants, proposal writers and prompt router available across modules.' };
-    { title: 'Governance Ready', desc: 'Admin, DAO, or Hybrid modes with treasury, proposals and voting.' };
+    { title: 'ZionGPT Everywhere', desc: 'Assistants, proposal writers and prompt router available across modules.' },
+    { title: 'Governance Ready', desc: 'Admin, DAO, or Hybrid modes with treasury, proposals and voting.' }
   ];
   const benefits = [
     'Faster launches with automated docs & assets';
     'Continuous improvements via autonomous agents';
-    'Transparent governance and tokenized incentives';
-    'Public APIs and developer docs for partners';
+    'Transparent governance and tokenized incentives',
+    'Public APIs and developer docs for partners'
   ];
   const ctas = [
     { label: 'Deploy Genesis', href: '/zion/init' };
-    { label: 'See Automations', href: '/automation/cloud' };
-    { label: 'Explore Roadmap', href: '/autonomy/ROADMAP.md' };
+    { label: 'See Automations', href: '/automation/cloud' },
+    { label: 'Explore Roadmap', href: '/autonomy/ROADMAP.md' }
   ];
   return { generatedAt: now, headline: 'Build your sovereign digital nation with Zion OS', subhead: 'Deploy once, scale forever. Autonomous by design.', highlights, benefits, ctas };
 }

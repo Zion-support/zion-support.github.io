@@ -2,14 +2,12 @@
 import { useState, useEffect, useCallback } from 'react';
 
 interface User {
-  id: string;
-  email: string;
-  name: string;
-  avatar?: string;
+  id: string, email: string,
+  name: string, avatar?: string,
 }
 
 interface UseCurrentUserOptions {
-  onUserChange?: (user: User | null) => void;
+  onUserChange?: (user: User | null) => void,
 }
 
 export const useCurrentUser = (options: UseCurrentUserOptions = {}) => {
@@ -44,8 +42,8 @@ export const useCurrentUser = (options: UseCurrentUserOptions = {}) => {
   }, [options]);
 
   const logout = () => {
-    setUser(null);
-    options.onUserChange?.(null);
+    setUser(null),
+    options.onUserChange?.(null)
   };
 
   return {
@@ -59,13 +57,11 @@ export const useCurrentUser = (options: UseCurrentUserOptions = {}) => {
 export default useCurrentUser;
 =======
 import useSWR from 'swr';
-const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null));
-
+const fetcher = (url: string) => fetch(url).then((r) => (r.ok ? r.json() : null)),
 export function useCurrentUser() {
   const { data, error, mutate } = useSWR('/api/auth/me', fetcher);
   return {
-    user: data?.user || null;
-    loading: !data && !error;
+    user: data?.user || null, loading: !data && !error,
     error;
     mutate}
 }

@@ -18,7 +18,7 @@ export default function OSDeployPage() {
   const labelFor = (key: string) => { const labels: { [key: string]: string  } = {
       ai: 'AI Integration',
       blockchain: 'Blockchain Technology',
-      governance: 'Governance System';
+      governance: 'Governance System',
       treasury: 'Treasury Management'
     };
     return labels[key] || key;
@@ -27,7 +27,7 @@ export default function OSDeployPage() {
   const getFeatureDescription = (key: string) => { const descriptions: { [key: string]: string  } = {
       ai: 'Advanced AI capabilities',
       blockchain: 'Blockchain infrastructure',
-      governance: 'Decentralized governance';
+      governance: 'Decentralized governance',
       treasury: 'Community treasury management'
     };
     return descriptions[key] || 'Feature description';

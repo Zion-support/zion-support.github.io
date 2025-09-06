@@ -1,43 +1,34 @@
  export default function MicroSAASServicesPage () {
   const microSAASServices = [ {
-  benefits: [ "50% cost savings vs competitors";
-"Easy onboarding and adoption";
+  benefits: [ "50% cost savings vs competitors", "Easy onboarding and adoption",
 "Scalable as you grow";
 "No long-term contracts";
 "24/7 customer support" ];
-website: "https://ziontechgroup.com/project-management";
-freeTrial: "14 days";
+website: "https://ziontechgroup.com/project-management", freeTrial: "14 days",
 setupTime: "Under 1 hour" 
 };
-benefits: [ "Faster payment collection";
-"Reduced administrative overhead";
+benefits: [ "Faster payment collection", "Reduced administrative overhead",
 "Better cash flow management";
 "Professional client experience";
 "Compliance automation" ];
-website: "https://ziontechgroup.com/invoice-billing";
-freeTrial: "30 days";
+website: "https://ziontechgroup.com/invoice-billing", freeTrial: "30 days",
 setupTime: "Under 2 hours" 
 };
-benefits: [ "Save 10+ hours per week";
-"Improve engagement rates";
+benefits: [ "Save 10+ hours per week", "Improve engagement rates",
 "Consistent posting schedule";
 "Data-driven content strategy";
 "Multi-account management" ];
-website: "https://ziontechgroup.com/social-media-scheduler";
-freeTrial: "7 days";
+website: "https://ziontechgroup.com/social-media-scheduler", freeTrial: "7 days",
 setupTime: "Under 30 minutes" 
 };
-benefits: [ "Increase sales by 25%";
-"Better lead conversion";
+benefits: [ "Increase sales by 25%", "Better lead conversion",
 "Improved customer retention";
 "Streamlined sales process";
 "Data-driven insights" ];
-website: "https://ziontechgroup.com/crm";
-freeTrial: "21 days";
+website: "https://ziontechgroup.com/crm", freeTrial: "21 days",
 setupTime: "Under 2 hours" 
 };
-features: [ "Drag-and-drop email builder";
-"Email automation workflows";
+features: [ "Drag-and-drop email builder", "Email automation workflows",
 "Advanced segmentation";
 "A/B testing capabilities";
 "Performance analytics";
@@ -45,28 +36,24 @@ features: [ "Drag-and-drop email builder";
 "Integration with popular tools";
 "Compliance and deliverability" ];
 pricing: {
-  starter: "$69/month";
-professional: "$139/month";
+  starter: "$69/month", professional: "$139/month",
 enterprise: "$249/month" 
 };
-marketPrice: "$120-250/month";
+marketPrice: "$120-250/month",
 useCases: ["E-commerce", "Marketing teams", "Small businesses", "Newsletters", "Online courses" ];
 Higher open and click rates";
 " Automated customer journeys";
 " Better ROI on campaigns";
 " Professional email templates";
 " Compliance automation"];
-website: " https://ziontechgroup.com/email-marketing";
-freeTrial: " 14 days";
+website: " https://ziontechgroup.com/email-marketing", freeTrial: " 14 days",
 setupTime: " Under 1 hour" 
 };
-benefits: [ " Data-driven decision making";
-" Time savings on reporting";
+benefits: [ " Data-driven decision making", " Time savings on reporting",
 " Better business insights";
 " Improved performance tracking";
 " Professional presentations"];
-website: " https://ziontechgroup.com/analytics-dashboard";
-freeTrial: " 30 days";
+website: " https://ziontechgroup.com/analytics-dashboard", freeTrial: " 30 days",
 setupTime: " Under 3 hours" 
 }];
 ];

@@ -17,8 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const { action, reviewId, updates } = req.body as {
-      action: Action;
-      reviewId: string;
+      action: Action, reviewId: string,
       updates?: { rating?: number, text?: string }
     };
 

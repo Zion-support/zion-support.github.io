@@ -18,7 +18,7 @@ const fixes = [
   },
   // Fix malformed semicolons in JSX
   {
-    pattern: /;"";"/g,
+    pattern: /, "","/g,
     replacement: ''
   },
   // Fix malformed JSX expressions
@@ -67,9 +67,9 @@ function fixFile(filePath) {
     fixes.forEach(fix => {
       const newContent = fixedContent.replace(fix.pattern, fix.replacement);
       if (newContent !== fixedContent) {
-        fixedContent = newContent;
-        hasChanges = true;
-      }
+    fixedContent = newContent,
+    hasChanges = true
+  }
     });
     
     if (hasChanges) {

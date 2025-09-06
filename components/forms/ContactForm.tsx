@@ -67,8 +67,8 @@ const ContactForm: React.FC = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      content: '123 Tech Street, Innovation City, IC 12345';
-      href: '#'
+      content: '123 Tech Street, Innovation City, IC 12345',
+    href: '#'
     }
   ];
 

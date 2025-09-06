@@ -434,8 +434,8 @@ class EnhancedAutomationSuite {
 
 // Run the enhanced automation suite
 if (require.main === module) {
-  const suite = new EnhancedAutomationSuite();
-  suite.run().catch(console.error);
-}
+    const suite = new EnhancedAutomationSuite(),
+    suite.run().catch(console.error)
+  }
 
 module.exports = EnhancedAutomationSuite;

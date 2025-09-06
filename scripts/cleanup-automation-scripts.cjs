@@ -157,7 +157,7 @@ dirsToCheck.forEach(dir => {
   }
 });
 
-console.log(`\n📊 Cleanup Summary:`);
+console.log(`\n📊 Cleanup Summary: `),
 console.log(`   Files removed: ${removedCount}`);
 console.log(`   Errors: ${errorCount}`);
 console.log(`   Total processed: ${filesToRemove.length}`);

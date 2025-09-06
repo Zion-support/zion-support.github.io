@@ -17,7 +17,7 @@ import ServicesPage from '../pages/services';
 import PricingPage from '../pages/pricing';
 ;
 <<<<<<< HEAD
-export default function App() {; return (; <ErrorBoundary>; <Router>; <div className = "min-h-screen bg-gray-50">; <Header />; <Sidebar />; <main className = "flex-1 lg:ml-80">; <Routes>; <Route path = "/" element = {<HomePage />} />; <Route path = "/about" element = {<AboutPage />} />; <Route path = "/contact" element = {<ContactPage />} />; <Route path = "/services" element = {<ServicesPage />} />; <Route path = "/pricing" element = {<PricingPage />} />; </Routes>; </main>; <Footer />; </div>; </Router>; </ErrorBoundary>; )};
+export default function App() {; return (; <ErrorBoundary>; <Router>; <div className = "min-h-screen bg-gray-50">; <Header />; <Sidebar />; <main className = "flex-1 lg: ml-80">, <Routes>, <Route path = "/" element = {<HomePage />} />; <Route path = "/about" element = {<AboutPage />} />; <Route path = "/contact" element = {<ContactPage />} />; <Route path = "/services" element = {<ServicesPage />} />; <Route path = "/pricing" element = {<PricingPage />} />; </Routes>; </main>; <Footer />; </div>; </Router>; </ErrorBoundary>; )};
 =======
 export default function App() {;
   return (;
@@ -26,8 +26,7 @@ export default function App() {;
         <div className="min-h-screen bg-gray-50">;
           <Header />;
           <Sidebar />;
-          <main className="flex-1 lg: ml-80">;
-            <Routes>;
+          <main className="flex-1 lg: ml-80">, <Routes>,
               <Route path="/" element={<HomePage />} />;
               <Route path="/about" element={<AboutPage />} />;
               <Route path="/contact" element={<ContactPage />} />;

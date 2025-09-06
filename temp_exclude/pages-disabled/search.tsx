@@ -12,7 +12,7 @@ const searchResults = []
     description: "Cutting-edge artificial intelligence solutions including machine learning, natural language processing, and computer vision.",
     type: "Service",
     href: "/ai-services",
-    icon: Briefcase;
+    icon: Briefcase,
   },
   {}
     id: 2,
@@ -20,7 +20,7 @@ const searchResults = []
     description: "Comprehensive information technology services including cloud infrastructure, cybersecurity, and system administration.",
     type: "Service",
     href: "/it-services",
-    icon: Briefcase;
+    icon: Briefcase,
   },
   {}
     id: 3,
@@ -28,7 +28,7 @@ const searchResults = []
     description: "Scalable software as a service solutions including AI-powered tools, blockchain applications, and business automation.",
     type: "Service",
     href: "/micro-saas",
-    icon: Briefcase;
+    icon: Briefcase,
   },
   {}
     id: 4,
@@ -36,7 +36,7 @@ const searchResults = []
     description: "Learn about Zion Tech Group's mission, values, and the expert team behind our innovative technology solutions.",
     type: "Page",
     href: "/about",
-    icon: Building2;
+    icon: Building2,
   },
   {}
     id: 5,
@@ -44,7 +44,7 @@ const searchResults = []
     description: "Meet the talented professionals who make Zion Tech Group a leader in technology consulting and development.",
     type: "Page",
     href: "/team",
-    icon: Users;
+    icon: Users,
   },
   {}
     id: 6,
@@ -52,7 +52,7 @@ const searchResults = []
     description: "Stay updated with the latest insights, trends, and best practices in AI, cloud computing, and technology.",
     type: "Resource",
     href: "/blog",
-    icon: FileText;
+    icon: FileText,
   };
 ];
 

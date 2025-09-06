@@ -1314,8 +1314,9 @@ export default function MainFrontIndex() {
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md:grid-cols-2">
             {[
               '24/7 progress without human interventionRapid feedback loop with safe, incremental editsContinuous delivery directly to main branchFewer regressions via layered checks and reportsHigher velocity with automated maintenanceReduced costs via zero‑ops and automated QAConsistent design language and UX qualityTransparent artifacts and live workflow logs';
-              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically';
-              'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'].map((b) => (
+              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEOHappier users thanks to performance & a11y winsLower operational risk through guardrailsImproved discoverability via deep indexing and SEOHappier engineers with less toil and more creationConfident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',
+    'Auditability for compliance with full traceabilityHappier teams: less toil, more product valueAutomated dependency upgrades and security scansClear analytics and downloadable artifacts for every runComposable factories accelerate new initiatives'
+  ].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.9)]" />
                 <span className="text-sm text-white/80">{b}</span>

@@ -34,7 +34,7 @@ class TypeChecker {}
       this.log('Running TypeScript type check...');
       execSync('npm run type-check', { })
         stdio: 'pipe',
-        cwd: process.cwd();
+        cwd: process.cwd(),
       }
 });
       this.log('TypeScript type check completed successfully');
@@ -61,7 +61,7 @@ class TypeChecker {}
           line: parseInt(match[2]),
           column: parseInt(match[3]),
           code: match[4],
-          message: match[5];
+          message: match[5],
         }
 });
       };
@@ -166,9 +166,7 @@ class TypeChecker {}
         };
         break;
         
-      default:
-        // Generic fixes for common patterns;
-        if (line.includes(';;')) {}
+      default: // Generic fixes for common patterns, if (line.includes(',;')) {}
           fixedLine = line.replace(/;;/g, ';');
         } else if (line.includes('import') && line.includes('from') && !line.includes(';')) {}
           fixedLine = line + ';';
@@ -217,7 +215,7 @@ class TypeChecker {}
             description: 'Fix boolean type quotes'
           },
           {}
-            pattern: /import\s+([^;]+);;\s*import/g,
+            pattern: /import\s+([^, ]+),;\s*import/g,
             replacement: 'import $1;\nimport',
             description: 'Fix malformed imports'
           },
@@ -302,7 +300,7 @@ class TypeChecker {}
         /\.cache/
       ],
       persistent: true,
-      ignoreInitial: true;
+      ignoreInitial: true,
     }
 });
 
@@ -331,7 +329,7 @@ class TypeChecker {}
       // Run type check on the specific file;
       execSync(`npx tsc --noEmit "${filePath}"`, { `})
         stdio: 'pipe',
-        cwd: process.cwd();
+        cwd: process.cwd(),
       }
 });
       this.log(`Type check passed for ${filePath}`);

@@ -14,14 +14,12 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       // Update user metadata
       const { error: authError } = await supabase.auth.updateUser({
         data: {
-          display_name: data.displayName;
-          user_type: data.userType;
+          display_name: data.displayName, user_type: data.userType,
           headline: data.headline}});
 
       if (authError) {
         toast({
-          title: "Profile update failed";
-          description: authError.message;
+          title: "Profile update failed", description: authError.message,
           variant: "destructive"});
         return { error: authError }
       }
@@ -30,33 +28,28 @@ export const useProfileManagement = (setIsLoading: (loading: boolean) => void) =
       const { error: profileError } = await supabase
         .from("profiles")
         .update({
-          display_name: data.displayName;
-          user_type: data.userType;
-          bio: data.bio;
-          headline: data.headline;
-          avatar_url: data.avatarUrl || data.avatar_url;
-          profile_complete: data.profileComplete;
+          display_name: data.displayName, user_type: data.userType,
+          bio: data.bio, headline: data.headline,
+          avatar_url: data.avatarUrl || data.avatar_url, profile_complete: data.profileComplete,
           updated_at: new Date().toISOString()})
         .eq("id", data.id);
 
       if (profileError) {
         toast({
-          title: "Profile update failed";
-          description: profileError.message;
+          title: "Profile update failed", description: profileError.message,
           variant: "destructive"});
         return { error: profileError }
       }
 
       toast({
-        title: "Profile updated";
+        title: "Profile updated",
         description: "Your profile has been updated successfully."});
 
       return { success: true }
     } catch (error: any) {
       console.error("Profile update error:", error);
       toast({
-        title: "Profile update failed";
-        description: error.message || "An unexpected error occurred";
+        title: "Profile update failed", description: error.message || "An unexpected error occurred",
         variant: "destructive"});
       return { error }
     } finally {

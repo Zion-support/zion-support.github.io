@@ -168,7 +168,7 @@ async function main() {
     if (conflictFiles.length === 0) {
       console.log('✅ No files with merge conflicts found');
     } else {
-      console.log(`📁 Found ${conflictFiles.length} files with merge conflicts:`);
+      console.log(`📁 Found ${conflictFiles.length} files with merge conflicts: `),
       conflictFiles.forEach(file => console.log(`   - ${file}`));
     }
 

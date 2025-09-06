@@ -43,13 +43,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
       await supabase
         .from("scheduled_jobs")
         .insert({
-          job_type: "send_retention_email";
-          scheduled_for: new Date().toISOString();
-          status: "pending";
+          job_type: "send_retention_email", scheduled_for: new Date().toISOString(),
+          status: "pending",
           payload: {
-            user_id: user.id;
-            email_type: "welcome_series";
-            user_type: user.userType || "unknown";
+            user_id: user.id, email_type: "welcome_series",
+            user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
         });
@@ -58,13 +56,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
       await supabase
         .from("email_campaigns")
         .insert({
-          user_id: user.id;
-          campaign_type: "welcome_series";
-          template_name: "welcome_email";
+          user_id: user.id, campaign_type: "welcome_series",
+          template_name: "welcome_email",
           template_data: {
-            user_id: user.id;
-            email_type: "welcome_series";
-            user_type: user.userType || "unknown";
+            user_id: user.id, email_type: "welcome_series",
+            user_type: user.userType || "unknown",
             display_name: user.displayName || user.email?.split("@")[0] || "User"
           }
         })

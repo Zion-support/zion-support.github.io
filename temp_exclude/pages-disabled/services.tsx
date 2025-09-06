@@ -49,7 +49,7 @@ const services = []
     features: [Custom Applications", "API Development", "Database Solutions", "Integration Services", "Workflow Automation", "Lead Management", "AI-Powered Tools", "Smart Contracts", "Content Moderation", "Energy Management"],
     pricing: "Starting at $29/month",
     count: "45+ Products",
-    popular: true;
+    popular: true,
   };
 ];
 

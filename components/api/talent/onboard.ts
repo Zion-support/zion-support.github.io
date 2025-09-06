@@ -5,11 +5,9 @@ import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
 // Lazy import to avoid serverless cold start cost unless needed
 async function summarizeAndTag(input: {
-  fullName: string;
-  professionalTitle: string;
-  bio: string;
-  projects?: string;
-  skills: string;
+  fullName: string, professionalTitle: string,
+  bio: string, projects?: string,
+  skills: string,
   tools?: string
 }) {
   const openaiApiKey = process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || '';
@@ -39,7 +37,7 @@ async function summarizeAndTag(input: {
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT:\n${combinedText}`;
 
     const response = await client.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are an expert technical recruiter.' };
         { role: 'user', content: prompt }];
@@ -94,7 +92,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await fse.ensureDir(uploadsDir);
     await fse.ensureDir(dataDir);
 
-    let savedProfileImagePath: string | null = null;
+    let savedProfileImagePath: string | null = null,
     if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path.extname(profilePicture.name) || '.png';
       const filename = `${id}-profile${ext}`;
@@ -106,7 +104,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
     }
 
-    let savedCvPath: string | null = null;
+    let savedCvPath: string | null = null,
     if (cvFile?.base64 && cvFile?.name) {
       const ext = path.extname(cvFile.name) || '.pdf';
       const filename = `${id}-cv${ext}`;
@@ -128,20 +126,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const record = {
       id;
-      createdAt: new Date().toISOString();
-      fullName;
+      createdAt: new Date().toISOString(), fullName,
       professionalTitle;
       bio;
       projects;
-      yearsOfExperience: Number(yearsOfExperience) || 0;
-      skills;
+      yearsOfExperience: Number(yearsOfExperience) || 0, skills,
       tools;
       availability;
       timezone;
-      hourlyRate: hourlyRate ? Number(hourlyRate) : null;
-      portfolioLinks;
+      hourlyRate: hourlyRate ? Number(hourlyRate) : null, portfolioLinks,
       assets: {
-        profileImage: savedProfileImagePath;
+        profileImage: savedProfileImagePath,
         cv: savedCvPath};
       ai: {
         summary;
@@ -151,7 +146,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
     const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
-    let aggregate: any[] = [];
+    let aggregate: any[] = [],
     if (fs.existsSync(aggregatePath)) {
       try {
         const content = await fse.readJSON(aggregatePath);

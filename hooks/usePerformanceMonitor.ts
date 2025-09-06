@@ -1,11 +1,9 @@
 
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
+  loadTime: number, firstContentfulPaint: number,
+  largestContentfulPaint: number, firstInputDelay: number,
+  cumulativeLayoutShift: number,
 }
 
 export function usePerformanceMonitor() {
@@ -17,9 +15,9 @@ export function usePerformanceMonitor() {
 
     // Check if Performance Observer is supported
     if (!('PerformanceObserver' in window)) {
-      setIsSupported(false);
-      return;
-    }
+    setIsSupported(false),
+    return
+  }
 
     setIsSupported(true);
 

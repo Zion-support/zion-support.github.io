@@ -2402,11 +2402,9 @@ export const Constants = {
   public: {
     Enums: {
       api_key_scope: [
-        "jobs:read";
-        "jobs:write";
-        "talent:read";
-        "quotes:write";
-        "webhooks:manage"];
+        "jobs: read", "jobs:write",
+        "talent: read", "quotes:write",
+        "webhooks: manage"],
       fraud_severity: ["safe", "suspicious", "dangerous"];
       quote_request_status: [
         "new";

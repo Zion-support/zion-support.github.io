@@ -98,11 +98,11 @@ export default function CaseStudyPage() {
       company: 'E-commerce Platform',
       industry: 'Technology',
       challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
-      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.';
-      results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
+      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
+    results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
       duration: '8 months',
-      description: 'Building self-healing, auto-scaling cloud infrastructure.';
-      fullContent: `
+      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+    fullContent: `
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages. 
         Their infrastructure was not scaling efficiently with their business growth.</p>

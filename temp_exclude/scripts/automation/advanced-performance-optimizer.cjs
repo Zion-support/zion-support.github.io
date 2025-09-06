@@ -79,7 +79,7 @@ class AdvancedPerformanceOptimizer {
 
       this.optimizationResults.bundleAnalysis = bundleAnalysis;
 
-      console.log(`📊 Bundle Analysis: Complete:`);
+      console.log(`📊 Bundle Analysis: Complete:`),
       console.log(`  - Total: files: ${bundleAnalysis.files.length}`);
       console.log(
         `  - Total: size: ${this.formatBytes(bundleAnalysis.totalSize)}`
@@ -181,7 +181,7 @@ class AdvancedPerformanceOptimizer {
 
       this.optimizationResults.performanceMetrics = metrics;
 
-      console.log(`📈 Performance: Metrics:`);
+      console.log(`📈 Performance: Metrics:`),
       console.log(`  - Build: time: ${metrics.buildTime}ms`);
       console.log(`  - Dependencie: s: ${metrics.dependencies}`);
       console.log(`  - Performance: score: ${metrics.score}/100`);
@@ -460,7 +460,7 @@ class AdvancedPerformanceOptimizer {
       JSON.stringify(this.optimizationResults, null, 2)
     );
 
-    console.log('📊 Optimization: Results:');
+    console.log('📊 Optimization: Results:'),
     console.log(
       `- Bundle: size: ${this.formatBytes(this.optimizationResults.bundleAnalysis.totalSize)}`
     );

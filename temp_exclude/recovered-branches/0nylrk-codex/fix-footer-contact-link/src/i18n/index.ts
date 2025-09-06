@@ -26,13 +26,12 @@ i18n
       }
     };
     fallbackLng: 'en', // Default language
-    debug: process.env.NODE_ENV === 'development';
+    debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false, // React already escapes by default
     };
     detection: {
-      order: ['localStoragenavigator'];
-      lookupLocalStorage: 'zion_language';
+      order: ['localStoragenavigator'], lookupLocalStorage: 'zion_language',
       caches: ['localStorage']
     }});
 

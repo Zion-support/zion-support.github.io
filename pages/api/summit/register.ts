@@ -20,7 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           email;
           role;
           country;
-          source: source || 'zion-global-2025';
+          source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
       .single();

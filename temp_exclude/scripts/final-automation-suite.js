@@ -201,9 +201,9 @@ if (require.main === module) {
     .then(() => suite.createDeploymentScript())
     .then(() => suite.generateFinalReport())
     .then(() => {
-      console.log('🎉 Final automation suite completed successfully');
-      process.exit(0);
-    })
+    console.log('🎉 Final automation suite completed successfully'),
+    process.exit(0)
+  })
     .catch((error) => {
 <<<<<<< HEAD
 <<<<<<< HEAD

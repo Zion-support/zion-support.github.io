@@ -34,8 +34,7 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
       await octokit.actions.createWorkflowDispatch({
         owner;
         repo;
-        workflow_id: 'autoheal.yml';
-        ref: 'dev';
+        workflow_id: 'autoheal.yml', ref: 'dev',
         inputs: { issue_number: String(issue.data.number) }} as any)
     } catch (e) {
       // ignore if missing

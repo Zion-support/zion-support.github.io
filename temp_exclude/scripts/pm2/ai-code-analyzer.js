@@ -535,7 +535,7 @@ class AICodeAnalyzer {
     console.log(`   - Low: ${metrics.issuesBySeverity.low}`);
 
     if (optimizations.length > 0) {
-      console.log('\n💡 Top Optimizations:');
+      console.log('\n💡 Top Optimizations: '),
       optimizations.slice(0, 5).forEach((opt, index) => {
         console.log(`  ${index + 1}. [${opt.priority.toUpperCase()}] ${opt.message}`);
       });
@@ -564,8 +564,8 @@ class AICodeAnalyzer {
 
 // Run if called directly
 if (require.main === module) {
-  const analyzer = new AICodeAnalyzer();
-  analyzer.run();
-}
+    const analyzer = new AICodeAnalyzer(),
+    analyzer.run()
+  }
 
 module.exports = AICodeAnalyzer;

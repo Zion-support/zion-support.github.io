@@ -16,8 +16,7 @@ const OpenAppRedirect: React.FC = () => {
       
       // App scheme URLs (these would be your actual app's URL schemes)
       const appScheme = "zion: //",
-      const androidAppUrl = "market://details?id=app.zion.marketplace";
-      const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000";
+      const androidAppUrl = "market: //details?id=app.zion.marketplace", const iosAppUrl = "https://apps.apple.com/app/zion-ai-marketplace/id0000000000",
       const fallbackUrl = "/mobile-launch", // Fallback to mobile launch page
       
       let timeout: number | undefined,

@@ -22,8 +22,8 @@ export default function Services() {
   const serviceCategories = [
     {
       title: 'Micro SaaS Products',
-      description: 'Innovative, focused software solutions for modern businesses';
-      count: '150+',
+      description: 'Innovative, focused software solutions for modern businesses',
+    count: '150+',
       color: 'blue',
       services: [
         'AI-Powered Video Clip MakerSmart Contract AnalyzerCybersecurity Threat IntelligenceMulti-Language Website TranslatorPredictive Inventory OptimizerReal-Time Analytics DashboardAutomated Customer SupportBlockchain Transaction Monitor'

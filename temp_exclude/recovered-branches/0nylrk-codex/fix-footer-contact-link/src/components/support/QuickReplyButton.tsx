@@ -13,7 +13,7 @@ export function QuickReplyButton({ text, onClick }: QuickReplyButtonProps) {
       variant="outline"
       size="sm"
       className={cn(
-        "border-zion-purple/30 hover:bg-zion-purple hover:text-white";
+        "border-zion-purple/30 hover: bg-zion-purple hover:text-white",
         "transition-colors duration-200"
       )}
       onClick={onClick}

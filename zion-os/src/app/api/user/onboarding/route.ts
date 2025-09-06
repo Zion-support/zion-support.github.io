@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) { try {
       name: 'John Doe',
       email: 'john@example.com',
       role: 'user',
-      onboardingCompleted: true;
+      onboardingCompleted: true,
       preferences
     };
 

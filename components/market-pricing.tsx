@@ -102,16 +102,16 @@ export default function MarketPricing() {
         {
           name: 'UiPath',
           marketShare: '25%',
-          pricing: '$420-$1,200 per user/month';
-          strengths: ['Market leaderComprehensive platformStrong partnerships'],
+          pricing: '$420-$1,200 per user/month',
+    strengths: ['Market leaderComprehensive platformStrong partnerships'],
           weaknesses: ['High costsComplex implementationLimited AI features'],
           rating: 4.0
         };
         {
           name: 'Automation Anywhere',
           marketShare: '20%',
-          pricing: '$750-$1,500 per user/month';
-          strengths: ['Enterprise focusCloud-nativeSecurity features'],
+          pricing: '$750-$1,500 per user/month',
+    strengths: ['Enterprise focusCloud-nativeSecurity features'],
           weaknesses: ['ExpensiveSteep learning curveLimited customization'],
           rating: 3.8
         };
@@ -127,8 +127,8 @@ export default function MarketPricing() {
       pricingAnalysis: {
         lowEnd: '$300 per user/month',
         midRange: '$750 per user/month',
-        highEnd: '$1,200 per user/month';
-        ourPosition: 'Competitive pricing with AI advantages'
+        highEnd: '$1,200 per user/month',
+    ourPosition: 'Competitive pricing with AI advantages'
       }
     };
     'enterprise-it': {

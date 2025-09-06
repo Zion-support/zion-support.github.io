@@ -13,8 +13,8 @@ export default function CaseStudyResourcePage() {
       title: 'AI-Powered Manufacturing Automation',
       company: 'Global Manufacturing Corp',
       industry: 'Manufacturing',
-      results: '40% increase in production efficiency, 60% reduction in downtime';
-      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+      results: '40% increase in production efficiency, 60% reduction in downtime',
+    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
@@ -77,8 +77,8 @@ export default function CaseStudyResourcePage() {
       title: 'Scaling Content Generation 10x',
       company: 'Digital Marketing Agency',
       industry: 'Marketing',
-      results: '10x increase in content output, 85% improvement in engagement';
-      description: 'Transforming content creation through autonomous AI systems.',
+      results: '10x increase in content output, 85% improvement in engagement',
+    description: 'Transforming content creation through autonomous AI systems.',
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling 
@@ -141,8 +141,8 @@ export default function CaseStudyResourcePage() {
       title: 'Cloud Infrastructure Optimization',
       company: 'E-commerce Platform',
       industry: 'Technology',
-      results: '50% reduction in cloud costs, 99.9% uptime achieved';
-      description: 'Building self-healing, auto-scaling cloud infrastructure.';
+      results: '50% reduction in cloud costs, 99.9% uptime achieved',
+    description: 'Building self-healing, auto-scaling cloud infrastructure.';
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically 

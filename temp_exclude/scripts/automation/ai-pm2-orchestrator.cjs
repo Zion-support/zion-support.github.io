@@ -611,9 +611,9 @@ class AIPM2Orchestrator {
     try {
       // Force garbage collection if available
       if (global.gc) {
-        global.gc();
-        this.log('Forced garbage collection');
-      }
+    global.gc(),
+    this.log('Forced garbage collection')
+  }
       
       const processes = await this.getProcessMetrics();
       const highMemoryProcesses = processes.filter(p => p.memory > 100 * 1024 * 1024); // 100MB
@@ -931,8 +931,8 @@ class AIPM2Orchestrator {
 
 // Run if called directly
 if (require.main === module) {
-  const orchestrator = new AIPM2Orchestrator();
-  orchestrator.start().catch(console.error);
-}
+    const orchestrator = new AIPM2Orchestrator(),
+    orchestrator.start().catch(console.error)
+  }
 
 module.exports = AIPM2Orchestrator;

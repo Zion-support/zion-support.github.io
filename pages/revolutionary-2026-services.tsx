@@ -39,11 +39,9 @@ export default function Revolutionary2026ServicesPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
+              "@context": "https: //schema.org", "@type": "Organization",
               "name": "Zion Tech Group";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png",
               "description": "Revolutionary AI, quantum computing, and emerging technology services for 2026";
               "address": {
                 "@type": "PostalAddress";
@@ -107,20 +105,20 @@ export default function Revolutionary2026ServicesPage() {
                 {
                   icon: '⚛️',
                   title: 'Quantum Technology',
-                  description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.';
-                  color: 'from-blue-500 to-cyan-500'
+                  description: 'Leading-edge quantum computing, cryptography, and quantum internet infrastructure.',
+    color: 'from-blue-500 to-cyan-500'
                 };
                 {
                   icon: '🚀',
                   title: 'Emerging Tech',
-                  description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.';
-                  color: 'from-green-500 to-emerald-500'
+                  description: 'Cutting-edge holographic metaverse, space tech, and autonomous manufacturing.',
+    color: 'from-green-500 to-emerald-500'
                 };
                 {
                   icon: '🏥',
                   title: 'Healthcare Innovation',
-                  description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.';
-                  color: 'from-teal-500 to-cyan-500'
+                  description: 'Revolutionary AI drug discovery, autonomous healthcare, and biotech research.',
+    color: 'from-teal-500 to-cyan-500'
                 };
                 {
                   icon: '💰',
@@ -131,8 +129,8 @@ export default function Revolutionary2026ServicesPage() {
                 {
                   icon: '🌐',
                   title: 'Global Impact',
-                  description: 'Serving 2,500+ customers worldwide with transformative technology solutions.';
-                  color: 'from-indigo-500 to-purple-500'
+                  description: 'Serving 2,500+ customers worldwide with transformative technology solutions.',
+    color: 'from-indigo-500 to-purple-500'
                 }
               ].map((feature, index) => (
                 <div key={index} className="group">

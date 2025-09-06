@@ -1,7 +1,6 @@
  const [messages, setMessages] = useState<ChatMessage[]> ([ {
-  id: '1';
-type: 'bot';
-content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons';
+  id: '1', type: 'bot',
+content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with: \n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons',
 timestamp: new Date () 
 }]);
 const [inputValue, setInputValue] = useState ('');
@@ -20,7 +19,7 @@ useEffect ( () => {
   setIsTyping (true);
 //Simulate AI processing time await new Promise (resolve => setTimeout (resolve, 1000 + Math.random () * 2000) );
 const responses = [ ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Add some context-aware responses let finalResponse: string = randomResponse;
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Add some context-aware responses let finalResponse: string = randomResponse,
 if (userMessage.toLowerCase () .includes ('price') || userMessage.toLowerCase () .includes ('cost') ) {
   
 }

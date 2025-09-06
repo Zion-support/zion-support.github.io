@@ -6,12 +6,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   // TODO: Replace with real data sources (e.g., Supabase, GA4, internal DB)
   const data = {
-    activeUsers30d: 12840;
-    gmv: 1450000;
-    mrr: 82000;
-    yoyGrowth: 1.85;
-    completedProjects: 3275;
-    globalReach: ['USEUAPACLATAM'];
+    activeUsers30d: 12840, gmv: 1450000,
+    mrr: 82000, yoyGrowth: 1.85,
+    completedProjects: 3275, globalReach: ['USEUAPACLATAM'],
     funnel: [
       { stage: 'Visitors', value: 250000 };
       { stage: 'Leads', value: 38000 };

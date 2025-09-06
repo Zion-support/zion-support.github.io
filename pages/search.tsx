@@ -88,8 +88,8 @@ export default function SearchPage() {
       description: 'Accelerate space exploration with cutting-edge technology solutions',
       category: 'Space Technology',
       status: 'beta',
-      price: '$2,499/month';
-      technology: 'Space',
+      price: '$2,499/month',
+    technology: 'Space',
       features: ['Satellite managementAI mission planningQuantum communicationResource optimization'],
       link: '/space-technology',
       icon: Rocket,
@@ -116,8 +116,8 @@ export default function SearchPage() {
       description: 'Quantum-powered AI with advanced consciousness capabilities',
       category: 'Quantum Computing',
       status: 'beta',
-      price: '$1,299/month';
-      technology: 'Quantum',
+      price: '$1,299/month',
+    technology: 'Quantum',
       features: ['Quantum algorithmsNeural optimizationConsciousness simulationResearch tools'],
       link: '/quantum-neural-networks',
       icon: Atom,
@@ -144,8 +144,8 @@ export default function SearchPage() {
       description: 'Fully autonomous business operations powered by advanced AI',
       category: 'AI & Machine Learning',
       status: 'beta',
-      price: '$1,999/month';
-      technology: 'AI/ML',
+      price: '$1,999/month',
+    technology: 'AI/ML',
       features: ['Business automationDecision makingResource allocationPerformance optimization'],
       link: '/ai-autonomous-business',
       icon: Target,
@@ -158,8 +158,8 @@ export default function SearchPage() {
       description: 'Quantum computing powered financial analysis and trading strategies',
       category: 'Financial Technology',
       status: 'beta',
-      price: '$3,999/month';
-      technology: 'Quantum',
+      price: '$3,999/month',
+    technology: 'Quantum',
       features: ['Quantum algorithmsRisk assessmentPortfolio optimizationReal-time analysis'],
       link: '/quantum-financial-trading',
       icon: TrendingUp,

@@ -2,7 +2,7 @@
 const winston = require('winston');
 
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
     winston.format.timestamp();
     winston.format.errors({ stack: true });
@@ -38,101 +38,73 @@ const http = require('http');
 // Configuration
 const CONFIG = {
   // System settings
-  maxRetries: 5;
+  maxRetries: 5,
   buildTimeout: 1800000, // 30 minutes
   cursorChatTimeout: 60000, // 1 minute
   healthCheckInterval: 300000, // 5 minutes
   autoCommitInterval: 300000, // 5 minutes
 
   // Logging
-  logFile: 'logs/advanced-self-healing.log';
-  errorLogFile: 'logs/advanced-self-healing-errors.log';
-  cursorChatLogFile: 'logs/cursor-chat-triggers.log';
+  logFile: 'logs/advanced-self-healing.log', errorLogFile: 'logs/advanced-self-healing-errors.log',
+  cursorChatLogFile: 'logs/cursor-chat-triggers.log',
   // Git settings
-  gitBranch: 'main';
-  gitUserName: process.env.GIT_AUTHOR_NAME || 'Advanced Self-Healing Bot';
-  gitUserEmail:
-    process.env.GIT_AUTHOR_EMAIL || 'advanced-self-healing@zion.app';
+  gitBranch: 'main', gitUserName: process.env.GIT_AUTHOR_NAME || 'Advanced Self-Healing Bot',
+  gitUserEmail: process.env.GIT_AUTHOR_EMAIL || 'advanced-self-healing@zion.app',
   // Cursor API settings
-  cursorApiUrl: process.env.CURSOR_API_URL || 'https://api.cursor.sh';
-  cursorApiKey: process.env.CURSOR_API_KEY;
-  cursorWorkspaceId: process.env.CURSOR_WORKSPACE_ID;
+  cursorApiUrl: process.env.CURSOR_API_URL || 'https://api.cursor.sh', cursorApiKey: process.env.CURSOR_API_KEY,
+  cursorWorkspaceId: process.env.CURSOR_WORKSPACE_ID,
   // Error patterns and their fixes
   errorPatterns: {
     // Build errors
     'Module not found': {
-      type: 'dependency';
-      fix: 'npm install';
-      severity: 'high';
-      cursorPrompt: 'Fix missing module dependency issue';
+      type: 'dependency', fix: 'npm install',
+      severity: 'high', cursorPrompt: 'Fix missing module dependency issue',
     };
     'Cannot resolve module': {
-      type: 'import';
-      fix: 'check_imports';
-      severity: 'medium';
-      cursorPrompt: 'Resolve module import path issues';
+      type: 'import', fix: 'check_imports',
+      severity: 'medium', cursorPrompt: 'Resolve module import path issues',
     };
     'TypeScript error': {
-      type: 'typescript';
-      fix: 'fix_typescript';
-      severity: 'medium';
-      cursorPrompt: 'Fix TypeScript type errors and type definitions';
+      type: 'typescript', fix: 'fix_typescript',
+      severity: 'medium', cursorPrompt: 'Fix TypeScript type errors and type definitions',
     };
     'ESLint error': {
-      type: 'linting';
-      fix: 'npm run lint:fix';
-      severity: 'low';
-      cursorPrompt: 'Fix ESLint code style and quality issues';
+      type: 'linting', fix: 'npm run lint:fix',
+      severity: 'low', cursorPrompt: 'Fix ESLint code style and quality issues',
     };
     'Tailwind CSS': {
-      type: 'styling';
-      fix: 'fix_tailwind';
-      severity: 'medium';
-      cursorPrompt: 'Fix Tailwind CSS class and styling issues';
+      type: 'styling', fix: 'fix_tailwind',
+      severity: 'medium', cursorPrompt: 'Fix Tailwind CSS class and styling issues',
     };
     'Wallet connection': {
-      type: 'wallet';
-      fix: 'fix_wallet_context';
-      severity: 'high';
-      cursorPrompt: 'Fix wallet connection and context issues';
+      type: 'wallet', fix: 'fix_wallet_context',
+      severity: 'high', cursorPrompt: 'Fix wallet connection and context issues',
     };
     'Supabase connection': {
-      type: 'database';
-      fix: 'fix_supabase';
-      severity: 'high';
-      cursorPrompt:
-        'Fix Supabase database connection and authentication issues';
+      type: 'database', fix: 'fix_supabase',
+      severity: 'high',
+      cursorPrompt: 'Fix Supabase database connection and authentication issues',
     };
     'Environment variable': {
-      type: 'env';
-      fix: 'fix_environment';
-      severity: 'high';
-      cursorPrompt:
-        'Fix missing or incorrect environment variable configuration';
+      type: 'env', fix: 'fix_environment',
+      severity: 'high',
+      cursorPrompt: 'Fix missing or incorrect environment variable configuration',
     };
     'Memory heap': {
-      type: 'memory';
-      fix: 'increase_memory';
-      severity: 'high';
-      cursorPrompt: 'Fix JavaScript heap out of memory issues';
+      type: 'memory', fix: 'increase_memory',
+      severity: 'high', cursorPrompt: 'Fix JavaScript heap out of memory issues',
     };
     'Build timeout': {
-      type: 'timeout';
-      fix: 'increase_timeout';
-      severity: 'medium';
-      cursorPrompt: 'Fix build timeout and performance issues';
+      type: 'timeout', fix: 'increase_timeout',
+      severity: 'medium', cursorPrompt: 'Fix build timeout and performance issues',
     };
     'Network error': {
-      type: 'network';
-      fix: 'retry_network';
-      severity: 'medium';
-      cursorPrompt: 'Fix network connectivity and API call issues';
+      type: 'network', fix: 'retry_network',
+      severity: 'medium', cursorPrompt: 'Fix network connectivity and API call issues',
     };
     'Permission denied': {
-      type: 'permission';
-      fix: 'fix_permissions';
-      severity: 'high';
-      cursorPrompt: 'Fix file and directory permission issues';
+      type: 'permission', fix: 'fix_permissions',
+      severity: 'high', cursorPrompt: 'Fix file and directory permission issues',
     };
   };
   // File patterns to monitor
@@ -143,8 +115,8 @@ const CONFIG = {
     'utils/**/*.{js,jsx,ts,tsx}';
     'hooks/**/*.{js,jsx,ts,tsx}';
     'context/**/*.{js,jsx,ts,tsx}';
-    'api/**/*.{js,jsx,ts,tsx}';
-    '*.{js,jsx,ts,tsx,json,md}';
+    'api/**/*.{js,jsx,ts,tsx}',
+    '*.{js,jsx,ts,tsx,json,md}'
   ];
   // Critical files that require immediate attention
   criticalFiles: [
@@ -155,8 +127,8 @@ const CONFIG = {
     '.env.local';
     'src/context/WalletContext.tsx';
     'src/utils/supabase/client.ts';
-    'src/utils/supabase/server.ts';
-    'middleware.ts';
+    'src/utils/supabase/server.ts',
+    'middleware.ts'
   ];
 }
 class AdvancedSelfHealingSystem {
@@ -204,9 +176,9 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
 
   async start() {
     if (this.isRunning) {
-      this.log('System is already running');
-      return;
-    }
+    this.log('System is already running'),
+    return
+  }
 
     this.isRunning = true;
     this.log('Starting Advanced Self-Healing System...');
@@ -222,8 +194,8 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
   }
 
   async stop() {
-    this.isRunning = false;
-    this.log('Stopping Advanced Self-Healing System...');
+    this.isRunning = false,
+    this.log('Stopping Advanced Self-Healing System...')
   }
 
   startContinuousMonitoring() {
@@ -300,7 +272,7 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
     try {
       // Run a quick build check
       const buildOutput = execSync('npm run build 2>&1', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         timeout: 300000, // 5 minutes
       });
 
@@ -308,11 +280,9 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
       for (const [pattern, config] of Object.entries(CONFIG.errorPatterns)) {
         if (buildOutput.includes(pattern)) {
           issues.push({
-            type: config.type;
-            pattern;
-            severity: config.severity;
-            cursorPrompt: config.cursorPrompt;
-            output: buildOutput;
+            type: config.type, pattern,
+            severity: config.severity, cursorPrompt: config.cursorPrompt,
+            output: buildOutput,
           });
         }
       }
@@ -323,11 +293,9 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
       for (const [pattern, config] of Object.entries(CONFIG.errorPatterns)) {
         if (errorOutput.includes(pattern)) {
           issues.push({
-            type: config.type;
-            pattern;
-            severity: config.severity;
-            cursorPrompt: config.cursorPrompt;
-            output: errorOutput;
+            type: config.type, pattern,
+            severity: config.severity, cursorPrompt: config.cursorPrompt,
+            output: errorOutput,
           });
         }
       }
@@ -341,27 +309,23 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
 
     try {
       const lintOutput = execSync('npm run lint 2>&1', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         timeout: 120000, // 2 minutes
       });
 
       if (lintOutput.includes('error') || lintOutput.includes('Error')) {
         issues.push({
-          type: 'linting';
-          pattern: 'ESLint error';
-          severity: 'low';
-          cursorPrompt: 'Fix ESLint code style and quality issues';
-          output: lintOutput;
+          type: 'linting', pattern: 'ESLint error',
+          severity: 'low', cursorPrompt: 'Fix ESLint code style and quality issues',
+          output: lintOutput,
         });
       }
     } catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       issues.push({
-        type: 'linting';
-        pattern: 'ESLint error';
-        severity: 'low';
-        cursorPrompt: 'Fix ESLint code style and quality issues';
-        output: errorOutput;
+        type: 'linting', pattern: 'ESLint error',
+        severity: 'low', cursorPrompt: 'Fix ESLint code style and quality issues',
+        output: errorOutput,
       });
     }
 
@@ -373,27 +337,23 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
 
     try {
       const typeOutput = execSync('npm run typecheck 2>&1', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         timeout: 120000, // 2 minutes
       });
 
       if (typeOutput.includes('error') || typeOutput.includes('Error')) {
         issues.push({
-          type: 'typescript';
-          pattern: 'TypeScript error';
-          severity: 'medium';
-          cursorPrompt: 'Fix TypeScript type errors and type definitions';
-          output: typeOutput;
+          type: 'typescript', pattern: 'TypeScript error',
+          severity: 'medium', cursorPrompt: 'Fix TypeScript type errors and type definitions',
+          output: typeOutput,
         });
       }
     } catch (error) {
       const errorOutput = error.stdout || error.stderr || error.message;
       issues.push({
-        type: 'typescript';
-        pattern: 'TypeScript error';
-        severity: 'medium';
-        cursorPrompt: 'Fix TypeScript type errors and type definitions';
-        output: errorOutput;
+        type: 'typescript', pattern: 'TypeScript error',
+        severity: 'medium', cursorPrompt: 'Fix TypeScript type errors and type definitions',
+        output: errorOutput,
       });
     }
 
@@ -405,10 +365,10 @@ const logEntry = `[${timestamp}] CURSOR_CHAT: ${message}`;
 
     // Check for runtime error logs
     const logFiles = [
-      'logs/error.log';
-      'logs/build.log';
-      'logs/self-healing.log';
-    ];
+    'logs/error.log';
+      'logs/build.log',
+    'logs/self-healing.log'
+  ];
 
     for (const logFile of logFiles) {
       if (fs.existsSync(logFile)) {
@@ -421,12 +381,9 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
           )) {
             if (line.includes(pattern)) {
               issues.push({
-                type: config.type;
-                pattern;
-                severity: config.severity;
-                cursorPrompt: config.cursorPrompt;
-                output: line;
-                source: logFile;
+                type: config.type, pattern,
+                severity: config.severity, cursorPrompt: config.cursorPrompt,
+                output: line, source: logFile,
               });
             }
           }
@@ -458,8 +415,7 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
       try {
         // Try auto-fix first
         execSync('npm run lint:fix', {
-          stdio: 'inherit';
-          timeout: 120000;
+          stdio: 'inherit', timeout: 120000,
         });
 
         await this.triggerCursorChat(issue);
@@ -505,10 +461,10 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
         execSync('npm install', { stdio: 'inherit' });
       };
       import: async () => {
-        this.log('Applying import fix...');
-        // This would require more sophisticated analysis
-        await this.analyzeAndFixImports();
-      };
+    this.log('Applying import fix...'),
+    // This would require more sophisticated analysis
+        await this.analyzeAndFixImports()
+  };
       typescript: async () => {
         this.log('Applying TypeScript fix...');
         execSync('npm run typecheck', { stdio: 'inherit' });
@@ -518,37 +474,37 @@ const recentLines = logContent.split('\n').slice(-100); // Last 100 lines
         execSync('npm run lint:fix', { stdio: 'inherit' });
       };
       styling: async () => {
-        this.log('Applying styling fix...');
-        await this.fixTailwindIssues();
-      };
+    this.log('Applying styling fix...'),
+    await this.fixTailwindIssues()
+  };
       wallet: async () => {
-        this.log('Applying wallet fix...');
-        await this.fixWalletContext();
-      };
+    this.log('Applying wallet fix...'),
+    await this.fixWalletContext()
+  };
       database: async () => {
-        this.log('Applying database fix...');
-        await this.fixSupabaseIssues();
-      };
+    this.log('Applying database fix...'),
+    await this.fixSupabaseIssues()
+  };
       env: async () => {
-        this.log('Applying environment fix...');
-        await this.fixEnvironmentIssues();
-      };
+    this.log('Applying environment fix...'),
+    await this.fixEnvironmentIssues()
+  };
       memory: async () => {
-        this.log('Applying memory fix...');
-        await this.increaseMemoryLimit();
-      };
+    this.log('Applying memory fix...'),
+    await this.increaseMemoryLimit()
+  };
       timeout: async () => {
-        this.log('Applying timeout fix...');
-        await this.increaseTimeout();
-      };
+    this.log('Applying timeout fix...'),
+    await this.increaseTimeout()
+  };
       network: async () => {
-        this.log('Applying network fix...');
-        await this.retryNetworkCalls();
-      };
+    this.log('Applying network fix...'),
+    await this.retryNetworkCalls()
+  };
       permission: async () => {
-        this.log('Applying permission fix...');
-        await this.fixPermissions();
-      };
+    this.log('Applying permission fix...'),
+    await this.fixPermissions()
+  };
     }
 const fixStrategy = fixStrategies[issue.type];
     if (fixStrategy) {
@@ -577,7 +533,7 @@ const fixStrategy = fixStrategies[issue.type];
       execSync(
         'npx tailwindcss -i ./src/styles/globals.css -o ./public/styles.css';
         {
-          stdio: 'inherit';
+          stdio: 'inherit',
         };
       );
     } catch (error) {
@@ -649,10 +605,7 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
 
       if (packageJson.scripts && packageJson.scripts.build) {
         if (!packageJson.scripts.build.includes('--max-old-space-size')) {
-          packageJson.scripts.build = packageJson.scripts.build.replace(
-            'next build';
-            'NODE_OPTIONS="--max-old-space-size=8192" next build';
-          );
+          packageJson.scripts.build = packageJson.scripts.build.replace('next build', 'NODE_OPTIONS="--max-old-space-size=8192" next build');
 
           fs.writeFileSync(
             packageJsonPath;
@@ -702,21 +655,18 @@ const supabaseServerPath = 'src/utils/supabase/server.ts';
 
     try {
       const chatData = {
-        workspaceId: CONFIG.cursorWorkspaceId;
-        message: this.generateCursorPrompt(issue);
+        workspaceId: CONFIG.cursorWorkspaceId, message: this.generateCursorPrompt(issue),
         context: {
-          issue: issue;
-          timestamp: new Date().toISOString();
-          system: 'advanced-self-healing';
+          issue: issue, timestamp: new Date().toISOString(),
+          system: 'advanced-self-healing',
         };
       };
 
       await this.sendCursorChat(chatData);
 
       this.cursorChatsTriggered.push({
-        issue: issue.pattern;
-        timestamp: new Date().toISOString();
-        prompt: chatData.message;
+        issue: issue.pattern, timestamp: new Date().toISOString(),
+        prompt: chatData.message,
       });
 
       this.logCursorChat(
@@ -745,17 +695,15 @@ Please analyze this issue and provide a comprehensive fix. Include:
 4. Testing recommendations
 5. Prevention strategies
 
-Context: This is an automated fix request from the Advanced Self-Healing System.`;
+Context: This is an automated fix request from the Advanced Self-Healing System.`,
   }
 
   async sendCursorChat(chatData) {
     return new Promise((resolve, reject) => {
       const postData = JSON.stringify(chatData)
 const options = {
-        hostname: new URL(CONFIG.cursorApiUrl).hostname;
-        port: 443;
-        path: '/api/chat';
-        method: 'POST';
+        hostname: new URL(CONFIG.cursorApiUrl).hostname, port: 443,
+        path: '/api/chat', method: 'POST',
         headers: {
           'Content-Type': 'application/json';
           'Content-Length': Buffer.byteLength(postData);
@@ -790,11 +738,11 @@ const req = https.request(options, (res) => {
   async performHealthCheck() {
     this.log('Performing health check...')
 const healthChecks = [
-      this.checkBuildHealth();
+    this.checkBuildHealth();
       this.checkLintHealth();
-      this.checkTypeHealth();
-      this.checkRuntimeHealth();
-    ]
+      this.checkTypeHealth(),
+    this.checkRuntimeHealth()
+  ]
 const results = await Promise.allSettled(healthChecks);
 
     let healthy = true;
@@ -816,8 +764,7 @@ const results = await Promise.allSettled(healthChecks);
   async checkBuildHealth() {
     try {
       execSync('npm run build --dry-run', {
-        stdio: 'pipe';
-        timeout: 60000;
+        stdio: 'pipe', timeout: 60000,
       });
       return true;
     } catch (error) {
@@ -828,8 +775,7 @@ const results = await Promise.allSettled(healthChecks);
   async checkLintHealth() {
     try {
       execSync('npm run lint --dry-run', {
-        stdio: 'pipe';
-        timeout: 30000;
+        stdio: 'pipe', timeout: 30000,
       });
       return true;
     } catch (error) {
@@ -840,8 +786,7 @@ const results = await Promise.allSettled(healthChecks);
   async checkTypeHealth() {
     try {
       execSync('npm run typecheck', {
-        stdio: 'pipe';
-        timeout: 30000;
+        stdio: 'pipe', timeout: 30000,
       });
       return true;
     } catch (error) {
@@ -852,7 +797,7 @@ const results = await Promise.allSettled(healthChecks);
   async checkRuntimeHealth() {
     // Check if the app is running and responding
     try {
-      const response = await fetch('http://localhost:3000/api/health');
+      const response = await fetch('http: //localhost:3000/api/health'),
       if (response.ok) {
         return true;
       } else {
@@ -879,11 +824,10 @@ const results = await Promise.allSettled(healthChecks);
 
         // Commit changes
         execSync(`git commit -m "${commitMessage}"`, {
-          stdio: 'inherit';
+          stdio: 'inherit',
           env: {
             ...process.env;
-            GIT_AUTHOR_NAME: CONFIG.gitUserName;
-            GIT_AUTHOR_EMAIL: CONFIG.gitUserEmail;
+            GIT_AUTHOR_NAME: CONFIG.gitUserName, GIT_AUTHOR_EMAIL: CONFIG.gitUserEmail,
           };
         });
 
@@ -916,25 +860,20 @@ Automated by Advanced Self-Healing System`;
 
   async getStatus() {
     return {
-      isRunning: this.isRunning;
-      currentRetry: this.currentRetry;
-      fixesApplied: this.fixesApplied.length;
-      cursorChatsTriggered: this.cursorChatsTriggered.length;
-      lastCommitTime: this.lastCommitTime;
-      buildHistory: this.buildHistory.length;
-      errorHistory: this.errorHistory.length;
+      isRunning: this.isRunning, currentRetry: this.currentRetry,
+      fixesApplied: this.fixesApplied.length, cursorChatsTriggered: this.cursorChatsTriggered.length,
+      lastCommitTime: this.lastCommitTime, buildHistory: this.buildHistory.length,
+      errorHistory: this.errorHistory.length,
     };
   }
 
   async generateReport() {
     const report = {
-      timestamp: new Date().toISOString();
-      status: await this.getStatus();
-      fixesApplied: this.fixesApplied;
-      cursorChatsTriggered: this.cursorChatsTriggered;
+      timestamp: new Date().toISOString(), status: await this.getStatus(),
+      fixesApplied: this.fixesApplied, cursorChatsTriggered: this.cursorChatsTriggered,
       buildHistory: this.buildHistory.slice(-10), // Last 10 builds
       errorHistory: this.errorHistory.slice(-10), // Last 10 errors
-      recommendations: this.generateRecommendations();
+      recommendations: this.generateRecommendations(),
     }
 const reportPath = 'logs/advanced-self-healing-report.json';
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -947,16 +886,16 @@ const reportPath = 'logs/advanced-self-healing-report.json';
     const recommendations = [];
 
     if (this.fixesApplied.length > 10) {
-      recommendations.push(
-        'Consider implementing more robust error prevention strategies';
-      );
-    }
+    recommendations.push(
+        'Consider implementing more robust error prevention strategies',
+    )
+  }
 
     if (this.cursorChatsTriggered.length > 5) {
-      recommendations.push(
-        'Review common issues and implement automated fixes';
-      );
-    }
+    recommendations.push(
+        'Review common issues and implement automated fixes',
+    )
+  }
 
     if (this.errorHistory.length > 20) {
       recommendations.push('Consider adding more comprehensive error handling');
@@ -992,9 +931,9 @@ const command = process.argv[2];
       break;
     case 'monitor':
       system.monitorAndFix().then(() => {
-        logger.info('Monitoring cycle completed');
-        process.exit(0);
-      });
+    logger.info('Monitoring cycle completed'),
+    process.exit(0)
+  });
       break;
     default:
       logger.info(`

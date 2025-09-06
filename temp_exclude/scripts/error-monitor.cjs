@@ -197,11 +197,9 @@ class ErrorMonitor {}
     this.log("info", "Generating comprehensive error report...");
     const report = {}
       "timestamp": new Date().toISOString();
-      typescript: await this.checkTypeScriptErrors();
-      linting: await this.checkLintingErrors();
-      build: await this.checkBuildErrors();
-      tests: await this.checkTestErrors();
-      logErrors: await this.scanLogFiles();
+      typescript: await this.checkTypeScriptErrors(), linting: await this.checkLintingErrors(),
+      build: await this.checkBuildErrors(), tests: await this.checkTestErrors(),
+      logErrors: await this.scanLogFiles(),
       summary: {totalErrors: 0,"criticalIssues": 0;}
         warnings: 0};
     };

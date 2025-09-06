@@ -8,8 +8,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   const { recipientId, body, linkUrl, attachmentBase64, attachmentName, context } = req.body as {
-    recipientId: string;
-    body: string;
+    recipientId: string, body: string,
     linkUrl?: string;
     attachmentBase64?: string;
     attachmentName?: string;
@@ -19,8 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!recipientId || !body) return res.status(400).json({ error: 'Missing fields' });
 
   const { conversation, message } = sendMessage({
-    senderId: user.id;
-    recipientId;
+    senderId: user.id, recipientId,
     body;
     linkUrl;
     attachmentBase64;

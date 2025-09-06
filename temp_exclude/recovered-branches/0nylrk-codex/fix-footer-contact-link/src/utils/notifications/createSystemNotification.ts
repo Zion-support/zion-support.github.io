@@ -16,8 +16,7 @@ export async function createSystemNotification({
     userId;
     title;
     message;
-    type: 'system';
-    sendEmail;
+    type: 'system', sendEmail,
     actionUrl;
     actionText
   })

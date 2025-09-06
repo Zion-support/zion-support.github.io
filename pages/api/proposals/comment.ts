@@ -18,11 +18,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const body = req.body || {};
     const data = await fs.readJson(FILE_PATH);
     const comment = {
-      id: Date.now().toString();
-      proposalId: body.proposalId;
-      region: body.region || 'Global';
-      author: body.author || 'anon';
-      text: body.text || '';
+      id: Date.now().toString(), proposalId: body.proposalId,
+      region: body.region || 'Global', author: body.author || 'anon',
+      text: body.text || '',
       createdAt: new Date().toISOString()};
     data.comments.push(comment);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });

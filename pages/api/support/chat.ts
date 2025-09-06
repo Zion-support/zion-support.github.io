@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [sysMessage, ...messages];
       temperature: 0.2});
 
@@ -38,8 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({
       assistantMessage;
       meta: {
-        intentMatched: intent.intentMatched;
-        matchedArticleIds: intent.matchedArticleIds;
+        intentMatched: intent.intentMatched, matchedArticleIds: intent.matchedArticleIds,
         links: matchedArticles.map((a) => ({ title: a.title, href: `/help/${a.slug}` }))}})
   } catch (e: any) {
     return res.status(200).json({ assistantMessage: 'I could not reach the assistant right now. Please try again in a moment.' })

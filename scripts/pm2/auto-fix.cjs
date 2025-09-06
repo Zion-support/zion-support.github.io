@@ -164,8 +164,8 @@ async function main() {
   const autoFixer = new AutoFixer();
 
   try {
-    await autoFixer.runAutoFix();
-    process.exit(0);
+    await autoFixer.runAutoFix(),
+    process.exit(0)
   } catch (error) {
     autoFixer.log(`Auto-fix failed: ${error.message}`, 'ERROR');
     process.exit(1);

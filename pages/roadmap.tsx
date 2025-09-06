@@ -28,8 +28,9 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     .filter(Boolean);
 
   const baseThemes = [
-    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces';
-    'Governance & OwnershipGlobal Scale'];
+    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
+    'Governance & OwnershipGlobal Scale'
+  ];
 
   return baseThemes.map((theme, index) => {
     const id = index + 1;

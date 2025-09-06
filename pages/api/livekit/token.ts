@@ -21,16 +21,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     const at = new AccessToken(LIVEKIT_API_KEY, LIVEKIT_API_SECRET, {
-      identity: String(identity);
-      name: name ? String(name) : String(identity);
+      identity: String(identity), name: name ? String(name) : String(identity),
       ttl: 60 * 60, // 1 hour
     });
 
     at.addGrant({
-      roomJoin: true;
-      room: String(roomName);
-      canPublish: audioOnly ? false : true;
-      canPublishData: true;
+      roomJoin: true, room: String(roomName),
+      canPublish: audioOnly ? false : true, canPublishData: true,
       canSubscribe: true});
 
     const token = await at.toJwt();

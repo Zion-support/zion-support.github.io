@@ -247,7 +247,7 @@ export default function UltimateServicesShowcase2029() {
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     selectedPriceRange === range.id
                       ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white shadow-lg'
-                      : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50';
+                      : 'bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700/50',
                   }`}
                 >
                   {range.name}

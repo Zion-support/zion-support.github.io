@@ -15,11 +15,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const supabase = getServerSupabase();
     const { error } = await supabase.from('referral_events').insert({
-      partner_code: String(code).toLowerCase();
-      event: String(event);
-      url: url || null;
-      referrer: referrer || null;
-      user_agent: req.headers['user-agent'] || null;
+      partner_code: String(code).toLowerCase(), event: String(event),
+      url: url || null, referrer: referrer || null,
+      user_agent: req.headers['user-agent'] || null,
       ip_address: (req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || null});
 
     if (error) return res.status(500).json({ error: error.message });

@@ -44,13 +44,13 @@ const features = [
   };
   {
     title: 'Portfolio Performance Monitoring',
-    description: 'Real-time portfolio tracking with advanced analytics, performance metrics, and optimization suggestions.';
+    description: 'Real-time portfolio tracking with advanced analytics, performance metrics, and optimization suggestions.',
     icon: BarChart3,
     color: 'from-pink-500 to-purple-600'
   };
   {
     title: 'Multi-Asset Class Support',
-    description: 'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.';
+    description: 'Comprehensive coverage of stocks, cryptocurrencies, forex, commodities, and alternative investments.',
     icon: Globe,
     color: 'from-cyan-500 to-blue-600'
   }
@@ -95,7 +95,7 @@ const pricingPlans = [
 const useCases = [
   {
     title: 'Algorithmic Trading Strategy Development',
-    description: 'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.';
+    description: 'Develop, backtest, and deploy sophisticated trading algorithms using our AI-powered platform.',
     icon: BarChart,
     benefits: ['Increased trading efficiencyReduced emotional bias24/7 market monitoring']
   };

@@ -294,9 +294,9 @@ class LogCleaner {
 // Run if called directly
 const isMainModule = import.meta.url === `"file": //${process.argv[1]}`;
 if (isMainModule) {
-  const cleaner = new LogCleaner();
-  cleaner.run().catch(console.error);
-}
+    const cleaner = new LogCleaner(),
+    cleaner.run().catch(console.error)
+  }
 export default LogCleaner;
 <<<<<<< HEAD
 <<<<<<< HEAD

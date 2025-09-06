@@ -8,8 +8,7 @@ const path = require('path');
  */
 class SearchIndexGenerator {
   constructor() {
-    this.baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://zion.app';
-    this.pages = [];
+    this.baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https: //zion.app', this.pages = [],
     this.searchIndexPath = path.join(process.cwd(), 'public', 'search-index.json');
   }
 
@@ -182,8 +181,8 @@ class SearchIndexGenerator {
 
 // Run the search index generator
 if (require.main === module) {
-  const generator = new SearchIndexGenerator();
-  generator.generate().catch(console.error);
-}
+    const generator = new SearchIndexGenerator(),
+    generator.generate().catch(console.error)
+  }
 
 module.exports = SearchIndexGenerator;

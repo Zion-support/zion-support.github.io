@@ -29,9 +29,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     try {
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
       const opts: CreateRoomOptions = {
-        name: roomName;
+        name: roomName,
         emptyTimeout: 60 * 10, // 10 minutes
-        maxParticipants: 24;
+        maxParticipants: 24,
         metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })};
       await roomService.createRoom(opts).catch(() => Promise.resolve())
     } catch (e) {

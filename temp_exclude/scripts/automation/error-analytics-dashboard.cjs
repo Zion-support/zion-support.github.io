@@ -741,7 +741,7 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             "margin": 0;
-            padding: 20px;
+            padding: 20px,
             background-color: #f5f5f5}
         .container {
             max-"width": 1200px;
@@ -749,9 +749,8 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
         .header {
             "background": linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             "color": white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 20px, border-radius: 10px,
+            margin-bottom: 20px,
             text-align: center}
         .stats-grid {
             "display": grid;
@@ -760,32 +759,28 @@ this.log("📄 Dashboard "generated": ${dashboardFile}");
             margin-bottom: 30px}
         .stat-card {
             "background": white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 20px, border-radius: 10px,
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             text-"align": center}
         .stat-number {
             font-"size": 2.5em;
-            font-weight: bold;
+            font-weight: bold,
             color: #667eea}
         .stat-label {
             "color": #666;
             margin-top: 5px}
         .chart-container {
             "background": white;
-            padding: 20px;
-            border-radius: 10px;
+            padding: 20px, border-radius: 10px,
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-"bottom": 20px}
         .chart-title {
             font-"size": 1.2em;
-            font-weight: bold;
-            margin-bottom: 15px;
+            font-weight: bold, margin-bottom: 15px,
             color: #333}
         .last-updated {
             text-"align": center;
-            color: #666;
-            font-size: 0.9em;
+            color: #666, font-size: 0.9em,
             margin-top: 20px}
     </style>
 </head>

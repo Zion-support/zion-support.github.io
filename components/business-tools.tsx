@@ -11,8 +11,8 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'Notion',
-          description: 'All-in-one workspace for notes, docs, projects, and team collaboration.';
-          features: ['TemplatesDatabase viewsReal-time editingIntegrationsTeam spaces'],
+          description: 'All-in-one workspace for notes, docs, projects, and team collaboration.',
+    features: ['TemplatesDatabase viewsReal-time editingIntegrationsTeam spaces'],
           pricing: 'Free - $8/month',
           website: 'https://notion.so',
           icon: <FileText className="w-6 h-6" />,
@@ -21,8 +21,8 @@ export default function BusinessToolsPage() {
         };
         {
           name: 'Asana',
-          description: 'Work management platform for teams to organize, track, and manage their work.';
-          features: ['Task managementProject timelinesTeam collaborationWorkflow automationReporting'],
+          description: 'Work management platform for teams to organize, track, and manage their work.',
+    features: ['Task managementProject timelinesTeam collaborationWorkflow automationReporting'],
           pricing: 'Free - $10.99/month',
           website: 'https://asana.com',
           icon: <CheckCircle className="w-6 h-6" />,
@@ -54,8 +54,8 @@ export default function BusinessToolsPage() {
         };
         {
           name: 'Microsoft Teams',
-          description: 'Unified communication platform with chat, video meetings, and file collaboration.';
-          features: ['ChatVideo meetingsFile sharingOffice integrationSecurity'],
+          description: 'Unified communication platform with chat, video meetings, and file collaboration.',
+    features: ['ChatVideo meetingsFile sharingOffice integrationSecurity'],
           pricing: 'Free - $6/month',
           website: 'https://teams.microsoft.com',
           icon: <Users className="w-6 h-6" />,
@@ -63,8 +63,8 @@ export default function BusinessToolsPage() {
         };
         {
           name: 'Zoom',
-          description: 'Video conferencing platform for meetings, webinars, and team collaboration.';
-          features: ['HD videoScreen sharingRecordingWebinarsBreakout rooms'],
+          description: 'Video conferencing platform for meetings, webinars, and team collaboration.',
+    features: ['HD videoScreen sharingRecordingWebinarsBreakout rooms'],
           pricing: 'Free - $14.99/month',
           website: 'https://zoom.us',
           icon: <Video className="w-6 h-6" />,
@@ -77,8 +77,8 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'HubSpot',
-          description: 'All-in-one inbound marketing, sales, and customer service platform.';
-          features: ['CRMEmail marketingLead generationAnalyticsAutomation'],
+          description: 'All-in-one inbound marketing, sales, and customer service platform.',
+    features: ['CRMEmail marketingLead generationAnalyticsAutomation'],
           pricing: 'Free - $45/month',
           website: 'https://hubspot.com',
           icon: <Target className="w-6 h-6" />,
@@ -96,8 +96,8 @@ export default function BusinessToolsPage() {
         };
         {
           name: 'Salesforce',
-          description: 'Customer relationship management platform for sales, service, and marketing.';
-          features: ['Sales CRMService cloudMarketing automationAnalyticsAppExchange'],
+          description: 'Customer relationship management platform for sales, service, and marketing.',
+    features: ['Sales CRMService cloudMarketing automationAnalyticsAppExchange'],
           pricing: '$25/month - $300/month',
           website: 'https://salesforce.com',
           icon: <TrendingUp className="w-6 h-6" />,
@@ -110,8 +110,8 @@ export default function BusinessToolsPage() {
       tools: [
         {
           name: 'QuickBooks',
-          description: 'Small business accounting software for invoicing, expenses, and financial reporting.';
-          features: ['InvoicingExpense trackingFinancial reportsTax preparationBank integration'],
+          description: 'Small business accounting software for invoicing, expenses, and financial reporting.',
+    features: ['InvoicingExpense trackingFinancial reportsTax preparationBank integration'],
           pricing: '$30/month - $200/month',
           website: 'https://quickbooks.intuit.com',
           icon: <CreditCard className="w-6 h-6" />,
@@ -162,8 +162,8 @@ export default function BusinessToolsPage() {
         };
         {
           name: 'Adobe Creative Cloud',
-          description: 'Complete creative software suite for design, photography, and video.';
-          features: ['PhotoshopIllustratorInDesignPremiere ProAfter Effects'],
+          description: 'Complete creative software suite for design, photography, and video.',
+    features: ['PhotoshopIllustratorInDesignPremiere ProAfter Effects'],
           pricing: '$52.99/month',
           website: 'https://adobe.com/creativecloud',
           icon: <Palette className="w-6 h-6" />,

@@ -7,17 +7,14 @@ import { flagContent } from './flagContent';
  * Create a monitoring system helper to easily monitor any content
  */
 export const monitorContent = async (
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
+  userId: string, userEmail: string | undefined,
+  contentType: FraudFlag['content_type'], contentId: string,
   content: string
 ): Promise<void> => {
   const analysis = analyzeContent(content);
   
   if (analysis.isSuspicious) {
-    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious';
-    
+    let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',
     // If contains highly suspicious phrases, mark as dangerous
     if (analysis.reasons.some(r => 
       r.includes('payment') || 

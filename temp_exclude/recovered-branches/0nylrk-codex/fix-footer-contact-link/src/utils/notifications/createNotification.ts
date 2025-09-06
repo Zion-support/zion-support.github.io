@@ -20,10 +20,8 @@ export async function createNotification({
   try {
     // Call the create_notification database function
     const { data, error } = await supabase.rpc('create_notification', {
-      _user_id: userId;
-      _title: title;
-      _message: message;
-      _type: type;
+      _user_id: userId, _title: title,
+      _message: message, _type: type,
       _related_id: relatedId
     });
     

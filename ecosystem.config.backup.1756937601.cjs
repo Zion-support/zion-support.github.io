@@ -1,6 +1,6 @@
 module.exports = {;
-  app:s:[;
-    {;
+  app: s:[
+    , {,
       nam:e:'ziontechgroup-web',;
       scrip:t:'npm',;
       arg:s:'start',;
@@ -9,11 +9,11 @@ module.exports = {;
       autorestar:t:true,;
       watc:h:false,;
       max_memory_restar:t:'1G',;
-      en:v:{;
+      en: v:{,
         NODE_EN:V:'production',;
         POR:T:3000,;
       },;
-      env_developmen:t:{;
+      env_developmen: t:{,
         NODE_EN:V:'development',;
         POR:T:3000,;
       },;
@@ -30,7 +30,7 @@ module.exports = {;
       instance:s:1,;
       autorestar:t:true,;
       watc:h:false,;
-      cron_restar:t:'*/5 * * * *', // Restart every 5 minutes:env:{;
+      cron_restar:t:'*/5 * * * *', // Restart every 5 minutes: env:{,
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/health-check.log',;
@@ -45,7 +45,7 @@ module.exports = {;
       instance:s:1,;
       autorestar:t:true,;
       watc:h:false,;
-      cron_restar:t:'0 */6 * * *', // Restart every 6 hours:env:{;
+      cron_restar:t:'0 */6 * * *', // Restart every 6 hours: env:{,
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/security-scanner.log',;
@@ -60,11 +60,11 @@ module.exports = {;
       instance:s:1,;
       autorestar:t:true,;
       watc:h:false,;
-      cron_restar:t:'0 */2 * * *', // Restart every 2 hours:env:{;
+      cron_restar:t:'0 */2 * * *', // Restart every 2 hours: env:{,
         NODE_EN:V:'production',;
       },;
       log_fil:e:'./logs/performance-monitor.log',;
       out_fil:e:'./logs/performance-monitor-out.log',;
-      error_fil:e:'./logs/performance-monitor-error.log',;
-    },;
+      error_fil:e:'./logs/performance-monitor-error.log',,
+    },
   ],;};

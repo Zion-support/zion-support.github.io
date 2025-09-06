@@ -88,7 +88,7 @@ const pricing = [
   };
   {
     name: 'Professional',
-    price: '$1,299';
+    price: '$1,299',
     period: '/month',
     description: 'Advanced emotion intelligence for growing businesses',
     features: [

@@ -61,9 +61,9 @@ class AutomationRunner {
     if (testResult.success) {
       this.results.tests.passed++;
     } else {
-      this.results.tests.failed++;
-      this.results.tests.errors.push(testResult.error);
-    }
+    this.results.tests.failed++,
+    this.results.tests.errors.push(testResult.error)
+  }
 
     // Run type checking
     const typeResult = await this.runCommand(
@@ -74,9 +74,9 @@ class AutomationRunner {
     if (typeResult.success) {
       this.results.tests.passed++;
     } else {
-      this.results.tests.failed++;
-      this.results.tests.errors.push(typeResult.error);
-    }
+    this.results.tests.failed++,
+    this.results.tests.errors.push(typeResult.error)
+  }
   }
 
   async runLinting() {
@@ -165,9 +165,9 @@ class PerformanceMonitor {
     try {
       const buildDir = path.join(process.cwd(), '.next');
       if (fs.existsSync(buildDir)) {
-        const stats = fs.statSync(buildDir);
-        this.metrics.bundleSize = stats.size;
-      }
+    const stats = fs.statSync(buildDir),
+    this.metrics.bundleSize = stats.size
+  }
     } catch(error) {
       console.error('Error measuring bundle size:', error);
     }

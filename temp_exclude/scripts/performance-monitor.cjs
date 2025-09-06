@@ -176,7 +176,7 @@ if (fs.existsSync(publicDir)) {
 }
 
 // Display results
-console.log('\n📊 Performance Metrics:');
+console.log('\n📊 Performance Metrics: '),
 console.log(`   - .next bundle size: ${performanceMetrics.bundleSize['.next']?.sizeMB || '0'} MB`);
 console.log(`   - node_modules size: ${performanceMetrics.bundleSize['node_modules']?.sizeMB || '0'} MB`);
 console.log(`   - TypeScript files: ${fileCounts['.tsx'] + fileCounts['.ts']}`);
@@ -184,7 +184,7 @@ console.log(`   - JavaScript files: ${fileCounts['.jsx'] + fileCounts['.js']}`);
 console.log(`   - CSS files: ${fileCounts['.css']}`);
 
 if (performanceMetrics.recommendations.length > 0) {
-  console.log('\n💡 Recommendations:');
+  console.log('\n💡 Recommendations: '),
   performanceMetrics.recommendations.forEach(rec => console.log(`   - ${rec}`));
 } else {
   console.log('\n✅ No performance issues detected');

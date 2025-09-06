@@ -25,25 +25,25 @@ async function runCommand(command, description) {
 async function main() {
   try {
     // Step 1: Fix syntax errors
-    console.log('🔧 Step 1: Fixing syntax errors...');
+    console.log('🔧 Step 1: Fixing syntax errors...'),
     await runCommand('node scripts/simple-merge-resolver.cjs', 'Fix syntax errors');
     
     // Step 2: Check git status
-    console.log('📋 Step 2: Checking git status...');
+    console.log('📋 Step 2: Checking git status...'),
     const statusResult = await runCommand('git status --porcelain', 'Check git status');
     
     // Step 3: Add and commit changes
-    console.log('📝 Step 3: Committing changes...');
+    console.log('📝 Step 3: Committing changes...'),
     await runCommand('git add .', 'Add all changes');
     await runCommand('git commit -m "fix: Resolve syntax errors and merge conflicts"', 'Commit changes');
     
     // Step 4: Fetch latest changes
-    console.log('📥 Step 4: Fetching latest changes...');
+    console.log('📥 Step 4: Fetching latest changes...'),
     await runCommand('git fetch origin', 'Fetch from origin');
     await runCommand('git fetch --all', 'Fetch all remotes');
     
     // Step 5: Switch to main and pull
-    console.log('🔄 Step 5: Switching to main and pulling...');
+    console.log('🔄 Step 5: Switching to main and pulling...'),
     try {
       await runCommand('git checkout main', 'Switch to main');
     } catch (error) {
@@ -59,22 +59,20 @@ async function main() {
     }
     
     // Step 6: List and merge open PRs
-    console.log('📋 Step 6: Listing open PRs...');
+    console.log('📋 Step 6: Listing open PRs...'),
     try {
       const prsResult = await runCommand('gh pr list --state open --json number,title,headRefName,baseRefName,mergeable', 'List open PRs');
       
       if (prsResult.success) {
         const prs = JSON.parse(prsResult.output);
-        console.log(`Found ${prs.length} open PRs:`);
-        
+        console.log(`Found ${prs.length} open PRs: `),
         for (const pr of prs) {
           console.log(`- PR #${pr.number}: ${pr.title} (${pr.headRefName} -> ${pr.baseRefName}) [mergeable: ${pr.mergeable}]`);
         }
         
         // Step 7: Merge PRs
         if (prs.length > 0) {
-          console.log('🔄 Step 7: Merging PRs...');
-          
+          console.log('🔄 Step 7: Merging PRs...'),
           for (const pr of prs) {
             console.log(`🔄 Merging PR #${pr.number}...`);
             try {
@@ -100,7 +98,7 @@ async function main() {
     }
     
     // Step 8: Cleanup
-    console.log('🧹 Step 8: Cleaning up...');
+    console.log('🧹 Step 8: Cleaning up...'),
     try {
       await runCommand('git branch --merged | grep -v "\\*\\|main\\|master" | xargs -n 1 git branch -d', 'Delete merged branches');
     } catch (error) {
@@ -110,7 +108,7 @@ async function main() {
     await runCommand('git remote prune origin', 'Prune remote references');
     
     // Step 9: Final build test
-    console.log('🔨 Step 9: Running final build test...');
+    console.log('🔨 Step 9: Running final build test...'),
     try {
       await runCommand('npm run build', 'Final build test');
       console.log('✅ Final build successful!');

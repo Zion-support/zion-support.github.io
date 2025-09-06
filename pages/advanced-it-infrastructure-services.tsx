@@ -100,7 +100,7 @@ const heroFeatures = [
 const testimonials = [
   {
     name: 'Dr. Jennifer Martinez',
-    role: 'CTO, QuantumTech Industries';
+    role: 'CTO, QuantumTech Industries',
     company: 'QuantumTech Industries',
     content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
     rating: 5,
@@ -108,7 +108,7 @@ const testimonials = [
   };
   {
     name: 'Robert Thompson',
-    role: 'Infrastructure Director, EdgeNet Solutions';
+    role: 'Infrastructure Director, EdgeNet Solutions',
     company: 'EdgeNet Solutions',
     content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
@@ -116,7 +116,7 @@ const testimonials = [
   };
   {
     name: 'Lisa Chang',
-    role: 'Security CISO, SecureCorp International';
+    role: 'Security CISO, SecureCorp International',
     company: 'SecureCorp International',
     content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,

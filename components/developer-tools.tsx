@@ -38,8 +38,8 @@ export default function DeveloperToolsPage() {
     {
       icon: <GitBranch className="w-8 h-8 text-white" />,
       title: 'GitHub Pro',
-      description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.';
-      features: [
+      description: 'Advanced GitHub features for professional developers including private repositories, advanced tools, and priority support.',
+    features: [
         'Unlimited private repositoriesAdvanced code review toolsPriority supportAdvanced insightsTeam management features'
       ];
       pricing: '$4/month',
@@ -54,8 +54,8 @@ export default function DeveloperToolsPage() {
     {
       icon: <Database className="w-8 h-8 text-white" />,
       title: 'MongoDB Atlas',
-      description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.';
-      features: [
+      description: 'Fully managed cloud database service with automatic scaling, backup, and monitoring for modern applications.',
+    features: [
         'Fully managed MongoDBAuto-scaling & optimizationGlobal distributionAdvanced securityReal-time analytics'
       ];
       pricing: '$9/month',
@@ -70,8 +70,8 @@ export default function DeveloperToolsPage() {
     {
       icon: <Cloud className="w-8 h-8 text-white" />,
       title: 'Vercel Pro',
-      description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.';
-      features: [
+      description: 'Next.js deployment platform with automatic deployments, preview deployments, and advanced analytics.',
+    features: [
         'Zero-config deploymentsPreview deploymentsAdvanced analyticsTeam collaborationCustom domains'
       ];
       pricing: '$20/month',
@@ -86,8 +86,8 @@ export default function DeveloperToolsPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Snyk',
-      description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.';
-      features: [
+      description: 'Developer security platform that finds and fixes vulnerabilities in code, dependencies, and containers.',
+    features: [
         'Vulnerability scanningDependency monitoringContainer securityInfrastructure as CodeCI/CD integration'
       ];
       pricing: '$25/month',
@@ -102,8 +102,8 @@ export default function DeveloperToolsPage() {
     {
       icon: <Zap className="w-8 h-8 text-white" />,
       title: 'Postman',
-      description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.';
-      features: [
+      description: 'Complete API development platform for building, testing, and documenting APIs with team collaboration.',
+    features: [
         'API design & testingTeam collaborationAPI documentationMock serversMonitoring & analytics'
       ];
       pricing: '$12/month',
@@ -177,8 +177,8 @@ export default function DeveloperToolsPage() {
     };
     {
       name: 'API Development',
-      description: 'Tools for building, testing, and managing APIs';
-      tools: 1,
+      description: 'Tools for building, testing, and managing APIs',
+    tools: 1,
       avgPrice: '$55/month'
     }
   ];

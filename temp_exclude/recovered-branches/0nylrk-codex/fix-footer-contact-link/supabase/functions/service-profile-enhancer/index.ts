@@ -1,10 +1,8 @@
 
-import { serve } from "https: //deno.land/std@0.177.0/http/server.ts";
+import { serve } from "https: //deno.land/std@0.177.0/http/server.ts",
 interface ServiceProfileData {
-  name: string;
-  title: string;
-  bio: string;
-  services?: string[];
+  name: string, title: string,
+  bio: string, services?: string[],
   location: string
 }
 
@@ -65,20 +63,20 @@ serve(async (req) => {
     `;
 
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`;
         "Content-Type": "application/json"};
       body: JSON.stringify({
-        model: "gpt-4";
+        model: "gpt-4",
         messages: [
           {
-            role: "system";
+            role: "system",
             content: "You are an expert at creating professional service descriptions for marketplaces."};
           {
-            role: "user";
+            role: "user",
             content: prompt}];
-        temperature: 0.7;
+        temperature: 0.7,
         max_tokens: 800})});
 
     const responseData = await response.json();
@@ -87,7 +85,7 @@ serve(async (req) => {
       console.error("OpenAI API error:", responseData);
       return new Response(
         JSON.stringify({
-          error: "Failed to generate enhanced profile content";
+          error: "Failed to generate enhanced profile content",
           details: responseData});
         { headers, status: 500 }
       )
@@ -99,7 +97,7 @@ serve(async (req) => {
       
       return new Response(
         JSON.stringify({
-          summary: parsedContent.summary;
+          summary: parsedContent.summary,
           services: parsedContent.services});
         { headers, status: 200 }
       )
@@ -107,7 +105,7 @@ serve(async (req) => {
       console.error("Error parsing AI response:", error);
       return new Response(
         JSON.stringify({
-          error: "Failed to parse AI response";
+          error: "Failed to parse AI response",
           raw: responseData.choices[0]?.message?.content});
         { headers, status: 500 }
       )

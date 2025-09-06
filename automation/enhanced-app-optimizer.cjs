@@ -173,8 +173,8 @@ class EnhancedAppOptimizer {
 
 // Run if called directly
 if (require.main === module) {
-  const optimizer = new EnhancedAppOptimizer();
-  optimizer.run().catch(console.error);
-}
+    const optimizer = new EnhancedAppOptimizer(),
+    optimizer.run().catch(console.error)
+  }
 
 module.exports = EnhancedAppOptimizer;

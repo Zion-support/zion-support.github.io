@@ -19,7 +19,7 @@ const runCommand = (command, description) => {}
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
-      cwd: process.cwd();
+      cwd: process.cwd(),
     }
 });
     log(`Completed: ${description}`);
@@ -82,7 +82,7 @@ const generatePerformanceReport = (results) => {}
     memory: results.memory,
     overall: {}
       status: 'GOOD',
-      issues: 0;
+      issues: 0,
     };
   };
   
@@ -113,7 +113,7 @@ const main = async () => {}
   // Generate comprehensive report;
   const results = {}
     build: buildResults,
-    memory: memoryResults;
+    memory: memoryResults,
   };
   
   const report = generatePerformanceReport(results);
@@ -124,7 +124,7 @@ const main = async () => {}
   } else if (report.overall.status === 'WARNING') {}
     log('Performance warnings detected, monitoring closely');
   } else {}
-    log('Performance monitoring passed: All metrics look good');
+    log('Performance monitoring passed: All metrics look good'),
   };
   log('Performance Monitor Process completed');
 };

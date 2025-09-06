@@ -68,9 +68,9 @@ class IntelligentCICDPipeline {
       }
       
       try {
-        await this.checkForPipelineTriggers();
-        await this.monitorActivePipelines();
-      } catch (error) {
+    await this.checkForPipelineTriggers(),
+    await this.monitorActivePipelines()
+  } catch (error) {
         console.error('Error in continuous monitoring:', error);
       }
     }, 600000); // 10 minutes
@@ -439,9 +439,9 @@ class IntelligentCICDPipeline {
 
   async calculateBundleSize() {
     try {
-      const stats = await fs.stat('./dist');
-      return stats.size;
-    } catch (error) {
+    const stats = await fs.stat('./dist'),
+    return stats.size
+  } catch (error) {
       return 0;
     }
   }

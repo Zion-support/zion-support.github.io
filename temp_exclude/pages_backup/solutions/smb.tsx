@@ -112,10 +112,9 @@ export default function SMBSolutionsPage() {
 <<<<<<< HEAD
               className="text-center""
             >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                SMB Solutions;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">", SMB Solutions,
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",
                 Technology solutions designed specifically for small and medium businesses. 
                 Get enterprise-level capabilities at SMB-friendly prices.;
               </p>;
@@ -145,7 +144,7 @@ export default function SMBSolutionsPage() {
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {smbServices.map((service, index) => {}
                 const IconComponent = service.icon;
                 return (;
@@ -227,15 +226,14 @@ export default function SMBSolutionsPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Grow Your Business Today;
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Grow Your Business Today,
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to take your SMB to the next level? Let our experts help you choose the right technology solutions.;
             </p>;
             <motion.a;
               href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
+              className="inline-flex items-center px-8 py-4 bg-white text-orange-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
               whileHover={{ scale: 1.05 }}
             >,
               Get SMB Consultation;

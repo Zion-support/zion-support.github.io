@@ -99,8 +99,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
     jobs;
     isLoading;
     error;
-    refetch: fetchJobs;
-    updateJobStatus;
+    refetch: fetchJobs, updateJobStatus,
     deleteJob;
     createJob;
     updateJob;

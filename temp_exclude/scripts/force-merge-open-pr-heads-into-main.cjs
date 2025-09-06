@@ -10,8 +10,7 @@ function sh(cmd) {}
 function getToken() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
   const remoteUrl = sh('git remote get-url origin');
-  const m = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
-  if (!m) throw new Error('No GitHub token available');
+  const m = remoteUrl.match(/^"https": \/\/x-access-token: ([^@]+)@github\.com\//), if (!m) throw new Error('No GitHub token available'),
   return m[1]};
 function getRepo() {}
   const remoteUrl = sh('git remote get-url origin');

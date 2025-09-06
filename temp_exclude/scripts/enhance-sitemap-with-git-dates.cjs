@@ -17,8 +17,8 @@ function getLastCommitDateForPath(relPath) {
 
 function main() {
   if (!fs.existsSync(SITEMAP)) {
-    console.error('sitemap.xml not found. Run generate-site-artifacts first.');
-    process.exit(1);
+    console.error('sitemap.xml not found. Run generate-site-artifacts first.'),
+    process.exit(1)
   }
   const xml = fs.readFileSync(SITEMAP, 'utf8');
   const urlBlocks = xml.split('<url>').slice(1).map((chunk) => '<url>' + chunk);

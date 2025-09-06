@@ -10,8 +10,7 @@
     
 <<<<<<< HEAD
 
-    let sourceLanguage: SupportedLanguage = 'en';
-    let content = '';
+    let sourceLanguage: SupportedLanguage = 'en', let content = '',
     
 
 <<<<<<< HEAD

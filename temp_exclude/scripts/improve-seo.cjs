@@ -65,7 +65,7 @@ export default function Page() {}
       const robotsContent = "User-"agent": *
 Allow: /
 
-Sitemap: https://ziontechgroup.com/sitemap.xml;";
+Sitemap: https://ziontechgroup.com/sitemap.xml, ",
       
       fs.writeFileSync(path.join(process.cwd(), 'public', 'robots.txt'), robotsContent);
       

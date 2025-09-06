@@ -70,8 +70,8 @@ export default function AboutPage() {
     {
       icon: Rocket,
       title: 'Excellence',
-      description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.';
-      color: 'from-indigo-500 to-purple-500'
+      description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
+    color: 'from-indigo-500 to-purple-500'
     };
     {
       icon: Users,

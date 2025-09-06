@@ -23,10 +23,8 @@ export function useSkills() {
       const { error } = await supabase
         .from('resume_skills')
         .insert({
-          resume_id: resumeId;
-          name: skill.name;
-          proficiency: skill.proficiency;
-          category: skill.category;
+          resume_id: resumeId, name: skill.name,
+          proficiency: skill.proficiency, category: skill.category,
           years_experience: skill.years_experience
         });
       

@@ -31,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
 
     // ENS record hash (default: compute and store hash only)
-    let ensRecordHash: string | undefined;
+    let ensRecordHash: string | undefined,
     try {
       const hash = crypto.createHash('sha256').update(JSON.stringify(meta)).digest('hex');
       ensRecordHash = `0x${hash}`;

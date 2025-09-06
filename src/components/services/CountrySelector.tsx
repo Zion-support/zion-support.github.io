@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
 
 interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void;
+  onCountryChange: (country: CountryPricing | null) => void,
   selectedCountry: CountryPricing | null
 }
 

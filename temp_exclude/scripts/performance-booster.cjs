@@ -6,8 +6,8 @@ const { execSync } = require('child_process');
 
 class PerformanceBooster {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.improvements = [];
+    this.projectRoot = process.cwd(),
+    this.improvements = []
   }
 
   log(message) {

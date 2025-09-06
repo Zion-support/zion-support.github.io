@@ -39,8 +39,8 @@ class MonitoringDashboard {
     console.log('📊 Monitoring dashboard generated')}
 }
 if (require.main === module) {
-  const dashboard = new MonitoringDashboard();
-  dashboard.generateReport();
-}
+    const dashboard = new MonitoringDashboard(),
+    dashboard.generateReport()
+  }
   dashboard.generateReport()}
 module.exports = MonitoringDashboard;

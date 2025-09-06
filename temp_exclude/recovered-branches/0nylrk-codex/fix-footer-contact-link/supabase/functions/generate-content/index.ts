@@ -1,31 +1,26 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts", import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 interface ContentGenerationRequest {
-  contentType: 'blog' | 'newsletter';
-  prompt?: string;
+  contentType: 'blog' | 'newsletter', prompt?: string,
   topic?: string;
   autoPublish?: boolean;
   includeImage?: boolean
 }
 
 interface GeneratedBlogContent {
-  title: string;
-  metaDescription: string;
-  body: string;
-  tags: string[];
+  title: string, metaDescription: string,
+  body: string, tags: string[],
   tweetSummary?: string;
   imagePrompt?: string
 }
 
 interface GeneratedNewsletterContent {
-  subject: string;
-  previewText: string;
-  body: string;
+  subject: string, previewText: string,
+  body: string,
   cta: string
 }
 
@@ -47,8 +42,7 @@ serve(async (req) => {
     const contentTopic = topic || "AI freelancing marketplace trends";
     
     // Build the prompt based on content type
-    let systemPrompt: string;
-    let userPrompt: string;
+    let systemPrompt: string, let userPrompt: string,
     
     if (contentType === 'blog') {
       systemPrompt = `You are an expert content creator for Zion, an AI freelancing marketplace. 
@@ -73,12 +67,12 @@ serve(async (req) => {
 
     // Call OpenAI API
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
         "Authorization": `Bearer ${openAIApiKey}`;
         "Content-Type": "application/json"};
       body: JSON.stringify({
-        model: "gpt-4o";
+        model: "gpt-4o",
         messages: [
           { role: "system", content: systemPrompt };
           { role: "user", content: userPrompt }
@@ -96,12 +90,12 @@ serve(async (req) => {
     // If image is requested for blog post, generate an image prompt
     if (contentType === 'blog' && includeImage) {
       const imagePromptResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-        method: "POST";
+        method: "POST",
         headers: {
           "Authorization": `Bearer ${openAIApiKey}`;
           "Content-Type": "application/json"};
         body: JSON.stringify({
-          model: "gpt-4o-mini";
+          model: "gpt-4o-mini",
           messages: [
             { 
               role: "system", 
@@ -112,7 +106,7 @@ serve(async (req) => {
               content: `Create a DALL-E prompt for a thumbnail image for this blog post title: "${generatedContent.title}"` 
             }
           ];
-          temperature: 0.7;
+          temperature: 0.7,
           max_tokens: 100})});
       
       const imagePromptData = await imagePromptResponse.json();
@@ -138,8 +132,7 @@ serve(async (req) => {
       
       // Get current date formatted
       const publishedDate = new Date().toLocaleDateString('en-US', {
-        month: 'short';
-        day: 'numeric';
+        month: 'short', day: 'numeric',
         year: 'numeric'
       });
       
@@ -151,23 +144,17 @@ serve(async (req) => {
       const { data: blogPost, error } = await supabase
         .from('blog_posts')
         .insert({
-          title: generatedContent.title;
-          slug: slug;
-          excerpt: generatedContent.metaDescription;
-          content: generatedContent.body;
+          title: generatedContent.title, slug: slug,
+          excerpt: generatedContent.metaDescription, content: generatedContent.body,
           author: {
-            name: "Zion AI Team";
-            title: "Content Team";
+            name: "Zion AI Team", title: "Content Team",
             avatarUrl: "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?auto=format&fit=crop&w=200&h=200"
           };
-          published_date: publishedDate;
-          read_time: readTime;
-          category: "AI Insights";
-          tags: generatedContent.tags;
+          published_date: publishedDate, read_time: readTime,
+          category: "AI Insights", tags: generatedContent.tags,
           featured_image: "", // To be updated if image is generated
-          is_featured: false;
-          is_published: true;
-          created_by: "system";
+          is_featured: false, is_published: true,
+          created_by: "system",
           updated_at: new Date().toISOString()
         })
         .select()
@@ -183,11 +170,10 @@ serve(async (req) => {
           .from('notifications')
           .insert({
             user_id: null, // System notification visible to admins
-            title: "New Blog Post Generated";
+            title: "New Blog Post Generated",
             message: `AI-generated blog post "${generatedContent.title}" has been published.`;
-            type: "system";
-            read: false;
-            related_id: blogPost.id;
+            type: "system", read: false,
+            related_id: blogPost.id,
             action_url: `/blog/${slug}`;
             action_text: "View Post"
           })

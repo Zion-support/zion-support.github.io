@@ -11,12 +11,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const client = new OpenAI({ apiKey });
         const prompt = `Write a concise ${type} press release for ${companyName} (date ${date}) with clear headlines, 2 paragraphs, and one quote.`;
         const completion = await client.chat.completions.create({
-          model: 'gpt-4o-mini';
+          model: 'gpt-4o-mini',
           messages: [
             { role: 'system', content: 'You are a seasoned tech PR writer.' };
             { role: 'user', content: prompt }
           ];
-          temperature: 0.4;
+          temperature: 0.4,
           max_tokens: 500});
         const text = completion.choices?.[0]?.message?.content?.trim();
         if (text) {

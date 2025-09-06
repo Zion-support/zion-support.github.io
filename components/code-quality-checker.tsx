@@ -13,14 +13,14 @@ export default function CodeQualityCheckerPage() {
     {
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'Multi-Language Support',
-      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.';
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
+      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
+    color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500'},
     {
       icon: <CheckCircle className="w-8 h-8 text-white" />,
       title: 'Code Quality Metrics',
-      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
+    color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <Zap className="w-8 h-8 text-white" />,
@@ -31,8 +31,8 @@ export default function CodeQualityCheckerPage() {
     {
       icon: <Shield className="w-8 h-8 text-white" />,
       title: 'Security Scanning',
-      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.';
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
+    color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'}],
   const supportedLanguages = [
     { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },

@@ -50,8 +50,8 @@ export default function SummitPage() {
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
-      title: 'Founder, Zion';
-      avatarUrl: '/favicon.svg',
+      title: 'Founder, Zion',
+    avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',

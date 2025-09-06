@@ -114,8 +114,8 @@ export default function ExplorePage() {
       category: 'ai',
       description: 'Revolutionary AI consciousness platform with emotional intelligence',
       status: 'beta',
-      price: '$1,999/month';
-      icon: Brain,
+      price: '$1,999/month',
+    icon: Brain,
       color: 'from-purple-500 to-pink-500'
     };
     {
@@ -124,8 +124,8 @@ export default function ExplorePage() {
       category: 'quantum',
       description: 'Quantum-powered AI with advanced consciousness capabilities',
       status: 'beta',
-      price: '$1,299/month';
-      icon: Atom,
+      price: '$1,299/month',
+    icon: Atom,
       color: 'from-blue-500 to-cyan-500'
     };
     {
@@ -144,8 +144,8 @@ export default function ExplorePage() {
       category: 'space',
       description: 'AI-powered space exploration and resource optimization',
       status: 'beta',
-      price: '$2,499/month';
-      icon: Rocket,
+      price: '$2,499/month',
+    icon: Rocket,
       color: 'from-indigo-500 to-purple-500'
     }
   ];

@@ -1,35 +1,27 @@
 export interface PasswordStrengthResult {
-  password: string;
+  password: string,
   score: number, // 0-100
-  strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
-  feedback: string[];
-  suggestions: string[];
+  strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong', feedback: string[],
+  suggestions: string[],
   details: {
-    length: number;
-    hasUppercase: boolean;
-    hasLowercase: boolean;
-    hasNumbers: boolean;
-    hasSymbols: boolean;
-    hasCommonWords: boolean;
-    hasSequentialChars: boolean;
-    hasRepeatingChars: boolean;
-    entropy: number;
+    length: number, hasUppercase: boolean,
+    hasLowercase: boolean, hasNumbers: boolean,
+    hasSymbols: boolean, hasCommonWords: boolean,
+    hasSequentialChars: boolean, hasRepeatingChars: boolean,
+    entropy: number,
     crackTime: string
   };
   warnings: string[]
 }
 
 export interface CommonPasswordData {
-  commonPasswords: Set<string>;
-  commonWords: Set<string>;
+  commonPasswords: Set<string>, commonWords: Set<string>,
   patterns: RegExp[]
 }
 
 class PasswordStrengthService {
-  private commonPasswords: Set<string>;
-  private commonWords: Set<string>;
-  private patterns: RegExp[];
-
+  private commonPasswords: Set<string>, private commonWords: Set<string>,
+  private patterns: RegExp[],
   constructor() {
     // Common weak passwords
     this.commonPasswords = new Set([
@@ -56,20 +48,14 @@ class PasswordStrengthService {
   analyzePassword(password: string): PasswordStrengthResult {
     const result: PasswordStrengthResult = {
       password;
-      score: 0;
-      strength: 'very-weak';
-      feedback: [];
-      suggestions: [];
+      score: 0, strength: 'very-weak',
+      feedback: [], suggestions: [],
       details: {
-        length: password.length;
-        hasUppercase: /[A-Z]/.test(password);
-        hasLowercase: /[a-z]/.test(password);
-        hasNumbers: /\d/.test(password);
+        length: password.length, hasUppercase: /[A-Z]/.test(password),
+        hasLowercase: /[a-z]/.test(password), hasNumbers: /\d/.test(password),
         hasSymbols: /[!@#$%^&*()_+\-=\[\]{},':"\\|,.<>\/?]/.test(password);
-        hasCommonWords: this.hasCommonWords(password);
-        hasSequentialChars: this.hasSequentialChars(password);
-        hasRepeatingChars: this.hasRepeatingChars(password);
-        entropy: this.calculateEntropy(password);
+        hasCommonWords: this.hasCommonWords(password), hasSequentialChars: this.hasSequentialChars(password),
+        hasRepeatingChars: this.hasRepeatingChars(password), entropy: this.calculateEntropy(password),
         crackTime: this.estimateCrackTime(password)
       };
       warnings: []
@@ -197,8 +183,7 @@ class PasswordStrengthService {
    * Generate feedback based on password analysis
    */
   private generateFeedback(details: PasswordStrengthResult['details']): string[] {
-    const feedback: string[] = [];
-
+    const feedback: string[] = [],
     if (details.length < 8) {
       feedback.push('Password is too short - minimum 8 characters recommended')
     } else if (details.length < 12) {
@@ -240,8 +225,7 @@ class PasswordStrengthService {
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
-    const suggestions: string[] = [];
-
+    const suggestions: string[] = [],
     if (details.length < 12) {
       suggestions.push('Use at least 12 characters for strong passwords')
     }
@@ -269,8 +253,7 @@ class PasswordStrengthService {
    * Generate security warnings
    */
   private generateWarnings(details: PasswordStrengthResult['details']): string[] {
-    const warnings: string[] = [];
-
+    const warnings: string[] = [],
     if (details.length < 8) {
       warnings.push('CRITICAL: Password is extremely weak and easily crackable')
     }
@@ -348,8 +331,7 @@ class PasswordStrengthService {
    */
   getStats(): { totalCommonPasswords: number, totalCommonWords: number, totalPatterns: number } {
     return {
-      totalCommonPasswords: this.commonPasswords.size;
-      totalCommonWords: this.commonWords.size;
+      totalCommonPasswords: this.commonPasswords.size, totalCommonWords: this.commonWords.size,
       totalPatterns: this.patterns.length
     }
   }

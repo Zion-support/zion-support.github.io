@@ -33,40 +33,40 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
-          background: 'rgba(0, 0, 0, 0.95)';
-          glow: 'rgba(0, 255, 255, 0.3)'
+          background: 'rgba(0, 0, 0, 0.95)',
+    glow: 'rgba(0, 255, 255, 0.3)'
         };
       case 'neon-cyber':
         return {
           primary: '#ff0080',
           secondary: '#00ff80',
           accent: '#8000ff',
-          background: 'rgba(0, 0, 0, 0.9)';
-          glow: 'rgba(255, 0, 128, 0.4)'
+          background: 'rgba(0, 0, 0, 0.9)',
+    glow: 'rgba(255, 0, 128, 0.4)'
         };
       case 'holographic-matrix':
         return {
           primary: '#00ff41',
           secondary: '#ff0040',
           accent: '#0040ff',
-          background: 'rgba(0, 0, 0, 0.92)';
-          glow: 'rgba(0, 255, 65, 0.35)'
+          background: 'rgba(0, 0, 0, 0.92)',
+    glow: 'rgba(0, 255, 65, 0.35)'
         };
       case 'space-time':
         return {
           primary: '#ff6b35',
           secondary: '#4ecdc4',
           accent: '#45b7d1',
-          background: 'rgba(0, 0, 0, 0.88)';
-          glow: 'rgba(255, 107, 53, 0.3)'
+          background: 'rgba(0, 0, 0, 0.88)',
+    glow: 'rgba(255, 107, 53, 0.3)'
         };
       default:
         return {
           primary: '#00ffff',
           secondary: '#ff00ff',
           accent: '#ffff00',
-          background: 'rgba(0, 0, 0, 0.95)';
-          glow: 'rgba(0, 255, 255, 0.3)'
+          background: 'rgba(0, 0, 0, 0.95)',
+    glow: 'rgba(0, 255, 255, 0.3)'
         }
     }
   };

@@ -228,8 +228,8 @@ export default function InnovationsPage() {
                 {
                   icon: TrendingUp,
                   title: 'Market Leadership',
-                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology';
-                  stats: '15+ First-to-market innovations'
+                  description: 'First-to-market solutions in AI consciousness, quantum-AI fusion, and space technology',
+    stats: '15+ First-to-market innovations'
                 };
                 {
                   icon: Zap,

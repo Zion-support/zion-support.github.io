@@ -22,8 +22,7 @@ const SEO: React.FC<SEOProps> = ({
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
   image = '/images/zion-tech-group-og-image.jpg';
-  url = 'https://ziontechgroup.com';
-  type = 'website';
+  url = 'https: //ziontechgroup.com', type = 'website',
   publishedTime;
   modifiedTime;
   author = 'Zion Tech Group';
@@ -94,16 +93,13 @@ const SEO: React.FC<SEOProps> = ({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org";
-            "@type": "Organization";
+            "@context": "https: //schema.org", "@type": "Organization",
             "name": "Zion Tech Group";
-            "url": "https://ziontechgroup.com";
-            "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png";
+            "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/images/zion-tech-group-logo.png",
             "description": description;
             "foundingDate": "2020";
             "sameAs": [
-              "https://www.linkedin.com/company/zion-tech-group";
-              "https://twitter.com/ziontechgroup";
+              "https: //www.linkedin.com/company/zion-tech-group", "https://twitter.com/ziontechgroup",
               "https://github.com/Zion-Holdings"
             ];
             "contactPoint": {

@@ -20,8 +20,7 @@ function runCommand(command, options = {}) {
 }
 
 function getRecentBranches() {
-  const branches = runCommand('git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate:short) %(refname:short)"');
-  if (!branches) return [];
+  const branches = runCommand('git for-each-ref --sort=-committerdate refs/remotes/origin --format="%(committerdate: short) %(refname:short)"'), if (!branches) return [],
   
   return branches.split('\n')
     .filter(line => line.includes('cursor/') && !line.includes('main'))
@@ -82,7 +81,7 @@ function main() {
   
   // Get recent branches
   const recentBranches = getRecentBranches();
-  console.log(`\n📊 Found ${recentBranches.length} recent branches to check:`);
+  console.log(`\n📊 Found ${recentBranches.length} recent branches to check: `),
   recentBranches.forEach((branch, index) => {
     console.log(`   ${index + 1}. ${branch}`);
   });
@@ -128,7 +127,7 @@ function main() {
   runCommand('git push origin main');
   
   // Summary
-  console.log('\n📊 Merge Summary:');
+  console.log('\n📊 Merge Summary: '),
   console.log(`   ✅ Successfully merged: ${mergedCount} branches`);
   console.log(`   ⚠️  Had conflicts but resolved: ${conflictCount} branches`);
   console.log(`   ❌ Failed to merge: ${errorCount} branches`);

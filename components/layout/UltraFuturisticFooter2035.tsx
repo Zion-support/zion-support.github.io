@@ -125,7 +125,7 @@ const footerSections = [
   };
   {
     title: 'Resources',
-    description: 'Documentation, support, and learning';
+    description: 'Documentation, support, and learning',
     icon: <BookOpen className="w-5 h-5 text-cyan-400" />,
     links: [
       { name: 'Documentation', href: '/docs' },

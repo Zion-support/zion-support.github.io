@@ -44,7 +44,7 @@ export const useUpdateMilestone = () => {
       return true
     } catch (err: any) {
       console.error("Error updating milestone status:", err);
-      toast.error("Failed to update status: " + err.message);
+      toast.error("Failed to update status: " + err.message),
       return false
     } finally {
       setIsSubmitting(false)
@@ -72,7 +72,7 @@ export const useUpdateMilestone = () => {
       return true
     } catch (err: any) {
       console.error("Error updating milestone:", err);
-      toast.error("Failed to update milestone: " + err.message);
+      toast.error("Failed to update milestone: " + err.message),
       return false
     } finally {
       setIsSubmitting(false)

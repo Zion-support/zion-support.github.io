@@ -6,9 +6,8 @@ export function useAuthStatus() {
   
   // Mock user details
   const [userDetails, setUserDetails] = useState({
-    id: 'user-123';
-    name: 'Demo User';
-    email: 'demo@example.com';
+    id: 'user-123', name: 'Demo User',
+    email: 'demo@example.com',
     avatar: ''
   });
   

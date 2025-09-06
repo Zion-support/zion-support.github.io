@@ -1,28 +1,19 @@
 export interface Service {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  marketSize: string;
-  competitiveAdvantage: string;
-  implementationTime: string;
-  roi: string;
-  link: string;
+  id: string, name: string,
+  description: string, category: string,
+  price: string, features: string[],
+  benefits: string[], useCases: string[],
+  targetAudience: string[], marketSize: string,
+  competitiveAdvantage: string, implementationTime: string,
+  roi: string, link: string,
   tags: string[]
 }
 
 export const emergingTech2027Services: Service[] = [
   {
-    id: 'quantum-machine-learning';
-    name: 'Quantum Machine Learning Platform';
-    description: 'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.';
-    category: 'Quantum Computing';
-    price: '$12,999/month';
+    id: 'quantum-machine-learning', name: 'Quantum Machine Learning Platform',
+    description: 'Revolutionary platform that combines quantum computing with machine learning for unprecedented AI capabilities and computational power.', category: 'Quantum Computing',
+    price: '$12,999/month',
     features: [
       'Quantum neural networksQuantum optimization algorithmsHybrid classical-quantum MLQuantum feature selectionQuantum clusteringReal-time quantum processing'
     ];
@@ -35,19 +26,15 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Research institutionsPharmaceutical companiesFinancial institutionsGovernment agenciesTech companies'
     ];
-    marketSize: '$18.7B by 2027';
-    competitiveAdvantage: 'First quantum machine learning platform with hybrid algorithms';
-    implementationTime: '6-8 weeks';
-    roi: '1200% within 18 months';
-    link: 'https://ziontechgroup.com/services/quantum-machine-learning';
+    marketSize: '$18.7B by 2027', competitiveAdvantage: 'First quantum machine learning platform with hybrid algorithms',
+    implementationTime: '6-8 weeks', roi: '1200% within 18 months',
+    link: 'https://ziontechgroup.com/services/quantum-machine-learning',
     tags: ['Quantum ComputingMachine LearningAIResearchOptimization']
   };
   {
-    id: 'neuromorphic-computing';
-    name: 'Neuromorphic Computing Platform';
-    description: 'Advanced computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing and learning.';
-    category: 'AI & Computing';
-    price: '$8,999/month';
+    id: 'neuromorphic-computing', name: 'Neuromorphic Computing Platform',
+    description: 'Advanced computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing and learning.', category: 'AI & Computing',
+    price: '$8,999/month',
     features: [
       'Brain-inspired architectureSpiking neural networksEvent-driven processingLow-power consumptionReal-time learningAdaptive algorithms'
     ];
@@ -60,19 +47,16 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'IoT companiesRobotics manufacturersEdge computing providersSensor manufacturersAutonomous vehicle companies'
     ];
-    marketSize: '$14.2B by 2027';
-    competitiveAdvantage: 'Most advanced neuromorphic computing platform';
-    implementationTime: '4-6 weeks';
-    roi: '800% within 12 months';
-    link: 'https://ziontechgroup.com/services/neuromorphic-computing';
+    marketSize: '$14.2B by 2027', competitiveAdvantage: 'Most advanced neuromorphic computing platform',
+    implementationTime: '4-6 weeks', roi: '800% within 12 months',
+    link: 'https://ziontechgroup.com/services/neuromorphic-computing',
     tags: ['Neuromorphic ComputingAIEdge ComputingIoTRobotics']
   };
   {
-    id: 'synthetic-biology-platform';
-    name: 'Synthetic Biology Platform';
-    description: 'Revolutionary platform for designing, building, and testing synthetic biological systems using AI and advanced genetic engineering.';
-    category: 'Biotechnology';
-    price: '$15,999/month';
+    id: 'synthetic-biology-platform', name: 'Synthetic Biology Platform',
+    description: 'Revolutionary platform for designing, building, and testing synthetic biological systems using AI and advanced genetic engineering.',
+    category: 'Biotechnology',
+    price: '$15,999/month',
     features: [
       'DNA design automationGenetic circuit engineeringProtein designMetabolic pathway optimizationBiological simulationLab automation integration'
     ];
@@ -85,19 +69,16 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Pharmaceutical companiesAgricultural companiesIndustrial biotech firmsResearch institutionsEnvironmental companies'
     ];
-    marketSize: '$22.8B by 2027';
-    competitiveAdvantage: 'Most comprehensive synthetic biology platform with AI integration';
-    implementationTime: '8-12 weeks';
-    roi: '1500% within 24 months';
-    link: 'https://ziontechgroup.com/services/synthetic-biology-platform';
+    marketSize: '$22.8B by 2027', competitiveAdvantage: 'Most comprehensive synthetic biology platform with AI integration',
+    implementationTime: '8-12 weeks', roi: '1500% within 24 months',
+    link: 'https://ziontechgroup.com/services/synthetic-biology-platform',
     tags: ['Synthetic BiologyBiotechnologyAIGenetic EngineeringResearch']
   };
   {
-    id: 'quantum-sensors-network';
-    name: 'Quantum Sensors Network';
-    description: 'Advanced network of quantum sensors for ultra-precise measurements in various fields including navigation, medical imaging, and environmental monitoring.';
-    category: 'Quantum Technology';
-    price: '$9,999/month';
+    id: 'quantum-sensors-network', name: 'Quantum Sensors Network',
+    description: 'Advanced network of quantum sensors for ultra-precise measurements in various fields including navigation, medical imaging, and environmental monitoring.',
+    category: 'Quantum Technology',
+    price: '$9,999/month',
     features: [
       'Quantum entanglement sensorsUltra-precise measurementsReal-time data processingNetwork synchronizationEnvironmental monitoringMedical imaging capabilities'
     ];
@@ -110,19 +91,16 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Medical device companiesEnvironmental monitoring firmsNavigation companiesResearch institutionsIndustrial companies'
     ];
-    marketSize: '$16.5B by 2027';
-    competitiveAdvantage: 'Only quantum sensors network with multi-application support';
-    implementationTime: '6-8 weeks';
-    roi: '900% within 15 months';
-    link: 'https://ziontechgroup.com/services/quantum-sensors-network';
+    marketSize: '$16.5B by 2027', competitiveAdvantage: 'Only quantum sensors network with multi-application support',
+    implementationTime: '6-8 weeks', roi: '900% within 15 months',
+    link: 'https://ziontechgroup.com/services/quantum-sensors-network',
     tags: ['Quantum TechnologySensorsMedical ImagingEnvironmentalNavigation']
   };
   {
-    id: 'brain-computer-interface';
-    name: 'Brain-Computer Interface Platform';
-    description: 'Advanced platform for direct communication between the human brain and computers, enabling new forms of human-computer interaction.';
-    category: 'Neural Technology';
-    price: '$19,999/month';
+    id: 'brain-computer-interface', name: 'Brain-Computer Interface Platform',
+    description: 'Advanced platform for direct communication between the human brain and computers, enabling new forms of human-computer interaction.',
+    category: 'Neural Technology',
+    price: '$19,999/month',
     features: [
       'Neural signal processingThought-to-text conversionBrain-controlled devicesNeural feedback systemsSafety protocolsReal-time processing'
     ];
@@ -135,19 +113,15 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Medical device companiesResearch institutionsAssistive technology firmsGaming companiesHealthcare providers'
     ];
-    marketSize: '$28.9B by 2027';
-    competitiveAdvantage: 'Most advanced brain-computer interface platform';
-    implementationTime: '10-12 weeks';
-    roi: '2000% within 30 months';
-    link: 'https://ziontechgroup.com/services/brain-computer-interface';
+    marketSize: '$28.9B by 2027', competitiveAdvantage: 'Most advanced brain-computer interface platform',
+    implementationTime: '10-12 weeks', roi: '2000% within 30 months',
+    link: 'https://ziontechgroup.com/services/brain-computer-interface',
     tags: ['Brain-Computer InterfaceNeural TechnologyMedicalAssistive TechnologyResearch']
   };
   {
-    id: 'quantum-internet-security';
-    name: 'Quantum Internet Security Platform';
-    description: 'Next-generation security platform that uses quantum cryptography to create unhackable communications and data protection systems.';
-    category: 'Cybersecurity';
-    price: '$7,999/month';
+    id: 'quantum-internet-security', name: 'Quantum Internet Security Platform',
+    description: 'Next-generation security platform that uses quantum cryptography to create unhackable communications and data protection systems.', category: 'Cybersecurity',
+    price: '$7,999/month',
     features: [
       'Quantum key distributionQuantum encryptionQuantum-resistant algorithmsReal-time threat detectionQuantum authenticationGlobal security network'
     ];
@@ -160,19 +134,16 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Government agenciesFinancial institutionsHealthcare organizationsMilitary organizationsCritical infrastructure'
     ];
-    marketSize: '$25.4B by 2027';
-    competitiveAdvantage: 'Only quantum internet security platform with global coverage';
-    implementationTime: '4-6 weeks';
-    roi: '1000% within 18 months';
-    link: 'https://ziontechgroup.com/services/quantum-internet-security';
+    marketSize: '$25.4B by 2027', competitiveAdvantage: 'Only quantum internet security platform with global coverage',
+    implementationTime: '4-6 weeks', roi: '1000% within 18 months',
+    link: 'https://ziontechgroup.com/services/quantum-internet-security',
     tags: ['Quantum SecurityCybersecurityEncryptionGovernmentFinancial']
   };
   {
-    id: 'autonomous-robotics-platform';
-    name: 'Autonomous Robotics Platform';
-    description: 'Advanced platform for developing, deploying, and managing autonomous robots with AI-powered decision making and learning capabilities.';
-    category: 'Robotics & AI';
-    price: '$6,999/month';
+    id: 'autonomous-robotics-platform', name: 'Autonomous Robotics Platform',
+    description: 'Advanced platform for developing, deploying, and managing autonomous robots with AI-powered decision making and learning capabilities.',
+    category: 'Robotics & AI',
+    price: '$6,999/month',
     features: [
       'AI-powered navigationAutonomous decision makingLearning algorithmsMulti-robot coordinationSafety systemsPerformance analytics'
     ];
@@ -185,19 +156,15 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Manufacturing companiesLogistics companiesAgricultural companiesService providersResearch institutions'
     ];
-    marketSize: '$19.8B by 2027';
-    competitiveAdvantage: 'Most advanced autonomous robotics platform with AI learning';
-    implementationTime: '5-7 weeks';
-    roi: '700% within 12 months';
-    link: 'https://ziontechgroup.com/services/autonomous-robotics-platform';
+    marketSize: '$19.8B by 2027', competitiveAdvantage: 'Most advanced autonomous robotics platform with AI learning',
+    implementationTime: '5-7 weeks', roi: '700% within 12 months',
+    link: 'https://ziontechgroup.com/services/autonomous-robotics-platform',
     tags: ['RoboticsAIAutomationManufacturingLogistics']
   };
   {
-    id: 'quantum-materials-discovery';
-    name: 'Quantum Materials Discovery Platform';
-    description: 'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.';
-    category: 'Materials Science';
-    price: '$13,999/month';
+    id: 'quantum-materials-discovery', name: 'Quantum Materials Discovery Platform',
+    description: 'Revolutionary platform that uses quantum computing and AI to discover new materials with unprecedented properties for various applications.', category: 'Materials Science',
+    price: '$13,999/month',
     features: [
       'Quantum material simulationAI-powered discoveryProperty predictionSynthesis optimizationPerformance testingDatabase management'
     ];
@@ -210,19 +177,16 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Semiconductor companiesBattery manufacturersAerospace companiesMedical device companiesEnergy companies'
     ];
-    marketSize: '$21.3B by 2027';
-    competitiveAdvantage: 'Only quantum materials discovery platform with AI integration';
-    implementationTime: '8-10 weeks';
-    roi: '1100% within 20 months';
-    link: 'https://ziontechgroup.com/services/quantum-materials-discovery';
+    marketSize: '$21.3B by 2027', competitiveAdvantage: 'Only quantum materials discovery platform with AI integration',
+    implementationTime: '8-10 weeks', roi: '1100% within 20 months',
+    link: 'https://ziontechgroup.com/services/quantum-materials-discovery',
     tags: ['Materials ScienceQuantum ComputingAIDiscoveryInnovation']
   };
   {
-    id: 'quantum-financial-modeling';
-    name: 'Quantum Financial Modeling Platform';
-    description: 'Advanced financial modeling platform that uses quantum computing for ultra-accurate predictions, risk assessment, and portfolio optimization.';
-    category: 'Financial Technology';
-    price: '$11,999/month';
+    id: 'quantum-financial-modeling', name: 'Quantum Financial Modeling Platform',
+    description: 'Advanced financial modeling platform that uses quantum computing for ultra-accurate predictions, risk assessment, and portfolio optimization.',
+    category: 'Financial Technology',
+    price: '$11,999/month',
     features: [
       'Quantum risk modelingPortfolio optimizationMarket predictionStress testingReal-time analysisRegulatory compliance'
     ];
@@ -235,19 +199,16 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Investment banksHedge fundsAsset managersInsurance companiesRegulatory bodies'
     ];
-    marketSize: '$18.9B by 2027';
-    competitiveAdvantage: 'Only quantum financial modeling platform with real-time analysis';
-    implementationTime: '6-8 weeks';
-    roi: '900% within 16 months';
-    link: 'https://ziontechgroup.com/services/quantum-financial-modeling';
+    marketSize: '$18.9B by 2027', competitiveAdvantage: 'Only quantum financial modeling platform with real-time analysis',
+    implementationTime: '6-8 weeks', roi: '900% within 16 months',
+    link: 'https://ziontechgroup.com/services/quantum-financial-modeling',
     tags: ['Financial TechnologyQuantum ComputingRisk ManagementPortfolioModeling']
   };
   {
-    id: 'quantum-climate-modeling';
-    name: 'Quantum Climate Modeling Platform';
-    description: 'Revolutionary platform that uses quantum computing for ultra-accurate climate modeling, weather prediction, and environmental analysis.';
-    category: 'Environmental Technology';
-    price: '$10,999/month';
+    id: 'quantum-climate-modeling', name: 'Quantum Climate Modeling Platform',
+    description: 'Revolutionary platform that uses quantum computing for ultra-accurate climate modeling, weather prediction, and environmental analysis.',
+    category: 'Environmental Technology',
+    price: '$10,999/month',
     features: [
       'Quantum climate simulationWeather predictionEnvironmental modelingReal-time monitoringPredictive analyticsData visualization'
     ];
@@ -260,11 +221,9 @@ export const emergingTech2027Services: Service[] = [
     targetAudience: [
       'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
     ];
-    marketSize: '$17.6B by 2027';
-    competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions';
-    implementationTime: '7-9 weeks';
-    roi: '800% within 18 months';
-    link: 'https://ziontechgroup.com/services/quantum-climate-modeling';
+    marketSize: '$17.6B by 2027', competitiveAdvantage: 'Only quantum climate modeling platform with real-time predictions',
+    implementationTime: '7-9 weeks', roi: '800% within 18 months',
+    link: 'https://ziontechgroup.com/services/quantum-climate-modeling',
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
   }
 ];

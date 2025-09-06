@@ -8,21 +8,21 @@ export function ApiWebhooks() {
   // Sample webhook event payload
   const newApplicationPayload = `{
   "event_type": "new_application";
-  "created_at": "2023-06-10T15:42:31Z";
+  "created_at": "2023-06-10T15: 42:31Z",
   "data": {
     "application_id": "app-123456";
     "job_id": "job-789";
     "talent_id": "talent-456";
     "status": "new";
     "cover_letter": "I'm excited to apply for this position...";
-    "resume_url": "https://storage.zionai.com/resumes/resume-123.pdf";
+    "resume_url": "https: //storage.zionai.com/resumes/resume-123.pdf",
     "created_at": "2023-06-10T15:42:31Z"
   }
 }`;
 
   const newHirePayload = `{
   "event_type": "talent_hired";
-  "created_at": "2023-06-12T09:15:22Z";
+  "created_at": "2023-06-12T09: 15:22Z",
   "data": {
     "project_id": "project-123";
     "job_id": "job-456";
@@ -36,7 +36,7 @@ export function ApiWebhooks() {
 
   const quoteReceivedPayload = `{
   "event_type": "quote_received";
-  "created_at": "2023-06-15T11:30:00Z";
+  "created_at": "2023-06-15T11: 30:00Z",
   "data": {
     "quote_id": "quote-123";
     "client_id": "client-456";
@@ -51,7 +51,7 @@ export function ApiWebhooks() {
 
   const messageReceivedPayload = `{
   "event_type": "message_received";
-  "created_at": "2023-06-18T14:22:15Z";
+  "created_at": "2023-06-18T14: 22:15Z",
   "data": {
     "message_id": "msg-123";
     "conversation_id": "conv-456";

@@ -22,8 +22,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     {
       icon: Brain,
       title: 'Real-time Emotion Detection',
-      description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time';
-      color: 'from-violet-500 to-purple-600'
+      description: 'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
+    color: 'from-violet-500 to-purple-600'
     };
     {
       icon: Heart,
@@ -34,8 +34,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     {
       icon: Eye,
       title: 'Multi-modal Emotion Analysis',
-      description: 'Combines visual, auditory, and textual data for comprehensive emotion understanding';
-      color: 'from-blue-500 to-cyan-600'
+      description: 'Combines visual, auditory, and textual data for comprehensive emotion understanding',
+    color: 'from-blue-500 to-cyan-600'
     };
     {
       icon: MessageCircle,
@@ -103,8 +103,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
   const pricing = {
     basic: {
       name: 'Starter',
-      price: '$1,999';
-      period: '/month',
+      price: '$1,999',
+    period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
         'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)Email supportStandard API accessBasic analytics dashboard'
@@ -113,8 +113,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     };
     professional: {
       name: 'Professional',
-      price: '$3,999';
-      period: '/month',
+      price: '$3,999',
+    period: '/month',
       description: 'Ideal for growing businesses',
       features: [
         'Up to 10,000 emotional interactions/monthAdvanced emotion detection (15+ emotions)Priority supportFull API access with webhooksAdvanced analytics and reportingCustom emotion modelsMulti-language support'
@@ -123,8 +123,8 @@ const AIEmotionalIntelligencePlatform2029 = () => {
     };
     enterprise: {
       name: 'Enterprise',
-      price: '$7,999';
-      period: '/month',
+      price: '$7,999',
+    period: '/month',
       description: 'For large organizations with custom needs',
       features: [
         'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting'

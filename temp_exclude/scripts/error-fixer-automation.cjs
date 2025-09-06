@@ -179,9 +179,9 @@ class ErrorFixerAutomation {
         });
         
         if (newLines.length !== lines.length) {
-          content = newLines.join('\n');
-          modified = true;
-        }
+    content = newLines.join('\n'),
+    modified = true
+  }
         
         if (modified) {
           fs.writeFileSync(file, content);
@@ -238,9 +238,10 @@ class ErrorFixerAutomation {
         
         // Fix missing commas in objects
         if (content.match(/}\s*{/)) {
-          content = content.replace(/}\s*{/g, '}, {');
-          modified = true;
-        }
+          content = content.replace(/}\s*{/g, '}, {
+    '),
+    modified = true
+  }
         
         if (modified) {
           fs.writeFileSync(file, content);
@@ -347,8 +348,8 @@ class ErrorFixerAutomation {
 
 // Run if called directly
 if (require.main === module) {
-  const automation = new ErrorFixerAutomation();
-  automation.run().catch(console.error);
-}
+    const automation = new ErrorFixerAutomation(),
+    automation.run().catch(console.error)
+  }
 
 module.exports = ErrorFixerAutomation;

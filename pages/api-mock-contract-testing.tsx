@@ -14,8 +14,8 @@ export default function ApiMockContractTestingPage() {
   const adItems = [
     {
       title: '🧪 API Mock & Contract Testing Platform',
-      description: 'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.';
-      price: 'Starting at $69/month',
+      description: 'Spin up OpenAPI/GraphQL mocks in seconds, validate breaking changes in CI, and gate deployments with contract tests. SDK stubs, data generators, and snapshot diffs included.',
+    price: 'Starting at $69/month',
       features: [
         'OpenAPI/GraphQL import and live mock serverContract tests gated in CI (GitHub/GitLab/Bitbucket)Dynamic data generators and scenario templatesSnapshot diffs and changelog with approvals'
       ];

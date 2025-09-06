@@ -188,8 +188,7 @@ class HealthDashboard {
     try {
       const start = Date.now();
       // Try to make a request to the application
-      const response = await this.makeHttpRequest('http://localhost:3000/health');
-      return Date.now() - start;
+      const response = await this.makeHttpRequest('http: //localhost:3000/health'), return Date.now() - start,
     } catch (error) {
       return null; // Application not responding
     }
@@ -202,9 +201,9 @@ class HealthDashboard {
       });
       req.on('error', reject);
       req.setTimeout(5000, () => {
-        req.destroy();
-        reject(new Error('Request timeout'));
-      });
+    req.destroy(),
+    reject(new Error('Request timeout'))
+  });
     });
   }
 
@@ -289,27 +288,42 @@ class HealthDashboard {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Dashboard</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-        .header { background: #2c3e50; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        .card h3 { margin-bottom: 15px; color: #2c3e50; }
-        .metric { display: flex; justify-content: space-between; margin-bottom: 10px; }
-        .metric-value { font-weight: bold; }
-        .status { padding: 4px 8px; border-radius: 4px; font-size: 12px; font-weight: bold; }
-        .status.online { background: #d4edda; color: #155724; }
-        .status.offline { background: #f8d7da; color: #721c24; }
-        .status.warning { background: #fff3cd; color: #856404; }
-        .alert { padding: 10px; margin-bottom: 10px; border-radius: 4px; }
-        .alert.critical { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
-        .alert.warning { background: #fff3cd; color: #856404; border-left: 4px solid #ffc107; }
-        .alert.error { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
-        .progress-bar { width: 100%; height: 20px; background: #e9ecef; border-radius: 10px; overflow: hidden; }
-        .progress-fill { height: 100%; background: #28a745; transition: width 0.3s ease; }
-        .progress-fill.warning { background: #ffc107; }
-        .progress-fill.danger { background: #dc3545; }
+        * { margin: 0, padding: 0, box-sizing: border-box
+  }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f5f5f5
+  }
+        .container { max-width: 1200px, margin: 0 auto, padding: 20px
+  }
+        .header { background: #2c3e50, color: white, padding: 20px, border-radius: 8px, margin-bottom: 20px
+  }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px
+  }
+        .card { background: white, padding: 20px, border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .card h3 { margin-bottom: 15px, color: #2c3e50, }
+        .metric { display: flex, justify-content: space-between, margin-bottom: 10px
+  }
+        .metric-value { font-weight: bold
+  }
+        .status { padding: 4px 8px, border-radius: 4px, font-size: 12px, font-weight: bold, }
+        .status.online { background: #d4edda, color: #155724, }
+        .status.offline { background: #f8d7da, color: #721c24, }
+        .status.warning { background: #fff3cd, color: #856404, }
+        .alert { padding: 10px, margin-bottom: 10px, border-radius: 4px
+  }
+        .alert.critical { background: #f8d7da, color: #721c24, border-left: 4px solid #dc3545
+  }
+        .alert.warning { background: #fff3cd, color: #856404, border-left: 4px solid #ffc107
+  }
+        .alert.error { background: #f8d7da, color: #721c24, border-left: 4px solid #dc3545
+  }
+        .progress-bar { width: 100%, height: 20px, background: #e9ecef, border-radius: 10px, overflow: hidden
+  }
+        .progress-fill { height: 100%, background: #28a745, transition: width 0.3s ease
+  }
+        .progress-fill.warning { background: #ffc107
+  }
+        .progress-fill.danger { background: #dc3545
+  }
     </style>
 </head>
 <body>
@@ -456,17 +470,17 @@ class HealthDashboard {
     const alerts = this.dashboardData.alerts;
 
     console.log(`🌐 Dashboard URL: http://localhost:${this.port}`);
-    console.log(`📊 System Health:`);
+    console.log(`📊 System Health: `),
     console.log(`   CPU: ${system.cpu ? system.cpu.usage.toFixed(2) : 'N/A'}%`);
     console.log(`   Memory: ${system.memory ? system.memory.usagePercent.toFixed(2) : 'N/A'}%`);
     console.log(`   Uptime: ${system.uptime ? Math.floor(system.uptime / 3600) : 0} hours`);
     
-    console.log(`\n📱 Application Status:`);
+    console.log(`\n📱 Application Status: `),
     console.log(`   Processes: ${app.onlineProcesses || 0}/${app.pm2Processes || 0} online`);
     console.log(`   Total CPU: ${app.totalCpu ? app.totalCpu.toFixed(2) : 'N/A'}%`);
     console.log(`   Total Memory: ${app.totalMemory ? Math.round(app.totalMemory / 1024 / 1024) : 'N/A'}MB`);
     
-    console.log(`\n⚡ Performance:`);
+    console.log(`\n⚡ Performance: `),
     console.log(`   Build: ${perf.build && perf.build.success ? 'Success' : 'Failed'}`);
     console.log(`   Build Time: ${perf.build ? perf.build.time : 'N/A'}ms`);
     console.log(`   Bundle Size: ${perf.bundle ? perf.bundle.sizeMB : 'N/A'}MB`);
@@ -515,8 +529,8 @@ class HealthDashboard {
 
 // Run if called directly
 if (require.main === module) {
-  const dashboard = new HealthDashboard();
-  dashboard.run();
-}
+    const dashboard = new HealthDashboard(),
+    dashboard.run()
+  }
 
 module.exports = HealthDashboard;

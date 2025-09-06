@@ -1,14 +1,12 @@
 const fs = require('fs');
 
-  announceToScreenReade: r: (messag: e: string) => void;
-  setFocu: s: (elementI: d: string) => void;
+  announceToScreenReade: r: (messag: e: string) => void, setFocu: s: (elementI: d: string) => void,
 
 }
 ;
 const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
 
-  childre: n: ReactNode;
-
+  childre: n: ReactNode,
     }
   };
 ;

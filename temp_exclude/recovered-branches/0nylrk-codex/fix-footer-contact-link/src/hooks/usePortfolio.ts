@@ -52,13 +52,10 @@ export function usePortfolio() {
       const { data, error } = await supabase
         .from('portfolio_projects')
         .insert({
-          user_id: user.id;
-          title: project.title;
-          description: project.description;
-          technologies: project.technologies;
-          image_url: project.image_url;
-          github_url: project.github_url;
-          demo_url: project.demo_url;
+          user_id: user.id, title: project.title,
+          description: project.description, technologies: project.technologies,
+          image_url: project.image_url, github_url: project.github_url,
+          demo_url: project.demo_url,
           pdf_url: project.pdf_url
         })
         .select('id')
@@ -67,7 +64,7 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project added";
+        title: "Project added",
         description: "Your project has been added to your portfolio"
       });
       
@@ -77,7 +74,7 @@ export function usePortfolio() {
       console.error('Error adding portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error";
+        title: "Error",
         description: `Could not add project: ${e.message}`;
         variant: "destructive"
       });
@@ -100,12 +97,9 @@ export function usePortfolio() {
       const { error } = await supabase
         .from('portfolio_projects')
         .update({
-          title: project.title;
-          description: project.description;
-          technologies: project.technologies;
-          image_url: project.image_url;
-          github_url: project.github_url;
-          demo_url: project.demo_url;
+          title: project.title, description: project.description,
+          technologies: project.technologies, image_url: project.image_url,
+          github_url: project.github_url, demo_url: project.demo_url,
           pdf_url: project.pdf_url
         })
         .eq('id', projectId)
@@ -114,7 +108,7 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project updated";
+        title: "Project updated",
         description: "Your portfolio project has been updated"
       });
       
@@ -124,7 +118,7 @@ export function usePortfolio() {
       console.error('Error updating portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error";
+        title: "Error",
         description: `Could not update project: ${e.message}`;
         variant: "destructive"
       });
@@ -153,7 +147,7 @@ export function usePortfolio() {
       if (error) throw error;
       
       toast({
-        title: "Project deleted";
+        title: "Project deleted",
         description: "Your portfolio project has been deleted"
       });
       
@@ -163,7 +157,7 @@ export function usePortfolio() {
       console.error('Error deleting portfolio project:', e);
       setError(e.message);
       toast({
-        title: "Error";
+        title: "Error",
         description: `Could not delete project: ${e.message}`;
         variant: "destructive"
       });

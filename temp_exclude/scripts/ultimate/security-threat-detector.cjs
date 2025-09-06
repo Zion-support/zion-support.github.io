@@ -216,9 +216,9 @@ class AdvancedSecurityThreatDetector {
       
       // Scan each process for threats
       for (const process of processes) {
-        const processThreats = await this.scanProcess(process);
-        threats.push(...processThreats);
-      }
+    const processThreats = await this.scanProcess(process),
+    threats.push(...processThreats)
+  }
       
       // Scan system for threats
       const systemThreats = await this.scanSystem();
@@ -456,17 +456,15 @@ class AdvancedSecurityThreatDetector {
   }
 
   async handleSystemMemoryThreat(threat) {
-    this.log(`🖥️ Handling system memory threat`);
-    
+    this.log(`🖥️ Handling system memory threat`),
     // Clean up system resources
-    await this.cleanupSystemResources();
+    await this.cleanupSystemResources()
   }
 
   async handleDiskSpaceThreat(threat) {
-    this.log(`💿 Handling disk space threat`);
-    
+    this.log(`💿 Handling disk space threat`),
     // Clean up old logs and temporary files
-    await this.cleanupDiskSpace();
+    await this.cleanupDiskSpace()
   }
 
   async handleSuspiciousPortThreat(threat) {
@@ -525,9 +523,9 @@ class AdvancedSecurityThreatDetector {
     try {
       // Force garbage collection
       if (global.gc) {
-        global.gc();
-        this.log('🗑️ Forced garbage collection');
-      }
+    global.gc(),
+    this.log('🗑️ Forced garbage collection')
+  }
       
       // Clear PM2 logs
       execSync('pm2 flush', { stdio: 'pipe' });
@@ -849,8 +847,8 @@ class AdvancedSecurityThreatDetector {
 
 // Run the detector
 if (require.main === module) {
-  const detector = new AdvancedSecurityThreatDetector();
-  detector.run();
-}
+    const detector = new AdvancedSecurityThreatDetector(),
+    detector.run()
+  }
 
 module.exports = AdvancedSecurityThreatDetector;

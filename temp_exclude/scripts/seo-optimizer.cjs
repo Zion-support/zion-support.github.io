@@ -67,15 +67,15 @@ function analyzeFile(filePath) {
     // Check for title tag
     const titleMatch = content.match(/<title[^>]*>([^<]*)<\/title>/i);
     if (titleMatch) {
-      analysis.hasTitle = true;
-      analysis.titleLength = titleMatch[1].length;
-    }
+    analysis.hasTitle = true,
+    analysis.titleLength = titleMatch[1].length
+  }
     // Check for meta description
     const metaMatch = content.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i);
     if (metaMatch) {
-      analysis.hasMetaDescription = true;
-      analysis.metaLength = metaMatch[1].length;
-    }
+    analysis.hasMetaDescription = true,
+    analysis.metaLength = metaMatch[1].length
+  }
     // Check for H1 tag
     analysis.hasH1 = /<h1[^>]*>.*<\/h1>/i.test(content);
     // Check for images
@@ -84,13 +84,13 @@ function analyzeFile(filePath) {
   }
   updateMetrics(metrics, analysis) {
     if (analysis.hasTitle) {
-      metrics.pagesWithTitle++;
-      metrics.averageTitleLength += analysis.titleLength;
-    }
+    metrics.pagesWithTitle++,
+    metrics.averageTitleLength += analysis.titleLength
+  }
     if (analysis.hasMetaDescription) {
-      metrics.pagesWithMetaDescription++;
-      metrics.averageMetaLength += analysis.metaLength;
-    }
+    metrics.pagesWithMetaDescription++,
+    metrics.averageMetaLength += analysis.metaLength
+  }
     if (analysis.hasH1) metrics.pagesWithH1++;
     if (analysis.hasImages) metrics.pagesWithImages++;
   }
@@ -168,7 +168,7 @@ function analyzeFile(filePath) {
 }
 // Run if called directly
 if (require.main === module) {
-  const optimizer = new SEOOptimizer();
-  optimizer.run().catch(console.error);
-}
+    const optimizer = new SEOOptimizer(),
+    optimizer.run().catch(console.error)
+  }
 module.exports = SEOOptimizer;

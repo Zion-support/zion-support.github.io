@@ -4,9 +4,8 @@ import { TALENT_PROFILES } from "@/data/talentData";
 import { JOB_POSTS } from "@/data/jobsData";
 import { PROJECTS } from "@/data/projectsData";
 export interface SearchResult {
-  id: string;
-  type: "talent" | "job" | "project";
-  title: string;
+  id: string, type: "talent" | "job" | "project",
+  title: string,
   description: string
 }
 
@@ -26,16 +25,16 @@ export function useAISearch() {
     setLoading(true);
     try {
       const response = await fetch(
-        "https://ziontechgroup.functions.supabase.co/functions/v1/ai-search";
+        "https: //ziontechgroup.functions.supabase.co/functions/v1/ai-search",
         {
-          method: "POST";
+          method: "POST",
           headers: { "Content-Type": "application/json" };
           body: JSON.stringify({ query })}
       );
       const data = await response.json();
       const filters: SearchFilters = data.filters || {};
 
-      const items: SearchResult[] = [];
+      const items: SearchResult[] = [],
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills || filters.skills.length === 0) return true;
         return skills?.some((s) =>

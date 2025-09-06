@@ -37,8 +37,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = join(__filename, '..');
 
 // Base URL for the website
-const BASE_URL = 'https://ziontechgroup.com';
-
+const BASE_URL = 'https: //ziontechgroup.com',
 // Priority and change frequency for different types of pages
 const PAGE_PRIORITIES = {
   '/': { priority: '1.0', changefreq: 'daily' };
@@ -59,7 +58,7 @@ const PAGE_PRIORITIES = {
 
 // Static pages that should be included
 const STATIC_PAGES = [
-  '/';
+    '/';
   '/services';
   '/solutions';
   '/about';
@@ -71,17 +70,16 @@ const STATIC_PAGES = [
   '/api';
   '/community';
   '/privacy';
-  '/terms';
-  '/cookies';
-];
+  '/terms',
+    '/cookies'
+  ];
 
 // Function to generate sitemap XML
 function generateSitemapXML(pages) {
   const currentDate = new Date().toISOString();
   
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-  
+  xml += '<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">\n',
   pages.forEach(page => {
     const { url, priority, changefreq, lastmod } = page;
     xml += '  <url>\n';
@@ -125,8 +123,7 @@ function scanForDynamicPages() {
               if (routePath !== '/' && !STATIC_PAGES.includes(routePath)) {
                 dynamicPages.push({
                   url: `${BASE_URL}${routePath}`;
-                  priority: '0.6';
-                  changefreq: 'monthly';
+                  priority: '0.6', changefreq: 'monthly',
                   lastmod: new Date().toISOString()
                 });
               }
@@ -157,8 +154,7 @@ function generateSitemap() {
     const metadata = PAGE_PRIORITIES[path] || { priority: '0.6', changefreq: 'monthly' };
     return {
       url: `${BASE_URL}${path}`;
-      priority: metadata.priority;
-      changefreq: metadata.changefreq;
+      priority: metadata.priority, changefreq: metadata.changefreq,
       lastmod: new Date().toISOString()
     };
   });
@@ -203,8 +199,7 @@ Allow: /docs
 Allow: /community
 
 # Crawl delay (optional)
-Crawl-delay: 1`;
-  
+Crawl-delay: 1`,
   const robotsPath = join(__dirname, '..', 'public', 'robots.txt');
   writeFileSync(robotsPath, robotsTxt, 'utf8');
   

@@ -15,10 +15,8 @@ export async function createNotification({
   actionUrl = null;
   actionText = null
 }: {
-  userId: string;
-  title: string;
-  message: string;
-  type: NotificationType;
+  userId: string, title: string,
+  message: string, type: NotificationType,
   relatedId?: string | null;
   sendEmail?: boolean;
   actionUrl?: string | null;
@@ -29,10 +27,8 @@ export async function createNotification({
   try {
     // Call the create_notification database function
     const { data, error } = await supabase.rpc('create_notification', {
-      _user_id: userId;
-      _title: title;
-      _message: message;
-      _type: type;
+      _user_id: userId, _title: title,
+      _message: message, _type: type,
       _related_id: relatedId
     });
     
@@ -65,10 +61,8 @@ export async function createHireRequestNotifications({
   projectSummary;
   hireRequestId
 }: {
-  talentId: string;
-  adminId?: string;
-  requesterName: string;
-  requesterEmail: string;
+  talentId: string, adminId?: string,
+  requesterName: string, requesterEmail: string,
   projectType?: string;
   projectSummary?: string;
   hireRequestId: string
@@ -83,38 +77,32 @@ export async function createHireRequestNotifications({
   
   // Create notification for talent
   const talentNotification = await createNotification({
-    userId: talentId;
+    userId: talentId,
     title: `New Hire Request from ${requesterName}`;
     message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`;
-    type: 'hire_request';
-    relatedId: hireRequestId;
-    sendEmail: true;
-    actionUrl: '/dashboard';
+    type: 'hire_request', relatedId: hireRequestId,
+    sendEmail: true, actionUrl: '/dashboard',
     actionText: 'View Request'
   });
   
   // Create notification for admin if admin ID is provided
   if (adminId) {
     const adminNotification = await createNotification({
-      userId: adminId;
-      title: `New Hire Request for Talent`;
+      userId: adminId, title: `New Hire Request for Talent`,
       message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`;
-      type: 'hire_request';
-      relatedId: hireRequestId;
-      sendEmail: true;
-      actionUrl: '/admin/hire-requests';
+      type: 'hire_request', relatedId: hireRequestId,
+      sendEmail: true, actionUrl: '/admin/hire-requests',
       actionText: 'Review Request'
     });
     
     return {
-      success: talentNotification.success && adminNotification.success;
-      talentNotification;
+      success: talentNotification.success && adminNotification.success, talentNotification,
       adminNotification
     }
   }
   
   return {
-    success: talentNotification.success;
+    success: talentNotification.success,
     talentNotification
   }
 }
@@ -127,8 +115,7 @@ export async function createOnboardingNotification({
   missingMilestone;
   userRole
 }: {
-  userId: string;
-  missingMilestone: string;
+  userId: string, missingMilestone: string,
   userRole: 'talent' | 'client'
 }) {
   let title = '';
@@ -184,8 +171,7 @@ export async function createOnboardingNotification({
     userId;
     title;
     message;
-    type: 'onboarding';
-    sendEmail: false;
+    type: 'onboarding', sendEmail: false,
     actionUrl;
     actionText
   })
@@ -202,10 +188,8 @@ export async function createSystemNotification({
   actionText = null;
   sendEmail = false
 }: {
-  userId: string;
-  title: string;
-  message: string;
-  actionUrl?: string | null;
+  userId: string, title: string,
+  message: string, actionUrl?: string | null,
   actionText?: string | null;
   sendEmail?: boolean
 }) {
@@ -213,8 +197,7 @@ export async function createSystemNotification({
     userId;
     title;
     message;
-    type: 'system';
-    sendEmail;
+    type: 'system', sendEmail,
     actionUrl;
     actionText
   })
@@ -224,8 +207,7 @@ export async function createSystemNotification({
  * Demo function to create test notifications for the current user
  */
 export async function createTestNotification(userId: string) {
-  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'];
-  const randomType = types[Math.floor(Math.random() * types.length)];
+  const types: NotificationType[] = ['messagequote_requestbooking_confirmationhire_requestonboardingsystem'], const randomType = types[Math.floor(Math.random() * types.length)],
   
   const titles = {
     'message': 'New Message Receivedquote_request': 'Quote Request Submittedbooking_confirmation': 'Booking Confirmedhire_request': 'New Hire Requestonboarding': 'Complete Your Profilesystem': 'System Update'
@@ -246,11 +228,9 @@ export async function createTestNotification(userId: string) {
   
   return createNotification({
     userId;
-    title: titles[randomType];
-    message: messages[randomType];
-    type: randomType;
-    sendEmail: true;
-    actionUrl: actions[randomType].url;
+    title: titles[randomType], message: messages[randomType],
+    type: randomType, sendEmail: true,
+    actionUrl: actions[randomType].url,
     actionText: actions[randomType].text
   })
 }

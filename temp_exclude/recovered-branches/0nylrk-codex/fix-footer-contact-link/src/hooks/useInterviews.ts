@@ -14,8 +14,7 @@ export function useInterviews() {
   const requestInterview = async (interviewRequest: InterviewRequest): Promise<Interview | null> => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "You must be logged in to request interviews";
+        title: "Authentication required", description: "You must be logged in to request interviews",
         variant: "destructive"
       });
       return null
@@ -29,15 +28,11 @@ export function useInterviews() {
       const { data, error: insertError } = await supabase
         .from('interviews')
         .insert({
-          client_id: interviewRequest.client_id;
-          talent_id: interviewRequest.talent_id;
-          scheduled_date: interviewRequest.scheduled_date;
-          duration_minutes: interviewRequest.duration_minutes;
-          notes: interviewRequest.notes;
-          meeting_link: interviewRequest.meeting_link;
-          meeting_platform: interviewRequest.meeting_platform;
-          interview_type: interviewRequest.interview_type;
-          title: interviewRequest.title;
+          client_id: interviewRequest.client_id, talent_id: interviewRequest.talent_id,
+          scheduled_date: interviewRequest.scheduled_date, duration_minutes: interviewRequest.duration_minutes,
+          notes: interviewRequest.notes, meeting_link: interviewRequest.meeting_link,
+          meeting_platform: interviewRequest.meeting_platform, interview_type: interviewRequest.interview_type,
+          title: interviewRequest.title,
           status: 'requested'})
         .select('*')
         .single();
@@ -96,23 +91,15 @@ export function useInterviews() {
 
       // Transform the data to match Interview type
       const formattedInterviews = data.map((interview: any): Interview => ({
-        id: interview.id;
-        client_id: interview.client_id;
-        talent_id: interview.talent_id;
-        scheduled_date: interview.scheduled_date;
-        end_time: interview.end_time || '';
-        duration_minutes: interview.duration_minutes;
-        status: interview.status;
-        notes: interview.notes;
-        meeting_link: interview.meeting_link;
-        meeting_platform: interview.meeting_platform;
-        created_at: interview.created_at;
-        updated_at: interview.updated_at;
-        title: interview.title;
-        interview_type: interview.interview_type;
-        client_name: interview.clients?.display_name;
-        talent_name: interview.talents?.full_name;
-        client_avatar: interview.clients?.avatar_url;
+        id: interview.id, client_id: interview.client_id,
+        talent_id: interview.talent_id, scheduled_date: interview.scheduled_date,
+        end_time: interview.end_time || '', duration_minutes: interview.duration_minutes,
+        status: interview.status, notes: interview.notes,
+        meeting_link: interview.meeting_link, meeting_platform: interview.meeting_platform,
+        created_at: interview.created_at, updated_at: interview.updated_at,
+        title: interview.title, interview_type: interview.interview_type,
+        client_name: interview.clients?.display_name, talent_name: interview.talents?.full_name,
+        client_avatar: interview.clients?.avatar_url,
         talent_avatar: interview.talents?.profile_picture_url}));
 
       setInterviews(formattedInterviews);
@@ -128,13 +115,12 @@ export function useInterviews() {
 
   // Respond to an interview request (as talent)
   const respondToInterview = async (
-    interviewId: string;
+    interviewId: string,
     response: InterviewResponse
   ): Promise<boolean> => {
     if (!user?.id) {
       toast({
-        title: "Authentication required";
-        description: "You must be logged in to respond to interviews";
+        title: "Authentication required", description: "You must be logged in to respond to interviews",
         variant: "destructive"
       });
       return false
@@ -148,7 +134,7 @@ export function useInterviews() {
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          status: response.status;
+          status: response.status,
           updated_at: new Date().toISOString()
         })
         .eq('id', interviewId);
@@ -209,16 +195,13 @@ export function useInterviews() {
 
   // Helper function to create interview notifications
   const createInterviewNotification = async (
-    userId: string;
-    type: string;
-    title: string;
-    message: string;
+    userId: string, type: string,
+    title: string, message: string,
     relatedId: string
   ) => {
     try {
       await supabase.from('notifications').insert({
-        user_id: userId;
-        type;
+        user_id: userId, type,
         title;
         message;
         related_id: relatedId})
@@ -257,7 +240,7 @@ export function useInterviews() {
       const { error: updateError } = await supabase
         .from('interviews')
         .update({
-          status: 'cancelled';
+          status: 'cancelled',
           updated_at: new Date().toISOString()
         })
         .eq('id', interviewId);

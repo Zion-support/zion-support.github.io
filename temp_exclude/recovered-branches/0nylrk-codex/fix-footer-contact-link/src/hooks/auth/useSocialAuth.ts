@@ -9,15 +9,13 @@ export const useSocialAuth = () => {
 
       if (error) {
         toast({
-          title: "Google login failed";
-          description: error.message;
+          title: "Google login failed", description: error.message,
           variant: "destructive"})
       }
     } catch (error: any) {
       console.error("Google login error:", error);
       toast({
-        title: "Google login failed";
-        description: error.message || "An unexpected error occurred";
+        title: "Google login failed", description: error.message || "An unexpected error occurred",
         variant: "destructive"})
     }
   };
@@ -29,15 +27,13 @@ export const useSocialAuth = () => {
 
       if (error) {
         toast({
-          title: "Facebook login failed";
-          description: error.message;
+          title: "Facebook login failed", description: error.message,
           variant: "destructive"})
       }
     } catch (error: any) {
       console.error("Facebook login error:", error);
       toast({
-        title: "Facebook login failed";
-        description: error.message || "An unexpected error occurred";
+        title: "Facebook login failed", description: error.message || "An unexpected error occurred",
         variant: "destructive"})
     }
   };
@@ -49,15 +45,13 @@ export const useSocialAuth = () => {
 
       if (error) {
         toast({
-          title: "Twitter login failed";
-          description: error.message;
+          title: "Twitter login failed", description: error.message,
           variant: "destructive"})
       }
     } catch (error: any) {
       console.error("Twitter login error:", error);
       toast({
-        title: "Twitter login failed";
-        description: error.message || "An unexpected error occurred";
+        title: "Twitter login failed", description: error.message || "An unexpected error occurred",
         variant: "destructive"})
     }
   };

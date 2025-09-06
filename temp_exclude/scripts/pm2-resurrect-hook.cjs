@@ -36,10 +36,8 @@ class PM2ResurrectHook {
       const processes = JSON.parse(output);
       
       return {
-        total: processes.length;
-        running: processes.filter(p => p.pm2_env.status === 'online').length;
-        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length;
-        errored: processes.filter(p => p.pm2_env.status === 'errored').length;
+        total: processes.length, running: processes.filter(p => p.pm2_env.status === 'online').length,
+        stopped: processes.filter(p => p.pm2_env.status === 'stopped').length, errored: processes.filter(p => p.pm2_env.status === 'errored').length,
         processes: processes
       };
     } catch (error) {
@@ -123,9 +121,9 @@ class PM2ResurrectHook {
       );
 
       if (failedProcesses.length === 0) {
-        this.log('No failed processes found');
-        return true;
-      }
+    this.log('No failed processes found'),
+    return true
+  }
 
       this.log(`Found ${failedProcesses.length} failed processes`);
 
@@ -162,9 +160,9 @@ class PM2ResurrectHook {
       );
 
       if (orphanedProcesses.length === 0) {
-        this.log('No orphaned processes found');
-        return true;
-      }
+    this.log('No orphaned processes found'),
+    return true
+  }
 
       this.log(`Found ${orphanedProcesses.length} orphaned processes`);
 
@@ -203,12 +201,10 @@ class PM2ResurrectHook {
     for (const file of ecosystemFiles) {
       try {
         const content = fs.readFileSync(file, 'utf8');
-        const appMatches = content.match(/name:\s*['"`]([^'"`]+)['"`]/g);
-        
+        const appMatches = content.match(/name: \s*['"`]([^'"`]+)['"`]/g),
         if (appMatches) {
           appMatches.forEach(match => {
-            const processName = match.match(/name:\s*['"`]([^'"`]+)['"`]/)[1];
-            expectedProcesses.push(processName);
+            const processName = match.match(/name: \s*['"`]([^'"`]+)['"`]/)[1], expectedProcesses.push(processName),
           });
         }
       } catch (error) {
@@ -223,10 +219,8 @@ class PM2ResurrectHook {
     this.log('Generating resurrection report...');
     
     const report = {
-      timestamp: new Date().toISOString();
-      status: await this.checkPM2Status();
-      ecosystemFiles: this.findEcosystemFiles().map(f => path.basename(f));
-      expectedProcesses: this.getExpectedProcesses(this.findEcosystemFiles());
+      timestamp: new Date().toISOString(), status: await this.checkPM2Status(),
+      ecosystemFiles: this.findEcosystemFiles().map(f => path.basename(f)), expectedProcesses: this.getExpectedProcesses(this.findEcosystemFiles()),
       recommendations: []
     };
 
@@ -274,9 +268,9 @@ async function main() {
       case 'start':
         const processNames = process.argv.slice(3);
         if (processNames.length === 0) {
-          console.log('Please specify process names to start');
-          process.exit(1);
-        }
+    console.log('Please specify process names to start'),
+    process.exit(1)
+  }
         await hook.startSpecificProcesses(processNames);
         break;
         
@@ -290,12 +284,9 @@ async function main() {
         break;
         
       case 'help':
-      default:
-        console.log('PM2 Resurrect Hook');
-        console.log('==================');
+      default: console.log('PM2 Resurrect Hook'), console.log('=================='),
         console.log('');
-        console.log('Usage:');
-        console.log('  node pm2-resurrect-hook.cjs resurrect      - Resurrect all processes');
+        console.log('Usage: '), console.log('  node pm2-resurrect-hook.cjs resurrect      - Resurrect all processes'),
         console.log('  node pm2-resurrect-hook.cjs restart-failed - Restart failed processes');
         console.log('  node pm2-resurrect-hook.cjs cleanup        - Clean up orphaned processes');
         console.log('  node pm2-resurrect-hook.cjs start <names>  - Start specific processes');

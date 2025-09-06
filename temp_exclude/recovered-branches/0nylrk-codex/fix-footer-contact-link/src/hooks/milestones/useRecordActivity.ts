@@ -6,10 +6,10 @@ export const useRecordActivity = () => {
   const { user } = useAuth();
   
   const recordMilestoneActivity = async (
-    milestoneId: string;
+    milestoneId: string,
     action: string, 
     previousStatus: string | null, 
-    newStatus: string;
+    newStatus: string,
     comment?: string
   ) => {
     if (!user) return null;
@@ -18,11 +18,9 @@ export const useRecordActivity = () => {
       const { data, error } = await supabase
         .from('milestone_activities')
         .insert({
-          milestone_id: milestoneId;
-          user_id: user.id;
+          milestone_id: milestoneId, user_id: user.id,
           action;
-          previous_status: previousStatus;
-          new_status: newStatus;
+          previous_status: previousStatus, new_status: newStatus,
           comment})
         .select(`
           *;

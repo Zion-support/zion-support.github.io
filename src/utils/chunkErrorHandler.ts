@@ -20,22 +20,15 @@
         );
 <<<<<<< HEAD
         <button onclick="window.location.reload()" style="
-          background: #0070f3;
-          color: white;
-          border: none;
-          padding: 0.75rem 1.5rem;
-          border-radius: 0.5rem;
-          font-size: 1rem;
-          cursor: pointer;
-          margin-right: 1rem;
+          background: #0070f3, color: white,
+          border: none, padding: 0.75rem 1.5rem,
+          border-radius: 0.5rem, font-size: 1rem,
+          cursor: pointer, margin-right: 1rem,
         ">
           Try Again
         </button>
         <button onclick="window.location.href='/'" style="
-          background: #666;
-          color: white;
-          border: none;
-          padding: 0.75rem 1.5rem;
-          border-radius: 0.5rem;
-          font-size: 1rem;
-          cursor: pointer;
+          background: #666, color: white,
+          border: none, padding: 0.75rem 1.5rem,
+          border-radius: 0.5rem, font-size: 1rem,
+          cursor: pointer,

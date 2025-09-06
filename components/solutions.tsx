@@ -15,8 +15,8 @@ const SolutionsPage: React.FC = () => {
       solutions: [
         {
           name: 'Healthcare AI Solutions',
-          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms';
-          href: '/healthcare-solutions',
+          description: 'AI-powered diagnostic tools, patient care optimization, and medical research platforms',
+    href: '/healthcare-solutions',
           featured: true,
           icon: <Heart className="w-6 h-6" />
         };

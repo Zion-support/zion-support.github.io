@@ -31,10 +31,8 @@ async function fetchIssues() {
   try {
     const issues = await gh('/issues?state=open&per_page=50');
     return issues.filter((i) => !i.pull_request).map((i) => ({
-      id: i.number;
-      title: i.title;
-      url: i.html_url;
-      labels: (i.labels || []).map((l) => (typeof l === 'string' ? l : l.name));
+      id: i.number, title: i.title,
+      url: i.html_url, labels: (i.labels || []).map((l) => (typeof l === 'string' ? l : l.name)),
     }));
   } catch {
     return [];
@@ -46,8 +44,7 @@ async function fetchRecentCommits() {
     const commits = await gh('/commits?per_page=20');
     return commits.map((c) => ({
       sha: c.sha.substring(0, 7);
-      msg: c.commit.message.split('\n')[0];
-      url: c.html_url;
+      msg: c.commit.message.split('\n')[0], url: c.html_url,
     }));
   } catch {
     return [];
@@ -88,9 +85,8 @@ async function main() {
   fs.writeFileSync(path.join(process.cwd(), 'public', 'autonomy', 'ROADMAP.md'), md, 'utf8');
 
   const snapshot = {
-    generatedAt: new Date().toISOString();
-    issuesCount: issues.length;
-    commitsCount: commits.length;
+    generatedAt: new Date().toISOString(), issuesCount: issues.length,
+    commitsCount: commits.length,
   };
   ensureDir(path.join(process.cwd(), 'automation_logs'));
   const id = new Date().toISOString().replace(/[:.]/g, '-').toLowerCase();

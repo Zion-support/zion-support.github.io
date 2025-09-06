@@ -165,9 +165,9 @@ class AIPoweredCodeAnalyzer {
     const emptyLines = lines.filter(line => line.trim() === '').length;
     const emptyRatio = emptyLines / lines.length;
     if (emptyRatio > 0.3) {
-      score -= 10;
-      issues.push('Too many empty lines');
-    }
+    score -= 10,
+    issues.push('Too many empty lines')
+  }
     
     // Check for line length
     const longLines = lines.filter(line => line.length > 120).length;
@@ -184,9 +184,9 @@ class AIPoweredCodeAnalyzer {
     ).length;
     const commentRatio = commentLines / lines.length;
     if (commentRatio < 0.1) {
-      score -= 15;
-      issues.push('Insufficient comments');
-    }
+    score -= 15,
+    issues.push('Insufficient comments')
+  }
     
     return {
       score: Math.max(0, score),
@@ -527,9 +527,9 @@ class AIPoweredCodeAnalyzer {
         try {
           const fixResult = await this.fixFileIssues(fileAnalysis);
           if (fixResult.fixed) {
-            fixedCount++;
-            fixResults.push(fixResult);
-          }
+    fixedCount++,
+    fixResults.push(fixResult)
+  }
         } catch (error) {
           this.log(`Error fixing issues in ${fileAnalysis.file}: ${error.message}`, 'error');
         }
@@ -553,9 +553,9 @@ class AIPoweredCodeAnalyzer {
         const originalContent = content;
         content = content.replace(/console\.log\([^)]*\);?\s*\n?/g, '');
         if (content !== originalContent) {
-          fixed = true;
-          fixes.push('Removed console.log statements');
-        }
+    fixed = true,
+    fixes.push('Removed console.log statements')
+  }
       }
       
       if (suggestion.type === 'bestPractices') {
@@ -563,17 +563,17 @@ class AIPoweredCodeAnalyzer {
         const originalContent = content;
         content = content.replace(/\bvar\s+/g, 'const ');
         if (content !== originalContent) {
-          fixed = true;
-          fixes.push('Replaced var with const');
-        }
+    fixed = true,
+    fixes.push('Replaced var with const')
+  }
         
         // Replace == with ===
         const originalContent2 = content;
         content = content.replace(/==/g, '===');
         if (content !== originalContent2) {
-          fixed = true;
-          fixes.push('Replaced == with ===');
-        }
+    fixed = true,
+    fixes.push('Replaced == with ===')
+  }
       }
     }
     
@@ -612,8 +612,8 @@ class AIPoweredCodeAnalyzer {
 
 // Run if called directly
 if (require.main === module) {
-  const analyzer = new AIPoweredCodeAnalyzer();
-  analyzer.run().catch(console.error);
-}
+    const analyzer = new AIPoweredCodeAnalyzer(),
+    analyzer.run().catch(console.error)
+  }
 
 module.exports = AIPoweredCodeAnalyzer;

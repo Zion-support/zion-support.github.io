@@ -5,8 +5,8 @@ const path = require('path');
 
 class HTMLEntityFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+    this.projectRoot = process.cwd(),
+    this.fixedFiles = []
   }
 
   log(message, type = 'INFO') {
@@ -143,7 +143,7 @@ class HTMLEntityFixer {
       }
     }
     
-    this.log(`\n📊 HTML Entity Fix Summary:`);
+    this.log(`\n📊 HTML Entity Fix Summary: `),
     this.log(`  - Files processed: ${filesToFix.length}`);
     this.log(`  - Files fixed: ${this.fixedFiles.length}`);
     

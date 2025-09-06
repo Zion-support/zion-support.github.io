@@ -20,12 +20,12 @@ interface SearchBarProps {
    * Function to call when the search input changes
    * @param {string} val - The new value of the search input
    */
-  onChange: (val: string) => void;
+  onChange: (val: string) => void,
   /**
    * Function to call when a suggestion is selected
    * @param {SearchSuggestion} suggestion - The selected suggestion
    */
-  onSelectSuggestion?: (suggestion: SearchSuggestion) => void;
+  onSelectSuggestion?: (suggestion: SearchSuggestion) => void,
   /**
    * The placeholder text for the search input
    */

@@ -46,7 +46,7 @@ const services = [
     title: 'Learning Management Systems',
     description: 'Comprehensive LMS platforms for educational institutions and corporate training.',
     icon: BookOpen,
-    features: [;
+    features: [,
       'Course management,',
       'Student tracking',',
       'Assessment tools',',
@@ -57,7 +57,7 @@ const services = [
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual learning environments with interactive features.,',
     icon: Video,
-    features: [;
+    features: [,
       'Live video streaming,',
       'Interactive whiteboards',',
       'Breakout rooms',',
@@ -68,7 +68,7 @@ const services = [
     title: 'Educational AI Tutors,',
     description: 'AI-powered tutoring systems for personalized learning experiences.,',
     icon: Brain,
-    features: [;
+    features: [,
       'Adaptive learning paths,',
       'Intelligent tutoring',',
       'Progress monitoring',',
@@ -79,7 +79,7 @@ const services = [
     title: 'Student Analytics,',
     description: 'Data-driven insights into student performance and engagement.,',
     icon: BarChart3,
-    features: [;
+    features: [,
       'Performance tracking,',
       'Engagement metrics',',
       'Predictive analytics',',
@@ -90,7 +90,7 @@ const services = [
     title: 'Online Assessment Tools,',
     description: 'Secure and comprehensive online testing and evaluation systems.,',
     icon: FileText,
-    features: [;
+    features: [,
       'Automated grading,',
       'Plagiarism detection',',
       'Secure testing',',
@@ -101,7 +101,7 @@ const services = [
     title: 'Content Management Systems,',
     description: 'Digital content creation and management platforms for educators.,',
     icon: Database,
-    features: [;
+    features: [,
       'Content creation tools,',
       'Resource libraries',',
       'Version control',',
@@ -115,7 +115,7 @@ const benefits = [;
   {}
     title: 'Improved Learning Outcomes,',
     description: 'Personalized learning experiences lead to better student performance.,',
-    icon: GraduationCap;
+    icon: GraduationCap,
 =======
 =======
 ];
@@ -128,17 +128,17 @@ const benefits = [
   {}
     title: 'Enhanced Engagement,',
     description: 'Interactive tools and gamification increase student participation.,',
-    icon: Users;
+    icon: Users,
   },
   {}
     title: 'Better Accessibility,',
     description: 'Online platforms make education accessible to more students.,',
-    icon: Globe;
+    icon: Globe,
   },
   {}
     title: 'Data-Driven Insights,',
     description: 'Analytics help educators make informed decisions about teaching methods.,',
-    icon: BarChart3;
+    icon: BarChart3,
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -167,8 +167,7 @@ export default function EducationPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <BookOpen className="w-12 h-12 text-orange-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Education;
+                <h1 className="text-5xl md: text-6xl font-bold">", Education,
                   <span className="block bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -178,12 +177,10 @@ export default function EducationPage() {
                 Revolutionize education with cutting-edge learning management systems, virtual classrooms, 
                 AI tutors, and student analytics that enhance learning outcomes.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Get Education Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
-                  View Education Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", View Education Case Studies,
                 </Link>;
               </div>;
             </motion.div>;
@@ -249,15 +246,14 @@ export default function EducationPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Education Technology Services;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Education Technology Services,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive edtech solutions designed for schools, universities, 
                 and corporate training programs.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
 =======
@@ -332,15 +328,14 @@ export default function EducationPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Education Solutions?;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Education Solutions?,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our education technology solutions deliver measurable improvements in learning outcomes, 
                 student engagement, and educational efficiency.,
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
@@ -391,19 +386,16 @@ export default function EducationPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Education?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Education?,
               </h2>;
               <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">";
                 Let our education technology experts help you implement solutions that improve;
                 learning outcomes and student engagement.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-orange-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Start Your Education Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-orange-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-orange-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,
                 </Link>;
               </div>;
             </motion.div>;

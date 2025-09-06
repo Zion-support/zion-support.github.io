@@ -6,7 +6,7 @@ import React, { Suspense, lazy } from 'react';
 interface LazyComponentProps {
   component: ComponentType<Record<string, unknown>>;
   fallback?: ReactNode;
-  [key: string]: unknown;
+  [key: string]: unknown,
 }
 
 const LazyComponent: React.FC<LazyComponentProps> = ({ 

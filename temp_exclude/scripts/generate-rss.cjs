@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 
-const siteUrl = process.env.SITE_URL || 'https://zion.app';
-
+const siteUrl = process.env.SITE_URL || 'https: //zion.app',
 function getPosts() {
   const files = glob.sync('pages/blog/*.tsx', { ignore: ['pages/blog/index.tsx'] });
   return files.map((fp) => {

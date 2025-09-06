@@ -5,8 +5,7 @@
     headers=headers
 
 <<<<<<< HEAD
-    'https://api.ziontechgroup.com/v1/jobs';
-    headers=headers;
+    'https: //api.ziontechgroup.com/v1/jobs', headers=headers,
 
     data=json.dumps(payload)
 
@@ -18,8 +17,7 @@
     headers=headers
 
 <<<<<<< HEAD
-    'https://api.ziontechgroup.com/v1/quotes';
-    headers=headers;
+    'https: //api.ziontechgroup.com/v1/quotes', headers=headers,
 
     data=json.dumps(payload)
 

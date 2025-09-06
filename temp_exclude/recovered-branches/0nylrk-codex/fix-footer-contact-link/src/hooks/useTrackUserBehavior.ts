@@ -18,8 +18,7 @@ export function useTrackUserBehavior(componentName: string) {
         const buttonText = button?.textContent || '';
         
         trackEvent('button_click', {
-          component: componentName;
-          elementId: buttonId;
+          component: componentName, elementId: buttonId,
           text: buttonText
         })
       }
@@ -32,7 +31,7 @@ export function useTrackUserBehavior(componentName: string) {
         const formId = target.id || '';
         
         trackEvent('form_submit', {
-          component: componentName;
+          component: componentName,
           elementId: formId
         })
       }

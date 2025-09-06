@@ -608,24 +608,24 @@ class PerformanceOptimizer {
     const assets = this.optimizations.assets;
     const recommendations = this.optimizations.recommendations;
 
-    console.log(`📦 Bundle Analysis:`);
+    console.log(`📦 Bundle Analysis: `),
     console.log(`   Files: ${bundle.fileCount || 0}`);
     console.log(`   Size: ${bundle.totalSize ? (bundle.totalSize / 1024 / 1024).toFixed(2) : 0}MB`);
     console.log(`   Compression: ${bundle.compressionRatio ? bundle.compressionRatio.toFixed(1) : 0}%`);
     
-    console.log(`\n🔍 Code Analysis:`);
+    console.log(`\n🔍 Code Analysis: `),
     console.log(`   Files: ${code.totalFiles || 0}`);
     console.log(`   Lines: ${code.totalLines || 0}`);
     console.log(`   Issues: ${code.performanceIssues ? code.performanceIssues.length : 0}`);
     
-    console.log(`\n🖼️ Asset Analysis:`);
+    console.log(`\n🖼️ Asset Analysis: `),
     console.log(`   Images: ${assets.images ? assets.images.totalImages : 0}`);
     console.log(`   Large Images: ${assets.images ? assets.images.largeImages : 0}`);
     console.log(`   CSS Files: ${assets.css ? assets.css.totalFiles : 0}`);
     console.log(`   JS Files: ${assets.js ? assets.js.totalFiles : 0}`);
 
     if (recommendations.length > 0) {
-      console.log('\n💡 Top Recommendations:');
+      console.log('\n💡 Top Recommendations: '),
       recommendations.slice(0, 5).forEach((rec, index) => {
         console.log(`  ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.message}`);
         console.log(`     → ${rec.action}`);
@@ -663,8 +663,8 @@ class PerformanceOptimizer {
 
 // Run if called directly
 if (require.main === module) {
-  const optimizer = new PerformanceOptimizer();
-  optimizer.run();
-}
+    const optimizer = new PerformanceOptimizer(),
+    optimizer.run()
+  }
 
 module.exports = PerformanceOptimizer;

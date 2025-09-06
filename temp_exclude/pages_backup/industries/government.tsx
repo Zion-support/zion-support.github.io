@@ -47,7 +47,7 @@ const services = [
     title: 'Citizen Service Portals',
     description: 'Comprehensive digital platforms for citizen-government interaction and service delivery.',
     icon: Globe,
-    features: [;
+    features: [,
       'Online service applications,',
       'Digital document submission',',
       'Status tracking systems',',
@@ -58,7 +58,7 @@ const services = [
     title: 'Secure Data Management,',
     description: 'Government-grade data security and management systems for sensitive information.,',
     icon: Shield,
-    features: [;
+    features: [,
       'Encrypted data storage,',
       'Access control systems',',
       'Audit trail management',',
@@ -69,7 +69,7 @@ const services = [
     title: 'Digital Identity Solutions,',
     description: 'Secure digital identity verification and management systems for citizens.,',
     icon: Users,
-    features: [;
+    features: [,
       'Biometric authentication,',
       'Digital ID cards',',
       'Identity verification',',
@@ -80,7 +80,7 @@ const services = [
     title: 'Public Safety Systems,',
     description: 'Advanced systems for emergency response and public safety management.,',
     icon: Phone,
-    features: [;
+    features: [,
       'Emergency dispatch systems,',
       'Real-time monitoring',',
       'Incident management',',
@@ -91,7 +91,7 @@ const services = [
     title: 'Government Analytics,',
     description: 'Data analytics platforms for informed policy-making and resource allocation.,',
     icon: BarChart3,
-    features: [;
+    features: [,
       'Performance metrics,',
       'Trend analysis',',
       'Predictive modeling',',
@@ -102,7 +102,7 @@ const services = [
     title: 'Compliance Management,',
     description: 'Automated systems for regulatory compliance and policy enforcement.,',
     icon: FileText,
-    features: [;
+    features: [,
       'Regulatory tracking,',
       'Compliance reporting',',
       'Policy management',',
@@ -116,7 +116,7 @@ const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Government-grade security measures protect sensitive citizen and government data.,',
-    icon: Shield;
+    icon: Shield,
 =======
 =======
 ];
@@ -129,17 +129,17 @@ const benefits = [
   {}
     title: 'Improved Efficiency,',
     description: 'Digital processes streamline government operations and reduce administrative burden.,',
-    icon: BarChart3;
+    icon: BarChart3,
   },
   {}
     title: 'Better Citizen Experience,',
     description: 'User-friendly digital services make government more accessible to citizens.,',
-    icon: Users;
+    icon: Users,
   },
   {}
     title: 'Transparency & Accountability,',
     description: 'Digital systems provide transparency and enable better accountability.,',
-    icon: Globe;
+    icon: Globe,
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -168,8 +168,7 @@ export default function GovernmentPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Building className="w-12 h-12 text-indigo-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Government;
+                <h1 className="text-5xl md: text-6xl font-bold">", Government,
                   <span className="block bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -179,12 +178,10 @@ export default function GovernmentPage() {
                 Transform government operations with secure, efficient, and citizen-centric technology solutions. 
                 Enhance service delivery, improve transparency, and ensure public safety.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Get Government Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">";
-                  View Government Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">", View Government Case Studies,
                 </Link>;
               </div>;
             </motion.div>;
@@ -250,15 +247,14 @@ export default function GovernmentPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Government Technology Services;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Government Technology Services,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive government technology solutions designed for federal, state, 
                 and local government agencies.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
 =======
@@ -333,15 +329,14 @@ export default function GovernmentPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Government Solutions?;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Government Solutions?,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our government technology solutions deliver enhanced security, improved efficiency, 
                 and better citizen services.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
@@ -392,19 +387,16 @@ export default function GovernmentPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Government?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Government?,
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let our government technology experts help you implement solutions that enhance;
                 citizen services and improve operational efficiency.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Start Your Government Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-indigo-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,
                 </Link>;
               </div>;
             </motion.div>;

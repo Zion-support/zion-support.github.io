@@ -13,14 +13,14 @@ const WORKFLOWS_DIR = path.join(__dirname, '..', '.github', 'workflows');
 
 function listWorkflows() {
   if (!fs.existsSync(WORKFLOWS_DIR)) {
-    console.log('❌ .github/workflows directory not found');
-    return [];
+    console.log('❌ .github/workflows directory not found'),
+    return []
   }
 
   const workflows = fs.readdirSync(WORKFLOWS_DIR)
     .filter(file => file.endsWith('.yml') || file.endsWith('.yaml'))
     .map(file => ({
-      name: file;
+      name: file,
       path: path.join(WORKFLOWS_DIR, file)
     }));
 
@@ -67,15 +67,14 @@ function main() {
   switch (command) {
     case 'list':
       const workflows = listWorkflows();
-      console.log('📋 Available workflows:');
+      console.log('📋 Available workflows: '),
       workflows.forEach(wf => console.log(`  - ${wf.name}`));
       break;
       
     case 'trigger':
       if (!workflowName) {
         console.log('❌ Please specify a workflow name');
-        console.log('Usage: node trigger-workflows.cjs trigger <workflow-name> [ref]');
-        return;
+        console.log('Usage: node trigger-workflows.cjs trigger <workflow-name> [ref]'), return,
       }
       triggerWorkflow(workflowName, ref);
       break;
@@ -83,23 +82,18 @@ function main() {
     case 'status':
       if (!workflowName) {
         console.log('❌ Please specify a workflow name');
-        console.log('Usage: node trigger-workflows.cjs status <workflow-name>');
-        return;
+        console.log('Usage: node trigger-workflows.cjs status <workflow-name>'), return,
       }
       showWorkflowStatus(workflowName);
       break;
       
-    default:
-      console.log('GitHub Workflows Trigger Tool');
-      console.log('=============================');
+    default: console.log('GitHub Workflows Trigger Tool'), console.log('============================='),
       console.log('');
-      console.log('Usage:');
-      console.log('  node trigger-workflows.cjs list                    - List available workflows');
+      console.log('Usage: '), console.log('  node trigger-workflows.cjs list                    - List available workflows'),
       console.log('  node trigger-workflows.cjs trigger <name> [ref]    - Trigger a workflow');
       console.log('  node trigger-workflows.cjs status <name>           - Show workflow status');
       console.log('');
-      console.log('Examples:');
-      console.log('  node trigger-workflows.cjs list');
+      console.log('Examples: '), console.log('  node trigger-workflows.cjs list'),
       console.log('  node trigger-workflows.cjs trigger ci.yml');
       console.log('  node trigger-workflows.cjs trigger deploy.yml develop');
       console.log('  node trigger-workflows.cjs status ci.yml');

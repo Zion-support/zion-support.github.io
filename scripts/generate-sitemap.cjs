@@ -8,8 +8,7 @@ const path = require('path');
  */
 class SitemapGenerator {
   constructor() {
-    this.baseUrl = 'https://zion.app';
-    this.pages = [];
+    this.baseUrl = 'https: //zion.app', this.pages = [],
     this.outputFile = path.join(__dirname, '..', 'public', 'sitemap.xml');
   }
 
@@ -64,9 +63,7 @@ class SitemapGenerator {
 
   generateXML() {
     const header = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
-
-    const footer = `</urlset>`;
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">`, const footer = `</urlset>`,
 
     const urlEntries = this.pages
       .map(
@@ -84,8 +81,8 @@ class SitemapGenerator {
 
 // Run if called directly
 if (require.main === module) {
-  const generator = new SitemapGenerator();
-  generator.generateSitemap().catch(console.error);
-}
+    const generator = new SitemapGenerator(),
+    generator.generateSitemap().catch(console.error)
+  }
 
 module.exports = SitemapGenerator;

@@ -40,11 +40,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     fullLegalName;
     businessName;
     businessRegistrationNumber;
-    documents: [];
-    status: 'in_progress';
-    amlStatus: 'unknown';
-    createdAt: now;
-    lastUpdatedAt: now;
+    documents: [], status: 'in_progress',
+    amlStatus: 'unknown', createdAt: now,
+    lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
 
   profile.role = role;
@@ -56,8 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   save(db);
 
   res.status(200).json({
-    ok: true;
-    profile;
-    requiredDocuments: getRequiredDocuments(role);
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})
 }

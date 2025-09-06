@@ -590,7 +590,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           .mobile-optimized button;
           .mobile-optimized a {
             min-height: 44px,
-            min-width: 44px;
+            min-width: 44px,
           }
           
           .mobile-optimized input;

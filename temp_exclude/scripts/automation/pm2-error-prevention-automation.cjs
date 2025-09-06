@@ -306,22 +306,14 @@ class $1 {}
     try {}
   // Step "1": Install missing dependencies;
       await this.installMissingDependencies();
-      // Step 2: Fix common syntax errors;
-      this.fixCommonSyntaxErrors();
-      // Step 3: Fix import issues;
-      this.fixImportIssues();
-      // Step 4: Fix component issues;
-      this.fixComponentIssues();
-      // Step 5: Clean up build artifacts;
-      await this.cleanup();
-      // Step 6: Run type check;
-      const typeCheckPassed = await this.runTypeCheck();
-      // Step 7: Run lint;
-      const lintPassed = await this.runLint();
-      // Step 8: Run build;
-      const buildPassed = await this.runBuild();
-      // Step 9: Run tests;
-      const testsPassed = await this.runTests();
+      // Step 2: Fix common syntax errors, this.fixCommonSyntaxErrors(),
+      // Step 3: Fix import issues, this.fixImportIssues(),
+      // Step 4: Fix component issues, this.fixComponentIssues(),
+      // Step 5: Clean up build artifacts, await this.cleanup(),
+      // Step 6: Run type check, const typeCheckPassed = await this.runTypeCheck(),
+      // Step 7: Run lint, const lintPassed = await this.runLint(),
+      // Step 8: Run build, const buildPassed = await this.runBuild(),
+      // Step 9: Run tests, const testsPassed = await this.runTests(),
       // Generate report;
       const report = await this.generateReport();
       if (typeCheckPassed && lintPassed && buildPassed && testsPassed) {}
@@ -336,22 +328,14 @@ class $1 {}
     try {}
   // Step "1": Install missing dependencies;
       await this.installMissingDependencies();
-      // Step 2: Fix common syntax errors;
-      this.fixCommonSyntaxErrors();
-      // Step 3: Fix import issues;
-      this.fixImportIssues();
-      // Step 4: Fix component issues;
-      this.fixComponentIssues();
-      // Step 5: Clean up build artifacts;
-      await this.cleanup();
-      // Step 6: Run type check;
-      const typeCheckPassed = await this.runTypeCheck();
-      // Step 7: Run lint;
-      const lintPassed = await this.runLint();
-      // Step 8: Run build;
-      const buildPassed = await this.runBuild();
-      // Step 9: Run tests;
-      const testsPassed = await this.runTests();
+      // Step 2: Fix common syntax errors, this.fixCommonSyntaxErrors(),
+      // Step 3: Fix import issues, this.fixImportIssues(),
+      // Step 4: Fix component issues, this.fixComponentIssues(),
+      // Step 5: Clean up build artifacts, await this.cleanup(),
+      // Step 6: Run type check, const typeCheckPassed = await this.runTypeCheck(),
+      // Step 7: Run lint, const lintPassed = await this.runLint(),
+      // Step 8: Run build, const buildPassed = await this.runBuild(),
+      // Step 9: Run tests, const testsPassed = await this.runTests(),
       // Generate report;
       const report = await this.generateReport();
       if (typeCheckPassed && lintPassed && buildPassed && testsPassed) {}

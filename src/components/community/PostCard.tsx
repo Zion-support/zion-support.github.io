@@ -1,5 +1,5 @@
 
-      "transition-shadow hover:shadow-md";
+      "transition-shadow hover: shadow-md",
 <<<<<<< HEAD
 
 

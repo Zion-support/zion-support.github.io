@@ -7,8 +7,7 @@ interface AIEnhancementButtonProps {
   currentContent: string,
   enhancementType: 'summary' | 'work-description' | 'skill-categorization' | 'general',
   context?: string;
-  onEnhanced: (enhancedContent: string) => void;
-  buttonText?: string;
+  onEnhanced: (enhancedContent: string) => void, buttonText?: string,
   className?: string
 }
 

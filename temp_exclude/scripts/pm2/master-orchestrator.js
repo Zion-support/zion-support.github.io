@@ -269,7 +269,7 @@ class MasterOrchestrator {
     console.log(`⏱️ Uptime: ${Math.floor(uptime / 60)} minutes`);
     console.log(`📱 Processes: ${Object.keys(processes).length}`);
     
-    console.log('\n🔧 Process Status:');
+    console.log('\n🔧 Process Status: '),
     Object.entries(processes).forEach(([name, proc]) => {
       const status = proc.healthy ? '✅' : '❌';
       console.log(`  ${status} ${name}: ${proc.status} (CPU: ${proc.cpu}%, Memory: ${Math.round(proc.memory / 1024 / 1024)}MB)`);
@@ -277,7 +277,7 @@ class MasterOrchestrator {
 
     const recommendations = this.generateRecommendations();
     if (recommendations.length > 0) {
-      console.log('\n💡 Recommendations:');
+      console.log('\n💡 Recommendations: '),
       recommendations.slice(0, 3).forEach((rec, index) => {
         console.log(`  ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.message}`);
         console.log(`     → ${rec.action}`);
@@ -334,8 +334,8 @@ class MasterOrchestrator {
 
 // Run if called directly
 if (require.main === module) {
-  const orchestrator = new MasterOrchestrator();
-  orchestrator.run();
-}
+    const orchestrator = new MasterOrchestrator(),
+    orchestrator.run()
+  }
 
 module.exports = MasterOrchestrator;

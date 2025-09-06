@@ -53,8 +53,8 @@ export default function GetStarted() {
     {
       id: 'quantum-computing',
       name: 'Quantum Computing Solutions',
-      description: 'Leverage quantum computing for cryptography, optimization, and simulation';
-      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      description: 'Leverage quantum computing for cryptography, optimization, and simulation',
+    icon: <Atom className="w-8 h-8 text-purple-400" />,
       features: [
         'Quantum algorithmsPost-quantum cryptographyQuantum machine learningQuantum simulation'
       ];

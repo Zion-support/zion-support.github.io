@@ -92,7 +92,7 @@ const serviceCategories: Array<{
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond';
+    description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],
@@ -110,7 +110,7 @@ const serviceCategories: Array<{
   {
     id: 'space-metaverse',
     title: '🌌 Space & Metaverse',
-    description: 'Space mining, metaverse development, and more';
+    description: 'Space mining, metaverse development, and more',
     icon: Rocket,
     color: 'from-teal-500 to-emerald-500',
     services: [...quantumSpaceServices],
@@ -128,7 +128,7 @@ const serviceCategories: Array<{
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
-    description: 'Innovative fintech, DeFi, and financial services';
+    description: 'Innovative fintech, DeFi, and financial services',
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -470,7 +470,7 @@ export default function ServicesPage() {
                         className={`p-3 rounded-xl transition-all duration-300 ${
                           viewMode === 'list' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
-                            : 'text-gray-400 hover:text-white hover:bg-gray-700/50';
+                            : 'text-gray-400 hover: text-white hover:bg-gray-700/50',
                         }`}
                       >
                         <List className="w-5 h-5" />

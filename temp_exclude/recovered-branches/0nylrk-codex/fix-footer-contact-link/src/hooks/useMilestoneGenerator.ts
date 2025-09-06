@@ -3,17 +3,14 @@ import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 export interface MilestoneInput {
-  scope: string;
-  startDate: string;
-  endDate: string | null;
+  scope: string, startDate: string,
+  endDate: string | null,
   projectType: string
 }
 
 export interface GeneratedMilestone {
-  title: string;
-  description: string;
-  dueDate: string;
-  estimatedHours: number;
+  title: string, description: string,
+  dueDate: string, estimatedHours: number,
   isAiGenerated: boolean
 }
 

@@ -104,7 +104,7 @@ function main() {
     }
   }
 
-  console.log("\n📊 Summary: ");
+  console.log("\n📊 Summary: "),
   console.log(`   Files processed: ${filesProcessed}`);
   console.log(`   Console statements "removed": ${totalRemoved}`);
   

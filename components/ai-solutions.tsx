@@ -6,8 +6,8 @@ export default function AISolutionsPage() {
     {
       id: 'machine-learning',
       title: 'Machine Learning Solutions',
-      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.';
-      features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
+      description: 'Custom ML models for predictive analytics, pattern recognition, and intelligent decision making.',
+    features: ['Predictive AnalyticsPattern RecognitionAnomaly DetectionRecommendation Systems'],
       icon: '🧠',
       category: 'Core AI',
       complexity: 'Advanced'
@@ -15,8 +15,8 @@ export default function AISolutionsPage() {
     {
       id: 'natural-language-processing',
       title: 'Natural Language Processing',
-      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
-      features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
+      description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
+    features: ['Text AnalysisSentiment AnalysisLanguage TranslationChatbot Development'],
       icon: '💬',
       category: 'Language AI',
       complexity: 'Advanced'
@@ -24,8 +24,8 @@ export default function AISolutionsPage() {
     {
       id: 'computer-vision',
       title: 'Computer Vision',
-      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.';
-      features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
+      description: 'Computer vision solutions for image recognition, object detection, and visual analytics.',
+    features: ['Image RecognitionObject DetectionFacial RecognitionQuality Control'],
       icon: '👁️',
       category: 'Visual AI',
       complexity: 'Advanced'

@@ -1,8 +1,7 @@
 export const innovativeITInfrastructureServices2025 = [
   {
-    id: 'quantum-edge-computing-orchestrator';
-    name: 'Quantum Edge Computing Orchestrator';
-    description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.';
+    id: 'quantum-edge-computing-orchestrator', name: 'Quantum Edge Computing Orchestrator',
+    description: 'Revolutionary edge computing platform that leverages quantum computing principles to provide ultra-fast, secure, and intelligent edge processing for IoT, autonomous systems, and real-time applications.',
     features: [
       'Quantum-enhanced edge processing with 1000x speed improvementIntelligent workload distribution and optimizationReal-time data processing and analyticsAdvanced security with quantum encryptionAutonomous edge node managementMulti-cloud edge orchestrationAI-powered predictive maintenanceZero-latency communication protocols';
       'Scalable edge infrastructureEnergy-efficient quantum processing'
@@ -24,26 +23,24 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited nodes'] 
       }
     };
-    category: 'IT Infrastructure';
-    tags: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration'];
-    website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator';
+    category: 'IT Infrastructure', tags: ['Quantum ComputingEdge ComputingIoTReal-time ProcessingInfrastructure Orchestration'],
+    website: 'https://ziontechgroup.com/quantum-edge-computing-orchestrator',
     contact: {
-      phone: '+1 302 464 0950';
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     };
-    marketSize: '$28.7B';
-    targetAudience: 'IoT companies, autonomous vehicle manufacturers, smart city developers, industrial automation firms';
+    marketSize: '$28.7B',
+    targetAudience: 'IoT companies, autonomous vehicle manufacturers, smart city developers, industrial automation firms',
     competitiveAdvantage: 'Quantum computing integration for unprecedented processing speed, intelligent edge orchestration, and industry-leading security';
     useCases: [
       'Autonomous vehicle processingSmart city infrastructureIndustrial IoT automationReal-time gaming and entertainmentEmergency response systems'
     ];
-    integrations: ['IoT platformsCloud providers5G networksAI platformsSecurity systems'];
+    integrations: ['IoT platformsCloud providers5G networksAI platformsSecurity systems'],
     compliance: ['SOC2ISO 27001NISTGDPRIndustry-specific regulations']
   };
   {
-    id: 'zero-trust-quantum-security-platform';
-    name: 'Zero Trust Quantum Security Platform';
-    description: 'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.';
+    id: 'zero-trust-quantum-security-platform', name: 'Zero Trust Quantum Security Platform',
+    description: 'Next-generation cybersecurity platform that implements zero-trust architecture with quantum-resistant encryption, AI-powered threat detection, and autonomous security response.',
     features: [
       'Quantum-resistant encryption algorithmsAI-powered threat detection with 99.9% accuracyZero-trust network architectureAutonomous security response and remediationReal-time threat intelligenceAdvanced behavioral analyticsMulti-factor quantum authenticationSecure quantum key distribution';
       'Compliance automation and reporting24/7 autonomous security monitoring'
@@ -65,26 +62,24 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Complete security suiteCustom deploymentDedicated supportWhite-label solution'] 
       }
     };
-    category: 'Cybersecurity';
-    tags: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security'];
-    website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform';
+    category: 'Cybersecurity', tags: ['Zero TrustQuantum SecurityAI SecurityThreat DetectionNetwork Security'],
+    website: 'https://ziontechgroup.com/zero-trust-quantum-security-platform',
     contact: {
-      phone: '+1 302 464 0950';
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     };
-    marketSize: '$42.3B';
-    targetAudience: 'Enterprise businesses, government agencies, financial institutions, healthcare providers, critical infrastructure';
+    marketSize: '$42.3B',
+    targetAudience: 'Enterprise businesses, government agencies, financial institutions, healthcare providers, critical infrastructure',
     competitiveAdvantage: 'Quantum-resistant security, AI-powered threat detection, and comprehensive zero-trust architecture implementation';
     useCases: [
       'Enterprise network securityGovernment infrastructure protectionFinancial system securityHealthcare data protectionCritical infrastructure security'
     ];
-    integrations: ['SIEM systemsFirewall platformsIdentity providersCloud securityNetwork monitoring'];
+    integrations: ['SIEM systemsFirewall platformsIdentity providersCloud securityNetwork monitoring'],
     compliance: ['SOC2ISO 27001NISTFedRAMPHIPAAPCI DSS']
   };
   {
-    id: 'autonomous-devops-intelligence-platform';
-    name: 'Autonomous DevOps Intelligence Platform';
-    description: 'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.';
+    id: 'autonomous-devops-intelligence-platform', name: 'Autonomous DevOps Intelligence Platform',
+    description: 'Intelligent DevOps platform that autonomously manages software development, deployment, and operations using AI, machine learning, and advanced automation.',
     features: [
       'Autonomous code review and quality assuranceAI-powered testing and bug detectionIntelligent deployment orchestrationReal-time performance monitoring and optimizationAutomated incident response and resolutionPredictive maintenance and scalingMulti-environment managementAdvanced CI/CD pipeline optimization';
       'Security vulnerability scanningCompliance automation and reporting'
@@ -106,26 +101,24 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Full autonomous suiteCustom deploymentDedicated supportUnlimited environments'] 
       }
     };
-    category: 'DevOps & Automation';
-    tags: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response'];
-    website: 'https://ziontechgroup.com/autonomous-devops-intelligence-platform';
+    category: 'DevOps & Automation', tags: ['DevOpsAI AutomationCI/CDPerformance MonitoringIncident Response'],
+    website: 'https://ziontechgroup.com/autonomous-devops-intelligence-platform',
     contact: {
-      phone: '+1 302 464 0950';
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     };
-    marketSize: '$35.8B';
-    targetAudience: 'Software development companies, IT departments, DevOps teams, technology startups';
+    marketSize: '$35.8B',
+    targetAudience: 'Software development companies, IT departments, DevOps teams, technology startups',
     competitiveAdvantage: 'Autonomous DevOps operations, AI-powered automation, and comprehensive development lifecycle management';
     useCases: [
       'Software development automationContinuous deployment optimizationPerformance monitoring and optimizationIncident response automationDevelopment workflow optimization'
     ];
-    integrations: ['Git platformsCloud providersMonitoring toolsSecurity platformsCommunication tools'];
+    integrations: ['Git platformsCloud providersMonitoring toolsSecurity platformsCommunication tools'],
     compliance: ['SOC2ISO 27001GDPRIndustry-specific regulations']
   };
   {
-    id: 'quantum-cloud-infrastructure-platform';
-    name: 'Quantum Cloud Infrastructure Platform';
-    description: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.';
+    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+    description: 'Revolutionary cloud computing platform that integrates quantum computing capabilities with traditional cloud infrastructure for unprecedented performance and scalability.',
     features: [
       'Quantum-enhanced cloud processingHybrid quantum-classical computingIntelligent resource allocationQuantum-secure data transmissionAdvanced load balancing and scalingMulti-cloud quantum orchestrationAI-powered infrastructure optimizationReal-time performance analytics';
       'Quantum-resistant encryptionAutonomous infrastructure management'
@@ -147,26 +140,24 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Full quantum suiteCustom deploymentDedicated supportUnlimited resources'] 
       }
     };
-    category: 'Cloud Computing';
-    tags: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security'];
-    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform';
+    category: 'Cloud Computing', tags: ['Quantum ComputingCloud InfrastructureHybrid ComputingInfrastructure OptimizationQuantum Security'],
+    website: 'https://ziontechgroup.com/quantum-cloud-infrastructure-platform',
     contact: {
-      phone: '+1 302 464 0950';
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     };
-    marketSize: '$65.4B';
-    targetAudience: 'Enterprise businesses, technology companies, research institutions, government agencies';
+    marketSize: '$65.4B',
+    targetAudience: 'Enterprise businesses, technology companies, research institutions, government agencies',
     competitiveAdvantage: 'Quantum computing integration, hybrid quantum-classical architecture, and industry-leading performance';
     useCases: [
       'High-performance computingScientific research and simulationFinancial modeling and analysisAI and machine learning trainingBig data processing and analytics'
     ];
-    integrations: ['Major cloud providersQuantum computersAI platformsData analytics toolsSecurity platforms'];
+    integrations: ['Major cloud providersQuantum computersAI platformsData analytics toolsSecurity platforms'],
     compliance: ['SOC2ISO 27001FedRAMPGDPRIndustry-specific regulations']
   };
   {
-    id: 'ai-powered-data-center-automation';
-    name: 'AI-Powered Data Center Automation';
-    description: 'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.';
+    id: 'ai-powered-data-center-automation', name: 'AI-Powered Data Center Automation',
+    description: 'Intelligent data center management platform that uses AI and machine learning to autonomously optimize operations, reduce costs, and improve efficiency.',
     features: [
       'Autonomous data center operationsAI-powered energy optimizationPredictive maintenance and failure preventionIntelligent workload distributionReal-time performance monitoringAutomated capacity planningAdvanced cooling and power managementSecurity automation and threat response';
       'Compliance monitoring and reportingCost optimization and resource management'
@@ -188,20 +179,19 @@ export const innovativeITInfrastructureServices2025 = [
         features: ['Complete automation suiteCustom deploymentDedicated supportUnlimited data centers'] 
       }
     };
-    category: 'Data Center Management';
-    tags: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management'];
-    website: 'https://ziontechgroup.com/ai-powered-data-center-automation';
+    category: 'Data Center Management', tags: ['AI AutomationData CenterEnergy OptimizationPredictive MaintenanceInfrastructure Management'],
+    website: 'https://ziontechgroup.com/ai-powered-data-center-automation',
     contact: {
-      phone: '+1 302 464 0950';
+      phone: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com'
     };
-    marketSize: '$31.2B';
-    targetAudience: 'Data center operators, cloud providers, enterprise businesses, colocation facilities';
+    marketSize: '$31.2B',
+    targetAudience: 'Data center operators, cloud providers, enterprise businesses, colocation facilities',
     competitiveAdvantage: 'AI-powered autonomous operations, comprehensive energy optimization, and predictive maintenance capabilities';
     useCases: [
       'Data center operations automationEnergy efficiency optimizationPredictive maintenanceCapacity planning and optimizationCost reduction and management'
     ];
-    integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'];
+    integrations: ['Data center infrastructureMonitoring systemsEnergy managementSecurity platformsCompliance tools'],
     compliance: ['SOC2ISO 27001Uptime InstituteEnergy StarIndustry-specific regulations']
   }
 ];

@@ -328,9 +328,9 @@ export function securityHeaders(req, res, next) {
         recommendations.push('Add rate limiting for authentication endpoints');
         recommendations.push('Implement two-factor authentication');
       } else {
-        recommendations.push('Consider implementing authentication system');
-        recommendations.push('Add user registration and login functionality');
-      }
+    recommendations.push('Consider implementing authentication system'),
+    recommendations.push('Add user registration and login functionality')
+  }
 
       this.results.authenticationSecurity = {
         success: true,
@@ -400,8 +400,8 @@ export function securityHeaders(req, res, next) {
 
 // Run the security scanner
 if (require.main === module) {
-  const scanner = new SecurityScanner();
-  scanner.run().catch(console.error);
-}
+    const scanner = new SecurityScanner(),
+    scanner.run().catch(console.error)
+  }
 
 module.exports = SecurityScanner;

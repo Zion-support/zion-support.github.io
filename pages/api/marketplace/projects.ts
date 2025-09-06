@@ -34,10 +34,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const { content } = req.body as { content: string };
         if (!content) return bad(res, "Missing content");
         const note: ProjectNote = {
-          id: uuidv4();
-          authorId: user.id;
-          authorRole: user.role;
-          content;
+          id: uuidv4(), authorId: user.id,
+          authorRole: user.role, content,
           createdAtIso: new Date().toISOString()};
         project.notes.push(note);
         saveProject(project);
@@ -48,8 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const { name, url } = req.body as { name: string, url?: string };
         if (!name) return bad(res, "Missing name");
         const doc: ProjectDocument = {
-          id: uuidv4();
-          name;
+          id: uuidv4(), name,
           url;
           uploadedAtIso: new Date().toISOString()};
         project.documents.push(doc);

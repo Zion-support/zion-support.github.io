@@ -118,15 +118,15 @@ class ComprehensiveAppImprover {
 
     lines.forEach(line => {
       if (line.trim().startsWith('import ')) {
-        importLines.push(line);
-        inImports = true;
-      } else if (inImports && line.trim() === '') {
+    importLines.push(line),
+    inImports = true
+  } else if (inImports && line.trim() === '') {
         importLines.push(line);
       } else {
         if (inImports) {
-          otherLines.push(line);
-          inImports = false;
-        } else {
+    otherLines.push(line),
+    inImports = false
+  } else {
           otherLines.push(line);
         }
       }

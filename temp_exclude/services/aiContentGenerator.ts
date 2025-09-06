@@ -1,37 +1,29 @@
 export interface ContentGenerationRequest {
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
-  topic: string;
-  tone: 'professional' | 'casual' | 'friendly' | 'formal';
-  length: 'short' | 'medium' | 'long';
+  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description', topic: string,
+  tone: 'professional' | 'casual' | 'friendly' | 'formal', length: 'short' | 'medium' | 'long',
   keywords?: string[];
   targetAudience?: string
 }
 
 export interface ContentGenerationResponse {
-  content: string;
-  wordCount: number;
-  seoScore: number;
-  readabilityScore: number;
-  suggestions: string[];
+  content: string, wordCount: number,
+  seoScore: number, readabilityScore: number,
+  suggestions: string[],
   metadata: {
-    title: string;
-    description: string;
+    title: string, description: string,
     tags: string[]
   }
 }
 
 export interface ContentTemplate {
-  id: string;
-  name: string;
-  description: string;
-  type: string;
-  preview: string;
+  id: string, name: string,
+  description: string, type: string,
+  preview: string,
   price: number
 }
 
 export class AIContentGeneratorService {
-  private apiKey: string;
-  private baseUrl: string;
+  private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey;
@@ -42,7 +34,7 @@ export class AIContentGeneratorService {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch(`${this.baseUrl}/content/generate`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -62,35 +54,27 @@ export class AIContentGeneratorService {
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
       {
-        id: 'blog-post-starter';
-        name: 'Blog Post Starter';
-        description: 'Professional blog post template with SEO optimization';
-        type: 'blog-post';
-        preview: 'Create engaging blog posts that rank well in search engines...';
+        id: 'blog-post-starter', name: 'Blog Post Starter',
+        description: 'Professional blog post template with SEO optimization', type: 'blog-post',
+        preview: 'Create engaging blog posts that rank well in search engines...',
         price: 29
       };
       {
-        id: 'social-media-campaign';
-        name: 'Social Media Campaign';
-        description: 'Complete social media content strategy and posts';
-        type: 'social-media';
-        preview: 'Engage your audience with compelling social media content...';
+        id: 'social-media-campaign', name: 'Social Media Campaign',
+        description: 'Complete social media content strategy and posts', type: 'social-media',
+        preview: 'Engage your audience with compelling social media content...',
         price: 49
       };
       {
-        id: 'email-sequence';
-        name: 'Email Sequence';
-        description: 'Convert prospects with persuasive email sequences';
-        type: 'email';
-        preview: 'Build relationships and drive sales with email automation...';
+        id: 'email-sequence', name: 'Email Sequence',
+        description: 'Convert prospects with persuasive email sequences', type: 'email',
+        preview: 'Build relationships and drive sales with email automation...',
         price: 39
       };
       {
-        id: 'landing-page-copy';
-        name: 'Landing Page Copy';
-        description: 'High-converting landing page content';
-        type: 'landing-page';
-        preview: 'Turn visitors into customers with compelling copy...';
+        id: 'landing-page-copy', name: 'Landing Page Copy',
+        description: 'High-converting landing page content', type: 'landing-page',
+        preview: 'Turn visitors into customers with compelling copy...',
         price: 59
       }
     ]
@@ -112,10 +96,8 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 
     return {
-      content: mockContent;
-      wordCount: mockContent.split(' ').length;
-      seoScore: 85;
-      readabilityScore: 78;
+      content: mockContent, wordCount: mockContent.split(' ').length,
+      seoScore: 85, readabilityScore: 78,
       suggestions: [
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
       ];
@@ -128,15 +110,13 @@ ${request.topic} represents a significant opportunity for organizations looking 
   }
 
   async analyzeContent(content: string): Promise<{
-    seoScore: number;
-    readabilityScore: number;
-    suggestions: string[];
+    seoScore: number, readabilityScore: number,
+    suggestions: string[],
     keywordDensity: Record<string, number>
   }> {
     // Mock content analysis
     return {
-      seoScore: Math.floor(Math.random() * 30) + 70;
-      readabilityScore: Math.floor(Math.random() * 30) + 70;
+      seoScore: Math.floor(Math.random() * 30) + 70, readabilityScore: Math.floor(Math.random() * 30) + 70,
       suggestions: [
         'Add more headings for better structureInclude internal links to related contentOptimize meta description'
       ];
@@ -152,25 +132,22 @@ ${request.topic} represents a significant opportunity for organizations looking 
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
   starter: {
-    name: 'Starter';
-    price: 29;
-    period: '/month';
+    name: 'Starter', price: 29,
+    period: '/month',
     features: [
       '100 content generations per monthBasic templatesSEO analysisEmail supportStandard quality'
     ]
   };
   professional: {
-    name: 'Professional';
-    price: 99;
-    period: '/month';
+    name: 'Professional', price: 99,
+    period: '/month',
     features: [
       '500 content generations per monthPremium templatesAdvanced SEO analysisPriority supportHigh quality outputCustom brandingAPI access'
     ]
   };
   enterprise: {
-    name: 'Enterprise';
-    price: 299;
-    period: '/month';
+    name: 'Enterprise', price: 299,
+    period: '/month',
     features: [
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee'
     ]

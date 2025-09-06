@@ -72,13 +72,13 @@ const serviceCategories = [
 const heroFeatures = [
   {
     title: 'AI-Powered Automation',
-    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.';
+    description: 'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
     icon: Brain,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   };
   {
     title: 'Intelligent Optimization',
-    description: 'AI-driven optimization that continuously improves performance, security, and efficiency.';
+    description: 'AI-driven optimization that continuously improves performance, security, and efficiency.',
     icon: Sparkles,
     gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
   };
@@ -99,7 +99,7 @@ const heroFeatures = [
 const testimonials = [
   {
     name: 'Dr. Michael Chen',
-    role: 'CTO, TechFlow Solutions';
+    role: 'CTO, TechFlow Solutions',
     company: 'TechFlow Solutions',
     content: 'Zion Tech Group\'s AI automation platform has revolutionized our development process. We\'ve reduced testing time by 90% and improved code quality significantly.',
     rating: 5,
@@ -107,7 +107,7 @@ const testimonials = [
   };
   {
     name: 'Sarah Rodriguez',
-    role: 'DevOps Director, CloudScale Inc.';
+    role: 'DevOps Director, CloudScale Inc.',
     company: 'CloudScale Inc.',
     content: 'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
     rating: 5,
@@ -115,7 +115,7 @@ const testimonials = [
   };
   {
     name: 'David Kim',
-    role: 'Security Manager, SecureNet Corp.';
+    role: 'Security Manager, SecureNet Corp.',
     company: 'SecureNet Corp.',
     content: 'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
     rating: 5,

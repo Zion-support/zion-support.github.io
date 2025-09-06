@@ -26,8 +26,7 @@ function extractLinks(text) {
   for (const rx of [hrefRegex, srcRegex]) {
     for (const m of text.matchAll(rx)) {
       const url = m[1];
-      if (url.startsWith('mailto:') || url.startsWith('tel:')) continue;
-      if (url.startsWith('#')) continue;
+      if (url.startsWith('mailto: ') || url.startsWith('tel:')) continue, if (url.startsWith('#')) continue,
       if (url.startsWith('/')) continue; // internal
       links.add(url);
     }
@@ -69,4 +68,7 @@ async function main() {
   console.log('Checked links:', list.length, 'broken:', broken);
 }
 
-main().catch(e => { console.error(e); process.exit(1); });
+main().catch(e => {
+    console.error(e),
+    process.exit(1)
+  });

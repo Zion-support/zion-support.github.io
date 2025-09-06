@@ -79,9 +79,9 @@ class MergeConflictResolver {
     const filesWithConflicts = await this.findFilesWithConflicts();
     
     if (filesWithConflicts.length === 0) {
-      this.log('✅ No merge conflicts found!');
-      return;
-    }
+    this.log('✅ No merge conflicts found!'),
+    return
+  }
     
     for (const file of filesWithConflicts) {
       await this.fixFile(file);
@@ -93,12 +93,12 @@ class MergeConflictResolver {
     this.log(`Errors: ${this.errors.length}`);
     
     if (this.fixedFiles.length > 0) {
-      this.log('\n✅ Successfully fixed files:');
+      this.log('\n✅ Successfully fixed files: '),
       this.fixedFiles.forEach(file => this.log(`   - ${file}`));
     }
     
     if (this.errors.length > 0) {
-      this.log('\n❌ Errors encountered:');
+      this.log('\n❌ Errors encountered: '),
       this.errors.forEach(({ file, error }) => this.log(`   - ${file}: ${error}`));
     }
     
@@ -107,8 +107,8 @@ class MergeConflictResolver {
 }
 
 if (require.main === module) {
-  const resolver = new MergeConflictResolver();
-  resolver.run().catch(console.error);
-}
+    const resolver = new MergeConflictResolver(),
+    resolver.run().catch(console.error)
+  }
 
 module.exports = MergeConflictResolver;

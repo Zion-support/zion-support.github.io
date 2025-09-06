@@ -130,8 +130,8 @@ export default function UltraFuturistic2029InnovationsPage() {
                 };
                 {
                   title: '🚀 Space Colonization & Mining',
-                  description: 'Automated space exploration, colonization, and resource extraction systems';
-                  icon: Rocket,
+                  description: 'Automated space exploration, colonization, and resource extraction systems',
+    icon: Rocket,
                   color: 'from-red-600 to-orange-600',
                   services: cuttingEdge2029Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))
                 };

@@ -20,8 +20,8 @@ const QuantumServicesPage: React.FC = () => {
       name: 'Quantum Neural Networks',
       description: 'Next-generation neural networks powered by quantum computing',
       features: ['Quantum SuperpositionEntanglement ProcessingQuantum MemoryHybrid Classical-Quantum'],
-      price: '$3,999';
-      period: 'month',
+      price: '$3,999',
+    period: 'month',
       popular: true,
       icon: <Brain className="w-8 h-8" />
     };
@@ -30,8 +30,8 @@ const QuantumServicesPage: React.FC = () => {
       name: 'Quantum Financial Trading',
       description: 'Quantum-powered algorithmic trading and risk management',
       features: ['Quantum Risk AssessmentPortfolio OptimizationMarket PredictionReal-time Analysis'],
-      price: '$2,999';
-      period: 'month',
+      price: '$2,999',
+    period: 'month',
       popular: false,
       icon: <TrendingUp className="w-8 h-8" />
     };
@@ -40,8 +40,8 @@ const QuantumServicesPage: React.FC = () => {
       name: 'Quantum Materials Discovery',
       description: 'Accelerated materials research using quantum simulation',
       features: ['Quantum SimulationMolecular ModelingProperty PredictionDiscovery Automation'],
-      price: '$2,499';
-      period: 'month',
+      price: '$2,499',
+    period: 'month',
       popular: false,
       icon: <Atom className="w-8 h-8" />
     };
@@ -50,8 +50,8 @@ const QuantumServicesPage: React.FC = () => {
       name: 'Quantum Bio-Computing',
       description: 'Quantum computing for biological and pharmaceutical research',
       features: ['Protein FoldingDrug DiscoveryGenetic AnalysisBioinformatics'],
-      price: '$2,799';
-      period: 'month',
+      price: '$2,799',
+    period: 'month',
       popular: false,
       icon: <Heart className="w-8 h-8" />
     };
@@ -60,8 +60,8 @@ const QuantumServicesPage: React.FC = () => {
       name: 'Quantum Internet Security',
       description: 'Unbreakable quantum encryption and secure communications',
       features: ['Quantum Key DistributionPost-Quantum CryptographySecure NetworksQuantum Authentication'],
-      price: '$1,999';
-      period: 'month',
+      price: '$1,999',
+    period: 'month',
       popular: false,
       icon: <Shield className="w-8 h-8" />
     };
@@ -70,8 +70,8 @@ const QuantumServicesPage: React.FC = () => {
       name: 'Quantum Cloud Infrastructure',
       description: 'Quantum-ready cloud computing infrastructure',
       features: ['Quantum Processing UnitsHybrid ComputingScalable ArchitecturePerformance Optimization'],
-      price: '$3,499';
-      period: 'month',
+      price: '$3,499',
+    period: 'month',
       popular: false,
       icon: <Cloud className="w-8 h-8" />
     }

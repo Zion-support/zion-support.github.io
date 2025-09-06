@@ -23,15 +23,11 @@ export function useEducation() {
       const { error } = await supabase
         .from('education')
         .insert({
-          resume_id: resumeId;
-          institution: education.institution;
-          degree: education.degree;
-          field_of_study: education.field_of_study;
-          start_date: formatDateForDB(education.start_date);
-          end_date: education.is_current ? null : formatDateForDB(education.end_date);
-          is_current: education.is_current;
-          description: education.description;
-          institution_logo_url: education.institution_logo_url;
+          resume_id: resumeId, institution: education.institution,
+          degree: education.degree, field_of_study: education.field_of_study,
+          start_date: formatDateForDB(education.start_date), end_date: education.is_current ? null : formatDateForDB(education.end_date),
+          is_current: education.is_current, description: education.description,
+          institution_logo_url: education.institution_logo_url,
           location: education.location
         });
       
@@ -58,14 +54,10 @@ export function useEducation() {
       const { error } = await supabase
         .from('education')
         .update({
-          institution: education.institution;
-          degree: education.degree;
-          field_of_study: education.field_of_study;
-          start_date: formatDateForDB(education.start_date);
-          end_date: education.is_current ? null : formatDateForDB(education.end_date);
-          is_current: education.is_current;
-          description: education.description;
-          institution_logo_url: education.institution_logo_url;
+          institution: education.institution, degree: education.degree,
+          field_of_study: education.field_of_study, start_date: formatDateForDB(education.start_date),
+          end_date: education.is_current ? null : formatDateForDB(education.end_date), is_current: education.is_current,
+          description: education.description, institution_logo_url: education.institution_logo_url,
           location: education.location
         })
         .eq('id', eduId);

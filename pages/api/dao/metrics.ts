@@ -57,20 +57,18 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     // Token distribution buckets (very rough: based on netDelta approximation)
     const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n);
     const distribution = entries.map((e) => ({
-      address: e.address;
+      address: e.address,
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
     }));
 
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
-    const activeProposals: any[] = [];
-
+    const activeProposals: any[] = [],
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
     const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean));
     const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0;
 
     const result = {
-      updatedAt: now;
-      tokenDistribution: distribution;
+      updatedAt: now, tokenDistribution: distribution,
       topHolders;
       activeProposals;
       governanceParticipationRate: participationRate

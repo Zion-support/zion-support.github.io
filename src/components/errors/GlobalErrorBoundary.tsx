@@ -60,10 +60,10 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       ...error;
       componentStack: errorInfo.componentStack,
       errorBoundary: this.props.context || 'GlobalErrorBoundary',
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'SSR',
       url: typeof window !== 'undefined' ? window.location.href : 'SSR',
-      userId: this.getUserId();
+      userId: this.getUserId(),
       buildInfo: this.getBuildInfo()
     }
 
@@ -200,7 +200,7 @@ export class GlobalErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoun
       message: this.state.error?.message,
       stack: this.state.error?.stack,
       componentStack: this.state.errorInfo?.componentStack,
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       url: typeof window !== 'undefined' ? window.location.href : 'unknown',
       userAgent: typeof window !== 'undefined' ? navigator.userAgent : 'unknown'
     }
@@ -403,7 +403,7 @@ export const useErrorBoundary = () => {
 
 // Higher-order component for adding error boundaries
 export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>;
+  Component: React.ComponentType<P>,
   errorBoundaryProps?: Omit<ErrorBoundaryProps, 'children'>
 ) => {
   const WrappedComponent = (props: P) => (

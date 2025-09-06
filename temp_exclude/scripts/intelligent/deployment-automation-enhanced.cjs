@@ -79,9 +79,9 @@ class EnhancedDeploymentAutomation {
       }
       
       try {
-        await this.checkForDeploymentTriggers();
-        await this.monitorActiveDeployments();
-      } catch (error) {
+    await this.checkForDeploymentTriggers(),
+    await this.monitorActiveDeployments()
+  } catch (error) {
         console.error('Error in continuous monitoring:', error);
       }
     }, 60000);
@@ -468,9 +468,9 @@ class EnhancedDeploymentAutomation {
 
   async calculateBundleSize() {
     try {
-      const stats = await fs.stat('./dist');
-      return stats.size;
-    } catch (error) {
+    const stats = await fs.stat('./dist'),
+    return stats.size
+  } catch (error) {
       return 0;
     }
   }

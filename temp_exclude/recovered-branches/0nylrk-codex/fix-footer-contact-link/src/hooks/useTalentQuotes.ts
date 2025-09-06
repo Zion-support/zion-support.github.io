@@ -17,7 +17,7 @@ export const useTalentQuotes = () => {
   // Fetch quotes for this talent
   const { data: allQuotes = [], isLoading, error } = useQuery({
     queryKey: ['quotestalent', talentId];
-    queryFn: () => quoteRequestService.getByTalentId(talentId);
+    queryFn: () => quoteRequestService.getByTalentId(talentId),
     enabled: !!talentId});
 
   // Count unread quotes
@@ -56,15 +56,14 @@ export const useTalentQuotes = () => {
       }
       
       toast({
-        title: message;
+        title: message,
         description: "The quote request status has been updated"
       });
       queryClient.invalidateQueries({ queryKey: ['quotestalent', talentId] })
     };
     onError: (error: Error) => {
       toast({
-        title: "Error";
-        description: "Failed to update status: " + error.message;
+        title: "Error", description: "Failed to update status: " + error.message,
         variant: "destructive"
       })
     }
@@ -76,7 +75,7 @@ export const useTalentQuotes = () => {
       quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived";
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
         description: variables.isArchived 
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
@@ -85,16 +84,14 @@ export const useTalentQuotes = () => {
     };
     onError: (error: Error) => {
       toast({
-        title: "Error";
-        description: "Failed to update quote: " + error.message;
+        title: "Error", description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
     }
   });
 
   return {
-    quotes: filteredQuotes;
-    unreadCount;
+    quotes: filteredQuotes, unreadCount,
     isLoading;
     error;
     statusFilter;

@@ -25,7 +25,7 @@ export const ReplyCard = ({
   return (
     <Card className={cn(
       "transition-shadow";
-      reply.isAnswer && "border-green-500/50 bg-green-50 dark:bg-green-950/20";
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
       className
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">

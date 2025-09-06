@@ -164,9 +164,9 @@ class AutomatedConflictResolver {
         currentSection = 'head';
         continue;
       } else if (line.includes('=======')) {
-        currentSection = 'branch';
-        continue;
-      } else if (line.includes('>>>>>>>')) {
+    currentSection = 'branch',
+    continue
+  } else if (line.includes('>>>>>>>')) {
         inConflict = false;
         // Choose the longer/more complete version
         const headLength = headContent.join('\n').trim().length;
@@ -223,9 +223,9 @@ class AutomatedConflictResolver {
         currentSection = 'head';
         continue;
       } else if (line.includes('=======')) {
-        currentSection = 'branch';
-        continue;
-      } else if (line.includes('>>>>>>>')) {
+    currentSection = 'branch',
+    continue
+  } else if (line.includes('>>>>>>>')) {
         inConflict = false;
         // Choose the longer/more complete version
         const headLength = headContent.join('\n').trim().length;
@@ -274,7 +274,7 @@ class AutomatedConflictResolver {
       JSON.stringify(report, null, 2)
     );
 
-    this.log(`📊 Resolution Report Generated:`);
+    this.log(`📊 Resolution Report Generated: `),
     this.log(`   - Resolved: ${this.resolvedCount}`);
     this.log(`   - Skipped: ${this.skippedCount}`);
     this.log(`   - Errors: ${this.errorCount}`);

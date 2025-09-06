@@ -63,11 +63,9 @@ export function useWallet() {
     setWallet(prev => prev ? { ...prev, balance: prev.balance + amount } : prev);
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
+        id: crypto.randomUUID(), user_id: user.id,
         amount;
-        transaction_type: 'earn';
-        reason: reason || null;
+        transaction_type: 'earn', reason: reason || null,
         created_at: new Date().toISOString()};
       ...prev])
   }
@@ -79,11 +77,9 @@ export function useWallet() {
     );
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
+        id: crypto.randomUUID(), user_id: user.id,
         amount;
-        transaction_type: 'burn';
-        reason: reason || null;
+        transaction_type: 'burn', reason: reason || null,
         created_at: new Date().toISOString()};
       ...prev])
   }

@@ -56,8 +56,7 @@ function main() {
   const overrides = {};
   for (const r of routes) {
     overrides[r] = {
-      title: deriveTitle(r);
-      description: deriveDescription(r);
+      title: deriveTitle(r), description: deriveDescription(r),
       ogImage: `/og${r === '/' ? '/home' : r}.png`.replace(/\/\//g, '/');
     };
   }

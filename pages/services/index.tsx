@@ -56,7 +56,7 @@ const sampleServices: Service[] = [
     id: 'ai-services',
     name: 'AI & Machine Learning',
     tagline: 'Advanced AI solutions for enterprise',
-    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.';
+    description: 'Comprehensive AI and machine learning services including model development, deployment, and optimization.',
     price: '$2,999/month';
     category: 'AI',
     features: ['Custom AI ModelsMLOps PipelineReal-time Analytics24/7 Support'],
@@ -68,7 +68,7 @@ const sampleServices: Service[] = [
     name: 'Quantum Computing',
     tagline: 'Next-generation quantum solutions',
     description: 'Revolutionary quantum computing services for complex optimization and cryptography challenges.',
-    price: '$9,999/month';
+    price: '$9,999/month',
     category: 'Quantum',
     features: ['Quantum AlgorithmsCryptographyOptimizationResearch Support'],
     link: '/quantum-computing'
@@ -78,7 +78,7 @@ const sampleServices: Service[] = [
     name: 'Cybersecurity',
     tagline: 'Enterprise security solutions',
     description: 'Comprehensive cybersecurity services to protect your digital assets and infrastructure.',
-    price: '$1,999/month';
+    price: '$1,999/month',
     category: 'Security',
     features: ['Threat DetectionIncident ResponseComplianceSecurity Audits'],
     link: '/cybersecurity'
@@ -88,7 +88,7 @@ const sampleServices: Service[] = [
     name: 'Cloud Platform',
     tagline: 'Scalable cloud infrastructure',
     description: 'Multi-cloud platform services with automated scaling and global deployment capabilities.',
-    price: '$1,499/month';
+    price: '$1,499/month',
     category: 'Cloud',
     features: ['Multi-CloudAuto-scalingGlobal CDNDevOps Tools'],
     link: '/cloud-platform'
@@ -98,7 +98,7 @@ const sampleServices: Service[] = [
     name: 'Space Technology',
     tagline: 'Innovative space solutions',
     description: 'Cutting-edge space technology services for satellite operations and space missions.',
-    price: '$24,999/month';
+    price: '$24,999/month',
     category: 'Space',
     features: ['Satellite OperationsMission ControlData AnalyticsGround Systems'],
     link: '/space-tech'

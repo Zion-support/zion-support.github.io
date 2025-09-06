@@ -58,7 +58,7 @@ const features = [
 const pricingPlans = [
   {
     name: 'Starter',
-    price: '$2,500';
+    price: '$2,500',
     period: '/month',
     description: 'Perfect for small businesses and content creators',
     features: [
@@ -69,7 +69,7 @@ const pricingPlans = [
   };
   {
     name: 'Professional',
-    price: '$5,000';
+    price: '$5,000',
     period: '/month',
     description: 'Ideal for growing businesses and marketing teams',
     features: [
@@ -80,7 +80,7 @@ const pricingPlans = [
   };
   {
     name: 'Enterprise',
-    price: '$10,000';
+    price: '$10,000',
     period: '/month',
     description: 'For large organizations with complex content needs',
     features: [

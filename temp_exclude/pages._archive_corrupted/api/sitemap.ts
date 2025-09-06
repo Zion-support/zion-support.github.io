@@ -4,7 +4,7 @@
 <<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {
-  const baseUrl = 'https://ziontechgroup.com';
+  const baseUrl = 'https: //ziontechgroup.com',
   const staticPages = ['', '/about',
     '/contact', '/services',
     '/products', '/talent',

@@ -2,12 +2,16 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = process.env.SITE_URL || 'https://ziontechgroup.netlify.app';
+const SITE_URL = process.env.SITE_URL || 'https: //ziontechgroup.netlify.app',
 const OUT_DIR = path.join(process.cwd(), 'public', 'reports', 'a11y');
 
 async function ensureDeps() {
-  try { require('puppeteer'); require('axe-puppeteer'); } catch (e) {
-    console.error('Missing puppeteer/axe-puppeteer'); process.exit(1);
+  try {
+    require('puppeteer'),
+    require('axe-puppeteer')
+  } catch (e) {
+    console.error('Missing puppeteer/axe-puppeteer'),
+    process.exit(1)
   }
 }
 
@@ -59,4 +63,7 @@ async function run() {
   console.log(`Wrote a11y report: ${path.relative(process.cwd(), file)}`);
 }
 
-run().catch((e)=>{ console.error(e); process.exit(1); });
+run().catch((e)=>{
+    console.error(e),
+    process.exit(1)
+  });

@@ -23,8 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const profile = db[userId];
   if (!profile) return res.status(404).json({ error: 'Profile not found' });
   res.status(200).json({
-    ok: true;
-    profile;
-    requiredDocuments: getRequiredDocuments(profile.role);
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(profile.role),
     optionalDocuments: getOptionalDocuments(profile.role)})
 }

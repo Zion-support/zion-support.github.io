@@ -25,40 +25,40 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
-      background: 'rgba(0, 0, 0, 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
+      background: 'rgba(0, 0, 0, 0.85)',
+    particles: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff'],
       glow: '#00ffff'
     };
     cyberpunk: {
       primary: '#ff0080',
       secondary: '#00ffff',
       accent: '#ffff00',
-      background: 'rgba(20, 0, 40, 0.9)';
-      particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
+      background: 'rgba(20, 0, 40, 0.9)',
+    particles: ['#ff0080#00ffff#ffff00#ff4000#8000ff#00ff80'],
       glow: '#ff0080'
     };
     holographic: {
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
-      background: 'rgba(0, 20, 40, 0.85)';
-      particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
+      background: 'rgba(0, 20, 40, 0.85)',
+    particles: ['#00ffff#ff00ff#ffff00#00ff80#ff8000#8000ff'],
       glow: '#00ffff'
     };
     neural: {
       primary: '#00ff80',
       secondary: '#ff0080',
       accent: '#ffff00',
-      background: 'rgba(0, 40, 20, 0.9)';
-      particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
+      background: 'rgba(0, 40, 20, 0.9)',
+    particles: ['#00ff80#ff0080#ffff00#00ffff#ff8000#8000ff'],
       glow: '#00ff80'
     };
     cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
       accent: '#45b7d1',
-      background: 'rgba(10, 10, 30, 0.9)';
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
+      background: 'rgba(10, 10, 30, 0.9)',
+    particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
       glow: '#4ecdc4'
     }
   };

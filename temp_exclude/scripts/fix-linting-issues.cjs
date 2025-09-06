@@ -137,9 +137,9 @@ class LintingFixer {
     const filesWithIssues = await this.findFilesWithIssues();
     
     if (filesWithIssues.length === 0) {
-      this.log('✅ No linting issues found!');
-      return;
-    }
+    this.log('✅ No linting issues found!'),
+    return
+  }
     
     // Focus on the most critical files first
     const criticalFiles = filesWithIssues.filter(file => 
@@ -159,12 +159,12 @@ class LintingFixer {
     this.log(`Errors: ${this.errors.length}`);
     
     if (this.fixedFiles.length > 0) {
-      this.log('\n✅ Successfully fixed files:');
+      this.log('\n✅ Successfully fixed files: '),
       this.fixedFiles.forEach(file => this.log(`   - ${file}`));
     }
     
     if (this.errors.length > 0) {
-      this.log('\n❌ Errors encountered:');
+      this.log('\n❌ Errors encountered: '),
       this.errors.forEach(({ file, error }) => this.log(`   - ${file}: ${error}`));
     }
     
@@ -173,8 +173,8 @@ class LintingFixer {
 }
 
 if (require.main === module) {
-  const fixer = new LintingFixer();
-  fixer.run().catch(console.error);
-}
+    const fixer = new LintingFixer(),
+    fixer.run().catch(console.error)
+  }
 
 module.exports = LintingFixer;

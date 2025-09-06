@@ -1,6 +1,6 @@
 
 export interface CountryPricing {
-  country: string;
+  country: string,
   pricePerIncident: number
 }
 

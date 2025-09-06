@@ -11,23 +11,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       questions: [
         {
           question: `Which topic is central to ${moduleTitle}?`;
-          options: ['Random OpsZion OS missionUnrelated financeLegacy ERP'];
+          options: ['Random OpsZion OS missionUnrelated financeLegacy ERP'],
           answerIndex: 1};
         {
-          question: 'What does DAO commonly refer to?';
-          options: ['Data Access ObjectDecentralized Autonomous OrganizationDigital Asset OptionDynamic Allocation Output'];
+          question: 'What does DAO commonly refer to?', options: ['Data Access ObjectDecentralized Autonomous OrganizationDigital Asset OptionDynamic Allocation Output'],
           answerIndex: 1};
         {
-          question: 'What should be configured during deployment?';
-          options: ['Genesis Deploy Kit & modulesOnly UI colorsNothingRandom plugins'];
+          question: 'What should be configured during deployment?', options: ['Genesis Deploy Kit & modulesOnly UI colorsNothingRandom plugins'],
           answerIndex: 0};
         {
-          question: 'Who are key community roles to hire?';
+          question: 'Who are key community roles to hire?',
           options: ['Moderators, educators, ambassadorsAstronautsComediansNo one'];
           answerIndex: 0};
         {
-          question: 'Which docs are needed for launch?';
-          options: ['Whitepaper + governance docsNovelRecipe bookNone'];
+          question: 'Which docs are needed for launch?', options: ['Whitepaper + governance docsNovelRecipe bookNone'],
           answerIndex: 0}]})
   };
 
@@ -38,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const prompt = `Create a 5-question multiple-choice quiz in JSON with the shape {"questions":[{"question":string,"options":string[],"answerIndex":number}]} about the following module. Keep questions practical for founders. Respond with JSON only.\n\nTitle: ${moduleTitle}\nContent:\n${moduleContent}`;
 
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are an expert course designer for founders.' };
         { role: 'user', content: prompt }];

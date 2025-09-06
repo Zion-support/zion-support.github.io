@@ -6,8 +6,8 @@ const { execSync } = require('child_process');
 
 class AllHTMLEntityFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+    this.projectRoot = process.cwd(),
+    this.fixedFiles = []
   }
 
   log(message, type = 'INFO') {
@@ -119,7 +119,7 @@ class AllHTMLEntityFixer {
         await this.fixFile(file);
       }
       
-      this.log(`\n📊 HTML Entity Fix Summary:`);
+      this.log(`\n📊 HTML Entity Fix Summary: `),
       this.log(`  - Files processed: ${files.length}`);
       this.log(`  - Files fixed: ${this.fixedFiles.length}`);
       

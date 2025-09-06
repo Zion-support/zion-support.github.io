@@ -41,8 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ];
 
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o';
-      temperature: 0.3;
+      model: 'gpt-4o', temperature: 0.3,
       messages: preparedMessages
     });
 

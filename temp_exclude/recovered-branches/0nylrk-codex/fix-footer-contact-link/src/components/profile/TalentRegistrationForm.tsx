@@ -183,11 +183,9 @@ export function TalentRegistrationForm() {
   // Get category color
   const getCategoryColor = (category: CategoryType) => {
     switch (category) {
-      case 'programming': return 'bg-blue-500/20 hover:bg-blue-500/30 text-blue-500';
-      case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500';
-      case 'platforms': return 'bg-amber-500/20 hover:bg-amber-500/30 text-amber-500';
-      case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500';
-      case 'other': return 'bg-gray-500/20 hover:bg-gray-500/30 text-gray-500';
+      case 'programming': return 'bg-blue-500/20 hover: bg-blue-500/30 text-blue-500', case 'devops': return 'bg-green-500/20 hover:bg-green-500/30 text-green-500',
+      case 'platforms': return 'bg-amber-500/20 hover: bg-amber-500/30 text-amber-500', case 'softSkills': return 'bg-purple-500/20 hover:bg-purple-500/30 text-purple-500',
+      case 'other': return 'bg-gray-500/20 hover: bg-gray-500/30 text-gray-500',
       default: return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
   };

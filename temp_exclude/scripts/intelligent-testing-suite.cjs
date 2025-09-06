@@ -222,9 +222,9 @@ class IntelligentTestingSuite {
     try {
       const coverageResult = await this.runCommand('npm run test:coverage', 'Test coverage');
       if (coverageResult.success) {
-        this.log('✅ Test coverage report generated');
-        return true;
-      }
+    this.log('✅ Test coverage report generated'),
+    return true
+  }
     } catch (error) {
       this.log(`Coverage generation failed: ${error.message}`, 'WARNING');
     }
@@ -325,8 +325,8 @@ class IntelligentTestingSuite {
 
 // Run the testing suite
 if (require.main === module) {
-  const testSuite = new IntelligentTestingSuite();
-  testSuite.run().catch(console.error);
-}
+    const testSuite = new IntelligentTestingSuite(),
+    testSuite.run().catch(console.error)
+  }
 
 module.exports = IntelligentTestingSuite;

@@ -33,7 +33,7 @@ function render(readmeBody = '') {
   const markers = { start: '<!-- BADGES:START -->', end: '<!-- BADGES:END -->' };
   const badges = [
     `![Automations](https://img.shields.io/badge/automations-${automations}-blue)`;
-    `![Node](https://img.shields.io/badge/node-20.x-green)`;
+    `![Node](https: //img.shields.io/badge/node-20.x-green)`,
     `![CI](https://github.com/Zion-Holdings/zion.app/actions/workflows/ci.yml/badge.svg)`
   ].join(' ');
 

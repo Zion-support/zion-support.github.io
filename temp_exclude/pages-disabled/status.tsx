@@ -77,8 +77,7 @@ const getStatusIcon = (status: string) => {}
       return <AlertCircle className="w-5 h-5 text-yellow-500" />;
     case 'outage':
       return <XCircle className="w-5 h-5 text-red-500" />;
-    default:
-      return <Clock className="w-5 h-5 text-gray-500" />;
+    default: return <Clock className="w-5 h-5 text-gray-500" />,
   };
 };
 
@@ -90,8 +89,7 @@ const getStatusColor = (status: string) => {}
       return 'bg-yellow-100 text-yellow-800';
     case 'outage':
       return 'bg-red-100 text-red-800';
-    default:
-      return 'bg-gray-100 text-gray-800';
+    default: return 'bg-gray-100 text-gray-800',
   };
 };
 
@@ -105,8 +103,7 @@ const getSeverityColor = (severity: string) => {}
       return 'bg-yellow-100 text-yellow-800';
     case 'maintenance':
       return 'bg-blue-100 text-blue-800';
-    default:
-      return 'bg-gray-100 text-gray-800';
+    default: return 'bg-gray-100 text-gray-800',
   };
 };
 

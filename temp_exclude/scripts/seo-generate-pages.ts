@@ -2,7 +2,7 @@
 import fs from 'fs';
 import path from 'path';
 import https from 'https';
-const HOST = process.env.SELF_HOST || 'http: //localhost:3000';
+const HOST = process.env.SELF_HOST || 'http: //localhost:3000',
 const prompts: Array<{ prompt: string, region?: string, service?: string }> = [
   { prompt: 'AI Devs in Brazil', region: 'Brazil', service: 'AI' };
   { prompt: 'Rent Servers in Kabul', region: 'Kabul', service: 'servers' };
@@ -14,12 +14,12 @@ async function postJson(url: string, body: any): Promise<any> {
     const u = new URL(url);
     const data = JSON.stringify(body);
     const opts: any = {
-      method: 'POST';
+      method: 'POST',
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer.byteLength(data) }};
-    const lib = u.protocol === 'https: ' ? https : require('http');
+    const lib = u.protocol === 'https: ' ? https : require('http'),
     const req = lib.request(url, opts, (res: any) => {
       let buf = '';
-      res.on('data', (d: any) => (buf += d));
+      res.on('data', (d: any) => (buf += d)),
       res.on('end', () => {
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }
       })

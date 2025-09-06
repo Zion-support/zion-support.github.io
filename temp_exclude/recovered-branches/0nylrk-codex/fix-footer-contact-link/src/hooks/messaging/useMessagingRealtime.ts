@@ -8,9 +8,8 @@ import { toast } from '@/hooks/use-toast';
 type UserWithProfile = UserProfile | UserDetails | null;
 
 export function useMessagingRealtime(
-  user: UserWithProfile;
-  activeConversation: Conversation | null;
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+  user: UserWithProfile, activeConversation: Conversation | null,
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,
   fetchConversations: () => Promise<void>
 ) {
   // Setup real-time subscription when user is logged in

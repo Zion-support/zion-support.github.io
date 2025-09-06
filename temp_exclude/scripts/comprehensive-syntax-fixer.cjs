@@ -124,9 +124,9 @@
 
     for (const dir of directories) {
       if (fs.existsSync(dir)) {
-        const dirFiles = await this.getFilesInDirectory(dir);
-        files.push(...dirFiles);
-      }
+    const dirFiles = await this.getFilesInDirectory(dir),
+    files.push(...dirFiles)
+  }
     }
 
     return files;
@@ -143,9 +143,9 @@
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        const subFiles = await this.getFilesInDirectory(fullPath);
-        files.push(...subFiles);
-      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
+    const subFiles = await this.getFilesInDirectory(fullPath),
+    files.push(...subFiles)
+  } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx')) {
         files.push(fullPath);
       }
     }
@@ -190,9 +190,9 @@
     this.log('Running TypeScript type check...');
     const result = await this.runCommand('npx tsc --noEmit');
     if (result.success) {
-      this.log('TypeScript type check passed');
-      return true;
-    } else {
+    this.log('TypeScript type check passed'),
+    return true
+  } else {
       this.log(`TypeScript type check failed: ${result.stderr}`);
       return false;
     }
@@ -203,9 +203,9 @@
     this.log('Running ESLint check...');
     const result = await this.runCommand('npx eslint . --max-warnings 0');
     if (result.success) {
-      this.log('ESLint check passed');
-      return true;
-    } else {
+    this.log('ESLint check passed'),
+    return true
+  } else {
       this.log(`ESLint check failed: ${result.stderr}`);
       return false;
     }
@@ -292,9 +292,7 @@ if (require.main === module) {
     case "report":
       fixer.generateReport();
       break;
-    default:
-      console.log("Usage: node comprehensive-syntax-fixer.cjs [run|report]");
-      process.exit(1);
+    default: console.log("Usage: node comprehensive-syntax-fixer.cjs [run|report]"), process.exit(1),
   }
 }
 
@@ -461,7 +459,7 @@ class ComprehensiveSyntaxFixer {}
       fixedFiles: this.fixedFiles.length,
       errors: this.errors.length,
       fixedFileList: this.fixedFiles,
-      errorList: this.errors;
+      errorList: this.errors,
     };
 
     const reportPath = 'syntax-fix-report.json';

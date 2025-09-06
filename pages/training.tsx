@@ -30,10 +30,10 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '12 weeks',
       level: 'Intermediate to Advanced',
-      price: '$2,999';
-      rating: 4.9,
-      students: '1,247';
-      featured: true,
+      price: '$2,999',
+    rating: 4.9,
+      students: '1,247',
+    featured: true,
       icon: <Brain className="w-12 h-12" />,
       highlights: [
         'Hands-on AI consciousness platform developmentReal-world project implementationExpert mentorship and supportIndustry-recognized certificationLifetime access to course materials'
@@ -46,8 +46,8 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '16 weeks',
       level: 'Advanced',
-      price: '$3,499';
-      rating: 4.8,
+      price: '$3,499',
+    rating: 4.8,
       students: '892',
       featured: true,
       icon: <Atom className="w-12 h-12" />,
@@ -62,10 +62,10 @@ export default function TrainingPage() {
       category: 'autonomous-ops',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,499';
-      rating: 4.9,
-      students: '1,156';
-      featured: true,
+      price: '$2,499',
+    rating: 4.9,
+      students: '1,156',
+    featured: true,
       icon: <Rocket className="w-12 h-12" />,
       highlights: [
         'Business process automation designAI-powered decision making systemsChange management strategiesROI measurement and optimizationIndustry best practices and case studies'
@@ -82,10 +82,10 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '6 weeks',
       level: 'Beginner',
-      price: '$1,299';
-      rating: 4.7,
-      students: '2,341';
-      icon: <Brain className="w-8 h-8" />
+      price: '$1,299',
+    rating: 4.7,
+      students: '2,341',
+    icon: <Brain className="w-8 h-8" />
     };
     {
       id: 5,
@@ -94,8 +94,8 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '14 weeks',
       level: 'Advanced',
-      price: '$3,999';
-      rating: 4.9,
+      price: '$3,999',
+    rating: 4.9,
       students: '567',
       icon: <Brain className="w-8 h-8" />
     };
@@ -106,10 +106,10 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '8 weeks',
       level: 'Intermediate',
-      price: '$1,899';
-      rating: 4.8,
-      students: '1,023';
-      icon: <Shield className="w-8 h-8" />
+      price: '$1,899',
+    rating: 4.8,
+      students: '1,023',
+    icon: <Shield className="w-8 h-8" />
     };
     {
       id: 7,
@@ -118,8 +118,8 @@ export default function TrainingPage() {
       category: 'ai-consciousness',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,199';
-      rating: 4.7,
+      price: '$2,199',
+    rating: 4.7,
       students: '789',
       icon: <Code className="w-8 h-8" />
     };
@@ -132,10 +132,10 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '8 weeks',
       level: 'Beginner',
-      price: '$1,599';
-      rating: 4.6,
-      students: '1,456';
-      icon: <Atom className="w-8 h-8" />
+      price: '$1,599',
+    rating: 4.6,
+      students: '1,456',
+    icon: <Atom className="w-8 h-8" />
     };
     {
       id: 9,
@@ -144,8 +144,8 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '12 weeks',
       level: 'Advanced',
-      price: '$3,299';
-      rating: 4.8,
+      price: '$3,299',
+    rating: 4.8,
       students: '423',
       icon: <Atom className="w-8 h-8" />
     };
@@ -156,8 +156,8 @@ export default function TrainingPage() {
       category: 'quantum-computing',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,399';
-      rating: 4.7,
+      price: '$2,399',
+    rating: 4.7,
       students: '678',
       icon: <Shield className="w-8 h-8" />
     };
@@ -170,8 +170,8 @@ export default function TrainingPage() {
       category: 'autonomous-ops',
       duration: '8 weeks',
       level: 'Intermediate',
-      price: '$1,999';
-      rating: 4.8,
+      price: '$1,999',
+    rating: 4.8,
       students: '945',
       icon: <Zap className="w-8 h-8" />
     };
@@ -182,8 +182,8 @@ export default function TrainingPage() {
       category: 'autonomous-ops',
       duration: '12 weeks',
       level: 'Advanced',
-      price: '$2,999';
-      rating: 4.9,
+      price: '$2,999',
+    rating: 4.9,
       students: '567',
       icon: <Target className="w-8 h-8" />
     };
@@ -196,8 +196,8 @@ export default function TrainingPage() {
       category: 'enterprise-it',
       duration: '10 weeks',
       level: 'Intermediate',
-      price: '$2,299';
-      rating: 4.7,
+      price: '$2,299',
+    rating: 4.7,
       students: '823',
       icon: <Building className="w-8 h-8" />
     };
@@ -208,10 +208,10 @@ export default function TrainingPage() {
       category: 'enterprise-it',
       duration: '8 weeks',
       level: 'Intermediate',
-      price: '$1,899';
-      rating: 4.6,
-      students: '1,134';
-      icon: <Server className="w-8 h-8" />
+      price: '$1,899',
+    rating: 4.6,
+      students: '1,134',
+    icon: <Server className="w-8 h-8" />
     };
     {
       id: 15,
@@ -220,8 +220,8 @@ export default function TrainingPage() {
       category: 'enterprise-it',
       duration: '6 weeks',
       level: 'Intermediate',
-      price: '$1,599';
-      rating: 4.8,
+      price: '$1,599',
+    rating: 4.8,
       students: '756',
       icon: <Zap className="w-8 h-8" />
     }

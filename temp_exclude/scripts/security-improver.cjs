@@ -34,8 +34,8 @@ class SecurityImprover {
 }
 
 if (require.main === module) {
-  const improver = new SecurityImprover();
-  improver.improve();
-}
+    const improver = new SecurityImprover(),
+    improver.improve()
+  }
 
 module.exports = SecurityImprover;

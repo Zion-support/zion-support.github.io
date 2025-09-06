@@ -39,19 +39,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const outputActions = {
       zionGPT: {
-        initialized: true;
-        routes: ['/gpt/gpt/router'];
+        initialized: true, routes: ['/gpt/gpt/router'],
         agents: ['proposal-writerresume-generator']};
       daoAndToken: {
-        token: tokenActivation ? 'ZION$' : 'disabled';
+        token: tokenActivation ? 'ZION$' : 'disabled',
         treasury: tokenActivation ? `${provisionId}-treasury` : null;
         governanceMode;
         votingDashboard: '/dao'};
       assets: {
-        whitepaper: '/whitepaper';
-        roadmap: '/roadmap';
+        whitepaper: '/whitepaper', roadmap: '/roadmap',
         book: {
-          pdf: '/book/manifesto.pdf';
+          pdf: '/book/manifesto.pdf',
           trailerScript: '/trailer/script'};
         summit: '/summit'};
       publicPages: [
@@ -61,14 +59,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const deployLog = {
       provisionId;
       instanceName;
-      region: deploymentRegion;
-      language: defaultLanguage || 'en';
+      region: deploymentRegion, language: defaultLanguage || 'en',
       governanceMode;
       tokenActivation;
       branding;
       modules;
       bonusModules;
-      createdAt: now;
+      createdAt: now,
       version: 'Zion OS v1.0.0'};
 
     const operator = {
@@ -76,9 +73,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mission: missionParagraph(deploymentRegion, instanceName, modules, bonusModules)};
 
     const access = {
-      roles: ['FounderSuperadminDAO Multisig'];
+      roles: ['FounderSuperadminDAO Multisig'],
       export: {
-        type: 'application/json';
+        type: 'application/json',
         href: `/api/deploy/export?id=${encodeURIComponent(provisionId)}`}};
 
     return res.status(200).json({ outputActions, deployLog, access, operator })

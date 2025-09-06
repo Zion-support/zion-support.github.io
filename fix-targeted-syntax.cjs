@@ -67,9 +67,9 @@ function fixFile(filePath) {
     for (const fix of fixes) {
       const newContent = content.replace(fix.pattern, fix.replacement);
       if (newContent !== content) {
-        content = newContent;
-        modified = true;
-      }
+    content = newContent,
+    modified = true
+  }
     }
     
     if (modified) {

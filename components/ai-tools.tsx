@@ -22,8 +22,8 @@ export default function AiToolsPage() {
     {
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'ChatGPT Plus',
-      description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.';
-      features: [
+      description: 'Advanced AI chatbot with enhanced reasoning, web browsing, and plugin capabilities for professional use.',
+    features: [
         'Advanced reasoning & analysisWeb browsing & real-time infoPlugin ecosystem accessCode generation & debuggingProfessional writing assistance'
       ];
       pricing: '$20/month',
@@ -70,8 +70,8 @@ export default function AiToolsPage() {
     {
       icon: <Video className="w-8 h-8 text-white" />,
       title: 'Runway ML',
-      description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.';
-      features: [
+      description: 'Professional AI video generation and editing tools for filmmakers, marketers, and content creators.',
+    features: [
         'AI video generationVideo editing toolsMotion trackingGreen screen removalProfessional workflows'
       ];
       pricing: '$12-76/month',
@@ -102,8 +102,8 @@ export default function AiToolsPage() {
     {
       icon: <FileText className="w-8 h-8 text-white" />,
       title: 'Jasper AI',
-      description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.';
-      features: [
+      description: 'AI-powered content creation platform for marketers, writers, and businesses with enterprise features.',
+    features: [
         'Content generationBrand voice trainingSEO optimizationTeam collaborationEnterprise integrations'
       ];
       pricing: '$39-125/month',
@@ -147,14 +147,14 @@ export default function AiToolsPage() {
   const aiCategories = [
     {
       name: 'Conversational AI',
-      description: 'Chatbots, virtual assistants, and language models';
-      tools: 3,
+      description: 'Chatbots, virtual assistants, and language models',
+    tools: 3,
       avgPrice: '$20/month'
     };
     {
       name: 'Image Generation',
-      description: 'AI-powered art, design, and visual content creation';
-      tools: 1,
+      description: 'AI-powered art, design, and visual content creation',
+    tools: 1,
       avgPrice: '$20/month'
     };
     {

@@ -34,14 +34,14 @@ export default function SaaSMarketplacePage() {
         '5000+ app integrationsVisual workflow builderMulti-step automationsScheduled triggersError handlingTeam collaboration'
       ];
       website: 'https://zapier.com',
-      useCase: 'Perfect for businesses looking to automate customer support, marketing, and sales processes.';
-      pros: ['Easy to useExtensive integrationsReliableGreat support'],
+      useCase: 'Perfect for businesses looking to automate customer support, marketing, and sales processes.',
+    pros: ['Easy to useExtensive integrationsReliableGreat support'],
       cons: ['Can get expensiveLimited customization']
     };
     {
       name: 'Notion',
-      description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.';
-      category: 'Productivity',
+      description: 'All-in-one workspace for notes, docs, projects, and team collaboration. Organize everything in one place.',
+    category: 'Productivity',
       pricing: 'Free - $8/month',
       rating: 4.7,
       users: '20M+',
@@ -51,14 +51,14 @@ export default function SaaSMarketplacePage() {
         'Note-taking & docsProject managementTeam collaborationDatabase & tablesTemplates libraryAPI integration'
       ];
       website: 'https://notion.so',
-      useCase: 'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.';
-      pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
+      useCase: 'Ideal for teams that need a flexible workspace for documentation, project management, and knowledge sharing.',
+    pros: ['Highly flexibleBeautiful interfaceGreat templatesFree tier'],
       cons: ['Learning curveLimited offline access']
     };
     {
       name: 'Stripe',
-      description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.';
-      category: 'Payments',
+      description: 'Complete payment processing platform for online businesses. Accept payments, manage subscriptions, and handle compliance.',
+    category: 'Payments',
       pricing: '2.9% + 30¢ per transaction',
       rating: 4.9,
       users: '1M+',
@@ -68,14 +68,14 @@ export default function SaaSMarketplacePage() {
         'Global payment methodsSubscription billingFraud protectionCompliance toolsDeveloper-friendly APIAnalytics dashboard'
       ];
       website: 'https://stripe.com',
-      useCase: 'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.';
-      pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
+      useCase: 'Essential for any online business that needs to accept payments, especially SaaS companies and e-commerce.',
+    pros: ['Developer-friendlyGlobal reachExcellent docsReliable'],
       cons: ['Higher fees than some alternativesComplex for beginners']
     };
     {
       name: 'Intercom',
-      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.';
-      category: 'Customer Support',
+      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized, messenger-based experiences.',
+    category: 'Customer Support',
       pricing: '$39 - $999/month',
       rating: 4.6,
       users: '25K+',
@@ -102,8 +102,8 @@ export default function SaaSMarketplacePage() {
         'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
       ];
       website: 'https://mixpanel.com',
-      useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.';
-      pros: ['Powerful analyticsReal-time dataGood documentationFlexible'],
+      useCase: 'Essential for product teams that need to understand user behavior, optimize conversion funnels, and make data-driven decisions.',
+    pros: ['Powerful analyticsReal-time dataGood documentationFlexible'],
       cons: ['Complex setupExpensive at scaleSteep learning curve']
     };
     {
@@ -119,14 +119,14 @@ export default function SaaSMarketplacePage() {
         'Fully managed MongoDBGlobal clustersAuto-scalingBackup & recoverySecurity & complianceMonitoring & alerting'
       ];
       website: 'https://mongodb.com/atlas',
-      useCase: 'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.';
-      pros: ['Fully managedGlobal distributionAuto-scalingGood free tier'],
+      useCase: 'Perfect for developers who want to use MongoDB without managing infrastructure, especially for modern web applications.',
+    pros: ['Fully managedGlobal distributionAuto-scalingGood free tier'],
       cons: ['Can be expensiveVendor lock-inLimited customization']
     };
     {
       name: 'Vercel',
-      description: 'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.';
-      category: 'Hosting',
+      description: 'Platform for deploying and hosting frontend applications with automatic scaling, global CDN, and zero configuration.',
+    category: 'Hosting',
       pricing: 'Free - $20/month',
       rating: 4.8,
       users: '100K+',
@@ -153,8 +153,8 @@ export default function SaaSMarketplacePage() {
         'Issue trackingRoadmap planningTeam collaborationGit integrationAutomated workflowsMobile apps'
       ];
       website: 'https://linear.app',
-      useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.';
-      pros: ['Lightning fastBeautiful designGreat keyboard shortcutsGit integration'],
+      useCase: 'Perfect for software development teams that need a fast, intuitive issue tracking and project management tool.',
+    pros: ['Lightning fastBeautiful designGreat keyboard shortcutsGit integration'],
       cons: ['Limited reportingNo time trackingSmaller ecosystem']
     }
   ];

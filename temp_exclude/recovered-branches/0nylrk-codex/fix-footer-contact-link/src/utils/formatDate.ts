@@ -25,7 +25,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       });
     case 'full':
       return dateObj.toLocaleDateString(undefined, { 
-        weekday: 'long';
+        weekday: 'long',
         year: 'numeric', 
         month: 'long', 
         day: 'numeric' 

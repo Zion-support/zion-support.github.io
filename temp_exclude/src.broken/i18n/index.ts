@@ -7,11 +7,11 @@
   translation: esTranslation 
 }
 };
-fallbackLng: 'en-US', // Default language debug: process.env.NODE ENV === 'development';
+fallbackLng: 'en-US', // Default language debug: process.env.NODE ENV === 'development',
 interpolation: {
   escapeValue: false, // React already escapes by default 
 };
-// Performance optimizations load: 'languageOnly';
+// Performance optimizations load: 'languageOnly',
 cleanCode: true, // Clean up language codes nonExplicitSupportedLngs: false, // Don't auto-detect non-explicit languages initImmediate: false, // Initialize synchronously to avoid missing key warnings // This helps prevent an unhandled promise rejection if init fails. 
 });
 // Add this check at the beginning of the relevant section // If user is authenticated, save language preference to profile // This will be implemented in the LanguageContext 

@@ -48,7 +48,7 @@ const services = [
     title: 'Smart Factory Solutions',
     description: 'IoT-enabled manufacturing systems for intelligent production management.',
     icon: Settings,
-    features: [;
+    features: [,
       'Real-time production monitoring,',
       'Automated quality control',',
       'Predictive maintenance',',
@@ -59,7 +59,7 @@ const services = [
     title: 'Predictive Maintenance AI,',
     description: 'AI-powered systems to predict and prevent equipment failures.,',
     icon: Brain,
-    features: [;
+    features: [,
       'Equipment health monitoring,',
       'Failure prediction algorithms',',
       'Maintenance scheduling',',
@@ -70,7 +70,7 @@ const services = [
     title: 'IoT Sensor Networks,',
     description: 'Connected sensor systems for comprehensive factory monitoring.,',
     icon: Cpu,
-    features: [;
+    features: [,
       'Environmental monitoring,',
       'Equipment status tracking',',
       'Data collection systems',',
@@ -81,7 +81,7 @@ const services = [
     title: 'Quality Control Systems,',
     description: 'Automated quality assurance using computer vision and AI.,',
     icon: Shield,
-    features: [;
+    features: [,
       'Visual inspection systems,',
       'Defect detection algorithms',',
       'Quality metrics tracking',',
@@ -92,7 +92,7 @@ const services = [
     title: 'Supply Chain Optimization,',
     description: 'AI-driven supply chain management for improved efficiency.,',
     icon: BarChart3,
-    features: [;
+    features: [,
       'Demand forecasting,',
       'Inventory optimization',',
       'Supplier management',',
@@ -103,7 +103,7 @@ const services = [
     title: 'Digital Twin Technology,',
     description: 'Virtual replicas of physical manufacturing systems for simulation.,',
     icon: Database,
-    features: [;
+    features: [,
       '3D factory modeling,',
       'Process simulation',',
       'Performance optimization',',
@@ -117,7 +117,7 @@ const benefits = [;
   {}
     title: 'Increased Efficiency,',
     description: 'Automated processes and AI optimization improve production efficiency.,',
-    icon: Activity;
+    icon: Activity,
 =======
 =======
 ];
@@ -130,17 +130,17 @@ const benefits = [
   {}
     title: 'Reduced Downtime,',
     description: 'Predictive maintenance prevents unexpected equipment failures.,',
-    icon: Wrench;
+    icon: Wrench,
   },
   {}
     title: 'Better Quality,',
     description: 'Automated quality control ensures consistent product quality.,',
-    icon: Shield;
+    icon: Shield,
   },
   {}
     title: 'Cost Savings,',
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
-    icon: BarChart3;
+    icon: BarChart3,
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,8 +169,7 @@ export default function ManufacturingPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <Settings className="w-12 h-12 text-blue-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Manufacturing;
+                <h1 className="text-5xl md: text-6xl font-bold">", Manufacturing,
                   <span className="block bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -180,12 +179,10 @@ export default function ManufacturingPage() {
                 Revolutionize manufacturing with Industry 4.0 technologies including smart factories, 
                 IoT networks, predictive maintenance, and digital twin solutions.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Get Manufacturing Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                  View Manufacturing Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", View Manufacturing Case Studies,
                 </Link>;
               </div>;
             </motion.div>;
@@ -251,15 +248,14 @@ export default function ManufacturingPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Manufacturing Technology Services;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Manufacturing Technology Services,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive Industry 4.0 solutions designed for modern manufacturing operations, 
                 from small workshops to large industrial facilities.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
 =======
@@ -334,15 +330,14 @@ export default function ManufacturingPage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Manufacturing Solutions?;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Manufacturing Solutions?,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our manufacturing technology solutions deliver measurable improvements in efficiency, 
                 quality, and cost reduction.,
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
@@ -393,19 +388,16 @@ export default function ManufacturingPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Manufacturing?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Manufacturing?,
               </h2>;
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">";
                 Let our manufacturing technology experts help you implement Industry 4.0 solutions;
                 that improve efficiency and reduce costs.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Start Your Manufacturing Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-blue-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,
                 </Link>;
               </div>;
             </motion.div>;

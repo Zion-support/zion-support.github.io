@@ -19,8 +19,7 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
 
   return (
     <Card className={cn(
-      "transition-shadow hover:shadow-md";
-      post.isPinned && "border-zion-purple/50";
+      "transition-shadow hover: shadow-md", post.isPinned && "border-zion-purple/50",
       post.isFeatured && "bg-zion-purple/5"
     )}>
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">

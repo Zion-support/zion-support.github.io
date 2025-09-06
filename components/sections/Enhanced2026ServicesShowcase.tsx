@@ -18,8 +18,8 @@ const Enhanced2026ServicesShowcase = () => {
     {
       id: 'autonomous-ai-agents-platform-2026',
       name: 'Autonomous AI Agents Platform 2026',
-      description: 'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.';
-      price: '$199',
+      description: 'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
+    price: '$199',
       period: '/month',
       icon: Zap,
       color: 'from-blue-500 to-cyan-500',
@@ -41,8 +41,8 @@ const Enhanced2026ServicesShowcase = () => {
       id: 'neuromorphic-computing-platform-2026',
       name: 'Neuromorphic Computing Platform 2026',
       description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
-      price: '$1,499';
-      period: '/month',
+      price: '$1,499',
+    period: '/month',
       icon: Cpu,
       color: 'from-green-500 to-emerald-500',
       category: 'Emerging Tech',
@@ -52,8 +52,8 @@ const Enhanced2026ServicesShowcase = () => {
       id: 'dna-computing-platform-2026',
       name: 'DNA Computing Platform 2026',
       description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
-      price: '$2,999';
-      period: '/month',
+      price: '$2,999',
+    period: '/month',
       icon: Globe,
       color: 'from-indigo-500 to-purple-500',
       category: 'Emerging Tech',

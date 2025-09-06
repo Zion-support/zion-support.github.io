@@ -64,10 +64,7 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 };
-;
-// Mock ResizeObserver;
-global.ResizeObserver = class ResizeObserver {; constructor() {}; disconnect() {}; observe() {}; unobserve() {}};
-;
+
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -81,4 +78,3 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
-import '@testing-library/jest-dom';

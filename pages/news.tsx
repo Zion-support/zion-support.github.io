@@ -84,8 +84,8 @@ const NewsPage: React.FC = () => {
     {
       id: 6,
       title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
-      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.';
-      category: 'research',
+      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
+    category: 'research',
       date: '2025-01-03',
       author: 'Dr. Michael Rodriguez',
       readTime: '8 min read',
@@ -96,8 +96,8 @@ const NewsPage: React.FC = () => {
     {
       id: 7,
       title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation',
-      excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, accelerating digital transformation initiatives.';
-      category: 'partnerships',
+      excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, accelerating digital transformation initiatives.',
+    category: 'partnerships',
       date: '2024-12-28',
       author: 'Zion Tech Group',
       readTime: '3 min read',
@@ -120,8 +120,8 @@ const NewsPage: React.FC = () => {
     {
       id: 9,
       title: 'Zion Tech Group Expands to European Markets',
-      excerpt: 'Strategic expansion into European Union markets with new offices in London, Berlin, and Paris to serve growing demand.';
-      category: 'company',
+      excerpt: 'Strategic expansion into European Union markets with new offices in London, Berlin, and Paris to serve growing demand.',
+    category: 'company',
       date: '2024-12-15',
       author: 'Zion Tech Group',
       readTime: '3 min read',
@@ -152,8 +152,8 @@ const NewsPage: React.FC = () => {
   const mediaResources = [
     {
       title: 'Company Fact Sheet',
-      description: 'Key facts, figures, and company information for media and investors.';
-      type: 'PDF',
+      description: 'Key facts, figures, and company information for media and investors.',
+    type: 'PDF',
       size: '2.1 MB',
       download: '/media/zion-tech-group-fact-sheet.pdf'
     };

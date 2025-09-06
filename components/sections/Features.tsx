@@ -23,8 +23,7 @@ const Features: React.FC<FeaturesProps> = ({
   features;
   columns = 3}) => {
   const gridCols = {
-    2: 'md:grid-cols-2';
-    3: 'md:grid-cols-2 lg:grid-cols-3';
+    2: 'md:grid-cols-2', 3: 'md:grid-cols-2 lg:grid-cols-3',
     4: 'md:grid-cols-2 lg:grid-cols-4'};
 
   return (

@@ -1,35 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface TextAnalysisResult {
-  text: string;
+  text: string,
   statistics: {
-    characters: number;
-    charactersNoSpaces: number;
-    words: number;
-    sentences: number;
-    paragraphs: number;
-    syllables: number;
-    readingTime: number;
+    characters: number, charactersNoSpaces: number,
+    words: number, sentences: number,
+    paragraphs: number, syllables: number,
+    readingTime: number,
     speakingTime: number
   };
   readability: {
-    fleschReadingEase: number;
-    fleschKincaidGrade: number;
-    gunningFog: number;
-    smog: number;
-    colemanLiau: number;
-    automatedReadability: number;
+    fleschReadingEase: number, fleschKincaidGrade: number,
+    gunningFog: number, smog: number,
+    colemanLiau: number, automatedReadability: number,
     averageGrade: number
   };
   sentiment: {
-    score: number;
-    label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';
-    positiveWords: string[];
+    score: number, label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive',
+    positiveWords: string[],
     negativeWords: string[]
   };
   language: {
-    detectedLanguage: string;
-    confidence: number;
+    detectedLanguage: string, confidence: number,
     isEnglish: boolean
   };
   keywords: {
@@ -40,7 +32,7 @@ interface TextAnalysisResult {
 }
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -102,8 +94,7 @@ export default async function handler(
     const negativeCount = textWords.filter(word => negativeWords.includes(word)).length;
     
     const sentimentScore = positiveCount - negativeCount;
-    let sentimentLabel: TextAnalysisResult['sentiment']['label'];
-    if (sentimentScore <= -3) sentimentLabel = 'very-negative';
+    let sentimentLabel: TextAnalysisResult['sentiment']['label'], if (sentimentScore <= -3) sentimentLabel = 'very-negative',
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
@@ -169,17 +160,13 @@ export default async function handler(
         readingTime;
         speakingTime};
       readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100;
-        fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100;
-        gunningFog: Math.round(gunningFog * 100) / 100;
-        smog: Math.round(smog * 100) / 100;
-        colemanLiau: Math.round(colemanLiau * 100) / 100;
-        automatedReadability: Math.round(automatedReadability * 100) / 100;
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
+        gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100,
+        colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100,
         averageGrade};
       sentiment: {
-        score: sentimentScore;
-        label: sentimentLabel;
-        positiveWords: textWords.filter(word => positiveWords.includes(word));
+        score: sentimentScore, label: sentimentLabel,
+        positiveWords: textWords.filter(word => positiveWords.includes(word)),
         negativeWords: textWords.filter(word => negativeWords.includes(word))};
       language: {
         detectedLanguage;

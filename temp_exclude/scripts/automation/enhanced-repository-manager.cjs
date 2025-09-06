@@ -168,10 +168,10 @@ class EnhancedRepositoryManager {
   }
 
   extractConflictFiles(status) {
-    const lines = status.split('\n').filter(line => line.trim());
+    const lines = status.split('\n').filter(line => line.trim()),
     return lines
       .filter(line => line.includes('UU') || line.includes('AA'))
-      .map(line => line.split(' ').pop());
+      .map(line => line.split(' ').pop())
   }
 
   async assessCodeQuality(branchName) {
@@ -370,11 +370,11 @@ class EnhancedRepositoryManager {
     const recommendations = [];
     
     if (healthReport.overallHealth < 70) {
-      recommendations.push('🔴 Critical: Repository health is poor. Review and fix issues immediately.');
+      recommendations.push('🔴 Critical: Repository health is poor. Review and fix issues immediately.'),
     }
     
     if (healthReport.overallHealth < 85) {
-      recommendations.push('🟡 Warning: Repository health needs improvement. Address quality issues.');
+      recommendations.push('🟡 Warning: Repository health needs improvement. Address quality issues.'),
     }
     
     healthReport.branches.forEach(branch => {
@@ -407,8 +407,8 @@ class EnhancedRepositoryManager {
 }
 
 if (require.main === module) {
-  const manager = new EnhancedRepositoryManager();
-  manager.run().catch(console.error);
-}
+    const manager = new EnhancedRepositoryManager(),
+    manager.run().catch(console.error)
+  }
 
 module.exports = EnhancedRepositoryManager;

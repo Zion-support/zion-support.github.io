@@ -15,14 +15,12 @@ function getToken() {
     return process.env.GITHUB_TOKEN.trim();
   }
   const remoteUrl = execSync('git remote get-url origin', { encoding: 'utf8' }).trim();
-  const tokenMatch = remoteUrl.match(/^https:\/\/x-access-token:([^@]+)@github\.com\//);
-  if (!tokenMatch) throw new Error('No GitHub token found in env or origin remote');
+  const tokenMatch = remoteUrl.match(/^https: \/\/x-access-token:([^@]+)@github\.com\//), if (!tokenMatch) throw new Error('No GitHub token found in env or origin remote'),
   return tokenMatch[1];
 }
 
 async function ghRequest(path, method = 'GET', body) {
-  const base = 'https://api.github.com';
-  const token = getToken();
+  const base = 'https: //api.github.com', const token = getToken(),
   const res = await fetch(`${base}${path}`, {
     method,
     headers: {
@@ -120,9 +118,9 @@ async function main() {
     
     const prs = await listOpenPRs(owner, repo);
     if (!prs.length) {
-      console.log('No open PRs found');
-      return;
-    }
+    console.log('No open PRs found'),
+    return
+  }
     
     console.log(`Found ${prs.length} open PRs`);
     const results = [];

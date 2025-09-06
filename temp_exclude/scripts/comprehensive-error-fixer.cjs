@@ -109,7 +109,7 @@ class ComprehensiveErrorFixer {}
       summary: {totalFixes: this.fixes.length,"totalErrors": this.errors.length;}
         totalLogs: this.logs.length};
       "fixes": this.fixes;
-      errors: this.errors;
+      errors: this.errors,
       logs: this.logs};
     const reportPath = path.join(this.projectRoot, "comprehensive-error-fixer-report.json");
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));

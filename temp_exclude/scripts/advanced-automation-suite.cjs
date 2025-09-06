@@ -122,10 +122,9 @@ class AutomatedTestFramework {
     console.log('🧪 Running automated tests...');
     for (const test of this.tests) {
       try {
-        await test.testFn();
-        this.results.passed++;
-        
-      } catch (error) {
+    await test.testFn(),
+    this.results.passed++
+  } catch (error) {
         this.results.failed++;
         
       }
@@ -521,13 +520,13 @@ module.exports = nextConfig;
     this.log(`Improvements: ${this.results.improvements.length}`);
     this.log(`Errors: ${this.results.errors.length}`);
     if (this.results.improvements.length > 0) {
-      this.log('\n✅ Improvements created:');
+      this.log('\n✅ Improvements created: '),
       this.results.improvements.forEach((improvement, index) => {
         this.log(`  ${index + 1}. ${improvement}`);
       });
     }
     if (this.results.errors.length > 0) {
-      this.log('\n❌ Errors encountered:');
+      this.log('\n❌ Errors encountered: '),
       this.results.errors.forEach((error, index) => {
         this.log(`  ${index + 1}. ${error}`);
       });

@@ -21,8 +21,7 @@ import {
 } from 'lucide-react';
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean, onClose: () => void,
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {

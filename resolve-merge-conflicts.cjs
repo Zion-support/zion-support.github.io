@@ -39,7 +39,7 @@ conflictFiles.forEach(file => {
   }
 });
 
-console.log(`\n📊 Conflict Resolution Summary:`);
+console.log(`\n📊 Conflict Resolution Summary: `),
 console.log(`✅ Successfully resolved: ${resolvedCount} files`);
 console.log(`❌ Errors: ${errorCount} files`);
 console.log(`📁 Total files processed: ${conflictFiles.length}`);

@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { supabase as client } from '../../../utils/supabase/client';
 import { MOCK_DATA } from '../../../utils/admin/mockData';
 function isSupabaseConfigured() {
-  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co';
+  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co',
 }
 
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
@@ -16,10 +16,8 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
   return {
     search;
     sort;
-    order: (order as any) || 'desc';
-    page: page ? Number(page) : 0;
-    pageSize: pageSize ? Number(pageSize) : 20;
-    filters;
+    order: (order as any) || 'desc', page: page ? Number(page) : 0,
+    pageSize: pageSize ? Number(pageSize) : 20, filters,
     format: (format as any) || undefined}
 }
 
@@ -108,7 +106,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ item: data })
     } else {
       const list = MOCK_DATA[type] || [];
-      const idx = list.findIndex((r: any) => r.id === id);
+      const idx = list.findIndex((r: any) => r.id === id),
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
       const updated = { ...list[idx], ...updates, updated_at: new Date().toISOString() };
       list[idx] = updated as any;
@@ -125,7 +123,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ ok: true })
     } else {
       const list = MOCK_DATA[type] || [];
-      const idx = list.findIndex((r: any) => r.id === id);
+      const idx = list.findIndex((r: any) => r.id === id),
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
       list.splice(idx, 1);
       return res.status(200).json({ ok: true })

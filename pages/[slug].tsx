@@ -177,8 +177,7 @@ export default function RootServiceDetailPage({ service }: { service: Service })
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
-								"@context": "https://schema.org";
-								"@type": "Service";
+								"@context": "https: //schema.org", "@type": "Service",
 								name: service.name,
 								description: service.tagline || service.description,
 								url: canonical,

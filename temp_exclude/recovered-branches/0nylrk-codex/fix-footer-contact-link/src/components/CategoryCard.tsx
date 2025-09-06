@@ -24,7 +24,7 @@ export function CategoryCard({ title, description, icon, color, count, className
     <Link 
       to={`/category/${slug}`} 
       className={cn(
-        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group";
+        "flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover: border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group",
         className
       )}
     >

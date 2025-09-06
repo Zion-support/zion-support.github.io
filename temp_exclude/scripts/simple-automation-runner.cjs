@@ -36,9 +36,9 @@ const path = require('path')
     
     for (const cmd of testCommands) {
       if (await this.runCommand(cmd, `Test: ${cmd}`)) {
-        this.results.summary.testsPassed++;
-        break;
-      } else {
+    this.results.summary.testsPassed++,
+    break
+  } else {
         this.results.summary.testsFailed++;
       }
     }
@@ -94,7 +94,7 @@ const path = require('path')
     
     fs.writeFileSync('automation-report.json', JSON.stringify(report, null, 2));
     
-    console.log('\n🎯 AUTOMATION SUMMARY:');
+    console.log('\n🎯 AUTOMATION SUMMARY: '),
     console.log(`✅ Tests Passed: ${report.summary.testsPassed}`);
     console.log(`❌ Tests Failed: ${report.summary.testsFailed}`);
     console.log(`🔨 Build Success: ${report.summary.buildSuccess ? 'Yes' : 'No'}`);

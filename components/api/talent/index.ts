@@ -28,17 +28,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice(0, 6);
       const item: TalentProfile = {
         ...payload;
-        id: uuid();
-        slug;
-        verified: false;
-        rating: 0;
-        reviewsCount: 0;
-        createdAt: new Date().toISOString();
-        summary: payload.summary || '';
-        skills: payload.skills || [];
-        name: payload.name || 'Unnamed';
-        title: payload.title || 'Professional';
-        location: payload.location || 'Remote';
+        id: uuid(), slug,
+        verified: false, rating: 0,
+        reviewsCount: 0, createdAt: new Date().toISOString(),
+        summary: payload.summary || '', skills: payload.skills || [],
+        name: payload.name || 'Unnamed', title: payload.title || 'Professional',
+        location: payload.location || 'Remote',
         availability: (payload.availability as any) || 'Open'} as TalentProfile;
 
       // Auto-translate
@@ -62,29 +57,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
-          id: item.id;
-          slug: item.slug;
-          name: item.name;
-          title: item.title;
-          category: item.category;
-          location: item.location;
-          timezone: item.timezone;
-          region: item.region;
-          skills: item.skills;
-          summary: item.summary;
-          bio: item.bio;
-          hourly_rate_usd: item.hourlyRateUsd ?? null;
-          request_quote: item.requestQuote ?? null;
-          availability: item.availability;
-          profile_image_url: item.profileImageUrl ?? null;
-          video_url: item.videoUrl ?? null;
-          portfolio: item.portfolio ?? null;
-          verified: item.verified ?? null;
-          rating: item.rating ?? null;
-          reviews_count: item.reviewsCount ?? null;
-          created_at: item.createdAt;
+          id: item.id, slug: item.slug,
+          name: item.name, title: item.title,
+          category: item.category, location: item.location,
+          timezone: item.timezone, region: item.region,
+          skills: item.skills, summary: item.summary,
+          bio: item.bio, hourly_rate_usd: item.hourlyRateUsd ?? null,
+          request_quote: item.requestQuote ?? null, availability: item.availability,
+          profile_image_url: item.profileImageUrl ?? null, video_url: item.videoUrl ?? null,
+          portfolio: item.portfolio ?? null, verified: item.verified ?? null,
+          rating: item.rating ?? null, reviews_count: item.reviewsCount ?? null,
+          created_at: item.createdAt,
           // i18n
-          original_language: item.originalLanguage;
+          original_language: item.originalLanguage,
           translations: item.translations as any} as any);
         if (error) throw error;
         return res.status(201).json({ slug: item.slug })

@@ -12,7 +12,7 @@ try {
   const auditData = JSON.parse(auditResult);
   
   if (auditData.vulnerabilities && Object.keys(auditData.vulnerabilities).length > 0) {
-    console.log('⚠️  Security vulnerabilities found:');
+    console.log('⚠️  Security vulnerabilities found: '),
     Object.entries(auditData.vulnerabilities).forEach(([pkg, vuln]) => {
       console.log(`   - ${pkg}: ${vuln.severity} - ${vuln.title}`);
     });
@@ -63,7 +63,7 @@ const scanDirectory = (dir, results = []) => {
 
 const sensitiveResults = scanDirectory('.');
 if (sensitiveResults.length > 0) {
-  console.log('⚠️  Potential sensitive data found:');
+  console.log('⚠️  Potential sensitive data found: '),
   sensitiveResults.forEach(result => {
     console.log(`   - ${result.file}`);
     result.matches.forEach(match => {
@@ -81,7 +81,7 @@ try {
   const outdatedData = JSON.parse(outdatedResult);
   
   if (Object.keys(outdatedData).length > 0) {
-    console.log('⚠️  Outdated dependencies found:');
+    console.log('⚠️  Outdated dependencies found: '),
     Object.entries(outdatedData).forEach(([pkg, info]) => {
       console.log(`   - ${pkg}: ${info.current} → ${info.latest}`);
     });

@@ -1,42 +1,36 @@
  export default function ITServicesPage () {
   const itServices = [ {
-  benefits: [ "Reduced infrastructure costs";
-"Improved scalability";
+  benefits: [ "Reduced infrastructure costs", "Improved scalability",
 "Enhanced security posture";
 "Better performance";
 "Operational efficiency" ];
 website: "https://ziontechgroup.com/cloud-migration" 
 };
-benefits: [ "Faster deployment cycles";
-"Reduced manual errors";
+benefits: [ "Faster deployment cycles", "Reduced manual errors",
 "Improved collaboration";
 "Better resource utilization";
 "Enhanced security" ];
 website: "https://ziontechgroup.com/devops-automation" 
 };
-benefits: [ "Reduced security risks";
-"Compliance assurance";
+benefits: [ "Reduced security risks", "Compliance assurance",
 "Improved incident response";
 "Enhanced customer trust";
 "Cost-effective security" ];
 website: "https://ziontechgroup.com/cybersecurity" 
 };
-benefits: [ "Improved network performance";
-"Enhanced security";
+benefits: [ "Improved network performance", "Enhanced security",
 "Better scalability";
 "Reduced downtime";
 "Operational efficiency" ];
 website: "https://ziontechgroup.com/network-infrastructure" 
 };
-benefits: [ "Improved data performance";
-"Enhanced data security";
+benefits: [ "Improved data performance", "Enhanced data security",
 "Better scalability";
 "Reduced maintenance costs";
 "Improved reliability" ];
 website: "https://ziontechgroup.com/database-services" 
 };
-benefits: [ "Reduced downtime";
-"Lower operational costs";
+benefits: [ "Reduced downtime", "Lower operational costs",
 "Improved performance";
 "Enhanced security";
 "Peace of mind" ];

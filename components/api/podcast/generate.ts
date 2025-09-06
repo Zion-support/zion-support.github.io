@@ -37,18 +37,18 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
 
-  let generated: any = null;
+  let generated: any = null,
   try {
     const apiKey = process.env.OPENAI_API_KEY;
-    let content: string;
+    let content: string,
     if (apiKey) {
       const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
-        model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini';
+        model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini',
         messages: [
           { role: 'system', content: system };
           { role: 'user', content: user }];
-        temperature: 0.8;
+        temperature: 0.8,
         max_tokens: 2048});
       content = completion.choices?.[0]?.message?.content || ''
     } else {
@@ -57,12 +57,11 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         questions: [
           'What is the vision behind Zion as a global decentralized talent protocol?How does Zion practically onboard talent and organizations?What are the core protocol primitives (identity, reputation, incentives)?How does governance work and how do contributors participate?What challenges have you faced scaling globally?How does Zion interoperate with existing web2 hiring systems?What does success look like in 3-5 years?'];
         timeMarkers: {
-          intro: '00:00';
-          segments: ['03:0008:0012:00'];
+          intro: '00:00', segments: ['03:0008:0012:00'],
           closing: '14:30'};
-        transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.';
-        youtubeDescription: 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.';
-        spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.';
+        transcript: 'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
+        youtubeDescription: 'Visionary + technical deep dive into Zion, a decentralized talent protocol. Learn how it works and how to join.',
+    spotifyDescription: 'A 15-minute interview on Zion: identity, incentives, governance, and real-world adoption.';
         bestQuote: 'Talent networks become protocols when incentives, reputation, and opportunity align.'})
     }
 
@@ -81,17 +80,13 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     const episodes = readEpisodes();
     const episode = {
       id;
-      createdAt: new Date().toISOString();
-      persona;
+      createdAt: new Date().toISOString(), persona,
       invitee;
       topic;
-      title: generated.title;
-      questions: generated.questions || [];
+      title: generated.title, questions: generated.questions || [],
       timeMarkers: generated.timeMarkers || { intro: '00:00', segments: [], closing: '14:30' };
-      transcript: generated.transcript;
-      youtubeDescription: generated.youtubeDescription || '';
-      spotifyDescription: generated.spotifyDescription || '';
-      bestQuote: generated.bestQuote || '';
+      transcript: generated.transcript, youtubeDescription: generated.youtubeDescription || '',
+      spotifyDescription: generated.spotifyDescription || '', bestQuote: generated.bestQuote || '',
       audio: {}};
     episodes.unshift(episode);
     writeEpisodes(episodes);

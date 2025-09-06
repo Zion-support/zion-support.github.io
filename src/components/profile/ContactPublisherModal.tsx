@@ -29,7 +29,7 @@ import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
   isOpen: boolean,
-  onClose: () => void;
+  onClose: () => void,
   publisherName: string,
   publisherEmail?: string;
   productId?: string
@@ -65,7 +65,7 @@ export function ContactPublisherModal({
 
 
   const form = useForm<FormValues>({
-    resolver: yupResolver(schema) as Resolver<FormValues>;
+    resolver: yupResolver(schema) as Resolver<FormValues>,
     mode: 'onChange',
     defaultValues: { subject: '', message: '' }});
   const handleSend = async () => {

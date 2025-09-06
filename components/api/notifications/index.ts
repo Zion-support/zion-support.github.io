@@ -55,22 +55,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // Fallback seed data for local/dev if table is missing
       const fallback: NotificationItem[] = [
         {
-          id: 'seed-1';
-          user_id: userId;
-          type: 'onboarding';
-          title: 'Welcome to Zion AI Marketplace';
-          body: 'Complete your profile to get personalized matches.';
-          created_at: new Date().toISOString();
-          read_status: false;
+          id: 'seed-1', user_id: userId,
+          type: 'onboarding', title: 'Welcome to Zion AI Marketplace',
+          body: 'Complete your profile to get personalized matches.', created_at: new Date().toISOString(),
+          read_status: false,
           related_action: '/profile'};
         {
-          id: 'seed-2';
-          user_id: userId;
-          type: 'system';
-          title: 'System maintenance scheduled';
-          body: 'We will be undergoing maintenance this weekend.';
-          created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString();
-          read_status: false;
+          id: 'seed-2', user_id: userId,
+          type: 'system', title: 'System maintenance scheduled',
+          body: 'We will be undergoing maintenance this weekend.', created_at: new Date(Date.now() - 1000 * 60 * 60).toISOString(),
+          read_status: false,
           related_action: '/status'}];
       return res.status(200).json({ notifications: fallback })
     }

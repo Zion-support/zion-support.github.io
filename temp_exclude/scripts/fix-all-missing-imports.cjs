@@ -5,8 +5,8 @@ const path = require('path');
 
 class AllMissingImportsFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+    this.projectRoot = process.cwd(),
+    this.fixedFiles = []
   }
 
   log(message, type = 'INFO') {
@@ -35,10 +35,10 @@ class AllMissingImportsFixer {
       // Check for missing imports
       for (const [component, importStatement] of Object.entries(commonImports)) {
         if (content.includes(component) && !content.includes(importStatement)) {
-          // Add import at the top of the file
-          content = importStatement + '\n' + content;
-          modified = true;
-        }
+    // Add import at the top of the file
+          content = importStatement + '\n' + content,
+    modified = true
+  }
       }
       
       if (modified) {
@@ -93,7 +93,7 @@ class AllMissingImportsFixer {
         await this.fixFile(file);
       }
       
-      this.log(`\n📊 Missing Imports Fix Summary:`);
+      this.log(`\n📊 Missing Imports Fix Summary: `),
       this.log(`  - Files processed: ${files.length}`);
       this.log(`  - Files fixed: ${this.fixedFiles.length}`);
       

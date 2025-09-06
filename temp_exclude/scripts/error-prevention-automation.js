@@ -61,7 +61,7 @@ class ErrorPreventionAutomation {
   async fixLintingErrors() {
     try {
       this.log('info', 'Running lint fix...');
-      await execAsync('npm run lint:fix');
+      await execAsync('npm run lint: fix'),
       this.log('info', 'Linting errors fixed');
     } catch (error) {
       this.log('error', `Failed to fix linting errors: ${error.message}`);
@@ -313,8 +313,7 @@ if (require.main === module) {
     case 'build':
       automation.runBuildCheck().catch(console.error);
       break;
-    default:
-      console.log('Usage: node error-prevention-automation.js [start|stop|status|health|lint|type|build]');
+    default: console.log('Usage: node error-prevention-automation.js [start|stop|status|health|lint|type|build]'),
   }
 }
 

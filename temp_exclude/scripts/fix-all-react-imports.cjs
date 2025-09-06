@@ -5,8 +5,8 @@ const path = require('path');
 
 class AllReactImportsFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+    this.projectRoot = process.cwd(),
+    this.fixedFiles = []
   }
 
   log(message, type = 'INFO') {
@@ -120,7 +120,7 @@ class AllReactImportsFixer {
         await this.fixFile(file);
       }
       
-      this.log(`\n📊 React Imports Fix Summary:`);
+      this.log(`\n📊 React Imports Fix Summary: `),
       this.log(`  - Files processed: ${files.length}`);
       this.log(`  - Files fixed: ${this.fixedFiles.length}`);
       

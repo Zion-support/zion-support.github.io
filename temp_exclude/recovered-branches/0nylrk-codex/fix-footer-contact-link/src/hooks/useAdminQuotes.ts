@@ -14,8 +14,7 @@ export const useAdminQuotes = () => {
 
   // Fetch all quote requests
   const { data: allQuotes = [], isLoading, error } = useQuery({
-    queryKey: ['quotesadmin'];
-    queryFn: () => quoteRequestService.getAll();
+    queryKey: ['quotesadmin'], queryFn: () => quoteRequestService.getAll(),
     enabled: true});
 
   // Filter quotes based on selected filters
@@ -72,15 +71,14 @@ export const useAdminQuotes = () => {
       quoteRequestService.updateStatus(id, status);
     onSuccess: () => {
       toast({
-        title: "Status updated";
+        title: "Status updated",
         description: "The quote request status has been updated"
       });
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
-        title: "Error";
-        description: "Failed to update status: " + error.message;
+        title: "Error", description: "Failed to update status: " + error.message,
         variant: "destructive"
       })
     }
@@ -92,7 +90,7 @@ export const useAdminQuotes = () => {
       quoteRequestService.toggleArchive(id, isArchived);
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived";
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
         description: variables.isArchived 
           ? "The quote request has been archived" 
           : "The quote request has been moved back to active quotes"
@@ -101,8 +99,7 @@ export const useAdminQuotes = () => {
     };
     onError: (error: Error) => {
       toast({
-        title: "Error";
-        description: "Failed to update quote: " + error.message;
+        title: "Error", description: "Failed to update quote: " + error.message,
         variant: "destructive"
       })
     }
@@ -110,26 +107,24 @@ export const useAdminQuotes = () => {
 
   // Delete mutation
   const deleteMutation = useMutation({
-    mutationFn: (id: string) => quoteRequestService.delete(id);
+    mutationFn: (id: string) => quoteRequestService.delete(id),
     onSuccess: () => {
       toast({
-        title: "Quote deleted";
+        title: "Quote deleted",
         description: "The quote request has been permanently deleted"
       });
       queryClient.invalidateQueries({ queryKey: ['quotesadmin'] })
     };
     onError: (error: Error) => {
       toast({
-        title: "Error";
-        description: "Failed to delete quote: " + error.message;
+        title: "Error", description: "Failed to delete quote: " + error.message,
         variant: "destructive"
       })
     }
   });
 
   return {
-    quotes: filteredQuotes;
-    isLoading;
+    quotes: filteredQuotes, isLoading,
     error;
     statusFilter;
     setStatusFilter;

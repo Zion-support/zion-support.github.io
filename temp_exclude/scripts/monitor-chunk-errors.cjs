@@ -39,11 +39,10 @@ class ChunkErrorMonitor {
                 
                 if (sizeKB > 250) {
                   issues.push({
-                    type: 'large-chunk';
-                    page;
+                    type: 'large-chunk', page,
                     chunk;
                     sizeKB;
-                    severity: sizeKB > 500 ? 'high' : 'medium';
+                    severity: sizeKB > 500 ? 'high' : 'medium',
                     recommendation: 'Consider code splitting or lazy loading'
                   });
                 }
@@ -66,10 +65,9 @@ class ChunkErrorMonitor {
           
           if (sizeKB > 200) {
             issues.push({
-              type: 'large-vendor-chunk';
-              chunk: vendorChunk;
+              type: 'large-vendor-chunk', chunk: vendorChunk,
               sizeKB;
-              severity: sizeKB > 400 ? 'high' : 'medium';
+              severity: sizeKB > 400 ? 'high' : 'medium',
               recommendation: 'Consider optimizing vendor bundle splitting'
             });
           }
@@ -78,8 +76,7 @@ class ChunkErrorMonitor {
       
     } catch (error) {
       issues.push({
-        type: 'analysis-error';
-        error: error.message;
+        type: 'analysis-error', error: error.message,
         severity: 'low'
       });
     }
@@ -99,27 +96,25 @@ class ChunkErrorMonitor {
         // Check for problematic configurations
         const checks = [
           {
-            pattern: /maxAsyncRequests:\s*(\d+)/;
+            pattern: /maxAsyncRequests:\s*(\d+)/,
             check: (match) => {
               const value = parseInt(match[1]);
               return value > 30 ? {
-                type: 'config-warning';
-                setting: 'maxAsyncRequests';
+                type: 'config-warning', setting: 'maxAsyncRequests',
                 value;
-                severity: 'medium';
+                severity: 'medium',
                 recommendation: 'Consider reducing maxAsyncRequests to prevent too many concurrent chunk requests'
               } : null;
             }
           };
           {
-            pattern: /maxSize:\s*(\d+)/g;
+            pattern: /maxSize:\s*(\d+)/g,
             check: (match) => {
               const value = parseInt(match[1]);
               return value > 250000 ? {
-                type: 'config-warning';
-                setting: 'maxSize';
+                type: 'config-warning', setting: 'maxSize',
                 value;
-                severity: 'low';
+                severity: 'low',
                 recommendation: 'Large chunks may cause loading issues on slow connections'
               } : null;
             }
@@ -138,8 +133,7 @@ class ChunkErrorMonitor {
       }
     } catch (error) {
       issues.push({
-        type: 'config-analysis-error';
-        error: error.message;
+        type: 'config-analysis-error', error: error.message,
         severity: 'low'
       });
     }
@@ -157,8 +151,7 @@ class ChunkErrorMonitor {
     
     if (highSeverityIssues.length > 0) {
       recommendations.push({
-        priority: 'high';
-        title: 'Critical Chunk Size Issues';
+        priority: 'high', title: 'Critical Chunk Size Issues',
         description: `Found ${highSeverityIssues.length} high-severity chunk issues that may cause ChunkLoadErrors`;
         actions: [
           'Implement dynamic imports for large components';
@@ -174,8 +167,7 @@ class ChunkErrorMonitor {
     
     if (mediumSeverityIssues.length > 0) {
       recommendations.push({
-        priority: 'medium';
-        title: 'Chunk Optimization Opportunities';
+        priority: 'medium', title: 'Chunk Optimization Opportunities',
         description: `Found ${mediumSeverityIssues.length} optimization opportunities`;
         actions: [
           'Review webpack splitChunks configuration';
@@ -187,9 +179,8 @@ class ChunkErrorMonitor {
     
     // General recommendations
     recommendations.push({
-      priority: 'low';
-      title: 'Preventive Measures';
-      description: 'General recommendations to prevent ChunkLoadErrors';
+      priority: 'low', title: 'Preventive Measures',
+      description: 'General recommendations to prevent ChunkLoadErrors',
       actions: [
         'Implement proper error boundaries';
         'Add retry logic for failed chunk loads';
@@ -211,21 +202,20 @@ class ChunkErrorMonitor {
     const recommendations = this.generateRecommendations(buildIssues, configIssues);
     
     const report = {
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       summary: {
-        totalIssues: buildIssues.length + configIssues.length;
-        buildIssues: buildIssues.length;
-        configIssues: configIssues.length;
+        totalIssues: buildIssues.length + configIssues.length, buildIssues: buildIssues.length,
+        configIssues: configIssues.length,
         highSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'high').length;
         mediumSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'medium').length;
         lowSeverity: [...buildIssues, ...configIssues].filter(i => i.severity === 'low').length
       };
       buildAnalysis: {
-        issues: buildIssues;
+        issues: buildIssues,
         summary: `Analyzed build output and found ${buildIssues.length} potential chunk-related issues`
       };
       configAnalysis: {
-        issues: configIssues;
+        issues: configIssues,
         summary: `Analyzed Next.js config and found ${configIssues.length} potential configuration issues`
       };
       recommendations;
@@ -250,7 +240,7 @@ class ChunkErrorMonitor {
     console.log('=====================================');
     
     // Summary
-    console.log(`\n📈 Summary:`);
+    console.log(`\n📈 Summary: `),
     console.log(`   Total Issues: ${report.summary.totalIssues}`);
     console.log(`   High Severity: ${report.summary.highSeverity}`);
     console.log(`   Medium Severity: ${report.summary.mediumSeverity}`);
@@ -258,7 +248,7 @@ class ChunkErrorMonitor {
     
     // High severity issues
     if (report.summary.highSeverity > 0) {
-      console.log('\n🚨 High Severity Issues:');
+      console.log('\n🚨 High Severity Issues: '),
       [...report.buildAnalysis.issues, ...report.configAnalysis.issues]
         .filter(issue => issue.severity === 'high')
         .forEach(issue => {
@@ -269,7 +259,7 @@ class ChunkErrorMonitor {
     }
     
     // Recommendations
-    console.log('\n💡 Recommendations:');
+    console.log('\n💡 Recommendations: '),
     report.recommendations.forEach(rec => {
       console.log(`\n   ${rec.priority.toUpperCase()} PRIORITY: ${rec.title}`);
       console.log(`   ${rec.description}`);
@@ -279,8 +269,7 @@ class ChunkErrorMonitor {
     });
     
     console.log(`\n📄 Full report saved to: ${this.reportPath}`);
-    console.log('\n🔧 To fix ChunkLoadErrors:');
-    console.log('   1. Import the ChunkErrorHandler in your _app.tsx');
+    console.log('\n🔧 To fix ChunkLoadErrors: '), console.log('   1. Import the ChunkErrorHandler in your _app.tsx'),
     console.log('   2. Review and optimize large chunks');
     console.log('   3. Test on slow network connections');
     console.log('   4. Monitor error rates in production');

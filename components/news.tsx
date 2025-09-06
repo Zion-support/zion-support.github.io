@@ -129,8 +129,8 @@ export default function News() {
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
-      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.';
-      category: 'Company News',
+      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptography, optimization, and scientific research.',
+    category: 'Company News',
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
       readTime: '5 min read',
@@ -395,8 +395,8 @@ export default function News() {
     {
       id: 1,
       title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
-      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.';
-      category: 'ai',
+      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',
+    category: 'ai',
       author: 'Dr. Sarah Chen',
       date: '2024-01-15',
       readTime: '5 min read',
@@ -407,8 +407,8 @@ export default function News() {
     {
       id: 2,
       title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability',
-      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.';
-      category: 'quantum',
+      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',
+    category: 'quantum',
       author: 'Prof. Michael Rodriguez',
       date: '2024-01-12',
       readTime: '7 min read',
@@ -455,8 +455,8 @@ export default function News() {
     {
       id: 6,
       title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies',
-      excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.';
-      category: 'quantum',
+      excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.',
+    category: 'quantum',
       author: 'Dr. Elena Petrova',
       date: '2024-01-03',
       readTime: '8 min read',
@@ -495,8 +495,8 @@ export default function News() {
       type: 'Conference',
       date: '2024-02-15',
       time: '9:00 AM - 6:00 PM',
-      location: 'San Francisco, CA';
-      description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',
+      location: 'San Francisco, CA',
+    description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',
       registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'
     };
     {
@@ -586,7 +586,7 @@ export default function News() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white';
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',
                   }`}
                 >
                   {category.name} ({category.count})

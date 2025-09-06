@@ -47,23 +47,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const now = new Date().toISOString();
       const record: GrantApplication = {
         id;
-        program: payload.program || 'grant';
-        projectName: payload.projectName;
-        teamInfo: payload.teamInfo;
-        proposalSummary: payload.proposalSummary;
-        timeline: payload.timeline;
-        budgetAmount: payload.budgetAmount || 0;
-        budgetCurrency: payload.budgetCurrency || 'USDC';
-        supportingLinks: payload.supportingLinks || [];
-        pitchDeckUrl: payload.pitchDeckUrl;
-        region: payload.region;
-        sector: payload.sector;
-        status: payload.submit ? 'Submitted' : 'Draft';
-        createdAt: now;
-        updatedAt: now;
-        milestones: [];
-        fundsReleased: 0;
-        updates: [];
+        program: payload.program || 'grant', projectName: payload.projectName,
+        teamInfo: payload.teamInfo, proposalSummary: payload.proposalSummary,
+        timeline: payload.timeline, budgetAmount: payload.budgetAmount || 0,
+        budgetCurrency: payload.budgetCurrency || 'USDC', supportingLinks: payload.supportingLinks || [],
+        pitchDeckUrl: payload.pitchDeckUrl, region: payload.region,
+        sector: payload.sector, status: payload.submit ? 'Submitted' : 'Draft',
+        createdAt: now, updatedAt: now,
+        milestones: [], fundsReleased: 0,
+        updates: [],
         votes: []};
       fs.writeFileSync(path.join(GRANTS_DIR, `${id}.json`), JSON.stringify(record, null, 2), 'utf8');
       res.status(201).json({ id, record })

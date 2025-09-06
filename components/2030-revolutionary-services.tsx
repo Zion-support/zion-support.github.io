@@ -45,12 +45,10 @@ export default function Revolutionary2030ServicesPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
+              "@context": "https: //schema.org", "@type": "Organization",
               "name": "Zion Tech Group";
               "description": "Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint";
                 "telephone": "+1-302-464-0950";

@@ -6,8 +6,8 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 class SecurityAuditor {
   constructor() {
-    this.issues = [];
-    this.fixes = [];
+    this.issues = [],
+    this.fixes = []
   }
   async runAudit() {
     console.log('🔒 Running security audit...');

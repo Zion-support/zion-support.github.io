@@ -109,9 +109,9 @@ export default function ForgotPassword() {
                   <div className="space-y-3">
                     <button
                       onClick={() => {
-                        setIsSuccess(false);
-                        setEmail('');
-                      }}
+    setIsSuccess(false),
+    setEmail('')
+  }}
                       className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
                     >
                       Try Another Email

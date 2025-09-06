@@ -161,8 +161,7 @@ class DeploymentPipeline {
   async runTests() {
     try {
       // Check if tests exist
-      const testScripts = ['test', 'test:unit', 'test:integration', 'test:e2e'];
-      let testCommand = null;
+      const testScripts = ['test', 'test:unit', 'test:integration', 'test: e2e'], let testCommand = null,
 
       for (const script of testScripts) {
         try {
@@ -546,7 +545,7 @@ class DeploymentPipeline {
     console.log(`🔧 Stages: ${this.deployment.stages.length}`);
     
     if (this.deployment.stages.length > 0) {
-      console.log('\n📋 Stage Details:');
+      console.log('\n📋 Stage Details: '),
       this.deployment.stages.forEach((stage, index) => {
         const status = stage.status === 'completed' ? '✅' : 
                      stage.status === 'failed' ? '❌' : '⏳';
@@ -594,9 +593,9 @@ class DeploymentPipeline {
       
       // Attempt rollback on failure
       try {
-        await this.rollback();
-        this.deployment.status = 'failed_rolled_back';
-      } catch (rollbackError) {
+    await this.rollback(),
+    this.deployment.status = 'failed_rolled_back'
+  } catch (rollbackError) {
         this.log(`❌ Rollback also failed: ${rollbackError.message}`, 'ERROR');
         this.deployment.status = 'failed';
       }
@@ -609,8 +608,8 @@ class DeploymentPipeline {
 
 // Run if called directly
 if (require.main === module) {
-  const pipeline = new DeploymentPipeline();
-  pipeline.run();
-}
+    const pipeline = new DeploymentPipeline(),
+    pipeline.run()
+  }
 
 module.exports = DeploymentPipeline;

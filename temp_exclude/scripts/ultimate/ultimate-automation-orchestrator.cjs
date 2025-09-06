@@ -217,10 +217,10 @@ class UltimateAutomationOrchestrator {
     const startOrder = this.calculateStartOrder();
     
     for (const systemKey of startOrder) {
-      await this.startSystem(systemKey);
-      // Wait between starts to avoid resource conflicts
-      await this.sleep(5000);
-    }
+    await this.startSystem(systemKey),
+    // Wait between starts to avoid resource conflicts
+      await this.sleep(5000)
+  }
     
     this.log(`🎉 Started ${this.orchestrationData.systemsStarted} automation systems`);
   }
@@ -500,19 +500,20 @@ class UltimateAutomationOrchestrator {
     }
     
     // Optimize resource usage
-    if (metrics.totalMemory > 2 * 1024 * 1024 * 1024) { // 2GB
-      this.log('🧹 Optimizing memory usage...');
-      await this.optimizeMemoryUsage();
-    }
+    if (metrics.totalMemory > 2 * 1024 * 1024 * 1024) {
+    // 2GB
+      this.log('🧹 Optimizing memory usage...'),
+    await this.optimizeMemoryUsage()
+  }
   }
 
   async optimizeMemoryUsage() {
     try {
       // Force garbage collection
       if (global.gc) {
-        global.gc();
-        this.log('🗑️ Forced garbage collection');
-      }
+    global.gc(),
+    this.log('🗑️ Forced garbage collection')
+  }
       
       // Restart high memory processes
       const processes = await this.getProcessList();
@@ -604,8 +605,8 @@ class UltimateAutomationOrchestrator {
 
 // Run the orchestrator
 if (require.main === module) {
-  const orchestrator = new UltimateAutomationOrchestrator();
-  orchestrator.run();
-}
+    const orchestrator = new UltimateAutomationOrchestrator(),
+    orchestrator.run()
+  }
 
 module.exports = UltimateAutomationOrchestrator;

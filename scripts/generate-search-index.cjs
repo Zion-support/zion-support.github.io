@@ -100,8 +100,8 @@ class SearchIndexGenerator {
 
 // Run if called directly
 if (require.main === module) {
-  const generator = new SearchIndexGenerator();
-  generator.generateSearchIndex().catch(console.error);
-}
+    const generator = new SearchIndexGenerator(),
+    generator.generateSearchIndex().catch(console.error)
+  }
 
 module.exports = SearchIndexGenerator;

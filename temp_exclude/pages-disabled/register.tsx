@@ -15,7 +15,7 @@ export default function RegisterPage() {}
     confirmPassword: '',
     company: '',
     agreeToTerms: false,
-    subscribeNewsletter: false;
+    subscribeNewsletter: false,
   }
 });
 
@@ -24,7 +24,7 @@ export default function RegisterPage() {}
     uppercase: false,
     lowercase: false,
     number: false,
-    special: false;
+    special: false,
   }
 });
 

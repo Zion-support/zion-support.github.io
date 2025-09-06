@@ -33,11 +33,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       await fsPromisesWrite(filePath, buffer);
       dispute.attachments.push({
         id: `${Date.now()}-${safeName}`;
-        fileName: safeName;
-        fileSize: buffer.length;
-        mimeType: f.mimeType || 'application/octet-stream';
-        path: filePath;
-        uploadedAt: now;
+        fileName: safeName, fileSize: buffer.length,
+        mimeType: f.mimeType || 'application/octet-stream', path: filePath,
+        uploadedAt: now,
         uploadedByUserId: user.id})
     }
 

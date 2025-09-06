@@ -35,11 +35,9 @@ async function main() {
   const data = JSON.parse(fs.readFileSync(lhJson, 'utf8'));
   const cats = data.categories || {};
   const summary = {
-    generatedAt: new Date().toISOString();
-    url;
-    performance: cats.performance?.score ?? null;
-    accessibility: cats.accessibility?.score ?? null;
-    bestPractices: cats['best-practices']?.score ?? cats.bestPractices?.score ?? null;
+    generatedAt: new Date().toISOString(), url,
+    performance: cats.performance?.score ?? null, accessibility: cats.accessibility?.score ?? null,
+    bestPractices: cats['best-practices']?.score ?? cats.bestPractices?.score ?? null,
     seo: cats.seo?.score ?? null
   };
   fs.writeFileSync(path.join(METRICS_DIR, 'performance.json'), JSON.stringify(summary, null, 2));
@@ -48,4 +46,7 @@ async function main() {
   server.kill('SIGINT');
 }
 
-main().catch((e) => { console.error(e); process.exit(1); });
+main().catch((e) => {
+    console.error(e),
+    process.exit(1)
+  });

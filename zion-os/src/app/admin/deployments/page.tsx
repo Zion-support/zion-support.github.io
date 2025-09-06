@@ -12,8 +12,7 @@ const getStatusColor = (status: string) => {
       return 'text-red-400';
     case 'stopped':
       return 'text-gray-400';
-    default:
-      return 'text-gray-400';
+    default: return 'text-gray-400',
   }
 };
 
@@ -36,8 +35,7 @@ export default function DeploymentsPage() {
         return <XCircle className="w-4 h-4 text-red-400" />;
       case 'stopped':
         return <AlertCircle className="w-4 h-4 text-gray-400" />;
-      default:
-        return <AlertCircle className="w-4 h-4 text-gray-400" />;
+      default: return <AlertCircle className="w-4 h-4 text-gray-400" />,
     }
   };
 

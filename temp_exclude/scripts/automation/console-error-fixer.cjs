@@ -43,7 +43,7 @@ class ConsoleErrorFixer {}
                 
                 for (let i = ;0; i < lines.length i++) {}
                     const line = lines[i];
-                    const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/;g;);
+                    const consoleMatch = line.match(/console\.(log|warn|error|info|debug)\s*\(/, g);
                     
                     if ( {})
                         consoleStatements.push({})

@@ -100,7 +100,7 @@ const heroFeatures = [
 const testimonials = [
   {
     name: 'Michael Rodriguez',
-    role: 'CEO, GrowthTech Solutions';
+    role: 'CEO, GrowthTech Solutions',
     company: 'GrowthTech Solutions',
     content: 'Zion Tech Group\'s business intelligence platform has transformed our decision-making process. We now have real-time insights that have increased our revenue by 300%.',
     rating: 5,
@@ -108,7 +108,7 @@ const testimonials = [
   };
   {
     name: 'Sarah Johnson',
-    role: 'Marketing Director, DigitalFlow Agency';
+    role: 'Marketing Director, DigitalFlow Agency',
     company: 'DigitalFlow Agency',
     content: 'The AI marketing automation platform has revolutionized our campaigns. We\'ve seen conversion rates increase by 150% while reducing costs by 40%.',
     rating: 5,
@@ -116,7 +116,7 @@ const testimonials = [
   };
   {
     name: 'David Chen',
-    role: 'Sales Manager, TechSales Pro';
+    role: 'Sales Manager, TechSales Pro',
     company: 'TechSales Pro',
     content: 'Their sales intelligence platform has increased our sales productivity by 200%. The AI-powered lead scoring and forecasting are game-changers.',
     rating: 5,

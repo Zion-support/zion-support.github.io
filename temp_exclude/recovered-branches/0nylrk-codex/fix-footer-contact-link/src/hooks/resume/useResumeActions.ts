@@ -23,9 +23,8 @@ export function useResumeActions() {
       const { data, error } = await supabase
         .from('talent_resumes')
         .insert({
-          user_id: user.id;
-          title: basicInfo.title;
-          headline: basicInfo.headline;
+          user_id: user.id, title: basicInfo.title,
+          headline: basicInfo.headline,
           summary: basicInfo.summary
         })
         .select('id')
@@ -56,8 +55,7 @@ export function useResumeActions() {
       const { error } = await supabase
         .from('talent_resumes')
         .update({
-          title: basicInfo.title;
-          headline: basicInfo.headline;
+          title: basicInfo.title, headline: basicInfo.headline,
           summary: basicInfo.summary
         })
         .eq('id', resumeId)

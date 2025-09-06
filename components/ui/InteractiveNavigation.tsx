@@ -4,14 +4,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 interface NavigationItem {
-  name: string;
-  href: string;
+  name: string, href: string,
   submenu?: NavigationItem[];
 }
 
 interface InteractiveNavigationProps {
-  items: NavigationItem[];
-  className?: string;
+  items: NavigationItem[], className?: string,
 }
 
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({ 

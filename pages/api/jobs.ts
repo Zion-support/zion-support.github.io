@@ -33,17 +33,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const nowIso = new Date().toISOString();
 
     const job: Job = {
-      id: uuidv4();
-      title: String(title);
-      description: String(description);
-      category: String(category || '');
-      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [];
-      budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined;
-      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined;
-      deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined;
-      clientEmail: String(clientEmail);
-      status: 'New';
-      createdAtIso: nowIso;
+      id: uuidv4(), title: String(title),
+      description: String(description), category: String(category || ''),
+      requiredSkills: Array.isArray(requiredSkills) ? requiredSkills.map(String) : [], budgetMinUsd: typeof budgetMinUsd === 'number' ? budgetMinUsd : undefined,
+      budgetMaxUsd: typeof budgetMaxUsd === 'number' ? budgetMaxUsd : undefined, deliveryDeadlineIso: deliveryDeadlineIso ? String(deliveryDeadlineIso) : undefined,
+      clientEmail: String(clientEmail), status: 'New',
+      createdAtIso: nowIso,
       updatedAtIso: nowIso};
 
     // Auto-assign category via AI (placeholder). In production, call OpenAI based on description/skills.

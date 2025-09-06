@@ -112,7 +112,7 @@ const generateTestReport = (testResults) => {}
       "total": testResults.passed + testResults.failed;
     },
     "build": {}
-      success: true;
+      success: true,
     };
   };
   

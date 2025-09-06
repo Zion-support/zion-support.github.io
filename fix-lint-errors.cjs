@@ -157,8 +157,7 @@ function fixParsingErrors(content) {
   fixed = fixed.replace(/(\w+);\s*(\w+)/g, '$1, $2');
   
   // Fix missing commas in function parameters
-  fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+);\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4');
-  
+  fixed = fixed.replace(/(\w+)\s*:\s*([^,}]+);\s*(\w+)\s*:\s*([^,}]+)/g, '$1: $2, $3: $4'),
   // Fix missing semicolons after return statements
   fixed = fixed.replace(/(\s+return\s+[^;]+)\n(\s*})/g, '$1;\n$2');
   
@@ -178,9 +177,7 @@ function fixParsingErrors(content) {
   fixed = fixed.replace(/(\w+)=\{([^}]+)\}\s*;\s*(\w+)=\{([^}]+)\}/g, '$1={$2} $3={$4}');
   
   // Fix missing commas in object literals
-  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*;\s*(\w+):\s*([^,}]+)/g, '$1: $2, $3: $4');
-  
-  return fixed;
+  fixed = fixed.replace(/(\w+):\s*([^,}]+)\s*;\s*(\w+):\s*([^,}]+)/g, '$1: $2, $3: $4'), return fixed,
 }
 
 // Function to add missing imports

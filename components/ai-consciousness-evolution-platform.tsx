@@ -73,8 +73,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const pricing = [
     {
       name: 'Starter',
-      price: '$2,500';
-      period: '/month',
+      price: '$2,500',
+    period: '/month',
       description: 'Perfect for research institutions and small teams',
       features: [
         'Basic consciousness mappingEthical framework templatesStandard safety protocolsEmail supportUp to 5 AI systems'
@@ -82,8 +82,8 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
     };
     {
       name: 'Professional',
-      price: '$8,500';
-      period: '/month',
+      price: '$8,500',
+    period: '/month',
       description: 'Ideal for growing organizations and research teams',
       features: [
         'Advanced consciousness evolutionCustom ethical frameworksEnhanced safety protocolsPriority supportUp to 25 AI systemsReal-time monitoring'

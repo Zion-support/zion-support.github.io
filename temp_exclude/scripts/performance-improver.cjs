@@ -34,8 +34,8 @@ class PerformanceImprover {
 }
 
 if (require.main === module) {
-  const improver = new PerformanceImprover();
-  improver.improve();
-}
+    const improver = new PerformanceImprover(),
+    improver.improve()
+  }
 
 module.exports = PerformanceImprover;

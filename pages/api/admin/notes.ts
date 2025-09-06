@@ -1,16 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { randomUUID } from 'crypto';
 type Note = {
-  id: string;
-  targetType: string;
-  targetId: string;
-  text: string;
-  authorId: string;
+  id: string, targetType: string,
+  targetId: string, text: string,
+  authorId: string,
   createdAt: number
 };
 
-const notesStore: Note[] = [];
-
+const notesStore: Note[] = [],
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const isAdmin = req.headers['x-admin'] === 'true';
   if (!isAdmin) return res.status(403).json({ error: 'Admin only' });

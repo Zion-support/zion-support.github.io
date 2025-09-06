@@ -20,8 +20,8 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Space Resource Mining',
       description: 'Advanced mining operations for extraterrestrial resources',
       features: ['Asteroid MiningResource ExtractionProcessing AutomationTransport Logistics'],
-      price: '$4,999';
-      period: 'month',
+      price: '$4,999',
+    period: 'month',
       popular: true,
       icon: <Rocket className="w-8 h-8" />
     };
@@ -30,8 +30,8 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'AI-Powered Space Technology',
       description: 'Intelligent space systems with autonomous capabilities',
       features: ['Autonomous NavigationAI Mission ControlPredictive AnalyticsReal-time Optimization'],
-      price: '$3,999';
-      period: 'month',
+      price: '$3,999',
+    period: 'month',
       popular: false,
       icon: <Brain className="w-8 h-8" />
     };
@@ -40,8 +40,8 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Brain-Computer Interface',
       description: 'Neural interface technology for space applications',
       features: ['Neural ControlCognitive EnhancementRemote OperationSafety Protocols'],
-      price: '$3,499';
-      period: 'month',
+      price: '$3,499',
+    period: 'month',
       popular: false,
       icon: <Cpu className="w-8 h-8" />
     };
@@ -50,8 +50,8 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Autonomous Vehicle AI',
       description: 'AI-powered autonomous systems for space vehicles',
       features: ['Path PlanningObstacle AvoidanceMission ExecutionAdaptive Learning'],
-      price: '$2,999';
-      period: 'month',
+      price: '$2,999',
+    period: 'month',
       popular: false,
       icon: <Settings className="w-8 h-8" />
     };
@@ -60,8 +60,8 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Quantum Space Communications',
       description: 'Secure quantum communication for space missions',
       features: ['Quantum EncryptionInterplanetary LinksSecure Data TransferQuantum Networks'],
-      price: '$3,799';
-      period: 'month',
+      price: '$3,799',
+    period: 'month',
       popular: false,
       icon: <Globe className="w-8 h-8" />
     };
@@ -70,8 +70,8 @@ const SpaceTechnologyPage: React.FC = () => {
       name: 'Space Infrastructure',
       description: 'Comprehensive space infrastructure solutions',
       features: ['Orbital StationsLunar BasesMars ColoniesSustainable Systems'],
-      price: '$5,999';
-      period: 'month',
+      price: '$5,999',
+    period: 'month',
       popular: false,
       icon: <Building className="w-8 h-8" />
     }

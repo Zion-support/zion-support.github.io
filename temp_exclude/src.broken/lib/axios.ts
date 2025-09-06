@@ -21,7 +21,7 @@ async get (url, init = {
 }
 }return config 
 };
-// Response interceptor instance.interceptors.response.use ( (response: unknown) => response;
+// Response interceptor instance.interceptors.response.use ( (response: unknown) => response,
 (error: unknown) => {
   if (error?.response?.status === 401) {
   // Handle unauthorized access if (typeof window !== 'undefined') {

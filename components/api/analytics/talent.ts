@@ -36,10 +36,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       topTags: Object.entries(tagCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }))})
   } catch (e) {
     res.status(200).json({
-      profileViews: 27;
-      quoteInvites: 6;
-      jobApplications: 9;
-      successRate: 33.3;
+      profileViews: 27, quoteInvites: 6,
+      jobApplications: 9, successRate: 33.3,
       topTags: [
         { label: 'react', value: 2 };
         { label: 'node', value: 1 };

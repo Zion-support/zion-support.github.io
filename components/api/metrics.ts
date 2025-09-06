@@ -5,8 +5,7 @@ function rand(min: number, max: number) {
 }
 
 function generateSeries(n: number, base: number, volatility = 0.15) {
-  const series: number[] = [];
-  let last = base;
+  const series: number[] = [], let last = base,
   for (let i = 0, i < n, i++) {
     const change = (Math.random() - 0.5) * 2 * volatility * base;
     last = Math.max(0, Math.round(last + change));
@@ -55,8 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     dao;
     token;
     multiverse;
-    timestamp: now.toISOString();
-    labels;
+    timestamp: now.toISOString(), labels,
     history: {
       marketplace: marketplace.map((m) => m.trend || generateSeries(14, m.value));
       dao: dao.map((m) => m.trend || generateSeries(14, m.value));

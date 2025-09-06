@@ -329,34 +329,28 @@ class DeploymentSystem {}
   async executeDeployment(environment, deployment) {}
   try {log(`Executing deployment to ${environment.name}`);
       // Step "1": Update source code;
-      log("Step 1: Updating source code");
-      // Step 1: Update source code;
-      log("Step 1: Updating source code");
-      const updateResult = await this.updateSourceCode(environment);
+      log("Step 1: Updating source code"), // Step 1: Update source code,
+      log("Step 1: Updating source code"), const updateResult = await this.updateSourceCode(environment),
       if (!updateResult.success) {}
   return updateResult};
       ;
       // Step "2": Install dependencies;
-      log("Step 2: Installing dependencies");
-      const installResult = await this.installDependencies(environment);
+      log("Step 2: Installing dependencies"), const installResult = await this.installDependencies(environment),
       if (!installResult.success) {}
   return installResult};
       ;
       // Step "3": Build application;
-      log("Step 3: Building application");
-      const buildResult = await this.buildApplication(environment);
+      log("Step 3: Building application"), const buildResult = await this.buildApplication(environment),
       if (!buildResult.success) {}
   return buildResult};
       ;
       // Step "4": Deploy with PM2;
-      log("Step 4: Deploying with PM2");
-      const pm2Result = await this.deployWithPM2(environment);
+      log("Step 4: Deploying with PM2"), const pm2Result = await this.deployWithPM2(environment),
       if (!pm2Result.success) {}
   return pm2Result};
       ;
       // Step "5": Verify deployment;
-      log("Step 5: Verifying deployment");
-      const verifyResult = await this.verifyDeployment(environment);
+      log("Step 5: Verifying deployment"), const verifyResult = await this.verifyDeployment(environment),
       return {}
   success: true,
         "steps": {}
@@ -370,8 +364,7 @@ class DeploymentSystem {}
       return {}
   "success": false,
       // Step "5": Verify deployment;
-      log("Step 5: Verifying deployment");
-      const verifyResult = await this.verifyDeployment(environment);
+      log("Step 5: Verifying deployment"), const verifyResult = await this.verifyDeployment(environment),
       return {}
   success: true,
         "steps": {}
@@ -629,36 +622,29 @@ class DeploymentSystem {}
   async executeRollback(environment, rollback) {}
   try {log(`Executing rollback for ${environment.name}`);
       // Step "1": Revert to previous commit;
-      log("Step 1: Reverting to previous commit");
-      const revertResult = await this.revertToPreviousCommit(environment);
+      log("Step 1: Reverting to previous commit"), const revertResult = await this.revertToPreviousCommit(environment),
       if (!revertResult.success) {}
   return revertResult};
       ;
       // Step "2": Reinstall dependencies;
-      log("Step 2: Reinstalling dependencies");
-      // Step 2: Reinstall dependencies;
-      log("Step 2: Reinstalling dependencies");
-      const installResult = await this.installDependencies(environment);
+      log("Step 2: Reinstalling dependencies"), // Step 2: Reinstall dependencies,
+      log("Step 2: Reinstalling dependencies"), const installResult = await this.installDependencies(environment),
       if (!installResult.success) {}
   return installResult};
       ;
       // Step "3": Rebuild application;
-      log("Step 3: Rebuilding application");
-      const buildResult = await this.buildApplication(environment);
+      log("Step 3: Rebuilding application"), const buildResult = await this.buildApplication(environment),
       if (!buildResult.success) {}
   return buildResult};
       ;
       // Step "4": Redeploy with PM2;
-      log("Step 4: Redeploying with PM2");
-      // Step 4: Redeploy with PM2;
-      log("Step 4: Redeploying with PM2");
-      const pm2Result = await this.deployWithPM2(environment);
+      log("Step 4: Redeploying with PM2"), // Step 4: Redeploy with PM2,
+      log("Step 4: Redeploying with PM2"), const pm2Result = await this.deployWithPM2(environment),
       if (!pm2Result.success) {}
   return pm2Result};
       ;
       // Step "5": Verify rollback;
-      log("Step 5: Verifying rollback");
-      const verifyResult = await this.verifyDeployment(environment);
+      log("Step 5: Verifying rollback"), const verifyResult = await this.verifyDeployment(environment),
       return {}
   success: true,
         "steps": {}

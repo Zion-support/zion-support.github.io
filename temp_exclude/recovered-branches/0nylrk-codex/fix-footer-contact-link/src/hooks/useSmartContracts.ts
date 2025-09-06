@@ -21,14 +21,10 @@ export function useSmartContracts() {
       
       const { data, error } = await supabase.functions.invoke("generate-smart-contract", {
         body: {
-          talentName: talent.full_name;
-          clientName: clientName;
-          projectName: values.projectName;
-          scopeSummary: values.scopeSummary;
-          startDate: values.startDate.toISOString();
-          endDate: values.endDate?.toISOString();
-          paymentTerms: values.paymentTerms;
-          paymentAmount: values.paymentAmount;
+          talentName: talent.full_name, clientName: clientName,
+          projectName: values.projectName, scopeSummary: values.scopeSummary,
+          startDate: values.startDate.toISOString(), endDate: values.endDate?.toISOString(),
+          paymentTerms: values.paymentTerms, paymentAmount: values.paymentAmount,
           additionalClauses: values.additionalClauses || []}
       });
       
@@ -49,7 +45,7 @@ export function useSmartContracts() {
   };
   
   const deploySmartContract = async (
-    contractCode: string;
+    contractCode: string,
     options: DeploymentOptions
   ): Promise<SmartContractInfo | null> => {
     if (!user?.id) {
@@ -66,15 +62,12 @@ export function useSmartContracts() {
         Math.floor(Math.random() * 16).toString(16)).join('')}`;
       
       const mockSmartContractInfo: SmartContractInfo = {
-        id: crypto.randomUUID();
-        transactionHash: mockTransactionHash;
-        networkName: options.network;
-        blockNumber: Math.floor(Math.random() * 1000000);
+        id: crypto.randomUUID(), transactionHash: mockTransactionHash,
+        networkName: options.network, blockNumber: Math.floor(Math.random() * 1000000),
         deployedAddress: `0x${Array.from({length: 40}, () => 
           Math.floor(Math.random() * 16).toString(16)).join('')}`;
-        contractType: 'escrow';
-        createdAt: new Date().toISOString();
-        createdBy: user.id;
+        contractType: 'escrow', createdAt: new Date().toISOString(),
+        createdBy: user.id,
         status: 'deployed'
       };
       

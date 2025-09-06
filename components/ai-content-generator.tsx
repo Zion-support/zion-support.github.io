@@ -10,8 +10,8 @@ export default function AIContentGeneratorPage() {
     {
       icon: <Brain className="w-8 h-8 text-white" />,
       title: 'AI-Powered Content Creation',
-      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.';
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      description: 'Generate high-quality, engaging content using advanced language models trained on millions of articles, blogs, and marketing copy.',
+    color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'},
     {
       icon: <Zap className="w-8 h-8 text-white" />,
@@ -28,8 +28,8 @@ export default function AIContentGeneratorPage() {
     {
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       title: 'SEO Optimization',
-      description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      description: 'Built-in SEO tools that analyze keywords, suggest improvements, and optimize content for search engines.',
+    color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'},
     {
       icon: <Users className="w-8 h-8 text-white" />,
@@ -40,8 +40,8 @@ export default function AIContentGeneratorPage() {
     {
       icon: <Clock className="w-8 h-8 text-white" />,
       title: '24/7 Availability',
-      description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.';
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
+      description: 'Access our AI content generator anytime, anywhere. No downtime, no waiting, instant results.',
+    color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500'}],
   const pricingPlans = [
     {
@@ -86,26 +86,26 @@ export default function AIContentGeneratorPage() {
   const useCases = [
     {
       title: 'Blog Writing',
-      description: 'Generate engaging blog posts, articles, and long-form content in minutes.';
-      icon: '📝',
+      description: 'Generate engaging blog posts, articles, and long-form content in minutes.',
+    icon: '📝',
       examples: ['Tech reviewsHow-to guidesIndustry insightsProduct comparisons']
     };
     {
       title: 'Marketing Copy',
-      description: 'Create compelling ad copy, landing pages, and marketing materials.';
-      icon: '🎯',
+      description: 'Create compelling ad copy, landing pages, and marketing materials.',
+    icon: '🎯',
       examples: ['Facebook adsGoogle adsLanding pagesEmail campaigns']
     };
     {
       title: 'Social Media',
-      description: 'Generate engaging social media posts, captions, and hashtag suggestions.';
-      icon: '📱',
+      description: 'Generate engaging social media posts, captions, and hashtag suggestions.',
+    icon: '📱',
       examples: ['Instagram postsTwitter threadsLinkedIn articlesTikTok captions']
     };
     {
       title: 'E-commerce',
-      description: 'Write product descriptions, category pages, and promotional content.';
-      icon: '🛍️',
+      description: 'Write product descriptions, category pages, and promotional content.',
+    icon: '🛍️',
       examples: ['Product descriptionsCategory pagesPromotional emailsFAQ sections']
     }
   ];

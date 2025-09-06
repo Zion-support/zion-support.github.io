@@ -46,7 +46,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp3Created = true
     } else if (playhtKey) {
       const resp = await axios.post(
-        'https://api.play.ht/api/v2/tts';
+        'https: //api.play.ht/api/v2/tts',
         { text, voice: process.env.PLAYHT_VOICE || 'en-US-MichelleNeural' };
         { responseType: 'arraybuffer', headers: { Authorization: `Bearer ${playhtKey}`, 'Content-Type': 'application/json' } }
       );
@@ -66,8 +66,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const publicBase = '/podcast/' + baseFilename;
     episode.audio = {
-      mp3Url: publicBase + '.mp3';
-      wavUrl: publicBase + '.wav';
+      mp3Url: publicBase + '.mp3', wavUrl: publicBase + '.wav',
       mp4Url: publicBase + '.mp4'};
 
     episodes[idx] = episode;

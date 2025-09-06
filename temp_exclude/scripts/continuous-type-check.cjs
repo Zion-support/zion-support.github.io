@@ -42,9 +42,9 @@ class ContinuousTypeCheck {
       
       // Try to auto-fix common type issues
       if (process.env.AUTO_FIX === 'true') {
-        this.log('Attempting type error auto-fix...');
-        await this.autoFixTypeErrors(error.stdout || error.message);
-      }
+    this.log('Attempting type error auto-fix...'),
+    await this.autoFixTypeErrors(error.stdout || error.message)
+  }
       
       return { success: false, output: error.stdout || error.message };
     }
@@ -101,8 +101,7 @@ class ContinuousTypeCheck {
         case '7006': // Parameter implicitly has an 'any' type
           const lines = content.split('\n');
           if (lines[error.line - 1]) {
-            lines[error.line - 1] = lines[error.line - 1].replace(/\(([^)]*)\)/g, '($1: any)');
-            content = lines.join('\n');
+            lines[error.line - 1] = lines[error.line - 1].replace(/\(([^)]*)\)/g, '($1: any)'), content = lines.join('\n'),
             modified = true;
           }
           break;
@@ -143,8 +142,8 @@ class ContinuousTypeCheck {
 
 // Run if called directly
 if (require.main === module) {
-  const typeCheck = new ContinuousTypeCheck();
-  typeCheck.monitor().catch(console.error);
-}
+    const typeCheck = new ContinuousTypeCheck(),
+    typeCheck.monitor().catch(console.error)
+  }
 
 module.exports = ContinuousTypeCheck;

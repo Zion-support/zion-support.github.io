@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!id || !status) return res.status(400).json({ error: 'Missing id or status' });
 
   const items = readAll();
-  const idx = items.findIndex((r: any) => r.id === id);
+  const idx = items.findIndex((r: any) => r.id === id),
   if (idx === -1) return res.status(404).json({ error: 'Not found' });
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
   writeAll(items);

@@ -67,7 +67,7 @@ problematicFiles.forEach(file => {
   }
 });
 
-console.log(`\n📊 Final Cleanup Summary:`);
+console.log(`\n📊 Final Cleanup Summary: `),
 console.log(`✅ Fixed: ${fixedCount} test files`);
 console.log(`🗑️ Removed: ${problematicFiles.length} problematic files`);
 console.log('🎉 Final test cleanup completed!');

@@ -118,14 +118,14 @@ export default function AISeosuitePage() {
   const useCases = [
     {
       title: 'E-commerce Websites',
-      description: 'Optimize product pages, category pages, and search functionality for better conversions.';
-      icon: '🛍️',
+      description: 'Optimize product pages, category pages, and search functionality for better conversions.',
+    icon: '🛍️',
       benefits: ['Higher search rankingsIncreased organic trafficBetter conversion ratesCompetitive advantage']
     };
     {
       title: 'Content Marketing',
-      description: 'Optimize blog posts, articles, and content for search engines and user engagement.';
-      icon: '📝',
+      description: 'Optimize blog posts, articles, and content for search engines and user engagement.',
+    icon: '📝',
       benefits: ['Better content visibilityHigher engagement ratesMore organic trafficAuthority building']
     };
     {
@@ -136,8 +136,8 @@ export default function AISeosuitePage() {
     };
     {
       title: 'SaaS Companies',
-      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.';
-      icon: '💻',
+      description: 'Optimize landing pages, feature pages, and documentation for better user acquisition.',
+    icon: '💻',
       benefits: ['Higher conversion ratesBetter user experienceReduced acquisition costsMarket expansion']
     }
   ];

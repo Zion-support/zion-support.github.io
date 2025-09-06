@@ -18,12 +18,9 @@ export interface UserDetails {
 export interface UserProfile {
   id?: string;
   displayName?: string;
-  email: string;
-  userType: string;
-  profileComplete: boolean;
-  createdAt: string;
-  updatedAt: string;
-  avatar_url?: string;
+  email: string, userType: string,
+  profileComplete: boolean, createdAt: string,
+  updatedAt: string, avatar_url?: string,
   bio?: string;
   avatarUrl?: string;
   headline?: string;
@@ -34,18 +31,15 @@ export interface UserProfile {
 
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {
-  user: UserDetails | null;
-  isLoading: boolean;
-  isAuthenticated: boolean;
+  user: UserDetails | null, isLoading: boolean,
+  isAuthenticated: boolean,
   login: (email: string, password: string) => Promise<{ data?: any, error?: any }>;
   signup: (email: string, password: string, userData?: any) => Promise<{ error?: any }>;
-  logout: () => Promise<void>;
+  logout: () => Promise<void>,
   resetPassword: (email: string) => Promise<{ error?: any }>;
   updateProfile: (data: Partial<UserDetails>) => Promise<{ error?: any }>;
-  loginWithGoogle: () => Promise<void>;
-  loginWithFacebook: () => Promise<void>;
-  loginWithTwitter: () => Promise<void>;
-  loginWithWeb3: () => Promise<void>;
+  loginWithGoogle: () => Promise<void>, loginWithFacebook: () => Promise<void>,
+  loginWithTwitter: () => Promise<void>, loginWithWeb3: () => Promise<void>,
   signIn?: (email: string, password: string) => Promise<{ error: any }>;
   signOut?: () => Promise<void>;
   signUp?: (email: string, password: string, userData?: Partial<UserDetails>) => Promise<{ error: any }>

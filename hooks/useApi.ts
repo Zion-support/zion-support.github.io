@@ -2,15 +2,12 @@ import { useState, useEffect, useCallback } from 'react';
 
 interface UseApiOptions {
   immediate?: boolean;
-  onSuccess?: (data: any) => void;
-  onError?: (error: Error) => void;
+  onSuccess?: (data: any) => void, onError?: (error: Error) => void,
 }
 
 interface UseApiResult<T> {
-  data: T | null;
-  loading: boolean;
-  error: Error | null;
-  execute: (...args: any[]) => Promise<void>;
+  data: T | null, loading: boolean,
+  error: Error | null, execute: (...args: any[]) => Promise<void>,
 }
 
 export function useApi<T = any>(
@@ -19,8 +16,7 @@ export function useApi<T = any>(
 ): UseApiResult<T> {
 interface UseApiOptions<T = unknown> {
   immediate?: boolean;
-  onSuccess?: (data: T) => void;
-  onError?: (error: Error) => void;
+  onSuccess?: (data: T) => void, onError?: (error: Error) => void,
 }
 
 export const useApi = <T = unknown>(
@@ -60,9 +56,8 @@ export const useApi = <T = unknown>(
 
 export default useApi;
 interface ApiState<T> {
-  data: T | null;
-  loading: boolean;
-  error: string | null;
+  data: T | null, loading: boolean,
+  error: string | null,
 }
 
 interface UseApiOptions {
@@ -70,7 +65,7 @@ interface UseApiOptions {
 }
 
 export function useApi<T>(
-  apiCall: () => Promise<T>;
+  apiCall: () => Promise<T>,
   options: UseApiOptions = {}
 ): ApiState<T> & { refetch: () => void } {
   const [data, setData] = useState<T | null>(null);
@@ -82,9 +77,9 @@ export function useApi<T>(
     setError(null);
     
     try {
-      const result = await apiCall();
-      setData(result);
-    } catch (err) {
+    const result = await apiCall(),
+    setData(result)
+  } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
       setLoading(false);

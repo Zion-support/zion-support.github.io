@@ -23,42 +23,42 @@ const industries = [;
     icon: Heart,
     description: 'HIPAA-compliant solutions for healthcare providers and medical institutions,',
     features: ['HIPAA Compliance, 'Patient Data Security', 'Telemedicine Platforms', 'Medical Records Management'],',
-    color: 'from-red-500 to-pink-500'';
+    color: 'from-red-500 to-pink-500'',
   },
   {}
     name: 'Finance,',
     icon: CreditCard,
     description: 'Secure financial technology and payment solutions for banks and fintech companies,',
     features: ['PCI DSS Compliance, 'Fraud Detection', 'Payment Processing', 'Risk Management'],',
-    color: 'from-green-500 to-emerald-500'';
+    color: 'from-green-500 to-emerald-500'',
   },
   {}
     name: 'E-commerce,',
     icon: Globe,
     description: 'Scalable online retail and marketplace platforms for digital commerce,',
     features: ['Scalable Architecture, 'Payment Integration', 'Inventory Management', 'Customer Analytics'],',
-    color: 'from-blue-500 to-cyan-500'';
+    color: 'from-blue-500 to-cyan-500'',
   },
   {}
     name: 'Education,',
     icon: GraduationCap,
     description: 'Learning management and educational technology solutions,',
     features: ['LMS Development, 'Student Analytics', 'Online Assessment', 'Content Management'],',
-    color: 'from-purple-500 to-indigo-500'';
+    color: 'from-purple-500 to-indigo-500'',
   },
   {}
     name: 'Manufacturing,',
     icon: Factory,
     description: 'IoT and automation solutions for manufacturing and industrial operations,',
     features: ['IoT Integration, 'Process Automation', 'Quality Control', 'Supply Chain Management'],',
-    color: 'from-orange-500 to-red-500'';
+    color: 'from-orange-500 to-red-500'',
   },
   {}
     name: 'Real Estate,',
     icon: Home,
     description: 'Property management and real estate technology platforms,',
     features: ['Property Management, 'Virtual Tours', 'Market Analytics', 'Transaction Management'],',
-    color: 'from-yellow-500 to-orange-500'';
+    color: 'from-yellow-500 to-orange-500'',
   }
 ;];
 
@@ -102,25 +102,20 @@ export default function IndustrySolutionsPage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <BarChart3 className="w-16 h-16 text-indigo-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Solutions</span>";
+                <h1 className="text-5xl md: text-6xl font-bold">", Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">Solutions</span>",
                 </h1>;
               </div>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8">";
-                Specialized technology solutions tailored to meet the unique requirements of different industries;
+              <p className="text-xl md: text-2xl text-gray-300 mb-8">", Specialized technology solutions tailored to meet the unique requirements of different industries,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact"";
-                  className="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
+                  className="px-8 py-4 bg-indigo-600 hover: bg-indigo-700 text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center"", >,
                   Discuss Your Industry;
                   <ArrowRight className="ml-2 w-5 h-5" />";
                 </Link>;
                 <Link;
                   href="/case-studies"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"";
-                >;
+                  className="px-8 py-4 border border-white text-white hover: bg-white hover:text-gray-900 rounded-lg font-semibold transition-colors"", >,
                   Industry Case Studies;
                 </Link>;
               </div>;
@@ -131,7 +126,7 @@ export default function IndustrySolutionsPage() {
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-2 md: grid-cols-4 gap-8">",
               {stats.map((stat, index) => (,
                 <motion.div}),
                   key={stat.label}
@@ -157,15 +152,14 @@ export default function IndustrySolutionsPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Expertise</span>";
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Industry <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Expertise</span>",
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {industries.map((industry, index) => (,
                 <motion.div}),
                   key={industry.name}
@@ -207,15 +201,14 @@ export default function IndustrySolutionsPage() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Capabilities</span>";
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">Capabilities</span>",
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Industry-specific capabilities that ensure your solutions meet regulatory requirements and business objectives;
               </p>;
             </motion.div>;
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {capabilities.map((capability, index) => (,
                 <motion.div}),
                   key={capability.title}
@@ -240,24 +233,20 @@ export default function IndustrySolutionsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready for Industry-Specific Solutions?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready for Industry-Specific Solutions?,
               </h2>;
               <p className="text-xl text-indigo-100 mb-8 max-w-3xl mx-auto">";
                 Let's discuss how our industry expertise can help you build solutions that meet your specific regulatory and business requirements';
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link;
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link,
                   href="/contact"";
-                  className="px-8 py-4 bg-white text-indigo-600 hover:bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"";
-                >;
+                  className="px-8 py-4 bg-white text-indigo-600 hover: bg-gray-100 rounded-lg font-semibold transition-colors inline-flex items-center justify-center"", >,
                   Schedule Industry Consultation;
                   <ArrowRight className="ml-2 w-5 h-5" />";
                 </Link>;
                 <Link;
                   href="/solutions"";
-                  className="px-8 py-4 border border-white text-white hover:bg-white hover:text-indigo-600 rounded-lg font-semibold transition-colors"";
-                >;
+                  className="px-8 py-4 border border-white text-white hover: bg-white hover:text-indigo-600 rounded-lg font-semibold transition-colors"", >,
                   View All Solutions;
                 </Link>;
               </div>;

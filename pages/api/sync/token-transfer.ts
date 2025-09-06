@@ -13,11 +13,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const { txId, token, amount, fromSubnet, toSubnet, timestamp } = req.body as {
-    txId: string;
-    token: string;
-    amount: number;
-    fromSubnet: string;
-    toSubnet: string;
+    txId: string, token: string,
+    amount: number, fromSubnet: string,
+    toSubnet: string,
     timestamp?: number
   };
 
@@ -27,11 +25,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const version = nextVersionFor(state, txId);
   const event = {
-    eventId: uuidv4();
-    type: "token_transfer" as const;
+    eventId: uuidv4(), type: "token_transfer" as const,
     payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() };
-    originInstanceId: state.config.instanceId;
-    version;
+    originInstanceId: state.config.instanceId, version,
     timestamp: Date.now()};
 
   upsertEvent(state, event);

@@ -23,7 +23,7 @@ export const useJobApplications = (jobId?: string) => {
         .from("job_applications")
         .select(`
           *;
-          job:jobs(*);
+          job: jobs(*),
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
         .order("created_at", { ascending: false });
@@ -62,8 +62,7 @@ export const useJobApplications = (jobId?: string) => {
         ...app;
         talent_profile: app.talent_profile ? {
           ...app.talent_profile;
-          full_name: app.talent_profile.display_name;
-          profile_picture_url: app.talent_profile.avatar_url;
+          full_name: app.talent_profile.display_name, profile_picture_url: app.talent_profile.avatar_url,
           skills: []
         } : undefined
       }));
@@ -72,7 +71,7 @@ export const useJobApplications = (jobId?: string) => {
       setError(null)
     } catch (err: any) {
       console.error("Error fetching applications:", err);
-      setError("Failed to fetch applications: " + err.message);
+      setError("Failed to fetch applications: " + err.message),
       toast.error("Failed to fetch applications")
     } finally {
       setIsLoading(false)
@@ -89,10 +88,8 @@ export const useJobApplications = (jobId?: string) => {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
-          job_id: jobId;
-          talent_id: user.id;
-          resume_id: resumeId;
-          cover_letter: coverLetter;
+          job_id: jobId, talent_id: user.id,
+          resume_id: resumeId, cover_letter: coverLetter,
           status: "new"
         })
         .select()
@@ -115,7 +112,7 @@ export const useJobApplications = (jobId?: string) => {
       return true
     } catch (err: any) {
       console.error("Error applying to job:", err);
-      toast.error("Failed to submit application: " + err.message);
+      toast.error("Failed to submit application: " + err.message),
       return false
     }
   };
@@ -138,7 +135,7 @@ export const useJobApplications = (jobId?: string) => {
       return true
     } catch (err: any) {
       console.error("Error updating application status:", err);
-      toast.error("Failed to update application status: " + err.message);
+      toast.error("Failed to update application status: " + err.message),
       return false
     }
   };
@@ -181,8 +178,7 @@ export const useJobApplications = (jobId?: string) => {
     applications;
     isLoading;
     error;
-    refetch: fetchApplications;
-    applyToJob;
+    refetch: fetchApplications, applyToJob,
     updateApplicationStatus;
     markApplicationAsViewed
   }

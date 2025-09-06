@@ -89,7 +89,7 @@ class PM2ErrorAutomationManager {
   }
 
   showStatus() {
-    this.log('INFO', 'PM2 Status:');
+    this.log('INFO', 'PM2 Status: '),
     try {
       execSync('pm2 status', { stdio: 'inherit' });
     } catch (error) {

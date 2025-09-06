@@ -128,15 +128,14 @@ ${pages.map(page => `  <url>`})
 Allow: /
 
 # Sitemap;
-Sitemap: https://ziontechgroup.com/sitemap.xml;
-# Disallow admin and private areas;
+Sitemap: https://ziontechgroup.com/sitemap.xml, # Disallow admin and private areas,
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
 
 # Crawl delay;
-Crawl-delay: 1;";
+Crawl-delay: 1, ",
 
         fs.writeFileSync(robotsPath, robotsContent);
         this.log('Robots.txt generated');

@@ -217,7 +217,7 @@ class AIPerformancePredictor {
     this.log('💡 Generating performance recommendations...');
 
     return [
-      'Implement comprehensive monitoring';
+    'Implement comprehensive monitoring';
       'Set up performance budgets';
       'Use performance profiling tools';
       'Implement automated performance testing';
@@ -225,9 +225,9 @@ class AIPerformancePredictor {
       'Use CDN for static content';
       'Implement caching strategies';
       'Monitor Core Web Vitals';
-      'Use performance optimization techniques';
-      'Regular performance audits';
-    ];
+      'Use performance optimization techniques',
+    'Regular performance audits'
+  ];
   }
 
   generateReport(analysis) {

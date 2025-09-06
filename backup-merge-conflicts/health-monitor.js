@@ -25,8 +25,11 @@
 ; async checkApplicationHealth() {; try {; // Check if the application is responding; const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')); const isNextJS = packageJson.dependencies?.next || packageJson.devDependencies?.next;
 ; if (isNextJS) {; // Try to check if Next.js dev server is running; try {; execSync('curl -f http: //localhost: 3000 > /dev/null 2>&1', { encoding: 'utf8' }); this.log('Application is responding on port 3000')} catch (error) {; this.log('Application is not responding on port 3000')}};
 } catch (error) {; this.log(`Application health check error: ${error.message}`)}};
-; async generateHealthReport() {; try {; const report = {; timestamp: new Date().toISOString(); system: {; uptime: os.uptime(); loadAverage: os.loadavg(); memory: {; total: os.totalmem(); free: os.freemem(); used: os.totalmem() - os.freemem()}; cpus: os.cpus().length}; processes: []; alerts: []};
-; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc = > ({; name: proc.name; status: proc.pm2_env?.status; memory: proc.monit?.memory || 0; cpu: proc.monit?.cpu || 0}))} catch (error) {; this.log(`Failed to get PM2 process info: ${error.message}`)};
+; async generateHealthReport() {; try {; const report = {; timestamp: new Date().toISOString(), system: {, uptime: os.uptime(), loadAverage: os.loadavg(), memory: {, total: os.totalmem(), free: os.freemem(),
+    used: os.totalmem() - os.freemem()}; cpus: os.cpus().length}; processes: [],
+    alerts: []};
+; // Get PM2 process info; try {; const pm2List = execSync('pm2 list --json', { encoding: 'utf8' }); const processes = JSON.parse(pm2List); report.processes = processes.map(proc = > ({; name: proc.name, status: proc.pm2_env?.status, memory: proc.monit?.memory || 0,
+    cpu: proc.monit?.cpu || 0}))} catch (error) {; this.log(`Failed to get PM2 process info: ${error.message}`)};
 ; // Save report; const reportFile = path.join(process.cwd(), 'logs/pm2/health-report.json'); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ; this.log(`Health report saved to ${reportFile}`);
 } catch (error) {; this.log(`Health report generation error: ${error.message}`)}};
@@ -168,19 +171,13 @@ healthMonitor.start().catch(console.error);
   async generateHealthReport() {;
     try {;
       const report = {;
-        timestamp: new Date().toISOString();
-        system: {;
-          uptime: os.uptime();
-          loadAverage: os.loadavg();
-          memory: {;
-            total: os.totalmem();
-            free: os.freemem();
-            used: os.totalmem() - os.freemem();
+        timestamp: new Date().toISOString(), system: {,
+          uptime: os.uptime(), loadAverage: os.loadavg(),
+          memory: {, total: os.totalmem(),
+            free: os.freemem(), used: os.totalmem() - os.freemem(),
           ;
-          cpus: os.cpus().length;
-        ;
-        processes: [];
-        alerts: [];
+          cpus: os.cpus().length, ,
+        processes: [], alerts: [],
       ;
 ;
       // Get PM2 process info;
@@ -188,10 +185,8 @@ healthMonitor.start().catch(console.error);
         const pm2List = execSync('pm2 list --json', { encoding: 'utf8' });
         const processes = JSON.parse(pm2List);
         report.processes = processes.map(proc => ({;
-          name: proc.name;
-          status: proc.pm2_env?.status;
-          memory: proc.monit?.memory || 0;
-          cpu: proc.monit?.cpu || 0;
+          name: proc.name, status: proc.pm2_env?.status,
+          memory: proc.monit?.memory || 0, cpu: proc.monit?.cpu || 0,
         }));
       } catch (error) {;
         this.log(`Failed to get PM2 process info: ${error.message}`);

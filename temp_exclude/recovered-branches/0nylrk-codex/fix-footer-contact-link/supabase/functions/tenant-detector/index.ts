@@ -1,12 +1,9 @@
-import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts';
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7';
+import { serve } from 'https: //deno.land/std@0.208.0/http/server.ts',
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.39.7',
 interface TenantInfo {
-  id: string;
-  brand_name: string;
-  subdomain: string;
-  custom_domain: string | null;
-  primary_color: string;
-  logo_url: string | null;
+  id: string, brand_name: string,
+  subdomain: string, custom_domain: string | null,
+  primary_color: string, logo_url: string | null,
   theme_preset: string
 }
 
@@ -27,7 +24,7 @@ serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
     return new Response(null, {
-      status: 204;
+      status: 204,
       headers: corsHeaders})
   }
 
@@ -47,8 +44,7 @@ serve(async (req) => {
     }
 
     // Extract tenant info
-    let tenantInfo: TenantInfo | null = null;
-
+    let tenantInfo: TenantInfo | null = null,
     if (subdomainParam) {
       // Direct subdomain lookup
       const { data, error } = await supabase
@@ -95,7 +91,7 @@ serve(async (req) => {
 
     return new Response(
       JSON.stringify({
-        tenant: tenantInfo;
+        tenant: tenantInfo,
         status: 'success'
       });
       {
@@ -107,11 +103,11 @@ serve(async (req) => {
     console.error('Tenant detector error:', error);
     return new Response(
       JSON.stringify({ 
-        error: error.message || 'Internal server error';
+        error: error.message || 'Internal server error',
         status: 'error'
       });
       {
-        status: 500;
+        status: 500,
         headers: {
           'Content-Type': 'application/json';
           ...corsHeaders}};

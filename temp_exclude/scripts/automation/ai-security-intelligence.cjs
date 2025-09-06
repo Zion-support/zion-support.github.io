@@ -175,7 +175,7 @@ class AISecurityIntelligence {
     this.log('💡 Generating security recommendations...');
 
     return [
-      'Implement automated security scanning in CI/CD';
+    'Implement automated security scanning in CI/CD';
       'Set up dependency vulnerability monitoring';
       'Add security headers middleware';
       'Implement rate limiting';
@@ -183,9 +183,9 @@ class AISecurityIntelligence {
       'Use HTTPS everywhere';
       'Implement proper authentication and authorization';
       'Add security logging and monitoring';
-      'Regular security audits and penetration testing';
-      'Implement secure coding practices';
-    ];
+      'Regular security audits and penetration testing',
+    'Implement secure coding practices'
+  ];
   }
 
   generateReport(analysis) {

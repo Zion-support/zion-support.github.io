@@ -1,7 +1,7 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -57,8 +57,7 @@ serve(async (req) => {
 
     // 2. Fetch resume details if a resume_id is provided
     let resumeContent = "";
-    let resumeSkills: string[] = [];
-    
+    let resumeSkills: string[] = [],
     if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
@@ -116,21 +115,21 @@ serve(async (req) => {
 
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"};
       body: JSON.stringify({
-        model: "gpt-4o-mini";
+        model: "gpt-4o-mini",
         messages: [
           {
-            role: "system";
+            role: "system",
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details 
             provided, focusing on skills, experience, and qualifications.`
           };
           {
-            role: "user";
+            role: "user",
             content: `
             # Job Details
             Title: ${jobTitle}
@@ -197,10 +196,8 @@ serve(async (req) => {
     const { error: updateError } = await supabase
       .from("job_applications")
       .update({
-        match_score: matchResult.score;
-        match_summary: matchResult.summary;
-        match_breakdown: matchResult.breakdown;
-        match_suggestion: matchResult.suggestion;
+        match_score: matchResult.score, match_summary: matchResult.summary,
+        match_breakdown: matchResult.breakdown, match_suggestion: matchResult.suggestion,
         scored_at: new Date().toISOString()
       })
       .eq("id", applicationId);

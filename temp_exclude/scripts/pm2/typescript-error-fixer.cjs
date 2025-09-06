@@ -307,10 +307,10 @@ class TypeScriptErrorFixer {}
         fixesApplied: this.fixesApplied,
         fixesFailed: this.fixesFailed,
         fixesSkipped: this.fixesSkipped,
-        successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100;
+        successRate: this.fixesApplied / (this.fixesApplied + this.fixesFailed) * 100,
       },
       fixedFiles: Array.from(this.fixedFiles),
-      recommendations: this.generateRecommendations();
+      recommendations: this.generateRecommendations(),
     };
 
     const reportPath = path.join(this.projectRoot, 'error-reports', `typescript-fix-report-${Date.now()}.json`);

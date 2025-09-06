@@ -46,11 +46,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       funnel})
   } catch (e) {
     res.status(200).json({
-      jobsPosted: 3;
-      quotesReceived: 2;
-      timeToHireDays: 3.1;
-      talentViewed: 12;
-      shortlisted: 5;
+      jobsPosted: 3, quotesReceived: 2,
+      timeToHireDays: 3.1, talentViewed: 12,
+      shortlisted: 5,
       funnel: [
         { label: 'Post', value: 3 };
         { label: 'Invite', value: 2 };

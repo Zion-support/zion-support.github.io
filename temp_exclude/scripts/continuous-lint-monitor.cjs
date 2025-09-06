@@ -79,8 +79,8 @@ class ContinuousLintMonitor {
 
 // Run if called directly
 if (require.main === module) {
-  const monitor = new ContinuousLintMonitor();
-  monitor.monitor().catch(console.error);
-}
+    const monitor = new ContinuousLintMonitor(),
+    monitor.monitor().catch(console.error)
+  }
 
 module.exports = ContinuousLintMonitor;

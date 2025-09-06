@@ -2,8 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 interface ButtonProps {
-  children: React.ReactNode;
-  href?: string;
+  children: React.ReactNode, href?: string,
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
   variant?: "primary" | "secondary" | "outline";

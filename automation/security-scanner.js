@@ -12,7 +12,10 @@
 ; if (stat.isDirectory() && !item.startsWith(".") && item ! = = "node_modules") {; walkDir(fullPath)} else if (item.endsWith(".ts") || item.endsWith(".tsx") || item.endsWith(".js") || item.endsWith(".jsx")) {; files.push(fullPath)}})};
 ; walkDir(srcDir)};
 ; return files};
-; async generateReport() {; const report = {; timestamp: new Date().toISOString(); vulnerabilities: this.vulnerabilities; recommendations: [; "Run npm audit fix to address vulnerabilities"; "Review and remove any hardcoded secrets"; "Use environment variables for sensitive data"; "Implement proper authentication and authorization"; "Regularly update dependencies"; ]};
+; async generateReport() {; const report = {; timestamp: new Date().toISOString(), vulnerabilities: this.vulnerabilities, recommendations: [
+    , "Run npm audit fix to address vulnerabilities", "Review and remove any hardcoded secrets"; "Use environment variables for sensitive data"; "Implement proper authentication and authorization",
+    "Regularly update dependencies"
+  ]};
 ; const reportFile = path.join(__dirname, "reports", "security-report.json"); fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)); this.log(`Security report saved to: ${reportFile}`)};
 ; async run() {; this.log("🔒 Starting Security Scanner");
 ; try {; await this.runSecurityAudit(); await this.checkSecrets(); await this.generateReport();
@@ -113,15 +116,14 @@ export default SecurityScanner;
 ;
   async generateReport() {;
     const report = {;
-      timestamp: new Date().toISOString();
-      vulnerabilities: this.vulnerabilities;
-      recommendations: [;
-        "Run npm audit fix to address vulnerabilities";
+      timestamp: new Date().toISOString(), vulnerabilities: this.vulnerabilities,
+      recommendations: [
+    , "Run npm audit fix to address vulnerabilities",
         "Review and remove any hardcoded secrets";
         "Use environment variables for sensitive data";
-        "Implement proper authentication and authorization";
-        "Regularly update dependencies";
-      ];
+        "Implement proper authentication and authorization",
+    "Regularly update dependencies"
+  ];
 };
 ;
     const reportFile = path.join(__dirname, "reports", "security-report.json");

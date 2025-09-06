@@ -48,8 +48,7 @@ export function useReviews(projectId?: string) {
     } catch (err: any) {
       console.error("Error fetching reviews:", err);
       toast({
-        title: "Error";
-        description: "Failed to load reviews";
+        title: "Error", description: "Failed to load reviews",
         variant: "destructive"})
     } finally {
       setIsLoading(false)
@@ -80,8 +79,7 @@ export function useReviews(projectId?: string) {
     } catch (err: any) {
       console.error("Error fetching user reviews:", err);
       toast({
-        title: "Error";
-        description: "Failed to load reviews";
+        title: "Error", description: "Failed to load reviews",
         variant: "destructive"})
     } finally {
       setIsLoading(false)
@@ -90,10 +88,8 @@ export function useReviews(projectId?: string) {
   
   // Submit a review
   const submitReview = async (review: {
-    project_id: string;
-    reviewee_id: string;
-    rating: number;
-    review_text: string;
+    project_id: string, reviewee_id: string,
+    rating: number, review_text: string,
     communication_rating?: number;
     quality_rating?: number;
     timeliness_rating?: number;
@@ -102,8 +98,7 @@ export function useReviews(projectId?: string) {
   }) => {
     if (!user) {
       toast({
-        title: "Error";
-        description: "You must be logged in to submit a review";
+        title: "Error", description: "You must be logged in to submit a review",
         variant: "destructive"});
       return false
     }
@@ -122,7 +117,7 @@ export function useReviews(projectId?: string) {
       if (error) throw error;
       
       toast({
-        title: "Success";
+        title: "Success",
         description: "Your review has been submitted and is pending approval"});
       
       setUserReview(data);
@@ -133,13 +128,11 @@ export function useReviews(projectId?: string) {
       // Check for unique constraint violation
       if (err.code === "23505") {
         toast({
-          title: "Error";
-          description: "You have already submitted a review for this project";
+          title: "Error", description: "You have already submitted a review for this project",
           variant: "destructive"})
       } else {
         toast({
-          title: "Error";
-          description: "Failed to submit review";
+          title: "Error", description: "Failed to submit review",
           variant: "destructive"})
       }
       return false
@@ -165,7 +158,7 @@ export function useReviews(projectId?: string) {
       if (error) throw error;
       
       toast({
-        title: "Success";
+        title: "Success",
         description: "Your review has been updated"});
       
       if (userReview) {
@@ -176,8 +169,7 @@ export function useReviews(projectId?: string) {
     } catch (err: any) {
       console.error("Error updating review:", err);
       toast({
-        title: "Error";
-        description: "Failed to update review";
+        title: "Error", description: "Failed to update review",
         variant: "destructive"});
       return false
     } finally {
@@ -193,31 +185,28 @@ export function useReviews(projectId?: string) {
       const { error } = await supabase
         .from("review_reports")
         .insert({
-          review_id: reviewId;
-          reporter_id: user.id;
+          review_id: reviewId, reporter_id: user.id,
           reason});
         
       if (error) {
         // Check for unique constraint violation
         if (error.code === "23505") {
           toast({
-            title: "Error";
-            description: "You have already reported this review";
+            title: "Error", description: "You have already reported this review",
             variant: "destructive"})
         } else {
           throw error
         }
       } else {
         toast({
-          title: "Report Submitted";
+          title: "Report Submitted",
           description: "Thank you. Our team will review your report"});
         return true
       }
     } catch (err: any) {
       console.error("Error reporting review:", err);
       toast({
-        title: "Error";
-        description: "Failed to report review";
+        title: "Error", description: "Failed to report review",
         variant: "destructive"})
     }
     

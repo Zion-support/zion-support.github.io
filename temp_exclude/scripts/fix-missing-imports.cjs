@@ -5,8 +5,8 @@ const path = require('path');
 
 class MissingImportsFixer {
   constructor() {
-    this.projectRoot = process.cwd();
-    this.fixedFiles = [];
+    this.projectRoot = process.cwd(),
+    this.fixedFiles = []
   }
 
   log(message, type = 'INFO') {
@@ -20,7 +20,7 @@ class MissingImportsFixer {
       let modified = false;
       
       // Find all icon references in the file
-      const iconMatches = content.match(/icon:\s*([A-Z][a-zA-Z0-9]+)/g);
+      const iconMatches = content.match(/icon: \s*([A-Z][a-zA-Z0-9]+)/g),
       if (iconMatches) {
         const icons = iconMatches.map(match => match.replace('icon: ', ''));
         
@@ -97,7 +97,7 @@ class MissingImportsFixer {
         await this.fixFile(file);
       }
       
-      this.log(`\n📊 Missing Imports Fix Summary:`);
+      this.log(`\n📊 Missing Imports Fix Summary: `),
       this.log(`  - Files processed: ${files.length}`);
       this.log(`  - Files fixed: ${this.fixedFiles.length}`);
       

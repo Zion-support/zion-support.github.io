@@ -5,8 +5,7 @@ import { getFraudStore, newEvent } from '../../../utils/fraud/store';
 import { extractClientIp } from '../../../utils/ip';
 import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
 import { sendWarningEmail } from '../../../utils/email';
-const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'];
-
+const allowedSources: MonitoredSource[] = ['signupjob_postmessagequotereview'],
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
@@ -33,7 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
 
     // Privacy opt-out check for content analysis
-    let gpt: GptClassification | undefined = undefined;
+    let gpt: GptClassification | undefined = undefined,
     if (content && userId) {
       const privacy = await store.getPrivacySettings(userId);
       if (!privacy.monitoringContentAnalysisOptOut) {
@@ -43,8 +42,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       gpt = await classifyWithGPT(content, source)
     }
 
-    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
-    if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
+    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE'), if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS',
     if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
 
     const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
@@ -53,7 +51,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ...event;
       heuristic;
       gpt;
-      autoHidden: !!autoHide;
+      autoHidden: !!autoHide,
       status: 'PENDING'};
 
     const saved = await store.saveEvent(stored);
@@ -62,19 +60,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const prior = await store.countFlaggedForUser(userId);
       if (prior <= 1 && combinedLabel !== 'SAFE') {
         await sendWarningEmail({
-          toUserId: userId;
-          subject: 'Marketplace warning: suspicious activity detected';
+          toUserId: userId, subject: 'Marketplace warning: suspicious activity detected',
           body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`})
       }
     }
 
     res.status(200).json({
-      id: saved.id;
-      flagged: combinedLabel !== 'SAFE';
-      label: combinedLabel;
-      heuristic;
+      id: saved.id, flagged: combinedLabel !== 'SAFE',
+      label: combinedLabel, heuristic,
       gpt;
-      autoHidden: saved.autoHidden;
+      autoHidden: saved.autoHidden,
       createdAt: saved.createdAt})
   } catch (e: any) {
     res.status(500).json({ error: 'Internal error', details: e?.message || String(e) })

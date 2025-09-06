@@ -81,9 +81,9 @@ class ConflictResolver {
     const conflictedFiles = await this.findConflictedFiles();
     
     if (conflictedFiles.length === 0) {
-      this.log('✅ No merge conflicts found!');
-      return true;
-    }
+    this.log('✅ No merge conflicts found!'),
+    return true
+  }
 
     this.log(`Found ${conflictedFiles.length} files with conflicts`);
 
@@ -91,12 +91,12 @@ class ConflictResolver {
       await this.resolveConflictsInFile(file);
     }
 
-    this.log(`\n📊 Resolution Summary:`);
+    this.log(`\n📊 Resolution Summary: `),
     this.log(`✅ Successfully resolved: ${this.resolvedFiles.length} files`);
     this.log(`❌ Failed to resolve: ${this.failedFiles.length} files`);
 
     if (this.failedFiles.length > 0) {
-      this.log('\n❌ Failed files:');
+      this.log('\n❌ Failed files: '),
       this.failedFiles.forEach(({ file, error }) => {
         this.log(`  - ${file}: ${error}`);
       });
@@ -146,12 +146,12 @@ async function main() {
     const success = await resolver.resolveAllConflicts();
     
     if (success) {
-      resolver.log('🎉 All merge conflicts resolved successfully!');
-      process.exit(0);
-    } else {
-      resolver.log('⚠️ Some conflicts could not be resolved automatically');
-      process.exit(1);
-    }
+    resolver.log('🎉 All merge conflicts resolved successfully!'),
+    process.exit(0)
+  } else {
+    resolver.log('⚠️ Some conflicts could not be resolved automatically'),
+    process.exit(1)
+  }
   } catch (error) {
     resolver.log(`❌ Error during conflict resolution: ${error.message}`);
     process.exit(1);

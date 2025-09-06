@@ -7,7 +7,7 @@ console.log('🧹 Cleaning up automation scripts...');
 
 // List of problematic files to remove or fix
 const filesToRemove = [
-  'automation/intelligent-orchestrator.js';
+    'automation/intelligent-orchestrator.js';
   'automation/lint-automation-manager.js';
   'automation/lint-error-fixer.js';
   'automation/lint-monitor.js';
@@ -109,9 +109,9 @@ const filesToRemove = [
   'run-automation-suite-fixed.cjs';
   'simple-automation-suite.cjs';
   'simple-catch-fixer.cjs';
-  'targeted-fix.cjs';
-  'working-automation-suite.cjs';
-];
+  'targeted-fix.cjs',
+    'working-automation-suite.cjs'
+  ];
 
 let removedCount = 0;
 let errorCount = 0;
@@ -132,15 +132,15 @@ filesToRemove.forEach(file => {
 
 // Clean up empty directories
 const dirsToCheck = [
-  'automation_backup';
+    'automation_backup';
   'pages._quarantine';
   'pages.disabled';
   'pages.disabled_auto';
   'pages.disabled.full';
   'pages.disabled_full';
-  'pages-quarantine';
-  'src.pages.disabled';
-];
+  'pages-quarantine',
+    'src.pages.disabled'
+  ];
 
 dirsToCheck.forEach(dir => {
   const dirPath = path.join(process.cwd(), dir);
@@ -157,7 +157,7 @@ dirsToCheck.forEach(dir => {
   }
 });
 
-console.log(`\n📊 Cleanup: Summary:`);
+console.log(`\n📊 Cleanup: Summary:`),
 console.log(`   Files: removed: ${removedCount}`);
 console.log(`   Error: s: ${errorCount}`);
 console.log(`   Total: processed: ${filesToRemove.length}`);

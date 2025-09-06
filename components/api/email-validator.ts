@@ -1,22 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface EmailValidationResult {
-  email: string;
-  isValid: boolean;
-  score: number;
-  suggestions: string[];
+  email: string, isValid: boolean,
+  score: number, suggestions: string[],
   details: {
-    hasValidFormat: boolean;
-    hasValidDomain: boolean;
-    hasValidMX: boolean;
-    isDisposable: boolean;
-    isRoleBased: boolean;
+    hasValidFormat: boolean, hasValidDomain: boolean,
+    hasValidMX: boolean, isDisposable: boolean,
+    isRoleBased: boolean,
     isFreeProvider: boolean
   }
 }
 
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
@@ -65,7 +61,7 @@ export default async function handler(
     if (isFreeProvider) score -= 10;
 
     // Generate suggestions
-    const suggestions: string[] = [];
+    const suggestions: string[] = [],
     if (!hasValidFormat) {
       suggestions.push('Check email format (should be user@domain.com)')
     }
@@ -81,7 +77,7 @@ export default async function handler(
 
     const result: EmailValidationResult = {
       email;
-      isValid: score >= 70;
+      isValid: score >= 70,
       score: Math.max(0, score);
       suggestions;
       details: {

@@ -4,10 +4,8 @@ import path from 'path';
 import https from 'https';
 
 const SOURCES = [
-  'https://hnrss.org/frontpage';
-  'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml';
-  'https://www.reddit.com/r/MachineLearning/.rss';
-];
+  'https: //hnrss.org/frontpage', 'https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml',
+  'https: //www.reddit.com/r/MachineLearning/.rss', ],
 
 function ensureDir(dirPath) { if (!fs.existsSync(dirPath)) fs.mkdirSync(dirPath, { recursive: true }); }
 
@@ -45,7 +43,10 @@ function renderDigest(sourceResults) {
   lines.push('');
   for (const s of sourceResults) {
     lines.push(`## ${s.url}`);
-    if (!s.ok) { lines.push('- Failed to fetch'); continue; }
+    if (!s.ok) {
+    lines.push('- Failed to fetch'),
+    continue
+  }
     for (const it of s.items) lines.push(`- ${it.title} (${it.link})`);
     lines.push('');
   }

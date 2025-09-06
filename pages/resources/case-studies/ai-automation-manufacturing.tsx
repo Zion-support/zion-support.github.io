@@ -7,7 +7,7 @@ export default function ResourceCaseStudyPage() {
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
-    results: '40% increase in production efficiency, 60% reduction in downtime';
+    results: '40% increase in production efficiency, 60% reduction in downtime',
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
   };
 

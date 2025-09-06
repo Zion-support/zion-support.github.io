@@ -53,8 +53,8 @@ export default function ITServices() {
     {
       id: 3,
       name: 'DevSecOps & Security Automation',
-      description: 'Integrated development, security, and operations with automated security testing and deployment.';
-      category: 'devops',
+      description: 'Integrated development, security, and operations with automated security testing and deployment.',
+    category: 'devops',
       features: ['CI/CD PipelinesSecurity ScanningAutomated TestingInfrastructure as Code'],
       price: '$199/month',
       popular: false,

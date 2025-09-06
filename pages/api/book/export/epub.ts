@@ -22,9 +22,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const tmpPath = `/tmp/${randomUUID()}.epub`;
   const options = {
-    title: project.meta.title;
-    author: project.meta.author;
-    publisher: project.meta.publisher || 'Zion';
+    title: project.meta.title, author: project.meta.author,
+    publisher: project.meta.publisher || 'Zion',
     content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
 
   try {

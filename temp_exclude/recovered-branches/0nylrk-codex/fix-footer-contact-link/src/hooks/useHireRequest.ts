@@ -5,20 +5,17 @@ import { toast } from "@/hooks/use-toast";
 import { TalentProfile } from "@/types/talent";
 export interface HireRequestData {
   talent: {
-    id: string;
-    full_name: string;
-    professional_title: string;
+    id: string, full_name: string,
+    professional_title: string,
     email?: string
   };
   requester: {
-    name: string;
-    email: string;
+    name: string, email: string,
     id?: string
   };
   project: {
-    overview: string;
-    timeline: string;
-    budgetMin: number;
+    overview: string, timeline: string,
+    budgetMin: number,
     budgetMax: number
   }
 }
@@ -41,7 +38,7 @@ export function useHireRequest() {
       
       // Show success message
       toast({
-        title: "Request Submitted";
+        title: "Request Submitted",
         description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`});
       
       return { success: true, requestId: response?.request_id }
@@ -55,8 +52,7 @@ export function useHireRequest() {
       setError(errorMessage);
       
       toast({
-        title: "Error";
-        description: errorMessage;
+        title: "Error", description: errorMessage,
         variant: "destructive"});
       
       return { success: false, error: errorMessage }

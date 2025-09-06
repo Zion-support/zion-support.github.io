@@ -205,9 +205,9 @@ class UltimateAIDecisionEngine {
     return new Promise((resolve, reject) => {
       pm2.list((err, processes) => {
         if (err) {
-          reject(err);
-          return;
-        }
+    reject(err),
+    return
+  }
         resolve(processes);
       });
     });
@@ -334,8 +334,7 @@ class UltimateAIDecisionEngine {
       case 'softmax':
         // Simplified softmax for single value
         return 1 / (1 + Math.exp(-value));
-      default:
-        return value;
+      default: return value,
     }
   }
 
@@ -360,8 +359,7 @@ class UltimateAIDecisionEngine {
           reasons.push('Low available memory');
         }
         break;
-      default:
-        reasons.push('System operating normally');
+      default: reasons.push('System operating normally'),
     }
     
     return reasons.join(', ');
@@ -461,9 +459,9 @@ class UltimateAIDecisionEngine {
     try {
       // Force garbage collection
       if (global.gc) {
-        global.gc();
-        this.log('🗑️ Forced garbage collection');
-      }
+    global.gc(),
+    this.log('🗑️ Forced garbage collection')
+  }
       
       // Restart processes with high memory usage
       const processes = await this.getProcessList();
@@ -545,9 +543,9 @@ class UltimateAIDecisionEngine {
     
     for (let i = 0; i < weights.length; i++) {
       for (let j = 0; j < weights[i].length; j++) {
-        const gradient = (prediction[j] - target[j]) * features[i];
-        weights[i][j] -= learningRate * gradient;
-      }
+    const gradient = (prediction[j] - target[j]) * features[i],
+    weights[i][j] -= learningRate * gradient
+  }
     }
   }
 
@@ -640,8 +638,8 @@ class UltimateAIDecisionEngine {
 
 // Run the engine
 if (require.main === module) {
-  const engine = new UltimateAIDecisionEngine();
-  engine.run();
-}
+    const engine = new UltimateAIDecisionEngine(),
+    engine.run()
+  }
 
 module.exports = UltimateAIDecisionEngine;

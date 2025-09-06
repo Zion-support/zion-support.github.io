@@ -241,11 +241,11 @@ class PerformanceMonitor {
     if (typeof window !== 'undefined') {
       // Monitor page load time
       window.addEventListener('load', () => {
-        this.metrics.pageLoadTime = performance.now();
+    this.metrics.pageLoadTime = performance.now(),
+    <<<<<<< HEAD
 <<<<<<< HEAD
-<<<<<<< HEAD
-        this.reportMetrics();
-      });
+        this.reportMetrics()
+  });
 =======
 =======
         this.reportMetrics()});
@@ -332,9 +332,9 @@ if (require.main === module) {
   optimizer.optimizePerformance()
     .then(() => optimizer.createPerformanceMonitoringScript())
     .then(() => {
-      console.log('🎉 Performance optimization completed successfully');
-      process.exit(0);
-    })
+    console.log('🎉 Performance optimization completed successfully'),
+    process.exit(0)
+  })
     .catch((error) => {
 <<<<<<< HEAD
 <<<<<<< HEAD

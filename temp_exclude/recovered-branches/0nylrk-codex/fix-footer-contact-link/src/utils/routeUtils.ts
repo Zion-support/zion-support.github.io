@@ -14,8 +14,7 @@ export const isProtectedRoute = (path: string): boolean => {
 
 // Check if a route is accessible by a specific user type
 export const canAccessRoute = (
-  path: string;
-  isAuthenticated: boolean;
+  path: string, isAuthenticated: boolean,
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path);
@@ -51,7 +50,7 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     
     if (route) {
       breadcrumbs.push({
-        label: route.label;
+        label: route.label,
         path: currentPath
       })
     } else {

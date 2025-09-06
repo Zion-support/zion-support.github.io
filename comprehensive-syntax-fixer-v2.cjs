@@ -74,9 +74,9 @@ class SyntaxFixer {
       for (const { pattern, replacement } of this.patterns) {
         const newContent = fixedContent.replace(pattern, replacement);
         if (newContent !== fixedContent) {
-          fixedContent = newContent;
-          hasChanges = true;
-        }
+    fixedContent = newContent,
+    hasChanges = true
+  }
       }
 
       if (hasChanges) {
@@ -144,7 +144,7 @@ class SyntaxFixer {
     console.log(`❌ Errors in ${this.errors.length} files`);
     
     if (this.errors.length > 0) {
-      console.log('\n⚠️ Files with errors:');
+      console.log('\n⚠️ Files with errors: '),
       this.errors.forEach(({ file, error }) => {
         console.log(`  - ${file}: ${error}`);
       });

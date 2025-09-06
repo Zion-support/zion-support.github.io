@@ -132,9 +132,9 @@ class DeploymentAutomator {
       // Pre-deployment checks
       const preChecksPassed = await this.preDeploymentChecks();
       if (!preChecksPassed) {
-        this.log('❌ Pre-deployment checks failed. Aborting deployment.');
-        return;
-      }
+    this.log('❌ Pre-deployment checks failed. Aborting deployment.'),
+    return
+  }
 
       // Build and optimize
       this.deploymentResults.push(await this.buildApplication());

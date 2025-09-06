@@ -314,7 +314,7 @@ class GitWorkflowAutomator {
       await this.saveReport(report);
       const duration = Date.now() - this.startTime;
       // Log summary
-      this.log('\n📊 Git Workflow Report:');
+      this.log('\n📊 Git Workflow Report: '),
       this.log(`Branches cleaned: ${report.summary.branchesCleaned}`);
       this.log(`Conflicts resolved: ${report.summary.conflictsResolved}`);
       this.log(`Pull requests found: ${report.summary.pullRequestsFound}`);
@@ -322,7 +322,7 @@ class GitWorkflowAutomator {
       this.log(`Total errors: ${report.summary.totalErrors}`);
       this.log(`Duration: ${duration}ms`);
       if (report.recommendations.length > 0) {
-        this.log('\n💡 Recommendations:');
+        this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);

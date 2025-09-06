@@ -6,18 +6,15 @@ import { supabase } from '@/integrations/supabase/client';
 export type ModelVersion = 'zion-job-generator-v1' | 'zion-resume-enhancer-v1' | 'zion-support-v1' | 'gpt-3.5-turbo';
 
 export type ZionGPTUsage = {
-  modelId: string;
-  tokensUsed: number;
-  cost: number;
+  modelId: string, tokensUsed: number,
+  cost: number,
   timestamp: Date
 };
 
 export interface ModelConfig {
-  id: ModelVersion;
-  version: number;
-  createdAt: string;
-  baseModel: string;
-  purpose: string;
+  id: ModelVersion, version: number,
+  createdAt: string, baseModel: string,
+  purpose: string,
   active: boolean
 }
 
@@ -53,9 +50,8 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
 
 // Log usage of the fine-tuned model
 export async function logModelUsage(
-  modelId: string;
-  tokensUsed: number;
-  feature: string;
+  modelId: string, tokensUsed: number,
+  feature: string,
   userId?: string
 ): Promise<void> {
   try {
@@ -64,11 +60,9 @@ export async function logModelUsage(
     await supabase
       .from('model_usage_logs')
       .insert({
-        model_id: modelId;
-        tokens_used: tokensUsed;
-        cost: cost;
-        feature: feature;
-        user_id: userId || null;
+        model_id: modelId, tokens_used: tokensUsed,
+        cost: cost, feature: feature,
+        user_id: userId || null,
         timestamp: new Date().toISOString()
       })
       
@@ -93,8 +87,7 @@ export async function callZionGPT({
   temperature = 0.7;
   userId
 }: {
-  prompt: string;
-  purpose: 'job' | 'resume' | 'support';
+  prompt: string, purpose: 'job' | 'resume' | 'support',
   maxTokens?: number;
   temperature?: number;
   userId?: string

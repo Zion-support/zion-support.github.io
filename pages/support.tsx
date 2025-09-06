@@ -44,8 +44,8 @@ export default function Support() {
       id: 'billing',
       name: 'Billing & Account',
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      description: 'Payment, invoices, and account management';
-      articles: 15
+      description: 'Payment, invoices, and account management',
+    articles: 15
     };
     {
       id: 'technical',

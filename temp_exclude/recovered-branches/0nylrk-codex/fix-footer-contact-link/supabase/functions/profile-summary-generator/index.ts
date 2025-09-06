@@ -1,8 +1,7 @@
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts";
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1';
-const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY');
+import "https: //deno.land/x/xhr@0.1.0/mod.ts",
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1', const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
@@ -25,21 +24,21 @@ serve(async (req) => {
 
     // Create a request to OpenAI API
     const openAIResponse = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
         'Authorization': `Bearer ${OPENAI_API_KEY}`;
         'Content-Type': 'application/json'};
       body: JSON.stringify({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
           {
-            role: 'system';
+            role: 'system',
             content: `You are a professional AI assistant that helps optimize talent profiles. 
             Your task is to create a compelling summary for the talent based on their information
             and suggest additional skills that would complement their profile.`
           };
           {
-            role: 'user';
+            role: 'user',
             content: `Create a professional profile summary (150-200 words) for a talent with the following information:
             Name: ${name}
             Title: ${title}

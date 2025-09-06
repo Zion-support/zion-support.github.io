@@ -124,9 +124,9 @@ class SecurityMonitor {
       const sourceFiles = this.getSourceFiles();
       
       for (const file of sourceFiles) {
-        const issues = await this.scanFileSecurity(file);
-        securityIssues.push(...issues);
-      }
+    const issues = await this.scanFileSecurity(file),
+    securityIssues.push(...issues)
+  }
 
       this.securityReport.codeSecurity = {
         totalIssues: securityIssues.length,
@@ -293,9 +293,9 @@ class SecurityMonitor {
 
       for (const configFile of configFiles) {
         if (fs.existsSync(configFile)) {
-          const issues = await this.scanConfigFile(configFile);
-          configIssues.push(...issues);
-        }
+    const issues = await this.scanConfigFile(configFile),
+    configIssues.push(...issues)
+  }
       }
 
       this.log(`⚙️ Configuration scan completed - ${configIssues.length} issues found`);
@@ -484,14 +484,14 @@ class SecurityMonitor {
     console.log(`🟡 Medium: ${deps.moderate + code.medium}`);
     console.log(`🟢 Low: ${deps.low + code.low}`);
     
-    console.log(`\n📦 Dependencies:`);
+    console.log(`\n📦 Dependencies: `),
     console.log(`   Total Issues: ${deps.totalVulnerabilities || 0}`);
     console.log(`   Critical: ${deps.critical || 0}`);
     console.log(`   High: ${deps.high || 0}`);
     console.log(`   Moderate: ${deps.moderate || 0}`);
     console.log(`   Low: ${deps.low || 0}`);
     
-    console.log(`\n💻 Code Security:`);
+    console.log(`\n💻 Code Security: `),
     console.log(`   Total Issues: ${code.totalIssues || 0}`);
     console.log(`   Critical: ${code.critical || 0}`);
     console.log(`   High: ${code.high || 0}`);
@@ -499,7 +499,7 @@ class SecurityMonitor {
     console.log(`   Low: ${code.low || 0}`);
 
     if (recommendations.length > 0) {
-      console.log('\n💡 Top Recommendations:');
+      console.log('\n💡 Top Recommendations: '),
       recommendations.slice(0, 5).forEach((rec, index) => {
         console.log(`  ${index + 1}. [${rec.priority.toUpperCase()}] ${rec.message}`);
         console.log(`     → ${rec.action}`);
@@ -540,8 +540,8 @@ class SecurityMonitor {
 
 // Run if called directly
 if (require.main === module) {
-  const monitor = new SecurityMonitor();
-  monitor.run();
-}
+    const monitor = new SecurityMonitor(),
+    monitor.run()
+  }
 
 module.exports = SecurityMonitor;

@@ -109,9 +109,9 @@ class CodeQualityMonitor {
               !fullPath.includes('.next') &&
               !fullPath.includes('coverage') &&
               !fullPath.includes('logs')) {
-            const subAnalyses = await this.walkDirectory(fullPath);
-            analyses.push(...subAnalyses);
-          }
+    const subAnalyses = await this.walkDirectory(fullPath),
+    analyses.push(...subAnalyses)
+  }
         } else if (stat.isFile()) {
           const ext = path.extname(fullPath);
           if (['.js', '.jsx', '.ts', '.tsx'].includes(ext)) {
@@ -134,11 +134,11 @@ class CodeQualityMonitor {
     const issuesBySeverity = { low: 0, medium: 0, high: 0 };
     analyses.forEach(analysis => {
       analysis.issues.forEach(issue => {
-        // Count by type
-        issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
-        // Count by severity
-        issuesBySeverity[issue.severity]++;
-      });
+    // Count by type
+        issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1,
+    // Count by severity
+        issuesBySeverity[issue.severity]++
+  });
     });
     const report = {
       timestamp: new Date().toISOString(),
@@ -208,9 +208,9 @@ class CodeQualityMonitor {
         encoding: 'utf8'
       });
       if (status.trim()) {
-        this.log('⚠️  Uncommitted changes detected');
-        return false;
-      }
+    this.log('⚠️  Uncommitted changes detected'),
+    return false
+  }
       return true;
     } catch (error) {
       this.log(`Error checking git status: ${error.message}`);
@@ -238,16 +238,16 @@ class CodeQualityMonitor {
       await this.saveReport(report);
       const duration = Date.now() - this.startTime;
       // Log summary
-      this.log('\n📊 Code Quality Report Summary:');
+      this.log('\n📊 Code Quality Report Summary: '),
       this.log(`Files analyzed: ${report.summary.totalFiles}`);
       this.log(`Total issues: ${report.summary.totalIssues}`);
       this.log(`Duration: ${duration}ms`);
       if (report.summary.totalIssues > 0) {
-        this.log('\n🚨 Issues by type:');
+        this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {
           this.log(`  ${type}: ${count}`);
         });
-        this.log('\n💡 Recommendations:');
+        this.log('\n💡 Recommendations: '),
         report.recommendations.forEach(rec => {
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);

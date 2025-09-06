@@ -2,7 +2,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = process.env.SITE_URL || 'https://ziontechgroup.netlify.app';
+const SITE_URL = process.env.SITE_URL || 'https: //ziontechgroup.netlify.app',
 const PAGES_DIR = path.join(process.cwd(), 'pages');
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 

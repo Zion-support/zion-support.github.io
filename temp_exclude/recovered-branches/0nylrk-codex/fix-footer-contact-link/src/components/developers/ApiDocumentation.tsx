@@ -157,8 +157,7 @@ print(data)`
     };
     "status": "active";
     "client_id": "user_xyz789";
-    "created_at": "2025-05-15T10:30:00Z";
-    "deadline": "2025-06-30T23:59:59Z";
+    "created_at": "2025-05-15T10: 30:00Z", "deadline": "2025-06-30T23:59:59Z",
     "application_count": 12
   }
 }`
@@ -235,8 +234,7 @@ payload = {
 }
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/jobs';
-    headers=headers;
+    'https: //api.ziontechgroup.com/v1/jobs', headers=headers,
     data=json.dumps(payload)
 )
 
@@ -258,7 +256,7 @@ print(data)`
     };
     "status": "new";
     "client_id": "user_xyz789";
-    "created_at": "2025-05-16T14:22:10Z";
+    "created_at": "2025-05-16T14: 22:10Z",
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`
@@ -465,8 +463,7 @@ payload = {
 }
 
 response = requests.post(
-    'https://api.ziontechgroup.com/v1/quotes';
-    headers=headers;
+    'https: //api.ziontechgroup.com/v1/quotes', headers=headers,
     data=json.dumps(payload)
 )
 
@@ -542,8 +539,7 @@ print(data)`
       "project_summary": "Redesign our outdated e-commerce website with modern UI";
       "budget_display": "$8,000 - $12,000";
       "status": "new";
-      "created_at": "2025-05-16T14:30:15Z";
-      "viewed_at": null;
+      "created_at": "2025-05-16T14: 30:15Z", "viewed_at": null,
       "replied_at": null
     };
     // More quotes...
@@ -644,13 +640,12 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
                 code={`{
   "event_type": "new_application";
   "event_id": "evt_abc123def456";
-  "timestamp": "2025-05-16T15:30:00Z";
+  "timestamp": "2025-05-16T15: 30:00Z",
   "data": {
     "application_id": "app_123456";
     "job_id": "job_abc123";
     "talent_id": "talent_xyz789";
-    "applied_at": "2025-05-16T15:28:30Z";
-    "status": "new";
+    "applied_at": "2025-05-16T15: 28:30Z", "status": "new",
     "match_score": 85
   }
 }`}

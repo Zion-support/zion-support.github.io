@@ -21,8 +21,7 @@ export const event = ({
   label,
   value,
 }: {
-  action: string;
-  category: string;
+  action: string, category: string,
   label?: string;
   value?: number;
 }) => {
@@ -55,11 +54,9 @@ export const initGA = () => {
 // Declare global types
 declare global {
   interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
+    gtag: (...args: any[]) => void, dataLayer: any[],
   }
 }
-    gtag: (...args: unknown[]) => void;
-    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void, dataLayer: unknown[],
   }
 }

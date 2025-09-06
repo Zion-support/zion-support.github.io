@@ -8,7 +8,7 @@ const OUTPUT = path.join(PUBLIC_DIR, 'automation-catalog.json');
 
 function parseSchedule(yamlContent) {
   // naive parse for `cron:` lines
-  const cronMatch = yamlContent.match(/cron:\s*"([^"]+)"/);
+  const cronMatch = yamlContent.match(/cron: \s*"([^"]+)"/),
   return cronMatch ? `cron: ${cronMatch[1]}` : 'event-driven or manual';
 }
 
@@ -41,10 +41,8 @@ async function main() {
     const full = path.join(WORKFLOWS, file);
     const content = fs.readFileSync(full, 'utf8');
     return {
-      id: file;
-      title: toTitle(file);
-      description: describe(file);
-      schedule: parseSchedule(content);
+      id: file, title: toTitle(file),
+      description: describe(file), schedule: parseSchedule(content),
       link: '/automation'
     };
   });
@@ -55,6 +53,6 @@ async function main() {
 }
 
 main().catch((e) => {
-  console.error(e);
-  process.exit(1);
-});
+    console.error(e),
+    process.exit(1)
+  });

@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react';
 interface UseAutoTranslateOptions {
   sourceLanguage?: string;
   targetLanguage?: string;
-  onTranslate?: (text: string, translatedText: string) => void;
+  onTranslate?: (text: string, translatedText: string) => void,
 }
 
 export const useAutoTranslate = (options: UseAutoTranslateOptions = {}) => {
@@ -40,7 +40,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 export type UseAutoTranslateResult = {
   translations: Record<string, string>;
-  loading: boolean;
+  loading: boolean,
   error?: string
 };
 

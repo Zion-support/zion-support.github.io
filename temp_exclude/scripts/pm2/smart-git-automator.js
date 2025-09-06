@@ -416,9 +416,9 @@ class SmartGitAutomator {
     try {
       const status = await this.getBranchStatus();
       if (!status || !status.hasChanges) {
-        this.log('No changes to commit');
-        return false;
-      }
+    this.log('No changes to commit'),
+    return false
+  }
 
       // Generate intelligent commit message
       const commitMessage = this.generateCommitMessage(status.changes);
@@ -541,7 +541,7 @@ class SmartGitAutomator {
     console.log(`⚠️ Conflicts: ${report.conflicts?.length || 0}`);
 
     if (report.recommendations?.length > 0) {
-      console.log('\n💡 Recommendations:');
+      console.log('\n💡 Recommendations: '),
       report.recommendations.forEach(rec => {
         console.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
         console.log(`    → ${rec.action}`);
@@ -577,8 +577,8 @@ class SmartGitAutomator {
 
 // Run if called directly
 if (require.main === module) {
-  const automator = new SmartGitAutomator();
-  automator.run();
-}
+    const automator = new SmartGitAutomator(),
+    automator.run()
+  }
 
 module.exports = SmartGitAutomator;

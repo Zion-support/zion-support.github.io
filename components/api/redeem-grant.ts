@@ -29,8 +29,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const records = (await fs.pathExists(REDEMPTIONS_FILE)) ? await fs.readJSON(REDEMPTIONS_FILE) : [];
   const now = new Date().toISOString();
   const record = {
-    id: uuidv4();
-    partnerId: auth.partner.id;
+    id: uuidv4(), partnerId: auth.partner.id,
     studentEmail;
     grantCode;
     courseId;

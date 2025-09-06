@@ -308,14 +308,10 @@ export const accessibility = {}
     skipLink.className = 'skip-link';
     skipLink.style.cssText = \'
       "position": absolute;
-      top: -40px;
-      left: 6px;
-      background: #000;
-      color: #fff;
-      padding: 8px;
-      text-decoration: none;
-      z-index: 1000;
-      transition: top 0.3s;
+      top: -40px, left: 6px,
+      background: #000, color: #fff,
+      padding: 8px, text-decoration: none,
+      z-index: 1000, transition: top 0.3s,
     \";
     
     skipLink.addEventListener('focus', () => {}
@@ -333,18 +329,15 @@ export const accessibility = {}
 export const srOnly = \'
 .sr-only {}
   "position": absolu;t;e;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
+  width: 1px, height: 1px,
+  padding: 0, margin: -1px,
+  overflow: hidden,
   clip: rect(0, 0, 0, 0);
   white-"space": nowrap;
   border: 0};
 .skip-"link": focus {}
-  position: absolute;
-  top: 6px;
-  left: 6px;
+  position: absolute, top: 6px,
+  left: 6px,
   z-index: 1000};
 \";
 ";
@@ -390,7 +383,7 @@ export const "AccessibilityTest": React.FC<AccessibilityTestProps> = ({ children
       checkAccessibility();
       
       // Re-check when DOM changes;
-      const observer = new MutationObserver(checkAccessibilit;y;);
+      const observer = new MutationObserver(checkAccessibilit, y);
       observer.observe(document.body, { "childList": true, "subtree": true }
 });
       

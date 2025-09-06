@@ -16,17 +16,16 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`;
 
     const resp = await client.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are an impartial risk and trust analyst for a talent marketplace.' };
         { role: 'user', content: prompt }];
-      temperature: 0.2;
+      temperature: 0.2,
       max_tokens: 200});
 
     const content = resp.choices?.[0]?.message?.content || '';
     const lower = content.toLowerCase();
-    let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust';
-    if (lower.includes('risk alert')) level = 'Risk Alert';
+    let level: TrustScoreBreakdown['riskLevel'] = 'Moderate Trust', if (lower.includes('risk alert')) level = 'Risk Alert',
     else if (lower.includes('high trust')) level = 'High Trust';
     else if (lower.includes('moderate trust')) level = 'Moderate Trust';
 
@@ -45,7 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const analyze = req.query.analyze === 'true';
 
       // Fetch inputs from DB if available, else use mock defaults
-      let inputs: TrustMetricInputs | null = null;
+      let inputs: TrustMetricInputs | null = null,
       try {
         const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data.values as TrustMetricInputs
@@ -53,21 +52,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (!inputs) {
         inputs = {
-          completionRate: 0.88;
-          onboardingCompletionRate: 0.9;
-          feedbackAverage: 4.7;
-          feedbackQualityScore: 0.8;
-          averageResponseHours: 6;
-          accountAgeDays: 420;
-          sentimentScore: 0.4;
-          disputeFlags: 0;
-          verifiedReviewRatio: 0.7;
-          endorsements: 8;
+          completionRate: 0.88, onboardingCompletionRate: 0.9,
+          feedbackAverage: 4.7, feedbackQualityScore: 0.8,
+          averageResponseHours: 6, accountAgeDays: 420,
+          sentimentScore: 0.4, disputeFlags: 0,
+          verifiedReviewRatio: 0.7, endorsements: 8,
           flags: 0}
       }
 
-      let reasonSummary: string | undefined;
-      let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined;
+      let reasonSummary: string | undefined, let riskLevelOverride: TrustScoreBreakdown['riskLevel'] | undefined,
       if (analyze) {
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;

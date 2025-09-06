@@ -22,11 +22,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const version = nextVersionFor(state, resolutionId);
   const event = {
-    eventId: uuidv4();
-    type: "dao_endorsement" as const;
+    eventId: uuidv4(), type: "dao_endorsement" as const,
     payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() };
-    originInstanceId: state.config.instanceId;
-    version;
+    originInstanceId: state.config.instanceId, version,
     timestamp: Date.now()};
 
   upsertEvent(state, event);

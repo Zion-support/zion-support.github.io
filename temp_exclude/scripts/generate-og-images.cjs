@@ -18,8 +18,8 @@ async function ensurePuppeteer() {
   try {
     return require('puppeteer');
   } catch (e) {
-    console.error('Missing puppeteer. Please install it.');
-    process.exit(1);
+    console.error('Missing puppeteer. Please install it.'),
+    process.exit(1)
   }
 }
 
@@ -31,14 +31,20 @@ function buildHtml(title) {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
-      @font-face { font-family: Inter; font-style: normal; font-weight: 600; src: local('Inter'); }
-      html, body { margin: 0; padding: 0; }
-      body { width: ${WIDTH}px; height: ${HEIGHT}px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg,#0f172a,#1f2937); color: #fff; font-family: Inter, ui-sans-serif, system-ui, -apple-system; }
-      .card { width: ${WIDTH - 80}px; height: ${HEIGHT - 80}px; border-radius: 24px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); display: flex; flex-direction: column; padding: 40px; justify-content: space-between; }
-      .brand { font-size: 28px; letter-spacing: 0.5px; opacity: 0.9; }
-      .title { font-size: 64px; font-weight: 700; line-height: 1.05; }
-      .footer { display: flex; justify-content: space-between; align-items: center; font-size: 22px; opacity: 0.9; }
-      .badge { padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); font-size: 18px; }
+      @font-face { font-family: Inter, font-style: normal, font-weight: 600, src: local('Inter'), }
+      html, body { margin: 0, padding: 0, }
+      body { width: ${WIDTH}px; height: ${HEIGHT}px; display: flex, align-items: center, justify-content: center,
+    background: linear-gradient(135deg,#0f172a,#1f2937); color: #fff; font-family: Inter, ui-sans-serif, system-ui, -apple-system; }
+      .card { width: ${WIDTH - 80}px; height: ${HEIGHT - 80}px; border-radius: 24px,
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); display: flex, flex-direction: column, padding: 40px, justify-content: space-between, }
+      .brand { font-size: 28px, letter-spacing: 0.5px, opacity: 0.9
+  }
+      .title { font-size: 64px, font-weight: 700, line-height: 1.05
+  }
+      .footer { display: flex, justify-content: space-between, align-items: center, font-size: 22px, opacity: 0.9
+  }
+      .badge { padding: 6px 12px, border-radius: 999px, background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); font-size: 18px
+  }
     </style>
   </head>
   <body>
@@ -53,14 +59,14 @@ function buildHtml(title) {
 
 async function main() {
   if (!fs.existsSync(DATA_OVERRIDES)) {
-    console.error('overrides.json not found. Run scripts/generate-dynamic-seo.cjs first.');
-    process.exit(1);
+    console.error('overrides.json not found. Run scripts/generate-dynamic-seo.cjs first.'),
+    process.exit(1)
   }
   const overrides = JSON.parse(fs.readFileSync(DATA_OVERRIDES, 'utf8'));
   const routes = Object.entries(overrides.routes || {});
   if (routes.length === 0) {
-    console.log('No routes to process');
-    return;
+    console.log('No routes to process'),
+    return
   }
   fs.mkdirSync(OUT_DIR, { recursive: true });
   const puppeteer = await ensurePuppeteer();
@@ -84,7 +90,7 @@ async function main() {
 
 if (require.main === module) {
   main().catch((err) => {
-    console.error(err);
-    process.exit(1);
+    console.error(err),
+    process.exit(1)
   });
 }

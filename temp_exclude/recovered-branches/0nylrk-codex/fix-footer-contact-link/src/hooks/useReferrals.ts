@@ -12,9 +12,8 @@ export function useReferrals() {
   const [referrals, setReferrals] = useState<Referral[]>([]);
   const [rewards, setRewards] = useState<ReferralReward[]>([]);
   const [stats, setStats] = useState<ReferralStats>({
-    totalReferrals: 0;
-    pendingReferrals: 0;
-    completedReferrals: 0;
+    totalReferrals: 0, pendingReferrals: 0,
+    completedReferrals: 0,
     totalRewards: 0});
 
   useEffect(() => {
@@ -129,8 +128,7 @@ export function useReferrals() {
     try {
       if (!user) {
         toast({
-          title: "Authentication required";
-          description: "You need to be logged in to generate a referral code";
+          title: "Authentication required", description: "You need to be logged in to generate a referral code",
           variant: "destructive"});
         return
       }
@@ -142,8 +140,7 @@ export function useReferrals() {
       if (error) throw error;
 
       toast({
-        title: "Success!";
-        description: "Your referral code has been generated";
+        title: "Success!", description: "Your referral code has been generated",
         variant: "success"});
 
       // Refresh the code
@@ -153,8 +150,7 @@ export function useReferrals() {
     } catch (error: any) {
       console.error("Error generating referral code:", error);
       toast({
-        title: "Error generating code";
-        description: error.message || "There was a problem generating your referral code";
+        title: "Error generating code", description: error.message || "There was a problem generating your referral code",
         variant: "destructive"})
     }
   };
@@ -173,13 +169,11 @@ export function useReferrals() {
     if (link) {
       navigator.clipboard.writeText(link);
       toast({
-        title: "Copied!";
-        description: "Referral link copied to clipboard";
+        title: "Copied!", description: "Referral link copied to clipboard",
         variant: "success"})
     } else {
       toast({
-        title: "Cannot copy link";
-        description: "Please generate a referral code first";
+        title: "Cannot copy link", description: "Please generate a referral code first",
         variant: "destructive"})
     }
   };
@@ -191,8 +185,7 @@ export function useReferrals() {
     
     if (!link) {
       toast({
-        title: "Cannot share";
-        description: "Please generate a referral code first";
+        title: "Cannot share", description: "Please generate a referral code first",
         variant: "destructive"});
       return
     }

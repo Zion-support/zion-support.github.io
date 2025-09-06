@@ -10,14 +10,10 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle message operations
  */
 export function useMessages(
-  user: UserWithProfile;
-  activeConversation: Conversation | null;
-  activeMessages: Message[];
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
-  conversations: Conversation[];
-  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
-  setUnreadCount: (updater: (prev: number) => number) => void;
-  setIsLoading: (loading: boolean) => void;
+  user: UserWithProfile, activeConversation: Conversation | null,
+  activeMessages: Message[], setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,
+  conversations: Conversation[], setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void,
+  setUnreadCount: (updater: (prev: number) => number) => void, setIsLoading: (loading: boolean) => void,
   fetchConversations: () => Promise<void>
 ) {
   /**
@@ -71,11 +67,9 @@ export function useMessages(
       const { data, error } = await supabase
         .from('messages')
         .insert({
-          conversation_id: conversationId;
-          sender_id: user.id;
-          recipient_id: conversation.user_id;
-          content;
-          created_at: new Date().toISOString();
+          conversation_id: conversationId, sender_id: user.id,
+          recipient_id: conversation.user_id, content,
+          created_at: new Date().toISOString(),
           read: false
         })
         .select('*')
@@ -96,8 +90,7 @@ export function useMessages(
     } catch (error) {
       console.error('Error sending message:', error);
       toast({
-        title: "Failed to send message";
-        description: "Please try again later";
+        title: "Failed to send message", description: "Please try again later",
         variant: "destructive"
       })
     }

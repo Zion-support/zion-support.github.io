@@ -18,13 +18,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       brand});
     return res.status(201).json({
       partner: {
-        id: partner.id;
-        name: partner.name;
-        status: partner.status;
-        entityType: partner.entityType;
-        useCaseType: partner.useCaseType;
+        id: partner.id, name: partner.name,
+        status: partner.status, entityType: partner.entityType,
+        useCaseType: partner.useCaseType,
         createdAt: partner.createdAt};
-      apiKey: apiKey.key;
+      apiKey: apiKey.key,
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
   } catch (e) {
     return res.status(500).json({ error: "Failed to create partner" })

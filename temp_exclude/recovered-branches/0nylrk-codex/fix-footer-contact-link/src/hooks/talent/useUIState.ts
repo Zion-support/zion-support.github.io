@@ -6,10 +6,8 @@ export function useUIState() {
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [selectedTalent, setSelectedTalent] = useState<TalentProfile | null>(null);
   const [expandedSections, setExpandedSections] = useState({
-    skills: true;
-    availability: true;
-    region: true;
-    experience: true;
+    skills: true, availability: true,
+    region: true, experience: true,
     price: true});
   
   // Toggle expanded sections in the sidebar

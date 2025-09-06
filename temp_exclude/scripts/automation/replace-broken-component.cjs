@@ -33,11 +33,9 @@ import { }
 
 interface ChatMessage {}
   "id": string;
-  content: string;
-  sender: 'user' | 'bot';
-  timestamp: Date;
-  type: 'text' | 'file';
-  status: 'sending' | 'sent' | 'error';
+  content: string, sender: 'user' | 'bot',
+  timestamp: Date, type: 'text' | 'file',
+  status: 'sending' | 'sent' | 'error',
   metadata?: {}
     confidence?: number;
     suggestions?: string[];

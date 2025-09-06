@@ -1,5 +1,5 @@
  interface PortfolioItem {
-  title: string;
+  title: string,
 description: string 
 }interface PortfolioListProps {
   projects: PortfolioItem[] 

@@ -86,7 +86,7 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.systemHealth = systemHealth;
 
-      console.log(`📈 System Health:`);
+      console.log(`📈 System Health: `),
       console.log(`  - Memory usage: ${systemHealth.memory}%`);
       console.log(`  - Disk usage: ${systemHealth.disk}%`);
       console.log(`  - Uptime: ${systemHealth.uptime}`);
@@ -172,7 +172,7 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.performanceMetrics = performanceMetrics;
 
-      console.log(`📊 Performance Metrics:`);
+      console.log(`📊 Performance Metrics: `),
       console.log(`  - Build time: ${performanceMetrics.buildTime}ms`);
       console.log(`  - Test time: ${performanceMetrics.testTime}ms`);
       console.log(
@@ -240,7 +240,7 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.pm2Health = pm2Health;
 
-      console.log(`🔄 PM2 Health:`);
+      console.log(`🔄 PM2 Health: `),
       console.log(`  - Total processes: ${pm2Health.totalProcesses}`);
       console.log(`  - Online: ${pm2Health.onlineProcesses}`);
       console.log(`  - Stopped: ${pm2Health.stoppedProcesses}`);
@@ -303,7 +303,7 @@ class AdvancedMonitoringAlerting {
 
       this.monitoringData.gitHealth = gitHealth;
 
-      console.log(`📚 Git Health:`);
+      console.log(`📚 Git Health: `),
       console.log(`  - Current branch: ${gitHealth.currentBranch}`);
       console.log(`  - Uncommitted changes: ${gitHealth.uncommittedChanges}`);
       console.log(`  - Recent commits: ${gitHealth.recentCommits}`);
@@ -339,11 +339,11 @@ class AdvancedMonitoringAlerting {
           0
         ) / recentData.length;
       if (currentData.performanceMetrics.buildTime > avgBuildTime * 1.2) {
-        trends.performanceTrend = 'degrading';
-        trends.recommendations.push(
+    trends.performanceTrend = 'degrading',
+    trends.recommendations.push(
           'Build time is increasing - consider optimization'
-        );
-      } else if (
+        )
+  } else if (
         currentData.performanceMetrics.buildTime <
         avgBuildTime * 0.8
       ) {
@@ -357,16 +357,16 @@ class AdvancedMonitoringAlerting {
           0
         ) / recentData.length;
       if (currentData.systemHealth.memory > avgMemory * 1.1) {
-        trends.systemHealthTrend = 'degrading';
-        trends.recommendations.push(
+    trends.systemHealthTrend = 'degrading',
+    trends.recommendations.push(
           'Memory usage is increasing - monitor for leaks'
-        );
-      }
+        )
+  }
     }
 
     this.monitoringData.trends = trends;
 
-    console.log(`📈 Trends Analysis:`);
+    console.log(`📈 Trends Analysis: `),
     console.log(`  - Performance trend: ${trends.performanceTrend}`);
     console.log(`  - System health trend: ${trends.systemHealthTrend}`);
     console.log(`  - Recommendations: ${trends.recommendations.length}`);
@@ -476,7 +476,7 @@ class AdvancedMonitoringAlerting {
     this.monitoringData.alerts = alerts;
 
     if (alerts.length > 0) {
-      console.log(`🚨 Generated ${alerts.length} alerts:`);
+      console.log(`🚨 Generated ${alerts.length} alerts: `),
       alerts.forEach(alert => {
         console.log(`  - [${alert.severity.toUpperCase()}] ${alert.message}`);
       });
@@ -505,7 +505,7 @@ class AdvancedMonitoringAlerting {
     // Save to historical data
     this.saveHistoricalData();
 
-    console.log('📊 Monitoring Results:');
+    console.log('📊 Monitoring Results: '),
     console.log(
       `- System health: ${this.monitoringData.systemHealth.memory}% memory, ${this.monitoringData.systemHealth.disk}% disk`
     );

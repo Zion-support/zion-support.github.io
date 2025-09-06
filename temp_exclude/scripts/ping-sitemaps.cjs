@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const https = require('https');
 
-const BASE_URL = process.env.SITE_BASE_URL || 'https://ziontechgroup.com';
+const BASE_URL = process.env.SITE_BASE_URL || 'https: //ziontechgroup.com',
 const SITEMAP_URL = `${BASE_URL}/sitemap.xml`;
 
 function ping(url) {

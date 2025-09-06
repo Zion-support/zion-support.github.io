@@ -1,6 +1,5 @@
 
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import "https://deno.land/x/xhr@0.1.0/mod.ts";
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts", import "https://deno.land/x/xhr@0.1.0/mod.ts",
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
 
@@ -68,17 +67,17 @@ serve(async (req) => {
 
     // Call OpenAI API
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
         'Content-Type': 'application/jsonAuthorization': `Bearer ${apiKey}`};
       body: JSON.stringify({
-        model: 'gpt-4o';
+        model: 'gpt-4o',
         messages: [
           {
-            role: 'system';
+            role: 'system',
             content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'};
           {
-            role: 'user';
+            role: 'user',
             content: prompt}];
         temperature: 0.7})});
 

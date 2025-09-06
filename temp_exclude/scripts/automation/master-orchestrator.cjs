@@ -190,9 +190,9 @@ class MasterOrchestrator {
     const results = {};
     
     for (const automationName of Object.keys(this.automations)) {
-      const result = await this.stopAutomation(automationName);
-      results[automationName] = result;
-    }
+    const result = await this.stopAutomation(automationName),
+    results[automationName] = result
+  }
     
     const successCount = Object.values(results).filter(r => r.success).length;
     const totalCount = Object.keys(results).length;
@@ -336,9 +336,9 @@ class MasterOrchestrator {
     
     // Generate recommendations
     if (health.overall === 'unhealthy') {
-      health.recommendations.push('Restart failed automations');
-      health.recommendations.push('Check logs for error details');
-    }
+    health.recommendations.push('Restart failed automations'),
+    health.recommendations.push('Check logs for error details')
+  }
     
     if (health.issues.some(issue => issue.type === 'high_memory_usage')) {
       health.recommendations.push('Consider optimizing memory usage or increasing memory limits');
@@ -425,8 +425,7 @@ if (require.main === module) {
     case 'health':
       orchestrator.healthCheck().then(console.log);
       break;
-    default:
-      orchestrator.run().catch(console.error);
+    default: orchestrator.run().catch(console.error),
   }
 }
 

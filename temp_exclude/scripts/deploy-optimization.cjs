@@ -16,9 +16,8 @@ class DeploymentOptimizer {
     this.projectRoot = process.cwd();
     this.buildDir = path.join(this.projectRoot, '.next');
     this.optimizationResults = {
-      bundleSize: 0;
-      optimizationsApplied: [];
-      warnings: [];
+      bundleSize: 0, optimizationsApplied: [],
+      warnings: [],
       performance: {};
     };
   }
@@ -33,9 +32,9 @@ class DeploymentOptimizer {
       await this.generateOptimizationReport();
       
       if (isStandalone) {
-        console.log('\n✅ Deployment optimization completed successfully!');
-        this.printSummary();
-      }
+    console.log('\n✅ Deployment optimization completed successfully!'),
+    this.printSummary()
+  }
     } catch (error) {
       console.error('\n❌ Deployment optimization failed:', error.message);
       // If part of a larger script, don't exit process, throw instead
@@ -49,9 +48,9 @@ class DeploymentOptimizer {
     
     // Check if required environment variables are set
     const requiredEnvVars = [
-      'NEXT_PUBLIC_SUPABASE_URL';
-      'NEXT_PUBLIC_SUPABASE_ANON_KEY';
-    ];
+    'NEXT_PUBLIC_SUPABASE_URL',
+    'NEXT_PUBLIC_SUPABASE_ANON_KEY'
+  ];
 
     const missingEnvVars = requiredEnvVars.filter(envVar => !process.env[envVar]);
     
@@ -66,18 +65,18 @@ class DeploymentOptimizer {
       execSync('npx tsc --noEmit', { stdio: 'pipe' });
       console.log('   ✅ TypeScript check passed');
     } catch (error) {
-      this.optimizationResults.warnings.push('TypeScript errors detected');
-      console.log('   ⚠️  TypeScript warnings detected (continuing with build)');
-    }
+    this.optimizationResults.warnings.push('TypeScript errors detected'),
+    console.log('   ⚠️  TypeScript warnings detected (continuing with build)')
+  }
 
     // Check for security vulnerabilities
     try {
       execSync('npm audit --audit-level=high', { stdio: 'pipe' });
       console.log('   ✅ Security audit passed');
     } catch (error) {
-      this.optimizationResults.warnings.push('Security vulnerabilities detected');
-      console.log('   ⚠️  Security vulnerabilities detected');
-    }
+    this.optimizationResults.warnings.push('Security vulnerabilities detected'),
+    console.log('   ⚠️  Security vulnerabilities detected')
+  }
   }
 
   async optimizeBuild() {
@@ -138,7 +137,7 @@ class DeploymentOptimizer {
           .sort((a, b) => b.size - a.size)
           .slice(0, 5);
           
-        console.log('   📋 Largest chunks:');
+        console.log('   📋 Largest chunks: '),
         largestChunks.forEach(chunk => {
           console.log(`      ${chunk.file}: ${this.formatBytes(chunk.size)}`);
         });
@@ -159,15 +158,11 @@ class DeploymentOptimizer {
     console.log('\n📄 Generating optimization report...');
     
     const report = {
-      timestamp: new Date().toISOString();
-      version: this.getPackageVersion();
-      environment: 'production';
-      optimizations: this.optimizationResults.optimizationsApplied;
-      bundleSize: this.optimizationResults.bundleSize;
-      bundleSizeFormatted: this.formatBytes(this.optimizationResults.bundleSize);
-      warnings: this.optimizationResults.warnings;
-      recommendations: this.generateRecommendations();
-      deploymentChecklist: this.generateDeploymentChecklist();
+      timestamp: new Date().toISOString(), version: this.getPackageVersion(),
+      environment: 'production', optimizations: this.optimizationResults.optimizationsApplied,
+      bundleSize: this.optimizationResults.bundleSize, bundleSizeFormatted: this.formatBytes(this.optimizationResults.bundleSize),
+      warnings: this.optimizationResults.warnings, recommendations: this.generateRecommendations(),
+      deploymentChecklist: this.generateDeploymentChecklist(),
     };
 
     // Save report
@@ -183,29 +178,23 @@ class DeploymentOptimizer {
     
     if (this.optimizationResults.bundleSize > 3 * 1024 * 1024) {
       recommendations.push({
-        type: 'performance';
-        priority: 'high';
-        title: 'Consider code splitting';
-        description: 'Bundle size is large. Implement dynamic imports for heavy components.';
+        type: 'performance', priority: 'high',
+        title: 'Consider code splitting', description: 'Bundle size is large. Implement dynamic imports for heavy components.',
         action: 'Use React.lazy() and dynamic imports'
       });
     }
 
     if (this.optimizationResults.warnings.length > 0) {
       recommendations.push({
-        type: 'security';
-        priority: 'medium';
-        title: 'Address warnings';
-        description: 'Several warnings were detected during optimization.';
+        type: 'security', priority: 'medium',
+        title: 'Address warnings', description: 'Several warnings were detected during optimization.',
         action: 'Review and resolve warnings before deployment'
       });
     }
 
     recommendations.push({
-      type: 'monitoring';
-      priority: 'medium';
-      title: 'Setup production monitoring';
-      description: 'Enable performance monitoring in production.';
+      type: 'monitoring', priority: 'medium',
+      title: 'Setup production monitoring', description: 'Enable performance monitoring in production.',
       action: 'Configure Sentry alerts and performance budgets'
     });
 
@@ -215,28 +204,23 @@ class DeploymentOptimizer {
   generateDeploymentChecklist() {
     return [
       {
-        item: 'Environment variables configured';
-        status: process.env.NEXT_PUBLIC_SUPABASE_URL ? 'complete' : 'pending';
+        item: 'Environment variables configured', status: process.env.NEXT_PUBLIC_SUPABASE_URL ? 'complete' : 'pending',
         required: true
       };
       {
-        item: 'Production build successful';
-        status: fs.existsSync(this.buildDir) ? 'complete' : 'pending';
+        item: 'Production build successful', status: fs.existsSync(this.buildDir) ? 'complete' : 'pending',
         required: true
       };
       {
-        item: 'Bundle size optimized';
-        status: this.optimizationResults.bundleSize < 5 * 1024 * 1024 ? 'complete' : 'warning';
+        item: 'Bundle size optimized', status: this.optimizationResults.bundleSize < 5 * 1024 * 1024 ? 'complete' : 'warning',
         required: false
       };
       {
-        item: 'Security audit passed';
-        status: this.optimizationResults.warnings.some(w => w.includes('Security')) ? 'warning' : 'complete';
+        item: 'Security audit passed', status: this.optimizationResults.warnings.some(w => w.includes('Security')) ? 'warning' : 'complete',
         required: false
       };
       {
-        item: 'Performance monitoring ready';
-        status: 'manual-check';
+        item: 'Performance monitoring ready', status: 'manual-check',
         required: false
       }
     ];
@@ -250,14 +234,13 @@ class DeploymentOptimizer {
     console.log(`Warnings: ${this.optimizationResults.warnings.length}`);
     
     if (this.optimizationResults.warnings.length > 0) {
-      console.log('\n⚠️  WARNINGS:');
+      console.log('\n⚠️  WARNINGS: '),
       this.optimizationResults.warnings.forEach(warning => {
         console.log(`   • ${warning}`);
       });
     }
 
-    console.log('\n🚀 NEXT STEPS:');
-    console.log('   1. Review deployment report for detailed analysis');
+    console.log('\n🚀 NEXT STEPS: '), console.log('   1. Review deployment report for detailed analysis'),
     console.log('   2. Deploy to your hosting platform');
     console.log('   3. Configure production monitoring');
     console.log('   4. Run post-deployment tests');

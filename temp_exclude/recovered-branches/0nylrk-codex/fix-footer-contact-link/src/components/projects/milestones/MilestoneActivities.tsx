@@ -40,7 +40,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
           .from('milestone_activities')
           .select(`
             *;
-            milestone:milestone_id(title);
+            milestone: milestone_id(title),
             created_by_profile:profiles!user_id(display_name, avatar_url)
           `)
           .eq('project_id', projectId)

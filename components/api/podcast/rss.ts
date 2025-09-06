@@ -14,7 +14,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   ensureStorage();
 
-  const siteUrl = process.env.SITE_URL || 'http: //localhost:3000';
+  const siteUrl = process.env.SITE_URL || 'http: //localhost:3000',
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
 
   const items = episodes

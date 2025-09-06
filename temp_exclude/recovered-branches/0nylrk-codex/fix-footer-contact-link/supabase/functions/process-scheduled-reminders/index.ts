@@ -1,7 +1,6 @@
 
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1";
-const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1", const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 
 const corsHeaders = {
@@ -13,7 +12,7 @@ serve(async (req: Request) => {
   // Handle CORS
   if (req.method === "OPTIONS") {
     return new Response(null, {
-      status: 204;
+      status: 204,
       headers: corsHeaders})
   }
   
@@ -31,7 +30,7 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Failed to create scheduled reminders", details: error });
         {
-          status: 500;
+          status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
@@ -49,7 +48,7 @@ serve(async (req: Request) => {
       return new Response(
         JSON.stringify({ error: "Failed to fetch pending jobs", details: jobsError });
         {
-          status: 500;
+          status: 500,
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
@@ -62,7 +61,7 @@ serve(async (req: Request) => {
         const reminderResponse = await fetch(
           `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
           {
-            method: "POST";
+            method: "POST",
             headers: {
               "Content-Type": "application/json";
               "Authorization": `Bearer ${supabaseServiceKey}`};
@@ -74,7 +73,7 @@ serve(async (req: Request) => {
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
-              status: "completed";
+              status: "completed",
               completed_at: new Date().toISOString()})
             .eq("id", job.id);
           
@@ -97,11 +96,10 @@ serve(async (req: Request) => {
     
     return new Response(
       JSON.stringify({
-        message: "Reminders processed successfully";
-        processed_jobs: processedJobs.length;
+        message: "Reminders processed successfully", processed_jobs: processedJobs.length,
         job_ids: processedJobs});
       {
-        status: 200;
+        status: 200,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   } catch (error) {
@@ -109,7 +107,7 @@ serve(async (req: Request) => {
     return new Response(
       JSON.stringify({ error: "Internal server error", details: error.message });
       {
-        status: 500;
+        status: 500,
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
   }

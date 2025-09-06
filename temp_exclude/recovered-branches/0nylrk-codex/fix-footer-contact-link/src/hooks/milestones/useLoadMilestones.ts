@@ -53,7 +53,7 @@ export const useLoadMilestones = (projectId?: string) => {
       setError(null)
     } catch (err: any) {
       console.error("Error fetching milestones:", err);
-      setError("Failed to fetch milestones: " + err.message);
+      setError("Failed to fetch milestones: " + err.message),
       toast.error("Failed to fetch milestones")
     } finally {
       setIsLoading(false)

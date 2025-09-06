@@ -36,8 +36,9 @@ function fixLinkTags(content) {
         "import React from 'react';\nimport Link from 'next/link';"
       );
     } else {
-      content = "import Link from 'next/link';\n" + content;
-    }
+    content = "import Link from 'next/link',
+    \n" + content
+  }
   }
   
   // Replace <a> tags with Link components for internal links

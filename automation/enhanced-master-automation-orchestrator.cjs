@@ -104,9 +104,9 @@ class EnhancedMasterAutomationOrchestrator {
     for (const task of sortedTasks) {
       // Check dependencies
       const unmetDependencies = task.dependencies.filter(dep => {
-        const depTask = this.automationTasks.find(t => t.name === dep);
-        return !depTask || depTask.status !== 'completed';
-      });
+    const depTask = this.automationTasks.find(t => t.name === dep),
+    return !depTask || depTask.status !== 'completed'
+  });
       
       if (unmetDependencies.length > 0) {
         this.log(`⏳ Skipping ${task.name} - unmet dependencies: ${unmetDependencies.join(', ')}`, 'WARNING');
@@ -281,8 +281,8 @@ class EnhancedMasterAutomationOrchestrator {
 
 // Run the enhanced master automation orchestrator
 if (require.main === module) {
-  const orchestrator = new EnhancedMasterAutomationOrchestrator();
-  orchestrator.run().catch(console.error);
-}
+    const orchestrator = new EnhancedMasterAutomationOrchestrator(),
+    orchestrator.run().catch(console.error)
+  }
 
 module.exports = EnhancedMasterAutomationOrchestrator;

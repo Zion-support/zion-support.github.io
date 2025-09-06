@@ -147,8 +147,8 @@ class HealthCheckSystem {
 
 // Run if called directly
 if (require.main === module) {
-  const monitor = new HealthCheckSystem();
-  monitor.monitor().catch(console.error);
-}
+    const monitor = new HealthCheckSystem(),
+    monitor.monitor().catch(console.error)
+  }
 
 module.exports = HealthCheckSystem;

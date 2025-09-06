@@ -32,8 +32,7 @@ function fixFile(filePath) {
     content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
     
     // Fix common syntax issues
-    content = content.replace(/md: text-2xl/g, 'md:text-2xl');
-    content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout';[\s\S]*?const blogPosts/g, 'const blogPosts');
+    content = content.replace(/md: text-2xl/g, 'md: text-2xl'), content = content.replace(/import MainLayout from '\.\.\/components\/layout\/MainLayout',[\s\S]*?const blogPosts/g, 'const blogPosts');
     content = content.replace(/,\s*"title":/g, ',');
     content = content.replace(/,\s*"description":/g, ',');
     content = content.replace(/,\s*"icon":/g, ',');

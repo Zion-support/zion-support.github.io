@@ -23,24 +23,16 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
 
   const form = useForm<JobSchemaType>({
-    resolver: zodResolver(jobSchema);
+    resolver: zodResolver(jobSchema),
     defaultValues: {
-      title: '';
-      company: '';
-      location: '';
-      job_type: '';
-      salary_range: '';
-      description: '';
-      responsibilities: '';
-      qualifications: '';
-      benefits: '';
-      application_instructions: '';
-      contact_email: '';
-      published_date: '';
-      expiry_date: '';
-      is_remote: false;
-      category: '';
-      status: '';
+      title: '', company: '',
+      location: '', job_type: '',
+      salary_range: '', description: '',
+      responsibilities: '', qualifications: '',
+      benefits: '', application_instructions: '',
+      contact_email: '', published_date: '',
+      expiry_date: '', is_remote: false,
+      category: '', status: '',
       external_apply_link: ''};
     mode: "onChange"});
 
@@ -60,9 +52,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
 
       const jobData = {
         ...values;
-        published_date: publishedDate;
-        expiry_date: expiryDate;
-        is_remote: isRemote;
+        published_date: publishedDate, expiry_date: expiryDate,
+        is_remote: isRemote,
         user_id: user.id};
 
       if (onSuccess) {

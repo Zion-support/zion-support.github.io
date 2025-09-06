@@ -48,7 +48,7 @@ const services = [
     title: 'Blockchain Solutions',
     description: 'Secure, transparent, and efficient blockchain implementations for financial services.',
     icon: Shield,
-    features: [;
+    features: [,
       'Smart contract development,',
       'Cryptocurrency integration',',
       'Decentralized finance (DeFi)',',
@@ -59,7 +59,7 @@ const services = [
     title: 'AI Trading Algorithms,',
     description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',
     icon: Brain,
-    features: [;
+    features: [,
       'Algorithmic trading systems,',
       'Risk management AI',',
       'Market prediction models',',
@@ -70,7 +70,7 @@ const services = [
     title: 'Digital Payment Systems,',
     description: 'Secure, scalable payment processing solutions for modern financial transactions.',',
     icon: CreditCard,
-    features: [;
+    features: [,
       'Payment gateway integration,',
       'Mobile payment solutions',',
       'Cross-border payments',',
@@ -81,7 +81,7 @@ const services = [
     title: 'Risk Management AI,',
     description: 'AI-powered risk assessment and management tools for financial institutions.,',
     icon: TrendingUp,
-    features: [;
+    features: [,
       'Credit risk analysis,',
       'Market risk modeling',',
       'Operational risk assessment',',
@@ -92,7 +92,7 @@ const services = [
     title: 'Fraud Detection Systems,',
     description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',
     icon: Lock,
-    features: [;
+    features: [,
       'Real-time transaction monitoring,',
       'Behavioral analysis',',
       'Pattern recognition',',
@@ -103,7 +103,7 @@ const services = [
     title: 'Regulatory Compliance Tools,',
     description: 'Automated compliance monitoring and reporting for financial regulations.,',
     icon: FileText,
-    features: [;
+    features: [,
       'KYC/AML automation,',
       'Regulatory reporting',',
       'Audit trail management',',
@@ -117,7 +117,7 @@ const benefits = [;
   {}
     title: 'Enhanced Security,',
     description: 'Bank-grade security measures protect sensitive financial data and transactions.,',
-    icon: Shield;
+    icon: Shield,
 =======
 =======
 ];
@@ -130,17 +130,17 @@ const benefits = [
   {}
     title: 'Improved Efficiency,',
     description: 'Automated processes reduce manual work and increase operational efficiency.,',
-    icon: BarChart3;
+    icon: BarChart3,
   },
   {}
     title: 'Better Risk Management,',
     description: 'AI-powered risk assessment helps make informed financial decisions.,',
-    icon: TrendingUp;
+    icon: TrendingUp,
   },
   {}
     title: 'Regulatory Compliance,',
     description: 'Built-in compliance tools ensure adherence to financial regulations.,',
-    icon: FileText;
+    icon: FileText,
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -169,8 +169,7 @@ export default function FinancePage() {
             >;
               <div className="flex items-center justify-center mb-6">";
                 <DollarSign className="w-12 h-12 text-green-400 mr-4" />";
-                <h1 className="text-5xl md:text-6xl font-bold">";
-                  Financial;
+                <h1 className="text-5xl md: text-6xl font-bold">", Financial,
                   <span className="block bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">";
                     Technology Solutions;
                   </span>;
@@ -180,12 +179,10 @@ export default function FinancePage() {
                 Revolutionizing financial services with cutting-edge blockchain, AI, and digital payment solutions. 
                 Enhance security, efficiency, and compliance in your financial operations.,
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Get Fintech Consultation;
                 </Link>;
-                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">";
-                  View Finance Case Studies;
+                <Link href="/case-studies" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-green-600 transition-all duration-300 font-semibold">", View Finance Case Studies,
                 </Link>;
               </div>;
             </motion.div>;
@@ -251,15 +248,14 @@ export default function FinancePage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Financial Technology Services;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Financial Technology Services,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Comprehensive fintech solutions designed for banks, financial institutions, 
                 and fintech startups.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
 =======
@@ -334,15 +330,14 @@ export default function FinancePage() {
 <<<<<<< HEAD
               className="text-center mb-16""
             >;
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
-                Why Choose Our Fintech Solutions?;
+              <h2 className="text-4xl md: text-5xl font-bold text-gray-900 mb-6">", Why Choose Our Fintech Solutions?,
               </h2>;
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">";
                 Our financial technology solutions deliver enhanced security, improved efficiency, 
                 and regulatory compliance for financial institutions.;
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {benefits.map((benefit, index) => (,
                 <motion.div}),
 =======
@@ -393,19 +388,16 @@ export default function FinancePage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
             >,
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">";
-                Ready to Transform Financial Services?;
+              <h2 className="text-4xl md: text-5xl font-bold mb-6">", Ready to Transform Financial Services?,
               </h2>;
               <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">";
                 Let our fintech experts help you implement cutting-edge financial technology;
                 solutions that enhance security and efficiency.;
               </p>;
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">";
-                <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">";
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">", <Link href="/contact" className="px-8 py-4 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">",
                   Start Your Fintech Project;
                 </Link>;
-                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-green-600 transition-all duration-300 font-semibold">";
-                  Learn About Our Expertise;
+                <Link href="/about" className="px-8 py-4 border-2 border-white text-white rounded-lg hover: bg-white hover:text-green-600 transition-all duration-300 font-semibold">", Learn About Our Expertise,
                 </Link>;
               </div>;
             </motion.div>;

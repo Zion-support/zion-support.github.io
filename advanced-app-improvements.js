@@ -14,8 +14,8 @@ function createAdvancedMonitoring() {
     'monitoring/health-check.js': `// Advanced health check system
 export class HealthChecker {
   constructor() {
-    this.checks = new Map();
-    this.results = new Map();
+    this.checks = new Map(),
+    this.results = new Map()
   }
 
   addCheck(name, checkFunction) {
@@ -41,8 +41,8 @@ export const healthChecker = new HealthChecker();`,
     'monitoring/performance-monitor.js': `// Performance monitoring system
 export class PerformanceMonitor {
   constructor() {
-    this.metrics = new Map();
-    this.observers = [];
+    this.metrics = new Map(),
+    this.observers = []
   }
 
   startMonitoring() {
@@ -109,8 +109,8 @@ export class PerformanceMonitor {
   }
 
   stopMonitoring() {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
+    this.observers.forEach(observer => observer.disconnect()),
+    this.observers = []
   }
 }
 
@@ -119,8 +119,8 @@ export const performanceMonitor = new PerformanceMonitor();`,
     'monitoring/error-tracker.js': `// Error tracking system
 export class ErrorTracker {
   constructor() {
-    this.errors = [];
-    this.errorCounts = new Map();
+    this.errors = [],
+    this.errorCounts = new Map()
   }
 
   trackError(error, context = {}) {
@@ -177,9 +177,8 @@ if (typeof window !== 'undefined') {
     'monitoring/analytics.js': `// Analytics tracking system
 export class AnalyticsTracker {
   constructor() {
-    this.events = [];
-    this.sessionId = this.generateSessionId();
-
+    this.events = [],
+    this.sessionId = this.generateSessionId()
   }
 
   generateSessionId() {
@@ -272,9 +271,9 @@ export function debounce(func, wait) {
   let timeout;
   return function executedFunction(...args) {
     const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
+    clearTimeout(timeout),
+    func(...args)
+  };
     clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };
@@ -364,14 +363,10 @@ function addSkipLinks() {
   skipLink.textContent = 'Skip to main content';
   skipLink.className = 'skip-link';
   skipLink.style.cssText = \`
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 1000;
+    position: absolute, top: -40px,
+    left: 6px, background: #000,
+    color: #fff, padding: 8px,
+    text-decoration: none, z-index: 1000,
   \`;
   
   skipLink.addEventListener('focus', () => {
@@ -390,8 +385,7 @@ function improveFocusManagement() {
   const style = document.createElement('style');
   style.textContent = \`
     *:focus {
-      outline: 2px solid #007acc;
-      outline-offset: 2px;
+      outline: 2px solid #007acc, outline-offset: 2px,
     }
   \`;
   document.head.appendChild(style);
@@ -399,7 +393,7 @@ function improveFocusManagement() {
 
 function addAriaLabels() {
   // Add ARIA labels to interactive elements without labels
-  const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+  const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])'),
   buttons.forEach(button => {
     if (!button.textContent.trim()) {
       button.setAttribute('aria-label', 'Button');
@@ -458,11 +452,11 @@ function handleTabNavigation(event) {
   const lastElement = focusableElements[focusableElements.length - 1];
   
   if (event.shiftKey && document.activeElement === firstElement) {
-    event.preventDefault();
-    lastElement.focus();
+    event.preventDefault(),
+    lastElement.focus()
   } else if (!event.shiftKey && document.activeElement === lastElement) {
-    event.preventDefault();
-    firstElement.focus();
+    event.preventDefault(),
+    firstElement.focus()
   }
 }
 
@@ -492,9 +486,9 @@ function handleArrowNavigation(event) {
     }
     
     if (nextIndex !== currentIndex) {
-      event.preventDefault();
-      items[nextIndex].focus();
-    }
+    event.preventDefault(),
+    items[nextIndex].focus()
+  }
   }
 }`
 
@@ -516,8 +510,7 @@ async function main() {
     createAccessibilityImprovements();
     
     console.log('\n✅ Advanced app improvements completed successfully!');
-    console.log('\n📋 Summary:');
-    console.log('  - Advanced monitoring system created');
+    console.log('\n📋 Summary: '), console.log('  - Advanced monitoring system created'),
     console.log('  - Performance optimization utilities added');
     console.log('  - Accessibility improvements implemented');
     console.log('\n🚀 Your app is now enhanced with advanced features!');

@@ -18,14 +18,14 @@ export default function WebsitePerformanceMonitorPage() {
     {
       icon: <Gauge className="w-8 h-8 text-white" />,
       title: 'Performance Metrics',
-      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      description: 'Comprehensive metrics including Core Web Vitals, page load times, and user experience scores.',
+    color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500'},
     {
       icon: <AlertTriangle className="w-8 h-8 text-white" />,
       title: 'Issue Detection',
-      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      description: 'Automatically detect and alert on performance issues, downtime, and bottlenecks.',
+    color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'},
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
@@ -36,8 +36,8 @@ export default function WebsitePerformanceMonitorPage() {
   const metrics = [
     {
       name: 'Core Web Vitals',
-      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.';
-      icon: '⚡',
+      description: 'LCP, FID, and CLS metrics that directly impact user experience and SEO rankings.',
+    icon: '⚡',
       color: 'text-blue-400'
     };
     {

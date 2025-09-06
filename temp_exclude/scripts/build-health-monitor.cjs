@@ -65,9 +65,9 @@ class BuildHealthMonitor {
       
       // Try to auto-fix build issues
       if (process.env.AUTO_FIX === 'true') {
-        this.log('Attempting build error auto-fix...');
-        await this.autoFixBuildErrors(error.stdout || error.message);
-      }
+    this.log('Attempting build error auto-fix...'),
+    await this.autoFixBuildErrors(error.stdout || error.message)
+  }
       
       return { success: false, output: error.stdout || error.message };
     }
@@ -193,8 +193,8 @@ class BuildHealthMonitor {
 
 // Run if called directly
 if (require.main === module) {
-  const monitor = new BuildHealthMonitor();
-  monitor.monitor().catch(console.error);
-}
+    const monitor = new BuildHealthMonitor(),
+    monitor.monitor().catch(console.error)
+  }
 
 module.exports = BuildHealthMonitor;

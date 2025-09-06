@@ -31,7 +31,7 @@ const serviceCategories = [
   {
     id: 'financial-technology',
     title: '💰 Financial Technology',
-    description: 'Innovative fintech, DeFi, and financial services';
+    description: 'Innovative fintech, DeFi, and financial services',
     icon: TrendingUp,
     color: 'from-green-500 to-emerald-500',
     services: [...innovativeFinancialServices2025],
@@ -91,7 +91,7 @@ const serviceCategories = [
   {
     id: 'quantum-emerging',
     title: '⚛️ Quantum & Emerging Tech',
-    description: 'Quantum computing, DNA computing, and beyond';
+    description: 'Quantum computing, DNA computing, and beyond',
     icon: Atom,
     color: 'from-indigo-500 to-blue-500',
     services: [...emergingTechServices2025],

@@ -29,7 +29,7 @@ const newsArticles = [
     date: "2024-01-15",
     category: "Product Launch",
     image: "/images/news/ai-platform.jpg",
-    featured: true];
+    featured: true],
     tags: [AI", "Analytics", "Product Launch", "Innovation"],
   {
     id: 2,

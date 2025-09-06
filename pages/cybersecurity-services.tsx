@@ -19,7 +19,7 @@ const contactInfo = {
 const serviceHighlights = [
   {
     title: 'Zero Trust Security',
-    description: 'Never trust, always verify - Advanced zero trust implementation';
+    description: 'Never trust, always verify - Advanced zero trust implementation',
     icon: Shield,
     color: 'from-red-500 to-pink-600',
     features: ['Continuous verificationMicro-segmentationAdaptive controlsReal-time monitoring']

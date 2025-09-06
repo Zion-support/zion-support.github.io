@@ -1,4 +1,4 @@
-const GITHUB_API = 'https: //api.github.com';
+const GITHUB_API = 'https: //api.github.com',
 async function getFile(owner, repo, path, token) {
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {

@@ -280,17 +280,17 @@ class EnhancedGitAutomation {
       try {
         execSync('npm test', { stdio: 'pipe' });
       } catch (error) {
-        qualityCheck.passed = false;
-        qualityCheck.issues.push('Tests failed');
-      }
+    qualityCheck.passed = false,
+    qualityCheck.issues.push('Tests failed')
+  }
       
       // Run linting
       try {
         execSync('npm run lint', { stdio: 'pipe' });
       } catch (error) {
-        qualityCheck.passed = false;
-        qualityCheck.issues.push('Linting failed');
-      }
+    qualityCheck.passed = false,
+    qualityCheck.issues.push('Linting failed')
+  }
       
       // Check test coverage
       try {
@@ -311,9 +311,9 @@ class EnhancedGitAutomation {
       try {
         execSync('npm audit --audit-level moderate', { stdio: 'pipe' });
       } catch (error) {
-        qualityCheck.passed = false;
-        qualityCheck.issues.push('Security vulnerabilities found');
-      }
+    qualityCheck.passed = false,
+    qualityCheck.issues.push('Security vulnerabilities found')
+  }
       
       // Store quality check results
       this.qualityChecks.set(branchName, qualityCheck);
@@ -380,9 +380,7 @@ class EnhancedGitAutomation {
         case 'package':
           resolution.actions.push('resolve_package_conflict');
           break;
-        default:
-          resolution.actions.push('manual_review_required');
-          resolution.resolved = false;
+        default: resolution.actions.push('manual_review_required'), resolution.resolved = false,
           return resolution;
       }
     }
@@ -405,9 +403,9 @@ class EnhancedGitAutomation {
         
         i++;
         while (i < lines.length && !lines[i].includes('>>>>>>>')) {
-          conflict.content.push(lines[i]);
-          i++;
-        }
+    conflict.content.push(lines[i]),
+    i++
+  }
         
         conflicts.push(conflict);
       }
@@ -418,8 +416,8 @@ class EnhancedGitAutomation {
 
   extractFileName(line) {
     // Extract filename from conflict marker
-    const match = line.match(/<<<<<<< (.*)/);
-    return match ? match[1] : 'unknown';
+    const match = line.match(/<<<<<<< (.*)/),
+    return match ? match[1] : 'unknown'
   }
 
   analyzeConflictType(conflict) {

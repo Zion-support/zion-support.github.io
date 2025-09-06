@@ -26,8 +26,8 @@ export default function Careers() {
       id: 1,
       title: 'Senior AI Engineer',
       department: 'ai-research',
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',
+      location: 'Remote / Middletown, DE',
+    type: 'Full-time',
       experience: '5+ years',
       description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
@@ -38,8 +38,8 @@ export default function Careers() {
       id: 2,
       title: 'Quantum Computing Researcher',
       department: 'quantum',
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',
+      location: 'Remote / Middletown, DE',
+    type: 'Full-time',
       experience: '3+ years',
       description: 'Research and develop quantum algorithms and quantum computing solutions.',
       requirements: [
@@ -50,8 +50,8 @@ export default function Careers() {
       id: 3,
       title: 'Space Technology Engineer',
       department: 'space-tech',
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',
+      location: 'Remote / Middletown, DE',
+    type: 'Full-time',
       experience: '4+ years',
       description: 'Design and develop innovative space technology solutions and satellite systems.',
       requirements: [
@@ -62,8 +62,8 @@ export default function Careers() {
       id: 4,
       title: 'Full Stack Developer',
       department: 'engineering',
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',
+      location: 'Remote / Middletown, DE',
+    type: 'Full-time',
       experience: '3+ years',
       description: 'Build scalable web applications and cloud-based solutions.',
       requirements: [
@@ -74,8 +74,8 @@ export default function Careers() {
       id: 5,
       title: 'Business Development Manager',
       department: 'sales',
-      location: 'Remote / Middletown, DE';
-      type: 'Full-time',
+      location: 'Remote / Middletown, DE',
+    type: 'Full-time',
       experience: '5+ years',
       description: 'Drive business growth through strategic partnerships and client relationships.',
       requirements: [

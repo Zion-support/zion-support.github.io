@@ -1,7 +1,7 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
-import { Resend } from "npm: resend@2.0.0";
+import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
+import { Resend } from "npm: resend@2.0.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -28,7 +28,7 @@ serve(async (req) => {
       .from('interviews')
       .select(`
         *;
-        clients:client_id(*);
+        clients: client_id(*),
         talents:talent_id(*)
       `)
       .eq('statusconfirmed')
@@ -52,8 +52,7 @@ serve(async (req) => {
         if (clientEmail) {
           try {
             await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>";
-              to: [clientEmail];
+              from: "Zion Marketplace <onboarding@resend.dev>", to: [clientEmail],
               subject: `Your interview with ${talentName} is starting soon!`;
               html: `
                 <h1>Interview Reminder</h1>
@@ -77,8 +76,7 @@ serve(async (req) => {
         if (talentEmail) {
           try {
             await resend.emails.send({
-              from: "Zion Marketplace <onboarding@resend.dev>";
-              to: [talentEmail];
+              from: "Zion Marketplace <onboarding@resend.dev>", to: [talentEmail],
               subject: `Your interview with ${clientName} is starting soon!`;
               html: `
                 <h1>Interview Reminder</h1>

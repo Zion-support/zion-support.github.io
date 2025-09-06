@@ -61,25 +61,25 @@ const certificationPaths = []
     name: "AI Solutions Architect",
     description: "Design and implement AI solutions for enterprise applications",
     duration: "6 months",
-    courses: 8;
+    courses: 8,
   },
   {}
     name: "Cloud Security Specialist",
     description: "Secure cloud infrastructure and applications",
     duration: "4 months",
-    courses: 6;
+    courses: 6,
   },
   {}
     name: "DevOps Engineer",
     description: "Automate and optimize development workflows",
     duration: "5 months",
-    courses: 7;
+    courses: 7,
   },
   {}
     name: "Data Science Professional",
     description: "Extract insights from data using advanced analytics",
     duration: "7 months",
-    courses: 10;
+    courses: 10,
   };
 ];
 

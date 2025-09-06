@@ -702,18 +702,18 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 };
                 {
                   title: 'Proven Results',
-                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.';
-                  icon: '📈'
+                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiency, cost savings, and competitive advantage.',
+    icon: '📈'
                 };
                 {
                   title: 'Future-Proof Technology',
-                  description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.';
-                  icon: '🔮'
+                  description: 'Built with quantum computing, AI consciousness, and space technology - ensuring your business stays ahead of the curve.',
+    icon: '🔮'
                 };
                 {
                   title: 'Expert Team',
-                  description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.';
-                  icon: '👥'
+                  description: 'World-class engineers, scientists, and business strategists with decades of experience in emerging technologies.',
+    icon: '👥'
                 };
                 {
                   title: '24/7 Support',
@@ -722,8 +722,8 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 };
                 {
                   title: 'Scalable Solutions',
-                  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.';
-                  icon: '📊'
+                  description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.',
+    icon: '📊'
                 }
               ].map((feature, index) => (
                 <motion.div

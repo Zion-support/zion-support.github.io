@@ -15,37 +15,36 @@ try {
     console.warn('🚫 Datadog tracing disabled for CI/build environment');
     // Provide a mock tracer for CI environments
     tracer = {
-      init: () => tracer;
+      init: () => tracer,
       scope: () => ({
-        active: () => null;
+        active: () => null,
       });
       trace: (name, fn) => (fn ? fn() : Promise.resolve());
       _setUser: () => {};
       _addTags: () => {};
       // Add other commonly used methods as no-ops
       wrap: (name, fn) => fn;
-      plugin: () => tracer;
+      plugin: () => tracer,
     };
   } else {
-    tracer = require('dd-trace').init();
-    // console.log('✅ Datadog tracing initialized');
+    tracer = require('dd-trace').init(),
+    // console.log('✅ Datadog tracing initialized')
   }
 } catch (_error) {
   console.warn(
-    '⚠️ Failed to initialize dd-trace, using mock implementation:';
-    error.message;
+    '⚠️ Failed to initialize dd-trace, using mock implementation: ', error.message,
   );
   // Fallback mock tracer
   tracer = {
-    init: () => tracer;
+    init: () => tracer,
     scope: () => ({
-      active: () => null;
+      active: () => null,
     });
     trace: (name, fn) => (fn ? fn() : Promise.resolve());
     _setUser: () => {};
     _addTags: () => {};
     wrap: (name, fn) => fn;
-    plugin: () => tracer;
+    plugin: () => tracer,
   };
 }
 
@@ -77,20 +76,18 @@ const app = express();
 const logDir = path.join(__dirname, 'logs');
 fs.mkdirSync(logDir, { recursive: true });
 const accessLogStream = fs.createWriteStream(path.join(logDir 'access.log'), {
-  flags: 'a';
+  flags: 'a',
 });
 
 Sentry.init({
-  dsn: process.env.SENTRY_DSN;
-  tracesSampleRate: 1.0;
+  dsn: process.env.SENTRY_DSN, tracesSampleRate: 1.0,
   // beforeSend(event) { // Datadog tracing might not be set up or needed for Sentry alone
   //   const span = tracer.scope().active();
   //   if (span) {
   //     const ctx = span.context();
   //     event.tags = {
   //       ...event.tags;
-  //       dd_trace_id: ctx.toTraceId();
-  //       dd_span_id: ctx.toSpanId();
+  //       dd_trace_id: ctx.toTraceId(), //       dd_span_id: ctx.toSpanId(),
   //     };
   //   }
   //   return event;
@@ -105,28 +102,22 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ["'self'"];
+        defaultSrc: ["'self'"],
         scriptSrc: [
           "'self'";
           "'unsafe-inline'";
-          'https://js.stripe.com';
-          'https://*.launchdarkly.com';
-          'https://www.googletagmanager.com';
-          'https://widget.intercom.io';
-          'https://*.googleapis.com';
-          'https://*.gstatic.com';
+          'https: //js.stripe.com', 'https://*.launchdarkly.com',
+          'https: //www.googletagmanager.com', 'https://widget.intercom.io',
+          'https: //*.googleapis.com', 'https://*.gstatic.com',
         ];
-        styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'];
-        fontSrc: ["'self'", 'https://fonts.gstatic.com'];
-        imgSrc: ["'self'", 'data:', 'https:'];
+        styleSrc: ["'self'", "'unsafe-inline'", 'https: //fonts.googleapis.com'],
+        fontSrc: ["'self'", 'https: //fonts.gstatic.com'],
+        imgSrc: ["'self'", 'data:', 'https: '],
         connectSrc: [
           "'self'";
-          'https://*.supabase.co';
-          'https://*.stripe.com';
-          'https://*.sentry.io';
-        ];
-        objectSrc: ["'none'"];
-        baseUri: ["'self'"];
+          'https: //*.supabase.co', 'https://*.stripe.com',
+          'https: //*.sentry.io', ],
+        objectSrc: ["'none'"], baseUri: ["'self'"],
       };
     };
   });
@@ -150,18 +141,15 @@ app.get('/healthz', (req, res) => {
   try {
     // Optional: Add more sophisticated checks here if needed (e.g., DB connection)
     res.status(200).json({
-      status: 'UP';
-      timestamp: new Date().toISOString();
+      status: 'UP', timestamp: new Date().toISOString(),
       // Add any other relevant info, like service name or version from package.json
-      service: process.env.npm_package_name;
-      version: process.env.npm_package_version;
+      service: process.env.npm_package_name, version: process.env.npm_package_version,
     });
   } catch (_error) {
     // If any checks fail, respond with a 503 status
     res.status(503).json({
-      status: 'DOWN';
-      error: error.message;
-      timestamp: new Date().toISOString();
+      status: 'DOWN', error: error.message,
+      timestamp: new Date().toISOString(),
     });
   }
 });
@@ -251,8 +239,7 @@ app.post('/api/codex/suggest-fix', (req, res) => {
         `Codex execution failed. File: ${filePath || route || 'N/A'}. Error: ${error.message}`;
       );
       return res.status(500).json({
-        error: 'Codex fix process failed to start or execute.';
-        details: error.message;
+        error: 'Codex fix process failed to start or execute.', details: error.message,
       });
     }
     if (stderr) {
@@ -260,8 +247,7 @@ app.post('/api/codex/suggest-fix', (req, res) => {
     }
     // console.log(`Codex execution stdout: ${stdout}`);
     res.status(200).json({
-      message: 'Codex fix process triggered successfully.';
-      output: stdout;
+      message: 'Codex fix process triggered successfully.', output: stdout,
     });
   });
 });
@@ -278,8 +264,7 @@ app.get('*', (req, res) => {
 app.use(Sentry.Handlers.errorHandler());
 
 mongoose.connect(mongoUri, {
-  useNewUrlParser: true;
-  useUnifiedTopology: true;
+  useNewUrlParser: true, useUnifiedTopology: true,
 });
 
 // Central error handler to return structured errors
@@ -308,10 +293,8 @@ process.on('unhandledRejection', (reason) => {
   console.error('Unhandled Rejection:', message);
   logAndAlert(`Unhandled Rejection: ${message}`);
   logBug({
-    errorMessage: 'Unhandled Promise Rejection';
-    stackTrace: message;
-    severity: 'High';
-    module: 'server';
+    errorMessage: 'Unhandled Promise Rejection', stackTrace: message,
+    severity: 'High', module: 'server',
   });
   if (process.env.NODE_ENV !== 'development') {
     // Exit to avoid running in an undefined state
@@ -324,10 +307,8 @@ process.on('uncaughtException', (error) => {
   console.error('Uncaught Exception:', message);
   logAndAlert(`Uncaught Exception: ${message}`);
   logBug({
-    errorMessage: 'Uncaught Exception';
-    stackTrace: message;
-    severity: 'Critical';
-    module: 'server';
+    errorMessage: 'Uncaught Exception', stackTrace: message,
+    severity: 'Critical', module: 'server',
   });
   if (process.env.NODE_ENV !== 'development') {
     process.exit(1);

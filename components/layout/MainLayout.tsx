@@ -5,8 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 interface MainLayoutProps {
-  children: ReactNode;
-  title?: string;
+  children: ReactNode, title?: string,
   description?: string;
   keywords?: string;
   canonical?: string;

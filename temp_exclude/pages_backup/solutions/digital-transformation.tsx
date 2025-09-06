@@ -176,10 +176,9 @@ export default function DigitalTransformationPage() {
 <<<<<<< HEAD
               className="text-center""
             >;
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">";
-                Digital Transformation;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">", Digital Transformation,
               </h1>;
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">";
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">",
                 Transform your business for the digital age with our comprehensive transformation solutions. 
                 Modernize processes, enhance efficiency, and drive innovation.,
               </p>;
@@ -242,7 +241,7 @@ export default function DigitalTransformationPage() {
         {/* Services Section */}
         <section className="py-20">"
           <div className="container mx-auto px-4">";
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">",
               {transformationServices.map((service, index) => {}
                 const IconComponent = service.icon;
                 return (;
@@ -424,15 +423,14 @@ export default function DigitalTransformationPage() {
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">";
-              Start Your Digital Journey;
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">", Start Your Digital Journey,
             </h2>;
             <p className="text-xl mb-8 max-w-2xl mx-auto">";
               Ready to transform your business? Let our experts guide you through your digital transformation journey.;
             </p>;
             <motion.a;
               href="/contact"";
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold"";
+              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 rounded-lg hover: bg-gray-100 transition-all duration-300 font-semibold"",
               whileHover={{ scale: 1.05 }}
             >,
               Begin Transformation;

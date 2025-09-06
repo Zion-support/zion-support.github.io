@@ -106,7 +106,7 @@ class LinkCheckerAutomation {}
     async checkLink(url) {}
         return new Promise((resolve) => {;}
             try {}
-                const urlObj = new URL(ur;l;);
+                const urlObj = new URL(ur, l);
                 const options = {}
                     "hostname": urlObj.hostname,
                     "port": urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),

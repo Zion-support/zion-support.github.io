@@ -20,7 +20,7 @@ const runCommand = (command, description) => {}
     const output = execSync(command, { })
       encoding: 'utf8', 
       stdio: 'pipe',
-      cwd: process.cwd();
+      cwd: process.cwd(),
     }
 });
     log(`Completed: ${description}`);
@@ -173,7 +173,7 @@ const main = async () => {}
     linting: lintingResults,
     typeChecking: typeCheckingResults,
     codeQuality: codeQualityResults,
-    coverage: coverageResults;
+    coverage: coverageResults,
   };
   
   const report = generateQualityReport(results);

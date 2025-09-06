@@ -124,14 +124,14 @@ export default function AboutPage() {
   const services = [
     {
       title: 'AI Development',
-      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.';
-      icon: '🧠',
+      description: 'Advanced machine learning models, natural language processing, computer vision systems, and autonomous decision making.',
+    icon: '🧠',
       color: 'text-cyan-400',
       gradient: 'from-cyan-400 to-blue-500'},
     {
       title: 'Automation Systems',
-      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.';
-      icon: '⚙️',
+      description: 'Cloud infrastructure automation, CI/CD pipeline optimization, self-healing applications, and performance monitoring.',
+    icon: '⚙️',
       color: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500'}],
   const achievements = [

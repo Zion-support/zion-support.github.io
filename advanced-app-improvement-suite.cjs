@@ -144,7 +144,7 @@ class AdvancedAppImprovementSuite {
       
       const report = await this.createImprovementReport();
       
-      this.log('\n📊 Advanced App Improvement Suite Summary:');
+      this.log('\n📊 Advanced App Improvement Suite Summary: '),
       this.log(`✅ Improvements: ${report.summary.totalImprovements}`);
       this.log(`❌ Errors: ${report.summary.totalErrors}`);
       this.log(`📈 Success Rate: ${report.summary.successRate.toFixed(1)}%`);

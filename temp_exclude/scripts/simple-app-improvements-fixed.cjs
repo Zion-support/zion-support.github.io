@@ -4,14 +4,14 @@
     this.log(`Duration: ${duration}ms`);
     
     if (this.improvements.length > 0) {
-      this.log('\\n✅ Improvements created:');
+      this.log('\\n✅ Improvements created: '),
       this.improvements.forEach((improvement, index) => {
         this.log(`  ${index + 1}. ${improvement}`);
       });
     }
     
     if (this.errors.length > 0) {
-      this.log('\\n❌ Errors encountered:');
+      this.log('\\n❌ Errors encountered: '),
       this.errors.forEach((error, index) => {
         this.log(`  ${index + 1}. ${error}`);
       });

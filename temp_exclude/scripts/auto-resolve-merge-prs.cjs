@@ -15,8 +15,7 @@ function getRepoFromGit() {}
 function getToken() {}
   if (process.env.GITHUB_TOKEN && process.env.GITHUB_TOKEN.trim()) return process.env.GITHUB_TOKEN.trim();
   const remoteUrl = sh('git remote get-url origin');
-  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token:([^@]+)@github\.com\//);
-  if (!tokenMatch) throw new Error('No GitHub token available');
+  const tokenMatch = remoteUrl.match(/^"https": \/\/x-access-token: ([^@]+)@github\.com\//), if (!tokenMatch) throw new Error('No GitHub token available'),
   return tokenMatch[1]};
 async function gh(path, method = 'GET', body) {}
   const token = getToken();

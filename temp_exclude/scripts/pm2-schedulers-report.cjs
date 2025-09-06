@@ -54,32 +54,25 @@ class PM2SchedulersReport {
     
     const processes = await this.getPM2Status();
     const report = {
-      generated: new Date().toISOString();
+      generated: new Date().toISOString(),
       summary: {
-        total: processes.length;
-        running: 0;
-        stopped: 0;
-        errored: 0;
+        total: processes.length, running: 0,
+        stopped: 0, errored: 0,
         restarts: 0
       };
-      processes: [];
+      processes: [],
       recommendations: []
     };
 
     for (const process of processes) {
       const processInfo = {
-        name: process.name;
-        id: process.pm_id;
-        status: process.pm2_env.status;
-        uptime: process.pm2_env.pm_uptime;
-        restarts: process.pm2_env.restart_time;
-        memory: process.monit.memory;
-        cpu: process.monit.cpu;
-        pid: process.pid;
+        name: process.name, id: process.pm_id,
+        status: process.pm2_env.status, uptime: process.pm2_env.pm_uptime,
+        restarts: process.pm2_env.restart_time, memory: process.monit.memory,
+        cpu: process.monit.cpu, pid: process.pid,
         pm2_env: {
-          instances: process.pm2_env.instances;
-          exec_mode: process.pm2_env.exec_mode;
-          node_version: process.pm2_env.node_version;
+          instances: process.pm2_env.instances, exec_mode: process.pm2_env.exec_mode,
+          node_version: process.pm2_env.node_version,
           pm_cwd: process.pm2_env.pm_cwd
         }
       };
@@ -101,24 +94,21 @@ class PM2SchedulersReport {
       // Generate recommendations
       if (process.pm2_env.restart_time > 10) {
         report.recommendations.push({
-          process: process.name;
-          issue: 'High restart count';
+          process: process.name, issue: 'High restart count',
           recommendation: 'Investigate why this process keeps restarting'
         });
       }
 
       if (process.monit.memory > 500 * 1024 * 1024) { // 500MB
         report.recommendations.push({
-          process: process.name;
-          issue: 'High memory usage';
+          process: process.name, issue: 'High memory usage',
           recommendation: 'Consider memory optimization or increase memory limit'
         });
       }
 
       if (process.monit.cpu > 80) {
         report.recommendations.push({
-          process: process.name;
-          issue: 'High CPU usage';
+          process: process.name, issue: 'High CPU usage',
           recommendation: 'Investigate CPU-intensive operations'
         });
       }
@@ -127,16 +117,14 @@ class PM2SchedulersReport {
     // Add general recommendations
     if (report.summary.errored > 0) {
       report.recommendations.push({
-        process: 'System';
-        issue: 'Processes in error state';
+        process: 'System', issue: 'Processes in error state',
         recommendation: 'Check PM2 logs and restart failed processes'
       });
     }
 
     if (report.summary.restarts > 50) {
       report.recommendations.push({
-        process: 'System';
-        issue: 'High restart frequency';
+        process: 'System', issue: 'High restart frequency',
         recommendation: 'Review process stability and error handling'
       });
     }
@@ -177,32 +165,43 @@ class PM2SchedulersReport {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PM2 Schedulers Report</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 20px; background: #f5f5f5; }
-        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden; }
-        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; }
-        .header h1 { margin: 0; font-size: 2.5em; }
-        .header p { margin: 10px 0 0 0; opacity: 0.9; }
-        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 30px; background: #f8f9fa; }
-        .summary-card { background: white; padding: 20px; border-radius: 8px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .summary-card h3 { margin: 0 0 10px 0; color: #333; }
-        .summary-card .number { font-size: 2em; font-weight: bold; color: #667eea; }
-        .processes { padding: 30px; }
-        .process-card { background: white; border: 1px solid #e9ecef; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-        .process-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .process-name { font-size: 1.2em; font-weight: bold; color: #333; }
-        .process-status { padding: 4px 12px; border-radius: 20px; font-size: 0.9em; font-weight: bold; }
-        .status-online { background: #d4edda; color: #155724; }
-        .status-stopped { background: #f8d7da; color: #721c24; }
-        .status-errored { background: #fff3cd; color: #856404; }
-        .process-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; }
-        .detail-item { text-align: center; }
-        .detail-label { font-size: 0.9em; color: #666; margin-bottom: 5px; }
-        .detail-value { font-weight: bold; color: #333; }
-        .recommendations { padding: 30px; background: #f8f9fa; }
-        .recommendation { background: white; border-left: 4px solid #ffc107; padding: 15px; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
-        .recommendation h4 { margin: 0 0 10px 0; color: #333; }
-        .recommendation p { margin: 0; color: #666; }
-        .timestamp { text-align: center; padding: 20px; color: #666; font-size: 0.9em; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0, padding: 20px, background: #f5f5f5
+  }
+        .container { max-width: 1200px, margin: 0 auto, background: white, border-radius: 8px, box-shadow: 0 2px 10px rgba(0,0,0,0.1); overflow: hidden
+  }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white, padding: 30px, text-align: center
+  }
+        .header h1 { margin: 0, font-size: 2.5em, }
+        .header p { margin: 10px 0 0 0, opacity: 0.9, }
+        .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px, padding: 30px, background: #f8f9fa
+  }
+        .summary-card { background: white, padding: 20px, border-radius: 8px, text-align: center, box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .summary-card h3 { margin: 0 0 10px 0, color: #333, }
+        .summary-card .number { font-size: 2em, font-weight: bold, color: #667eea
+  }
+        .processes { padding: 30px
+  }
+        .process-card { background: white, border: 1px solid #e9ecef, border-radius: 8px, padding: 20px, margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .process-header { display: flex, justify-content: space-between, align-items: center, margin-bottom: 15px, }
+        .process-name { font-size: 1.2em, font-weight: bold, color: #333
+  }
+        .process-status { padding: 4px 12px, border-radius: 20px, font-size: 0.9em, font-weight: bold, }
+        .status-online { background: #d4edda, color: #155724, }
+        .status-stopped { background: #f8d7da, color: #721c24, }
+        .status-errored { background: #fff3cd, color: #856404, }
+        .process-details { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px
+  }
+        .detail-item { text-align: center
+  }
+        .detail-label { font-size: 0.9em, color: #666, margin-bottom: 5px
+  }
+        .detail-value { font-weight: bold, color: #333, }
+        .recommendations { padding: 30px, background: #f8f9fa, }
+        .recommendation { background: white, border-left: 4px solid #ffc107, padding: 15px, margin-bottom: 15px, border-radius: 0 8px 8px 0
+  }
+        .recommendation h4 { margin: 0 0 10px 0, color: #333, }
+        .recommendation p { margin: 0, color: #666, }
+        .timestamp { text-align: center, padding: 20px, color: #666, font-size: 0.9em, }
     </style>
 </head>
 <body>
@@ -294,7 +293,7 @@ async function main() {
     const report = await reporter.generateReport();
     await reporter.saveReport(report);
     
-    console.log('\n📊 Report Summary:');
+    console.log('\n📊 Report Summary: '),
     console.log(`  Total processes: ${report.summary.total}`);
     console.log(`  Running: ${report.summary.running}`);
     console.log(`  Stopped: ${report.summary.stopped}`);

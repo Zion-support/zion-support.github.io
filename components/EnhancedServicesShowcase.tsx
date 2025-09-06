@@ -87,8 +87,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       name: 'Space Technology Innovation',
       tagline: 'Accelerate space exploration with cutting-edge technology solutions',
       category: 'Space Tech',
-      price: '$2,499';
-      period: '/month',
+      price: '$2,499',
+    period: '/month',
       setupTime: '8-12 weeks',
       customers: '25+',
       features: ['Satellite managementAI mission planningQuantum communicationSpace analytics'],
@@ -123,8 +123,8 @@ const EnhancedServicesShowcase: React.FC = () => {
       name: 'Quantum AI Neural Networks',
       tagline: 'Quantum-powered AI with advanced consciousness capabilities',
       category: 'Quantum AI',
-      price: '$1,299';
-      period: '/month',
+      price: '$1,299',
+    period: '/month',
       setupTime: '10-14 weeks',
       customers: '15+',
       features: ['Quantum neural networksConsciousness simulationAdvanced learningQuantum optimization'],

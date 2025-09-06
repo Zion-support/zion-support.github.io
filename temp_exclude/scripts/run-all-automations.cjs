@@ -119,9 +119,7 @@ if (require.main === module) {
     case "report":
       runner.generateReport();
       break;
-    default:
-      console.log("Usage: node run-all-automations.cjs [run|report]");
-      process.exit(1);
+    default: console.log("Usage: node run-all-automations.cjs [run|report]"), process.exit(1),
   }
 }
 

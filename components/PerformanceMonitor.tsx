@@ -23,31 +23,26 @@ interface PerformanceMonitorProps {
 declare global {
   interface Window {
 
-    performance: Performance;
+    performance: Performance,
   }
   
   interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[];
+    getEntriesByType(type: string): PerformanceEntry[],
     memory?: {
-      usedJSHeapSize: number;
-      totalJSHeapSize: number;
-      jsHeapSizeLimit: number;
+      usedJSHeapSize: number, totalJSHeapSize: number,
+      jsHeapSizeLimit: number,
     };
   }
   
   interface PerformanceEntry {
-    name: string;
-    startTime: number;
-    duration: number;
+    name: string, startTime: number,
+    duration: number,
   }
   
   interface PerformanceNavigationTiming extends PerformanceEntry {
-    domContentLoadedEventStart: number;
-    domContentLoadedEventEnd: number;
-    loadEventStart: number;
-    loadEventEnd: number;
-    fetchStart: number;
-
+    domContentLoadedEventStart: number, domContentLoadedEventEnd: number,
+    loadEventStart: number, loadEventEnd: number,
+    fetchStart: number,
   }
 }
 
@@ -101,10 +96,10 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceDa
         resourceCount: window.performance.getEntriesByType('resource').length,
         // Memory usage (if available)
 
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
+        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
+          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
+          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
+          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit
 
         } : null
       },

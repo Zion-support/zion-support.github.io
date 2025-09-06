@@ -7,7 +7,7 @@ import { Download } from 'lucide-react'
 import { Resume } from "@/types/resume";
 interface ResumePreviewCardProps {
   resume: Resume,
-  onDownload: () => void;
+  onDownload: () => void,
   isLoading: boolean
 }
 

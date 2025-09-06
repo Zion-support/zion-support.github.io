@@ -1,14 +1,19 @@
 <<<<<<< HEAD
 }};
 ; async analyzeFile(filePath) {; try {; const content = fs.readFileSync(filePath, 'utf8'); const stats = fs.statSync(filePath);
-; const analysis = {; file: filePath; size: stats.size; lines: content.split('\n').length; issues: []};
+; const analysis = {; file: filePath, size: stats.size, lines: content.split('\n').length,
+    issues: []};
 ; // Check for common code quality issues; const lines = content.split('\n');
 ; lines.forEach((line, index) = > {; const lineNum = index + 1;
-; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum; type: 'trailing-spaces'; message: 'Trailing spaces found'; severity: 'low'})};
-; // Long lines (over 120 characters); if (line.length > 120) {; analysis.issues.push({; line: lineNum; type: 'long-line'; message: `Line is ${line.length} characters long (max: 120)`; severity: 'medium'})};
-; // Console statements; if (line.match(/console\.(log|warn|error|info|debug)/)) {; analysis.issues.push({; line: lineNum; type: 'console-statement'; message: 'Console statement found - should be removed in production'; severity: 'medium'})};
-; // TODO/FIXME comments; if (line.match(/TODO|FIXME|HACK|XXX/)) {; analysis.issues.push({; line: lineNum; type: 'todo-comment'; message: 'TODO/FIXME comment found'; severity: 'low'})};
-; // Unused imports (basic check); if (line.match(/^import.*from/) && !line.includes('//')) {; const importMatch = line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content.includes(importName)) {; analysis.issues.push({; line: lineNum; type: 'unused-import'; message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
+; // Trailing spaces; if (line.match(/[ \t]+$/)) {; analysis.issues.push({; line: lineNum, type: 'trailing-spaces', message: 'Trailing spaces found',
+    severity: 'low'})};
+; // Long lines (over 120 characters); if (line.length > 120) {; analysis.issues.push({; line: lineNum, type: 'long-line', message: `Line is ${line.length} characters long (max: 120)`,
+    severity: 'medium'})};
+; // Console statements; if (line.match(/console\.(log|warn|error|info|debug)/)) {; analysis.issues.push({; line: lineNum, type: 'console-statement', message: 'Console statement found - should be removed in production',
+    severity: 'medium'})};
+; // TODO/FIXME comments; if (line.match(/TODO|FIXME|HACK|XXX/)) {; analysis.issues.push({; line: lineNum, type: 'todo-comment', message: 'TODO/FIXME comment found',
+    severity: 'low'})};
+; // Unused imports (basic check); if (line.match(/^import.*from/) && !line.includes('//')) {; const importMatch = line.match(/import\s+(\w+)/); if (importMatch) {; const importName = importMatch[1]; if (importName ! = = 'React' && !content.includes(importName)) {; analysis.issues.push({; line: lineNum, type: 'unused-import', message: `Potentially unused import ${importName}`; severity: 'medium'})}}}});
 ; return analysis} catch (error) {; this.log(`Error analyzing file ${filePath}: ${error.message}`); return null}};
 ; async walkDirectory(dir) {; const analyses = [];
 ; try {; const items = fs.readdirSync(dir);
@@ -19,17 +24,23 @@
 ; const issuesByType = {}; const issuesBySeverity = { low: 0, medium: 0, high: 0 };
 ; analyses.forEach(analysis = > {; analysis.issues.forEach(issue = > {; // Count by type; issuesByType[issue.type] = (issuesByType[issue.type] || 0) + 1;
 ; // Count by severity; issuesBySeverity[issue.severity]++})});
-; const report = {; timestamp: new Date().toISOString(); summary: {; totalFiles; totalIssues; issuesByType; issuesBySeverity}; files: analyses.filter(analysis = > analysis.issues.length > 0); recommendations: this.generateRecommendations(issuesByType, totalIssues)};
+; const report = {; timestamp: new Date().toISOString(), summary: {, totalFiles; totalIssues; issuesByType; issuesBySeverity}; files: analyses.filter(analysis = > analysis.issues.length > 0),
+    recommendations: this.generateRecommendations(issuesByType, totalIssues)};
 ; return report};
 ; generateRecommendations(issuesByType, totalIssues) {; const recommendations = [];
-; if (issuesByType['trailing-spaces'] > 0) {; recommendations.push({; type: 'trailing-spaces'; priority: 'low'; message: 'Remove trailing spaces from files'; action: 'Run the lint-fixer to automatically remove trailing spaces'})};
-; if (issuesByType['console-statement'] > 0) {; recommendations.push({; type: 'console-statement'; priority: 'medium'; message: 'Remove console statements from production code'; action: 'Replace console statements with proper logging or remove them'})};
-; if (issuesByType['unused-import'] > 0) {; recommendations.push({; type: 'unused-import'; priority: 'medium'; message: 'Remove unused imports'; action: 'Clean up unused imports to reduce bundle size'})};
-; if (totalIssues > 100) {; recommendations.push({; type: 'general'; priority: 'high'; message: 'High number of code quality issues detected'; action: 'Run comprehensive code cleanup and establish coding standards'})};
+; if (issuesByType['trailing-spaces'] > 0) {; recommendations.push({; type: 'trailing-spaces', priority: 'low', message: 'Remove trailing spaces from files',
+    action: 'Run the lint-fixer to automatically remove trailing spaces'})};
+; if (issuesByType['console-statement'] > 0) {; recommendations.push({; type: 'console-statement', priority: 'medium', message: 'Remove console statements from production code',
+    action: 'Replace console statements with proper logging or remove them'})};
+; if (issuesByType['unused-import'] > 0) {; recommendations.push({; type: 'unused-import', priority: 'medium', message: 'Remove unused imports',
+    action: 'Clean up unused imports to reduce bundle size'})};
+; if (totalIssues > 100) {; recommendations.push({; type: 'general', priority: 'high', message: 'High number of code quality issues detected',
+    action: 'Run comprehensive code cleanup and establish coding standards'})};
 ; return recommendations};
 ; async saveReport(report) {; try {; const reportDir = path.dirname(this.reportFile); if (!fs.existsSync(reportDir)) {; fs.mkdirSync(reportDir, { recursive: true })};
 ; fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2)); this.log(`Report saved to: ${this.reportFile}`)} catch (error) {; this.log(`Error saving report: ${error.message}`)}};
-; async checkGitStatus() {; try {; const status = execSync('git status --porcelain', {; cwd: this.projectRoot; encoding: 'utf8'});
+; async checkGitStatus() {; try {; const status = execSync('git status --porcelain', {; cwd: this.projectRoot,
+    encoding: 'utf8'});
 ; if (status.trim()) {; this.log('⚠️ Uncommitted changes detected'); return false};
 ; return true} catch (error) {; this.log(`Error checking git status: ${error.message}`); return false}};
 ; async run() {; this.log('🔍 Starting Code Quality Monitor...'); this.log(`Project root: ${this.projectRoot}`);
@@ -41,7 +52,7 @@
 ; const duration = Date.now() - this.startTime;
 ; // Log summary; this.log('\n📊 Code Quality Report Summary: '); this.log(`Files analyzed: ${report.summary.totalFiles}`); this.log(`Total issues: ${report.summary.totalIssues}`); this.log(`Duration: ${duration}ms`);
 ; if (report.summary.totalIssues > 0) {; this.log('\n🚨 Issues by type: '); Object.entries(report.summary.issuesByType).forEach(([type, count]) = > {; this.log(` ${type}: ${count}`)});
-; this.log('\n💡 Recommendations: '); report.recommendations.forEach(rec = > {; this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)});
+; this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec = > {, this.log(` [${rec.priority.toUpperCase()}] ${rec.message}`); this.log(` Action: ${rec.action}`)});
 ; // If there are many issues and git is clean, suggest running the lint fixer; if (report.summary.totalIssues > 50 && isClean) {; this.log('\n🔧 Suggesting to run lint-fixer to auto-fix issues')}} else {; this.log('✨ Excellent! No code quality issues found!')};
 } catch (error) {; this.log(`❌ Error running code quality monitor: ${error.message}`); process.exit(1)}}};
 ;
@@ -59,10 +70,8 @@ monitor.run().catch(error = > {; process.exit(1)});
       const stats = fs.statSync(filePath);
 ;
       const analysis = {;
-        file: filePath;
-        size: stats.size;
-        lines: content.split('\n').length;
-        issues: [];
+        file: filePath, size: stats.size,
+        lines: content.split('\n').length, issues: [],
       ;
 ;
       // Check for common code quality issues;
@@ -74,40 +83,32 @@ monitor.run().catch(error = > {; process.exit(1)});
         // Trailing spaces;
         if (line.match(/[ \t]+$/)) {;
           analysis.issues.push({;
-            line: lineNum;
-            type: 'trailing-spaces';
-            message: 'Trailing spaces found';
-            severity: 'low';
+            line: lineNum, type: 'trailing-spaces',
+            message: 'Trailing spaces found', severity: 'low',
           });
         };
 ;
         // Long lines (over 120 characters);
         if (line.length > 120) {;
           analysis.issues.push({;
-            line: lineNum;
-            type: 'long-line';
-            message: `Line is ${line.length} characters long (max: 120)`;
-            severity: 'medium';
+            line: lineNum, type: 'long-line',
+            message: `Line is ${line.length} characters long (max: 120)`, severity: 'medium',
           });
         };
 ;
         // Console statements;
         if (line.match(/console\.(log|warn|error|info|debug)/)) {;
           analysis.issues.push({;
-            line: lineNum;
-            type: 'console-statement';
-            message: 'Console statement found - should be removed in production';
-            severity: 'medium';
+            line: lineNum, type: 'console-statement',
+            message: 'Console statement found - should be removed in production', severity: 'medium',
           });
         };
 ;
         // TODO/FIXME comments;
         if (line.match(/TODO|FIXME|HACK|XXX/)) {;
           analysis.issues.push({;
-            line: lineNum;
-            type: 'todo-comment';
-            message: 'TODO/FIXME comment found';
-            severity: 'low';
+            line: lineNum, type: 'todo-comment',
+            message: 'TODO/FIXME comment found', severity: 'low',
           });
         };
 ;
@@ -118,10 +119,9 @@ monitor.run().catch(error = > {; process.exit(1)});
             const importName = importMatch[1];
             if (importName !== 'React' && !content.includes(importName)) {;
               analysis.issues.push({;
-                line: lineNum;
-                type: 'unused-import';
+                line: lineNum, type: 'unused-import',
                 message: `Potentially unused import ${importName}`;
-                severity: 'medium';
+                severity: 'medium',
               });
             };
           };
@@ -178,8 +178,7 @@ monitor.run().catch(error = > {; process.exit(1)});
     const totalIssues = analyses.reduce((sum, analysis) => sum + analysis.issues.length, 0);
 ;
     const issuesByType = {};
-    const issuesBySeverity = { low: 0, medium: 0, high: 0 ;
-;
+    const issuesBySeverity = { low: 0, medium: 0, high: 0 , ,
     analyses.forEach(analysis => {;
       analysis.issues.forEach(issue => {;
         // Count by type;
@@ -191,14 +190,13 @@ monitor.run().catch(error = > {; process.exit(1)});
     });
 ;
     const report = {;
-      timestamp: new Date().toISOString();
-      summary: {;
+      timestamp: new Date().toISOString(), summary: {,
         totalFiles;
         totalIssues;
         issuesByType;
         issuesBySeverity;
       };
-      files: analyses.filter(analysis => analysis.issues.length > 0);
+      files: analyses.filter(analysis => analysis.issues.length > 0),
       recommendations: this.generateRecommendations(issuesByType, totalIssues);
 };
 ;
@@ -210,37 +208,29 @@ monitor.run().catch(error = > {; process.exit(1)});
 ;
     if (issuesByType['trailing-spaces'] > 0) {;
       recommendations.push({;
-        type: 'trailing-spaces';
-        priority: 'low';
-        message: 'Remove trailing spaces from files';
-        action: 'Run the lint-fixer to automatically remove trailing spaces';
+        type: 'trailing-spaces', priority: 'low',
+        message: 'Remove trailing spaces from files', action: 'Run the lint-fixer to automatically remove trailing spaces',
       });
 };
 ;
     if (issuesByType['console-statement'] > 0) {;
       recommendations.push({;
-        type: 'console-statement';
-        priority: 'medium';
-        message: 'Remove console statements from production code';
-        action: 'Replace console statements with proper logging or remove them';
+        type: 'console-statement', priority: 'medium',
+        message: 'Remove console statements from production code', action: 'Replace console statements with proper logging or remove them',
       });
 };
 ;
     if (issuesByType['unused-import'] > 0) {;
       recommendations.push({;
-        type: 'unused-import';
-        priority: 'medium';
-        message: 'Remove unused imports';
-        action: 'Clean up unused imports to reduce bundle size';
+        type: 'unused-import', priority: 'medium',
+        message: 'Remove unused imports', action: 'Clean up unused imports to reduce bundle size',
       });
 };
 ;
     if (totalIssues > 100) {;
       recommendations.push({;
-        type: 'general';
-        priority: 'high';
-        message: 'High number of code quality issues detected';
-        action: 'Run comprehensive code cleanup and establish coding standards';
+        type: 'general', priority: 'high',
+        message: 'High number of code quality issues detected', action: 'Run comprehensive code cleanup and establish coding standards',
       });
 };
 ;
@@ -264,8 +254,7 @@ monitor.run().catch(error = > {; process.exit(1)});
   async checkGitStatus() {;
     try {;
       const status = execSync('git status --porcelain', {;
-        cwd: this.projectRoot;
-        encoding: 'utf8';
+        cwd: this.projectRoot, encoding: 'utf8',
       });
 ;
       if (status.trim()) {;
@@ -308,19 +297,18 @@ monitor.run().catch(error = > {; process.exit(1)});
       const duration = Date.now() - this.startTime;
 ;
       // Log summary;
-      this.log('\n📊 Code Quality Report Summary: ');
+      this.log('\n📊 Code Quality Report Summary: '),
       this.log(`Files analyzed: ${report.summary.totalFiles}`);
       this.log(`Total issues: ${report.summary.totalIssues}`);
       this.log(`Duration: ${duration}ms`);
 ;
       if (report.summary.totalIssues > 0) {;
-        this.log('\n🚨 Issues by type: ');
+        this.log('\n🚨 Issues by type: '),
         Object.entries(report.summary.issuesByType).forEach(([type, count]) => {;
           this.log(`  ${type}: ${count}`);
         });
 ;
-        this.log('\n💡 Recommendations: ');
-        report.recommendations.forEach(rec => {;
+        this.log('\n💡 Recommendations: '), report.recommendations.forEach(rec => {,
           this.log(`  [${rec.priority.toUpperCase()}] ${rec.message}`);
           this.log(`    Action: ${rec.action}`);
         });
