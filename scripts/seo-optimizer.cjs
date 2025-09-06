@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");class SEOOptimizer { constructor() { this.projectRoot = process.cwd();" this.reportFile = path.join(__dirname, "./logs/seo-report.json"); }" log(message, level = "INFO") { const timestamp = new Date().toISOString(); console.log(`[${timestamp}] [${level}] ${message}`); }"`"`
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -8,7 +12,6 @@ class SEOOptimizer {
   }
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
-    
   }
   async optimizeSEO() {
     this.log('🔍 Starting SEO optimization...');
@@ -171,4 +174,8 @@ if (require.main === module) {
   const optimizer = new SEOOptimizer();
   optimizer.run().catch(console.error);
 }
+<<<<<<< HEAD
 module.exports = SEOOptimizer;
+=======
+module.exports = SEOOptimizer;
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

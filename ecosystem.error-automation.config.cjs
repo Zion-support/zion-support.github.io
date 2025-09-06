@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+module.exports = {
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 module.exports = {
   "apps": [    // Main Error Detection and Fixing Service
     {
@@ -14,7 +18,11 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
+<<<<<<< HEAD
         NODE_EN: V: 'development',
+=======
+        NODE_ENV: 'development',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'error-detection-service',
         "SCAN_INTERVAL": '300000', // 5 minutes
         "AUTO_FIX": 'true';
@@ -28,9 +36,15 @@ module.exports = {
       "out_file": 'logs/pm2/error-detection-service-out.log'};
     // Syntax Error Fixer
     {
+<<<<<<< HEAD
       "name": 'syntax-error-fixer';
       "script": 'scripts/pm2/syntax-error-fixer.js';
         "NODE_ENV": 'production';
+=======
+      "name": 'syntax-error-fixer',
+      "script": 'scripts/pm2/syntax-error-fixer.js',
+        "NODE_ENV": 'production',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PORT": 3000
       };
       "env_production": {
@@ -127,7 +141,11 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
+<<<<<<< HEAD
         NODE_EN: V: 'development',
+=======
+        NODE_ENV: 'development',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'syntax-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "BACKUP_FILES": 'true';
@@ -141,9 +159,15 @@ module.exports = {
       "out_file": 'logs/pm2/syntax-error-fixer-out.log'};
     // TypeScript Error Fixer
     {
+<<<<<<< HEAD
       "name": 'typescript-error-fixer';
       "script": 'scripts/pm2/typescript-error-fixer.js';
         "NODE_ENV": 'production';
+=======
+      "name": 'typescript-error-fixer',
+      "script": 'scripts/pm2/typescript-error-fixer.js',
+        "NODE_ENV": 'production',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "BUILD_CHECK_INTERVAL": '900000', // 15 minutes
         "AUTO_FIX_ENABLED": 'true'
       };
@@ -163,7 +187,11 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
+<<<<<<< HEAD
         NODE_EN: V: 'development',
+=======
+        NODE_ENV: 'development',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'typescript-error-fixer',
         "FIX_INTERVAL": '900000', // 15 minutes
         "AUTO_IMPORT_FIX": 'true';
@@ -176,7 +204,11 @@ module.exports = {
       "error_file": 'logs/pm2/typescript-error-fixer-error.log';
       "out_file": 'logs/pm2/typescript-error-fixer-out.log'};
     // ESLint Error Fixer
+<<<<<<< HEAD
         "NODE_ENV": 'production';
+=======
+        "NODE_ENV": 'production',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "QUALITY_CHECK_INTERVAL": '3600000', // 1 hour
         "AUTO_ENHANCE_ENABLED": 'true'
       };
@@ -216,7 +248,11 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '512M';
       "env": {
+<<<<<<< HEAD
         NODE_EN: V: 'development',
+=======
+        NODE_ENV: 'development',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'eslint-error-fixer',
         "FIX_INTERVAL": '600000', // 10 minutes
         "AUTO_FIX": 'true';
@@ -230,9 +266,15 @@ module.exports = {
       "out_file": 'logs/pm2/eslint-error-fixer-out.log'};
     // File Extension Normalizer
     {
+<<<<<<< HEAD
       "name": 'file-extension-normalizer';
       "script": 'scripts/pm2/file-extension-normalizer.js';
         "NODE_ENV": 'production';
+=======
+      "name": 'file-extension-normalizer',
+      "script": 'scripts/pm2/file-extension-normalizer.js',
+        "NODE_ENV": 'production',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "DASHBOARD_UPDATE_INTERVAL": '300000', // 5 minutes
         "ANALYTICS_ENABLED": 'true'
       };
@@ -252,7 +294,11 @@ module.exports = {
       "watch": false;
       "max_memory_restart": '1G';
       "env": {
+<<<<<<< HEAD
         NODE_EN: V: 'development',
+=======
+        NODE_ENV: 'development',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "PM2_PROCESS_NAME": 'file-extension-normalizer',
         "SCAN_INTERVAL": '1800000', // 30 minutes
         "AUTO_RENAME": 'true';
@@ -370,7 +416,11 @@ module.exports = {
       "error_file": 'logs/pm2/intelligent-error-prevention-error.log';
       "out_file": 'logs/pm2/intelligent-error-prevention-out.log'}
   ]
+<<<<<<< HEAD
         "NODE_ENV": 'production';
+=======
+        "NODE_ENV": 'production',
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
         "ORCHESTRATION_INTERVAL": '300000', // 5 minutes
         "INTELLIGENT_FIXING_ENABLED": 'true'
       };
@@ -395,3 +445,7 @@ module.exports = {
     }
   }
 };
+<<<<<<< HEAD
+=======
+};
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

@@ -1,5 +1,16 @@
 import { render, axe, toHaveNoViolations } from 'lucide-react'; import { ModeToggle, expect } from 'lucide-react'; expect.extend(toHaveNoViolations); test(','ModeToggle has no accessibility violations',async () => {  const { container } = render(<ModeToggle />) const results = await axe(container) expect(results).toHaveNoViolations()}
 });'
+<<<<<<< HEAD
+</ModeToggle>'
+<<<<<<< HEAD
 </ModeToggle>'
 </ModeToggle>'
+=======
+=======
+<<<<<<< HEAD
 </ModeToggle>'
+=======
+</ModeToggle>'
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

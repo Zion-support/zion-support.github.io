@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node/""usr/bin/env"" node;#!/usr/bin/env node"const fs = require("fs");"const path = require("path");"const { execSync } = require("child_process");class $1 { constructor() {""
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 #!/""usr/bin/env"" node;
 #!/usr/bin/env node
 const fs = require("fs");
@@ -275,6 +279,10 @@ throw error}
     this.dependencyHistory = []}
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
+<<<<<<< HEAD
+=======
+    }
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     console.log(`[${timestamp}] [${level}] ${message}`)}
   async runDependencyCheck() {
     try {
@@ -503,4 +511,8 @@ if (require.main === module) {
     resolver.log(`Failed to start "resolver": ${error.message}`, 'ERROR');
     process.exit(1)})}
 ;
+<<<<<<< HEAD
 module.exports = DependencyErrorResolver
+=======
+module.exports = DependencyErrorResolver
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

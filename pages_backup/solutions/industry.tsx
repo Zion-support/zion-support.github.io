@@ -1,13 +1,34 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
 import { Heart, CreditCard, Globe, GraduationCap, Factory, Home } from 'lucide-react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { BarChart3, Shield, Users, Globe, ArrowRight, CheckCircle, Building, Heart, GraduationCap, Factory, Home, CreditCard } from 'lucide-react';
 import Layout from "../../components/Layout";";
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 const industries = [;
   {}
     name: 'Healthcare,',
@@ -52,7 +73,6 @@ const industries = [;
     color: 'from-yellow-500 to-orange-500'';
   }
 ;];
-
 const capabilities = [;
   { title: 'Regulatory Compliance, description: 'Ensure compliance with industry-specific regulations' },',
   { title: 'Custom Workflows, description: 'Tailored business processes for your industry' },',
@@ -61,14 +81,12 @@ const capabilities = [;
   { title: 'Performance Optimization, description: 'Optimized for industry-specific performance requirements' },',
   { title: 'Ongoing Support, description: 'Dedicated support team familiar with your industry' }',
 ;];
-
 const stats = [;
   { number: '15+, label: 'Industries Served' },',
   { number: '10+, label: 'Years Experience' },',
   { number: '100%, label: 'Compliance Rate' },',
   { number: '500+, label: 'Industry Projects' }',
 ;];
-
 export default function IndustrySolutionsPage() {
   return (;
     <Layout);
@@ -83,7 +101,6 @@ export default function IndustrySolutionsPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
-
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -118,7 +135,6 @@ export default function IndustrySolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
-
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
@@ -138,7 +154,6 @@ export default function IndustrySolutionsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Industries Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -155,7 +170,6 @@ export default function IndustrySolutionsPage() {
                 We have deep expertise across multiple industries, delivering solutions that meet specific regulatory and business requirements,
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {industries.map((industry, index) => (,
                 <motion.div}),
@@ -174,7 +188,6 @@ export default function IndustrySolutionsPage() {
                       <p className="text-gray-600">{industry.description}</p>"
                     </div>;
                   </div>;
-
                   <ul className="space-y-3">";
                     {industry.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-gray-600">"
@@ -188,7 +201,6 @@ export default function IndustrySolutionsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* Capabilities Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -205,7 +217,6 @@ export default function IndustrySolutionsPage() {
                 Industry-specific capabilities that ensure your solutions meet regulatory requirements and business objectives;
               </p>;
             </motion.div>;
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {capabilities.map((capability, index) => (,
                 <motion.div}),
@@ -222,7 +233,6 @@ export default function IndustrySolutionsPage() {
             </div>,
           </div>;
         </section>;
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">"
           <div className="container mx-auto px-4 text-center">";

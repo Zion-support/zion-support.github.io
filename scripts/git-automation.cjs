@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+const fs = require('fs');
+const path = require('path');
+const { exec } = require('child_process');
+const { promisify } = require('util');
+const execAsync = promisify(exec);
+class GitAutomation {
+  constructor() {
+    this.logFile = path.join(__dirname, '..', 'automation', 'logs', 'git-automation.log');
+  }
+  log(message) {
+    const timestamp = new Date().toISOString();
+    const logMessage = `[${timestamp}] ${message}\n`;
+    console.log(logMessage.trim());
+    fs.appendFileSync(this.logFile, logMessage);
+  }
+  log(message, level = 'INFO') {
+    const timestamp = new Date().toISOString(});
+    const logMessage = `[${timestamp}] [${level}] ${message};`;
+    const logFile = path.join(this.logDir, 'git-automation.log';);
+    fs.appendFileSync(logFile, logMessage + '\n')}
+  async runCommand(command, description, timeout = 300000) {
+    this.log(`🔧 ${description}`);
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   async runCommand(command, options = {}) {
     try {
       const { stdout, stderr } = await execAsync(command, { 
@@ -15,11 +40,9 @@
       };
     }
   }
-
   async checkGitStatus() {
     this.log('Checking git status...');
     const result = await this.runCommand('git status --porcelain');
-    
     if (result.success) {
       const changes = result.stdout.trim().split('\n').filter(line => line.length > 0);
       this.log(`Found ${changes.length} changes`);
@@ -29,11 +52,9 @@
       return [];
     }
   }
-
   async addAllChanges() {
     this.log('Adding all changes...');
     const result = await this.runCommand('git add .');
-    
     if (result.success) {
       this.log('✅ All changes added');
       return true;
@@ -42,11 +63,9 @@
       return false;
     }
   }
-
   async commitChanges(message) {
     this.log(`Committing changes: ${message}`);
     const result = await this.runCommand(`git commit -m "${message}"`);
-    
     if (result.success) {
       this.log('✅ Changes committed');
       return true;
@@ -55,11 +74,9 @@
       return false;
     }
   }
-
   async pushChanges(branch = 'main') {
     this.log(`Pushing changes to ${branch}...`);
     const result = await this.runCommand(`git push origin ${branch}`);
-    
     if (result.success) {
       this.log('✅ Changes pushed');
       return true;
@@ -68,92 +85,76 @@
       return false;
     }
   }
-
   async mergeToMain() {
     this.log('Merging to main branch...');
-    
     // Checkout main branch
     const checkoutResult = await this.runCommand('git checkout main');
     if (!checkoutResult.success) {
       this.log('❌ Failed to checkout main branch');
       return false;
     }
-
     // Pull latest changes
     const pullResult = await this.runCommand('git pull origin main');
     if (!pullResult.success) {
       this.log('❌ Failed to pull latest changes');
       return false;
     }
-
     // Merge current branch
     const mergeResult = await this.runCommand('git merge --no-ff -m "Automated merge of automation improvements"');
     if (!mergeResult.success) {
       this.log('❌ Failed to merge changes');
       return false;
     }
-
     // Push merged changes
     const pushResult = await this.pushChanges('main');
     if (!pushResult.success) {
       this.log('❌ Failed to push merged changes');
       return false;
     }
-
     this.log('✅ Successfully merged to main branch');
     return true;
   }
-
   async runFullWorkflow() {
     this.log('Starting full git automation workflow...');
-    
     // Ensure logs directory exists
     const logsDir = path.join(__dirname, '..', 'automation', 'logs');
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true });
     }
-
     // Check git status
     const changes = await this.checkGitStatus();
     if (changes.length === 0) {
       this.log('No changes to commit');
       return true;
     }
-
     // Add all changes
     const added = await this.addAllChanges();
     if (!added) {
       return false;
     }
-
     // Commit changes
     const committed = await this.commitChanges('Automated improvements and fixes');
     if (!committed) {
       return false;
     }
-
     // Push changes
     const pushed = await this.pushChanges();
     if (!pushed) {
       return false;
     }
-
     // Merge to main
     const merged = await this.mergeToMain();
     if (!merged) {
       return false;
     }
-
     this.log('Full git automation workflow completed successfully');
     return true;
   }
 }
-
 // Handle command line arguments
 if (require.main === module) {
   const gitAutomation = new GitAutomation();
   const command = process.argv[2];
-
   switch (command) {
     case "status":
       gitAutomation.checkGitStatus();
@@ -183,14 +184,12 @@ if (require.main === module) {
       process.exit(1);
   }
 }
-
 module.exports = GitAutomation;
 #!/usr/bin/env node;
 /**
  * Git Automation Script;
  * Handles git operations, commits, pushes, and merges;
  */
-
 const { execSync } = require('child_process')
 const fs = require('fs')
 const path = require('path')
@@ -213,4 +212,8 @@ const path = require('path')
       return { "success": true, "message"}
     const mergeResult = await this.runCommand('git merge --no-ff -m ""feat": automated improvements and fixes")
       "operation"
+<<<<<<< HEAD
       this.log(" Git automation workflow "failed": ${error.message}")
+=======
+      this.log(" Git automation workflow "failed": ${error.message}")
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

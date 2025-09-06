@@ -1,9 +1,19 @@
+<<<<<<< HEAD
+=======
+const fs = require("fs");"const path = require("path");/ Function to clean merge conflicts in a filefunction cleanMergeConflicts(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); / Remove all merge conflict markers''"
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 const fs = require('fs');
 const path = require('path');
 // Function to clean merge conflicts in a file;
 function cleanMergeConflicts(filePath) {}
   try {}
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
+=======
+    // Remove all merge conflict markers
+    // Remove duplicate category lines
+    content = content.replace(/"category": '[^']*'},\s*"category": '[^']*'\s*}/g, (match) => {
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
     // Remove all merge conflict markers;
     content = content.replace(/[\s\S]*?[\s\S]*?origin\/cursor[^\n]*\n?/g, '');
     content = content.replace(/origin\/cursor[^\n]*\n?/g, '');
@@ -22,6 +32,13 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
     content = content.replace(/},\s*]/g, '}\n  ]');
     content = content.replace(/"category": '[^']*'}\s*"category": '[^']*'\s*}/g, (match) => {}
       const categoryMatch = match.match(/"category": '([^']*)'/);
+<<<<<<< HEAD
+=======
+      if (categoryMatch) {
+        return `category: '${categoryMatch[1]}'\n    }`}
+      return match});
+    // Remove any remaining merge conflict markers
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
       if (categoryMatch) {}
         return `category: '${categoryMatch[1]}'\n    }`};
       return match}
@@ -55,4 +72,8 @@ filesToClean.forEach(file => {})
 });
 console.log('Comprehensive merge conflict cleanup completed!');
 cursor/website-audit-and-update-with-deployment-76dc;
+<<<<<<< HEAD
 cursor/fix-lint-push-and-merge-to-main-f3c1;
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

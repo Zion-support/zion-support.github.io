@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /** @type {import('tailwindcss').Config} */;
 module.exports = {;
   darkMode:"class",;
@@ -547,6 +548,11 @@ module.exports = {;
     extend:{}},;
   plugins:[]}
 ;module.exports = {
+=======
+/** @type {import('tailwindcss').Config} */
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+module.exports = {
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   content: [
     './pages/**/*.{js,ts,jsx,tsx}./components/**/*.{js,ts,jsx,tsx}'],
   theme: {
@@ -799,6 +805,7 @@ module.exports = {;
           '75%': {_transform: 'rotate(270deg) scale(0.8)'},
           '100%': {_transform: 'rotate(360deg) scale(1)'}
         },
+<<<<<<< HEAD
         spaceMining: {_'0%, _100%': { transform: 'translateX(0px) translateY(0px) rotate(0deg)'},
           '25%': {_transform: 'translateX(10px) translateY(-10px) rotate(90deg)'},
           '50%': {_transform: 'translateX(0px) translateY(-20px) rotate(180deg)'},
@@ -1034,3 +1041,17 @@ module.exports = {;
   theme: {
     extend: {}},  plugins: []}
 
+=======
+      },
+    },
+  },
+  plugins: [
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@tailwindcss/forms'),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@tailwindcss/typography'),
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    require('@tailwindcss/aspect-ratio'),
+  ],
+};
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

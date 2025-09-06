@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
+=======
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 
 import React from 'react';
 import Link from 'next/link';
@@ -1525,3 +1531,7 @@ export default function Services() {
 		</Layout>
 	);
 }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/chore/merge-open-prs
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

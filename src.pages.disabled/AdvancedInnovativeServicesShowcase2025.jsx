@@ -1,9 +1,7 @@
 import React from 'react';
-
 interface AdvancedInnovativeServicesShowcase2025Props {
   // Add props here as needed
 }
-
 export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInnovativeServicesShowcase2025Props) {
   return (
     <div>
@@ -11,7 +9,14 @@ export default function AdvancedInnovativeServicesShowcase2025({ }: AdvancedInno
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
+}
+<<<<<<< HEAD
 }
 }
 }
+=======
+=======
 }
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

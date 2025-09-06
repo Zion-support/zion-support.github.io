@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 const fs = require('fs'); const path = require('path');  const performanceChecks = { bundleSize: () => {  return true},loadTime: () => {  return true},memoryUsage: () => {  return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); } catch (error) { } }); 
 const fs = require('fs');
 const path = require('path');
@@ -29,5 +37,14 @@ Object.entries(performanceChecks).forEach(([name, check]) => {
   }
 });
 console.log('🎉 Performance monitoring completed!');
+<<<<<<< HEAD
 const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
 const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
+=======
+<<<<<<< HEAD
+const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
+=======
+const fs = require('fs'); const path = require('path'); console.log('📊 Enhanced Performance Monitor Starting...'); const performanceChecks = { bundleSize: () => { console.log('📦 Checking bundle size...'); return true},loadTime: () => { console.log('⏱️ Checking load times...'); return true},memoryUsage: () => { console.log('🧠 Checking memory usage...'); return true} }; Object.entries(performanceChecks).forEach(([name,check]) => { try { const result = check(); console.log(`✅ ${name}: ${result ? 'PASS' : 'FAIL'}`)} catch (error) { console.log(`❌ ${name}: ERROR - ${error.message}`)} }); console.log('🎉 Performance monitoring completed!');
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

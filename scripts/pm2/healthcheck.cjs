@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+#!/usr/bin/env node
+const fs = require('fs');
+const http = require('http');
+const distOk = fs.existsSync('out/index.html');
+function pingPreview() {
+	return new Promise((resolve) => {
+		const req = http.request({ host: '127.0.0.1', port: 3000, path: '/', timeout: 2000 }, (res) => {
+			resolve(res.statusCode && res.statusCode < 500);
+		});
+		req.on('error', () => resolve(false));
+		req.end();
+	});
+}
+(async () => {
+	const ok = distOk && (await pingPreview());
+	if (!ok) {
+		console.error('Healthcheck failed');
+		process.exit(1);
+	}
+	console.log('Healthy');
+})();
+#!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const http = require("http");"const distOk = fs.existsSync("dist/index.html");function pingPreview() {return new Promise((resolve) => {"const req = http.request({ host: "127.0.0.1", port: 4173, path: "/", timeout: 2000 }, (res) => {resolve(res.statusCode && res.statusCode < 500)});"req.on("error", () => resolve(false));req.end()})}(async () => {const ok = distOk && (await pingPreview());if (!ok) {"console.error("Healthcheck failed");process.exit(1)}"console.log("Healthy")})();''"
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 #!/usr/bin/env node;
 ;
 /**;
@@ -6,6 +31,7 @@
  */;
 ;const { execSync } = require('child_process');
 const fs = require('fs');
+<<<<<<< HEAD
 const path = require('path');
 ;
 class HealthChecker {;
@@ -228,3 +254,22 @@ if (require.main === module) {;
 }
 ;
 module.exports = HealthChecker;
+=======
+const http = require('http');
+const distOk = fs.existsSync('dist/index.html');
+function pingPreview() {}
+	return new Promise((resolve) => {}
+		const req = http.request({ host: '127.0.0.1', port: 4173, path: '/', timeout: 2000 }, (res) => {}
+			resolve(res.statusCode && res.statusCode < 500)}
+});
+		req.on('error', () => resolve(false));
+		req.end()})};
+(async () => {}
+	const ok = distOk && (await pingPreview());
+	if (!ok) {}
+		console.error('Healthcheck failed');
+		process.exit(1)}
+	})();
+		process.exit(1)};
+	console.log('Healthy')})();
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

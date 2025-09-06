@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { render, screen, fireEvent, waitFor } from '@testing-library/react',;
 import '@testing-library/jest-dom',;
 import { describe, it, expect, vi } from 'vitest',;
@@ -35,10 +36,12 @@ describe('ProductActions', () => {;
   }),;
 }),;import React from 'react';
 
+=======
+import React from 'react';
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 interface ProductActions.testProps {
   // Add props here as needed
 }
-
 export default function ProductActions.test({ }: ProductActions.testProps) {
   return (
     <div>
@@ -46,4 +49,16 @@ export default function ProductActions.test({ }: ProductActions.testProps) {
       <p>This component is currently under development.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+}
+=======
+<<<<<<< HEAD
+}
+=======
+}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

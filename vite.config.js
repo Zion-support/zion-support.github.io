@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ;
   };
@@ -8,6 +9,12 @@ import { defineConfig } from "vite;
 import react from "@vitejs/plugin-react";
 ;
 export default defineConfig({,
+=======
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
   plugins: [react()],
   server: {,
     port: 3000,
@@ -34,7 +41,14 @@ export default defineConfig({,
       };
     };
   },
+<<<<<<< HEAD
   optimizeDeps: {,
     include: ["react, "react-dom", framer-motion", "lucide-react"]
   };
 }),
+=======
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
+  }
+});
+>>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd

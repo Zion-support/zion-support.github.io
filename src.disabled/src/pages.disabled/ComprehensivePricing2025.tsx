@@ -1,0 +1,12 @@
+<<<<<<< HEAD
+import React,{ useState,useMemo } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; import { Link } from \'react-router-dom\'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from \'lucide-react\'; import { innovativeServices } from \'../data/innovative-services-2025\'; const \"ComprehensivePricing2025\": React.FC = () => {}}
+const React,{ useState,useMemo } from "react"; import { motion,AnimatePresence } from "framer-motion"; import { Link } from "react-router-dom"; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from "lucide-react"; import { innovativeServices } from "./data/innovative-services-2025"; const ComprehensivePricing2025: React.FC = () => {}}'"'"
+import _React,{ useState,useMemo } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { Link } from 'react-router-dom'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from 'lucide-react'; import { innovativeServices } from '../data/innovative-services-2025'; const "ComprehensivePricing2025": _React.FC = () => {}}
+=======
+<<<<<<< HEAD
+=======
+import React,{ useState,useMemo } from \'react\'; import { motion,AnimatePresence } from \'framer-motion\'; import { Link } from \'react-router-dom\'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from \'lucide-react\'; import { innovativeServices } from \'../data/innovative-services-2025\'; const \"ComprehensivePricing2025\": React.FC = () => {}}
+const React,{ useState,useMemo } from "react"; import { motion,AnimatePresence } from "framer-motion"; import { Link } from "react-router-dom"; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from "lucide-react"; import { innovativeServices } from "./data/innovative-services-2025"; const ComprehensivePricing2025: React.FC = () => {}}'"'"
+import _React,{ useState,useMemo } from 'react'; import { motion,AnimatePresence } from 'framer-motion'; import { Link } from 'react-router-dom'; import { Check,X,Star,Zap,Shield,Brain,Globe,TrendingUp,Users,ArrowRight,Phone,Mail,MapPin,ExternalLink } from 'lucide-react'; import { innovativeServices } from '../data/innovative-services-2025'; const "ComprehensivePricing2025": _React.FC = () => {}}
+>>>>>>> cursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
