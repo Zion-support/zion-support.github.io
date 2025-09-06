@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -11,6 +12,8 @@
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default function NewPost() {
   return (
     <div>
@@ -30,6 +33,7 @@ export default function NewPost() {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 }
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -38,6 +42,8 @@ export default function NewPost() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default /**
  * NewPost - Function description
  */
@@ -48,6 +54,7 @@ function NewPost() {
       <p > Component placeholder - needs implementation</p>;
     </div>);
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -70,6 +77,9 @@ function NewPost() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from 'react';
 export default function NewPost() {;
   return (;
@@ -80,6 +90,7 @@ export default function NewPost() {;
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -102,3 +113,6 @@ export default function NewPost() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

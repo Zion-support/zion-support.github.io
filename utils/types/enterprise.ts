@@ -1,15 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer';
 
 export interface CompanyUsageLimits {;
   monthlyJobPosts: number;
   budgetCapUsd: number;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -98,6 +102,8 @@ export interface InvoiceRecord {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   companyId: string;
   number: string;
   amountUsd: number;
@@ -107,10 +113,10 @@ export interface InvoiceRecord {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 }
 export interface CompanyRecord {id: string;
   name: string;
@@ -122,16 +128,20 @@ export interface CompanyRecord {id: string;
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type EnterpriseRole = 'admin' | 'manager' | 'recruiter' | 'viewer',
 export interface CompanyUsageLimits {
   monthlyJobPosts: number,
   budgetCapUsd: number;
 =======
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -144,12 +154,14 @@ export interface CompanyUsageLimits {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -160,6 +172,8 @@ export interface CompanyUsageLimits {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface CompanyPlan {
   tier: 'teams' | 'business' | 'enterprise - custom',
@@ -193,8 +207,6 @@ export interface CompanyRecord {
   id: string,
   name: string,
   slug: string, // e.g. acme;
-<<<<<<< HEAD
-
 
   logoUrl?: string,;
   brandColor?: string,;
@@ -202,6 +214,7 @@ export interface CompanyRecord {
   members: CompanyMember[];
   activity: CompanyActivityEvent[];
   invoices: InvoiceRecord[];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -218,10 +231,13 @@ export interface CompanyRecord {id: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -246,6 +262,10 @@ export interface CompanyRecord {;
   invoices: InvoiceRecord[];
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   logoUrl?: string,;
   brandColor?: string,;
   plan: CompanyPlan,;
@@ -260,9 +280,13 @@ export interface CompanyRecord {;
   invoices: InvoiceRecord[];
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

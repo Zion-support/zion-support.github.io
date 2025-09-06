@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,6 +14,8 @@ function toSlug(name: string): string {;
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 function toSlug(name: string): string {;
   return name;
 
@@ -20,8 +23,6 @@ import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 function toSlug(name: string): string {return name;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import fs from "fs",;
 import path from "path",;
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion",;
@@ -29,16 +30,17 @@ import fs from "fs";
 import path from "path";
 import { DeployInput, DeployResult, DeployLogEntry, GeneratedAsset } from "../types/zion";
 
-
-
 function toSlug(name: string): string {;
   return name;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     .toLowerCase();
     .replace(/[^a-z0-9]+/g, "-");
     .replace(/(^-|-$)+/g, "");
@@ -46,12 +48,15 @@ function toSlug(name: string): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 ;
   // Schedule launch stream (/summit);
@@ -107,6 +112,7 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;
   const daoDir = path.join(process.cwd(), "data", "dao"),;
   const tokenDir = path.join(process.cwd(), "data", "token"),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -556,6 +562,8 @@ if ( {) {
   }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   // Schedule launch stream (/summit);
   ensureDir(eventsDir),;
@@ -611,10 +619,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const gptDir = path.join(process.cwd(), "data", "zion-gpt"),;
   const daoDir = path.join(process.cwd(), "data", "dao"),;
   const tokenDir = path.join(process.cwd(), "data", "token"),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ensureDir(baseDir);
   const configPath = path.join(baseDir, "config.json");
   writeTextFile(configPath, JSON.stringify({ ...input, instanceSlug, version, createdAt: nowIso() }, null, 2)),;
@@ -708,8 +712,6 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     );
     assets.push({ kind: "file", path: roadmapPath, description: "Public roadmap" });
     writeTextFile(;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import fs from './fs';,
 import path from './path';,
@@ -912,28 +914,15 @@ if ( {) {
     config_path,
     assets,
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     logs;
     summary;
     version}
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       changelogPath,;
       `# Changelog\n\n- ${nowIso()}: Genesis deployment initialized for ${input.instanceName}.\n`;
     ),;
     assets.push({ kind: "file", path: changelogPath, description: "Changelog" });
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
@@ -1042,16 +1031,10 @@ if ( {) {
     logs;
     summary;
     version  } catch (error) {
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -1086,8 +1069,6 @@ if ( {) {
   ensureDir(eventsDir);
   const summitEventPath = path.join(eventsDir, `summit-${instanceSlug}.json`);
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   writeTextFile(;
 
     summitEventPath,;
@@ -1112,23 +1093,28 @@ if ( {) {
     );
   ),;
 
-
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 }
+<<<<<<< HEAD
 }
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

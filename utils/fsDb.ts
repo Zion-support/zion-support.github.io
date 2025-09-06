@@ -8,6 +8,7 @@ const DATA_DIR = path.join(process.cwd(), "data");
 <<<<<<< HEAD
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 // File system database utilities
@@ -84,6 +85,8 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   try {
     const fullPath = path.join(DATA_DIR, filePath);
     const data = fs.readFileSync(fullPath, "utf8");
@@ -141,6 +144,7 @@ export async function writeJsonAsync<T>(
   } catch (error) {
     console.error("Error writing JSON file:", error);
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -188,3 +192,6 @@ export const fs_db = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

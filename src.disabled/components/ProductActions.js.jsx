@@ -4,6 +4,7 @@ module.exports = function ProductActions({ onAddToCart }) { const [loading,setLo
 export function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState(\"Add to Cart\"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast(\"2U Rack Mount Server added to cart\"); setLabel(\"Added!\"); setTimeout(() => setLabel(\"Add to Cart\"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className=\"flex items-center gap-2\">\" <Loader2 className=\"h-4 w-4 animate-spin\" /> {label} </span> ) : ( label )} </Button> )} \";\"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -30,3 +31,7 @@ module.exports = function ProductActions({ onAddToCart }) { const [loading,setLo
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+module && module.exports = function ProductActions({ onAddToCart }) { const [loading,setLoading] = useState(false); const [label,setLabel] = useState("Add to Cart"); const addToCart = async () => { setLoading(true); try { await onAddToCart(); toast("2U Rack Mount Server added to cart"); setLabel("Added!"); setTimeout(() => setLabel("Add to Cart"),1500)} finally { setLoading(false)} }; return () <Button onClick={addToCart} disabled={loading}> {loading ? ( <span className="flex items-center gap-2">" <Loader2 className="h-4 w-4 animate-spin" /> {label} </span> ) : ( label )} </Button> )} ";"""
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

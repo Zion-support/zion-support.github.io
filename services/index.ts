@@ -1,12 +1,13 @@
-<<<<<<< HEAD
-
 ;
 // Export service types and interfaces;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type {
   ShortUrl;
   UrlAnalytics;
@@ -17,6 +18,7 @@ export type {
 ;
 
 export type {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -24,6 +26,8 @@ export type {
 // Export all micro SaaS services
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export { urlShortenerService } from './urlShortenerService';
 export { passwordGeneratorService } from './passwordGeneratorService';
 export { qrCodeService } from './qrCodeService';
@@ -36,6 +40,7 @@ export { textAnalysisService } from './textAnalysisService';
 } from './urlShortenerService';
 export type {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -57,6 +62,13 @@ export type {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+export type {;
+
+export type {;
+export type {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   PasswordOptions;
   PasswordStrength;
   GeneratedPassword;
@@ -64,12 +76,16 @@ export type {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 ;
 
 export type {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -90,15 +106,22 @@ export type {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-export type {
+=======
 
+export type {;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+export type {
 
 export type {;
 export type {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   QRCodeOptions;
   QRCodeResult;
   QRCodeTemplate;
@@ -106,12 +129,16 @@ export type {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 ;
 
 export type {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -132,15 +159,22 @@ export type {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
-export type {
+=======
 
+export type {;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+export type {
 
 export type {;
 export type {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   ConversionOptions;
   ConversionResult;
   SupportedFormat;
@@ -149,12 +183,16 @@ export type {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 ;
 
 export type {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -180,14 +218,16 @@ export type {;
   ClickEvent;
   CreateShortUrlRequest
 } from './urlShortenerService';
+=======
+
+export type {;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type {
 
 export type {;
-  PasswordOptions;
-  PasswordStrength;
-  GeneratedPassword
-} from './passwordGeneratorService';
 export type {
+<<<<<<< HEAD
 
 export type {;
   QRCodeOptions;
@@ -216,6 +256,8 @@ export type {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   TextAnalysisResult;
   BasicTextStats;
   ReadabilityMetrics;
@@ -223,6 +265,7 @@ export type {
   KeywordAnalysis;
   LanguageDetection;
   EntityExtraction;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -236,6 +279,11 @@ export type {
 } from './textAnalysisService';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  TextSummary;
+} from './textAnalysisService';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 // Service categories for easy discovery;
 export const SERVICE_CATEGORIES = {
@@ -260,17 +308,12 @@ export const SERVICE_CATEGORIES = {
 export const SERVICES_METADATA = {
   url_shortener: {
     name: 'URL Shortener',
-<<<<<<< HEAD
-=======
-  url_shortener: {
-    name: 'URL Shortener',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
 
 =======
 
     name: 'URL Shortener',;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -284,6 +327,8 @@ export const SERVICES_METADATA = {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     description: 'Create short, trackable URLs with analytics';
     icon: '🔗';
     category: 'UTILITIES';
@@ -293,16 +338,21 @@ export const SERVICES_METADATA = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     pricing: 'Free',
     api_endpoint: '/api / url - shortener';
   }
   password_generator: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -349,6 +399,9 @@ export const SERVICES_METADATA = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     name: 'Password Generator';
     description: 'Generate secure passwords with strength analysis';
     icon: '🔐';
@@ -356,8 +409,11 @@ export const SERVICES_METADATA = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     features: [;
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations';
     ];
@@ -365,6 +421,7 @@ export const SERVICES_METADATA = {
     pricing: 'Free',
     api_endpoint: '/api / password - generator';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     pricing: 'Free',
@@ -379,6 +436,8 @@ export const SERVICES_METADATA = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   qrCodeGenerator: {
     name: 'QR Code Generator';
@@ -388,21 +447,28 @@ export const SERVICES_METADATA = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     features: [;
       'Multiple QR code types_custom styling_logo integration_error correction_template library';
     ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     pricing: 'Free',
     api_endpoint: '/api / qr - code - generator';
   }
   file_converter: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -420,6 +486,9 @@ export const SERVICES_METADATA = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     name: 'File Converter';
     description: 'Convert files between different formats';
     icon: '🔄';
@@ -427,30 +496,34 @@ export const SERVICES_METADATA = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     features: [;
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing';
     ];
 
     pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
 
-=======
-    pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     apiEndpoint: '/api/file-converter'
   }
   textAnalysis: {
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     pricing: 'Free (Basic) / $9.99 / month (Pro)',
     api_endpoint: '/api / file - converter';
   }
   text_analysis: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -469,6 +542,8 @@ export const SERVICES_METADATA = {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     name: 'Text Analysis';
     description: 'Analyze text for insights and optimization';
     icon: '📊';
@@ -476,14 +551,18 @@ export const SERVICES_METADATA = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     features: [;
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection';
     ];
 
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
@@ -496,13 +575,15 @@ export const SERVICES_METADATA = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     apiEndpoint: '/api/text-analysis'
   }
 } as const;
 // Service availability and status
 export const getServiceStatus = () => {
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -518,6 +599,8 @@ export const getServiceStatus = () => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return {;
     urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
@@ -526,6 +609,7 @@ export const getServiceStatus = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -541,6 +625,11 @@ export const getServiceStatus = () => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
     qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
@@ -549,6 +638,7 @@ export const getServiceStatus = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
@@ -559,6 +649,9 @@ export const getServiceStatus = () => {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  return {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 }
 // Service usage statistics
@@ -566,9 +659,12 @@ export const getServiceStats = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-  return {
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+  return {
   return {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   return {;
@@ -576,6 +672,8 @@ export const getServiceStats = () => {
 =======
   return {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     totalUsers: 15420;
     totalRequests: 2847500;
     averageResponseTime: 125
@@ -583,13 +681,12 @@ export const getServiceStats = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
     api_endpoint: '/api / text - analysis';
-=======
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 }
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 }
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 }
@@ -771,10 +868,10 @@ textAnalysis: {
   users: 3890, requests: 11500, avgResponse: 178 
 }
 
-<<<<<<< HEAD
     }
   }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
     pricing: 'Free (Basic) / $19.99 / month (Pro)',
@@ -786,6 +883,8 @@ textAnalysis: {
     api_endpoint: '/api / text - analysis';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
@@ -794,6 +893,7 @@ textAnalysis: {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -804,6 +904,9 @@ textAnalysis: {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Export all micro SaaS services;
 export { urlShortenerService } from './urlShortenerService',;
 export { passwordGeneratorService } from './passwordGeneratorService',;
@@ -862,10 +965,13 @@ export const SERVICE_CATEGORIES = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   }
 } as const;
@@ -882,6 +988,7 @@ export const getServiceStatus = () =>: any {
 }
 ;
 // Service usage statistics;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -961,6 +1068,9 @@ export const getServiceStatus = () => {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export const getServiceStats = () => {;
   return {;
     totalUsers: 15420,;
@@ -973,6 +1083,7 @@ export const getServiceStats = () => {;
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -980,6 +1091,8 @@ export const getServiceStats = () => {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -989,6 +1102,7 @@ export const getServiceStats = () => {;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 }
@@ -996,6 +1110,8 @@ export const getServiceStats = () => {;
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
 export const getServiceStats = () =>: any {
   return {
@@ -1010,6 +1126,7 @@ export const getServiceStats = () =>: any {
       text_analysis: { users: 3890, requests: 11500, avg_response: 178 }
     }
   }
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1018,3 +1135,6 @@ export const getServiceStats = () =>: any {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

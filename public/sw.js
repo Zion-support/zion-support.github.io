@@ -3,29 +3,27 @@
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
-const CACHE_NAME = 'zion-tech-group-v1';
+// Service Worker for caching
+const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
-  '/static/css/main.css',
-  '/static/js/main.js',
+  '/static/js/bundle.js',
+  '/static/css/main.css'
 ];
 
-self.addEventListener('install', event => {
+self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache)),
+      .then((cache) => cache.addAll(urlsToCache))
   );
 });
 
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
-      .then(response => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }),
+      .then((response) => {
+        return response || fetch(event.request);
+      })
   );
 });
 <<<<<<< HEAD

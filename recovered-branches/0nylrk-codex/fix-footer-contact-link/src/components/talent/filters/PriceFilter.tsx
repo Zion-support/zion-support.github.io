@@ -12,9 +12,6 @@ export function PriceFilter({
     setPriceRange([values[0], values[1]]);
   };
 
-
-
-
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">;
       <button
@@ -40,8 +37,6 @@ export function PriceFilter({
             max={200}
             step={5}
             onValueChange={handleChange}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="mt-6"
           />;
         </div>;
@@ -50,9 +45,6 @@ export function PriceFilter({
   );
 }
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import { ChevronDown, ChevronUp  } from './lucide-react';
 import { Slider  } from '@/components / ui / slider';
 import { PriceFilterProps  } from '@/types / filters';

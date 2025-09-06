@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export default function RegisterPage() {
   const [formData, setFormData] = useState({
@@ -29,6 +33,7 @@ export default function RegisterPage() {
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -273,3 +278,13 @@ export default function RegisterPage() {
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Register</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Register;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

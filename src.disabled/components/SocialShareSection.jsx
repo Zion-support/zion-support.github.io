@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "export\": function SocialShareSection () { const socialPlatforms = [ { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\";\",;
 export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
@@ -26,3 +27,8 @@ export: function SocialShareSection () { const socialPlatforms = [ { name: "Twit
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+"export\": function SocialShareSection () { const socialPlatforms = [ { name: \'Twitter,\',\"icon\": \',\"url\": \',\"https\": \''\";\",;
+export: function SocialShareSection () { const socialPlatforms = [ { name: "Twitter,",icon: ",url: ",https: """;",;'"'"
+"export": function SocialShareSection () { const socialPlatforms = [' { name: 'Twitter,',"icon": ',"url": ',"https": '''";",;"]"}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

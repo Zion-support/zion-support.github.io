@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { 
   Play, 
   Clock, 
@@ -35,6 +36,9 @@ import {
   ExternalLink
 } from 'lucide-react';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const tutorialCategories = [
   { name: 'AI & Machine Learning', count: 15, color: 'bg-blue-100 text-blue-800' },
@@ -150,6 +154,7 @@ const stats = [
 
 export default function TutorialsPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Tutorials - Zion Tech Group"
       description="Learn from our comprehensive collection of tutorials covering AI, web development, cloud computing, cybersecurity, and more."
@@ -416,3 +421,13 @@ export default function TutorialsPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Tutorials</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Tutorials;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

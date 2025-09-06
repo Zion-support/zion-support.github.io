@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const microSaasProducts = [
   {
@@ -94,6 +98,7 @@ const categories = [
 
 export default function ProductsIndex() {
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Products - Zion Tech Group</title>
@@ -272,3 +277,13 @@ export default function ProductsIndex() {
     </>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Index</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Index;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

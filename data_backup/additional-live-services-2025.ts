@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface AdditionalLiveService2025 {
   "id": string;
   name: string;
@@ -23,6 +26,7 @@ export const "additionalLiveServices2025": AdditionalLiveService2025[] = [{
     "price": '$199',
     "features": ['Real-time monitoring', 'Live support', 'Performance tracking']},
 ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -83,3 +87,7 @@ export interface AdditionalLiveService2025 { id: string; name: string; tagline: 
 
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+export interface AdditionalLiveService2025 { id: string; name: string; tagline: string; price: string; features: string[]} export const additionalLiveServices2025: AdditionalLiveService2025[] = [ { id: 'live-service-1',name: 'Live Service 1',tagline: 'Real-time service delivery',price: '$199',features: ['Real-time monitoring','Live support','Performance tracking'],},];
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

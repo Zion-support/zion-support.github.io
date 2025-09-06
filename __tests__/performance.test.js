@@ -35,6 +35,7 @@ test.describe('Performance Tests', () => {
     });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -46,6 +47,8 @@ test.describe('Performance Tests', () => {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Check performance score
     if (lighthouse.lhr && lighthouse.lhr.categories) {
       const performanceScore = lighthouse.lhr.categories.performance.score * 100;
@@ -66,6 +69,9 @@ test.describe('Performance Tests', () => {
     await page.waitForTimeout(2000);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Should not have bundle size warnings
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -93,6 +99,7 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 =======
     expect(consoleMessages.length).toBe(0);
   });
+<<<<<<< HEAD
 });
 =======
 =======
@@ -185,3 +192,6 @@ const { test,expect } = require('@playwright/test')';; test.describe('Performanc
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+});
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

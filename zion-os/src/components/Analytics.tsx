@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 "use client",
 import { useEffect  } from './react';,
 interface FirstInputEntry extends PerformanceEntry {
@@ -20,6 +23,7 @@ export /**
 function Analytics() {
   useEffect (() => {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,6 +41,8 @@ export function Analytics() {useEffect(() => {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 "use client",;
 import { useEffect } from "react",;
 interface FirstInputEntry extends PerformanceEntry {;
@@ -49,6 +55,7 @@ export function Analytics() {;
   useEffect(() => {;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -59,6 +66,9 @@ export function Analytics() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Performance monitoring;
     // Check condition
 if ( {) {
@@ -76,18 +86,23 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           // Check condition
 if ( {) {
   $2
 }
             const firstInputEntry = entry as FirstInputEntry,
             // // // console.log ("FID:", firstInputEntry.processing_start - firstInputEntry.start_time);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -107,12 +122,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           }
         }
       });
       observer.observe({ entryTypes: ["largest-contentful-paint", "first-input"] });
       // Cumulative Layout Shift monitoring;
-<<<<<<< HEAD
       let cls = 0,
       const observer2 = new PerformanceObserver ((list) => {
         for (const entry of list.get_entries ()) {
@@ -133,14 +149,18 @@ if ( {) {
       // Cleanup;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       return () => {;
         observer.disconnect();
 
         observer2.disconnect();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       return () => {observer.disconnect();
@@ -175,6 +195,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
   }, []);

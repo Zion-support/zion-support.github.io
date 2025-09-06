@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { 
   Globe, 
   Award, 
@@ -33,6 +34,9 @@ import {
   MapPin
 } from 'lucide-react';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const partnerTypes = [
   {
@@ -115,6 +119,7 @@ const stats = [
 
 export default function PartnersPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Partners - Zion Tech Group"
       description="Join our partner ecosystem and expand your reach with Zion Tech Group. Strategic partnerships for technology companies, solution providers, and industry leaders."
@@ -270,3 +275,13 @@ export default function PartnersPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Partners</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Partners;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

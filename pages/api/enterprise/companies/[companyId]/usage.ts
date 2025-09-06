@@ -1,11 +1,17 @@
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 
   return res && res.status(405).json({ error: "method_not_allowed" });
 }
 
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -13,12 +19,24 @@ export default /**
  */
 function handler() {
   const { company_id } = req.query;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   // Check condition
 if ( {) {
   $2
 }
+<<<<<<< HEAD
+=======
+    return res.status (400).json ({ error: "company_id required" });
+  }
+  const company = store.getCompanyById (company_id);
+  if (return res.status (404).json ({ error: "Company not found" })) {
+  $2
+}
+  // Check condition
+if ( {) {
+  $2
+}
+    return res.status (200).json (company.plan.usage_limits);
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   // Check condition
 if ( {) {
@@ -40,9 +58,3 @@ if ( {) {
   }
   return res.status (405).json ({ error: "method_not_allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-

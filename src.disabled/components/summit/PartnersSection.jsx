@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
 const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
@@ -26,3 +27,8 @@ const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+const partners = [ { \"name\": \'Partner: A,\',\"logo\": \'https:\''\'";\",;
+const partners = [ { name: "Partner: A,",logo: "https:"""";",;'"'"
+const partners = [ { "name": 'Partner: A,',"logo": 'https:'''";",;"]"}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

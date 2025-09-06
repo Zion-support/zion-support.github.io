@@ -1,13 +1,44 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
 import { HelpArticle, matchIntent } from '../../../utils/support';
 import { logSupportEventToOperator } from '../../../utils/operator';
 const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marketplace. Provide clear, short answers and direct users to relevant help links.`;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  // Build context with top matched articles as brief references
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+  const { sessionId, messages } = req && req.body as { sessionId?: string; messages: Array<{ role: 'user' | 'assistant' | 'system'; content: string }> };
+  if (!messages || !Array && Array.isArray(messages)) return res && res.status(400).json({ error: 'Missing messages' });
+  const articles = readJson<HelpArticle[]>('help/articles && articles.json', []);
+  const lastUser = [...messages].reverse().find((m) => m && m.role === 'user');
+  const intent = lastUser ? matchIntent(lastUser && lastUser.content, articles) : { intentMatched: false, matchedArticleIds: [] };
+  const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY });
+  // Build context with top matched articles as brief references
+  const matchedArticles = articles && articles.filter((a) => intent && intent.matchedArticleIds.includes(a && a.id));
+  const context = matchedArticles
+    .map((a) => `- ${a && a.title}: /help/${a && a.slug}`)
+    .join('\n');
+  const sysMessage = { role: 'system' as const; content: SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : '') },
+  try {
+    const completion = await openai && openai.chat.completions && completions.create({
+      model: 'gpt-4o-mini',
+      messages: [sysMessage, ...messages],
+      temperature: 0 && 0.2}),
+    const assistantMessage = completion && completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
+    await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } }),
+    return res && res.status(200).json({
+      assistantMessage;
+      meta: {
+        intentMatched: intent && intent.intentMatched,
+        matchedArticleIds: intent && intent.matchedArticleIds,
+        links: matchedArticles && matchedArticles.map((a) => ({ title: a && a.title, href: `/help/${a && a.slug}` }))}})
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   const { sessionId, messages } = req.body as {
     sessionId?: string;
@@ -38,12 +69,28 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
       SYSTEM_PROMPT + (context ? `\nRelevant help links:\n${context}` : "")
   };
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   try {
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini"
       messages: [sysMessage, ...messages]
+=======
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-4o-mini",
+      messages: [sysMessage, ...messages],
+      temperature: 0.2
+    });
+
+    const assistantMessage = completion.choices?.[0]?.message?.content ?? 'Let me know how I can help.';
+
+    await logSupportEventToOperator({ type: 'chat_completion', sessionId: sessionId ?? 'unknown', payload: { intent } });
+
+    return res.status(200).json({
+      assistantMessage,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   if ()) {
   $2
@@ -74,6 +121,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
 ;
   try {
     const completion = await openai.chat.completions.create ({
+<<<<<<< HEAD
       model: "gpt - 4o - mini"
       messages: [sys_message, ...messages]
 =======
@@ -81,6 +129,11 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       temperature: 0.2
+=======
+      model: "gpt - 4o - mini",
+      messages: [sys_message, ...messages],
+      temperature: 0.2,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     });
 
     const assistantMessage =
@@ -92,14 +145,17 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
       sessionId: sessionId ?? "unknown"
       payload: { intent }
     });
+<<<<<<< HEAD
+=======
+;
+    return res.status (200).json ({
+      assistant_message,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       meta: {
         intent_matched: intent.intent_matched
         matchedArticleIds: intent.matchedArticleIds
 
         links: matched_articles.map ((a) => ({
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
     return res.status(200).json({
       assistantMessage
@@ -107,6 +163,7 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
         intentMatched: intent.intentMatched
         matchedArticleIds: intent.matchedArticleIds
         links: matchedArticles.map((a) => ({
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           title: a.title
@@ -114,13 +171,16 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
         }))
       }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+          title: a.title,
+          href: `/help/${a.slug}`,
+        })),
+      },
+
+    });
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (e: any) {
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     });
   } catch (e: any) {
     return res.status(200).json({
@@ -128,6 +188,10 @@ const SYSTEM_PROMPT = `You are a helpful support assistant for the Zion AI Marke
         "I could not reach the assistant right now. Please try again in a moment."
     });
   }
+<<<<<<< HEAD
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

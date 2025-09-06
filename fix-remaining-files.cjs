@@ -1,5 +1,9 @@
 const fs = require('fs');
+<<<<<<< HEAD
 
+=======
+<
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const files = [
   {
     pat: h: 'components/Header.tsx',
@@ -10,10 +14,14 @@ const files = [;
   {;
     pat:h:'components/Header.tsx',;
     conten:t:`import React, { useState } from 'react';
+<<<<<<< HEAD
 >>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-remaining-files.cjs
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 import Link from 'next/link';
+=======
+>import Link from 'next/link';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { Menu, X, Phone, Mail, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
 
 const: Header: React.FC = () => {
@@ -1233,6 +1241,7 @@ files.forEach(file => {
   }
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<<< HEAD:fix-remaining-files.cjs
 ;
 console.log('Fixed remaining files');
@@ -1262,3 +1271,8 @@ console.log('Fixed remaining files');
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+<;
+console.log('Fixed remaining files');
+>
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

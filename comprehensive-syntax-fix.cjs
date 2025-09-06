@@ -61,9 +61,7 @@ class ComprehensiveSyntaxFixer {
           let content = fs.readFileSync(filePath, 'utf8');
           
           // Remove merge conflict markers
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-          content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-          
+          content = content.replace(/          content = content.replace(/          
           fs.writeFileSync(filePath, content);
           this.log(`✅ Fixed merge conflicts in ${file}`);
         } catch (error) {
@@ -131,6 +129,7 @@ class ComprehensiveSyntaxFixer {
 
 // Run the syntax fixer
 const fixer = new ComprehensiveSyntaxFixer();
+<<<<<<< HEAD
 fixer.run().catch(console.error);
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -502,3 +501,6 @@ fixer.run().catch(console.error);
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+fixer.run().catch(console.error);
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

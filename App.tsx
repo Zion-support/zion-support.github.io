@@ -24,7 +24,7 @@ import ChatAssistant from './src/components/ChatAssistant';
 import ScrollToTop from './src/components/ScrollToTop';
 import ParticleBackground from './src/components/ParticleBackground';
 
-export default function App() {
+export default function App(): React.JSX.Element {
   const services = [
     {
       title: 'AI Solutions',
@@ -64,6 +64,7 @@ export default function App() {
     },
   ];
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
 
 <<<<<<< HEAD
@@ -89,6 +90,8 @@ export default function App(): JSX.Element {
 =======
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
       <ParticleBackground />
@@ -160,6 +163,7 @@ export default function App(): JSX.Element {
     </div>
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
   );
+<<<<<<< HEAD
 }
 =======
 
@@ -192,3 +196,6 @@ export default function App(): JSX.Element {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> main
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

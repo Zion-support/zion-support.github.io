@@ -22,9 +22,12 @@ export function issueTokens(userId: string, amount: number, reason: string) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     userId
     type: 'earn'
     amount
@@ -43,6 +46,7 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
   const currentBalance = getUserBalance(userId);
   const actualAmount = Math.min(amount, currentBalance);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -53,6 +57,8 @@ export function revokeTokens(userId: string, amount: number, reason: string) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return addTransaction({
     userId,
     type: "earn",

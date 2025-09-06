@@ -24,6 +24,7 @@ export class jobServiceService {; constructor() {; this.baseUrl = process.env.NE
 export default new jobServiceService(),
 }
 export class jobServiceService {; constructor() {; this && this.baseUrl = process && process.env.NEXT_PUBLIC_API_URL || "/api";,} async get() {; try {; const response = await fetch("${this && this.baseUrl}/jobservice");,} return await response && response.json();,} } catch (error) {; console && console.error("Error fetching data:",error);,} throw error;,} } export default new jobServiceService();,}
+<<<<<<< HEAD
 export default new jobServiceService()}
 <<<<<<< HEAD
 
@@ -50,3 +51,6 @@ export default new jobServiceService()}
 export class jobServiceService {; constructor() {; this.baseUrl = process.env.NEXT_PUBLIC_API_URL || "/api",} async get() {; try {; const response = await fetch("${this.baseUrl}/jobservice"),} return await response.json(),} } catch (error) {; console.error("Error fetching data:",error),} throw error,} } export default new jobServiceService(),}
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+export default new jobServiceService()}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

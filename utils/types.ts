@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
 export interface Application {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface Application {;
   id: string;
   name: string;
@@ -22,7 +25,6 @@ export interface Application {;
 export interface Application {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
   id: string;
   jobId: string;
   talentSlug: string;
@@ -31,6 +33,7 @@ export interface Application {;
 }
 export type UserRole = 'admin' | 'user' | 'guest';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export type UserRole = "admin" | "user" | "guest";
 =======
@@ -84,3 +87,6 @@ export type UserRole = 'admin' | 'user' | 'guest';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+export type UserRole = "admin" | "user" | "guest";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

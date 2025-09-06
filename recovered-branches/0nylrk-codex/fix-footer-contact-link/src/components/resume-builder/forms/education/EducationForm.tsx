@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -17,35 +6,9 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 export function EducationForm({ ;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import {useState} from 'react';
-import {Button} from '@/components/ui/button';
-import {Education} from '@/types/resume';
-import {useResume} from '@/hooks/useResume';
-import {format} from 'date-fns';
-import {EducationFormProps} from './types';
-import {EducationList} from './EducationList';
-import {EducationFormFields} from './EducationFormFields';
-export function EducationForm({
-export function EducationForm({ ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   resumeId;
   educationEntries
   onComplete
@@ -69,29 +32,6 @@ export function EducationForm({ ;
       is_current: data.is_current
       description: data.description
       location: data.location}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-    let success;
-    if (editingId) {
-      success = await updateEducation(editingId, educationData)
-    } else {
-      success = await addEducation(resumeId, educationData)
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Education } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-import { format } from 'date-fns',;
-import { EducationFormProps } from './types',;
-import { EducationList } from './EducationList',;
-import { EducationFormFields } from './EducationFormFields',;
-export function EducationForm({;
-  resumeId,;
-  educationEntries,;
-  onComplete,;
-  onBack;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function EducationForm(): any ({ ;
   resumeId;
   educationEntries, ;
@@ -119,71 +59,21 @@ export function EducationForm(): any ({ ;
       description: data && data.description,;
       location: data && data.location},;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let success;
-<<<<<<< HEAD
-=======
-}: EducationFormProps) {;
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd');
-  },;
-  const handleAddOrUpdate = async (data: any) => {;
-    const educationData: Education = {;
-      institution: data.institution,;
-      degree: data.degree,;
-      field_of_study: data.field_of_study,;
-      start_date: data.start_date,;
-      end_date: data.is_current ? undefined : (data.end_date || undefined),;
-      is_current: data.is_current,;
-      description: data.description,;
-      location: data.location},;
-    let success,;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     let success;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (editingId) {;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
     if (success) {
       setEditingId(null)
     }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
 
     }
 
-
   };
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  }
-  };
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -198,54 +88,21 @@ export function EducationForm(): any ({ ;
       setEditingId(null)
     } else {
       onBack()
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-=======
 
     }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-    }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     if (success) {;
       setEditingId(null);
     }
 
-
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },;
 
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
     // Form reset happens in the child component;
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    }
-  }
-  };
-  },;
-  const handleEdit = (edu: Education) => {;
-    setEditingId(edu.id!),;
-    // Form reset happens in the child component;
-  },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleDelete = async (id: string) => {;
     if (confirm('Are you sure you want to delete this education entry?')) {;
       await deleteEducation(id);
@@ -258,22 +115,9 @@ export function EducationForm(): any ({ ;
     } else {;
       onBack();
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   },
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  },
-
-=======
-
-  },
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   return (
     <div className="space-y-6">
       <div>
@@ -283,16 +127,8 @@ export function EducationForm(): any ({ ;
         </p>
       </div>
 
-
-
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
   return (
 
-
       <EducationList 
         educationEntries={educationEntries} 
 
@@ -300,105 +136,10 @@ export function EducationForm(): any ({ ;
         onDelete={handleDelete}
       />
 
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      <EducationList
-        educationEntries={educationEntries}
-      <EducationList 
-        educationEntries={educationEntries} 
-        onEdit={handleEdit}
-        onDelete={handleDelete}
-      />
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-  }
-  return (
-
-import { useState } from 'react',;
-import { Button } from '@/components/ui/button',;
-import { Education } from '@/types/resume',;
-import { useResume } from '@/hooks/useResume',;
-import { format } from 'date-fns',;
-import { EducationFormProps } from './types',;
-import { EducationList } from './EducationList',;
-import { EducationFormFields } from './EducationFormFields',;
-;
-export function EducationForm({ ;
-  resumeId,;
-  educationEntries, ;
-  onComplete, ;
-  onBack ;
-} EducationFormProps) {;
-  const { addEducation, updateEducation, deleteEducation, isLoading } = useResume(),;
-  const [editingId, setEditingId] = useState<string | null>(null),;
-  ;
-  // Helper function to format dates to string;
-  const formatDateValue = (dateValue:string | Date | undefined):string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
-    return format(dateValue, 'yyyy-MM-dd'),;
-  },;
-;
-  const handleAddOrUpdate = async (data:any) => {;
-    const educationData:Education = {;
-      institution:data.institution,;
-      degree:data.degree,;
-      field_of_study:data.field_of_study,;
-      start_date:data.start_date,;
-      end_date:data.is_current ? undefined :(data.end_date || undefined),;
-      is_current:data.is_current,;
-      description:data.description,;
-      location:data.location},;
-;
-    let success,;
-    if (editingId) {;
-      success = await updateEducation(editingId, educationData),;
-    } else {;
-      success = await addEducation(resumeId, educationData),;
-    }
-;
-    if (success) {;
-      setEditingId(null),;    }
-  },;
-;
-  const handleEdit = (edu:Education) => {;
-    setEditingId(edu.id!),;
-    // Form reset happens in the child component;
-  },;
-;
-  const handleDelete = async (id:string) => {;
-    if (confirm('Are you sure you want to delete this education entry?')) {;
-      await deleteEducation(id);
-    }
-  },;
-;
-  const handleCancel = () => {;
-    if (editingId) {;
-      setEditingId(null),;
-    } else {;
-      onBack(),;
-    }
-  },;
-;
-  return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     <div className="space-y-6">;
       <div>;
         <h2 className="text-xl font-semibold mb-2">Education</h2>;
@@ -406,8 +147,6 @@ export function EducationForm({ ;
           Add your educational background and academic achievements.;
         </p>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <EducationList
         educationEntries={educationEntries} 
@@ -420,7 +159,6 @@ export function EducationForm({ ;
           {editingId ? 'Update Education' : 'Add Education'}
         </h3>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <EducationFormFields
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
@@ -430,9 +168,6 @@ export function EducationForm({ ;
       </div>;
 
       {!editingId && educationEntries && educationEntries.length > 0 && (;
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
       <EducationList ;
         educationEntries={educationEntries} ;
@@ -453,12 +188,10 @@ export function EducationForm({ ;
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
-<<<<<<< HEAD
         />;
       </div>;
 ;
       {!editingId && educationEntries.length > 0 && (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         <div className="flex justify-end">;
           <Button type="button" onClick={onComplete}>;
             Next;
@@ -466,15 +199,9 @@ export function EducationForm({ ;
         </div>;
       )}
     </div>;
-<<<<<<< HEAD
   );
 }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export /**
  * EducationForm - Function description
  */
@@ -577,42 +304,3 @@ if ( {) {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;}
- return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Education</h2> <p className="text-muted-foreground" > Add your educational background and academic achievements. </p> </div> <EducationList educationEntries= {
-  educationEntries 
-}onEdit= {
-  handleEdit 
-}onDelete= {
-  handleDelete 
-}/> </h3> <EducationFormFields isEditing= {
-  !!editingId 
-}onSubmit= {
-  handleAddOrUpdate 
-}onCancel= {
-  handleCancel 
-}/> </div> Next </Button> </div>) 
-}</div>) 
-}
-        <EducationFormFields
-          isEditing={!!editingId}
-          onSubmit={handleAddOrUpdate}
-          onCancel={handleCancel}
-        />
-      </div>
-      {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
-            Next
-          </Button>
-        </div>
-      )}
-    </div>
-  )
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

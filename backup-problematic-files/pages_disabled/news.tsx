@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { 
   Calendar, 
   User, 
@@ -33,6 +34,9 @@ import {
   MapPin
 } from 'lucide-react';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const newsCategories = [
   { name: 'Company News', count: 12, color: 'bg-blue-100 text-blue-800' },
@@ -134,6 +138,7 @@ const stats = [
 
 export default function NewsPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="News & Updates - Zion Tech Group"
       description="Stay updated with the latest news, product launches, partnerships, and industry insights from Zion Tech Group."
@@ -373,3 +378,13 @@ export default function NewsPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>News</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default News;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

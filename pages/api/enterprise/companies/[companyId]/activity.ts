@@ -1,21 +1,38 @@
+<<<<<<< HEAD
 =======
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import { store } from "../../../../../utils/data/enterpriseStore";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { companyId } = req.query;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  if (!companyId || typeof companyId !== "string") {
+    return res.status(400).json({ error: "companyId required" });
+  }
+  const company = store.getCompanyById(companyId);
+  if (!company) return res.status(404).json({ error: "company_not_found" });
+  return res.status(200).json(company.activity);
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   const company = store && store.getCompanyById(companyId);
   if (!company) return res && res.status(404).json({ error: "company_not_found" });
   return res && res.status(200).json(company && company.activity);
 }
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import { store  } from '../../../../../utils / data / enterprise_store';
 export default /**
@@ -35,6 +52,7 @@ if ( {) {
 }
   return res.status (200).json (company.activity);
 }
+<<<<<<< HEAD
 =======
 =======
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -73,14 +91,19 @@ export default function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
   const company = store.getCompanyById(companyId);
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
   } catch (error) {
@@ -95,9 +118,13 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

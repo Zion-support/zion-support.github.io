@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
 import {
@@ -13,7 +16,6 @@ import {
   upsertDispute,;
 } from "../../../../utils/fsdb";
 import {
-
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -41,13 +43,25 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
+<<<<<<< HEAD
+=======
+
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
+
+    }
+    const { files } =
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import path from './path';
 import {
@@ -89,9 +103,26 @@ if ( {) {
     }
     const { files } =;
       req.body ||;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       { recursive: true }
+=======
+
+      ({} as {
+        files: { file_name: string; mime_type: string; base64: string }[];
+      });
+
+    }
+
+}
+
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
+  const fs = await import("fs");
+  await new Promise<void>((resolve, reject) => {
+
+      { recursive: true },
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       (err: any) => {
         if (return reject (err)) {
   $2
@@ -102,12 +133,14 @@ if ( {) {
       }
     );
   });
+<<<<<<< HEAD
 =======
+=======
+
 }
 
-=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
-
 
 }
 
@@ -121,8 +154,6 @@ if ( {) {
 
 }
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['POST']);
@@ -148,14 +179,16 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
 }
+<<<<<<< HEAD
 =======
 
 
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -246,8 +279,12 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

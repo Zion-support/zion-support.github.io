@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 =======
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
@@ -40,6 +41,8 @@ import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
@@ -47,6 +50,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; import Link from; \'next/link\'; const \"Index\": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name=\'description\' content=\'Index blog post\' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href=\'/blog\'>Back to Blog</Link> </main> </div> )} export default Index
+<<<<<<< HEAD
 import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
 <<<<<<< HEAD
 
@@ -76,3 +80,6 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; import Lin
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; import Link from; 'next/link'; const "Index": NextPage = () => { return ( <div> <Head> <title>Index - Zion Tech Solutions</title> <meta name='description' content='Index blog post' /> </Head> <main> <h1>Index</h1> <p>Blog content coming soon...</p> <Link href='/blog'>Back to Blog</Link> </main> </div> )} export default Index;''
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

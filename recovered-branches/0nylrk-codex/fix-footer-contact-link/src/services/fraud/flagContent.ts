@@ -1,37 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 import { supabase } from '@/integrations/supabase/client',
 import { FraudSeverity, FraudFlag } from '@/types/fraud',
 import { FlagResult } from './types',
-
 
 /**
  * Flag content for review
  */
 
-
-<<<<<<< HEAD
-=======
-export const flagContent = async (;
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
-  severity: FraudSeverity;
-export const flagContent = async (
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
-
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 // Content flagging functionality;
 import {supabase} from '@/integrations / supabase / client';
 import {FraudSeverity, FraudFlag} from '@/types / fraud';
@@ -45,26 +19,6 @@ export const flag_content = async (
   content_type: FraudFlag['content_type'];
   content_id: string;
   content_excerpt: string;
-<<<<<<< HEAD
-=======
-// Content flagging functionality
-import { supabase  } from '@/integrations/supabase/client';
-import { FraudSeverity, FraudFlag  } from '@/types/fraud';
-import { FlagResult } from './types';
-import { supabase } from '@/integrations/supabase/client',
-import { FraudSeverity, FraudFlag } from '@/types/fraud',
-import { FlagResult } from './types',
-/**
- * Flag content for review
- */
-
-export const flagContent = async (;
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   severity: FraudSeverity;
 export const flagContent = async (
   userId: string;
@@ -72,8 +26,6 @@ export const flagContent = async (
   contentType: FraudFlag['content_type'];
   contentId: string;
   contentExcerpt: string;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   severity: FraudSeverity;
   reason: string
   userId: string,
@@ -86,8 +38,6 @@ export const flagContent = async (
   ipAddress?: string
 ): Promise<FlagResult> => {
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
     console.log ('Flagging content for review:', {
       user_id;
       content_type;
@@ -105,9 +55,6 @@ export const flagContent = async (
       content_id: contentId,
       content_excerpt: contentExcerpt && contentExcerpt.substring(0, 200), // Limit excerpt length
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     // // // console.log('Flagging content for review:', {
       userId,
       contentType,
@@ -117,16 +64,12 @@ export const flagContent = async (
       reason;
       severity;
     });
-<<<<<<< HEAD
     const { error } = await supabase.from('fraud_flags').insert({
       user_id: userId;
       user_email: userEmail;
       content_type: contentType;
       content_id: contentId
       content_excerpt: contentExcerpt.substring(0, 200), // Limit excerpt length
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       severity;
       reason;
       ip_address: ipAddress;
@@ -136,16 +79,7 @@ export const flagContent = async (
     if (error) throw error;
     return { success: true }
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-    console.error('Error flagging content:', error);
-    return {
-      success: false
-      error: error instanceof Error ? error.message : 'Unknown error'
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     }
   }
 }
@@ -211,7 +145,6 @@ export const flagContent = async (;
     return {;
       success: false;
       error: error instanceof Error ? error.message : 'Unknown error';
-<<<<<<< HEAD
 
       reason;
       severity;
@@ -231,74 +164,15 @@ export const flagContent = async (;
     if (error) throw error;
     return { success: true }
   } catch (error) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     console && console.error('Error flagging content:', error);
     return { 
       success: false, 
       error: error instanceof Error ? error && error.message : 'Unknown error' 
-<<<<<<< HEAD
 
     }
-=======
-    }
-
-// Content flagging functionality;
-import { supabase } from '@/integrations/supabase/client',;
-import { FraudSeverity, FraudFlag } from '@/types/fraud',;
-import { FlagResult } from './types',;
-;
-/**;
- * Flag content for review;
- */;
-export const flagContent = async (;
-  userId:string,;
-  userEmail:string | undefined,;
-  contentType:FraudFlag['content_type'],;
-  contentId:string,;
-  contentExcerpt:string,;
-  severity:FraudSeverity,;
-  reason:string,;
-  ipAddress?:string;
-):Promise<FlagResult> => {;
-  try {;
-    // // // console.log('Flagging content for review:', {;
-      userId,;
-      contentType,;
-      contentId,;
-      reason,;
-      severity;
-    }),;
-    ;
-    const { error } = await supabase.from('fraud_flags').insert({;
-      user_id:userId,;
-      user_email:userEmail,;
-      content_type:contentType,;
-      content_id:contentId,;
-      content_excerpt:contentExcerpt.substring(0, 200), // Limit excerpt length;
-      severity,;
-      reason,;
-      ip_address:ipAddress,;
-      timestamp:new Date().toISOString(),;
-      status:'pending';
-    }),;
-    ;
-    if (error) throw error,;
-    ;
-    return { success:true },;
-  } catch (error) {;
-    console.error('Error flagging content:', error),;
-    return { ;
-      success:false, ;
-      error:error instanceof Error ? error.message :'Unknown error' ;
-    },;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
 }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 ;
     const { error } = await supabase.from ('fraud_flags').insert ({
       user_id: user_id;
@@ -323,10 +197,6 @@ if (throw error) {
     return {
       success: false,
       error: error instanceof Error ? error.message : 'Unknown error';
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
   ipAddress?: string
 ): Promise<FlagResult> => {
@@ -356,27 +226,10 @@ if (throw error) {
     if (error) throw error,
     
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
     }
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-};
     }
   }
 };
-    }
-  }
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-    }
-  }
-};
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

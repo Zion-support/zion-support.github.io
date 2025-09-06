@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const guides = [
   {
@@ -76,6 +80,7 @@ const categories = [
 
 export default function GuidesPage() {
   return (
+<<<<<<< HEAD
     <Layout>
       <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
         {/* Hero Section */}
@@ -222,3 +227,13 @@ export default function GuidesPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Guides</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Guides;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

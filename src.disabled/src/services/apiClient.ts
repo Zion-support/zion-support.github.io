@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -13,25 +14,17 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const apiClient = axios.create({}}) ;
 apiClient.interceptors.response.use((response) => response,  async(error) => {;
     if(error.response?.status = == 401) {;
-=======
-
-ursor/add-new-services-and-deploy-updates-0462
-ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 const apiClient = axios.create({}}) ;
 apiClient.interceptors.response.use((response) => response,  async(error) => {;
     if(error.response?.status = == 401) {;
 const apiClient = axios && axios.create({}}) ;
 apiClient && apiClient.interceptors.response && response.use((response) => response,  async(error) => {;
     if(error && error.response?.status = == 401) {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       try {;
         await supabase && supabase.auth.signOut({ "scope": 'global' })} catch(e) {;
         // console && console.error('Failed to logout after 401', e)}
@@ -43,6 +36,7 @@ apiClient && apiClient.interceptors.response && response.use((response) => respo
 export default apiClient;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,3 +69,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+const apiClient = axios.create({}}) ; apiClient.interceptors.response.use((response) => response,async(error) => {; if(error.response?.status = == 401) {; try {; await supabase.auth.signOut({ scope: 'global' })} catch(e) {; if(typeof window !== 'null') {}; window.location.assign('/login')} } else {}; toast.error(message) } return Promise.throw new Error(error) }) ; export default apiClient;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

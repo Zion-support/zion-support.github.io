@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -57,12 +58,17 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+;,
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import dynamic from 'next/dynamic';';,
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {',
   "loading": () => null,",
 ;  "ssr": 'false'});',
 export default AnalyticsManager;,
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -103,12 +109,19 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false,}); export default AnalyticsManager;',
 import dynamic from 'next/dynamic';
 const AnalyticsManager = dynamic(() => import('./AnalyticsManager'), {
   "loading": () => null,
   "ssr": 'false'});
 export default AnalyticsManager;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -171,3 +184,7 @@ ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+import dynamic from 'next/dynamic'; const AnalyticsManager = dynamic(() => import('./AnalyticsManager'),{ loading: () => null,ssr: 'false',}); export default AnalyticsManager;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

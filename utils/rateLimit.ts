@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   const ip =
     (req.headers["x-forwarded-for"] as string)?.split(",")[0]?.trim() ||
@@ -36,6 +39,7 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   rateLimitMap.set (key, current);
   return true;
 
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 <<<<<<< HEAD
@@ -49,6 +53,8 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
 
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Rate limiting utilities
 export interface RateLimitConfig {
   windowMs: number;
@@ -136,8 +142,6 @@ export function rateLimit(config: RateLimitConfig) {
   };
 }
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
@@ -195,6 +199,7 @@ if ( {) {
   rateLimitMap.set (key, current);
   return true;
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 <<<<<<< HEAD
@@ -211,3 +216,6 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

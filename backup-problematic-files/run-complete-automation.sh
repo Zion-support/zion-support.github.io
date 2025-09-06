@@ -72,6 +72,7 @@ echo "====="
 
 # Security scan
 <<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD:run-complete-automation.sh
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
@@ -87,32 +88,18 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20:run-complete-automation.sh
-run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
-
-=======
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-<<<<<<< HEAD:backup-problematic-files/run-complete-automation.sh
-=======
 run_with_log "Security Scanner" "node scripts/security-audit.cjs"
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
 run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scanner.cjs"
+<<<<<<< HEAD
 >>>>>>> origin/main
 =======
 >>>>>>> origin/automation-improvements-final
@@ -134,6 +121,8 @@ run_optional "Enhanced Security Scanner" "node automation/enhanced-security-scan
 
 >>>>>>> main:run-complete-automation.sh
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 # Security audit
 run_optional "Security Audit" "node scripts/security-audit.cjs"
 

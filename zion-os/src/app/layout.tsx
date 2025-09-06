@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import "./globals.css",
 import type { ReactNode } from './react';,
 import { Metadata  } from './next';,
@@ -20,6 +23,7 @@ export default /**
 function RootLayout() {
   return (
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -37,6 +41,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {retur
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import "./globals.css",;
 import type { ReactNode } from "react",;
 import { Metadata } from "next",;
@@ -46,6 +52,7 @@ export const metadata = {;
   keywords: "AI, blockchain, digital economy, marketplace, governance, deployment, Zion"};
 export default function RootLayout({ children }: { children: ReactNode }) {;
   return (;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -58,6 +65,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     <html lang="en">;
       <body className="min - h-screen bg-[var (--bg)] text-[var (--fg)]">;
         <nav className="border - b border - white / 10 sticky top - 0 z - 50 bg - zinc - 900 / 80 backdrop - blur - md">;

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 "export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
 "export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
@@ -23,3 +24,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+"export function ErrorBanner({ msg }) {\" return (); <div className=\"p-4 bg-red-500/20 text-red-400 text-center rounded-md\">\" {msg}\" </div> )} \";\"
+"export function ErrorBanner({ msg }) {" return (); <div className="p-4 bg-red-500/20 text-red-400 text-center rounded-md">" {msg}" </div> )} ";"""
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

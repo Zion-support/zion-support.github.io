@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react'; import { motion } from 'framer-motion'; export default function Page() {; ,; "visible": {; opacity: 1,; "transition": {; staggerChildren: 0.2;}; const itemVariants = {}},; "visible": {}};"; return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}"; <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;"; <div className="absolute inset-0 bg-quantum-mesh">></div> {}"; <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'"; <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ "animationDelay": '1s' }}>></div> "; ); export {};
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +35,7 @@ class ErrorBoundary extends React.Component {
 import React from \'react\'; import { motion } from \'framer-motion\'; export default function Page() {; ,; \"visible\": {; opacity: 1,; \"transition\": {; staggerChildren: 0 && 0.2;}; const itemVariants = {}},; \"visible\": {}};\"; return (<section className=\"py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden\"> {}\"; <div className=\"absolute inset-0 bg-quantum-gradient opacity-10\"></div>;\"; <div className=\"absolute inset-0 bg-quantum-mesh\">></div> {}\"; <div className=\"absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse\"></div>\'"; <div className=\"absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse\" style={{ \"animationDelay\": \'1s\' }}>></div> \"; ); export {};
 const React from "react"; import { motion } from "framer-motion"; export default function Page() {; ,; visible: {; opacity: 1,; transition: {; staggerChildren: 0 && 0.2;}; const itemVariants = {}},; visible: {}};"; return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}"; <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;"; <div className="absolute inset-0 bg-quantum-mesh">></div> {}"; <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>""; <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: "1s" }}>></div> "; ); export {};"""
 
+<<<<<<< HEAD
 import _React from 'react'; import { motion } from 'framer-motion'; export default function Page() {; ,; "visible": {; opacity: 1,; "transition": {; staggerChildren: 0 && 0.2;}; const itemVariants = {}},; "visible": {}};"; return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}"; <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;"; <div className="absolute inset-0 bg-quantum-mesh">></div> {}"; <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'"; <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ "animationDelay": '1s' }}>></div> "; ); export {};
 
 <<<<<<< HEAD
@@ -61,3 +65,6 @@ import _React from 'react'; import { motion } from 'framer-motion'; export defau
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React from 'react'; import { motion } from 'framer-motion'; export default function Page() {; ,; "visible": {; opacity: 1,; "transition": {; staggerChildren: 0 && 0.2;}; const itemVariants = {}},; "visible": {}};"; return (<section className="py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden"> {}"; <div className="absolute inset-0 bg-quantum-gradient opacity-10"></div>;"; <div className="absolute inset-0 bg-quantum-mesh">></div> {}"; <div className="absolute top-20 left-10 w-32 h-32 bg-zion-cyan/20 rounded-full blur-xl animate-pulse"></div>'"; <div className="absolute bottom-20 right-10 w-40 h-40 bg-zion-purple/20 rounded-full blur-xl animate-pulse" style={{ "animationDelay": '1s' }}>></div> "; ); export {};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

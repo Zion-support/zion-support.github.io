@@ -21,6 +21,7 @@ import React from';react' "export": interface AdvancedAIService {';
    email: string;
    website: string;
 import React from';react' export: interface AdvancedAIService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string} address: 'strin',g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string} export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''';,;
+<<<<<<< HEAD
    address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}  "export": const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,3 +50,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import React from';react' export: interface AdvancedAIService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: string; address: strin,g} technicalSpecs: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string} export: const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''',
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+   address: strin,g} "technicalSpecs": { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}  "export": const ADVANCED_AI_SERVICES_2025: AdvancedAIService[] = [''',
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

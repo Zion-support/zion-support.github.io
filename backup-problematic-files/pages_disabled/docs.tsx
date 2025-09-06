@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import Link from 'next/link';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const categories = [
   {
@@ -66,6 +70,7 @@ const categories = [
 
 export default function DocsPage() {
   return (
+<<<<<<< HEAD
     <Layout>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -232,3 +237,13 @@ export default function DocsPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Docs</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Docs;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

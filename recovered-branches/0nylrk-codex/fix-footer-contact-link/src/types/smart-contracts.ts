@@ -1,8 +1,6 @@
 export type BlockchainNetwork = "ethereum" | "polygon" | "none";
 
-
 export interface SmartContractInfo {;
-
 
   id: string;
   transactionHash?: string;
@@ -16,22 +14,12 @@ export interface SmartContractInfo {;
   status: "draft" | "deployed" | "executed" | "cancelled";
 }
 
-
 export interface EscrowContractDetails {;
 
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface EscrowContractDetails {
 
 export interface EscrowContractDetails {;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   client: string;
   talent: string;
   amount: number;
@@ -41,23 +29,8 @@ export interface EscrowContractDetails {;
   arbitrator?: string;
 }
 
-
-
 export interface DeploymentOptions {;
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  completionDeadline: string
-  arbitrator?: string
-}
-export interface DeploymentOptions {
-
-export interface DeploymentOptions {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   network: BlockchainNetwork;
   walletAddress?: string;
   useEscrow: boolean;
@@ -72,23 +45,4 @@ export interface DeploymentOptions {
 }
 ;
 
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-  arbitrator?: string;
 }
-;
-export interface DeploymentOptions {;
-  network: BlockchainNetwork,;
-  walletAddress?: string,;
-  useEscrow: boolean;
-  deployToChain: boolean;
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

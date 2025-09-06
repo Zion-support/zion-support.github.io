@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { 
@@ -19,6 +20,9 @@ import {
   Lightbulb
 } from 'lucide-react';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const communityStats = [
   { number: '2,500+', label: 'Active Members' },
@@ -27,6 +31,7 @@ const communityStats = [
   { number: '50+', label: 'Countries Represented' }
 ];
 
+<<<<<<< HEAD
 const communityFeatures = [
   {
     icon: MessageSquare,
@@ -166,8 +171,17 @@ export default function Community() {
     discussion.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     discussion.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
     discussion.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+=======
+const Community: React.FC<CommunityProps> = ({ className }) => {
+  return (
+    <div className={className || ""}>
+      <h1>Community</h1>
+      <p>This component is under development.</p>
+    </div>
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   );
 
+<<<<<<< HEAD
   return (
     <Layout>
       <Head>
@@ -475,3 +489,6 @@ export default function Community() {
     </Layout>
   );
 }
+=======
+export default Community;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

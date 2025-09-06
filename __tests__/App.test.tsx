@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 <<<<<<< HEAD
@@ -8,6 +9,8 @@
 <<<<<<< HEAD
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from 'react';
 
 import { render, screen } from '@testing-library/react';
@@ -44,23 +47,7 @@ describe('App', () => {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
-
-=======
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import App from '../src/App';
-describe('App', () => {
-  test('renders without crashing', () => {
-    render(<App />);
-    expect(screen.getByRole('heading', { level: 1, name: 'Zion Tech Group' })).toBeInTheDocument();
-  });
 });
-
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-});
-=======
 import { render, screen } from '@testing-library/react'
 import App from '../src/App'
 describe('App'
@@ -69,10 +56,13 @@ describe('App'
   it('has proper heading structure'
     const heading = screen.getByRole('heading', { level: '1'
     const heading = screen.getByRole('heading'
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
@@ -84,6 +74,7 @@ describe("App", () => {
       screen.getByRole("heading", { level: 1, name: "Zion Tech Group" }),
     ).toBeInTheDocument();
   });
+<<<<<<< HEAD
 });
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -112,3 +103,6 @@ describe("App", () => {
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+});
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

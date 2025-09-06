@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {\''\'";\";
 "import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
@@ -26,3 +27,8 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {\''\'";\";
+"import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {"""";";'"'"
+'import { Sparkles,Zap,TrendingUp,ArrowRight,Star,CheckCircle,Globe,MessageCircle export function NewServicesShowcase() {'''";";""}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

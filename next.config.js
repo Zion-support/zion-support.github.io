@@ -31,6 +31,7 @@ const nextConfig = {
     minimumCacheTTL: 31536000,
   },
 <<<<<<< HEAD
+<<<<<<< HEAD
   async headers() {
     return [
       {
@@ -54,6 +55,8 @@ const nextConfig = {
   },
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -97,6 +100,7 @@ const nextConfig = {
       };
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
     if (!dev && !isServer) {
@@ -112,6 +116,8 @@ const nextConfig = {
       }
     }
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     
     // Exclude apps directory from compilation
     config.module.rules.push({
@@ -124,6 +130,7 @@ const nextConfig = {
 <<<<<<< HEAD
   }
 };
+<<<<<<< HEAD
 
 module.exports = nextConfig;
 =======
@@ -156,6 +163,8 @@ module.exports = nextConfig;
     ]
   }
 };
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export default nextConfig;
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358

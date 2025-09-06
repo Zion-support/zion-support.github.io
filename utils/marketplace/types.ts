@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 
@@ -13,6 +14,8 @@ export interface Offer {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Marketplace types
 export interface Offer {
 
@@ -22,6 +25,7 @@ export interface Offer {
 export interface Offer {;
 =======
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -33,6 +37,10 @@ export interface Offer {;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface Offer {;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   createdAtIso: string;
   client_id: string;
@@ -40,8 +48,6 @@ export interface Offer {;
   startDateIso: string;
 <<<<<<< HEAD
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   scopeSummary: string;
   paymentTerms: PaymentTerms;
   agreementUrl?: string;
@@ -61,6 +67,7 @@ export interface PaymentTerms {
   }>;
 }
 
+<<<<<<< HEAD
 
 
 =======
@@ -109,6 +116,8 @@ export interface Project {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   title: string;
   summary: string;
@@ -133,13 +142,13 @@ export interface Project {;
   notes: ProjectNote[];
 }
 
-
 export interface ProjectNote {
   id: string;
   authorId: string;
   authorRole: string;
   content: string;
   createdAtIso: string;
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 =======
@@ -158,3 +167,6 @@ export interface ProjectNote {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

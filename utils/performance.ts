@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Performance monitoring utilities
 export const measurePerformance = (name: string, fn: () => void) => {
   const start = performance.now();
@@ -18,6 +21,7 @@ export const reportWebVitals = (metric: any) => {
     // Send to analytics service
     console.log('Web Vital:', metric);
   }
+<<<<<<< HEAD
 };
 =======
 =======
@@ -304,3 +308,6 @@ export const reportWebVitals = (metric: any) => {
 };
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

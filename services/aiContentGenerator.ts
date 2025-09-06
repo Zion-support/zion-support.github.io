@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface ContentGenerationRequest {
 export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
@@ -11,11 +14,14 @@ export interface ContentGenerationRequest {;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   keywords?: string[],
   target_audience?: string;
@@ -23,22 +29,27 @@ export interface ContentGenerationRequest {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface ContentGenerationRequest {
   type: 'blog - post' | 'social - media' | 'email' | 'landing - page' | 'product - description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
-<<<<<<< HEAD
   keywords?: string[],
   target_audience?: string;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface ContentGenerationResponse {
   content: string;
@@ -49,8 +60,6 @@ export interface ContentGenerationResponse {
   suggestions: string[];
   metadata: {
     title: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     description: string,
     tags: string[];
@@ -58,6 +67,7 @@ export interface ContentGenerationResponse {
   }
 }
 export interface ContentTemplate {
+<<<<<<< HEAD
 =======
     description: string,
     tags: string[];
@@ -102,20 +112,25 @@ export interface ContentTemplate {;
 }
 export interface ContentTemplate {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   name: string;
   description: string;
   type: string;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   preview: string
@@ -124,6 +139,8 @@ export interface ContentTemplate {
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export class AIContentGeneratorService {
 
   private apiKey: string;
@@ -132,19 +149,22 @@ export class AIContentGeneratorService {
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
-<<<<<<< HEAD
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -159,6 +179,8 @@ export class AIContentGeneratorService {
         throw new Error(`Content generation failed: ${response.statusText}`)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface ContentGenerationRequest {;
   type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
   topic: string,;
@@ -210,21 +232,24 @@ export class AIContentGeneratorService {;
       if (!response.ok) {;
         throw new Error(`Content generation failed: ${response.statusText}`);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export interface ContentGenerationRequest {;
-
 
       }
       return await response.json()
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -233,6 +258,8 @@ export interface ContentGenerationRequest {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       const response = await fetch(`${this && this.baseUrl}/content/generate`, {
         method: 'POST',
         headers: {
@@ -254,10 +281,6 @@ export interface ContentGenerationRequest {;
       return this && this.generateMockContent(request)
     }
   }
-
-
-
-
 
   async getTemplates(): Promise<ContentTemplate[]> {
     return [
@@ -310,13 +333,17 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         type: 'blog - post';
         preview: 'Create engaging blog posts that rank well in search engines...',
         price: 29;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         type: 'blog - post';
@@ -327,6 +354,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
       {
         id: 'social - media - campaign';
@@ -335,13 +364,17 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         type: 'social - media';
         preview: 'Engage your audience with compelling social media content...',
         price: 49;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         type: 'social - media';
@@ -352,6 +385,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
       {
         id: 'email - sequence';
@@ -361,12 +396,16 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         preview: 'Build relationships and drive sales with email automation...',
         price: 39;
 
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
@@ -377,6 +416,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
       {
         id: 'landing - page - copy';
@@ -398,6 +439,7 @@ if ( {) {
     ];
   }
 
+<<<<<<< HEAD
 
 
 
@@ -417,6 +459,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
 ## Key Points
 - Point 1: ${request.topic} is essential for modern businesses
@@ -427,15 +471,19 @@ ${request.topic} represents a significant opportunity for organizations looking 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const mockContent = `# ${request && request.topic}
     return {
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -466,6 +514,8 @@ ${request && request.topic} represents a significant opportunity for organizatio
       content: mockContent;
       wordCount: mockContent && mockContent.split(' ').length;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       seoScore: 85;
       readabilityScore: 78;
       suggestions: [
@@ -475,65 +525,16 @@ ${request && request.topic} represents a significant opportunity for organizatio
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         title: `${request && request.topic} - Complete Guide`;
         description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
         tags: [request && request.topic, request && request.type, 'guidetutorial']
-=======
-export interface ContentGenerationRequest {;
-  type:'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description',;
-  topic:string,;
-  tone:'professional' | 'casual' | 'friendly' | 'formal',;
-  length:'short' | 'medium' | 'long',;
-  keywords?:string[],;
-  targetAudience?:string;
-}
-;
-export interface ContentGenerationResponse {;
-  content:string,;
-  wordCount:number,;
-  seoScore:number,;
-  readabilityScore:number,;
-  suggestions:string[],;
-  metadata:{;
-    title:string,;
-    description:string,;
-    tags:string[];
-  },;}
-;
-export interface ContentTemplate {;
-  id:string,;
-  name:string,;
-  description:string,;
-  type:string,;
-  preview:string,;
-  price:number;
-}
-;
-export class AIContentGeneratorService {;
-  private apiKey:string,;
-  private baseUrl:string,;
-;
-  constructor(apiKey:string, baseUrl:string = 'https://api.ziontech.ai') {;
-    this.apiKey = apiKey,;
-    this.baseUrl = baseUrl;
-  }
-;
-  async generateContent(request:ContentGenerationRequest):Promise<ContentGenerationResponse> {;
-    try {;
-      // In a real implementation, this would call OpenAI, Claude, or similar API;
-      const response = await fetch(`${this.baseUrl}/content/generate`, {;
-        method:'POST',;
-        headers:{;
-          'Authorization':`Bearer ${this.apiKey}`,;
-          'Content-Type':'application/json'},;
-        body:JSON.stringify(request)}),;
-;
-      if (!response.ok) {;
-        throw new Error(`Content generation failed:${response.statusText}`),;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       }
     }
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -613,20 +614,17 @@ ${request.topic} represents a significant opportunity for organizations looking 
         description: `Learn everything about ${request && request.topic} and how to implement it effectively.`;
         tags: [request && request.topic, request && request.type, 'guidetutorial']
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-      }
-    }
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async analyzeContent(content: string): Promise<{
     seoScore: number;
     readabilityScore: number;
     suggestions: string[]
     keywordDensity: Record<string, number>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -657,6 +655,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
   private generateMockContent (request: ContentGenerationRequest): ContentGenerationResponse {
     const mock_content = `# ${request.topic}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.;
 ## Key Points;
 - Point 1: ${request.topic} is essential for modern businesses;
@@ -666,10 +666,13 @@ This is a ${request.length} ${request.type} about ${request.topic}. The content 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ${request.topic} represents a significant opportunity for organizations looking to stay competitive in today's digital landscape.`;
 ;
     return {
@@ -683,6 +686,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       metadata: {
         title: `${request.topic} - Complete Guide`;
         description: `Learn everything about ${request.topic} and how to implement it effectively.`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -703,6 +707,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         tags: [request.topic, request.type, 'guidetutorial'];
       }
     }
@@ -710,14 +716,16 @@ ${request.topic} represents a significant opportunity for organizations looking 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   async analyze_content (content: string): Promise<{
     seo_score: number;
     readability_score: number;
     suggestions: string[],
     keyword_density: Record < string, number>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }> {
     // Mock content analysis;
 
@@ -725,6 +733,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'seo': 1 && 1.8,
         'marketing': 1 && 1.5
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -740,6 +749,11 @@ ${request.topic} represents a significant opportunity for organizations looking 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }> {
+    // Mock content analysis;
+    return {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       seo_score: Math.floor (Math.random () * 30) + 70;
       readability_score: Math.floor (Math.random () * 30) + 70;
       suggestions: [;
@@ -749,6 +763,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1;
         'seo': 1.8,
         'marketing': 1.5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -770,6 +785,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     return {;
       seoScore: Math.floor(Math.random() * 30) + 70,;
       readabilityScore: Math.floor(Math.random() * 30) + 70,;
@@ -780,6 +797,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'content': 2.1,;
         'seo': 1.8,;
         'marketing': 1.5;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -796,11 +814,15 @@ ${request.topic} represents a significant opportunity for organizations looking 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -843,10 +865,12 @@ ${request.topic} represents a significant opportunity for organizations looking 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
-// Pricing tiers for the AI Content Generator;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+// Pricing tiers for the AI Content Generator
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Pricing tiers for the AI Content Generator;
+// Pricing tiers for the AI Content Generator;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 // Pricing tiers for the AI Content Generator;
@@ -856,10 +880,13 @@ ${request.topic} represents a significant opportunity for organizations looking 
 // Pricing tiers for the AI Content Generator;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export const AI_CONTENT_PRICING = {
   starter: {
     name: 'Starter';
     price: 29;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -869,11 +896,15 @@ export const AI_CONTENT_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     period: '/month',
     features: [;
       '100 content generations per month_basic templatesSEO analysis_email support_standard quality';
     ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -891,10 +922,13 @@ export const AI_CONTENT_PRICING = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   professional: {
     name: 'Professional';
     price: 99;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -904,10 +938,14 @@ export const AI_CONTENT_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     period: '/month',
     features: [;
       '500 content generations per month_premium templates_advanced SEO analysis_priority support_high quality output_custom brandingAPI access';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -922,10 +960,14 @@ export const AI_CONTENT_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   enterprise: {
     name: 'Enterprise';
     price: 299;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -942,14 +984,17 @@ export const AI_CONTENT_PRICING = {
     ]
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     period: '/month',
 
+    period: '/month',
 
-<<<<<<< HEAD
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -961,6 +1006,8 @@ export const AI_CONTENT_PRICING = {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 // Pricing tiers for the AI Content Generator;
 export const AI_CONTENT_PRICING = {;
@@ -971,18 +1018,23 @@ export const AI_CONTENT_PRICING = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     features: [;
       'Unlimited content generations_custom templates_advanced analytics_dedicated support_highest quality_white - label options_custom integrationsSLA guarantee';
     ];
 
 <<<<<<< HEAD
   },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -1030,6 +1082,8 @@ export const AI_CONTENT_PRICING = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   professional: {;
     name: 'Professional',;
     price: 99,;
@@ -1045,21 +1099,13 @@ export const AI_CONTENT_PRICING = {;
     features: [;
       'Unlimited content generationsCustom templatesAdvanced analyticsDedicated supportHighest qualityWhite-label optionsCustom integrationsSLA guarantee';
     ];
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
   }
 }
-<<<<<<< HEAD
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-}
-}
-}
-}// Pricing tiers for the AI Content Generator 
   }
+<<<<<<< HEAD
 };
   }
 };
@@ -1076,3 +1122,6 @@ export const AI_CONTENT_PRICING = {;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

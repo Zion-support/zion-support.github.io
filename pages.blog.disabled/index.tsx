@@ -3,15 +3,19 @@ interface IndexProps {
   // Add props here as needed
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 }
 =======
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
@@ -31,12 +35,15 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default function Index({ }: IndexProps) {
   return (
     <div>
       <h1>Index</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -108,3 +115,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

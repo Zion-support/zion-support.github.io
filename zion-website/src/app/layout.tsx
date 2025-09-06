@@ -7,7 +7,6 @@ export default function RootLayout({
   children}: {
   children: React.ReactNode
 }) {
-<<<<<<< HEAD
 
 import Navigation from '@/components / Navigation';
 import Footer from '@/components / Footer';
@@ -46,6 +45,7 @@ export default /**
 function RootLayout() {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -54,11 +54,15 @@ function RootLayout() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return (
     <html lang=&quot;en & quot; className=&quot;scroll - smooth & quot;>;
       <body className={`${inter.class_name} bg - black text - white antialiased`}>;
         <Navigation />;
         <main className=&quot;min - h-screen & quot;>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,11 +130,14 @@ export default function RootLayout({
   return (;
     <html lang=&quot;en&quot; className=&quot;scroll-smooth&quot;>
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${inter.className} bg-black text-white antialiased`}>
         <Navigation />
         <main className="min-h-screen">
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -148,10 +155,13 @@ export default function RootLayout({
         <main className="min-h-screen">
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           {children}
         </main>;
         <Footer />;
       </body>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -161,6 +171,8 @@ export default function RootLayout({
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     </html>);
 
@@ -168,6 +180,7 @@ export default function RootLayout({
 <<<<<<< HEAD
 
 }
+<<<<<<< HEAD
 ;
 
 <<<<<<< HEAD
@@ -187,3 +200,6 @@ export default function RootLayout({
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

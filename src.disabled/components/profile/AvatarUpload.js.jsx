@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 '\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
 "export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
@@ -23,3 +24,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+'\"export\": function AvatarUpload({ value,onChange }) {\' const [url,setUrl] = useState(value) const handleUpload = result => {\'';\'"\";
+"export: function AvatarUpload({ value,onChange }) {" const [url,setUrl] = useState(value) const handleUpload = result => {"";""";"""
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

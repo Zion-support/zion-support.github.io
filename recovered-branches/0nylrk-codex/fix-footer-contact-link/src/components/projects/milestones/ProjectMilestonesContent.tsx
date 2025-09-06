@@ -1,39 +1,6 @@
-
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
 
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-import React, { useState, useEffect } from 'react';
-
-import {useParams} from 'react-router-dom';
-import {useProjects} from '@/hooks/useProjects';
-import {useMilestones} from '@/hooks/useMilestones';
-import {useJobDetails} from '@/hooks/useJobDetails';
-import {useAuth} from '@/hooks/useAuth';
-import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
-import {useDisputeCheck} from '@/hooks/useDisputeCheck';
-import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
-export function ProjectMilestonesContent() {
-  const { projectId } = useParams() as { projectId?: string }
-
-export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?: string };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -41,46 +8,18 @@ export function ProjectMilestonesContent() {;
     activities;
     isLoading: milestonesLoading
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?: string };
-  const { user } = useAuth();
-  const { getProjectById } = useProjects();
-  const { ;
-    milestones, ;
-    activities;
-    isLoading: milestonesLoading, ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
 import React, { useState, useEffect } from 'react';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     createMilestone;
     updateMilestoneStatus;
     deleteMilestone;
     uploadDeliverable;
     isSubmitting;
-<<<<<<< HEAD
-<<<<<<< HEAD
     refetch;
-=======
-    refetch
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     refetch;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   } = useMilestones(projectId);
   const [project, setProject] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState('milestones');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
 
@@ -93,74 +32,10 @@ import React, { useState, useEffect } from 'react';
       setIsLoading(true);
       try {;
 
-=======
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
-
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id)
-
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
-  useEffect(() => {
-    async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
-      try {
-
-        const projectData = await getProjectById(projectId);
-        if (projectData) {
-          setProject(projectData)
-import React, { useState, useEffect } from 'react',;
-import { useParams } from 'react-router-dom',;
-import { useProjects } from '@/hooks/useProjects',;
-import { useMilestones } from '@/hooks/useMilestones',;
-import { useJobDetails } from '@/hooks/useJobDetails',;
-import { useAuth } from '@/hooks/useAuth',;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',;
-import { useDisputeCheck } from '@/hooks/useDisputeCheck',;
-import {;
-  MilestoneActivities,;
-  MilestoneManager,;
-  MilestoneCreator,;
-  ProjectActions,;
-  ProjectHeader;
-} from './components',;
-export function ProjectMilestonesContent() {;
-  const { projectId } = useParams() as { projectId?: string },;
-  const { user } = useAuth(),;
-  const { getProjectById } = useProjects(),;
-  const {;
-    milestones,;
-    activities,;
-    isLoading: milestonesLoading,;
-    createMilestone,;
-    updateMilestoneStatus,;
-    deleteMilestone,;
-    uploadDeliverable,;
-    isSubmitting,;
-    refetch;
-  } = useMilestones(projectId),;
-  const [project, setProject] = useState<any>(null),;
-  const [isLoading, setIsLoading] = useState(true),;
-  const [activeTab, setActiveTab] = useState('milestones'),;
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId),;
-  useEffect(() => {;
-    async function loadProject() {;
-      if (!projectId) return;
-      setIsLoading(true);
-      try {;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         const projectData = await getProjectById(projectId);
         if (projectData) {;
           setProject(projectData);
 
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
         }
       } catch (error) {;
         console && console.error("Error loading project:", error);
@@ -168,22 +43,12 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false);
       }
     }
-<<<<<<< HEAD
-=======
-=======
-  const { job, isLoading: jobLoading } = useJobDetails(project?.job_id),;
-  const { isUnderDispute, disputeId } = useDisputeCheck(projectId);
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   useEffect(() => {;
     async function loadProject() {;
       if (!projectId) return,;
       ;
       setIsLoading(true),;
       try {;
-
-
-
 
         const projectData = await getProjectById(projectId);
         if (projectData) {;
@@ -215,28 +80,16 @@ export function ProjectMilestonesContent() {;
     loadProject(),;
     refetch();
   }, [projectId, getProjectById, refetch]),;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
 
     loadProject();
     refetch();
   }, [projectId, getProjectById, refetch]);
-
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
     
     loadProject(),
     refetch()
   }, [projectId, getProjectById, refetch]),
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const handleMilestoneCreated = async () => {;
     await refetch();
   };
@@ -245,11 +98,6 @@ export function ProjectMilestonesContent() {;
   const isClient = user?.id === project?.client_id;
   const isTalent = user?.id === project?.talent_id;
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       <div className="container mx-auto py-8 px-4">;
         <div className="flex justify-center items-center h-64">;
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
@@ -257,8 +105,6 @@ export function ProjectMilestonesContent() {;
       </div>;
     );
   }
-<<<<<<< HEAD
-
 
     loadProject();
     refetch();
@@ -360,7 +206,6 @@ export function ProjectMilestonesContent() {;
   const projectType = job?.category || "Other",;
   if (isLoading || !project) {;
     return (;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <div className="container mx-auto py-8 px-4">;
         <div className="flex justify-center items-center h-64">;
           <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>;
@@ -368,19 +213,13 @@ export function ProjectMilestonesContent() {;
       </div>;
     );
   }
-<<<<<<< HEAD
 
-
-=======
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   const handleMilestoneSubmit = async (data: any) => {;
     if (!projectId) return,;
 
     // Ensure all required fields are present;
     const milestoneData = {;
       project_id: projectId,;
-<<<<<<< HEAD
       title: data && data.title,;
       description: data && data.description || "",;
       amount: data && data.amount,;
@@ -399,8 +238,6 @@ export function ProjectMilestonesContent() {;
 
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         <ProjectActions
 
     },
@@ -409,7 +246,6 @@ export function ProjectMilestonesContent() {;
     setActiveTab('milestones'),
     await handleMilestoneCreated()
   },
-
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -421,76 +257,15 @@ export function ProjectMilestonesContent() {;
 
         <ProjectActions 
 
-
           projectId={projectId || ''}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-        <ProjectActions
-    ),;
-  }
-;
-  const handleMilestoneSubmit = async (data:any) => {;
-    if (!projectId) return,;
-    ;
-    // Ensure all required fields are present;
-    const milestoneData = {;
-      project_id:projectId,;
-      title:data.title,;
-      description:data.description || "",;
-      amount:data.amount,;
-      status:"pending" as const,;
-      due_date:data.due_date ? data.due_date.toISOString() :undefined;
-    },;
-    ;
-    await createMilestone(milestoneData),;
-    setActiveTab('milestones'),;
-    await handleMilestoneCreated(),;
-  },;
-;
-  return (;
-    <div className="container mx-auto py-8 px-4">;
-      <ProjectHeader title={project.job?.title || "Untitled Project"} />;
-      ;
-      <div className="flex justify-between items-center my-6">;
-        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
-        <ProjectActions ;
-          projectId={projectId || ''}
-      title: data.title,;
-      description: data.description || "",;
-      amount: data.amount,;
-      status: "pending" as const,;
-      due_date: data.due_date ? data.due_date.toISOString() : undefined;
-    },;
-    await createMilestone(milestoneData),;
-    setActiveTab('milestones');
-    await handleMilestoneCreated();
-  };
-  return (;
-    <div className="container mx-auto py-8 px-4">;
-      <ProjectHeader title={project.job?.title || "Untitled Project"} />;
-      <div className="flex justify-between items-center my-6">;
-        <h2 className="text-2xl font-bold">Payment Milestones</h2>;
-        <ProjectActions;
-          projectId={projectId || ''}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
           onAddMilestone={() => setActiveTab('create')}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         />;
       </div>;
 
-=======
-        />;
-      </div>;
-      ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       <Tabs value={activeTab} onValueChange={setActiveTab}>;
         <TabsList className="mb-6">;
           <TabsTrigger value="milestones">Milestones</TabsTrigger>;
@@ -500,18 +275,10 @@ export function ProjectMilestonesContent() {;
           )}
         </TabsList>;
 
-<<<<<<< HEAD
         <TabsContent value="milestones">;
           <MilestoneManager
             projectId={projectId || ''}
 
-=======
-
-          <MilestoneManager 
-            projectId={projectId || ''}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
           <MilestoneManager 
             projectId={projectId || ''}
 
@@ -535,22 +302,12 @@ export function ProjectMilestonesContent() {;
             projectId={projectId |''}
           <MilestoneManager 
             projectId={projectId || ''}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
             isClient={isClient}
             isTalent={isTalent}
-<<<<<<< HEAD
-<<<<<<< HEAD
             paymentTerms={project && project.payment_terms}
-=======
-            paymentTerms={project.paymentterms}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             isSubmitting={isSubmitting}
             onCreateMilestone={createMilestone}
 import {use_params} from 'react-router-dom';
@@ -691,8 +448,6 @@ if (return, ) {
             onDeleteMilestone={delete_milestone}
             onUploadDeliverable={upload_deliverable}
             refetch={refetch}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           />;
         </TabsContent>;
@@ -704,39 +459,17 @@ if (return, ) {
         <TabsContent value="create">;
           {(isClient || isTalent) && (;
 
-=======
-            paymentTerms={project.payment_terms}
-            isSubmitting={isSubmitting}
-            onCreateMilestone={createMilestone}
-            onUpdateStatus={updateMilestoneStatus}
-            onDeleteMilestone={deleteMilestone}
-            onUploadDeliverable={uploadDeliverable}
-            refetch={refetch}
-          />
-        </TabsContent>
-        <TabsContent value="activity">
-          <MilestoneActivities projectId={projectId |''} />
-        </TabsContent>
-        <TabsContent value="create">
-
-          />;
-        </TabsContent>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
             <MilestoneCreator
 
           {(isClient || isTalent) && (
             <MilestoneCreator 
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
               projectScope={project && project.scope_summary}
               projectStartDate={project && project.start_date}
               projectEndDate={project && project.end_date}
-<<<<<<< HEAD
-<<<<<<< HEAD
               projectType={projectType}
             />;
           )}
@@ -747,29 +480,6 @@ if (return, ) {
   );
 }
 
-=======
-        ;
-        <TabsContent value="activity">;
-          <MilestoneActivities projectId={projectId || ''} />;
-        </TabsContent>;
-        ;
-        <TabsContent value="create">;
-          {(isClient || isTalent) && (;
-            <MilestoneCreator ;
-              onSubmit={handleMilestoneSubmit}              isSubmitting={isSubmitting}
-              onCancel={_() => setActiveTab('milestones')}
-              projectScope={project.scopesummary}
-              projectStartDate={project.startdate}
-              projectEndDate={project.enddate}
-              projectType={projectType}
-            />;
-          )}
-        </TabsContent>;
-      </Tabs>;
-    </div>;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           />;
         </TabsContent>;
         <TabsContent value="activity">;
@@ -789,24 +499,14 @@ if (return, ) {
         </TabsContent>;
       </Tabs>;
     </div>);
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   ),; setIsLoading (true);
 try {
   
 }finally {
   setIsLoading (false) 
 }
-<<<<<<< HEAD
 ;
 
 }loadProject ();
@@ -905,6 +605,3 @@ await handleMilestoneCreated ()
   );
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

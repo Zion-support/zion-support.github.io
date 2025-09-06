@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react';  import '@testing-library/jest-dom'; import Footerdynamic from '../components/Footer.dynamic'; describe('Footerdynamic',() => { test('renders without crashing',() => { render(<Footerdynamic />); expect(screen.getByTestId('footer.dynamic')).toBeInTheDocument()}); test('displays correct content',() => { render(<Footerdynamic />)}); test('handles user interactions',() => { render(<Footerdynamic />)}); test('applies correct styling',() => { render(<Footerdynamic />)})});
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -51,6 +52,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import '@testing-library/jest-dom'
@@ -61,6 +64,7 @@ describe('Footerdynamic'
   test('displays correct content'
   test('handles user interactions'
   test('applies correct styling'
+<<<<<<< HEAD
 const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Footerdynamic from "./components/Footer.dynamic"; describe('Footerdynamic', () => { test("renders without crashing",() => { render(<Footerdynamic />); expect(screen.getByTestId("footer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Footerdynamic />)}); test("handles user interactions",() => { render(<Footerdynamic />)}); test("applies correct styling"
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -85,3 +89,6 @@ import _React from 'react';  import '@testing-library/jest-dom'; import Footerdy
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import Footerdynamic from "./components/Footer.dynamic"; describe('Footerdynamic', () => { test("renders without crashing",() => { render(<Footerdynamic />); expect(screen.getByTestId("footer.dynamic")).toBeInTheDocument()}); test("displays correct content",() => { render(<Footerdynamic />)}); test("handles user interactions",() => { render(<Footerdynamic />)}); test("applies correct styling"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

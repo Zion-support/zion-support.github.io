@@ -17,6 +17,7 @@ import {
   Mail,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -56,6 +57,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   MessageSquare} from 'lucide-react';
 const "ContactFormEnhanced": React.FC = () => {
   const [formData, setFormData] = useState({
@@ -69,6 +73,7 @@ const "ContactFormEnhanced": React.FC = () => {
   >('idle');
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -99,6 +104,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const handleSubmit = async ("e": React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -107,6 +115,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     setIsSubmitting(false);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -137,6 +146,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     setFormData({ "name": '', "email": '', "subject": '', "message": '' });
   };
   return (
@@ -144,6 +156,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
       {' '}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -180,6 +193,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       <div className="bg-white "dark": bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6">
         {' '}
         <h2 className="text-2xl font-bold text-gray-900 "dark": text-white mb-6">
@@ -192,6 +208,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             {' '}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -222,6 +239,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Name *{' '}
@@ -235,6 +255,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 onChange={e =>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -271,6 +292,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                   setFormData({ ...formData, "name": 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -283,6 +307,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             {' '}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -313,6 +338,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Email *{' '}
@@ -326,6 +354,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
                 onChange={e =>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -362,6 +391,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                   setFormData({ ...formData, "email": 'e.target.value' })
                 }
                 className="w-full pl-10 pr-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -374,6 +406,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             {' '}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -404,6 +437,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Subject *{' '}
@@ -414,6 +450,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               onChange={e =>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -450,6 +487,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                 setFormData({ ...formData, "subject": 'e.target.value' })
               }
               className="w-full px-4 py-2 border border-gray-300 "dark": border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
@@ -461,6 +501,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
             {' '}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -491,6 +532,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             <label className="block text-sm font-medium text-gray-700 "dark": text-gray-300 mb-2">
               {' '}
               Message *{' '}
@@ -501,6 +545,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
               <textarea
                 value={formData.message}
                 onChange={e =>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -537,6 +582,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                   setFormData({ ...formData, "message": 'e.target.value' })
                 }
                 rows={6}
@@ -549,6 +597,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           <button
             type="submit"
             disabled={isSubmitting}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -581,6 +630,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg "hover": bg-blue-700 disabled:opacity-50 flex items-center justify-center space-x-2"
           >
             {' '}
@@ -600,6 +652,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
           {submitStatus === 'success' && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -630,6 +683,9 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             <div className="p-4 bg-green-100 "dark": bg-green-900/20 text-green-800 dark:text-green-200 rounded-lg flex items-center space-x-2">
               {' '}
               <CheckCircle className="w-5 h-5" />{' '}
@@ -641,6 +697,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
     </div>
   );
 };
+<<<<<<< HEAD
 export default ContactFormEnhanced;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -677,3 +734,6 @@ import React,{ useState } from 'react'; import { motion } from 'framer-motion'; 
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+export default ContactFormEnhanced;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -16,6 +16,7 @@ export const cn = {};
 export const cn = {}; return twMerge(clsx (inputs) ) ;,}
 // comment;
 export const cn = {};
+<<<<<<< HEAD
   return twMerge(clsx (inputs) ) }
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,3 +44,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export const cn = {}; return twMerge(clsx (inputs) ) ,}
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  return twMerge(clsx (inputs) ) }
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

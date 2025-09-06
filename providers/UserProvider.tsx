@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 <<<<<<< HEAD
@@ -15,6 +16,10 @@ import React, {;
 import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type UserRole = 'client' | 'talent';
 
 export type User = {
@@ -123,9 +128,13 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default UserProvider;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 export default UserProvider;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default UserProvider;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

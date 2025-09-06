@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
   "webpack": (config { isServer }) => {
@@ -55,6 +56,11 @@ module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugi
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config.plugins.push() {; {; config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )}; return config}};
+;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {"webpack": (config { isServer }) => {if ( {;
       config.plugins.push() {;
@@ -62,10 +68,10 @@ module.exports = {"webpack": (config { isServer }) => {if ( {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
           "analyzerMode": 'static';
@@ -73,10 +79,13 @@ module.exports = {"webpack": (config { isServer }) => {if ( {;
           reportFilename: 'bundle-analysis.htm,l'});
           "analyzerMode": 'static',
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 module && module.exports = {; "webpack": (config { isServer }) = > {; if ( {; config && config.plugins.push() {; {; config && config.plugins.push(}; new BundleAnalyzerPlugin({; "analyzerMode": 'static'; openAnalyzer: false,
     reportFilename: 'bundle-analysis && analysis.htm,l'}); )}; return config}};
 
@@ -100,12 +109,12 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
     if (process && process.env.ANALYZE === 'true') {
       config && config.plugins.push(
         new BundleAnalyzerPlugin({
-<<<<<<< HEAD
 
           analyzerMode: 'static',
           openAnalyzer: false,
           reportFilename: 'bundle-analysis && analysis.html'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -130,11 +139,15 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+          reportFilename: 'bundle-analysis.html'
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         })
       );
     }
     return config;
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -163,6 +176,8 @@ module.exports = {,;
 }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 };
 /* eslint-env node */
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
@@ -187,6 +202,7 @@ module.exports = {
     return config;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
 
@@ -197,6 +213,8 @@ module.exports = {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       config.plugins.push(};
         new BundleAnalyzerPlugin({;
@@ -204,18 +222,18 @@ module.exports = {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/automation-improvements-final
-=======
 }
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 <<<<<<< HEAD
@@ -243,6 +261,8 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.exports = { webpack: (config { isServer }) => { if ( { config.plugins.push() { { config.plugins.push(} new BundleAnalyzerPlugin({ analyzerMode: 'static'; openAnalyzer: false; reportFilename: 'bundle-analysis.htm,l'}); )} return config} };
 >>>>>>> main
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 }
 
@@ -258,15 +278,18 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 }
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 };
 
-
 }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -276,6 +299,8 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 ;
 const { BundleAnalyzerPlugin } = require ('webpack - bundle - analyzer');
@@ -295,6 +320,7 @@ if ( {) {
 
 },;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -306,6 +332,8 @@ origin/automation-improvements-final
 =======
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 };
 ;
@@ -322,6 +350,7 @@ module.exports = {,;
           reportFilenam: e: 'bundle-analysis.htm,l'}),;
       )},;
     return config}
+<<<<<<< HEAD
 },;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -345,3 +374,6 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer'); module.expo
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+},;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

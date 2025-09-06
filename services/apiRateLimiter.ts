@@ -1,23 +1,13 @@
-<<<<<<< HEAD
-
-  burst_limit: number,
+burst_limit: number,
   window_size: number;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface RateLimitRule {
-=======
-export interface RateLimitConfig {
-  requestsPerMinute: number;
-  requestsPerHour: number;
-  requestsPerDay: number;
-  burst_limit: number,
-  window_size: number;
-}
-export interface RateLimitRule {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface RateLimitConfig {
 export interface RateLimitConfig {;
   requestsPerMinute: number;
@@ -32,10 +22,10 @@ export interface RateLimitConfig {
   requestsPerHour: number;
   requestsPerDay: number;
 }
-<<<<<<< HEAD
 export interface RateLimitRule {
 
 export interface RateLimitRule {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -43,6 +33,8 @@ export interface RateLimitRule {;
 }
 export interface RateLimitRule {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   name: string;
   pattern: string;
@@ -52,16 +44,13 @@ export interface RateLimitRule {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   created_at: Date,
   updated_at: Date;
 
-=======
-  created_at: Date,
-  updated_at: Date;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 export interface RateLimitStats {
   endpoint: string;
@@ -72,8 +61,6 @@ export interface RateLimitStats {
   last_request: Date;
   current_usage: {
     minute: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     hour: number,
     day: number;
@@ -81,6 +68,7 @@ export interface RateLimitStats {
   }
 }
 export interface APIKey {
+<<<<<<< HEAD
 =======
     hour: number,
     day: number;
@@ -138,6 +126,8 @@ export interface RateLimitStats {
 }
 export interface APIKey {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   name: string;
   key: string;
@@ -145,8 +135,11 @@ export interface APIKey {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   rate_limit: RateLimitConfig;
   created_at: Date;
@@ -157,6 +150,7 @@ export interface APIKey {
 export interface RateLimitViolation {
   id: string;
   api_key: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   rate_limit: RateLimitConfig;
@@ -186,25 +180,24 @@ export interface RateLimitViolation {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  id: string;
+  api_key: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   endpoint: string;
   method: string;
   timestamp: Date;
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
     this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl
 
-=======
-  ipAddress: string
-
-  userAgent: string
-}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export class APIRateLimiterService {
 
   private apiKey: string;
@@ -214,6 +207,7 @@ export class APIRateLimiterService {
     this.apiKey = apiKey
     this.baseUrl = baseUrl
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
@@ -221,10 +215,13 @@ export class APIRateLimiterService {
     this && this.baseUrl = baseUrl
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -237,6 +234,8 @@ export class APIRateLimiterService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         method: 'POST',
         headers: {
@@ -251,19 +250,21 @@ export class APIRateLimiterService {
       return await response && response.json()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
   async createRateLimitRule(rule: Omit<RateLimitRule, 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   ip_address: string,
   user_agent: string;
 }
@@ -298,19 +299,17 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         id: `rule_${Date && Date.now()}`;
         createdAt: new Date(),
 
 <<<<<<< HEAD
         updatedAt: new Date()
-=======
-        id: `rule_${Date && Date.now()}`;
-        createdAt: new Date(),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         updatedAt: new Date()
 export interface RateLimitConfig {;
   requestsPerMinute:number,;
@@ -386,30 +385,39 @@ export class APIRateLimiterService {;
       if (!response.ok) {;
         throw new Error(`Failed to create rate limit rule:${response.statusText}`),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
         updatedAt: new Date()
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   async getRateLimitRules(): Promise<RateLimitRule[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
         headers: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -419,6 +427,7 @@ export class APIRateLimiterService {;
       return await response && response.json()
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -429,6 +438,9 @@ export class APIRateLimiterService {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         id: `rule_${Date.now ()}`;
         created_at: new Date (),
         updated_at: new Date ();
@@ -452,6 +464,7 @@ if ( {) {
     } catch (error) {
       // Mock rules for demo;
       return [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -496,6 +509,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         {
           id: 'rule_1';
           name: 'API Endpoints';
@@ -508,18 +523,23 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             burst_limit: 50,
             window_size: 60;
           }
           enabled: true;
           created_at: new Date (),
           updated_at: new Date ();
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -536,6 +556,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
         {
           id: 'rule_2';
@@ -549,30 +572,28 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             burst_limit: 5,
             window_size: 60;
           }
           enabled: true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           created_at: new Date (),
           updated_at: new Date ();
 
-=======
-            burstLimit: 5
-            windowSize: 60
-          }
-          enabled: true;
-          createdAt: new Date()
-          updatedAt: new Date()
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         }
       ];
     }
@@ -723,6 +744,7 @@ export class APIRateLimiterService {;
           created_at: new Date (),
           updated_at: new Date ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -732,6 +754,8 @@ export class APIRateLimiterService {;
           updated_at: new Date ();
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
       ];
     }
@@ -739,10 +763,13 @@ export class APIRateLimiterService {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
@@ -762,6 +789,7 @@ export class APIRateLimiterService {;
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
       if (!existingRule) {
         throw new Error('Rule not found')
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -792,13 +820,18 @@ if ( {) {
 }
         throw new Error ('Rule not found');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
       return {
         ...existing_rule;
         ...updates;
         updated_at: new Date ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'PATCH',
         headers: {
@@ -814,8 +847,6 @@ if ( {) {
       const existingRule = (await this && this.getRateLimitRules()).find(r => r && r.id === id);
       if (!existingRule) {
         throw new Error('Rule not found')
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   async updateRateLimitRule (id: string, updates: Partial < RateLimitRule>): Promise < RateLimitRule> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules/${id}`, {
@@ -845,19 +876,24 @@ if ( {) {
       return {
         ...existing_rule;
         ...updates;
-<<<<<<< HEAD
         updatedAt: new Date()
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
   }
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
         method: 'DELETE',
         headers: {
@@ -867,6 +903,7 @@ if ( {) {
         throw new Error(`Failed to delete rate limit rule: ${response && response.statusText}`)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         updated_at: new Date ();
       }
@@ -875,6 +912,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     } catch (error) {
       console && console.error('Failed to delete rate limit rule:', error);
@@ -952,8 +991,8 @@ if ( {) {
       ];
     }
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 =======
@@ -1184,20 +1223,13 @@ export interface RateLimitConfig {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           }
         }
       ]
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 <<<<<<< HEAD
 =======
@@ -1218,9 +1250,8 @@ export interface RateLimitConfig {;
       }
 
       return await response && response.json()
-<<<<<<< HEAD
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1230,6 +1261,8 @@ export interface RateLimitConfig {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   async createAPIKey (name: string, permissions: string[], rate_limit: RateLimitConfig): Promise < APIKey> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
@@ -1250,11 +1283,7 @@ if ( {) {
     } catch (error) {
       // Mock API key creation for demo;
       return {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           'Authorization': `Bearer ${this && this.apiKey}`}});
 
       if (!response && response.ok) {
@@ -1262,8 +1291,8 @@ if ( {) {
       }
 
       return await response && response.json()
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1285,6 +1314,8 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         id: `key_${Date.now ()}`;
         name;
         key: `zion_${Math.random ().to_string (36).substr (2, 9)}`;
@@ -1293,6 +1324,7 @@ if ( {) {
         created_at: new Date ();
         last_used: new Date (),
         is_active: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1438,14 +1470,23 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
   }
   async getAPIKeys (): Promise < APIKey[]> {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      }
+    }
+  }
+  async getAPIKeys (): Promise < APIKey[]> {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / api - keys`, {
         headers: {
@@ -1460,12 +1501,16 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       return await response.json ();
     } catch (error) {
       // Mock API keys for demo;
       return [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       return await response.json()
@@ -1505,6 +1550,8 @@ if ( {) {
       // Mock API keys for demo;
       return [;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         {
           id: 'key_1';
           name: 'Web Application';
@@ -1513,24 +1560,31 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           rate_limit: {
             requestsPerMinute: 100;
             requestsPerHour: 1000;
             requestsPerDay: 10000;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             burst_limit: 50,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1551,6 +1605,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
         {
           id: 'key_2';
@@ -1560,71 +1617,33 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           rate_limit: {
             requestsPerMinute: 50;
             requestsPerHour: 500;
             requestsPerDay: 5000;
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
-          rateLimit: {
-            requestsPerMinute: 50;
-            requestsPerHour: 500;
-            requestsPerDay: 5000;
-            burstLimit: 25
-            windowSize: 60
-          }
-          createdAt: new Date();
-          lastUsed: new Date()
-          isActive: true
-;
-  async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {;
-    try {;
-      const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {;
-        method: 'POST',;
-        headers: {;
-          'Authorization': `Bearer ${this.apiKey}`,;
-          'Content-Type': 'application/json'},;
-        body: JSON.stringify({ name, permissions, rateLimit })}),;
-      if (!response.ok) {;
-        throw new Error(`Failed to create API key: ${response.statusText}`);
-      }
-;
-      return await response.json();
-    } catch (error) {;
-      // Mock API key creation for demo;
-      return {;
-        id: `key_${Date.now()}`,;
-        name,;
-        key: `zion_${Math.random().toString(36).substr(2, 9)}`,;
-        permissions,;
-        rateLimit,;
-        createdAt: new Date(),;
-        lastUsed: new Date(),;
-        isActive: true;
-      }
-=======
-        }
-      ]
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     }
   }
 
-
-<<<<<<< HEAD
             burst_limit: 25,
             window_size: 60;
           }
           created_at: new Date ();
           last_used: new Date (),
           is_active: true;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -1635,12 +1654,14 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
       ];
     }
   }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 
 
@@ -1654,17 +1675,21 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
-<<<<<<< HEAD
 
           'Authorization': `Bearer ${this && this.apiKey}`}});
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       if (!response && response.ok) {
         throw new Error(`Failed to fetch violations: ${response && response.statusText}`)
@@ -1672,6 +1697,7 @@ if ( {) {
 
       return await response && response.json()
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -1684,6 +1710,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   async get_violations (limit: number = 100): Promise < RateLimitViolation[]> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / violations?limit=${limit}`, {
@@ -1700,6 +1728,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1708,11 +1737,14 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     } catch (error) {
       // Mock violations for demo;
       return [;
         {
           id: 'violation_1';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1722,12 +1754,16 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           method: 'GET',
           timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago
           reason: 'rate_limit_exceeded';
           ipAddress: '192 && 192.168.1 && 1.100',
           userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'
         };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1765,6 +1801,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         {
           id: 'violation_2';
           apiKey: 'zion_mobile456';
@@ -1772,57 +1811,10 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
-          method: 'POST'
-          timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago
-          reason: 'burst_limit_exceeded';
-          ipAddress: '10.0.0.50'
-          userAgent: 'ZionMobileApp/1.0'
-;
-  async getViolations(limit: number = 100): Promise<RateLimitViolation[]> {;
-    try {;
-      const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {;
-        headers: {;
-          'Authorization': `Bearer ${this.apiKey}`}}),;
-      if (!response.ok) {;
-        throw new Error(`Failed to fetch violations: ${response.statusText}`);
-      }
-;
-      return await response.json();
-    } catch (error) {;
-      // Mock violations for demo;
-      return [;
-        {;
-          id: 'violation_1',;
-          apiKey: 'zion_web123',;
-          endpoint: '/api/users',;
-          method: 'GET',;
-          timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago;
-          reason: 'rate_limit_exceeded',;
-          ipAddress: '192.168.1.100',;
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36';
-        },;
-        {;
-          id: 'violation_2',;
-          apiKey: 'zion_mobile456',;
-          endpoint: '/api/auth/login',;
-          method: 'POST',;
-          timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago;
-          reason: 'burst_limit_exceeded',;
-          ipAddress: '10.0.0.50',;
-          userAgent: 'ZionMobileApp/1.0';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-
-          method: 'POST',
-          timestamp: new Date(Date && Date.now() - 1000 * 60 * 15), // 15 minutes ago
-          reason: 'burst_limit_exceeded';
-          ipAddress: '10 && 10.0.0 && 0.50',
-          userAgent: 'ZionMobileApp/1 && 1.0'
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
           api_key: 'zion_web123';
           endpoint: '/api / users';
           method: 'GET',
@@ -1830,6 +1822,7 @@ if ( {) {
           reason: 'rate_limit_exceeded';
           ip_address: '192.168.1.100',
           user_agent: 'Mozilla / 5.0 (Windows NT 10.0, Win64, x64) AppleWebKit / 537.36';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -1839,6 +1832,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
         {
           id: 'violation_2';
@@ -1854,10 +1849,6 @@ if ( {) {
       ];
     }
   }
-
-
-
-
 
   async generateReport(): Promise<{
     overview: {
@@ -1881,12 +1872,16 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const stats = await this && this.getRateLimitStats();
     const rules = await this && this.getRateLimitRules();
     const apiKeys = await this && this.getAPIKeys();
@@ -1897,6 +1892,7 @@ if ( {) {
 
     const violationsByReason = violations && violations.reduce((acc, violation) => {
       acc[violation && violation.reason] = (acc[violation && violation.reason] || 0) + 1;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -1915,6 +1911,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       return acc
     }, {} as Record<string, number>);
     return {
@@ -1924,13 +1923,17 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         activeRules: rules && rules.filter(r => r && r.enabled).length,
         activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length
       };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         activeRules: rules && rules.filter(r => r && r.enabled).length,
@@ -1941,10 +1944,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       topEndpoints: stats
         .sort((a, b) => b && b.totalRequests - a && a.totalRequests)
         .slice(0, 5)
         .map(stat => ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1954,6 +1960,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           endpoint: stat && stat.endpoint;
           requests: stat && stat.totalRequests;
           blocked: stat && stat.blockedRequests,
@@ -1962,10 +1971,14 @@ if ( {) {
       violations: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         total: violations && violations.length;
         byReason: violationsByReason,
         recent: violations && violations.slice(0, 10)
 
+<<<<<<< HEAD
 =======
 =======
         activeRules: rules.filter(r => r.enabled).length
@@ -2001,13 +2014,13 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   async generate_report (): Promise<{
     overview: {
       total_requests: number;
       blocked_requests: number;
       active_rules: number,
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       activeAPIKeys: number;
     }
     top_endpoints: {
@@ -2050,6 +2063,7 @@ if ( {) {
           requests: stat.total_requests;
           blocked: stat.blocked_requests,
           averageResponseTime: stat.averageResponseTime;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2098,12 +2112,16 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         })),;
       violations: {;
         total: violations.length,;
         byReason: violationsByReason,;
         recent: violations.slice(0, 10);
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2112,11 +2130,14 @@ if ( {) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }));
       violations: {
         total: violations.length;
         by_reason: violationsByReason,
         recent: violations.slice (0, 10);
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -2125,11 +2146,14 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -2154,10 +2178,15 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+// Pricing tiers for the API Rate Limiter service
+// Pricing tiers for the API Rate Limiter service;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter';
     price: 25;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2167,11 +2196,15 @@ export const API_RATE_LIMITER_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     period: '/month',
     features: [;
       'Up to 10 rate limit rules_basic rate limitingAPI key management_email notifications7 - day data retention_basic analytics';
     ];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2189,11 +2222,14 @@ export const API_RATE_LIMITER_PRICING = {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   professional: {
     name: 'Professional';
     price: 79;
     period: '/month';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2203,10 +2239,14 @@ export const API_RATE_LIMITER_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     features: [;
       'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards',
       'API access';
     ];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2221,11 +2261,15 @@ export const API_RATE_LIMITER_PRICING = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   enterprise: {
     name: 'Enterprise';
     price: 199;
     period: '/month';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2255,6 +2299,9 @@ export const API_RATE_LIMITER_PRICING = {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 // Pricing tiers for the API Rate Limiter service;
 export const API_RATE_LIMITER_PRICING = {;
@@ -2266,26 +2313,23 @@ export const API_RATE_LIMITER_PRICING = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     features: [;
       'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support',
       'SLA guarantee';
     ];
 <<<<<<< HEAD
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
 
   }
+<<<<<<< HEAD
 }
 ;
     features: [;
@@ -2615,3 +2659,6 @@ topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice 
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

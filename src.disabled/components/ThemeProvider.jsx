@@ -1,24 +1,21 @@
 "use client;""";";",
 "use client;"";";";,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
-:src.disabled/components/ThemeProvider.jsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 "use client"
 "use client"
 ursor/add-new-services-and-deploy-updates-0462
 "use client"
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/ThemeProvider.jsx
-=======
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "use client"
+<<<<<<< HEAD
 :temp_exclude/src.disabled/components/ThemeProvider.jsx
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -31,3 +28,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 "use client"
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+"use client"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

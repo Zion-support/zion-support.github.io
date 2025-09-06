@@ -73,8 +73,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 <<<<<<< HEAD
 export async function getAccounts(): Promise<string[]> {
@@ -145,8 +148,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 <<<<<<< HEAD
 export async function getBalance(address: string): Promise<string> {
@@ -227,8 +233,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 <<<<<<< HEAD
 export async function signMessage(
@@ -269,6 +278,7 @@ export async function signMessage(message: string, address: string): Promise<str
       params: [message, address],
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
   if (typeof window === 'undefined' |!window.ethereum) {
@@ -300,12 +310,15 @@ if ( {) {
       params: [message, address],
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     });
     return signature;
   } catch (error) {
     throw new Error("Failed to sign message");
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -322,6 +335,11 @@ if ( {) {
 // Extend Window interface for TypeScript;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+// Extend Window interface for TypeScript;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 declare global {
   interface Window {
     ethereum?: {
@@ -357,24 +375,27 @@ declare global {
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     };
-=======
 
+<<<<<<< HEAD
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
 
     };
 
   }
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 }

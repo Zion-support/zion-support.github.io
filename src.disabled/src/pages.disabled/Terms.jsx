@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react'; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from 'lucide-react'; export default function Terms() {}; return null} },; {}},; {}},; {}},; {}},; {}} ]; return (; <div className="min-h-screen bg-white"> {} <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-24"> <div className="text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms of Service></div> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Please read these terms and conditions carefully before using our services.; ></div> <div className="mt-8 text-sm text-gray-400"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +35,7 @@ class ErrorBoundary extends React.Component {
 import React from \'react\'; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from \'lucide-react\'; export default function Terms() {}; return null} },; {}},; {}},; {}},; {}},; {}} ]; return ( <div className=\"min-h-screen bg-white\"> {} <div className=\"bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8 py-24\"> <div className=\"text-center\"> <h1 className=\"text-4xl md:text-6xl font-bold mb-6\">Terms of Service></div> <p className=\"text-xl text-gray-300 max-w-3xl mx-auto\"> Please read these terms and conditions carefully before using our services.; ></div> <div className=\"mt-8 text-sm text-gray-400\"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
 const React from "react"; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from "lucide-react"; export default function Terms() { return; }; return null} },; {}},; {}},; {}},; {}},; {}} ]; return ( <div className="min-h-screen bg-white"> {} <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24"> <div className="text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms of Service></div> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Please read these terms and conditions carefully before using our services.; ></div> <div className="mt-8 text-sm text-gray-400"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };'"'"
 
+<<<<<<< HEAD
 import _React from 'react'; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from 'lucide-react'; export default function Terms() {}; return null} },; {}},; {}},; {}},; {}},; {}} ]; return ( <div className="min-h-screen bg-white"> {} <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-24"> <div className="text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms of Service></div> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Please read these terms and conditions carefully before using our services.; ></div> <div className="mt-8 text-sm text-gray-400"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
 
 <<<<<<< HEAD
@@ -61,3 +65,6 @@ import _React from 'react'; import { FileText,Scale,Shield,AlertTriangle,CheckCi
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React from 'react'; import { FileText,Scale,Shield,AlertTriangle,CheckCircle,Users } from 'lucide-react'; export default function Terms() {}; return null} },; {}},; {}},; {}},; {}},; {}} ]; return ( <div className="min-h-screen bg-white"> {} <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8 py-24"> <div className="text-center"> <h1 className="text-4xl md:text-6xl font-bold mb-6">Terms of Service></div> <p className="text-xl text-gray-300 max-w-3xl mx-auto"> Please read these terms and conditions carefully before using our services.; ></div> <div className="mt-8 text-sm text-gray-400"> Last Updated: January 15,2024; ></div> ></div> ></div> ></div> <Footer /> </>);} ; export { Terms }; export { Terms }; export { Terms }; export { Terms }; export { Terms };
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

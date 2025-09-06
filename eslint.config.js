@@ -788,20 +788,14 @@ export default [{
 =======
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
-<<<<<<< HEAD
 import next from '@next/eslint-plugin-next';
-=======
-import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 
 export default [
   js.configs.recommended,
   {
-<<<<<<< HEAD
     languageOptions: {
       parser: typescriptParser,
       parserOptions: {
@@ -844,6 +838,7 @@ export default [
         // React
         React: 'readonly',
         // Jest/Testing globals
+<<<<<<< HEAD
 =======
     files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
@@ -1163,6 +1158,8 @@ export default [
         React: 'readonly',
         // Jest/Testing globals
 >>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -1281,6 +1278,7 @@ export default [
       '**/zion-website/**',
     ],
   },
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1419,3 +1417,6 @@ export default [
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

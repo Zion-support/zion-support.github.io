@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import { v4 as uuidv4 } from "uuid";
 import { readJsonFile, writeJsonFile } from "../../utils/db";
@@ -9,17 +12,24 @@ const FILE = "conversations && conversations.json";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   if (req && req.method === "POST") {
     const { conversationId, sender, text, attachments } = req && req.body || {};
     if (
       !conversationId ||
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     ) {
       res && res.status(400).json({ error: "Invalid message" });
       return;
@@ -29,16 +39,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (idx === -1) {
       res && res.status(404).json({ error: "Conversation not found" });
       return;
+<<<<<<< HEAD
+=======
+
+    }
+    const now = new Date().toISOString();
+    const msg: Message = {
+
+    res.status(201).json({ message: msg });
+    return
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
-
-
-
 
   if (req.method === "GET") {
 
-
   if (req.method === 'GET') {
     const { conversationId } = req.query;
+<<<<<<< HEAD
 =======
       id: uuidv4()
       conversationId: String(conversationId)
@@ -57,6 +74,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === "GET") {
     const { conversationId } = req && req.query;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const conversations = readJsonFile<Conversation[]>(FILE, []);
     const conv = conversations && conversations.find((c) => c && c.id === String(conversationId));
     if (!conv) {
@@ -66,12 +85,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(200).json({ conversation: conv });
     return;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     res.status(201).json({ message: msg });
     return
   }
 
   if (req.method === "GET") {
-
 
   if (req.method === 'GET') {
     const { conversationId } = req.query;
@@ -82,9 +104,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return;
   }
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const conv = conversations.find((c) => c.id === String(conversationId));
     if (!conv) {
       res.status(404).json({ error: 'Conversation not found' });
@@ -93,15 +118,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(200).json({ conversation: conv });
     return
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   res && res.setHeader("AllowGET, POST");
   res && res.status(405).end("Method Not Allowed");
 }
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import { v4 as uuidv4  } from './uuid';
 import { readJsonFile, writeJsonFile  } from '../../utils / db';
@@ -171,6 +202,7 @@ if ( {) {
   }
   res.set_header ("AllowGET, POST");
   res.status (405).end ("Method Not Allowed");
+<<<<<<< HEAD
 =======
 =======
 
@@ -365,9 +397,14 @@ export default function handler(req, res) {
 =======
 }
 
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 res.setHeader("AllowGET, POST");
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+}
+
+res.setHeader("AllowGET, POST");
   res.status(405).end("Method Not Allowed");
 }
 }
@@ -377,15 +414,27 @@ res.setHeader("AllowGET, POST");
   }
 }
 ;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+  res.setHeader('AllowGET, POST');
+  res.status(405).end('Method Not Allowed')
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

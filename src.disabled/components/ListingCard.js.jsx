@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 '\"export\": function ListingCard ({\' id,title,description,images,category,tags,author,className,profileType = \'service\'}) {\''\''\";\";
 "export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
@@ -23,3 +24,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+'\"export\": function ListingCard ({\' id,title,description,images,category,tags,author,className,profileType = \'service\'}) {\''\''\";\";
+"export: function ListingCard ({" id,title,description,images,category,tags,author,className,profileType = "service"}) {""""";";'"'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

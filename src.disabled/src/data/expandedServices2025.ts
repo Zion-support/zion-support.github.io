@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 =======
@@ -10,9 +11,9 @@
 =======
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Digital Marketing" | "Business Intelligence" | "Supply Chain" | "Healthcare Tech" | "Education Tech" | "Legal Tech" | "Real Estate Tech"; price: string;'"'"
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+module.exports = type ServiceItem = { id: string; title: string; description: string; category: "Micro SaaS" | "IT Services" | "AI Solutions" | "Cybersecurity" | "Data & Analytics" | "Cloud & DevOps" | "Quantum Computing" | "Blockchain & Web3" | "IoT & Edge" | "Green Tech" | "Space Tech" | "BioTech & Health" | "FinTech & DeFi" | "Metaverse & AR/VR" | "Autonomous Systems" | "Digital Marketing" | "Business Intelligence" | "Supply Chain" | "Healthcare Tech" | "Education Tech" | "Legal Tech" | "Real Estate Tech"; price: string;'"'"
 import React from 'react';
 interface ExpandedServices2025Props {
   // Add props here as needed
@@ -23,6 +24,7 @@ export default function ExpandedServices2025({ }: ExpandedServices2025Props) {
       <h1>ExpandedServices2025</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -42,3 +44,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

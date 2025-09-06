@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import MainLayout from '../components/layout/MainLayout';
@@ -39,117 +38,10 @@ export default function ContactPage() {
 import React from 'react';
 import Head from 'next/head';
 
-=======
-
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
-
-
-import React from "react";
-import Layout from "../components/Layout";
-import React from 'react';
-import Layout from '../components/Layout';
-import Layout from '../components/Layout';
-origin/automation-improvements-final
-
-import Head from 'next/head';
-import { useState } from 'react';
-import { ContactInfo } from '../types';
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const contact: ContactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    site: 'https://ziontechgroup.com'
-  };
-  const services = [
-    'AI Automation Platform',
-    'Cloud Infrastructure',
-    'Micro SaaS Development',
-    'Cybersecurity Solutions',
-    'Data Analytics & BI',
-    'Blockchain Solutions',
-    'Other'
-  ];
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  };
-  return (
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for your technology needs.
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-
-import React from "react";
-import Layout from "../components/Layout";
->>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 export default function Contact() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Contact - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for your AI and IT needs" />
       </Head>
@@ -207,6 +99,7 @@ export default function Contact() {
       </main>
     </>
   );
+<<<<<<< HEAD
 =======
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for advanced IT solutions and AI services." />
@@ -640,3 +533,6 @@ const ContactPage: React.FC = () => {
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 }
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

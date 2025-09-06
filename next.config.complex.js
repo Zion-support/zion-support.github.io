@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
@@ -12,16 +15,20 @@ const next_config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   page_extensions: ['tsxtsjsxjs'],
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 /** @type {import('next').NextConfig} */;
 
 const nextConfig = {;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -62,6 +69,11 @@ const nextConfig = {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   compress: true,;
   poweredByHeader: false,;
   eslint: { ignoreDuringBuilds: true },;
@@ -70,8 +82,11 @@ const nextConfig = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   // Image optimization;
   images: {
@@ -91,6 +106,7 @@ const nextConfig = {;
   // Dist directory;
   dist_dir: '.next';
 },
+<<<<<<< HEAD
 module.exports = next_config,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
@@ -157,3 +173,6 @@ module.exports = nextConfig,;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+module.exports = next_config,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

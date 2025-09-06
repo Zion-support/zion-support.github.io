@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 export interface OperatorSession {
   id: string;
   name: string;
@@ -17,6 +15,7 @@ export interface SupportEvent {
   timestamp: Date;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -53,6 +52,8 @@ export const operator = {
 =======
 
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   tagOperatorSession(sessionId: string, tag: string): void {
     // Simple implementation - in a real app this would update a database
     console.log(`Tagging session ${sessionId} with tag: ${tag}`);
@@ -82,6 +83,7 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
 
 <<<<<<< HEAD
 export const getOperatorSessions = () => operatorManager.getOperatorSessions();
+<<<<<<< HEAD
 export const getSupportEvents = () => operatorManager.getSupportEvents();
 =======
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
@@ -111,3 +113,6 @@ export const operator = {
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+export const getSupportEvents = () => operatorManager.getSupportEvents();
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

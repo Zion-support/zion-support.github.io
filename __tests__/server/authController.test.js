@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 "await";
@@ -96,3 +97,6 @@ const { describe,it,expect,vi,beforeEach } = require( 'vitest')';; const { creat
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+"await";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

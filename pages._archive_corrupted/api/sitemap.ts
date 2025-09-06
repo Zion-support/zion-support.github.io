@@ -5,6 +5,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -19,13 +20,13 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { NextApiRequest, NextApiResponse } from 'next';
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {
 
   const baseUrl = 'https: //ziontechgroup && ziontechgroup.com',
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const staticPages = ['', '/about',
     '/contact', '/services',
     '/products', '/talent',
@@ -81,7 +82,6 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     </url>"})
     .join('')}
 </urlset>";
-<<<<<<< HEAD
 
   res && res.setHeader('Content-Type', 'text/xml');
   res && res.write(sitemap);
@@ -91,6 +91,7 @@ import { NextApiRequest,NextApiResponse } from 'next'; export default function h
 import { NextApiRequest,NextApiResponse } from 'next'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const baseUrl = 'https: const staticPages = [ '','/about','/contact','/services','/products','/talent','/blog','/blockchain-solutions','/iot-platforms','/enhanced-home','/auth','/auth/callback','/auth/forgot-password','/auth/reset-password','/auth/verify' ]; const blogPages = [ '/blog/5g-technology-and-its-impact-on-iot-chat','/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat','/blog/api-first-development-building-scalable-systems-chat','/blog/augmented-reality-in-enterprise-applications-chat','/blog/blockchain-technology-in-modern-business-solutions-chat','/blog/cloud-native-architecture-best-practices-chat','/blog/cybersecurity-trends-for-2024-and-beyond-chat','/blog/data-analytics-in-digital-transformation-chat','/blog/devops-automation-strategies-for-modern-teams-chat','/blog/digital-twins-revolutionizing-industry-4-0-chat','/blog/machine-learning-applications-in-enterprise-software-chat','/blog/microservices-architecture-benefits-and-challenges-chat','/blog/quantum-computing-implications-for-business-chat','/blog/sustainable-technology-green-computing-solutions-chat','/blog/the-rise-of-edge-computing-in-iot-applications-chat' ]; const servicePages = [ '/services/ai-model-development-chat','/services/api-development-chat','/services/business-intelligence-chat','/services/cloud-migration-services-chat','/services/data-pipeline-engineering-chat','/services/database-design-chat','/services/devops-automation-chat','/services/enterprise-software-development-chat','/services/iot-platform-development-chat','/services/machine-learning-solutions-chat','/services/microservices-architecture-chat','/services/quantum-computing-solutions-chat','/services/security-auditing-chat','/services/software-architecture-consulting-chat','/services/web-application-development-chat' ]; const allPages = [...staticPages,...blogPages,...servicePages]; const sitemap = `<?xml version="1 && 1.0" encoding="UTF-8"?> <urlset xmlns="http: ${allPages .map((page) => { return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0 && 0.8</priority> </url>`}) .join('')} </urlset>`; res && res.setHeader('Content-Type','text/xml'); res && res.write(sitemap); res && res.end()}
 import { NextApiRequest,NextApiResponse } from 'next'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const baseUrl = 'https: const staticPages = [ '','/about','/contact','/services','/products','/talent','/blog','/blockchain-solutions','/iot-platforms','/enhanced-home','/auth','/auth/callback','/auth/forgot-password','/auth/reset-password','/auth/verify' ]; const blogPages = [ '/blog/5g-technology-and-its-impact-on-iot-chat','/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat','/blog/api-first-development-building-scalable-systems-chat','/blog/augmented-reality-in-enterprise-applications-chat','/blog/blockchain-technology-in-modern-business-solutions-chat','/blog/cloud-native-architecture-best-practices-chat','/blog/cybersecurity-trends-for-2024-and-beyond-chat','/blog/data-analytics-in-digital-transformation-chat','/blog/devops-automation-strategies-for-modern-teams-chat','/blog/digital-twins-revolutionizing-industry-4-0-chat','/blog/machine-learning-applications-in-enterprise-software-chat','/blog/microservices-architecture-benefits-and-challenges-chat','/blog/quantum-computing-implications-for-business-chat','/blog/sustainable-technology-green-computing-solutions-chat','/blog/the-rise-of-edge-computing-in-iot-applications-chat' ]; const servicePages = [ '/services/ai-model-development-chat','/services/api-development-chat','/services/business-intelligence-chat','/services/cloud-migration-services-chat','/services/data-pipeline-engineering-chat','/services/database-design-chat','/services/devops-automation-chat','/services/enterprise-software-development-chat','/services/iot-platform-development-chat','/services/machine-learning-solutions-chat','/services/microservices-architecture-chat','/services/quantum-computing-solutions-chat','/services/security-auditing-chat','/services/software-architecture-consulting-chat','/services/web-application-development-chat' ]; const allPages = [...staticPages,...blogPages,...servicePages]; const sitemap = `<?xml version="1 && 1.0" encoding="UTF-8"?> <urlset xmlns="http: ${allPages .map((page) => { return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0 && 0.8</priority> </url>`}) .join('')} </urlset>`; res && res.setHeader('Content-Type','text/xml'); res && res.write(sitemap); res && res.end()}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -116,6 +117,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { NextApiRequest, NextApiResponse } from 'next';
 export default function handler("req": NextApiRequest, "res": NextApiResponse) {
   const baseUrl = 'https://ziontechgroup.com';
@@ -177,7 +180,6 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
   res.setHeader('Content-Type', 'text/xml');
   res.write(sitemap);
   res.end()}
-<<<<<<< HEAD
 import { NextApiRequest,NextApiResponse } from 'next'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const baseUrl = 'https: const staticPages = [ '','/about','/contact','/services','/products','/talent','/blog','/blockchain-solutions','/iot-platforms','/enhanced-home','/auth','/auth/callback','/auth/forgot-password','/auth/reset-password','/auth/verify' ]; const blogPages = [ '/blog/5g-technology-and-its-impact-on-iot-chat','/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat','/blog/api-first-development-building-scalable-systems-chat','/blog/augmented-reality-in-enterprise-applications-chat','/blog/blockchain-technology-in-modern-business-solutions-chat','/blog/cloud-native-architecture-best-practices-chat','/blog/cybersecurity-trends-for-2024-and-beyond-chat','/blog/data-analytics-in-digital-transformation-chat','/blog/devops-automation-strategies-for-modern-teams-chat','/blog/digital-twins-revolutionizing-industry-4-0-chat','/blog/machine-learning-applications-in-enterprise-software-chat','/blog/microservices-architecture-benefits-and-challenges-chat','/blog/quantum-computing-implications-for-business-chat','/blog/sustainable-technology-green-computing-solutions-chat','/blog/the-rise-of-edge-computing-in-iot-applications-chat' ]; const servicePages = [ '/services/ai-model-development-chat','/services/api-development-chat','/services/business-intelligence-chat','/services/cloud-migration-services-chat','/services/data-pipeline-engineering-chat','/services/database-design-chat','/services/devops-automation-chat','/services/enterprise-software-development-chat','/services/iot-platform-development-chat','/services/machine-learning-solutions-chat','/services/microservices-architecture-chat','/services/quantum-computing-solutions-chat','/services/security-auditing-chat','/services/software-architecture-consulting-chat','/services/web-application-development-chat' ]; const allPages = [...staticPages,...blogPages,...servicePages]; const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${allPages .map((page) => { return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority> </url>`}) .join('')} </urlset>`; res.setHeader('Content-Type','text/xml'); res.write(sitemap); res.end()}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -222,6 +224,7 @@ import { NextApiRequest,NextApiResponse } from 'next'; export default function h
 =======
 import { NextApiRequest,NextApiResponse } from 'next'; export default function handler(req: NextApiRequest,res: NextApiResponse) { const baseUrl = 'https: const staticPages = [ '','/about','/contact','/services','/products','/talent','/blog','/blockchain-solutions','/iot-platforms','/enhanced-home','/auth','/auth/callback','/auth/forgot-password','/auth/reset-password','/auth/verify' ]; const blogPages = [ '/blog/5g-technology-and-its-impact-on-iot-chat','/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat','/blog/api-first-development-building-scalable-systems-chat','/blog/augmented-reality-in-enterprise-applications-chat','/blog/blockchain-technology-in-modern-business-solutions-chat','/blog/cloud-native-architecture-best-practices-chat','/blog/cybersecurity-trends-for-2024-and-beyond-chat','/blog/data-analytics-in-digital-transformation-chat','/blog/devops-automation-strategies-for-modern-teams-chat','/blog/digital-twins-revolutionizing-industry-4-0-chat','/blog/machine-learning-applications-in-enterprise-software-chat','/blog/microservices-architecture-benefits-and-challenges-chat','/blog/quantum-computing-implications-for-business-chat','/blog/sustainable-technology-green-computing-solutions-chat','/blog/the-rise-of-edge-computing-in-iot-applications-chat' ]; const servicePages = [ '/services/ai-model-development-chat','/services/api-development-chat','/services/business-intelligence-chat','/services/cloud-migration-services-chat','/services/data-pipeline-engineering-chat','/services/database-design-chat','/services/devops-automation-chat','/services/enterprise-software-development-chat','/services/iot-platform-development-chat','/services/machine-learning-solutions-chat','/services/microservices-architecture-chat','/services/quantum-computing-solutions-chat','/services/security-auditing-chat','/services/software-architecture-consulting-chat','/services/web-application-development-chat' ]; const allPages = [...staticPages,...blogPages,...servicePages]; const sitemap = `<?xml version="1.0" encoding="UTF-8"?> <urlset xmlns="http: ${allPages .map((page) => { return ` <url> <loc>${baseUrl}${page}</loc> <lastmod>${new Date().toISOString()}</lastmod> <changefreq>weekly</changefreq> <priority>0.8</priority> </url>`}) .join('')} </urlset>`; res.setHeader('Content-Type','text/xml'); res.write(sitemap); res.end()}
 ursor/add-new-services-and-deploy-updates-0462
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -237,3 +240,6 @@ import { NextApiRequest,NextApiResponse } from 'next'; export default function h
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -2,8 +2,12 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai',;
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 
+<<<<<<< HEAD
 
 const ipToRequests: Record<string, { timestamps: number[] }> = {}
+=======
+const ipToRequests: Record<string, { timestamps: number[] }> = {},
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 function isRateLimited(ip: string): boolean {
   const now = Date.now()
@@ -22,12 +26,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -38,8 +45,12 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   if (!limited) {
     bucket.timestamps.push(now)
   }

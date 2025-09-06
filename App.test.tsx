@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 import { render } from '@testing-library/react';
@@ -109,9 +110,13 @@ const { render,screen } from "@testing-library/react"; import { describe,it,expe
 =======
 import React from 'react';
 import { render } from '@testing-library/react';
+=======
+import React from "react";
+import { render } from "@testing-library/react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-describe('App', () => {
-  it('should render without crashing', () => {
+describe("App", () => {
+  it("should render without crashing", () => {
     // Simple test that just checks if the component can be imported
     expect(true).toBe(true);
   });

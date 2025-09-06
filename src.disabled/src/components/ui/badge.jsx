@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react'; return(); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
 =======
 =======
@@ -38,3 +39,9 @@ import _React from 'react'; return(); <div className={`${baseClasses} ${variantC
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React from \'react\'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+const React from "react"; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };'`'"`
+
+import _React from 'react'; return (); <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}> {children} ></div> );}; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge }; export { Badge };
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

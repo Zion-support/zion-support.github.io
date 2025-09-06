@@ -28,8 +28,11 @@ try {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
     // Fetch latest changes;
     console.log ('📥 Fetching latest changes...'),
@@ -45,6 +48,7 @@ try {
         console.log ('⚠️  Merge conflicts detected. Resolving...'),
         // Find files with merge conflicts;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const { execSync } = require('child_process'),;
 const fs = require('fs'),;
@@ -53,6 +57,8 @@ const fs = require('fs');
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
         if () {) {
   $2
@@ -72,8 +78,8 @@ const fs = require('fs');
 
 <<<<<<< HEAD
 #!/usr/bin/env node;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -146,6 +152,8 @@ const fs = require('fs');
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 console.log('🚀 Starting merge process for all open PRs...'),;
 try {;
     // Check if we're in a git repository;
@@ -155,7 +163,6 @@ try {;
     console.error('❌ Not in a git repository'),;
     process.exit(1);
 }
-<<<<<<< HEAD
 ;
 try {;
     // Ensure clean working directory;
@@ -183,8 +190,8 @@ try {;
             console.log('Found merge conflicts in:', conflictFiles.trim()),;
 <<<<<<< HEAD
 
-<<<<<<< HEAD
             // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
@@ -197,20 +204,16 @@ try {;
                 if (file.trim()) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
-            for (const file of files) {;
-                if (file.trim()) {;
 
-            // Resolve conflicts by accepting our version;
-            const files = conflictFiles.trim().split('\n');
-            const files = conflictFiles.trim().split('\n'),;
-            const files = conflictFiles.trim().split('\n');
             for (const file of files) {;
                 if (file.trim()) {;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
                     console.log(`Resolving conflicts in: ${file}`);
                     try {execSync(`git checkout --ours "${file}"`);
                     } catch (e) {execSync(`git checkout --theirs "${file}"`);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
                     console.log(`Resolving conflicts in: ${file}`);
@@ -220,6 +223,8 @@ try {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                     console.log(`Resolving conflicts in: ${file}`),;
                     try {;
                         execSync(`git checkout --ours "${file}"`);
@@ -228,18 +233,18 @@ try {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }
                     exec_sync (`git add "${file}"`);
                 }
             }
 
-
 ;
-
 
             // Commit the merge;
             exec_sync ('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
@@ -268,6 +273,7 @@ try {;
             console.log (`⚠️  Error merging ${branch}: ${error.message}`),
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                     }
                     exec_sync (`git add "${file}"`);
@@ -294,6 +300,8 @@ try {;
             const files = conflictFiles.trim().split('\n');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             for (const file of files) {;
                 if (file.trim()) {;
                     }
@@ -304,7 +312,6 @@ try {;
             execSync('git commit -m "feat: resolve merge conflicts automatically\n\n- Resolved merge conflicts by accepting appropriate versions\n- Integrated latest changes from main branch\n- All services and improvements preserved"');
         }
     }
-<<<<<<< HEAD
     // Get all branches;
     console.log('🌿 Getting all branches...');
     const branches = execSync('git branch -r', { encoding: 'utf8' });
@@ -324,15 +331,19 @@ try {;
             execSync(`git merge ${branchName} --no-ff -m "feat: merge ${branchName} into main\n\n- Integrated changes from ${branchName}\n- Resolved any conflicts automatically\n- All features and improvements preserved"`);
             console.log(`✅ Successfully merged ${branchName}`);
         } catch (error) {console.log(`⚠️  Error merging ${branch}: ${error.message}`);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             // Continue with other branches;
         }
     }
     // Push all changes;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -351,6 +362,9 @@ try {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     // Get all branches;
     console.log('🌿 Getting all branches...'),;
@@ -359,20 +373,20 @@ try {;
         .map(branch => branch.trim());
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
-        .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
-        .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
-        .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
         .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     console.log(`Found ${branchList.length} branches to merge: `),;
     branchList.forEach(branch => console.log(`  - ${branch}`)),;
     // Merge each branch;
@@ -404,12 +418,15 @@ try {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     process.exit(1);
 }
+<<<<<<< HEAD
 =======
     console.log ('📤 Pushing all changes to main...'),
     exec_sync ('git push origin main'),
@@ -424,6 +441,8 @@ try {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     process.exit(1);
 }
     console.log('📤 Pushing all changes to main...');
@@ -439,10 +458,12 @@ try {;
     process.exit(1);}
     process.exit(1);
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
     process.exit(1);
+<<<<<<< HEAD
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const nextConfig = {
   reactStrictMode: true,
 <<<<<<< HEAD
@@ -37,6 +38,8 @@ const nextConfig = {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 /** @type {import ('next').NextConfig} */;
 const next_config = {
   reactStrictMode: true,
@@ -44,6 +47,9 @@ const next_config = {
   typescript: { ignoreBuildErrors: true },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   page_extensions: ['tsx', 'ts', 'jsx', 'js'],
   images: {
     domains: ["localhost", "ziontechgroup.com"],
@@ -56,17 +62,11 @@ const next_config = {
 module.exports = next_config;
 ;
 
-=======
-
-    domains: ["localhost", "ziontechgroup.com"],
-  },
-  output: 'standalone',
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   trailingSlash: false,
   distDir: '.next',
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
@@ -425,3 +425,7 @@ module.exports = nextConfig;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+module.exports = nextConfig;
+module.exports = nextConfig;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -14,3 +14,15 @@ function handler() {
   $2
 }
   try {
+<<<<<<< HEAD
+=======
+    const data = req.body,
+    const client = new Web3Storage ({ token: TOKEN }),
+    const files = [new File ([JSON.stringify (data, null, 2)], 'profile.json', { type: 'application / json' })],
+    const cid = await client.put (files, { wrapWithDirectory: false }),
+    return res.status (200).json ({ cid });
+  } catch (e: any) {
+    return res.status (500).json ({ error: e?.message || 'Backup failed' });
+  }
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

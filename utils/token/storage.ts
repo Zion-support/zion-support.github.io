@@ -1,9 +1,5 @@
-  tokenName: string;
+tokenName: string;
   tokenSymbol: string;
-
-
-
-
 
 export interface TokenConfig {
 <<<<<<< HEAD
@@ -11,6 +7,7 @@ export interface TokenConfig {
 export interface TokenConfig {
   token_name: string;
   token_symbol: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -26,6 +23,8 @@ export interface TokenConfig {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   decimals: number;
   totalSupply: number;
   issueRate: number;
@@ -36,12 +35,16 @@ export interface TokenConfig {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json');
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -51,6 +54,8 @@ const STORE_FILE = path && path.join(DATA_DIR, 'token_store && token_store.json'
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class TokenStore {
   private config: TokenConfig = {
     token_name: 'ZION$',
@@ -82,6 +87,7 @@ class TokenStore {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   }
 export interface TokenStoreData {
@@ -100,6 +106,11 @@ export interface TokenStoreData {;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+
+  }
+export interface TokenStoreData {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 }
 export const tokenStore = new TokenStore();
@@ -120,13 +131,15 @@ export class TokenStorageManager {
     lastUpdated: new Date()
   };
 
-
   }
 export interface TokenStoreData {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
@@ -137,6 +150,7 @@ function readFromDisk(): TokenStoreData | null {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -144,9 +158,12 @@ function readFromDisk(): TokenStoreData | null {
 =======
 }
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 }
 
+}
 
   async loadConfigs(): Promise<TokenConfig[]> {
     return this.storage.configs;
@@ -176,17 +193,21 @@ function readFromDisk(): TokenStoreData | null {
 
 // Singleton instance
 export const tokenStorage = new TokenStorageManager();
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   set_config (new_config: Partial < TokenConfig>): void {
     this.config = { ...this.config, ...new_config }
   }
 }
 export const token_store = new TokenStore ();
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -199,6 +220,8 @@ export const token_store = new TokenStore ();
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     if (!fs.existsSync(STORE_FILE)) return null;
     const raw = fs.readFileSync(STORE_FILE, 'utf8');
@@ -213,6 +236,7 @@ export const token_store = new TokenStore ();
 }
 export const tokenStore = new TokenStore();
 
+<<<<<<< HEAD
 }
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -229,3 +253,6 @@ export const tokenStore = new TokenStore();
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

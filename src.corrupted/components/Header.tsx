@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react'; import Link from 'next/link';
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -22,11 +23,12 @@ const React from "react"; import Link from "next/link";''"
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from \'react\'; import Link from \'next/link\';
 const React from "react"; import Link from "next/link";''"
 import _React from 'react'; import Link from 'next/link';
 import _React from 'react'; import Link from 'next/link';
-<<<<<<< HEAD
 
 =======
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
@@ -37,6 +39,7 @@ import _React from 'react'; import Link from 'next/link';
 
 import React from \'react\'; import Link from \'next/link\';
 const React from "react"; import Link from "next/link";''"
+<<<<<<< HEAD
 import _React from 'react'; import Link from 'next/link';
 <<<<<<< HEAD
 
@@ -65,3 +68,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React from 'react'; import Link from 'next/link';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

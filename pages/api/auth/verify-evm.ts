@@ -13,8 +13,12 @@ export default async function handler(
   const { message, signature, address, chainId } = req.body |{}
   if (!message |!signature |!address)
     return res.status(400).json({ error: "Missing fields" });
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   try {
     const recovered = ethers && ethers.utils
       .verifyMessage(message, signature)
@@ -22,6 +26,7 @@ export default async function handler(
     if (recovered !== String(address).toLowerCase()) {
       return res && res.status(401).json({ error: "Invalid signature" });
     }
+<<<<<<< HEAD
 =======
     const cookieHeader = req && req.headers.cookie || "";
     const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
@@ -45,6 +50,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    const cookieHeader = req && req.headers.cookie || "";
+    const match = cookieHeader && cookieHeader.match(/siwe-nonce=([^]+)/);
+    if (!match) return res && res.status(400).json({ error: "Missing nonce" });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const nonce = match[1];
     if (!String(message).includes(`Nonce: ${nonce}`))
       return res && res.status(400).json({ error: "Nonce mismatch" });
@@ -67,10 +79,15 @@ const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me';
 export default async function handler(req, res) {
     return res && res.status(500).json({ error: e?.message || "Verify failed" });
 
-
   }
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import jwt from './jsonwebtoken';
 import { ethers  } from './ethers';
@@ -120,8 +137,11 @@ function handler() {
     return res.status (200).json ({ ok: true });
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message || "Verify failed" });
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 }
 
@@ -129,6 +149,7 @@ function handler() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 =======
 
@@ -175,3 +196,6 @@ export default async function handler(req, res) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export const metadata = {
   title: 'Careers - Zion Tech Group',
   description: 'Join our team of AI innovators and help shape the future of autonomous business operations and digital economies.',
@@ -22,6 +25,7 @@ function CareersPage() {
       location: 'Remote / Global',
       type: 'Full - time',
       description: 'Lead cutting - edge research in AI consciousness, autonomous systems, and quantum neural networks.',
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -57,6 +61,8 @@ export default function CareersPage() {const openPositions = [;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       requirements: [;
         'MS/PhD in Physics, Computer Science, or related field3+ years experience in quantum computingKnowledge of quantum algorithms and quantum programmingExperience with Qiskit, Cirq, or similar frameworks']}
     {title: 'Full-Stack Developer';
@@ -64,7 +70,6 @@ export default function CareersPage() {const openPositions = [;
       location: 'Remote / Global';
       type: 'Full-time';
       description: 'Build scalable web applications and APIs for our AI-powered platforms.';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       requirements: [;
         '3+ years experience in full-stack developmentProficiency in React, Node.js, and TypeScriptExperience with cloud platforms (AWS, GCP, Azure)Knowledge of database design and optimization']}
     {title: 'Cybersecurity Specialist';
@@ -75,6 +80,7 @@ export default function CareersPage() {const openPositions = [;
       requirements: [;
         '5+ years experience in cybersecurityExpertise in threat detection and preventionKnowledge of AI security and adversarial attacksRelevant certifications (CISSP, CEH, etc.)']}];
   const benefits = [;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -140,6 +146,9 @@ export default function CareersPage() {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     {;
       title: 'Remote First',;
       description: 'Work from anywhere in the world with our distributed team.',;
@@ -165,6 +174,7 @@ export default function CareersPage() {;
       description: 'Comprehensive health coverage and wellness programs.',;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -175,6 +185,9 @@ export default function CareersPage() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       icon: '🏥'}];
   return (
     <div className="space - y-16">;

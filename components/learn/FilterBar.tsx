@@ -1,52 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-};
-export default function FilterBar(): any ({;
-  category,;
-  level,;
-  isFree,;
-  onChange,;
-}: Props) {;
-=======
-
-
-type Props = {
-  category: string;
-  level: string;
-  isFree: string;
-  onChange: (next: { category: string; level: string; isFree: string }) => void;
-}
-export default function FilterBar({
-  category
-  level
-  isFree
-  onChange
-}: Props) {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  return (
+return (
       <select
         className='border rounded px-3 py-2 bg-white dark:bg-black'
         value={category}
-<<<<<<< HEAD
-
 
 import React from 'react';
 type Props = {
   category: string,
   level: string,
   isFree: string,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        onChange={e => onChange({ category: e.target.value, level, isFree })}
-      >
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-  category: string
-  level: string
-  isFree: string
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
         onChange={e => onChange({ category: e && e.target.value, level, isFree })}
@@ -57,33 +18,18 @@ type Props = {
   isFree: string,;
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-
-
-
-<<<<<<< HEAD
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function FilterBar(): any ({ category, level, isFree, onChange }: Props) {;
   return (
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">;
 import React from 'react';
-<<<<<<< HEAD
 
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 type Props = {
   category: string;
   level: string;
@@ -104,7 +50,6 @@ export default function FilterBar({
         onChange={e => onChange({ category: e.target.value, level, isFree })}
       >
         <option value=''>All Categories</option>        <option>AI Development</option>type Props = {
-<<<<<<< HEAD
   category: string
   level: string
   isFree: string
@@ -113,18 +58,8 @@ export default function FilterBar({
   category: string,
   level: string,
   isFree: string,
-=======
-        onChange={e => onChange({ category: e && e.target.value, level, isFree })}
-      >;
-        <option value=''>All Categories</option>        <option>AI Development</option>type Props = {;
-  category: string,;
-  level: string,;
-  isFree: string,;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   onChange: (next: { category: string, level: string, isFree: string }) => void;
 };
-
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -142,7 +77,6 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
-<<<<<<< HEAD
         onChange={(e) => onChange({ category: e.target.value, level, isFree })}
       >
         <option value="">All Categories</option>
@@ -184,16 +118,9 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
       </select>
     </div>
   );
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 
   );
 
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   is_free: string;
   on_change: (next: { category: string; level: string; is_free: string }) => void;
 }
@@ -236,7 +163,6 @@ function FilterBar() {
       <select;
         className='border rounded px - 3 py - 2 bg - white dark:bg - black';
         value={level}
-<<<<<<< HEAD
         on_change={e => on_change ({ category, level: e.target.value, is_free })}
       >;
         <option value=''>All Levels</option>        <option > Beginner</option>        value={level}
@@ -266,24 +192,8 @@ function FilterBar() {
     </div>);
 }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
 }
 
-
-
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-}
-
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
         onChange={e => onChange({ category, level: e.target.value, isFree })}
       >
         <option value=''>All Levels</option>        <option>Beginner</option>        value={level}
@@ -316,4 +226,3 @@ function FilterBar() {
   );
 }
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

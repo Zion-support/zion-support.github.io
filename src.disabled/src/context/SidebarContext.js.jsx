@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ createContext,useContext,useState } from 'react'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return(<SidebarContext.Provider value = {; { isSidebarOpen,setIsSidebarOpen,; toggleSidebar}}>; {children}; </SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error('useSidebar must be used within a SidebarProvider')}; return context};
 =======
 =======
@@ -38,3 +39,9 @@ import _React,{ createContext,useContext,useState } from 'react'; const SidebarP
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React,{ createContext,useContext,useState } from \'react\'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext&& SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen, toggleSidebar}}>; {children}; </SidebarContext && SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error(\'useSidebar must be used within a SidebarProvider\')}; return context};
+const React,{ createContext,useContext,useState } from "react"; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext&& SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen, toggleSidebar}}>; {children}; </SidebarContext && SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error("useSidebar must be used within a SidebarProvider")}; return context};''"
+
+import _React,{ createContext,useContext,useState } from 'react'; const SidebarProvider({ children }) {; const [isSidebarOpen,setIsSidebarOpen] = useState(false); const toggleSidebar = () => {; setIsSidebarOpen(!isSidebarOpen)}; return (<SidebarContext&& SidebarContext.Provider value = { { isSidebarOpen,setIsSidebarOpen, toggleSidebar}}>; {children}; </SidebarContext && SidebarContext.Provider>)}; export function useSidebar() {; const context = useContext(SidebarContext); if(context === null) {; throw new Error('useSidebar must be used within a SidebarProvider')}; return context};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

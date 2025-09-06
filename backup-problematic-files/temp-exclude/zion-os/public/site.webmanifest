@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD:backup-problematic-files/temp-exclude/zion-os/public/site.webmanifest
   "name": "Zion Tech Group - AI-Powered Technology Solutions",
   "short_name": "Zion Tech",
   "description": "Leading provider of AI-powered technology solutions, autonomous systems, and quantum computing innovations.",
@@ -11,7 +10,6 @@
   "scope": "/",
   "lang": "en",
   "categories": ["business", "productivity", "technology"],
-=======
   "name": "Zion Tech Group",
   "short_name": "Zion",
   "description": "Zion Tech Group - AI Automation Solutions",
@@ -19,7 +17,6 @@
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
->>>>>>> origin/main:backup-problematic-files/public/manifest.json
   "icons": [
     {
       "src": "/icon-192x192.png",
@@ -42,7 +39,6 @@
       "src": "/favicon-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
-<<<<<<< HEAD:backup-problematic-files/temp-exclude/zion-os/public/site.webmanifest
     },
     {
       "src": "/apple-touch-icon.png",
@@ -89,8 +85,6 @@
         }
       ]
     }
-=======
     }
->>>>>>> origin/main:backup-problematic-files/public/manifest.json
   ]
 }

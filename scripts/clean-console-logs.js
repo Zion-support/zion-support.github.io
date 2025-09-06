@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
 <<<<<<< HEAD
@@ -38,3 +39,9 @@
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node/usr/bin/env node/usr/bin/env node];import { glob } from "glob;""
+#!/usr/bin/env node];import { glob } from "glob;""
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

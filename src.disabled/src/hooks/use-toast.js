@@ -23,6 +23,7 @@ setTimeout(() => {}}
     toast, dismiss,    toasts}};"`
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(Toast [${variant}]: ${title} -,${description}"");,} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]);,} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]);,} setTimeout(() => {}} },5000);,} return id},[]);,} const dismiss = useCallback((id) => {}} },[]);,} return {}; toast,dismiss,toasts}};"`
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -56,3 +57,6 @@ import React,{ useState,useCallback } from "react"; export const toast = ({ titl
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React,{ useState,useCallback } from "react"; export const toast = ({ title,description,variant = "default" }) => {}; console.log(Toast [${variant}]: ${title} -,${description}"");,} return Date.now()} ; export const useToast = () => {}}; const [toasts,setToasts] = useState([]);,} ; const toast = useCallback(({ title,description,variant = "default' }) => {}} const newToast = {} ; setToasts(prev => [...prev,newToast]);,} setTimeout(() => {}} },5000);,} return id},[]);,} const dismiss = useCallback((id) => {}} },[]);,} return {}; toast,dismiss,toasts}};"`
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

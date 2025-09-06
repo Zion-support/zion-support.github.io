@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const faqCategories = [
   {
@@ -29,6 +33,7 @@ const faqCategories = [
   }
 ];
 
+<<<<<<< HEAD
 const faqData = {
   general: [
     {
@@ -323,3 +328,15 @@ export default function FAQ() {
     </Layout>
   );
 }
+=======
+const Faq: React.FC<FaqProps> = ({ className }) => {
+  return (
+    <div className={className || ""}>
+      <h1>Faq</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Faq;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -14,6 +15,8 @@
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default MyApp,
 ;
 ;
@@ -36,7 +39,6 @@ import '../styles / globals.css',
 function MyApp() {
   return <Component {...page_props} />;
 }
-<<<<<<< HEAD
 
 export default MyApp;
 
@@ -46,13 +48,17 @@ function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
 export default MyApp
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export default MyApp,
 ;
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -66,3 +72,7 @@ export default MyApp,
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+export default MyApp,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

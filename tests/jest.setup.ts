@@ -2,8 +2,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 import 'whatwg - fetch',
 import fetch_mock from 'jest - fetch - mock',
@@ -21,6 +24,7 @@ global.TextEncoder = TextEncoder,
 // @ts - expect - error - Node's TextDecoder might not perfectly match DOM's, but it's usually sufficient for tests;
 global.TextDecoder = TextDecoder,
 
+<<<<<<< HEAD
 =======
 import 'whatwg-fetch',;
 import fetchMock from 'jest-fetch-mock',;
@@ -49,6 +53,8 @@ global.TextEncoder = TextEncoder,
 global.TextDecoder = TextDecoder,
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Set up a mock for Vite environment variables accessed via import.meta.env;
 // This assumes that Babel (via babel - plugin - transform - import - meta or similar);
 // will transform import.meta.env.VITE_SOME_VAR to something like process.env.VITE_SOME_VAR;
@@ -56,8 +62,11 @@ global.TextDecoder = TextDecoder,
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http: //localhost:54321',
@@ -223,6 +232,7 @@ if ( {) {
   $2
 }
   URL.revokeObjectURL = jest.fn ();
+<<<<<<< HEAD
 =======
 process.env.VITE_REOWN_PROJECT_ID = 'test_project_id_from_jest_setup',;
 process.env.NEXT_PUBLIC_SUPABASE_URL = 'http://localhost:54321',;
@@ -402,6 +412,10 @@ if ( {) {
 }
 // Polyfill for BroadcastChannel;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+// Polyfill for BroadcastChannel;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Check condition
 if ( {) {
   $2
@@ -433,6 +447,7 @@ if ( {) {
 import axios from 'axios',
 // @ts - ignore;
 axios.create = jest.fn (() => axios),
+<<<<<<< HEAD
 =======
 if (typeof BroadcastChannel === 'undefined') {;
   // @ts-expect-error - BroadcastChannel polyfill for test environment;
@@ -471,6 +486,8 @@ import axios from 'axios',
 // @ts - ignore;
 axios.create = jest.fn (() => axios),
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // -----------------------------;
 // Vitest Compatibility Layer for Jest;
 // -----------------------------;
@@ -478,8 +495,11 @@ axios.create = jest.fn (() => axios),
 // To keep migrating gradually while still running the Jest suite successfully, we create;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // a lightweight shim that re - maps the most common Vitest helpers to their Jest equivalents.;
 // This avoids individual test failures like &quot;Vitest cannot be imported in a CommonJS module & quot;.;
 //;
@@ -494,6 +514,7 @@ jest.mock ('vitest', () => {
     vi: {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   return {
     // Named export expected in `import { vi } from 'vitest'` statements;
@@ -501,6 +522,8 @@ jest.mock ('vitest', () => {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       fn: jest_fn,
       spy_on: jest.spy_on.bind (jest),
       mock: jest.mock.bind (jest),
@@ -622,6 +645,7 @@ if ( {) {
   // @ts - ignore;
   window.IntersectionObserver = MockIntersectionObserver,
   // @ts - ignore;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -774,14 +798,21 @@ if (typeof window.IntersectionObserver === 'undefined') {;
 
   global.IntersectionObserver = MockIntersectionObserver;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+  global.IntersectionObserver = MockIntersectionObserver;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 // Ensure all code paths use the mock implementation;
 // Some services import the global fetch reference before jest - fetch - mock is enabled.;
 // Override it explicitly so those modules receive the mocked version.;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 // @ts - ignore;
 global.fetch = fetch_mock,
@@ -854,6 +885,7 @@ if ( {) {
   if (global.vi.advanceTimersByTime = jest.advanceTimersByTime.bind (jest)) {
   $2
 }
+<<<<<<< HEAD
 }
 
 =======
@@ -1096,3 +1128,6 @@ getItem: jest.fn ()
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

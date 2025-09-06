@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +35,7 @@ class ErrorBoundary extends React.Component {
 import React from \'react\'; \"export default function EnhancedSEO({\" title = \"Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions\",\" description = \"Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions && solutions.Transform your business with cutting-edge technology services.\",\" keywords = \"AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation\",canonical,\" ogImage = \""https\": \';\' })
 const React from "react"; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions && solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = "https: ";" })'"'"
 
+<<<<<<< HEAD
 import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions && solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
 
 <<<<<<< HEAD
@@ -61,3 +65,6 @@ import _React from 'react'; "export default function EnhancedSEO({" title = "Zio
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React from 'react'; "export default function EnhancedSEO({" title = "Zion Tech Group - Advanced AI,Quantum Computing & Enterprise Technology Solutions"," description = "Leading provider of advanced AI automation,quantum computing,autonomous business operations,and enterprise technology solutions && solutions.Transform your business with cutting-edge technology services."," keywords = "AI automation,quantum computing,enterprise technology,autonomous business operations,AI consulting,machine learning,cloud computing,cybersecurity,digital transformation",canonical," ogImage = ""https": ';' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

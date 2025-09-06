@@ -22,13 +22,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         ]
       })
       const text = resp.choices?.[0]?.message?.content |'No response'
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       return res.status(200).json({ text })
     }
     // Fallback without API key
     return res.status(200).json({ text: 'Tip: Break complex topics into small steps. Revisit objectives and test your understanding with quick quizzes.' })
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   };
 };
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -36,8 +43,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next'
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 export default async /**
  * handler - Function description

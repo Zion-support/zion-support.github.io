@@ -1,24 +1,36 @@
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
   const { id } = req && req.query;
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
 import { parseUserFromRequest, ensureAdmin } from "../../../../utils/auth";
 export default async function handler(
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   req: NextApiRequest
   res: NextApiResponse
+=======
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ) {;
 
   const { id } = req.query;
@@ -26,10 +38,12 @@ export default async function handler(
     return res && res.status(400).json({ error: "Invalid id" });
   const user = parseUserFromRequest(req);
 
-
   if (req && req.method === "POST") {
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     try {
       ensureAdmin(user);
     } catch (e: any) {
@@ -38,26 +52,39 @@ export default async function handler(
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status($1).json({ $2 });
     const { resolutionSummary, status } = req && req.body || {};
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const now = new Date().toISOString();
 
     if (status && !["Resolved", "Under Review", "Open"].includes(status)) {
       return res && res.status(400).json({ error: "Invalid status" });
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
 
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
-
-
-
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
 
+<<<<<<< HEAD
+=======
+  res && res.setHeader("Allow", "POST");
+  return res && res.status(405).end("Method Not Allowed");
+
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
 import { parseUserFromRequest, ensure_admin  } from '../../../../utils / auth';
@@ -104,14 +131,11 @@ if ( {) {
   res.set_header ("Allow", "POST");
   return res.status (405).end ("Method Not Allowed");
 }
+<<<<<<< HEAD
 =======
-    return res.status(200).json({ dispute });
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     return res.status(200).json({ dispute });
-
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
@@ -145,8 +169,6 @@ req: NextApiRequest
     }
     ((dispute.status = status |"Resolved")
       (dispute.resolvedAt = dispute.status === "Resolved" ? now : undefined));
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     dispute.resolutionSummary = resolutionSummary |dispute.resolutionSummary;
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -226,19 +248,14 @@ export default async function handler(req, res) {
     dispute.status = status || 'Resolved';
     dispute.resolvedAt = dispute.status === 'Resolved' ? now : undefined;
 
-
-
-
     dispute.resolutionSummary = resolutionSummary || dispute.resolutionSummary;
     dispute.updatedAt = now;
     await upsertDispute(dispute);
-
 
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
 
 }
-
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById, upsert_dispute  } from '../../../../utils / fsdb';
@@ -258,6 +275,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 }
 =======
     try {
@@ -291,3 +309,6 @@ if ( {) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

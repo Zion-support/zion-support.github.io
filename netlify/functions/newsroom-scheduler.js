@@ -1,11 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 function runNode(relPath, args = []) {
 
   const abs = path && path.resolve(__dirname, '..', '..', relPath);
@@ -22,7 +25,6 @@ function runNode(relPath, args = []) {
   };
 
 exports && exports.config = { schedule: '0 * * * *' };
-
 
 exports && exports.handler = async () => {
   const logs = [];
@@ -47,8 +49,6 @@ exports && exports.handler = async () => {
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -71,8 +71,8 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -83,6 +83,8 @@ exports && exports.handler = async () => {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const path = require ('path');
 const { spawn_sync } = require ('child_process');
 ;
@@ -152,6 +154,7 @@ exports.handler = async () => {
   step ('newsroom:generate', () => run_node ('automation / newsroom - generator.cjs')),
   step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
   return { status_code: 200, headers: { 'content - type': 'text / plain' }, body: logs.join ('\n') }
+<<<<<<< HEAD
 },
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -208,3 +211,6 @@ exports.config = { schedule: '0 * * * *';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+},
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<<< HEAD:src.disabled/src/pages.disabled/OpenApp.jsx
@@ -17,6 +18,8 @@ import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; con
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const OpenApp = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Open App - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Open App</h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Launch and access Zion Tech Group applications for seamless; service delivery.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; App launcher coming soon. We're building comprehensive application; access.; ></div> ></div> ></div> ></div> </>)}; export default OpenApp; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp };
 
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const OpenApp = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Open App - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Open App</h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Launch and access Zion Tech Group applications for seamless; service delivery.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; App launcher coming soon. We're building comprehensive application; access.; ></div> ></div> ></div> ></div> </>)}; export default OpenApp; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp };
@@ -26,6 +29,7 @@ const React from "react";"""; import { Helmet } from "react-helmet-async"; const
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const OpenApp = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Open App - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Open App</h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Launch and access Zion Tech Group applications for seamless; service delivery.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; App launcher coming soon. We're building comprehensive application; access.; ></div> ></div> ></div> ></div> </>)}; export default OpenApp; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp };
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const OpenApp = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Open App - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4">Open App</h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Launch and access Zion Tech Group applications for seamless; service delivery.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; App launcher coming soon. We're building comprehensive application; access.; ></div> ></div> ></div> ></div> </>)}; export default OpenApp; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp }; export { OpenApp };
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -45,3 +49,6 @@ import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; con
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

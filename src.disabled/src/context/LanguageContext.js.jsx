@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ createContext,useContext,useState } from 'react'; const LanguageProvider({ children }) {; const [language,setLanguage] = useState('en'); const t = (key) => {; return translations[language]?.[key] || key}; const isRTL = language === 'ar' || language === 'he'; return(<LanguageContext.Provider value = {; { language,setLanguage,t,; isRTL}}>; {children}; </LanguageContext.Provider>)}; export function useLanguage() {; const context = useContext(LanguageContext); if(!context) {; throw new Error('useLanguage must be used within a LanguageProvider')}; return context};
 =======
 =======
@@ -38,3 +39,9 @@ import _React,{ createContext,useContext,useState } from 'react'; const Language
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React,{ createContext,useContext,useState } from \'react\'; const LanguageProvider({ children }) {; const [language,setLanguage] = useState(\'en\'); const t = (key) => {; return translations[language]?.[key] || key}; const isRTL = language === \'ar\' || language === \'he\'; return (<LanguageContext&& LanguageContext.Provider value = { { language,setLanguage,t, isRTL}}>; {children}; </LanguageContext && LanguageContext.Provider>)}; export function useLanguage() {; const context = useContext(LanguageContext); if(!context) {; throw new Error(\'useLanguage must be used within a LanguageProvider\')}; return context};
+const React,{ createContext,useContext,useState } from "react"; const LanguageProvider({ children }) {; const [language,setLanguage] = useState("en"); const t = (key) => {; return translations[language]?.[key] | key}; const isRTL = language === "ar" | language === "he"; return (<LanguageContext&& LanguageContext.Provider value = { { language,setLanguage,t, isRTL}}>; {children}; </LanguageContext && LanguageContext.Provider>)}; export function useLanguage() {; const context = useContext(LanguageContext); if(!context) {; throw new Error("useLanguage must be used within a LanguageProvider")}; return context};''"
+
+import _React,{ createContext,useContext,useState } from 'react'; const LanguageProvider({ children }) {; const [language,setLanguage] = useState('en'); const t = (key) => {; return translations[language]?.[key] || key}; const isRTL = language === 'ar' || language === 'he'; return (<LanguageContext&& LanguageContext.Provider value = { { language,setLanguage,t, isRTL}}>; {children}; </LanguageContext && LanguageContext.Provider>)}; export function useLanguage() {; const context = useContext(LanguageContext); if(!context) {; throw new Error('useLanguage must be used within a LanguageProvider')}; return context};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

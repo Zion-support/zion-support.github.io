@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default {
   apps: [
@@ -20,10 +21,10 @@ export default {
 =======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-module.exports = {;
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+module.exports = {;
 module && module.exports = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   apps:[;
 <<<<<<< HEAD
 
@@ -32,21 +33,18 @@ module && module.exports = {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 module.exports = {apps:[;
 
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {;
 
       name:'error-fixer',;
       script:'automation/lint-error-fixer && fixer.cjs',;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 module.exports = {;
 module && module.exports = {;
   apps:[;
-
-
 
     {;
 
@@ -59,9 +57,12 @@ module.exports = {;
     {;
       name:'error-fixer',;
       script:'automation/lint-error-fixer.cjs',;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -70,6 +71,7 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       error_file:'./logs/error-fixer-error && error.log',;
@@ -85,10 +87,16 @@ module.exports = {;
       out_file:'./logs/error-fixer-out && out.log',;
       log_file:'./logs/error-fixer-combined && combined.log',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      error_file:'./logs/error-fixer-error && error.log',;
+      out_file:'./logs/error-fixer-out && out.log',;
+      log_file:'./logs/error-fixer-combined && combined.log',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       time:true;
     },;
     {;
       name:'intelligent-orchestrator',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
@@ -98,6 +106,9 @@ module.exports = {;
 =======
       script:'automation/intelligent-orchestrator && orchestrator.cjs',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      script:'automation/intelligent-orchestrator && orchestrator.cjs',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       args:'continuous',;
       instances:1,;
       autorestart:true,;
@@ -106,6 +117,7 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       error_file:'./logs/orchestrator-error && error.log',;
@@ -121,10 +133,16 @@ module.exports = {;
       out_file:'./logs/orchestrator-out && out.log',;
       log_file:'./logs/orchestrator-combined && combined.log',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      error_file:'./logs/orchestrator-error && error.log',;
+      out_file:'./logs/orchestrator-out && out.log',;
+      log_file:'./logs/orchestrator-combined && combined.log',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       time:true;
     },;
     {;
       name:'automation-dashboard',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       script:'automation/automation-dashboard && dashboard.cjs',;
@@ -134,6 +152,9 @@ module.exports = {;
 =======
       script:'automation/automation-dashboard && dashboard.cjs',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      script:'automation/automation-dashboard && dashboard.cjs',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       args:'start',;
       instances:1,;
       autorestart:true,;
@@ -141,8 +162,11 @@ module.exports = {;
       max_memory_restart:'1G',;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       env:{;
         NODE_ENV:'production';
@@ -152,6 +176,7 @@ module.exports = {;
       error_file:'./logs/dashboard-error && error.log',;
       out_file:'./logs/dashboard-out && out.log',;
       log_file:'./logs/dashboard-combined && combined.log',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       env:{;
@@ -164,10 +189,13 @@ module.exports = {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       time:true;
     },;
     {;
       name:'code-quality-monitor',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       script:'automation/code-quality-monitor && monitor.cjs',;
@@ -177,6 +205,9 @@ module.exports = {;
 =======
       script:'automation/code-quality-monitor && monitor.cjs',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      script:'automation/code-quality-monitor && monitor.cjs',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -184,6 +215,7 @@ module.exports = {;
       env:{;
         NODE_ENV:'production';
       },;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       error_file:'./logs/code-quality-error && error.log',;
@@ -199,10 +231,16 @@ module.exports = {;
       out_file:'./logs/code-quality-out && out.log',;
       log_file:'./logs/code-quality-combined && combined.log',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      error_file:'./logs/code-quality-error && error.log',;
+      out_file:'./logs/code-quality-out && out.log',;
+      log_file:'./logs/code-quality-combined && combined.log',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       time:true;
     },;
     {;
       name:'performance-optimizer',;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       script:'automation/performance-optimizer && optimizer.cjs',;
@@ -212,6 +250,9 @@ module.exports = {;
 =======
       script:'automation/performance-optimizer && optimizer.cjs',;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      script:'automation/performance-optimizer && optimizer.cjs',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       instances:1,;
       autorestart:true,;
       watch:false,;
@@ -221,12 +262,16 @@ module.exports = {;
       },;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       error_file:'./logs/performance-error && error.log',;
       out_file:'./logs/performance-out && out.log',;
       log_file:'./logs/performance-combined && combined.log',;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       error_file:'./logs/performance-error.log',;
@@ -234,6 +279,8 @@ module.exports = {;
       log_file:'./logs/performance-combined.log',;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 module.exports = {;
   apps:[;
 module.exports = {apps:[;
@@ -311,16 +358,20 @@ module.exports = {apps:[;
       out_file:'./logs/performance-out.log';
       log_file:'./logs/performance-combined.log';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       time:true;
     }
   ];
 };      env: {
         NODE_ENV: 'production'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -330,6 +381,8 @@ module.exports = {apps:[;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       },
       error_file: './logs/performance-error && error.log',
@@ -337,6 +390,7 @@ module.exports = {apps:[;
       log_file: './logs/performance-combined && combined.log',
 
       time: true
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 module.exports = {
@@ -350,6 +404,8 @@ module.exports = {
       NODE_ENV: "production"
       PORT: 3000
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
     env_production: {
       NODE_ENV: "production"
@@ -483,6 +539,7 @@ export default {
     {
 
       name: 'bolt-zion-app',
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       name: 'bolt - zion - app',
@@ -829,6 +886,8 @@ module.exports = {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 module && module.exports = {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   apps: [{
 
     },
@@ -840,6 +899,7 @@ module && module.exports = {
 
     time: true
 
+<<<<<<< HEAD
 
 
 
@@ -855,21 +915,20 @@ module && module.exports = {
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 
 }
 
-=======
-
->>>>>>> origin/automation-improvements-final
-=======
 }
+<<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       },
       time: true
     }
@@ -893,8 +952,6 @@ origin/main
 origin/automation-improvements-final
 },
 }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default {
   apps: [
     {
@@ -1189,12 +1246,6 @@ module.exports = {;
     }
   ];
 },;
-<<<<<<< HEAD
-
-
-
-
-
 
 }
 
@@ -1387,17 +1438,18 @@ module && module.exports = {
     log_file: "./logs/combined && combined.log",
 };
 
-
 }
-
 
     time: true
   }]
 };
 }
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     name: "ziontechgroup - site",
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
     script: "npm",
@@ -1440,6 +1492,7 @@ module && module.exports = {
     time: true;
   }];
 }
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1471,3 +1524,6 @@ module && module.exports = {
 };
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

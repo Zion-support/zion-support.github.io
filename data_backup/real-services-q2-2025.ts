@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -49,6 +50,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface RealServiceQ22025 {
   "id": string;
   name: string;
@@ -86,6 +89,7 @@ export const "realServicesQ22025": RealServiceQ22025[] = [{
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -106,3 +110,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+export interface RealServiceQ22025 { id: string; name: string; tagline: string; price: string; features: string[]; category?: string} export const realServicesQ22025: RealServiceQ22025[] = [ { id:,q2-service-1',name: 'Q2 Service 1,tagline:,Second quarter service offering',price: '$299,features: [,Core features','Standard performance','Basic integration'],category: 'Q2 Services },{ id:,q2-service-2',name: 'Q2 Service 2,tagline:,Advanced Q2 solutions',price: '$499,features: [,Advanced features','Enhanced performance','Full integration'],category: 'Q2 Services } ];
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

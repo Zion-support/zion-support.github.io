@@ -5,6 +5,7 @@
 import React,{ createContext,useContext } from \"react\"
 const React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}""
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -29,3 +30,6 @@ import _React,{ createContext,useContext } from "react" const defaultConfig = {}
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React,{ createContext,useContext } from "react" const defaultConfig = {};const defaultConfig = {}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

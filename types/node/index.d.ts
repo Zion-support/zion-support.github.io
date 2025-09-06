@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 declare const __dirname: string,
 declare const __filename: string,
 
@@ -10,18 +8,12 @@ export {}
 declare const __dirname: string,;
 declare const __filename: string,;
 
-<<<<<<< HEAD
-=======
-=======
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type;
-interface Buffer {}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 declare const __dirname: string;
 declare const __filename: string;
 export {}
 declare const __dirname: string,;
 declare const __filename: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -38,6 +30,8 @@ declare const __filename: string,;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 interface Buffer {  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -45,6 +39,7 @@ interface Buffer {  } catch (error) {
 }
 declare const __dirname: string;
 declare const __filename: string;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -69,3 +64,10 @@ export {}
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+export {};
+// eslint - disable - next - line @typescript - eslint / no - empty - object - type;
+interface Buffer {}
+export {}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

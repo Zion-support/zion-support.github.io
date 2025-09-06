@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 import type { NextApiRequest, NextApiResponse } from './next';
 import { PROVIDERS  } from '../../../lib / integrations / registry';
@@ -15,6 +18,7 @@ function handler() {
 }
   res.status (200).json ({ providers: PROVIDERS });
 }
+<<<<<<< HEAD
 =======
 
 =======
@@ -22,6 +26,8 @@ function handler() {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PROVIDERS } from '[^']*';
@@ -40,9 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ providers: PROVIDERS });
 }
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -62,7 +66,11 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

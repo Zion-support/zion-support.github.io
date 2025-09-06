@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -6,6 +7,8 @@
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,12 +38,11 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface PortfolioBuilderProps {
   // Add props here as needed
-<<<<<<< HEAD
-
 
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -66,6 +68,8 @@ interface PortfolioBuilderProps {
 >>>>>>>> main:src.disabled/src/pages.disabled/PortfolioBuilder.jsx
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
   return (
     <div>
@@ -74,17 +78,19 @@ export default function PortfolioBuilder({ }: PortfolioBuilderProps) {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
 }
 :src.disabled/src/pages.disabled/PortfolioBuilder.jsx
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/src/pages.disabled/PortfolioBuilder.jsx
 =======
@@ -161,3 +167,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>>> main:src.disabled/src/pages.disabled/PortfolioBuilder.jsx
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

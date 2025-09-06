@@ -17,6 +17,7 @@ export { API_BASE_URL };
 export { API_BASE_URL };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth");,} return await response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -50,3 +51,6 @@ export class authService {}} ; async get() {}; const response = await fetch("${t
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+export class authService {}} ; async get() {}; const response = await fetch("${this.baseUrl}/auth");,} return await response.json();,} } catch (error) {}} throw error;,} ; const authService = new AuthService(); export default authService; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL }; ; export { API_BASE_URL };
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

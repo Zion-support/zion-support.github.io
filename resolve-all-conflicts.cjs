@@ -90,8 +90,7 @@ function resolveMergeConflicts(filePath) {
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
     
     // Check if file has merge conflicts
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {
-      console.log(`✅ No conflicts in: ${filePath}`);
+    if (!content.includes('      console.log(`✅ No conflicts in: ${filePath}`);
       return true;
     }
 
@@ -103,12 +102,9 @@ function resolveMergeConflicts(filePath) {
     // For specific file types, use different strategies
     if (filePath.includes('package.json') || filePath.includes('package-lock.json')) {
       // For package files, prefer the newer version
-      resolvedContent = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-        const parts = match.split('=======');
+      resolvedContent = content.replace(/        const parts = match.split('');
         if (parts.length === 2) {
-          const headPart = parts[0].replace('<<<<<<< HEAD', '').trim();
-          const incomingPart = parts[1].replace(/>>>>>>> [^\n]+/, '').trim();
-          
+          const headPart = parts[0].replace('          const incomingPart = parts[1].replace(/          
           // For package.json, prefer the version with more dependencies
           if (filePath.includes('package.json')) {
             const headDeps = (headPart.match(/"dependencies"/g) || []).length;
@@ -122,12 +118,9 @@ function resolveMergeConflicts(filePath) {
       });
     } else if (filePath.includes('.tsx') || filePath.includes('.ts') || filePath.includes('.jsx') || filePath.includes('.js')) {
       // For code files, prefer our enhanced version
-      resolvedContent = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-        const parts = match.split('=======');
+      resolvedContent = content.replace(/        const parts = match.split('');
         if (parts.length === 2) {
-          const headPart = parts[0].replace('<<<<<<< HEAD', '').trim();
-          const incomingPart = parts[1].replace(/>>>>>>> [^\n]+/, '').trim();
-          
+          const headPart = parts[0].replace('          const incomingPart = parts[1].replace(/          
           // Prefer the version with more content (our enhanced version)
           return headPart.length >= incomingPart.length ? headPart : incomingPart;
         }
@@ -135,21 +128,16 @@ function resolveMergeConflicts(filePath) {
       });
     } else {
       // For other files, use a simple strategy
-      resolvedContent = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, (match) => {
-        const parts = match.split('=======');
+      resolvedContent = content.replace(/        const parts = match.split('');
         if (parts.length === 2) {
-          const headPart = parts[0].replace('<<<<<<< HEAD', '').trim();
-          return headPart;
+          const headPart = parts[0].replace('          return headPart;
         }
         return match;
       });
     }
 
     // Clean up any remaining conflict markers
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-    resolvedContent = resolvedContent.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
-    resolvedContent = resolvedContent.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
-
+    resolvedContent = resolvedContent.replace(/    resolvedContent = resolvedContent.replace(/    resolvedContent = resolvedContent.replace(/[\s\S]*?
     // Write the resolved content
     fs.writeFileSync(filePath, resolvedContent, 'utf8');
     console.log(`✅ Resolved conflicts in: ${filePath}`);

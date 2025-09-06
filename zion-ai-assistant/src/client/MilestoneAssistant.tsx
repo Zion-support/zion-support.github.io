@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React, { useMemo, useState } from './react';,
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared / types",
 export interface MilestoneAssistantProps {
@@ -15,6 +18,7 @@ export interface MilestoneAssistantProps {
   endDateIso: string,
   project_type: ProjectType,
   on_accept?: (milestones: SuggestedMilestoneItem[], auto_add: boolean) => void;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -75,6 +79,8 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React, { useMemo, useState } from "react",;
 import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",;
 export interface MilestoneAssistantProps {;
@@ -85,8 +91,11 @@ export interface MilestoneAssistantProps {;
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 }
 export /**
@@ -155,6 +164,7 @@ function accept() {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 ;
@@ -210,11 +220,14 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   return (;
     <div className="milestone-assistant">;
       <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>;
         <button onClick={generate} disabled={loading || isDisabled}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -231,6 +244,9 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           {loading ? "Generating..." : "💡 Generate AI Milestones"}
         </button>;
         <label style={{ display: "flex", gap: 6, align_items: "center" }}>;
@@ -241,13 +257,17 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       {error && <div style={{ color: "#b00", marginTop: 8 }}>{error}</div>}
 
 ;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -268,6 +288,8 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       <div style={{ marginTop: 12 }}>;
         {items.length === 0 && !loading && (;
           <div style={{ color: "#666" }}>No suggestions yet. Click "Generate" above.</div>;
@@ -277,12 +299,16 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       {error && <div style={{ color: "#b00", margin_top: 8 }}>{error}</div>}
       <div style={{ margin_top: 12 }}>;
         {items.length === 0 && !loading && (
@@ -291,6 +317,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
           <div key={idx} className="milestone - item" style={{ border: "1px solid #ddd", border_radius: 8, margin_bottom: 8 }}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -299,6 +326,9 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             <div;
               className="milestone - summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justify_content: "space - between", align_items: "center" }}
@@ -307,12 +337,16 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
             <div;
               className="milestone-summary";
               style={{ padding: 12, cursor: "pointer", display: "flex", justifyContent: "space-between", alignItems: "center" }}
@@ -321,16 +355,20 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                 <span style={{ fontWeight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
 
-
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -339,8 +377,9 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", borderRadius: 4, fontSize: 12 }}>;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
               <div style={{ display: "flex", gap: 8, align_items: "center" }}>;
                 <span style={{ font_weight: 600 }}>{item.title || `Milestone ${idx + 1}`}</span>;
                 <span style={{ background: "#eef7ff", color: "#1677ff", padding: "2px 6px", border_radius: 4, font_size: 12 }}>;
@@ -369,6 +408,7 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {;
                   <textarea;
                     value={item.description}
                     on_change={(e) => update_item (idx, { description: e.target.value })}
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -515,10 +555,13 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                     rows={3}
                     placeholder="Description";
                   />;
                 </div>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -527,6 +570,8 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label > Suggested due date</label>;
                   <input;
@@ -537,6 +582,7 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
                 </div>;
                 <div style={{ display: "grid", gap: 6 }}>;
                   <label > Estimated effort (hours)</label>;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -556,6 +602,8 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                   <input;
                     type="number";
                     min={1}
@@ -563,18 +611,19 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
                     on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-                    on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
+                    on_change={(e) => update_item (idx, { estimatedEffortHours: Math.max (1, parse_int (e.target.value || "0", 10)) })}
 
                     onChange={(e) => updateItem(idx, { estimatedEffortHours: Math.max(1, parseInt(e.target.value || "0", 10)) })}
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
@@ -585,6 +634,8 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                   />;
                 </div>;
                 <div style={{ display: "flex", justify_content: "space - between", margin_top: 8 }}>;
@@ -594,17 +645,18 @@ export function MilestoneAssistant(props:MilestoneAssistantProps) {;
               </div>)}
           </div>))}
       </div>;
-<<<<<<< HEAD
     </div>);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
-
 
 ;
 
-
 export default MilestoneAssistant;
+<<<<<<< HEAD
 =======
                     onChange={(e) => updateItem(idx, { estimatedEffortHours:Math.max(1, parseInt(e.target.value || "0", 10)) })}
                   />;
@@ -783,3 +835,6 @@ export default MilestoneAssistant;
 =======
 export default MilestoneAssistant;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default MilestoneAssistant;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

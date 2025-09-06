@@ -5,8 +5,6 @@ interface SaveTalentButtonProps {
   talentId: string;
   onSave: (talentId: string) => void;
   isSaved: boolean;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
@@ -14,19 +12,13 @@ interface SaveTalentButtonProps {
   talentId: string;
   onSave: (talentId: string) => void;
   isSaved: boolean;
->>>>>>> main
 }
 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 export function SaveTalentButton({
   talentId,
   onSave,
   isSaved,
 }: SaveTalentButtonProps) {
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React from 'react';
 import {Button} from "@/components/ui/button";
 import {Star} from "lucide-react";
@@ -61,12 +53,6 @@ export function SaveTalentButton({
       {is_saved ? "Saved" : "Save"}
     </Button>);
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
       size="sm"
       className={
         isSaved

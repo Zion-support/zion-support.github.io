@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -14,6 +15,8 @@ export function buildPrintableHtml(project: BookProject): string {;
     .join('\n'),;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { BookProject } from '../book/bookTypes';
 export function buildPrintableHtml(project: BookProject): string {const { meta, chapters, visuals } = project;
 export function buildPrintableHtml(project: BookProject): string {;
@@ -21,6 +24,7 @@ export function buildPrintableHtml(project: BookProject): string {;
   const quotesHtml = visuals.quoteCallouts;
     .map((q) => `<blockquote class="quote"><p>${escapeHtml(q.text)}</p>${q.attribution ? `<cite>${escapeHtml(q.attribution)}</cite>` : ''}</blockquote>`);
     .join('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -32,6 +36,8 @@ export function buildPrintableHtml(project: BookProject): string {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const chapterHtml = chapters;
     .map(;
 import type { BookProject } from '../book / book_types',
@@ -51,17 +57,10 @@ export function buildPrintableHtml (project: BookProject): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
-    .join('\n\n'),;
-  const visualsHtml = [;
-    ...visuals.timelineImages,;
-    ...visuals.daoVoteCharts,;
-    ...visuals.uiScreens];
-    .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
-    .join('\n'),;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     .join('\n\n');
   const visualsHtml = [;
     ...visuals.timelineImages;
@@ -69,6 +68,7 @@ export function buildPrintableHtml (project: BookProject): string {
     ...visuals.uiScreens];
     .map((src) => `<figure class="visual"><img src="${src}" /></figure>`) // base64 ok;
     .join('\n');
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -79,6 +79,8 @@ export function buildPrintableHtml (project: BookProject): string {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
 =======
@@ -93,6 +95,7 @@ export function buildPrintableHtml (project: BookProject): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   const barcode = meta.isbn ? `<img class="barcode" src="/api/barcode/isbn?code=${encodeURIComponent(meta.isbn)}" />` : '';
@@ -102,6 +105,8 @@ export function buildPrintableHtml (project: BookProject): string {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return `<!doctype html>;
 <html>;
 <head>;
@@ -112,6 +117,7 @@ export function buildPrintableHtml (project: BookProject): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -121,6 +127,8 @@ export function buildPrintableHtml (project: BookProject): string {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 function escapeHtml(s: string): string {;
   return s;
@@ -128,6 +136,7 @@ function escapeHtml(s: string): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -136,6 +145,8 @@ function escapeHtml(s: string): string {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   @page { margin: 1in   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -210,6 +221,7 @@ function escapeHtml(s: string): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   @page { margin: 1in }
   body { font-family: ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif, color: #111 }
@@ -230,6 +242,8 @@ function escapeHtml(s: string): string {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 </style>;
 </head>;
 <body>;
@@ -237,14 +251,18 @@ function escapeHtml(s: string): string {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     <div>${escape_html (meta.publisher || '')}</div>;
     <h1>${escape_html (meta.title)}</h1>;
     <h3>${escape_html (meta.subtitle || '')}</h3>;
     <div class="by">By ${escape_html (meta.author)}</div>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     <div>${escapeHtml(meta.publisher |'')}</div>;
@@ -256,6 +274,8 @@ function escapeHtml(s: string): string {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     ${barcode}
   </section>;
   ${quotes_html}
@@ -264,6 +284,7 @@ function escapeHtml(s: string): string {;
 </body>;
 </html>`;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -357,6 +378,9 @@ function escapeHtml(s: string): string {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     <div>${escapeHtml(meta.publisher || '')}</div>;
     <h1>${escapeHtml(meta.title)}</h1>;
     <h3>${escapeHtml(meta.subtitle || '')}</h3>;
@@ -394,6 +418,7 @@ function paragraphize(text: string): string {;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -407,11 +432,15 @@ function paragraphize(text: string): string {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     .replace(/&/g, '&amp,');
     .replace(/</g, '<');
     .replace(/>/g, '>');
     .replace(/"/g, '"');
     .replace(/'/g, '&#039,');
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -421,6 +450,9 @@ function paragraphize(text: string): string {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 function paragraphize (text: string): string {
   // Check condition
 if (return '') {
@@ -440,10 +472,13 @@ function escape_html (string: string): string {
     .replace (/'/g, '&#039, ');
 }
 
+<<<<<<< HEAD
 =======
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -451,11 +486,14 @@ function escape_html (string: string): string {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
@@ -467,3 +505,6 @@ function escape_html (string: string): string {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

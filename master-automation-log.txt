@@ -78,6 +78,7 @@
 [2025-09-05T14:29:59.663Z] ❌ Failed: Performance Monitor - Command failed: node scripts/performance-monitor-enhanced.cjs
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 =======
 =======
@@ -87,23 +88,11 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 /workspace/scripts/performance-monitor-enhanced.cjs:1
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
 /workspace/scripts/performance-monitor-enhanced.cjs:1
-=======
->>>>>>> origin/main
->>>>>>> cursor/integrate-build-improve-and-re-verify-8b20
-=======
 /workspace/scripts/performance-monitor-enhanced.cjs:1
->>>>>>> origin/main
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 ^^
 
@@ -297,16 +286,9 @@ Node.js v22.16.0
 [2025-09-05T14:30:32.816Z] Running ESLint...
 [2025-09-05T14:30:33.348Z] ⚠️ ESLint found issues, but continuing...
 [2025-09-05T14:30:33.348Z] Running TypeScript check...
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
-=======
->>>>>>> origin/main
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 /workspace/scripts/performance-monitor-enhanced.cjs:1
+<<<<<<< HEAD
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 <<<<<<< HEAD
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -328,3 +310,6 @@ Node.js v22.16.0
 /workspace/scripts/performance-monitor-enhanced.cjs:1
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+/workspace/scripts/performance-monitor-enhanced.cjs:1
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

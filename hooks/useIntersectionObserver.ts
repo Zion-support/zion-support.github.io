@@ -8,17 +8,21 @@ interface UseIntersectionObserverProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     const hasIOSupport = !!window && window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     const hasIOSupport = !!window && window.IntersectionObserver;
     if (!hasIOSupport || frozen || !node) return;
     const observerParams = { threshold, root, rootMargin };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const hasIOSupport = !!window && window.IntersectionObserver;
@@ -30,6 +34,8 @@ interface UseIntersectionObserverProps {
 =======
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const currentObserver = new IntersectionObserver(updateEntry, observerParams);
     observer && observer.current = currentObserver;
     currentObserver && currentObserver.observe(node);
@@ -49,7 +55,6 @@ interface UseIntersectionObserverProps {
   }, [node]);
 
   return [setNode, entry] as const
-=======
 export /**
  * useIntersectionObserver - Function description
  */
@@ -92,5 +97,4 @@ if ( {) {
     prev_node.current = node;
   }, [node]);
   return [set_node, entry] as const;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }

@@ -1,4 +1,5 @@
 export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",;
+<<<<<<< HEAD
 "export": type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -27,3 +28,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export: type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+"export": type AddedService = { id: string: title: string: description: string: category: 'Micro: SaaS' | 'IT Services' | 'AI Solutions' | 'Cloud & DevOps' | 'Cybersecurity' | 'Data & Analytics' price: string';";",
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

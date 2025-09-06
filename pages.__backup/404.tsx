@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 =======
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
@@ -40,6 +41,8 @@ import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const 
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
@@ -47,6 +50,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 import type { NextPage } from; \'next\'; import Head from; \'next/head\'; const \"Custom404\": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name=\'description\' content=\'404 page\' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404
+<<<<<<< HEAD
 import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
 <<<<<<< HEAD
 
@@ -76,3 +80,6 @@ import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Cus
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import type { NextPage } from; 'next'; import Head from; 'next/head'; const "Custom404": NextPage = () => { return ( <div> <Head> <title>404 - Zion Tech Solutions</title> <meta name='description' content='404 page' /> </Head> <main> <h1>404</h1> <p>This page is under construction.</p> </main> </div> )} export default Custom404;''
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

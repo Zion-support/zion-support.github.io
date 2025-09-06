@@ -31,7 +31,7 @@ function resolveMergeConflicts(filePath) {
 // Function to resolve merge conflicts by choosing the newer version (after =======)
 function resolveConflicts(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
+    const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
     if (!content.includes('<<<<<<<') || !content.includes('=======') || !content.includes('>>>>>>>')) {

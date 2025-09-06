@@ -50,6 +50,7 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 },
 }
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); setMatches([])} finally {; setIsLoading(false);,} },[jobId]); const triggerAIMatching = async () => {; setIsProcessing(true); try {; const response = await supabase && supabase.functions.invoke('job-talent-matcher',{; body: { jobId },;,}); ; if(response && response.error) throw new Error(response && response.error.message); ; toast({; title: "AI Matching Complete",; description: `Found ${response && response.data.matches || 0} potential talent matches for this job.`,;,}); ; await fetchMatches();,} catch(error) {; console && console.error("Error triggering AI matching:",error); toast({; title: "Matching Failed",; description: "Could not process talent matching && matching.Please try again later.",; variant: "destructive",;,});,} finally {; setIsProcessing(false);,} }; useEffect(() => {},[]); if(jobId) { fetchMatches();,} },[jobId,fetchMatches]); return {; matches,; isLoading,; isProcessing,; triggerAIMatching,; refetch: 'fetchMatches };,}
+<<<<<<< HEAD
     "refetch": fetchMatches // Added refetch}}
 <<<<<<< HEAD
 
@@ -81,3 +82,6 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+    "refetch": fetchMatches // Added refetch}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

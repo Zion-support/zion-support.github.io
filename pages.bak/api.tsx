@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 module.exports = default function APIPage() { return null}
 >>>>>>> main
@@ -29,12 +30,12 @@ interface ApiProps {
 module.exports = default function APIPage() { return null}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 module.exports = default function APIPage() { return null}
 import React from 'react';
 interface ApiProps {
   // Add props here as needed
-
-
 
 module.exports = default function APIPage() { return null}
 module.exports = default function APIPage() { return null}
@@ -47,12 +48,12 @@ ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
 module.exports = default function APIPage() { return null}
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import React from 'react';
 interface ApiProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 
@@ -97,12 +98,15 @@ interface ApiProps {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default function Api({ }: ApiProps) {
   return (
     <div>
       <h1>Api</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -172,3 +176,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

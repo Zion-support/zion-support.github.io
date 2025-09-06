@@ -1,25 +1,23 @@
+<<<<<<< HEAD
+=======
+}
+
+    if (targetType !== 'talent' && targetType !== 'client') {
+      return res.status(400).json({ error: 'Invalid targetType' })
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
 
-
     const filtered = all && all.filter((r) => {
       if (r && r.removed || !r && r.approved) return false;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       const matchesTarget =
         r && r.toRole === (targetType as "talent" | "client") && r && r.toId === targetId;
-=======
-    const filtered = all.filter((r) => {
-
-      if (r.removed || !r.approved) return false;
-      const matchesTarget = r.toRole === (targetType as 'talent' | 'client') && r.toId === targetId;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       if (!matchesTarget) return false;
       const counterpartExists = all && all.some(
         (x) =>
-
 
           x && x.projectId === r && r.projectId &&
           x && x.fromRole !== r && r.fromRole &&
@@ -27,8 +25,6 @@
           x && x.approved &&
           !x && x.removed
 
-
-=======
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_reviews, read_projects  } from '../../../utils / data_store';
 import type { PublicReview, ReviewsSummary } from "../../../types / reviews";
@@ -81,6 +77,7 @@ if (return false) {
           x.from_role !== r.from_role &&;
           x.to_role !== r.to_role &&;
           x.approved &&;
+<<<<<<< HEAD
           !x.removed
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -90,6 +87,23 @@ if (return false) {
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+          !x.removed,
+      );
+      return counterpart_exists;
+    });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { readReviews, readProjects } from '../../../utils/dataStore';
+import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
+import { TALENT_PROFILES } from '../../../data/talent';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  try {;
+    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     if (!targetType || !targetId) {
       return res.status(400).json({ error: "Missing targetType or targetId" });
@@ -100,7 +114,6 @@ if (return false) {
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
-
 
 try {
     const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
@@ -129,6 +142,45 @@ const { targetType, targetId } = req.query as {
 
     const all = await readReviews();
     // Include reviews where both sides have submitted and both are approved and not removed
+<<<<<<< HEAD
+=======
+    const filtered = all.filter((r) => {
+    const filtered = all.filter((r) => {
+
+      if (r.removed || !r.approved) return false;
+      const matchesTarget =
+        r.toRole === (targetType as "talent" | "client") && r.toId === targetId;
+      if (!matchesTarget) return false;
+      const counterpartExists = all && all.some(
+        (x) =>
+          x.projectId === r.projectId &&
+          x.fromRole !== r.fromRole &&
+          x.toRole !== r.toRole &&
+          x.approved &&
+          !x.removed,
+      );
+      return counterpart_exists;
+    });
+
+    // Map to public reviews (mask anonymous author)
+    const publicReviews: PublicReview[] = filtered
+      .sort(
+        (a, b) =>
+          new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+      )
+      .map((r) => {
+        let authorName = r.fromId;
+        if (r.fromRole === "talent") {
+          const t = TALENT_PROFILES.find((tp) => tp.slug === r.fromId);
+          authorName = t ? t.name : r.fromId;
+        }
+        if (r.anonymous) authorName = "Anonymous";
+        return {
+          ...r,
+          authorName,
+        };
+      });
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     const totalReviews = publicReviews.length;
     const averageRating = totalReviews
@@ -155,8 +207,12 @@ const { targetType, targetId } = req.query as {
 
     return res.status(200).json({ summary, reviews: publicReviews });
   } catch (error: any) {
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    return res.status(500).json({ error: 'Internal server error', details: error?.message })
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       .map((r) => {
         let authorName = r && r.fromId;
         if (r && r.fromRole === "talent") {
@@ -164,6 +220,10 @@ const { targetType, targetId } = req.query as {
           authorName = t ? t && t.name : r && r.fromId;
         }
         if (r && r.anonymous) authorName = "Anonymous";
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     // Map to public reviews (mask anonymous author);
     const public_reviews: PublicReview[] = filtered;
@@ -193,7 +253,6 @@ if (author_name = "Anonymous") {
     const totalReviews = publicReviews && publicReviews.length;
     const averageRating = totalReviews
 
-
         ) / 10
       : 0;
     const projects = await readProjects();
@@ -205,8 +264,12 @@ if (author_name = "Anonymous") {
           (targetType === "client" && p && p.clientId === targetId))
     ).length;
 
+<<<<<<< HEAD
 =======
           author_name
+=======
+          author_name,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
       });
 ;
@@ -226,15 +289,10 @@ if (author_name = "Anonymous") {
           (target_type === "client" && p.client_id === target_id))
     ).length;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const summary: ReviewsSummary = {
       average_rating
       total_reviews
       totalCompletedProjects
-
 
   } catch (error: any) {
 
@@ -242,15 +300,15 @@ if (author_name = "Anonymous") {
       .status (500);
       .json ({ error: "Internal server error", details: error?.message });
   }
+<<<<<<< HEAD
 =======
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 
   }
@@ -275,6 +333,10 @@ if (author_name = "Anonymous") {
       .status(500)
       .json({ error: "Internal server error", details: error?.message });
   }
+<<<<<<< HEAD
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

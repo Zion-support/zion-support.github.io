@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const q = (req.query.q as string) || '';
+=======
+const q = (req.query.q as string) || '';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { AccessLevel } from "../../utils/search/filter";
@@ -8,7 +12,6 @@ import { parseQueryToFilters } from "../../utils/search/parser";
 import { searchAll, suggestDidYouMean } from "../../utils/search/filter";
 
   try {
-
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -56,6 +59,7 @@ function handler() {
       "public") as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       ok: true
@@ -94,14 +98,44 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+    const keywords = Array.from(
+      new Set([...(parsed.skills || []), ...(parsed.keywords || [])]),
+    );
+    const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
+
+    res.status(200).json({
+      ok: true,
+      query: q,
+      parsed,
+      keywords,
+      didYouMean,
+      counts: {
+
+      },
+      results
+    });
+
+  } catch (e: any) {
+
+  }
+}
+    res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
+  }
+}
+
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
 
-
   }
 }
+<<<<<<< HEAD
 =======
   } catch (error) {
     console.error("Error:", error);
@@ -115,3 +149,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    res.status(500).json({ ok: false, error: e?.message || "Search failed" });
+  }
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

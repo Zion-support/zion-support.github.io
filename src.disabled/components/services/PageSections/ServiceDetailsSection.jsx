@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {\'';\''\"";
 "import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {"";"""";"""
@@ -26,3 +27,8 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {\'';\''\"";
+"import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {"";"""";"""
+'import { Check,Clock,Users,Shield,Star,ArrowRight,ChevronDown,ChevronUp export const ServiceDetailsSection = ({ services = [] }) => {'';''"";""}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

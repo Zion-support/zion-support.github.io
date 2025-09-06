@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +11,8 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type ServiceVariant =;
   | 'default';
   | 'holographic';
@@ -226,8 +229,6 @@ origin/main
   | 'neural-futuristic',;
 ursor/integrate-build-improve-and-re-verify-8f7d
 ursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 module.exports = type ServiceVariant = | "default" | "holographic" | "quantum" | "cyberpunk" | "neural" | "quantum-holographic" | "quantum-advanced" | "holographic-advanced" | "neural-quantum" | "quantum-cyberpunk" | "holographic-neural" | "quantum-holographic-advanced" | "quantum-matrix" | "neural-cyberpunk" | "holographic-quantum" | "quantum-neural-advanced" | "cyberpunk-holographic" | "quantum-space" | "ai-futuristic" | "quantum-entanglement" | "holographic-matrix" | "neural-quantum-cyberpunk" | "quantum-iot" | "quantum-logistics" | "quantum-financial" | "quantum-neural" | "neural-quantum-cyberpunk" | "quantum-energy" | "quantum-futuristic" | "cloud-futuristic" | "devops-futuristic" | "security-futuristic" | "data-futuristic" | "mobility-futuristic" | "network-futuristic" | "backup-futuristic" | "itsm-futuristic" | "monitoring-futuristic" | "blockchain-futuristic" | "metaverse-futuristic" | "iot-futuristic" | "edge-futuristic" | "ar-futuristic" | "digital-twin-futuristic" | "5g-futuristic" | "biometric-futuristic" | "autonomous-futuristic" | "enterprise-futuristic" | "holographic-futuristic" | "biotech-futuristic" | "simulation-futuristic" | "micro-saas-futuristic" | "hr-futuristic" | "marketing-futuristic" | "legal-futuristic" | "customer-service-futuristic" | "project-management-futuristic" | "fintech" | "fintech-futuristic" | "defi-futuristic" | "quantum-bio-enterprise" | "quantum-materials-enterprise" | "supply-chain-futuristic" | "ai-content" | "ai-education" | "it-futuristic" | "ai-consciousness" | "healthcare-futuristic" | "cybersecurity" | "ai-revolutionary" | "quantum-revolutionary" | "ai-quantum-revolutionary" | "quantum-ai-revolutionary" | "quantum-space-revolutionary" | "quantum-iot-revolutionary" | "quantum-energy-revolutionary" | "quantum-logistics-revolutionary" | "quantum-ai-finance" | "ai-emotional" | "ai-multimodal" | "ai-autonomous" | "ai-creative" | "ai-healthcare" | "ai-prediction" | "neural-revolutionary" | "quantum-security" | "quantum-ai-interface" | "ai-autonomous-vehicles" | "space-futuristic" | "consulting-futuristic" | "api-futuristic" | "integration-futuristic" | "monitoring-futuristic" | "backup-futuristic" | "analytics-futuristic" | "emerging-tech" | "space-tech" | "autonomous-systems" | "quantum-futuristic";''"
 import React from 'react';
 interface ServicevariantsProps {
@@ -240,15 +241,12 @@ export default function Servicevariants({ }: ServicevariantsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-
-
-
 
 }
 }
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -262,6 +260,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type ServiceVariant =
   | 'default'
   | 'holographic'
@@ -372,6 +372,7 @@ export type ServiceVariant =
   | 'quantum - hologographic';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 | 'quantum - hologographic';
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -389,6 +390,8 @@ export type ServiceVariant =
 =======
   | 'quantum - hologographic';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   | 'quantum - advanced';
   | 'holographic - advanced';
   | 'neural - quantum';
@@ -487,6 +490,7 @@ export type ServiceVariant =
   | 'education - futuristic';
   | 'real - estate - futuristic';
   | 'industrial - futuristic';
+<<<<<<< HEAD
   | 'neural - futuristic';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -611,3 +615,6 @@ origin/automation-improvements-final
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  | 'neural - futuristic';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

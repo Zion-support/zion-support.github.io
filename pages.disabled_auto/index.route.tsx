@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 =======
@@ -24,6 +25,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }\"
 import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }"
 import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }\"
@@ -31,8 +34,8 @@ import _React from 'react' export default function Home() { return ( <main style
 ;
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
 import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }\"
+<<<<<<< HEAD
 import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 <<<<<<< HEAD
@@ -46,3 +49,6 @@ import _React from 'react' export default function Home() { return ( <main style
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup.com</p></main> ) }"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

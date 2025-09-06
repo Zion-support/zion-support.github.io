@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/main
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -17,6 +18,8 @@ const type { NextPage } from "next"; const Test: NextPage = () => {}}; export de
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
@@ -31,6 +34,7 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {}}; export default Test;
 const type { NextPage } from "next"; const Test: NextPage = () => {}}; export default Test;'"'"
 import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export default Test;""
+<<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -53,3 +57,6 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {}}; export
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

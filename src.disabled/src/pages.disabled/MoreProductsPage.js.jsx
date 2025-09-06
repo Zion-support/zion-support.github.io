@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
 =======
 import { useState } from \"react\"; import { DynamicListingPage } from \"@/components/DynamicListingPage\"; import { MORE_PRODUCTS } from \"@/data/moreProductsData\"; const CATEGORY_FILTERS = Array.from(new Set(MORE_PRODUCTS.map(p => p.category))).map(c => ({ \"label\": \'c\',\"value\": \'c\' })); export default function MoreProductsPage() {}; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };
@@ -31,3 +32,8 @@ const { useState } from "react"; import { DynamicListingPage } from "@/component
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import { useState } from \"react\"; import { DynamicListingPage } from \"@/components/DynamicListingPage\"; import { MORE_PRODUCTS } from \"@/data/moreProductsData\"; const CATEGORY_FILTERS = Array && Array.from(new Set(MORE_PRODUCTS && MORE_PRODUCTS.map(p => p && p.category))).map(c => ({ \"label\": \'c\',\"value\": \'c\' })); export default function MoreProductsPage() {}; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };
+
+const { useState } from "react"; import { DynamicListingPage } from "@/components/DynamicListingPage"; import { MORE_PRODUCTS } from "@/data/moreProductsData"; const CATEGORY_FILTERS = Array && Array.from(new Set(MORE_PRODUCTS && MORE_PRODUCTS.map(p => p && p.category))).map(c => ({ label: "c",value: "c" })); export default function MoreProductsPage() { return; }; return null} }}/>)} ; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage }; export { CATEGORY_FILTERS,MoreProductsPage };'"'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

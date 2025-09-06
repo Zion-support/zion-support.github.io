@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -22,12 +23,14 @@ const { defineConfig,devices } from "@playwright/test"; export default defineCon
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from 'react';
 ;
 interface Playwright.configProps {;
   // Add props here as needed
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -95,6 +98,8 @@ origin/cursor/fix-syntax-push-and-merge-to-main-ba45
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 };
 export default function Playwright.config({ }: Playwright.configProps) {;
   return (,
@@ -105,6 +110,7 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 };
 };
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -137,10 +143,14 @@ export default function Playwright.config({ }: Playwright.configProps) {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }}}
 }
 }}}
 }}}
+<<<<<<< HEAD
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -195,3 +205,6 @@ origin/main
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
@@ -18,6 +19,9 @@ import {
   Building,
   Rocket
 } from 'lucide-react';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const jobOpenings = [
   {
@@ -243,6 +247,7 @@ const values = [;
 
 export default function CareersPage() {
   return (
+<<<<<<< HEAD
     <MainLayout>
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -474,3 +479,13 @@ export default function CareersPage() {
     </MainLayout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Careers</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Careers;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

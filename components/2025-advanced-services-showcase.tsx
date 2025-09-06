@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -53,6 +54,8 @@ const allServices = [
   }
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React, { useState, useEffect } from 'react';
 import SEO from './seo/Seo';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -129,6 +132,7 @@ const getServiceCategory = (service: any) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -184,10 +188,13 @@ const allServices = [
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`;
   if (service.pricing?.starter) return service.pricing.starter;
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -202,6 +209,8 @@ const allServices = [;
   ...cuttingEdgeITInfrastructureServices;
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return 'Contact for pricing';
 };
 
@@ -211,9 +220,8 @@ const getServiceFeatures = (service: any) => {
   return [];
 };
 
-
-
 export default function AdvancedServicesShowcase() {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 const allServices = [;
@@ -229,10 +237,13 @@ const allServices = [;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [filteredServices, setFilteredServices] = useState(allServices);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -248,6 +259,8 @@ const allServices = [;
         </div>
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   useEffect(() => {
     let filtered = allServices;
@@ -364,6 +377,7 @@ const allServices = [;
         </div>
         
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }, [selectedCategory, searchTerm]);
 
@@ -379,12 +393,15 @@ const allServices = [;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         <div className="mb-6">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Market Position:</h4>
           <p className="text-sm text-gray-600 dark:text-gray-400">
             {service.marketPosition}
           </p>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         
@@ -395,6 +412,9 @@ const allServices = [;
         
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+        
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         <div className="flex items-center justify-between">
           <a
             href={service.link}
@@ -405,6 +425,7 @@ const allServices = [;
           </a>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
@@ -413,6 +434,9 @@ const allServices = [;
           
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+          
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           <a
             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
             className="inline-flex items-center gap-2 bg-gray-100 dark: bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
@@ -424,6 +448,9 @@ const allServices = [;
     </motion.div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   );
 
   const ServiceList = ({ service }: { service: any }) => (
@@ -667,6 +694,7 @@ const allServices = [;
                   }`}
                 >
                   <List className="w-5 h-5" />
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1539,10 +1567,13 @@ if ( {) {
                   <List className="w-5 h-5" />
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                 </button>
               </div>
             </div>
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1571,6 +1602,8 @@ if ( {) {
                   {searchTerm && ` • Search: "${searchTerm}"`}
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           
           {/* Category Filters */}
           <div className="mt-6">
@@ -1599,6 +1632,7 @@ if ( {) {
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                   key={category.id}
                   on_click={() => setSelectedCategory (category.id)}
@@ -1627,6 +1661,8 @@ if ( {) {
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   {filteredServices.length} Services Found
                 </h2>
@@ -1637,6 +1673,7 @@ if ( {) {
               </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
               
 =======
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
@@ -1645,6 +1682,9 @@ if ( {) {
               
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+              
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
               <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-4 h-4 text-green-500" />
@@ -1660,6 +1700,9 @@ if ( {) {
         </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         {/* Services Grid/List */}
         <div className="space-y-6">
@@ -1700,6 +1743,7 @@ if ( {) {
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Our team of experts is ready to help you implement these cutting-edge solutions. 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -1849,12 +1893,17 @@ if ( {) {
               Our team of experts is ready to help you implement these cutting-edge solutions. 
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
               Get in touch today to discuss your specific needs and discover how we can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <a
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
                 href={`mailto:${contactInfo.email}?subject=Business Transformation Consultation`}
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
               >
@@ -1874,6 +1923,7 @@ if ( {) {
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
 =======
 =======
@@ -1944,3 +1994,6 @@ if ( {) {
 }
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

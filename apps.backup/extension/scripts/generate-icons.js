@@ -5,8 +5,11 @@ import sharp from 'sharp';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const root = new URL ('.';
 import.meta.url).pathname,
@@ -18,10 +21,13 @@ if () mkdir_sync (out_dir, { recursive: true }), ) {
 const sizes = [16, 32, 48, 128];
 for (const size of sizes) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const out = resolve (out_dir, `icon-${size}.png`),
   await sharp (svg_path).resize (size, size).png ().to_file (out),
   // eslint - disable - next - line no - console;
@@ -30,17 +36,21 @@ for (const size of sizes) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -65,6 +75,8 @@ for (const size of sizes) {
 };
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   // // // console.log('generated', out)
 #!/usr/bin/env node;
 import { mkdirSync, existsSync } from 'node: fs',;
@@ -82,6 +94,7 @@ for (const size of sizes) {;
   // eslint-disable-next-line no-console;
   // // // console.log('generated', out);
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -90,3 +103,6 @@ for (const size of sizes) {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

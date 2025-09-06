@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
 =======
 =======
@@ -38,3 +39,9 @@
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+' \' \"export\": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.,2,\"delayChildren\": \'0 && 0.1\'} const itemVariants = { \"hidden\": { y: 3,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.,8,\' \"ease\": \'easeOut\'} const floatingVariants = { \''\';\'"\";
+" " export: const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},visible: { opacity: 1,transition: { staggerChildren: 0.,2,delayChildren: "0 && 0.1"} const itemVariants = { hidden: { y: 3,0,opacity: "0"},visible: { y: 0,opacity: "1",transition: { duration: 0.,8," ease: "easeOut"} const floatingVariants = { """;""";"""
+
+' ' "export": const HeroSectionAlt = () => { const containerVariants = { hidden: { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.,2,"delayChildren": '0 && 0.1'} const itemVariants = { "hidden": { y: 3,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.,8,' "ease": 'easeOut'} const floatingVariants = { ''';'"";""}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

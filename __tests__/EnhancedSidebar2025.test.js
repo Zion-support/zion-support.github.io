@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
@@ -18,6 +19,8 @@ import _React from 'react"  import '@testing-library/jest-dom import EnhancedSid
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import EnhancedSidebar2025 from "./components/EnhancedSidebar2025" describe("EnhancedSidebar2025",() => {" test("renders without crashing",() => {" render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<EnhancedSidebar2025 / / />) }) test("handles user interactions",() => {" render(<EnhancedSidebar2025 / / />) }) test("applies correct styling",() => {" render(<EnhancedSidebar2025 / / />) }) })'"'"
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
@@ -25,6 +28,7 @@ const React from "react" import { render,screen,fireEvent } from "@testing-libra
 import _React from 'react"  import '@testing-library/jest-dom import EnhancedSidebar2025 from '../components/EnhancedSidebar2025" describe('EnhancedSidebar2025',() => {' test('renders without crashing',() => {' render(<EnhancedSidebar2025 / / />) expect(screen.getByTestId("enhancedsidebar2025")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<EnhancedSidebar2025 / / />) }) test('handles user interactions',() => {' render(<EnhancedSidebar2025 / / />) }) test('applies correct styling',() => {' render(<EnhancedSidebar2025 / / />) }) })
 ursor/add-new-services-and-deploy-updates-0462
 ursor/fix-syntax-push-and-merge-to-main-40de
+<<<<<<< HEAD
 ursor/fix-syntax-push-and-merge-to-main-40de
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -48,3 +52,6 @@ import _React from 'react"  import '@testing-library/jest-dom import EnhancedSid
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+ursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

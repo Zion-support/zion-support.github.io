@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})}
 });''
@@ -35,10 +36,13 @@ describe('smoke', () => { it("true is truthy"
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 describe('smoke', () => {
   it('true is truthy', () => {
     expect(true).toBeTruthy();
   });
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,21 +52,20 @@ describe('smoke', () => {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 });''
 
 =======
 });
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-
 =======
-describe('smoke'
-  it('true is truthy'
-describe('smoke', () => { it("true is truthy"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
 describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"
@@ -78,6 +81,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 describe('smoke'
   it('true is truthy'
 describe('smoke', () => { it("true is truthy"
+<<<<<<< HEAD
 ursor/automate-test-improve-and-merge-code-2480
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -108,3 +112,6 @@ describe('smoke',() => { it('true is truthy',() => { expect(true).toBeTruthy()})
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+ursor/automate-test-improve-and-merge-code-2480
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

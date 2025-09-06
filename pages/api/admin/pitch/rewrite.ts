@@ -1,4 +1,13 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next',;
+import { ensureAdminFromApi } from '../../../../utils/auth',;
+import OpenAI from 'openai',;
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY }),
+
+import type { NextApiRequest, NextApiResponse } from 'next',;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
@@ -9,9 +18,19 @@ import { ensureAdminFromApi } from '../../../../utils/auth',;
 import OpenAI from 'openai',;
 const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY })
 
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |process.env.NEXT_PUBLIC_OPENAI_API_KEY });
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { allowed } = await ensureAdminFromApi(req);
+  if (!allowed) return res.status(403).json({ error: 'Forbidden' });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method Not Allowed' });
+  const { slide } = req.body |{}
+  if (!slide) return res.status(400).json({ error: 'Missing slide' })
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   try {
     const prompt = `Rephrase the following slide content for an investor deck. Keep it 120-150 words, punchy, and data-driven. Return JSON with keys title and content.
 Title: ${slide.title}\nContent:\n${slide.content}`

@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById } from "../../../utils/fsdb";
 import {
@@ -35,15 +38,19 @@ export default async function handler(
 
     return res && res.status(400).json({ error: "Invalid id" });
 
+<<<<<<< HEAD
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res.status(404).json({ error: "Dispute not found" });
     try {
+<<<<<<< HEAD
 =======
   res.setHeader("Allow", "GET");
   return res.status(405).end("Method Not Allowed");
@@ -55,6 +62,18 @@ export default async function handler(
 =======
 =======
 
+=======
+
+    }
+    return res && res.status(200).json({ dispute });
+  }
+
+  res && res.setHeader("Allow", "GET");
+  return res && res.status(405).end("Method Not Allowed");
+
+}
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" });
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
@@ -65,7 +84,6 @@ export default async function handler(
   res && res.setHeader("Allow", "GET");
   return res && res.status(405).end("Method Not Allowed");
 }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getDisputeById  } from '../../../utils / fsdb';
 import {
@@ -89,6 +107,7 @@ if ( {) {
   $2
 }
 
+<<<<<<< HEAD
 
 
 =======
@@ -112,6 +131,8 @@ if ( {) {
 }
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Allow', ['GET']);
@@ -126,14 +147,12 @@ export default async function handler(req, res) {
 
     return res && res.status(400).json({ error: "Invalid id" });
 
-
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "GET") {
     const dispute = await getDisputeById(id);
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
     try {
-
 
     }
     return res && res.status(200).json({ dispute });
@@ -173,6 +192,7 @@ function handler() {
   // Check condition
 if ( {) {
   $2
+<<<<<<< HEAD
 }
 =======
 
@@ -180,3 +200,6 @@ if ( {) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

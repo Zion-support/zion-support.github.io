@@ -1,18 +1,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 import { ProviderConnection, SyncLogEntry } from './types';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -31,6 +33,8 @@ import { v4 as uuidv4 } from 'uuid';
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
 async function mockProviderCall<T>(
@@ -41,32 +45,12 @@ async function mockProviderCall<T>(
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 =======
-  async syncContact(
-    connection: ProviderConnection
-    contact: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "sync_contact", { contact });
-  }
-  async addEmailTouchpoint(
-    connection: ProviderConnection
-    touchpoint: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_email_touchpoint", { touchpoint });
-  }
-  async addProjectNote(
-    connection: ProviderConnection
-    note: Record<string, any>
-  ) {
-    return mockProviderCall(connection, "add_project_note", { note });
-  }
-}
-// ATS actions
-export const ats = {
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   const log: SyncLogEntry = {
     id: uuidv4(),
     timestamp: Date.now(),
@@ -98,22 +82,22 @@ async function mockProviderCall < T>(
 export const crm = {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 
 };
 
 // ATS actions
 export const ats = {
-<<<<<<< HEAD
 
   async pushApplicant($2) {
     return simulateAction($3);
@@ -125,6 +109,7 @@ export const ats = {
     return simulateAction(connection, 'ats.updateStatus', { change })
   }};
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -142,6 +127,8 @@ export const ats = {
   }
 }
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   async sync_contact (
     connection: ProviderConnection,
     contact: Record < string, any>,
@@ -162,6 +149,7 @@ export const ats = {
   },
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const log: SyncLogEntry = {
     id: uuidv4()
@@ -176,6 +164,8 @@ export const ats = {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 ;
 // ATS actions;
@@ -187,6 +177,7 @@ export const ats = {
     return mockProviderCall (connection, "update_status", { status });
   },
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -200,6 +191,9 @@ export const ats = {
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 ;
 // ATS actions;
@@ -212,9 +206,12 @@ export const ats = {
   },
 }
 ;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   async createCandidate(
     connection: ProviderConnection,
@@ -227,10 +224,13 @@ export const ats = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Email actions
 export const email = {
   async sendNotification(
@@ -239,6 +239,7 @@ export const email = {
   ) {
     return executeProviderAction(connection, 'sendNotification', { notification });
   },
+<<<<<<< HEAD
 };
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -248,3 +249,6 @@ export const email = {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getFraudStore } from "../../../../utils/fraud/store";
 export default async function handler(
@@ -24,11 +27,14 @@ export default async function handler(
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 =======
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getFraudStore  } from '../../../../utils / fraud / store';
 ;
@@ -50,8 +56,11 @@ if ( {) {
   res.status (200).json (report);
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const month = (req.query.month as string) || new Date().toISOString().slice(0, 7);
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
@@ -61,6 +70,7 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
     } catch (error) {
     console.error("Error:", error);
+<<<<<<< HEAD
     return res.status(500).json({ error: "Internal server error" });
 
 
@@ -69,3 +79,6 @@ if ( {) {
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

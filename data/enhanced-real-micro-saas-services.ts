@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 tagline: string;
 price: string;
 period: string;
@@ -33,8 +36,8 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -69,6 +72,8 @@ category: 'AI & Machine Learning';
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface MicroSaasService {
   id: string,
   name: string,
@@ -2241,7 +2246,6 @@ export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSa
   if (categoryName === 'All' || categoryName === 'all') {
     return enhancedRealMicroSaasServices
   }
-<<<<<<< HEAD
 // Service categories
 export const serviceCategories = [
   'AllAI & Enterprise Automation',
@@ -2274,6 +2278,7 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -2309,6 +2314,11 @@ export const serviceCategories = [
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+// Combined all services
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   
   // Map category names to match service categories
   const categoryMapping: { [key: string]: string[] } = {
@@ -2373,6 +2383,7 @@ export const serviceCategories = [
 ];
 
 // Combined all services
+<<<<<<< HEAD
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2385,3 +2396,6 @@ export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

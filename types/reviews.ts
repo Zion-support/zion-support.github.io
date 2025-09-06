@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -18,6 +19,8 @@ export type ReviewRole = 'client' | 'talent',;
 export type ReviewCategoryScores = {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type ProjectStatus = 'InProgress' | 'Completed';
 export type Project = {
   id: string;
@@ -43,18 +46,21 @@ export type ReviewCategoryScores = {
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   communication?: number, // 1-5 optional;
   qualityOfWork?: number, // 1-5 optional;
   timeliness?: number, // 1-5 optional;
   wouldWorkWithAgain?: boolean, // optional;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -72,11 +78,14 @@ export type Review = {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +119,8 @@ export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
   toId: string, // target id (talentSlug or clientId);
@@ -117,23 +128,17 @@ export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-
+<<<<<<< HEAD
 =======
-  text: string,;
-  categories?: ReviewCategoryScores,;
-  anonymous?: boolean,;
-  approved: boolean, // admin moderated visibility;
-  reported: boolean,;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   text: string;
   categories?: ReviewCategoryScores,;
   anonymous?: boolean,;
   approved: boolean, // admin moderated visibility;
   reported: boolean;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -141,11 +146,14 @@ export type PublicReview = Omit<Review, 'fromId'> & { authorName: string }
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   reports?: { reason: string, reportedAt: string }[],;
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -166,6 +174,8 @@ export type PublicReview = Omit<Review 'fromId'> & { authorName: string };
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type ReviewsSummary = {
   averageRating: number;
   totalReviews: number;
@@ -173,16 +183,19 @@ export type ReviewsSummary = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   mostRecent: PublicReview[];
 
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type ProjectStatus = 'InProgress' | 'Completed',
 export type Project = {
   id: string,
@@ -226,6 +239,7 @@ export type ReviewsSummary = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
@@ -235,10 +249,14 @@ export type ReviewsSummary = {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   mostRecent: PublicReview[];
 
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 };
 
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 export type ProjectStatus = 'InProgress' | 'Completed',;
 ;
 export type Project = {;
@@ -302,3 +320,6 @@ export type ReviewRole = 'client' | 'talent';
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

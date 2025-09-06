@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
 =======
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
@@ -18,6 +19,8 @@ const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false)
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.disabled/components/unused/EnhancedAccessibility.jsx
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 :src.disabled/components/unused/EnhancedAccessibility.jsx
@@ -27,10 +30,9 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
 :temp_exclude/src.disabled/components/unused/EnhancedAccessibility.jsx
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ \"highContrast\": \'fals\',e,\"fontSize\": \'1\',6,\"reducedMotion\": \'fals\',e,\"screenReader\": \'fals\',e,\"keyboardNavigation\": \'fals\',e,\"focusIndicator\": \'tru\',e,\"colorBlindness\": \'none\'}) useEffect(() => {\''\"";
 const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ highContrast: "fals",e,fontSize: "1",6,reducedMotion: "fals",e,screenReader: "fals",e,keyboardNavigation: "fals",e,focusIndicator: "tru",e,colorBlindness: "none"}) useEffect(() => {"""";'"'"
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
 <<<<<<< HEAD
@@ -45,3 +47,6 @@ import React,{ useState,useEffect } from';react' import { motion,AnimatePresence
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React,{ useState,useEffect } from';react' import { motion,AnimatePresence } from';';framer-motion' import { SpeakerWaveIcon,AdjustmentsHorizontalIcon,ArrowUpIcon,ArrowDownIcon } from';';@heroicons/react/24/outline' const EnhancedAccessibility = () => { const [isOpen,setIsOpen] = useState(false) const [settings,setSettings] = useState({ "highContrast": 'fals',e,"fontSize": '1',6,"reducedMotion": 'fals',e,"screenReader": 'fals',e,"keyboardNavigation": 'fals',e,"focusIndicator": 'tru',e,"colorBlindness": ';';none'}) useEffect(() => {'';''}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

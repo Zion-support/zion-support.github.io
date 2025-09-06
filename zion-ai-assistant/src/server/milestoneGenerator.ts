@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js";
@@ -10,6 +11,9 @@ async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMil
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   const user = {;
+=======
+const user = {;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     scopeOfWork: input.scopeOfWork;
     startDateIso: input.startDateIso;
     endDateIso: input.endDateIso;
@@ -79,12 +83,14 @@ function createHeuristicPlan(input: MilestoneSuggestionInput): SuggestedMileston
   }
   return milestones;
 }
-<<<<<<< HEAD
 export async function generateMilestones(input: MilestoneSuggestionInput): Promise<MilestoneSuggestionResponse> {const ai = await callOpenAI(input);
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem } from "../shared/types.js",;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,;
 async function callOpenAI(input: MilestoneSuggestionInput): Promise<SuggestedMilestoneItem[] | null> {;
@@ -173,19 +179,21 @@ export async function generateMilestones(input: MilestoneSuggestionInput): Promi
   const ai = await callOpenAI(input);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
   const milestones = ai && ai.length ? ai : createHeuristicPlan(input);
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { MilestoneSuggestionInput, MilestoneSuggestionResponse, SuggestedMilestoneItem  } from '../shared / types.js';,
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPENAI_API_TOKEN,
 async function callOpenAI (input: MilestoneSuggestionInput): Promise < SuggestedMilestoneItem[] | null> {
@@ -229,7 +237,6 @@ if (return null, ) {
   try {
     const parsed = JSON.parse (content),
     const milestones: SuggestedMilestoneItem[] = Array.is_array (parsed?.milestones);
-<<<<<<< HEAD
       ? parsed.milestones;
       : [],
     // Check condition
@@ -278,6 +285,7 @@ function createHeuristicPlan (input: MilestoneSuggestionInput): SuggestedMilesto
       tags: ["AI Suggested"];
     }),
     phase_start = due;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -427,5 +435,16 @@ body: JSON.stringify (body)
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+  return milestones;
+}
+export async function generate_milestones (input: MilestoneSuggestionInput): Promise < MilestoneSuggestionResponse> {
+  const ai = await callOpenAI (input);
+  const milestones = ai && ai.length ? ai : createHeuristicPlan (input);
+  }
+  return milestones,;
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return { milestones }
 }

@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -74,19 +77,21 @@ function restorePage(pagePath) {;
       const parts = backupContent.split('');
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 '),
 
-
       if (parts.length > 1) {
         // Take the content after the conflict resolution
-<<<<<<< HEAD
         backupContent = parts[1].split('>>>>>>>')[0]
 
+<<<<<<< HEAD
 =======
 
 
@@ -101,6 +106,8 @@ function restorePage(pagePath) {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
     // Clean up the content
@@ -114,6 +121,7 @@ function restorePage(pagePath) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -138,6 +146,11 @@ function restorePage(pagePath) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -153,12 +166,15 @@ function restorePage(pagePath) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 '),
       // Check condition
 if ( {) {
@@ -184,9 +200,12 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     // Create a backup of the current corrupted file;
     const timestamp = Date.now();
@@ -194,15 +213,19 @@ if ( {) {
     fs.writeFileSync(corruptedBackupPath, currentContent),;
     // Restore the page;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
       backupUsed: backupPath,;
       corruptedBackup: corruptedBackupPath;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,6 +239,8 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
@@ -232,21 +257,14 @@ function fixSpecificPages() {
     details: []
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 <<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   },
 
-
-=======
-  },
-
-
-  }
-  console.log('🚀 Starting targeted page restoration...')
-  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   },
   
   console.log('🚀 Starting targeted page restoration...'),
@@ -255,6 +273,7 @@ function fixSpecificPages() {
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -269,6 +288,8 @@ function fixSpecificPages() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
       console.log(`⚠️  Page not found: ${pagePath}`)
@@ -277,9 +298,12 @@ function fixSpecificPages() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   },
   // // // console.log('🚀 Starting targeted page restoration...'),
   // // // console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`),
@@ -288,11 +312,14 @@ function fixSpecificPages() {
       // // // console.log(`⚠️  Page not found: ${pagePath}`),
       results.failed++,
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       results.details.push({
         file: pagePath
         restored: false
@@ -301,8 +328,8 @@ function fixSpecificPages() {
       })
       continue
     }
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -317,12 +344,17 @@ function fixSpecificPages() {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    console.log(`\n🔍 Checking: ${pagePath}`)
+    const result = restorePage(pagePath)
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
 =======
     
     console.log(`\n🔍 Checking: ${pagePath}`),
 =======
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -340,18 +372,24 @@ function fixSpecificPages() {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
+=======
+
+    const result = restorePage(pagePath),
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
     
     console.log(`\n🔍 Checking: ${pagePath}`),
     // // // console.log(`\n🔍 Checking: ${pagePath}`),
 
-
     const result = restorePage(pagePath),
     const result = restorePage(pagePath),
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
@@ -361,15 +399,10 @@ function fixSpecificPages() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
-      results.failed++
-      console.log(`❌ Failed: ${pagePath}`)
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-      results.failed++,
-      console.log(`❌ Failed: ${pagePath}`),
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       console.log(`   Reason: ${result.reason}`)
     }
     results.details.push({
@@ -379,6 +412,7 @@ function fixSpecificPages() {
   }
   // Generate summary
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -404,6 +438,11 @@ function fixSpecificPages() {
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+
+      results.failed++,
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   return results
 
       // // // console.log(`❌ Failed: ${pagePath}`),
@@ -472,6 +511,7 @@ function fixSpecificPages() {;
   fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -556,11 +596,14 @@ function fixSpecificPages() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 // Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -573,6 +616,9 @@ if ({
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Function to fix specific corrupted pages;
 /**
  * fixSpecificPages - Function description
@@ -640,16 +686,13 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 <<<<<<< HEAD
 =======
-module.exports = {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-  restorePage
-  fixSpecificPages
-  findBestBackup
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -659,6 +702,8 @@ module.exports = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 module.exports = {;
   restorePage,;
@@ -668,6 +713,7 @@ module.exports = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -685,14 +731,16 @@ module.exports = {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 module.exports = {
   restore_page,
   fixSpecificPages,
   findBestBackup;
-<<<<<<< HEAD
-
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -702,6 +750,8 @@ module.exports = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 main
 
@@ -712,6 +762,7 @@ module.exports = {
 },;
 
 };
+<<<<<<< HEAD
 main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -723,3 +774,6 @@ main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+main
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

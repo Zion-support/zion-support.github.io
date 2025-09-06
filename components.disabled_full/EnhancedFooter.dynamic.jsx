@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,3 +55,8 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+const EnhancedFooter = dynamic(() => import(\"./EnhancedFooter\"),{\'; \"loading\": () => <p>Loading...</p,>}) \"export\": \'default EnhancedFooter\' ,
+const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{"; loading: () => <p>Loading.</p,>}) export: "default EnhancedFooter" ,"""
+const EnhancedFooter = dynamic(() => import("./EnhancedFooter"),{'; "loading": () => <p>Loading...</p,>}) "export": 'default EnhancedFooter' ,'
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

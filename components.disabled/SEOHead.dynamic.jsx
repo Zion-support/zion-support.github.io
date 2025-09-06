@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,3 +55,8 @@ ursor/add-new-services-and-deploy-updates-0462
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+const SEOHead = dynamic(() => import(\"./SEOHead\"),{\'; loading: () => <p>Loading...</p,>,}) export: \'default SEOHead\' ,
+const SEOHead = dynamic(() => import("./SEOHead"),{"; loading: () => <p>Loading.</p,>,}) export: "default SEOHead" ,"""
+const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

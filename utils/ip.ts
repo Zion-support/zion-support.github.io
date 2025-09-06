@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
 import type { NextApiRequest } from 'next';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) |'';
 
@@ -23,6 +26,7 @@ export function extractClientIp(req: NextApiRequest): string | null {;
 export function getClientIp(req: any): string {
 
 export function getClientIp(req: any): string {;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -41,11 +45,14 @@ export function getClientIp(req: any): string {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   const forwarded = req.headers['x-forwarded-for'];
   const remoteAddress = req.socket?.remoteAddress;
   if (forwarded) {
     return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim();
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,9 +69,10 @@ export function getClientIp(req: any): string {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
-  return remoteAddress |'unknown';
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+  return remoteAddress |'unknown';
 }
 
   // Check IP reputation
@@ -91,6 +99,7 @@ export function getClientIp(req: any): string {
       console.error('Error checking IP reputation:', error);
       return null;
     }
+<<<<<<< HEAD
   }
 
 <<<<<<< HEAD
@@ -274,3 +283,6 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

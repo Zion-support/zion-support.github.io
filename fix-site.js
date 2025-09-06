@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const fs = require ('fs'),
 console.log ('🔧 Fixing site loading issues...'),
 // Fix Next.js configuration;
@@ -19,6 +22,7 @@ const next_config = {
   images: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 =======
@@ -29,6 +33,8 @@ const next_config = {
 const fs = require('fs');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 console.log('🔧 Fixing site loading issues...');
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
@@ -58,6 +64,7 @@ console.log('🎉 Site fixes completed!');
 const fs = require('fs'),;
 const fs = require('fs');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
@@ -78,12 +85,14 @@ const next_config = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 console.log('🔧 Fixing site loading issues...'),;
 // Fix Next.js configuration;
 const nextConfig = `/** @type {import('next').NextConfig} */;
 const nextConfig = {;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -101,17 +110,24 @@ const nextConfig = {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  reactStrictMode: true,;
+  reactStrictMode: true;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   eslint: { ignoreDuringBuilds: true },;
   typescript: { ignoreBuildErrors: true },;
   pageExtensions: ['tsxtsjsxjs'],;
   images: {;
-<<<<<<< HEAD
 
     domains: ["localhost", "ziontechgroup.com"];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   },
   output: 'standalone',
   trailing_slash: false,
@@ -125,6 +141,7 @@ console.log ('✅ Next.js configuration fixed'),
 const emptyFiles = [;
   'components/BundleAnalyzer.jscomponents/PerformanceMonitor.jscomponents/SEO.js';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -151,10 +168,16 @@ const emptyFiles = [;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+],;
+];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 emptyFiles.forEach(file => {;
   if (fs.existsSync(file) && fs.statSync(file).size === 0) {;
     fs.unlinkSync(file),;
     console.log(`✅ Removed empty file: ${file}`);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -216,3 +239,9 @@ console.log('🎉 Site fixes completed!'),;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+  }
+}),
+console.log ('🎉 Site fixes completed!'),
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

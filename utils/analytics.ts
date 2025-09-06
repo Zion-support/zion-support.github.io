@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type UserType = 'freelancer' | 'b2b' | 'hiring_manager' | 'guest',
 export type TrackEventPayload = {
   name: string;
@@ -27,6 +30,7 @@ function track_event() {
 
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -73,16 +77,18 @@ export async function trackEvent(payload: TrackEventPayload) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     await fetch('/api/analytics/events/track', {;
       method: 'POST',;
       headers: { 'Content-Type': 'application/json' },;
       body: JSON.stringify(payload);
       keepalive: true as any});
-<<<<<<< HEAD
-
 
   }
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -99,6 +105,8 @@ export async function trackEvent(payload: TrackEventPayload) {;
     // swallow;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     // swallow;
     } catch (error) {
@@ -110,6 +118,7 @@ export async function trackEvent(payload: TrackEventPayload) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -124,3 +133,6 @@ export async function trackEvent(payload: TrackEventPayload) {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

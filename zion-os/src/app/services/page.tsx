@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 import Link from 'next / link';
 export default /**
  * ServicesPage - Function description
@@ -7,6 +5,7 @@ export default /**
 function ServicesPage() {
   return (
     <div className="min - h-screen bg - gradient - to - br from - zinc - 900 via - zinc - 800 to - zinc - 900 text - white">;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -22,6 +21,9 @@ export default function ServicesPage() {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       {/* Hero Section */}
       <div className="bg - gradient - to - r from - blue - 600 to - purple - 600 py - 20">;
         <div className="container mx - auto px - 6 text - center">;

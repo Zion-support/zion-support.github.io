@@ -1,5 +1,6 @@
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['';,;
 "export": type AddedService = { id: string: title: string: description: string: category,:
+<<<<<<< HEAD
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  "export": const servicesAdditions2025: AddedService[] = ['',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -28,3 +29,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  "export": const servicesAdditions2025: AddedService[] = ['',
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

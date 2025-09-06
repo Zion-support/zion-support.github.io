@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 =======
@@ -31,12 +32,15 @@
 >>>>>>> main
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type InnovativeMicroSaasV2 = {
   "id": string;
   title: string;
   description: string;
   price?: string};
 export const "innovativeMicroSaasV2": InnovativeMicroSaasV2[] = [];
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -126,3 +130,7 @@ export type InnovativeMicroSaasV2 = { id: string; title: string; description: st
 >>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+export type InnovativeMicroSaasV2 = { id: string; title: string; description: string; price?: string}; export const innovativeMicroSaasV2: InnovativeMicroSaasV2[] = [];
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -18,15 +19,11 @@
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 <<<<<<< HEAD
 =======
-}}}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+}}}
 }}}
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }}};
 }}},};
 export default function Jest.setup({ }: Jest.setupProps) {;
@@ -136,6 +133,7 @@ origin/automation-improvements-final
 }}}
 }}},;
 }}};
+<<<<<<< HEAD
 }}},;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -149,3 +147,6 @@ origin/automation-improvements-final
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+}}},;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

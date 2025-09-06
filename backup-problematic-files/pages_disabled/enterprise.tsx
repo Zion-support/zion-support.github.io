@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -20,6 +21,9 @@ import {
   Lock,
   TrendingUp
 } from 'lucide-react';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const enterpriseFeatures = [
   {
@@ -124,6 +128,7 @@ const benefits = [
 
 export default function EnterpriseSolutionsPage() {
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Enterprise Solutions - Zion Tech Group | Large Scale Technology Solutions</title>
@@ -395,3 +400,13 @@ export default function EnterpriseSolutionsPage() {
     </>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Enterprise</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Enterprise;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

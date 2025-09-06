@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 =======
@@ -24,35 +25,41 @@ interface Props {
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 interface State {
+=======
+import React from 'react';
+
+interface ErrorBoundaryState {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
 }
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
+=======
+interface ErrorBoundaryProps {
+  children: React.ReactNode;
+  fallback?: React.ComponentType<{ error?: Error }>;
+}
+
+class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     super(props);
     this.state = { hasError: false };
   }
 <<<<<<< HEAD
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
   }
 
 =======
@@ -66,58 +73,11 @@ class ErrorBoundary extends Component<Props, State> {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-          <div className="max-w-md w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6">
-            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 dark:bg-red-900 rounded-full mb-4">
-              <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400" />
-            </div>
-
-            <div className="text-center">
-              <h1 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                Something went wrong
-              </h1>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-                We're sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-
-              <div className="space-y-3">
-                <button
-                  onClick={() => window.location.reload()}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  <RefreshCw className="w-4 h-4 mr-2" />
-                  Refresh Page
-                </button>
-
-                <button
-                  onClick={() => window.location.href = '/'}
-                  className="w-full flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-sm font-medium rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
-                >
-                  <Home className="w-4 h-4 mr-2" />
-                  Go Home
-                </button>
-              </div>
-
-              {process.env.NODE_ENV === 'development' && this.state.error && (
-                <details className="mt-6 text-left">
-                  <summary className="text-sm font-medium text-gray-700 dark:text-gray-300 cursor-pointer">
-                    Error Details (Development)
-                  </summary>
-                  <div className="mt-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-md">
-                    <pre className="text-xs text-red-600 dark:text-red-400 whitespace-pre-wrap">
-                      {this.state.error.toString()}
-                      {this.state.errorInfo?.componentStack}
-                    </pre>
-                  </div>
-                </details>
-              )}
-            </div>
-          </div>
+      const FallbackComponent = this.props.fallback;
+      return FallbackComponent ? <FallbackComponent error={this.state.error} /> : (
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>Please refresh the page and try again.</p>
         </div>
       );
     }
@@ -127,6 +87,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
 =======
 <<<<<<< HEAD
@@ -201,3 +162,6 @@ export { ErrorBoundary };
 export default ErrorBoundary;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+export default ErrorBoundary;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

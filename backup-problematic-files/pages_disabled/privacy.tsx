@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from './components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export default function PrivacyPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Privacy Policy - Zion Tech Group"
       description="Zion Tech Group's privacy policy outlining how we collect, use, and protect your personal information."
@@ -147,3 +152,13 @@ export default function PrivacyPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Privacy</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Privacy;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

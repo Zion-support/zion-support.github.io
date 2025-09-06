@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const searchResults = [
   {
@@ -93,6 +97,7 @@ export default function SearchPage() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gray-50">
       {/* Search Header */}
       <section className="bg-white border-b py-8">
@@ -232,3 +237,13 @@ export default function SearchPage() {
     </div>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Search</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Search;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

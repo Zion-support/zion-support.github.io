@@ -9,6 +9,7 @@ import React from 'react';
 <<<<<<< HEAD
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 
+<<<<<<< HEAD
 =======
 import React from 'react';
 =======
@@ -25,10 +26,13 @@ import React from 'react';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 interface SitemapProps {
   // Add props here as needed
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,6 +72,8 @@ interface SitemapProps {
 
 >>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   res.status(200).send(sitemap)}
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -95,6 +101,7 @@ export default function Sitemap({ }: SitemapProps) {
       <h1>Sitemap</h1>
       <p>This component is currently under development.</p>
     </div>
+<<<<<<< HEAD
   );
 <<<<<<< HEAD
 }
@@ -175,3 +182,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+  );
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

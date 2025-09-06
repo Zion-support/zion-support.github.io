@@ -88,16 +88,10 @@ function resolveMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Remove merge conflict markers and keep the version from our branch (after =======)
+    // Remove merge conflict markers and keep the version from our branch (after )
     content = content
-      .replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1')
-      .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< HEAD[\s\S]*?=======/g, '')
-      .replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '')
-      .replace(/<<<<<<< HEAD/g, '')
-      .replace(/=======/g, '')
-      .replace(/>>>>>>> [^\n]+/g, '');
-    
+      .replace(/      .replace(/      .replace(/      .replace(/[\s\S]*?      .replace(/      .replace(//g, '')
+      .replace(/    
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`✅ Resolved conflicts in: ${filePath}`);
@@ -130,8 +124,7 @@ function findFilesWithConflicts(dir) {
           if (['.js', '.ts', '.tsx', '.jsx'].includes(ext)) {
             try {
               const content = fs.readFileSync(fullPath, 'utf8');
-              if (content.includes('<<<<<<< HEAD')) {
-                files.push(fullPath);
+              if (content.includes('                files.push(fullPath);
               }
             } catch (e) {
               // Skip files we can't read
@@ -207,7 +200,6 @@ function resolveConflicts(filePath) {
   }
 }
 
-
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -250,7 +242,6 @@ function resolveConflicts(filePath) {
 });
 // Resolve conflicts for each file
 conflictFiles.forEach(resolveConflicts);
-
 
 // Run linter to check if issues are resolved
 console.log('\n🔍 Running linter to check if issues are resolved...');
@@ -321,6 +312,7 @@ if (resolveMergeConflicts()) {
 }
   console.log(`⚠️  ${remainingConflicts.length} files still have conflicts`);
 }
+<<<<<<< HEAD
 console.log('\n🎉 Merge conflict resolution completed!');
 
 <<<<<<< HEAD
@@ -332,3 +324,6 @@ console.log('\n🎉 Merge conflict resolution completed!');
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+console.log('\n🎉 Merge conflict resolution completed!');
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

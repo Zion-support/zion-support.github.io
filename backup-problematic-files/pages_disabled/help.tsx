@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -510,3 +511,21 @@ export default function HelpPage() {
     </div>
   );
 }
+=======
+import React from "react";
+
+interface HelpProps {
+  className?: string;
+}
+
+const Help: React.FC<HelpProps> = ({ className }) => {
+  return (
+    <div className={className || ""}>
+      <h1>Help</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Help;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

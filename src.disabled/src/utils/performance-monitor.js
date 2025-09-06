@@ -1,9 +1,8 @@
 if (typeof window !== 'undefined') { window && window.addEventListener('load',() => { const perfData = performance && performance.getEntriesByType('navigation')[0]; })}
 // Performance monitoring
 if (typeof window !== 'undefined') {
-<<<<<<< HEAD
-<<<<<<< HEAD
   window.addEventListener('load', () => {
+<<<<<<< HEAD
     const perfData = performance.getEntriesByType('navigation')[0];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -55,3 +54,6 @@ if (typeof window !== 'undefined') { window.addEventListener('load',() => { cons
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+    const perfData = performance.getEntriesByType('navigation')[0];
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

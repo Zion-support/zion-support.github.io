@@ -461,6 +461,7 @@ class CompleteImprovementSuite {
       return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -486,6 +487,10 @@ class CompleteImprovementSuite {
         content.includes('=======') ||
         content.includes('>>>>>>> ')
       );
+=======
+        content.includes('        content.includes('') ||
+        content.includes('      );
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         content.includes('') ||
         content.includes('') ||
         content.includes('      );
@@ -521,6 +526,7 @@ class CompleteImprovementSuite {
       content = content.replace(
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
@@ -540,6 +546,9 @@ class CompleteImprovementSuite {
 =======
         /<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [a-f0-9]+/gs,
         '$1'
+=======
+        /        '$1'
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       );
 <<<<<<< HEAD
 =======
@@ -567,8 +576,7 @@ class CompleteImprovementSuite {
 <<<<<<< HEAD
 =======
           `✅ Resolved conflicts in: ${path.relative(this.projectRoot, filePath)}`
-      content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-
+      content = content.replace(/
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content, 'utf8');
         this.log(
@@ -1180,6 +1188,7 @@ const { execSync } = require('child_process')
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 cursor/fix-lint-push-and-merge-to-main-f3c1;
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -1202,3 +1211,6 @@ cursor/fix-lint-push-and-merge-to-main-f3c1;
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+cursor/fix-lint-push-and-merge-to-main-f3c1;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

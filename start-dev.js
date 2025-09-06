@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -17,6 +18,10 @@ console.log ('🚀 Starting development server...'),
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+const { spawn } = require ('child_process'),
+console.log ('🚀 Starting development server...'),
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 console.log('🚀 Starting development server...'),;
 
@@ -34,10 +39,13 @@ dev_process.on ('close', (code) => {
 // Handle process termination;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 const { spawn } = require('child_process');
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 console.log('🚀 Starting development server...');
 // Start the development server;
 const devProcess = spawn('npm', ['rundev'], {stdio: 'inherit';
@@ -82,9 +90,12 @@ process.on('SIGTERM', () => {;
   process.exit(0);
 }),;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 process.on ('SIGINT', () => {
   console.log ('Stopping development server...'),
   dev_process.kill ('SIGINT'),
@@ -94,6 +105,7 @@ process.on ('SIGTERM', () => {
   console.log ('Stopping development server...'),
   dev_process.kill ('SIGTERM'),
   process.exit (0);
+<<<<<<< HEAD
 }),
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -135,3 +147,6 @@ process.on('SIGTERM', () => {;
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}),
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

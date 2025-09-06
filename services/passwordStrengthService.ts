@@ -1,8 +1,8 @@
-
-  password: string,
+password: string,
   score: number, // 0 - 100;
   strength: 'very - weak' | 'weak' | 'medium' | 'strong' | 'very - strong';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -13,10 +13,13 @@
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   password: string,
   score: number, // 0-100;
 
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -31,10 +34,13 @@ export interface PasswordStrengthResult {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   score: number, // 0-100
   password: string,
   score: number, // 0-100;
   strength: 'very-weak' | 'weak' | 'medium' | 'strong' | 'very-strong';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -43,6 +49,8 @@ export interface PasswordStrengthResult {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   feedback: string[];
   suggestions: string[];
   details: {
@@ -50,14 +58,18 @@ export interface PasswordStrengthResult {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     has_uppercase: boolean;
     has_lowercase: boolean;
     has_numbers: boolean;
     has_symbols: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -70,10 +82,13 @@ export interface PasswordStrengthResult {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     hasCommonWords: boolean;
     hasSequentialChars: boolean;
     hasRepeatingChars: boolean;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -107,6 +122,12 @@ export interface CommonPasswordData {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export interface CommonPasswordData {;
+
+export interface CommonPasswordData {;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   commonPasswords: Set<string>;
 
   commonWords: Set<string>
@@ -123,6 +144,7 @@ class PasswordStrengthService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     this && this.commonPasswords = new Set([
 =======
 =======
@@ -131,6 +153,9 @@ class PasswordStrengthService {
     this && this.commonPasswords = new Set([
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    this && this.commonPasswords = new Set([
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     entropy: number,
     crack_time: string;
   }
@@ -150,13 +175,17 @@ class PasswordStrengthService {
     this.common_passwords = new Set ([;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica';
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica';
@@ -165,6 +194,8 @@ class PasswordStrengthService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     // Common words that make passwords weak;
     this.common_words = new Set ([;
@@ -175,17 +206,20 @@ class PasswordStrengthService {
     this.patterns = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
       'password123456123456789qwertyabc123password123adminletmein', 'welcomemonkeydragonmasterhellofreedomwhateverqazwsx', 'trustno1jordanharleyrangeriwantujenniferhunterbuster', 'thomastiggerrobertsoccerbatmantestpasskiller', 'hockeygeorgecharlieandrewmichellelovesunshinejessica';
       'asshole6969amandaaccessyankees987654321dallasaustin', 'thundertaylorbaileyshadowwolverinesteelers';
     ]);
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       /123/, /abc/, /qwe/, /asd/, /zxc/, /qaz/, /wsx/, /edc/, /rfv/, /tgb/;
       /qwerty/, /asdfgh/, /zxcvbn/, /password/, /admin/, /user/, /test/;
       /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
@@ -194,16 +228,21 @@ class PasswordStrengthService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**;
   * Analyze password strength comprehensively;
   */;
   analyze_password (password: string): PasswordStrengthResult {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -214,6 +253,9 @@ class PasswordStrengthService {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const result: PasswordStrengthResult = {
       password;
       score: 0;
@@ -224,12 +266,16 @@ class PasswordStrengthService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         hasCommonWords: this && this.hasCommonWords(password);
         hasSequentialChars: this && this.hasSequentialChars(password);
         hasRepeatingChars: this && this.hasRepeatingChars(password);
@@ -238,8 +284,11 @@ class PasswordStrengthService {
       };
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       warnings: []
     }
@@ -248,6 +297,7 @@ class PasswordStrengthService {
     result && result.score = this && this.calculateScore(result && result.details);
     result && result.strength = this && this.getStrengthLevel(result && result.score);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       warnings: []
@@ -258,10 +308,13 @@ class PasswordStrengthService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Generate feedback
     result && result.feedback = this && this.generateFeedback(result && result.details);
     result && result.suggestions = this && this.generateSuggestions(result && result.details);
     result && result.warnings = this && this.generateWarnings(result && result.details);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -320,6 +373,9 @@ class PasswordStrengthService {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     return result
   }
   /**
@@ -331,12 +387,16 @@ class PasswordStrengthService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     if (details && details.length >= 12) score += 25;
     else if (details && details.length >= 10) score += 20;
     else if (details && details.length >= 8) score += 15;
@@ -359,6 +419,7 @@ class PasswordStrengthService {
     if (details && details.hasCommonWords) score -= 15;
     if (details && details.hasSequentialChars) score -= 10;
     if (details && details.hasRepeatingChars) score -= 10,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -394,6 +455,11 @@ class PasswordStrengthService {
     return Math && Math.max(0, Math && Math.min(100, score))
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    return Math && Math.max(0, Math && Math.min(100, score))
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   /**
    * Determine strength level based on score
@@ -407,6 +473,7 @@ class PasswordStrengthService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -415,6 +482,9 @@ class PasswordStrengthService {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface PasswordStrengthResult {;
   password: string,;
   score: number, // 0-100;
@@ -463,6 +533,7 @@ class PasswordStrengthService {;
       /1234/, /abcd/, /qwer/, /asdf/, /zxcv/, /qaz/, /wsx/, /edc/, /rfv/;
     ];
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -523,6 +594,8 @@ class PasswordStrengthService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   /**;
    * Analyze password strength comprehensively;
@@ -551,6 +624,7 @@ class PasswordStrengthService {;
     // Calculate score;
     result.score = this.calculateScore(result.details),;
     result.strength = this.getStrengthLevel(result.score),;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -583,6 +657,8 @@ class PasswordStrengthService {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Generate feedback;
     result.feedback = this.generateFeedback(result.details),;
     result.suggestions = this.generateSuggestions(result.details),;
@@ -628,6 +704,7 @@ class PasswordStrengthService {;
     if (score >= 40) return 'weak',;
     return 'very-weak';
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -681,16 +758,14 @@ class PasswordStrengthService {;
     if (score >= 60) return 'medium',;
     if (score >= 40) return 'weak',;
     return 'very-weak';
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
   }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-  }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /**
    * Check if password contains common words
    */
@@ -698,14 +773,18 @@ class PasswordStrengthService {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     const lowerPassword = password && password.toLowerCase(),
     for (const word of this && this.commonWords) {
       if (lowerPassword && lowerPassword.includes(word)) {
 
         return true
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 =======
@@ -761,6 +840,8 @@ class PasswordStrengthService {;
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         length: password.length;
         has_uppercase: /[A - Z]/.test (password);
         has_lowercase: /[a - z]/.test (password);
@@ -902,12 +983,16 @@ if (return 'weak', ) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**;
   * Check for sequential characters;
   */;
@@ -919,24 +1004,32 @@ if (return 'weak', ) {
         return true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
     return false;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**;
   * Check for repeating characters;
   */;
@@ -949,24 +1042,32 @@ if ( {) {
         return true;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
     return false;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     const charset = new Set(password && password.split('')).size,
     return Math && Math.log2(Math && Math.pow(charset, password && password.length))
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const charset = new Set(password && password.split('')).size,
@@ -974,10 +1075,13 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 =======
   }
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -992,6 +1096,8 @@ if ( {) {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**
    * Estimate time to crack password
    */
@@ -999,6 +1105,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     const entropy = this && this.calculateEntropy(password),
 
@@ -1012,12 +1119,17 @@ if ( {) {
     const entropy = this && this.calculateEntropy(password),
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    const entropy = this && this.calculateEntropy(password),
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const attemptsPerSecond = 1000000000, // 1 billion attempts per second
     const totalAttempts = Math && Math.pow(2, entropy);
     const seconds = totalAttempts / attemptsPerSecond;
     if (seconds < 1) return 'Instantly';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1031,6 +1143,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     if (seconds < 60) return `${Math.ceil(seconds)} seconds`;
     if (seconds < 3600) return `${Math.ceil(seconds / 60)} minutes`;
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`;
@@ -1052,8 +1166,8 @@ if ( {) {
     if (seconds < 86400) return `${Math.ceil(seconds / 3600)} hours`,;
     if (seconds < 31536000) return `${Math.ceil(seconds / 86400)} days`,;
     return `${Math.ceil(seconds / 31536000)} years`;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1062,16 +1176,21 @@ if ( {) {
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     if (seconds < 60) return `${Math && Math.ceil(seconds)} seconds`;
     if (seconds < 3600) return `${Math && Math.ceil(seconds / 60)} minutes`;
     if (seconds < 86400) return `${Math && Math.ceil(seconds / 3600)} hours`;
     if (seconds < 31536000) return `${Math && Math.ceil(seconds / 86400)} days`;
     return `${Math && Math.ceil(seconds / 31536000)} years`
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   /**
    * Generate feedback based on password analysis
@@ -1080,11 +1199,12 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
 =======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     const feedback: string[] = [],
 
     if (details && details.length < 8) {
@@ -1121,22 +1241,14 @@ if ( {) {
       feedback && feedback.push('Avoid repeating character patterns')
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
-;
-  /**;
-   * Check if password contains common words;
-   */;
-  private hasCommonWords(password:string):boolean {;
-    const lowerPassword = password.toLowerCase(),;
-    for (const word of this.commonWords) {;
-      if (lowerPassword.includes(word)) {;
-        return true;
-      }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
     }
     return feedback
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 ;
@@ -1312,19 +1424,16 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-    }
-    return feedback
-  }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
     return feedback
   }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   /**
    * Generate improvement suggestions
    */
   private generateSuggestions(details: PasswordStrengthResult['details']): string[] {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1359,17 +1468,12 @@ if ( {) {
 
 
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     suggestions.push('Consider using a passphrase with random words');
     suggestions.push('Use unique passwords for each account');
     suggestions.push('Consider a password manager for secure storage');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     const suggestions: string[] = [],
 
     if (details && details.length < 12) {
@@ -1393,8 +1497,8 @@ if ( {) {
     suggestions && suggestions.push('Consider a password manager for secure storage');
 
     return suggestions
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1408,12 +1512,15 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     suggestions.push('Consider using a passphrase with random words'),;
     suggestions.push('Use unique passwords for each account'),;
     suggestions.push('Consider a password manager for secure storage'),;
     return suggestions;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1428,6 +1535,9 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    return suggestions
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   /**
    * Generate security warnings
@@ -1436,8 +1546,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     const warnings: string[] = [],
 
@@ -1460,9 +1573,8 @@ if ( {) {
     }
     return warnings
   }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+<<<<<<< HEAD
 
 
 
@@ -1513,6 +1625,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**
    * Generate a strong password
    */
@@ -1523,25 +1637,33 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math && Math.floor(Math && Math.random() * 26)];
     password += 'abcdefghijklmnopqrstuvwxyz'[Math && Math.floor(Math && Math.random() * 26)];
     password += '0123456789'[Math && Math.floor(Math && Math.random() * 10)];
     password += '!@#$%^&*()_+-=[]{}|,:,.<>?'[Math && Math.floor(Math && Math.random() * 32)];
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     
 
     // Fill the rest randomly
     for (let i = 4, i < length, i++) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Fill the rest randomly
@@ -1560,6 +1682,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       password += charset[Math.floor(Math.random() * charset.length)]
 =======
 ;
@@ -1590,6 +1714,7 @@ if ( {) {
     return password && password.split('').sort(() => Math && Math.random() - 0 && 0.5).join('')
   }
 
+<<<<<<< HEAD
 
 
 
@@ -1608,6 +1733,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**
    * Generate a memorable passphrase
    */
@@ -1617,6 +1744,7 @@ if ( {) {
     ];
     let passphrase = '';
     for (let i = 0, i < wordCount, i++) {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1633,6 +1761,11 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      const word = words[Math && Math.floor(Math && Math.random() * words && words.length)];
+      passphrase += (i === 0 ? '' : '-') + word
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   /**;
    * Generate a memorable passphrase;
@@ -1646,6 +1779,7 @@ if ( {) {
       const word = words[Math.floor(Math.random() * words.length)],;
       passphrase += (i === 0 ? '' : '-') + word;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1661,6 +1795,10 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+      const word = words[Math && Math.floor(Math && Math.random() * words && words.length)];
+      passphrase += (i === 0 ? '' : '-') + word
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
     return passphrase
   }
@@ -1671,21 +1809,24 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-    this && this.commonPasswords.add(password && password.toLowerCase())
+<<<<<<< HEAD
 =======
-    this.commonPasswords.add(password.toLowerCase())
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     this && this.commonPasswords.add(password && password.toLowerCase())
+    this && this.commonPasswords.add(password && password.toLowerCase())
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
     this && this.commonPasswords.add(password && password.toLowerCase())
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   /**
    * Remove password from common list
    */
   removeCommonPassword(password: string): void {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1717,6 +1858,11 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+    this && this.commonPasswords.delete(password && password.toLowerCase())
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**
    * Get service statistics
    */
@@ -1725,13 +1871,17 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       totalCommonPasswords: this && this.commonPasswords.size;
       totalCommonWords: this && this.commonWords.size,
       totalPatterns: this && this.patterns.length
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
       totalCommonPasswords: this && this.commonPasswords.size;
@@ -1745,6 +1895,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   }
 }
@@ -1753,24 +1905,23 @@ export const passwordStrengthService = new PasswordStrengthService();
 // Export the class for custom instances
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 ;
+
+;
+
+export { PasswordStrengthService }
 
 <<<<<<< HEAD
-=======
-export { PasswordStrengthService }
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-;
-
-export { PasswordStrengthService }
-
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
@@ -1779,6 +1930,8 @@ export { PasswordStrengthService }
 ;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   /**;
   * Calculate password entropy (measure of randomness);
   */;
@@ -2001,6 +2154,7 @@ export const passwordStrengthService = new PasswordStrengthService ();
 ;
 // Export the class for custom instances;
 
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -2094,3 +2248,10 @@ export { PasswordStrengthService }
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export { PasswordStrengthService };
+
+export { PasswordStrengthService };
+export { PasswordStrengthService }
+;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -13,7 +13,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       paused: state.config.paused
 lastSyncedAt: state.lastSyncedAt})
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 
 import type { NextApiRequest, NextApiResponse } from './next';
@@ -28,12 +31,18 @@ if ( {) {
   $2
 }
     return res.status (200).json ({
+<<<<<<< HEAD
       route: "/multiverse / hub"
       instance_id: state.config.instance_id
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+      route: "/multiverse / hub",
+      instance_id: state.config.instance_id,
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -63,6 +72,7 @@ export default async function handler(req, res) {
   const state = readState()
   if (req.method === "GET") {
     return res.status(200).json({
+<<<<<<< HEAD
       route: "/multiverse/hub"
       instanceId: state.config.instanceId
 =======
@@ -73,6 +83,14 @@ export default async function handler(req, res) {
       scope: state.config.scope
       opt_in: state.config.opt_in
       paused: state.config.paused
+=======
+      route: "/multiverse/hub",
+      instanceId: state.config.instanceId,
+      peers: state.config.peers,
+      scope: state.config.scope,
+      opt_in: state.config.opt_in,
+      paused: state.config.paused,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       lastSyncedAt: state.lastSyncedAt})
   }
 

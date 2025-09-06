@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const securityFeatures = [
   {
@@ -51,6 +55,7 @@ const complianceFrameworks = [
 
 export default function SecurityPage() {
   return (
+<<<<<<< HEAD
     <>
       <Head>
         <title>Security - Zion Tech Group</title>
@@ -255,3 +260,13 @@ export default function SecurityPage() {
     </>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Security</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Security;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

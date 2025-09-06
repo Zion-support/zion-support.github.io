@@ -20,6 +20,7 @@ import React from';react' "export": interface EmergingTechService {';
    contactInfo: { phone: string;
    email: string;
 import React from';react' export: interface EmergingTechService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string} website: 'strin',g} technicalSpecs?: { technology: 'string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]'} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''';,;
+<<<<<<< HEAD
    website: strin,g} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}"export": const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -48,3 +49,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import React from';react' export: interface EmergingTechService {'; id: string; title: string; description: string; category: string; subcategory: string; price: number; currency: string; pricingModel: string; features: string[]; benefits: string[]; useCases: string[]; targetAudience: string[]; tags: string[]; estimatedDelivery: string; supportLevel: string; marketPrice: string; roi: string; innovationLevel: string; contactInfo: { phone: string; email: string; website: strin,g} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}export: const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+   website: strin,g} technicalSpecs?: { "technology": string[] integrations: string[] apiEndpoints: number: uptime: string: security: string[]} competitors?: string[] marketSize?: string}"export": const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [''',
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

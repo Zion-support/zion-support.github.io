@@ -63,4 +63,8 @@ export default function RootLayout({
       </body>
     </html>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }

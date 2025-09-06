@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +35,7 @@ class ErrorBoundary extends React.Component {
 import React from \"react\"; export function TrustedBySection() { const companies = []; return () <section className=\"py-16 bg-white/5> <div className=\"container\" mx-auto px-4 text-center> <h3 className=\"text-lg\" font-medium text-zion-slate-light mb-8\"> Trusted by leading companies worldwide </h3>\" <div className=\"flex\" flex-wrap justify-center items-center gap-8 opacity-60> {companies && companies.map(comp => ( <div key=\"{comp}\" className=\"text-zion-slate-light\" font-semibold> {comp} </div> ))} </div> </div> </section> )} \");} ); \"export default ComponentName;\"
 const React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies && companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"""
 
+<<<<<<< HEAD
 import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies && companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
 
 <<<<<<< HEAD
@@ -61,3 +65,6 @@ import _React from "react"; export function TrustedBySection() { const companies
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React from "react"; export function TrustedBySection() { const companies = []; return () <section className="py-16 bg-white/5> <div className="container" mx-auto px-4 text-center> <h3 className="text-lg" font-medium text-zion-slate-light mb-8"> Trusted by leading companies worldwide </h3>" <div className="flex" flex-wrap justify-center items-center gap-8 opacity-60> {companies && companies.map(comp => ( <div key="{comp}" className="text-zion-slate-light" font-semibold> {comp} </div> ))} </div> </div> </section> )} ");} ); "export default ComponentName;"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

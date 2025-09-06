@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return(); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
 =======
 =======
@@ -38,3 +39,9 @@ import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } fr
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React from \'react\';\''\'; import { EnhancedInnovativeServicesShowcase } from \'@/components/services/EnhancedInnovativeServicesShowcase\';\''\'; import EnhancedSEO from \'@/components/EnhancedSEO\'; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+const React from "react";"""; import { EnhancedInnovativeServicesShowcase } from "@/components/services/EnhancedInnovativeServicesShowcase";"""; import EnhancedSEO from "@/components/EnhancedSEO"; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };''"
+
+import _React from 'react';'''; import { EnhancedInnovativeServicesShowcase } from '@/components/services/EnhancedInnovativeServicesShowcase';'''; import EnhancedSEO from '@/components/EnhancedSEO'; export {}; return null} return (); <> <div>Broken JSX</div> /> <EnhancedInnovativeServicesShowcase /> </>)} ; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage }; export { EnhancedInnovativeServicesPage };
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

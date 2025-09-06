@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 import { NextResponse } from 'next/server';
@@ -9,6 +10,8 @@ export function middleware(request: NextRequest) {const { pathname } = request.n
   if (pathname === '/dashboard' |pathname === '/dashboard/') {const role = request.cookies.get('userRole')?.value |'talent';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { NextResponse } from 'next/server',;
 import type { NextRequest } from 'next/server',;
 export function middleware(request: NextRequest) {;
@@ -21,10 +24,13 @@ export function middleware(request: NextRequest) {;
   return NextResponse.next();
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
 export /**
@@ -41,9 +47,12 @@ if ( {) {
     return NextResponse.redirect (new URL (target, request.url));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export const config = {matcher: ['/dashboard/dashboard/']}
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
@@ -56,10 +65,10 @@ export function middleware(request: NextRequest) {;
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   }
   return NextResponse.next ();
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   return NextResponse.next();
@@ -78,6 +87,8 @@ export const config = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 import { NextResponse } from 'next / server',
 import type { NextRequest } from 'next / server',
@@ -96,12 +107,12 @@ if ( {) {
   }
   return NextResponse.next ();
 }
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export const config = {
   matcher: ['/dashboard / dashboard/']}
 
 ;
 export const config = {;
+<<<<<<< HEAD
   matcher: ['/dashboard/dashboard/']};
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -122,3 +133,6 @@ export const config = {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  matcher: ['/dashboard/dashboard/']};
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

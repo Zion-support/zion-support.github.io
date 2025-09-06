@@ -4,8 +4,6 @@ import bs58 from 'bs58',;
 import jwt from 'jsonwebtoken',;
 const JWT_SECRET = process.env.JWT_SECRET || 'dev-secret-change-me'
 
-
-=======
 const cookieHeader = req.headers.cookie || '';
     const match = cookieHeader.match(/siwe-nonce=([^]+)/);
     if (!match) return res.status(400).json({ error: 'Missing nonce' });
@@ -95,8 +93,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e?.message || 'Verify failed' })
   };
 };
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nacl from 'tweetnacl';
 import bs58 from 'bs58';
@@ -123,7 +119,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     const token = jwt.sign({ sub: publicKey, chain: 'sol' }, JWT_SECRET, { expiresIn: '7d' })
     res.setHeader('Set-Cookie', `web3-session=${token}, HttpOnly, Path=/, SameSite=Lax, Max-Age=${7 * 24 * 3600}`)

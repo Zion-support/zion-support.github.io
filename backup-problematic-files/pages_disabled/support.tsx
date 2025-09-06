@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,6 +17,9 @@ import {
   Zap,
   Shield
 } from 'lucide-react';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const supportChannels = [
   {
@@ -100,6 +104,7 @@ const resources = [
 
 export default function SupportPage() {
   return (
+<<<<<<< HEAD
     <Layout 
       title="Support - Zion Tech Group | 24/7 Technical Support & Help Center"
       description="Get expert technical support for all Zion Tech Group services. 24/7 phone support, live chat, email support, and comprehensive help resources."
@@ -330,3 +335,13 @@ export default function SupportPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Support</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Support;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

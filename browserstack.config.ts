@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -10,6 +11,8 @@ import { defineConfig, devices } from '@playwright/test';
 export default defineConfig({testDir:'tests/e2e';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import { defineConfig, devices } from '@playwright/test',;
 ;
 export default defineConfig({;
@@ -17,6 +20,7 @@ export default defineConfig({;
   use:{;
     baseURL:process.env.PLAYWRIGHT_BASE_URL |'http://localhost:3000';
     trace:'on-first-retry'}
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -33,6 +37,8 @@ export default defineConfig({;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   projects:[;
     {name:'Desktop Chrome';
       use:{;
@@ -50,12 +56,16 @@ export default defineConfig({;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     {name:'Mobile Chrome';
       use:{;
         browserName:'chromium';
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     {name:'Mobile Chrome';
@@ -124,6 +134,8 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
         browserName:'chromium';
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   ]
   ]
         browserName: "webkit",
@@ -151,6 +163,7 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
       name: 'Mobile Chrome';
       use: {
         browserName: 'chromium';
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -189,6 +202,8 @@ export default define_config ({
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         ...devices['Pixel 5']}
     },
     {
@@ -202,10 +217,13 @@ export default define_config ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ]
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ]
   testDir: 'tests/e2e',;
   use: {;
@@ -267,9 +285,12 @@ export default define_config ({
   ],;
   reporter: [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     ['list'];
 
     {
@@ -281,9 +302,12 @@ export default define_config ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     ['list'];
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 });import { defineConfig, devices } from "@playwright/test";
@@ -295,20 +319,23 @@ import { defineConfig, devices } from '@playwright/test';
     {
       name: "Desktop Chrome"
       use: {
-<<<<<<< HEAD
         browserName: 'chromium'
         channel: 'chrome'
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
     }
     {
       name: "Desktop Firefox"
 
       use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -321,6 +348,9 @@ import { defineConfig, devices } from '@playwright/test';
 =======
         browser_name: 'firefox';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        browser_name: 'firefox';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
     }
     {
@@ -328,6 +358,7 @@ import { defineConfig, devices } from '@playwright/test';
       name: "Desktop Safari"
 
       use: {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -340,6 +371,9 @@ import { defineConfig, devices } from '@playwright/test';
 =======
         browser_name: 'webkit';
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        browser_name: 'webkit';
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
     }
     {
@@ -349,12 +383,16 @@ import { defineConfig, devices } from '@playwright/test';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         browser_name: 'chromium',
         ...devices['Pixel 5'];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         browserName: 'chromium'
@@ -364,6 +402,8 @@ import { defineConfig, devices } from '@playwright/test';
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
     }
     {
@@ -373,8 +413,11 @@ import { defineConfig, devices } from '@playwright/test';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         browser_name: 'webkit',
         ...devices['i_phone 12'];
 
@@ -385,6 +428,7 @@ import { defineConfig, devices } from '@playwright/test';
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
 });
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -395,6 +439,8 @@ import { defineConfig, devices } from '@playwright/test';
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     ['list'];
 
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
@@ -403,6 +449,7 @@ import { defineConfig, devices } from '@playwright/test';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
@@ -413,10 +460,13 @@ import { defineConfig, devices } from '@playwright/test';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   ],
   reporter: [;
     ['list'],
     ['html', { output_folder: 'playwright - logs / html - report', open: 'never' }];
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -446,3 +496,6 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

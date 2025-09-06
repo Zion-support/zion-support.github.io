@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -59,3 +60,9 @@ import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
+import type { NextPage } from \'next\'; const \"Test\": NextPage = () => {; return (; <div className=\"min-h-screen bg-gray-900 flex items-center justify-center\"> <h1 className=\"text-white text-4xl\">Test Page Working!></div> ></div> );}; export default Test;
+import type { NextPage } from 'next'; const "Test": NextPage = () => {; return (; <div className="min-h-screen bg-gray-900 flex items-center justify-center"> <h1 className="text-white text-4xl">Test Page Working!></div> ></div> )}; export default Test;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

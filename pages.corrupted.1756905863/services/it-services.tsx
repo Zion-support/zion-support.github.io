@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 <<<<<<< HEAD
@@ -38,11 +39,14 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import Sidebar from \'../../components/Sidebar\' export default function ITServices() { const offerings = [{ \"title\": \'Managed Cloud (AWS/GCP/Azure)\',\"price\": \'$3k–$12k/mo\',\"desc\": \'Provisioning,observability,cost optimization,and SRE.\' },{ \"title\": \'Cybersecurity & Compliance\',\"price\": \'$4k–$15k/mo\',\"desc\": \'vCISO,SOC hardening,ISO 27001/SOC2 readiness.\' },{ \"title\": \'DevOps & CI/CD\',\"price\": \'$2k–$8k/mo\',\"desc\": \'Pipelines,IaC,release automation,blue/green,canary.\' },{ \"title\": \'Modern Web & Mobile\',\"price\": \'$15k–$60k project\',\"desc\": \'Next.js,React Native,performance,accessibility.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>IT Services</h1> <p>Reliable delivery,measurable uptime,and transparent governance.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {offerings.map((o) => ( <div key={o.title} className=\"ztg-card\"> <h3>{o.title}</h3> <p>{o.desc}</p> <p><strong>{o.price}</strong></p> </div> ))} </div> </div> </div> </div> </div> ) }
 import Sidebar from '../../components/Sidebar' export default function ITServices() { const offerings = [{ "title": 'Managed Cloud (AWS/GCP/Azure)',"price": '$3k–$12k/mo',"desc": 'Provisioning,observability,cost optimization,and SRE.' },{ "title": 'Cybersecurity & Compliance',"price": '$4k–$15k/mo',"desc": 'vCISO,SOC hardening,ISO 27001/SOC2 readiness.' },{ "title": 'DevOps & CI/CD',"price": '$2k–$8k/mo',"desc": 'Pipelines,IaC,release automation,blue/green,canary.' },{ "title": 'Modern Web & Mobile',"price": '$15k–$60k project',"desc": 'Next.js,_React Native,performance,accessibility.' } ] return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-grid"> <Sidebar /> <div> <div className="ztg-card"> <h1>IT Services</h1> <p>Reliable delivery,measurable uptime,and transparent governance.</p> </div> <div className="ztg-section" style={{ "display": 'grid',"gridTemplateColumns": 'repeat(2,minmax(0,1fr))',"gap": '24' }}> {offerings.map((o) => ( <div key={o.title} className="ztg-card"> <h3>{o.title}</h3> <p>{o.desc}</p> <p><strong>{o.price}</strong></p> </div> ))} </div> </div> </div> </div> </div> ) }
 import Sidebar from \'../../components/Sidebar\' export default function ITServices() { const offerings = [{ \"title\": \'Managed Cloud (AWS/GCP/Azure)\',\"price\": \'$3k–$12k/mo\',\"desc\": \'Provisioning,observability,cost optimization,and SRE.\' },{ \"title\": \'Cybersecurity & Compliance\',\"price\": \'$4k–$15k/mo\',\"desc\": \'vCISO,SOC hardening,ISO 27001/SOC2 readiness.\' },{ \"title\": \'DevOps & CI/CD\',\"price\": \'$2k–$8k/mo\',\"desc\": \'Pipelines,IaC,release automation,blue/green,canary.\' },{ \"title\": \'Modern Web & Mobile\',\"price\": \'$15k–$60k project\',\"desc\": \'Next.js,React Native,performance,accessibility.\' } ] return ( <div className=\"ztg-page\"> <div className=\"ztg-container\"> <div className=\"ztg-grid\"> <Sidebar /> <div> <div className=\"ztg-card\"> <h1>IT Services</h1> <p>Reliable delivery,measurable uptime,and transparent governance.</p> </div> <div className=\"ztg-section\" style={{ \"display\": \'grid\',\"gridTemplateColumns\": \'repeat(2,minmax(0,1fr))\',\"gap\": \'24\' }}> {offerings.map((o) => ( <div key={o.title} className=\"ztg-card\"> <h3>{o.title}</h3> <p>{o.desc}</p> <p><strong>{o.price}</strong></p> </div> ))} </div> </div> </div> </div> </div> ) }
 import Sidebar from '../../components/Sidebar' export default function ITServices() { const offerings = [{ "title": 'Managed Cloud (AWS/GCP/Azure)',"price": '$3k–$12k/mo',"desc": 'Provisioning,observability,cost optimization,and SRE.' },{ "title": 'Cybersecurity & Compliance',"price": '$4k–$15k/mo',"desc": 'vCISO,SOC hardening,ISO 27001/SOC2 readiness.' },{ "title": 'DevOps & CI/CD',"price": '$2k–$8k/mo',"desc": 'Pipelines,IaC,release automation,blue/green,canary.' },{ "title": 'Modern Web & Mobile',"price": '$15k–$60k project',"desc": 'Next.js,_React Native,performance,accessibility.' } ] return ( <div className="ztg-page"> <div className="ztg-container"> <div className="ztg-grid"> <Sidebar /> <div> <div className="ztg-card"> <h1>IT Services</h1> <p>Reliable delivery,measurable uptime,and transparent governance.</p> </div> <div className="ztg-section" style={{ "display": 'grid',"gridTemplateColumns": 'repeat(2,minmax(0,1fr))',"gap": '24' }}> {offerings.map((o) => ( <div key={o.title} className="ztg-card"> <h3>{o.title}</h3> <p>{o.desc}</p> <p><strong>{o.price}</strong></p> </div> ))} </div> </div> </div> </div> </div> ) }
 ;
+<<<<<<< HEAD
 <<<<<<< HEAD
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
@@ -72,3 +76,6 @@ import Sidebar from '../../components/Sidebar' export default function ITService
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

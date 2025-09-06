@@ -3,6 +3,7 @@ Allow: /
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -14,6 +15,8 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 <<<<<<< HEAD
 <<<<<<< HEAD
 # Sitemaps
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 <<<<<<< HEAD
@@ -31,6 +34,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -153,3 +157,10 @@ Allow: /guides/
 Crawl-delay: 1
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+
+# Allow important pages
+Allow: /services/
+Allow: /about/
+Allow: /contact/
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

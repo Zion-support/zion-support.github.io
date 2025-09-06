@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -59,3 +60,9 @@ import _React from 'react'; import SEOHead from '../src/components/SEOHead'; con
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const RDPage = () => {; return (; <> <SEOHead title=\"Research & Development - Zion Tech Group\" description=\"Explore our R&D initiatives and innovation programs.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Research & Development></div> <p className=\"text-gray-600\">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
+import React from \'react\'; import SEOHead from \'../src/components/SEOHead\'; const RDPage = () => {; return (; <> <SEOHead title=\"Research & Development - Zion Tech Group\" description=\"Explore our R&D initiatives and innovation programs.\" /> <main className=\"max-w-5xl mx-auto px-4 py-16\"> <h1 className=\"text-4xl font-bold mb-6\">Research & Development></div> <p className=\"text-gray-600\">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
+import _React from 'react'; import SEOHead from '../src/components/SEOHead'; const RDPage = () => {; return (; <> <SEOHead title="Research & Development - Zion Tech Group" description="Explore our R&D initiatives and innovation programs." /> <main className="max-w-5xl mx-auto px-4 py-16"> <h1 className="text-4xl font-bold mb-6">Research & Development></div> <p className="text-gray-600">We invest in cutting-edge research across AI,cloud,and edge computing to build the future.></div> ></div> ></div> );}; export default RDPage;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

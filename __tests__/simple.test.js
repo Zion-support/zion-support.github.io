@@ -1,6 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 describe('Simple Test', () => {
   it('should pass', () => {
+=======
+describe("Simple Test", () => {
+  it("should pass", () => {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     expect(1 + 1).toBe(2);
 =======
 import React from 'react';

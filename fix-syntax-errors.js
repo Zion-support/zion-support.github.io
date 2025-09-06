@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -8,6 +9,8 @@
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 #!/usr / bin / env node;
 import fs from './fs';
 import path from './path';
@@ -45,6 +48,7 @@ if (.ends_with (") {
           modified = true;
           return match.trim () + ";";
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -87,6 +91,8 @@ files.forEach((file) => {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
         return match;
       },
@@ -95,8 +101,11 @@ files.forEach((file) => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     // Fix other common syntax issues;
     // Fix missing semicolons after variable declarations;
@@ -122,6 +131,7 @@ if (&&) {
           !match.includes ("export") &&;
           !match.includes ("import")) {
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Fix other common syntax issues
@@ -151,6 +161,8 @@ if (&&) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           modified = true;
           return match + ";";
         }
@@ -161,8 +173,11 @@ if (&&) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     // Check condition
 if ( {) {
@@ -179,6 +194,7 @@ if ( {) {
 
 });
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -195,6 +211,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
@@ -203,12 +221,12 @@ console.log(`\nTotal files fixed: ${totalFixed}`);
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 }},
 
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }},
 ,
 // Run all fixes,
@@ -220,6 +238,7 @@ fixCareers();
 ,
 console.log('🎉 Syntax error fixes completed');
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -228,6 +247,8 @@ console.log('🎉 Syntax error fixes completed');
 }},
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Run all fixes,
 fixFooter(),
 fixAccessibility(),
@@ -246,6 +267,7 @@ fixCareers(),;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -259,3 +281,7 @@ fixCareers(),;
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+}},
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

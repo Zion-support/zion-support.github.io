@@ -1,12 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Documentation = () => {} return <div>Component></div> }; return(); <> <Helmet> <title>Documentation - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Documentation"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Comprehensive documentation for our services,APIs,and; development tools.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Documentation coming soon. We're building comprehensive guides and; references.; ></div> ></div> ></div> ></div> </>)}; export default Documentation; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation };
 =======
 =======
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -32,6 +35,7 @@ class ErrorBoundary extends React.Component {
 import React from \'react\';\''\'; import { Helmet } from \'react-helmet-async\'; const Documentation = () => {} return <div>Component></div> }; return (); <> <Helmet> <title>Documentation - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>\"; <div className=\"min-h-screen bg-gray-50 py-12\"> <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\"> <div className=\"text-center mb-12\"> <h1 className=\"text-4xl font-bold text-gray-900 mb-4\"> Documentation\"; </h1> <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\"> Comprehensive documentation for our services,APIs,and; development tools.; ></div> </div>\"; <div className=\"bg-white rounded-lg shadow-lg p-8\"> <p className=\"text-gray-600 text-center\">\'; Documentation coming soon. We\'re building comprehensive guides and; references.; ></div> ></div> ></div> ></div> </>)}; export default Documentation; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation };
 const React from "react";"""; import { Helmet } from "react-helmet-async"; const Documentation = () => {} return <div>Component></div> }; return (); <> <Helmet> <title>Documentation - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Documentation"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Comprehensive documentation for our services,APIs,and; development tools.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">"; Documentation coming soon. We"re building comprehensive guides and; references.; ></div> ></div> ></div> ></div> </>)}; export default Documentation; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation };"""
 
+<<<<<<< HEAD
 import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Documentation = () => {} return <div>Component></div> }; return (); <> <Helmet> <title>Documentation - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Documentation"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Comprehensive documentation for our services,APIs,and; development tools.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Documentation coming soon. We're building comprehensive guides and; references.; ></div> ></div> ></div> ></div> </>)}; export default Documentation; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation };
 
 <<<<<<< HEAD
@@ -61,3 +65,6 @@ import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; con
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import _React from 'react';'''; import { Helmet } from 'react-helmet-async'; const Documentation = () => {} return <div>Component></div> }; return (); <> <Helmet> <title>Documentation - Zion Tech Group></div> <div>Broken JSX</div> /> </Helmet>"; <div className="min-h-screen bg-gray-50 py-12"> <div className="max-w-7xl mx-auto px-4 "sm": px-6 lg:px-8"> <div className="text-center mb-12"> <h1 className="text-4xl font-bold text-gray-900 mb-4"> Documentation"; </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Comprehensive documentation for our services,APIs,and; development tools.; ></div> </div>"; <div className="bg-white rounded-lg shadow-lg p-8"> <p className="text-gray-600 text-center">'; Documentation coming soon. We're building comprehensive guides and; references.; ></div> ></div> ></div> ></div> </>)}; export default Documentation; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation }; export { Documentation };
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

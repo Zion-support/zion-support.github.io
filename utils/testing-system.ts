@@ -1,12 +1,11 @@
-<<<<<<< HEAD
-
-  static async testUserInteraction (
+static async testUserInteraction (
     element: HTMLElement,
     action: 'click' | 'type' | 'hover') {
     switch (action) {
       case 'click':;
         element.click ();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -23,12 +22,15 @@ export class TestingSystem {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         break;
       case 'type': // Handle typing;
         break;
       case 'hover': // Handle hover;
         break;
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -45,6 +47,8 @@ export class TestingSystem {
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 }
 =======
@@ -52,6 +56,7 @@ export class TestingSystem {
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 =======
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -68,3 +73,6 @@ export class TestingSystem {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  }
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

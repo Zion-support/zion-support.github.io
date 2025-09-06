@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 #!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
@@ -69,19 +72,21 @@ function restorePage(pagePath) {;
       const parts = backupContent.split('');
       if (parts.length > 1) {;
         // Take the content after the conflict resolution;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 '),
 
-
       if (parts.length > 1) {
         // Take the content after the conflict resolution
-<<<<<<< HEAD
         backupContent = parts[1].split('>>>>>>>')[0]
 
+<<<<<<< HEAD
 =======
 
 
@@ -96,6 +101,8 @@ function restorePage(pagePath) {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     }
     // Clean up the content
@@ -109,6 +116,7 @@ function restorePage(pagePath) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -133,6 +141,11 @@ function restorePage(pagePath) {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -148,12 +161,15 @@ function restorePage(pagePath) {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 '),
       // Check condition
 if ( {) {
@@ -179,9 +195,12 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
     // Create a backup of the current corrupted file;
     const timestamp = Date.now();
@@ -189,15 +208,19 @@ if ( {) {
     fs.writeFileSync(corruptedBackupPath, currentContent),;
     // Restore the page;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     fs.writeFileSync(pagePath, backupContent),;
     return {;
       restored: true,;
       backupUsed: backupPath,;
       corruptedBackup: corruptedBackupPath;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -211,12 +234,15 @@ if ( {) {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
 
+<<<<<<< HEAD
 
 
 
@@ -231,6 +257,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Function to scan and restore all corrupted pages
 function restoreAllCorruptedPages() {
   const pagesDir = path.join(process.cwd(), 'pages')
@@ -260,11 +288,11 @@ function restoreAllCorruptedPages() {
         
         console.log(`\n🔍 Checking: ${fullPath}`),
 
-
       } else if (entry.name.endsWith('.tsx') || entry.name.endsWith('.jsx')) {
         results.total++,
         
         console.log(`\n🔍 Checking: ${fullPath}`),
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -279,6 +307,9 @@ function restoreAllCorruptedPages() {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 // Function to scan and restore all corrupted pages;
 function restoreAllCorruptedPages() {;
@@ -303,6 +334,7 @@ function restoreAllCorruptedPages() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
@@ -314,10 +346,13 @@ function restoreAllCorruptedPages() {;
 <<<<<<< HEAD
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
         const result = restorePage(fullPath),
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
         const result = restorePage(fullPath),
@@ -325,6 +360,8 @@ function restoreAllCorruptedPages() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         if (result.restored) {
           results.restored++
           console.log(`✅ Restored: ${fullPath}`)
@@ -334,12 +371,15 @@ function restoreAllCorruptedPages() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
           results.failed++
           console.log(`❌ Failed: ${fullPath}`)
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
           console.log(`   Reason: ${result.reason}`)
           results.failed++,
@@ -359,8 +399,6 @@ function restoreAllCorruptedPages() {;
           results.failed++,;
           // // // console.log(`❌ Failed: ${fullPath}`),;
           // // // console.log(`   Reason: ${result.reason}`);
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
           results.failed++,
 =======
@@ -369,6 +407,7 @@ function restoreAllCorruptedPages() {;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
           results.failed++,
 
+<<<<<<< HEAD
 
 =======
 <<<<<<< HEAD
@@ -393,6 +432,8 @@ function restoreAllCorruptedPages() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
         results.details.push({
           file: fullPath
@@ -402,6 +443,7 @@ function restoreAllCorruptedPages() {;
     }
   }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -427,6 +469,9 @@ function restoreAllCorruptedPages() {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  return results
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   // // // console.log('🚀 Starting page restoration process...'),
   scanDirectory(pagesDir),
   // Generate summary
@@ -438,32 +483,18 @@ function restoreAllCorruptedPages() {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
-  scanDirectory(pagesDir),
-  // Generate summary
-
-
+<<<<<<< HEAD
 =======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   scanDirectory(pagesDir),
   // Generate summary
-  console.log('\n📊 Restoration Summary: '),
-  console.log(`   Total pages: ${results.total}`),
-  console.log(`   Restored: ${results.restored}`),
-  console.log(`   Failed: ${results.failed}`),
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`),
-  
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'page-restoration-report.json'),
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2)),
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`),
-  
-  return results
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+
   scanDirectory(pagesDir),
   // Generate summary
   scanDirectory(pagesDir),
   // Generate summary
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
@@ -472,6 +503,8 @@ function restoreAllCorruptedPages() {;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   // // // console.log('\n📊 Restoration Summary: '),
   // // // console.log(`   Total pages: ${results.total}`),
   // // // console.log(`   Restored: ${results.restored}`),
@@ -483,7 +516,6 @@ function restoreAllCorruptedPages() {;
   console.log(`\n Detailed report saved to: ${reportPath}`)
 
   return results
-<<<<<<< HEAD
 ;
   // // // console.log('🚀 Starting page restoration process...'),;
   scanDirectory(pagesDir),;
@@ -499,6 +531,7 @@ function restoreAllCorruptedPages() {;
   // // // console.log(`\n📄 Detailed report saved to: ${reportPath}`),;
   return results;
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -512,6 +545,8 @@ function restoreAllCorruptedPages() {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 // Run the restoration if this script is executed directly
 if ({
@@ -520,6 +555,7 @@ if ({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -529,6 +565,9 @@ if ({
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Function to scan and restore all corrupted pages;
 /**
  * restoreAllCorruptedPages - Function description
@@ -606,16 +645,13 @@ if ( {) {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
-
 <<<<<<< HEAD
 =======
-module.exports = {
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-  restorePage
-  restoreAllCorruptedPages
-  findBestBackup
 }
 
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 }
@@ -625,6 +661,8 @@ module.exports = {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 module.exports = {;
   restorePage,;
@@ -634,6 +672,7 @@ module.exports = {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
@@ -651,14 +690,16 @@ module.exports = {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 module.exports = {
   restore_page,
   restoreAllCorruptedPages,
   findBestBackup;
-<<<<<<< HEAD
-
 
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -668,6 +709,8 @@ module.exports = {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 main
 
@@ -678,6 +721,7 @@ module.exports = {
 },;
 
 };
+<<<<<<< HEAD
 main
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -689,3 +733,6 @@ main
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+main
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

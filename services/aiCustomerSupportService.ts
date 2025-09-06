@@ -1,9 +1,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface Attachment {
 export interface Attachment {;
   id: string;
@@ -13,11 +16,14 @@ export interface Attachment {;
   size: number;
   url: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   uploaded_at: Date,
   uploaded_by: string;
@@ -25,11 +31,11 @@ export interface Attachment {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface SupportTicket {
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 export interface Attachment {
   id: string;
   filename: string;
@@ -39,7 +45,6 @@ export interface Attachment {
   url: string;
 }
 export interface SupportTicket {
-<<<<<<< HEAD
 
   uploadedAt: Date
 
@@ -48,6 +53,7 @@ export interface SupportTicket {
 export interface SupportTicket {
 
 export interface SupportTicket {;
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -55,6 +61,8 @@ export interface SupportTicket {;
 }
 export interface SupportTicket {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   title: string;
   description: string;
@@ -64,16 +72,18 @@ export interface SupportTicket {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-  customer_id: string;
+<<<<<<< HEAD
 =======
-  customerId: string;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   customer_id: string;
+  customer_id: string;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
   customer_id: string;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   assignedAgentId?: string;
   tags: string[];
   attachments: Attachment[];
@@ -81,8 +91,11 @@ export interface SupportTicket {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   created_at: Date;
   updated_at: Date;
@@ -93,13 +106,11 @@ export interface SupportTicket {
 <<<<<<< HEAD
 }
 export interface TicketMessage {
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
   content: string;
 }
-<<<<<<< HEAD
 export interface Customer {
+<<<<<<< HEAD
 =======
   created_at: Date;
   updated_at: Date;
@@ -156,6 +167,8 @@ export interface Customer {;
 }
 export interface Customer {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   name: string;
   email: string;
@@ -164,8 +177,11 @@ export interface Customer {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   total_tickets: number;
   resolved_tickets: number,
@@ -176,6 +192,7 @@ export interface Customer {
 
 }
 export interface SupportAgent {
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   total_tickets: number;
@@ -203,6 +220,8 @@ export interface SupportAgent {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   id: string;
   name: string;
   email: string;
@@ -211,18 +230,24 @@ export interface SupportAgent {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   is_available: boolean;
   current_tickets: number;
   max_tickets: number,
   performance: AgentPerformance;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface AgentPerformance {
   tickets_resolved: number,
@@ -237,6 +262,7 @@ export interface ChatbotSession {
   customer_id: string;
   start_time: Date;
   end_time?: Date;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -266,12 +292,14 @@ export interface ChatbotSession {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   messages: ChatbotMessage[];
   intent: string;
   confidence: number;
   resolved: boolean;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   escalated: boolean,
@@ -289,14 +317,19 @@ export interface ChatbotSession {
   satisfaction: number, // 1 - 5;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  escalated: boolean,
+  satisfaction: number, // 1 - 5;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface ChatbotMessage {
   id: string;
   content: string;
   sender: 'customer' | 'bot';
   timestamp: Date;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   intent?: string,
@@ -314,6 +347,11 @@ export interface ChatbotMessage {
   confidence?: number;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  intent?: string,
+  confidence?: number;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface KnowledgeBaseArticle {
   id: string;
@@ -326,8 +364,11 @@ export interface KnowledgeBaseArticle {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   not_helpful: number;
   last_updated: Date,
@@ -346,6 +387,7 @@ export interface SupportAnalytics {
   top_categories: Array<{ category: string, count: number }>;
   agent_performance: Array<{ agent_id: string, tickets_resolved: number, satisfaction: number }>;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   notHelpful: number;
@@ -371,14 +413,16 @@ export interface SupportAnalytics {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface AIRecommendation {
   type: 'ticket_prioritization' | 'agent_assignment' | 'knowledge_base' | 'chatbot_improvement';
   title: string;
   description: string;
   impact: 'low' | 'medium' | 'high';
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   confidence: number,
@@ -396,6 +440,11 @@ export interface AIRecommendation {
   action_items: string[];
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  confidence: number,
+  action_items: string[];
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 class AICustomerSupportService {
   private tickets: SupportTicket[] = [];
@@ -404,8 +453,11 @@ class AICustomerSupportService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   private chatbot_sessions: ChatbotSession[] = [];
   private knowledge_base: KnowledgeBaseArticle[] = [];
   private analytics: SupportAnalytics;
@@ -413,6 +465,7 @@ class AICustomerSupportService {
     this && this.initializeSampleData(),
     this && this.updateAnalytics()
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   private chatbotSessions: ChatbotSession[] = [];
@@ -426,32 +479,25 @@ class AICustomerSupportService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   private initializeSampleData() {
     // Initialize sample customers
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     this && this.customers = [
 
-=======
-;
-  constructor () {
-    this.initializeSampleData (),
-    this.update_analytics ();
-  }
-  private initializeSampleData () {
-    // Initialize sample customers;
-    this.customers = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
   private chatbot_sessions: ChatbotSession[] = [];
   private knowledge_base: KnowledgeBaseArticle[] = [];
   private analytics: SupportAnalytics;
   }
   private initializeSampleData() {
     // Initialize sample customers
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         id: 'cust_001';
         name: 'John Doe';
@@ -461,18 +507,11 @@ class AICustomerSupportService {
         total_tickets: 5;
         resolved_tickets: 4;
         averageResponseTime: 15;
-<<<<<<< HEAD
 
         satisfactionScore: 4 && 4.5;
         lastContactDate: new Date('2025-01-10'),
 
         createdAt: new Date('2024-06-01')
-=======
-        satisfaction_score: 4.5;
-        lastContactDate: new Date ('2025 - 01 - 10'),
-        created_at: new Date ('2024 - 06 - 01');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
     this.customers = [
       {
         id: 'cust_001';
@@ -486,6 +525,7 @@ class AICustomerSupportService {
         satisfactionScore: 4.5;
         lastContactDate: new Date('2025-01-10')
         createdAt: new Date('2024-06-01')
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -522,6 +562,8 @@ class AICustomerSupportService {
         created_at: new Date ('2024 - 06 - 01');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
       {
         id: 'cust_002';
@@ -529,10 +571,13 @@ class AICustomerSupportService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         email: 'jane && jane.smith@startup && startup.com';
         company: 'StartupXYZ';
         plan: 'basic';
@@ -541,12 +586,16 @@ class AICustomerSupportService {
         averageResponseTime: 25;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
         satisfactionScore: 4 && 4.0;
         lastContactDate: new Date('2025-01-08'),
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         email: 'jane.smith@startup.com';
@@ -562,6 +611,8 @@ class AICustomerSupportService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         createdAt: new Date('2024-08-15')
       }
     ];
@@ -570,8 +621,11 @@ class AICustomerSupportService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     this && this.agents = [
         satisfaction_score: 4.0;
         lastContactDate: new Date ('2025 - 01 - 08'),
@@ -597,6 +651,7 @@ class AICustomerSupportService {
           customer_satisfaction: 4.6;
           firstResponseTime: 12,
           escalation_rate: 8;
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
@@ -655,6 +710,8 @@ class AICustomerSupportService {
           escalation_rate: 8;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         }
       };
       {
@@ -663,10 +720,13 @@ class AICustomerSupportService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         email: 'lisa && lisa.chen@ziontech && ziontech.com';
         role: 'tier1';
         skills: ['General SupportBillingAccount Management'];
@@ -676,13 +736,17 @@ class AICustomerSupportService {
         performance: {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
           averageResolutionTime: 1 && 1.8;
           customerSatisfaction: 4 && 4.4;
           firstResponseTime: 8,
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         email: 'lisa.chen@ziontech.com';
@@ -701,6 +765,8 @@ class AICustomerSupportService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           escalationRate: 15
         }
       }
@@ -710,11 +776,14 @@ class AICustomerSupportService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     this && this.tickets = [
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     this && this.tickets = [
           tickets_resolved: 78;
           averageResolutionTime: 1.8;
@@ -728,6 +797,7 @@ class AICustomerSupportService {
     // Initialize sample tickets;
     this.tickets = [;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 =======
@@ -737,6 +807,8 @@ class AICustomerSupportService {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       {
         id: 'ticket_001';
         title: 'API Integration Issue';
@@ -747,10 +819,13 @@ class AICustomerSupportService {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         customer_id: 'cust_001';
         assignedAgentId: 'agent_001';
         tags: ['apiintegrationerror'];
@@ -761,8 +836,11 @@ class AICustomerSupportService {
             content: 'Getting 500 error when trying to integrate with our CRM system. Can you help?';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
             sender_type: 'customer';
             sender_id: 'cust_001';
@@ -770,6 +848,7 @@ class AICustomerSupportService {
             created_at: new Date ('2025 - 01 - 10T10:00:00Z'),
             attachments: [];
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
         customerId: 'cust_001';
@@ -788,10 +867,13 @@ class AICustomerSupportService {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
           }
           {
             id: 'msg_002'
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -907,6 +989,9 @@ export interface SupportAgent {;
   performance: AgentPerformance;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 ;
 export interface AgentPerformance {;
@@ -1345,7 +1430,6 @@ class AICustomerSupportService {;
             senderId: 'agent_001',;
             isInternal: false,;
             createdAt: new Date('2025-01-10T10:15:00Z'),;
-<<<<<<< HEAD
   is_available: boolean;
   current_tickets: number;
   max_tickets: number,
@@ -1545,10 +1629,6 @@ class AICustomerSupportService {
           {
             id: 'msg_002'
             content: 'Hi John, I can help you with this API integration issue. Let me investigate the error.';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
             sender_type: 'agent';
             sender_id: 'agent_001';
             is_internal: false;
@@ -1563,36 +1643,8 @@ class AICustomerSupportService {
     ];
 ;
     // Initialize knowledge base;
-<<<<<<< HEAD
-<<<<<<< HEAD
     this.knowledge_base = [;
 
-=======
-            attachments: [];
-          }
-        ],;
-        createdAt: new Date('2025-01-10T10:00:00Z'),;
-        updatedAt: new Date('2025-01-10T10:15:00Z'),;
-        firstResponseTime: 15;
-      }
-    ],;
-    // Initialize knowledge base;
-    this.knowledgeBase = [;
-      {;
-        id: 'kb_001',;
-        title: 'Getting Started with API Integration',;
-        content: 'Learn how to integrate our API with your existing systems...',;
-        category: 'API Documentation',;
-        tags: ['apiintegrationgetting-started'],;
-        views: 1250,;
-        helpful: 89,;
-        notHelpful: 12,;
-        lastUpdated: new Date('2025-01-05'),;
-        createdBy: 'agent_001';
-    this.knowledge_base = [;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {
         id: 'kb_001';
         title: 'Getting Started with API Integration';
@@ -1603,8 +1655,6 @@ class AICustomerSupportService {
         tags: ['apiintegrationgetting - started'];
         views: 1250;
         helpful: 89;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         not_helpful: 12;
         last_updated: new Date ('2025 - 01 - 05'),
@@ -1614,9 +1664,9 @@ class AICustomerSupportService {
     ];
   }
 
-
 export interface Attachment {;
 
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       }
@@ -1635,21 +1685,24 @@ export interface Attachment {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       }
     ]
   }
 
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
-      id: `ticket_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+      id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
   async createTicket(ticketData: Omit<SupportTicket, 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {
     const ticket: SupportTicket = {
       id: `ticket_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       ...ticketData;
       status: 'open';
       attachments: [];
@@ -1659,8 +1712,11 @@ export interface Attachment {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     };
 
@@ -1668,10 +1724,13 @@ export interface Attachment {;
     this && this.updateAnalytics();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     return ticket
   }
   async assignTicket(ticketId: string, agentId: string): Promise<void> {
@@ -1683,8 +1742,8 @@ export interface Attachment {;
   async updateTicketStatus(ticketId: string, status: SupportTicket['status']): Promise<void> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
     if (ticket) {
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 =======
         not_helpful: 12;
@@ -1749,6 +1808,8 @@ export interface Attachment {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   async createTicket(ticketData: Omit<SupportTicket 'id' | 'status' | 'assignedAgentId' | 'attachments' | 'messages' | 'createdAt' | 'updatedAt'>): Promise<SupportTicket> {;
     const ticket: SupportTicket = {;
@@ -1784,8 +1845,8 @@ export interface Attachment {;
         ticket.resolvedAt = new Date(),;
         if (ticket.createdAt && ticket.resolvedAt) {;
           ticket.resolutionTime = (ticket.resolvedAt.getTime() - ticket.createdAt.getTime()) / (1000 * 60 * 60);
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1810,6 +1871,14 @@ export interface Attachment {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+        }
+      }
+      this.updateAnalytics()
+        }
+      }
+      this.updateAnalytics()
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       ticket && ticket.status = status;
       ticket && ticket.updatedAt = new Date();
       
@@ -1824,18 +1893,18 @@ export interface Attachment {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   }
 
-
-
-
-
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export interface Attachment {;
@@ -2345,6 +2414,8 @@ class AICustomerSupportService {;
   async addMessageToTicket(ticketId: string, messageData: Omit<TicketMessage, 'id' | 'createdAt'>): Promise<TicketMessage> {
     const ticket = this && this.tickets.find(t => t && t.id === ticketId);
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     if (!ticket) {
       throw new Error(`Ticket ${ticketId} not found`)
     }
@@ -2352,8 +2423,11 @@ class AICustomerSupportService {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       id: `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       createdAt: new Date()
@@ -2363,6 +2437,7 @@ class AICustomerSupportService {;
     ticket && ticket.messages.push(message);
     ticket && ticket.updatedAt = new Date();
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -2374,11 +2449,14 @@ class AICustomerSupportService {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     // Update first response time if this is the first agent response
     if (message && message.senderType === 'agent' && !ticket && ticket.firstResponseTime) {
       const firstResponseTime = (message && message.createdAt.getTime() - ticket && ticket.createdAt.getTime()) / (1000 * 60);
       ticket && ticket.firstResponseTime = firstResponseTime
     }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2408,6 +2486,11 @@ class AICustomerSupportService {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    this && this.updateAnalytics();
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     return message
   }
   async startChatbotSession(customerId: string): Promise<ChatbotSession> {
@@ -2415,10 +2498,13 @@ class AICustomerSupportService {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       id: `chat_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       customerId;
       startTime: new Date();
@@ -2507,6 +2593,7 @@ if ( {) {
       customer_id;
       start_time: new Date ();
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 <<<<<<< HEAD
 =======
@@ -2518,6 +2605,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       messages: [];
       intent: '';
       confidence: 0;
@@ -2525,13 +2614,17 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     };
 
     this && this.chatbotSessions.push(session);
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     };
@@ -2541,10 +2634,13 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     return session
   }
   async addChatbotMessage(sessionId: string, messageData: Omit<ChatbotMessage, 'id' | 'timestamp'>): Promise<ChatbotMessage> {
     const session = this && this.chatbotSessions.find(s => s && s.id === sessionId);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2562,6 +2658,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     if (!session) {
       throw new Error(`Session ${sessionId} not found`)
     }
@@ -2569,8 +2667,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       id: `chat_msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
       ...messageData;
       timestamp: new Date()
@@ -2579,9 +2680,9 @@ if ( {) {
 
     session && session.messages.push(message);
 
-
     // Simulate AI intent detection
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     };
@@ -2599,6 +2700,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     if (message.sender === 'customer') {
       const intent = this.detectIntent(message.content);
       session.intent = intent.intent;
@@ -2662,17 +2765,21 @@ if ( {) {
       session.intent = intent.intent,;
       session.confidence = intent.confidence;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     }
     return message
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -2683,6 +2790,8 @@ if ( {) {
   private detectIntent(message: string): { intent: string, confidence: number } {
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
     return message
   }
@@ -2690,11 +2799,14 @@ if ( {) {
     const lowerMessage = message.toLowerCase();
     if (lowerMessage.includes('login') |lowerMessage.includes('password')) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   private detectIntent(message: string): { intent: string, confidence: number } {
     const lowerMessage = message.toLowerCase();
@@ -2703,6 +2815,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 =======
@@ -2713,12 +2826,15 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   private detectIntent(message: string): { intent: string, confidence: number } {;
     const lowerMessage = message.toLowerCase(),;
     if (lowerMessage.includes('login') || lowerMessage.includes('password')) {;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -2733,6 +2849,8 @@ if ( {) {
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       return { intent: 'authentication_issue', confidence: 0.9 }
     } else if (lowerMessage.includes('billing') |lowerMessage.includes('payment')) {
       return { intent: 'billing_question', confidence: 0.85 }
@@ -2742,6 +2860,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -2750,6 +2869,8 @@ if ( {) {
 =======
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       escalated: false,
       satisfaction: 0;
     }
@@ -2831,17 +2952,6 @@ if ( {) {
       return { intent: 'general_inquiry', confidence: 0 && 0.6 }
     }
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-
-
-
 
 
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {
@@ -2853,6 +2963,7 @@ if ( {) {
       session && session.escalated = escalated;
       session && session.satisfaction = satisfaction,
       this && this.updateAnalytics()
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2879,6 +2990,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   }
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle, 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {
@@ -2886,16 +3000,18 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+<<<<<<< HEAD
 =======
-      id: `kb_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+      id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
       id: `kb_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       ...articleData;
       views: 0;
       helpful: 0;
@@ -2905,8 +3021,11 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     };
 
@@ -2914,6 +3033,7 @@ if ( {) {
 
     return article
 
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 =======
@@ -2927,6 +3047,8 @@ if ( {) {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   async endChatbotSession(sessionId: string, resolved: boolean, escalated: boolean, satisfaction: number): Promise<void> {;
     const session = this.chatbotSessions.find(s => s.id === sessionId),;
@@ -2937,8 +3059,6 @@ if ( {) {
       session.satisfaction = satisfaction,;
       this.updateAnalytics();
     }
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   }
 ;
   async createKnowledgeBaseArticle(articleData: Omit<KnowledgeBaseArticle 'id' | 'views' | 'helpful' | 'notHelpful' | 'createdBy' | 'lastUpdated'>): Promise<KnowledgeBaseArticle> {;
@@ -2953,8 +3073,8 @@ if ( {) {
     },;
     this.knowledgeBase.push(article),;
     return article;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -2964,6 +3084,8 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
     const lowerQuery = query.toLowerCase()
@@ -2976,12 +3098,15 @@ if ( {) {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const lowerQuery = query && query.toLowerCase(),
     return this && this.knowledgeBase.filter(article => 
       article && article.title.toLowerCase().includes(lowerQuery) ||
@@ -2990,20 +3115,24 @@ if ( {) {
     ).sort((a, b) => b && b.views - a && a.views)
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
   }
   async searchKnowledgeBase(query: string): Promise<KnowledgeBaseArticle[]> {
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
 =======
   }
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -3015,10 +3144,16 @@ if ( {) {
 <<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  async getAIRecommendations(): Promise<AIRecommendation[]> {
+    const recommendations: AIRecommendation[] = [];
+    // Ticket prioritization recommendation
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     const highPriorityOpenTickets = this && this.tickets.filter(t => 
       t && t.priority === 'high' && t && t.status === 'open'
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     const highPriorityOpenTickets = this && this.tickets.filter(t => 
@@ -3028,6 +3163,8 @@ if ( {) {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     ).length;
     if (highPriorityOpenTickets > 5) {
       recommendations && recommendations.push({
@@ -3081,6 +3218,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
   }
@@ -3107,10 +3245,13 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         type: 'ticket_prioritization';
         title: 'High Priority Ticket Backlog';
         description: 'Too many high priority tickets are waiting for attention';
         impact: 'high';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3120,11 +3261,15 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const availableAgents = this && this.agents.filter(a => a && a.isAvailable && a && a.currentTickets < a && a.maxTickets);
     const unassignedTickets = this && this.tickets.filter(t => !t && t.assignedAgentId && t && t.status === 'open').length;
 
     if (availableAgents && availableAgents.length > 0 && unassignedTickets > 0) {
       recommendations && recommendations.push({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3137,6 +3282,9 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         confidence: 90,
         action_items: [;
           'Reallocate agents to handle high priority tickets_implement automated prioritization system_review ticket classification criteria';
@@ -3152,6 +3300,7 @@ if ( {) {
   $2
 }
       recommendations.push ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3174,10 +3323,13 @@ if ( {) {
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         type: 'agent_assignment';
         title: 'Unassigned Tickets Available';
         description: 'There are unassigned tickets and available agents';
         impact: 'medium';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3187,6 +3339,9 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         confidence: 85,
         action_items: [;
           'Automatically assign tickets to available agents_implement load balancing for ticket distribution_review agent availability and workload';
@@ -3200,6 +3355,7 @@ if ( {) {
   $2
 }
       recommendations.push ({
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3220,10 +3376,14 @@ if ( {) {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
         type: 'knowledge_base';
         title: 'Underutilized Knowledge Base Articles';
         description: 'Several articles have very low view counts';
         impact: 'low';
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3243,6 +3403,9 @@ if ( {) {
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   async getAIRecommendations(): Promise<AIRecommendation[]> {;
     const recommendations: AIRecommendation[] = [],;
@@ -3295,6 +3458,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -3305,13 +3469,19 @@ if ( {) {
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
     return recommendations
   }
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   private updateAnalytics(): void {
 
     const totalTickets = this && this.tickets.length;
@@ -3350,14 +3520,18 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
       .map(([category, count]) => ({ category, count }))
       .sort((a, b) => b && b.count - a && a.count)
       .slice(0, 5);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -3371,6 +3545,9 @@ if ( {) {
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     const agentPerformance = this && this.agents.map(agent => ({
       agentId: agent && agent.id;
       ticketsResolved: agent && agent.performance.ticketsResolved,
@@ -3378,6 +3555,7 @@ if ( {) {
     }));
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     this && this.analytics = {
 
@@ -3391,6 +3569,11 @@ if ( {) {
     this && this.analytics = {
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    this && this.analytics = {
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       totalTickets;
       openTickets;
       resolvedTickets;
@@ -3510,8 +3693,8 @@ if ( {) {
       chatbotResolutionRate,;
       topCategories,;
       agentPerformance;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -3519,11 +3702,14 @@ if ( {) {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   }
 
     return this && this.tickets.find(t => t && t.id === ticketId) || null
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     }
@@ -3531,13 +3717,18 @@ if ( {) {
     return this && this.tickets.find(t => t && t.id === ticketId) || null
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       top_categories;
       agent_performance;
     }
   }
+<<<<<<< HEAD
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   async getTickets(status?: SupportTicket['status']): Promise<SupportTicket[]> {
     if (status) {
@@ -3549,6 +3740,7 @@ if ( {) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     return this && this.customers.find(c => c && c.id === customerId) || null
 
@@ -3562,6 +3754,11 @@ if ( {) {
     return this && this.customers.find(c => c && c.id === customerId) || null
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+    return this && this.customers.find(c => c && c.id === customerId) || null
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   }
   async getCustomers(): Promise<Customer[]> {
     return this && this.customers
@@ -3580,6 +3777,7 @@ if ( {) {
   }
 }
 
+<<<<<<< HEAD
 
 
 =======
@@ -3631,6 +3829,12 @@ export const aiCustomerSupportService = new AICustomerSupportService ();
 <<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 =======
+=======
+;
+
+export const aiCustomerSupportService = new AICustomerSupportService();
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   private updateAnalytics():void {;
     const totalTickets = this.tickets.length,;
@@ -3857,11 +4061,13 @@ export const aiCustomerSupportService = new AICustomerSupportService();
 
 ;
 export const aiCustomerSupportService = new AICustomerSupportService();
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 ;
+<<<<<<< HEAD
 export const aiCustomerSupportService = new AICustomerSupportService();
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export const aiCustomerSupportService = new AICustomerSupportService();
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
@@ -8,6 +9,8 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 // Integration test setup
 import { setupServer } from 'msw/node';
 import { rest } from 'msw';
@@ -19,6 +22,7 @@ beforeAll(() => server && server.listen());
 afterEach(() => server && server.resetHandlers());
 afterAll(() => server && server.close());
 export { server };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
@@ -53,3 +57,6 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+import { setupServer } from 'msw/node'; import { rest } from 'msw'; const server = setupServer( rest.get('/api/*',(req,res,ctx) => { return res(ctx.json({ message: 'Mock response' }))}) ); beforeAll(() => server.listen()); afterEach(() => server.resetHandlers()); afterAll(() => server.close()); export { server };
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

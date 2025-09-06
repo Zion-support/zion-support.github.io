@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout from './components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export default function TermsPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Terms of Service - Zion Tech Group"
       description="Zion Tech Group's terms of service outlining the rules and regulations for using our services."
@@ -160,3 +165,13 @@ export default function TermsPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Terms</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Terms;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

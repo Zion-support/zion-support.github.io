@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 =======
@@ -10,6 +11,9 @@ export interface EmergingTechService2029V2 {;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   id: string;
+=======
+id: string;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   name: string;
   description: string;
   category: string[];
@@ -43,9 +47,6 @@ export interface EmergingTechService2029V2 {;
     mobile: string;
     email: string;
     website: string;
-
-
-<<<<<<< HEAD
 
     address: string;
   }
@@ -109,6 +110,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
       'Implementation team',
     ],
     compliance: ['FIPS 140 - 2', 'Common Criteria', 'SOC 2', 'ISO 27001'],    scalability: 'Enterprise - grade, global deployment',    roi: '600% within 24 months',
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -116,6 +118,8 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     deployment: 'Hardware appliances, cloud options',
     maintenance: 'Continuous updates, security patches',
     training: 'Quantum security training, certification',
@@ -123,18 +127,10 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
+<<<<<<< HEAD
 =======
-    api: 'Security management APIs',
-    mobile: 'Mobile security apps',    security: 'Quantum - safe encryption, zero - trust',    backup: 'Secure backup, disaster recovery',
-    monitoring: 'Real - time security monitoring',
-=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-    api: 'Security management APIs', mobile: 'Mobile security apps',
-    security: 'Quantum-safe encryption, zero-trust',
-    backup: 'Secure backup, disaster recovery',
-    monitoring: 'Real-time security monitoring',
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     analytics: 'Security insights, threat intelligence',
     customization: 'Custom security policies, integration',
     whiteLabel: 'Available for security providers', affiliate: '20% commission for referrals',
@@ -596,10 +592,13 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     training: 'Quantum security training, certification',
     documentation: 'Security guides, best practices',
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     api: 'Security management APIs', mobile: 'Mobile security apps',
     security: 'Quantum-safe encryption, zero-trust',
     backup: 'Secure backup, disaster recovery',
@@ -637,8 +636,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     scalability: 'Research-grade, scalable deployment',
     roi: '800% within 36 months',
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     deployment: 'Laboratory setup, cloud integration',
     maintenance: 'Continuous optimization, biological monitoring',
     training: 'Biotech training, safety protocols',
@@ -671,6 +668,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [
     analytics: 'Trading analytics, performance reports',
     customization: 'Custom trading strategies, integration',
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -689,12 +687,18 @@ export interface EmergingTechService2029V2 {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+export interface EmergingTechService2029V2 {;
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   }
 ];
 
 ;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -807,6 +811,8 @@ export interface EmergingTechService2029V2 {;
       address: '364 E Main St STE 1008 Middletown DE 19709'
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
   }
 ];
@@ -1042,6 +1048,7 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 
     }
   }
+<<<<<<< HEAD
 ];
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -1115,3 +1122,6 @@ export const emergingTechServices2029V2: EmergingTechService2029V2[] = [;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+];
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

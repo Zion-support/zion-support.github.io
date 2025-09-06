@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   These definitions are **not** a replacement for `@types / react` – they only;
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
@@ -14,15 +15,23 @@
   exist so that isolated compilation of individual files (e.g., in CI or code;
   review bots) will not fail when full React type declarations are not;
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  These definitions are **not** a replacement for `@types / react` – they only;
+  exist so that isolated compilation of individual files (e.g., in CI or code;
+  review bots) will not fail when full React type declarations are not;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   present.  They purposefully model just enough surface - area used throughout;
   the code - base.  If you have `@types / react` available in `node_modules`,
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   TypeScript will prefer those and ignore this file, because paths declared in;
   `type_roots` are merged with normal type resolution.;
 */;
@@ -30,16 +39,20 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 declare module "react" {
   // Basic ReactElement stub (JSX trees ultimately compile into this).;
   export interface ReactElement < P = any, T extends string | React.JSXElementConstructor < any> = any> {
     type: T,
     props: P,
     key: React.Key | null;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -103,6 +116,10 @@ declare namespace React {// Keep JSX namespace for intrinsic elements – this p
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+  the code-base.  If you have `@types/react` available in `node_modules`,;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   TypeScript will prefer those and ignore this file, because paths declared in;
   `typeRoots` are merged with normal type resolution.;
 */;
@@ -112,10 +129,10 @@ declare module "react" {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+<<<<<<< HEAD
 =======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+
   }
   // Function Component (very trimmed - down).;
   export interface FC < P = Record < string, unknown>> {
@@ -141,6 +158,7 @@ declare module "react" {;
     return res.status(500).json({ error: "Internal server error" });
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 
@@ -163,6 +181,8 @@ declare module "react" {;
 ;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   // Function Component (very trimmed-down).;
   export interface FC<P = Record<string, unknown>> {(props: P): ReactElement | null;
   }
@@ -215,6 +235,9 @@ declare module "react" {;
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types / react` is not present.;
@@ -240,11 +263,14 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
 }declare namespace React {
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements" // errors when `@types/react` is not present. export interface IntrinsicElements {
   
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 ;
   // Function Component (very trimmed-down).;
@@ -271,8 +297,8 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
   }
 }
 ;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -284,6 +310,8 @@ TypeScript will prefer those and ignore this file, because paths declared in `ty
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 declare namespace React {;
   // Keep JSX namespace for intrinsic elements – this prevents "JSX.IntrinsicElements";
   // errors when `@types/react` is not present.;
@@ -292,14 +320,13 @@ declare namespace React {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -313,7 +340,6 @@ declare namespace React {;
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
   }
 }
 <<<<<<< HEAD
@@ -321,6 +347,7 @@ declare namespace React {;
   `type_roots` are merged with normal type resolution.;
 */;
   }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -329,3 +356,6 @@ declare namespace React {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

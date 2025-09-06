@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 
@@ -30,6 +31,8 @@ ursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
@@ -43,13 +46,17 @@ interface TeamProps {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import React from 'react';
 interface TeamProps {
   // Add props here as needed
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -59,6 +66,8 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default function Team({ }: TeamProps) {
   return (
     <div>
@@ -118,6 +127,7 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 
@@ -137,3 +147,6 @@ origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

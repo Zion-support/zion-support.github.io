@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import MainLayout from '../components/layout/MainLayout';
@@ -80,6 +79,7 @@ export default function Services() {
       </main>
     </>
   );
+<<<<<<< HEAD
 }
 =======
 
@@ -1619,3 +1619,6 @@ className="px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold 
 }
 >>>>>>> cursor/fix-netlify-build-and-merge-to-main-9571
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

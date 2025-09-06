@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 <<<<<<< HEAD
@@ -17,6 +18,8 @@ export interface Branding {;
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface Branding {logoUrl?: string;
   primaryColor?: string;
   secondaryColor?: string;
@@ -29,6 +32,7 @@ export interface Branding {;
   secondaryColor?: string;
   subdomain?: string;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -38,15 +42,17 @@ export interface Branding {;
 export interface Branding {;
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   logoUrl?: string,;
   primaryColor?: string,;
   secondaryColor?: string,;
   subdomain?: string;
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -55,10 +61,14 @@ export interface Branding {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 ;
 export interface DeployModules {;
   marketplace: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -71,6 +81,9 @@ export interface DeployModules {;
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   gpt: boolean;
   academy: boolean;
   token: boolean;
@@ -82,8 +95,8 @@ export interface DeployModules {;
   apiDocsWiki: boolean;
   zionBrain: boolean;
   // Bonus;
-<<<<<<< HEAD
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -95,6 +108,8 @@ export interface DeployModules {;
 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   globalMap?: boolean,;
   franchiseOnboarding?: boolean,;
   referralAmbassadors?: boolean,;
@@ -108,6 +123,7 @@ export interface DeployModules {;
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   globalMap?: boolean;
   franchiseOnboarding?: boolean;
@@ -119,6 +135,8 @@ export interface DeployModules {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface DeployInput {instanceName: string;
   defaultLanguage: string;
@@ -150,8 +168,6 @@ export interface DeployResult {success: boolean;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
 ;
 export interface DeployInput {;
@@ -159,31 +175,7 @@ export interface DeployInput {;
   defaultLanguage: string;
   deploymentRegion: string;
   tokenActivation: boolean;
-<<<<<<< HEAD
 
-
-=======
-  governanceMode: GovernanceMode;
-  branding: Branding;
-  modules: DeployModules;
-  requestedRoutes?: string[];
-}
-;
-export interface DeployLogEntry {;
-  timestamp: string;
-  level: "info" | "warn" | "error";
-  action: string;
-  details?: Record<string unknown> | string;
-}
-;
-export interface GeneratedAsset {;
-  kind: "file" | "page" | "config" | "job" | "event";
-  path: string;
-  description?: string;
-=======
-}
-;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   governanceMode: GovernanceMode,;
   branding: Branding,;
   modules: DeployModules,;
@@ -213,14 +205,11 @@ export interface GeneratedAsset {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 ;
 export interface DeployResult {;
   success: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
@@ -236,6 +225,8 @@ export interface DeployResult {;
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   instanceSlug: string;
   configPath: string;
   assets: GeneratedAsset[];
@@ -245,6 +236,7 @@ export interface DeployResult {;
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -254,6 +246,9 @@ export interface DeployResult {;
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type GovernanceMode = "Admin" | "DAO" | "Hybrid",
 export interface Branding {
   logo_url?: string,
@@ -262,16 +257,22 @@ export interface Branding {
   subdomain?: string;
 =======
 
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 
+<<<<<<< HEAD
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 }
 export interface DeployModules {
   marketplace: boolean,
@@ -327,7 +328,6 @@ export interface AccessControlConfig {
   allowed_roles: ("Founder" | "Superadmin" | "DAOMultisig")[];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   adminKeyConfigured: boolean;
-<<<<<<< HEAD
 
 <<<<<<< HEAD
 }
@@ -340,9 +340,9 @@ export interface AccessControlConfig {allowedRoles: ("Founder" | "Superadmin" | 
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -353,11 +353,14 @@ export interface AccessControlConfig {;
   adminKeyConfigured: boolean;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -372,3 +375,6 @@ export interface AccessControlConfig {;
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

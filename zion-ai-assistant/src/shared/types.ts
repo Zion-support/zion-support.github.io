@@ -1,22 +1,29 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type ProjectType = "Web Dev" | "AI / ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",
 export interface MilestoneSuggestionInput {
   scopeOfWork: string,
 
+<<<<<<< HEAD
 =======
 
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export type ProjectType = "Web Dev" | "AI/ML" | "DevOps" | "Mobile" | "Data Engineering" | "Other",;
 export interface MilestoneSuggestionInput {;
   scopeOfWork: string,;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -30,10 +37,13 @@ export interface MilestoneSuggestionInput {
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   startDateIso: string, // ISO 8601;
   endDateIso: string,   // ISO 8601;
   project_type: ProjectType;
 }
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -43,10 +53,14 @@ export interface MilestoneSuggestionInput {
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export interface SuggestedMilestoneItem {
   title: string,
   description: string,
 
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -66,10 +80,13 @@ export interface SuggestedMilestoneItem {title: string;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 export interface SuggestedMilestoneItem {;
   title: string,;
   description: string,;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -85,6 +102,9 @@ export interface SuggestedMilestoneItem {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   suggestedDueDateIso: string;
   estimatedEffortHours: number, // estimated hours;
   tags?: string[], // e.g., ["AI Suggested"];
@@ -92,11 +112,15 @@ export interface SuggestedMilestoneItem {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 export interface MilestoneSuggestionResponse {
   milestones: SuggestedMilestoneItem[];
 }
 
+<<<<<<< HEAD
 =======
 
 =======
@@ -142,3 +166,9 @@ export interface MilestoneSuggestionResponse {;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+;
+export interface MilestoneSuggestionResponse {;
+  milestones: SuggestedMilestoneItem[];
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

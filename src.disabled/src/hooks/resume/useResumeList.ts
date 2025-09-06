@@ -59,6 +59,7 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 },
 }
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; ); .order('created_at',{ ascending: 'false' }); ; if(resumeError) throw resumeError; ; if(!resumeData || resumeData && resumeData.length === 0) {; setResumes([]); return [];,} ; const transformedResumes: Resume[] = resumeData && resumeData.map(resume => ({; id: resume && resume.id,; user_id: 'resume && resume.user_id',; basic_info: {; id: resume && resume.id,; title: 'resume && resume.title',; headline: 'resume && resume.headline',; summary: 'resume && resume.summary;',},; work_experience: '[]',; education: '[]',; skills: '[]',; certifications: '[]',; is_active: 'resume && resume.is_active;',})); ; setResumes(transformedResumes); return transformedResumes;,} catch(e: any) {; console && console.error('Error fetching resumes:',e); setError(e && e.message); setResumes([]); return [];,} finally {; setIsLoading(false);,} },[user]); ; useEffect(() => {},[]); if(user) {; fetchResumes();,} else {; setResumes([]); setError(null)} },[user,fetchResumes]); ; return {; isLoading,; error,; resumes,; fetchResumes;,};,}
+<<<<<<< HEAD
     fetchResumes}}
 <<<<<<< HEAD
 
@@ -90,3 +91,6 @@ import { useState,useEffect,useCallback } from 'react'; import { supabase } from
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+    fetchResumes}}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

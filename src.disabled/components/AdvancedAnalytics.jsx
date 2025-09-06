@@ -5,6 +5,7 @@
 export\"
 export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;""
 <<<<<<< HEAD
+<<<<<<< HEAD
 "export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -29,3 +30,6 @@ export: function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] =
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+"export": function AdvancedAnalytics () { const [analyticsData,setAnalyticsData] = useState ({ ;")"}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

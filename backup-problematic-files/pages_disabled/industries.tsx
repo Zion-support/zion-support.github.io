@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, CheckCircle, Star, Zap, Users, Globe, BarChart3, Brain, Network, Cloud } from 'lucide-react';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 =======
 <<<<<<< HEAD:pages/industries.tsx
@@ -524,6 +528,7 @@ const technologies = [
 ];
 export default function IndustriesPage() {
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -1083,3 +1088,13 @@ export default function IndustriesPage() {
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Industries</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Industries;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

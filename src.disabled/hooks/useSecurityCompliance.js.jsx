@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<<< HEAD:src.disabled/hooks/useSecurityCompliance.js.jsx
@@ -16,6 +17,8 @@ const { useState,useEffect,useCallback,useRef } from";react" import { useAnalyti
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
 
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
@@ -24,6 +27,7 @@ import { useState,useEffect,useCallback,useRef } from\';react\' import { useAnal
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
 const { useState,useEffect,useCallback,useRef } from";react" import { useAnalytics } from "./useAnalytics" export const useSecurityCompliance = (_initialConfig) => { const { trackEvent } = useAnalytics({ enableTracking: "tru",e,enableUserBehaviorTracking: "true"}) const [securityEvents,setSecurityEvents] = useState([]) const [complianceRules,setComplianceRules] = useState([]) const [securityMetrics,setSecurityMetrics] = useState({ totalEvents: "0",criticalEvents: "0",highSeverityEvents: "0",complianceScore: "10",0,threatLevel: ";";low,",averageResponseTime: "0",falsePositiveRate: "0"}) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()""";low",averageResponseTime: "0",falsePositiveRate: "0" }) const [isMonitoring,setIsMonitoring] = useState(false) const [isComplianceChecking,setIsComplianceChecking] = useState(false) const monitoringIntervalRef = useRef() const complianceCheckIntervalRef = useRef()"'"'"
+<<<<<<< HEAD
 ursor/add-new-services-and-deploy-updates-0462
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -42,3 +46,6 @@ const { useState,useEffect,useCallback,useRef } from";react" import { useAnalyti
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+ursor/add-new-services-and-deploy-updates-0462
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

@@ -3,7 +3,6 @@ import { readState, writeState } from "../../../utils/sync/storage",;
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types",;
 ;
 
-
   if (req.method === "GET") {
 
     return res.status(200).json({ config: state.config })
@@ -34,14 +33,15 @@ import type { NextApiRequest, NextApiResponse } from "next"
 import { readState, writeState } from "../../../utils/sync/storage"
 import { InstanceConfig, Peer, SyncScope } from "../../../utils/sync/types"
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   const state = readState()
+=======
+  const state = readState(),
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   if (req.method === "GET") {
     return res.status(200).json({ config: state.config })
   }
 
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 }
   } catch (error) {
     console.error("Error:", error);
@@ -49,13 +49,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-
-
   if (req.method === "POST") {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
       peers?: Peer[]
       scope?: SyncScope
       instanceId?: string
+<<<<<<< HEAD
     }
 
 
@@ -66,6 +65,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
     writeState(state)
+=======
+    },
+
+    if (typeof optIn === "boolean") state.config.optIn = optIn,
+    if (typeof paused === "boolean") state.config.paused = paused,
+    if (scope) state.config.scope = scope,
+    if (instanceId && typeof instanceId === "string") state.config.instanceId = instanceId,
+
+    writeState(state),
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
     return res.status(200).json({ config: state.config })
     } catch (error) {

@@ -24,21 +24,16 @@ export const useResumeProgress = (resume: Resume | null) => {
     if (resume.education && resume.education.length > 0) {
       completed += 1;
     }
-<<<<<<< HEAD
 
     // Skills (1 point if at least one entry)
     if (resume.skills && resume.skills.length > 0) {
       completed += 1;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     // Certifications (1 point if at least one entry)
     if (resume.certifications && resume.certifications.length > 0) {
       completed += 1;
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     const progressPercentage = (completed / 5) * 100;
     setProgress(progressPercentage);
@@ -46,16 +41,8 @@ export const useResumeProgress = (resume: Resume | null) => {
 
   return progress;
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
   return progress;
->>>>>>> main
-=======
   return progress;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 };
 
 import { useState, useEffect } from 'react',;
@@ -111,7 +98,3 @@ export const useResumeProgress = (resume:Resume | null) => {;
 };
 
 };
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a

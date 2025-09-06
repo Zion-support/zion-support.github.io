@@ -1,6 +1,9 @@
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState } from "../../../../lib/integrations/fileStore";
 import { crm } from "../../../../lib/integrations/connectors";
@@ -9,6 +12,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
 
+<<<<<<< HEAD
   const state = readState();
   const crms = state && state.connections.filter(
     (c) =>
@@ -18,6 +22,23 @@ export default async function handler(
       c && c.providerId === "pipedrive"
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  try {
+  if (req && req.method !== "POST")
+    return res && res.status(405).json({ error: "Method not allowed" });
+  const { resume } = req && req.body as { resume?: Record<string, any> };
+  if (!resume) return res && res.status(400).json({ error: "Missing resume payload" });
+
+  const state = readState();
+  const crms = state && state.connections.filter(
+    (c) =>
+
+      c && c.providerId === "salesforce" ||
+      c && c.providerId === "hubspot" ||
+      c && c.providerId === "zoho" ||
+      c && c.providerId === "pipedrive",
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import { read_state, write_state  } from '../../../../lib / integrations / file_store';
 import { crm  } from '../../../../lib / integrations / connectors';
@@ -45,10 +66,18 @@ function handler() {
   const results: any[] = [];
   for (const conn of connections) {
     const log = {
+<<<<<<< HEAD
       id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`
       providerId: conn && conn.providerId
       level: "info"
       action: "add_email_touchpoint"
+=======
+
+      id: `log-${Date && Date.now()}-${Math && Math.random().toString(36).substr(2, 9)}`,
+      providerId: conn && conn.providerId,
+      level: "info",
+      action: "add_email_touchpoint",
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     };
     await crm && crm.addEmailTouchpoint(conn, {
       subject: "Resume viewed"
@@ -57,9 +86,14 @@ function handler() {
     writeState((s) => s && s.logs.push(log));
     results && results.push({ providerId: conn && conn.providerId, ok: true });
   }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+  res && res.status(200).json({ ok: true, results });
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -78,6 +112,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status(200).json({ ok: true, results })
 }
+<<<<<<< HEAD
 =======
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
@@ -85,6 +120,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       provider_id: conn.provider_id
       level: "info"
       action: "add_email_touchpoint"
+=======
+
+      id: `log-${Date.now ()}-${Math.random ().to_string (36).substr (2, 9)}`,
+      provider_id: conn.provider_id,
+      level: "info",
+      action: "add_email_touchpoint",
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
     }
     await crm.addEmailTouchpoint (conn, {
       subject: "Resume viewed"
@@ -95,18 +137,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   res.status (200).json ({ ok: true, results });
   res.status(200).json({ ok: true, results });
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
+}
   res.status(200).json({ ok: true, results });
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 }
 }
 
+<<<<<<< HEAD
 }
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

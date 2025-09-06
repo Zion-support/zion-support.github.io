@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -34,6 +35,8 @@ class UltimateAutomationFactory {;
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
   ensureLogsDir() {;
     if (!fs.existsSync(this.logsDir)) {;
@@ -124,21 +127,10 @@ class UltimateAutomationFactory {;
 // CLI interface;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
-=======
-if (import.meta.url === `file: //${process.argv[1]}`) {;
-  const factory = new UltimateAutomationFactory();
-  factory.start().then(report => {;
-    console.log('Ultimate Automation Factory completed:', report.summary);
-=======
-},;
-,;
-// CLI interface,;
-if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
-  const factory = new UltimateAutomationFactory(),;
-  factory.start().then(report => {,;
-    console.log('Ultimate Automation Factory: completed:', report.summary),;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
     process.exit(0);
   }).catch(error => {,;
     console.error('Ultimate Automation Factory: failed:', error),;
@@ -147,7 +139,6 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
 },;
 ,;
 export default UltimateAutomationFactory;
-<<<<<<< HEAD
 import fs from 'fs',
 import path from 'path',
 import { execSync } from 'child_process',
@@ -262,10 +253,13 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 };
 ,
 export default UltimateAutomationFactory,
+<<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
 
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import {exec_sync} from 'child_process';
 ;
 class UltimateAutomationFactory { constructor () { this.logs_dir = path.join (process.cwd (), 'logs'); this.ensureLogsDir ()}
@@ -303,6 +297,7 @@ export default UltimateAutomationFactory;
 ;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
@@ -313,10 +308,14 @@ export default UltimateAutomationFactory;
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 =======
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -353,6 +352,8 @@ class UltimateAutomationFactory {; constructor() {; this.logsDir = path.join(pro
 // CLI interface;
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 if (import.meta.url = = = `file: //${process.argv[1]}`) {; const factory = new UltimateAutomationFactory(); factory.start().then(report = > {; console.log('Ultimate Automation Factory completed: ', report.summary); process.exit(0)}).catch(error = > {; console.error('Ultimate Automation Factory failed: ', error); process.exit(1)})};
 ;
 export default UltimateAutomationFactory;
@@ -451,6 +452,7 @@ if (import.meta.url === `fil: e: //${process.argv[1]}`) {,;
   });
 },;
 ,;
+<<<<<<< HEAD
 export default UltimateAutomationFactory;
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -460,3 +462,6 @@ export default UltimateAutomationFactory;
 =======
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+export default UltimateAutomationFactory;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

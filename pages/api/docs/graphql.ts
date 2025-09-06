@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 
 
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from './next';
 import v1 from "../../../data / api - docs / v1";
 /**
@@ -22,6 +25,7 @@ function toSDL() {
   });
   return typedefs.join ("\n");
 }
+<<<<<<< HEAD
 =======
 =======
 =======
@@ -33,3 +37,15 @@ function toSDL() {
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
+=======
+export default /**
+ * handler - Function description
+ */
+function handler() {
+  res.set_header ("Content - Type", "text / plain");
+  res.status (200).send (toSDL ());
+}
+
+  res.status(200).send(toSDL());
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

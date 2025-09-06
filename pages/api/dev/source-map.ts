@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
 import { getGitStatus, requireRoles } from "../../../utils/devAccess";
@@ -12,10 +15,16 @@ import { getGitStatus, requireRoles } from "../../../utils/devAccess",;
 ;
 export default function handler(req: any, res: any) {
   res.status(200).json({ message: 'Source map endpoint' });
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next"
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap"
 import { getGitStatus, requireRoles } from "../../../utils/devAccess"
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+import type { NextApiRequest, NextApiResponse } from "next",
+import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap",
+import { getGitStatus, requireRoles } from "../../../utils/devAccess",
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const identity = requireRoles(req, res, ["admin", "maintainer"])
   if (!identity) return
@@ -37,12 +46,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   res.setHeader("Allow", "GET, POST")
 
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 import type { NextApiRequest, NextApiResponse } from './next';
 import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';
 import { getGitStatus, require_roles  } from '../../../utils / dev_access';
+=======
+}
+import type { NextApiRequest, NextApiResponse } from './next';,
+import { getSourceMapWithExistence, deployBasicTemplateForPath  } from '../../../utils / source_map';,
+import { getGitStatus, require_roles  } from '../../../utils / dev_access';,
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 ;
 export default /**
  * handler - Function description
@@ -69,7 +85,12 @@ if ( {) {
     const { path: repoRelativePath } = req.body || {}
 
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+<<<<<<< HEAD
       res.status(400).json({ error: "Invalid path" })
+=======
+      res.status(400).json({ error: "Invalid path" }),
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
       return;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
@@ -149,6 +170,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
+<<<<<<< HEAD
 }
 =======
 }
@@ -156,3 +178,6 @@ export default function handler(req, res) {
 
 
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+=======
+}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

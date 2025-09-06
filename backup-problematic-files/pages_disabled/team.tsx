@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import * as React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -16,6 +17,9 @@ import {
   Shield
 } from 'lucide-react';
 import Layout from '../components/Layout';
+=======
+import React from "react";
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const teamMembers = [
   {
@@ -152,6 +156,7 @@ const stats = [
 
 export default function TeamPage() {
   return (
+<<<<<<< HEAD
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -385,3 +390,13 @@ export default function TeamPage() {
     </Layout>
   );
 }
+=======
+    <div className={className || ""}>
+      <h1>Team</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+};
+
+export default Team;
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

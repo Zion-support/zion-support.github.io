@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> main
 <<<<<<< HEAD
@@ -51,6 +52,10 @@ import '@testing-library/jest-dom/vitest';''
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
 
+=======
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
 
 const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
@@ -69,6 +74,7 @@ const "@testing-library/jest-dom/vitest";''"
 import '@testing-library/jest-dom/vitest';''
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 =======
@@ -122,3 +128,7 @@ import '@testing-library/jest-dom/vitest';''
 >>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+const "@testing-library/jest-dom/vitest";''"
+import '@testing-library/jest-dom/vitest';''
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

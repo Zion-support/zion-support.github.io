@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React from \'react\'; export default function Home() { return ( <main style={{ \"padding\": \'24\' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
 const React from "react"; export default function Home() { return ( <main style={{ padding: "24" }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}'"'"
+<<<<<<< HEAD
 import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
 =======
 <<<<<<< HEAD:corrupted_backup/index.xpage.tsx
@@ -8,3 +8,6 @@ import _React from 'react'; export default function Home() { return ( <main styl
 =======
 >>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 >>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6:temp_exclude/pages.disabled_full/index.xpage.tsx
+=======
+import _React from 'react'; export default function Home() { return ( <main style={{ "padding": '24' }}> <h1>Zion Tech Group</h1> <p>Production build sanity page.</p> </main> )}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

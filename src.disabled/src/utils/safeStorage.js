@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 function safeConsoleError(message,error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message,error)} } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage} } catch(error) { safeConsoleError('LocalStorage not available:',error)} return null} function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage} } catch(error) { safeConsoleError('SessionStorage not available:',error)} return null} export { safeConsoleError,safeLocalStorage,safeSessionStorage };
 function safeConsoleError(message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message, error)} } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage} } catch(error) { safeConsoleError('LocalStorage not "available": ', error)} return null} function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage} } catch(error) { safeConsoleError('SessionStorage not "available": ', error)} return null} export { safeConsoleError, safeLocalStorage, safeSessionStorage };
 function safeConsoleError(message,error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message,error)} } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage} } catch(error) { safeConsoleError('LocalStorage not available:',error)} return null} function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage} } catch(error) { safeConsoleError('SessionStorage not available:',error)} return null} export { safeConsoleError,safeLocalStorage,safeSessionStorage };
@@ -47,3 +48,5 @@ function safeConsoleError(message,error) { const env = globalThis.process?.env?.
 >>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

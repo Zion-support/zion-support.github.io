@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 ' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
 " export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
@@ -22,3 +23,7 @@
 =======
 >>>>>>> main
 >>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
+=======
+' \"export\": function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { \''\'";\";
+" export: function TalentGrid({ talents,isLoading,onTalentClick,isAuthenticated,viewProfile,clearFilters,handleBook,handleMessage }) { """";";'"'"
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88

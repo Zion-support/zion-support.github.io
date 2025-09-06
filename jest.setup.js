@@ -99,6 +99,11 @@ global.ResizeObserver = class ResizeObserver {
 <<<<<<< HEAD
 =======
 
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+const { TextEncoder, TextDecoder } = require('util');
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
 // Global test setup
 beforeEach(() => {
   jest.clearAllMocks();

@@ -4,6 +4,7 @@ module.exports = {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
@@ -12,6 +13,9 @@ module.exports = {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
   content: [;
     './src / pages/**/*.{js, ts, jsx, tsx, mdx}./src / components/**/*.{js, ts, jsx, tsx, mdx}./src / app/**/*.{js, ts, jsx, tsx, mdx}'],
   theme: {
@@ -21,6 +25,7 @@ module.exports = {
         foreground: 'hsl (var (--foreground))'},
       font_family: {
         sans: ['Intersans - serif']}}},
+<<<<<<< HEAD
   plugins: []}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -34,3 +39,6 @@ module.exports = {
 
 >>>>>>> cursor/expand-services-advertise-and-build-project-4b36
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+=======
+  plugins: []}
+>>>>>>> cursor/automate-test-improve-and-merge-code-ac88
