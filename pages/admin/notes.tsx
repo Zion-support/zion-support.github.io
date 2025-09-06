@@ -1,194 +1,66 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
+import { useEffect, useState } from 'react';
 
-interface Note {
+type Note = {
   id: string;
-  title: string;
-  content: string;
-  author: string;
-  createdAt: string;
-  updatedAt: string;
-  tags: string[];
-  isPrivate: boolean;
-}
-
-const mockNotes: Note[] = [
-  {
-    id: '1',
-    title: 'Project Alpha Status Update',
-    content: 'The Alpha project is progressing well. We have completed 75% of the planned features and are on track for the Q1 release.',
-    author: 'John Doe',
-    createdAt: '2025-01-15T09:00:00Z',
-    updatedAt: '2025-01-15T09:00:00Z',
-    tags: ['project', 'alpha', 'status'],
-    isPrivate: false
-  },
-  {
-    id: '2',
-    title: 'Security Audit Findings',
-    content: 'Critical security vulnerabilities found in the authentication system. Immediate action required.',
-    author: 'Jane Smith',
-    createdAt: '2025-01-15T10:30:00Z',
-    updatedAt: '2025-01-15T10:30:00Z',
-    tags: ['security', 'audit', 'critical'],
-    isPrivate: true
-  },
-  {
-    id: '3',
-    title: 'Team Meeting Notes',
-    content: 'Discussed upcoming features and resource allocation. Need to hire 2 additional developers.',
-    author: 'Mike Johnson',
-    createdAt: '2025-01-15T14:00:00Z',
-    updatedAt: '2025-01-15T14:00:00Z',
-    tags: ['meeting', 'team', 'hiring'],
-    isPrivate: false
-  }
-];
-
-const AdminNotesPage: React.FC = () => {
-  const [notes, setNotes] = useState<Note[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterTag, setFilterTag] = useState('');
-  const [showPrivate, setShowPrivate] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading notes
-    setTimeout(() => {
-      setNotes(mockNotes);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  const filteredNotes = notes.filter(note => {
-    const matchesSearch = note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.author.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = !filterTag || note.tags.includes(filterTag);
-    const matchesPrivacy = !note.isPrivate || showPrivate;
-    return matchesSearch && matchesTag && matchesPrivacy;
-  });
-
-  const allTags = Array.from(new Set(notes.flatMap(note => note.tags)));
-
-  return (
-    <>
-      <Head>
-        <title>Admin Notes - Zion Tech Group</title>
-        <meta name="description" content="Admin notes and documentation" />
-      </Head>
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Admin Notes</h1>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-            Add New Note
-          </button>
-        </div>
-
-        {/* Filters */}
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">Search</label>
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search notes..."
-                className="w-full p-2 border rounded-md"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Filter by Tag</label>
-              <select
-                value={filterTag}
-                onChange={(e) => setFilterTag(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="">All Tags</option>
-                {allTags.map(tag => (
-                  <option key={tag} value={tag}>{tag}</option>
-                ))}
-              </select>
-            </div>
-            <div className="flex items-center">
-              <label className="flex items-center">
-                <input
-                  type="checkbox"
-                  checked={showPrivate}
-                  onChange={(e) => setShowPrivate(e.target.checked)}
-                  className="mr-2"
-                />
-                <span>Show Private Notes</span>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        {/* Notes List */}
-        {loading ? (
-          <div className="text-center py-8">Loading notes...</div>
-        ) : filteredNotes.length === 0 ? (
-          <div className="text-center py-8 text-gray-500">
-            No notes found matching your criteria.
-          </div>
-        ) : (
-          <div className="space-y-4">
-            {filteredNotes.map((note) => (
-              <div key={note.id} className="bg-white rounded-lg shadow p-6">
-                <div className="flex justify-between items-start mb-3">
-                  <h3 className="text-xl font-semibold">{note.title}</h3>
-                  <div className="flex items-center gap-2">
-                    {note.isPrivate && (
-                      <span className="px-2 py-1 bg-red-100 text-red-800 rounded text-xs">
-                        Private
-                      </span>
-                    )}
-                    <span className="text-sm text-gray-500">
-                      {new Date(note.updatedAt).toLocaleDateString()}
-                    </span>
-                  </div>
-                </div>
-                
-                <p className="text-gray-700 mb-4">{note.content}</p>
-                
-                <div className="flex justify-between items-center">
-                  <div className="flex flex-wrap gap-2">
-                    {note.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs cursor-pointer hover:bg-blue-200"
-                        onClick={() => setFilterTag(tag)}
-                      >
-                        #{tag}
-                      </span>
-                    ))}
-                  </div>
-                  
-                  <div className="text-sm text-gray-500">
-                    By {note.author}
-                  </div>
-                </div>
-                
-                <div className="mt-4 flex gap-2">
-                  <button className="text-blue-600 hover:text-blue-800 text-sm">
-                    Edit
-                  </button>
-                  <button className="text-red-600 hover:text-red-800 text-sm">
-                    Delete
-                  </button>
-                  <button className="text-gray-600 hover:text-gray-800 text-sm">
-                    Share
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </main>
-    </>
-  );
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number
 };
 
-export default AdminNotesPage;
+export default function AdminNotesConsole() {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
+  useEffect__(() => {
+    async function load() {
+      setLoading(true);
+      try {
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return;
+        const data = await res.json()
+        setNotes(data.notes || [])
+      } finally {
+        setLoading(false)
+      }
+        const _res = await fetch('/api/admin/notes-all', _{ headers: { 'X-Admin': isAdmin ? 'true' : 'false'} });
+        if (!res.ok) return;
+        const _data = await res.json();
+        setNotes(data.notes || []);
+      } finally {_setLoading(false);}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    }
+    if (isAdmin) load()
+  }, [isAdmin]);
+
+  return (
+    <div className=&quot;space-y-4&quot;>
+      <div className=&quot;flex items-center justify-between&quot;>
+        <h1 className=&quot;text-xl font-semibold&quot;>Admin Notes</h1>
+        <label className=&quot;inline-flex items-center gap-2 text-sm&quot;>
+          <input type=&quot;checkbox&quot; checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
+          <span>Admin</span>
+        </label>
+      </div>
+
+      {_loading ? (
+        <div>Loading…</div>
+      ) : notes.length === 0 ? (
+        <div className=&quot;opacity-70&quot;>No notes found.</div>
+      ) : (
+        <div className=&quot;grid grid-cols-1 md:grid-cols-2 gap-3&quot;>
+          {notes.map((n) => (
+            <div key={n.id} className=&quot;rounded border p-3 text-sm&quot;>
+              <div className=&quot;opacity-60 text-xs mb-1&quot;>{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
+              <div className=&quot;font-medium mb-1&quot;>{n.targetType} • {n.targetId}</div>
+              <div>{n.text}</div>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}

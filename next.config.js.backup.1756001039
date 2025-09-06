@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 const os = require('os');
->>>>>>> origin/cursor/website-audit-and-enhancement-63e3
 const path = require('path');
 
 const nextConfig = {

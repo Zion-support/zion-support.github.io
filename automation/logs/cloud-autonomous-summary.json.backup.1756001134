@@ -1,10 +1,5 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-08-24T00:54:24.432Z",
-=======
-  "timestamp": "2025-08-24T00:00:22.881Z",
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
-  "results": [
+  "timestamp": "2025-08-24T00:54:24.432Z",  "results": [
     {
       "name": "type-check",
       "code": 2
@@ -75,11 +70,6 @@
     },
     {
       "name": "build",
-<<<<<<< HEAD
-      "code": 1
-=======
-      "code": 0
->>>>>>> origin/cursor/analyze-improve-and-deploy-ziontechgroup-app-a825
-    }
+      "code": 1    }
   ]
 }

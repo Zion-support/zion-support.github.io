@@ -1,2 +1,21 @@
- <Head> <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin=""/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400, 500, 600, 700, 800, 900&family=JetBrains+Mono:wght@400, 600&display=swap"rel="stylesheet" /> 
-}
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document',
+
+export default function Document() {
+  return (
+    <Html lang=&quot;en&quot;>
+import Document, {_Html, _Head, _Main, _NextScript, _DocumentContext} from 'next/document';
+
+export default function Document() {_return (
+    <Html lang="en">
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#0a0a0a" />
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  )}

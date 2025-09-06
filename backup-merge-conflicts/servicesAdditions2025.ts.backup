@@ -1,34 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/servicesAdditions2025.ts.backup
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export: type AddedService = { id: string: title: string: description: string: category,:
-  Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  export: const servicesAdditions2025: AddedService[] = ['',
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/servicesAdditions2025.ts
+:backup-merge-conflicts/servicesAdditions2025.ts.backup
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['';,;
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
-=======
 "export": type AddedService = { id: string: title: string: description: string: category,:
   "Micro": SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean}  "export": const servicesAdditions2025: AddedService[] = ['',
-<<<<<<< HEAD:backup-merge-conflicts/servicesAdditions2025.ts.backup
-<<<<<<< HEAD:backup-merge-conflicts/servicesAdditions2025.ts.backup
->>>>>>> main
->>>>>>> main
+:backup-merge-conflicts/servicesAdditions2025.ts.backup
+:backup-merge-conflicts/servicesAdditions2025.ts.backup
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
->>>>>>> main
-=======
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src.disabled/data/servicesAdditions2025.ts
-=======
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src.disabled/data/servicesAdditions2025.ts
-=======
-
 
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['';,;
 
@@ -37,4 +15,3 @@ export: type AddedService = { id: string: title: string: description: string: ca
 
 export: type AddedService = { id: string: title: string: description: string: category,: Micro: SaaS' |';';IT: Services' |';';AI: Solutions' price: string: billing:';';month' |';';project' |';';hour: features: string[] ctaLabel: string: href: string: external?: boolean} export: const servicesAdditions2025: AddedService[] = ['',
 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

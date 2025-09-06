@@ -1,145 +1,91 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '../components/layout/Layout';
+import React from 'react'
+import Head from 'next/head'
+import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground'
+import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react',
 
-const AgenticRAG: React.FC = () => {
-  return (
-    <Layout>
-      <Head>
-        <title>Agentic RAG Platform | Zion Tech Group</title>
-        <meta name="description" content="Advanced Retrieval-Augmented Generation platform for intelligent document processing and question answering" />
-      </Head>
-      <main className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-4xl mx-auto mb-12">
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
-            Agentic RAG
-          </h1>
-          <p className="text-xl text-gray-300">
-            Ingest everything. Retrieve precisely. Answer confidently with sources and chain-of-thought.
-          </p>
-          <div className="mt-6 flex justify-center gap-3">
-            <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">
-              Request a Demo
-            </a>
-            <a href="/resources" className="border-gray-600 text-gray-200 border px-6 py-3 rounded-xl">
-              Explore Docs
-            </a>
-          </div>
-        </div>
+export default function AgenticRAGPage() {
+	const contactInfo = {
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709',
+		website: 'https://ziontechgroup.com'
+	},
 
-        {/* Features Grid */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-            <div className="text-gray-400 text-sm mb-2">Ingestion</div>
-            <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-cyan-400">🔗</span>
-              Connectors
-            </div>
-            <p className="text-gray-400 mt-2 text-sm">
-              Web, PDFs, DOCX, Markdown, GitHub, and cloud storage with auto-chunking.
-            </p>
-          </div>
+	const plans = [
+		{ name: 'Starter', price: '$199/month', items: ['100K tokens/monthWeb/PDF ingestionBasic rerankerCSV export'] },
+		{ name: 'Pro', price: '$599/month', items: ['2M tokens/monthGitHub/S3 connectorsHybrid search + rerankEval kits'] },
+		{ name: 'Enterprise', price: 'Custom', items: ['Siloed indexesSOC2/ISO supportPrivate VPCSAML/SSO'] }],
 
-          <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-            <div className="text-gray-400 text-sm mb-2">Indexing</div>
-            <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-purple-400">🗄️</span>
-              Hybrid + Rerank
-            </div>
-            <p className="text-gray-400 mt-2 text-sm">
-              Embedding + keyword + reranker for fidelity. Namespace partitioning with filters.
-            </p>
-          </div>
 
-          <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-            <div className="text-gray-400 text-sm mb-2">Evaluation</div>
-            <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-rose-400">📊</span>
-              Accuracy & Sources
-            </div>
-            <p className="text-gray-400 mt-2 text-sm">
-              Evals with reference answers, source grounding checks, and hallucination detection.
-            </p>
-          </div>
-        </div>
+export default function AgenticRAGPage() {_const _contactInfo = {
+		mobile: '+1 302 464 0950', _email: 'kleber@ziontechgroup.com', _address: '364 E Main St STE 1008 Middletown DE 19709', _website: 'https://ziontechgroup.com'};
 
-        {/* Key Benefits */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold text-center mb-8">Why Choose Our RAG Platform?</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Intelligent Document Processing</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Multi-format document ingestion</li>
-                <li>• Automatic content chunking and indexing</li>
-                <li>• Smart metadata extraction</li>
-                <li>• Real-time content updates</li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Advanced Retrieval</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Hybrid search (semantic + keyword)</li>
-                <li>• Context-aware reranking</li>
-                <li>• Multi-vector similarity search</li>
-                <li>• Filtered and scoped queries</li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Confident Generation</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Source-attributed responses</li>
-                <li>• Chain-of-thought reasoning</li>
-                <li>• Confidence scoring</li>
-                <li>• Hallucination prevention</li>
-              </ul>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-semibold">Enterprise Ready</h3>
-              <ul className="space-y-2 text-gray-300">
-                <li>• Scalable architecture</li>
-                <li>• Security and compliance</li>
-                <li>• API and SDK support</li>
-                <li>• Custom model fine-tuning</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+	const _plans = [
+		{_name: 'Starter', _price: '$199/month', _items: ['100K tokens/month', _'Web/PDF ingestion', _'Basic reranker', _'CSV export']},
+		{_name: 'Pro', _price: '$599/month', _items: ['2M tokens/month', _'GitHub/S3 connectors', _'Hybrid search + rerank', _'Eval kits']},
+		{_name: 'Enterprise', _price: 'Custom', _items: ['Siloed indexes', _'SOC2/ISO support', _'Private VPC', _'SAML/SSO']}];
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
 
-        {/* Use Cases */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h2 className="text-3xl font-bold text-center mb-8">Use Cases</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white/5 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3">Customer Support</h3>
-              <p className="text-gray-300 text-sm">
-                Provide instant, accurate answers to customer queries using your knowledge base.
-              </p>
-            </div>
-            <div className="bg-white/5 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3">Research & Analysis</h3>
-              <p className="text-gray-300 text-sm">
-                Analyze large document collections and extract insights with source citations.
-              </p>
-            </div>
-            <div className="bg-white/5 rounded-lg p-6">
-              <h3 className="text-lg font-semibold mb-3">Legal & Compliance</h3>
-              <p className="text-gray-300 text-sm">
-                Search through legal documents and regulations with precise source attribution.
-              </p>
-            </div>
-          </div>
-        </div>
+	return (_<UltraFuturisticMatrixBackground>
+			<Head>
+				<title>Agentic RAG Platform | Zion Tech Group</title>
+				<meta name=&quot;description&quot; content=&quot;High-accuracy retrieval augmented generation with ingestion, indexing, reranking, and evaluation built-in.&quot; />
+				<link rel=&quot;canonical&quot; href=&quot;https://ziontechgroup.com/agentic-rag&quot; />
+			</Head>
 
-        {/* CTA */}
-        <div className="text-center">
-          <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">
-            Talk to Engineering
-          </a>
-        </div>
-      </main>
-    </Layout>
-  );
-};
+			<div className=&quot;min-h-screen py-20 px-4 sm:px-6 lg:px-8&quot;>
+				<div className=&quot;text-center max-w-4xl mx-auto mb-12&quot;>
+					<h1 className=&quot;text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6&quot;>Agentic RAG</h1>
+					<p className=&quot;text-xl text-gray-300&quot;>Ingest everything. Retrieve precisely. Answer confidently with sources and chain-of-thought.</p>
+					<div className=&quot;mt-6 flex justify-center gap-3&quot;>
+						<a href=&quot;/contact&quot; className=&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl w-4 h-4 mr-2&quot;><Rocket />Request a Demo</Link>
+						                                        <a href=&quot;/resources&quot; className=&quot;border-gray-600 text-gray-200 border px-6 py-3 rounded-xl&quot;>Explore Docs</Link>
+					</div>
+				</div>
 
-export default AgenticRAG;
+				<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16&quot;>
+					{plans.map((p) => (
+						<div key={p.name} className=&quot;bg-black/30 border border-gray-700/50 rounded-2xl p-6&quot;>
+							<h3 className=&quot;text-2xl font-bold text-white mb-2&quot;>{p.name}</h3>
+							<div className=&quot;text-cyan-400 font-semibold mb-4&quot;>{p.price}</div>
+							<ul className=&quot;space-y-2 text-gray-300 text-sm&quot;>
+								{p.items.map((i) => (
+									<li key={i} className=&quot;flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400&quot;><Check /> <span>{i}</span></li>
+								))}
+							</ul>
+						</div>
+					))}
+				</div>
+
+				<div className=&quot;max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6&quot;>
+					<div className=&quot;bg-black/20 border border-gray-700/50 rounded-2xl p-6&quot;>
+						<div className=&quot;text-gray-400 text-sm mb-2&quot;>Ingestion</div>
+						<div className=&quot;text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-cyan-400&quot;><Link /> Connectors</div>
+						<p className=&quot;text-gray-400 mt-2 text-sm&quot;>Web, PDFs, DOCX, Markdown, GitHub, and cloud storage with auto-chunking.</p>
+					</div>
+					<div className=&quot;bg-black/20 border border-gray-700/50 rounded-2xl p-6&quot;>
+						<div className=&quot;text-gray-400 text-sm mb-2&quot;>Indexing</div>
+						<div className=&quot;text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-purple-400&quot;><Database /> Hybrid + Rerank</div>
+						<p className=&quot;text-gray-400 mt-2 text-sm&quot;>Embedding + keyword + reranker for fidelity. Namespace partitioning with filters.</p>
+					</div>
+					<div className=&quot;bg-black/20 border border-gray-700/50 rounded-2xl p-6&quot;>
+						<div className=&quot;text-gray-400 text-sm mb-2&quot;>Evaluation</div>
+						<div className=&quot;text-white text-xl font-semibold flex items-center gap-2 w-5 h-5 text-rose-400&quot;><Gauge /> Accuracy & Sources</div>
+						<p className=&quot;text-gray-400 mt-2 text-sm&quot;>Evals with reference answers, source grounding checks, and hallucination detection.</p>
+					</div>
+				</div>
+
+				<div className=&quot;max-w-3xl mx-auto mt-16 bg-black/20 backdrop-blur-xl rounded-2xl p-6 border border-cyan-500/30&quot;>
+					<div className=&quot;grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4&quot;>
+						<div className=&quot;flex items-center justify-center gap-2 text-cyan-400 w-4 h-4&quot;><Phone /><span>{contactInfo.mobile}</span></div>
+						<div className=&quot;flex items-center justify-center gap-2 text-purple-400 w-4 h-4&quot;><Mail /><span>{contactInfo.email}</span></div>
+						<div className=&quot;flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs&quot;><MapPin /><span >{contactInfo.address}</span></div>
+					</div>
+					<div className=&quot;text-center&quot;>
+						<a href=&quot;/contact&quot; className=&quot;bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl&quot;>Talk to Engineering</Link>
+					</div>
+				</div>
+			</div>
+		</UltraFuturisticMatrixBackground>
+	)
+}

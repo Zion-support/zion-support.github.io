@@ -1,10 +1,4 @@
-export default function FiveHundred() {
-  return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">500 - Server Error</h1>
-        <p className="text-gray-600">Something went wrong on our end.</p>
-      </div>
-    </div>
-  );
+export default function FiveHundred(){
 }
+export default function FiveHundred(){_return <div className="min-h-screen flex items-center justify-center">Something went wrong.</div>;}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

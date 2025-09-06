@@ -1,4 +1,4 @@
-import React from 'react',
+import React from 'react'
 export default function TestMinimal() {
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>

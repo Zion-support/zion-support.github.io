@@ -1,1 +1,25 @@
- <div> <Head> <title>CloudComputingStrategies - Zion Tech Solutions</title> <meta name="description" content="CloudComputingStrategies page" /> </Head> <main> <h1>CloudComputingStrategies</h1> <p>This page is under construction.</p> </main> </div> export default CloudComputingStrategies;
+import type { NextPage } from 'next'
+import Head from 'next/head'
+const CloudComputingStrategies: NextPage = () => {
+  return (
+import type {_NextPage} from 'next';
+import Head from 'next/head';
+
+const CloudComputingStrategies: NextPage = () => {_return (
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13
+    <div>
+      <Head>
+        <title>CloudComputingStrategies - Zion Tech Solutions</title>
+        <meta name=&quot;description&quot; content=&quot;CloudComputingStrategies page&quot; />
+      </Head>
+      
+      <main>
+        <h1>CloudComputingStrategies</h1>
+        <p>This page is under construction.</p>
+      </main>
+    </div>
+  )
+},
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+
+export default CloudComputingStrategies

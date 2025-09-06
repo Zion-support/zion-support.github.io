@@ -1,277 +1,311 @@
-import React from 'react';
-import Head from 'next/head';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import Layout from '../components/Layout';
-import { 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Bot, 
-  FileText, 
-  Target, 
-  Settings, 
-  Image, 
-  Mic, 
-  Search, 
-  TrendingUp,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Clock,
-  Users,
-  DollarSign
-} from 'lucide-react';
-
-const aiServices = [
-  {
-    id: 1,
-    title: "Machine Learning & AI Development",
-    description: "Custom AI solutions and machine learning models tailored to your business needs",
-    icon: Brain,
-    features: ['Custom ML Models', 'Data Analysis', 'Predictive Analytics', 'Model Training'],
-    price: 'Starting at $2,500/month',
-    category: 'Core AI'
-  },
-  {
-    id: 2,
-    title: "Computer Vision Solutions",
-    description: "Advanced image and video processing using cutting-edge computer vision technology",
-    icon: Image,
-    features: ['Object Detection', 'Image Recognition', 'Video Analysis', 'Real-time Processing'],
-    price: 'Starting at $3,000/month',
-    category: 'Vision AI'
-  },
-  {
-    id: 3,
-    title: "Natural Language Processing",
-    description: "Text analysis, sentiment analysis, and language understanding solutions",
-    icon: FileText,
-    features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbots'],
-    price: 'Starting at $2,200/month',
-    category: 'NLP'
-  },
-  {
-    id: 4,
-    title: "AI-Powered Analytics",
-    description: "Advanced business intelligence and data analytics powered by artificial intelligence",
-    icon: BarChart3,
-    features: ['Business Intelligence', 'Data Visualization', 'Predictive Analytics', 'Real-time Insights'],
-    price: 'Starting at $2,500/month',
-    category: 'Analytics'
-  },
-  {
-    id: 5,
-    title: "AI Security Solutions",
-    description: "Advanced threat detection and security solutions powered by artificial intelligence",
-    icon: Shield,
-    features: ['Threat Detection', 'Anomaly Detection', 'Fraud Prevention', 'Security Monitoring'],
-    price: 'Starting at $3,200/month',
-    category: 'Security'
-  },
-  {
-    id: 6,
-    title: "Process Automation",
-    description: "Intelligent automation solutions to streamline your business processes",
-    icon: Settings,
-    features: ['Process Automation', 'Document Processing', 'Workflow Optimization', 'Compliance Monitoring'],
-    price: 'Starting at $2,000/month',
-    category: 'Automation'
-  },
-  {
-    id: 7,
-    title: "Conversational AI & Chatbots",
-    description: "Intelligent chatbots and conversational AI for customer service and support",
-    icon: Bot,
-    features: ['Customer Service Bots', 'Voice Assistants', 'Multi-language Support', '24/7 Availability'],
-    price: 'Starting at $1,800/month',
-    category: 'Conversational'
-  },
-  {
-    id: 8,
-    title: "AI Content Generation",
-    description: "Automated content creation using advanced AI writing and generation tools",
-    icon: FileText,
-    features: ['Content Writing', 'Blog Posts', 'Social Media', 'Marketing Copy'],
-    price: 'Starting at $1,500/month',
-    category: 'Content'
-  },
-  {
-    id: 9,
-    title: "AI-Powered Recommendation Engines",
-    description: "Personalized recommendation systems to enhance user experience and engagement",
-    icon: Target,
-    features: ['Product Recommendations', 'Content Suggestions', 'Personalization', 'User Behavior Analysis'],
-    price: 'Starting at $2,200/month',
-    category: 'Recommendations'
-  },
-  {
-    id: 10,
-    title: "AI Voice & Speech Technology",
-    description: "Voice recognition, speech synthesis, and voice-controlled applications",
-    icon: Mic,
-    features: ['Speech Recognition', 'Voice Synthesis', 'Voice Commands', 'Audio Processing'],
-    price: 'Starting at $1,800/month',
-    category: 'Voice'
-  },
-  {
-    id: 11,
-    title: "AI-Powered Search & Discovery",
-    description: "Intelligent search solutions with semantic understanding and context awareness",
-    icon: Search,
-    features: ['Semantic Search', 'Context Awareness', 'Smart Filtering', 'Relevance Ranking'],
-    price: 'Starting at $2,000/month',
-    category: 'Search'
-  },
-  {
-    id: 12,
-    title: "AI Financial Analysis & Trading",
-    description: "Advanced financial analysis and algorithmic trading solutions",
-    icon: TrendingUp,
-    features: ['Market Analysis', 'Risk Assessment', 'Algorithmic Trading', 'Financial Forecasting'],
-    price: 'Starting at $5,000/month',
-    category: 'Finance'
-  }
-];
-
-const categories = [
-  'All',
-  'Core AI',
-  'Vision AI',
-  'NLP',
-  'Analytics',
-  'Security',
-  'Automation',
-  'Conversational',
-  'Content',
-  'Recommendations',
-  'Voice',
-  'Search',
-  'Finance'
-];
-
+import Link from 'next/link'
+import Head from 'next/head'
+import { useState, useEffect } from 'react',
+import { ContactInfo } from '../types'
+import ErrorBoundary from '../components/ErrorBoundary'
 export default function AIServices() {
+  const [isLoaded, setIsLoaded] = useState(false),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoaded(true), 100),
+    return () => clearTimeout(timer)
+  }, []),
+
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  },
+
+  const categories = [
+    { id: 'all', name: 'All AI Services', count: 100 },
+    { id: 'autonomous', name: 'Autonomous Agents', count: 25 },
+    { id: 'nlp', name: 'Natural Language', count: 20 },
+    { id: 'computer-vision', name: 'Computer Vision', count: 15 },
+    { id: 'predictive', name: 'Predictive Analytics', count: 15 },
+    { id: 'automation', name: 'AI Automation', count: 15 },
+    { id: 'specialized', name: 'Specialized AI', count: 10 }
+  ],
+
+  const services = [
+    {
+      id: 1,
+      name: 'Autonomous AI Agents',
+      description: 'Self-managing AI agents that can perform complex tasks independently with minimal human intervention.',
+      category: 'autonomous',
+      features: ['Task AutomationDecision MakingLearning CapabilitiesMulti-platform Integration'],
+      price: 'Custom Pricing',
+      popular: true,
+      useCases: ['Process AutomationCustomer ServiceData AnalysisContent Generation']
+    },
+    {
+      id: 2,
+      name: 'AI-Powered Financial Trading',
+      description: 'Advanced AI algorithms for automated trading, risk management, and market analysis.',
+      category: 'predictive',
+      features: ['Market AnalysisRisk AssessmentAutomated TradingReal-time Monitoring'],
+      price: 'Custom Pricing',
+      popular: true,
+      useCases: ['Algorithmic TradingPortfolio ManagementRisk AnalysisMarket Prediction']
+    },
+    {
+      id: 3,
+      name: 'AI Legal Document Analysis',
+      description: 'Intelligent document review and analysis for legal professionals with contract insights.',
+      category: 'nlp',
+      features: ['Contract AnalysisRisk IdentificationCompliance CheckingDocument Summarization'],
+      price: '$199/month',
+      popular: false,
+      useCases: ['Contract ReviewLegal ResearchCompliance MonitoringDocument Management']
+    },
+    {
+      id: 4,
+      name: 'AI-Powered Voice Analytics',
+      description: 'Advanced voice analysis for sentiment, emotion, and intent detection in customer interactions.',
+      category: 'nlp',
+      features: ['Sentiment AnalysisEmotion DetectionIntent RecognitionReal-time Processing'],
+      price: '$149/month',
+      popular: true,
+      useCases: ['Customer ServiceCall Center AnalyticsMarket ResearchQuality Assurance']
+    },
+    {
+      id: 5,
+      name: 'AI-Powered Search & Discovery',
+      description: 'Intelligent search solutions with semantic understanding and personalized results.',
+      category: 'specialized',
+      features: ['Semantic SearchPersonalizationNatural Language QueriesContext Awareness'],
+      price: '$99/month',
+      popular: false,
+      useCases: ['Enterprise SearchE-commerceContent DiscoveryKnowledge Management']
+    },
+    {
+      id: 6,
+      name: 'Computer Vision Solutions',
+      description: 'Advanced image and video analysis for object detection, recognition, and processing.',
+      category: 'computer-vision',
+      features: ['Object DetectionImage RecognitionVideo AnalysisReal-time Processing'],
+      price: '$179/month',
+      popular: true,
+      useCases: ['Quality ControlSecurity MonitoringMedical ImagingAutonomous Vehicles']
+    },
+    {
+      id: 7,
+      name: 'Machine Learning Model Training',
+      description: 'Custom ML model development and training for specific business requirements.',
+      category: 'specialized',
+      features: ['Custom ModelsData PreprocessingModel OptimizationDeployment Support'],
+      price: 'Custom Pricing',
+      popular: false,
+      useCases: ['Predictive ModelingPattern RecognitionAnomaly DetectionRecommendation Systems']
+    },
+    {
+      id: 8,
+      name: 'Natural Language Processing',
+      description: 'Advanced NLP capabilities for text analysis, translation, and language understanding.',
+      category: 'nlp',
+      features: ['Text AnalysisLanguage TranslationSentiment AnalysisEntity Recognition'],
+      price: '$129/month',
+      popular: true,
+      useCases: ['Content AnalysisMultilingual SupportCustomer FeedbackDocument Processing']
+    },
+    {
+      id: 9,
+      name: 'AI Process Automation',
+      description: 'Intelligent automation of complex business processes using AI and machine learning.',
+      category: 'automation',
+      features: ['Process MiningWorkflow OptimizationDecision AutomationIntegration APIs'],
+      price: '$159/month',
+      popular: false,
+      useCases: ['Business Process AutomationWorkflow ManagementDecision SupportSystem Integration']
+    },
+    {
+      id: 10,
+      name: 'Predictive Analytics Engine',
+      description: 'Advanced predictive modeling for forecasting trends, behaviors, and outcomes.',
+      category: 'predictive',
+      features: ['Trend ForecastingBehavioral AnalysisRisk PredictionScenario Modeling'],
+      price: '$189/month',
+      popular: true,
+      useCases: ['Sales ForecastingCustomer BehaviorRisk ManagementResource Planning']
+    },
+    {
+      id: 11,
+      name: 'AI Content Generation',
+      description: 'Intelligent content creation for marketing, documentation, and communication.',
+      category: 'specialized',
+      features: ['Content CreationMulti-format SupportBrand ConsistencyQuality Control'],
+      price: '$79/month',
+      popular: false,
+      useCases: ['Marketing ContentTechnical DocumentationSocial MediaEmail Campaigns']
+    },
+    {
+      id: 12,
+      name: 'AI Chatbot Development',
+      description: 'Intelligent conversational AI for customer service and engagement.',
+      category: 'automation',
+      features: ['Natural ConversationsMulti-channel SupportLearning CapabilitiesIntegration APIs'],
+      price: '$89/month',
+      popular: true,
+      useCases: ['Customer SupportLead GenerationInternal HelpdeskE-commerce Assistant']
+    }
+  ],
+
+  const filteredServices = selectedCategory === 'all' 
+    ? services 
+    : services.filter(service => service.category === selectedCategory),
   return (
-    <Layout 
-      title="AI Services - Zion Tech Group"
-      description="Comprehensive AI services including machine learning, computer vision, NLP, and automation solutions. Transform your business with cutting-edge artificial intelligence."
-    >
-      <div className="min-h-screen bg-gray-50">
-        {/* Hero Section */}
-        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-          <div className="container mx-auto px-6 text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Services
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-                Transform your business with cutting-edge artificial intelligence solutions. 
-                From machine learning to computer vision, we provide comprehensive AI services 
-                to drive innovation and growth.
+    <>
+      <Head>
+        <title>AI Services - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Advanced AI services including autonomous AI agents, _financial trading systems, _legal document analysis, _and more."
+        />
+        <meta name="viewport" content="width=device-width, _initial-scale=1.0" />
+      </Head>
+      <ErrorBoundary level="page">
+        <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+          <div className="container mx-auto px-4 py-16">
+            <h1 className="text-4xl font-bold text-center mb-8">AI Services</h1>
+            <p className="text-xl text-slate-300 text-center">
+              Advanced artificial intelligence solutions for your business.
+            </p>
+          </div>
+                    </div>
+                    
+                    <button className=&quot;w-full py-2 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors&quot;>
+                      Learn More
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* AI Capabilities Section */}
+          <section className=&quot;py-16 px-4 bg-slate-900/40&quot;>
+            <div className=&quot;max-w-6xl mx-auto&quot;>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold text-center mb-12&quot;>
+                Our AI Capabilities
+              </h2>
+              
+              <div className=&quot;grid md:grid-cols-2 lg:grid-cols-4 gap-8&quot;>
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z&quot; />
+                    </svg>
+                  </div>
+                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Machine Learning</h3>
+                  <p className=&quot;text-slate-400&quot;>Advanced ML algorithms for pattern recognition and predictive modeling</p>
+                </div>
+                
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M15 12a3 3 0 11-6 0 3 3 0 016 0z&quot; />
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z&quot; />
+                    </svg>
+                  </div>
+                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Computer Vision</h3>
+                  <p className=&quot;text-slate-400&quot;>Image and video analysis with object detection and recognition</p>
+                </div>
+                
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z&quot; />
+                    </svg>
+                  </div>
+                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Natural Language</h3>
+                  <p className=&quot;text-slate-400&quot;>Advanced NLP for text analysis, translation, and understanding</p>
+                </div>
+                
+                <div className=&quot;text-center&quot;>
+                  <div className=&quot;w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4&quot;>
+                    <svg className=&quot;w-8 h-8 text-white&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; viewBox=&quot;0 0 24 24&quot;>
+                      <path strokeLinecap=&quot;round&quot; strokeLinejoin=&quot;round&quot; strokeWidth={2} d=&quot;M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z&quot; />
+                    </svg>
+                  </div>
+                  <h3 className=&quot;text-xl font-bold mb-2&quot;>Predictive Analytics</h3>
+                  <p className=&quot;text-slate-400&quot;>Data-driven insights and forecasting for business intelligence</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className=&quot;py-16 px-4&quot;>
+            <div className=&quot;max-w-4xl mx-auto text-center&quot;>
+              <h2 className=&quot;text-3xl md:text-4xl font-bold mb-8&quot;>
+                Ready to Harness AI Power?
+              </h2>
+              <p className=&quot;text-lg text-slate-300 mb-8&quot;>
+                Contact our AI experts to discuss how our advanced artificial intelligence services 
+                can transform your business operations and drive innovation.
               </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                  Get Started
+              
+              <div className=&quot;flex flex-col sm:flex-row items-center justify-center gap-4&quot;>
+                <Link 
+                  href=&quot;/contact&quot; 
+                  className=&quot;px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors&quot;
+                >
+                  Get AI Consultation
                 </Link>
-                <Link href="/it-services" className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                  View IT Services
+                <a 
+                  href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`} 
+                  className=&quot;px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors&quot;
+                >
+                  Call {contact.phone}
+                </Link>
+                <a 
+                  href={`mailto:${contact.email}`} 
+                  className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
+                >
+                  Email Us
                 </Link>
               </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Services Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our AI Services</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Comprehensive AI solutions designed to meet your specific business needs
-              </p>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {aiServices.map((service, index) => (
-                <motion.div
-                  key={service.id}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                >
-                  <div className="flex items-center mb-4">
-                    <service.icon className="w-8 h-8 text-blue-600 mr-3" />
-                    <h3 className="text-xl font-semibold">{service.title}</h3>
-                  </div>
-                  
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold mb-2">Features:</h4>
-                    <ul className="text-sm text-gray-600 space-y-1">
-                      {service.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-lg font-bold text-blue-600">{service.price}</span>
-                    <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                      {service.category}
-                    </span>
-                  </div>
-                  
-                  <Link 
-                    href="/contact" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
-                  >
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="bg-blue-900 text-white py-20">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Transform Your Business with AI?
-            </h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Contact us today to discuss your AI needs and discover how our solutions 
-              can drive innovation and growth in your organization.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/contact" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors">
-                Contact Us
-              </Link>
-              <Link href="/micro-saas" className="border border-white text-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-lg font-semibold transition-colors">
-                View Micro SaaS
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-  );
+          </section>
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+        </main>
+      </ErrorBoundary>
+    </>
+  )
 }
-=======
-import ErrorBoundary from '../components/ErrorBoundary';
-export default function AIServices () {
-  return (<> <Head> <title>AI Services - Zion Tech Group</title> </main> </ErrorBoundary> </> 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
+import SEO from '../components/SEO'
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground'
+import Link from 'next/link'
+export default function AIServicesPage() {
+  return (
+    <UltraAdvancedFuturisticBackground>
+      <SEO title=&quot;AI Services | Zion Tech Group&quot; description=&quot;LLM apps, RAG, evaluation, guardrails, and automation with transparent pricing.&quot; canonical=&quot;https://ziontechgroup.com/ai-services/&quot; />
+      <div className=&quot;container mx-auto px-4 py-24 text-white&quot;>
+        <div className=&quot;max-w-5xl mx-auto space-y-8&quot;>
+          <h1 className=&quot;text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent&quot;>AI Services</h1>
+          <p className=&quot;text-gray-300 text-lg&quot;>Productized AI solutions: evaluation labs, safety & guardrails, chatbots, agents, search/RAG, and automation. See <Link className=&quot;text-cyan-400 underline&quot; href=&quot;/market-pricing&quot;>Market Pricing</Link> for typical vendor benchmarks.</p>
+          <div className=&quot;grid md:grid-cols-3 gap-6&quot;>
+            {[
+              { title: 'RAG & Vector Search', href: '/vector-search-starter' },
+              { title: 'AI Evaluation Lab', href: '/rag-evaluation-lab' },
+              { title: 'AI Guardrails', href: '/ai-powered-cybersecurity' },
+              { title: 'AI Content Generator', href: '/intelligent-content-automation-platform' },
+              { title: 'AI Customer Service', href: '/ai-customer-service' },
+              { title: 'AI Sales Intelligence', href: '/ai-sales-automation' }].map((c) => (
+              <Link key={c.href} href={c.href} className=&quot;p-6 rounded-2xl bg-black/40 border border-white/10 hover:border-cyan-500/40 transition-colors&quot;>
+                <div className=&quot;text-xl font-semibold&quot;>{c.title}</div>
+                <div className=&quot;text-sm text-gray-400 mt-2&quot;>Implementation‑ready with pricing and SLAs.</div>
+              </Link>
+            ))}
+          </div>
+          <div className=&quot;text-sm text-gray-400&quot;>Questions? <Link className=&quot;text-cyan-400 underline&quot; href=&quot;/contact&quot;>Contact us</Link>.</div>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+}
+>>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7
+  );}
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13

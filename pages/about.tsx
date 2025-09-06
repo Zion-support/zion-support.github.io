@@ -1,6 +1,6 @@
-import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react'
+import Head from 'next/head'
+import { motion } from 'framer-motion'
 import { 
   Brain,
   Shield,
@@ -62,14 +62,51 @@ const AboutPage: React.FC = () => {
       description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
       color: "from-pink-500 to-rose-500"
     }
-  ];
+  ]
 
+function AboutPage() {
   const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "50+", label: "Happy Clients" },
-    { number: "5+", label: "Years Experience" },
-    { number: "24/7", label: "Support Available" }
-  ];
+    { number: '500+', label: 'Projects Delivered', icon: CheckCircle, color: 'from-blue-500 to-cyan-500' },
+    { number: '50+', label: 'Enterprise Clients', icon: Users, color: 'from-purple-500 to-pink-500' },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: Shield, color: 'from-green-500 to-emerald-500' },
+    { number: '24/7', label: 'Support Available', icon: Clock, color: 'from-orange-500 to-red-500' }
+  ]
+
+  const values = [
+    {
+      icon: Brain,
+      title: 'Innovation First',
+      description: 'We push the boundaries of what\'s possible, constantly exploring emerging technologies and creating breakthrough solutions.',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      icon: Shield,
+      title: 'Trust & Security',
+      description: 'Security is at the core of everything we do. We build solutions that protect your business and data with quantum-resistant technology.',
+      color: 'from-red-500 to-orange-500'
+    },
+    {
+      icon: Rocket,
+      title: 'Excellence',
+      description: 'We strive for excellence in every project, delivering solutions that exceed expectations and drive measurable business value.',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      icon: Users,
+      title: 'Client Success',
+      description: 'Your success is our success. We partner with you to understand your needs and deliver solutions that transform your business.',
+      color: 'from-emerald-500 to-teal-500'
+    }
+  ]
+
+  const technologies = [
+    { name: 'Artificial Intelligence', icon: Brain, description: 'Advanced AI and machine learning solutions', color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum Computing', icon: Atom, description: 'Quantum-powered computing and cryptography', color: 'from-blue-500 to-cyan-500' },
+    { name: 'Cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions', color: 'from-red-500 to-orange-500' },
+    { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
+    { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
+    { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
+  ]
 
   const team = [
     {
@@ -89,6 +126,39 @@ const AboutPage: React.FC = () => {
       role: "Lead Developer",
       image: "/team/mike.jpg",
       bio: "Full-stack developer passionate about innovation"
+    }
+  ];
+
+  const milestones = [
+    {
+      year: '2020',
+      title: 'Company Founded',
+      description: 'Zion Tech Group was established with a vision to revolutionize technology through AI and quantum computing.'
+    },
+    {
+      year: '2021',
+      title: 'First AI Solutions',
+      description: 'Launched our first AI-powered business intelligence and automation solutions.'
+    },
+    {
+      year: '2022',
+      title: 'Quantum Breakthrough',
+      description: 'Developed quantum-resistant cybersecurity solutions and quantum neural networks.'
+    },
+    {
+      year: '2023',
+      title: 'Space Technology',
+      description: 'Expanded into space technology with AI-powered satellite management systems.'
+    },
+    {
+      year: '2024',
+      title: 'Global Expansion',
+      description: 'Reached 50+ enterprise clients and expanded our service portfolio to 100+ solutions.'
+    },
+    {
+      year: '2025',
+      title: 'Future Vision',
+      description: 'Continuing to push boundaries with autonomous AI systems and consciousness technology.'
     }
   ];
 
@@ -140,39 +210,31 @@ const AboutPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Values Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900">
           <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">
-                Our Values
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {values.map((value, index) => (
-                  <motion.div
-                    key={value.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow"
-                  >
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${value.color} flex items-center justify-center mb-4`}>
-                      <value.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                      {value.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {value.description}
-                    </p>
-                  </motion.div>
-                ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+              <h2 className="text-2xl font-semibold mb-3">Contact</h2>
+              <ul className="text-gray-300 space-y-2">
+                <li>Mobile: <a className="text-cyan-300" href="tel:+13024640950">+1 302 464 0950</a></li>
+                <li>E-mail: <a className="text-purple-300" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></li>
+                <li>Address: <span className="text-gray-200">364 E Main St STE 1008 Middletown DE 19709</span></li>
+                <li>Website: <a className="text-cyan-300" href="https://ziontechgroup.com">ziontechgroup.com</a></li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-2xl bg-black/40 border border-gray-700/60">
+              <h2 className="text-2xl font-semibold mb-3">Get Started</h2>
+              <p className="text-gray-300 mb-4">Book a consultation to map your roadmap to shipped outcomes.</p>
+              <div className="flex gap-3">
+                <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
+                <Button href="/pricing" variant="outline" className="border border-gray-600 text-gray-200">Pricing</Button>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Stats Section */}
+      {/* Stats Section */}
         <section className="py-16 bg-blue-900">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -262,6 +324,4 @@ const AboutPage: React.FC = () => {
       </div>
     </>
   );
-};
-
-export default AboutPage;
+}

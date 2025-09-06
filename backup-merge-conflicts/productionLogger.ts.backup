@@ -1,26 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
-<<<<<<< HEAD:src/utils/productionLogger.ts
-<<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/productionLogger.ts
-export function logErrorToProduction(message: string, error?: unknown): void {
-=======
+:backup-merge-conflicts/productionLogger.ts.backup
+:src/utils/productionLogger.ts
+:backup-merge-conflicts/productionLogger.ts.backupexport function logErrorToProduction(message: string, error?: unknown): void {
 export function logErrorToProduction("message": 'string',error?: "unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message",error)} }
-=======
-<<<<<<< HEAD
-export function logErrorToProduction(message: string,error?: unknown): void { if (process.env[&apos;NODE_ENV&apos;] === &apos;development&apos;) { } }
-=======
-=======
-export function logErrorToProduction("message": 'string',error?: "unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message",error)} }
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/utils/productionLogger.ts
-export function logErrorToProduction("message": string, error?: unknown): void {
->>>>>>> main
-=======
-
+export function logErrorToProduction(message: string,error?: unknown): void { if (process.env[&apos;NODE_ENV&apos;] === &apos;development&apos;) { } }export function logErrorToProduction("message": string, error?: unknown): void {
 
 export function logErrorToProduction(message: string, error?: unknown): void {
 export function logErrorToProduction(message: string,error?: unknown): void { if (process.env[&apos;NODE_ENV&apos;] === &apos;development&apos;) { } }
@@ -29,36 +11,18 @@ export function logErrorToProduction("message": 'string',error?: "unknown): void
 
 export function logErrorToProduction("message": string, error?: unknown): void {
 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
   // In production, we might want to send errors to a logging service
   // For now, just console.error in development
   if (process.env['NODE_ENV'] === 'development') {
     console.error(message, error)}
-<<<<<<< HEAD
-<<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
-<<<<<<< HEAD
+:backup-merge-conflicts/productionLogger.ts.backup
   // TODO: Implement production error logging service';
-}';';
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/utils/productionLogger.ts
-export function logErrorToProduction(message: 'string',error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
->>>>>>> d200903062be89cd2962b930112f6c17412cdf5b
-=======
+}';';export function logErrorToProduction(message: 'string',error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
   // "TODO": Implement production error logging service
 }
 export function logErrorToProduction(message: string,error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
-<<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
-<<<<<<< HEAD:backup-merge-conflicts/productionLogger.ts.backup
->>>>>>> main
->>>>>>> main
->>>>>>> main
->>>>>>> main:src_backup_temp/utils/productionLogger.ts
-=======
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:src_backup_temp/utils/productionLogger.ts
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52:src_backup_temp/utils/productionLogger.ts
-=======
+:backup-merge-conflicts/productionLogger.ts.backup
+:backup-merge-conflicts/productionLogger.ts.backup
 
 export function logErrorToProduction(message: 'string',error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
 
@@ -66,4 +30,3 @@ export function logErrorToProduction(message: 'string',error?: unknown): void { 
 }
 export function logErrorToProduction(message: string,error?: unknown): void { if (process.env['NODE_ENV'] === 'development') { console.error(message,error)} }
 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5

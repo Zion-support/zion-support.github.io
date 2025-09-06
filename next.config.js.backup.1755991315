@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** @type {import('next').NextConfig} */
 const path = require('path');
 
@@ -16,15 +15,6 @@ const baseConfig = {
   eslint: { ignoreDuringBuilds: true },
   async rewrites() { return [{ source: '/webhooks/receive', destination: '/api/webhooks/receive' }]; },
   exportPathMap: async function (defaultPathMap) { delete defaultPathMap['/developers']; delete defaultPathMap['/dashboard/api-access']; return defaultPathMap; },
-  webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },
-=======
-const nextConfig = {
-	reactStrictMode: true,
-	swcMinify: true,
-	optimizeFonts: false,
-	output: 'export',
-	trailingSlash: true
->>>>>>> origin/cursor/build-nextjs-app-and-handle-errors-5869
-};
+  webpack: (config) => { config.resolve = config.resolve || {}; config.resolve.alias = config.resolve.alias || {}; config.resolve.alias['@'] = path.resolve(__dirname); return config; },};
 
 module.exports = withSentryConfig(baseConfig);
