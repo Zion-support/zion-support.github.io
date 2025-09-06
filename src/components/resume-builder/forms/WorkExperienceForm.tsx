@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -94,9 +93,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       setError(err.message || 'An error occurred')
     }
   };
-=======
-
-<<<<<<< HEAD
 
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
@@ -105,20 +101,10 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
-<<<<<<< HEAD
-<<<<<<< HEAD
       ...work,
-=======
-      ...work;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   };
@@ -170,17 +156,13 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                       variant="ghost"
                       size="icon"
                       onClick={() => handleEdit(work)}
-                      aria-label="Edit experience"
-                    >
-                      <Edit className="h-4 w-4" />
+                      aria-label="Edit experience"><Edit className="h-4 w-4" />
                     </Button>
                     <Button
                       variant="ghost"
                       size="icon"
                       onClick={() => handleDelete(work.id!)}
-                      aria-label="Delete experience"
-                    >
-                      <Trash2 className="h-4 w-4" />
+                      aria-label="Delete experience"><Trash2 className="h-4 w-4" />
                     </Button>
                   </div>
                 </div>
@@ -349,9 +331,7 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
                   } else {
                     onBack()
                   }
-                }}
-              >
-                {editingId ? 'Cancel' : 'Back'}
+                }}>{editingId ? 'Cancel' : 'Back'}
               </Button>
 
               <div className="flex gap-2">
@@ -371,7 +351,6 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
         </Form>
       </div>
     </div>
-<<<<<<< HEAD
   );
 
 }> {';
@@ -379,16 +358,10 @@ type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>;
 }</Button> Next </Button>) ;
 }</div> </div> </form> </Form> </div> </div>) ;
 }'"
-=======
       ...work;
       start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   };
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

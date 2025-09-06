@@ -558,9 +558,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='mb-8'
             className="mb-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
               <span>AI-Powered Healthcare</span>
             </div>
@@ -578,9 +576,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             
             {/* Key Metrics */}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>
-            className="mb-8"
-          >
-            <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
+            className="mb-8"><div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
               <span>AI-Powered Healthcare</span>
             </div>
@@ -604,19 +600,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'
-              >
-                <div className='text-3xl font-bold text-green-400 mb-2'>
+                className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'><div className='text-3xl font-bold text-green-400 mb-2'>
                   99.2%
                 </div>
                 <div className='text-gray-300'>Diagnostic Accuracy</div>
-                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
+                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"><div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
                 <div className="text-gray-300">Diagnostic Accuracy</div>
-                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
+                className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"><div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
                 <div className="text-gray-300">Diagnostic Accuracy</div>
 ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
@@ -624,17 +614,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm'
-              >
-                <div className='text-3xl font-bold text-cyan-400 mb-2'>80%</div>
+                className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm'><div className='text-3xl font-bold text-cyan-400 mb-2'>80%</div>
                 <div className='text-gray-300'>Faster Diagnosis</div>
-                className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+                className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"><div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
-                className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+                className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"><div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
 ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
@@ -642,19 +626,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm'
-              >
-                <div className='text-3xl font-bold text-purple-400 mb-2'>
+                className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm'><div className='text-3xl font-bold text-purple-400 mb-2'>
                   24/7
                 </div>
                 <div className='text-gray-300'>Continuous Monitoring</div>
-                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"><div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Monitoring</div>
-                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
-              >
-                <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+                className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"><div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Monitoring</div>
 ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
@@ -715,9 +693,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -726,9 +702,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -748,9 +722,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group'
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className='text-xl font-semibold text-white mb-4'>
@@ -759,9 +731,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p className='text-gray-300 leading-relaxed'>
                   {feature.description}
                 </p>
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"><div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
@@ -798,9 +768,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -809,9 +777,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -831,9 +797,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="flex items-center justify-between mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
                     <specialty.icon className="w-8 h-8 text-white" />
                   </div>
@@ -848,9 +812,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p className='text-gray-300 leading-relaxed'>
                   {specialty.description}
                 </p>
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"><div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
                     <specialty.icon className="w-8 h-8 text-white" />
                   </div>
@@ -893,9 +855,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -904,9 +864,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -926,9 +884,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="flex items-start space-x-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -939,13 +895,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {useCase.benefits.map((benefit, benefitIndex) => (
                         <div
                           key={benefitIndex}
-                          className='flex items-center space-x-2 text-sm'
-                        >
-                          <CheckCircle className='w-4 h-4 text-green-400' />
+                          className='flex items-center space-x-2 text-sm'><CheckCircle className='w-4 h-4 text-green-400' />
                           <span className='text-gray-300'>{benefit}</span>
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
-              >
-                <div className="flex items-start space-x-4">
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"><div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -990,9 +942,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1001,9 +951,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1030,9 +978,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
 ursor/integrate-build-improve-and-re-verify-b76c
                     : 'border-gray-700/50'
-                }`}
-              >
-                {plan.popular && (
+                }`}>{plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <div className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -1069,9 +1015,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {plan.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className='flex items-center space-x-3'
-                    >
-                      <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+                      className='flex items-center space-x-3'><CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                       <span className='text-gray-300'>{feature}</span>
                 
                 <div className="text-center mb-8">
@@ -1097,9 +1041,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </ul>
 
                 <button
-                  className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
-                >
-                <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
+                  className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}><button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
                 <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
 ursor/integrate-build-improve-and-re-verify-b76c
                   Get Started
@@ -1128,9 +1070,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1139,9 +1079,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1161,9 +1099,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
@@ -1172,9 +1108,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p className='text-gray-300 text-sm'>
                   {integration.description}
                 </p>
-                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"><div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{integration.name}</h3>
@@ -1203,9 +1137,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
                 Transform

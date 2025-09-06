@@ -181,9 +181,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
+            transition={{ duration: 0.8 }}><h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
 ursor/integrate-build-improve-and-re-verify-b76c
               2029 Comprehensive Pricing
@@ -219,9 +217,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                 className={`relative w-16 h-8 bg-gray-700 rounded-full transition-colors duration-300 ${
                   billingCycle === 'annual' ? 'bg-purple-600' : ''
-                }`}
-              >
-                <div
+                }`}><div
                   className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-transform duration-300 ${
                     billingCycle === 'annual'
                       ? 'translate-x-8'
@@ -266,9 +262,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     : 'border-gray-600 text-gray-400 hover:border-gray-500 hover:text-gray-300'
                 }`}
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <category.icon className='w-5 h-5' />
+                whileTap={{ scale: 0.95 }}><category.icon className='w-5 h-5' />
                 <span>{category.name}</span>
                 <span className='px-2 py-1 bg-gray-700 rounded-full text-xs'>
                 <category.icon className="w-5 h-5" />
@@ -299,9 +293,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className='text-center mb-16'
-          >
-            <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
+            className='text-center mb-16'><h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
             viewport={{ once: true }} className="text-center mb-16">
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -334,9 +326,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className='relative group'
-              >
-                <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500'></div>
+                className='relative group'><div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500'></div>
                 <div className='relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500 h-full'>
                 viewport={{ once: true }} className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -392,9 +382,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex}
-                        className='px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600'
-                      >
-                  <div className="flex flex-wrap gap-2 mb-6 justify-center">
+                        className='px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600'><div className="flex flex-wrap gap-2 mb-6 justify-center">
                     {service.category.slice(0, 3).map((cat, catIndex) => (
                       <span
                         key={catIndex} className="px-3 py-1 bg-gray-800 text-gray-300 text-sm rounded-full border border-gray-600">
@@ -419,9 +407,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         .map((feature, featureIndex) => (
                           <li
                             key={featureIndex}
-                            className='flex items-center gap-2 text-gray-300 text-sm'
-                          >
-                            <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
+                            className='flex items-center gap-2 text-gray-300 text-sm'><CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
                             <span>{feature}</span>
                           </li>
                         ))}
@@ -450,9 +436,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         .map((benefit, benefitIndex) => (
                           <li
                             key={benefitIndex}
-                            className='flex items-center gap-2 text-gray-300 text-sm'
-                          >
-                            <Star className='w-4 h-4 text-yellow-400 flex-shrink-0' />
+                            className='flex items-center gap-2 text-gray-300 text-sm'><Star className='w-4 h-4 text-yellow-400 flex-shrink-0' />
                             <span>{benefit}</span>
                           </li>
                         ))}
@@ -507,9 +491,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     </Link>
                     <Link
                       href='/contact'
-                      className='flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm'
-                    >
-                  <div className="flex gap-3">
+                      className='flex-1 inline-flex items-center justify-center px-4 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300 text-sm'><div className="flex gap-3">
                     <Link
                       href={`/services/${service.id}`} className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-sm">
                       Learn More
@@ -540,9 +522,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
+            viewport={{ once: true }}><h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Enterprise Solutions
@@ -564,9 +544,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
                 <Link
                   href='/contact'
-                  className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'
-                >
-            <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
+                  className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'><h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Enterprise Solutions
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
@@ -607,9 +585,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
                 <Link
                   href='/contact'
-                  className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'
-                >
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
+                  className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'><div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
@@ -641,9 +617,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className="text-2xl font-bold text-purple-400 mb-4">Custom Pricing</div>
                 <Link
                   href='/contact'
-                  className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'
-                >
-              <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
+                  className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300'><div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
@@ -676,9 +650,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
+            viewport={{ once: true }}><h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
             <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Get Started?
@@ -731,9 +703,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
+                whileTap={{ scale: 0.95 }}><Link
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover:from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg'
                 >
@@ -750,9 +720,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
               <motion.div
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Link
+                whileTap={{ scale: 0.95 }}><Link
                   href='/2029-innovative-services-showcase'
                   className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'
                 >

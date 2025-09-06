@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -21,8 +19,6 @@ import { ProjectDetailsFields } from './ProjectDetailsFields';
 import { PaymentTermsFields } from './PaymentTermsFields';
 import { AdditionalClausesFields } from './AdditionalClausesFields';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
@@ -164,9 +160,7 @@ export function ContractForm({
           <Button 
             type="submit" 
             className="w-full bg-zion-purple hover:bg-zion-purple-dark"
-            disabled={isGenerating}
-          >
-            {isGenerating ? (
+            disabled={isGenerating}>{isGenerating ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                 Generating Contract...
@@ -189,7 +183,6 @@ export function ContractForm({
       </DialogFooter>
     </>
   );
-<<<<<<< HEAD
 }finally {;
   setIsGenerating (false) ;
 
@@ -207,20 +200,13 @@ talent.full name ;
   isGenerating ;
 }> {";
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") ";
-}</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) ;
+}</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4"><Button > Reset Form </Button> </DialogFooter> </>) ;
 }"
-=======
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
 
   
 
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

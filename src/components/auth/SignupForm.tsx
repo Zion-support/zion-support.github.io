@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -313,9 +312,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
               size="sm"
               className="h-7 w-7 p-0"
               onClick={() => setShowPassword(!showPassword)}
-              aria-label={showPassword ? 'Hide password' : 'Show password'}
-            >
-              {showPassword ? (
+              aria-label={showPassword ? 'Hide password' : 'Show password'}>{showPassword ? (
                 <EyeOff className="h-4 w-4" />
               ) : (
                 <Eye className="h-4 w-4" />
@@ -395,9 +392,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
               size="sm"
               className="h-7 w-7 p-0"
               onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}
-            >
-              {showConfirmPassword ? (
+              aria-label={showConfirmPassword ? 'Hide confirm password' : 'Show confirm password'}>{showConfirmPassword ? (
                 <EyeOff className="h-4 w-4" />
               ) : (
                 <Eye className="h-4 w-4" />
@@ -425,9 +420,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       <Button 
         type="submit" 
         className="w-full py-3" 
-        disabled={isSubmitting || !isValid}
-      >
-        {isSubmitting ? (
+        disabled={isSubmitting || !isValid}>{isSubmitting ? (
           <>
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             Creating Account...
@@ -438,7 +431,6 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       </Button>
     </form>
   );
-<<<<<<< HEAD
 
 }/> </div> ✓ 8+ characters </span> <span className= {';
   /[A-Z]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
@@ -461,21 +453,14 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
 }</div>) ;
 }{;
   /* Submit Button */ ;
-}<Button > {'";
+}<Button>{'";
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Creating Account... </>) : ('Create Account') ;
 }</Button> </form>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
         setFieldStates(prev => ({
           ...prev;
 
-<<<<<<< HEAD
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Rocket,
   Brain,
@@ -56,9 +54,6 @@ import {
   LockIcon,
   GlobeIcon,
   CpuIcon,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   Rocket, Brain, Atom, Zap, Sparkles, Shield, 
   Phone, Mail, MapPin, Globe, ArrowRight;
@@ -68,25 +63,13 @@ import {
   Target, Microscope, Cpu, Database, Cloud, Lock;
   Home, Building, DollarSign, FileText, MessageSquare, MessageCircle, Newspaper, Handshake, LifeBuoy, Activity;
   ShoppingCart, UserCheck, BarChart, Palette, Video, LockIcon, GlobeIcon, CpuIcon
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
-=======
-  website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 const serviceCategories = [
@@ -94,8 +77,6 @@ const serviceCategories = [
     title: '🧠 Revolutionary AI Services',
     icon: Brain,
     services: [
-<<<<<<< HEAD
-<<<<<<< HEAD
       {
         name: 'AI Business Intelligence Pro',
         href: '/ai-business-intelligence-pro',
@@ -118,25 +99,16 @@ const serviceCategories = [
       },
     ],
   },
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', price: '$299/month' },
       { name: 'AI Video Generation Platform', href: '/ai-video-generation-platform', price: '$499/month' },
       { name: 'AI-Powered Cybersecurity', href: '/ai-cybersecurity-platform', price: '$799/month' },
       { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-platform', price: '$3,999/month' }
     ]
   };
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     title: '⚛️ Quantum & Emerging Tech',
     icon: Atom,
     services: [
-<<<<<<< HEAD
-<<<<<<< HEAD
       {
         name: 'Quantum Machine Learning',
         href: '/quantum-machine-learning-platform',
@@ -159,25 +131,16 @@ const serviceCategories = [
       },
     ],
   },
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       { name: 'Quantum Machine Learning', href: '/quantum-machine-learning-platform', price: '$1,999/month' };
       { name: 'Blockchain AI Platform', href: '/blockchain-ai-platform', price: '$899/month' },
       { name: 'Edge AI Computing', href: '/edge-ai-computing-platform', price: '$599/month' },
       { name: 'AI Climate Modeling', href: '/ai-climate-modeling-platform', price: '$1,299/month' }
     ]
   };
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     title: '🏙️ Enterprise IT Solutions',
     icon: Cpu,
     services: [
-<<<<<<< HEAD
-<<<<<<< HEAD
       {
         name: 'API Security & Monitoring',
         href: '/api-security-monitoring-suite',
@@ -200,25 +163,16 @@ const serviceCategories = [
       },
     ],
   },
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       { name: 'API Security & Monitoring', href: '/api-security-monitoring-suite', price: '$399/month' },
       { name: 'Customer Success Automation', href: '/customer-success-automation', price: '$199/month' },
       { name: 'HR Automation Suite', href: '/hr-automation-suite', price: '$179/month' },
       { name: 'Project Management AI', href: '/project-management-ai-platform', price: '$199/month' }
     ]
   };
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   {
     title: '🛒 Business Automation',
     icon: ShoppingCart,
     services: [
-<<<<<<< HEAD
-<<<<<<< HEAD
       {
         name: 'E-commerce Automation',
         href: '/ecommerce-automation-platform',
@@ -241,19 +195,12 @@ const serviceCategories = [
       },
     ],
   },
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       { name: 'E-commerce Automation', href: '/ecommerce-automation-platform', price: '$249/month' },
       { name: 'Marketing Automation Suite', href: '/marketing-automation-suite', price: '$279/month' },
       { name: 'Financial Analytics Platform', href: '/financial-analytics-platform', price: '$349/month' },
       { name: 'Legal Document Automation', href: '/legal-document-automation', price: '$399/month' }
     ]
   }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const quickLinks = [
@@ -264,15 +211,7 @@ const quickLinks = [
   { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Case Studies', href: '/case-studies', icon: FileText },
   { name: 'Blog', href: '/blog', icon: MessageSquare },
-<<<<<<< HEAD
-<<<<<<< HEAD
   { name: 'Contact', href: '/contact', icon: MessageCircle },
-=======
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  { name: 'Contact', href: '/contact', icon: MessageCircle }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const companyLinks = [
@@ -281,12 +220,7 @@ const companyLinks = [
   { name: 'News', href: '/news', icon: Newspaper },
   { name: 'Partners', href: '/partners', icon: Handshake },
   { name: 'Support', href: '/support', icon: LifeBuoy },
-<<<<<<< HEAD
-<<<<<<< HEAD
   { name: 'Status', href: '/status', icon: Activity },
-=======
-  { name: 'Status', href: '/status', icon: Activity }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const socialLinks = [
@@ -298,7 +232,6 @@ const socialLinks = [
 ];
 
 const certifications = [
-<<<<<<< HEAD
   'ISO 27001 Certified',
   'SOC 2 Type II Compliant',
   'GDPR Compliant',
@@ -307,7 +240,6 @@ const certifications = [
   'FedRAMP Authorized',
   'Quantum Security Certified',
   'AI Ethics Compliant',
-=======
   { name: 'Status', href: '/status', icon: Activity }
 ];
 
@@ -321,35 +253,19 @@ const socialLinks = [
 
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const stats = [
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
   { label: 'Countries Served', value: '45+', icon: Globe },
-<<<<<<< HEAD
-<<<<<<< HEAD
   { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
-=======
-  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  { label: 'Success Rate', value: '99.9%', icon: CheckCircle }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 export default function UltraFuturisticFooter2034() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
-=======
-    <footer className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -362,9 +278,7 @@ export default function UltraFuturisticFooter2034() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Company Info */}
-<<<<<<< HEAD
             <div className='lg:col-span-1'>
-=======
     <footer className="bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -379,23 +293,13 @@ export default function UltraFuturisticFooter2034() {
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
             {/* Company Info */}
             <div className="lg:col-span-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="lg:col-span-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='space-y-6'
-=======
-                className="space-y-6"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="flex items-center space-x-3">
+                className='space-y-6'><div className="flex items-center space-x-3">
                   <div className="relative">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                       <Rocket className="w-7 h-7 text-white" />
@@ -416,12 +320,8 @@ export default function UltraFuturisticFooter2034() {
                 </p>
 
                 {/* Stats */}
-<<<<<<< HEAD
                 <div className='grid grid-cols-2 gap-4'>
-=======
-                className="space-y-6"
-              >
-                <div className="flex items-center space-x-3">
+                className="space-y-6"><div className="flex items-center space-x-3">
                   <div className="relative">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
                       <Rocket className="w-7 h-7 text-white" />
@@ -443,10 +343,7 @@ export default function UltraFuturisticFooter2034() {
 
                 {/* Stats */}
                 <div className="grid grid-cols-2 gap-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="grid grid-cols-2 gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {stats.map((stat, index) => (
                     <motion.div
                       key={stat.label}
@@ -454,55 +351,37 @@ export default function UltraFuturisticFooter2034() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10'
-                    >
-                      <stat.icon className='w-6 h-6 text-cyan-400 mx-auto mb-2' />
+                      className='text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10'><stat.icon className='w-6 h-6 text-cyan-400 mx-auto mb-2' />
                       <div className='text-lg font-bold text-white'>
                         {stat.value}
                       </div>
                       <div className='text-xs text-gray-400'>{stat.label}</div>
-=======
-                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
-                    >
-                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"><stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                       <div className="text-lg font-bold text-white">{stat.value}</div>
                       <div className="text-xs text-gray-400">{stat.label}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
-                    >
-                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
+                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"><stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
                       <div className="text-lg font-bold text-white">{stat.value}</div>
                       <div className="text-xs text-gray-400">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </motion.div>
                   ))}
                 </div>
 
                 {/* Contact Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
-=======
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
                     <Phone className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
                     <Mail className="w-4 h-4" />
                     <span>{contactInfo.email}</span>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>
-=======
                 <div className="space-y-3">
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
                     <Phone className="w-4 h-4" />
@@ -515,52 +394,29 @@ export default function UltraFuturisticFooter2034() {
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors">
                     <MapPin className="w-4 h-4" />
                     <span className="text-sm">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </motion.div>
             </div>
 
             {/* Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='lg:col-span-2'>
-=======
-            <div className="lg:col-span-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            <div className="lg:col-span-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='space-y-8'
-              >
-                <h3 className='text-xl font-bold text-white mb-6'>
+                className='space-y-8'><h3 className='text-xl font-bold text-white mb-6'>
                   Our Services
                 </h3>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-=======
-                className="space-y-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
+                className="space-y-8"><h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                className="space-y-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
+                className="space-y-8"><h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {serviceCategories.map((category, index) => (
                     <motion.div
                       key={category.title}
@@ -568,14 +424,7 @@ export default function UltraFuturisticFooter2034() {
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      className='space-y-4'
-=======
-                      className="space-y-4"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                    >
-                      <div className="flex items-center space-x-2">
+                      className='space-y-4'><div className="flex items-center space-x-2">
                         <category.icon className="w-5 h-5 text-cyan-400" />
                         <h4 className="font-semibold text-white">{category.title}</h4>
                       </div>
@@ -584,17 +433,11 @@ export default function UltraFuturisticFooter2034() {
                           <Link
                             key={service.name}
                             href={service.href}
-                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200"
-                          >
-                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
+                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200"><span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
                               {service.name}
                             </span>
-<<<<<<< HEAD
                             <span className='text-xs text-gray-500 group-hover:text-cyan-400 transition-colors'>
-=======
-                      className="space-y-4"
-                    >
-                      <div className="flex items-center space-x-2">
+                      className="space-y-4"><div className="flex items-center space-x-2">
                         <category.icon className="w-5 h-5 text-cyan-400" />
                         <h4 className="font-semibold text-white">{category.title}</h4>
                       </div>
@@ -603,16 +446,11 @@ export default function UltraFuturisticFooter2034() {
                           <Link
                             key={service.name}
                             href={service.href}
-                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200"
-                          >
-                            <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
+                            className="flex items-center justify-between group hover:bg-white/5 rounded-lg p-2 transition-all duration-200"><span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
                               {service.name}
                             </span>
                             <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <span className="text-xs text-gray-500 group-hover:text-cyan-400 transition-colors">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                               {service.price}
                             </span>
                           </Link>
@@ -625,28 +463,13 @@ export default function UltraFuturisticFooter2034() {
             </div>
 
             {/* Quick Links & Social */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='lg:col-span-1'>
-=======
-            <div className="lg:col-span-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            <div className="lg:col-span-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='space-y-8'
-=======
-                className="space-y-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              >
-                {/* Quick Links */}
+                className='space-y-8'>{/* Quick Links */}
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
                   <div className="space-y-2">
@@ -654,15 +477,9 @@ export default function UltraFuturisticFooter2034() {
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
-<<<<<<< HEAD
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"><link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
                         <span className='text-sm'>{link.name}</span>
-=======
-                className="space-y-8"
-              >
-                {/* Quick Links */}
+                className="space-y-8">{/* Quick Links */}
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
                   <div className="space-y-2">
@@ -670,15 +487,10 @@ export default function UltraFuturisticFooter2034() {
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"><link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <span className="text-sm">{link.name}</span>
                         <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">{link.name}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </Link>
                     ))}
                   </div>
@@ -686,42 +498,29 @@ export default function UltraFuturisticFooter2034() {
 
                 {/* Company Links */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <h4 className='text-lg font-semibold text-white mb-4'>
                     Company
                   </h4>
                   <div className='space-y-2'>
                     {companyLinks.map(link => (
-=======
                   <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
                   <div className="space-y-2">
                     {companyLinks.map((link) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
-<<<<<<< HEAD
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"><link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
                         <span className='text-sm'>{link.name}</span>
-=======
                   <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
                   <div className="space-y-2">
                     {companyLinks.map((link) => (
                       <Link
                         key={link.name}
                         href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
+                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"><link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                        <span className="text-sm">{link.name}</span>
                         <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
                         <span className="text-sm">{link.name}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">{link.name}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </Link>
                     ))}
                   </div>
@@ -729,28 +528,11 @@ export default function UltraFuturisticFooter2034() {
 
                 {/* Social Links */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <h4 className='text-lg font-semibold text-white mb-4'>
                     Follow Us
                   </h4>
                   <div className='flex space-x-4'>
                     {socialLinks.map(social => (
-=======
-                  <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
-                  <div className="flex space-x-4">
-                    {socialLinks.map((social) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                      <Link
-                        key={social.name}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
-                      >
-<<<<<<< HEAD
-                        <social.icon className='w-5 h-5' />
-=======
                   <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
                   <div className="flex space-x-4">
                     {socialLinks.map((social) => (
@@ -759,13 +541,17 @@ export default function UltraFuturisticFooter2034() {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
-                      >
+                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"><social.icon className='w-5 h-5' />
+                  <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
+                  <div className="flex space-x-4">
+                    {socialLinks.map((social) => (
+                      <Link
+                        key={social.name}
+                        href={social.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"><social.icon className="w-5 h-5" />
                         <social.icon className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                        <social.icon className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </Link>
                     ))}
                   </div>
@@ -780,26 +566,14 @@ export default function UltraFuturisticFooter2034() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='mt-16 pt-8 border-t border-white/10'
-          >
-            <h4 className='text-lg font-semibold text-white mb-6 text-center'>
+            className='mt-16 pt-8 border-t border-white/10'><h4 className='text-lg font-semibold text-white mb-6 text-center'>
               Certifications & Compliance
             </h4>
             <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4'>
-=======
-            className="mt-16 pt-8 border-t border-white/10"
-          >
-            <h4 className="text-lg font-semibold text-white mb-6 text-center">Certifications & Compliance</h4>
+            className="mt-16 pt-8 border-t border-white/10"><h4 className="text-lg font-semibold text-white mb-6 text-center">Certifications & Compliance</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            className="mt-16 pt-8 border-t border-white/10"
-          >
-            <h4 className="text-lg font-semibold text-white mb-6 text-center">Certifications & Compliance</h4>
+            className="mt-16 pt-8 border-t border-white/10"><h4 className="text-lg font-semibold text-white mb-6 text-center">Certifications & Compliance</h4>
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {certifications.map((cert, index) => (
                 <motion.div
                   key={cert}
@@ -807,26 +581,14 @@ export default function UltraFuturisticFooter2034() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'
-                >
-                  <CheckCircle className='w-4 h-4 text-green-400 mr-2' />
+                  className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'><CheckCircle className='w-4 h-4 text-green-400 mr-2' />
                   <span className='text-xs text-gray-300 text-center'>
                     {cert}
                   </span>
-=======
-                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"
-                >
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span className="text-xs text-gray-300 text-center">{cert}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"
-                >
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"><CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                   <span className="text-xs text-gray-300 text-center">{cert}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </motion.div>
               ))}
             </div>
@@ -834,8 +596,6 @@ export default function UltraFuturisticFooter2034() {
         </div>
 
         {/* Bottom Bar */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
@@ -858,7 +618,6 @@ export default function UltraFuturisticFooter2034() {
               <div className='flex items-center space-x-2 text-gray-400'>
                 <Heart className='w-4 h-4 text-red-400' />
                 <span className='text-sm'>Made with ❤️ for the future</span>
-=======
         <div className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -867,7 +626,6 @@ export default function UltraFuturisticFooter2034() {
                 <Link href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
               </div>
-=======
         <div className="border-t border-white/10 bg-black/50 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-6">
             <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
@@ -876,15 +634,10 @@ export default function UltraFuturisticFooter2034() {
                 <Link href="/privacy" className="hover:text-cyan-400 transition-colors">Privacy Policy</Link>
                 <Link href="/terms" className="hover:text-cyan-400 transition-colors">Terms of Service</Link>
               </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               
               <div className="flex items-center space-x-2 text-gray-400">
                 <Heart className="w-4 h-4 text-red-400" />
                 <span className="text-sm">Made with ❤️ for the future</span>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
@@ -892,11 +645,4 @@ export default function UltraFuturisticFooter2034() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

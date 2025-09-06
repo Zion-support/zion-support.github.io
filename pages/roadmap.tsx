@@ -328,9 +328,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <button
                 onClick={copyPrompt}
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                {copied ? 'Copied' : 'Copy'}
+ursor/integrate-build-improve-and-re-verify-b76c>{copied ? 'Copied' : 'Copy'}
               </button>
             </div>
             <pre className='whitespace-pre-wrap rounded-lg border border-gray-200 bg-gray-50 p-4 text-sm text-gray-800'>
@@ -344,9 +342,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               {stages.map(stage => (
                 <article
                   key={stage.id}
-                  className='rounded-lg border border-gray-200 p-5 shadow-sm'
-                >
-                  <h3 className='text-lg font-bold'>
+                  className='rounded-lg border border-gray-200 p-5 shadow-sm'><h3 className='text-lg font-bold'>
                     {stage.name} — {stage.theme}
                   </h3>
                   <p className='mt-2 text-gray-700'>

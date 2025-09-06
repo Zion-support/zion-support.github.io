@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react'
@@ -103,7 +102,6 @@ export const NotificationCenter: React.FC = () => {
     </Popover>
   )
 };
-<<<<<<< HEAD
 
 }, [open, loadedOnce, fetchNotifications]);
 }catch (err) {;
@@ -120,7 +118,7 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }> <PopoverTrigger asChild> {';
   unreadCount > 9 ? '9+' : unreadCount ;
 }</span>) ;
-}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col" > <NotificationHeader unreadCount= {;
+}</Button> </PopoverTrigger> <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col"><NotificationHeader unreadCount= {;
   unreadCount ;
 }onMarkAllAsRead= {;
   handleMarkAllAsRead ;
@@ -145,16 +143,7 @@ enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Erro
 }/> </PopoverContent> </Popover>) ;
 };
 '"
-=======
 
-<<<<<<< HEAD
     unreadCount, 
     markAsRead, 
-<<<<<<< HEAD
 
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

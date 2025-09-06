@@ -325,9 +325,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8'>
+            transition={{ duration: 0.8 }}><h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8'>
             <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8">
 ursor/integrate-build-improve-and-re-verify-b76c
               Revolutionary 2027
@@ -344,23 +342,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-wrap items-center justify-center gap-6 text-center mb-8">
               <motion.div className="flex items-center gap-2 text-cyan-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Phone className="w-5 h-5" />
+                transition={{ type: "spring", stiffness: 300 }}><Phone className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.mobile}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-purple-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Mail className="w-5 h-5" />
+                transition={{ type: "spring", stiffness: 300 }}><Mail className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.email}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-green-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <MapPin className='w-5 h-5' />
+                transition={{ type: "spring", stiffness: 300 }}><MapPin className='w-5 h-5' />
                 <span className='text-sm font-semibold'>
                   {contactInfo.address}
                 </span>
@@ -379,23 +371,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-wrap items-center justify-center gap-6 text-center mb-8">
               <motion.div className="flex items-center gap-2 text-cyan-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Phone className="w-5 h-5" />
+                transition={{ type: "spring", stiffness: 300 }}><Phone className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.mobile}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-purple-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <Mail className="w-5 h-5" />
+                transition={{ type: "spring", stiffness: 300 }}><Mail className="w-5 h-5" />
                 <span className="font-semibold">{contactInfo.email}</span>
               </motion.div>
               <motion.div className="flex items-center gap-2 text-green-400"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <MapPin className="w-5 h-5" />
+                transition={{ type: "spring", stiffness: 300 }}><MapPin className="w-5 h-5" />
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
                 <MapPin className="w-5 h-5" />
                 <span className="text-sm font-semibold">{contactInfo.address}</span>
@@ -407,16 +393,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className='flex flex-wrap items-center justify-center gap-4'>
               <a
                 href='/contact'
-                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'
-              >
-                <Rocket className='w-5 h-5 mr-2' />
+                className='bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'><Rocket className='w-5 h-5 mr-2' />
                 Get Started Today
               </a>
               <a
                 href='/services'
-                className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'
-              >
-                <Globe className='w-5 h-5 mr-2' />
+                className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'><Globe className='w-5 h-5 mr-2' />
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-lg px-8 py-4 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                 <Rocket className="w-5 h-5 mr-2" />
@@ -482,9 +464,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
-                  className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
-                >
-                  {categories.map(category => (
+                  className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'>{categories.map(category => (
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               {/* Category Filter */}
               <div>
@@ -511,9 +491,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}
-                  className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
-                >
-                  {priceRanges.map(range => (
+                  className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'>{priceRanges.map(range => (
                 <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
                 <select
                   value={selectedPriceRange}
@@ -540,9 +518,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}
-                  className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'
-                >
-                  {sortOptions.map(option => (
+                  className='w-full px-3 py-2 bg-gray-900/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500'>{sortOptions.map(option => (
                 <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
                 <select
                   value={sortBy}
@@ -614,9 +590,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     whileHover={{ y: -10, scale: 1.02 }}
-                    className='group'
-                  >
-                    <div className='h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm'>
+                    className='group'><div className='h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm'>
                     whileHover={{ y: -10, scale: 1.02 }} className="group">
                     <div className="h-full bg-black/40 backdrop-blur-lg border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -698,9 +672,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                               .map((feature, idx) => (
                                 <li
                                   key={idx}
-                                  className='flex items-center gap-2 text-xs text-gray-400'
-                                >
-                                  <CheckCircle className='w-3 h-3 text-emerald-400 flex-shrink-0' />
+                                  className='flex items-center gap-2 text-xs text-gray-400'><CheckCircle className='w-3 h-3 text-emerald-400 flex-shrink-0' />
                                   <span className='line-clamp-1'>
                                     {feature}
                                   </span>
@@ -758,9 +730,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {/* Category Badge */}
                         <div className='mb-4'>
                           <span
-                            className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service.color} text-white`}
-                          >
-                        <div className="mb-4">
+                            className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service.color} text-white`}><div className="mb-4">
                           <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service.color} text-white`}>
                         <div className="mb-4">
                           <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold ${service.color} text-white`}>
@@ -773,16 +743,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <div className='flex gap-2'>
                           <a
                             href={service.link}
-                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'
-                          >
-                            <ArrowRight className='w-4 h-4 mr-1' />
+                            className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300'><ArrowRight className='w-4 h-4 mr-1' />
                             Learn More
                           </a>
                           <a
                             href='/contact'
-                            className='px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300'
-                          >
-                            <MessageSquare className='w-4 h-4' />
+                            className='px-4 py-2 border border-gray-600 text-gray-200 hover:bg-gray-700 hover:border-gray-500 transform hover:scale-105 transition-all duration-300'><MessageSquare className='w-4 h-4' />
                         <div className="flex gap-2">
                           <a 
                             href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
@@ -813,9 +779,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className='text-center py-16'
-              >
-                <div className='text-6xl mb-4'>🔍</div>
+                className='text-center py-16'><div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No services found
                 </h3>
@@ -872,9 +836,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className='bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30'
-          >
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            className='bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30'><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -907,9 +869,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </a>
               <a
                 href='/services'
-                className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'
-              >
-                <Globe className='w-5 h-5 mr-2' />
+                className='border-2 border-purple-500 text-purple-400 text-lg px-8 py-4 hover:bg-purple-500 hover:text-white transform hover:scale-105 transition-all duration-300'><Globe className='w-5 h-5 mr-2' />
             viewport={{ once: true }} className="bg-gradient-to-r from-cyan-900/50 to-purple-900/50 backdrop-blur-lg rounded-3xl p-12 border border-cyan-500/30">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?

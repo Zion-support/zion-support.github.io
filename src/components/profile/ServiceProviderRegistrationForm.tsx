@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,7 +9,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-=======
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -23,7 +20,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form;
@@ -529,9 +525,7 @@ export function ServiceProviderRegistrationForm() {
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
-                    >
-                      <Sparkles className="mr-2 h-4 w-4" />
+                      disabled={isGenerating}><Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>
@@ -549,9 +543,7 @@ export function ServiceProviderRegistrationForm() {
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-                        onClick={applyGeneratedContent}
-                      >
-                        <Check className="mr-1 h-3 w-3" /> Apply
+                        onClick={applyGeneratedContent}><Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
                     </div>
                     
@@ -568,9 +560,7 @@ export function ServiceProviderRegistrationForm() {
                             {generatedContent.services.map((service, index) => (
                               <Badge
                                 key={index}
-                                className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
-                              >
-                                {service}
+                                className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">{service}
                               </Badge>
                             ))}
                           </div>
@@ -624,15 +614,11 @@ export function ServiceProviderRegistrationForm() {
                     {serviceTags.map(service => (
                       <Badge
                         key={service}
-                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
-                      >
-                        {service}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">{service}
                         <button
                           type="button"
                           onClick={() => handleRemoveService(service)}
-                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
-                        >
-                          <X className="h-3 w-3" />
+                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"><X className="h-3 w-3" />
                         </button>
                       </Badge>
                     ))}
@@ -743,9 +729,7 @@ export function ServiceProviderRegistrationForm() {
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
+                  disabled={isSubmitting}>{isSubmitting ? "Creating Profile..." : "Create Service Profile"}
                 </Button>
               </div>
             </CardFooter>
@@ -754,7 +738,6 @@ export function ServiceProviderRegistrationForm() {
       </Card>
     </div>
   );
-<<<<<<< HEAD
 
 };
 //Handle removing service tags const handleRemoveService = (service: string) => {;
@@ -782,7 +765,6 @@ reader.readAsDataURL (file) ;
   providerData: {;
   name: formData.name, title: formData.title, bio: formData.bio,  services: serviceTags, location: formData.location ;
 
-
 });
 }else {';
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');
@@ -805,7 +787,6 @@ toast ({;
 if (newServices.length > 0) {;
   ;
 
-
 };
 //Handle form submission const onSubmit = async (values: ServiceFormValues) => {;
   if (serviceTags.length === 0) {;
@@ -824,7 +805,6 @@ try {;
   body: {;
   providerData: {;
   name: values.name, title: values.title, bio: values.bio,  services: serviceTags, location: values.location ;
-
 
 });
 //Create the service profile const {;
@@ -885,37 +865,22 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
   service ";
 }className=" bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"> {;
   service ";
-}<button > <X className=" h-3 w-3"/> </button> </Badge>) ) ;
+}<button><X className=" h-3 w-3"/> </button> </Badge>) ) ;
 }) ";
 }</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>) ";
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   enhancedProfile: z.boolean().transform(val => !!val),
   website: z.string().url("Please enter a valid URL").or(z.string().length(0)).optional()}),
 
 type ServiceFormValues = z.infer<typeof serviceProfileSchema>;
 
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
       let finalSummary = values.bio;
       let finalServices = serviceTags;
       
-<<<<<<< HEAD
           
-<<<<<<< HEAD
           website: values.website || null}),
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

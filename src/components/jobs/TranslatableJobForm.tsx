@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,8 +10,6 @@ import { useTranslationService } from '@/hooks/useTranslationService';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 import { toast } from '@/components/ui/use-toast';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -217,9 +213,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant="outline"
               onClick={() => autoTranslate('title')}
               disabled={isTranslating || (!title.en && !title.es && !title.fr && !title.pt && !title.ar)}
-              className="flex items-center gap-1"
-            >
-              {isTranslating ? (
+              className="flex items-center gap-1">{isTranslating ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
                 <Globe className="h-4 w-4" />
@@ -266,9 +260,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant="outline"
               onClick={() => autoTranslate('description')}
               disabled={isTranslating || (!description.en && !description.es && !description.fr && !description.pt && !description.ar)}
-              className="flex items-center gap-1"
-            >
-              {isTranslating ? (
+              className="flex items-center gap-1">{isTranslating ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
                 <Globe className="h-4 w-4" />
@@ -313,9 +305,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
               variant="outline"
               onClick={() => autoTranslate('requirements')}
               disabled={isTranslating || (!requirements.en && !requirements.es && !requirements.fr && !requirements.pt && !requirements.ar)}
-              className="flex items-center gap-1"
-            >
-              {isTranslating ? (
+              className="flex items-center gap-1">{isTranslating ? (
                 <Loader2 className="h-4 w-4 animate-spin" />
               ) : (
                 <Globe className="h-4 w-4" />
@@ -383,9 +373,7 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
         <Button
           type="submit"
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan"
-          disabled={isSubmitting || isTranslating}
-        >
-          {isSubmitting ? (
+          disabled={isSubmitting || isTranslating}>{isSubmitting ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               {t('jobs.submitting')}
@@ -397,7 +385,6 @@ export function TranslatableJobForm({ onSubmit, isSubmitting = false }: Translat
       </div>
     </form>
   );
-<<<<<<< HEAD
 
 };
 //Ensure all translations are available if (!title.en && !title.es && !title.fr && !title.pt && !title.ar) return;
@@ -518,30 +505,19 @@ if (!description.en && !description.es && !description.fr && !description.pt && 
 }</>) : (t ('jobs.post job button') ) ;
 }</Button> </div> </form>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     ar: ""
   });
-<<<<<<< HEAD
     ar: ""
   });
   
-<<<<<<< HEAD
     
-<<<<<<< HEAD
 
     let sourceLanguage: SupportedLanguage = 'en', let content = '',
     
-
-<<<<<<< HEAD
 
           variant: "destructive"
       });
       return;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react';
 import {
@@ -20,8 +18,6 @@ import {
 import { QuoteStatusBadge } from '@/components/quotes/QuoteStatusBadge';
 import type { QuoteRequest, QuoteStatus } from '@/types/quotes';
 import { formatDate } from '@/utils/dateUtils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from 'lucide-react'
@@ -95,9 +91,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
             quotes.map(quote => (
               <TableRow 
                 key={quote.id}
-                className="border-zion-blue-light hover:bg-zion-blue"
-              >
-                <TableCell className="text-white">
+                className="border-zion-blue-light hover:bg-zion-blue"><TableCell className="text-white">
                   {quote.talent_name || 'Unknown Talent'}
                 </TableCell>
                 <TableCell className="text-white">
@@ -128,9 +122,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                     <Button 
                       variant="ghost" 
                       size="icon" 
-                      onClick={() => onViewDetails(quote)}
-                    >
-                      <Eye className="h-4 w-4" />
+                      onClick={() => onViewDetails(quote)}><Eye className="h-4 w-4" />
                       <span className="sr-only">View Details</span>
                     </Button>
                     
@@ -139,9 +131,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                         <Button 
                           variant="ghost" 
                           size="icon"
-                          onClick={() => toggleArchive(quote.id, false)}
-                        >
-                          <Archive className="h-4 w-4" />
+                          onClick={() => toggleArchive(quote.id, false)}><Archive className="h-4 w-4" />
                           <span className="sr-only">Unarchive</span>
                         </Button>
                         <Button 
@@ -152,9 +142,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                               deleteQuote(quote.id)
                             }
-                          }}
-                        >
-                          <Trash2 className="h-4 w-4" />
+                          }}><Trash2 className="h-4 w-4" />
                           <span className="sr-only">Delete</span>
                         </Button>
                       </>
@@ -192,9 +180,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                                 deleteQuote(quote.id)
                               };
                             }}
-                            className="text-red-500"
-                          >
-                            <Trash2 className="h-4 w-4 mr-2" />
+                            className="text-red-500"><Trash2 className="h-4 w-4 mr-2" />
                             Delete
                           </DropdownMenuItem>
                         </DropdownMenuContent>
@@ -210,14 +196,8 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
 '"
-=======
 
-<<<<<<< HEAD
   quotes;
   isArchived = false;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { MobileHeader } from '@/mobile/components/common/MobileHeader';
 import { BottomNavigation } from '@/mobile/components/common/BottomNavigation';
@@ -17,8 +15,6 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { MobileHeader } from "@/mobile/components/common/MobileHeader";
@@ -105,17 +101,13 @@ export function MobileJobPost() {
             <Button 
               variant="outline" 
               className="flex-1 gap-1" 
-              onClick={goToPrevStep}
-            >
-              <ChevronLeft className="h-4 w-4" /> Back
+              onClick={goToPrevStep}><ChevronLeft className="h-4 w-4" /> Back
             </Button>
           )}
           
           <Button 
             className="flex-1 gap-1"
-            onClick={goToNextStep}
-          >
-            {currentStep === "preview" ? "Publish Job" : "Continue"}
+            onClick={goToNextStep}>{currentStep === "preview" ? "Publish Job" : "Continue"}
             {currentStep !== "preview" && <ChevronRight className="h-4 w-4" />}
           </Button>
         </div>
@@ -242,9 +234,7 @@ function RequirementsStep() {
             <Badge 
               key={skill} 
               variant="secondary"
-              className="flex items-center gap-1 px-3 py-1"
-            >
-              {skill}
+              className="flex items-center gap-1 px-3 py-1">{skill}
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
                 onClick={() => removeSkill(skill)}
@@ -404,7 +394,6 @@ function PreviewStep() {
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
   );
-<<<<<<< HEAD
 
 };";
 min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {;
@@ -430,12 +419,7 @@ min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"clas
   3 ;
 }/> </div> </div>) '";
 }<Card> <CardContent className=" p-4"> <h3 className=" font-bold text-lg">Senior React Developer</h3> <p className=" text-muted-foreground">TechCorp Inc. • Remote • Full-time</p> <div className=" flex gap-2 my-3"> <Badge variant=" outline">React</Badge> <Badge variant=" outline">TypeScript</Badge> <Badge variant=" outline">Node.js</Badge> </div> </div> <div className=" space-y-1 text-sm mt-3"> <p className=" font-medium">Experience Level:</p> <p>Senior</p> </div> </div> <div className=" mt-4 pt-3 border-t border-border"> <h4 className=" font-medium mb-2">Description</h4> <p className=" text-sm">We are looking for a skilled React developer to help us build out our new customer-facing application. You'll be working with a team of experienced developers to create a responsive and performant web app...</p> </div> </CardContent> </Card> <Button variant=" outline"className=" w-full" >Edit Job Post</Button> </div> '"
-=======
 
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -118,9 +118,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </a>
               <a
                 href='/contact'
-                className='border-white/20 hover:border-white/40'
-              >
-        <meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
+                className='border-white/20 hover:border-white/40'><meta name="description" content="Comprehensive analytics platform with real-time insights, predictive analytics, and custom reporting capabilities." />
       </Head>
 
       <div className="min-h-screen bg-black">
@@ -327,9 +325,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </a>
               <a
                 href='/contact'
-                className='border-white text-white hover:bg-white hover:text-blue-600'
-              >
-        <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
+                className='border-white text-white hover:bg-white hover:text-blue-600'><section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Unlock Your Data?

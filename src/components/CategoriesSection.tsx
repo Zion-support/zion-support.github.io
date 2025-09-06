@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import Link from 'next/link';
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
 import { HelpCircle } from 'lucide-react'; // Added HelpCircle for default icon
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { GradientHeading } from "./GradientHeading";
 import Link from "next/link";
@@ -140,9 +136,7 @@ export function CategoriesSection({
             <Link
               key={category.id}
               href={category.link || '#'}
-              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"
-            >
-              <div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
+              className="group block rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan"><div className="rounded-lg overflow-hidden h-full border border-zion-blue-light bg-zion-blue-dark p-6 transition-all duration-300 group-hover:border-zion-purple/50 group-focus:border-zion-purple/50 hover:translate-y-[-5px] group-hover:shadow-lg">
                 <div className={`rounded-full w-16 h-16 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <div className="text-white">
                     {category.icon}
@@ -163,9 +157,7 @@ export function CategoriesSection({
               <Link 
                 key={service.title}
                 href={service.link}
-                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300"
-              >
-                {service.title}
+                className="px-6 py-3 bg-zion-blue-light hover:bg-zion-blue-dark border border-zion-purple/20 hover:border-zion-purple/50 rounded-full text-zion-cyan transition-all duration-300">{service.title}
               </Link>
             ))}
           </div>
@@ -174,15 +166,12 @@ export function CategoriesSection({
         <div className="mt-12 flex justify-center">
           <Link 
             href="/categories/all"
-            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors"
-          >
-            {t('home.view_all_categories')}
+            className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors">{t('home.view_all_categories')}
           </Link>
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
   switch (iconName) {;
   ;
 
@@ -219,30 +208,25 @@ icon: getIcon (cat.iconName) ;
 }) );
 //If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
   
-}> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
+}> <div className="container mx-auto px-4"><h2 className="text-3xl font-semibold text-white mb-4">{';
   t ('home.no categories title') ";
-}</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
+}</h2> <p className="text-zion-slate-light text-lg mb-2">{';
   t ('home.no categories desc') ";
-}</p> <p className="text-zion-slate-light text-md" > {';
+}</p> <p className="text-zion-slate-light text-md">{';
   t ('home.no categories support') ;
 
 }return (</p> </div>) ;
 }</div> </Link>) ) ;
-}</div> > {;
+}</div>>{;
   service.title ;
 }</Link>) ) ";
-}</div> </div> <div className="mt-12 flex justify-center" > <Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors" > {';
+}</div> </div> <div className="mt-12 flex justify-center"><Link href="/categories/all" className="text-zion-cyan border-b border-zion-cyan hover:border-zion-cyan-dark transition-colors">{';
   t ('home.view all categories') ;
 }</Link> </div> </div> </section>) ;
 }'"
-=======
 
-<<<<<<< HEAD
         color: defaultCategories.find(dc => dc.id === cat.id)?.color || "from-gray-500 to-gray-600"}))
     : defaultCategories.map(cat => ({
         ...cat;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

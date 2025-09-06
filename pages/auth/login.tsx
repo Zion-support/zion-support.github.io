@@ -803,9 +803,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <Button
                 type='submit'
                 className='w-full'
-                disabled={isLoading || isEmailUnverified}
-              >
-                {isLoading
+                disabled={isLoading || isEmailUnverified}>{isLoading
                   ? 'Signing in...'
                   : isEmailUnverified
                     ? t('auth.email_verification_required')
@@ -822,10 +820,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 Don't have an account?{' '}
                 <Link
                   href='/auth/register'
-                  className='text-blue-600 hover:underline'
-                >
-              
-              <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
+                  className='text-blue-600 hover:underline'><Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
               </Button>
             </form>

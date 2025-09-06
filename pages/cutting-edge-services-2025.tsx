@@ -186,9 +186,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-5xl md:text-7xl font-bold mb-6'>
+            transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-7xl font-bold mb-6'>
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -215,9 +213,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 href="tel:+13024640950"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                <Phone className='mr-2 w-5 h-5' />
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"><Phone className='mr-2 w-5 h-5' />
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Cutting-Edge Services 2025
@@ -242,9 +238,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 href="tel:+13024640950"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"><Phone className="mr-2 w-5 h-5" />
                 <Phone className="mr-2 w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                 Call Now
@@ -269,9 +263,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               Revolutionary Technology Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -281,9 +273,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='space-y-16'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">
               Revolutionary Technology Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -301,13 +291,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className='text-center mb-12'>
+                viewport={{ once: true }}><div className='text-center mb-12'>
                   <div
-                    className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${category.color} p-5 mb-6`}
-                  >
-                    <category.icon className='w-10 h-10 text-white' />
+                    className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${category.color} p-5 mb-6`}><category.icon className='w-10 h-10 text-white' />
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-r ${category.color} p-5 mb-6`}>
                     <category.icon className="w-10 h-10 text-white" />
@@ -338,9 +324,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       viewport={{ once: true }}
                       className='group'
                       className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-                    >
-                      <div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
                         <div className="flex items-start justify-between mb-4">
                           <h4 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
                             {service.name}
@@ -381,12 +365,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
                             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                            className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"
-                          >
-                            <Mail className='w-4 h-4 mr-2' />
-                      className="group"
-                    >
-                      <div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
+                            className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"><Mail className='w-4 h-4 mr-2' />
+                      className="group"><div className={`bg-gradient-to-br ${category.bgColor} p-8 rounded-2xl border ${category.borderColor} hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105`}>
                         <div className="flex items-start justify-between mb-4">
                           <h4 className="text-xl font-semibold text-white group-hover:text-cyan-400 transition-colors">
                             {service.name}
@@ -427,24 +407,16 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <div className="flex flex-col sm:flex-row gap-3">
                           <a
                             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
-                            className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"
-                          >
-                            <Mail className="w-4 h-4 mr-2" />
+                            className="flex-1 inline-flex items-center justify-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 text-sm"><Mail className="w-4 h-4 mr-2" />
                             <Mail className="w-4 h-4 mr-2" />
 ursor/integrate-build-improve-and-re-verify-b76c
                             Get Quote
                           </a>
                           <a
                             href={service.website}
-                            className='flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm'
-                          >
-                            <ExternalLink className='w-4 h-4 mr-2' />
-                            className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"
-                          >
-                            <ExternalLink className="w-4 h-4 mr-2" />
+                            className='flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm'><ExternalLink className='w-4 h-4 mr-2' />
+                            className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"><ExternalLink className="w-4 h-4 mr-2" />
+                            className="flex-1 inline-flex items-center justify-center px-4 py-3 border border-gray-600 text-gray-300 font-semibold rounded-xl hover:border-cyan-500 hover:text-cyan-400 transition-all duration-300 text-sm"><ExternalLink className="w-4 h-4 mr-2" />
 ursor/integrate-build-improve-and-re-verify-b76c
                             Learn More
                           </a>
@@ -474,9 +446,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -487,9 +457,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {['Starter', 'Professional', 'Enterprise'].map((plan, index) => (
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Transparent Pricing Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -511,9 +479,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group'
                 className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
                   
                   <div className="space-y-4 mb-8">
@@ -528,9 +494,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <div className='text-sm text-gray-400'>
                           Email support included
                         </div>
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
+                className="group"><div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 p-8 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">
                   <h3 className="text-2xl font-bold text-white mb-4">{plan}</h3>
                   
                   <div className="space-y-4 mb-8">
@@ -643,9 +607,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent'>
+            viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent'>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Experience the Future?
@@ -687,9 +649,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 href="tel:+13024640950"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                <Phone className='mr-2 w-5 h-5' />
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"><Phone className='mr-2 w-5 h-5' />
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
               Ready to Experience the Future?
             </h2>
@@ -730,9 +690,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 href="tel:+13024640950"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"
-              >
-                <Phone className="mr-2 w-5 h-5" />
+                className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover: bg-cyan-500 hover:text-white transition-all duration-300"><Phone className="mr-2 w-5 h-5" />
                 <Phone className="mr-2 w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                 Call Now

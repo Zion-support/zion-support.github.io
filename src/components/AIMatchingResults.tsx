@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { MatchResultItem } from '@/lib/ai-matchmaking';
 import { Card, CardContent } from '@/components/ui/card';
@@ -10,7 +8,6 @@ import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
 import Skeleton from '@/components/ui/skeleton';
 import { cn } from '@/lib/utils';
 
-=======
 import { useState } from "react";
 import { MatchResultItem } from "@/lib/ai-matchmaking";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,7 +17,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
 import { cn } from "@/lib/utils";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -114,9 +110,7 @@ export function AIMatchingResults({
                   <Card 
                     key={match.id}
                     className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover: border-zion-purple/50 cursor-pointer"
-                    onClick={() => onSelectMatch && onSelectMatch(match)}
-                  >
-                    <div className="flex">
+                    onClick={() => onSelectMatch && onSelectMatch(match)}><div className="flex">
                       <div className={cn(
                         "w-2",
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
@@ -178,13 +172,7 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

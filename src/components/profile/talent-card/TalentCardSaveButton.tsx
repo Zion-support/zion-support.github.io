@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import { useRouter } from 'next/router';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Heart } from 'lucide-react'
@@ -66,9 +62,7 @@ export function TalentCardSaveButton({
     <button 
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors"
       onClick={handleSaveToggle}
-      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}
-    >
-      <Heart 
+      aria-label={localIsSaved ? "Remove from favorites" : "Save to favorites"}><Heart 
         className={cn(
           "h-4 w-4 transition-colors",
           localIsSaved ? "fill-red-500 text-red-500" : "text-zion-slate"
@@ -76,17 +70,11 @@ export function TalentCardSaveButton({
       />
     </button>
   );
-<<<<<<< HEAD
 
 }variant: "default" ;
 }) ;
 };
 }/> </button>) ;
 }"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -228,9 +228,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <select
                 value={statusFilter}
                 onChange={(e) => setStatusFilter(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="all">All Statuses</option>
+                className="w-full p-2 border rounded-md"><option value="all">All Statuses</option>
                 <option value="active">Active</option>
                 <option value="inactive">Inactive</option>
                 <option value="pending">Pending</option>

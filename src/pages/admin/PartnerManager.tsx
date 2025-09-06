@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
-=======
 import { useState, useEffect } from "react";
 import { useAuth } from "@/hooks/useAuth";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -535,16 +531,12 @@ export default function PartnerManager() {
                 <div className="flex justify-end gap-2 mt-4">
                   <Button 
                     variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-                  >
-                    <X className="h-4 w-4 mr-1" />
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}><X className="h-4 w-4 mr-1" />
                     Reject
                   </Button>
                   <Button 
                     className="bg-green-600 hover:bg-green-700"
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}
-                  >
-                    <Check className="h-4 w-4 mr-1" />
+                    onClick={() => handleUpdateStatus(selectedPartner.id, 'approved')}><Check className="h-4 w-4 mr-1" />
                     Approve
                   </Button>
                 </div>
@@ -683,18 +675,14 @@ function PartnerTable({
                       variant="ghost"
                       size="sm"
                       onClick={() => onUpdateStatus(partner.id, 'rejected')}
-                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20"
-                    >
-                      <X className="h-4 w-4" />
+                      className="text-red-500 hover:text-red-600 hover:bg-red-900/20"><X className="h-4 w-4" />
                       <span className="sr-only">Reject</span>
                     </Button>
                     <Button 
                       variant="ghost"
                       size="sm"
                       onClick={() => onUpdateStatus(partner.id, 'approved')}
-                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20"
-                    >
-                      <Check className="h-4 w-4" />
+                      className="text-green-500 hover:text-green-600 hover:bg-green-900/20"><Check className="h-4 w-4" />
                       <span className="sr-only">Approve</span>
                     </Button>
                   </>
@@ -704,9 +692,7 @@ function PartnerTable({
                   variant="ghost" 
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
-                  className="text-zion-slate-light hover:text-white"
-                >
-                  <Settings className="h-4 w-4" />
+                  className="text-zion-slate-light hover:text-white"><Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
                 
@@ -724,7 +710,6 @@ function PartnerTable({
       </TableBody>
     </Table>
   );
-<<<<<<< HEAD
 
 };
 try {;
@@ -761,7 +746,7 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
   searchQuery ;
 }onChange= {;
   handleSearch ";
-}/> </div> </div> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="space-y-4" > <PartnerTable partners= {;
+}/> </div> </div> </CardHeader> <CardContent> </TabsList> <TabsContent value="pending" className="space-y-4"><PartnerTable partners= {;
   filteredPartners ;
 }isLoading= {;
   isLoading ;
@@ -775,7 +760,7 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
   getStatusBadge ;
 }getFraudFlagBadge= {;
   getFraudFlagBadge ";
-}/> </TabsContent> <TabsContent value="approved" className="space-y-4" > <PartnerTable partners= {;
+}/> </TabsContent> <TabsContent value="approved" className="space-y-4"><PartnerTable partners= {;
   filteredPartners ;
 }isLoading= {;
   isLoading ;
@@ -789,7 +774,7 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
   getStatusBadge ;
 }getFraudFlagBadge= {;
   getFraudFlagBadge ";
-}/> </TabsContent> <TabsContent value="rejected" className="space-y-4" > <PartnerTable partners= {;
+}/> </TabsContent> <TabsContent value="rejected" className="space-y-4"><PartnerTable partners= {;
   filteredPartners ;
 }isLoading= {;
   isLoading ;
@@ -890,29 +875,19 @@ return (<div className="container max-w-7xl py-10"> <div className="flex flex-co
   getStatusBadge (partner.status) ;
 }</TableCell> <TableCell> {;
   new Date (partner.created at) .toLocaleDateString () ";
-}</TableCell> <TableCell className="text-right"> className="text-red-500 hover:text-red-600 hover:bg-red-900/20" > <X className="h-4 w-4" /> <span className="sr-only" >Reject</span> </Button> <Button className="text-green-500 hover:text-green-600 hover:bg-green-900/20" > <Check className="h-4 w-4" /> <span className="sr-only" >Approve</span> </Button> </>) ";
-}<Button className="text-zion-slate-light hover:text-white" > <Settings className="h-4 w-4" /> <span className="sr-only" >Settings</span> </Button> <Button > View </Button> </div> </TableCell> </TableRow>) ) ;
+}</TableCell> <TableCell className="text-right"> className="text-red-500 hover:text-red-600 hover:bg-red-900/20"><X className="h-4 w-4" /> <span className="sr-only" >Reject</span> </Button> <Button className="text-green-500 hover:text-green-600 hover:bg-green-900/20"><Check className="h-4 w-4" /> <span className="sr-only" >Approve</span> </Button> </>) ";
+}<Button className="text-zion-slate-light hover:text-white"><Settings className="h-4 w-4" /> <span className="sr-only" >Settings</span> </Button> <Button > View </Button> </div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
         .order('created_at', { ascending: false }),
         
 
-<<<<<<< HEAD
-
         return <Badge variant="outline" className="bg-yellow-900/30 text-yellow-500 border-yellow-600">Pending</Badge>;
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
   partners, 
   isLoading, 
   onViewDetails, 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -3,8 +3,6 @@ import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 
 export default function ApiPerformanceTestingPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const features = [
     'k6/Gatling-compatible test runner',
     'SLO-aware latency reports',
@@ -32,9 +30,7 @@ export default function ApiPerformanceTestingPage() {
             {features.map(f => (
               <div
                 key={f}
-                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'
-              >
-                <Check className='w-5 h-5 text-cyan-400 mt-1' />
+                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'><Check className='w-5 h-5 text-cyan-400 mt-1' />
                 <p className='text-gray-200'>{f}</p>
               </div>
             ))}
@@ -56,34 +52,27 @@ export default function ApiPerformanceTestingPage() {
               href='https://grafana.com/docs/k6/'
               target='_blank'
               rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> k6 Docs
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'><ExternalLink className='w-4 h-4' /> k6 Docs
             </a>
             <a
               href='https://gatling.io/open-source/'
               target='_blank'
               rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> Gatling OSS
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'><ExternalLink className='w-4 h-4' /> Gatling OSS
             </a>
           </div>
         </section>
       </main>
     </>
   );
-=======
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
 
-=======
 	const features = [
 		'k6/Gatling-compatible test runnerSLO-aware latency reportsRegression baselines per endpointCI checks and PR annotationsSynthetic traffic for staging'
 	];
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="API Performance Testing" description="Load, latency and regression testing-as-a-service with CI and SLOs." />
@@ -113,9 +102,5 @@ export default function ApiPerformanceTestingPage() {
 			</main>
 		</>
 	);
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
@@ -13,14 +11,12 @@ import {
   MessageSquare,
   Smartphone,;
 } from 'lucide-react';
-=======
 
 import React from "react";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { cn } from "@/lib/utils";
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface QuickAccessProps {
   className?: string;
@@ -85,9 +81,7 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
             <Link
               key={index}
               href={link.link}
-              className="group bg-zion-blue relative border border-zion-blue-light hover: border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"
-            >
-              <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+              className="group bg-zion-blue relative border border-zion-blue-light hover: border-zion-purple/50 rounded-xl p-4 transition-all duration-300 flex flex-col items-center text-center hover:shadow-md hover:bg-zion-blue-light/20"><div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
                 {link.icon}
               </div>
               <h3 className="text-white font-medium mb-1">{link.title}</h3>
@@ -105,10 +99,6 @@ export function QuickAccess({ className, style }: QuickAccessProps) {
 }
 
 export default QuickAccess;
-=======
-
-<<<<<<< HEAD
 
 export default QuickAccess;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

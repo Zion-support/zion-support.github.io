@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
 
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' 
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -16,7 +13,6 @@ type RequestBody = {
   experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead';
   remote: boolean;
   employmentType: 'contract' | 'freelance' | 'full-time'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 type InsightResponse = {
@@ -29,9 +25,7 @@ type InsightResponse = {
   trendMonthly: { label: string, value: number }[];
   regionalComparison: { region: string, medianHourlyUsd: number }[];
   tags: string[];
-<<<<<<< HEAD
   gptRecommendation?: string;
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
 import OpenAI from 'openai';
@@ -51,23 +45,16 @@ type InsightResponse = {
   regionalComparison: { region: string, medianHourlyUsd: number }[];
   tags: string[],
   gptRecommendation?: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   gptRecommendation?: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
-=======
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items.reduce((acc, item) => {
@@ -112,12 +99,10 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
   return series;
 }
 
-<<<<<<< HEAD
 async function maybeGetGptRecommendation(
   input: RequestBody,
   stats: { median: number; min: number; max: number; country: string }
 ) {
-=======
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
 }
 
@@ -165,30 +150,17 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
 }
 
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
-<<<<<<< HEAD
-<<<<<<< HEAD
     const skillsStr = input.skills.join(', ');
-=======
-    const skillsStr = input.skills.join();
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    const skillsStr = input.skills.join();
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
 
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini';
       messages: [
-<<<<<<< HEAD
-<<<<<<< HEAD
         {
           role: 'system',
           content:
@@ -200,24 +172,20 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
       max_tokens: 300,
     });
     return completion.choices?.[0]?.message?.content || undefined;
-=======
         { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
         { role: 'user', content: prompt }];
       temperature: 0.2;
       max_tokens: 300});
     return completion.choices?.[0]?.message?.content || undefined
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch {
     return undefined
   }
 }
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<InsightResponse | { error: string }>
 ) {
-=======
         { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
         { role: 'user', content: prompt }];
       temperature: 0.2,
@@ -229,32 +197,21 @@ export default async function handler(
 }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-<<<<<<< HEAD
   const body: RequestBody = req.body;
-<<<<<<< HEAD
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } =
     body;
-=======
   const body: RequestBody = req.body,
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const country = extractCountry(region || 'Global');
 
   // Score and filter candidate profiles
-<<<<<<< HEAD
-<<<<<<< HEAD
   const scored = TALENT_PROFILES.map(p => ({
     profile: p,
     score:
@@ -268,7 +225,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const sample =
     scored.length > 0 ? scored.map(s => s.profile) : TALENT_PROFILES;
   const rates = sample.map(p => p.hourlyRateUsd);
-=======
   const scored = TALENT_PROFILES.map((p) => ({
     profile: p,
     score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
@@ -278,8 +234,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const scored = TALENT_PROFILES.map((p) => ({
     profile: p;
     score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
@@ -289,14 +243,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const baseMedian = median(rates);
   const min = Math.min(...rates);
   const max = Math.max(...rates);
 
   // Adjustments
-<<<<<<< HEAD
-<<<<<<< HEAD
   const expMultiplier =
     experienceLevel === 'Junior'
       ? 0.8
@@ -305,9 +256,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         : experienceLevel === 'Senior'
           ? 1.2
           : 1.35;
-=======
   const expMultiplier = experienceLevel === 'Junior' ? 0.8 : experienceLevel === 'Mid' ? 1.0 : experienceLevel === 'Senior' ? 1.2 : 1.35;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const remoteMultiplier = remote ? 1.1 : 1.0;
   const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15, // FT tends to lower hourly, contract/freelance higher
 
@@ -326,12 +275,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
-<<<<<<< HEAD
     .map(([r, list]) => ({
       region: r,
       medianHourlyUsd: Math.round(median(list.map(p => p.hourlyRateUsd))),
     }))
-=======
   const expMultiplier = experienceLevel === 'Junior' ? 0.8 : experienceLevel === 'Mid' ? 1.0 : experienceLevel === 'Senior' ? 1.2 : 1.35;
   const remoteMultiplier = remote ? 1.1 : 1.0;
   const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15, // FT tends to lower hourly, contract/freelance higher
@@ -352,16 +299,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
 
   // Tags
-<<<<<<< HEAD
-<<<<<<< HEAD
   const scarceSkills = [
     'RAG',
     'LangChain',
@@ -373,10 +315,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const undersupplied = (skills || []).some(s =>
     scarceSkills.some(t => s.toLowerCase().includes(t.toLowerCase()))
   );
-=======
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const tags: string[] = [];
   if (remote) tags.push('Remote Premium');
   if (undersupplied) tags.push('Undersupplied Skill');
@@ -395,9 +335,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     tags;
     gptRecommendation};
 
-<<<<<<< HEAD
   return res.status(200).json(response);
-=======
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
   const tags: string[] = []; if (remote) tags.push('Remote Premium'),
@@ -415,8 +353,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
   return res.status(200).json(response)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return res.status(200).json(response)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

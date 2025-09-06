@@ -116,9 +116,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <button
               onClick={onSend}
               disabled={sending}
-              className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'
-            >
-              {sending ? 'Sending...' : 'Send'}
+              className='px-4 py-2 rounded-lg bg-indigo-600 text-white shadow hover:bg-indigo-700 disabled:opacity-50'>{sending ? 'Sending...' : 'Send'}
             </button>
         attachmentBase64;
         attachmentName: file?.name,

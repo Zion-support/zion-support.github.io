@@ -320,9 +320,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <div className='grid md:grid-cols-3 gap-6 mt-8'>
         <section
           id='agenda'
-          className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
-        >
-          <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
+          className='md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'><h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>
 ursor/integrate-build-improve-and-re-verify-b76c
       <div className="grid md:grid-cols-3 gap-6 mt-8">
@@ -369,16 +367,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <section
         id='speakers'
-        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
-      >
-        <h2 className='text-2xl font-bold mb-6'>Speakers</h2>
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'><h2 className='text-2xl font-bold mb-6'>Speakers</h2>
         <div className='grid sm:grid-cols-2 lg:grid-cols-3 gap-6'>
           {speakers.map(s => (
             <div
               key={s.name}
-              className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}
-            >
-              <div className='flex items-center gap-4'>
+              className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}><div className='flex items-center gap-4'>
                 <img
                   src={s.avatarUrl}
                   alt={s.name}
@@ -445,9 +439,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <section
         id='partners'
-        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
-      >
-        <div className='flex items-center justify-between'>
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'><div className='flex items-center justify-between'>
           <h2 className='text-2xl font-bold'>Partners</h2>
           <a
             href='#register'
@@ -460,9 +452,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           {partners.map(p => (
             <div
               key={p.name}
-              className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'
-            >
-              {p.logoUrl ? (
+              className='h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70'>{p.logoUrl ? (
                 <img src={p.logoUrl} alt={p.name} className='max-h-12' />
               ) : (
                 p.name
@@ -490,9 +480,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
       <section
         id='livestream'
-        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
-      >
-        <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
+        className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'><div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
           <h2 className='text-2xl font-bold'>Livestream</h2>
           <div className='flex flex-wrap items-center gap-2'>
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
@@ -504,9 +492,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               aria-label="Platform"
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={platform}
-              onChange={(e) => setPlatform(e.target.value as any)}
-            >
-              <option value="youtube">YouTube</option>
+              onChange={(e) => setPlatform(e.target.value as any)}><option value="youtube">YouTube</option>
               <option value="twitch">Twitch</option>
               <option value="twitter">Twitter</option>
             </select>
@@ -573,9 +559,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <button
               type="submit"
               disabled={submitting}
-              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50"
-            >
-              {submitting ? 'Submitting...' : 'Submit Registration'}
+              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Registration'}
             </button>
             {result?.ok && (
               <span className='text-green-600'>
@@ -593,9 +577,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               aria-label="Platform"
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
               value={platform}
-              onChange={(e) => setPlatform(e.target.value as any)}
-            >
-              <option value="youtube">YouTube</option>
+              onChange={(e) => setPlatform(e.target.value as any)}><option value="youtube">YouTube</option>
               <option value="twitch">Twitch</option>
               <option value="twitter">Twitter</option>
             </select>
@@ -662,9 +644,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <button
               type="submit"
               disabled={submitting}
-              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50"
-            >
-              {submitting ? 'Submitting...' : 'Submit Registration'}
+              className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Registration'}
             </button>
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
             {result?.error && <span className="text-red-600">{result.error}</span>}

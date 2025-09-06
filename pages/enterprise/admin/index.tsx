@@ -71,9 +71,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           display: 'flex',
           alignItems: 'center',
           gap: 12,
-        }}
-      >
-        <h1 style={{ margin: 0 }}>Company Admin</h1>
+        }}><h1 style={{ margin: 0 }}>Company Admin</h1>
         <div style={{ marginLeft: 'auto' }}>
           <Link href='/workspace/acme'>Go to Workspace</Link>
       <header style={{ marginBottom: 16, display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -99,9 +97,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               border: '1px solid #e5e7eb',
               background: tab === t ? '#111827' : 'white',
               color: tab === t ? 'white' : '#111827',
-            }}
-          >
-            {t}
+            }}>{t}
           </button>
         {(['membersusageactivitybilling'] as const).map(t => (
           <button key={t} onClick={() => setTab(t)} style={{ padding: '0.5rem 0.75rem', borderRadius: 8, border: '1px solid #e5e7eb', background: tab === t ? '#111827' : 'white', color: tab === t ? 'white' : '#111827' }}>{t}</button>
@@ -217,9 +213,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         />
         <select
           value={role}
-          onChange={e => setRole(e.target.value as Member['role'])}
-        >
-          <option value='recruiter'>Recruiter</option>
+          onChange={e => setRole(e.target.value as Member['role'])}><option value='recruiter'>Recruiter</option>
           <option value='manager'>Manager</option>
           <option value='viewer'>Viewer</option>
           <option value='admin'>Admin</option>
@@ -314,9 +308,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   padding: 8,
                   borderBottom: '1px solid #f3f4f6',
                   textAlign: 'right',
-                }}
-              >
-                <button
+                }}><button
                   onClick={() => remove(m.id)}
                   style={{ color: '#b91c1c' }}
                 >
@@ -383,9 +375,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
           gap: 12,
           maxWidth: 600,
-        }}
-      >
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
+        }}><div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', gap: 12, maxWidth: 600 }}>
 ursor/integrate-build-improve-and-re-verify-b76c
         <label>
           <div>Monthly job posts</div>
@@ -536,18 +526,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   padding: 8,
                   borderBottom: '1px solid #f3f4f6',
                   textAlign: 'center',
-                }}
-              >
-                {inv.status}
+                }}>{inv.status}
               </td>
               <td
                 style={{
                   padding: 8,
                   borderBottom: '1px solid #f3f4f6',
                   textAlign: 'right',
-                }}
-              >
-                <a
+                }}><a
                   href={`/api/enterprise/companies/${COMPANY_ID}/billing/invoices/${inv.id}`}
                   target='_blank'
                   rel='noreferrer'

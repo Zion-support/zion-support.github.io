@@ -1,7 +1,5 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Star,
   Users,
@@ -19,12 +17,10 @@ import {
   Code,
   Database,
   Cloud,;
-=======
 import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
   Brain, Globe, Lock, Code, Database, Cloud
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import Button from '../ui/Button';
 interface Service {
@@ -77,13 +73,11 @@ interface EnhancedServiceShowcaseProps {
 }
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-<<<<<<< HEAD
   title,
   subtitle,
   showFilters = false,
   services = [],
   maxServices = 12,
-=======
 import { 
   Star, Users, TrendingUp, DollarSign, Clock, 
   CheckCircle, ArrowRight, Zap, Shield, Rocket;
@@ -142,17 +136,11 @@ interface EnhancedServiceShowcaseProps {
 }
 
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   title;
   subtitle;
   showFilters = false;
   services = [];
   maxServices = 12
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
@@ -164,15 +152,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'quantum', name: 'Quantum', icon: '⚛️' },
     { id: 'blockchain', name: 'Blockchain', icon: '⛓️' },
     { id: 'enterprise', name: 'Enterprise', icon: '🏢' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟' },
-=======
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
@@ -180,15 +160,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'low', name: 'Under $1K/month' },
     { id: 'medium', name: '$1K - $5K/month' },
     { id: 'high', name: '$5K - $20K/month' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'premium', name: '$20K+/month' },
-=======
-    { id: 'premium', name: '$20K+/month' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    { id: 'premium', name: '$20K+/month' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const sortOptions = [
@@ -196,12 +168,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     { id: 'rating', name: 'Highest Rated' },
     { id: 'roi', name: 'Best ROI' },
     { id: 'price-low', name: 'Price Low to High' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'price-high', name: 'Price High to Low' },
-=======
-    { id: 'price-high', name: 'Price High to Low' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const filteredServices = useMemo(() => {
@@ -219,9 +186,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                           (selectedPriceRange === 'high' && parseFloat(service.price.replace(/[$]/g, '')) >= 5000 && parseFloat(service.price.replace(/[$]/g, '')) < 20000) ||
                           (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
 
-<<<<<<< HEAD
       return matchesCategory && matchesPrice;
-=======
     { id: 'price-high', name: 'Price High to Low' }
   ];
 
@@ -241,10 +206,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                           (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 20000);
 
       return matchesCategory && matchesPrice
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return matchesCategory && matchesPrice
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     });
 
     // Sort services
@@ -259,12 +221,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
         filtered.sort((a, b) => {
           const aROI = parseInt(a.roi.match(/\d+/)?.[0] || '0');
           const bROI = parseInt(b.roi.match(/\d+/)?.[0] || '0');
-<<<<<<< HEAD
-<<<<<<< HEAD
           return bROI - aROI;
-=======
-          return bROI - aROI
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         });
         break;
       case 'price-low':
@@ -290,9 +247,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-<<<<<<< HEAD
         <div className='text-center mb-16'>
-=======
           return bROI - aROI
         });
         break;
@@ -320,41 +275,18 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="text-center mb-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'
-=======
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          >
-            {title}
+            className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>{title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'
-=======
-            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          >
-            {subtitle}
+            className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>{subtitle}
           </motion.p>
 
           {/* Stats */}
@@ -362,38 +294,24 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'
-=======
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          >
-            {stats.map((stat, index) => (
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>{stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className="w-8 h-8" />
                 </div>
-<<<<<<< HEAD
                 <div className='text-2xl font-bold text-white'>
                   {stat.value}
                 </div>
                 <div className='text-sm text-gray-400'>{stat.label}</div>
-=======
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
-          >
-            {stats.map((stat, index) => (
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">{stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
                   <stat.icon className="w-8 h-8" />
                 </div>
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             ))}
           </motion.div>
@@ -405,14 +323,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='mb-12'
-=======
-            className="mb-12"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+            className='mb-12'><div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Category Filter */}
                 <div>
@@ -420,14 +331,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-<<<<<<< HEAD
-                    {categories.map(category => (
-=======
-            className="mb-12"
-          >
-            <div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{categories.map(category => (
+            className="mb-12"><div className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Category Filter */}
                 <div>
@@ -435,13 +340,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{categories.map((category) => (
                     {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <option key={category.id} value={category.id}>
                         {category.icon} {category.name}
                       </option>
@@ -451,33 +351,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Price Range Filter */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Price Range
                   </label>
-=======
-                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Price Range">Price Range</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  <select
-                    value={selectedPriceRange}
-                    onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-<<<<<<< HEAD
-                    {priceRanges.map(range => (
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Price Range">Price Range</label>
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{priceRanges.map(range => (
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Price Range">Price Range</label>
+                  <select
+                    value={selectedPriceRange}
+                    onChange={(e) => setSelectedPriceRange(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{priceRanges.map((range) => (
                     {priceRanges.map((range) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    {priceRanges.map((range) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <option key={range.id} value={range.id}>
                         {range.name}
                       </option>
@@ -487,33 +374,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Sort Options */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Sort By
                   </label>
-=======
-                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Sort By">Sort By</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  <select
-                    value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-<<<<<<< HEAD
-                    {sortOptions.map(option => (
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Sort By">Sort By</label>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map(option => (
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Sort By">Sort By</label>
+                  <select
+                    value={sortBy}
+                    onChange={(e) => setSortBy(e.target.value)}
+                    className="w-full bg-gray-800/50 border border-gray-600 rounded-lg px-4 py-2 text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map((option) => (
                     {sortOptions.map((option) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    {sortOptions.map((option) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>
@@ -530,17 +404,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
-=======
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        >
-          <AnimatePresence>
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'><AnimatePresence>
             {filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -548,36 +412,20 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 whileInView={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='group'
-=======
-                className="group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
+                className='group'><div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
                   {/* Popular Badge */}
                   {service.popular && (
-<<<<<<< HEAD
                     <div className='absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>
-=======
-                className="group"
-              >
-                <div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
+                className="group"><div className="relative bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 h-full">
                   {/* Popular Badge */}
                   {service.popular && (
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="absolute -top-3 left-6 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       ⭐ Most Popular
                     </div>
                   )}
 
                   {/* Header */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mb-6'>
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-3xl'>{service.icon}</div>
@@ -588,22 +436,18 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                         <div className='text-sm text-gray-400'>
                           {service.period}
                         </div>
-=======
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
                       <div className="text-right">
                         <div className="text-2xl font-bold text-white">{service.price}</div>
                         <div className="text-sm text-gray-400">{service.period}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {service.name}
                     </h3>
-<<<<<<< HEAD
                     <p className='text-gray-300 text-sm leading-relaxed'>
-=======
                   <div className="mb-6">
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
@@ -616,36 +460,25 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <p className="text-gray-300 text-sm leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {service.tagline}
                     </p>
                   </div>
 
                   {/* Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-gray-300 mb-3 flex items-center'>
                       <CheckCircle className='w-4 h-4 mr-2 text-green-400' />
-=======
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       Key Features
                     </h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature, idx) => (
-<<<<<<< HEAD
                         <li
                           key={idx}
-                          className='text-sm text-gray-400 flex items-start'
-                        >
-                          <span className='text-cyan-400 mr-2'>•</span>
-=======
+                          className='text-sm text-gray-400 flex items-start'><span className='text-cyan-400 mr-2'>•</span>
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-gray-300 mb-3 flex items-center">
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
@@ -655,11 +488,8 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       {service.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <li key={idx} className="text-sm text-gray-400 flex items-start">
                           <span className="text-cyan-400 mr-2">•</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {feature}
                         </li>
                       ))}
@@ -667,12 +497,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   </div>
 
                   {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='grid grid-cols-3 gap-4 mb-6 text-center'>
-=======
-                  <div className="grid grid-cols-3 gap-4 mb-6 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <div>
                       <div className="text-lg font-bold text-white">{service.rating}</div>
                       <div className="text-xs text-gray-400">Rating</div>
@@ -682,12 +507,10 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <div className="text-xs text-gray-400">Customers</div>
                     </div>
                     <div>
-<<<<<<< HEAD
                       <div className='text-lg font-bold text-white'>
                         {service.trialDays}
                       </div>
                       <div className='text-xs text-gray-400'>Trial Days</div>
-=======
                   <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                     <div>
                       <div className="text-lg font-bold text-white">{service.rating}</div>
@@ -700,74 +523,52 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     <div>
                       <div className="text-lg font-bold text-white">{service.trialDays}</div>
                       <div className="text-xs text-gray-400">Trial Days</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="text-lg font-bold text-white">{service.trialDays}</div>
                       <div className="text-xs text-gray-400">Trial Days</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
 
                   {/* ROI Highlight */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20'>
                     <div className='text-sm text-green-400 font-semibold mb-1'>
                       🚀 ROI Promise
                     </div>
                     <div className='text-xs text-gray-300 leading-relaxed'>
-=======
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
                     <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="mb-6 p-4 bg-gradient-to-r from-green-900/20 to-blue-900/20 rounded-lg border border-green-500/20">
                     <div className="text-sm text-green-400 font-semibold mb-1">🚀 ROI Promise</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {service.roi}
                     </div>
                   </div>
 
                   {/* Market Position */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mb-6 p-4 bg-gray-800/30 rounded-lg'>
                     <div className='text-sm text-cyan-400 font-semibold mb-2'>
                       📊 Market Position
                     </div>
                     <div className='text-xs text-gray-300 leading-relaxed'>
-=======
                   <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
                     <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="mb-6 p-4 bg-gray-800/30 rounded-lg">
                     <div className="text-sm text-cyan-400 font-semibold mb-2">📊 Market Position</div>
                     <div className="text-xs text-gray-300 leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {service.marketPosition}
                     </div>
                   </div>
 
                   {/* CTA */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mt-auto'>
-=======
-                  <div className="mt-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <Button
                       href={service.link}
                       variant="primary"
                       className="w-full group-hover:bg-cyan-500 transition-colors"
                     >
                       Get Started
-<<<<<<< HEAD
                       <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />
-=======
                   <div className="mt-auto">
                     <Button
                       href={service.link}
@@ -776,16 +577,11 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                     >
                       Get Started
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </Button>
                   </div>
 
                   {/* Contact Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='mt-4 text-center'>
                     <div className='text-xs text-gray-500'>
                       Contact:{' '}
@@ -798,22 +594,18 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                       <span className='text-cyan-400'>
                         {service.contactInfo.email}
                       </span>
-=======
                   <div className="mt-4 text-center">
                     <div className="text-xs text-gray-500">
                       Contact: <span className="text-cyan-400">{service.contactInfo.mobile}</span>
                     </div>
                     <div className="text-xs text-gray-500">
                       Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="mt-4 text-center">
                     <div className="text-xs text-gray-500">
                       Contact: <span className="text-cyan-400">{service.contactInfo.mobile}</span>
                     </div>
                     <div className="text-xs text-gray-500">
                       Email: <span className="text-cyan-400">{service.contactInfo.email}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
                 </div>
@@ -827,14 +619,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          className='text-center mt-16'
-=======
-          className="text-center mt-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        >
-          <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
+          className='text-center mt-16'><div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -852,7 +637,6 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 <DollarSign className="ml-2 w-5 h-5" />
               </Button>
             </div>
-<<<<<<< HEAD
             <div className='mt-6 text-sm text-gray-400'>
               <p>
                 📞 Call us:{' '}
@@ -866,10 +650,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 🌐 Visit:{' '}
                 <span className='text-cyan-400'>https://ziontechgroup.com</span>
               </p>
-=======
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
+          className="text-center mt-16"><div className="bg-gradient-to-r from-cyan-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">
             <h3 className="text-2xl font-bold text-white mb-4">
               Ready to Transform Your Business?
             </h3>
@@ -887,36 +668,24 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                 <DollarSign className="ml-2 w-5 h-5" />
               </Button>
             </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <div className="mt-6 text-sm text-gray-400">
               <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>
               <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>
               <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default EnhancedServiceShowcase;
-=======
   )
 };
 
 export default EnhancedServiceShowcase;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default EnhancedServiceShowcase;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

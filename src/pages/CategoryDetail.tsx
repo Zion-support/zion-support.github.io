@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from '@/components/GradientHeading';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { useState, useEffect, useRef, Suspense } from 'react';
@@ -15,14 +13,12 @@ import {
 } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { ProductListing } from '@/types/listings';
-=======
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { Brain, PenLine, BarChart, Eye, Bot, Mic, Code, Briefcase } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from "@/data/listingData";
 import { ProductListing } from "@/types/listings";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { toast } from "@/hooks/use-toast";
@@ -301,7 +297,6 @@ export default function CategoryDetail({ slug: slugProp }: CategoryDetailProps =
       </Suspense>
     </>
   );
-<<<<<<< HEAD
 
 };
 return (<> <NextSeo title= {;
@@ -313,9 +308,6 @@ return (<> <NextSeo title= {;
 }</div>) ;
 }</div> </div> </Suspense> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
       icon: <Briefcase className="w-6 h-6" />
     };
@@ -370,14 +362,8 @@ return (<> <NextSeo title= {;
       icon: <Code className="w-6 h-6" />
     };
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
 
       
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

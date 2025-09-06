@@ -289,9 +289,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>
+              transition={{ duration: 0.8 }}><div className='inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8'>
                 <Sparkles className='w-5 h-5 text-cyan-400' />
                 <span className='text-cyan-400 font-medium'>
                   2024 Revolutionary Services
@@ -423,9 +421,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <select
                     value={selectedCategory}
                     onChange={e => setSelectedCategory(e.target.value)}
-                    className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'
-                  >
-                    {categories.map(category => (
+                    className='w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200'>{categories.map(category => (
                     onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
                     {categories.map((category) => (
                     onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
@@ -454,9 +450,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     onClick={() =>
                       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
                     }
-                    className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'
-                  >
-                <div className="flex space-x-2">
+                    className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'><div className="flex space-x-2">
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
@@ -509,9 +503,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className='group'
-                  >
-                    <div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
+                    className='group'><div className='bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm'>
                     transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -574,9 +566,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                             .map((feature, featureIndex) => (
                               <div
                                 key={featureIndex}
-                                className='flex items-center space-x-2'
-                              >
-                                <CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
+                                className='flex items-center space-x-2'><CheckCircle className='w-4 h-4 text-green-400 flex-shrink-0' />
                                 <span className='text-sm text-gray-300'>
                                   {feature}
                                 </span>
@@ -708,9 +698,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'
-            >
-              <h2 className='text-4xl font-bold text-white mb-6'>
+              className='bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm'><h2 className='text-4xl font-bold text-white mb-6'>
               viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
               <h2 className="text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c

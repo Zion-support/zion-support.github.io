@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -19,7 +17,6 @@ import { HireConfirmationModal } from '@/components/hiring-tracker/HireConfirmat
 import React, { useState } from 'react'; // Import React and useState
 import { toast } from '@/hooks/use-toast';
 import Image from 'next/image'; // Import next/image
-=======
 import { format } from "date-fns";
 import { JobApplication } from "@/types/jobs";
 import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed
@@ -39,7 +36,6 @@ import { HireConfirmationModal } from "@/components/hiring-tracker/HireConfirmat
 import React, { useState } from "react", // Import React and useState
 import { toast } from "@/hooks/use-toast";
 import Image from 'next/image', // Import next/image
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ApplicationsTableProps {
   applications: JobApplication[],
@@ -135,9 +131,7 @@ export function ApplicationsTable({
                     <ClickableBadge 
                       variant="outline"
                       className="cursor-pointer"
-                      onClick={() => onViewScore(application)}
-                    >
-                      {application.match_score}%
+                      onClick={() => onViewScore(application)}>{application.match_score}%
                     </ClickableBadge>
                   ) : (
                     <span className="text-muted-foreground text-sm">Not scored</span>
@@ -148,9 +142,7 @@ export function ApplicationsTable({
                     <ClickableBadge 
                       variant="outline" 
                       className="cursor-pointer bg-green-50 hover:bg-green-100 text-green-700"
-                      onClick={() => handleHireClick(application)}
-                    >
-                      <Briefcase className="h-3 w-3 mr-1" /> Hire
+                      onClick={() => handleHireClick(application)}><Briefcase className="h-3 w-3 mr-1" /> Hire
                     </ClickableBadge>
                     <ApplicationActions
                       application={application}
@@ -174,7 +166,6 @@ export function ApplicationsTable({
       />
     </>
   );
-<<<<<<< HEAD
 
   /* Using Renamed AvatarPrimitive */ ;
 }{;
@@ -201,7 +192,7 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }> {;
   application.match score ";
 }% </ClickableBadge>) : (<span className="text-muted-foreground text-sm" >Not scored</span>) ";
-}</TableCell> <TableCell className="text-right" > <div className="flex items-center justify-end gap-2" > <ClickableBadge > <Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {;
+}</TableCell> <TableCell className="text-right"><div className="flex items-center justify-end gap-2"><ClickableBadge><Briefcase className="h-3 w-3 mr-1" /> Hire </ClickableBadge> <ApplicationActions application= {;
   application ;
 }processingId= {;
   processingId ;
@@ -220,15 +211,9 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed ;
 }/> </>) ;
 }'"
-=======
 
-<<<<<<< HEAD
   const talentName = application.talent_profile?.full_name || "Candidate";
 
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

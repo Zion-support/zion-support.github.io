@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Award } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { Badge } from '@/components/ui/badge';
 
 interface TalentCardBadgesProps {
@@ -23,8 +19,6 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
       </Badge>
     </div>
   );
-<<<<<<< HEAD
-=======
 
 import React from "react";
 import { Badge } from "@/components/ui/badge";
@@ -46,7 +40,4 @@ export function TalentCardBadges({ featured }: TalentCardBadgesProps) {
     </div>
   )
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

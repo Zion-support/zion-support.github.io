@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 'use client';
 
 import React, {
@@ -15,9 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 'use client'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -125,9 +121,7 @@ const EnhancedError: React.FC<{
             onClick={retry} 
             variant="outline" 
             size="sm"
-            className="border-red-300 text-red-700 hover:bg-red-100"
-          >
-            <RefreshCw className="h-4 w-4 mr-2" />
+            className="border-red-300 text-red-700 hover:bg-red-100"><RefreshCw className="h-4 w-4 mr-2" />
             Try Again
           </Button>
         )}
@@ -256,9 +250,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className={cn("flex items-center justify-center p-8", className)}
-      >
-        <EnhancedLoading 
+        className={cn("flex items-center justify-center p-8", className)}><EnhancedLoading 
           progress={progress} 
           message="Loading component..."
           showProgress={true}
@@ -280,9 +272,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className={cn("flex items-center justify-center p-8", className)}
-      >
-        <EnhancedError
+        className={cn("flex items-center justify-center p-8", className)}><EnhancedError
           error={loadingState.error}
           retry={retry}
           isOnline={loadingState.isOnline}
@@ -303,9 +293,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className={className}
-          >
-            <DynamicComponent {...props}>
+            className={className}><DynamicComponent {...props}>
               {children}
             </DynamicComponent>
           </motion.div>
@@ -357,15 +345,9 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
-<<<<<<< HEAD
 export default DynamicComponentLoader;
-=======
 
-<<<<<<< HEAD
       setLoadingState(prev => ({
         ...prev;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default DynamicComponentLoader 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

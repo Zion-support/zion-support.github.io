@@ -39,9 +39,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         {steps.map((label, i) => (
           <div
             key={label}
-            className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}
-          >
-      <h1 className="text-2xl font-semibold">Get Started</h1>
+            className={`px-3 py-1 rounded-full border ${i === step ? 'bg-blue-600 text-white border-blue-600' : 'opacity-80'}`}><h1 className="text-2xl font-semibold">Get Started</h1>
 
       <div className="flex items-center gap-2 text-sm flex-wrap">
         {steps.map((label, i) => (

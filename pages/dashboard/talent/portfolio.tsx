@@ -38,9 +38,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <select
           value={theme}
           onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-          className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-        >
-          <option value="light">Light</option>
+          className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"><option value="light">Light</option>
           <option value="dark">Dark</option>
         </select>
       </div>
@@ -65,9 +63,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <select
           value={theme}
           onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-          className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-        >
-          <option value="light">Light</option>
+          className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"><option value="light">Light</option>
           <option value="dark">Dark</option>
         </select>
       </div>

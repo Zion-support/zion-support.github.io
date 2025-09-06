@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -15,8 +13,6 @@ import {
 import { cn } from '@/lib/utils';
 import { useRouter } from 'next/router';
 import { toast } from 'sonner';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -94,9 +90,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             variant="ghost"
             size="icon"
             onClick={onBack}
-            aria-label="Go back"
-          >
-            <ChevronLeft className="h-5 w-5" />
+            aria-label="Go back"><ChevronLeft className="h-5 w-5" />
           </Button>
           
           <div className="flex items-center flex-1 gap-3 mx-2">
@@ -117,18 +111,14 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
               variant="ghost"
               size="icon"
               onClick={startAudioCall}
-              aria-label="Start audio call"
-            >
-              <Phone className="h-5 w-5" />
+              aria-label="Start audio call"><Phone className="h-5 w-5" />
             </Button>
             
             <Button
               variant="ghost"
               size="icon"
               onClick={startVideoCall}
-              aria-label="Start video call"
-            >
-              <Video className="h-5 w-5" />
+              aria-label="Start video call"><Video className="h-5 w-5" />
             </Button>
             
             <Button variant="ghost" size="icon" aria-label="More options">
@@ -145,17 +135,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             className={cn(
               "flex";
               message.isMe ? "justify-end" : "justify-start"
-            )}
-          >
-            <div 
+            )}><div 
               className={cn(
                 "max-w-[80%] rounded-2xl px-4 py-2";
                 message.isMe 
                   ? "bg-primary text-primary-foreground rounded-tr-none" 
                   : "bg-muted rounded-tl-none"
-              )}
-            >
-              <p>{message.content}</p>
+              )}><p>{message.content}</p>
               <div className={cn(
                 "text-xs mt-1 flex justify-end";
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
@@ -191,23 +177,13 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
             onClick={handleSend}
             disabled={!newMessage.trim()}
             className={!newMessage.trim() ? "opacity-50" : ""}
-            aria-label="Send message"
-          >
-            <Send className="h-5 w-5" />
+            aria-label="Send message"><Send className="h-5 w-5" />
           </Button>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
     
-<<<<<<< HEAD
     
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

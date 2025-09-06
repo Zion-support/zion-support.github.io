@@ -1,11 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function RAGEvaluationLabPage() {
 	return(<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
@@ -53,7 +49,6 @@ export default function RAGEvaluationLabPage() {
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://humanloop.com" target="_blank" rel="noreferrer">Humanloop</a>, <a className="underline hover:text-cyan-300" href="https://arize.com" target="_blank" rel="noreferrer">Arize</a>, <a className="underline hover: text-cyan-300" href="https://promptfoo.dev" target="_blank" rel="noreferrer">promptfoo</a>.</p>
 					</div>
 
-<<<<<<< HEAD
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
@@ -73,7 +68,6 @@ export default function RAGEvaluationLabPage() {
       </section>
     </>
   );
-=======
 export default function RAGEvaluationLabPage() {
 	return(<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
@@ -121,8 +115,6 @@ export default function RAGEvaluationLabPage() {
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://humanloop.com" target="_blank" rel="noreferrer">Humanloop</a>, <a className="underline hover:text-cyan-300" href="https://arize.com" target="_blank" rel="noreferrer">Arize</a>, <a className="underline hover: text-cyan-300" href="https://promptfoo.dev" target="_blank" rel="noreferrer">promptfoo</a>.</p>
 					</div>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-cyan-400 text-black font-semibold">Start Evaluating</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
@@ -133,7 +125,3 @@ export default function RAGEvaluationLabPage() {
 		</>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

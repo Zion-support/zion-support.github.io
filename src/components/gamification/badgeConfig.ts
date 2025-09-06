@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   LucideIcon,
   BadgeCheck,
@@ -9,11 +7,9 @@ import {
   BadgePlus,
   BadgeDollarSign,;
 } from 'lucide-react';
-=======
 
 import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
 import { Star } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export type BadgeKey =
   | "first_listing"
@@ -83,17 +79,10 @@ export const badgeList: BadgeMeta[] = [
   }];
 
 export const getBadgeMeta = (key: BadgeKey) =>
-<<<<<<< HEAD
   badgeList.find(b => b.key === key);
-=======
-<<<<<<< HEAD
   | "monetized";
 
-<<<<<<< HEAD
   badgeList.find((b) => b.key === key);
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   badgeList.find((b) => b.key === key);
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

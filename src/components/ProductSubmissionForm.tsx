@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,7 +9,6 @@ import { useRouter } from 'next/router';
 import Image from 'next/image'; // Import next/image
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
 import React from "react";
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -22,7 +19,6 @@ import { useToast } from "@/hooks/use-toast";
 import { useRouter } from "next/router";
 import Image from 'next/image', // Import next/image
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   Form;
   FormControl;
@@ -351,9 +347,7 @@ export function ProductSubmissionForm() {
                     <FormControl>
                       <select
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                        {...field}
-                      >
-                        <option value="">Select a category</option>
+                        {...field}><option value="">Select a category</option>
                         <option value="digital_product">Digital Product</option>
                         <option value="service">Service</option>
                         <option value="ai_tool">AI Tool</option>
@@ -463,9 +457,7 @@ export function ProductSubmissionForm() {
               <Button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
-              >
-                {isSubmitting ? "Publishing..." : "Publish Product"}
+                className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">{isSubmitting ? "Publishing..." : "Publish Product"}
               </Button>
             </div>
           </form>
@@ -482,7 +474,6 @@ export function ProductSubmissionForm() {
         />
       </TabsContent>
     </Tabs>
-<<<<<<< HEAD
   );
 
   const file = e.target.files?.[0];
@@ -549,12 +540,12 @@ const {;
 
 };
 
-}className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
+}className="w-full"> <TabsList className="grid grid-cols-2 mb-6"><TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
 }";
 }/> <FormField Describe your product in detail..." className="min-h-32" {;
   ...field ';
 }/> </FormControl> <FormDescription> Provide a detailed description of what you're offering </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {;
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><FormField <FormItem> <FormLabel>Price (USD) </FormLabel> <FormControl> <Input type="number" min="0" step="0.01" placeholder="0.00" {;
   ...field ;
 }/> ";
 }/> <FormField >Select a category</option> <option value="digital product" >Digital Product</option> <option value="service" >Service</option> <option value="ai tool" >AI Tool</option> <option value="course" >Course</option> <option value="template" >Template</option> <option value="other" >Other</option> </select> </FormControl> <FormMessage /> </FormItem>) ";
@@ -570,25 +561,14 @@ const {;
   handleVideoChange ";
 }className="cursor-pointer" /> </FormControl> <FormDescription> Optional video demonstrating your product </FormDescription> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
-}/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
+}/> <div className="flex justify-end"><Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai"><AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
-=======
 
-<<<<<<< HEAD
 type ProductFormValues = z.infer<typeof productSchema>;
 
-<<<<<<< HEAD
         
-<<<<<<< HEAD
         imagePublicUrl = publicUrlData.publicUrl;
           
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

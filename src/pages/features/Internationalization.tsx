@@ -1,28 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 export default function Internationalization() {
   const schema = {
-<<<<<<< HEAD
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Internationalization',
     description:
       'Use Zion in multiple languages and attract clients worldwide with localized listings.',
     url: 'https://app.ziontechgroup.com/features/internationalization',
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -37,37 +31,29 @@ export default function Internationalization() {
     "name": "Internationalization",
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.",
     "url": "https://app.ziontechgroup.com/features/internationalization"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "@context": "https://schema.org";
     "@type": "WebPage";
     "name": "Internationalization";
     "description": "Use Zion in multiple languages and attract clients worldwide with localized listings.";
     "url": "https://app.ziontechgroup.com/features/internationalization"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
-<<<<<<< HEAD
         title='Internationalization'
         description='Reach a global audience with multi-language support across the Zion platform.'
         keywords='i18n, multi-language marketplace, localized listings'
         canonical='https://app.ziontechgroup.com/features/internationalization'
-=======
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
         canonical="https://app.ziontechgroup.com/features/internationalization"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
@@ -99,11 +85,9 @@ export default function Internationalization() {
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/'>Explore Zion</Link>
-=======
         title="Internationalization"
         description="Reach a global audience with multi-language support across the Zion platform."
         keywords="i18n, multi-language marketplace, localized listings"
@@ -112,8 +96,7 @@ export default function Internationalization() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
@@ -148,23 +131,13 @@ export default function Internationalization() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Button>
           </div>
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

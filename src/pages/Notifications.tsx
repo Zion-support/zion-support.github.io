@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
@@ -95,9 +94,7 @@ const NotificationCard: React.FC<{
         'border rounded-lg shadow-sm p-4 mb-3 group transition-colors';
         notification.read
           ? 'border-zion-blue-light bg-zion-blue-dark/10'
-          : 'border-zion-cyan bg-zion-blue-dark/30')}
-    >
-      <div className="flex items-start gap-4">
+          : 'border-zion-cyan bg-zion-blue-dark/30')}><div className="flex items-start gap-4">
         <div className="mt-1">
           {getNotificationIcon(notification.type, 'h-6 w-6')}
         </div>
@@ -128,9 +125,7 @@ const NotificationCard: React.FC<{
                   variant="ghost"
                   size="sm"
                   className="h-8 w-8 p-0"
-                  onClick={() => onMarkAsRead(notification.id)}
-                >
-                  <Check className="h-4 w-4 text-green-400" />
+                  onClick={() => onMarkAsRead(notification.id)}><Check className="h-4 w-4 text-green-400" />
                   <span className="sr-only">Mark as read</span>
                 </Button>
               )}
@@ -138,9 +133,7 @@ const NotificationCard: React.FC<{
                 variant="ghost"
                 size="sm"
                 className="h-8 w-8 p-0"
-                onClick={() => onDismiss(notification.id)}
-              >
-                <Trash2 className="h-4 w-4 text-red-400" />
+                onClick={() => onDismiss(notification.id)}><Trash2 className="h-4 w-4 text-red-400" />
                 <span className="sr-only">Dismiss</span>
               </Button>
             </div>
@@ -153,9 +146,7 @@ const NotificationCard: React.FC<{
               variant="outline"
               size="sm"
               className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black"
-              onClick={handleAction}
-            >
-              {notification.action_text}
+              onClick={handleAction}>{notification.action_text}
               <ChevronRight className="ml-1 h-4 w-4" />
             </Button>
           )}
@@ -209,9 +200,7 @@ export default function NotificationsPage() {
         <div className="mb-8">
           <Tabs
             defaultValue={filter}
-            onValueChange={(value) => setFilter(value as any)}
-          >
-            <TabsList className="grid w-full max-w-md grid-cols-6">
+            onValueChange={(value) => setFilter(value as any)}><TabsList className="grid w-full max-w-md grid-cols-6">
               <TabsTrigger value="all">All</TabsTrigger>
               <TabsTrigger value="unread">Unread</TabsTrigger>
               <TabsTrigger value="onboarding">Onboarding</TabsTrigger>
@@ -256,7 +245,6 @@ export default function NotificationsPage() {
       </main>
     </>
   );
-<<<<<<< HEAD
 
 };
 const getNotificationTypeBadge = (type: NotificationType) => {;
@@ -288,21 +276,21 @@ if (!notification.read) {;
 }</div> </div> onClick={;
   () => onMarkAsRead (notification.id) ";
 }> <Check className="h-4 w-4 text-green-400" /> <span className="sr-only" >Mark as read</span> </Button>) ";
-}<Button > <Trash2 className="h-4 w-4 text-red-400" /> <span className="sr-only" >Dismiss</span> </Button> </div> </div> {";
+}<Button><Trash2 className="h-4 w-4 text-red-400" /> <span className="sr-only" >Dismiss</span> </Button> </div> </div> {";
   notification.action url && notification.action text && (<Button variant="outline" size="sm" className="mt-1 text-zion-cyan border-zion-cyan hover:bg-zion-cyan hover:text-black" onClick={;
   handleAction ;
 }> </Button>) ;
 }</div> </div> </div>) ;
 };";
-return (<> <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8 min-h-screen" > <div className="flex justify-between items-center mb-6" > <div> {;
+return (<> <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8 min-h-screen"><div className="flex justify-between items-center mb-6"><div> {;
   unreadCount ;
 }unread </Badge>) ";
 }</h1> <p className="text-muted-foreground" > Stay updated with the latest activities and reminders </p> </div> Mark all as read </Button>) ";
-}</div> <div className="mb-8" > <Tabs defaultValue= {;
+}</div> <div className="mb-8"><Tabs defaultValue= {;
   filter ;
 }onValueChange= {;
   (value) => setFilter (value as any) ";
-}> <TabsList className="grid w-full max-w-md grid-cols-6" > <TabsTrigger value="all" >All</TabsTrigger> <TabsTrigger value="unread" >Unread</TabsTrigger> <TabsTrigger value="onboarding" >Onboarding</TabsTrigger> <TabsTrigger value="messages" >Messages</TabsTrigger> <TabsTrigger value="system" >System</TabsTrigger> <TabsTrigger value="orders" >Orders</TabsTrigger> </TabsList> </div>) : filteredNotifications.length === 0 ? (<div className="text-center py-12 bg-muted rounded-lg" > <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" /> <h3 className="text-xl font-medium" > No notifications found </h3> <p className="text-muted-foreground mt-1" > {'";
+}> <TabsList className="grid w-full max-w-md grid-cols-6"><TabsTrigger value="all" >All</TabsTrigger> <TabsTrigger value="unread" >Unread</TabsTrigger> <TabsTrigger value="onboarding" >Onboarding</TabsTrigger> <TabsTrigger value="messages" >Messages</TabsTrigger> <TabsTrigger value="system" >System</TabsTrigger> <TabsTrigger value="orders" >Orders</TabsTrigger> </TabsList> </div>) : filteredNotifications.length === 0 ? (<div className="text-center py-12 bg-muted rounded-lg"><Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" /> <h3 className="text-xl font-medium" > No notifications found </h3> <p className="text-muted-foreground mt-1">{'";
   filter === 'all' ? "You don't have any notifications yet" : `You don't have any $ {;
   filter ;
 }notifications` ;
@@ -319,14 +307,7 @@ return (<> <SEO title="Notifications | Zion AI Marketplace" description="View an
 }</div>) ;
 }</TabsContent> </Tabs> </div> </main> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
       return <Badge className="bg-blue-500">Message</Badge>;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

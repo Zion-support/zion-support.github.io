@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
   
 }];
@@ -19,11 +17,9 @@ setIsSearching (false)
   const handleClickOutside = (event: MouseEvent) => {
   if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
   
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface SearchResult {
   id: string,
@@ -251,9 +247,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             <button
               type="button"
               onClick={clearSearch}
-              className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-4 h-4" />
+              className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"><X className="w-4 h-4" />
             </button>
           )}
           
@@ -275,9 +269,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
-          >
-            {/* Filters */}
+            className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto">{/* Filters */}
             {showFilters && (
               <div className="p-4 border-b border-gray-700">
                 <div className="flex items-center gap-2 mb-3">
@@ -293,9 +285,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         selectedFilters.includes(category.id)
                           ? `bg-gradient-to-r ${category.color} text-white`
                           : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
-                      }`}
-                    >
-                      <category.icon className="w-3 h-3" />
+                      }`}><category.icon className="w-3 h-3" />
                       {category.name}
                     </button>
                   )}
@@ -303,9 +293,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                     <button
                       onClick={() => handleSearch()}
                       disabled={isSearching || !query.trim()}
-                      className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSearching ? 'Searching...' : 'Search'}
+                      className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">{isSearching ? 'Searching...' : 'Search'}
                     </button>
                   </div>
                 </div>
@@ -317,9 +305,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"
-                    >
-                      {/* Quick Actions */}
+                      className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10">{/* Quick Actions */}
                       <div className="p-4 border-b border-gray-700">
                         <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3>
                         <div className="grid grid-cols-2 gap-2">
@@ -327,9 +313,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                             <button
                               key={action.name}
                               onClick={() => handleQuickAction(action.action)}
-                              className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
-                            >
-                              {action.icon}
+                              className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">{action.icon}
                               <span>{action.name}</span>
                             </button>
                           ))}
@@ -342,9 +326,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           <button
                             key={suggestion.id}
                             onClick={() => handleSuggestionClick(suggestion)}
-                            className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-800 transition-colors"
-                          >
-                            <div className="text-gray-400">
+                            className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-800 transition-colors"><div className="text-gray-400">
                               {suggestion.icon}
                             </div>
                             <div className="flex-1">
@@ -377,9 +359,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       key={result.id}
                       whileHover={{ scale: 1.02 }}
                       className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30"
-                      onClick={() => handleResultSelect(result)}
-                    >
-                      <div className="flex items-start justify-between">
+                      onClick={() => handleResultSelect(result)}><div className="flex items-start justify-between">
                         <div className="flex-1">
                           <h4 className="font-medium text-white mb-1">{result.name}</h4>
                           <p className="text-sm text-gray-300 mb-2 line-clamp-2">{result.description}</p>
@@ -421,9 +401,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
-                            className="px-3 py-1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors"
-                          >
-                            {term}
+                            className="px-3 py-1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors">{term}
                           </button>
                         ))}
                       </div>
@@ -441,9 +419,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
-                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover: from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30"
-                        >
-                          {term}
+                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover: from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30">{term}
                         </button>
                       ))}
                     </div>
@@ -457,11 +433,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
 // Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
 wait: number 
 }export default EnhancedSearch;
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
@@ -692,9 +666,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             <button
               type="button"
               onClick={clearSearch}
-              className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-4 h-4" />
+              className="absolute right-16 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"><X className="w-4 h-4" />
             </button>
           )}
           
@@ -716,9 +688,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -10, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto"
-          >
-            {/* Filters */}
+            className="absolute top-full left-0 right-0 mt-2 bg-gray-900/95 backdrop-blur-md border border-gray-700 rounded-xl shadow-2xl z-50 max-h-96 overflow-y-auto">{/* Filters */}
             {showFilters && (
               <div className="p-4 border-b border-gray-700">
                 <div className="flex items-center gap-2 mb-3">
@@ -734,9 +704,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         selectedFilters.includes(category.id)
                           ? `bg-gradient-to-r ${category.color} text-white`
                           : 'bg-gray-700/50 text-gray-300 hover:bg-gray-600/50'
-                      }`}
-                    >
-                      <category.icon className="w-3 h-3" />
+                      }`}><category.icon className="w-3 h-3" />
                       {category.name}
                     </button>
                   )}
@@ -744,9 +712,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                     <button
                       onClick={() => handleSearch()}
                       disabled={isSearching || !query.trim()}
-                      className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      {isSearching ? 'Searching...' : 'Search'}
+                      className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">{isSearching ? 'Searching...' : 'Search'}
                     </button>
                   </div>
                 </div>
@@ -758,9 +724,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       initial={{ opacity: 0, y: -10 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -10 }}
-                      className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10"
-                    >
-                      {/* Quick Actions */}
+                      className="absolute top-full left-0 right-0 mt-2 bg-gray-900 border border-gray-700 rounded-xl shadow-2xl overflow-hidden z-10">{/* Quick Actions */}
                       <div className="p-4 border-b border-gray-700">
                         <h3 className="text-sm font-medium text-gray-400 mb-3">Quick Actions</h3>
                         <div className="grid grid-cols-2 gap-2">
@@ -768,9 +732,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                             <button
                               key={action.name}
                               onClick={() => handleQuickAction(action.action)}
-                              className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors"
-                            >
-                              {action.icon}
+                              className="flex items-center space-x-2 p-2 text-sm text-gray-300 hover:text-white hover:bg-gray-800 rounded-lg transition-colors">{action.icon}
                               <span>{action.name}</span>
                             </button>
                           ))}
@@ -783,9 +745,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           <button
                             key={suggestion.id}
                             onClick={() => handleSuggestionClick(suggestion)}
-                            className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-800 transition-colors"
-                          >
-                            <div className="text-gray-400">
+                            className="w-full flex items-center space-x-3 p-3 text-left hover:bg-gray-800 transition-colors"><div className="text-gray-400">
                               {suggestion.icon}
                             </div>
                             <div className="flex-1">
@@ -818,9 +778,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                       key={result.id}
                       whileHover={{ scale: 1.02 }}
                       className="p-3 bg-gray-800/50 rounded-lg cursor-pointer hover:bg-gray-700/50 transition-all duration-300 border border-transparent hover:border-cyan-400/30"
-                      onClick={() => handleResultSelect(result)}
-                    >
-                      <div className="flex items-start justify-between">
+                      onClick={() => handleResultSelect(result)}><div className="flex items-start justify-between">
                         <div className="flex-1">
                           <h4 className="font-medium text-white mb-1">{result.name}</h4>
                           <p className="text-sm text-gray-300 mb-2 line-clamp-2">{result.description}</p>
@@ -862,9 +820,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                           <button
                             key={index}
                             onClick={() => setQuery(term)}
-                            className="px-3 py-1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors"
-                          >
-                            {term}
+                            className="px-3 py-1.5 bg-gray-700/50 text-gray-300 text-sm rounded-lg hover:bg-gray-600/50 transition-colors">{term}
                           </button>
                         ))}
                       </div>
@@ -882,9 +838,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
-                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover: from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30"
-                        >
-                          {term}
+                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover: from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30">{term}
                         </button>
                       ))}
                     </div>
@@ -898,8 +852,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     </div>
   )
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
@@ -913,9 +865,5 @@ function debounce<T extends (...args: any[]) => any>(
   };
 }
 
-<<<<<<< HEAD
 export default EnhancedSearch;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default EnhancedSearch;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

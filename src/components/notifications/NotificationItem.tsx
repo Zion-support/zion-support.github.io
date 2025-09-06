@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react'
@@ -65,9 +64,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
   return (<div
       className={cn(
         'p-3 border-b border-zion-blue-light relative group',
-        !notification.read ? 'bg-zion-blue-dark/30' : '')}
-    >
-      <div className="flex items-start gap-2">
+        !notification.read ? 'bg-zion-blue-dark/30' : '')}><div className="flex items-start gap-2">
         <div className="text-xl">{getTypeIcon(notification.type)}</div>
         <div className="flex-1">
           <div className="flex justify-between items-center mb-1">
@@ -95,9 +92,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 variant="link"
                 size="sm"
                 className="text-zion-cyan p-0 h-auto"
-                onClick={handleClick}
-              >
-                {notification.action_text}
+                onClick={handleClick}>{notification.action_text}
                 <ChevronRight className="h-3 w-3 ml-1" />
               </Button>
             )}
@@ -118,9 +113,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                   e.stopPropagation();
                   onMarkAsRead(notification.id);
                 }}
-                aria-label="Mark as read"
-              >
-                <Check className="h-3.5 w-3.5 text-green-400" />
+                aria-label="Mark as read"><Check className="h-3.5 w-3.5 text-green-400" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -140,9 +133,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                   e.stopPropagation();
                   onDismiss(notification.id);
                 }}
-                aria-label="Dismiss notification"
-              >
-                <Trash2 className="h-3.5 w-3.5 text-red-400" />
+                aria-label="Dismiss notification"><Trash2 className="h-3.5 w-3.5 text-red-400" />
               </Button>
             </TooltipTrigger>
             <TooltipContent>
@@ -154,7 +145,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     </div>
   );
 };
-<<<<<<< HEAD
 interface NotificationItemProps {;
   notification: Notification;
 onMarkAsRead: (id: string) => Promise<void>;
@@ -171,12 +161,7 @@ onDismiss ;
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={;
   handleClick ;
 }> </Button>) ";
-}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
+}</div> </div> </div> h-3.5 w-3.5 text-green-400"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button><Trash2 className=" h-3.5 w-3.5 text-red-400" /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) ;
 };
 '"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

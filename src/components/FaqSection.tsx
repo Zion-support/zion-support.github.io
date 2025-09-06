@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
-=======
 
 import { GradientHeading } from "./GradientHeading";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   Accordion;
   AccordionContent;
@@ -70,9 +66,7 @@ export function FaqSection() {
                 <AccordionTrigger className="text-white hover:text-zion-cyan">
                   {faq.question}
                 </AccordionTrigger>
-<<<<<<< HEAD
                 <AccordionContent className='text-zion-slate-light'>
-=======
 
 import { GradientHeading } from "./GradientHeading";
 import {
@@ -117,7 +111,6 @@ const faqs = [
     answer:
       "Reach us via the chat widget, email support@ziontechgroup.com or call +1 302 464 0950 anytime."}];
 
-
 export function FaqSection() {
   return (
     <section className="py-20 bg-zion-blue" id="faq">
@@ -142,10 +135,7 @@ export function FaqSection() {
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-zion-slate-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <AccordionContent className="text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
@@ -155,11 +145,4 @@ export function FaqSection() {
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

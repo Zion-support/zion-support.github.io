@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Search, X } from 'lucide-react';
@@ -10,7 +8,6 @@ import { useDebounce } from '@/hooks/useDebounce';
 import { useRouter } from 'next/router';
 import { slugify } from '@/lib/slugify';
 import { debounce } from 'lodash';
-=======
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Search, X } from 'lucide-react'
@@ -21,9 +18,7 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { useRouter } from "next/router";
 import { slugify } from "@/lib/slugify";
 import { debounce } from "lodash";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logInfo, logWarn } from '@/utils/productionLogger';
-
 
 interface EnhancedSearchInputProps {
   value: string,
@@ -220,9 +215,7 @@ export function EnhancedSearchInput({
       aria-expanded={isFocused && filteredSuggestions.length > 0}
       aria-haspopup="listbox"
       aria-controls="autocomplete-suggestions-list" // Added aria-controls
-      onClick={() => inputRef.current?.focus()}
-    >
-      <div className="relative flex items-center w-full">
+      onClick={() => inputRef.current?.focus()}><div className="relative flex items-center w-full">
         <Search 
           className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" 
         />
@@ -263,9 +256,7 @@ export function EnhancedSearchInput({
           <button
             className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate hover:text-white"
             onClick={() => onChange('')}
-            aria-label="Clear search"
-          >
-            <X className="h-4 w-4" />
+            aria-label="Clear search"><X className="h-4 w-4" />
           </button>
         )}
       </div>
@@ -279,7 +270,6 @@ export function EnhancedSearchInput({
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
-<<<<<<< HEAD
   );
 
 }setIsFocused (false);
@@ -298,19 +288,12 @@ break;
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
 break ;
 
-};
-> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
+};><div className="relative flex items-center w-full"><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
   () => onChange ('') ";
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
+}aria-label="Clear search"><X className="h-4 w-4" /> </button>) ;
 }</div> <AutocompleteSuggestions /> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
           
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

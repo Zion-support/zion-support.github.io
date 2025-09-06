@@ -1,22 +1,16 @@
 import { App } from '@slack/bolt';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 dotenv.config();
 
 const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000';
 
 const app = new App({
-<<<<<<< HEAD
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
   appToken: process.env.SLACK_APP_LEVEL_TOKEN,
   socketMode: true,
-=======
 dotenv.config();
 
 const apiBase = process.env.API_ORIGIN || 'http: //localhost:4000',
@@ -24,35 +18,26 @@ const app = new App({
   token: process.env.SLACK_BOT_TOKEN, signingSecret: process.env.SLACK_SIGNING_SECRET,
   appToken: process.env.SLACK_APP_LEVEL_TOKEN,
   socketMode: true
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   token: process.env.SLACK_BOT_TOKEN;
   signingSecret: process.env.SLACK_SIGNING_SECRET;
   appToken: process.env.SLACK_APP_LEVEL_TOKEN;
   socketMode: true
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 });
 
 function helpText(): string {
   return [
-<<<<<<< HEAD
-<<<<<<< HEAD
     '*Zion Assistant Commands*',
     '`/zion post-job [role]` – generate a job post',
     '`/zion suggest-talent [query]` – AI match talent',
     '`/zion track-project [name]` – milestone status',
     '`/zion help` – command list',
   ].join('\n');
-=======
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
   ].join('\n');
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status`/zion help` – command list'
   ].join('\n');
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 app.command('/zion', async ({ command, ack, respond }) => {
   await ack();
@@ -63,29 +48,17 @@ app.command('/zion', async ({ command, ack, respond }) => {
   try {
     if (!sub || sub.toLowerCase() === 'help') {
       await respond({ response_type: 'ephemeral', text: helpText() });
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
-=======
-      return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     if (sub === 'post-job') {
       const role = rest.join(' ') || 'Cloud Engineer';
       const res = await fetch(`${apiBase}/jobs/generate`, {
-<<<<<<< HEAD
         method: 'POST',
-<<<<<<< HEAD
         headers: { 'content-type': 'application/json', 'x-user-id': userId },
         body: JSON.stringify({ role }),
-=======
         method: 'POST';
         headers: { 'content-type': 'application/jsonx-user-id': userId };
         body: JSON.stringify({ role })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       });
       const data = (await res.json()) as any;
       await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` });
@@ -117,12 +90,10 @@ app.command('/zion', async ({ command, ack, respond }) => {
 
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
-<<<<<<< HEAD
     await respond({
       response_type: 'ephemeral',
       text: `Error: ${err.message || 'unknown'}`,
     });
-=======
         headers: {
        'content-type': 'application/jsonx-user-id': userId 
     },
@@ -159,10 +130,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
     await respond({ response_type: 'ephemeral', text: helpText() })
   } catch (err: any) {
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     await respond({ response_type: 'ephemeral', text: `Error: ${err.message || 'unknown'}` })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 });
 
@@ -170,15 +138,9 @@ app.command('/zion', async ({ command, ack, respond }) => {
   const port = Number(process.env.SLACK_PORT || 3001);
   await app.start(port);
   // eslint-disable-next-line no-console
-<<<<<<< HEAD
-<<<<<<< HEAD
   console.log(`⚡️ Zion Slack bot running on port ${port}`);
 })();
-=======
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   console.log(`⚡️ Zion Slack bot running on port ${port}`)
 })();
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
 
 import React, { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { useDisputes } from "@/hooks/useDisputes";
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -305,15 +301,11 @@ export function DisputeDetail() {
                           return (
                             <div
                               key={msg.id}
-                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
-                            >
-                              <div
+                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}><div
                                 className={`max-w-[80%] ${
                                   isCurrentUser
                                     ? 'bg-primary text-primary-foreground'
-                                    : 'bg-muted', } p-4 rounded-lg`}
-                              >
-                                <div className="flex items-center gap-2 mb-2">
+                                    : 'bg-muted', } p-4 rounded-lg`}><div className="flex items-center gap-2 mb-2">
                                   <Avatar className="h-6 w-6">
                                     <AvatarImage src={msg.user_profile?.avatar_url} alt={msg.user_profile?.display_name || "User avatar"} />
                                     <AvatarFallback>
@@ -421,9 +413,7 @@ export function DisputeDetail() {
                               <select
                                 className="w-full p-2 border rounded"
                                 value={resolution.resolution_type || ""}
-                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}
-                              >
-                                <option value="client_favor">In Client's Favor</option>
+                                onChange={(e) => setResolution({ ...resolution, resolution_type: e.target.value as ResolutionType })}><option value="client_favor">In Client's Favor</option>
                                 <option value="talent_favor">In Talent's Favor</option>
                                 <option value="compromise">Compromise</option>
                                 <option value="dismissed">Dismissed</option>
@@ -564,7 +554,6 @@ export function DisputeDetail() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 
 };
@@ -607,9 +596,8 @@ if (isLoading) {";
   return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") ";
 }className=" mt-4"> Back to Disputes </Button> </div>) ;
 
-
 };";
-container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center justify-between gap-4" > <div> Start Review </Button>) ";
+container mx-auto p-4 space-y-6"><div className="flex flex-wrap items-center justify-between gap-4"><div> Start Review </Button>) ";
 }</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved</AlertTitle> <AlertDescription> {;
   dispute.resolution summary ;
 }</AlertDescription> </Alert>) ";
@@ -647,22 +635,21 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
   msg.message ;
 }</p> </div> </div>) ;
 }) ) ";
-}</div> </CardContent> <CardFooter> <div className="w-full space-y-4" > <Textarea className="min-h-[100px]" disabled= {;
+}</div> </CardContent> <CardFooter> <div className="w-full space-y-4"><Textarea className="min-h-[100px]" disabled= {;
   isSending ";
-}/> </Button> </div> </div> </CardFooter> </Card> </TabsContent> <TabsContent value="attachments"> <Card> <CardHeader> <CardTitle>Attachments</CardTitle> <CardDescription>Files related to this dispute</CardDescription> </CardHeader> <CardContent> <div className="text-center py-12"> <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground" >No attachments available</p> </div> </CardContent> </Card> </TabsContent> <Card> <CardHeader> <CardTitle>Admin Actions</CardTitle> <CardDescription>Handle this dispute as an administrator</CardDescription> </CardHeader> <CardContent className="space-y-6"> <div> <h3 className="font-medium mb-2">Change Status</h3> <div className="flex gap-2" > <Button > Mark as Open </Button> <Button > Mark as Under Review </Button> <Button > Close Dispute </Button> </div> </div> <h3 className="font-medium mb-2">Resolve Dispute</h3> <div className="space-y-4" > <Textarea placeholder="Enter resolution summary..." value= {;
+}/> </Button> </div> </div> </CardFooter> </Card> </TabsContent> <TabsContent value="attachments"> <Card> <CardHeader> <CardTitle>Attachments</CardTitle> <CardDescription>Files related to this dispute</CardDescription> </CardHeader> <CardContent> <div className="text-center py-12"> <Download className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground" >No attachments available</p> </div> </CardContent> </Card> </TabsContent> <Card> <CardHeader> <CardTitle>Admin Actions</CardTitle> <CardDescription>Handle this dispute as an administrator</CardDescription> </CardHeader> <CardContent className="space-y-6"> <div> <h3 className="font-medium mb-2">Change Status</h3> <div className="flex gap-2"><Button > Mark as Open </Button> <Button > Mark as Under Review </Button> <Button > Close Dispute </Button> </div> </div> <h3 className="font-medium mb-2">Resolve Dispute</h3> <div className="space-y-4"><Textarea placeholder="Enter resolution summary..." value= {;
   resolution.summary ;
 }onChange= {;
   (e) => setResolution ({;
   ...resolution, summary: e.target.value ;
 }) '";
-}className="min-h-[100px]" /> <div className="grid grid-cols-2 gap-4"> <div> <label className="text-sm font-medium mb-1 block">Resolution Type</label> <select > <option value="client favor" >In Client's Favor</option> <option value="talent favor" >In Talent's Favor</option> <option value="compromise" >Compromise</option> <option value="dismissed" >Dismissed</option> </select> </div> </div> <Button onClick={;
+}className="min-h-[100px]" /> <div className="grid grid-cols-2 gap-4"> <div> <label className="text-sm font-medium mb-1 block">Resolution Type</label> <select><option value="client favor" >In Client's Favor</option> <option value="talent favor" >In Talent's Favor</option> <option value="compromise" >Compromise</option> <option value="dismissed" >Dismissed</option> </select> </div> </div> <Button onClick={;
   handleResolveDispute ;
 }>Resolve Dispute</Button> </div> </div>) ;
 }<div> <AvatarFallback> {';
   msg.user profile?.display name?.[0] || 'A' ;
 }</AvatarFallback> </Avatar>) ";
-}</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea ;
-
+}</div> <Separator className="my-4" /> <div className="space-y-4"><Textarea ;
 
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) ";
 }</Tabs> </div> <div className="space-y-6"> <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> <CardContent className="space-y-6"> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {;
@@ -677,23 +664,12 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
   dispute.id ";
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
   resolution_type: "compromise"}),
    
-<<<<<<< HEAD
 
   const isAdmin = user?.userType === "admin";
   
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

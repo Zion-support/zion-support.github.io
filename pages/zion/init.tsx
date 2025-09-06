@@ -190,9 +190,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   ...state,
                   governanceMode: e.target.value as GovernanceMode,
                 })
-              }
-            >
-    <div className="space-y-8">
+              }><div className="space-y-8">
       <div>
         <h1 className="text-2xl font-bold">Genesis Deploy</h1>
         <p className="text-sm text-gray-600 dark:text-gray-400">Initialize a full Zion OS instance from a single control panel.</p>
@@ -325,9 +323,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <div className='flex items-center gap-3'>
           <button
             disabled={submitting}
-            className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'
-          >
-            {submitting ? 'Deploying…' : 'Deploy Genesis'}
+            className='inline-flex items-center px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-60'>{submitting ? 'Deploying…' : 'Deploy Genesis'}
           </button>
           {error && <span className='text-sm text-red-500'>{error}</span>}
         <div className="flex items-center gap-3">

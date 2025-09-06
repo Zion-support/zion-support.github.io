@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
-import { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { SEO } from "@/components/SEO";
@@ -107,28 +102,19 @@ export default function BlogPost() {
     
     switch (platform) {
       case 'facebook':
-=======
 
-<<<<<<< HEAD
         logErrorToProduction('Failed to fetch blog post', { data: err }),
         setError('Failed to load article');
-<<<<<<< HEAD
     
-<<<<<<< HEAD
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
         return `https://www.facebook.com/sharer/sharer.php?u=${url}`;
       case 'twitter':
         return `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
       case 'linkedin':
         return `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
-<<<<<<< HEAD
-<<<<<<< HEAD
       default:
         return '#';
-=======
       default: return '#'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
@@ -159,9 +145,7 @@ export default function BlogPost() {
             <Button 
               variant="outline" 
               className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-              asChild
-            >
-              <Link href="/blog">
+              asChild><Link href="/blog">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to all articles
               </Link>
@@ -209,9 +193,7 @@ export default function BlogPost() {
                     variant="ghost" 
                     size="sm"
                     className="text-zion-slate-light hover:text-white hover:bg-zion-blue-dark"
-                    onClick={() => setShowShareMenu(!showShareMenu)}
-                  >
-                    <Share2 className="h-4 w-4 mr-1" />
+                    onClick={() => setShowShareMenu(!showShareMenu)}><Share2 className="h-4 w-4 mr-1" />
                     <span className="text-sm">Share</span>
                   </Button>
                   
@@ -223,9 +205,7 @@ export default function BlogPost() {
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                         aria-label="Share on Facebook"
-                        title="Share on Facebook"
-                      >
-                        <Facebook className="h-4 w-4 mr-2" />
+                        title="Share on Facebook"><Facebook className="h-4 w-4 mr-2" />
                         <span>Facebook</span>
                       </a>
                       <a
@@ -234,9 +214,7 @@ export default function BlogPost() {
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                         aria-label="Share on Twitter"
-                        title="Share on Twitter"
-                      >
-                        <Twitter className="h-4 w-4 mr-2" />
+                        title="Share on Twitter"><Twitter className="h-4 w-4 mr-2" />
                         <span>Twitter</span>
                       </a>
                       <a
@@ -245,9 +223,7 @@ export default function BlogPost() {
                         rel="noopener noreferrer"
                         className="flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"
                         aria-label="Share on LinkedIn"
-                        title="Share on LinkedIn"
-                      >
-                        <Linkedin className="h-4 w-4 mr-2" />
+                        title="Share on LinkedIn"><Linkedin className="h-4 w-4 mr-2" />
                         <span>LinkedIn</span>
                       </a>
                     </div>
@@ -300,9 +276,7 @@ export default function BlogPost() {
                     <Link 
                       key={relatedPost.id}
                       href={`/blog/${relatedPost.slug}`}
-                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"
-                    >
-                      <div className="aspect-[16/9] relative">
+                      className="bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden hover:border-zion-purple transition-all duration-300"><div className="aspect-[16/9] relative">
                         <ImageWithRetry
                           src={relatedPost.featuredImage}
                           alt={relatedPost.featuredImageAlt || relatedPost.title}
@@ -334,9 +308,7 @@ export default function BlogPost() {
               <Button
                 variant="outline"
                 className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
-                asChild
-              >
-                <Link href="/blog">
+                asChild><Link href="/blog">
                   <ChevronLeft className="mr-2 h-4 w-4" />
                   All Articles
                 </Link>
@@ -347,12 +319,11 @@ export default function BlogPost() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 };
-outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {';
+outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild><Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button><Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {';
   getShareUrl ('facebook') ";
-}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a > <Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a > <Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>) ;
+}target=" blank"rel=" noopener noreferrer"className=" flex items-center p-2 hover:bg-zion-blue rounded transition-colors text-zion-slate-light hover:text-white"aria-label=" Share on Facebook"title=" Share on Facebook"> <Facebook className=" h-4 w-4 mr-2"/> <span>Facebook</span> </Link> <a><Twitter className=" h-4 w-4 mr-2"/> <span>Twitter</span> </Link> <a><Linkedin className=" h-4 w-4 mr-2"/> <span>LinkedIn</span> </Link> </div>) ;
 }</div> </div> </div> </div> /> </div> </div> <ReactMarkdown> {;
   post.content ;
 }</ReactMarkdown> </div> <span key= {;
@@ -360,14 +331,9 @@ outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-b
 }className=" text-xs text-zion-slate-light bg-zion-blue-dark px-3 py-1 rounded-full"> # {;
   tag ;
 }</span>) ) ";
-}</div> <Separator className=" my-12 bg-zion-blue-light"/> > <div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) ) ;
+}</div> <Separator className=" my-12 bg-zion-blue-light"/>><div className=" aspect-[16/9] relative"> <ImageWithRetry </div> </Link>) ) ;
 }</div> </div>) ";
-}<Button asChild > <Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
+}<Button asChild><Link href=" /blog"> <ChevronLeft className=" mr-2 h-4 w-4" /> All Articles </Link> </Button> </div> </div> </div> </div> </>) ;
 }'"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

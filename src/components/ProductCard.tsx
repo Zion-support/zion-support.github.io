@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Heart } from 'lucide-react'
 import { useWishlist } from '@/hooks/useWishlist';
@@ -117,9 +116,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
       <button
         className="absolute top-2 right-2 p-1 rounded-full bg-background/70"
         onClick={() => toggle(product.id)}
-        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}
-      >
-        <Heart className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'} />
+        aria-label={active ? 'Remove from favorites' : 'Add to favorites'}><Heart className={active ? 'text-red-500 fill-red-500' : 'text-gray-500'} />
       </button>
 
     <div className="w-full h-40 relative mb-2">
@@ -205,9 +202,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
                   variant="outline"
                   className="flex-1"
                   data-testid="buy-now-button"
-                  disabled={!isAuthenticated || buyDisabled || isRedirecting}
-                >
-                  {isRedirecting ? (
+                  disabled={!isAuthenticated || buyDisabled || isRedirecting}>{isRedirecting ? (
                     <>
                       <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true"></span>
                       Processing...
@@ -225,14 +220,13 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
         )}
       </div>
     </div>
-<<<<<<< HEAD
   );
 
 }onError= {;
   (e) => handleImageError (e) ;
 }priority= {;
   false ;
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center"><span className="text-gray-500" >No Image</span> </div>) ;
 }src= {;
   imageUrl ;
 }alt= {;
@@ -245,7 +239,7 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   (e) => handleImageError (e) ;
 }priority= {;
   false ";
-}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center" > <span className="text-gray-500" >No Image</span> </div>) ;
+}/>) : (<div className="w-full h-full bg-gray-200 flex items-center justify-center"><span className="text-gray-500" >No Image</span> </div>) ;
 }{;
   product.currency ;
 }{;
@@ -257,43 +251,29 @@ export default function ProductCard({ product, onBuy, onBuyAttemptComplete, buyD
   e.stopPropagation ();
 if (onBuy) {;
   setIsRedirecting (true);
-onBuy () > {'";
-  isRedirecting ? (<> <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true" ></span> Processing... </>) : ('Buy Now') ;
+onBuy ()>{'";
+  isRedirecting ? (<> <span className="animate-spin inline-block mr-2 h-4 w-4 border-2 border-current border-t-transparent rounded-full" role="status" aria-hidden="true"></span> Processing... </>) : ('Buy Now') ;
 }</Button> </TooltipTrigger> {;
   !isAuthenticated && !isRedirecting && (<TooltipContent>Login required</TooltipContent>) ;
 }</Tooltip> </TooltipProvider>) ;
 }</div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
 
   const stockStatus =
     product.stock === undefined
-<<<<<<< HEAD
       : 'In stock';
 
   const stockVariant =
     product.stock === undefined
-<<<<<<< HEAD
   const productTitle = product.title;
-
-<<<<<<< HEAD
 
   const imageUrl = Array.isArray(product.images) && product.images.length > 0 ? product.images[0] : null;
   const imageAltText = productTitle;
-
-<<<<<<< HEAD
 
   const isMobile = useMediaQuery('(max-width: 768px)'),
   const isTablet = useMediaQuery('(max-width: 1200px)'),
 
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw',
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -44,9 +44,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             ].map(opt => (
               <div
                 key={opt.title}
-                className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'
-              >
-                <div className='font-medium'>{opt.title}</div>
+                className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'><div className='font-medium'>{opt.title}</div>
                 <div className='text-sm text-gray-600 dark:text-gray-400'>
                   {opt.desc}
                 </div>

@@ -161,17 +161,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='mb-8'
             className="mb-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               Digital Transformation
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               End-to-end digital transformation solutions that modernize your
               business
-            className="mb-8"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
+            className="mb-8"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               Digital Transformation
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -188,18 +184,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8, delay: 0.2 }}
             className='mb-12'
             className="mb-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+ursor/integrate-build-improve-and-re-verify-b76c><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete 
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-700 hover:to-orange-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Start Transformation
               <ArrowRight className='w-5 h-5' />
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            className="mb-12"><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From strategy development to implementation, we guide businesses through complete 
               digital transformation journeys that drive innovation, efficiency, and growth.
             </p>
@@ -233,18 +225,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='text-center'
                 className="text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
                 </div>
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
                 <div className='text-white/70'>{stat.label}</div>
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                className="text-center"><div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -273,18 +261,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive transformation solutions designed to modernize your business operations
             </p>
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive transformation solutions designed to modernize your business operations
             </p>
@@ -302,9 +286,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300'
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className='text-2xl font-bold text-white mb-4'>
@@ -315,12 +297,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {service.features.map(feature => (
                     <li
                       key={feature}
-                      className='flex items-center text-white/80'
-                    >
-                      <CheckCircle className='w-5 h-5 text-orange-400 mr-3 flex-shrink-0' />
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
+                      className='flex items-center text-white/80'><CheckCircle className='w-5 h-5 text-orange-400 mr-3 flex-shrink-0' />
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"><div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -368,9 +346,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl font-bold text-white mb-6'>
+            viewport={{ once: true }}><h2 className='text-4xl font-bold text-white mb-6'>
             <h2 className="text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Business?
@@ -407,7 +383,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
     </div>
   );
 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 

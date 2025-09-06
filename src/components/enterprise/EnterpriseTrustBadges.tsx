@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react';
-=======
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function EnterpriseTrustBadges() {
   return (
@@ -29,11 +25,9 @@ export function EnterpriseTrustBadges() {
             <Award className="h-5 w-5 text-primary" />
             <span className="font-medium">ISO 27001</span>
           </div>
-<<<<<<< HEAD
           <div className='flex items-center justify-center gap-2 p-4 rounded-lg border border-border'>
             <CheckCircle className='h-5 w-5 text-primary' />
             <span className='font-medium'>HIPAA Compliant</span>
-=======
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from 'lucide-react'
@@ -62,22 +56,12 @@ export function EnterpriseTrustBadges() {
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium">HIPAA Compliant</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
             <CheckCircle className="h-5 w-5 text-primary" />
             <span className="font-medium">HIPAA Compliant</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

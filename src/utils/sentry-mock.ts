@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -26,13 +25,9 @@ const mockSentry = {
   getClient: noopReturn;
   
   // Transaction and performance monitoring
-<<<<<<< HEAD
   startTransaction: () => mockTransaction,
   finishTransaction: noop,
 
-=======
-
-<<<<<<< HEAD
   init: noop, captureException: noop,
   captureMessage: noop, captureEvent: noop,
   addBreadcrumb: noop, configureScope: noop,
@@ -44,14 +39,11 @@ const mockSentry = {
   // Transaction and performance monitoring
   startTransaction: () => mockTransaction,
   finishTransaction: noop,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   // Error boundary and React integration
   ErrorBoundary: ({ children }: any) => children,
   withErrorBoundary: (component: any) => component,
   showReportDialog: noop,
-<<<<<<< HEAD
 
-=======
   startTransaction: () => mockTransaction;
   finishTransaction: noop;
   
@@ -60,7 +52,6 @@ const mockSentry = {
   withErrorBoundary: (component: any) => component;
   showReportDialog: noop;
   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Browser-specific methods
   onLoad: noop;
   wrap: (fn: (...args: any[]) => any) => fn;
@@ -197,18 +188,13 @@ export const Severity = mockSentry.Severity;
 // Additional exports for compatibility
 export { mockSentry as Sentry };
 
-<<<<<<< HEAD
 // All exports are already defined above
-=======
   // Browser-specific methods
 
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
   
-<<<<<<< HEAD
 
   
-
-<<<<<<< HEAD
 
   setName: noop, setTag: noop,
   setData: noop, finish: noop,
@@ -228,9 +214,4 @@ const mockHub = {
   configureScope: noop, withScope: (callback: (...args: any[]) => any) => callback(mockScope),
   startTransaction: () => mockTransaction};
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 // All exports are already defined above
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

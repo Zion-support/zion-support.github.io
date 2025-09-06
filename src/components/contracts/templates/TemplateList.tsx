@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ContractTemplate } from '@/types/contracts';
 import { Button } from '@/components/ui/button';
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
@@ -13,7 +11,6 @@ import {
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import { useAuth } from '@/hooks/useAuth';
-=======
 
 import { ContractTemplate } from "@/types/contracts";
 import { Button } from "@/components/ui/button";
@@ -23,7 +20,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useAuth } from "@/hooks/useAuth";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // useRouter replaces the old useLocation hook from react-router
 import { useRouter } from 'next/router';
 import {
@@ -114,9 +110,7 @@ export function TemplateList({
                   variant="ghost"
                   size="icon"
                   onClick={() => onEdit(template)}
-                  aria-label="Edit template"
-                >
-                  <Edit className="h-4 w-4" />
+                  aria-label="Edit template"><Edit className="h-4 w-4" />
                 </Button>
                 {!template.is_default ? (
                   <TooltipProvider>
@@ -126,9 +120,7 @@ export function TemplateList({
                           variant="ghost"
                           size="icon"
                           onClick={() => handleSetDefault(template.id)}
-                          aria-label="Set as default"
-                        >
-                          <Star className="h-4 w-4" />
+                          aria-label="Set as default"><Star className="h-4 w-4" />
                         </Button>
                       </TooltipTrigger>
                       {!user && (
@@ -147,9 +139,7 @@ export function TemplateList({
                   variant="ghost"
                   size="icon"
                   onClick={() => handleDeleteClick(template.id)}
-                  aria-label="Delete template"
-                >
-                  <Trash className="h-4 w-4 text-destructive" />
+                  aria-label="Delete template"><Trash className="h-4 w-4 text-destructive" />
                 </Button>
               </div>
             </div>
@@ -188,7 +178,6 @@ export function TemplateList({
       </AlertDialog>
     </div>
   );
-<<<<<<< HEAD
 
 };
 const handleSetDefault = async (templateId: string) => {;
@@ -206,13 +195,13 @@ return ;
   template.is default && (<span className="bg-zion-purple/10 text-zion-purple text-xs px-2 py-0.5 rounded-full">Default</span>) ";
 }</div> <p className="text-xs text-muted-foreground"> Last updated: {;
   new Date (template.updated at) .toLocaleDateString () ";
-}</p> </div> <div className="flex items-center gap-2" > <Button > <Edit className="h-4 w-4" /> </Button> {";
+}</p> </div> <div className="flex items-center gap-2"><Button><Edit className="h-4 w-4" /> </Button> {";
   !template.is default ? (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button variant="ghost" size="icon" onClick={;
   () => handleSetDefault (template.id) ";
-}aria-label="Set as default" > <Star className="h-4 w-4" /> </Button> </TooltipTrigger> {;
+}aria-label="Set as default"><Star className="h-4 w-4" /> </Button> </TooltipTrigger> {;
   !user && (<TooltipContent> Please log in to use this feature </TooltipContent>) ";
 }</Tooltip> </TooltipProvider>) : (<Button variant="ghost" size="icon" disabled aria-label="Default template"> <StarOff className="h-4 w-4" /> </Button>) ";
-}<Button > <Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) ) ;
+}<Button><Trash className="h-4 w-4 text-destructive" /> </Button> </div> </div> <Separator className="my-3" /> <Button className="w-full" > Use This Template </Button> </CardContent> </Card>) ) ;
 }<AlertDialog open= {;
   !!templateToDelete ;
 }onOpenChange= {;
@@ -221,10 +210,5 @@ return ;
   handleDeleteConfirm ;
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) ;
 }'"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

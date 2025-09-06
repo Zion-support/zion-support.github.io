@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
-=======
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
  
 import { cn } from "@/lib/utils"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { ChevronRight } from 'lucide-react';
  
 const Breadcrumb = React.forwardRef<
@@ -22,9 +18,7 @@ const Breadcrumb = React.forwardRef<
     ref={ref}
     aria-label="breadcrumb"
     className={cn(
-<<<<<<< HEAD
       'inline-flex items-center gap-1 text-sm text-zion-slate-light',
-=======
 
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
@@ -44,24 +38,17 @@ const Breadcrumb = React.forwardRef<
     aria-label="breadcrumb"
     className={cn(
       "inline-flex items-center gap-1 text-sm text-zion-slate-light",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       "inline-flex items-center gap-1 text-sm text-zion-slate-light";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       className
     )}
     {...props}
   />
-<<<<<<< HEAD
-<<<<<<< HEAD
 ));
 Breadcrumb.displayName = 'Breadcrumb';
 
-=======
 ))
 Breadcrumb.displayName = "Breadcrumb"
  
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const BreadcrumbList = React.forwardRef<
   HTMLOListElement;
   React.ComponentPropsWithoutRef<"ol">
@@ -113,9 +100,7 @@ const BreadcrumbSeparator = ({
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
-    {...props}
-  >
-    {children || <ChevronRight className="h-4 w-4" />}
+    {...props}>{children || <ChevronRight className="h-4 w-4" />}
   </li>
 )
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
@@ -125,11 +110,9 @@ const BreadcrumbEllipsis = ({
   ...props
 }: React.ComponentProps<"span">) => (
   <span
-<<<<<<< HEAD
     role='presentation'
     aria-hidden='true'
     className={cn('flex h-9 w-9 items-center justify-center', className)}
-=======
 ))
 Breadcrumb.displayName = "Breadcrumb"
  
@@ -184,9 +167,7 @@ const BreadcrumbSeparator = ({
     role="presentation"
     aria-hidden="true"
     className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
-    {...props}
-  >
-    {children || <ChevronRight className = "h-4 w-4" />}
+    {...props}>{children || <ChevronRight className = "h-4 w-4" />}
   </li>
 )
 BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
@@ -199,18 +180,13 @@ const BreadcrumbEllipsis = ({
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {...props}
   >
     &#8230,
   </span>
-<<<<<<< HEAD
-<<<<<<< HEAD
 );
 BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
 
@@ -222,7 +198,6 @@ export {
   BreadcrumbSeparator,
   BreadcrumbEllipsis,
 };
-=======
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
  
@@ -235,8 +210,6 @@ export {
 
   BreadcrumbSeparator;
   BreadcrumbEllipsis}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 )
 BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
  
@@ -247,4 +220,3 @@ export {
   BreadcrumbLink;
   BreadcrumbSeparator;
   BreadcrumbEllipsis}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

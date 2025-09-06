@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useInterviews } from '@/hooks/useInterviews';
 import { Interview } from '@/types/interview';
@@ -10,7 +8,6 @@ import { InterviewCard } from '@/components/interviews/InterviewCard';
 import { Button } from '@/components/ui/button';
 import { Calendar, Clock, Video } from 'lucide-react';
 import { format, isAfter, parseISO, startOfDay } from 'date-fns';
-=======
 
 import React, { useEffect, useState } from "react";
 import { useInterviews } from "@/hooks/useInterviews";
@@ -22,7 +19,6 @@ import { InterviewCard } from "@/components/interviews/InterviewCard";
 import { Button } from "@/components/ui/button";
 import { Calendar, Clock, Video } from 'lucide-react'
 import { format, isAfter, parseISO, startOfDay } from "date-fns";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function InterviewsContent() {
   const { interviews, isLoading, fetchInterviews } = useInterviews();
@@ -201,11 +197,5 @@ export default function Interviews() {
       <InterviewsContent />
     </ProtectedRoute>
   );
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

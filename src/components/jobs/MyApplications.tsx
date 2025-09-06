@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useJobApplications } from '@/hooks/useJobApplications';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -9,8 +7,6 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
 import { ApplicationStatus } from '@/types/jobs';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { useJobApplications } from "@/hooks/useJobApplications";
@@ -101,9 +97,7 @@ export function MyApplications() {
                   variant="outline" 
                   size="sm" 
                   className="text-xs"
-                  asChild
-                >
-                  <Link href={`/jobs/${application.job_id}`}>
+                  asChild><Link href={`/jobs/${application.job_id}`}>
                     <ExternalLink className="h-3 w-3 mr-1" /> View Job
                   </Link>
                 </Button>
@@ -112,9 +106,7 @@ export function MyApplications() {
                   variant="default" 
                   size="sm"
                   className="text-xs"
-                  asChild
-                >
-                  <Link href={`/messages?jobId=${application.job_id}`}>
+                  asChild><Link href={`/messages?jobId=${application.job_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Contact Client
                   </Link>
                 </Button>
@@ -125,7 +117,6 @@ export function MyApplications() {
       ))}
     </div>
   );
-<<<<<<< HEAD
 
 };
 <p> {;
@@ -136,17 +127,10 @@ export function MyApplications() {
 }</div> {;
   application.cover letter ;
 }</p>) ";
-}<div className="flex justify-between items-center" > <Button variant="outline" size="sm" className="text-xs" asChild > </Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild > </Link> </Button> </div> </div> </CardContent> </Card>) ) ;
+}<div className="flex justify-between items-center"><Button variant="outline" size="sm" className="text-xs" asChild></Link> </Button> <Button variant="default" size="sm" className="text-xs" asChild></Link> </Button> </div> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
       case "new": return <Badge variant="secondary">New</Badge>;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

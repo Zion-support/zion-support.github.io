@@ -393,9 +393,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>
+            transition={{ duration: 0.8 }}><h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6'>
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Innovative Business Solutions
@@ -421,9 +419,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30'
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  {stat.icon}
+ursor/integrate-build-improve-and-re-verify-b76c>{stat.icon}
                   <span className="text-teal-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
@@ -436,12 +432,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </Link>
               <Link
                 href={`tel:${contactInfo.mobile}`}
-                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'
-              >
-                <Phone className='mr-2 w-5 h-5' />
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30"
-                >
-                  {stat.icon}
+                className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'><Phone className='mr-2 w-5 h-5' />
+                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-teal-500/30">{stat.icon}
                   <span className="text-teal-400 font-semibold">{stat.value}</span>
                   <span className="text-gray-300 text-sm">{stat.label}</span>
                 </motion.div>
@@ -479,9 +471,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -490,9 +480,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our Business Solutions?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -513,9 +501,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='relative group'
                 className="relative group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`${feature.gradient} p-1 rounded-xl`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
                     <div className="text-center">
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
@@ -525,9 +511,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {feature.title}
                       </h3>
                       <p className='text-gray-300'>{feature.description}</p>
-                className="relative group"
-              >
-                <div className={`${feature.gradient} p-1 rounded-xl`}>
+                className="relative group"><div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
                     <div className="text-center">
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
@@ -562,9 +546,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Business Solution Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -573,9 +555,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='space-y-16'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Business Solution Categories
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -595,9 +575,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='relative'
                 className="relative"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="text-center mb-12">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
                     <category.icon className="w-10 h-10 text-white" />
                   </div>
@@ -606,9 +584,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
 
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
-                className="relative"
-              >
-                <div className="text-center mb-12">
+                className="relative"><div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
                     <category.icon className="w-10 h-10 text-white" />
                   </div>
@@ -628,17 +604,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       viewport={{ once: true }}
                       className='relative group'
                       className="relative group"
-ursor/integrate-build-improve-and-re-verify-b76c
-                    >
-                      <div className={`${service.color} p-1 rounded-xl`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
-                      className="relative group"
-                    >
-                      <div className={`${service.color} p-1 rounded-xl`}>
+                      className="relative group"><div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-3xl">{service.icon}</span>
@@ -748,9 +720,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -759,9 +729,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -781,9 +749,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20'
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="flex items-center mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
                   <div>
                     <h4 className="text-white font-semibold">{testimonial.name}</h4>
@@ -796,9 +762,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className='w-4 h-4 fill-current' />
-                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"
-              >
-                <div className="flex items-center mb-4">
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-teal-500/20"><div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
                   <div>
                     <h4 className="text-white font-semibold">{testimonial.name}</h4>
@@ -834,9 +798,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
+            viewport={{ once: true }}><h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Business?
@@ -847,9 +809,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-              >
-                <Phone className='mr-2 w-5 h-5' />
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"><Phone className='mr-2 w-5 h-5' />
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -859,9 +819,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`tel:${contactInfo.mobile}`}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
-              >
-                <Phone className="mr-2 w-5 h-5" />
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"><Phone className="mr-2 w-5 h-5" />
                 <Phone className="mr-2 w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                 Call Now: {contactInfo.mobile}
@@ -870,18 +828,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 href={`mailto:${contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300'
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <Mail className="mr-2 w-5 h-5" />
+ursor/integrate-build-improve-and-re-verify-b76c><Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
             </div>
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
               <p className='text-gray-300'>🌐 {contactInfo.website}</p>
-                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"
-              >
-                <Mail className="mr-2 w-5 h-5" />
+                className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-teal-500/30 hover:bg-white/20 transition-all duration-300"><Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
             </div>
@@ -901,7 +855,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
   return (<Layout> <Head> <title>Innovative Business Solutions - Zion Tech Group</title> </Head> {
   /* Hero Section */ 
-}<section className="relative py-20 lg:py-32 overflow-hidden" > <div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20" ></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" > <motion.div initial= {
+}<section className="relative py-20 lg:py-32 overflow-hidden"><div className="absolute inset-0 bg-gradient-to-br from-teal-900/20 via-green-900/20 to-emerald-900/20"></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><motion.div initial= {
   {
   opacity: 0, y: 20 
 
@@ -914,12 +868,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
   duration: 0.8 
 
 }> <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-teal-400 via-green-400 to-emerald-400 bg-clip-text text-transparent mb-6" > Innovative Business Solutions </h1> </motion.div>) ) 
-}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>) 
+}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="#services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-green-600 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-green-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30" > Explore Solutions <ArrowRight className="ml-2 w-5 h-5" /> </Link> Get Started </Link> </div> </motion.div> </div> </section>><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Why Choose Our Business Solutions? </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Our business solutions combine cutting-edge AI technology with proven business processes to deliver unprecedented results </p> </motion.div> </div> </div> </div> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > Business Solution Categories </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Comprehensive business solutions covering every aspect of modern business operations </p> </motion.div> Popular </span>) 
 }</div> </div>) ) 
-}</div> <div className="flex items-center justify-between" > <Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) ) 
+}</div> <div className="flex items-center justify-between"><Link > Learn More <ArrowRight className="ml-1 w-4 h-4" /> </Link> <Link > Get Started </Link> </div> </div> </div> </motion.div>) ) 
 }</div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-3xl lg:text-4xl font-bold text-white mb-4" > What Our Clients Say </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Real feedback from businesses that have transformed their operations with our innovative solutions </p> </motion.div>) ) 
 }</div> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
@@ -937,7 +891,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   {
   once: true 
 
-}> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link > <Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>) 
+}> <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join hundreds of businesses that have already revolutionized their operations with our innovative AI-powered solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link><Mail className="mr-2 w-5 h-5" /> Email Us </Link> </div> </div> </motion.div> </div> </section> </Layout>) 
   )
 }
   )

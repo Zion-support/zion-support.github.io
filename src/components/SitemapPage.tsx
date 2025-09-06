@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { completeSitemap, dynamicPaths } from '@/config/sitemap';
 import Link from 'next/link';
@@ -37,9 +32,7 @@ export const SitemapPage: React.FC = () => {
                   <li key={route.path}>
                     <Link
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
+                      className="flex items-center hover:text-zion-purple"><ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
@@ -62,9 +55,7 @@ export const SitemapPage: React.FC = () => {
                   <li key={route.path}>
                     <Link
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
+                      className="flex items-center hover:text-zion-purple"><ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
@@ -87,9 +78,7 @@ export const SitemapPage: React.FC = () => {
                   <li key={route.path}>
                     <Link
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
+                      className="flex items-center hover:text-zion-purple"><ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
@@ -112,9 +101,7 @@ export const SitemapPage: React.FC = () => {
                   <li key={route.path}>
                     <Link
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
+                      className="flex items-center hover:text-zion-purple"><ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
@@ -136,9 +123,7 @@ export const SitemapPage: React.FC = () => {
                   <li key={route.path}>
                     <Link
                       href={resolvePath(route.path)}
-                      className="flex items-center hover:text-zion-purple"
-                    >
-                      <ChevronRight className="h-4 w-4 mr-2" />
+                      className="flex items-center hover:text-zion-purple"><ChevronRight className="h-4 w-4 mr-2" />
                       {route.label}
                     </Link>
                   </li>
@@ -167,11 +152,5 @@ export const SitemapPage: React.FC = () => {
     </>
   )
 };
-<<<<<<< HEAD
 '"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

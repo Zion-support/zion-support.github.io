@@ -188,13 +188,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
             {transactions.map(t => (
               <div
                 key={t.id}
-                className='flex justify-between border rounded p-2'
-              >
-                <div className='flex gap-2 items-center'>
+                className='flex justify-between border rounded p-2'><div className='flex gap-2 items-center'>
                   <span
-                    className={`px-2 py-0.5 rounded text-xs ${['earn', 'issue'].includes(t.type) ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
-                  >
-                    {t.type}
+                    className={`px-2 py-0.5 rounded text-xs ${['earn', 'issue'].includes(t.type) ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>{t.type}
                   </span>
                   <span className='text-gray-600'>{t.userId}</span>
                   <span className='text-gray-500'>

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -20,7 +18,6 @@ import { BlogPost } from '@/types/blog';
 import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { Search } from 'lucide-react';
-=======
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -35,10 +32,8 @@ import { BlogPost } from "@/types/blog";
 import { generateRandomBlogPost } from "@/utils/generateRandomBlogPost";
 import { BLOG_POSTS } from "@/data/blog-posts";
 import { Search } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 
 // Categories for filtering
 const CATEGORIES = [
@@ -178,9 +173,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   </div>
                   <Button 
                     asChild
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"
-                  >
-                    <Link href={`/blog/${featuredPost.slug}`}>
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"><Link href={`/blog/${featuredPost.slug}`}>
                       Read Article
                     </Link>
                   </Button>
@@ -231,9 +224,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                 <Card
                   key={post.id}
                   asChild
-                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
-                >
-                  <Link href={`/blog/${post.slug}`} className="block group">
+                  className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"><Link href={`/blog/${post.slug}`} className="block group">
                   <div className="aspect-[16/9] relative overflow-hidden">
                     <img
                       src={post.featuredImage}
@@ -303,7 +294,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       </div>
     </>
   );
-<<<<<<< HEAD
 }, [query]);
 //Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory;
 });
@@ -319,11 +309,11 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   featuredPost.title ";
 }</h3> <p className=" text-zion-slate-light mb-6"> {;
   featuredPost.excerpt ";
-}flex items-center mb-6" > <img ;
+}flex items-center mb-6"><img ;
 }";
-}/> <div> <p className="text-white font-medium" > {;
+}/> <div> <p className="text-white font-medium">{;
   featuredPost.author.name ";
-}</p> <p className="text-sm text-zion-slate-light" > {;
+}</p> <p className="text-sm text-zion-slate-light">{;
   featuredPost.publishedDate ;
 }• {;
   featuredPost.readTime ";
@@ -349,9 +339,9 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   post.title ";
 }</h3> <p className=" text-zion-slate-light mb-4 line-clamp-3"> {;
   post.excerpt ";
-}flex items-center" > <img ;
+}flex items-center"><img ;
 }";
-}/> <span className="text-sm text-white" > {;
+}/> <span className="text-sm text-white">{;
   post.author.name ";
 }</span> p-6 pt-0"> <span className=" text-zion-cyan group-hover:text-zion-purple">Read More →</span> </CardFooter> </Link> </Card>) ) ;
 }</div>) : null ";
@@ -359,19 +349,10 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
   () => {;
   ;
 
-
 }</div> </div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
       selectedCategory === "All Categories" || post.category === selectedCategory;
 
-<<<<<<< HEAD
-
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

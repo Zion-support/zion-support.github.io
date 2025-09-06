@@ -1,35 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
 import { Bot, Users, TrendingUp } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function AITalentMatchingPage() {
   const benefits = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Precise Candidate Matching',
       description:
         'Leverage AI algorithms to pair your roles with the most qualified experts.',
       icon: <Bot className='h-8 w-8' />,
     },
-=======
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className="h-8 w-8" />},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       title: "Streamlined Hiring Workflow",
       description: "Automated screening and ranking saves your team valuable time.",
@@ -61,8 +48,6 @@ export default function AITalentMatchingPage() {
       ctaLink="/request-quote"
     />
   );
-<<<<<<< HEAD
-=======
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className = "h-8 w-8" />},
@@ -100,7 +85,4 @@ export default function AITalentMatchingPage() {
     />
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

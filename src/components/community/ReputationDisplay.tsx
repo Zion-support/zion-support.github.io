@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Trophy } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -12,11 +8,9 @@ interface ReputationDisplayProps {
   size?: 'sm' | 'md' | 'lg'
 }
 
-<<<<<<< HEAD
 export const ReputationDisplay = ({
   reputation,
   size = 'md',
-=======
 
 import { Trophy } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -28,23 +22,15 @@ interface ReputationDisplayProps {
 export const ReputationDisplay = ({ 
   reputation,
   size = 'md' 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export const ReputationDisplay = ({ 
   reputation;
   size = 'md' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 }: ReputationDisplayProps) => {
   // Calculate next milestone
   const currentLevel = Math.floor(reputation / 100);
   const nextMilestone = (currentLevel + 1) * 100;
   const progress = ((reputation % 100) / 100) * 100;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Styling based on size
   const sizeClasses = {
     sm: {
@@ -80,9 +66,7 @@ export const ReputationDisplay = ({
 };
 
 export default ReputationDisplay;
-<<<<<<< HEAD
 '
-=======
   
   // Styling based on size
   const sizeClasses = {
@@ -120,9 +104,5 @@ export default ReputationDisplay;
   )
 };
 
-
 export default ReputationDisplay;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

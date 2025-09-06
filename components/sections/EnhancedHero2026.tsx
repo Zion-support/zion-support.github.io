@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   ArrowRight,
   Star,
@@ -13,9 +11,7 @@ import {
   Rocket,
   CheckCircle,;
 } from 'lucide-react';
-=======
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Button from '../ui/Button';
 interface EnhancedHero2026Props {
   contactInfo: {
@@ -34,12 +30,10 @@ interface EnhancedHero2026Props {
   }
 }
 
-<<<<<<< HEAD
 export default function EnhancedHero2026({
   contactInfo,
   serviceStats,
 }: EnhancedHero2026Props) {
-=======
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Rocket, CheckCircle } from 'lucide-react';
 import Button from '../ui/Button';
 interface EnhancedHero2026Props {
@@ -62,30 +56,21 @@ interface EnhancedHero2026Props {
 }
 
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default function EnhancedHero2026({ contactInfo, serviceStats }: EnhancedHero2026Props) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         staggerChildren: 0.2,
       },
     },
-=======
         staggerChildren: 0.2
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         staggerChildren: 0.2
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const itemVariants = {
@@ -95,21 +80,15 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
       opacity: 1,
       transition: {
         duration: 0.8,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ease: 'easeOut' as const,
       },
     },
-=======
         ease: "easeOut" as const
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         ease: "easeOut" as const
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const statsVariants = {
@@ -119,16 +98,12 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
       opacity: 1,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ease: 'easeOut' as const,
       },
     },
-=======
         ease: "easeOut" as const
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -148,11 +123,9 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`}}
             animate={{
-<<<<<<< HEAD
               y: [0, -30, 0],
               opacity: [0.3, 0.8, 0.3],
               scale: [1, 1.5, 1],
-=======
         ease: "easeOut" as const
       }
     }
@@ -178,46 +151,30 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
-<<<<<<< HEAD
-<<<<<<< HEAD
               ease: 'easeInOut',
               delay: Math.random() * 2,
-=======
               ease: "easeInOut",
               delay: Math.random() * 2
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               ease: "easeInOut",
               delay: Math.random() * 2
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }}
           />
         ))}
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-8"
-        >
-          {/* Main Headline */}
+          className="space-y-8">{/* Main Headline */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6">
               <Star className="w-5 h-5 text-yellow-400" />
@@ -234,7 +191,6 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 Solutions
               </span>
             </h1>
-<<<<<<< HEAD
 
             <p className='text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               Transform your business with our revolutionary AI, Quantum, and IT
@@ -244,15 +200,12 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 1000+ cutting-edge solutions
               </span>{' '}
               delivering unprecedented ROI.
-=======
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="space-y-8"
-        >
-          {/* Main Headline */}
+          className="space-y-8">{/* Main Headline */}
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="inline-flex items-center space-x-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-full px-6 py-3 mb-6">
               <Star className="w-5 h-5 text-yellow-400" />
@@ -269,31 +222,17 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 Solutions
               </span>
             </h1>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             
             <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </motion.div>
 
           {/* Enhanced Stats Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <motion.div
-=======
-          <motion.div 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto"
-          >
-            {[
-<<<<<<< HEAD
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">{[
               {
                 label: 'Total Services',
                 value: serviceStats.totalServices,
@@ -330,58 +269,35 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 icon: Star,
                 color: 'from-pink-500 to-purple-500',
               },
-=======
           <motion.div 
             variants={itemVariants}
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto"
-          >
-            {[
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto">{[
               { label: 'Total Services', value: serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' },
               { label: 'AI Solutions', value: serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' },
               { label: 'Emerging Tech', value: serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
               { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' },
               { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' },
               { label: 'Revolutionary', value: serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             ].map((stat, index) => (
               <motion.div
                 key={stat.label}
                 variants={statsVariants}
                 whileHover={{ scale: 1.05, y: -5 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'
-=======
-                className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                className='group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300'><div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
                   {stat.value.toLocaleString()}+
                 </div>
-<<<<<<< HEAD
                 <div className='text-xs text-gray-400 leading-tight'>
-=======
-                className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"
-              >
-                <div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
+                className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-4 hover:border-slate-600/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300"><div className={`w-12 h-12 bg-gradient-to-r ${stat.color} rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <stat.icon className="w-6 h-6 text-white" />
                 </div>
                 <div className="text-2xl md:text-3xl font-bold text-white mb-1">
                   {stat.value.toLocaleString()}+
                 </div>
                 <div className="text-xs text-gray-400 leading-tight">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-xs text-gray-400 leading-tight">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {stat.label}
                 </div>
               </motion.div>
@@ -389,8 +305,6 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
           </motion.div>
 
           {/* Enhanced CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Button
@@ -398,17 +312,13 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 variant='primary'
                 size='xl'
                 className='text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group'
-=======
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 href="/services" 
                 variant="primary"
                 size="xl"
-                className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <span className="flex items-center">
+                className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group"><span className="flex items-center">
                   <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
                   Explore All Services
                 </span>
@@ -419,21 +329,15 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 href="/contact" 
                 variant="secondary"
                 size="xl"
-                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
-              >
-<<<<<<< HEAD
-                <span className='flex items-center'>
+                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"><span className='flex items-center'>
                   <Shield className='mr-3 w-7 h-7' />
-=======
           <motion.div variants={itemVariants} className="space-y-6">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 href="/services" 
                 variant="primary"
                 size="xl"
-                className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group"
-              >
-                <span className="flex items-center">
+                className="text-xl px-12 py-6 bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 shadow-2xl hover:shadow-purple-500/30 border-0 group"><span className="flex items-center">
                   <Rocket className="mr-3 w-7 h-7 group-hover:rotate-12 transition-transform" />
                   Explore All Services
                 </span>
@@ -444,41 +348,30 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 href="/contact" 
                 variant="secondary"
                 size="xl"
-                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"
-              >
+                className="text-xl px-12 py-6 bg-gradient-to-r from-slate-800 to-slate-700 hover:from-slate-700 hover:to-slate-600 border-slate-600 hover:border-slate-500 shadow-2xl"><span className="flex items-center">
+                  <Shield className="mr-3 w-7 h-7" />
                 <span className="flex items-center">
                   <Shield className="mr-3 w-7 h-7" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <span className="flex items-center">
-                  <Shield className="mr-3 w-7 h-7" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Get Expert Consultation
                 </span>
               </Button>
             </div>
 
             {/* Trust Indicators */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400'>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <span>5000+ Happy Customers</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
                 <span>99.9% Uptime Guarantee</span>
               </div>
-<<<<<<< HEAD
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm text-gray-400">
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
@@ -490,27 +383,17 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <span>24/7 Expert Support</span>
               </div>
             </div>
           </motion.div>
 
           {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <motion.div
-=======
-          <motion.div 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             variants={itemVariants}
-            className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
-          >
-            <div className="text-center mb-4">
+            className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"><div className="text-center mb-4">
               <h3 className="text-lg font-semibold text-white mb-2">Ready to Get Started?</h3>
               <p className="text-gray-300 text-sm">Contact our team of experts today</p>
             </div>
@@ -523,16 +406,12 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
                 <div className="text-cyan-400 font-medium">Email</div>
                 <div className="text-white">{contactInfo.email}</div>
               </div>
-<<<<<<< HEAD
               <div className='text-center'>
                 <div className='text-cyan-400 font-medium'>Website</div>
                 <div className='text-white'>{contactInfo.website}</div>
-=======
           <motion.div 
             variants={itemVariants}
-            className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"
-          >
-            <div className="text-center mb-4">
+            className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 max-w-2xl mx-auto"><div className="text-center mb-4">
               <h3 className="text-lg font-semibold text-white mb-2">Ready to Get Started?</h3>
               <p className="text-gray-300 text-sm">Contact our team of experts today</p>
             </div>
@@ -548,26 +427,17 @@ export default function EnhancedHero2026({ contactInfo, serviceStats }: Enhanced
               <div className="text-center">
                 <div className="text-cyan-400 font-medium">Website</div>
                 <div className="text-white">{contactInfo.website}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="text-center">
                 <div className="text-cyan-400 font-medium">Website</div>
                 <div className="text-white">{contactInfo.website}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </motion.div>
         </motion.div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

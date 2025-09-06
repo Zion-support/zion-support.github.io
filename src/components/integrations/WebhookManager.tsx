@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import {
   Card,
@@ -23,8 +21,6 @@ import {
   SelectValue,;
 } from '@/components/ui/select';
 import { toast } from 'sonner';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -155,18 +151,14 @@ export function WebhookManager() {
               {newWebhook.eventTypes.map(event => (
                 <ClickableBadge 
                   key={event} 
-                  onRemove={() => handleRemoveEvent(event)}
-                >
-                  {eventOptions.find(e => e.value === event)?.label || event}
+                  onRemove={() => handleRemoveEvent(event)}>{eventOptions.find(e => e.value === event)?.label || event}
                 </ClickableBadge>
               ))}
             </div>
             <div className="flex space-x-2">
               <Select
                 value={newWebhook.selectedEvent}
-                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}
-              >
-                <SelectTrigger className="w-full">
+                onValueChange={(value) => setNewWebhook({...newWebhook, selectedEvent: value as WebhookEventType})}><SelectTrigger className="w-full">
                   <SelectValue placeholder="Select event" />
                 </SelectTrigger>
                 <SelectContent>
@@ -233,9 +225,7 @@ export function WebhookManager() {
                         <Button 
                           variant="outline" 
                           size="sm"
-                          onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}
-                        >
-                          {webhook.is_active ? 'Disable' : 'Enable'}
+                          onClick={() => toggleWebhook(webhook.id, !webhook.is_active)}>{webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
                     </div>
@@ -264,15 +254,11 @@ export function WebhookManager() {
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => deleteWebhook(webhook.id)}
-                  >
-                    <Trash className="h-4 w-4 mr-2" /> Delete
+                    onClick={() => deleteWebhook(webhook.id)}><Trash className="h-4 w-4 mr-2" /> Delete
                   </Button>
                   
                   <Select
-                    onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}
-                  >
-                    <SelectTrigger className="w-[180px]">
+                    onValueChange={(value) => handleTestWebhook(webhook.id, value as WebhookEventType)}><SelectTrigger className="w-[180px]">
                       <SelectValue placeholder="Test webhook" />
                     </SelectTrigger>
                     <SelectContent>
@@ -316,7 +302,6 @@ export function WebhookManager() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 }setNewWebhook ({;
   ...newWebhook;
@@ -365,14 +350,14 @@ newWebhook.secret || undefined);";
 }` ";
 }></div> <span className="text-sm"> {';
   webhook.is active ? 'Active' : 'Inactive' ";
-}</span> </div> <div className="flex-shrink-0"> <Button > {';
+}</span> </div> <div className="flex-shrink-0"> <Button>{';
   webhook.is active ? 'Disable' : 'Enable' ";
 }</Button> </div> </div> </div> </CardHeader> <CardContent className="py-2"> <div className="flex flex-col space-y-2"> <div> <Label className="text-sm">Events</Label> </ClickableBadge>) ) ";
 }</div> </div> <div className="text-xs text-muted-foreground"> {;
   webhook.last triggered at ? `Last triggered: $ {;
   new Date (webhook.last triggered at) .toLocaleString () ';
 }` : 'Never triggered' ";
-}</div> </div> </CardContent> <CardFooter className="flex justify-between pt-2"> <Button > <Trash className="h-4 w-4 mr-2"/> Delete </Button> <Select onValueChange= {;
+}</div> </div> </CardContent> <CardFooter className="flex justify-between pt-2"> <Button><Trash className="h-4 w-4 mr-2"/> Delete </Button> <Select onValueChange= {;
   (value) => handleTestWebhook (webhook.id, value as WebhookEventType) ";
 }> <SelectTrigger className="w-[180px]"> <SelectValue placeholder=" Test webhook"/> </SelectTrigger> <SelectContent> </SelectItem>) ) ;
 }</SelectContent> </Select> </CardFooter> </Card>) ) ;
@@ -389,16 +374,9 @@ newWebhook.secret || undefined);";
 }</pre> </div> </div> </CardContent> </Card>) ;
 }</div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
 
   
 
+  
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

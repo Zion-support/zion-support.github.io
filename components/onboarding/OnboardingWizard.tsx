@@ -1,24 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
-=======
 import React, { useMemo, useState } from 'react'
 import { useUser } from '../../providers/UserProvider'
 import { useToast } from '../ui/ToastProvider'
 import Link from 'next/link'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
   const [step, setStep] = useState(0)
 
-<<<<<<< HEAD
   const isClient = user?.role === 'client';
-=======
 import React, { useMemo, useState } from 'react'
 import { useUser } from '../../providers/UserProvider'
 import { useToast } from '../ui/ToastProvider'
@@ -30,16 +24,11 @@ export default function OnboardingWizard() {
   const [step, setStep] = useState(0)
 
   const isClient = user?.role === 'client'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const isClient = user?.role === 'client'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const steps = useMemo(() => {
     if (isClient) {
       return [
-<<<<<<< HEAD
-<<<<<<< HEAD
         {
           title: 'Ready to find top IT talent?',
           content: (
@@ -67,7 +56,6 @@ export default function OnboardingWizard() {
           content: <p>Send invites or start a conversation to move fast.</p>,
         },;
       ];
-=======
         { title: 'Ready to find top IT talent?', content: (
           <div className="space-y-4">
             <p>Post a role or import your job brief to get started.</p>
@@ -76,7 +64,6 @@ export default function OnboardingWizard() {
         ) };
         { title: 'View suggested matches', content: <p>We will surface the best matches instantly based on your job brief.</p> },
         { title: 'Invite or message talent', content: <p>Send invites or start a conversation to move fast.</p> }]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     return [
       { title: 'Complete your profile', content: (
@@ -127,7 +114,6 @@ export default function OnboardingWizard() {
         {step < steps.length - 1 ? (
           <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>
         ) : (
-<<<<<<< HEAD
           <button
             onClick={() => {
               completeOnboarding();
@@ -141,7 +127,6 @@ export default function OnboardingWizard() {
           >
             Finish
           </button>
-=======
         { title: 'Ready to find top IT talent?', content: (
           <div className="space-y-4">
             <p>Post a role or import your job brief to get started.</p>
@@ -201,19 +186,9 @@ export default function OnboardingWizard() {
           <button onClick={() => setStep(s => Math.min(steps.length - 1, s + 1))} className="px-3 py-2 rounded-md border">Next</button>
         ) : (
           <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <button onClick={() => { completeOnboarding(), addToast({ title: 'Onboarding completed', description: 'You can revisit anytime from Settings.', variant: 'success' }) }} className="px-3 py-2 rounded-md border">Finish</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         )}
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { useLocalStorage } from '@/hooks';
 import { Header } from '@/components/Header';
@@ -120,9 +115,7 @@ export default function AccountSettings() {
                     variant="outline" 
                     onClick={handleConnectWallet}
                     type="button"
-                    className="flex items-center gap-1"
-                  >
-                    <Wallet className="h-4 w-4" />
+                    className="flex items-center gap-1"><Wallet className="h-4 w-4" />
                     Connect
                   </Button>
                 </div>
@@ -171,9 +164,7 @@ export default function AccountSettings() {
               <Button 
                 onClick={handleSave}
                 disabled={isSubmitting}
-                className="w-full"
-              >
-                {isSubmitting ? 'Saving...' : 'Save Settings'}
+                className="w-full">{isSubmitting ? 'Saving...' : 'Save Settings'}
                 {!isSubmitting && <Save className="ml-2 h-4 w-4" />}
               </Button>
             </CardContent>
@@ -199,9 +190,7 @@ export default function AccountSettings() {
                       strokeWidth="2" 
                       strokeLinecap="round" 
                       strokeLinejoin="round" 
-                      className="text-green-500"
-                    >
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                      className="text-green-500"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                       <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg>
                     <span>{didHandle}</span>
@@ -218,9 +207,7 @@ export default function AccountSettings() {
                       strokeWidth="2" 
                       strokeLinecap="round" 
                       strokeLinejoin="round" 
-                      className="text-red-500"
-                    >
-                      <line x1="18" y1="6" x2="6" y2="18"></line>
+                      className="text-red-500"><line x1="18" y1="6" x2="6" y2="18"></line>
                       <line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                     <span>No wallet connected</span>
@@ -279,17 +266,9 @@ export default function AccountSettings() {
       </main>
     </>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

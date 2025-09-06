@@ -53,9 +53,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     {job.requiredSkills.map((s: string) => (
                       <span
                         key={s}
-                        className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'
-                      >
-                        {s}
+                        className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'>{s}
                       </span>
       body: JSON.stringify({ status: 'Closed' })}),
     mutate()

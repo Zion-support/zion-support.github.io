@@ -3,8 +3,6 @@ import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 
 export default function BrowserAutomationCloudPage() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const features = [
     'Parallel Playwright/Puppeteer execution',
     'Queued jobs with retries and rate limits',
@@ -32,9 +30,7 @@ export default function BrowserAutomationCloudPage() {
             {features.map(f => (
               <div
                 key={f}
-                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'
-              >
-                <Check className='w-5 h-5 text-cyan-400 mt-1' />
+                className='flex items-start space-x-3 p-4 rounded-xl bg-white/5 border border-white/10'><Check className='w-5 h-5 text-cyan-400 mt-1' />
                 <p className='text-gray-200'>{f}</p>
               </div>
             ))}
@@ -56,34 +52,27 @@ export default function BrowserAutomationCloudPage() {
               href='https://playwright.dev/'
               target='_blank'
               rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> Playwright
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'><ExternalLink className='w-4 h-4' /> Playwright
             </a>
             <a
               href='https://pptr.dev/'
               target='_blank'
               rel='noreferrer'
-              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'
-            >
-              <ExternalLink className='w-4 h-4' /> Puppeteer
+              className='inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300'><ExternalLink className='w-4 h-4' /> Puppeteer
             </a>
           </div>
         </section>
       </main>
     </>
   );
-=======
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
 
-=======
 	const features = [
 		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
 	];
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
@@ -114,7 +103,3 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	);
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

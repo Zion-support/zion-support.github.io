@@ -209,9 +209,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <nav className='mb-8'>
                 <Link
                   href='/resources'
-                  className='text-cyan-400 hover:text-cyan-300 transition-colors'
-                >
-          <title>Automation Readiness Assessment - Results | Zion Tech Group</title>
+                  className='text-cyan-400 hover:text-cyan-300 transition-colors'><title>Automation Readiness Assessment - Results | Zion Tech Group</title>
           <meta name="description" content="View your automation readiness assessment results and get personalized recommendations." />
         </Head>
           <title>Automation Readiness Assessment - Results | Zion Tech Group</title>
@@ -250,9 +248,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {questions.map((q, index) => (
                     <div
                       key={q.id}
-                      className='bg-white/10 rounded-lg p-4 border border-white/20'
-                    >
-                      <h3 className='font-semibold text-cyan-400 mb-2'>
+                      className='bg-white/10 rounded-lg p-4 border border-white/20'><h3 className='font-semibold text-cyan-400 mb-2'>
                         {q.question}
                       </h3>
                       <p className='text-white/80 text-sm'>
@@ -340,9 +336,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <nav className='mb-8'>
               <Link
                 href='/resources'
-                className='text-cyan-400 hover:text-cyan-300 transition-colors'
-              >
-        <meta name="description" content="Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool." />
+                className='text-cyan-400 hover:text-cyan-300 transition-colors'><meta name="description" content="Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool." />
       </Head>
         <meta name="description" content="Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool." />
       </Head>
@@ -437,9 +431,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <button 
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
-                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {currentQuestion === questions.length - 1
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">{currentQuestion === questions.length - 1
                     ? 'Get Results'
                     : 'Next'}
               <div className="flex justify-between">
@@ -454,9 +446,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <button 
                   onClick={nextQuestion}
                   disabled={!answers[currentQ.id]}
-                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
+                  className="bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed">{currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
                   {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
 ursor/integrate-build-improve-and-re-verify-b76c
                 </button>

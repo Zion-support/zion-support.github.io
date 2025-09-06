@@ -242,8 +242,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               />
               <span className='relative inline-block w-10 h-6 bg-gray-300 rounded-full shadow-inner'>
                 <span
-                  className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}
-                ></span>
+                  className={`absolute left-0 top-0 w-6 h-6 bg-white rounded-full transition-transform ${displayWeb3 ? 'translate-x-4' : ''}`}></span>
       <div className="max-w-3xl mx-auto space-y-8">
         <section className="rounded-xl border p-5">
           <h1 className="text-xl font-semibold mb-2">Account</h1>
@@ -294,9 +293,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <button
               onClick={linkDID}
               disabled={linking}
-              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2'
-            >
-              {linking ? 'Linking…' : 'Link & Verify'}
+              className='rounded-md bg-black text-white dark:bg-white dark:text-black px-4 py-2'>{linking ? 'Linking…' : 'Link & Verify'}
             </button>
         <section className="rounded-xl border p-5">
           <h2 className="font-semibold mb-2">Link Web3 identities</h2>

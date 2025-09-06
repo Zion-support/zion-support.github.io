@@ -1,8 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -11,28 +9,20 @@ export default async function handler(
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'POST').toUpperCase();
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
 
   const { title, level, location, skills, responsibilities } = req.body || {};
-<<<<<<< HEAD
-<<<<<<< HEAD
   const prompt =
     `Generate a compelling, unbiased job description for a role.\n` +
-=======
   const prompt = `Generate a compelling, unbiased job description for a role.\n` +
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     `- Title: ${title || 'Software Engineer'}\n` +
     `- Level: ${level || 'Mid'}\n` +
     `- Location: ${location || 'Remote'}\n` +
@@ -40,13 +30,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     `- Responsibilities: ${(responsibilities || []).join()}\n` +
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`;
 
-<<<<<<< HEAD
   const text = await generateText(
     prompt,
     'You are an expert technical recruiter and compensation analyst.'
   );
   return res.status(200).json({ jobDescription: text });
-=======
   const prompt = `Generate a compelling, unbiased job description for a role.\n` +
     `- Title: ${title || 'Software Engineer'}\n` +
     `- Level: ${level || 'Mid'}\n` +
@@ -58,9 +46,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status(200).json({ jobDescription: text })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status(200).json({ jobDescription: text })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

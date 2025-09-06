@@ -365,9 +365,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     {caseStudy.results.map((result, index) => (
                       <li
                         key={index}
-                        className='text-white/80 flex items-center gap-3'
-                      >
-                        <div className='w-2 h-2 bg-green-400 rounded-full'></div>
+                        className='text-white/80 flex items-center gap-3'><div className='w-2 h-2 bg-green-400 rounded-full'></div>
               
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">

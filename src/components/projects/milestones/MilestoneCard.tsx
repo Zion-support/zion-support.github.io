@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -36,9 +31,6 @@ export function MilestoneCard({
   onReject
 }: MilestoneCardProps) {
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
-<<<<<<< HEAD
-
-=======
 
 import React from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -75,10 +67,7 @@ export function MilestoneCard({
 }: MilestoneCardProps) { const { isUnderDispute, disputeStatus  } = useDisputeCheck(projectId, id),
 
   
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   function getStatusBadgeColor() {
     switch (status) {
       case 'completed':
@@ -89,15 +78,11 @@ export function MilestoneCard({
         return 'bg-yellow-500';
       case 'rejected':
         return 'bg-red-500';
-<<<<<<< HEAD
-<<<<<<< HEAD
       default:
         return 'bg-gray-500';
     }
-=======
       default: return 'bg-gray-500'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   
   return (
@@ -107,9 +92,7 @@ export function MilestoneCard({
           <div>
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
-<<<<<<< HEAD
               <p className='text-sm text-muted-foreground'>
-=======
       default: return 'bg-gray-500'
     };
   }
@@ -122,52 +105,38 @@ export function MilestoneCard({
             <CardTitle className="text-xl">{title}</CardTitle>
             {dueDate && (
               <p className="text-sm text-muted-foreground">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-sm text-muted-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Due: {format(new Date(dueDate), 'MMM d, yyyy')}
               </p>
             )}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='flex gap-2'>
             <Badge
               variant='outline'
-              className={`capitalize ${getStatusBadgeColor()} text-white`}
-            >
-              {status.replace('_', ' ')}
+              className={`capitalize ${getStatusBadgeColor()} text-white`}>{status.replace('_', ' ')}
             </Badge>
 
-=======
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
             
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
             
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {isUnderDispute && disputeStatus && (
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <CardContent className='pb-2'>
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
           <p className='text-xl font-bold'>${amount.toFixed(2)}</p>
-=======
       
       <CardContent className="pb-2">
         {description && (
@@ -175,7 +144,6 @@ export function MilestoneCard({
         )}
         <div className="mt-4">
           <p className="text-xl font-bold">${amount.toFixed(2)}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </CardContent>
       
@@ -205,9 +173,7 @@ export function MilestoneCard({
           )}
           
           {isUnderDispute && (
-<<<<<<< HEAD
             <Button variant='outline' size='sm' disabled>
-=======
       
       <CardContent className="pb-2">
         {description && (
@@ -245,10 +211,7 @@ export function MilestoneCard({
           
           {isUnderDispute && (
             <Button variant="outline" size="sm" disabled>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Button variant="outline" size="sm" disabled>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Actions frozen due to dispute
             </Button>
           )}
@@ -256,11 +219,4 @@ export function MilestoneCard({
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

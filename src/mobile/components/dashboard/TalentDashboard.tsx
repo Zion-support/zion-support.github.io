@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -19,8 +17,6 @@ import {
   BookOpen,;
 } from 'lucide-react';
 import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -85,13 +81,11 @@ export function TalentDashboard() {
                   <span className="text-xs text-muted-foreground mt-1">4 hours ago</span>
                 </div>
               </div>
-<<<<<<< HEAD
               <div className='flex gap-2 mt-3'>
                 <Button size='sm'>Apply Now</Button>
                 <Button size='sm' variant='outline'>
                   View Details
                 </Button>
-=======
 
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
@@ -159,23 +153,15 @@ export function TalentDashboard() {
               <div className="flex gap-2 mt-3">
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex gap-2 mt-3">
                 <Button size="sm">Apply Now</Button>
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
         <Card>
@@ -198,9 +184,7 @@ export function TalentDashboard() {
                 <div className="text-xs text-muted-foreground">Jobs Viewed</div>
               </div>
             </div>
-<<<<<<< HEAD
             <Button variant='outline' className='w-full mt-4'>
-=======
       
       <section>
         <h2 className="text-lg font-medium mb-4">Application Tracker</h2>
@@ -225,56 +209,38 @@ export function TalentDashboard() {
               </div>
             </div>
             <Button variant="outline" className="w-full mt-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Button variant="outline" className="w-full mt-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               View All Applications
             </Button>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
         <div className="grid grid-cols-2 gap-4">
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
-            aria-label="Update Resume"
-          >
-            <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
+            aria-label="Update Resume"><FileText className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Update Resume</span>
           </Button>
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
-            aria-label="View Portfolio"
-          >
-            <Image className="h-5 w-5 mb-1" aria-hidden="true" />
+            aria-label="View Portfolio"><Image className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Portfolio</span>
           </Button>
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
-            aria-label="Set Availability"
-          >
-            <Clock className="h-5 w-5 mb-1" aria-hidden="true" />
+            aria-label="Set Availability"><Clock className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Availability</span>
           </Button>
-<<<<<<< HEAD
           <Button
             variant='outline'
             className='h-auto py-4 flex flex-col gap-1'
-            aria-label='AI Resume Boost'
-          >
-            <Zap className='h-5 w-5 mb-1' aria-hidden='true' />
-=======
+            aria-label='AI Resume Boost'><Zap className='h-5 w-5 mb-1' aria-hidden='true' />
       
       <section>
         <h2 className="text-lg font-medium mb-4">Quick Actions</h2>
@@ -282,79 +248,59 @@ export function TalentDashboard() {
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
-            aria-label="Update Resume"
-          >
-            <FileText className="h-5 w-5 mb-1" aria-hidden="true" />
+            aria-label="Update Resume"><FileText className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Update Resume</span>
           </Button>
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
-            aria-label="View Portfolio"
-          >
-            <Image className="h-5 w-5 mb-1" aria-hidden="true" />
+            aria-label="View Portfolio"><Image className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Portfolio</span>
           </Button>
           <Button
             variant="outline"
             className="h-auto py-4 flex flex-col gap-1"
-            aria-label="Set Availability"
-          >
-            <Clock className="h-5 w-5 mb-1" aria-hidden="true" />
+            aria-label="Set Availability"><Clock className="h-5 w-5 mb-1" aria-hidden="true" />
             <span>Availability</span>
           </Button>
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <Button variant="outline" className="h-auto py-4 flex flex-col gap-1" aria-label="AI Resume Boost">
             <Zap className="h-5 w-5 mb-1" aria-hidden="true" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <span>AI Resume Boost</span>
           </Button>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <section>
         <div className='flex items-center justify-between mb-4'>
           <h2 className='text-lg font-medium'>Learning Hub</h2>
           <Button variant='ghost' size='sm' className='h-8'>
-=======
       
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
           <Button variant="ghost" size="sm" className="h-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Learning Hub</h2>
           <Button variant="ghost" size="sm" className="h-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             View all
           </Button>
         </div>
         <Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <CardContent className='p-4'>
             <div className='flex items-center gap-3'>
               <div
                 className='bg-primary/10 p-3 rounded-full'
-                aria-hidden='true'
-              >
-                <BookOpen className='h-6 w-6 text-primary' />
+                aria-hidden='true'><BookOpen className='h-6 w-6 text-primary' />
               </div>
               <div>
                 <h3 className='font-medium'>Improve your profile visibility</h3>
                 <p className='text-sm text-muted-foreground'>
                   5 tips for getting noticed by clients
                 </p>
-=======
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
               <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
@@ -363,8 +309,6 @@ export function TalentDashboard() {
               <div>
                 <h3 className="font-medium">Improve your profile visibility</h3>
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <CardContent className="p-4">
             <div className="flex items-center gap-3">
               <div className="bg-primary/10 p-3 rounded-full" aria-hidden="true">
@@ -373,7 +317,6 @@ export function TalentDashboard() {
               <div>
                 <h3 className="font-medium">Improve your profile visibility</h3>
                 <p className="text-sm text-muted-foreground">5 tips for getting noticed by clients</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </CardContent>
@@ -381,11 +324,4 @@ export function TalentDashboard() {
       </section>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

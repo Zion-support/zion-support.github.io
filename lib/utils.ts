@@ -7,33 +7,26 @@ export function cn(...inputs: ClassValue[]) {
 
 export function formatDate(date: Date | string | number): string {
   return new Intl.DateTimeFormat("en-US", {
-<<<<<<< HEAD
     month: "long", day: "numeric",
     year: "numeric",
-=======
     month: "long";
     day: "numeric";
     year: "numeric";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }).format(new Date(date));
 }
 
 export function formatCurrency(amount: number, currency = "USD"): string {
   return new Intl.NumberFormat("en-US", {
-<<<<<<< HEAD
     style: "currency", currency,
   }).format(amount);
 }
 
-
 };
 
-=======
     style: "currency";
     currency;
   }).format(amount);
 }
-<<<<<<< HEAD
 
 export function slugify(text: string): string {
   return text
@@ -72,7 +65,4 @@ export function throttle<T extends (...args: any[]) => any>(
     }
   };
 }
-=======
 };
->>>>>>> pr-11992
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import {
   DropdownMenu,
@@ -10,7 +8,6 @@ import {
 import { Button } from '@/components/ui/button';
 import { Eye, ChevronDown, Loader2 } from 'lucide-react';
 import { JobApplication, ApplicationStatus } from '@/types/jobs';
-=======
 
 import Link from "next/link";
 import { 
@@ -22,7 +19,6 @@ import {
 import { Button } from "@/components/ui/button";
 import { Eye, ChevronDown, Loader2 } from 'lucide-react'
 import { JobApplication, ApplicationStatus } from "@/types/jobs";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ApplicationActionsProps {
   application: JobApplication,
@@ -43,9 +39,7 @@ export function ApplicationActions({
         variant="outline" 
         size="sm" 
         onClick={() => onViewApplication(application.id)}
-        disabled={!!application.viewed_at}
-      >
-        <Eye className="h-4 w-4" />
+        disabled={!!application.viewed_at}><Eye className="h-4 w-4" />
       </Button>
       
       <DropdownMenu>
@@ -53,9 +47,7 @@ export function ApplicationActions({
           <Button 
             variant="outline" 
             size="sm"
-            disabled={processingId === application.id}
-          >
-            {processingId === application.id ? (
+            disabled={processingId === application.id}>{processingId === application.id ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
@@ -78,11 +70,9 @@ export function ApplicationActions({
           >
             Hire
           </DropdownMenuItem>
-<<<<<<< HEAD
           <DropdownMenuItem
             onClick={() => onStatusChange(application.id, 'rejected')}
             className='text-red-600'
-=======
 
 import Link from "next/link";
 import { 
@@ -116,9 +106,7 @@ export function ApplicationActions({
         variant="outline" 
         size="sm" 
         onClick={() => onViewApplication(application.id)}
-        disabled={!!application.viewed_at}
-      >
-        <Eye className="h-4 w-4" />
+        disabled={!!application.viewed_at}><Eye className="h-4 w-4" />
       </Button>
       
       <DropdownMenu>
@@ -126,9 +114,7 @@ export function ApplicationActions({
           <Button 
             variant="outline" 
             size="sm"
-            disabled={processingId === application.id}
-          >
-            {processingId === application.id ? (
+            disabled={processingId === application.id}>{processingId === application.id ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>
@@ -154,45 +140,24 @@ export function ApplicationActions({
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <DropdownMenuItem 
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <Button variant='default' size='sm' asChild>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       
       <Button 
         variant="default" 
         size="sm"
-        asChild
-      >
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-        <Link href={`/messages?talentId=${application.talent_id}`}>
+        asChild><Link href={`/messages?talentId=${application.talent_id}`}>
           Contact
         </Link>
       </Button>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

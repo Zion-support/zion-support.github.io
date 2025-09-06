@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react';
 import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
@@ -12,10 +8,8 @@ import { cn } from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
 
 interface ProfileBadgeProps {
-<<<<<<< HEAD
   type: BadgeType;
   className?: string;
-=======
 
 import React from "react";
 import { BadgeCheck, Star, Clock, Award } from 'lucide-react'
@@ -23,31 +17,23 @@ import { cn } from "@/lib/utils";
 
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
 
-
 interface ProfileBadgeProps {
   type: BadgeType,
   className?: string
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   type: BadgeType,
   className?: string
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   const badgeConfig = {
     verified: {
       icon: BadgeCheck,
-<<<<<<< HEAD
-<<<<<<< HEAD
       text: 'Verified',
       colors: 'bg-blue-500/20 text-blue-400',
     },
-=======
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     featured: {
       icon: Star,
       text: "Featured",
@@ -72,7 +58,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       <Icon className="w-3 h-3" />
       <span>{text}</span>
     </div>
-<<<<<<< HEAD
   );
 
   type, className ;
@@ -87,7 +72,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
   text ;
 }</span> ;
 }'"
-=======
       text: "Verified",
       colors: "bg-blue-500/20 text-blue-400"},
     featured: {
@@ -103,9 +87,7 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
 
-
   const { icon: Icon, text, colors  } = badgeConfig[type],
-
 
   return (
     <div className = {cn(
@@ -118,8 +100,5 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

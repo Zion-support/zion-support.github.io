@@ -357,9 +357,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+              transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Zion Tech Group
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -383,9 +381,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-            >
-              {stats.map((stat, index) => (
+              transition={{ duration: 0.8, delay: 0.3 }}>{stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                     {stat.number}
@@ -407,9 +403,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Our <span className="text-cyan-400">Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -424,9 +418,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6 h-full">
+                  viewport={{ once: true }}><Card className="p-6 h-full">
                     <div className="text-cyan-400 mb-4">
                       {service.icon}
                     </div>
@@ -459,9 +451,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Why Choose <span className="text-cyan-400">Zion Tech</span>?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -475,9 +465,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                viewport={{ once: true }}><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Zap className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-white">Lightning Fast</h3>
@@ -491,9 +479,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                viewport={{ once: true }}><div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Shield className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-white">Secure & Reliable</h3>
@@ -507,9 +493,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                viewport={{ once: true }}
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                viewport={{ once: true }}><div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <Brain className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-white">AI-Powered</h3>
@@ -529,9 +513,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 What Our <span className="text-cyan-400">Clients Say</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -546,9 +528,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <Card className="p-6">
+                  viewport={{ once: true }}><Card className="p-6">
                     <div className="flex mb-4">
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -575,9 +555,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">

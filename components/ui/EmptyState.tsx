@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import EnhancedButton from "./EnhancedButton";
 
-=======
 import React from 'react';
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export type EmptyStateProps = {
   title: string,
   description?: string;
@@ -28,9 +24,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
           {primaryAction && (
             <Link href={primaryAction.href}>
               <a>
-<<<<<<< HEAD
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>
-=======
 import React from 'react';
 import Link from 'next/link';
 import EnhancedButton from './EnhancedButton';
@@ -54,27 +48,18 @@ export default function EmptyState({ title, description, icon, primaryAction, se
             <Link href={primaryAction.href}>
               <a>
                 <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </a>
             </Link>
           )}
           {secondaryAction && (
             <Link href={secondaryAction.href}>
               <a>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <EnhancedButton variant='secondary' size='md'>
                   {secondaryAction.label}
                 </EnhancedButton>
-=======
                 <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </a>
             </Link>
           )}
@@ -82,11 +67,4 @@ export default function EmptyState({ title, description, icon, primaryAction, se
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
-=======
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -14,7 +11,6 @@ interface LazySectionProps {
   delay?: number;
   direction?: 'up' | 'down' | 'left' | 'right'
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children;
@@ -36,9 +32,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       case 'right':
         return { opacity: 0, x: -50 },
       default:
-<<<<<<< HEAD
         return { opacity: 0, y: 50 };
-=======
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
@@ -71,22 +65,14 @@ export const LazySection: React.FC<LazySectionProps> = ({
         return { opacity: 0, x: -50 },
       default:
         return { opacity: 0, y: 50 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         return { opacity: 0, y: 50 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':
-<<<<<<< HEAD
-<<<<<<< HEAD
         return { opacity: 1, y: 0 };
-=======
-        return { opacity: 1, y: 0 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       case 'down':
         return { opacity: 1, y: 0 },
       case 'left':
@@ -104,16 +90,12 @@ export const LazySection: React.FC<LazySectionProps> = ({
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
       transition={{ duration: 0.8, delay, ease: "easeOut" }}
-      className={className}
-    >
-      {children}
+      className={className}>{children}
     </motion.div>
   )
 };
 
-<<<<<<< HEAD
 export default LazySection;
-=======
         return { opacity: 1, y: 0 },
       case 'down':
         return { opacity: 1, y: 0 },
@@ -132,15 +114,10 @@ export default LazySection;
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
       transition={{ duration: 0.8, delay, ease: "easeOut" }}
-      className={className}
-    >
-      {children}
+      className={className}>{children}
     </motion.div>
   )
 };
 
 export default LazySection;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default LazySection;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, {
   useState;
   useEffect;
@@ -190,9 +189,7 @@ export function ChatAssistant({
       className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
       role="dialog"
       aria-modal="true"
-      aria-labelledby="chat-assistant-title"
-    >
-      <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
+      aria-labelledby="chat-assistant-title"><div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">
         {/* Header */}
         <div className="bg-zion-blue-dark p-3 flex items-center justify-between border-b border-zion-purple/20">
           <div className="flex items-center space-x-3">
@@ -216,9 +213,7 @@ export function ChatAssistant({
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
             onClick={onClose}
-            aria-label="Close chat"
-          >
-            <X className="h-5 w-5" />
+            aria-label="Close chat"><X className="h-5 w-5" />
           </Button>
         </div>
 
@@ -232,9 +227,7 @@ export function ChatAssistant({
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
-          aria-live="polite"
-        >
-          {currentMessages.length === 0 ? (
+          aria-live="polite">{currentMessages.length === 0 ? (
             <div className="text-center text-zion-slate py-8 space-y-4">
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
@@ -244,9 +237,7 @@ export function ChatAssistant({
                       key={idx}
                       variant="outline"
                       className="text-xs"
-                      onClick={() => handleSendMessage(q)}
-                    >
-                      {q}
+                      onClick={() => handleSendMessage(q)}>{q}
                     </Button>
                   ))}
                 </div>
@@ -271,9 +262,7 @@ export function ChatAssistant({
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
           aria-modal="true"
-          aria-labelledby="confirm-message-title"
-        >
-          <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
+          aria-labelledby="confirm-message-title"><div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md">
             <h3
               id="confirm-message-title"
               className="text-lg font-semibold text-white mb-4"
@@ -303,7 +292,6 @@ export function ChatAssistant({
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }, [ isGuest;
 initialMessages;
@@ -321,12 +309,12 @@ setGuestMessage (null) ;
 };
 if (!isOpen) return null;
 return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="chat-assistant-title" >) ";
-}</div> </div> <Button > <X className="h-5 w-5" /> </Button> </div> {;
+}</div> </div> <Button><X className="h-5 w-5" /> </Button> </div> {;
   contextHeader ;
 }</div>) ;
 }{;
   /* Messages */ ";
-}<div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite" > > {;
+}<div className="flex-1 overflow-y-auto p-4 space-y-4" aria-live="polite" >>{;
   q ;
 }</Button>) ) ;
 }</div>) ;
@@ -340,26 +328,16 @@ return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify
 }<div ref= {;
   messagesEndRef ;
 }/> </div> </div> </div> {";
-  showGuestModal && guestMessage && (<div className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title" > <div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md" > <h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4" > Confirm Message </h3> <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words" > {;
+  showGuestModal && guestMessage && (<div className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="confirm-message-title"><div className="bg-zion-blue-darker p-6 rounded-lg shadow-xl w-full max-w-md"><h3 id="confirm-message-title" className="text-lg font-semibold text-white mb-4" > Confirm Message </h3> <p className="text-zion-slate mb-6 whitespace-pre-wrap break-words">{;
   guestMessage ";
-}</p> <div className="flex justify-end space-x-3" > <Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
+}</p> <div className="flex justify-end space-x-3"><Button > Cancel </Button> <Button > Send </Button> </div> </div> </div>) ;
 }</div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated;
-
-<<<<<<< HEAD
-
 
   const handleSendMessage = async (messageContent: string) => {
 
     if (!messageContent.trim()) return,
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

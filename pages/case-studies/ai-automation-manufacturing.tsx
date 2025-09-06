@@ -60,9 +60,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <nav className='mb-8'>
               <Link
                 href='/case-studies'
-                className='text-cyan-400 hover:text-cyan-300 transition-colors'
-              >
-        <meta name="description" content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
+                className='text-cyan-400 hover:text-cyan-300 transition-colors'><meta name="description" content={`Learn how ${caseStudy.company} achieved ${caseStudy.results[0]} with AI automation.`} />
         <meta name="keywords" content="AI automation, manufacturing, case study, predictive maintenance, quality control" />
       </Head>
       
@@ -157,9 +155,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 {caseStudy.technologies.map((tech, index) => (
                   <div
                     key={index}
-                    className='bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center'
-                  >
-                    <span className='text-blue-400 font-semibold'>{tech}</span>
+                    className='bg-blue-500/10 rounded-lg p-4 border border-blue-500/20 text-center'><span className='text-blue-400 font-semibold'>{tech}</span>
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Technologies Used</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

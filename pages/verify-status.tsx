@@ -308,9 +308,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <div className='space-y-2'>
             <label
               htmlFor='email'
-              className='block text-sm font-medium text-gray-700'
-            >
-          <div className="space-y-2">
+              className='block text-sm font-medium text-gray-700'><div className="space-y-2">
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
 ursor/integrate-build-improve-and-re-verify-b76c
               Email Address
@@ -388,21 +386,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
               onClick={handleCheckStatus}
               disabled={!email || isCheckingStatus}
               className='w-full'
-              variant='outline'
-            >
-              {isCheckingStatus ? (
+              variant='outline'>{isCheckingStatus ? (
                 <>
                   <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
               className="w-full"
-              variant="outline"
-            >
-              {isCheckingStatus ? (
+              variant="outline">{isCheckingStatus ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
               className="w-full"
-              variant="outline"
-            >
-              {isCheckingStatus ? (
+              variant="outline">{isCheckingStatus ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -424,21 +416,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
               onClick={handleResendEmail}
               disabled={!email || isResending || countdown > 0}
               className='w-full'
-              variant='secondary'
-            >
-              {isResending ? (
+              variant='secondary'>{isResending ? (
                 <>
                   <RefreshCw className='h-4 w-4 mr-2 animate-spin' />
               className="w-full"
-              variant="secondary"
-            >
-              {isResending ? (
+              variant="secondary">{isResending ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
               className="w-full"
-              variant="secondary"
-            >
-              {isResending ? (
+              variant="secondary">{isResending ? (
                 <>
                   <RefreshCw className="h-4 w-4 mr-2 animate-spin" />
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -487,9 +473,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               onClick={handleGoBack}
               variant="ghost"
               size="sm"
-              className="text-blue-600 hover:text-blue-500"
-            >
-              <ArrowLeft className='h-4 w-4 mr-1' />
+              className="text-blue-600 hover:text-blue-500"><ArrowLeft className='h-4 w-4 mr-1' />
           <div className="text-center text-sm text-gray-500 space-y-2">
             <p>
               Can't find the verification email? Check your spam folder or try a different email address.
@@ -498,9 +482,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               onClick={handleGoBack}
               variant="ghost"
               size="sm"
-              className="text-blue-600 hover:text-blue-500"
-            >
-              <ArrowLeft className="h-4 w-4 mr-1" />
+              className="text-blue-600 hover:text-blue-500"><ArrowLeft className="h-4 w-4 mr-1" />
               <ArrowLeft className="h-4 w-4 mr-1" />
 ursor/integrate-build-improve-and-re-verify-b76c
               Go Back

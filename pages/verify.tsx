@@ -313,10 +313,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 {requiredDocs.map(k => {
                   const hasIt = (profile.documents || []).some(
                     d => d.kind === k
-                  );
-                  
-                    >
-              <h2 className="font-semibold mb-2">Required documents</h2>
+                  );><h2 className="font-semibold mb-2">Required documents</h2>
               <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                 {requiredDocs.map((k) => {
                   const hasIt = (profile.documents || []).some((d) => d.kind === k);
@@ -356,10 +353,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {optionalDocs.map(k => {
                     const hasIt = (profile.documents || []).some(
                       d => d.kind === k
-                    );
-                    
-                      >
-                <h2 className="font-semibold mb-2">Optional documents</h2>
+                    );><h2 className="font-semibold mb-2">Optional documents</h2>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-2">
                   {optionalDocs.map((k) => {
                     const hasIt = (profile.documents || []).some((d) => d.kind === k);

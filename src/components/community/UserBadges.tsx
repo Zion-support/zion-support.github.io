@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react';
 import { Badge } from '@/types/community';
 import {
@@ -8,12 +6,10 @@ import {
   TooltipProvider,
   TooltipTrigger,;
 } from '@/components/ui/tooltip';
-=======
 
 import { Trophy, Award, BadgeCheck, Star, MessageSquare } from 'lucide-react'
 import { Badge } from "@/types/community";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface UserBadgesProps {
   badges: Badge[]
@@ -42,9 +38,7 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
               <TooltipTrigger asChild>
                 <div 
                   style={{ backgroundColor: badge.color + '20' }}
-                  className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"
-                >
-                  <IconComponent 
+                  className="w-8 h-8 rounded-full flex items-center justify-center cursor-pointer"><IconComponent 
                     style={{ color: badge.color }} 
                     className="w-4 h-4" 
                   />
@@ -65,17 +59,9 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {
 };
 
 export default UserBadges;
-<<<<<<< HEAD
 '"
-=======
-<<<<<<< HEAD
         const IconComponent = iconMap[badge.icon as keyof typeof iconMap] || Trophy;
         
-<<<<<<< HEAD
-
 
 export default UserBadges;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

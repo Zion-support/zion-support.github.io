@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react'
 import { cn } from "@/lib/utils";
@@ -52,9 +47,7 @@ export function CodeBlock({
       <button
         className="absolute top-2 right-2 p-2 rounded-md hover: bg-zinc-800 transition-colors"
         onClick={handleCopyClick}
-        aria-label="Copy code"
-      >
-        {copied ? <Check size={16} /> : <Copy size={16} />}
+        aria-label="Copy code">{copied ? <Check size={16} /> : <Copy size={16} />}
       </button>
       {language && (
         <div className="absolute top-2 left-2 px-2 py-1 text-xs rounded-md bg-zinc-800 text-zinc-400">
@@ -66,10 +59,6 @@ export function CodeBlock({
 }
 
 export default CodeBlock;
-=======
-
-<<<<<<< HEAD
 
 export default CodeBlock;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

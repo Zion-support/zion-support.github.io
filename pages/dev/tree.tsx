@@ -148,9 +148,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           />
           <button
             className='px-3 py-1 text-sm bg-blue-600 text-white rounded'
-            onClick={handleSaveToken}
-          >
-    <div className="p-6 max-w-5xl mx-auto">
+            onClick={handleSaveToken}><div className="p-6 max-w-5xl mx-auto">
       <div className="flex items-center gap-4 mb-4">
         <h1 className="text-xl font-semibold">Zion OS Source Tree</h1>
         {git && (

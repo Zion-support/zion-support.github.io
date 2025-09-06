@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -141,9 +140,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Label htmlFor="budget" className="text-white">Estimated Budget</Label>
                 <Select 
                   value={formData.budget} 
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}
-                >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, budget: value }))}><SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your budget range" />
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
@@ -165,9 +162,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Label className="text-white">Project Timeline</Label>
                 <Select 
                   value={formData.timeframe}
-                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}
-                >
-                  <SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
+                  onValueChange={(value) => setFormData(prev => ({ ...prev, timeframe: value }))}><SelectTrigger className="bg-zion-blue-dark border-zion-blue-light text-white">
                     <SelectValue placeholder="Select your timeline" />
                   </SelectTrigger>
                   <SelectContent className="bg-zion-blue-dark border-zion-blue-light">
@@ -190,9 +185,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         className={cn(
                           "justify-start text-left font-normal w-full";
                           "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
+                        )}><CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
                         {startDate ? format(startDate, "PPP") : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
@@ -217,9 +210,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                         className={cn(
                           "justify-start text-left font-normal w-full";
                           "bg-zion-blue-dark border-zion-blue-light text-white"
-                        )}
-                      >
-                        <CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
+                        )}><CalendarIcon className="mr-2 h-4 w-4" aria-hidden="true" />
                         {endDate ? format(endDate, "PPP") : <span>Pick a date</span>}
                       </Button>
                     </PopoverTrigger>
@@ -322,9 +313,7 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
                 <Button 
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple"
-                >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple">{isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
             </div>
@@ -333,7 +322,6 @@ export function ServiceQuoteModal({ open, onOpenChange, service }: ServiceQuoteM
       </DialogContent>
     </Dialog>
   );
-<<<<<<< HEAD
 
 });
 if (error) throw error;
@@ -395,9 +383,6 @@ else if (currentStep === 'contact') setCurrentStep ('timeline') ;
 }className=" bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple" > Next </Button>) : (<Button </Button>) ;
 }</div> </DialogFooter> </form> </DialogContent> </Dialog>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
             ...formData;
             startDate: startDate?.toISOString(),
@@ -405,7 +390,4 @@ else if (currentStep === 'contact') setCurrentStep ('timeline') ;
         }
       });
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

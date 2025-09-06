@@ -1,44 +1,30 @@
 import React from 'react';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 type Props = {
   region?: string;
   service?: string;
-=======
 type Props = {
   region?: string;
   service?: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 type Props = {
   region?: string;
   service?: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 function matchesRegion(profile: TalentProfile, region?: string) {
   if (!region) return true;
   const r = region.toLowerCase();
-<<<<<<< HEAD
-<<<<<<< HEAD
   return profile.location.toLowerCase().includes(r);
-=======
   return profile.location.toLowerCase().includes(r)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return profile.location.toLowerCase().includes(r)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function matchesService(profile: TalentProfile, service?: string) {
   if (!service) return true;
   const s = service.toLowerCase();
-<<<<<<< HEAD
-<<<<<<< HEAD
   return (
     profile.title.toLowerCase().includes(s) ||
     profile.skills.some(sk => sk.toLowerCase().includes(s))
@@ -50,36 +36,28 @@ export default function TalentGrid({ region, service }: Props) {
       TALENT_PROFILES.filter(
         p => matchesRegion(p, region) && matchesService(p, service)
       ),
-=======
   return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
 }
 
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return profile.title.toLowerCase().includes(s) || profile.skills.some((sk) => sk.toLowerCase().includes(s))
 }
 
 export default function TalentGrid({ region, service }: Props) {
   const items = React.useMemo(
     () => TALENT_PROFILES.filter((p) => matchesRegion(p, region) && matchesService(p, service)),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     [region, service]
   );
 
   if (items.length === 0) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     return (
       <div className='text-sm text-gray-400'>
         No matching talent found. Try broadening filters.
       </div>
     );
-=======
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
@@ -99,11 +77,9 @@ export default function TalentGrid({ region, service }: Props) {
               <span key={sk} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300">{sk}</span>
             ))}
           </div>
-<<<<<<< HEAD
           <div className='mt-3 text-sm'>
             ${p.hourlyRateUsd}/hr • {p.availability}
           </div>
-=======
     return <div className="text-sm text-gray-400">No matching talent found. Try broadening filters.</div>
   }
 
@@ -125,19 +101,9 @@ export default function TalentGrid({ region, service }: Props) {
             ))}
           </div>
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="mt-3 text-sm">${p.hourlyRateUsd}/hr • {p.availability}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       ))}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

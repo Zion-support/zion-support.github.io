@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
@@ -164,9 +159,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       <RadioGroup 
         value={selectedOption} 
         onValueChange={(value) => handleOptionChange(value as 'recent' | 'select' | 'upload')}
-        className="space-y-3"
-      >
-        <div className="flex items-center space-x-2">
+        className="space-y-3"><div className="flex items-center space-x-2">
           <RadioGroupItem value="recent" id="recent" />
           <Label htmlFor="recent" className="text-white">Use most recent AI Resume</Label>
         </div>
@@ -213,15 +206,12 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
         <Button 
           variant="outline"
           onClick={handleGenerateResume}
-          className="text-zion-purple border-zion-purple/20"
-        >
-          <Plus className="h-4 w-4 mr-2" />
+          className="text-zion-purple border-zion-purple/20"><Plus className="h-4 w-4 mr-2" />
           Generate Resume Now
         </Button>
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 };
 }, [fetchResume]);
@@ -254,7 +244,7 @@ toast ({;
 //Handle "Generate Resume Now" button const handleGenerateResume = () => {';
   window.open ('/dashboard/talent/portfolio blank') ;
 };";
-return (<div className="space-y-4" > <h3 className="text-lg font-medium text-white" >Attach Resume</h3> <RadioGroup value= {;
+return (<div className="space-y-4"><h3 className="text-lg font-medium text-white" >Attach Resume</h3> <RadioGroup value= {;
   selectedOption ;
 }onValueChange= {';
   (value) => handleOptionChange (value as 'recent'| 'select'| 'upload') ";
@@ -288,19 +278,11 @@ return (<div className="space-y-4" > <h3 className="text-lg font-medium text-whi
 }/>) ";
 }> <Plus className=" h-4 w-4 mr-2" /> Generate Resume Now </Button> </div> </div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
     
-<<<<<<< HEAD
 
         return
       }
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
@@ -90,9 +89,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
           size="icon"
           onClick={onClose}
           aria-label="Close menu"
-          title="Close menu"
-        >
-          <X className="h-5 w-5" />
+          title="Close menu"><X className="h-5 w-5" />
         </Button>
       </div>
 
@@ -119,9 +116,7 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
               }
               onClose(), // Close mobile menu on any click
-            }}
-          >
-            <div className="relative mr-4">
+            }}><div className="relative mr-4">
               <item.icon className="h-5 w-5" aria-hidden="true" />
               {item.badge && item.badge > 0 && (
                 <span className="absolute -top-2 -right-2 bg-primary text-primary-foreground text-xs rounded-full h-4 w-4 flex items-center justify-center">
@@ -137,7 +132,6 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
         <ModeToggle />
       </div>
     </div>
-<<<<<<< HEAD
   );
 
 }> {';
@@ -146,15 +140,10 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
 }</div> {;
   item.name ;
 }</Link>) ) ";
-}</nav> <div className="mt-6 px-6" > <ModeToggle /> </div> </div>) ;
+}</nav> <div className="mt-6 px-6"><ModeToggle /> </div> </div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

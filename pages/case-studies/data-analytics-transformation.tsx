@@ -438,9 +438,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   ].map(tech => (
                     <div
                       key={tech}
-                      className='bg-white/5 rounded-lg p-4 text-center border border-white/10'
-                    >
-                      <span className='text-purple-400 font-semibold'>
+                      className='bg-white/5 rounded-lg p-4 text-center border border-white/10'><span className='text-purple-400 font-semibold'>
                         {tech}
                       </span>
 ursor/integrate-build-improve-and-re-verify-b76c

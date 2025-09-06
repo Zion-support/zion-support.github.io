@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
@@ -109,9 +104,7 @@ export function AIEnhancementPanel({
         <Button 
           onClick={handleGenerate} 
           className="w-full" 
-          disabled={isEnhancing || !options.content && !options.context}
-        >
-          {isEnhancing ? (
+          disabled={isEnhancing || !options.content && !options.context}>{isEnhancing ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Enhancing...
@@ -133,9 +126,7 @@ export function AIEnhancementPanel({
                 variant="ghost" 
                 size="sm" 
                 onClick={handleCopy}
-                className="h-8"
-              >
-                {copied ? (
+                className="h-8">{copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
                   <><Copy className="h-4 w-4 mr-1" /> Copy</>
@@ -167,14 +158,8 @@ export function AIEnhancementPanel({
       )}
     </Card>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
     ...defaultOptions;
     content: initialContent || defaultOptions.content}),
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -433,9 +433,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">News & Updates</h1>
+              className="text-center"><h1 className="text-4xl md:text-6xl font-bold mb-6">News & Updates</h1>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
                 Stay informed about our latest developments, product launches, and industry insights.
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
@@ -458,9 +456,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
-              {categories.map((category, index) => (
+              className="flex flex-wrap justify-center gap-4">{categories.map((category, index) => (
                 <button
                   key={category}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
@@ -581,9 +577,7 @@ export default function NewsPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            className="mb-8"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               News & Press
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -595,9 +589,7 @@ export default function NewsPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            className="mb-12"><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
               innovation from Zion Tech Group and our global team.
             </p>
@@ -614,9 +606,7 @@ export default function NewsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
+              className="text-center mb-12"><h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
               <p className="text-white/70">Latest headlines and major announcements</p>
             </motion.div>
 
@@ -628,9 +618,7 @@ export default function NewsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-                >
-                  <div className="p-8">
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"><div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
                         <item.icon className="w-6 h-6 text-white" />
@@ -683,9 +671,7 @@ export default function NewsPage() {
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                     : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>
@@ -700,9 +686,7 @@ export default function NewsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Stay informed about our latest developments and industry recognition
             </p>
@@ -716,9 +700,7 @@ export default function NewsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-              >
-                <div className="p-6">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"><div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
                       <item.icon className="w-5 h-5 text-white" />
@@ -780,9 +762,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4">Latest News</h2>
+              className="text-center mb-16"><h2 className="text-4xl font-bold mb-4">Latest News</h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our most recent developments and announcements
               </p>
@@ -795,9 +775,7 @@ export default function NewsPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  {category.name} ({category.count})
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300">{category.name} ({category.count})
                 </motion.button>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Latest News & Updates
@@ -818,9 +796,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
-              {categories.map((category, index) => (
+              className="flex flex-wrap justify-center gap-4">{categories.map((category, index) => (
                 <button
                   key={category}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
@@ -941,9 +917,7 @@ export default function NewsPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            className="mb-8"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               News & Press
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -955,9 +929,7 @@ export default function NewsPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            className="mb-12"><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover the latest developments in AI, quantum computing, and technology 
               innovation from Zion Tech Group and our global team.
             </p>
@@ -974,9 +946,7 @@ export default function NewsPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
+              className="text-center mb-12"><h2 className="text-3xl font-bold text-white mb-4">Featured News</h2>
               <p className="text-white/70">Latest headlines and major announcements</p>
             </motion.div>
 
@@ -988,9 +958,7 @@ export default function NewsPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-                >
-                  <div className="p-8">
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"><div className="p-8">
                     <div className="flex items-center gap-3 mb-4">
                       <div className={`w-12 h-12 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
                         <item.icon className="w-6 h-6 text-white" />
@@ -1043,9 +1011,7 @@ export default function NewsPage() {
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                     : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>
@@ -1060,9 +1026,7 @@ export default function NewsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Latest News</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Stay informed about our latest developments and industry recognition
             </p>
@@ -1076,9 +1040,7 @@ export default function NewsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-              >
-                <div className="p-6">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"><div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-10 h-10 bg-gradient-to-br ${item.color} rounded-xl flex items-center justify-center`}>
                       <item.icon className="w-5 h-5 text-white" />
@@ -1140,9 +1102,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4">Latest News</h2>
+              className="text-center mb-16"><h2 className="text-4xl font-bold mb-4">Latest News</h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our most recent developments and announcements
               </p>
@@ -1194,9 +1154,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12"
-              >
-                <div className="flex items-center gap-2 mb-4">
+                className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-8 md:p-12"><div className="flex items-center gap-2 mb-4">
                   <Tag className="w-4 h-4 text-blue-600" />
                   <span className="text-blue-600 font-medium">{featuredArticle.category}</span>
                 </div>
@@ -1235,9 +1193,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
+              transition={{ duration: 0.6, delay: 0.8 }}><h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
                 Subscribe to our newsletter for the latest news, insights, and technology updates
               </p>
@@ -1262,9 +1218,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
-                >
-                  <div className="flex items-center gap-2 mb-3">
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"><div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {release.category}
                     </span>
@@ -1294,9 +1248,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 News Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1312,9 +1264,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center group cursor-pointer"
-                >
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
+                  className="text-center group cursor-pointer"><div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
                       {category.icon}
                     </div>
@@ -1337,9 +1287,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Recent News
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1355,9 +1303,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
-                >
-                  <div className="flex items-center gap-2 mb-3">
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"><div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {news.category}
                     </span>
@@ -1394,9 +1340,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
+              transition={{ duration: 0.6, delay: 0.8 }}><h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
                 Subscribe to our newsletter for the latest news, insights, and technology updates
               </p>
@@ -1420,9 +1364,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
-                >
-                  <div className="flex items-center gap-2 mb-3">
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"><div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {release.category}
                     </span>
@@ -1452,9 +1394,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 News Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1470,9 +1410,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center group cursor-pointer"
-                >
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
+                  className="text-center group cursor-pointer"><div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
                       {category.icon}
                     </div>
@@ -1495,9 +1433,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Recent News
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1513,9 +1449,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
-                >
-                  <div className="flex items-center gap-2 mb-3">
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"><div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {news.category}
                     </span>
@@ -1558,9 +1492,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              viewport={{ once: true }}><h2 className="text-4xl font-bold text-white mb-4">
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1588,9 +1520,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              viewport={{ once: true }}><h2 className="text-4xl font-bold text-white mb-4">
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1629,9 +1559,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Stay Informed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -1667,9 +1595,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            viewport={{ once: true }}><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -1686,9 +1612,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl font-bold text-white mb-6">
               Media & Press Inquiries
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -1713,9 +1637,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Latest News
               </h2>
               <p className="text-xl text-gray-400">
@@ -1731,9 +1653,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  className="flex gap-6 p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"><div className="w-24 h-24 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Newspaper className="w-12 h-12 text-gray-400" />
                   </div>
                   <div className="flex-1">
@@ -1764,9 +1684,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-center py-12"
-              >
-                <p className="text-gray-400 text-lg">
+                className="text-center py-12"><p className="text-gray-400 text-lg">
                   No news articles match your current filters. Try adjusting your search or category selection.
                 </p>
               </motion.div>
@@ -1782,9 +1700,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Press Releases
               </h2>
               <p className="text-xl text-gray-400">
@@ -1800,9 +1716,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"><h3 className="text-xl font-bold text-white mb-3">
                     {release.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -1833,9 +1747,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Media Resources
               </h2>
               <p className="text-xl text-gray-400">
@@ -1851,9 +1763,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <h3 className="text-xl font-bold text-white mb-3">
+                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"><h3 className="text-xl font-bold text-white mb-3">
                     {resource.title}
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -1886,9 +1796,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-4xl font-bold text-white mb-6">
                 Stay Updated
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

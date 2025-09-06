@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -16,8 +14,6 @@ import { Progress } from '@/components/ui/progress';
 import { SeverityIndicator } from '../common/SeverityIndicator';
 import { useRouter } from 'next/router';
 import { toast } from 'sonner';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -134,16 +130,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 size="sm" 
                 variant="outline" 
                 className="gap-1 flex-1"
-                onClick={messageClient}
-              >
-                <MessageSquare className="h-4 w-4" /> Message
+                onClick={messageClient}><MessageSquare className="h-4 w-4" /> Message
               </Button>
               <Button 
                 size="sm" 
                 className="gap-1 flex-1 bg-zion-purple hover:bg-zion-purple-light"
-                onClick={startProjectCall}
-              >
-                <Video className="h-4 w-4" /> Call
+                onClick={startProjectCall}><Video className="h-4 w-4" /> Call
               </Button>
             </div>
           </div>
@@ -169,9 +161,7 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                     variant={
                       milestone.paymentStatus === "paid" ? "default" : 
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline";
-                    }
-                  >
-                    {milestone.paymentStatus}
+                    }>{milestone.paymentStatus}
                   </Badge>
                 </div>
                 
@@ -203,11 +193,5 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
       </section>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

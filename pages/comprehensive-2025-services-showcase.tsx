@@ -104,9 +104,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+            transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -154,9 +152,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  {category.name} ({category.count})
+                  }`}>{category.name} ({category.count})
                 </button>
               ))}
             </div>
@@ -168,21 +164,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
+                  }`}><Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded transition-all duration-300 ${
                     viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
+                  }`}><List className="w-5 h-5" />
                 </button>
               </div>
 
-}> Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Schedule Consultation <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>) 
+}> Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you implement these cutting-edge solutions and drive innovation in your organization. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"><a href="mailto:kleber@ziontechgroup.com" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Schedule Consultation <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>) 
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -278,9 +270,7 @@ export default function Comprehensive2025ServicesShowcase() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+            transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Innovative Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -328,9 +318,7 @@ export default function Comprehensive2025ServicesShowcase() {
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  {category.name} ({category.count})
+                  }`}>{category.name} ({category.count})
                 </button>
               ))}
             </div>
@@ -342,17 +330,13 @@ export default function Comprehensive2025ServicesShowcase() {
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
+                  }`}><Grid className="w-5 h-5" />
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded transition-all duration-300 ${
                     viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
+                  }`}><List className="w-5 h-5" />
                 </button>
               </div>
 
@@ -360,9 +344,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as any)}
-                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-              >
-                <option value="popularity">Most Popular</option>
+                className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"><option value="popularity">Most Popular</option>
                 <option value="price">Price: Low to High</option>
                 <option value="rating">Highest Rated</option>
                 <option value="newest">Newest First</option>
@@ -379,9 +361,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-          >
-            {filteredServices.map((service, index) => (
+            className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>{filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -389,9 +369,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewMode === 'grid' 
                     ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                     : 'p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
-                }`}
-              >
-                {/* Popular Badge */}
+                }`}>{/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-xs font-bold rounded-full">
                     POPULAR
@@ -523,9 +501,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            viewport={{ once: true }}><h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">

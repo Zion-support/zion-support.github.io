@@ -1,9 +1,5 @@
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -21,8 +17,6 @@ export default function Page() {
       </main>
     </div>
   );
-<<<<<<< HEAD
-=======
 export default function Page() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
@@ -41,7 +35,4 @@ export default function Page() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type {
   GrantApplication,
   GrantCategory,
@@ -22,22 +20,18 @@ const statuses: GrantStatus[] = [
   'Approved',
   'Rejected',
 ];
-=======
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
 const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
-<<<<<<< HEAD
   const [filters, setFilters] = useState<{
     sector?: string;
     status?: string;
     region?: string;
     program?: string;
   }>({});
-=======
 import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
@@ -45,10 +39,7 @@ const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   useEffect(() => {
     const params = new URLSearchParams();
@@ -57,27 +48,19 @@ export default function GrantsPage() {
     if (filters.region) params.set('region', filters.region);
     if (filters.program) params.set('program', filters.program);
     fetch(`/api/grants?${params.toString()}`)
-<<<<<<< HEAD
-<<<<<<< HEAD
       .then(r => r.json())
       .then(d => setItems(d.items || []))
       .catch(() => setItems([]));
-=======
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
       .catch(() => setItems([]))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
       .catch(() => setItems([]))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [filters]);
 
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
@@ -89,13 +72,11 @@ export default function GrantsPage() {
               Incubator
             </a>
           </Link>
-=======
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
           <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>
           <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
 
@@ -142,8 +123,6 @@ export default function GrantsPage() {
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
-=======
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
         <div className="flex gap-2">
@@ -196,7 +175,4 @@ export default function GrantsPage() {
     </EnhancedLayout>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

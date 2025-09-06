@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 
 export type ModerationModalProps = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   flag: any | null;
   onClose: () => void;
   onAction: (
     action: 'approve' | 'remove' | 'warn' | 'ban',
     adminNotes?: string
   ) => Promise<void>;
-=======
   flag: any | null,
   onClose: () => void,
   onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export default function ModerationModal({ flag, onClose, onAction }: ModerationModalProps) {
@@ -68,7 +64,6 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
             <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
         </div>
-<<<<<<< HEAD
         <div className='p-4 border-t flex items-center justify-end gap-2'>
           <button
             onClick={() => onAction('approve', adminNotes)}
@@ -94,7 +89,6 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
           >
             Ban User
           </button>
-=======
   flag: any | null,
   onClose: () => void,
   onAction: (action: 'approve' | 'remove' | 'warn' | 'ban', adminNotes?: string) => Promise<void>
@@ -152,26 +146,13 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
             <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
         </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <div className="p-4 border-t flex items-center justify-end gap-2">
           <button onClick={() => onAction('approve', adminNotes)} className="px-3 py-2 rounded bg-green-600 text-white">Approve</button>
           <button onClick={() => onAction('remove', adminNotes)} className="px-3 py-2 rounded bg-red-600 text-white">Remove</button>
           <button onClick={() => onAction('warn', adminNotes)} className="px-3 py-2 rounded bg-yellow-600 text-white">Warn</button>
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

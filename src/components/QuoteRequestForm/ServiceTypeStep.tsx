@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { QuoteFormData, ListingItem, ServiceType } from '@/types/quotes';
 import { Input } from '@/components/ui/input';
@@ -13,7 +11,6 @@ import { useIsMounted } from '@/hooks/useIsMounted';
 import { z } from 'zod';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
 import { useEffect, useState } from "react";
 import { QuoteFormData, ListingItem, ServiceType } from "@/types/quotes";
 import { Input } from "@/components/ui/input";
@@ -26,7 +23,6 @@ import { useDebounce } from "@/hooks/useDebounce";
 import { useIsMounted } from "@/hooks/useIsMounted";
 import { z } from "zod";
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const listingSchema = z.object({
   id: z.string(),
   title: z.string(),
@@ -39,7 +35,6 @@ interface ServiceTypeStepProps {
   formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void
 }
-
 
 export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepProps) {
   const [searchQuery, setSearchQuery] = useState("");
@@ -136,9 +131,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-            onClick={() => handleTypeSelect("service")}
-          >
-            <h4 className="font-medium text-white">Services</h4>
+            onClick={() => handleTypeSelect("service")}><h4 className="font-medium text-white">Services</h4>
             <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p>
           </Card>
           
@@ -148,9 +141,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-            onClick={() => handleTypeSelect("talent")}
-          >
-            <h4 className="font-medium text-white">Talent</h4>
+            onClick={() => handleTypeSelect("talent")}><h4 className="font-medium text-white">Talent</h4>
             <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p>
           </Card>
           
@@ -160,9 +151,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                 ? "bg-zion-purple/20 border-zion-purple" 
                 : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50"
             }`}
-            onClick={() => handleTypeSelect("equipment")}
-          >
-            <h4 className="font-medium text-white">Equipment</h4>
+            onClick={() => handleTypeSelect("equipment")}><h4 className="font-medium text-white">Equipment</h4>
             <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p>
           </Card>
         </div>
@@ -200,9 +189,7 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
                   onClick={() => handleItemSelect(item)}
                   className={`cursor-pointer transition-all ${
                     formData.specificItem?.id === item.id ? "ring-2 ring-zion-purple rounded-lg" : "";
-                  }`}
-                >
-                  <ListingScoreCard
+                  }`}><ListingScoreCard
                     title={item.title}
                     category={item.category}
                     aiScore={Math.floor(Math.random() * 30) + 70}
@@ -223,14 +210,13 @@ export function ServiceTypeStep({ formData, updateFormData }: ServiceTypeStepPro
       )}
     </div>
   );
-<<<<<<< HEAD
 
 };
 fetchServices () ;
 }, [formData.serviceType, debouncedQuery, isMounted]);
 }return item.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || item.category.toLowerCase () .includes (searchQuery.toLowerCase () ) ;
 });
-return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <Card > <h4 className="font-medium text-white">Services</h4> <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p> </Card> <Card > <h4 className="font-medium text-white">Talent</h4> <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p> </Card> <Card > <h4 className="font-medium text-white">Equipment</h4> <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p> </Card> </div> </div> {";
+return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold text-white mb-4">What are you looking for?</h3> <div className="grid grid-cols-1 md:grid-cols-3 gap-4"> <Card><h4 className="font-medium text-white">Services</h4> <p className="text-sm text-zion-slate-light">AI solutions, consulting, development</p> </Card> <Card><h4 className="font-medium text-white">Talent</h4> <p className="text-sm text-zion-slate-light">AI specialists, developers, consultants</p> </Card> <Card><h4 className="font-medium text-white">Equipment</h4> <p className="text-sm text-zion-slate-light">Servers, workstations, specialized hardware</p> </Card> </div> </div> {";
   formData.serviceType && (<div className="space-y-4"> <h3 className="text-xl font-semibold text-white">Select a specific {;
   formData.serviceType ";
 }</h3> <div className="relative"> <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-4 w-4" /> <Input placeholder= {;
@@ -254,15 +240,7 @@ return (<div className="space-y-6"> <div> <h3 className="text-xl font-semibold t
 }</div> </div>) ;
 }</div>) ;
 }"
-=======
-
-<<<<<<< HEAD
 
       const maxRetries = 3;
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

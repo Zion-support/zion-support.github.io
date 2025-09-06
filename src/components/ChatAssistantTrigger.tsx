@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { ChatAssistant } from '@/components/ChatAssistant';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { MessageSquare } from 'lucide-react'
@@ -46,9 +42,7 @@ export function ChatAssistantTrigger() {
         size="icon"
         variant="outline"
         className="fixed bottom-4 right-4 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-50"
-        aria-label="Open chat assistant"
-      >
-        <MessageSquare className="h-5 w-5" />
+        aria-label="Open chat assistant"><MessageSquare className="h-5 w-5" />
       </Button>
       
       {isOpen && (
@@ -66,10 +60,9 @@ export function ChatAssistantTrigger() {
       )}
     </>
   );
-<<<<<<< HEAD
 
 };
-return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
+return (<> <Button><MessageSquare className="h-5 w-5" /> </Button> {;
   isOpen && (<ChatAssistant isOpen= {;
   isOpen ;
 }onClose= {;
@@ -83,14 +76,8 @@ return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
 }/>) ;
 }</>) ;
 }'"
-=======
 
-<<<<<<< HEAD
       
-<<<<<<< HEAD
             avatarUrl: 'https://placehold.co/64x64?text=AI',
             role: 'Virtual Assistant',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

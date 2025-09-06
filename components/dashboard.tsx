@@ -1,8 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 
 export default function Dashboard() {
-<<<<<<< HEAD
-<<<<<<< HEAD
   const params =
     typeof window !== 'undefined'
       ? new URLSearchParams(window.location.search)
@@ -14,39 +12,29 @@ export default function Dashboard() {
     primaryColor?: string;
     logoUrl?: string;
   } | null>(null);
-=======
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') || '';
 
   const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams();
   const tenantId = params.get('tenantId') || '';
 
   const [branding, setBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   useEffect(() => {
     async function fetchBranding() {
       try {
         const resp = await fetch('/api/tenants');
         const data = await resp.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
         const t = (data.tenants || []).find((x: any) => x.id === tenantId);
         setBranding(t?.branding || { name: 'Zion Hire AI' });
-=======
         const t = (data.tenants || []).find((x: any) => x.id === tenantId),
         setBranding(t?.branding || { name: 'Zion Hire AI' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       } catch {
         setBranding({ name: 'Zion Hire AI' })
       }
     }
-<<<<<<< HEAD
     fetchBranding();
-=======
         const t = (data.tenants || []).find((x: any) => x.id === tenantId),
         setBranding(t?.branding || { name: 'Zion Hire AI' })
       } catch {
@@ -54,17 +42,12 @@ export default function Dashboard() {
       }
     }
     fetchBranding()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     fetchBranding()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [tenantId]);
 
   const accent = branding?.primaryColor || '#111827';
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
     <div className='min-h-screen bg-gray-50'>
       <header className='px-6 py-4 bg-white border-b flex items-center gap-3'>
         {branding?.logoUrl && (
@@ -76,13 +59,11 @@ export default function Dashboard() {
         <span className='ml-auto text-xs text-gray-400'>
           Tenant: {tenantId ? tenantId.slice(0, 8) : '—'}
         </span>
-=======
     <div className="min-h-screen bg-gray-50">
       <header className="px-6 py-4 bg-white border-b flex items-center gap-3">
         {branding?.logoUrl && <img src={branding.logoUrl} alt="logo" className="h-8 w-8 rounded" />}
         <h1 className="text-lg font-semibold" style={{ color: accent }}>{branding?.name || 'Zion Hire AI'}</h1>
         <span className="ml-auto text-xs text-gray-400">Tenant: {tenantId ? tenantId.slice(0,8) : '—'}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </header>
       <main className="max-w-6xl mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
         <section className="col-span-1 md:col-span-2 bg-white border rounded p-4">
@@ -104,7 +85,6 @@ export default function Dashboard() {
           </form>
         </section>
 
-<<<<<<< HEAD
         <section className='col-span-1 md:col-span-3 bg-white border rounded p-4'>
           <h2 className='font-semibold mb-3'>Candidate Flow</h2>
           <div className='grid grid-cols-1 md:grid-cols-4 gap-4 text-sm'>
@@ -124,7 +104,6 @@ export default function Dashboard() {
               <div className='font-medium'>Offer</div>
               <div className='text-gray-500'>0</div>
             </div>
-=======
     <div className="min-h-screen bg-gray-50">
       <header className="px-6 py-4 bg-white border-b flex items-center gap-3">
         {branding?.logoUrl && <img src={branding.logoUrl} alt="logo" className="h-8 w-8 rounded" />}
@@ -151,8 +130,6 @@ export default function Dashboard() {
           </form>
         </section>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <section className="col-span-1 md:col-span-3 bg-white border rounded p-4">
           <h2 className="font-semibold mb-3">Candidate Flow</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
@@ -160,24 +137,14 @@ export default function Dashboard() {
             <div className="border rounded p-3"><div className="font-medium">Screen</div><div className="text-gray-500">0</div></div>
             <div className="border rounded p-3"><div className="font-medium">Interview</div><div className="text-gray-500">0</div></div>
             <div className="border rounded p-3"><div className="font-medium">Offer</div><div className="text-gray-500">0</div></div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </section>
       </main>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }fetchBranding () 
 }, [tenantId]);
-</header> </form> </section> <section className="bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2" > <input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4" > <h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm" > <div className="border rounded p-3" ><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3" ><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) 
-=======
+</header> </form> </section> <section className="bg-white border rounded p-4"><h2 className="font-semibold mb-3" >Post a Job</h2> <form className="space-y-2"><input className="border rounded px-3 py-2 w-full" placeholder="Title" /> <input className="border rounded px-3 py-2 w-full" placeholder="Location" /> <input className="border rounded px-3 py-2 w-full" placeholder="Level" /> <button type="button" className="bg-gray-900 text-white rounded px-3 py-2 w-full" >Generate JD with AI</button> </form> </section> <section className="col-span-1 md:col-span-3 bg-white border rounded p-4"><h2 className="font-semibold mb-3" >Candidate Flow</h2> <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm"><div className="border rounded p-3"><div className="font-medium" >Applied</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3"><div className="font-medium" >Screen</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3"><div className="font-medium" >Interview</div><div className="text-gray-500" >0</div></div> <div className="border rounded p-3"><div className="font-medium" >Offer</div><div className="text-gray-500" >0</div></div> </div> </section> </main> </div>) 
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

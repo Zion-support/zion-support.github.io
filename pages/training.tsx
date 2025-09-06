@@ -602,9 +602,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
+              transition={{ duration: 0.8 }}><h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
               <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Training & Certification
@@ -668,9 +666,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     selectedCategory === category.id
                       ? 'bg-cyan-500 text-white'
                       : 'bg-gray-700 text-gray-300 hover:bg-gray-600'
-                  }`}
-                >
-                  {category.name} ({category.count})
+                  }`}>{category.name} ({category.count})
                 </button>
               ))}
             </div>
@@ -692,9 +688,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-4">
                 Featured Programs
               </h2>
               <p className="text-xl text-gray-400">
@@ -703,9 +697,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid lg:grid-cols-3 gap-8 mb-16'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Featured Programs
               </h2>
               <p className="text-xl text-gray-400">
@@ -726,9 +718,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
                     {program.icon}
                   </div>
                   <div className="p-6">
@@ -781,9 +771,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     >
                       Enroll Now
                       <ArrowRight className='w-4 h-4' />
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-                >
-                  <div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
+                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"><div className="h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
                     {program.icon}
                   </div>
                   <div className="p-6">
@@ -861,9 +849,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-4">
                 All Training Programs
               </h2>
               <p className="text-xl text-gray-400">
@@ -872,9 +858,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='space-y-4'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 All Training Programs
               </h2>
               <p className="text-xl text-gray-400">
@@ -895,9 +879,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden'
                   className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="p-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                         {program.icon}
@@ -931,9 +913,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                           <div className='flex items-center gap-1'>
                             <Star className='w-3 h-3 text-yellow-400 fill-current' />
-                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"
-                >
-                  <div className="p-6">
+                  className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300 overflow-hidden"><div className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                         {program.icon}
@@ -990,15 +970,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           onClick={() => toggleProgram(program.id)}
                           className='text-gray-400 hover:text-white transition-colors duration-300'
                           className="text-gray-400 hover:text-white transition-colors duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-                        >
-                          {expandedProgram === program.id ? (
+ursor/integrate-build-improve-and-re-verify-b76c>{expandedProgram === program.id ? (
                             <ChevronUp className="w-5 h-5" />
                           ) : (
                             <ChevronDown className='w-5 h-5' />
-                          className="text-gray-400 hover:text-white transition-colors duration-300"
-                        >
-                          {expandedProgram === program.id ? (
+                          className="text-gray-400 hover:text-white transition-colors duration-300">{expandedProgram === program.id ? (
                             <ChevronUp className="w-5 h-5" />
                           ) : (
                             <ChevronDown className="w-5 h-5" />
@@ -1018,9 +994,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         transition={{ duration: 0.3 }}
                         className='mt-4 pt-4 border-t border-gray-700'
                         className="mt-4 pt-4 border-t border-gray-700"
-ursor/integrate-build-improve-and-re-verify-b76c
-                      >
-                        <div className="grid md:grid-cols-2 gap-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <h4 className="text-white font-semibold mb-3">What You'll Learn</h4>
                             <ul className="space-y-2 text-sm text-gray-300">
@@ -1038,9 +1012,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                               </li>
                               <li className='flex items-center gap-2'>
                                 <CheckCircle className='w-4 h-4 text-green-400' />
-                        className="mt-4 pt-4 border-t border-gray-700"
-                      >
-                        <div className="grid md:grid-cols-2 gap-6">
+                        className="mt-4 pt-4 border-t border-gray-700"><div className="grid md:grid-cols-2 gap-6">
                           <div>
                             <h4 className="text-white font-semibold mb-3">What You'll Learn</h4>
                             <ul className="space-y-2 text-sm text-gray-300">
@@ -1170,9 +1142,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-4">
                 Learning Paths
               </h2>
               <p className="text-xl text-gray-400">
@@ -1222,9 +1192,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     'Performance Optimization',
                   ],
                 },
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Learning Paths
               </h2>
               <p className="text-xl text-gray-400">
@@ -1283,9 +1251,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300'
                   className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="text-center mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="text-center mb-6">
                     <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                       {path.icon}
                     </div>
@@ -1302,9 +1268,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       </div>
                       <div className='flex items-center gap-1'>
                         <BookOpen className='w-4 h-4' />
-                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="text-center mb-6">
+                  className="p-8 bg-gradient-to-br from-gray-900/50 to-gray-800/50 rounded-2xl border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"><div className="text-center mb-6">
                     <div className={`w-20 h-20 bg-${path.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                       {path.icon}
                     </div>
@@ -1388,9 +1352,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl font-bold text-white mb-6'>
               <h2 className="text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Career?
@@ -1448,7 +1410,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   {
   duration: 0.8 
 
-}> <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6" > Training & Certification </h1> </p> <div className="flex flex-wrap justify-center gap-4 text-gray-400" > <div className="flex items-center gap-2" > <GraduationCap className="w-5 h-5" /> <span>Expert-Led Training</span> </div> <div className="flex items-center gap-2" > <Award className="w-5 h-5" /> <span>Industry Certifications</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5" /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
+}> <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6" > Training & Certification </h1> </p> <div className="flex flex-wrap justify-center gap-4 text-gray-400"><div className="flex items-center gap-2"><GraduationCap className="w-5 h-5" /> <span>Expert-Led Training</span> </div> <div className="flex items-center gap-2"><Award className="w-5 h-5" /> <span>Industry Certifications</span> </div> <div className="flex items-center gap-2"><Users className="w-5 h-5" /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
   category.id 
 }onClick= {
   () => setSelectedCategory (category.id) 
@@ -1461,13 +1423,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
 }({
   category.count 
 }) </button>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Featured Programs </h2> <p className="text-xl text-gray-400" > Our most popular and comprehensive training programs </p> </motion.div> </div>) ) 
+}</div> </div> </section>><h2 className="text-4xl font-bold text-white mb-4" > Featured Programs </h2> <p className="text-xl text-gray-400" > Our most popular and comprehensive training programs </p> </motion.div> </div>) ) 
 }</div> <a href="#" className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Enroll Now <ArrowRight className="w-4 h-4" /> </Link> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > All Training Programs </h2> <p className="text-xl text-gray-400" > Comprehensive collection of training programs across all technology domains </p> </motion.div> </div> </div> </div>) : (<ChevronDown className="w-5 h-5" />) 
+}</div> </div> </section>><h2 className="text-4xl font-bold text-white mb-4" > All Training Programs </h2> <p className="text-xl text-gray-400" > Comprehensive collection of training programs across all technology domains </p> </motion.div> </div> </div> </div>) : (<ChevronDown className="w-5 h-5" />) 
 }</button> </div> </div> {
-  expandedProgram === program.id && (<motion.div > <div className="grid md:grid-cols-2 gap-6" > <div> <h4 className="text-white font-semibold mb-3" >What You'll Learn</h4> <ul className="space-y-2 text-sm text-gray-300" > <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Core concepts and principles</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Hands-on practical exercises</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Real-world project implementation</span> </li> <li className="flex items-center gap-2" > <CheckCircle className="w-4 h-4 text-green-400" /> <span>Industry best practices</span> </li> </ul> </div> <div> <h4 className="text-white font-semibold mb-3" >Program Details</h4> <div className="space-y-2 text-sm text-gray-300" > <div className="flex justify-between" > <span>Duration:</span> </div> <div className="flex justify-between" > <span>Level:</span> </div> <div className="flex justify-between" > <span>Format:</span> <span className="text-white" >Online + Live Sessions</span> </div> <div className="flex justify-between" > <span>Support:</span> <span className="text-white" >24/7 Community + Mentors</span> </div> </div> </div> </div> <div className="mt-6 flex gap-3" > <a href="#" className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300" > Enroll Now <ArrowRight className="w-4 h-4" /> </Link> <a href="#" className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Learn More </Link> </div> </motion.div>) 
+  expandedProgram === program.id && (<motion.div><div className="grid md:grid-cols-2 gap-6"><div> <h4 className="text-white font-semibold mb-3" >What You'll Learn</h4> <ul className="space-y-2 text-sm text-gray-300"><li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> <span>Core concepts and principles</span> </li> <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> <span>Hands-on practical exercises</span> </li> <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> <span>Real-world project implementation</span> </li> <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> <span>Industry best practices</span> </li> </ul> </div> <div> <h4 className="text-white font-semibold mb-3" >Program Details</h4> <div className="space-y-2 text-sm text-gray-300"><div className="flex justify-between"><span>Duration:</span> </div> <div className="flex justify-between"><span>Level:</span> </div> <div className="flex justify-between"><span>Format:</span> <span className="text-white" >Online + Live Sessions</span> </div> <div className="flex justify-between"><span>Support:</span> <span className="text-white" >24/7 Community + Mentors</span> </div> </div> </div> </div> <div className="mt-6 flex gap-3"><a href="#" className="flex-1 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300" > Enroll Now <ArrowRight className="w-4 h-4" /> </Link> <a href="#" className="inline-flex items-center justify-center gap-2 border-2 border-cyan-500 text-cyan-400 font-bold py-3 px-6 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Learn More </Link> </div> </motion.div>) 
 }</div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-4" > Learning Paths </h2> <p className="text-xl text-gray-400" > Structured learning journeys to master complete technology domains </p> </motion.div> </div> </div> </div> </div>) ) 
+}</div> </div> </section>><h2 className="text-4xl font-bold text-white mb-4" > Learning Paths </h2> <p className="text-xl text-gray-400" > Structured learning journeys to master complete technology domains </p> </motion.div> </div> </div> </div> </div>) ) 
 }</div> <a > Start Learning Path <ArrowRight className="w-4 h-4" /> </Link> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {

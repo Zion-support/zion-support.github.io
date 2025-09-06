@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
-=======
-import { useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub";
@@ -69,9 +64,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
             className="mb-2 p-0 shadow-sm border"
             ref={provided.innerRef}
             {...provided.draggableProps}
-            {...provided.dragHandleProps}
-          >
-            <CardContent className="p-3">
+            {...provided.dragHandleProps}><CardContent className="p-3">
               {/* Candidate Header */}
               <div className="flex justify-between items-start mb-2">
                 <div className="flex items-center gap-2">
@@ -172,9 +165,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   variant="outline" 
                   size="sm" 
                   className="flex-1"
-                  asChild
-                >
-                  <Link href={`/messages?talentId=${application.talent_id}`}>
+                  asChild><Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
@@ -183,9 +174,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   variant="outline" 
                   size="sm" 
                   className="flex-1"
-                  asChild
-                >
-                  {application.resume?.file_url ? (
+                  asChild>{application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
                     </a>
@@ -200,9 +189,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
                   variant="default" 
                   size="sm" 
                   className="flex-1"
-                  onClick={() => setShowHireModal(true)}
-                >
-                  <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire
+                  onClick={() => setShowHireModal(true)}><BriefcaseIcon className="h-3 w-3 mr-1" /> Hire
                 </Button>
               </div>
             </CardContent>
@@ -219,7 +206,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       />
     </>
   );
-<<<<<<< HEAD
 
   //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
   setShowNotes (false);
@@ -282,7 +268,7 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
 }onChange= {;
   (e) => setNotes (e.target.value) ;
 }/> </div> </div>) ";
-}<Button variant="outline" size="sm" className="flex-1" asChild > </Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild > <FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) ";
+}<Button variant="outline" size="sm" className="flex-1" asChild></Link> </Button> <Button variant="outline" size="sm" className="flex-1" asChild><FileText className="h-3 w-3 mr-1" /> Resume </Link>) : (<span> <FileText className="h-3 w-3 mr-1" /> No Resume </span>) ";
 }</Button> <Button variant="default" size="sm" className="flex-1" onClick={;
   () => setShowHireModal (true) ";
 }> <BriefcaseIcon className="h-3 w-3 mr-1" /> Hire </Button> </div> </CardContent> </Card>) ;
@@ -298,14 +284,8 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
   handleHireConfirmed ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   const candidateName = application.talent_profile?.full_name || "Candidate";
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

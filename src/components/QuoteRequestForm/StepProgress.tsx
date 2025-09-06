@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { QuoteRequestSteps } from '../QuoteRequestForm';
 import { CheckIcon } from 'lucide-react';
 import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react'
@@ -14,14 +10,12 @@ interface StepProgressProps {
 }
 
 export function StepProgress({ currentStep }: StepProgressProps) {
-<<<<<<< HEAD
   const steps: { id: QuoteRequestSteps; label: string }[] = [
     { id: 'service', label: 'Service' },
     { id: 'details', label: 'Details' },
     { id: 'timeline', label: 'Timeline' },
     { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' },
-=======
 
 import { QuoteRequestSteps } from "../QuoteRequestForm";
 import { CheckIcon } from 'lucide-react'
@@ -31,35 +25,25 @@ interface StepProgressProps {
 }
 
 export function StepProgress({ currentStep }: StepProgressProps) {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const steps: { id: QuoteRequestSteps, label: string }[] = [
     { id: "service", label: "Service" },
     { id: "details", label: "Details" },
     { id: "timeline", label: "Timeline" },
     { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const getStepStatus = (stepId: QuoteRequestSteps) => {
     const stepOrder = steps.findIndex(s => s.id === stepId);
     const currentStepOrder = steps.findIndex(s => s.id === currentStep);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
     if (stepOrder < currentStepOrder) return 'complete';
     if (stepOrder === currentStepOrder) return 'current';
     return 'upcoming';
-=======
     
     if (stepOrder < currentStepOrder) return "complete";
     if (stepOrder === currentStepOrder) return "current";
     return "upcoming"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -84,9 +68,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
                   "bg-zion-blue-light text-zion-slate-light"
-                )}
-              >
-                {status === "complete" ? (
+                )}>{status === "complete" ? (
                   <CheckIcon className="h-4 w-4" />
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
@@ -94,14 +76,12 @@ export function StepProgress({ currentStep }: StepProgressProps) {
               </div>
               <span 
                 className={cn(
-<<<<<<< HEAD
                   'text-xs mt-2 font-medium',
                   status === 'complete'
                     ? 'text-zion-cyan'
                     : status === 'current'
                       ? 'text-white'
                       : 'text-zion-slate-light'
-=======
     
     if (stepOrder < currentStepOrder) return "complete";
     if (stepOrder === currentStepOrder) return "current";
@@ -130,9 +110,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "bg-zion-purple text-white" : 
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" : 
                   "bg-zion-blue-light text-zion-slate-light"
-                )}
-              >
-                {status === "complete" ? (
+                )}>{status === "complete" ? (
                   <CheckIcon className="h-4 w-4" />
                 ) : (
                   <span className="text-xs">{steps.findIndex(s => s.id === step.id) + 1}</span>
@@ -144,20 +122,13 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   "text-xs mt-2 font-medium";
                   status === "complete" ? "text-zion-cyan" : 
                   status === "current" ? "text-white" : 
                   "text-zion-slate-light"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                )}
-              >
-                {step.label}
+                )}>{step.label}
               </span>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           );
         })}
       </div>
@@ -167,7 +138,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 }%` ;
 
 }/> </div> 
-}className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs" > {;
+}className=" flex flex-col items-center relative"> <div) : (<span className=" text-xs">{;
   steps.findIndex (s => s.id === step.id) + 1 ;
 }</span>) ;
 }</div> <span) ;
@@ -177,19 +148,15 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 }) ;
 }</div> </div>) ;
 }"
-=======
           )
         })}
       </div>
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           )
         })}
       </div>
     </div>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

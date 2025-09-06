@@ -25,21 +25,13 @@ import { nextGenAIServices } from '../data/next-gen-ai-services';
 import { industryRealServices } from '../data/industry-real-services';
 import { professionalServices } from '../data/professional-services';
 import { realVerifiedServices } from '../data/real-verified-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function DynamicServicePage() {
   const router = useRouter();
   const { slug } = router.query as { slug?: string };
 
   const service = useMemo(() => {
     if (!slug) return undefined;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const all: any[] = ([] as any[]).concat(
       enhancedRealMicroSaasServices as any,
       extraServices as any,
@@ -68,7 +60,6 @@ export default function DynamicServicePage() {
       real2026Q1Additions as any,
       ultimateFuturisticServices2025 as any
     );
-=======
     const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any;
@@ -98,15 +89,12 @@ export default function DynamicServicePage() {
         real2026Q1Additions as any;
         ultimateFuturisticServices2025 as any
       );
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link);
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
-<<<<<<< HEAD
         return false;
-=======
     const all: any[] = ([] as any[])
       .concat(
         enhancedRealMicroSaasServices as any;
@@ -142,31 +130,18 @@ export default function DynamicServicePage() {
         return url.pathname.replace(/^\/+|\/+$/g, '') === slug.replace(/^\/+|\/+$/g, '')
       } catch {
         return false
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         return false
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     });
     if (byLink) return byLink;
     const byId = enhancedRealMicroSaasServices.find(s => s.id === slug);
     if (byId) return byId;
-<<<<<<< HEAD
-<<<<<<< HEAD
     return undefined;
-=======
-    return undefined
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    return undefined
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [slug]);
 
   if (!service) {
     return (
       <UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='min-h-screen pt-28 pb-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-3xl mx-auto text-center'>
             <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
@@ -183,7 +158,6 @@ export default function DynamicServicePage() {
         </div>
       </UltraAdvancedFuturisticBackground>
     );
-=======
         <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
@@ -193,8 +167,6 @@ export default function DynamicServicePage() {
         </div>
       </UltraAdvancedFuturisticBackground>
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>
@@ -204,7 +176,6 @@ export default function DynamicServicePage() {
         </div>
       </UltraAdvancedFuturisticBackground>
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   const canonicalUrl = `https://ziontechgroup.com/${slug}`;
@@ -213,14 +184,10 @@ export default function DynamicServicePage() {
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content={service.description} />
         <link rel='canonical' href={canonicalUrl} />
-=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href={canonicalUrl} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -249,7 +216,6 @@ export default function DynamicServicePage() {
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating?.toFixed ? service.rating.toFixed(1) : service.rating}</div>
               </div>
-<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='quantum'
@@ -272,7 +238,6 @@ export default function DynamicServicePage() {
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
-=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href={canonicalUrl} />
       </Head>
@@ -303,17 +268,11 @@ export default function DynamicServicePage() {
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating?.toFixed ? service.rating.toFixed(1) : service.rating}</div>
               </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Start Free Trial<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
@@ -321,11 +280,6 @@ export default function DynamicServicePage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Static export support: generate root-level pages for service slugs
 type Svc = typeof enhancedRealMicroSaasServices[number];
@@ -354,8 +308,6 @@ function normalizeSlug(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-<<<<<<< HEAD
-=======
 }
 
 // Static export support: generate root-level pages for service slugs
@@ -385,8 +337,6 @@ function normalizeSlug(value: string): string {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null;
   try {
@@ -399,10 +349,6 @@ function extractRootSlugFromLink(link?: string): string | null {
     return null
   };
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices();
@@ -412,13 +358,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const pagesDir = path.join(process.cwd(), 'pages');
   const staticSlugs = new Set<string>();
   try {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true });
     
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
     for (const entry of entries) {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
@@ -426,18 +367,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
         if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
           staticSlugs.add(base.toLowerCase())
         }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     }
   } catch {}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   
-=======
   for (const s of services) {
     const fromLink = extractRootSlugFromLink((s as any).link);
     const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''));
@@ -445,7 +379,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
     if (reservedTopLevelSlugs.has(slugCandidate)) continue, // skip conflicts
     candidateSlugs.add(slugCandidate)
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug));
@@ -457,10 +390,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-<<<<<<< HEAD
   // No dynamic fetching needed; the component resolves the service client-side.
   return { props: {} };
-=======
   for (const s of services) {
     const fromLink = extractRootSlugFromLink((s as any).link);
     const slugCandidate = fromLink || (s.id ? normalizeSlug(s.id) : (s.name ? normalizeSlug(s.name) : ''));
@@ -481,9 +412,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
   return { props: {} }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   // No dynamic fetching needed, the component resolves the service client-side.
   return { props: {} }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };

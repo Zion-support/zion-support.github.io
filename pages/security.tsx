@@ -156,14 +156,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='flex items-center justify-center mb-6'
               className="flex items-center justify-center mb-6"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <Shield className="w-16 h-16 text-cyan-400" />
+ursor/integrate-build-improve-and-re-verify-b76c><Shield className="w-16 h-16 text-cyan-400" />
             </motion.div>
 
-              className="flex items-center justify-center mb-6"
-            >
-              <Shield className="w-16 h-16 text-cyan-400" />
+              className="flex items-center justify-center mb-6"><Shield className="w-16 h-16 text-cyan-400" />
             </motion.div>
 
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -220,18 +216,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Security</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Security</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We implement multiple layers of security controls to protect your data and ensure business continuity.
               </p>
             </motion.div>
 
             <div className='grid md:grid-cols-2 gap-8 mb-16'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Security</h2>
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Enterprise-Grade Security</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 We implement multiple layers of security controls to protect your data and ensure business continuity.
               </p>
@@ -248,9 +240,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   className='bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300'
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="flex items-center mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="flex items-center mb-6">
                     <measure.icon className="w-8 h-8 text-cyan-400 mr-4" />
                     <h3 className="text-2xl font-bold text-white">{measure.title}</h3>
                   </div>
@@ -262,9 +252,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <span className='text-gray-300 leading-relaxed'>
                           {feature}
                         </span>
-                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
-                >
-                  <div className="flex items-center mb-6">
+                  className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"><div className="flex items-center mb-6">
                     <measure.icon className="w-8 h-8 text-cyan-400 mr-4" />
                     <h3 className="text-2xl font-bold text-white">{measure.title}</h3>
                   </div>
@@ -290,21 +278,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
-              className='bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16'
-            >
-              <h3 className='text-3xl font-bold text-white mb-6 text-center'>
+              className='bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16'><h3 className='text-3xl font-bold text-white mb-6 text-center'>
                 Security Certifications & Compliance
               </h3>
 
               <div className='grid md:grid-cols-5 gap-6'>
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
+              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"><h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
               
               <div className="grid md:grid-cols-5 gap-6">
-              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
+              className="bg-gradient-to-r from-cyan-900/20 to-blue-900/20 rounded-2xl p-8 border border-cyan-500/20 mb-16"><h3 className="text-3xl font-bold text-white mb-6 text-center">Security Certifications & Compliance</h3>
               
               <div className="grid md:grid-cols-5 gap-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -314,21 +296,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className='text-center p-4 bg-slate-800/50 rounded-xl border border-white/10'
-                  >
-                    <CheckCircle className='w-8 h-8 text-green-400 mx-auto mb-3' />
+                    className='text-center p-4 bg-slate-800/50 rounded-xl border border-white/10'><CheckCircle className='w-8 h-8 text-green-400 mx-auto mb-3' />
                     <h4 className='text-white font-semibold mb-1'>
                       {cert.name}
                     </h4>
                     <p className='text-cyan-400 text-sm'>{cert.status}</p>
-                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
-                  >
-                    <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"><CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
                     <h4 className="text-white font-semibold mb-1">{cert.name}</h4>
                     <p className="text-cyan-400 text-sm">{cert.status}</p>
-                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"
-                  >
-                    <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
+                    className="text-center p-4 bg-slate-800/50 rounded-xl border border-white/10"><CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-3" />
                     <h4 className="text-white font-semibold mb-1">{cert.name}</h4>
                     <p className="text-cyan-400 text-sm">{cert.status}</p>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -344,9 +320,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8, delay: 0.6 }}
               className='mb-16'
               className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h3 className="text-3xl font-bold text-white mb-6">Incident Response</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-3xl font-bold text-white mb-6">Incident Response</h3>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
@@ -355,9 +329,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       Detection & Response
                     </h4>
                     <ul className='space-y-2 text-gray-300'>
-              className="mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6">Incident Response</h3>
+              className="mb-16"><h3 className="text-3xl font-bold text-white mb-6">Incident Response</h3>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
@@ -408,9 +380,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8, delay: 0.7 }}
               className='mb-16'
               className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h3 className="text-3xl font-bold text-white mb-6">Vulnerability Management</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-3xl font-bold text-white mb-6">Vulnerability Management</h3>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
                 <p className="text-gray-300 leading-relaxed mb-6">
                   We maintain a proactive approach to identifying and addressing security vulnerabilities:
@@ -443,9 +413,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <p className='text-gray-300 text-sm'>
                       Quick patching and vulnerability resolution
                     </p>
-              className="mb-16"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6">Vulnerability Management</h3>
+              className="mb-16"><h3 className="text-3xl font-bold text-white mb-6">Vulnerability Management</h3>
               <div className="bg-slate-800/50 rounded-2xl p-8 border border-white/10">
                 <p className="text-gray-300 leading-relaxed mb-6">
                   We maintain a proactive approach to identifying and addressing security vulnerabilities:
@@ -489,9 +457,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8, delay: 0.8 }}
               className='bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20'
               className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-8 h-8 text-red-400 mr-4" />
                 Report Security Issues
               </h3>
@@ -521,9 +487,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <div>
                     <p className='text-white font-semibold'>PGP Key</p>
                     <p className='text-gray-300'>Available on request</p>
-              className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"
-            >
-              <h3 className="text-3xl font-bold text-white mb-6 flex items-center">
+              className="bg-gradient-to-r from-red-900/20 to-orange-900/20 rounded-2xl p-8 border border-red-500/20"><h3 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-8 h-8 text-red-400 mr-4" />
                 Report Security Issues
               </h3>

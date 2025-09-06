@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -21,7 +20,6 @@ import { useAuth } from '@/context/auth/AuthProvider';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { MAX_PRICE, MIN_PRICE } from '@/data/marketplaceData';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 
 /**
  * Marketplace component props
@@ -111,9 +109,7 @@ const FilterControls: React.FC<{
       <select
         value={filterCategory}
         onChange={(e) => setFilterCategory(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Categories</option>
+        className="bg-background border border-border px-3 py-2 rounded"><option value="">All Categories</option>
         {categories.map(category => (
           <option key={category} value={category}>{category}</option>
         ))}
@@ -125,9 +121,7 @@ const FilterControls: React.FC<{
       <select
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="newest">Newest First</option>
+        className="bg-background border border-border px-3 py-2 rounded"><option value="newest">Newest First</option>
         <option value="price-low">Price: Low to High</option>
         <option value="price-high">Price: High to Low</option>
         <option value="rating">Highest Rated</option>
@@ -174,9 +168,7 @@ const FilterControls: React.FC<{
       <select
         value={minRating}
         onChange={(e) => setMinRating(Number(e.target.value))}
-        className="bg-background border border-border px-2 py-1 rounded"
-      >
-        <option value={0}>Any</option>
+        className="bg-background border border-border px-2 py-1 rounded"><option value={0}>Any</option>
         <option value={5}>5</option>
         <option value={4}>4</option>
         <option value={3}>3</option>
@@ -189,9 +181,7 @@ const FilterControls: React.FC<{
       <select
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">Any Availability</option>
+        className="bg-background border border-border px-3 py-2 rounded"><option value="">Any Availability</option>
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
@@ -202,9 +192,7 @@ const FilterControls: React.FC<{
       <select
         value={filterLocation}
         onChange={(e) => setFilterLocation(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Locations</option>
+        className="bg-background border border-border px-3 py-2 rounded"><option value="">All Locations</option>
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
         ))}
@@ -215,9 +203,7 @@ const FilterControls: React.FC<{
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
-      className="flex items-center gap-2"
-    >
-      <Sparkles className="h-4 w-4" />
+      className="flex items-center gap-2"><Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
     </Button>
   </div>
@@ -454,9 +440,7 @@ export default function Marketplace() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          className="text-center mb-8"><h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {t('marketplace.hero_title')}
           </h1>
           <p className="text-muted-foreground text-lg">
@@ -493,9 +477,7 @@ export default function Marketplace() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+          className="text-center mb-8"><h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             {t('marketplace.hero_title')}
           </h1>
           <p className="text-muted-foreground text-lg">
@@ -520,9 +502,7 @@ export default function Marketplace() {
       <motion.div 
         className="text-center mb-8"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        animate={{ opacity: 1, y: 0 }}><h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
           {t('marketplace.hero_title')}
         </h1>
         <p className="text-muted-foreground text-lg">
@@ -535,9 +515,7 @@ export default function Marketplace() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <MarketInsights stats={marketStats} />
+          transition={{ delay: 0.2 }}><MarketInsights stats={marketStats} />
         </motion.div>
       )}
 
@@ -545,9 +523,7 @@ export default function Marketplace() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-      >
-        <FilterControls
+        transition={{ delay: 0.3 }}><FilterControls
           sortBy={sortBy}
           setSortBy={setSortBy}
           filterCategory={filterCategory}
@@ -576,9 +552,7 @@ export default function Marketplace() {
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        <AnimatePresence mode="popLayout">
+        transition={{ delay: 0.4 }}><AnimatePresence mode="popLayout">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
@@ -588,9 +562,7 @@ export default function Marketplace() {
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
-              className="relative group"
-            >
-              <ProductCard
+              className="relative group"><ProductCard
                 product={{
                   id: product.id,
                   name: product.title,
@@ -654,9 +626,7 @@ export default function Marketplace() {
         <motion.div
           className="mt-8"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          animate={{ opacity: 1 }}><div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {Array.from({ length: 4 }).map((_, i) => (
               <SkeletonCard key={`loading-${i}`} />
             ))}
@@ -669,9 +639,7 @@ export default function Marketplace() {
         <motion.div
           className="text-center mt-12 py-8 border-t"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <div className="text-muted-foreground text-lg mb-2">
+          animate={{ opacity: 1 }}><div className="text-muted-foreground text-lg mb-2">
             🎉 You've explored all available products!
           </div>
           <div className="text-sm text-muted-foreground">
@@ -690,14 +658,11 @@ export default function Marketplace() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+            whileTap={{ scale: 0.9 }}><ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>
         )}
       </AnimatePresence>
     </div>
-<<<<<<< HEAD
   );
 }//Navigate to admin products page router.push ('/admin/products') ;
 }, [isAuthenticated, user, router, toast]);
@@ -719,7 +684,6 @@ case 'ai-score': return (b.aiScore || 0) - (a.aiScore || 0);';
 case 'newest': ;
 }else {;
   handleApiError (err), //This might show a toast or log to Sentry ;
-
 
 }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 //useInfiniteScrollPagination hook ;
@@ -857,7 +821,7 @@ case 'newest': ;
   isFetching ;
 }/> </motion.div> {;
   /* Product Grid */ ;
-}<motion.div > <ProductCard product= {;
+}<motion.div><ProductCard product= {;
   {';
   id: product.id, name: product.title, title: product.title, description: product.description || '', price: product.price || 0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating || 0, reviewCount: product.reviewCount || 0, created at: product.createdAt, updated at: product.createdAt,  //Use createdAt for both stock: product.stock, in stock: (product.stock || 0) > 0 ;
 
@@ -865,7 +829,6 @@ case 'newest': ;
   async () => {;
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
-
 
 }buyDisabled= {;
   false ;
@@ -942,16 +905,9 @@ case 'newest': ;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
         variant: "destructive"}),
       return;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

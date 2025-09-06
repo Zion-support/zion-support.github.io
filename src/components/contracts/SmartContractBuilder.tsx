@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Dialog,
@@ -19,7 +17,6 @@ import { useSmartContracts } from '@/hooks/useSmartContracts';
 import { toast } from 'sonner';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
 import { useState } from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -33,7 +30,6 @@ import { DeploymentOptions, SmartContractInfo } from "@/types/smart-contracts";
 import { useSmartContracts } from "@/hooks/useSmartContracts";
 import { toast } from "sonner";
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface SmartContractBuilderProps {
   isOpen: boolean,
   onClose: () => void,
@@ -121,9 +117,7 @@ export function SmartContractBuilder({
                 variant="outline" 
                 size="sm"
                 onClick={() => setTemplateManagerOpen(true)}
-                className="flex gap-1"
-              >
-                <Save className="h-4 w-4" />
+                className="flex gap-1"><Save className="h-4 w-4" />
                 Templates
               </Button>
             </div>
@@ -154,9 +148,7 @@ export function SmartContractBuilder({
                     <Button 
                       onClick={handleDeployContract}
                       disabled={deployStatus === 'deploying'}
-                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700"
-                    >
-                      {deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
+                      className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700">{deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain'}
                     </Button>
                   </div>
                 )}
@@ -174,7 +166,6 @@ export function SmartContractBuilder({
       </DialogContent>
     </Dialog>
   );
-<<<<<<< HEAD
 
 };
 //Modified to match the expected interface const handleFormSubmit = (contract: string) => {';
@@ -199,7 +190,7 @@ setActiveTab ("preview");
   onClose ;
 }deploymentInfo= {;
   deploymentInfo ;
-}/> > {';
+}/>>{';
   deployStatus === 'deploying' ? 'Deploying...' : 'Deploy to Blockchain' ;
 }</Button> </div>) ;
 }</div>) ;
@@ -213,10 +204,5 @@ setActiveTab ("preview");
   formValues ;
 }/> </DialogContent> </Dialog>) ;
 }'"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

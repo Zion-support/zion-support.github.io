@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Project } from '@/types/projects';
 import { useState } from "react";
 import { Star } from 'lucide-react'
@@ -104,10 +103,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
       )}
     </Card>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
   
   const isCompleted = project.status === "completed";
@@ -117,10 +112,6 @@ export function ProjectReviewSection({ project }: ProjectReviewSectionProps) {
   const clientProfile = project?.talent_profile;
   const talentProfile = project.talent_profile;
 
-
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

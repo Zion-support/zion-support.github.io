@@ -714,9 +714,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             key={result.id}
             className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
             data-testid="result-card"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h3 className="font-semibold">{result.title}</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="font-semibold">{result.title}</h3>
             <p className="text-gray-600 dark:text-gray-200">
               {result.description}
             </p>
@@ -726,9 +724,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <div
             key={result.id}
             className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
-            data-testid="result-card"
-          >
-            <h3 className="font-semibold">{result.title}</h3>
+            data-testid="result-card"><h3 className="font-semibold">{result.title}</h3>
             <p className="text-gray-600 dark:text-gray-200">
               {result.description}
             </p>
@@ -753,9 +749,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
         <div
           className="container mx-auto px-4 py-8"
-          data-testid="search-results"
-        >
-          {/* Search Header */}
+          data-testid="search-results">{/* Search Header */}
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -768,9 +762,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         <div
           className="container mx-auto px-4 py-8"
-          data-testid="search-results"
-        >
-          {/* Search Header */}
+          data-testid="search-results">{/* Search Header */}
           <div className="mb-8">
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
               <div className="flex-1">
@@ -782,9 +774,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   data-testid="results-count"
                   className="text-gray-600 dark:text-gray-200"
                   data-testid="results-count"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  {filteredResults.length > 0
+ursor/integrate-build-improve-and-re-verify-b76c>{filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
                     : `No results found for "${query}"`}
                 </p>
@@ -828,18 +818,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"
-                  data-testid="filter-button"
-                >
-                  <Filter className='h-4 w-4' />
+                  data-testid="filter-button"><Filter className='h-4 w-4' />
             <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
               <div className="flex items-center gap-2 flex-wrap">
                 <Button
                   variant="outline"
                   size="sm"
                   className="flex items-center gap-2"
-                  data-testid="filter-button"
-                >
-                  <Filter className="h-4 w-4" />
+                  data-testid="filter-button"><Filter className="h-4 w-4" />
                   <Filter className="h-4 w-4" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   Filters
@@ -849,9 +835,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   value={sortBy}
                   onChange={e => setSortBy(e.target.value)}
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm'
-                  data-testid='sort-select'
-                >
-                  <option value='relevance'>Relevance</option>
+                  data-testid='sort-select'><option value='relevance'>Relevance</option>
                   <option value='newest'>Newest</option>
                   <option value='price_asc'>Price: Low to High</option>
                   <option value='price_desc'>Price: High to Low</option>
@@ -876,19 +860,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={categoryFilter}
                   onChange={e => setCategoryFilter(e.target.value)}
-                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
-                >
-                  <option value='all'>All Categories</option>
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'><option value='all'>All Categories</option>
                   {categories.map(c => (
                   onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                >
-                  <option value="all">All Categories</option>
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"><option value="all">All Categories</option>
                   {categories.map((c) => (
                   onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                >
-                  <option value="all">All Categories</option>
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"><option value="all">All Categories</option>
                   {categories.map((c) => (
 ursor/integrate-build-improve-and-re-verify-b76c
                     <option key={c} value={c}>
@@ -941,9 +919,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   className='px-3 py-1 border border-gray-300 rounded-md text-sm'
                   onChange={(e) => setMinRating(e.target.value)}
                   className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <option value="">All Ratings</option>
+ursor/integrate-build-improve-and-re-verify-b76c><option value="">All Ratings</option>
                   <option value="4">4★ & up</option>
                   <option value="3">3★ & up</option>
                   <option value="2">2★ & up</option>
@@ -956,22 +932,16 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   size="sm"
                   onClick={() => setViewMode('grid')}
                   data-testid="view-mode-grid"
-                  className={viewMode === 'grid' ? 'active' : ''}
-                >
-                  <Grid className="h-4 w-4" />
+                  className={viewMode === 'grid' ? 'active' : ''}><Grid className="h-4 w-4" />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setViewMode('list')}
                   data-testid="view-mode-list"
-                  className={viewMode === 'list' ? 'active' : ''}
-                >
-                  <List className='h-4 w-4' />
+                  className={viewMode === 'list' ? 'active' : ''}><List className='h-4 w-4' />
                   onChange={(e) => setMinRating(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                >
-                  <option value="">All Ratings</option>
+                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"><option value="">All Ratings</option>
                   <option value="4">4★ & up</option>
                   <option value="3">3★ & up</option>
                   <option value="2">2★ & up</option>
@@ -984,18 +954,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   size="sm"
                   onClick={() => setViewMode('grid')}
                   data-testid="view-mode-grid"
-                  className={viewMode === 'grid' ? 'active' : ''}
-                >
-                  <Grid className="h-4 w-4" />
+                  className={viewMode === 'grid' ? 'active' : ''}><Grid className="h-4 w-4" />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => setViewMode('list')}
                   data-testid="view-mode-list"
-                  className={viewMode === 'list' ? 'active' : ''}
-                >
-                  <List className="h-4 w-4" />
+                  className={viewMode === 'list' ? 'active' : ''}><List className="h-4 w-4" />
                   <List className="h-4 w-4" />
 ursor/integrate-build-improve-and-re-verify-b76c
                 </Button>
@@ -1048,9 +1014,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       viewMode === 'grid'
                         ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'
                         : 'space-y-4'
-                    }
-                  >
-                    {typeResults.map(renderResultCard)}
+                    }>{typeResults.map(renderResultCard)}
                   </div>
                 </div>
               ))}
@@ -1063,18 +1027,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <Button
                     onClick={loadMore}
                     disabled={loading}
-                    className="flex items-center gap-2"
-                  >
-                    {loading ? (
+                    className="flex items-center gap-2">{loading ? (
                       <>
                         <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>
                 <div className="flex justify-center py-8">
                   <Button
                     onClick={loadMore}
                     disabled={loading}
-                    className="flex items-center gap-2"
-                  >
-                    {loading ? (
+                    className="flex items-center gap-2">{loading ? (
                       <>
                         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
                         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>

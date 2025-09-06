@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -27,8 +25,6 @@ import { useAuth } from '@/hooks/useAuth';
 import ReplyCard from '@/components/community/ReplyCard';
 import ReplyForm from '@/components/community/ReplyForm';
 import { useToast } from '@/hooks/use-toast';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import Link from "next/link";
@@ -342,18 +338,14 @@ export default function ForumPostPage() {
                   variant="outline"
                   size="sm"
                   onClick={handleUpvote}
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsUp className="h-4 w-4" />
+                  className="flex items-center gap-2"><ThumbsUp className="h-4 w-4" />
                   <span>{post.upvotes}</span>
                 </Button>
                 <Button
                   variant="outline"
                   size="sm"
                   onClick={handleDownvote}
-                  className="flex items-center gap-2"
-                >
-                  <ThumbsDown className="h-4 w-4" />
+                  className="flex items-center gap-2"><ThumbsDown className="h-4 w-4" />
                   <span>{post.downvotes}</span>
                 </Button>
               </div>
@@ -373,17 +365,13 @@ export default function ForumPostPage() {
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handlePinPost}
-                    >
-                      <Pin className="h-4 w-4 mr-1" />
+                      onClick={handlePinPost}><Pin className="h-4 w-4 mr-1" />
                       {post.isPinned ? "Unpin" : "Pin"}
                     </Button>
                     <Button
                       variant="ghost"
                       size="sm"
-                      onClick={handleLockPost}
-                    >
-                      <Lock className="h-4 w-4 mr-1" />
+                      onClick={handleLockPost}><Lock className="h-4 w-4 mr-1" />
                       {post.isLocked ? "Unlock" : "Lock"}
                     </Button>
                   </>
@@ -392,9 +380,7 @@ export default function ForumPostPage() {
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={handleReportPost}
-                >
-                  <Flag className="h-4 w-4 mr-1" />
+                  onClick={handleReportPost}><Flag className="h-4 w-4 mr-1" />
                   Report
                 </Button>
               </div>
@@ -457,7 +443,6 @@ export default function ForumPostPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 downvotes: 0 ;
 };
 {;
@@ -484,7 +469,7 @@ updatedAt: "2025-04-02T11:20:00Z";
 upvotes: 4;
 downvotes: 0 ;
 }];'";
-//Using `useParams` without type arguments avoids issues when TypeScript //can't determine the generic type for the helper from React Router. //Cast the result instead to provide the expected shape. <h1>Post not found</h1> <Button asChild className="mt-4" > <Link href="/community" >Back to Community</Link> </Button> </div> const handleUpvote = () => {;
+//Using `useParams` without type arguments avoids issues when TypeScript //can't determine the generic type for the helper from React Router. //Cast the result instead to provide the expected shape. <h1>Post not found</h1> <Button asChild className="mt-4"><Link href="/community" >Back to Community</Link> </Button> </div> const handleUpvote = () => {;
   if (!user) {;
   toast ({;
   return;
@@ -536,7 +521,7 @@ downvotes: 0 ;
   isAdminOrMod && (<> <Button variant=" ghost"size=" sm"onClick={;
   handlePinPost ;
 }> </Button> </>) ";
-}<Button > <Flag className=" h-4 w-4 mr-1"/> Report </Button> </div> </div> </CardContent> </Card>) ) ;
+}<Button><Flag className=" h-4 w-4 mr-1"/> Report </Button> </div> </div> </CardContent> </Card>) ) ;
 }</div>) ;
 }{;
   user ? (<ReplyForm onSubmit= {;
@@ -555,9 +540,6 @@ downvotes: 0 ;
 }/>) ) ;
 }</div> </div> </div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   const isAuthor = user?.id === post?.authorId;
   
@@ -567,7 +549,4 @@ downvotes: 0 ;
 
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

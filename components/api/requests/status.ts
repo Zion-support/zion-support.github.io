@@ -1,14 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json');
 
-=======
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function readAll() {
   try {
     return JSON.parse(fs.readFileSync(REQUESTS_PATH, 'utf-8'))
@@ -32,9 +28,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (idx === -1) return res.status(404).json({ error: 'Not found' });
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
   writeAll(items);
-<<<<<<< HEAD
   res.status(200).json({ ok: true });
-=======
 const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json');
 function readAll() {
   try {
@@ -61,8 +55,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   writeAll(items);
   res.status(200).json({ ok: true })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   res.status(200).json({ ok: true })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

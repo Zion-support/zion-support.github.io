@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
@@ -111,9 +110,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
         <Badge 
           key={filter.key} 
           variant="secondary" 
-          className="flex items-center gap-1 pl-2 pr-1"
-        >
-          <span className="text-xs">
+          className="flex items-center gap-1 pl-2 pr-1"><span className="text-xs">
             {filter.label}: {filter.value}
           </span>
           <Button
@@ -121,9 +118,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
             onClick={() => removeFilter(filter.key)}
-            aria-label={`Remove ${filter.label} filter`}
-          >
-            <X className="h-3 w-3" />
+            aria-label={`Remove ${filter.label} filter`}><X className="h-3 w-3" />
           </Button>
         </Badge>
       ))}
@@ -141,18 +136,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 };
 
 export default ActiveFiltersBar;
-<<<<<<< HEAD
 '"
-=======
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
 
 export default ActiveFiltersBar;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

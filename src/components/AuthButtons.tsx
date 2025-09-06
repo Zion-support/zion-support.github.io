@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Facebook } from 'lucide-react'
@@ -27,9 +26,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('google')}
-          disabled={loadingProvider !== null}
-        >
-          <span className="sr-only">Sign in with Google</span>
+          disabled={loadingProvider !== null}><span className="sr-only">Sign in with Google</span>
           {loadingProvider === 'google' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
@@ -48,9 +45,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('github')}
-          disabled={loadingProvider !== null}
-        >
-          <span className="sr-only">Sign in with GitHub</span>
+          disabled={loadingProvider !== null}><span className="sr-only">Sign in with GitHub</span>
           {loadingProvider === 'github' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
@@ -66,9 +61,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           variant="outline"
           className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('facebook')}
-          disabled={loadingProvider !== null}
-        >
-          <span className="sr-only">Sign in with Facebook</span>
+          disabled={loadingProvider !== null}><span className="sr-only">Sign in with Facebook</span>
           {loadingProvider === 'facebook' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
@@ -82,9 +75,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
           variant="outline"
           className="col-span-2 border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
           onClick={() => handleSignIn('credentials')}
-          disabled={loadingProvider !== null}
-        >
-          {loadingProvider === 'credentials' ? (
+          disabled={loadingProvider !== null}>{loadingProvider === 'credentials' ? (
             <svg className="h-5 w-5 animate-spin" viewBox="0 0 24 24" />
           ) : (
             <>Email Login</>
@@ -93,15 +84,7 @@ export function AuthButtons({ providers = ['googlegithubfacebookcredentials'] }:
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
 
   const gridCols = `grid-cols-${providers.length}`;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

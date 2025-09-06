@@ -17,7 +17,7 @@ function buildIpfsClient() {
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument.create();
-  const page = pdfDoc.addPage([595.28, 841.89]), // A4
+  const page = pdfDoc.addPage([595.28, 841.89]); // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const fontSize = 11;
   const margin = 40;
@@ -71,19 +71,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const hasher = crypto.createHash('sha256');
     hasher.update(markdown);
     const digest = '0x' + hasher.digest('hex');
-    let signature: string | undefined,
+    let signature: string | undefined;
     const privateKey = process.env.WEB3_SIGNER_PRIVATE_KEY;
     if (privateKey) {
       const wallet = new ethers.Wallet(privateKey);
-      signature = await wallet.signMessage(ethers.getBytes(digest))
+      signature = await wallet.signMessage(ethers.getBytes(digest));
     }
 
-    let ipfsCid: string | undefined,
+    let ipfsCid: string | undefined;
     const ipfs = buildIpfsClient();
     if (ipfs) {
       try {
         const { cid } = await ipfs.add(markdown);
-        ipfsCid = cid.toString()
+        ipfsCid = cid.toString();
       } catch {}
     }
 

@@ -1,6 +1,4 @@
 import { useEffect } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL ||
@@ -8,15 +6,11 @@ const IOS_APP_URL =
 const ANDROID_APP_URL =
   process.env.NEXT_PUBLIC_ANDROID_APP_URL ||
   'https://play.google.com/store/apps/details?id=com.zion.app';
-=======
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https://play.google.com/store/apps/details?id=com.zion.app';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open';
-=======
 const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
 const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https: //play.google.com/store/apps/details?id=com.zion.app', const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
 export default function OpenApp() {
   useEffect(() => {
@@ -26,15 +20,7 @@ export default function OpenApp() {
     const timeout = setTimeout(() => {
       const elapsed = Date.now() - now;
       if (elapsed < 2000) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL;
-=======
-        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        window.location.href = isIOS ? IOS_APP_URL : ANDROID_APP_URL
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     }, 1200);
 
@@ -45,32 +31,22 @@ export default function OpenApp() {
     document.body.appendChild(iframe);
 
     const timer = setTimeout(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
       try {
         document.body.removeChild(iframe);
       } catch {}
-=======
       try { document.body.removeChild(iframe) } catch {}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       try { document.body.removeChild(iframe) } catch {}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }, 1500);
 
     return () => {
       clearTimeout(timeout);
       clearTimeout(timer);
-<<<<<<< HEAD
-<<<<<<< HEAD
       try {
         document.body.removeChild(iframe);
       } catch {}
     };
-=======
       try { document.body.removeChild(iframe) } catch {}
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   return (
@@ -81,8 +57,6 @@ export default function OpenApp() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
       try { document.body.removeChild(iframe) } catch {}
     }
   }, []);
@@ -96,7 +70,4 @@ export default function OpenApp() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

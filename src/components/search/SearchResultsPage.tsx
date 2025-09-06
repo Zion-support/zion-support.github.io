@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import { Search, Filter, X, SortAsc, SortDesc, GridIcon, List, Loader2 } from 'lucide-react'
@@ -301,9 +300,7 @@ const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string)
                 key={index}
                 variant="outline"
                 size="sm"
-                onClick={() => onNewSearch(suggestion)}
-              >
-                {suggestion}
+                onClick={() => onNewSearch(suggestion)}>{suggestion}
               </Button>
             ))}
           </div>
@@ -505,16 +502,12 @@ export const SearchResultsPage: React.FC = () => {
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'ghost'}
                   size="sm"
-                  onClick={() => setViewMode('grid')}
-                >
-                  <GridIcon className="h-4 w-4" />
+                  onClick={() => setViewMode('grid')}><GridIcon className="h-4 w-4" />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'ghost'}
                   size="sm"
-                  onClick={() => setViewMode('list')}
-                >
-                  <List className="h-4 w-4" />
+                  onClick={() => setViewMode('list')}><List className="h-4 w-4" />
                 </Button>
               </div>
 
@@ -610,9 +603,7 @@ export const SearchResultsPage: React.FC = () => {
                     <Button 
                       onClick={loadMore} 
                       disabled={loading}
-                      variant="outline"
-                    >
-                      {loading ? (
+                      variant="outline">{loading ? (
                         <>
                           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                           Loading...
@@ -632,7 +623,6 @@ export const SearchResultsPage: React.FC = () => {
   )
 };
 
-<<<<<<< HEAD
 export default SearchResultsPage;
   suggestion ;
 }</Button>) ) ;
@@ -642,13 +632,13 @@ export default SearchResultsPage;
 setCurrentPage (data.page);
 setHasMore (data.hasMore);
 //Active filters count const activeFiltersCount = filters.types.length + (filters.category ? 1 : 0) + (filters.minPrice > 0 || filters.maxPrice < 10000 ? 1 : 0) + (filters.minRating > 0 ? 1 : 0);";
-}> <SelectTrigger className="w-40" > <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select> > <GridIcon className="h-4 w-4" /> </Button> <Button > <List className="h-4 w-4" /> </Button> </div> {;
+}> <SelectTrigger className="w-40"><SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="relevance" >Relevance</SelectItem> <SelectItem value="price asc" >Price: Low to High</SelectItem> <SelectItem value="price desc" >Price: High to Low</SelectItem> <SelectItem value="rating" >Highest Rated</SelectItem> </SelectContent> </Select>><GridIcon className="h-4 w-4" /> </Button> <Button><List className="h-4 w-4" /> </Button> </div> {;
   /* Mobile Filter Toggle */ ;
 }<Sheet open= {;
   showFilters ;
 }onOpenChange= {;
   setShowFilters ";
-}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80" > <SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6" > <FilterSidebar filters= {;
+}> <SheetTrigger asChild> </Button> </SheetTrigger> <SheetContent side="left" className="w-80"><SheetHeader> <SheetTitle>Search Filters</SheetTitle> </SheetHeader> <div className="mt-6"><FilterSidebar filters= {;
   filters ;
 }onFiltersChange= {;
   handleFiltersChange ;
@@ -683,7 +673,7 @@ setHasMore (data.hasMore);
 }viewMode= {;
   viewMode ;
 }/>) ) ;
-}</div> > {'";
+}</div>>{'";
   loading ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Loading... </>) : ('Load More Results') ;
 }</Button> </div>) ;
 }</>) ;
@@ -692,23 +682,12 @@ setHasMore (data.hasMore);
 };
 export default SearchResultsPage;
 '"
-=======
-
-<<<<<<< HEAD
-
 
 // No Results Component
 const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
   searchTerm,
   onNewSearch ;
 
-<<<<<<< HEAD
-
-
-
 export default SearchResultsPage, 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default SearchResultsPage, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

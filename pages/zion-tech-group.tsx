@@ -144,9 +144,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   </Link>
                   <Link
                     href='/contact'
-                    className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                  >
-        <title>About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
+                    className='text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium'><title>About Zion Tech Group | Revolutionary Quantum AI & Autonomous Systems</title>
         <meta name="description" content="Discover Zion Tech Group's mission to revolutionize technology with quantum AI, autonomous systems, and cutting-edge platforms. Learn about our innovative solutions and global impact." />
         <meta name="keywords" content="Zion Tech Group, about us, quantum AI, autonomous systems, technology innovation, company mission" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -815,9 +813,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </Link>
               <Link
                 href='/contact'
-                className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'
-              >
-        <div className="bg-purple-600">
+                className='inline-flex items-center px-6 py-3 border border-white text-base font-medium rounded-md text-white hover:bg-purple-700'><div className="bg-purple-600">
           <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
               <span className="block">Ready to Join the Future?</span>
@@ -868,9 +864,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       <li>
                         <Link
                           href='/zion-tech-group'
-                          className='text-base text-gray-300 hover:text-white'
-                        >
-        <footer className="bg-black/40">
+                          className='text-base text-gray-300 hover:text-white'><footer className="bg-black/40">
           <div className="max-w-7xl mx-auto py-12 px-4 sm: px-6 lg:py-16 lg:px-8">
             <div className="xl:grid xl:grid-cols-3 xl:gap-8">
               <div className="space-y-8 xl:col-span-1">
@@ -894,9 +888,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       <li>
                         <Link
                           href='/zion-tech-group'
-                          className='text-base text-gray-300 hover:text-white'
-                        >
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+                          className='text-base text-gray-300 hover:text-white'><Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
                           Autonomous Systems
@@ -905,9 +897,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       <li>
                         <Link
                           href='/zion-tech-group'
-                          className='text-base text-gray-300 hover:text-white'
-                        >
-                        <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
+                          className='text-base text-gray-300 hover:text-white'><Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
                         <Link href="/zion-tech-group" className="text-base text-gray-300 hover:text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
                           Technology Platforms
@@ -923,9 +913,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       <li>
                         <Link
                           href='/zion-tech-group'
-                          className='text-base text-gray-300 hover:text-white'
-                        >
-                  <div className="mt-12 md:mt-0">
+                          className='text-base text-gray-300 hover:text-white'><div className="mt-12 md:mt-0">
                     <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Company</h3>
                     <ul className="mt-4 space-y-4">
                       <li>
@@ -942,9 +930,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       <li>
                         <Link
                           href='/contact'
-                          className='text-base text-gray-300 hover:text-white'
-                        >
-                        <Link href="/contact" className="text-base text-gray-300 hover:text-white">
+                          className='text-base text-gray-300 hover:text-white'><Link href="/contact" className="text-base text-gray-300 hover:text-white">
                         <Link href="/contact" className="text-base text-gray-300 hover:text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
                           Contact

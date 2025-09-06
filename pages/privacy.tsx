@@ -189,9 +189,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
+                transition={{ duration: 0.6 }}><h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
                   Privacy Policy
@@ -232,9 +230,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h2 className='text-4xl font-bold mb-6 text-white'>
+                  transition={{ duration: 0.6 }}><h2 className='text-4xl font-bold mb-6 text-white'>
                   <h2 className="text-4xl font-bold mb-6 text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
                     Our Commitment to Privacy
@@ -279,9 +275,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   transition={{ duration: 0.6, delay: 0.2 }}
                   className='relative'
                   className="relative"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
                     <div className="text-center space-y-6">
                       <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
                         <Shield className="w-12 h-12 text-white" />
@@ -299,9 +293,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                             99.9%
                           </div>
                           <div className='text-gray-400'>Uptime</div>
-                  className="relative"
-                >
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+                  className="relative"><div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
                     <div className="text-center space-y-6">
                       <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
                         <Shield className="w-12 h-12 text-white" />
@@ -344,16 +336,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.6 }}
                 className='text-center mb-16'
                 className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
                 <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
               </motion.div>
 
               <div className='grid md:grid-cols-2 gap-8'>
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
                 <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
               </motion.div>
               
@@ -369,9 +357,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50'
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
-ursor/integrate-build-improve-and-re-verify-b76c
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
                         {section.icon}
                       </div>
@@ -382,9 +368,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <li key={itemIndex} className='flex items-start gap-3'>
                           <div className='w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0'></div>
                           <span className='text-gray-300'>{item}</span>
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"><div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
                         {section.icon}
                       </div>
@@ -422,16 +406,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.6 }}
                 className='text-center mb-16'
                 className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
                 <p className="text-xl text-gray-300">You have control over your personal information</p>
               </motion.div>
 
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
                 <p className="text-xl text-gray-300">You have control over your personal information</p>
               </motion.div>
               
@@ -447,9 +427,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center'
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <div className="text-white">
                         {right.icon}
                       </div>
@@ -458,9 +436,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {right.title}
                     </h3>
                     <p className='text-gray-300 text-sm'>{right.description}</p>
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
-                  >
-                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"><div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <div className="text-white">
                         {right.icon}
                       </div>
@@ -490,9 +466,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.6 }}
                 className='space-y-12'
                 className="space-y-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div>
+ursor/integrate-build-improve-and-re-verify-b76c><div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
                   
                   <div className="space-y-8">
@@ -508,9 +482,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         operating system, referring URLs, access times, and
                         pages viewed. We use this information to improve our
                         services and provide a better user experience.
-                className="space-y-12"
-              >
-                <div>
+                className="space-y-12"><div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
                   
                   <div className="space-y-8">
@@ -825,9 +797,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className='text-4xl font-bold mb-6 text-white'>
+                transition={{ duration: 0.6 }}><h2 className='text-4xl font-bold mb-6 text-white'>
                 <h2 className="text-4xl font-bold mb-6 text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
                   Questions About Privacy?
@@ -839,16 +809,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <Mail className="w-5 h-5" />
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><Mail className="w-5 h-5" />
                     Email Us
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <User className='w-5 h-5' />
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><User className='w-5 h-5' />
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
                 </h2>
@@ -859,16 +825,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <Mail className="w-5 h-5" />
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><Mail className="w-5 h-5" />
                     Email Us
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <User className="w-5 h-5" />
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><User className="w-5 h-5" />
                     <User className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                     Contact Form

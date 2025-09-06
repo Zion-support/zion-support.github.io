@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface TextAnalysisResult {
-<<<<<<< HEAD
   text: string;
   statistics: {
     characters: number;
@@ -34,12 +33,10 @@ interface TextAnalysisResult {
     isEnglish: boolean
   };
   keywords: {
-<<<<<<< HEAD
     topWords: Array<{ word: string; count: number; frequency: number }>;
     bigrams: Array<{ phrase: string; count: number }>;
     trigrams: Array<{ phrase: string; count: number }>;
   };
-=======
   text: string,
   statistics: {
       
@@ -68,40 +65,24 @@ interface TextAnalysisResult {
     isEnglish: boolean
   };
   keywords: {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     topWords: Array<{ word: string, count: number, frequency: number }>;
     bigrams: Array<{ phrase: string, count: number }>;
     trigrams: Array<{ phrase: string, count: number }>
   }
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default async function handler(
   req: NextApiRequest;
   res: NextApiResponse<TextAnalysisResult | { error: string }>
 ) {
   if (req.method !== 'POST') {
-<<<<<<< HEAD
-<<<<<<< HEAD
     return res.status(405).json({ error: 'Method not allowed' });
-=======
-    return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   try {
     const { text } = req.body;
 
     if (!text || typeof text !== 'string') {
-<<<<<<< HEAD
-<<<<<<< HEAD
       return res.status(400).json({ error: 'Text is required' });
     }
 
@@ -109,27 +90,21 @@ export default async function handler(
       return res
         .status(400)
         .json({ error: 'Text too long (max 10,000 characters)' });
-=======
       return res.status(400).json({ error: 'Text is required' })
     }
 
     if (text.length > 10000) {
       return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return res.status(400).json({ error: 'Text is required' })
     }
 
     if (text.length > 10000) {
       return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Basic statistics
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const words = text
       .trim()
       .split(/\s+/)
@@ -140,16 +115,12 @@ export default async function handler(
     const paragraphs = text
       .split(/\n\s*\n/)
       .filter(para => para.trim().length > 0).length;
-=======
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
     const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
     const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
@@ -158,27 +129,21 @@ export default async function handler(
       word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
       word = word.replace(/^y/, '');
       const matches = word.match(/[aeiouy]{1,2}/g);
-<<<<<<< HEAD
-<<<<<<< HEAD
       return matches ? matches.length : 1;
     };
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word);
-=======
       return matches ? matches.length : 1
     };
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return matches ? matches.length : 1
     };
 
     const syllables = text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }, 0);
 
     // Reading and speaking time (average: 200 words/min reading, 150 words/min speaking)
@@ -186,8 +151,6 @@ export default async function handler(
     const speakingTime = Math.ceil(words / 150);
 
     // Readability scores
-<<<<<<< HEAD
-<<<<<<< HEAD
     const fleschReadingEase = Math.max(
       0,
       Math.min(
@@ -225,14 +188,12 @@ export default async function handler(
       0,
       4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43
     );
-=======
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
     const smog = Math.max(0, 1.043 * Math.sqrt(text.split(/\s+/).filter(word => word.length > 2).length * (30 / sentences)) + 3.1291);
     const colemanLiau = Math.max(0, 0.0588 * (charactersNoSpaces / words * 100) - 0.296 * (sentences / words * 100) - 15.8);
     const automatedReadability = Math.max(0, 4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5);
 
@@ -247,7 +208,6 @@ export default async function handler(
     const sentimentScore = positiveCount - negativeCount;
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';
-=======
     const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
     const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
     const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
@@ -267,7 +227,6 @@ export default async function handler(
     
     const sentimentScore = positiveCount - negativeCount;
     let sentimentLabel: TextAnalysisResult['sentiment']['label'], if (sentimentScore <= -3) sentimentLabel = 'very-negative',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     else if (sentimentScore <= -1) sentimentLabel = 'negative';
     else if (sentimentScore <= 1) sentimentLabel = 'neutral';
     else if (sentimentScore <= 3) sentimentLabel = 'positive';
@@ -275,8 +234,6 @@ export default async function handler(
 
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-<<<<<<< HEAD
-<<<<<<< HEAD
     text
       .toLowerCase()
       .split(/\s+/)
@@ -286,39 +243,26 @@ export default async function handler(
           wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1);
         }
       });
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     text.toLowerCase().split(/\s+/).forEach(word => {
       const cleanWord = word.replace(/[^\w]/g, '');
       if (cleanWord.length > 2) {
         wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1)
       }
     });
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
       .map(([word, count]) => ({
-<<<<<<< HEAD
-<<<<<<< HEAD
         word,
         count,
         frequency: Math.round((count / words) * 1000) / 10,
-=======
         word;
         count;
         frequency: Math.round((count / words) * 1000) / 10
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         word;
         count;
         frequency: Math.round((count / words) * 1000) / 10
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }));
 
     // Bigrams and trigrams
@@ -326,21 +270,14 @@ export default async function handler(
     const bigramCounts = new Map<string, number>();
     const trigramCounts = new Map<string, number>();
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     for (let i = 0; i < wordsArray.length - 1; i++) {
-=======
-    for (let i = 0, i < wordsArray.length - 1, i++) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
     }
 
     for (let i = 0, i < wordsArray.length - 2, i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
-<<<<<<< HEAD
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1);
-=======
     for (let i = 0, i < wordsArray.length - 1, i++) {
       const bigram = `${wordsArray[i]} ${wordsArray[i + 1]}`;
       bigramCounts.set(bigram, (bigramCounts.get(bigram) || 0) + 1)
@@ -349,10 +286,7 @@ export default async function handler(
     for (let i = 0, i < wordsArray.length - 2, i++) {
       const trigram = `${wordsArray[i]} ${wordsArray[i + 1]} ${wordsArray[i + 2]}`;
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       trigramCounts.set(trigram, (trigramCounts.get(trigram) || 0) + 1)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const bigrams = Array.from(bigramCounts.entries())
@@ -366,25 +300,12 @@ export default async function handler(
       .map(([phrase, count]) => ({ phrase, count }));
 
     // Language detection (simplified - assume English for demo)
-<<<<<<< HEAD
-<<<<<<< HEAD
     const isEnglish = /^[a-zA-Z\s.,!?;:'"()-]+$/.test(text);
-=======
-    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    const isEnglish = /^[a-zA-Z\s.,!?,:'"()-]+$/.test(text);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
     const result: TextAnalysisResult = {
-<<<<<<< HEAD
-<<<<<<< HEAD
       text,
-=======
-      text;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       statistics: {
         characters;
         charactersNoSpaces;
@@ -421,8 +342,6 @@ export default async function handler(
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' })
   }
-<<<<<<< HEAD
-=======
       text;
       statistics: {
       
@@ -461,7 +380,4 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' })
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

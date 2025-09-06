@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
@@ -16,19 +14,12 @@ import {
   TrendingUp,
   Users,;
 } from 'lucide-react';
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { BarChart, DollarSign, LineChart, TrendingUp, Users } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation
@@ -37,14 +28,10 @@ export function PartnerDashboard() {
     pendingReferrals: 8,
     completedReferrals: 34,
     conversionRate: 18.5,
-<<<<<<< HEAD
-<<<<<<< HEAD
     totalRevenue: 850.0,
     pendingRevenue: 200.0,
-=======
     totalRevenue: 850.00,
     pendingRevenue: 200.00
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
   
   return (
@@ -70,14 +57,11 @@ export function PartnerDashboard() {
             <TrendingUp className="h-4 w-4 text-zion-purple" />
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
             <div className='text-2xl font-bold'>{stats.conversionRate}%</div>
             <p className='text-xs text-zion-slate-light'>
-=======
     totalRevenue: 850.00,
     pendingRevenue: 200.00
   };
-
 
   return (
     <div className="space-y-6">
@@ -104,17 +88,12 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">{stats.conversionRate}%</div>
             <p className="text-xs text-zion-slate-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="text-2xl font-bold">{stats.conversionRate}%</div>
             <p className="text-xs text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Of clicks that convert to sign-ups
             </p>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <Card className='bg-zion-blue-dark border-zion-blue-light'>
           <CardHeader className='flex flex-row items-center justify-between pb-2'>
@@ -126,7 +105,6 @@ export function PartnerDashboard() {
           <CardContent>
             <div className='text-2xl font-bold'>${stats.totalRevenue}</div>
             <p className='text-xs text-zion-slate-light'>
-=======
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -136,8 +114,6 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         
         <Card className="bg-zion-blue-dark border-zion-blue-light">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -147,18 +123,12 @@ export function PartnerDashboard() {
           <CardContent>
             <div className="text-2xl font-bold">${stats.totalRevenue}</div>
             <p className="text-xs text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               ${stats.pendingRevenue} pending payout
             </p>
           </CardContent>
         </Card>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
@@ -174,10 +144,8 @@ export function PartnerDashboard() {
       </Card>
       
       {/* Recent Referrals */}
-<<<<<<< HEAD
       <Card className='bg-zion-blue-dark border-zion-blue-light'>
         <CardHeader className='flex flex-row items-center justify-between'>
-=======
       
       {/* Performance Chart */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -196,17 +164,12 @@ export function PartnerDashboard() {
       {/* Recent Referrals */}
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader className="flex flex-row items-center justify-between">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <div>
             <CardTitle>Recent Referrals</CardTitle>
             <CardDescription>Your latest partner referrals</CardDescription>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Button variant='outline' size='sm'>
             View All
           </Button>
@@ -216,23 +179,16 @@ export function PartnerDashboard() {
             <Users className='h-16 w-16 mx-auto text-zion-slate-light mb-4' />
             <p className='text-zion-slate-light mb-4'>No referrals yet</p>
             <p className='text-xs text-zion-slate-light'>
-=======
           <Button variant="outline" size="sm">View All</Button>
         </CardHeader>
         <CardContent>
-=======
           <Button variant="outline" size="sm">View All</Button>
         </CardHeader>
         <CardContent>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
             <Users className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
             <p className="text-zion-slate-light mb-4">No referrals yet</p>
             <p className="text-xs text-zion-slate-light">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Start sharing your referral links to earn rewards
             </p>
           </div>
@@ -240,11 +196,4 @@ export function PartnerDashboard() {
       </Card>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

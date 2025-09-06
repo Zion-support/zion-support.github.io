@@ -173,9 +173,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <div className='pt-2'>
             <button
               disabled={submitting}
-              className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'
-            >
-              {submitting ? 'Submitting...' : 'Submit Dispute'}
+              className='px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50'>{submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>

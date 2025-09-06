@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -10,7 +8,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
-=======
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -21,7 +18,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form;
@@ -572,9 +568,7 @@ export function TalentRegistrationForm() {
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
                       onClick={generateEnhancedProfile}
-                      disabled={isGenerating}
-                    >
-                      <Sparkles className="mr-2 h-4 w-4" />
+                      disabled={isGenerating}><Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
                     </Button>
                   </div>
@@ -592,9 +586,7 @@ export function TalentRegistrationForm() {
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-                        onClick={applyGeneratedContent}
-                      >
-                        <Check className="mr-1 h-3 w-3" /> Apply
+                        onClick={applyGeneratedContent}><Check className="mr-1 h-3 w-3" /> Apply
                       </Button>
                     </div>
                     
@@ -611,17 +603,13 @@ export function TalentRegistrationForm() {
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (
                               <div key={category} className="flex items-center gap-2">
                                 <Badge
-                                  className={`w-fit ${getCategoryColor(category as CategoryType)}`}
-                                >
-                                  {category}
+                                  className={`w-fit ${getCategoryColor(category as CategoryType)}`}>{category}
                                 </Badge>
                                 <div className="flex flex-wrap gap-1">
                                   {skills.map((skill: string) => (
                                     <Badge
                                       key={skill}
-                                      className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none"
-                                    >
-                                      {skill}
+                                      className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">{skill}
                                     </Badge>
                                   ))}
                                 </div>
@@ -678,15 +666,11 @@ export function TalentRegistrationForm() {
                     {skillTags.map(skill => (
                       <Badge
                         key={skill}
-                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1"
-                      >
-                        {skill}
+                        className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">{skill}
                         <button
                           type="button"
                           onClick={() => handleRemoveSkill(skill)}
-                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"
-                        >
-                          <X className="h-3 w-3" />
+                          className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"><X className="h-3 w-3" />
                         </button>
                       </Badge>
                     ))}
@@ -773,9 +757,7 @@ export function TalentRegistrationForm() {
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                  disabled={isSubmitting}
-                >
-                  {isSubmitting ? "Creating Profile..." : "Create Profile"}
+                  disabled={isSubmitting}>{isSubmitting ? "Creating Profile..." : "Create Profile"}
                 </Button>
               </div>
             </CardFooter>
@@ -784,7 +766,6 @@ export function TalentRegistrationForm() {
       </Card>
     </div>
   );
-<<<<<<< HEAD
 
 };
 //Generate enhanced profile with AI return;
@@ -794,7 +775,6 @@ export function TalentRegistrationForm() {
   body: {;
   talentData: {;
   name: formData.name, title: formData.title, bio: formData.bio,  skills: skillTags, location: formData.location ;
-
 
 });
 }else {';
@@ -842,7 +822,6 @@ if (Array.isArray (categorySkills) ) {;
   new Date () .getFullYear () ;
 }Zion Marketplace</p> ;
 
-
 };
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {;
   if (skillTags.length === 0) {;
@@ -858,7 +837,6 @@ try {;
   body: {;
   talentData: {;
   name: values.name, title: values.title, bio: values.bio,  skills: skillTags, location: values.location ;
-
 
 });';
 //Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {;
@@ -893,10 +871,10 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
   form.handleSubmit (onSubmit) ";
 }> <CardContent className="space-y-8"> {;
   /* Basic Information */ ";
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> <div className="col-span-1" > <FormField <FormItem> <FormLabel className="text-zion-slate-light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
+}<div className="space-y-4"> <h3 className="text-lg font-medium text-white">Basic Information</h3> <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> <div className="col-span-1"><FormField <FormItem> <FormLabel className="text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className="relative"> <UserRound className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> </div> <div className="col-span-1"><FormField <FormItem> <FormLabel className="text-zion-slate-light">Professional Title</FormLabel> <FormControl> <div className="relative"> <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> </div> <div className="col-span-1"><FormField <FormItem> <FormLabel className="text-zion-slate-light">Location</FormLabel> <FormControl> <div className="relative"> <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> </div> <div className="col-span-1"><FormField <FormItem> <FormLabel className="text-zion-slate-light">Hourly Rate (USD) </FormLabel> <FormControl> <div className="relative"> <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ;
 }/> </div> </div> {;
   /* Upload Avatar */ ";
 }<div className="space-y-2"> <FormLabel className="text-zion-slate-light">Profile Picture</FormLabel> <div className="flex items-center gap-6"> <div className="relative w-24 h-24 rounded-full overflow-hidden bg-zion-blue-light border border-zion-blue-light"> {;
@@ -938,7 +916,7 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }</Badge> <div className="flex flex-wrap gap-1"> {;
   skills.map ( (skill: string) => (<Badge key= {;
   skill ";
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none" > {;
+}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none">{;
   skill ;
 }</Badge>) ) ;
 }</div> </div>) ) ;
@@ -954,19 +932,16 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }/> <div className="flex flex-wrap gap-2 mt-2"> {;
   skillTags.map (skill => (<Badge key= {;
   skill ";
-}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1" > {;
+}className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none pl-2 pr-1 py-1.5 flex items-center gap-1">{;
   skill ";
-}<button className="rounded-full hover:bg-zion-purple-dark/20 p-0.5" > <X className="h-3 w-3" /> </button> </Badge>) ) ;
+}<button className="rounded-full hover:bg-zion-purple-dark/20 p-0.5"><X className="h-3 w-3" /> </button> </Badge>) ) ;
 }{";
   skillTags.length === 0 && (<p className="text-zion-slate text-sm italic">No skills added yet</p>) ;
 }</div> </div> {;
   /* Availability Section */ ";
-}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
+}<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2"><input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2"><input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2"><input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
+}/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between"><Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   enhancedProfile: z.boolean().default(true)}),
 
@@ -974,20 +949,9 @@ type TalentFormValues = z.infer<typeof talentProfileSchema>;
 
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
 
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
-
         variant: "destructive"}),
       return;
 
-<<<<<<< HEAD
           
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

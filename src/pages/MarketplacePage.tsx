@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -124,9 +123,7 @@ const MarketplaceCard = ({ product, onViewDetails, onAddToCart }: { product: Pro
           variant="outline"
           onClick={onAddToCart}
           aria-label="Add to cart"
-          data-testid="add-to-cart-listing-button"
-        >
-          <ShoppingCart className="h-4 w-4" />
+          data-testid="add-to-cart-listing-button"><ShoppingCart className="h-4 w-4" />
         </Button>
         <Button size="sm" variant="outline" className="flex-1" onClick={onViewDetails}>
           View Details
@@ -345,9 +342,7 @@ function MarketplacePageContent() {
               animate={{ opacity: 1, scale: 1 }} 
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} 
-              whileHover={{ scale: 1.02 }}
-            >
-              <MarketplaceCard
+              whileHover={{ scale: 1.02 }}><MarketplaceCard
                 product={item}
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
@@ -413,9 +408,7 @@ function MarketplacePageContent() {
             animate={{ opacity: 1, scale: 1 }} 
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }} 
-            whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+            whileTap={{ scale: 0.9 }}><ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -424,7 +417,6 @@ function MarketplacePageContent() {
   );
 }
 
-<<<<<<< HEAD
 }, [sortBy, filterCategory, showRecommended]);
 return () => clearTimeout (timeoutId) ;
 }, [sortBy, filterCategory, showRecommended, refresh]);
@@ -600,17 +592,8 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div> </>) ;
 }// Main export '"
-=======
 
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 // Main export
 export default function MarketplacePage() {
   return <MarketplacePageContent />;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

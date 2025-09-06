@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Gift, RefreshCw } from 'lucide-react'
 import { usePoints } from '@/hooks/usePoints';
@@ -58,9 +57,7 @@ export function PointsBadge() {
               href={isAuthenticated ? "/points" : "#"}
               onClick={handleClick}
               title={isAuthenticated ? "View points" : "Earn points by participating"}
-              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >
-              <Gift className="h-4 w-4" aria-hidden="true" />
+              className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"><Gift className="h-4 w-4" aria-hidden="true" />
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
@@ -108,9 +105,7 @@ export function PointsBadge() {
                 onClick={handleRefresh}
                 disabled={isRefreshing || loading}
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
-                aria-label="Refresh points"
-              >
-                <RefreshCw
+                aria-label="Refresh points"><RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
                 />
@@ -128,17 +123,7 @@ export function PointsBadge() {
       )}
     </TooltipProvider>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
 
   const points = balance;
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

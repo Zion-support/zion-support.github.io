@@ -125,9 +125,7 @@ const AboutPage: React.FC = () => {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.1 }}
-                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-slate-700/50"
-                  >
-                    <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
+                    className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center border border-slate-700/50"><div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                     <div className="text-slate-300">{stat.label}</div>
                   </motion.div>
                 ))}
@@ -147,9 +145,7 @@ const AboutPage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${value.color} rounded-lg flex items-center justify-center mb-4`}>
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"><div className={`w-12 h-12 bg-gradient-to-r ${value.color} rounded-lg flex items-center justify-center mb-4`}>
                     <value.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
@@ -171,9 +167,7 @@ const AboutPage: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"
-                >
-                  <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center"><div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                     <Users className="w-12 h-12 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{member.name}</h3>

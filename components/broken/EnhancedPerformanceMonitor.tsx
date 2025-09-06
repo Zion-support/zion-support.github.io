@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  //FCP recommendations if (metrics.fcp > 2000) {
   recs.push ({
   
@@ -15,13 +13,13 @@ if (metrics.cls > 0.1) score -= 15;
 if (metrics.ttfb > 600) score -= 20;
 if (!performanceData) {
   
-}> <div className="animate-pulse" > <div className="h-4 bg-gray-700 rounded w-1/3 mb-4" ></div> <div className="space-y-3" > <div className="h-3 bg-gray-700 rounded" ></div> <div className="h-3 bg-gray-700 rounded w-5/6" ></div> <div className="h-3 bg-gray-700 rounded w-4/6" ></div> </div> </div> </div>) 
+}> <div className="animate-pulse"><div className="h-4 bg-gray-700 rounded w-1/3 mb-4"></div> <div className="space-y-3"><div className="h-3 bg-gray-700 rounded"></div> <div className="h-3 bg-gray-700 rounded w-5/6"></div> <div className="h-3 bg-gray-700 rounded w-4/6"></div> </div> </div> </div>) 
 }
-}> </p> </div> </div> <div className="flex items-center space-x-2" > <button > <BarChart3 className="w-4 h-4" /> </button> <button > <RefreshCw className= {
+}> </p> </div> </div> <div className="flex items-center space-x-2"><button><BarChart3 className="w-4 h-4" /> </button> <button><RefreshCw className= {
   `w-4 h-4 $ {
   isLoading ? 'animate-spin' : '' 
 }` 
-}/> </button> <button > <Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement' 
+}/> </button> <button><Settings className="w-4 h-4" /> </button> </div> </div> </div> performanceData.overallScore >= 70 ? 'Good': 'Needs Improvement' 
 }</p> </div> <span className= {
   `font-mono $ {
   metrics.fcp > 2000 ? 'text-red-400': 'text-green-400' 
@@ -29,10 +27,9 @@ if (!performanceData) {
 }> {
   metrics.fcp.toFixed (0) 
 }ms </span> </div> </span> </div> </div> </div>) 
-}</span> </div> <div className="w-full bg-gray-700 rounded-full h-2" > <div width: `$ {
+}</span> </div> <div className="w-full bg-gray-700 rounded-full h-2"><div width: `$ {
   (metrics.memoryUsage.usedJSHeapSize / metrics.memoryUsage.totalJSHeapSize) * 100 
 }%` 
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -44,7 +41,6 @@ import {
   BarChart3;
   Gauge
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface PerformanceMetrics {
   fcp: number,
@@ -250,9 +246,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     <motion.div
       className={`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-    >
-      {/* Header */}
+      animate={{ opacity: 1, y: 0 }}>{/* Header */}
       <div className="p-4 bg-gray-800/50 border-b border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -270,24 +264,18 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             <button
               onClick={() => setShowDetails(!showDetails)}
               className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
-              title={showDetails ? 'Hide details' : 'Show details'}
-            >
-              <BarChart3 className="w-4 h-4" />
+              title={showDetails ? 'Hide details' : 'Show details'}><BarChart3 className="w-4 h-4" />
             </button>
             <button
               onClick={updatePerformanceData}
               disabled={isLoading}
               className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50"
-              title="Refresh data"
-            >
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+              title="Refresh data"><RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
-              title={isExpanded ? 'Collapse' : 'Expand'}
-            >
-              <Settings className="w-4 h-4" />
+              title={isExpanded ? 'Collapse' : 'Expand'}><Settings className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -427,9 +415,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                 <button
                   onClick={measurePerformance}
                   disabled={isMonitoring}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  {isMonitoring ? (
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2">{isMonitoring ? (
                     <RefreshCw className="w-4 h-4 animate-spin" />
                   ) : (
                     <BarChart3 className="w-4 h-4" />
@@ -444,9 +430,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     </>
   )
 };
-<<<<<<< HEAD
 export default EnhancedPerformanceMonitor;
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -663,9 +647,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
     <motion.div
       className={`bg-gray-900 rounded-lg border border-gray-700 overflow-hidden ${className}`}
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-    >
-      {/* Header */}
+      animate={{ opacity: 1, y: 0 }}>{/* Header */}
       <div className="p-4 bg-gray-800/50 border-b border-gray-700">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-3">
@@ -683,24 +665,18 @@ const EnhancedPerformanceMonitor: React.FC = () => {
             <button
               onClick={() => setShowDetails(!showDetails)}
               className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
-              title={showDetails ? 'Hide details' : 'Show details'}
-            >
-              <BarChart3 className="w-4 h-4" />
+              title={showDetails ? 'Hide details' : 'Show details'}><BarChart3 className="w-4 h-4" />
             </button>
             <button
               onClick={updatePerformanceData}
               disabled={isLoading}
               className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors disabled:opacity-50"
-              title="Refresh data"
-            >
-              <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+              title="Refresh data"><RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
             </button>
             <button
               onClick={() => setIsExpanded(!isExpanded)}
               className="p-2 text-gray-400 hover:text-white hover:bg-gray-700/50 rounded-lg transition-colors"
-              title={isExpanded ? 'Collapse' : 'Expand'}
-            >
-              <Settings className="w-4 h-4" />
+              title={isExpanded ? 'Collapse' : 'Expand'}><Settings className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -840,9 +816,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
                 <button
                   onClick={measurePerformance}
                   disabled={isMonitoring}
-                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  {isMonitoring ? (
+                  className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 text-white py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2">{isMonitoring ? (
                     <RefreshCw className="w-4 h-4 animate-spin" />
                   ) : (
                     <BarChart3 className="w-4 h-4" />
@@ -859,8 +833,5 @@ const EnhancedPerformanceMonitor: React.FC = () => {
 };
 
 export default EnhancedPerformanceMonitor;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 export default EnhancedPerformanceMonitor;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

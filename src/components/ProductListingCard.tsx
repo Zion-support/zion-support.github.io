@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
@@ -130,9 +129,7 @@ const ProductListingCardComponent = ({
           e.preventDefault();
           handleViewListing()
         }
-      }}
-    >
-      {/* Image */}
+      }}>{/* Image */}
       <div
         className={isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'}
         onClick={handleViewListing} // Keep existing onClick for navigation
@@ -143,9 +140,7 @@ const ProductListingCardComponent = ({
             e.preventDefault();
             handleViewListing()
           }
-        }}
-      >
-        <div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
+        }}><div className={`relative ${imageContainerClasses}`}> {/* Ensure this container has dimensions */}
           <Image
             src={imageSrc}
             alt={listing.title}
@@ -163,9 +158,7 @@ const ProductListingCardComponent = ({
           {stockStatus && (
             <Badge
               variant={stockVariant as any}
-              className="absolute top-2 left-2"
-            >
-              {stockStatus}
+              className="absolute top-2 left-2">{stockStatus}
             </Badge>
           )}
            <FavoriteButton itemId={listing.id} />
@@ -206,9 +199,7 @@ const ProductListingCardComponent = ({
               {listing.tags.map((tag, idx) => (
                 <span 
                   key={idx} 
-                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
-                >
-                  {tag}
+                  className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full">{tag}
                 </span>
               ))}
             </div>
@@ -238,9 +229,7 @@ const ProductListingCardComponent = ({
                 e.stopPropagation(), // Prevent card click event
                 addToCart()
               }}
-              disabled={loading}
-            >
-              {loading ? (
+              disabled={loading}>{loading ? (
                 <>
                   <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -287,7 +276,6 @@ const ProductListingCardComponent = ({
   )
 };
 
-<<<<<<< HEAD
 }> {;
   /* Image */ ;
 }<div ;
@@ -302,7 +290,7 @@ const ProductListingCardComponent = ({
 }{;
   stockStatus && (<Badge variant= {;
   stockVariant as any ;
-}className="absolute top-2 left-2" > {;
+}className="absolute top-2 left-2">{;
   stockStatus ;
 }</Badge>) ;
 }<FavoriteButton itemId= {;
@@ -321,18 +309,18 @@ const ProductListingCardComponent = ({
 }/>) ;
 }</div> <span key= {;
   idx ";
-}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full" > {;
+}className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full">{;
   tag ;
 }</span>) ) ;
 }</div>) ;
 }</div> </span>) ";
-}</div> <div className="flex gap-2" > <Button onClick={;
+}</div> <div className="flex gap-2"><Button onClick={;
   (e) => {;
   e.stopPropagation (), //Prevent card click event addToCart () ;
 
 }disabled= {;
   loading ";
-}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" > <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" ></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" ></path> </svg> Loading... </>) : ("Add to Cart") ;
+}loading ? (<> <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle> <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path> </svg> Loading... </>) : ("Add to Cart") ;
 }</Button> <Button onClick={;
   (e) => {;
   e.stopPropagation (), //Prevent card click event //Add to cart first, then redirect to checkout dispatch (addItem ({;
@@ -349,27 +337,15 @@ router.push ('/checkout') ;
 }</div> </div> </div> </div>) ;
 };
 '"
-=======
-
-<<<<<<< HEAD
-
 
   const stockStatus =
     listing.stock === undefined
 
-<<<<<<< HEAD
-
   
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-
-<<<<<<< HEAD
-
 
 export const ProductListingCard = React.memo(ProductListingCardComponent),
 ProductListingCard.displayName = 'ProductListingCard';
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export const ProductListingCard = React.memo(ProductListingCardComponent);
 ProductListingCard.displayName = 'ProductListingCard';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { formatDistanceToNow } from "date-fns";
 import Link from "next/link";
@@ -102,20 +97,12 @@ export const PostCard = React.memo(PostCardComponent);
 PostCard.displayName = 'PostCard';
 
 export default PostCard;
-<<<<<<< HEAD
 '"
-=======
 
       "transition-shadow hover: shadow-md",
-<<<<<<< HEAD
-
 
 export const PostCard = React.memo(PostCardComponent);
 PostCard.displayName = 'PostCard';
 
-
 export default PostCard;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

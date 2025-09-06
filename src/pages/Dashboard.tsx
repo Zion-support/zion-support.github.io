@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { useAuth } from "@/hooks/useAuth";
@@ -107,17 +106,13 @@ export default function Dashboard() {
                   <p className="text-zion-slate-light mb-2">{user?.email}</p>
                   
                   <Badge
-                    className="bg-zion-purple text-white mb-4"
-                  >
-                    {userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : "New User"}
+                    className="bg-zion-purple text-white mb-4">{userType ? userType.charAt(0).toUpperCase() + userType.slice(1) : "New User"}
                   </Badge>
                   
                   <Button
                     id="profile-link"
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    onClick={() => window.location.href = "/profile"}
-                  >
-                    <UserCheck size={16} />
+                    onClick={() => window.location.href = "/profile"}><UserCheck size={16} />
                     Edit Profile
                   </Button>
                 </div>
@@ -156,9 +151,7 @@ export default function Dashboard() {
                     <Button 
                       className="w-full flex items-center justify-center gap-2"
                       variant="outline"
-                      onClick={handleTestNotification}
-                    >
-                      <Send size={16} className="text-zion-cyan" />
+                      onClick={handleTestNotification}><Send size={16} className="text-zion-cyan" />
                       Send Test Notification
                     </Button>
 
@@ -183,9 +176,7 @@ export default function Dashboard() {
                             description: "Please try again",
                             variant: "destructive"})
                         }
-                      }}
-                    >
-                      <Settings size={16} className="text-zion-purple" />
+                      }}><Settings size={16} className="text-zion-purple" />
                       Send Onboarding Nudge
                     </Button>
 
@@ -212,9 +203,7 @@ export default function Dashboard() {
                             description: "Please try again",
                             variant: "destructive"})
                         };
-                      }}
-                    >
-                      <Bell size={16} className="text-yellow-500" />
+                      }}><Bell size={16} className="text-yellow-500" />
                       Send System Alert
                     </Button>
                   </div>
@@ -248,9 +237,7 @@ export default function Dashboard() {
                     <Button 
                       variant="outline" 
                       className="text-zion-slate-light border-zion-blue-light hover:bg-zion-blue hover:text-white"
-                      onClick={logout}
-                    >
-                      <LogOut size={16} className="mr-2" />
+                      onClick={logout}><LogOut size={16} className="mr-2" />
                       Logout
                     </Button>
                   </div>
@@ -368,7 +355,6 @@ export default function Dashboard() {
       <GuidedTour role={roleForTour} />
     </>
   );
-<<<<<<< HEAD
 
 };";
 return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-8"> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> {;
@@ -379,16 +365,15 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
   userWithExtendedProps?.displayName || userWithExtendedProps?.email ";
 }</h2> <p className="text-zion-slate-light mb-2"> {;
   user?.email ";
-}</p> <Badge className="bg-zion-purple text-white mb-4" > > <UserCheck size= {;
+}</p> <Badge className="bg-zion-purple text-white mb-4" >><UserCheck size= {;
   16 ;
 }/> Edit Profile </Button> </div> </div> {;
   /* Stats & Metrics */ ";
 }<div className="bg-zion-blue-dark rounded-xl p-6 mb-6"> <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3> <div className="space-y-4"> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Profile Completion</span> <span className="text-zion-cyan font-medium">65%</span> </div> <div className="w-full bg-zion-blue rounded-full h-2"> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Points</span> <PointsBadge /> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">ZION$ Balance</span> <span className="text-zion-cyan font-medium"> <Link href="/wallet" className="hover:underline">View Wallet</Link> </span> </div> <div className="flex justify-between items-center"> <span className="text-zion-slate-light">Badges Earned</span> <span className="text-zion-cyan font-medium">3/12</span> </div> {;
   /* Test notification buttons */ ";
-}<div className="flex flex-col gap-2 mt-4"> <Button > <Send size= {;
+}<div className="flex flex-col gap-2 mt-4"> <Button><Send size= {;
   16 ";
 }className="text-zion-cyan" /> Send Test Notification </Button> <Button ;
-
 
 }> <Settings size= {;
   16 ";
@@ -407,7 +392,6 @@ toast ({";
   toast ({";
   title: "Error sending notification",  description: "Please try again", variant: "destructive" ;
 });
-
 
 }> <Bell size= {;
   16 ";
@@ -463,17 +447,9 @@ toast ({";
   roleForTour ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   const userWithExtendedProps = user as any;
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent';
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent';
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

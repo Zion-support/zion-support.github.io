@@ -153,9 +153,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+              transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Comprehensive Pricing 2025
@@ -189,9 +187,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                   className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
                     billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-white/20'
-                  }`}
-                >
-                  <div
+                  }`}><div
                     className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                       billingCycle === 'yearly'
                         ? 'translate-x-8'
@@ -284,15 +280,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className='flex flex-wrap justify-center gap-3'
-            >
-              {categories.map(category => (
-              className="flex flex-wrap justify-center gap-3"
-            >
-              {categories.map((category) => (
-              className="flex flex-wrap justify-center gap-3"
-            >
-              {categories.map((category) => (
+              className='flex flex-wrap justify-center gap-3'>{categories.map(category => (
+              className="flex flex-wrap justify-center gap-3">{categories.map((category) => (
+              className="flex flex-wrap justify-center gap-3">{categories.map((category) => (
 ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   key={category.id}
@@ -301,9 +291,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg'
                       : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                  }`}
-                >
-                  <span>{category.icon}</span>
+                  }`}><span>{category.icon}</span>
                   {category.name}
                 </button>
               ))}
@@ -329,21 +317,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
-                  >
-                    {/* Popular Badge */}
+                    className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'>{/* Popular Badge */}
                     {service.popular && (
                       <div className='absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10'>
                         <Star className='w-3 h-3' />
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
-                  >
-                    {/* Popular Badge */}
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">{/* Popular Badge */}
                     {service.popular && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                         <Star className="w-3 h-3" />
-                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
-                  >
-                    {/* Popular Badge */}
+                    className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300">{/* Popular Badge */}
                     {service.popular && (
                       <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1 z-10">
                         <Star className="w-3 h-3" />
@@ -404,9 +386,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {service.features.slice(0, 4).map((feature, idx) => (
                           <div
                             key={idx}
-                            className='flex items-center gap-2 text-sm text-white/60'
-                          >
-                            <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
+                            className='flex items-center gap-2 text-sm text-white/60'><Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                             <span className='line-clamp-2'>{feature}</span>
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
@@ -463,9 +443,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {/* Expand/Collapse Button */}
                       <button
                         onClick={() => toggleServiceExpansion(service.id)}
-                        className='w-full bg-white/10 text-white py-3 px-4 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 mb-4'
-                      >
-                        {expandedService === service.id
+                        className='w-full bg-white/10 text-white py-3 px-4 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2 mb-4'>{expandedService === service.id
                           ? 'Show Less'
                           : 'View Details'}
                         <ChevronDown
@@ -520,9 +498,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           transition={{ duration: 0.3 }}
                           className='overflow-hidden border-t border-white/10'
                           className="overflow-hidden border-t border-white/10"
-ursor/integrate-build-improve-and-re-verify-b76c
-                        >
-                          <div className="p-6 bg-white/5">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="p-6 bg-white/5">
                             {/* Market Position */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
@@ -538,9 +514,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                                     key={idx}
                                     className='bg-white/10 text-white/70 px-3 py-1 rounded-full text-xs'
                                   >
-                          className="overflow-hidden border-t border-white/10"
-                        >
-                          <div className="p-6 bg-white/5">
+                          className="overflow-hidden border-t border-white/10"><div className="p-6 bg-white/5">
                             {/* Market Position */}
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
@@ -570,9 +544,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                                 {service.useCases.map((useCase, idx) => (
                                   <div
                                     key={idx}
-                                    className='flex items-center gap-2 text-sm text-white/60'
-                                  >
-                                    <Target className='w-3 h-3 text-blue-400' />
+                                    className='flex items-center gap-2 text-sm text-white/60'><Target className='w-3 h-3 text-blue-400' />
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                               <div className="space-y-1">
@@ -604,9 +576,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                                 {service.benefits.map((benefit, idx) => (
                                   <div
                                     key={idx}
-                                    className='flex items-center gap-2 text-sm text-white/60'
-                                  >
-                                    <TrendingUp className='w-3 h-3 text-green-400' />
+                                    className='flex items-center gap-2 text-sm text-white/60'><TrendingUp className='w-3 h-3 text-green-400' />
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
                               <p className="text-white/70 text-sm mb-3">{service.roi}</p>
@@ -673,9 +643,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center'
               className="text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
                 <h2 className="text-3xl font-bold text-white mb-4">
                   Ready to Get Started?
                 </h2>
@@ -693,9 +661,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <a
                     href='tel:+13024640950'
                     className='bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2'
-              className="text-center"
-            >
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
+              className="text-center"><div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
                 <h2 className="text-3xl font-bold text-white mb-4">
                   Ready to Get Started?
                 </h2>

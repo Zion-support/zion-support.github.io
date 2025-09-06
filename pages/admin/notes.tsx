@@ -133,9 +133,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <select
                 value={filterTag}
                 onChange={(e) => setFilterTag(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="">All Tags</option>
+                className="w-full p-2 border rounded-md"><option value="">All Tags</option>
                 {allTags.map(tag => (
                   <option key={tag} value={tag}>{tag}</option>
                 ))}

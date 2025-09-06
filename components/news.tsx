@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  featured: true 
 };
 {
@@ -40,7 +38,6 @@ const years = [ {
 TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
 Clock, BookOpen, Video, Podcast, FileText, Search 
 }from 'lucide-react';
-=======
 import React from 'react';
   const featuredNews = [
     {
@@ -94,7 +91,6 @@ import React from 'react';
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
   return (
     <UltraFuturisticBackground>
@@ -209,9 +205,7 @@ export default function NewsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                className="text-center mb-12"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Featured Story
                 </h2>
               </motion.div>
@@ -221,9 +215,7 @@ export default function NewsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden"><div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div className="p-8 lg:p-12">
                     <div className="flex items-center space-x-4 mb-4">
                       <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -250,9 +242,7 @@ export default function NewsPage() {
                       {featuredArticle.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50"
-                        >
-                          {tag}
+                          className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50">{tag}
                         </span>
                       ))}
                     </div>
@@ -286,9 +276,7 @@ export default function NewsPage() {
                     category.active
                       ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
-                  }`}
-                >
-                  {category.name}
+                  }`}>{category.name}
                   <span className="ml-2 text-sm opacity-75">({category.count})</span>
                 </button>
               ))}
@@ -298,9 +286,7 @@ export default function NewsPage() {
 
         {/* News Grid */}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Latest News
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -323,9 +309,7 @@ export default function NewsPage() {
               transition={{ duration: 0.8 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
-                >
-                  <div className="relative h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"><div className="relative h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">
                     <Newspaper className="w-16 h-16 text-purple-400" />
                   </div>
                   <div className="p-6">
@@ -354,9 +338,7 @@ export default function NewsPage() {
                       {article.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
-                          className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30"
-                        >
-                          {tag}
+                          className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30">{tag}
                         </span>
                       ))}
                     </div>
@@ -374,9 +356,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
+              className="text-center mb-16"><div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
                 <Newspaper className="w-4 h-4 mr-2" />
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -384,9 +364,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              className="text-center"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Latest News & Updates
               </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">
@@ -405,9 +383,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
-              {categories.map((category, index) => (
+              className="flex flex-wrap justify-center gap-4">{categories.map((category, index) => (
                 <button
                   key={category}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
@@ -609,9 +585,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="relative mb-8">
+            className="max-w-4xl mx-auto"><div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -631,9 +605,7 @@ export default function News() {
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                       : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white';
-                  }`}
-                >
-                  {category.name} ({category.count})
+                  }`}>{category.name} ({category.count})
                 </button>
               ))}
             </div>
@@ -684,9 +656,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
+            className="flex flex-wrap justify-center gap-4"><a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
               <span>Read Featured News</span>
               <ArrowRight className="w-5 h-5" />
             </a>
@@ -708,9 +678,7 @@ export default function News() {
                   index === 0 
                     ? 'bg-purple-500 text-white' 
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>
@@ -725,9 +693,7 @@ export default function News() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Featured News
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -743,9 +709,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
-              >
-                <div className="h-48 bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center">
+                className="bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"><div className="h-48 bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center">
                   <Newspaper className="w-16 h-16 text-purple-400" />
                 </div>
                 <div className="p-6">
@@ -797,9 +761,7 @@ export default function News() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Recent News
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -815,9 +777,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
-              >
-                <div className="flex items-center gap-2 mb-3">
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300"><div className="flex items-center gap-2 mb-3">
                   <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
                     {article.category}
                   </span>
@@ -864,9 +824,7 @@ export default function News() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Industry Insights
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -882,9 +840,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300"
-              >
-                <div className="flex items-center gap-2 mb-3">
+                className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300"><div className="flex items-center gap-2 mb-3">
                   <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
                     {insight.category}
                   </span>
@@ -920,9 +876,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            viewport={{ once: true }}><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -983,7 +937,6 @@ export default function News() {
         </div>
       </section>
 
-<<<<<<< HEAD
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Get in Touch </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span>Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>) 
 }title: "Partnership with TechCorp Announced for Cloud Infrastructure";
 excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.";
@@ -1024,7 +977,7 @@ author: "Prof. Maria Garcia";
 readTime: "7 min read";
 image: "📚" 
 }];
-min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
+min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1>>{
   category 
 }</button>) ) 
 }</div> <span>•</span> <span> {
@@ -1034,7 +987,6 @@ min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-
 }</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) 
 }</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 
 }</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>) 
-=======
 import React from 'react';
   const featuredNews = [
     {
@@ -1202,9 +1154,7 @@ export default function NewsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="text-center mb-12"
-              >
-                <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+                className="text-center mb-12"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                   Featured Story
                 </h2>
               </motion.div>
@@ -1214,9 +1164,7 @@ export default function NewsPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden"
-              >
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                className="bg-gradient-to-br from-purple-900/30 to-blue-900/30 rounded-3xl border border-purple-500/20 overflow-hidden"><div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div className="p-8 lg:p-12">
                     <div className="flex items-center space-x-4 mb-4">
                       <span className="bg-gradient-to-r from-purple-500 to-blue-600 text-white text-sm font-semibold px-3 py-1 rounded-full">
@@ -1243,9 +1191,7 @@ export default function NewsPage() {
                       {featuredArticle.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50"
-                        >
-                          {tag}
+                          className="bg-gray-800/50 text-gray-300 text-sm px-3 py-1 rounded-full border border-gray-700/50">{tag}
                         </span>
                       ))}
                     </div>
@@ -1279,9 +1225,7 @@ export default function NewsPage() {
                     category.active
                       ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
-                  }`}
-                >
-                  {category.name}
+                  }`}>{category.name}
                   <span className="ml-2 text-sm opacity-75">({category.count})</span>
                 </button>
               ))}
@@ -1291,9 +1235,7 @@ export default function NewsPage() {
 
         {/* News Grid */}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Latest News
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -1316,9 +1258,7 @@ export default function NewsPage() {
               transition={{ duration: 0.8 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
-                >
-                  <div className="relative h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">
+                  className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"><div className="relative h-48 bg-gradient-to-br from-purple-900/30 to-blue-900/30 flex items-center justify-center">
                     <Newspaper className="w-16 h-16 text-purple-400" />
                   </div>
                   <div className="p-6">
@@ -1347,9 +1287,7 @@ export default function NewsPage() {
                       {article.tags.slice(0, 2).map((tag) => (
                         <span
                           key={tag}
-                          className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30"
-                        >
-                          {tag}
+                          className="bg-gray-800/30 text-gray-400 text-xs px-2 py-1 rounded-full border border-gray-700/30">{tag}
                         </span>
                       ))}
                     </div>
@@ -1367,9 +1305,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
+              className="text-center mb-16"><div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 text-sm font-medium mb-6">
                 <Newspaper className="w-4 h-4 mr-2" />
         <section className="relative py-20 px-4">
           <div className="container mx-auto max-w-6xl">
@@ -1377,9 +1313,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              className="text-center"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 Latest News & Updates
               </div>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent mb-6">
@@ -1398,9 +1332,7 @@ export default function NewsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="flex flex-wrap justify-center gap-4"
-            >
-              {categories.map((category, index) => (
+              className="flex flex-wrap justify-center gap-4">{categories.map((category, index) => (
                 <button
                   key={category}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
@@ -1602,9 +1534,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="relative mb-8">
+            className="max-w-4xl mx-auto"><div className="relative mb-8">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
@@ -1624,9 +1554,7 @@ export default function News() {
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                       : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',
-                  }`}
-                >
-                  {category.name} ({category.count})
+                  }`}>{category.name} ({category.count})
                 </button>
               ))}
             </div>
@@ -1677,9 +1605,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
+            className="flex flex-wrap justify-center gap-4"><a href="#featured" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center space-x-2">
               <span>Read Featured News</span>
               <ArrowRight className="w-5 h-5" />
             </a>
@@ -1701,9 +1627,7 @@ export default function News() {
                   index === 0 
                     ? 'bg-purple-500 text-white' 
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>
@@ -1718,9 +1642,7 @@ export default function News() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Featured News
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1736,9 +1658,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
-              >
-                <div className="h-48 bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center">
+                className="bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"><div className="h-48 bg-gradient-to-br from-purple-900/50 to-pink-900/50 flex items-center justify-center">
                   <Newspaper className="w-16 h-16 text-purple-400" />
                 </div>
                 <div className="p-6">
@@ -1790,9 +1710,7 @@ export default function News() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Recent News
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1808,9 +1726,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300"
-              >
-                <div className="flex items-center gap-2 mb-3">
+                className="bg-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-purple-500/50 transition-all duration-300"><div className="flex items-center gap-2 mb-3">
                   <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
                     {article.category}
                   </span>
@@ -1857,9 +1773,7 @@ export default function News() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Industry Insights
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -1875,9 +1789,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300"
-              >
-                <div className="flex items-center gap-2 mb-3">
+                className="bg-gray-900/50 p-6 rounded-xl border border-gray-800 hover:border-purple-500/50 transition-all duration-300"><div className="flex items-center gap-2 mb-3">
                   <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
                     {insight.category}
                   </span>
@@ -1913,9 +1825,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            viewport={{ once: true }}><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -1976,8 +1886,6 @@ export default function News() {
         </div>
       </section>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {/* Latest News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -1999,9 +1907,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group cursor-pointer"
-              >
-                <div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
+                className="group cursor-pointer"><div className="h-full bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition-all duration-300">
                   <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-600/20 flex items-center justify-center">
                     <BookOpen className="w-12 h-12 text-cyan-400" />
                   </div>
@@ -2060,9 +1966,7 @@ export default function News() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"
-              >
-                <div className="flex items-start gap-4">
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-cyan-500/50 transition-all duration-300"><div className="flex items-start gap-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
                     {event.type === 'Conference' ? <Globe className="w-8 h-8" /> : <Video className="w-8 h-8" />}
                   </div>
@@ -2118,9 +2022,7 @@ export default function News() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="p-8 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/20"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            className="p-8 rounded-3xl bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/20"><h2 className="text-4xl md:text-5xl font-bold mb-6">
               Stay Updated
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -2150,9 +2052,7 @@ export default function News() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4">Latest News</h2>
+              className="text-center mb-16"><h2 className="text-4xl font-bold mb-4">Latest News</h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Stay updated with our most recent developments and announcements
               </p>
@@ -2165,9 +2065,7 @@ export default function News() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.1 * index }}
-                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-4 mb-4">
+                  className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-cyan-500/50 transition-all duration-300"><div className="flex items-center gap-4 mb-4">
                     <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm font-medium rounded-full border border-cyan-500/30">
                       {article.category}
                     </span>
@@ -2205,9 +2103,7 @@ export default function News() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
+              transition={{ duration: 0.6, delay: 0.8 }}><h2 className="text-4xl font-bold mb-6">Stay Updated</h2>
               <p className="text-xl text-gray-400 mb-8">
                 Subscribe to our newsletter for the latest news, insights, and technology updates
               </p>
@@ -2231,9 +2127,7 @@ export default function News() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
-                >
-                  <div className="flex items-center gap-2 mb-3">
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"><div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {release.category}
                     </span>
@@ -2263,9 +2157,7 @@ export default function News() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 News Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2281,9 +2173,7 @@ export default function News() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="text-center group cursor-pointer"
-                >
-                  <div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
+                  className="text-center group cursor-pointer"><div className="w-16 h-16 bg-white/10 backdrop-blur-lg rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-500/20 transition-all duration-300 border border-white/20">
                     <div className="text-purple-400 group-hover:text-purple-300 transition-colors duration-300">
                       {category.icon}
                     </div>
@@ -2306,9 +2196,7 @@ export default function News() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-4">
                 Recent News
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2324,9 +2212,7 @@ export default function News() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"
-                >
-                  <div className="flex items-center gap-2 mb-3">
+                  className="bg-gradient-to-br from-gray-800/30 to-gray-900/30 p-6 rounded-2xl border border-gray-700/30 hover:border-purple-500/50 transition-all duration-300 group"><div className="flex items-center gap-2 mb-3">
                     <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-medium">
                       {news.category}
                     </span>
@@ -2361,9 +2247,7 @@ export default function News() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl font-bold text-white mb-4">
+              viewport={{ once: true }}><h2 className="text-4xl font-bold text-white mb-4">
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -2396,9 +2280,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Stay Informed?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -2433,9 +2315,7 @@ export default function News() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
+            viewport={{ once: true }}><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent">
               Get in Touch
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -2559,9 +2439,7 @@ export default function News() {
                     category === "All"
                       ? "bg-cyan-400 text-white border-cyan-400"
                       : "bg-white/10 text-white/80 border-white/20 hover:bg-white/20 hover:border-cyan-400/50"
-                  }`}
-                >
-                  {category}
+                  }`}>{category}
                 </button>
               ))}
             </div>
@@ -2656,7 +2534,3 @@ export default function News() {
     </>
   );
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

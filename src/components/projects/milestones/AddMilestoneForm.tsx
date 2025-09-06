@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -159,9 +154,7 @@ export function AddMilestoneForm({
                       <FormControl>
                         <Button
                           variant="outline"
-                          className="w-full pl-3 text-left font-normal"
-                        >
-                          {field.value ? (
+                          className="w-full pl-3 text-left font-normal">{field.value ? (
                             format(field.value, "PPP")
                           ) : (
                             <span className="text-muted-foreground">
@@ -234,7 +227,6 @@ export function AddMilestoneForm({
       </Form>
     </div>
   );
-<<<<<<< HEAD
 
 }//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {;
   projectScope ;
@@ -251,8 +243,8 @@ export function AddMilestoneForm({
 }/>) ;
 }</FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Description (optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"><FormField <FormLabel>Due Date (optional) </FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button variant="outline" className="w-full pl-3 text-left font-normal" >) : (<span className="text-muted-foreground" > Pick a date </span>) ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start"><Calendar initialFocus /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Amount ($) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) ";
 }/> </div> <Button type="button" variant="outline" onClick={;
   onCancel ;
@@ -262,14 +254,7 @@ export function AddMilestoneForm({
 }<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : ("Add Milestone") ;
 }</Button> </div> </form> </Form> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
 type MilestoneFormValues = z.infer<typeof formSchema>;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

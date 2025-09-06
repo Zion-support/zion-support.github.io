@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import {
@@ -12,8 +10,6 @@ import {
   X,;
 } from 'lucide-react';
 import { useWebhooks, type WebhookEventType } from '@/hooks/useWebhooks';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
@@ -35,8 +31,6 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 
 export function WebhooksManager() {
   const {
-<<<<<<< HEAD
-=======
 
 import { useState, useEffect } from "react";
 import { format } from "date-fns";
@@ -56,9 +50,7 @@ import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, 
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-
 export function WebhooksManager() { const {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     webhooks,
     loading,
     testResult,
@@ -67,9 +59,7 @@ export function WebhooksManager() { const {
     toggleWebhook,
     deleteWebhook,
     testWebhook,
-<<<<<<< HEAD
     clearTestResult,
-=======
     webhooks;
     loading;
     testResult;
@@ -79,7 +69,6 @@ export function WebhooksManager() { const {
     deleteWebhook;
     testWebhook;
     clearTestResult
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } = useWebhooks();
   
   const [showCreateDialog, setShowCreateDialog] = useState(false);
@@ -113,13 +102,11 @@ export function WebhooksManager() { const {
     resetWebhookForm()
   };
 
-<<<<<<< HEAD
   const handleToggleStatus = async (
     webhookId: string,
     currentStatus: boolean
   ) => {
     await toggleWebhook(webhookId, !currentStatus);
-=======
     clearTestResult
    } = useWebhooks(),
   
@@ -134,7 +121,6 @@ export function WebhooksManager() { const {
   const [ webhookSecret, setWebhookSecret ] = useState(""),
   const [ selectedEvents, setSelectedEvents ] = useState<WebhookEventType[]>([]),
   const [ testEventType, setTestEventType ] = useState<WebhookEventType>('new_application'),
-
 
   // Load webhooks on mount
   useEffect(() => {
@@ -157,34 +143,18 @@ export function WebhooksManager() { const {
 
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const handleToggleStatus = async (webhookId: string, currentStatus: boolean) => {
     await toggleWebhook(webhookId, !currentStatus)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId);
-<<<<<<< HEAD
-<<<<<<< HEAD
     setShowDeleteConfirm(null);
-=======
-    setShowDeleteConfirm(null)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    setShowDeleteConfirm(null)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookId, testEventType);
-<<<<<<< HEAD
-<<<<<<< HEAD
     setShowTestResult(true);
-=======
-    setShowTestResult(true)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const resetWebhookForm = () => {
@@ -284,16 +254,12 @@ export function WebhooksManager() { const {
                 
                 <div className="space-y-2">
                   <Label>Event Types</Label>
-<<<<<<< HEAD
                   <div className='grid gap-2 pt-2'>
                     {eventOptions.map(event => (
                       <div
                         key={event.value}
-                        className='flex items-center space-x-2'
-                      >
-                        <Checkbox
+                        className='flex items-center space-x-2'><Checkbox
                           id={event.value}
-=======
     setShowTestResult(true)
   };
 
@@ -394,54 +360,31 @@ export function WebhooksManager() { const {
                 
                 <div className="space-y-2">
                   <Label>Event Types</Label>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <div className="grid gap-2 pt-2">
                     {eventOptions.map((event) => (
                       <div key={event.value} className="flex items-center space-x-2">
                         <Checkbox 
                           id={event.value} 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           checked={selectedEvents.includes(event.value)}
                           onCheckedChange={() => toggleEvent(event.value)}
                         />
                         <Label
                           htmlFor={event.value}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'
-                        >
-                          {event.label}
+                          className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'>{event.label}
                           <span className='block text-xs text-zinc-400 mt-1'>
                             {event.description}
                           </span>
-=======
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          {event.label}
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{event.label}
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                        >
-                          {event.label}
+                          className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">{event.label}
                           <span className="block text-xs text-zinc-400 mt-1">{event.description}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </Label>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-              
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <DialogFooter>
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false);
@@ -449,47 +392,31 @@ export function WebhooksManager() { const {
                 }}>
                   Cancel
                 </Button>
-<<<<<<< HEAD
                 <Button
                   onClick={handleCreateWebhook}
                   disabled={
                     webhookName.trim() === '' ||
                     webhookUrl.trim() === '' ||
                     selectedEvents.length === 0
-                  }
-                >
-=======
-              
-              <DialogFooter>
+                  }><DialogFooter>
                 <Button variant="outline" onClick={() => {
                   setShowCreateDialog(false);
                   resetWebhookForm()
                 }}>
                   Cancel
                 </Button>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <Button onClick={handleCreateWebhook} disabled={
                   webhookName.trim() === "" || 
                   webhookUrl.trim() === "" || 
                   selectedEvents.length === 0;
                 }>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Create Webhook
                 </Button>
               </DialogFooter>
             </DialogContent>
           </Dialog>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {/* Webhooks List */}
         <div className="space-y-4">
           {loading ? (
@@ -533,17 +460,11 @@ export function WebhooksManager() { const {
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
                         <DropdownMenuItem
                           onClick={() => setShowTestDialog(webhook.id)}
-                          className="cursor-pointer"
-                        >
-                          <PlayCircle size={14} className="mr-2" /> Test
+                          className="cursor-pointer"><PlayCircle size={14} className="mr-2" /> Test
                         </DropdownMenuItem>
                         <DropdownMenuItem
                           onClick={() => setShowDeleteConfirm(webhook.id)}
-                          className="cursor-pointer text-red-500"
-                        >
-<<<<<<< HEAD
-                          <X size={14} className='mr-2' /> Delete
-=======
+                          className="cursor-pointer text-red-500"><X size={14} className='mr-2' /> Delete
         
         {/* Webhooks List */}
         <div className="space-y-4">
@@ -588,26 +509,17 @@ export function WebhooksManager() { const {
                       <DropdownMenuContent align="end" className="bg-zinc-900 border-zinc-800 text-white">
                         <DropdownMenuItem
                           onClick={() => setShowTestDialog(webhook.id)}
-                          className="cursor-pointer"
-                        >
-                          <PlayCircle size={14} className="mr-2" /> Test
+                          className="cursor-pointer"><PlayCircle size={14} className="mr-2" /> Test
                         </DropdownMenuItem>
                         <DropdownMenuItem
                           onClick={() => setShowDeleteConfirm(webhook.id)}
-                          className="cursor-pointer text-red-500"
-                        >
+                          className="cursor-pointer text-red-500"><X size={14} className="mr-2" /> Delete
                           <X size={14} className="mr-2" /> Delete
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                          <X size={14} className="mr-2" /> Delete
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <div className='mt-3 flex flex-wrap gap-2'>
                   {webhook.event_types.map((event: WebhookEventType) => (
@@ -615,30 +527,19 @@ export function WebhooksManager() { const {
                       key={event}
                       variant='secondary'
                       className='bg-zinc-800 text-zinc-300 hover:bg-zinc-800'
-=======
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event: WebhookEventType) => (
-=======
                 
                 <div className="mt-3 flex flex-wrap gap-2">
                   {webhook.event_types.map((event: WebhookEventType) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <Badge 
                       key={event} 
                       variant="secondary"
-                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                    >
-                      {event}
+                      className="bg-zinc-800 text-zinc-300 hover:bg-zinc-800">{event}
                     </Badge>
                   ))}
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <div className='mt-3 text-xs text-zinc-500 flex items-center space-x-4'>
                   <span>
@@ -653,20 +554,16 @@ export function WebhooksManager() { const {
                         'MMM d, yyyy HH:mm'
                       )}
                     </span>
-=======
                 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH: mm')}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 
                 <div className="mt-3 text-xs text-zinc-500 flex items-center space-x-4">
                   <span>Created: {format(new Date(webhook.created_at), 'MMM d, yyyy')}</span>
                   {webhook.last_triggered_at && (
                     <span>Last triggered: {format(new Date(webhook.last_triggered_at), 'MMM d, yyyy HH: mm')}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   )}
                 </div>
               </div>
@@ -674,8 +571,6 @@ export function WebhooksManager() { const {
           )}
         </div>
       </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <CardFooter className='justify-between border-t border-zinc-800 py-4'>
         <div className='text-xs text-zinc-500'>
@@ -683,7 +578,6 @@ export function WebhooksManager() { const {
         </div>
         <Button variant='outline' size='sm' onClick={fetchWebhooks}>
           <RefreshCw size={14} className='mr-1' /> Refresh
-=======
       
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
@@ -691,8 +585,6 @@ export function WebhooksManager() { const {
         </div>
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>
           <RefreshCw size={14} className="mr-1" /> Refresh
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       
       <CardFooter className="justify-between border-t border-zinc-800 py-4">
         <div className="text-xs text-zinc-500">
@@ -700,50 +592,28 @@ export function WebhooksManager() { const {
         </div>
         <Button variant="outline" size="sm" onClick={fetchWebhooks}>
           <RefreshCw size={14} className="mr-1" /> Refresh
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </Button>
       </CardFooter>
 
       {/* Test Webhook Dialog */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Dialog
         open={showTestDialog !== null}
         onOpenChange={open => {
-=======
       <Dialog 
         open={showTestDialog !== null} 
         onOpenChange={(open) => {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <Dialog 
         open={showTestDialog !== null} 
         onOpenChange={(open) => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           if (!open) {
             setShowTestDialog(null);
             setTestEventType('new_application');
             if (showTestResult) {
               setShowTestResult(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
               clearTestResult();
-=======
-              clearTestResult()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              clearTestResult()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             }
           }
-        }}
-      >
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <DialogContent className='bg-zinc-900 border-zinc-800 text-white'>
-=======
-        <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+        }}><DialogContent className='bg-zinc-900 border-zinc-800 text-white'>
           <DialogHeader>
             <DialogTitle>Test Webhook</DialogTitle>
             <DialogDescription className="text-zinc-400">
@@ -758,15 +628,11 @@ export function WebhooksManager() { const {
                   <Label htmlFor="test-event-type">Event Type</Label>
                   <Select
                     value={testEventType}
-                    onValueChange={(value) => setTestEventType(value as WebhookEventType)}
-                  >
-                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                    onValueChange={(value) => setTestEventType(value as WebhookEventType)}><SelectTrigger className="bg-zinc-800 border-zinc-700">
                       <SelectValue placeholder="Select an event type" />
                     </SelectTrigger>
-<<<<<<< HEAD
                     <SelectContent className='bg-zinc-900 border-zinc-800'>
                       {eventOptions.map(option => (
-=======
         <DialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <DialogHeader>
             <DialogTitle>Test Webhook</DialogTitle>
@@ -782,33 +648,24 @@ export function WebhooksManager() { const {
                   <Label htmlFor="test-event-type">Event Type</Label>
                   <Select
                     value={testEventType}
-                    onValueChange={(value) => setTestEventType(value as WebhookEventType)}
-                  >
-                    <SelectTrigger className="bg-zinc-800 border-zinc-700">
+                    onValueChange={(value) => setTestEventType(value as WebhookEventType)}><SelectTrigger className="bg-zinc-800 border-zinc-700">
                       <SelectValue placeholder="Select an event type" />
                     </SelectTrigger>
                     <SelectContent className="bg-zinc-900 border-zinc-800">
                       {eventOptions.map((option) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <SelectContent className="bg-zinc-900 border-zinc-800">
                       {eventOptions.map((option) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         <SelectItem key={option.value} value={option.value}>
                           {option.label}
                         </SelectItem>
                       ))}
                     </SelectContent>
                   </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <p className='text-xs text-zinc-500'>
                     The event type will determine the structure of the test
                     payload.
-=======
                   <p className="text-xs text-zinc-500">
                     The event type will determine the structure of the test payload.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </p>
                 </div>
               </div>
@@ -817,14 +674,10 @@ export function WebhooksManager() { const {
                 <Button variant="outline" onClick={() => setShowTestDialog(null)}>
                   Cancel
                 </Button>
-<<<<<<< HEAD
                 <Button
                   onClick={() =>
                     showTestDialog && handleTestWebhook(showTestDialog)
-                  }
-                >
-=======
-                  <p className="text-xs text-zinc-500">
+                  }><p className="text-xs text-zinc-500">
                     The event type will determine the structure of the test payload.
                   </p>
                 </div>
@@ -835,18 +688,13 @@ export function WebhooksManager() { const {
                   Cancel
                 </Button>
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Button onClick={() => showTestDialog && handleTestWebhook(showTestDialog)}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Send Test
                 </Button>
               </DialogFooter>
             </>
           ) : (
             <>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='space-y-4 py-4'>
                 <div className='space-y-2'>
                   <div className='flex items-center justify-between'>
@@ -858,7 +706,6 @@ export function WebhooksManager() { const {
                         testResult.status < 300
                           ? 'bg-green-700'
                           : 'bg-red-700'
-=======
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -868,8 +715,6 @@ export function WebhooksManager() { const {
                         testResult && testResult.status >= 200 && testResult.status < 300
                           ? "bg-green-700"
                           : "bg-red-700"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
@@ -879,47 +724,33 @@ export function WebhooksManager() { const {
                         testResult && testResult.status >= 200 && testResult.status < 300
                           ? "bg-green-700"
                           : "bg-red-700"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                      }
-                    >
-                      {testResult?.status} {testResult?.statusText}
+                      }>{testResult?.status} {testResult?.statusText}
                     </Badge>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <div className='space-y-2 mt-4'>
                     <Label>Response Body</Label>
                     <ScrollArea className='h-[200px] rounded border border-zinc-800 bg-black p-4'>
                       <pre className='text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all'>
                         {testResult?.responseBody || 'No response body'}
-=======
                   
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
                         {testResult?.responseBody || "No response body"}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   
                   <div className="space-y-2 mt-4">
                     <Label>Response Body</Label>
                     <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4">
                       <pre className="text-xs font-mono text-zinc-300 whitespace-pre-wrap break-all">
                         {testResult?.responseBody || "No response body"}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </pre>
                     </ScrollArea>
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-              
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <DialogFooter>
                 <Button variant="default" onClick={() => {
                   setShowTestDialog(null);
@@ -928,17 +759,12 @@ export function WebhooksManager() { const {
                 }}>
                   Close
                 </Button>
-<<<<<<< HEAD
                 <Button
                   variant='outline'
                   onClick={() => {
                     setShowTestResult(false);
                     clearTestResult();
-                  }}
-                >
-=======
-              
-              <DialogFooter>
+                  }}><DialogFooter>
                 <Button variant="default" onClick={() => {
                   setShowTestDialog(null);
                   setShowTestResult(false);
@@ -946,16 +772,10 @@ export function WebhooksManager() { const {
                 }}>
                   Close
                 </Button>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <Button variant="outline" onClick={() => {
                   setShowTestResult(false);
                   clearTestResult()
                 }}>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Test Another Event
                 </Button>
               </DialogFooter>
@@ -965,18 +785,12 @@ export function WebhooksManager() { const {
       </Dialog>
 
       {/* Delete Webhook Confirmation Dialog */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <AlertDialog
         open={showDeleteConfirm !== null}
         onOpenChange={open => !open && setShowDeleteConfirm(null)}
-=======
       <AlertDialog 
         open={showDeleteConfirm !== null} 
-        onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      >
-        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
+        onOpenChange={(open) => !open && setShowDeleteConfirm(null)}><AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>
             <AlertDialogDescription className="text-zinc-400">
@@ -988,18 +802,14 @@ export function WebhooksManager() { const {
             <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700">
               Cancel
             </AlertDialogCancel>
-<<<<<<< HEAD
             <AlertDialogAction
               onClick={() =>
                 showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)
               }
               className='bg-red-600 hover:bg-red-700'
-=======
       <AlertDialog 
         open={showDeleteConfirm !== null} 
-        onOpenChange={(open) => !open && setShowDeleteConfirm(null)}
-      >
-        <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
+        onOpenChange={(open) => !open && setShowDeleteConfirm(null)}><AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white">
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Webhook?</AlertDialogTitle>
             <AlertDialogDescription className="text-zinc-400">
@@ -1014,12 +824,9 @@ export function WebhooksManager() { const {
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <AlertDialogAction 
               onClick={() => showDeleteConfirm && handleDeleteWebhook(showDeleteConfirm)}
               className="bg-red-600 hover: bg-red-700"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               Delete
             </AlertDialogAction>
@@ -1027,8 +834,6 @@ export function WebhooksManager() { const {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
   value: WebhookEventType,  label: string, description: string ;
 }[] = [ {;
@@ -1049,7 +854,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   showCreateDialog ;
 }onOpenChange= {;
   setShowCreateDialog ";
-}> <DialogTrigger asChild> </Button> </DialogTrigger> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Create Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Add a webhook endpoint to receive event notifications. </DialogDescription> </DialogHeader> <div className="space-y-4 py-4"> <div className="space-y-2" > <Label htmlFor="webhook-name" >Webhook Name</Label> <Input className="bg-zinc-800 border-zinc-700" /> </div> className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> The window.URL where webhook payloads will be sent when events occur. </p> </div> <div className="space-y-2" > <Label htmlFor="webhook-secret" >Secret Key (Optional) </Label> <Input className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> Used to verify webhook payload signatures. Keep it secret and secure. </p> </div> <div className="space-y-2"> <Label>Event Types</Label> <div className="grid gap-2 pt-2"> {;
+}> <DialogTrigger asChild> </Button> </DialogTrigger> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Create Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Add a webhook endpoint to receive event notifications. </DialogDescription> </DialogHeader> <div className="space-y-4 py-4"> <div className="space-y-2"><Label htmlFor="webhook-name" >Webhook Name</Label> <Input className="bg-zinc-800 border-zinc-700" /> </div> className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> The window.URL where webhook payloads will be sent when events occur. </p> </div> <div className="space-y-2"><Label htmlFor="webhook-secret" >Secret Key (Optional) </Label> <Input className="bg-zinc-800 border-zinc-700" /> <p className="text-xs text-zinc-500"> Used to verify webhook payload signatures. Keep it secret and secure. </p> </div> <div className="space-y-2"> <Label>Event Types</Label> <div className="grid gap-2 pt-2"> {;
   eventOptions.map ( (event) => (<div key= {;
   event.value ";
 }className="flex items-center space-x-2"> <Checkbox id= {;
@@ -1060,7 +865,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   () => toggleEvent (event.value) ;
 }/> <Label htmlFor= {;
   event.value ";
-}className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" > </Label> </div>) ) ;
+}className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"></Label> </div>) ) ;
 }</div> </div> </div> <DialogFooter> ;
 
 }> Cancel </Button> <Button onClick={;
@@ -1128,7 +933,7 @@ if (showTestResult) {;
 }</SelectItem>) ) ";
 }</SelectContent> </Select> <p className="text-xs text-zinc-500"> The event type will determine the structure of the test payload. </p> </div> </div> <DialogFooter> Cancel </Button> <Button onClick={;
   () => showTestDialog && handleTestWebhook (showTestDialog) ";
-}> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <div className="flex items-center justify-between"> <Label>Response Status</Label> <Badge > {;
+}> Send Test </Button> </DialogFooter> </>) : (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <div className="flex items-center justify-between"> <Label>Response Status</Label> <Badge>{;
   testResult?.status ;
 }{;
   testResult?.statusText ";
@@ -1145,11 +950,7 @@ clearTestResult ();
   (open) => !open && setShowDeleteConfirm (null) ";
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) ;
 }'"
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

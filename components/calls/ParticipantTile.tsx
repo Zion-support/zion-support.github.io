@@ -1,15 +1,11 @@
 import React, { useEffect, useRef } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type {
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,
   Track,;
 } from 'livekit-client';
-=======
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
@@ -17,13 +13,11 @@ type Props = {
   displayName?: string
 };
 
-<<<<<<< HEAD
 export default function ParticipantTile({
   participant,
   isLocal,
   displayName,
 }: Props) {
-=======
 import type { RemoteParticipant, LocalParticipant, TrackPublication, Track } from 'livekit-client';
 
 type Props = {
@@ -33,70 +27,47 @@ type Props = {
 };
 
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default function ParticipantTile({ participant, isLocal, displayName }: Props) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const videoRef = useRef<HTMLVideoElement | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         track.attach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current);
-=======
         track.attach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         track.attach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     };
     const handleTrackUnsubscribed = (pub: TrackPublication, track: Track) => {
       if (track.kind === 'video' && videoRef.current) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         track.detach(videoRef.current);
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.detach(audioRef.current);
-=======
         track.detach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.detach(audioRef.current)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         track.detach(videoRef.current)
       }
       if (track.kind === 'audio' && audioRef.current) {
         track.detach(audioRef.current)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
     };
 
     participant.tracks.forEach(pub => {
       const track = pub.track;
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (track) handleTrackSubscribed(pub, track);
-=======
-      if (track) handleTrackSubscribed(pub, track)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      if (track) handleTrackSubscribed(pub, track)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     });
 
     participant.on('trackSubscribed', handleTrackSubscribed);
@@ -104,14 +75,10 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
 
     return () => {
       participant.off('trackSubscribed', handleTrackSubscribed);
-<<<<<<< HEAD
-<<<<<<< HEAD
       participant.off('trackUnsubscribed', handleTrackUnsubscribed);
     };
-=======
       participant.off('trackUnsubscribed', handleTrackUnsubscribed)
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [participant]);
 
   return (
@@ -123,8 +90,6 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
       participant.off('trackUnsubscribed', handleTrackUnsubscribed)
     }
   }, [participant]);
@@ -139,7 +104,4 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

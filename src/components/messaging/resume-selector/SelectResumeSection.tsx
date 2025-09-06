@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { FileText } from 'lucide-react'
 import { ResumeOption } from '../resume-selector/types';
@@ -37,17 +32,12 @@ export function SelectResumeSection({
                   ? 'bg-zion-purple/20 border border-zion-purple' 
                   : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50';
               }`}
-              onClick={() => handleResumeSelect(option.id)}
-            >
-              <div className="flex items-center">
+              onClick={() => handleResumeSelect(option.id)}><div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
                 <span className="text-white">{option.title}</span>
               </div>
             </button>
           ))}
-<<<<<<< HEAD
-
-=======
 
 import React from 'react';
 import { FileText } from 'lucide-react'
@@ -82,19 +72,14 @@ export function SelectResumeSection({
                   ? 'bg-zion-purple/20 border border-zion-purple' 
                   : 'bg-zion-blue-dark/30 hover: bg-zion-blue-dark/50',
               }`}
-              onClick={() => handleResumeSelect(option.id)}
-            >
-              <div className="flex items-center">
+              onClick={() => handleResumeSelect(option.id)}><div className="flex items-center">
                 <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
                 <span className="text-white">{option.title}</span>
               </div>
             </button>
           ))}
           
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {selectedResume?.type === 'ai_resume' && selectedResume.resume && (
             <ResumePreviewCard
               resume={selectedResume.resume as Resume}
@@ -106,11 +91,4 @@ export function SelectResumeSection({
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

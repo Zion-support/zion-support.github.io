@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  ...realMicroSaasServices2025;
 ...innovativeAIServices2025;
 ...innovativeITServices2025;
@@ -11,11 +9,11 @@
 //Filter and sort services const filteredServices = uniqueServices .filter (service => {
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || case 'name': return a.name.localeCompare (b.name);
 case 'price': case 'popularity': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-case 'rating': return (<UltraFuturisticBackground2029> <Head> <title>Revolutionary 2029 Technology Services | Zion Tech Group</title> <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." /> <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup.com/services" /> </Head> <Layout> </div> </motion.div> <h1 className="text-5xl md:text-7xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Our Services </span> </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8" > Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology;
-and micro SAAS services designed to transform your business and drive innovation. </p> <motion.div > <div className="flex items-center" > <div className="w-2 h-2 bg-green-400 rounded-full mr-2" ></div> AI & Consciousness </div> <div className="flex items-center" > <div className="w-2 h-2 bg-purple-400 rounded-full mr-2" ></div> Quantum Computing </div> <div className="flex items-center" > <div className="w-2 h-2 bg-blue-400 rounded-full mr-2" ></div> Enterprise IT </div> <div className="flex items-center" > <div className="w-2 h-2 bg-pink-400 rounded-full mr-2" ></div> Micro SAAS </div> </motion.div> </motion.div> {
+case 'rating': return (<UltraFuturisticBackground2029> <Head> <title>Revolutionary 2029 Technology Services | Zion Tech Group</title> <meta name="description" content="Explore our comprehensive range of revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." /> <meta name="keywords" content="AI services, quantum computing, space technology, biotechnology, 2029 technology, revolutionary services" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup.com/services" /> </Head> <Layout> </div> </motion.div> <h1 className="text-5xl md:text-7xl font-bold mb-6"><span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Our Services </span> </h1> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8" > Discover our comprehensive suite of cutting-edge AI, quantum computing, emerging technology;
+and micro SAAS services designed to transform your business and drive innovation. </p> <motion.div><div className="flex items-center"><div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div> AI & Consciousness </div> <div className="flex items-center"><div className="w-2 h-2 bg-purple-400 rounded-full mr-2"></div> Quantum Computing </div> <div className="flex items-center"><div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div> Enterprise IT </div> <div className="flex items-center"><div className="w-2 h-2 bg-pink-400 rounded-full mr-2"></div> Micro SAAS </div> </motion.div> </motion.div> {
   /* Enhanced Search and Filters */ 
 }<motion.div /> </div> </div> </option>) ) 
-}</select> <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none" > <ChevronDown className="w-5 h-5" /> </div> </div> > {
+}</select> <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none"><ChevronDown className="w-5 h-5" /> </div> </div>>{
   sortOptions.map ( (option) => (<option key= {
   option.value 
 }value= {
@@ -23,7 +21,7 @@ and micro SAAS services designed to transform your business and drive innovation
 }> {
   option.label 
 }</option>) ) 
-}</select> <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none" > <ChevronDown className="w-5 h-5" /> </div> </div> <button onClick= {
+}</select> <div className="absolute right-3 top-1/2 transform -translate-y-1/2 text-cyan-400 pointer-events-none"><ChevronDown className="w-5 h-5" /> </div> </div> <button onClick= {
   () => setViewMode ('grid') 
 }className= {
   `p-3 rounded-xl transition-all duration-300 $ {
@@ -35,7 +33,7 @@ and micro SAAS services designed to transform your business and drive innovation
   `p-3 rounded-xl transition-all duration-300 $ {
   viewMode === 'list' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' : 'text-gray-400 hover:text-white hover:bg-gray-700/50' 
 }` 
-}> <List className="w-5 h-5" /> </button> </div> </div> </div> </span> </div> </div> </div> <select > {
+}> <List className="w-5 h-5" /> </button> </div> </div> </div> </span> </div> </div> </div> <select>{
   categories.map (category => (<option key= {
   category 
 }value= {
@@ -43,20 +41,19 @@ and micro SAAS services designed to transform your business and drive innovation
 }> {
   category 
 }</option>) ) 
-}</select> <select > <option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="popularity" >Sort by Popularity</option> <option value="rating" >Sort by Rating</option> </select> </div> {
+}</select> <select><option value="name" >Sort by Name</option> <option value="price" >Sort by Price</option> <option value="popularity" >Sort by Popularity</option> <option value="rating" >Sort by Rating</option> </select> </div> {
   /* Enhanced Category Overview */ 
-}<motion.div > <div className="text-center mb-16" > <h2 className="text-4xl md:text-5xl font-bold mb-6" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Service Categories </span> </h2> <p className="text-lg text-gray-300 max-w-3xl mx-auto" > Explore our comprehensive range of cutting-edge services across multiple domains </p> </div> > <div className= {
+}<motion.div><div className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-6"><span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Service Categories </span> </h2> <p className="text-lg text-gray-300 max-w-3xl mx-auto" > Explore our comprehensive range of cutting-edge services across multiple domains </p> </div>><div className= {
   `w-20 h-20 bg-gradient-to-r $ {
   category.color 
 }rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg` 
 }> {
   category.icon 
-}</div> </div> </div> <div className="mt-6 pt-6 border-t border-gray-700/50" > <div className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300" > Click to explore → </div> </div> {
+}</div> </div> </div> <div className="mt-6 pt-6 border-t border-gray-700/50"><div className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors duration-300" > Click to explore → </div> </div> {
   /* Services Grid/List */ 
 }<motion.div initial= {
   {
   opacity: 0, y: 20 
-=======
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
@@ -122,7 +119,6 @@ const allServices = [
   ...additionalRealServices2025;
   ...newInnovativeAIServices
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -301,10 +297,9 @@ export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('name');
 
-<<<<<<< HEAD
 }> ⭐ Popular </span>) 
 }</div> </div> </div> </motion.div>) ) 
-}</div> > <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>) 
+}</div>><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" /> <h3 className="text-xl font-semibold text-white mb-2" >No services found</h3> <p className="text-gray-400" >Try adjusting your search criteria or browse all services</p> <button > Clear Filters </button> </motion.div>) 
 }</div> </section> </li>) ) 
 }</ul> </div> > Explore Service <ArrowRight className="w-5 h-5 inline ml-2 group-hover:translate-x-1 transition-transform duration-300" /> </a> </div> </motion.div>) ) 
 }</div> Popular </span>) 
@@ -313,8 +308,7 @@ export default function ServicesPage() {
 }</div>) 
 }</motion.div> {
   /* Enhanced CTA Section */ 
-}<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
-=======
+}<motion.div <div className="relative z-10"><motion.div><div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6"><span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8"><span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center"><motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
@@ -558,8 +552,6 @@ export default function ServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [sortBy, setSortBy] = useState('name');
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   // Combine all services
   const allServices = [
     ...enhancedRealMicroSaasServices;
@@ -661,15 +653,11 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-20"
-            >
-              <motion.div
+              className="text-center mb-20"><motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.2 }}
-                className="mb-6"
-              >
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
+                className="mb-6"><div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-4">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
                   {allServices.length}+ Revolutionary Services Available
                 </div>
@@ -689,9 +677,7 @@ export default function ServicesPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"
-              >
-                <div className="flex items-center">
+                className="flex flex-wrap justify-center gap-6 text-sm text-gray-400"><div className="flex items-center">
                   <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
                   AI & Consciousness
                 </div>
@@ -715,9 +701,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-12"
-            >
-              <div className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10">
+              className="mb-12"><div className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 shadow-2xl shadow-cyan-500/10">
                 <div className="flex flex-col lg:flex-row gap-6 items-center">
                   {/* Enhanced Search */}
                   <div className="relative flex-1 w-full lg:w-auto">
@@ -740,9 +724,7 @@ export default function ServicesPage() {
                       <select
                         value={selectedCategory}
                         onChange={(e) => setSelectedCategory(e.target.value)}
-                        className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10"
-                      >
-                        <option value="all">All Categories</option>
+                        className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10"><option value="all">All Categories</option>
                         {categories.map((category) => (
                           <option key={category.id} value={category.id}>
                             {category.name}
@@ -759,9 +741,7 @@ export default function ServicesPage() {
                       <select
                         value={sortBy}
                         onChange={(e) => setSortBy(e.target.value)}
-                        className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10"
-                      >
-                        {sortOptions.map((option) => (
+                        className="px-6 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all duration-300 hover:border-cyan-500/30 appearance-none pr-10">{sortOptions.map((option) => (
                           <option key={option.value} value={option.value}>
                             {option.label}
                           </option>
@@ -780,23 +760,15 @@ export default function ServicesPage() {
                           viewMode === 'grid' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
                             : 'text-gray-400 hover:text-white hover:bg-gray-700/50'
-                        }`}
-                      >
-                        <Grid className="w-5 h-5" />
+                        }`}><Grid className="w-5 h-5" />
                       </button>
                       <button
                         onClick={() => setViewMode('list')}
                         className={`p-3 rounded-xl transition-all duration-300 ${
                           viewMode === 'list' 
                             ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg shadow-cyan-500/25' 
-<<<<<<< HEAD
                             : 'text-gray-400 hover: text-white hover:bg-gray-700/50',
-=======
-                            : 'text-gray-400 hover:text-white hover:bg-gray-700/50';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                        }`}
-                      >
-                        <List className="w-5 h-5" />
+                        }`}><List className="w-5 h-5" />
                       </button>
                     </div>
                   </div>
@@ -815,9 +787,7 @@ export default function ServicesPage() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
-              >
-                {categories.map(category => (
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20">{categories.map(category => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -825,9 +795,7 @@ export default function ServicesPage() {
               <select
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
-              >
-                <option value="name">Sort by Name</option>
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"><option value="name">Sort by Name</option>
                 <option value="price">Sort by Price</option>
                 <option value="popularity">Sort by Popularity</option>
                 <option value="rating">Sort by Rating</option>
@@ -839,9 +807,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="mb-20"
-            >
-              <div className="text-center mb-16">
+              className="mb-20"><div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Service Categories
@@ -862,9 +828,7 @@ export default function ServicesPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 0.6 + index * 0.1 }}
                       className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 cursor-pointer group"
-                      onClick={() => setSelectedCategory(category.id)}
-                    >
-                      <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      onClick={() => setSelectedCategory(category.id)}><div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
                         {category.icon}
                       </div>
                       
@@ -896,9 +860,7 @@ export default function ServicesPage() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-center mb-12">
+              transition={{ duration: 0.8, delay: 0.8 }}><h2 className="text-3xl font-bold text-center mb-12">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   {selectedCategory === 'all' ? 'All Services' : categories.find(c => c.id === selectedCategory)?.name}
                 </span>
@@ -912,9 +874,7 @@ export default function ServicesPage() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
-                      className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden"
-                    >
-                      {/* Animated Background */}
+                      className="bg-gray-900/60 backdrop-blur-xl border border-gray-700/50 rounded-3xl p-8 hover:border-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:transform hover:scale-105 group relative overflow-hidden">{/* Animated Background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-cyan-500/10 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700"></div>
                       {/* Enhanced Service Header */}
@@ -944,9 +904,7 @@ export default function ServicesPage() {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="text-center py-20"
-              >
-                <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
+                className="text-center py-20"><Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>
                 <button
@@ -1022,9 +980,7 @@ export default function ServicesPage() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8, delay: 1 + index * 0.05 }}
-                      className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300"
-                    >
-                      <div className="flex flex-col lg:flex-row gap-6">
+                      className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:border-gray-600/50 transition-all duration-300"><div className="flex flex-col lg:flex-row gap-6">
                         {/* Service Info */}
                         <div className="flex-1">
                           <div className="flex items-start justify-between mb-3">
@@ -1086,9 +1042,7 @@ export default function ServicesPage() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className="text-center mt-24"
-            >
-              <div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">
+              className="text-center mt-24"><div className="relative overflow-hidden bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 border border-cyan-500/20 rounded-3xl p-16 shadow-2xl shadow-cyan-500/10">
                 {/* Animated Background Elements */}
                 <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-full blur-3xl"></div>
                 <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
@@ -1098,9 +1052,7 @@ export default function ServicesPage() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1, delay: 1.4 }}
-                    className="mb-8"
-                  >
-                    <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">
+                    className="mb-8"><div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6">
                       <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse"></span>
                       Transform Your Business Today
                     </div>
@@ -1149,7 +1101,3 @@ export default function ServicesPage() {
     </UltraFuturisticBackground2029>
   );
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

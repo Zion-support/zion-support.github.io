@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { FooterNewsletter } from '@/components/FooterNewsletter';
 import {
   Twitter,
@@ -12,12 +10,10 @@ import {
 import Link from 'next/link'; // Changed from react-router-dom
 import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
 
-=======
 import { FooterNewsletter } from "@/components/FooterNewsletter";
 import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
 import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
     return fallback;
@@ -65,9 +61,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
                 aria-label="Twitter"
-                title="Twitter"
-              >
-                <Twitter className="h-5 w-5" aria-hidden="true" />
+                title="Twitter"><Twitter className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Twitter</span>
               </a>
               <a
@@ -76,9 +70,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
                 aria-label="LinkedIn"
-                title="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" aria-hidden="true" />
+                title="LinkedIn"><Linkedin className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">LinkedIn</span>
               </a>
               <a
@@ -87,9 +79,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
                 aria-label="Facebook"
-                title="Facebook"
-              >
-                <Facebook className="h-5 w-5" aria-hidden="true" />
+                title="Facebook"><Facebook className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Facebook</span>
               </a>
               <a
@@ -98,9 +88,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
                 aria-label="Instagram"
-                title="Instagram"
-              >
-                <Instagram className="h-5 w-5" aria-hidden="true" />
+                title="Instagram"><Instagram className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">Instagram</span>
               </a>
               <a
@@ -109,9 +97,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="text-foreground/80 hover:text-primary transition-colors"
                 aria-label="GitHub"
-                title="GitHub"
-              >
-                <Github className="h-5 w-5" aria-hidden="true" />
+                title="GitHub"><Github className="h-5 w-5" aria-hidden="true" />
                 <span className="sr-only">GitHub</span>
               </a>
             </div>
@@ -188,9 +174,7 @@ export function Footer() {
               });
             }}
             className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
-            aria-label="Back to top"
-          >
-            <ChevronUp className="h-4 w-4" aria-hidden="true" />
+            aria-label="Back to top"><ChevronUp className="h-4 w-4" aria-hidden="true" />
             <span>Back to Top</span>
           </button>
         </div>
@@ -226,13 +210,5 @@ export function Footer() {
       </div>
     </footer>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

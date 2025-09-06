@@ -22,9 +22,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         setCopied(true);
         setTimeout(() => setCopied(false), 1500)
       }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900">{copied ? 'Copied' : label}
     </button>
   );
   generateZionWiki;
@@ -42,9 +40,7 @@ function CopyButton({ text, label }: { text: string, label: string }) {
         setCopied(true);
         setTimeout(() => setCopied(false), 1500)
       }}
-      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900"
-    >
-      {copied ? 'Copied' : label}
+      className="px-3 py-1 rounded border text-xs hover:bg-gray-50 dark:hover:bg-gray-900">{copied ? 'Copied' : label}
     </button>
   )
 }
@@ -66,9 +62,7 @@ export default function WikiPage() {
             <li key={s.id}>
               <a
                 href={`#${slugify(s.title)}`}
-                className='opacity-80 hover:opacity-100'
-              >
-    <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
+                className='opacity-80 hover:opacity-100'><div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8">
       <aside className="sticky top-20 self-start hidden lg:block">
         <div className="text-sm font-semibold mb-2">Table of contents</div>
         <ul className="space-y-1 text-sm">

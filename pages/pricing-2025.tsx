@@ -81,9 +81,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+            transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Pricing & Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -100,9 +98,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
                 className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-white/20'
-                }`}
-              >
-                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                }`}><div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
                 }`} />
               </button>
@@ -129,9 +125,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                     : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                <span>{category.icon}</span>
+                }`}><span>{category.icon}</span>
                 {category.name}
               </button>
             ))}
@@ -146,24 +140,20 @@ ursor/integrate-build-improve-and-re-verify-b76c
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredServices.map((service, index) => (
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
                   service.popular ? 'ring-2 ring-cyan-400/50' : ''
-                }`}
-              >
-                {/* Popular Badge */}
+                }`}>{/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
                     MOST POPULAR
                   </div>
                 )}
 
-}> <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Need Enterprise Solutions? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > We offer custom enterprise solutions, volume discounts, and dedicated support for organizations requiring multiple services or specialized implementations. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options." className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Contact Enterprise Sales <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Frequently Asked Questions </h2> </motion.div> </motion.div>) ) 
+}> <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Need Enterprise Solutions? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > We offer custom enterprise solutions, volume discounts, and dedicated support for organizations requiring multiple services or specialized implementations. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"><a href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options." className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Contact Enterprise Sales <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section>><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Frequently Asked Questions </h2> </motion.div> </motion.div>) ) 
 }</div> </div> </section> <EnhancedFooter /> </div>) 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -239,9 +229,7 @@ export default function Pricing2025() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
+            transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
               2025 Pricing & Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
@@ -258,9 +246,7 @@ export default function Pricing2025() {
                 onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'annual' : 'monthly')}
                 className={`relative w-16 h-8 rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'bg-cyan-500' : 'bg-white/20'
-                }`}
-              >
-                <div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
+                }`}><div className={`absolute top-1 w-6 h-6 bg-white rounded-full transition-all duration-300 ${
                   billingCycle === 'annual' ? 'right-1' : 'left-1'
                 }`} />
               </button>
@@ -287,9 +273,7 @@ export default function Pricing2025() {
                   selectedCategory === category.id
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
                     : 'bg-white/10 text-white/70 hover:bg-white/20 hover:text-white'
-                }`}
-              >
-                <span>{category.icon}</span>
+                }`}><span>{category.icon}</span>
                 {category.name}
               </button>
             ))}
@@ -304,17 +288,13 @@ export default function Pricing2025() {
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-          >
-            {filteredServices.map((service, index) => (
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredServices.map((service, index) => (
               <motion.div
                 key={service.id}
                 variants={itemVariants}
                 className={`group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl ${
                   service.popular ? 'ring-2 ring-cyan-400/50' : ''
-                }`}
-              >
-                {/* Popular Badge */}
+                }`}>{/* Popular Badge */}
                 {service.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 px-6 py-2 bg-gradient-to-r from-yellow-500 to-orange-500 text-black text-sm font-bold rounded-full">
                     MOST POPULAR
@@ -470,9 +450,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Need Enterprise Solutions?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -506,9 +484,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h2>
           </motion.div>
@@ -546,9 +522,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"
-              >
-                <h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
+                className="p-6 rounded-xl border border-white/10 bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-xl"><h3 className="text-xl font-bold text-white mb-3">{faq.question}</h3>
                 <p className="text-white/70 leading-relaxed">{faq.answer}</p>
               </motion.div>
             ))}

@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar, ArrowRight } from 'lucide-react';
-=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from 'lucide-react'
 import { Calendar } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function EnterpriseCTA() {
   return (
@@ -57,13 +53,11 @@ export function EnterpriseCTA() {
                     </div>
                     <p>Q&A with our enterprise solution experts</p>
                   </li>
-<<<<<<< HEAD
                   <li className='flex gap-3'>
                     <div className='h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0'>
                       <span className='text-primary text-sm font-medium'>
                         4
                       </span>
-=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -119,12 +113,9 @@ export function EnterpriseCTA() {
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <li className="flex gap-3">
                     <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <span className="text-primary text-sm font-medium">4</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                     <p>Free consultation on implementation</p>
                   </li>
@@ -136,11 +127,4 @@ export function EnterpriseCTA() {
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

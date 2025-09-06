@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  // All services combined const allServices = [ ...advancedAIMLServices;
 ...advancedCybersecurityServices;
 ...advancedCloudDevOpsServices2025;
@@ -12,35 +10,6 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 }<section className="relative overflow-hidden bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white"> <div className="absolute inset-0 bg-black/20"></div> <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24"> <motion.div initial= {
   {
   opacity: 0, y: 20 
-=======
-import React, { useState } from 'react';
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
-import { 
-  Brain, Building, Target, Cpu, Shield, 
-  Check, Phone, Mail, MapPin;
-  TrendingUp, Zap, Globe
-} from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-
-// Import our new service data
-import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
-import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
-import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
-import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
-import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
-const ComprehensiveServicesShowcase2025 = () => {
-  const [activeTab, setActiveTab] = useState('all');
-
-// Helper function to get service pricing
-const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  if (typeof service.price === 'string') return service.price;
-  return 'Contact for pricing'
-};
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
@@ -66,8 +35,31 @@ const getServicePricing = (service: any) => {
   if (typeof service.price === 'string') return service.price;
   return 'Contact for pricing'
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  Brain, Building, Target, Cpu, Shield, 
+  Check, Phone, Mail, MapPin;
+  TrendingUp, Zap, Globe
+} from 'lucide-react';
+
+// Import our new service data
+import { advancedAIMLServices } from '../data/2025-advanced-ai-ml-services';
+import { advancedCybersecurityServices } from '../data/2025-advanced-cybersecurity-services';
+import { advancedCloudDevOpsServices2025 } from '../data/2025-advanced-cloud-devops-services';
+import { industrySpecificSolutions } from '../data/2025-industry-specific-solutions';
+import { emergingTechnologyServices } from '../data/2025-emerging-technology-services';
+const ComprehensiveServicesShowcase2025 = () => {
+  const [activeTab, setActiveTab] = useState('all');
+
+// Helper function to get service pricing
+const getServicePricing = (service: any) => {
+  if (service.pricing?.starter) return service.pricing.starter;
+  if (service.price?.monthly) return `$${service.price.monthly}/month`;
+  if (typeof service.price === 'string') return service.price;
+  return 'Contact for pricing'
+};
 
 // Helper function to get service features
 const getServiceFeatures = (service: any) => {
@@ -135,9 +127,7 @@ const allServices = [
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            className="text-center"><h1 className="text-4xl md:text-6xl font-bold mb-6">
               2025 Comprehensive Services Showcase
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
@@ -196,9 +186,7 @@ const allServices = [
                   activeTab === category.id
                     ? 'bg-blue-600 text-white border-blue-600'
                     : 'bg-white text-gray-700 border-gray-300 hover:border-blue-300 hover:text-blue-600'
-                }`}
-              >
-                {category.icon}
+                }`}>{category.icon}
                 {category.name}
               </button>
             ))}
@@ -216,9 +204,7 @@ const allServices = [
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-              >
-                {/* Service Header */}
+                className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">{/* Service Header */}
                 <div className="p-6 border-b border-gray-100">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex-1">
@@ -287,22 +273,16 @@ const allServices = [
                     </div>
                   </div>
 
-
-
                   {/* CTA Button */}
                   <div className="flex flex-col gap-2">
                     <a
                       href={`mailto:${(service as any).contact || 'kleber@ziontechgroup.com'}?subject=Inquiry about ${service.name}`}
-                      className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
-                    >
-                      <Mail className="w-4 h-4" />
+                      className="w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"><Mail className="w-4 h-4" />
                       Get Started
                     </a>
                     <a
                       href={`tel:${(service as any).mobile || '+1 302 464 0950'}`}
-                      className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
-                    >
-                      <Phone className="w-4 h-4" />
+                      className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 text-center py-2 px-4 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"><Phone className="w-4 h-4" />
                       Call Now
                     </a>
                   </div>
@@ -319,17 +299,13 @@ const allServices = [
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {filteredServices.map((service, index) => (
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredServices.map((service, index) => (
                   <motion.div
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
-                  >
-                    {/* Service Header */}
+                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100">{/* Service Header */}
                     <div className={`p-6 bg-gradient-to-r ${service.color} text-white`}>
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-4xl">{service.icon}</span>
@@ -489,9 +465,7 @@ const allServices = [
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="text-center p-6"
-            >
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              className="text-center p-6"><div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Brain className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">AI-Powered Innovation</h3>
@@ -504,9 +478,7 @@ const allServices = [
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-center p-6"
-            >
-              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              className="text-center p-6"><div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
@@ -519,9 +491,7 @@ const allServices = [
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-center p-6"
-            >
-              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              className="text-center p-6"><div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3>
@@ -564,16 +534,12 @@ const allServices = [
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:kleber@ziontechgroup.com?subject=Business Transformation Consultation"
-              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
-            >
-              <Mail className="w-5 h-5" />
+              className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"><Mail className="w-5 h-5" />
               Start Consultation
             </a>
             <a
               href="https://ziontechgroup.com"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"
-            >
-              <Globe className="w-5 h-5" />
+              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors flex items-center justify-center gap-2"><Globe className="w-5 h-5" />
               Visit Website
             </a>
           </div>
@@ -583,8 +549,4 @@ const allServices = [
   )
 };
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default ComprehensiveServicesShowcase;

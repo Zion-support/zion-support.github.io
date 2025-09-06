@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -12,7 +10,6 @@ import {
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react';
-=======
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -20,7 +17,6 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from "@/components/ui/input";
 import { Copy, Facebook, Link, Share, Twitter } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ReferralLinkProps {
   referralLink: string,
@@ -63,9 +59,7 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           </div>
           
           {copied && (
-<<<<<<< HEAD
             <p className='text-sm text-green-600 dark:text-green-500'>
-=======
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -90,7 +84,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
     setCopied(true);
     setTimeout(() => setCopied(false), 2000)
   };
-
 
   return (
     <Card className="mt-6">
@@ -119,17 +112,12 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
           
           {copied && (
             <p className="text-sm text-green-600 dark:text-green-500">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-sm text-green-600 dark:text-green-500">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Copied to clipboard!
             </p>
           )}
         </div>
       </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <CardFooter className='border-t bg-muted/50 p-4'>
         <div className='flex flex-col sm:flex-row w-full justify-between items-center gap-4'>
           <p className='text-sm text-muted-foreground'>
@@ -140,7 +128,6 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               variant='outline'
               size='sm'
               className='flex items-center gap-2'
-=======
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">Share on social media:</p>
@@ -149,30 +136,21 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              onClick={() => onShare('twitter')}
-            >
-              <Twitter className="h-4 w-4" />
+              onClick={() => onShare('twitter')}><Twitter className="h-4 w-4" />
               Twitter
             </Button>
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('facebook')}
-            >
-              <Facebook className="h-4 w-4" />
+              onClick={() => onShare('facebook')}><Facebook className="h-4 w-4" />
               Facebook
             </Button>
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('linkedin')}
-            >
-<<<<<<< HEAD
-              <Share className='h-4 w-4' />
-=======
+              onClick={() => onShare('linkedin')}><Share className='h-4 w-4' />
       <CardFooter className="border-t bg-muted/50 p-4">
         <div className="flex flex-col sm:flex-row w-full justify-between items-center gap-4">
           <p className="text-sm text-muted-foreground">Share on social media:</p>
@@ -181,31 +159,22 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('twitter')}
-            >
-              <Twitter className="h-4 w-4" />
+              onClick={() => onShare('twitter')}><Twitter className="h-4 w-4" />
               Twitter
             </Button>
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('facebook')}
-            >
-              <Facebook className="h-4 w-4" />
+              onClick={() => onShare('facebook')}><Facebook className="h-4 w-4" />
               Facebook
             </Button>
             <Button 
               variant="outline" 
               size="sm"
               className="flex items-center gap-2"
-              onClick={() => onShare('linkedin')}
-            >
+              onClick={() => onShare('linkedin')}><Share className="h-4 w-4" />
               <Share className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              <Share className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               LinkedIn
             </Button>
           </div>
@@ -213,11 +182,4 @@ export function ReferralLink({ referralLink, onCopy, onShare }: ReferralLinkProp
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

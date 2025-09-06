@@ -199,9 +199,7 @@ export default function AIServices() {
                       selectedCategory === category.id
                         ? 'bg-purple-600 text-white'
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {category.name} ({category.count})
+                    }`}>{category.name} ({category.count})
                   </button>
                 ))}
               </div>
@@ -216,9 +214,7 @@ export default function AIServices() {
                   <div 
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-purple-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    {service.popular && (
+                    style={{ transitionDelay: `${index * 100}ms` }}>{service.popular && (
                       <div className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>

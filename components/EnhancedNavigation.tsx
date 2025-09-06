@@ -70,9 +70,7 @@ const EnhancedNavigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('services')}
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
-              >
-                <span>Services</span>
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"><span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
               
@@ -81,17 +79,13 @@ const EnhancedNavigation: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
-                >
-                  <div className="grid grid-cols-2 gap-4 px-6">
+                  className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"><div className="grid grid-cols-2 gap-4 px-6">
                     {services.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
                         className="group p-4 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllDropdowns}
-                      >
-                        <div className="flex items-start space-x-3">
+                        onClick={closeAllDropdowns}><div className="flex items-start space-x-3">
                           <service.icon className="w-6 h-6 text-blue-600 mt-1" />
                           <div>
                             <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
@@ -111,9 +105,7 @@ const EnhancedNavigation: React.FC = () => {
             <div className="relative">
               <button
                 onClick={() => toggleDropdown('company')}
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
-              >
-                <span>Company</span>
+                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"><span>Company</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
               </button>
               
@@ -122,17 +114,13 @@ const EnhancedNavigation: React.FC = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
-                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"
-                >
-                  <div className="space-y-2 px-6">
+                  className="absolute top-full left-0 mt-2 w-80 bg-white rounded-xl shadow-2xl border border-gray-200 py-6"><div className="space-y-2 px-6">
                     {company.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
                         className="group flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        onClick={closeAllDropdowns}
-                      >
-                        <item.icon className="w-5 h-5 text-blue-600 mt-1" />
+                        onClick={closeAllDropdowns}><item.icon className="w-5 h-5 text-blue-600 mt-1" />
                         <div>
                           <h3 className="font-semibold text-gray-900 group-hover:text-blue-600">
                             {item.name}
@@ -158,9 +146,7 @@ const EnhancedNavigation: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors"
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors">{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
@@ -170,9 +156,7 @@ const EnhancedNavigation: React.FC = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6"
-          >
-            <div className="px-6 space-y-6">
+            className="lg:hidden bg-white rounded-xl shadow-2xl border border-gray-200 mt-2 py-6"><div className="px-6 space-y-6">
               {/* Mobile Services */}
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Services</h3>
@@ -182,9 +166,7 @@ const EnhancedNavigation: React.FC = () => {
                       key={service.name}
                       href={service.href}
                       className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={closeAllDropdowns}
-                    >
-                      <service.icon className="w-5 h-5 text-blue-600 mt-1" />
+                      onClick={closeAllDropdowns}><service.icon className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
                         <h4 className="font-medium text-gray-900">{service.name}</h4>
                         <p className="text-sm text-gray-600">{service.description}</p>
@@ -203,9 +185,7 @@ const EnhancedNavigation: React.FC = () => {
                       key={item.name}
                       href={item.href}
                       className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                      onClick={closeAllDropdowns}
-                    >
-                      <item.icon className="w-5 h-5 text-blue-600 mt-1" />
+                      onClick={closeAllDropdowns}><item.icon className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
                         <h4 className="font-medium text-gray-900">{item.name}</h4>
                         <p className="text-sm text-gray-600">{item.description}</p>

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
-import { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { GradientHeading } from "@/components/GradientHeading";
 import { ProductListingCard } from "@/components/ProductListingCard";
@@ -261,9 +256,7 @@ export function DynamicListingPage({
                   </label>
                   <Select
                     value={selectedBrand}
-                    onValueChange={(value: string) => setSelectedBrand(value)}
-                  >
-                    <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                    onValueChange={(value: string) => setSelectedBrand(value)}><SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Brand" />
                     </SelectTrigger>
                     <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
@@ -308,9 +301,7 @@ export function DynamicListingPage({
                     value={selectedAvailability}
                     onValueChange={(value: string) =>
                       setSelectedAvailability(value)
-                    }
-                  >
-                    <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
+                    }><SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white">
                       <SelectValue placeholder="Select Availability" />
                     </SelectTrigger>
                     <SelectContent className="bg-zion-blue-dark border border-zion-blue-light">
@@ -372,9 +363,7 @@ export function DynamicListingPage({
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
                           : "border-zion-blue-light text-zion-slate-light";
-                      } focus-visible:ring-zion-purple`}
-                    >
-                      {rating === null ? (
+                      } focus-visible:ring-zion-purple`}>{rating === null ? (
                         "Any"
                       ) : (
                         <div className="flex items-center">
@@ -446,9 +435,7 @@ export function DynamicListingPage({
                     onClick={() => setView(isGrid ? "list" : "grid")}
                     aria-label={isGrid ? "List view" : "Grid view"}
                     title={isGrid ? "List view" : "Grid view"}
-                    className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple"
-                  >
-                    {ToggleViewIcon}
+                    className="border-zion-blue-light text-zion-slate-light focus-visible:ring-zion-purple">{ToggleViewIcon}
                     <span className="sr-only">
                       {isGrid ? "List view" : "Grid view"}
                     </span>
@@ -472,14 +459,10 @@ export function DynamicListingPage({
                   view === "grid"
                     ? "grid grid-cols-1 md:grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
-                }
-              >
-                {[1, 2, 3, 4].map((i) => (
+                }>{[1, 2, 3, 4].map((i) => (
                   <div
                     key={i}
-                    className="rounded-lg overflow-hidden border border-zion-blue-light"
-                  >
-                    <Skeleton height={192} width="100%" />
+                    className="rounded-lg overflow-hidden border border-zion-blue-light"><Skeleton height={192} width="100%" />
                     <div className="p-4">
                       <Skeleton height={24} width="33%" className="mb-2" />
                       <Skeleton height={32} width="83%" className="mb-4" />
@@ -499,9 +482,7 @@ export function DynamicListingPage({
                   view === "grid"
                     ? "grid grid-cols-1 md: grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
-                }
-              >
-                {filteredListings.map((listing) => (
+                }>{filteredListings.map((listing) => (
                   <ProductListingCard
                     key={listing.id}
                     listing={listing}
@@ -540,32 +521,30 @@ export function DynamicListingPage({
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 
 };
 if (typeof window !== 'undefined') {';
   sessionStorage.setItem ('quoteRequestData', JSON.stringify (quoteData) ) ;
 
-
 }, 500) ;
 };";
-return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {;
+return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6"><div className="lg:col-span-1"><div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6"><h3 className="text-lg font-medium text-white mb-4 flex items-center"><Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6"><label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label>>{;
   filter.label ;
 }</label> </div>) ) ;
 }</div> </div> Brand </label> <Select value= {;
   selectedBrand ;
 }onValueChange= {;
   (value: string) => setSelectedBrand (value) ";
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) ) ;
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"><SelectValue placeholder="Select Brand" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"><SelectItem value="all" className="text-white" > All Brands </SelectItem> </SelectItem>) ) ;
 }</SelectContent> </Select> </div>) ";
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {;
+}<div className="mb-6"><label className="text-sm font-medium text-zion-slate-light block mb-2" > Specifications </label> <Input Availability </label> <Select value= {;
   selectedAvailability ;
 }onValueChange= {;
   (value: string) => setSelectedAvailability (value) ";
-}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) ;
+}> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white"><SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"><SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) ;
 }</SelectContent> </Select> </div>) ";
-}<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> ;
+}<div className="mb-6"><label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2"><Slider </div> </div> </div> <div className="mb-6"><label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> ;
 
 }aria-pressed= {;
   selectedRating === rating ;
@@ -579,15 +558,14 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
 }</div> </div> <Button clearCategories ();
 setCurrentPriceFilter ([0, priceRange.max]);
 setSelectedRating (null);";
-> Clear All </Button> </div> </div> <div className="lg:col-span-3" > <div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light" > <div className="flex flex-col md:flex-row gap-4" > <div className="relative flex-grow" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input ;
+> Clear All </Button> </div> </div> <div className="lg:col-span-3"><div className="bg-zion-blue-dark rounded-lg p-4 mb-6 border border-zion-blue-light"><div className="flex flex-col md:flex-row gap-4"><div className="relative flex-grow"><Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" /> <Input ;
 }";
-}className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="newest" className="text-white" >Newest</SelectItem> <SelectItem value="price-asc" className="text-white" >Price: Low to High</SelectItem> <SelectItem value="price-desc" className="text-white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text-white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {;
-  isLoading ? (<div className= {;
-  > {;
+}className="pl-10 bg-zion-blue border border-zion-blue-light text-white" /> </div> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light"><SelectItem value="newest" className="text-white" >Newest</SelectItem> <SelectItem value="price-asc" className="text-white" >Price: Low to High</SelectItem> <SelectItem value="price-desc" className="text-white" >Price: High to Low</SelectItem> <SelectItem value="rating" className="text-white" >Highest Rating</SelectItem> </SelectContent> </Select> <Button </span> </Button> </div> </div> </div> </p> </div> {;
+  isLoading ? (<div className= {;>{;
   [1, 2,  3, 4].map ( (i) => (<div key= {;
   i ";
-}className="rounded-lg overflow-hidden border border-zion-blue-light" > </div> </div> </div>) ) ;
-}</div> > {;
+}className="rounded-lg overflow-hidden border border-zion-blue-light"></div> </div> </div>) ) ;
+}</div>>{;
   filteredListings.map ( (listing) => (<ProductListingCard key= {;
   listing.id ;
 }listing= {;
@@ -605,19 +583,11 @@ setSelectedRating (null);
 > Clear All </Button> </div>) ;
 }</div> </div> </div> </div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     max: 10000}),
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
                         logInfo('Rating selected:', { data: rating }),
                         setSelectedRating(rating);
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

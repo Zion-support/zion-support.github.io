@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -70,11 +66,9 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                 <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
                 <ul className="space-y-3">
                   {category.features.map((feature, idx) => (
-<<<<<<< HEAD
                     <li key={idx} className='flex items-start'>
                       <Check className='h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0' />
                       <span className='text-zion-slate-light'>{feature}</span>
-=======
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -122,7 +116,6 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     }
   ];
 
-
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -143,12 +136,9 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </li>
                   ))}
                 </ul>
@@ -159,11 +149,4 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -81,9 +81,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <select
           className='border rounded px-3 py-2'
           value={form.level}
-          onChange={e => setForm({ ...form, level: e.target.value })}
-        >
-        <select className="border rounded px-3 py-2" value={form.level} onChange={(e) => setForm({ ...form, level: e.target.value })}>
+          onChange={e => setForm({ ...form, level: e.target.value })}><select className="border rounded px-3 py-2" value={form.level} onChange={(e) => setForm({ ...form, level: e.target.value })}>
         <select className="border rounded px-3 py-2" value={form.level} onChange={(e) => setForm({ ...form, level: e.target.value })}>
 ursor/integrate-build-improve-and-re-verify-b76c
           <option>Beginner</option>

@@ -78,9 +78,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           {filtered.map(i => (
             <div
               key={i.id}
-              className='p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2'
-            >
-        <div className="divide-y border rounded">
+              className='p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2'><div className="divide-y border rounded">
           {filtered.map((i) => (
             <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
 ursor/integrate-build-improve-and-re-verify-b76c

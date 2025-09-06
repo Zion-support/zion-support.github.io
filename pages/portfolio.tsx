@@ -239,17 +239,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='mb-8'
             className="mb-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Innovative technology solutions that drive business transformation
               and growth
-            className="mb-8"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            className="mb-8"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -264,20 +260,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className='mb-12'
-          >
-            <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
+            className='mb-12'><p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Discover how we've helped organizations leverage cutting-edge
               technology to solve complex challenges and achieve remarkable
               results.
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            className="mb-12"><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover how we've helped organizations leverage cutting-edge technology to solve 
               complex challenges and achieve remarkable results.
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            className="mb-12"><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover how we've helped organizations leverage cutting-edge technology to solve 
               complex challenges and achieve remarkable results.
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -306,18 +296,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='text-center'
                 className="text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
                 <div className='text-white/70'>{stat.label}</div>
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                className="text-center"><div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -349,9 +335,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white'
                     : 'bg-white/5 text-white/70 hover:bg-white/10 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>
@@ -378,9 +362,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="p-8">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>
                       <project.icon className="w-6 h-6 text-white" />
@@ -405,9 +387,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           key={tech}
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'
                         >
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-              >
-                <div className="p-8">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"><div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${project.color} rounded-xl flex items-center justify-center`}>
                       <project.icon className="w-6 h-6 text-white" />
@@ -441,9 +421,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {project.results.map(result => (
                         <li
                           key={result}
-                          className='text-sm text-white/80 flex items-center'
-                        >
-                          <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2' />
+                          className='text-sm text-white/80 flex items-center'><div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2' />
 ursor/integrate-build-improve-and-re-verify-b76c
                   
                   <div className="mb-6">
@@ -492,9 +470,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl font-bold text-white mb-6'>
+            viewport={{ once: true }}><h2 className='text-4xl font-bold text-white mb-6'>
             <h2 className="text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Start Your Project?
@@ -530,7 +506,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <EnhancedFooter />
     </div>
   );
-</Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
+</Head> <EnhancedNavigation />><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section>><div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4"><stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
 }</div> </div> </section> key= {
   category 
 }onClick= {

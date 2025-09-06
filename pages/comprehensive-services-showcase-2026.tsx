@@ -341,9 +341,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              className="text-center"><h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 ZionTech Group
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                   2026 Services
@@ -391,9 +389,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  {categories.map(category => (
+                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">{categories.map(category => (
                     <option key={category} value={category} className="bg-gray-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -406,9 +402,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  {priceRanges.map(range => (
+                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">{priceRanges.map(range => (
                     <option key={range.value} value={range.value} className="bg-gray-800 text-white">
                       {range.label}
                     </option>
@@ -421,9 +415,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  <option value="popularity" className="bg-gray-800 text-white">Sort by Popularity</option>
+                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"><option value="popularity" className="bg-gray-800 text-white">Sort by Popularity</option>
                   <option value="price-low" className="bg-gray-800 text-white">Price: Low to High</option>
                   <option value="price-high" className="bg-gray-800 text-white">Price: High to Low</option>
                   <option value="rating" className="bg-gray-800 text-white">Sort by Rating</option>
@@ -500,9 +492,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              className="text-center"><h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 ZionTech Group
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                   2026 Services
@@ -550,9 +540,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  {categories.map(category => (
+                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">{categories.map(category => (
                     <option key={category} value={category} className="bg-gray-800 text-white">
                       {category === 'all' ? 'All Categories' : category}
                     </option>
@@ -565,9 +553,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  {priceRanges.map(range => (
+                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">{priceRanges.map(range => (
                     <option key={range.value} value={range.value} className="bg-gray-800 text-white">
                       {range.label}
                     </option>
@@ -580,9 +566,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"
-                >
-                  <option value="popularity" className="bg-gray-800 text-white">Sort by Popularity</option>
+                  className="w-full px-4 py-2 bg-white/20 border border-white/30 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400"><option value="popularity" className="bg-gray-800 text-white">Sort by Popularity</option>
                   <option value="price-low" className="bg-gray-800 text-white">Price: Low to High</option>
                   <option value="price-high" className="bg-gray-800 text-white">Price: High to Low</option>
                   <option value="rating" className="bg-gray-800 text-white">Sort by Rating</option>
@@ -767,7 +751,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 }<div> <select </option>) ) 
 }</select> </div> {
   /* Sort By */ 
-}<div> <select > <option value="popularity" className="bg-gray-800 text-white" >Sort by Popularity</option> <option value="price-low" className="bg-gray-800 text-white" >Price: Low to High</option> <option value="price-high" className="bg-gray-800 text-white" >Price: High to Low</option> <option value="rating" className="bg-gray-800 text-white" >Sort by Rating</option> <option value="customers" className="bg-gray-800 text-white" >Sort by Customers</option> </select> </div> </div> </div> </div> </h2> <p className="text-gray-300" > Discover innovative solutions tailored to your business needs </p> </div> Popular </div>) 
+}<div> <select><option value="popularity" className="bg-gray-800 text-white" >Sort by Popularity</option> <option value="price-low" className="bg-gray-800 text-white" >Price: Low to High</option> <option value="price-high" className="bg-gray-800 text-white" >Price: High to Low</option> <option value="rating" className="bg-gray-800 text-white" >Sort by Rating</option> <option value="customers" className="bg-gray-800 text-white" >Sort by Customers</option> </select> </div> </div> </div> </div> </h2> <p className="text-gray-300" > Discover innovative solutions tailored to your business needs </p> </div> Popular </div>) 
 }</div> </li>) ) 
 }</ul> </div> </div> {
   /* CTA Button */ 

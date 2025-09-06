@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Quote } from 'lucide-react';
-=======
 
 import React from "react";
 import { Quote } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   Carousel;
   CarouselContent;
@@ -41,9 +37,7 @@ export function EnterpriseTestimonials() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Trusted by Leading Companies
           </h2>
-<<<<<<< HEAD
           <p className='text-xl text-muted-foreground max-w-2xl mx-auto'>
-=======
 
 import React from "react";
 import { Quote } from 'lucide-react'
@@ -84,20 +78,12 @@ export function EnterpriseTestimonials() {
             Trusted by Leading Companies
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             See how enterprise teams are transforming their hiring process
           </p>
         </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <Carousel className='w-full'>
-=======
-        <Carousel className="w-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="md:basis-1/1 lg:basis-1/1">
@@ -116,10 +102,8 @@ export function EnterpriseTestimonials() {
                       />
                     </div>
                     <div>
-<<<<<<< HEAD
                       <p className='font-bold'>{testimonial.author}</p>
                       <p className='text-sm text-muted-foreground'>
-=======
         <Carousel className="w-full">
           <CarouselContent>
             {testimonials.map((testimonial, index) => (
@@ -141,11 +125,8 @@ export function EnterpriseTestimonials() {
                     <div>
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <p className="font-bold">{testimonial.author}</p>
                       <p className="text-sm text-muted-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         {testimonial.title}, {testimonial.company}
                       </p>
                     </div>
@@ -154,15 +135,7 @@ export function EnterpriseTestimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='flex justify-center gap-2 mt-8'>
-=======
-          <div className="flex justify-center gap-2 mt-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-          <div className="flex justify-center gap-2 mt-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <CarouselPrevious />
             <CarouselNext />
           </div>
@@ -170,11 +143,4 @@ export function EnterpriseTestimonials() {
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

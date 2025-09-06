@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useMutation } from '@tanstack/react-query';
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react';
@@ -7,7 +5,6 @@ import { format } from 'date-fns';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { Review, ReviewStatus } from '@/types/reviews';
-=======
 import { useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { Check, X, User, Star, MoreHorizontal } from 'lucide-react'
@@ -15,7 +12,6 @@ import { format } from "date-fns";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Review, ReviewStatus } from "@/types/reviews";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import {
   Table;
@@ -80,7 +76,6 @@ export function ReviewsModerationTable({
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
     }});
-
 
   const getInitials = (name: string) => {
     return name
@@ -187,9 +182,7 @@ export function ReviewsModerationTable({
               </TableCell>
               <TableCell>
                 <Badge
-                  variant="outline"
-                >
-                  {review.status.charAt(0).toUpperCase() + review.status.slice(1)}
+                  variant="outline">{review.status.charAt(0).toUpperCase() + review.status.slice(1)}
                 </Badge>
               </TableCell>
               <TableCell>
@@ -208,18 +201,14 @@ export function ReviewsModerationTable({
                         variant="outline"
                         className="h-8 w-8 p-0"
                         onClick={() => handleApprove(review.id)}
-                        disabled={isPending}
-                      >
-                        <Check className="h-4 w-4 text-green-500" />
+                        disabled={isPending}><Check className="h-4 w-4 text-green-500" />
                       </Button>
                       <Button
                         size="sm"
                         variant="outline"
                         className="h-8 w-8 p-0"
                         onClick={() => handleReject(review.id)}
-                        disabled={isPending}
-                      >
-                        <X className="h-4 w-4 text-red-500" />
+                        disabled={isPending}><X className="h-4 w-4 text-red-500" />
                       </Button>
                     </>
                   )}
@@ -228,9 +217,7 @@ export function ReviewsModerationTable({
                       <Button
                         variant="ghost"
                         size="sm"
-                        className="h-8 w-8 p-0"
-                      >
-                        <MoreHorizontal className="h-4 w-4" />
+                        className="h-8 w-8 p-0"><MoreHorizontal className="h-4 w-4" />
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end">
@@ -322,9 +309,7 @@ export function ReviewsModerationTable({
                   )}
                   {selectedReview.would_work_again !== undefined && (
                     <Badge
-                      variant={selectedReview.would_work_again ? "default" : "secondary"}
-                    >
-                      {selectedReview.would_work_again ? "Would work again" : "Would not work again"}
+                      variant={selectedReview.would_work_again ? "default" : "secondary"}>{selectedReview.would_work_again ? "Would work again" : "Would not work again"}
                     </Badge>
                   )}
                 </div>
@@ -381,7 +366,6 @@ export function ReviewsModerationTable({
       )}
     </>
   );
-<<<<<<< HEAD
 
 };
 
@@ -418,7 +402,7 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
   () => handleApprove (review.id) ;
 }disabled= {;
   isPending ";
-}> <Check className=" h-4 w-4 text-green-500"/> </Button> <Button > <X className=" h-4 w-4 text-red-500"/> </Button> </>) ";
+}> <Check className=" h-4 w-4 text-green-500"/> </Button> <Button><X className=" h-4 w-4 text-red-500"/> </Button> </>) ";
 }<DropdownMenu> <DropdownMenuTrigger asChild> <Button variant=" ghost"size=" sm"className=" h-8 w-8 p-0"> <MoreHorizontal className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> Mark as approved </DropdownMenuItem>) ;
 }</DropdownMenuContent> </DropdownMenu> </div> </TableCell> </TableRow>) ) ";
 }</TableBody> </Table> </DialogDescription> </DialogHeader> <div className=" space-y-4"> <div className=" flex items-center justify-between"> <div className=" flex items-center gap-2"> <Avatar> {;
@@ -458,15 +442,5 @@ return (<> <Table> <TableHeader> <TableRow> <TableHead>Reviewer</TableHead> <Tab
 }</DialogFooter> </DialogContent> </Dialog>) ;
 }</>) ;
 }"
-=======
 
-<<<<<<< HEAD
-
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

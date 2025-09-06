@@ -59,9 +59,7 @@ const UltraFuturisticServiceCard2026: React.FC<UltraFuturisticServiceCard2026Pro
       whileHover={{ y: -8, scale: 1.02 }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className={`group relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl p-8 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-500 cursor-pointer ${className}`}
-      onClick={handleClick}
-    >
-      {/* Background Effects */}
+      onClick={handleClick}>{/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       
       {/* Content */}

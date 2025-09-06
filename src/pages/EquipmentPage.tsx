@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -454,9 +453,7 @@ function EquipmentPageContent() {
               animate={{ opacity: 1, scale: 1 }} 
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }} 
-              whileHover={{ scale: 1.02 }}
-            >
-              <EquipmentCard
+              whileHover={{ scale: 1.02 }}><EquipmentCard
                 equipment={item}
                 onViewDetails={() => {
                   if (typeof window !== 'undefined') {
@@ -513,9 +510,7 @@ function EquipmentPageContent() {
             animate={{ opacity: 1, scale: 1 }} 
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }} 
-            whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+            whileTap={{ scale: 0.9 }}><ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>
         )}
       </AnimatePresence>
@@ -523,7 +518,6 @@ function EquipmentPageContent() {
   );
 }
 
-<<<<<<< HEAD
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -683,13 +677,7 @@ function EquipmentPageContent() {
 }</AnimatePresence> </div>) ;
 }//Main export with error boundary export default function EquipmentPage () {;
   return (<EquipmentErrorBoundary> <EquipmentPageContent /> </EquipmentErrorBoundary> '"
-=======
 
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 // Main export with error boundary
 export default function EquipmentPage() {
   return (
@@ -698,4 +686,3 @@ export default function EquipmentPage() {
     </EquipmentErrorBoundary>
   );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

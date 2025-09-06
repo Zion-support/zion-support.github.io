@@ -1,23 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface SkeletonProps {
   className?: string;
   height?: string;
   width?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
   rounded?: string;
-=======
   rounded?: string
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const Skeleton: React.FC<SkeletonProps> = ({ 
   className = '';
@@ -89,12 +79,10 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[...Array(4)].map((_, index) => (
-<<<<<<< HEAD
             <div key={index} className='text-center'>
               <Skeleton className='w-16 h-16 rounded-full mx-auto mb-4' />
               <Skeleton className='h-10 w-20 mx-auto mb-2' />
               <Skeleton className='h-5 w-24 mx-auto' />
-=======
   rounded?: string
 }
 
@@ -168,36 +156,24 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[...Array(4)].map((_, index) => (
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <div key={index} className="text-center">
               <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
               <Skeleton className="h-10 w-20 mx-auto mb-2" />
               <Skeleton className="h-5 w-24 mx-auto" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           ))}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default Skeleton;
-=======
   )
 };
 
 export default Skeleton;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default Skeleton;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
@@ -208,9 +207,7 @@ export function ValidatedFormField({
                 size="sm"
                 className="h-7 w-7 p-0"
                 onClick={() => setShowPassword(!showPassword)}
-                aria-label={showPassword ? 'Hide password' : 'Show password'}
-              >
-                {showPassword ? (
+                aria-label={showPassword ? 'Hide password' : 'Show password'}>{showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
@@ -333,31 +330,19 @@ export const commonValidations = {
         return 'Please enter a valid phone number'
       }
       return null;
-<<<<<<< HEAD
     },
   },
 };
-=======
-
-<<<<<<< HEAD
 
   const fieldError = form.formState.errors[name];
   const isTouched = form.formState.touchedFields[name];
 
-
-<<<<<<< HEAD
-
-
       default:
         return (
 
-<<<<<<< HEAD
       return null;
     };
   }},
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     };
   }},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

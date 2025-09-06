@@ -12,8 +12,7 @@ import {
 
 const Command = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive>,
-  React.ComponentPropsWithoutRef<typeof CommandPrimitive>
-></typeof>(({ className, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof CommandPrimitive>></typeof>(({ className, ...props }, ref) => (
   <CommandPrimitive
     ref={ref}
     className={cn(

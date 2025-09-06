@@ -7,7 +7,6 @@ import Button from '../../components/ui/Button';
 import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-
 interface LogEntry {
   id: string;
   timestamp: string;

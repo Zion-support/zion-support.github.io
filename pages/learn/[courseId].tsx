@@ -136,9 +136,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <li key={l.id}>
                   <button
                     className={`w-full text-left px-3 py-2 rounded border ${currentLessonId === l.id ? 'bg-blue-50 dark:bg-blue-900/20' : ''}`}
-                    onClick={() => setCurrentLessonId(l.id)}
-                  >
-    <div className="grid lg:grid-cols-3 gap-6">
+                    onClick={() => setCurrentLessonId(l.id)}><div className="grid lg:grid-cols-3 gap-6">
       <div className="lg:col-span-2 space-y-4">
         <div>
           <h1 className="text-2xl font-semibold">{course.title}</h1>

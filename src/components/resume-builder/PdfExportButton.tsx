@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -76,9 +75,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         <Button 
           variant="outline" 
           className="gap-2"
-          disabled={isExporting}
-        >
-          {isExporting ? (
+          disabled={isExporting}>{isExporting ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
             <FileText className="h-4 w-4" />
@@ -122,20 +119,14 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-<<<<<<< HEAD
 
 };
 h-4 w-4"/>) ";
-}Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56" > <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {;
+}Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56"><DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {;
   includePortfolio ;
 }onCheckedChange= {;
   setIncludePortfolio ;
 }> Include Portfolio Projects </DropdownMenuCheckboxItem> <DropdownMenuSeparator /> Download PDF </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) ;
 }'"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

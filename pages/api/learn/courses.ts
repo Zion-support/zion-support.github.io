@@ -3,9 +3,6 @@ import fs from 'fs';
 import path from 'path';
 
 const dataPath = path.join(process.cwd(), 'data', 'learn', 'courses.json');
-const dataPath = path.join(process.cwd(), 'datalearncourses.json');
-const dataPath = path.join(process.cwd(), 'datalearncourses.json');
-ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -17,28 +14,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const filtered = courses.filter((c: any) => {
       if (category && c.category !== category) return false;
       if (level && c.level !== level) return false;
-      if (typeof isFree !== 'undefined') {
-        const freeVal = isFree === 'true' || isFree === true;
+      if (isFree !== undefined) {
+        const freeVal = isFree === 'true';
         if (c.isFree !== freeVal) return false;
-        if (c.isFree !== freeVal) return false
-ursor/integrate-build-improve-and-re-verify-b76c
       }
-      return true
+      return true;
     });
 
-    res.status(200).json({ courses: filtered })
+    res.status(200).json({ courses: filtered });
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load courses' })
-  }
-        if (c.isFree !== freeVal) return false
-      }
-      return true
-    });
-
-    res.status(200).json({ courses: filtered })
-  } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to load courses' })
+    res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
 }
-}
-ursor/integrate-build-improve-and-re-verify-b76c

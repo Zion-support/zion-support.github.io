@@ -99,9 +99,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <Button
                 asChild
                 variant='outline'
-                className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'
-              >
-                <Link href='/cart'>← Back to Cart</Link>
+                className='border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10'><Link href='/cart'>← Back to Cart</Link>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="outline" className="border-zion-cyan/30 text-zion-slate-light hover:bg-zion-cyan/10">
                 <Link href="/cart">

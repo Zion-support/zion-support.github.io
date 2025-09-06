@@ -288,17 +288,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='mb-8'
             className="mb-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Strategic Partners
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Building the future of technology through strategic partnerships
               and collaboration
-            className="mb-8"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
+            className="mb-8"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Strategic Partners
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
@@ -315,18 +311,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8, delay: 0.2 }}
             className='mb-12'
             className="mb-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+ursor/integrate-build-improve-and-re-verify-b76c><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Join our ecosystem of technology leaders, innovators, and industry experts 
               to create transformative solutions that shape the future of computing.
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Become a Partner
               <ArrowRight className='w-5 h-5' />
-            className="mb-12"
-          >
-            <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
+            className="mb-12"><p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Join our ecosystem of technology leaders, innovators, and industry experts 
               to create transformative solutions that shape the future of computing.
             </p>
@@ -360,18 +352,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='text-center'
                 className="text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
                 <div className='text-white/70'>{stat.label}</div>
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                className="text-center"><div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -400,18 +388,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               We offer various partnership models to meet your business objectives and growth goals
             </p>
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Partnership Types</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               We offer various partnership models to meet your business objectives and growth goals
             </p>
@@ -429,9 +413,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300'
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <type.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className='text-2xl font-bold text-white mb-4'>
@@ -442,12 +424,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {type.benefits.map(benefit => (
                     <li
                       key={benefit}
-                      className='flex items-center text-white/80'
-                    >
-                      <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3' />
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
+                      className='flex items-center text-white/80'><div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3' />
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-blue-500/30 transition-all duration-300"><div className={`w-16 h-16 bg-gradient-to-br ${type.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <type.icon className="w-8 h-8 text-white" />
                 </div>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -483,18 +461,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Leading technology companies and organizations that trust us to deliver innovative solutions
             </p>
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Our Partners</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Leading technology companies and organizations that trust us to deliver innovative solutions
             </p>
@@ -512,9 +486,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="p-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${partner.color} rounded-xl flex items-center justify-center`}>
                       <partner.icon className="w-6 h-6 text-white" />
@@ -524,9 +496,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {partner.category}
                       </span>
                       <span className='text-xs text-white/40 bg-white/5 px-2 py-1 rounded'>
-                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
-              >
-                <div className="p-6">
+                className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"><div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-br ${partner.color} rounded-xl flex items-center justify-center`}>
                       <partner.icon className="w-6 h-6 text-white" />
@@ -558,9 +528,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {partner.benefits.map(benefit => (
                         <li
                           key={benefit}
-                          className='text-xs text-white/80 flex items-center'
-                        >
-                          <div className='w-1 h-1 bg-cyan-400 rounded-full mr-2' />
+                          className='text-xs text-white/80 flex items-center'><div className='w-1 h-1 bg-cyan-400 rounded-full mr-2' />
 ursor/integrate-build-improve-and-re-verify-b76c
                   
                   <h3 className="text-xl font-bold text-white mb-3">{partner.name}</h3>
@@ -629,9 +597,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl font-bold text-white mb-6'>
+            viewport={{ once: true }}><h2 className='text-4xl font-bold text-white mb-6'>
             <h2 className="text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Partner with Us?
@@ -667,10 +633,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
       <EnhancedFooter />
     </div>
   );
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
+}</div> </div> </section>><h2 className="text-4xl font-bold text-white mb-6" >Partnership Types</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > We offer various partnership models to meet your business objectives and growth goals </p> </motion.div> </li>) ) 
 }</ul> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 
-}</ul> </div> <div className="flex items-center justify-between" > <a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-4xl font-bold text-white mb-6" >Our Partners</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Leading technology companies and organizations that trust us to deliver innovative solutions </p> </motion.div> </span> </div> </div> </li>) ) 
+}</ul> </div> <div className="flex items-center justify-between"><a > Visit Website <ExternalLink className="w-3 h-3" /> </Link> <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white text-sm transition-all duration-300 transform hover:scale-105" > Learn More </button> </div> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 

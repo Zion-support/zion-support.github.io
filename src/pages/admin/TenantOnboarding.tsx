@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -27,8 +25,6 @@ import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { Switch } from '@/components/ui/switch';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Header } from "@/components/Header";
@@ -194,9 +190,7 @@ export default function TenantOnboarding() {
                       <Select 
                         name="industry" 
                         value={formData.industry} 
-                        onValueChange={(value) => handleSelectChange("industry", value)}
-                      >
-                        <SelectTrigger>
+                        onValueChange={(value) => handleSelectChange("industry", value)}><SelectTrigger>
                           <SelectValue placeholder="Select industry" />
                         </SelectTrigger>
                         <SelectContent>
@@ -217,9 +211,7 @@ export default function TenantOnboarding() {
                       <Select 
                         name="company_size" 
                         value={formData.company_size} 
-                        onValueChange={(value) => handleSelectChange("company_size", value)}
-                      >
-                        <SelectTrigger>
+                        onValueChange={(value) => handleSelectChange("company_size", value)}><SelectTrigger>
                           <SelectValue placeholder="Select company size" />
                         </SelectTrigger>
                         <SelectContent>
@@ -274,9 +266,7 @@ export default function TenantOnboarding() {
                       <Select 
                         name="theme_preset" 
                         value={formData.theme_preset} 
-                        onValueChange={(value) => handleSelectChange("theme_preset", value)}
-                      >
-                        <SelectTrigger>
+                        onValueChange={(value) => handleSelectChange("theme_preset", value)}><SelectTrigger>
                           <SelectValue placeholder="Select theme" />
                         </SelectTrigger>
                         <SelectContent>
@@ -355,24 +345,16 @@ export default function TenantOnboarding() {
       </main>
     </>
   );
-<<<<<<< HEAD
 
 };'";
-Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform." /> <Header /> <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8" > <div className="flex flex-col space-y-6" > <div> <h1 className="text-3xl font-bold tracking-tight" >Tenant Onboarding</h1> <p className="text-muted-foreground mt-2" > Create a new white-label instance of Zion Hire AI for a company. </p> </div> <Card> <CardHeader> <CardTitle>New Tenant Setup</CardTitle> <CardDescription> Configure the branding and details for the new white-label tenant. </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="company" className="space-y-4" > <div className="space-y-2" > <Label htmlFor="brand name" >Company Name</Label> <Input required /> </div> <div className="space-y-2" > <Label htmlFor="industry" >Industry</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select industry" /> </SelectTrigger> <SelectContent> <SelectItem value="technology" >Technology</SelectItem> <SelectItem value="healthcare" >Healthcare</SelectItem> <SelectItem value="finance" >Finance</SelectItem> <SelectItem value="education" >Education</SelectItem> <SelectItem value="retail" >Retail</SelectItem> <SelectItem value="manufacturing" >Manufacturing</SelectItem> <SelectItem value="services" >Professional Services</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> </div> <div className="space-y-2" > <Label htmlFor="company size" >Company Size</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select company size" /> </SelectTrigger> <SelectContent> <SelectItem value="1-10" >1-10 employees</SelectItem> <SelectItem value="11-50" >11-50 employees</SelectItem> <SelectItem value="51-200" >51-200 employees</SelectItem> <SelectItem value="201-500" >201-500 employees</SelectItem> <SelectItem value="501-1000" >501-1000 employees</SelectItem> <SelectItem value="1000+" >1000+ employees</SelectItem> </SelectContent> </Select> </div> </TabsContent> </p> </div> <div className="space-y-2" > <Label htmlFor="primary color" >Primary Brand Color</Label> <div className="flex items-center gap-2" > <Input /> </div> </div> <div className="space-y-2" > <Label htmlFor="theme preset" >Theme Preset</Label> <Select > <SelectTrigger> <SelectValue placeholder="Select theme" /> </SelectTrigger> <SelectContent> <SelectItem value="light" >Light</SelectItem> <SelectItem value="dark" >Dark</SelectItem> <SelectItem value="corporate" >Corporate</SelectItem> <SelectItem value="startup" >Startup</SelectItem> <SelectItem value="neon" >Neon</SelectItem> </SelectContent> </Select> </div> <div className="flex items-center justify-between" > <div className="space-y-0.5" > <Label htmlFor="is co branded" >Co-branding</Label> <p className="text-xs text-muted-foreground" > Show "Powered by Zion AI" in the footer and elsewhere </p> </div> <Switch /> </div> </TabsContent> <TabsContent value="domain" className="space-y-4" > <div className="space-y-2" > <Label htmlFor="subdomain" >Subdomain</Label> <div className="flex items-center" > <Input /> <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground" > .ziontechmarketplace.com </div> </div> <p className="text-xs text-muted-foreground" > Leave blank to auto-generate from company name </p> </div> <div className="space-y-2" > <Label htmlFor="custom domain" >Custom Domain (Optional) </Label> <Input /> <p className="text-xs text-muted-foreground" > If you want to use your own domain, enter it here. You'll need to configure DNS records. </p> </div> </TabsContent> </Tabs> </Button> </div> </form> </CardContent> </Card> </div> </main> </>) ;
+Tenant Onboarding - Zion AI Marketplace" description="Onboard a new white-label tenant to the Zion AI Marketplace platform." /> <Header /> <main className="flex-1 container max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8"><div className="flex flex-col space-y-6"><div> <h1 className="text-3xl font-bold tracking-tight" >Tenant Onboarding</h1> <p className="text-muted-foreground mt-2" > Create a new white-label instance of Zion Hire AI for a company. </p> </div> <Card> <CardHeader> <CardTitle>New Tenant Setup</CardTitle> <CardDescription> Configure the branding and details for the new white-label tenant. </CardDescription> </CardHeader> <CardContent> </TabsList> <TabsContent value="company" className="space-y-4"><div className="space-y-2"><Label htmlFor="brand name" >Company Name</Label> <Input required /> </div> <div className="space-y-2"><Label htmlFor="industry" >Industry</Label> <Select><SelectTrigger> <SelectValue placeholder="Select industry" /> </SelectTrigger> <SelectContent> <SelectItem value="technology" >Technology</SelectItem> <SelectItem value="healthcare" >Healthcare</SelectItem> <SelectItem value="finance" >Finance</SelectItem> <SelectItem value="education" >Education</SelectItem> <SelectItem value="retail" >Retail</SelectItem> <SelectItem value="manufacturing" >Manufacturing</SelectItem> <SelectItem value="services" >Professional Services</SelectItem> <SelectItem value="other" >Other</SelectItem> </SelectContent> </Select> </div> <div className="space-y-2"><Label htmlFor="company size" >Company Size</Label> <Select><SelectTrigger> <SelectValue placeholder="Select company size" /> </SelectTrigger> <SelectContent> <SelectItem value="1-10" >1-10 employees</SelectItem> <SelectItem value="11-50" >11-50 employees</SelectItem> <SelectItem value="51-200" >51-200 employees</SelectItem> <SelectItem value="201-500" >201-500 employees</SelectItem> <SelectItem value="501-1000" >501-1000 employees</SelectItem> <SelectItem value="1000+" >1000+ employees</SelectItem> </SelectContent> </Select> </div> </TabsContent> </p> </div> <div className="space-y-2"><Label htmlFor="primary color" >Primary Brand Color</Label> <div className="flex items-center gap-2"><Input /> </div> </div> <div className="space-y-2"><Label htmlFor="theme preset" >Theme Preset</Label> <Select><SelectTrigger> <SelectValue placeholder="Select theme" /> </SelectTrigger> <SelectContent> <SelectItem value="light" >Light</SelectItem> <SelectItem value="dark" >Dark</SelectItem> <SelectItem value="corporate" >Corporate</SelectItem> <SelectItem value="startup" >Startup</SelectItem> <SelectItem value="neon" >Neon</SelectItem> </SelectContent> </Select> </div> <div className="flex items-center justify-between"><div className="space-y-0.5"><Label htmlFor="is co branded" >Co-branding</Label> <p className="text-xs text-muted-foreground" > Show "Powered by Zion AI" in the footer and elsewhere </p> </div> <Switch /> </div> </TabsContent> <TabsContent value="domain" className="space-y-4"><div className="space-y-2"><Label htmlFor="subdomain" >Subdomain</Label> <div className="flex items-center"><Input /> <div className="bg-muted px-3 py-2 border border-l-0 border-input rounded-r-md text-muted-foreground" > .ziontechmarketplace.com </div> </div> <p className="text-xs text-muted-foreground" > Leave blank to auto-generate from company name </p> </div> <div className="space-y-2"><Label htmlFor="custom domain" >Custom Domain (Optional) </Label> <Input /> <p className="text-xs text-muted-foreground" > If you want to use your own domain, enter it here. You'll need to configure DNS records. </p> </div> </TabsContent> </Tabs> </Button> </div> </form> </CardContent> </Card> </div> </main> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
   
 
-<<<<<<< HEAD
       
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -2,25 +2,14 @@ import { useEffect, useMemo, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { TALENT_PROFILES } from '../data/talent';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function useFavorites() {
   const storageKey = 'zion_favorites';
   const [favorites, setFavorites] = useState<string[]>([]);
   useEffect(() => {
     try {
       const raw = localStorage.getItem(storageKey);
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (raw) setFavorites(JSON.parse(raw));
-=======
-      if (raw) setFavorites(JSON.parse(raw))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } catch {}
   }, []);
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug)),
@@ -29,12 +18,10 @@ function useFavorites() {
 
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites();
-<<<<<<< HEAD
   const profiles = useMemo(
     () => TALENT_PROFILES.filter(t => favorites.includes(t.slug)),
     [favorites]
   );
-=======
       if (raw) setFavorites(JSON.parse(raw))
     } catch {}
   }, []);
@@ -45,10 +32,7 @@ export default function FavoritesPage() {
 export default function FavoritesPage() {
   const { favorites, remove } = useFavorites();
   const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const profiles = useMemo(() => TALENT_PROFILES.filter((t) => favorites.includes(t.slug)), [favorites]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <div>
@@ -56,8 +40,6 @@ export default function FavoritesPage() {
         <title>Favorites — Zion AI Marketplace</title>
       </Head>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='mb-6 text-sm text-gray-500 dark:text-gray-400'>
         <nav aria-label='Breadcrumb'>
           <ol className='flex items-center gap-2'>
@@ -73,29 +55,17 @@ export default function FavoritesPage() {
             >
               Favorites
             </li>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <div className="mb-6 text-sm text-gray-500 dark:text-gray-400">
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2">
             <li><Link href="/"><a className="hover:underline">Home</a></Link></li>
             <li aria-hidden="true">/</li>
             <li className="text-gray-900 dark:text-gray-100" aria-current="page">Favorites</li>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </ol>
         </nav>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>Saved Talent</h1>
-=======
-      <h1 className="text-2xl font-semibold mb-4">Saved Talent</h1>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       {profiles.length === 0 ? (
         <div className="rounded-xl border border-gray-200 dark:border-gray-800 p-8 text-center">
@@ -121,7 +91,6 @@ export default function FavoritesPage() {
                   <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">{s}</span>
                 ))}
               </div>
-<<<<<<< HEAD
               <div className='mt-4 flex items-center justify-between text-sm'>
                 <div className='font-medium'>${t.hourlyRateUsd}/hr</div>
                 <div className='flex items-center gap-3'>
@@ -135,7 +104,6 @@ export default function FavoritesPage() {
                       Request to Hire
                     </a>
                   </Link>
-=======
       <h1 className="text-2xl font-semibold mb-4">Saved Talent</h1>
 
       {profiles.length === 0 ? (
@@ -162,17 +130,11 @@ export default function FavoritesPage() {
                   <span key={s} className="text-xs px-2 py-1 rounded bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800">{s}</span>
                 ))}
               </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <div className="mt-4 flex items-center justify-between text-sm">
                 <div className="font-medium">${t.hourlyRateUsd}/hr</div>
                 <div className="flex items-center gap-3">
                   <Link href={`/talent/${t.slug}`}><a className="px-3 py-1.5 rounded-md bg-indigo-600 text-white">View Profile</a></Link>
                   <Link href={`/talent/${t.slug}?hire=1`}><a className="px-3 py-1.5 rounded-md border border-indigo-600 text-indigo-600">Request to Hire</a></Link>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </div>
@@ -181,11 +143,4 @@ export default function FavoritesPage() {
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

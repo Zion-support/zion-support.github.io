@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { TUTORIALS } from '@/data/tutorials';
@@ -9,7 +7,6 @@ import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import type { Tutorial as TutorialType } from '@/types/tutorial';
 
-=======
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { TUTORIALS } from "@/data/tutorials";
@@ -18,7 +15,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft } from 'lucide-react'
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface TutorialPageProps {
   tutorial?: TutorialType
 }
@@ -43,9 +39,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
           <Button
             variant="outline"
             className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
-            asChild
-          >
-            <Link href="/tutorials">
+            asChild><Link href="/tutorials">
               <ArrowLeft className="mr-2 h-4 w-4" /> Back to Tutorials
             </Link>
           </Button>
@@ -63,13 +57,7 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   const slug = router.query.slug as string | undefined;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -451,9 +451,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
+              transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6'>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Revolutionary 2025 Pricing
@@ -489,9 +487,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                   className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                     billingCycle === 'yearly' ? 'bg-blue-600' : 'bg-gray-600'
-                  }`}
-                >
-                  <span
+                  }`}><span
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                       billingCycle === 'yearly'
                         ? 'translate-x-8'
@@ -550,9 +546,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className='bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30'
-                >
-                  <div className='text-2xl font-bold text-pink-400'>
+                  className='bg-gradient-to-br from-pink-600/20 to-rose-600/20 backdrop-blur-sm rounded-2xl p-4 border border-pink-500/30'><div className='text-2xl font-bold text-pink-400'>
                     {marketAnalysis.globalReach}
                   </div>
                   <div className='text-xs text-gray-400'>Global Reach</div>
@@ -634,9 +628,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -678,9 +670,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       ? 'scale-105 border-2 border-blue-500' 
 ursor/integrate-build-improve-and-re-verify-b76c
                       : 'border border-gray-700'
-                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
-                >
-                  {tier.popular && (
+                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}>{tier.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold'>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -776,9 +766,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Individual Service Pricing
               </h2>
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -815,9 +803,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white'
                       : 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400'
-                  }`}
-                >
-                  <category.icon className='w-5 h-5' />
+                  }`}><category.icon className='w-5 h-5' />
                   {category.name}
                   <span className='bg-white/20 px-2 py-1 rounded-full text-xs'>
                   <category.icon className="w-5 h-5" />
@@ -937,9 +923,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {service.features.slice(0, 3).map((feature, idx) => (
                         <div
                           key={idx}
-                          className='flex items-center gap-2 text-sm text-gray-400'
-                        >
-                          <div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>
+                          className='flex items-center gap-2 text-sm text-gray-400'><div className='w-1.5 h-1.5 bg-blue-500 rounded-full'></div>
                   <div className="mb-4">
                     <h4 className="text-sm font-semibold text-gray-300 mb-2">Key Features:</h4>
                     <div className="grid grid-cols-1 gap-1">
@@ -1031,9 +1015,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Get Started?

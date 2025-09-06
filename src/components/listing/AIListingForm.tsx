@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Sparkles } from 'lucide-react';
-=======
 
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -15,7 +12,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Sparkles } from 'lucide-react'
 import { Star } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface AIListingFormProps {
   onSubmit: (formData: {
@@ -24,9 +20,7 @@ interface AIListingFormProps {
     keyFeatures: string,
     targetAudience: string
   }) => void;
-<<<<<<< HEAD
   isLoading: boolean;
-=======
 
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
@@ -44,27 +38,19 @@ interface AIListingFormProps {
     targetAudience: string
   }) => void;
   isLoading: boolean,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   isLoading: boolean,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   initialValues?: {
     title?: string;
     category?: string;
     keyFeatures?: string;
-<<<<<<< HEAD
-<<<<<<< HEAD
     targetAudience?: string;
   };
-=======
     targetAudience?: string
   }
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) {
   const { toast } = useToast();
-<<<<<<< HEAD
   const [title, setTitle] = useState(initialValues.title || '');
   const [category, setCategory] = useState(initialValues.category || '');
   const [keyFeatures, setKeyFeatures] = useState(
@@ -73,11 +59,9 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [targetAudience, setTargetAudience] = useState(
     initialValues.targetAudience || ''
   );
-=======
     targetAudience?: string
   }
 }
-
 
 export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AIListingFormProps) { const { toast  } = useToast(),
   const [ title, setTitle ] = useState(initialValues.title || ""),
@@ -85,27 +69,20 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
   const [ keyFeatures, setKeyFeatures ] = useState(initialValues.keyFeatures || ""),
   const [ targetAudience, setTargetAudience ] = useState(initialValues.targetAudience || ""),
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [title, setTitle] = useState(initialValues.title || "");
   const [category, setCategory] = useState(initialValues.category || "");
   const [keyFeatures, setKeyFeatures] = useState(initialValues.keyFeatures || "");
   const [targetAudience, setTargetAudience] = useState(initialValues.targetAudience || "");
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const handleSubmit = () => {
     if (!title || !category) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: 'Missing required fields',
         description: 'Please provide at least a title and category.',
         variant: 'destructive',
-=======
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       });
       return
     }
@@ -167,9 +144,7 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       <Button 
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
-<<<<<<< HEAD
         className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2'
-=======
         title: "Missing required fields",
         description: "Please provide at least a title and category.",
         variant: "destructive"
@@ -184,7 +159,6 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
       targetAudience
     })
   };
-
 
   return (
     <div className="space-y-4">
@@ -236,44 +210,25 @@ export function AIListingForm({ onSubmit, isLoading, initialValues = {} }: AILis
         onClick={handleSubmit}
         disabled={isLoading || !title || !category}
         className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-      >
-        {isLoading ? (
+        className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white mt-2">{isLoading ? (
           <>Generating Optimized Content...</>
         ) : (
           <>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Sparkles className='h-4 w-4 mr-2' />
-=======
-            <Sparkles className="h-4 w-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-            <Sparkles className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Generate Optimized Content
           </>
         )}
       </Button>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }: AIListingFormProps) {;
   if (!title || !category) {;
   toast ({;
   return;
-}/> </div> <div className="space-y-2" > <label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2" > <label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2" > <label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input > {";
+}/> </div> <div className="space-y-2"><label htmlFor="category" className="text-sm font-medium text-zion-slate-light" >Category</label> <Input /> </div> <div className="space-y-2"><label htmlFor="keyFeatures" className="text-sm font-medium text-zion-slate-light" >Key Features (Optional) </label> <Textarea /> </div> <div className="space-y-2"><label htmlFor="targetAudience" className="text-sm font-medium text-zion-slate-light" >Target Audience (Optional) </label> <Input>{";
   isLoading ? (<>Generating Optimized Content...</>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Optimized Content </>) ;
 }</Button> </div>) ;
 }'"
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

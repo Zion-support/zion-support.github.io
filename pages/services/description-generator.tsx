@@ -193,9 +193,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <select
             className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-transparent px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
             value={tone}
-            onChange={(e) => setTone(e.target.value as any)}
-          >
-            <option value='professional'>Professional</option>
+            onChange={(e) => setTone(e.target.value as any)}><option value='professional'>Professional</option>
             <option value='friendly'>Friendly</option>
             <option value='persuasive'>Persuasive</option>
             <option value='technical'>Technical</option>
@@ -232,9 +230,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
-          >
-            {loading ? 'Generating…' : 'Generate Description'}
+            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60">{loading ? 'Generating…' : 'Generate Description'}
           </button>
           {error && <span className='text-red-600 text-sm'>{error}</span>}
           <label className="block text-sm font-medium mb-1">Additional Notes (optional)</label>
@@ -250,9 +246,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <button
             type="submit"
             disabled={loading}
-            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60"
-          >
-            {loading ? 'Generating…' : 'Generate Description'}
+            className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 disabled:opacity-60">{loading ? 'Generating…' : 'Generate Description'}
           </button>
           {error && <span className="text-red-600 text-sm">{error}</span>}
           {error && <span className="text-red-600 text-sm">{error}</span>}

@@ -70,9 +70,7 @@ const NotificationContainer: React.FC<NotificationContainerProps> = ({ toasts, o
                 : toast.tone === 'error'
                 ? 'bg-red-50 border-red-200 text-red-800'
                 : 'bg-white border-gray-200 text-gray-800'
-            }`}
-          >
-            <div className="flex items-start justify-between">
+            }`}><div className="flex items-start justify-between">
               <div className="flex-1">
                 <p className="text-sm">{toast.message}</p>
               </div>

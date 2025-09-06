@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Briefcase, Users, Check } from 'lucide-react';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -39,9 +35,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40"
           }`}
-          onClick={() => handleSelect('talent')}
-        >
-          <CardContent className="p-5">
+          onClick={() => handleSelect('talent')}><CardContent className="p-5">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                 <Briefcase className="h-6 w-6 text-primary" />
@@ -63,9 +57,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
               ? "border-primary bg-primary/5" 
               : "border-border hover:border-primary/40";
           }`}
-          onClick={() => handleSelect('client')}
-        >
-          <CardContent className="p-5">
+          onClick={() => handleSelect('client')}><CardContent className="p-5">
             <div className="flex items-center">
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                 <Users className="h-6 w-6 text-primary" />
@@ -83,11 +75,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

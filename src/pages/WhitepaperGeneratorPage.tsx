@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
@@ -38,7 +37,6 @@ const slugify = (text: string): string => {
     .replace(/-+$/, ''),            // Trim - from end of text
 };
 
-
 const WhitepaperGeneratorPage: React.FC = () => {
   const [tokenName, setTokenName] = useState('My Awesome Token');
   const [tokenSupply, setTokenSupply] = useState<string>('1000000000');
@@ -69,12 +67,10 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
   const previewPanelRef = React.useRef<HTMLDivElement>(null);
 
-
   useEffect(() => {
     if(error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel) setError(null)
    
   }, [tokenName, tokenSupply, useCases, rewardsLogic, distributionData, governanceLogic, legalDisclaimers, sections]);
-
 
   const parseWhitepaperDraft = useCallback((draft: string): WhitepaperSection[] => {
     if (!draft) return [];
@@ -176,22 +172,12 @@ const WhitepaperGeneratorPage: React.FC = () => {
       )
     )
   };
-=======
 
-<<<<<<< HEAD
     { id: crypto.randomUUID(), name: 'Public Sale Allocation', percentage: '10' }]),
-
-<<<<<<< HEAD
-
 
   const removeDistributionItem = (id: string) => {
     setDistributionData(prev => prev.filter(item => item.id !== id))
   };
-
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const assembleMarkdownContent = (): string => {
     let mdContent = `# ${tokenName} - Whitepaper\n\n`;
@@ -199,7 +185,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
     sections.forEach(section => {
       mdContent += `## ${section.title}\n\n${section.content}\n\n`;
-<<<<<<< HEAD
       if (section.title.toLowerCase().includes('token distribution')) {
         if (distributionChartData.length > 0) {
           mdContent += `### Distribution Details\n\n`;
@@ -401,7 +386,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
             setCurrentSharedWhitepaperIsPublic(true)
         }
 
-
         const { data: notifyResponse, error: notifyError } = await supabase.functions.invoke('notify-legal-team', {
             body: {
                 whitepaperId: whitepaperIdToSubmit,
@@ -421,7 +405,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
         setIsSubmittingToCounsel(false)
     }
 };
-
 
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
@@ -493,9 +476,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
             onClick={handleGenerateWhitepaper}
             disabled={isLoading || isDownloading || isSharing || isSubmittingToCounsel}
             size="lg"
-            className="w-full"
-          >
-            {isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
+            className="w-full">{isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft'}
           </Button>
 
           {isLoading && <p className="text-center text-sm text-blue-600">Draft generation in progress...</p>}
@@ -512,9 +493,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                     variant="outline"
                     size="sm" // smaller button
                     disabled={isSharing} // Disable while another share operation is in progress
-                    className={currentSharedWhitepaperIsPublic ? "bg-red-100 hover:bg-red-200" : "bg-green-100 hover:bg-green-200"}
-                >
-                    {currentSharedWhitepaperIsPublic ? 'Make Private' : 'Make Public'}
+                    className={currentSharedWhitepaperIsPublic ? "bg-red-100 hover:bg-red-200" : "bg-green-100 hover:bg-green-200"}>{currentSharedWhitepaperIsPublic ? 'Make Private' : 'Make Public'}
                 </Button>
               </div>
               <div className="flex items-center space-x-2 mt-1">
@@ -541,9 +520,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
                 variant="default"
                 size="lg"
-                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"
-            >
-                <Send className="mr-2 h-4 w-4" />
+                className="w-full mt-4 bg-indigo-600 hover:bg-indigo-700 text-white"><Send className="mr-2 h-4 w-4" />
                 {isSubmittingToCounsel ? 'Submitting...' : 'Submit to Counsel'}
             </Button>
           )}
@@ -593,37 +570,18 @@ const WhitepaperGeneratorPage: React.FC = () => {
 };
 
 export default WhitepaperGeneratorPage;
-<<<<<<< HEAD
 '"
-=======
 
-<<<<<<< HEAD
       const html2canvas = html2canvasModule.default;
       const { default: jsPDF } = await import('jspdf'),
 
-
-
-<<<<<<< HEAD
     const newPublicStatus = !currentSharedWhitepaperIsPublic;
 
     // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),
-<<<<<<< HEAD
 
-
-
-<<<<<<< HEAD
         if (currentSharedWhitepaperIsPublic === false) {
-<<<<<<< HEAD
 
         if (notifyError) throw new Error(`Failed to notify counsel: ${notifyError.message}`),
-<<<<<<< HEAD
-
-
-<<<<<<< HEAD
-
 
 export default WhitepaperGeneratorPage;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Item = { source: string, title: string, url: string, date?: string, summary?: string };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 type Props = { items: Item[] },
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -19,12 +15,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { items: [] }, revalidate: 1800 }
   }
 };
-<<<<<<< HEAD
 </header> {
   items.length === 0 && (<div className="text-gray-600 dark:text-gray-400" >No entries yet. The automation will populate this feed shortly.</div>) 
 }</li>) ) 
 }</ul> </div>) 
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -41,8 +35,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { items: [] }, revalidate: 1800 }
   }
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function InnovationDigest({ items }: Props) {
   return (
@@ -68,9 +60,5 @@ export default function InnovationDigest({ items }: Props) {
       </ul>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

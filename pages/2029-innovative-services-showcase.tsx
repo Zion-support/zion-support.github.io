@@ -132,9 +132,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
+              transition={{ duration: 0.8 }}><h1 className='text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8'>
               <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
 ursor/integrate-build-improve-and-re-verify-b76c
                 2029 Innovative Services
@@ -150,9 +148,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
                 <Link
                   href='/contact'
-                  className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'
-                >
-              <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
+                  className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300'><h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-8">
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
@@ -177,9 +173,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         {/* Services Overview */}
         <section
           id='services'
-          className='py-20 bg-gradient-to-b from-black to-gray-900'
-        >
-          <div className='container mx-auto px-4'>
+          className='py-20 bg-gradient-to-b from-black to-gray-900'><div className='container mx-auto px-4'>
         <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
           <div className="container mx-auto px-4">
         <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -190,9 +184,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
+              className='text-center mb-16'><h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -225,16 +217,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className='relative group'
-                >
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}
-                  ></div>
+                  className='relative group'><div
+                    className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <div className='relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500'>
                     <div
-                      className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl mb-6`}
-                    >
-                      <category.icon className='w-8 h-8 text-white' />
+                      className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl mb-6`}><category.icon className='w-8 h-8 text-white' />
                   viewport={{ once: true }} className="relative group">
                   <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-500`}></div>
                   <div className="relative bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500">
@@ -292,9 +279,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
+              className='text-center mb-16'><h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -327,9 +312,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className='bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500'
-                >
-                  <h3 className='text-2xl font-bold text-white mb-4'>
+                  className='bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 hover:border-gray-500 transition-all duration-500'><h3 className='text-2xl font-bold text-white mb-4'>
                     {service.name}
                   </h3>
                   <p className='text-gray-300 mb-6'>{service.description}</p>
@@ -393,9 +376,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     </Link>
                     <Link
                       href='/contact'
-                      className='inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300'
-                    >
-                  <div className="flex gap-4">
+                      className='inline-flex items-center px-6 py-3 border border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white transition-all duration-300'><div className="flex gap-4">
                     <Link
                       href={`/services/${service.id}`} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
                       Learn More
@@ -449,9 +430,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
+              viewport={{ once: true }}><h2 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6'>
               <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Business?
@@ -508,9 +487,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
                 <Link
                   href='/pricing'
-                  className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'
-                >
-              <div className="flex flex-wrap justify-center gap-4">
+                  className='inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 font-semibold rounded-full hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'><div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
                   Contact Us Now

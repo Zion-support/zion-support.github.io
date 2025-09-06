@@ -148,18 +148,14 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                   <Phone className='w-4 h-4' />
                   <a
                     href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g, '')}`}
-                    className='hover:underline'
-                  >
-                    {contactInfo.mobile}
+                    className='hover:underline'>{contactInfo.mobile}
                   </a>
                 </div>
                 <div className='flex items-center gap-2 text-purple-400'>
                   <Mail className='w-4 h-4' />
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className='hover:underline'
-                  >
-                    {contactInfo.email}
+                    className='hover:underline'>{contactInfo.email}
                   </a>
                 </div>
                 <div className='flex items-center gap-2 text-green-400'>
@@ -168,9 +164,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
                     href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
                     target='_blank'
                     rel='noopener noreferrer'
-                    className='text-xs hover:underline'
-                  >
-                    {contactInfo.address}
+                    className='text-xs hover:underline'>{contactInfo.address}
                   </a>
                 </div>
               </div>

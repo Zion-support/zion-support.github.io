@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
@@ -23,8 +21,6 @@ import Link from 'next/link';
 import { StatusBadge } from './StatusBadge';
 import { ApplicationProgress } from './ApplicationProgress';
 import { toast } from 'sonner';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
@@ -45,9 +41,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
-<<<<<<< HEAD
     toast.info('Resume download functionality will be implemented soon');
-=======
 
 import { useState } from "react";
 import { formatDistanceToNow } from "date-fns";
@@ -67,29 +61,21 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
 
   const [ expanded, setExpanded ] = useState(false),
 
-
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     toast.info("Resume download functionality will be implemented soon")
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const renderActionButtons = () => {
     switch (application.status) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       case 'shortlisted':
         return (
           <Button variant='default' size='sm'>
             <Calendar className='h-4 w-4 mr-1' /> Prepare for Interview
-=======
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </Button>
         );
       case "interview":
@@ -120,14 +106,12 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       <CardHeader className="pb-3">
         <div className="flex justify-between items-start">
           <div>
-<<<<<<< HEAD
             <CardTitle>{application.job?.title || 'Unknown Job'}</CardTitle>
             <div className='text-sm text-muted-foreground mt-1'>
               Applied{' '}
               {formatDistanceToNow(new Date(application.created_at), {
                 addSuffix: true,
               })}
-=======
       case "shortlisted": return (
           <Button variant="default" size="sm">
             <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
@@ -156,7 +140,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     }
   };
 
-
   return (
     <Card className="overflow-hidden">
       <CardHeader className="pb-3">
@@ -165,29 +148,22 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <CardContent className='pb-3'>
         <ApplicationProgress status={application.status} className='my-4' />
 
-=======
       
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
@@ -204,14 +180,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                     <FileText className="h-4 w-4 mr-2 text-blue-500" />
                     <span className="text-sm font-medium">{application.resume.title || "Resume"}</span>
                   </div>
-<<<<<<< HEAD
                   <Button
                     variant='ghost'
                     size='sm'
-                    onClick={handleDownloadResume}
-                  >
-                    <Download className='h-3 w-3 mr-1' /> Download
-=======
+                    onClick={handleDownloadResume}><Download className='h-3 w-3 mr-1' /> Download
       
       <CardContent className="pb-3">
         <ApplicationProgress status={application.status} className="my-4" />
@@ -234,21 +206,13 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                   </div>
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Button variant="ghost" size="sm" onClick={handleDownloadResume}>
                     <Download className="h-3 w-3 mr-1" /> Download
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </Button>
                 </div>
               </div>
             )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {application.match_score && (
               <div>
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
@@ -256,11 +220,9 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                   <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">
                     {application.match_score}%
                   </div>
-<<<<<<< HEAD
                   <span className='ml-2 text-xs text-muted-foreground'>
                     Relevance to job requirements
                   </span>
-=======
             
             {application.match_score && (
               <div>
@@ -270,46 +232,33 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                     {application.match_score}%
                   </div>
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             )}
           </div>
         )}
       </CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       <CardFooter className='flex flex-col gap-3 pt-0'>
         <div className='flex justify-between items-center w-full'>
           <Button
             variant='ghost'
             size='sm'
-            onClick={() => setExpanded(!expanded)}
-          >
-            {expanded ? 'Show Less' : 'Show More'}
-=======
+            onClick={() => setExpanded(!expanded)}>{expanded ? 'Show Less' : 'Show More'}
       
       <CardFooter className="flex flex-col gap-3 pt-0">
         <div className="flex justify-between items-center w-full">
           <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
             {expanded ? "Show Less" : "Show More"}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </Button>
           <div className="flex gap-2">
             {renderActionButtons()}
             <Button 
               variant="outline" 
               size="sm"
-              asChild
-            >
-              <Link href={`/jobs/${application.job_id}`}>
-<<<<<<< HEAD
+              asChild><Link href={`/jobs/${application.job_id}`}>
                 <ExternalLink className='h-4 w-4 mr-1' /> View Job
-=======
       
       <CardFooter className="flex flex-col gap-3 pt-0">
         <div className="flex justify-between items-center w-full">
@@ -321,71 +270,50 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
             <Button 
               variant="outline" 
               size="sm"
-              asChild
-            >
-              <Link href={`/jobs/${application.job_id}`}>
+              asChild><Link href={`/jobs/${application.job_id}`}>
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <ExternalLink className="h-4 w-4 mr-1" /> View Job
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </Link>
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
-=======
         
         <Button 
           variant="secondary" 
           size="sm"
           className="w-full"
-          asChild
-        >
-          <Link href={`/messages?jobId=${application.job_id}`}>
+          asChild><Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         
         <Button 
           variant="secondary" 
           size="sm"
           className="w-full"
-          asChild
-        >
-          <Link href={`/messages?jobId=${application.job_id}`}>
+          asChild><Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </Link>
         </Button>
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {;
+default: return (<Card className="overflow-hidden"><CardHeader className="pb-3"><div className="flex justify-between items-start"><div> </div> </div> <StatusBadge status= {;
   application.status ;
 }/> </div> </CardHeader> {";
-  application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground" > {;
+  application.cover letter && (<div> <h4 className="text-sm font-medium mb-1" >Your Cover Letter</h4> <p className="text-sm text-muted-foreground">{;
   application.cover letter ;
 }</p> </div>) ;
 }</Button> </div> </div>) ;
 }{";
-  application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center" > <div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium" > {;
+  application.match score && (<div> <h4 className="text-sm font-medium mb-1" >Match Score</h4> <div className="flex items-center"><div className="h-6 w-6 rounded-full bg-blue-100 text-blue-800 flex items-center justify-center text-xs font-medium">{;
   application.match score ";
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) ;
 }</div>) ";
-}</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) ;
+}</CardContent> <Button variant="outline" size="sm" asChild></Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild></Link> </Button> </CardFooter> </Card>) ;
 }"
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

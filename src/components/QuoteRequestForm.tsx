@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from '@/hooks/use-toast';
@@ -17,8 +15,6 @@ import { AutoFillModal } from '@/components/QuoteRequestForm/AutoFillModal';
 import { QuoteFormData } from '@/types/quotes';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { z } from 'zod';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
@@ -212,9 +208,7 @@ export function QuoteRequestForm() {
             size="sm"
             onClick={() => setAutoFillOpen(true)}
             disabled={autoFillLoading}
-            className="mt-2"
-          >
-            {autoFillLoading && (
+            className="mt-2">{autoFillLoading && (
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             )}
             Auto Fill with AI
@@ -251,9 +245,7 @@ export function QuoteRequestForm() {
                 <Button 
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                >
-                  {isSubmitting ? "Submitting..." : "Submit Request"}
+                  className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white">{isSubmitting ? "Submitting..." : "Submit Request"}
                 </Button>
               )}
             </div>
@@ -268,7 +260,6 @@ export function QuoteRequestForm() {
       />
     </div>
   );
-<<<<<<< HEAD
 const [autoFillLoading, setAutoFillLoading] = useState (false);
 const [autoFillOpen, setAutoFillOpen] = useState (false);
 }setCurrentStep ("details");
@@ -319,7 +310,7 @@ const renderStepContent = () => {;
   default: return null;
 
 };";
-<GradientHeading>Request a Quote</GradientHeading> <p className="text-zion-slate-light mt-4" > Tell us about your project and we'll create a customized quote for you </p> <div className="inline-flex items-center bg-zion-blue-dark py-1 px-3 rounded-full mt-3 border border-zion-purple/20" > <Sparkles className="h-4 w-4 text-zion-cyan mr-1" /> <span className="text-sm text-white" >AI-powered matching</span> </div> <Button) ";
+<GradientHeading>Request a Quote</GradientHeading> <p className="text-zion-slate-light mt-4" > Tell us about your project and we'll create a customized quote for you </p> <div className="inline-flex items-center bg-zion-blue-dark py-1 px-3 rounded-full mt-3 border border-zion-purple/20"><Sparkles className="h-4 w-4 text-zion-cyan mr-1" /> <span className="text-sm text-white" >AI-powered matching</span> </div> <Button) ";
 }Auto Fill with AI </Button> </div> <Button variant="outline" onClick={;
   handleBack ";
 }className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" > Back </Button>) ;
@@ -336,17 +327,10 @@ const renderStepContent = () => {;
   autoFillLoading ;
 }/> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
       ...prev;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

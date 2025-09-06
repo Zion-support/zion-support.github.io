@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useFavorites } from '@/hooks/useFavorites';
 import { X } from 'lucide-react'
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData';
@@ -76,9 +75,7 @@ export default function WishlistPage() {
                   <button
                     aria-label="Remove from favorites"
                     className="absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80"
-                    onClick={() => toggleFavorite('talent', fav.item_id)}
-                  >
-                    <X className="h-4 w-4" />
+                    onClick={() => toggleFavorite('talent', fav.item_id)}><X className="h-4 w-4" />
                   </button>
                   <TalentCard
                     talent={talent}
@@ -100,18 +97,14 @@ export default function WishlistPage() {
                 <button
                   aria-label="Remove from favorites"
                   className="absolute top-2 right-2 z-10 rounded-full bg-zion-blue-dark/80 p-1 hover:bg-zion-purple/80"
-                  onClick={() => toggleFavorite(fav.item_type, fav.item_id)}
-                >
-                  <X className="h-4 w-4" />
+                  onClick={() => toggleFavorite(fav.item_type, fav.item_id)}><X className="h-4 w-4" />
                 </button>
                 <ProductListingCard listing={item} />
                 <Button
                   size="sm"
                   className="absolute bottom-2 right-2"
                   onClick={() => addToCart(item)}
-                  disabled={items.some(i => i.id === item.id)}
-                >
-                  {items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
+                  disabled={items.some(i => i.id === item.id)}>{items.some(i => i.id === item.id) ? 'In Cart' : 'Add to Cart'}
                 </Button>
                 {fav.created_at && (
                   <p className="mt-1 text-xs text-muted-foreground">
@@ -125,7 +118,6 @@ export default function WishlistPage() {
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }onRequestHire= {;
   () => {;
@@ -139,7 +131,7 @@ export default function WishlistPage() {
 }</div>) : null ";
 }> <X className="h-4 w-4" /> </button> <ProductListingCard listing= {;
   item ;
-}/> <Button > {';
+}/> <Button>{';
   items.some (i => i.id === item.id) ? 'In Cart': 'Add to Cart' ;
 }</Button> Saved {;
   new Date (fav.created at) .toLocaleDateString () ;
@@ -149,12 +141,7 @@ export default function WishlistPage() {
 }</div>) ;
 }</div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     return null, // Or a loading spinner;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

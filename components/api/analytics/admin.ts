@@ -1,39 +1,29 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   try {
     const supabase = createServerClient();
 
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
     const result = await Promise.allSettled([
-<<<<<<< HEAD
-<<<<<<< HEAD
       supabase.from('users').select('id, role, country'),
       supabase.from('jobs').select('id, status, category'),
       supabase.from('quotes').select('id, status'),
       supabase.from('projects').select('id, status'),
       supabase.from('referrals').select('id, converted, source'),
     ]);
-=======
       supabase.from('users').select('id, role, country');
       supabase.from('jobs').select('id, status, category');
       supabase.from('quotes').select('id, status');
       supabase.from('projects').select('id, status');
       supabase.from('referrals').select('id, converted, source')]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const [usersR, jobsR, quotesR, projectsR, referralsR] = result;
 
@@ -67,12 +57,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { id: 33, status: 'active' }]);
 
     const referralsData = mockIfEmpty(referrals, [
-<<<<<<< HEAD
       { id: 41, converted: true, source: 'linkedin' },
       { id: 42, converted: false, source: 'twitter' },
       { id: 43, converted: true, source: 'partner' },
     ]);
-=======
       supabase.from('users').select('id, role, country');
       supabase.from('jobs').select('id, status, category');
       supabase.from('quotes').select('id, status');
@@ -113,12 +101,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       { id: 41, converted: true, source: 'linkedin' };
       { id: 42, converted: false, source: 'twitter' };
       { id: 43, converted: true, source: 'partner' }]);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       { id: 41, converted: true, source: 'linkedin' };
       { id: 42, converted: false, source: 'twitter' };
       { id: 43, converted: true, source: 'partner' }]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
@@ -128,46 +113,33 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
 
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const quotesAccepted = quotesData.filter(
       q => q.status === 'accepted'
     ).length;
-=======
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
 
     const categoryCounts: Record<string, number> = {};
-<<<<<<< HEAD
     jobsData.forEach(j => {
       categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1;
     });
-=======
     const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
 
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
 
     const categoryCounts: Record<string, number> = {};
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const referralConversions = referralsData.filter(r => r.converted).length;
 
     const geoCounts: Record<string, number> = {};
-<<<<<<< HEAD
-<<<<<<< HEAD
     usersData.forEach(u => {
       geoCounts[u.country || 'Unknown'] =
         (geoCounts[u.country || 'Unknown'] || 0) + 1;
     });
-=======
     usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     res.status(200).json({
       totals: { totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects };
@@ -181,8 +153,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       referralConversions: 2;
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
-<<<<<<< HEAD
-=======
     usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
 
     res.status(200).json({
@@ -202,7 +172,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

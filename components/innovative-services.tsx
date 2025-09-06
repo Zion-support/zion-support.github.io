@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Check,
   Star,
@@ -91,20 +89,14 @@ import {
   GraduationCap as GraduationCapIcon,
   ShieldCheck as ShieldCheckIcon,;
 } from 'lucide-react';
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
 import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   innovativeMicroSaasServices,
   getInnovativeServicesByCategory,
@@ -112,12 +104,8 @@ import {
   getInnovativeServicesByPriceRange,
   getInnovativeServiceCategories,;
 } from '../data/innovative-micro-saas-services';
-=======
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function InnovativeServicesPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -129,25 +117,16 @@ export default function InnovativeServicesPage() {
 
   const priceRanges = [
     { value: 'All', label: 'All Prices' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { value: '0-1000', label: '$0 - $1,000' },
     { value: '1001-2000', label: '$1,001 - $2,000' },
     { value: '2001-3000', label: '$2,001 - $3,000' },
     { value: '3001-5000', label: '$3,001 - $5,000' },
     { value: '5001+', label: '$5,001+' },
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     { value: '0-1000', label: '$0 - $1,000' };
     { value: '1001-2000', label: '$1,001 - $2,000' };
     { value: '2001-3000', label: '$2,001 - $3,000' };
     { value: '3001-5000', label: '$3,001 - $5,000' };
     { value: '5001+', label: '$5,001+' }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const sortOptions = [
@@ -155,15 +134,7 @@ export default function InnovativeServicesPage() {
     { value: 'price', label: 'Price Low-High' },
     { value: 'popularity', label: 'Most Popular' },
     { value: 'category', label: 'Category' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { value: 'roi', label: 'Highest ROI' },
-=======
-    { value: 'roi', label: 'Highest ROI' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    { value: 'roi', label: 'Highest ROI' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Filter and sort services
@@ -171,39 +142,23 @@ export default function InnovativeServicesPage() {
 
   // Category filter
   if (selectedCategory !== 'All') {
-<<<<<<< HEAD
-<<<<<<< HEAD
     filteredServices = getInnovativeServicesByCategory(selectedCategory);
-=======
-    filteredServices = getInnovativeServicesByCategory(selectedCategory)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    filteredServices = getInnovativeServicesByCategory(selectedCategory)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   // Price range filter
   if (priceRange !== 'All') {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const [min, max] = priceRange
       .split('-')
       .map(p => (p === '+' ? Infinity : parseInt(p)));
     filteredServices = getInnovativeServicesByPriceRange(min, max);
-=======
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getInnovativeServicesByPriceRange(min, max)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
     filteredServices = getInnovativeServicesByPriceRange(min, max)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   // Search filter
   if (searchQuery) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     filteredServices = filteredServices.filter(
       service =>
         service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -211,19 +166,12 @@ export default function InnovativeServicesPage() {
         service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
         service.category.toLowerCase().includes(searchQuery.toLowerCase())
     );
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     filteredServices = filteredServices.filter(service =>
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()) ||
       service.category.toLowerCase().includes(searchQuery.toLowerCase())
     )
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   // Sort services
@@ -238,8 +186,6 @@ export default function InnovativeServicesPage() {
       case 'roi': {
         const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
         const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
-<<<<<<< HEAD
-<<<<<<< HEAD
         return bRoi - aRoi;
       }
       default: {
@@ -252,13 +198,10 @@ export default function InnovativeServicesPage() {
           (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)
         );
       }
-=======
         return bRoi - aRoi
       }
-=======
         return bRoi - aRoi
       }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               default: {
           // Innovation level sorting
           const innovationOrder = { 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
@@ -266,10 +209,6 @@ export default function InnovativeServicesPage() {
           const bLevel = b.innovationLevel.split(' - ')[0];
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)
         }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   });
 
@@ -277,15 +216,7 @@ export default function InnovativeServicesPage() {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const popularServices = getPopularInnovativeServices();
@@ -295,8 +226,6 @@ export default function InnovativeServicesPage() {
     <>
       <Head>
         <title>Innovative Micro SAAS Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Discover revolutionary quantum AI, blockchain, cybersecurity, and autonomous systems. Cutting-edge micro SAAS services with breakthrough innovation and unprecedented ROI.'
@@ -322,7 +251,6 @@ export default function InnovativeServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/innovative-services'
         />
-=======
         <meta name="description" content="Discover revolutionary quantum AI, blockchain, cybersecurity, and autonomous systems. Cutting-edge micro SAAS services with breakthrough innovation and unprecedented ROI." />
         <meta name="keywords" content="quantum AI, blockchain, cybersecurity, autonomous systems, micro SAAS, innovation, quantum computing, AI services" />
         <meta property="og:title" content="Innovative Micro SAAS Services - Zion Tech Group" />
@@ -330,7 +258,6 @@ export default function InnovativeServicesPage() {
         <meta property="og:url" content="https://ziontechgroup.com/innovative-services" />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/innovative-services" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <QuantumHolographicBackground>
@@ -342,12 +269,10 @@ export default function InnovativeServicesPage() {
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                   Revolutionary Innovation
                 </h1>
-<<<<<<< HEAD
                 <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
                   Discover the future of technology with our breakthrough micro
                   SAAS services. From quantum AI to autonomous systems, we're
                   redefining what's possible.
-=======
         <meta name="description" content="Discover revolutionary quantum AI, blockchain, cybersecurity, and autonomous systems. Cutting-edge micro SAAS services with breakthrough innovation and unprecedented ROI." />
         <meta name="keywords" content="quantum AI, blockchain, cybersecurity, autonomous systems, micro SAAS, innovation, quantum computing, AI services" />
         <meta property="og:title" content="Innovative Micro SAAS Services - Zion Tech Group" />
@@ -369,30 +294,23 @@ export default function InnovativeServicesPage() {
                 <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Discover the future of technology with our breakthrough micro SAAS services. 
                   From quantum AI to autonomous systems, we're redefining what's possible.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                   Discover the future of technology with our breakthrough micro SAAS services. 
                   From quantum AI to autonomous systems, we're redefining what's possible.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </p>
               </div>
 
               {/* Innovation Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
                 <div className='text-center'>
                   <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
                     10
                   </div>
                   <div className='text-gray-400'>Breakthrough Services</div>
-=======
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">10</div>
                   <div className="text-gray-400">Breakthrough Services</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">$25B+</div>
@@ -402,13 +320,11 @@ export default function InnovativeServicesPage() {
                   <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">2500%</div>
                   <div className="text-gray-400">Average ROI</div>
                 </div>
-<<<<<<< HEAD
                 <div className='text-center'>
                   <div className='text-3xl md:text-4xl font-bold text-green-400 mb-2'>
                     99.99%
                   </div>
                   <div className='text-gray-400'>Accuracy Rate</div>
-=======
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">10</div>
@@ -425,18 +341,13 @@ export default function InnovativeServicesPage() {
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">99.99%</div>
                   <div className="text-gray-400">Accuracy Rate</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">99.99%</div>
                   <div className="text-gray-400">Accuracy Rate</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
 
               {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 mb-12 border border-white/10'>
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   Ready to Transform Your Business?
@@ -445,24 +356,20 @@ export default function InnovativeServicesPage() {
                   <div className='flex items-center justify-center space-x-2'>
                     <Phone className='w-5 h-5 text-cyan-400' />
                     <span className='text-gray-300'>{contactInfo.mobile}</span>
-=======
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 mb-12 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center justify-center space-x-2">
                     <Phone className="w-5 h-5 text-cyan-400" />
                     <span className="text-gray-300">{contactInfo.mobile}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Mail className="w-5 h-5 text-purple-400" />
                     <span className="text-gray-300">{contactInfo.email}</span>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center justify-center space-x-2'>
                     <MapPin className='w-5 h-5 text-pink-400' />
                     <span className='text-gray-300'>{contactInfo.address}</span>
-=======
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 mb-12 border border-white/10">
                 <h3 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -477,12 +384,9 @@ export default function InnovativeServicesPage() {
                   <div className="flex items-center justify-center space-x-2">
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-gray-300">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="flex items-center justify-center space-x-2">
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-gray-300">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </div>
@@ -490,18 +394,14 @@ export default function InnovativeServicesPage() {
           </section>
 
           {/* Filters and Search */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='px-4 sm:px-6 lg:px-8 mb-12'>
             <div className='max-w-7xl mx-auto'>
               <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10'>
                 <div className='flex flex-col lg:flex-row gap-6'>
-=======
           <section className="px-4 sm:px-6 lg:px-8 mb-12">
             <div className="max-w-7xl mx-auto">
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                 <div className="flex flex-col lg:flex-row gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {/* Search */}
                   <div className="flex-1">
                     <div className="relative">
@@ -510,10 +410,8 @@ export default function InnovativeServicesPage() {
                         type="text"
                         placeholder="Search innovative services..."
                         value={searchQuery}
-<<<<<<< HEAD
                         onChange={e => setSearchQuery(e.target.value)}
                         className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
           <section className="px-4 sm:px-6 lg:px-8 mb-12">
             <div className="max-w-7xl mx-auto">
               <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
@@ -528,44 +426,27 @@ export default function InnovativeServicesPage() {
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         onChange={(e) => setSearchQuery(e.target.value)}
                         className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       />
                     </div>
                   </div>
 
                   {/* Category Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='flex-shrink-0'>
-=======
-                  <div className="flex-shrink-0">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-<<<<<<< HEAD
-                      <option value='All'>All Categories</option>
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"><option value='All'>All Categories</option>
                       {categories.map(category => (
-=======
                   <div className="flex-shrink-0">
                     <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"><option value="All">All Categories</option>
+                      {categories.map((category) => (
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      <option value="All">All Categories</option>
-                      {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         <option key={category.name} value={category.name}>
                           {category.name} ({category.count})
                         </option>
@@ -574,31 +455,17 @@ export default function InnovativeServicesPage() {
                   </div>
 
                   {/* Price Range Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='flex-shrink-0'>
-=======
-                  <div className="flex-shrink-0">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={priceRange}
                       onChange={(e) => setPriceRange(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-<<<<<<< HEAD
-                      {priceRanges.map(range => (
-=======
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{priceRanges.map(range => (
                   <div className="flex-shrink-0">
                     <select
                       value={priceRange}
                       onChange={(e) => setPriceRange(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{priceRanges.map((range) => (
                       {priceRanges.map((range) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      {priceRanges.map((range) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         <option key={range.value} value={range.value}>
                           {range.label}
                         </option>
@@ -607,31 +474,17 @@ export default function InnovativeServicesPage() {
                   </div>
 
                   {/* Sort Options */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='flex-shrink-0'>
-=======
-                  <div className="flex-shrink-0">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-<<<<<<< HEAD
-                      {sortOptions.map(option => (
-=======
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map(option => (
                   <div className="flex-shrink-0">
                     <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
+                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map((option) => (
                       {sortOptions.map((option) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                      {sortOptions.map((option) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         <option key={option.value} value={option.value}>
                           {option.value}
                         </option>
@@ -640,60 +493,35 @@ export default function InnovativeServicesPage() {
                   </div>
 
                   {/* View Mode Toggle */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-=======
-                  <div className="flex-shrink-0">
-                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                      <button
-                        onClick={() => setViewMode('grid')}
-                        className={`px-3 py-2 rounded-lg transition-all ${
-                          viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                        }`}
-                      >
-<<<<<<< HEAD
-                        <Grid className='w-5 h-5' />
-=======
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${
                           viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                        }`}
-                      >
+                        }`}><Grid className='w-5 h-5' />
+                  <div className="flex-shrink-0">
+                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
+                      <button
+                        onClick={() => setViewMode('grid')}
+                        className={`px-3 py-2 rounded-lg transition-all ${
+                          viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
+                        }`}><Grid className="w-5 h-5" />
                         <Grid className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                        <Grid className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </button>
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                           viewMode === 'list'
                             ? 'bg-cyan-500 text-white'
                             : 'text-gray-400 hover:text-white'
-                        }`}
-                      >
-                        <List className='w-5 h-5' />
-=======
+                        }`}><List className='w-5 h-5' />
                           viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                        }`}
-                      >
-                        <List className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+                        }`}><List className="w-5 h-5" />
                           viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'
-                        }`}
-                      >
-                        <List className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                        }`}><List className="w-5 h-5" />
                       </button>
                     </div>
                   </div>
@@ -703,14 +531,10 @@ export default function InnovativeServicesPage() {
           </section>
 
           {/* Services Grid/List */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-7xl mx-auto'>
-=======
           <section className="px-4 sm:px-6 lg:px-8 mb-20">
             <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {filteredServices.length === 0 ? (
                 <div className="text-center py-20">
                   <div className="text-6xl mb-4">🔍</div>
@@ -734,9 +558,7 @@ export default function InnovativeServicesPage() {
                             </div>
                           </div>
                           {service.popular && (
-<<<<<<< HEAD
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>
-=======
           <section className="px-4 sm:px-6 lg:px-8 mb-20">
             <div className="max-w-7xl mx-auto">
               {filteredServices.length === 0 ? (
@@ -763,24 +585,17 @@ export default function InnovativeServicesPage() {
                           </div>
                           {service.popular && (
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                               POPULAR
                             </div>
                           )}
                         </div>
 
                         {/* Tagline */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
-=======
                         <p className="text-gray-300 mb-4 font-medium">{service.tagline}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
                         {/* Description */}
                         <p className="text-gray-400 text-sm mb-6 leading-relaxed">{service.description}</p>
@@ -791,9 +606,7 @@ export default function InnovativeServicesPage() {
                             <Sparkles className="w-4 h-4 text-yellow-400" />
                             <span className="text-sm font-medium text-yellow-400">Innovation Level</span>
                           </div>
-<<<<<<< HEAD
                           <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center'>
-=======
                         <p className="text-gray-300 mb-4 font-medium">{service.tagline}</p>
 
                         {/* Description */}
@@ -806,17 +619,12 @@ export default function InnovativeServicesPage() {
                             <span className="text-sm font-medium text-yellow-400">Innovation Level</span>
                           </div>
                           <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-3 py-1 rounded-lg text-xs font-bold text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             {service.innovationLevel}
                           </div>
                         </div>
 
                         {/* Price and ROI */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='grid grid-cols-2 gap-4 mb-6'>
                           <div className='text-center'>
                             <div className='text-2xl font-bold text-cyan-400'>
@@ -833,7 +641,6 @@ export default function InnovativeServicesPage() {
                             <div className='text-xs text-gray-400'>
                               average ROI
                             </div>
-=======
                         <div className="grid grid-cols-2 gap-4 mb-6">
                           <div className="text-center">
                             <div className="text-2xl font-bold text-cyan-400">${service.price.monthly.toLocaleString()}</div>
@@ -842,8 +649,6 @@ export default function InnovativeServicesPage() {
                           <div className="text-center">
                             <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
                             <div className="text-xs text-gray-400">average ROI</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="grid grid-cols-2 gap-4 mb-6">
                           <div className="text-center">
                             <div className="text-2xl font-bold text-cyan-400">${service.price.monthly.toLocaleString()}</div>
@@ -852,13 +657,10 @@ export default function InnovativeServicesPage() {
                           <div className="text-center">
                             <div className="text-lg font-bold text-green-400">{service.roi.split(' ')[0]}</div>
                             <div className="text-xs text-gray-400">average ROI</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                         </div>
 
                         {/* Key Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='mb-6'>
                           <h4 className='text-sm font-semibold text-white mb-3'>
                             Key Features
@@ -869,9 +671,7 @@ export default function InnovativeServicesPage() {
                               .map((feature, index) => (
                                 <div
                                   key={index}
-                                  className='flex items-center space-x-2'
-                                >
-                                  <Check className='w-4 h-4 text-green-400 flex-shrink-0' />
+                                  className='flex items-center space-x-2'><Check className='w-4 h-4 text-green-400 flex-shrink-0' />
                                   <span className='text-xs text-gray-300'>
                                     {feature}
                                   </span>
@@ -879,7 +679,6 @@ export default function InnovativeServicesPage() {
                               ))}
                             {service.features.length > 3 && (
                               <div className='text-xs text-cyan-400 text-center pt-2'>
-=======
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
@@ -891,8 +690,6 @@ export default function InnovativeServicesPage() {
                             ))}
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="mb-6">
                           <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
                           <div className="space-y-2">
@@ -904,7 +701,6 @@ export default function InnovativeServicesPage() {
                             ))}
                             {service.features.length > 3 && (
                               <div className="text-xs text-cyan-400 text-center pt-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                                 +{service.features.length - 3} more features
                               </div>
                             )}
@@ -912,23 +708,16 @@ export default function InnovativeServicesPage() {
                         </div>
 
                         {/* Market Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
-=======
-                        <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           <div>
                             <div className="text-gray-400">Market Size</div>
                             <div className="text-white font-medium">{service.marketSize}</div>
                           </div>
                           <div>
-<<<<<<< HEAD
                             <div className='text-gray-400'>Growth Rate</div>
                             <div className='text-white font-medium'>
                               {service.growthRate}
                             </div>
-=======
                         <div className="grid grid-cols-2 gap-4 mb-6 text-xs">
                           <div>
                             <div className="text-gray-400">Market Size</div>
@@ -937,21 +726,13 @@ export default function InnovativeServicesPage() {
                           <div>
                             <div className="text-gray-400">Growth Rate</div>
                             <div className="text-white font-medium">{service.growthRate}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <div className="text-gray-400">Growth Rate</div>
                             <div className="text-white font-medium">{service.growthRate}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                         </div>
 
                         {/* CTA Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='flex space-x-3'>
-=======
-                        <div className="flex space-x-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           <Button
                             href={service.link}
                             variant="primary"
@@ -963,11 +744,7 @@ export default function InnovativeServicesPage() {
                           <Button
                             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                             variant="secondary"
-                            className="px-4"
-                          >
-<<<<<<< HEAD
-                            <Mail className='w-4 h-4' />
-=======
+                            className="px-4"><Mail className='w-4 h-4' />
                         <div className="flex space-x-3">
                           <Button
                             href={service.link}
@@ -980,34 +757,23 @@ export default function InnovativeServicesPage() {
                           <Button
                             href={`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`}
                             variant="secondary"
-                            className="px-4"
-                          >
+                            className="px-4"><Mail className="w-4 h-4" />
                             <Mail className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                            <Mail className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           </Button>
                         </div>
 
                         {/* Contact Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         <div className='mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center'>
                           <div>
                             Contact: {contactInfo.mobile} | {contactInfo.email}
                           </div>
                           <div className='mt-1'>{contactInfo.website}</div>
-=======
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
                           <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>
                           <div className="mt-1">{contactInfo.website}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
                           <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>
                           <div className="mt-1">{contactInfo.website}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
                     </QuantumHolographicCard>
@@ -1018,33 +784,10 @@ export default function InnovativeServicesPage() {
           </section>
 
           {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
-          <section className="px-4 sm:px-6 lg:px-8 mb-20">
-            <div className="max-w-4xl mx-auto text-center">
-              <EnhancedFuturisticCard className="p-12">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  Ready to Lead the Future?
-                </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                  Join the revolution with our breakthrough micro SAAS services. 
-                  Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    href={`tel:${contactInfo.mobile}`}
-                    variant="primary"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
-                  >
-<<<<<<< HEAD
-                    <Phone className='w-5 h-5 mr-2' />
-=======
           <section className="px-4 sm:px-6 lg:px-8 mb-20">
             <div className="max-w-4xl mx-auto text-center">
               <EnhancedFuturisticCard className="p-12">
@@ -1059,49 +802,46 @@ export default function InnovativeServicesPage() {
                   <Button
                     href={`tel:${contactInfo.mobile}`}
                     variant="primary"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"
-                  >
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"><Phone className='w-5 h-5 mr-2' />
+          <section className="px-4 sm:px-6 lg:px-8 mb-20">
+            <div className="max-w-4xl mx-auto text-center">
+              <EnhancedFuturisticCard className="p-12">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Lead the Future?
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Join the revolution with our breakthrough micro SAAS services. 
+                  Transform your business with quantum AI, autonomous systems, and cutting-edge technology.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    href={`tel:${contactInfo.mobile}`}
+                    variant="primary"
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-8 py-4 text-lg"><Phone className="w-5 h-5 mr-2" />
                     <Phone className="w-5 h-5 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                    <Phone className="w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     Call Now: {contactInfo.mobile}
                   </Button>
                   <Button
                     href={`mailto:${contactInfo.email}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     variant='secondary'
                     className='px-8 py-4 text-lg'
-=======
                     variant="secondary"
-                    className="px-8 py-4 text-lg"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
+                    className="px-8 py-4 text-lg"><Mail className="w-5 h-5 mr-2" />
                     Email Us
                   </Button>
                 </div>
                 <div className="mt-8 text-sm text-gray-400">
                   <div>Address: {contactInfo.address}</div>
-<<<<<<< HEAD
                   <div className='mt-1'>Website: {contactInfo.website}</div>
-=======
                     variant="secondary"
-                    className="px-8 py-4 text-lg"
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
+                    className="px-8 py-4 text-lg"><Mail className="w-5 h-5 mr-2" />
                     Email Us
                   </Button>
                 </div>
                 <div className="mt-8 text-sm text-gray-400">
                   <div>Address: {contactInfo.address}</div>
                   <div className="mt-1">Website: {contactInfo.website}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="mt-1">Website: {contactInfo.website}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1110,11 +850,4 @@ export default function InnovativeServicesPage() {
       </QuantumHolographicBackground>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

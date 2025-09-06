@@ -138,9 +138,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               and{' '}
               <Link
                 href='/legal/privacy'
-                className='text-blue-600 hover:text-blue-500'
-              >
-          <div className="mt-6">
+                className='text-blue-600 hover:text-blue-500'><div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />

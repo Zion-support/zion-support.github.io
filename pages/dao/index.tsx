@@ -105,9 +105,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               {data.topHolders.map(h => (
                 <tr
                   key={h.address}
-                  className='border-t border-gray-200 dark:border-gray-800'
-                >
-                  <td className='py-1 pr-2 truncate max-w-[10rem]'>
+                  className='border-t border-gray-200 dark:border-gray-800'><td className='py-1 pr-2 truncate max-w-[10rem]'>
                     {h.address}
                   </td>
                   <td className='py-1'>{h.amount}</td>

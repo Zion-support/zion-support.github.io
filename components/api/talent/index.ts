@@ -5,18 +5,14 @@ import type { TalentProfile } from '@/utils/types/talent';
 import { v4 as uuid } from 'uuid';
 import { translateText, detectLanguageSimple } from '@/utils/api/translate';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 const hasSupabase =
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x.trim());
-=======
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -28,10 +24,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       return res.status(200).json({ items: LOCAL })
     } catch (e: any) {
-<<<<<<< HEAD
       return res.status(500).json({ error: e.message });
     }
-=======
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
 
@@ -47,18 +41,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(500).json({ error: e.message })
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return res.status(500).json({ error: e.message })
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'POST') {
     try {
       const payload = req.body as Partial<TalentProfile>;
-<<<<<<< HEAD
-<<<<<<< HEAD
       const slug =
         (payload.name || 'talent')
           .toLowerCase()
@@ -66,9 +55,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           .replace(/(^-|-$)/g, '') +
         '-' +
         uuid().slice(0, 6);
-=======
       const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice(0, 6);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       const item: TalentProfile = {
         ...payload;
         id: uuid();
@@ -97,13 +84,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (item.bio) translations.bio[lang] = await translateText(item.bio, lang, originalLang);
         if (item.category) {
           translations.category = translations.category || {};
-<<<<<<< HEAD
           translations.category[lang] = await translateText(
             item.category,
             lang,
             originalLang
           );
-=======
       const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice(0, 6);
       const item: TalentProfile = {
         ...payload;
@@ -129,10 +114,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         if (item.category) {
           translations.category = translations.category || {};
           translations.category[lang] = await translateText(item.category, lang, originalLang)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           translations.category[lang] = await translateText(item.category, lang, originalLang)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         }
       }
       item.originalLanguage = originalLang;
@@ -140,8 +122,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       if (hasSupabase) {
         const { error } = await supabaseClient.from('talent_profiles').insert({
-<<<<<<< HEAD
-<<<<<<< HEAD
           id: item.id,
           slug: item.slug,
           name: item.name,
@@ -163,7 +143,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           rating: item.rating ?? null,
           reviews_count: item.reviewsCount ?? null,
           created_at: item.createdAt,
-=======
           id: item.id;
           slug: item.slug;
           name: item.name;
@@ -185,7 +164,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           rating: item.rating ?? null;
           reviews_count: item.reviewsCount ?? null;
           created_at: item.createdAt;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           // i18n
           original_language: item.originalLanguage;
           translations: item.translations as any} as any);
@@ -200,12 +178,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-<<<<<<< HEAD
   return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
-=======
           id: item.id, slug: item.slug,
           name: item.name, title: item.title,
           category: item.category, location: item.location,
@@ -233,8 +209,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import { TalentCard } from '@/components/talent/TalentCard';
@@ -7,7 +5,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { TalentProfile } from '@/types/talent';
 import { toast } from '@/components/ui/use-toast';
-=======
 import { useState, useEffect } from "react";
 import { SEO } from "@/components/SEO";
 import { TalentCard } from "@/components/talent/TalentCard";
@@ -15,7 +12,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { supabase } from "@/integrations/supabase/client";
 import { TalentProfile } from "@/types/talent";
 import { toast } from "@/components/ui/use-toast";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from "@/components/ui/empty-state";
@@ -210,7 +206,6 @@ export default function SavedTalentsPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 }, [user, router]);
 }const {;
@@ -251,8 +246,6 @@ if (error) {;
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
 return;
 
-
-
 }catch (error) {;
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {';
   message: 'Error toggling saved talent' ;
@@ -261,7 +254,7 @@ toast ({;
   ;
 
 };'";
-return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length === 0 ? (<div className="py-8" > <EmptyState <TalentCard key= {;
+return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8"><h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length === 0 ? (<div className="py-8"><EmptyState <TalentCard key= {;
   talent.id ;
 }talent= {;
   talent ;
@@ -275,16 +268,5 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div>) ;
 }</div> </>) ;
 }'"
-=======
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

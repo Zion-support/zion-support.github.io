@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Button } from '@/components/ui/button';
-=======
 import React, { useState } from "react";
 import { useForm, ControllerRenderProps } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 import {
   Form;
@@ -207,8 +203,6 @@ export function DisputeForm({
       </Form>
     </div>
   );
-<<<<<<< HEAD
-
 
 };
 const removeFile = (index: number) => {;
@@ -227,7 +221,7 @@ description: values.description ;
 }finally {;
   setIsSubmitting (false) ;
 }";
-}return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {;
+}return (<div className="space-y-6"><div className="flex items-center space-x-2"><FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {;
   field.onChange ;
 }defaultValue= {;
   field.value ";
@@ -241,20 +235,13 @@ description: values.description ;
 }</SelectItem>) ) ;
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Describe the issue in detail</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ";
-}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) ;
+}/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4"><Input type="file" multiple > Remove </Button> </li>) ) ;
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
       setFiles(prev => [...prev, ...newFiles]);
-<<<<<<< HEAD
       
-<<<<<<< HEAD
         
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

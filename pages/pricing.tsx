@@ -558,9 +558,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               href="/comprehensive-pricing-2026" 
               variant="primary"
               size="lg"
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30"
-            >
-              <span className='flex items-center'>
+              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30"><span className='flex items-center'>
                 <Rocket className='mr-3 w-6 h-6' />
       icon: <TrendingUp className="w-8 h-8" />,
       metric: '300%',
@@ -634,9 +632,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               href="/comprehensive-pricing-2026" 
               variant="primary"
               size="lg"
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30"
-            >
-              <span className="flex items-center">
+              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/30"><span className="flex items-center">
                 <Rocket className="mr-3 w-6 h-6" />
               <span className="flex items-center">
                 <Rocket className="mr-3 w-6 h-6" />
@@ -670,9 +666,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
               onClick={() => setBillingCycle(billingCycle === 'monthly' ? 'yearly' : 'monthly')}
               className="relative inline-flex h-12 w-24 items-center rounded-full bg-slate-700/50 p-1 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <span
+ursor/integrate-build-improve-and-re-verify-b76c><span
                 className={`inline-block h-10 w-10 transform rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 transition-transform ${
                   billingCycle === 'yearly' ? 'translate-x-12' : 'translate-x-0'
                 }`}
@@ -708,9 +702,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 variant={tier.variant}
                 interactive={true}
                 glowIntensity={tier.popular ? 'high' : 'medium'}
-                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}
-              >
-                {tier.popular && (
+                className={`relative h-full ${tier.popular ? 'scale-105' : ''}`}>{tier.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold flex items-center'>
                       <Star className='w-4 h-4 mr-2' />
@@ -761,9 +753,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.ctaVariant}
                     size="lg"
-                    className="w-full"
-                  >
-                    {tier.cta}
+                    className="w-full">{tier.cta}
                     <ArrowRight className='ml-2 w-5 h-5' />
                 
                 <div className="text-center p-8">
@@ -797,9 +787,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     href={tier.name === 'Enterprise' ? '/contact' : '/services'}
                     variant={tier.ctaVariant}
                     size="lg"
-                    className="w-full"
-                  >
-                    {tier.cta}
+                    className="w-full">{tier.cta}
                     <ArrowRight className="ml-2 w-5 h-5" />
                     <ArrowRight className="ml-2 w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -830,9 +818,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 interactive={true}
                 className='text-center p-6'
                 className="text-center p-6"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
                   {proposition.icon}
                 </div>
                 <h3 className='text-xl font-bold text-white mb-2'>
@@ -847,9 +833,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className='text-sm text-gray-400'>
                   {proposition.detail}
                 </div>
-                className="text-center p-6"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
+                className="text-center p-6"><div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mb-4">
                   {proposition.icon}
                 </div>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -878,9 +862,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 key={index}
                 variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
                 interactive={true}
-                className="p-6"
-              >
-                <div className="flex items-center mb-4">
+                className="p-6"><div className="flex items-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
                     {category.icon}
                   </div>
@@ -894,9 +876,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {category.services.map((service, idx) => (
                     <li
                       key={idx}
-                      className='text-sm text-gray-300 flex items-center'
-                    >
-                      <Check className='w-4 h-4 text-green-400 mr-2' />
+                      className='text-sm text-gray-300 flex items-center'><Check className='w-4 h-4 text-green-400 mr-2' />
         <div className="mb-20">
           <h2 className="text-3xl font-bold text-white mb-12 text-center">Service Category Pricing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -905,9 +885,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 key={index}
                 variant={index % 3 === 0 ? 'quantum' : index % 3 === 1 ? 'holographic' : 'neural'}
                 interactive={true}
-                className="p-6"
-              >
-                <div className="flex items-center mb-4">
+                className="p-6"><div className="flex items-center mb-4">
                   <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 mr-4">
                     {category.icon}
                   </div>
@@ -975,9 +953,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 interactive={true}
                 className='p-6'
                 className="p-6"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="text-center mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="text-center mb-4">
                   <div className="text-3xl mb-3">{service.icon}</div>
                   <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
@@ -990,9 +966,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     {service.features.slice(0, 3).map((feature, idx) => (
                       <li key={idx} className='flex items-center'>
                         <Check className='w-3 h-3 text-green-400 mr-2' />
-                className="p-6"
-              >
-                <div className="text-center mb-4">
+                className="p-6"><div className="text-center mb-4">
                   <div className="text-3xl mb-3">{service.icon}</div>
                   <h3 className="text-lg font-bold text-white mb-2">{service.name}</h3>
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{service.price}</div>
@@ -1179,9 +1153,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         <div className='text-center'>
           <UltraFuturisticCard
             variant='quantum-holographic-advanced'
-            className='p-12'
-          >
-            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+            className='p-12'><h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
         <div className="text-center">
           <UltraFuturisticCard variant="quantum-holographic-advanced" className="p-12">
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">

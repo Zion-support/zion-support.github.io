@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2, Sparkles } from 'lucide-react'
@@ -78,9 +73,7 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
         <Button 
           onClick={handleCategorizeSkills}
           disabled={isEnhancing || !bulkSkills.trim()}
-          className="gap-2"
-        >
-          {isEnhancing ? (
+          className="gap-2">{isEnhancing ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
             <Sparkles className="h-4 w-4" />
@@ -97,18 +90,9 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {
     </div>
   )
 };
-<<<<<<< HEAD
 '"
-=======
-
-<<<<<<< HEAD
 
           
 
-<<<<<<< HEAD
-
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

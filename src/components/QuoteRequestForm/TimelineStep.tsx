@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { Calendar } from '@/components/ui/calendar';
 import { Button } from '@/components/ui/button';
@@ -12,8 +10,6 @@ import {
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
 import { QuoteFormData } from '@/types/quotes';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { format } from "date-fns";
 import { Calendar } from "@/components/ui/calendar";
@@ -42,9 +38,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover: border-zion-purple/50"
               }`}
-              onClick={() => updateFormData({ timeline: "fixed" })}
-            >
-              <h4 className="font-medium text-white">Fixed Dates</h4>
+              onClick={() => updateFormData({ timeline: "fixed" })}><h4 className="font-medium text-white">Fixed Dates</h4>
               <p className="text-sm text-zion-slate-light">I have specific start and end dates</p>
             </div>
             
@@ -54,9 +48,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                   ? "bg-zion-purple/20 border-zion-purple" 
                   : "bg-zion-blue-light/20 border-zion-blue-light hover:border-zion-purple/50";
               }`}
-              onClick={() => updateFormData({ timeline: "flexible" })}
-            >
-              <h4 className="font-medium text-white">Flexible Timeline</h4>
+              onClick={() => updateFormData({ timeline: "flexible" })}><h4 className="font-medium text-white">Flexible Timeline</h4>
               <p className="text-sm text-zion-slate-light">I'm flexible on the timing</p>
             </div>
           </div>
@@ -72,9 +64,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.startDate && "text-zion-slate-light"
-                      )}
-                    >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      )}><CalendarIcon className="mr-2 h-4 w-4" />
                       {formData.startDate ? format(formData.startDate, "PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
@@ -99,9 +89,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                       className={cn(
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
                         !formData.endDate && "text-zion-slate-light"
-                      )}
-                    >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      )}><CalendarIcon className="mr-2 h-4 w-4" />
                       {formData.endDate ? format(formData.endDate, "PPP") : <span>Pick a date</span>}
                     </Button>
                   </PopoverTrigger>
@@ -123,12 +111,6 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
                         "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

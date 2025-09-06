@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Rocket,
   DollarSign,
@@ -22,9 +20,6 @@ import {
   Target,
   Lightbulb,
   BookOpen,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   Rocket;
   DollarSign, 
@@ -43,23 +38,15 @@ import {
   Target;
   Lightbulb;
   BookOpen
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 
 export default function StartupToolsPage() {
   const startupTools = [
     {
       name: 'HubSpot',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
-=======
       description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'Marketing & Sales',
       pricing: 'Free - $45/month',
       rating: 4.7,
@@ -95,10 +82,8 @@ export default function StartupToolsPage() {
     };
     {
       name: 'Calendly',
-<<<<<<< HEAD
       description:
         'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
-=======
       description: 'All-in-one inbound marketing, sales, and customer service platform designed to help businesses grow better.',
     category: 'Marketing & Sales',
       pricing: 'Free - $45/month',
@@ -136,20 +121,12 @@ export default function StartupToolsPage() {
     {
       name: 'Calendly',
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'Productivity',
       pricing: 'Free - $12/month',
       rating: 4.8,
       users: '10M+',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Calendar className='w-8 h-8 text-blue-400' />,
-=======
-      icon: <Calendar className="w-8 h-8 text-blue-400" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
         'Automated schedulingCalendar integrationCustom booking pagesTeam schedulingAnalytics & reportingFree tier available'
@@ -162,10 +139,8 @@ export default function StartupToolsPage() {
     };
     {
       name: 'Canva',
-<<<<<<< HEAD
       description:
         'Graphic design platform that makes it easy to create professional designs without design skills.',
-=======
       icon: <Calendar className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
@@ -180,20 +155,12 @@ export default function StartupToolsPage() {
     {
       name: 'Canva',
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'Design',
       pricing: 'Free - $12.99/month',
       rating: 4.6,
       users: '100M+',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Lightbulb className='w-8 h-8 text-blue-400' />,
-=======
-      icon: <Lightbulb className="w-8 h-8 text-blue-400" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
         'Design templatesStock photos & iconsBrand kitTeam collaborationSocial media formatsFree tier available'
@@ -260,10 +227,8 @@ export default function StartupToolsPage() {
     };
     {
       name: 'Intercom',
-<<<<<<< HEAD
       description:
         'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
-=======
       icon: <Lightbulb className="w-8 h-8 text-blue-400" />,
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
@@ -332,20 +297,12 @@ export default function StartupToolsPage() {
     {
       name: 'Intercom',
       description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'Customer Support',
       pricing: '$39 - $999/month',
       rating: 4.6,
       users: '25K+',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Users className='w-8 h-8 text-green-400' />,
-=======
-      icon: <Users className="w-8 h-8 text-green-400" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
         'Live chatCustomer messagingHelp deskUser onboardingAnalytics & reportingIntegration ecosystem'
@@ -358,10 +315,8 @@ export default function StartupToolsPage() {
     };
     {
       name: 'Mixpanel',
-<<<<<<< HEAD
       description:
         'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
-=======
       icon: <Users className="w-8 h-8 text-green-400" />,
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
@@ -376,20 +331,12 @@ export default function StartupToolsPage() {
     {
       name: 'Mixpanel',
       description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       category: 'Analytics',
       pricing: 'Free - $25/month',
       rating: 4.5,
       users: '26K+',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <BarChart3 className='w-8 h-8 text-purple-400' />,
-=======
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
         'User behavior trackingFunnel analysisA/B testingReal-time dataCustom eventsMobile analytics'
@@ -423,12 +370,10 @@ export default function StartupToolsPage() {
   const categories = ['AllMarketing & SalesEmail MarketingProductivityDesignSocial MediaPaymentsCustomer Support', 'AnalyticsDevelopment'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
-<<<<<<< HEAD
   const filteredTools =
     selectedCategory === 'All'
       ? startupTools
       : startupTools.filter(tool => tool.category === selectedCategory);
-=======
       icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
@@ -466,19 +411,14 @@ export default function StartupToolsPage() {
   const filteredTools = selectedCategory === 'All' 
     ? startupTools 
     : startupTools.filter(tool => tool.category === selectedCategory);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const filteredTools = selectedCategory === 'All' 
     ? startupTools 
     : startupTools.filter(tool => tool.category === selectedCategory);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <>
       <Head>
         <title>Startup Tools & Resources - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Essential tools and resources for startups and entrepreneurs. Curated selection of SaaS services to help your business grow.'
@@ -492,12 +432,10 @@ export default function StartupToolsPage() {
           content='Essential tools and resources for startups and entrepreneurs to accelerate growth.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-=======
         <meta name="description" content="Essential tools and resources for startups and entrepreneurs. Curated selection of SaaS services to help your business grow." />
         <meta property="og:title" content="Startup Tools & Resources - Zion Tech Group" />
         <meta property="og:description" content="Essential tools and resources for startups and entrepreneurs to accelerate growth." />
         <meta name="twitter:card" content="summary_large_image" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       {/* Hero Section */}
@@ -538,12 +476,10 @@ export default function StartupToolsPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-<<<<<<< HEAD
                 href='/contact'
                 variant='outline'
                 size='lg'
                 className='animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5'
-=======
         <meta name="description" content="Essential tools and resources for startups and entrepreneurs. Curated selection of SaaS services to help your business grow." />
         <meta property="og:title" content="Startup Tools & Resources - Zion Tech Group" />
         <meta property="og:description" content="Essential tools and resources for startups and entrepreneurs to accelerate growth." />
@@ -588,16 +524,10 @@ export default function StartupToolsPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
               <Button
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 href="/contact"
                 variant="outline"
                 size="lg"
                 className="animate-scale-in border-white/20 hover:border-white/40 hover:bg-white/5"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 style={{ animationDelay: '0.4s' }}
               >
                 Get Startup Advice
@@ -606,19 +536,13 @@ export default function StartupToolsPage() {
           </div>
 
           {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in'
-            style={{ animationDelay: '0.6s' }}
-          >
-            <div className='text-center group'>
+            style={{ animationDelay: '0.6s' }}><div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300'>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {startupTools.length}+
               </div>
               <div className="text-gray-400 text-sm">Essential Tools</div>
@@ -639,9 +563,7 @@ export default function StartupToolsPage() {
               <div className="text-3xl md:text-4xl font-bold mb-3 text-purple-400 group-hover:scale-110 transition-transform duration-300">
                 130M+
               </div>
-<<<<<<< HEAD
               <div className='text-gray-400 text-sm'>Total Users</div>
-=======
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
             <div className="text-center group">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-orange-400 group-hover:scale-110 transition-transform duration-300">
@@ -666,33 +588,21 @@ export default function StartupToolsPage() {
                 130M+
               </div>
               <div className="text-gray-400 text-sm">Total Users</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="text-gray-400 text-sm">Total Users</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </div>
       </section>
 
       {/* Category Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-16 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <section className="py-16 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -700,9 +610,7 @@ export default function StartupToolsPage() {
                   selectedCategory === category
                     ? 'bg-orange-600 text-white shadow-lg'
                     : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>
@@ -710,8 +618,6 @@ export default function StartupToolsPage() {
       </section>
 
       {/* Tools Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
@@ -719,13 +625,11 @@ export default function StartupToolsPage() {
               {selectedCategory === 'All'
                 ? 'All Startup Tools'
                 : `${selectedCategory} Tools`}
-=======
       <section id="tools" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
               {selectedCategory === 'All' ? 'All Startup Tools' : `${selectedCategory} Tools`}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
               {selectedCategory === 'All' 
@@ -740,9 +644,7 @@ export default function StartupToolsPage() {
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-orange-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {tool.icon}
@@ -796,7 +698,6 @@ export default function StartupToolsPage() {
                         Visit Website
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
-<<<<<<< HEAD
 
                       <div className='text-right'>
                         <div className='text-xs text-gray-500 mb-1'>
@@ -805,7 +706,6 @@ export default function StartupToolsPage() {
                         <div className='text-sm text-gray-300 max-w-xs'>
                           {tool.useCase}
                         </div>
-=======
       <section id="tools" className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -825,9 +725,7 @@ export default function StartupToolsPage() {
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-orange-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl bg-gradient-to-br ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {tool.icon}
@@ -881,16 +779,10 @@ export default function StartupToolsPage() {
                         Visit Website
                         <ExternalLink className="w-4 h-4 ml-2" />
                       </Button>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       
                       <div className="text-right">
                         <div className="text-xs text-gray-500 mb-1">Use Case:</div>
                         <div className="text-sm text-gray-300 max-w-xs">{tool.useCase}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       </div>
                     </div>
                   </div>
@@ -902,18 +794,14 @@ export default function StartupToolsPage() {
       </section>
 
       {/* Startup Resources Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Additional Startup Resources
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -930,14 +818,10 @@ export default function StartupToolsPage() {
               <p className="text-gray-400 mb-4">
                 Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups.
               </p>
-<<<<<<< HEAD
               <Button
                 href='https://www.startupschool.org'
                 variant='outline'
-                size='sm'
-              >
-=======
-      <section className="py-24 bg-gray-900">
+                size='sm'><section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
@@ -958,37 +842,26 @@ export default function StartupToolsPage() {
                 Join startup communities like Y Combinator Startup School, Indie Hackers, and local startup meetups.
               </p>
               <Button href="https://www.startupschool.org" variant="outline" size="sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Button href="https://www.startupschool.org" variant="outline" size="sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Explore Communities
               </Button>
             </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600'>
                 <BookOpen className='w-8 h-8 text-white' />
-=======
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">
                 <BookOpen className="w-8 h-8 text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Educational Resources</h3>
               <p className="text-gray-400 mb-4">
                 Access free courses from platforms like Coursera, edX, and startup-specific learning resources.
               </p>
-<<<<<<< HEAD
               <Button
                 href='https://www.coursera.org'
                 variant='outline'
-                size='sm'
-              >
-=======
-            <Card className="text-center">
+                size='sm'><Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-green-500 to-emerald-600">
                 <BookOpen className="w-8 h-8 text-white" />
               </div>
@@ -997,32 +870,23 @@ export default function StartupToolsPage() {
                 Access free courses from platforms like Coursera, edX, and startup-specific learning resources.
               </p>
               <Button href="https://www.coursera.org" variant="outline" size="sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Button href="https://www.coursera.org" variant="outline" size="sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Start Learning
               </Button>
             </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <Card className='text-center'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600'>
                 <TrendingUp className='w-8 h-8 text-white' />
-=======
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <TrendingUp className="w-8 h-8 text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <h3 className="text-xl font-bold mb-4 text-white">Growth Strategies</h3>
               <p className="text-gray-400 mb-4">
                 Learn proven growth strategies from successful entrepreneurs and growth hackers.
               </p>
-<<<<<<< HEAD
               <Button href='/resources' variant='outline' size='sm'>
-=======
             <Card className="text-center">
               <div className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600">
                 <TrendingUp className="w-8 h-8 text-white" />
@@ -1032,10 +896,7 @@ export default function StartupToolsPage() {
                 Learn proven growth strategies from successful entrepreneurs and growth hackers.
               </p>
               <Button href="/resources" variant="outline" size="sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Button href="/resources" variant="outline" size="sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 View Resources
               </Button>
             </Card>
@@ -1044,18 +905,14 @@ export default function StartupToolsPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-=======
       <section className="py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Ready to Scale Your Startup?
           </h2>
           <p className="text-xl text-orange-100 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -1072,12 +929,10 @@ export default function StartupToolsPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-<<<<<<< HEAD
               href='/saas-marketplace'
               variant='outline'
               size='lg'
               className='border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl'
-=======
       <section className="py-24 bg-gradient-to-r from-orange-600 to-orange-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -1098,16 +953,10 @@ export default function StartupToolsPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               href="/saas-marketplace"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-orange-600 shadow-2xl"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               Explore More Tools
             </Button>
@@ -1116,11 +965,4 @@ export default function StartupToolsPage() {
       </section>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

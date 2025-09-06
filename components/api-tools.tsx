@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Code,
   Database,
@@ -21,9 +19,6 @@ import {
   BookOpen,
   Github,
   Terminal,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   Code;
   Database, 
@@ -41,21 +36,12 @@ import {
   BookOpen;
   Github;
   Terminal
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 
 export default function ApiToolsPage() {
   const apiTools = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Code className='w-8 h-8 text-white' />,
-=======
-      icon: <Code className="w-8 h-8 text-white" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
@@ -67,7 +53,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'Development',
-=======
       icon: <Code className="w-8 h-8 text-white" />,
       title: 'CodeGen API - AI-Powered Code Generation',
       description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
@@ -82,19 +67,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'Development',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500',
       website: 'https://codegen.api',
       docs: 'https://docs.codegen.api',
       github: 'https://github.com/codegen-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '15,000+',
-<<<<<<< HEAD
-=======
       users: '15,000+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       responseTime: '<100ms'
     };
@@ -111,7 +91,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'Data',
-=======
     rating: 4.8,
       responseTime: '<100ms'
     };
@@ -130,19 +109,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'Data',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       gradient: 'from-green-400 to-emerald-500',
       website: 'https://datasync.api',
       docs: 'https://docs.datasync.api',
       github: 'https://github.com/datasync-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '8,500+',
-<<<<<<< HEAD
-=======
       users: '8,500+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.9,
       responseTime: '<50ms'
     };
@@ -159,7 +133,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'Location',
-=======
     rating: 4.9,
       responseTime: '<50ms'
     };
@@ -178,19 +151,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'Location',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       gradient: 'from-purple-400 to-pink-500',
       website: 'https://geo.api',
       docs: 'https://docs.geo.api',
       github: 'https://github.com/geo-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '12,000+',
-<<<<<<< HEAD
-=======
       users: '12,000+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.7,
       responseTime: '<75ms'
     };
@@ -207,7 +175,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'Security',
-=======
     rating: 4.7,
       responseTime: '<75ms'
     };
@@ -226,19 +193,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'Security',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-red-500 to-orange-600',
       gradient: 'from-red-400 to-orange-500',
       website: 'https://authguard.api',
       docs: 'https://docs.authguard.api',
       github: 'https://github.com/authguard-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '6,800+',
-<<<<<<< HEAD
-=======
       users: '6,800+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.9,
       responseTime: '<25ms'
     };
@@ -255,7 +217,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'Integration',
-=======
     rating: 4.9,
       responseTime: '<25ms'
     };
@@ -274,19 +235,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'Integration',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       gradient: 'from-yellow-400 to-orange-500',
       website: 'https://webhookhub.api',
       docs: 'https://docs.webhookhub.api',
       github: 'https://github.com/webhookhub-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '9,200+',
-<<<<<<< HEAD
-=======
       users: '9,200+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       responseTime: '<30ms'
     };
@@ -303,7 +259,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'AI/ML',
-=======
     rating: 4.8,
       responseTime: '<30ms'
     };
@@ -322,19 +277,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'AI/ML',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-indigo-500 to-purple-600',
       gradient: 'from-indigo-400 to-purple-500',
       website: 'https://nlp.api',
       docs: 'https://docs.nlp.api',
       github: 'https://github.com/nlp-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '11,500+',
-<<<<<<< HEAD
-=======
       users: '11,500+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.7,
       responseTime: '<200ms'
     };
@@ -351,7 +301,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'Analytics',
-=======
     rating: 4.7,
       responseTime: '<200ms'
     };
@@ -370,19 +319,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'Analytics',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
       gradient: 'from-teal-400 to-cyan-500',
       website: 'https://analytics.api',
       docs: 'https://docs.analytics.api',
       github: 'https://github.com/analytics-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '7,800+',
-<<<<<<< HEAD
-=======
       users: '7,800+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.8,
       responseTime: '<150ms'
     };
@@ -399,7 +343,6 @@ export default function ApiToolsPage() {
         enterprise: 'Custom'
       };
       category: 'Security',
-=======
     rating: 4.8,
       responseTime: '<150ms'
     };
@@ -418,19 +361,14 @@ export default function ApiToolsPage() {
       
     },
     category: 'Security',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       color: 'bg-gradient-to-br from-gray-500 to-slate-600',
       gradient: 'from-gray-400 to-slate-500',
       website: 'https://encrypt.api',
       docs: 'https://docs.encrypt.api',
       github: 'https://github.com/encrypt-api',
       status: 'Live',
-<<<<<<< HEAD
       users: '4,200+',
-<<<<<<< HEAD
-=======
       users: '4,200+';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 4.9,
       responseTime: '<20ms'
     }
@@ -439,12 +377,10 @@ export default function ApiToolsPage() {
   const categories = ['AllDevelopmentDataLocationSecurityIntegrationAI/MLAnalytics'];
   const [selectedCategory, setSelectedCategory] = React.useState('All');
 
-<<<<<<< HEAD
   const filteredTools =
     selectedCategory === 'All'
       ? apiTools
       : apiTools.filter(tool => tool.category === selectedCategory);
-=======
     rating: 4.9,
       responseTime: '<20ms'
     }
@@ -456,18 +392,13 @@ export default function ApiToolsPage() {
   const filteredTools = selectedCategory === 'All' 
     ? apiTools 
     : apiTools.filter(tool => tool.category === selectedCategory);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const filteredTools = selectedCategory === 'All' 
     ? apiTools 
     : apiTools.filter(tool => tool.category === selectedCategory);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <title>
           API Tools & Developer Services | Zion Tech Group - Powerful APIs for
           Modern Applications
@@ -485,13 +416,11 @@ export default function ApiToolsPage() {
           content='Powerful APIs and developer tools for modern applications. AI, security, analytics, and more.'
         />
         <meta name='twitter:card' content='summary_large_image' />
-=======
         <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title>
         <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
         <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
         <meta property="og:description" content="Powerful APIs and developer tools for modern applications. AI, security, analytics, and more." />
         <meta name="twitter:card" content="summary_large_image" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       {/* Hero Section */}
@@ -510,11 +439,9 @@ export default function ApiToolsPage() {
           <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
             Build faster, scale better, and deliver more with our comprehensive collection of developer APIs. Each tool is designed for performance, reliability, and ease of integration.
           </p>
-<<<<<<< HEAD
 
           <div className='flex flex-wrap justify-center gap-4 mb-8'>
             {categories.map(category => (
-=======
         <title>API Tools & Developer Services | Zion Tech Group - Powerful APIs for Modern Applications</title>
         <meta name="description" content="Discover powerful APIs and developer tools for building modern applications. From AI-powered code generation to real-time data synchronization, we provide the building blocks you need." />
         <meta property="og:title" content="API Tools & Developer Services | Zion Tech Group" />
@@ -541,12 +468,9 @@ export default function ApiToolsPage() {
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -554,9 +478,7 @@ export default function ApiToolsPage() {
                   selectedCategory === category
                     ? 'bg-indigo-600 text-white shadow-lg'
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white'
-                }`}
-              >
-                {category}
+                }`}>{category}
               </button>
             ))}
           </div>
@@ -564,8 +486,6 @@ export default function ApiToolsPage() {
       </section>
 
       {/* API Tools Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
@@ -573,13 +493,11 @@ export default function ApiToolsPage() {
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
               {selectedCategory === 'All' ? 'All API Tools' : `${selectedCategory} APIs`}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               {filteredTools.length} APIs available. Each tool is production-ready with comprehensive documentation, SDKs, and support.
@@ -591,9 +509,7 @@ export default function ApiToolsPage() {
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {tool.icon}
@@ -611,9 +527,7 @@ export default function ApiToolsPage() {
                           <Star className="w-4 h-4 fill-current" />
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
-<<<<<<< HEAD
                         <span className='px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium'>
-=======
       <section className="py-24 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -630,9 +544,7 @@ export default function ApiToolsPage() {
               <Card
                 key={index}
                 className="group border border-gray-800 hover:border-indigo-500/30 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-start space-x-6">
+                style={{ animationDelay: `${index * 0.1}s` }}><div className="flex items-start space-x-6">
                   <div className="relative">
                     <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-3xl ${tool.color} shadow-xl group-hover:scale-110 transition-transform duration-300`}>
                       {tool.icon}
@@ -651,59 +563,13 @@ export default function ApiToolsPage() {
                           <span className="ml-1 text-sm font-medium">{tool.rating}</span>
                         </div>
                         <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {tool.status}
                         </span>
                       </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <p className='text-gray-400 leading-relaxed mb-6'>
-=======
-                    
-                    <p className="text-gray-400 leading-relaxed mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                      {tool.description}
-                    </p>
-                    
-                    <div className="grid grid-cols-3 gap-4 mb-6">
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
-                        <div className="text-xs text-gray-500">Users</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-lg font-bold text-green-400">{tool.responseTime}</div>
-                        <div className="text-xs text-gray-500">Response</div>
-                      </div>
-                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
-                        <div className="text-sm font-medium text-gray-300">Starting at</div>
-                        <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
-                      </div>
-                    </div>
-
-                    <ul className="space-y-2 mb-6">
-                      {tool.features.slice(0, 3).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex flex-wrap gap-3">
-                      <Button
-                        href={tool.website}
-                        variant="primary"
-                        size="sm"
-                        className="bg-indigo-600 hover:bg-indigo-700"
-                      >
-<<<<<<< HEAD
-                        <ExternalLink className='w-4 h-4 mr-2' />
-=======
                     
                     <p className="text-gray-400 leading-relaxed mb-6">
                       {tool.description}
@@ -738,63 +604,69 @@ export default function ApiToolsPage() {
                         href={tool.website}
                         variant="primary"
                         size="sm"
-                        className="bg-indigo-600 hover:bg-indigo-700"
-                      >
+                        className="bg-indigo-600 hover:bg-indigo-700"><ExternalLink className='w-4 h-4 mr-2' />
+                    
+                    <p className="text-gray-400 leading-relaxed mb-6">
+                      {tool.description}
+                    </p>
+                    
+                    <div className="grid grid-cols-3 gap-4 mb-6">
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                        <div className="text-lg font-bold text-indigo-400">{tool.users}</div>
+                        <div className="text-xs text-gray-500">Users</div>
+                      </div>
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                        <div className="text-lg font-bold text-green-400">{tool.responseTime}</div>
+                        <div className="text-xs text-gray-500">Response</div>
+                      </div>
+                      <div className="text-center p-3 bg-gray-800/50 rounded-lg">
+                        <div className="text-sm font-medium text-gray-300">Starting at</div>
+                        <div className="text-lg font-bold text-green-400">{tool.pricing.free}</div>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-2 mb-6">
+                      {tool.features.slice(0, 3).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="flex flex-wrap gap-3">
+                      <Button
+                        href={tool.website}
+                        variant="primary"
+                        size="sm"
+                        className="bg-indigo-600 hover:bg-indigo-700"><ExternalLink className="w-4 h-4 mr-2" />
                         <ExternalLink className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                        <ExternalLink className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         Visit API
                       </Button>
                       <Button
                         href={tool.docs}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         variant='outline'
                         size='sm'
-                        className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'
-                      >
-                        <BookOpen className='w-4 h-4 mr-2' />
-=======
+                        className='border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400'><BookOpen className='w-4 h-4 mr-2' />
                         variant="outline"
                         size="sm"
-                        className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
-                      >
-                        <BookOpen className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+                        className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"><BookOpen className="w-4 h-4 mr-2" />
                         variant="outline"
                         size="sm"
-                        className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"
-                      >
-                        <BookOpen className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                        className="border-gray-600 text-gray-300 hover:border-indigo-500 hover:text-indigo-400"><BookOpen className="w-4 h-4 mr-2" />
                         Documentation
                       </Button>
                       <Button
                         href={tool.github}
-<<<<<<< HEAD
-<<<<<<< HEAD
                         variant='ghost'
                         size='sm'
-                        className='text-gray-400 hover:text-indigo-400'
-                      >
-                        <Github className='w-4 h-4 mr-2' />
-=======
+                        className='text-gray-400 hover:text-indigo-400'><Github className='w-4 h-4 mr-2' />
                         variant="ghost"
                         size="sm"
-                        className="text-gray-400 hover:text-indigo-400"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+                        className="text-gray-400 hover:text-indigo-400"><Github className="w-4 h-4 mr-2" />
                         variant="ghost"
                         size="sm"
-                        className="text-gray-400 hover:text-indigo-400"
-                      >
-                        <Github className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                        className="text-gray-400 hover:text-indigo-400"><Github className="w-4 h-4 mr-2" />
                         GitHub
                       </Button>
                     </div>
@@ -807,18 +679,14 @@ export default function ApiToolsPage() {
       </section>
 
       {/* Developer Resources */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
-=======
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Developer Resources
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -865,9 +733,7 @@ export default function ApiToolsPage() {
               </p>
               <Button href="/sdk" variant="outline" size="sm">
                 Browse SDKs
-<<<<<<< HEAD
                 <ArrowRight className='w-4 h-4 ml-2' />
-=======
       <section className="py-24 bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
@@ -919,10 +785,7 @@ export default function ApiToolsPage() {
               <Button href="/sdk" variant="outline" size="sm">
                 Browse SDKs
                 <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </Button>
             </Card>
           </div>
@@ -930,18 +793,14 @@ export default function ApiToolsPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-=======
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Ready to Build Something Amazing?
           </h2>
           <p className="text-xl text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -958,12 +817,10 @@ export default function ApiToolsPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-<<<<<<< HEAD
               href='/docs'
               variant='outline'
               size='lg'
               className='border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl'
-=======
       <section className="py-24 bg-gradient-to-r from-indigo-600 to-indigo-700 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
@@ -984,16 +841,10 @@ export default function ApiToolsPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               href="/docs"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-indigo-600 shadow-2xl"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               View Documentation
             </Button>
@@ -1002,11 +853,4 @@ export default function ApiToolsPage() {
       </section>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

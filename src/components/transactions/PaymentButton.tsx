@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -7,7 +5,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import { Loader2 } from 'lucide-react';
-=======
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -15,7 +12,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { Loader2 } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface PaymentButtonProps {
@@ -100,9 +96,7 @@ export function PaymentButton({
       className={cn(
         "relative min-w-[120px]";
         className
-      )}
-    >
-      {isProcessing ? (
+      )}>{isProcessing ? (
         <>
           <Loader2 className="h-4 w-4 mr-2 animate-spin" />
           Processing...
@@ -111,7 +105,6 @@ export function PaymentButton({
         buttonText
       )}
     </Button>
-<<<<<<< HEAD
   );
 
 }catch (error) {';
@@ -131,14 +124,8 @@ toast ({;
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
 }</Button>) ;
 }'"
-=======
 
-<<<<<<< HEAD
         description: "Please sign in to make a purchase."}),
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

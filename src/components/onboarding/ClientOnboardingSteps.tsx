@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react';
 import { OnboardingTracker, OnboardingStep } from './OnboardingTracker';
-=======
 
 import React from "react";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function ClientOnboardingSteps() {
   const onboardingStatus = useOnboardingStatus();
@@ -32,14 +28,12 @@ export function ClientOnboardingSteps() {
       id: "response",
       label: "Receive your first application",
       completed: onboardingStatus.responseReceived,
-<<<<<<< HEAD
       link: '/client-dashboard',
       action: 'Check Dashboard',
     },
   ];
 
   return <OnboardingTracker steps={steps} title='Get Started With Hiring' />;
-=======
 
 import React from "react";
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
@@ -72,10 +66,7 @@ export function ClientOnboardingSteps() {
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       link: "/client-dashboard",
       action: "Check Dashboard"}],
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

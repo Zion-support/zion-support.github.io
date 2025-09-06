@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -77,9 +76,7 @@ const TalentFilterControls: React.FC<{
       <select
         value={filterSpecialization}
         onChange={(e) => setFilterSpecialization(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Specializations</option>
+        className="bg-background border border-border px-3 py-2 rounded"><option value="">All Specializations</option>
         {specializations.map(spec => (
           <option key={spec} value={spec}>{spec}</option>
         ))}
@@ -91,9 +88,7 @@ const TalentFilterControls: React.FC<{
       <select
         value={filterAvailability}
         onChange={(e) => setFilterAvailability(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="">All Availability</option>
+        className="bg-background border border-border px-3 py-2 rounded"><option value="">All Availability</option>
         <option value="full_time">Full Time</option>
         <option value="part_time">Part Time</option>
         <option value="project">Project Based</option>
@@ -106,9 +101,7 @@ const TalentFilterControls: React.FC<{
       <select
         value={sortBy}
         onChange={(e) => setSortBy(e.target.value)}
-        className="bg-background border border-border px-3 py-2 rounded"
-      >
-        <option value="newest">Newest First</option>
+        className="bg-background border border-border px-3 py-2 rounded"><option value="newest">Newest First</option>
         <option value="hourly-rate-low">Rate: Low to High</option>
         <option value="hourly-rate-high">Rate: High to Low</option>
         <option value="rating">Highest Rated</option>
@@ -121,9 +114,7 @@ const TalentFilterControls: React.FC<{
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
-      className="flex items-center gap-2"
-    >
-      <Star className="h-4 w-4" />
+      className="flex items-center gap-2"><Star className="h-4 w-4" />
       {showRecommended ? "All Talents" : "Recommended"}
     </Button>
   </div>
@@ -336,9 +327,7 @@ export default function TalentsPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-8"
-        >
-          <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+          className="text-center mb-8"><h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
             AI & IT Talent Directory
           </h1>
           <p className="text-muted-foreground text-lg">
@@ -370,9 +359,7 @@ export default function TalentsPage() {
       <motion.div 
         className="text-center mb-8"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-      >
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+        animate={{ opacity: 1, y: 0 }}><h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
           AI & IT Talent Directory
         </h1>
         <p className="text-muted-foreground text-lg">
@@ -385,9 +372,7 @@ export default function TalentsPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-        >
-          <TalentMarketInsights stats={marketStats} />
+          transition={{ delay: 0.2 }}><TalentMarketInsights stats={marketStats} />
         </motion.div>
       )}
 
@@ -395,9 +380,7 @@ export default function TalentsPage() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.3 }}
-      >
-        <TalentFilterControls
+        transition={{ delay: 0.3 }}><TalentFilterControls
           sortBy={sortBy}
           setSortBy={setSortBy}
           filterSpecialization={filterSpecialization}
@@ -416,9 +399,7 @@ export default function TalentsPage() {
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.4 }}
-      >
-        <AnimatePresence mode="popLayout">
+        transition={{ delay: 0.4 }}><AnimatePresence mode="popLayout">
           {talents.map((talent, index) => (
             <motion.div
               key={talent.id}
@@ -427,9 +408,7 @@ export default function TalentsPage() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
-              whileHover={{ scale: 1.02 }}
-            >
-              <TalentCard
+              whileHover={{ scale: 1.02 }}><TalentCard
                 talent={talent}
                 onHire={() => router.push(`/hire/${talent.id}`)}
               />
@@ -443,9 +422,7 @@ export default function TalentsPage() {
         <motion.div
           className="mt-8"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <TalentLoadingGrid count={4} />
+          animate={{ opacity: 1 }}><TalentLoadingGrid count={4} />
         </motion.div>
       )}
 
@@ -469,9 +446,7 @@ export default function TalentsPage() {
         <motion.div
           className="text-center mt-12 py-8 border-t"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          <div className="text-muted-foreground text-lg mb-2">
+          animate={{ opacity: 1 }}><div className="text-muted-foreground text-lg mb-2">
             🎉 You've explored all available talents!
           </div>
           <div className="text-sm text-muted-foreground">
@@ -490,15 +465,12 @@ export default function TalentsPage() {
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+            whileTap={{ scale: 0.9 }}><ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>
         )}
       </AnimatePresence>
     </div>
   );
-<<<<<<< HEAD
 
 }animate= {;
   {;
@@ -581,7 +553,7 @@ export default function TalentsPage() {
 }</AnimatePresence> </motion.div> {;
   /* Loading More Indicator */ ;
 }{;
-  (isFetching || loading) && (<motion.div > <TalentLoadingGrid count= {;
+  (isFetching || loading) && (<motion.div><TalentLoadingGrid count= {;
   4 ;
 }/> </motion.div>) ;
 }{";
@@ -593,7 +565,7 @@ export default function TalentsPage() {
 }{;
   /* End of Results */ ;
 }{'";
-  !hasMore && talents.length > 0 && (<motion.div > <div className=" text-muted-foreground text-lg mb-2"> 🎉 You've explored all available talents! </div> </div> </motion.div>) ;
+  !hasMore && talents.length > 0 && (<motion.div><div className=" text-muted-foreground text-lg mb-2"> 🎉 You've explored all available talents! </div> </div> </motion.div>) ;
 }{;
   /* Scroll to Top Button */ ;
 }<AnimatePresence> {;
@@ -602,15 +574,8 @@ export default function TalentsPage() {
 }> <ArrowUp className=" h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
     let filteredTalents = allTalents;
     
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

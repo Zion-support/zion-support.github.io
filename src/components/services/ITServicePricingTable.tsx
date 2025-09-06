@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useMemo } from 'react';
 import {
   onsiteServicePricing,
@@ -16,8 +14,6 @@ import {
 } from '@/components/ui/table';
 import { Globe, Search, ArrowUpDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState, useMemo } from "react";
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
@@ -88,9 +84,7 @@ export function ITServicePricingTable() {
                 <Button 
                   variant="ghost" 
                   onClick={() => handleSort("country")}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"
-                >
-                  <span>Country</span>
+                  className="hover:bg-zion-blue-dark p-0 flex items-center space-x-1 text-zion-cyan hover:text-zion-cyan-light"><span>Country</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
@@ -98,9 +92,7 @@ export function ITServicePricingTable() {
                 <Button 
                   variant="ghost" 
                   onClick={() => handleSort("pricePerIncident")}
-                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"
-                >
-                  <span>Price Per Incident</span>
+                  className="hover:bg-zion-blue-dark p-0 flex items-center justify-end space-x-1 w-full text-zion-cyan hover:text-zion-cyan-light"><span>Price Per Incident</span>
                   <ArrowUpDown className="h-4 w-4" />
                 </Button>
               </TableHead>
@@ -129,10 +121,6 @@ export function ITServicePricingTable() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
@@ -140,9 +128,4 @@ export function ITServicePricingTable() {
           : "ascending"})
   };
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

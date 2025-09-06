@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Check,
   Shield,
@@ -12,9 +10,7 @@ import {
   MapPin,
   ExternalLink,;
 } from 'lucide-react';
-=======
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -82,7 +78,6 @@ export default function AIGuardrailsPage() {
 						</Card>
 					</div>
 
-<<<<<<< HEAD
           <div className='bg-black/20 border border-rose-500/30 rounded-2xl p-6'>
             <h3 className='text-xl font-semibold text-white mb-4 text-center'>
               Contact
@@ -104,9 +99,7 @@ export default function AIGuardrailsPage() {
                   href={`https://maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-xs'
-                >
-                  {contactInfo.address}
+                  className='text-xs'>{contactInfo.address}
                 </a>
               </div>
             </div>
@@ -124,7 +117,6 @@ export default function AIGuardrailsPage() {
       </section>
     </UltraAdvancedFuturisticBackground>
   );
-=======
 import { Check, Shield, ShieldAlert, Lock, Phone, Mail, MapPin, ExternalLink } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -193,8 +185,6 @@ export default function AIGuardrailsPage() {
 						</Card>
 					</div>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 					<div className="bg-black/20 border border-rose-500/30 rounded-2xl p-6">
 						<h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
 						<div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
@@ -210,9 +200,5 @@ export default function AIGuardrailsPage() {
 			</section>
 		</UltraAdvancedFuturisticBackground>
 	);
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

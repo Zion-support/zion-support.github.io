@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Loader2, AlertTriangle, RefreshCw, Wifi, WifiOff, Clock, Zap } from 'lucide-react'
@@ -97,9 +96,7 @@ export const ProgressiveLoading: React.FC<ProgressiveLoadingProps> = ({
             )}
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: index <= activeStep ? 1 : 0.5, x: 0 }}
-            transition={{ delay: index * 0.1 }}
-          >
-            {index < activeStep ? (
+            transition={{ delay: index * 0.1 }}>{index < activeStep ? (
               <div className="h-4 w-4 rounded-full bg-green-500 flex items-center justify-center">
                 <div className="h-2 w-2 rounded-full bg-white" />
               </div>
@@ -275,9 +272,7 @@ export const ErrorState: React.FC<ErrorStateProps> = ({
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
+          transition={{ duration: 0.3 }}><Icon className={cn('mx-auto mb-4 h-12 w-12', config.color)} />
           <h3 className="text-lg font-semibold mb-2">{config.title}</h3>
           <p className="text-muted-foreground mb-6 max-w-md mx-auto">
             {config.description}
@@ -439,22 +434,9 @@ export const PerformanceIndicator: React.FC<PerformanceIndicatorProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
 };
-=======
-
-<<<<<<< HEAD
-
-
-
-<<<<<<< HEAD
 
   const Icon = config.icon;
   const canRetry = showRetry && onRetry && retryCount < maxRetries;
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

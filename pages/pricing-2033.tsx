@@ -462,9 +462,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className='mb-6'
-              >
-                <div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
+                className='mb-6'><div className='inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-purple-600/20 to-cyan-600/20 border border-purple-500/30 rounded-full text-purple-300 text-sm font-medium'>
                   <Crown className='w-4 h-4' />
         <title>2033 Revolutionary Technology Pricing | Zion Tech Group - AI Consciousness, Quantum DNA Computing, Space Mining</title>
         <meta name="description" content="Discover competitive pricing for Zion Tech Group's revolutionary 2033 technology solutions. From AI consciousness evolution to quantum DNA computing and space mining automation." />
@@ -506,9 +504,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className='text-4xl md:text-5xl lg:text-6xl font-bold mb-6'
-              >
-                <span className='bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent'>
+                className='text-4xl md:text-5xl lg:text-6xl font-bold mb-6'><span className='bg-gradient-to-r from-purple-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                   Revolutionary Technology
                 </span>
                 <br />
@@ -549,9 +545,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className='flex items-center justify-center space-x-4 mb-8'
-              >
-                <span
+                className='flex items-center justify-center space-x-4 mb-8'><span
                   className={`text-sm ${billingCycle === 'monthly' ? 'text-white' : 'text-gray-400'}`}
                 >
                 transition={{ duration: 0.6, delay: 0.3 }} className="flex items-center justify-center space-x-4 mb-8">
@@ -612,23 +606,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`relative ${tier.popular ? 'scale-105' : ''}`}
-                >
-                  {tier.popular && (
+                  className={`relative ${tier.popular ? 'scale-105' : ''}`}>{tier.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <div className='px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full'>
                   className={`relative ${
                     tier.popular ? 'scale-105' : ''
-                  }`}
-                >
-                  {tier.popular && (
+                  }`}>{tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full">
                   className={`relative ${
                     tier.popular ? 'scale-105' : ''
-                  }`}
-                >
-                  {tier.popular && (
+                  }`}>{tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-full">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -642,9 +630,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       tier.popular
                         ? 'border-purple-500/50 shadow-2xl shadow-purple-500/25'
                         : ''
-                    }`}
-                  >
-                    <div className='text-center mb-8'>
+                    }`}><div className='text-center mb-8'>
                       <h3 className='text-2xl font-bold text-white mb-2'>
                         {tier.name}
                       </h3>
@@ -766,13 +752,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'
-                >
-                  <div className='flex items-center space-x-3 mb-4'>
+                  className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'><div className='flex items-center space-x-3 mb-4'>
                     <div
-                      className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}
-                    >
-                      <category.icon className='w-6 h-6 text-white' />
+                      className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}><category.icon className='w-6 h-6 text-white' />
                   transition={{ duration: 0.6, delay: index * 0.1 }} className="bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300">
                   <div className="flex items-center space-x-3 mb-4">
                     <div className={`w-12 h-12 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center`}>
@@ -826,9 +808,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
                   <a
                     href='/services'
-                    className='inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium'
-                  >
-                    <span>Learn More</span>
+                    className='inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium'><span>Learn More</span>
                     <ArrowRight className='w-4 h-4' />
                     href="/services" className="inline-flex items-center space-x-2 text-purple-400 hover:text-cyan-400 transition-colors duration-200 text-sm font-medium">
                     <span>Learn More</span>
@@ -885,9 +865,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'
-                >
-                  <div className='flex items-start justify-between mb-4'>
+                  className='bg-gray-900/50 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300'><div className='flex items-start justify-between mb-4'>
                     <div className='flex-1'>
                       <h3 className='text-xl font-bold text-white mb-2'>
                         {service.name}
@@ -954,9 +932,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     </a>
                     <a
                       href={`tel:${contactInfo.mobile}`}
-                      className='px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
-                    >
-                  <div className="flex space-x-3">
+                      className='px-4 py-2 bg-gray-800/50 border border-purple-500/30 text-purple-300 text-sm font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'><div className="flex space-x-3">
                     <a
                       href="/contact" className="flex-1 px-4 py-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white text-sm font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 text-center">
                       Get Quote
@@ -1002,9 +978,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 
                 <a
                   href={`tel:${contactInfo.mobile}`}
-                  className='px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'
-                >
-                  <Phone className='w-5 h-5 mr-2 inline' />
+                  className='px-8 py-4 bg-gray-800/50 border border-purple-500/30 text-purple-300 font-medium rounded-lg hover:bg-gray-700/50 hover:border-purple-500/50 transition-all duration-200'><Phone className='w-5 h-5 mr-2 inline' />
         <div className="relative py-20">
           <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

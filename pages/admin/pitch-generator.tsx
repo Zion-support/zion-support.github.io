@@ -391,9 +391,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <div
                     key={d.label}
                     className='bg-purple-500 text-white text-xs px-2 py-1'
-                    style={{ width: `${100 - idx * 12}%` }}
-                  >
-                    {d.label}: {d.value}
+                    style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}
                   </div>
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
@@ -487,9 +485,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 onChange={e =>
                   setBuilder({ ...builder, roundType: e.target.value as any })
                 }
-                className='w-full border rounded px-2 py-1 bg-transparent'
-              >
-                <option value=''>Select</option>
+                className='w-full border rounded px-2 py-1 bg-transparent'><option value=''>Select</option>
     )
   };
 
@@ -589,9 +585,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 {history.map(h => (
                   <li
                     key={h.id}
-                    className='flex justify-between border rounded px-2 py-1'
-                  >
-                    <span>{h.version}</span>
+                    className='flex justify-between border rounded px-2 py-1'><span>{h.version}</span>
                     <span className='text-gray-500 dark:text-gray-400'>
                       {new Date(h.createdAt).toLocaleString()}
                     </span>

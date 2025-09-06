@@ -365,9 +365,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       selectedCategory === category.id
                         ? 'bg-blue-600 text-white'
                         : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-                    }`}
-                  >
-                    {category.name} ({category.count})
+                    }`}>{category.name} ({category.count})
                   </button>
                 ))}
               </div>
@@ -393,9 +391,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                     key={product.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
-                    style={{ transitionDelay: `${index * 100}ms` }}
-                  >
-                    {product.popular && (
+                    style={{ transitionDelay: `${index * 100}ms` }}>{product.popular && (
                       <div className='absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
                       <div className="absolute -top-2 -right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded-full">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -650,9 +646,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Micro SaaS Solutions</h2>
+              className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold mb-4">Our Micro SaaS Solutions</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Focused, powerful solutions that address specific business challenges with AI and automation.
               </p>
@@ -666,9 +660,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                  viewport={{ once: true }}><div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                     <solution.icon className="w-8 h-8 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{solution.title}</h3>
@@ -714,9 +706,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
+              className="text-center mb-12"><h2 className="text-3xl md:text-4xl font-bold mb-4">Industries We Serve</h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                 Our micro SaaS solutions are designed for various industries and business types.
               </p>
@@ -729,9 +719,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"
-                >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  className="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors"><div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
                     <industry.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{industry.name}</h3>
@@ -749,9 +737,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Deploy Your Micro SaaS?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">

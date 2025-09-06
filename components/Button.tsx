@@ -1,28 +1,17 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 interface ButtonProps {
   children: React.ReactNode;
-=======
 interface ButtonProps {
   children: React.ReactNode,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 interface ButtonProps {
   children: React.ReactNode,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function Button({ 
   children;
@@ -46,8 +35,6 @@ export default function Button({
     lg: 'px-6 py-3 text-lg'
   };
   
-<<<<<<< HEAD
-=======
 }
 
 export default function Button({ 
@@ -72,8 +59,6 @@ export default function Button({
     lg: 'px-6 py-3 text-lg'
   };
   
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const disabledClasses = disabled ? 'opacity-50 cursor-not-allowed' : 'hover: scale-105 transform',
   
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
@@ -83,20 +68,7 @@ export default function Button({
       type={type}
       className={classes}
       onClick={onClick}
-      disabled={disabled}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    >
-      {children}
+      disabled={disabled}>{children}
     </button>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

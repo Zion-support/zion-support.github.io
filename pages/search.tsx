@@ -650,9 +650,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+            transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Search Our Services
             </h1>
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8'>
@@ -736,17 +734,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <Grid className='w-5 h-5' />
+                  }`}><Grid className='w-5 h-5' />
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <Grid className="w-5 h-5" />
+                  }`}><Grid className="w-5 h-5" />
                   <Grid className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                 </button>
@@ -756,17 +750,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     viewMode === 'list'
                       ? 'bg-cyan-500/20 text-cyan-400'
                       : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <List className='w-5 h-5' />
+                  }`}><List className='w-5 h-5' />
                     viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
+                  }`}><List className="w-5 h-5" />
                     viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
-                  }`}
-                >
-                  <List className="w-5 h-5" />
+                  }`}><List className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                 </button>
               </div>
@@ -780,9 +768,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
-                >
-                  <Sliders className="w-4 h-4" />
+                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"><Sliders className="w-4 h-4" />
                   Filters
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
@@ -792,9 +778,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                >
-                  <option value='relevance'>Sort by Relevance</option>
+                  className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"><option value='relevance'>Sort by Relevance</option>
                   <option value='price-low'>Sort by Price: Low to High</option>
                   <option value='price-high'>Sort by Price: High to Low</option>
                   <option value='name'>Sort by Name</option>
@@ -803,9 +787,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setShowFilters(!showFilters)}
-                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
-                >
-                  <Sliders className="w-4 h-4" />
+                  className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"><Sliders className="w-4 h-4" />
                   Filters
                   {Object.values(filters).some(f => f !== 'all') && (
                     <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
@@ -830,15 +812,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
               {Object.values(filters).some(f => f !== 'all') && (
                 <button
                   onClick={clearFilters}
-                  className='flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors'
-                >
-                  <X className='w-4 h-4' />
-                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <X className="w-4 h-4" />
-                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
-                >
-                  <X className="w-4 h-4" />
+                  className='flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors'><X className='w-4 h-4' />
+                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"><X className="w-4 h-4" />
+                  className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"><X className="w-4 h-4" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   Clear Filters
                 </button>
@@ -853,35 +829,27 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 exit={{ opacity: 0, height: 0 }}
                 className='mt-6 pt-6 border-t border-white/20'
                 className="mt-6 pt-6 border-t border-white/20"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* Category Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Category</label>
                     <select
                       value={filters.category}
                       onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {categories.map(category => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{categories.map(category => (
                         <option
                           key={category.id}
                           value={category.id}
                           className='bg-slate-800 text-white'
                         >
-                className="mt-6 pt-6 border-t border-white/20"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                className="mt-6 pt-6 border-t border-white/20"><div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* Category Filter */}
                   <div>
                     <label className="block text-white font-medium mb-2">Category</label>
                     <select
                       value={filters.category}
                       onChange={(e) => setFilters(prev => ({ ...prev, category: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {categories.map(category => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -901,21 +869,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={filters.status}
                       onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {statuses.map(status => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{statuses.map(status => (
                         <option
                           key={status.id}
                           value={status.id}
-                          className='bg-slate-800 text-white'
-                        >
-                    <label className="block text-white font-medium mb-2">Status</label>
+                          className='bg-slate-800 text-white'><label className="block text-white font-medium mb-2">Status</label>
                     <select
                       value={filters.status}
                       onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {statuses.map(status => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{statuses.map(status => (
                         <option key={status.id} value={status.id} className="bg-slate-800 text-white">
                         <option key={status.id} value={status.id} className="bg-slate-800 text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -935,21 +897,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={filters.priceRange}
                       onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {priceRanges.map(range => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{priceRanges.map(range => (
                         <option
                           key={range.id}
                           value={range.id}
-                          className='bg-slate-800 text-white'
-                        >
-                    <label className="block text-white font-medium mb-2">Price Range</label>
+                          className='bg-slate-800 text-white'><label className="block text-white font-medium mb-2">Price Range</label>
                     <select
                       value={filters.priceRange}
                       onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {priceRanges.map(range => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{priceRanges.map(range => (
                         <option key={range.id} value={range.id} className="bg-slate-800 text-white">
                         <option key={range.id} value={range.id} className="bg-slate-800 text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -969,21 +925,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={filters.technology}
                       onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {technologies.map(tech => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{technologies.map(tech => (
                         <option
                           key={tech.id}
                           value={tech.id}
-                          className='bg-slate-800 text-white'
-                        >
-                    <label className="block text-white font-medium mb-2">Technology</label>
+                          className='bg-slate-800 text-white'><label className="block text-white font-medium mb-2">Technology</label>
                     <select
                       value={filters.technology}
                       onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
-                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                    >
-                      {technologies.map(tech => (
+                      className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all">{technologies.map(tech => (
                         <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
                         <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -1096,9 +1046,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewMode === 'grid'
                     ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                     : 'space-y-6'
-                }
-              >
-            <AnimatePresence mode="wait">
+                }><AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
@@ -1116,15 +1064,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
-                    }`}
-                  >
-                    <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
+                    }`}><div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
                     <div className='relative z-10'>
                       <div className='flex items-start justify-between mb-4'>
                         <div
-                          className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}
-                        >
-                          <service.icon className='w-8 h-8 text-white' />
+                          className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}><service.icon className='w-8 h-8 text-white' />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-4">
@@ -1159,9 +1103,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           {service.features.map((feature, idx) => (
                             <div
                               key={idx}
-                              className='flex items-center gap-2 text-sm text-white/70'
-                            >
-                              <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />
+                              className='flex items-center gap-2 text-sm text-white/70'><CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-4">
@@ -1210,9 +1152,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                         <a
                           href={service.link}
-                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
-                        >
-                          <span className="text-sm font-medium">Learn More</span>
+                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"><span className="text-sm font-medium">Learn More</span>
                           <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                         <a
@@ -1222,9 +1162,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       <div className="flex items-center justify-between">
                         <a
                           href={service.link}
-                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
-                        >
-                          <span className="text-sm font-medium">Learn More</span>
+                          className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"><span className="text-sm font-medium">Learn More</span>
                           <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                         <a
@@ -1294,9 +1232,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       performSearch()
                     }}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
-ursor/integrate-build-improve-and-re-verify-b76c
-                  >
-                    {term}
+ursor/integrate-build-improve-and-re-verify-b76c>{term}
                   </button>
                 ))}
               </div>

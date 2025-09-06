@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Slider } from '@/components/ui/slider';
@@ -24,7 +22,6 @@ import {
 import { Badge } from '@/components/ui/badge';
 import { Label } from '@/components/ui/label';
 
-=======
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -35,7 +32,6 @@ import { X, Filter } from 'lucide-react'
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Label } from "@/components/ui/label";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface BrowseFiltersProps {
   type: "jobs" | "talents"
 }
@@ -184,9 +180,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
             <Badge 
               key={filter} 
               variant="secondary"
-              className="flex items-center gap-1"
-            >
-              {filter}
+              className="flex items-center gap-1">{filter}
               <X 
                 className="h-3 w-3 cursor-pointer" 
                 onClick={() => removeFilter(filter)} 
@@ -197,13 +191,7 @@ export function BrowseFilters({ type }: BrowseFiltersProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

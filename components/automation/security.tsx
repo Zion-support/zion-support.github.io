@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -12,7 +9,6 @@ interface AuditReport {
   error?: string;
   raw?: string
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 type Props = { report: AuditReport },
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -25,9 +21,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 }
   }
 };
-<<<<<<< HEAD
 </pre> </div>) 
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -50,8 +44,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: { error: 'No audit report yet.' } }, revalidate: 86400 }
   }
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function SecurityAudit({ report }: Props) {
   return (
@@ -69,9 +61,5 @@ export default function SecurityAudit({ report }: Props) {
       </pre>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

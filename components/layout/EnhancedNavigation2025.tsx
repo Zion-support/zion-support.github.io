@@ -1,17 +1,15 @@
 'use client';
-<<<<<<< HEAD
-<<<<<<< HEAD
 ] 
 }];
 </div> </div> </div> </div> {
   /* Main Navigation */ 
 }<nav className= {
   `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
-  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300" ></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation • Intelligence • Impact</p> </div> </a> </button> {
+  isScrolled ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-700/50' </div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur-lg opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div> </div> <div> <h1 className="text-xl font-bold text-white" >Zion Tech Group</h1> <p className="text-xs text-gray-400" >Innovation • Intelligence • Impact</p> </div> </a> </button> {
   /* Submenu */ 
 }<AnimatePresence> <span key= {
   service 
-}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md" > {
+}className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">{
   service 
 }</span>) ) 
 }+ {
@@ -33,21 +31,21 @@
   `w-4 h-4 transition-transform duration-200 $ {
   activeDropdown === item.name ? 'rotate-180' : '' 
 }` 
-}/> </button> > {
+}/> </button>>{
   item.children?.map ( (child) => (<Link key= {
   child.name 
 }</span> </a>) ) 
 }</motion.div>) 
 }</div>) ) 
-}> Get Started </a> className="fixed inset-0 z-50 lg:hidden" > {
+}> Get Started </a> className="fixed inset-0 z-50 lg:hidden">{
   /* Backdrop */ 
-}<div > <X className="w-6 h-6" /> </button> </div> </div> <ChevronDown className= {
+}<div><X className="w-6 h-6" /> </button> </div> </div> <ChevronDown className= {
   `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
   activeSubmenu === item.name ? 'rotate-180': '' 
 }` 
 }/> </button> {
   /* Mobile Submenu */ 
-}<AnimatePresence> > {
+}<AnimatePresence>>{
   item.submenu?.map ( (subitem) => (<Link key= {
   subitem.name 
 }) ) 
@@ -56,7 +54,6 @@
 }</div> > View Pricing </a> <Link > Contact Us </a> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </>) 
 };
-=======
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -420,7 +417,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
-=======
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -784,7 +780,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709'
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function EnhancedNavigation2025() {
   const [isOpen, setIsOpen] = useState(false);
@@ -854,9 +849,7 @@ export default function EnhancedNavigation2025() {
                 <div key={item.name} className="relative group">
                   <button
                     onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"
-                  >
-                    <item.icon className="w-4 h-4" />
+                    className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2"><item.icon className="w-4 h-4" />
                     <span>{item.name}</span>
                     <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                       activeSubmenu === item.name ? 'rotate-180' : ''
@@ -871,17 +864,13 @@ export default function EnhancedNavigation2025() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"
-                      >
-                        <div className="p-6">
+                        className="absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-2xl shadow-2xl overflow-hidden"><div className="p-6">
                           {item.submenu?.map((subitem) => (
                             <Link
                               key={subitem.name}
                               href={subitem.href}
                               onClick={() => setActiveSubmenu(null)}
-                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"
-                            >
-                              <div className="flex items-start space-x-3">
+                              className="group block p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200 mb-2 last:mb-0"><div className="flex items-start space-x-3">
                                 {subitem.icon && (
                                   <div className="p-2 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-200">
                                     <subitem.icon className="w-5 h-5 text-cyan-400" />
@@ -899,9 +888,7 @@ export default function EnhancedNavigation2025() {
                                       {subitem.services.slice(0, 2).map((service) => (
                                         <span
                                           key={service}
-                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md"
-                                        >
-                                          {service}
+                                          className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-md">{service}
                                         </span>
                                       ))}
                                       {subitem.services.length > 2 && (
@@ -942,9 +929,7 @@ export default function EnhancedNavigation2025() {
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
-              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200"
-            >
-              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              className="lg:hidden p-2 text-gray-300 hover:text-white transition-colors duration-200">{isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -975,17 +960,13 @@ export default function EnhancedNavigation2025() {
                       animate={{ opacity: 1, height: 'auto' }}
                       exit={{ opacity: 0, height: 0 }}
                       transition={{ duration: 0.2 }}
-                      className="ml-8 mt-2 space-y-2"
-                    >
-                      {item.children?.map((child) => (
+                      className="ml-8 mt-2 space-y-2">{item.children?.map((child) => (
                         <Link
                           key={child.name}
                           href={child.href}
                           className="block px-4 py-2 text-sm text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                           onClick={() => setIsOpen(false)}
-                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"
-                        >
-                          <subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
+                          className="block p-2 text-gray-300 hover:text-white transition-colors text-sm"><subItem.icon className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />
                           <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
                             {subItem.name}
                           </span>
@@ -1005,9 +986,7 @@ export default function EnhancedNavigation2025() {
                 >
                   Get Started
                 </Link>
-            className="fixed inset-0 z-50 lg:hidden"
-          >
-            {/* Backdrop */}
+            className="fixed inset-0 z-50 lg:hidden">{/* Backdrop */}
             <div
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
               onClick={closeMenu}
@@ -1020,9 +999,7 @@ export default function EnhancedNavigation2025() {
                 <div className="flex justify-end mb-6">
                   <button
                     onClick={closeMenu}
-                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"
-                  >
-                    <X className="w-6 h-6" />
+                    className="p-2 text-gray-400 hover:text-white transition-colors duration-200"><X className="w-6 h-6" />
                   </button>
                 </div>
 
@@ -1032,9 +1009,7 @@ export default function EnhancedNavigation2025() {
                     <div key={item.name}>
                       <button
                         onClick={() => setActiveSubmenu(activeSubmenu === item.name ? null : item.name)}
-                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"
-                      >
-                        <div className="flex items-center space-x-3">
+                        className="flex items-center justify-between w-full text-left p-4 rounded-xl hover:bg-gray-800/50 transition-all duration-200"><div className="flex items-center space-x-3">
                           <item.icon className="w-5 h-5 text-cyan-400" />
                           <span className="text-white font-medium">{item.name}</span>
                         </div>
@@ -1051,16 +1026,12 @@ export default function EnhancedNavigation2025() {
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="ml-8 space-y-2"
-                          >
-                            {item.submenu?.map((subitem) => (
+                            className="ml-8 space-y-2">{item.submenu?.map((subitem) => (
                               <Link
                                 key={subitem.name}
                                 href={subitem.href}
                                 onClick={closeMenu}
-                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"
-                              >
-                                <h4 className="text-white font-medium">{subitem.name}</h4>
+                                className="block p-3 rounded-lg hover:bg-gray-800/50 transition-all duration-200"><h4 className="text-white font-medium">{subitem.name}</h4>
                                 <p className="text-sm text-gray-400 mt-1">{subitem.description}</p>
                               </Link>
                             ))}
@@ -1118,8 +1089,4 @@ export default function EnhancedNavigation2025() {
   )
 };
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default EnhancedNavigation2025;

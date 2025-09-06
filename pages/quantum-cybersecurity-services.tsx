@@ -83,16 +83,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6'
               className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
                 Quantum Cybersecurity
               </span>
             </motion.h1>
 
-              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
-            >
-              <span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
+              className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"><span className="bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-600 bg-clip-text text-transparent">
                 Quantum Cybersecurity
               </span>
             </motion.h1>
@@ -119,19 +115,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className='flex flex-col sm:flex-row gap-4 justify-center mb-16'
-            >
-              <a
+              className='flex flex-col sm:flex-row gap-4 justify-center mb-16'><a
                 href='#services'
                 className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-indigo-500/25'
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-            >
-              <a
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"><a
                 href="#services"
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-indigo-500/25"
-              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-            >
-              <a
+              className="flex flex-col sm:flex-row gap-4 justify-center mb-16"><a
                 href="#services"
                 className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-indigo-600 hover:to-purple-600 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg hover:shadow-indigo-500/25"
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -158,9 +148,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 1, delay: 0.6 }}
               className='grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto'
               className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                 <div className="text-4xl mb-4">🔐</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Unbreakable Encryption</h3>
                 <p className="text-gray-400 text-sm">Quantum-resistant algorithms that cannot be cracked by current or future computers.</p>
@@ -178,9 +166,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p className='text-gray-400 text-sm'>
                   Instant threat response and automated incident resolution.
                 </p>
-              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-            >
-              <div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"><div className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-6">
                 <div className="text-4xl mb-4">🔐</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Unbreakable Encryption</h3>
                 <p className="text-gray-400 text-sm">Quantum-resistant algorithms that cannot be cracked by current or future computers.</p>
@@ -215,9 +201,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   Quantum Security Solutions
                 </span>
@@ -228,9 +212,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                   Quantum Security Solutions
                 </span>
@@ -249,9 +231,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticServiceCard2026
+                  viewport={{ once: true }}><UltraFuturisticServiceCard2026
                     service={service}
                     variant='premium'
                     theme='cyberpunk'
@@ -280,17 +260,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
                   Why Quantum Security?
@@ -309,16 +283,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8'
                 className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
                 <p className="text-gray-300 mb-4">
                   Quantum computers will eventually break current encryption standards, making traditional security obsolete.
                 </p>
                 <ul className='text-gray-400 space-y-2'>
-                className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
+                className="bg-black/40 backdrop-blur-xl border border-indigo-400/30 rounded-2xl p-8"><h3 className="text-2xl font-bold text-white mb-4">The Quantum Threat</h3>
                 <p className="text-gray-300 mb-4">
                   Quantum computers will eventually break current encryption standards, making traditional security obsolete.
                 </p>
@@ -339,16 +309,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8'
                 className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
                 <p className="text-gray-300 mb-4">
                   We provide quantum-resistant security that protects against both current and future threats.
                 </p>
                 <ul className='text-gray-400 space-y-2'>
-                className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
+                className="bg-black/40 backdrop-blur-xl border border-purple-400/30 rounded-2xl p-8"><h3 className="text-2xl font-bold text-white mb-4">Our Quantum Solution</h3>
                 <p className="text-gray-300 mb-4">
                   We provide quantum-resistant security that protects against both current and future threats.
                 </p>
@@ -377,17 +343,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
                   Advanced Security Features
@@ -404,23 +364,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'>🔒</div>
+                className='text-center'><div className='text-6xl mb-4'>🔒</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Zero Trust Architecture
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Never trust, always verify approach to security.
                 </p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🔒</div>
+                className="text-center"><div className="text-6xl mb-4">🔒</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Zero Trust Architecture</h3>
                 <p className="text-gray-400 text-sm">Never trust, always verify approach to security.</p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🔒</div>
+                className="text-center"><div className="text-6xl mb-4">🔒</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Zero Trust Architecture</h3>
                 <p className="text-gray-400 text-sm">Never trust, always verify approach to security.</p>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -431,23 +385,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'>🔄</div>
+                className='text-center'><div className='text-6xl mb-4'>🔄</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Continuous Monitoring
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   24/7 threat detection and response.
                 </p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🔄</div>
+                className="text-center"><div className="text-6xl mb-4">🔄</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Continuous Monitoring</h3>
                 <p className="text-gray-400 text-sm">24/7 threat detection and response.</p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🔄</div>
+                className="text-center"><div className="text-6xl mb-4">🔄</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Continuous Monitoring</h3>
                 <p className="text-gray-400 text-sm">24/7 threat detection and response.</p>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -458,23 +406,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'>🤖</div>
+                className='text-center'><div className='text-6xl mb-4'>🤖</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   AI Automation
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Automated threat response and incident resolution.
                 </p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🤖</div>
+                className="text-center"><div className="text-6xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
                 <p className="text-gray-400 text-sm">Automated threat response and incident resolution.</p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">🤖</div>
+                className="text-center"><div className="text-6xl mb-4">🤖</div>
                 <h3 className="text-xl font-semibold text-white mb-2">AI Automation</h3>
                 <p className="text-gray-400 text-sm">Automated threat response and incident resolution.</p>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -485,23 +427,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
                 viewport={{ once: true }}
-                className='text-center'
-              >
-                <div className='text-6xl mb-4'>📊</div>
+                className='text-center'><div className='text-6xl mb-4'>📊</div>
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   Real-Time Analytics
                 </h3>
                 <p className='text-gray-400 text-sm'>
                   Comprehensive security insights and reporting.
                 </p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">📊</div>
+                className="text-center"><div className="text-6xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-Time Analytics</h3>
                 <p className="text-gray-400 text-sm">Comprehensive security insights and reporting.</p>
-                className="text-center"
-              >
-                <div className="text-6xl mb-4">📊</div>
+                className="text-center"><div className="text-6xl mb-4">📊</div>
                 <h3 className="text-xl font-semibold text-white mb-2">Real-Time Analytics</h3>
                 <p className="text-gray-400 text-sm">Comprehensive security insights and reporting.</p>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -522,9 +458,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent'>
               <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">

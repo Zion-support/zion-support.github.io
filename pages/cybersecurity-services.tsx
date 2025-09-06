@@ -292,9 +292,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='max-w-4xl mx-auto'
             className="max-w-4xl mx-auto"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
               <Shield className="w-5 h-5 text-red-400" />
               <span className="text-red-400 font-medium">Cybersecurity Services</span>
             </div>
@@ -324,9 +322,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <button className="border-2 border-red-500/50 hover:border-red-400 text-red-400 hover:text-red-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-red-500/10 flex items-center space-x-2">
                   <span>Get Protected</span>
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-            className="max-w-4xl mx-auto"
-          >
-            <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
+            className="max-w-4xl mx-auto"><div className="inline-flex items-center space-x-2 bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 rounded-full px-6 py-3 mb-8">
               <Shield className="w-5 h-5 text-red-400" />
               <span className="text-red-400 font-medium">Cybersecurity Services</span>
             </div>
@@ -374,9 +370,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         </div>
         <div
           className='absolute bottom-40 left-20 opacity-25 animate-float'
-          style={{ animationDelay: '2s' }}
-        >
-          <div className='w-3 h-3 bg-purple-400 rounded-full'></div>
+          style={{ animationDelay: '2s' }}><div className='w-3 h-3 bg-purple-400 rounded-full'></div>
         
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 opacity-20 animate-float">
@@ -396,9 +390,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       {/* Service Highlights */}
       <section
         id='services'
-        className='py-20 bg-gradient-to-b from-black to-gray-900'
-      >
-        <div className='container mx-auto px-4'>
+        className='py-20 bg-gradient-to-b from-black to-gray-900'><div className='container mx-auto px-4'>
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
@@ -411,9 +403,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -422,9 +412,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cybersecurity <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Services</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -445,9 +433,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
                 
@@ -458,12 +444,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {service.features.map((feature, featureIndex) => (
                     <li
                       key={featureIndex}
-                      className='flex items-center text-gray-300'
-                    >
-                      <CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />
-                className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                      className='flex items-center text-gray-300'><CheckCircle className='w-5 h-5 text-red-400 mr-3 flex-shrink-0' />
+                className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"><div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
                 </div>
                 
@@ -502,9 +484,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Security</span> Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -513,9 +493,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Security</span> Portfolio
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -536,9 +514,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='animated-border'
                 className="animated-border"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="h-full">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="h-full">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <span className="text-3xl">{service.icon}</span>
@@ -549,9 +525,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                     {service.popular && (
                       <span className='bg-gradient-to-r from-red-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
-                className="animated-border"
-              >
-                <div className="h-full">
+                className="animated-border"><div className="h-full">
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center space-x-3">
                       <span className="text-3xl">{service.icon}</span>
@@ -622,10 +596,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
                     <Link
                       href='/contact'
-                      className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
-                    >
-                  
-                  <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
+                      className='bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'><p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                   
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-red-400">
@@ -693,9 +664,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -704,9 +673,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Our Security</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -727,9 +694,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='text-center group'
                 className="text-center group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
 
@@ -739,9 +704,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
                 </p>
-                className="text-center group"
-              >
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                className="text-center group"><div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
                 
@@ -772,9 +735,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='max-w-4xl mx-auto'
             className="max-w-4xl mx-auto"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -810,9 +771,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <div>
                 <div className='text-3xl font-bold text-red-400 mb-2'>450%</div>
                 <div className='text-gray-300'>ROI Improvement</div>
-            className="max-w-4xl mx-auto"
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+            className="max-w-4xl mx-auto"><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">Secure</span> Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">

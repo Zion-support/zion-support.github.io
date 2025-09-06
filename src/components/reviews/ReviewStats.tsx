@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Star } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Star } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -34,11 +30,9 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 <Star
                   key={i}
                   className={`h-4 w-4 ${
-<<<<<<< HEAD
                     i <= Math.round(averageRating)
                       ? 'fill-yellow-400 text-yellow-400'
                       : 'text-gray-300'
-=======
 
 import { Star } from 'lucide-react'
 import { Progress } from "@/components/ui/progress";
@@ -58,7 +52,6 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
     return (count / totalReviews) * 100
   };
 
-
   return (
     <div className="bg-card border rounded-lg p-4">
       <div className="flex items-center justify-between mb-4">
@@ -71,36 +64,22 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                   key={i}
                   className={`h-4 w-4 ${
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   }`}
                 />
               ))}
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <span className='text-sm text-muted-foreground'>
               {totalReviews} {totalReviews === 1 ? 'review' : 'reviews'}
-=======
             <span className="text-sm text-muted-foreground">
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <span className="text-sm text-muted-foreground">
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </span>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {ratingDistribution && (
         <div className="space-y-2">
           {[5, 4, 3, 2, 1].map((rating) => (
@@ -111,9 +90,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 value={getPercentage(ratingDistribution[rating] || 0)} 
                 className="h-2" 
               />
-<<<<<<< HEAD
               <div className='w-8 text-xs text-muted-foreground'>
-=======
       
       {ratingDistribution && (
         <div className="space-y-2">
@@ -126,10 +103,7 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
                 className="h-2" 
               />
               <div className="w-8 text-xs text-muted-foreground">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="w-8 text-xs text-muted-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {ratingDistribution[rating] || 0}
               </div>
             </div>
@@ -138,15 +112,9 @@ export function ReviewStats({ averageRating, totalReviews, ratingDistribution }:
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }</div>) ;
 }</div>) ;
 }"
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

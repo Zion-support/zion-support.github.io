@@ -1,10 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function AnimatedBackground() {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Gradient Background */}
@@ -66,8 +62,6 @@ export default function AnimatedBackground() {
       />
     </div>
   );
-<<<<<<< HEAD
-=======
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">
       {/* Gradient Background */}
@@ -132,9 +126,6 @@ export default function AnimatedBackground() {
 };
 
 export default AnimatedBackground;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 };
 
 export default AnimatedBackground;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

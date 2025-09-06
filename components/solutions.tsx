@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
   ] 
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
@@ -220,9 +217,7 @@ const SolutionsPage: React.FC = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              {stats.map((stat, index) => (
+              transition={{ duration: 0.8, delay: 0.4 }}>{stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-2 text-cyan-400">
                     {stat.icon}
@@ -243,9 +238,7 @@ const SolutionsPage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Solution Portfolio
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -261,9 +254,7 @@ const SolutionsPage: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  viewport={{ once: true }}><div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {solution.icon}
                   </div>
                   
@@ -286,9 +277,7 @@ const SolutionsPage: React.FC = () => {
                   
                   <a
                     href={solution.href}
-                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"
-                  >
-                    <span>Learn More</span>
+                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"><span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </motion.div>
@@ -327,9 +316,7 @@ const SolutionsPage: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -344,9 +331,7 @@ const SolutionsPage: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-3xl font-bold text-white mb-8 text-center">
+                viewport={{ once: true }}><h3 className="text-3xl font-bold text-white mb-8 text-center">
                   {category.category}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -359,9 +344,7 @@ const SolutionsPage: React.FC = () => {
                       viewport={{ once: true }}
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${
                         solution.featured ? 'border-green-500/30' : 'border-gray-700/50'
-                      }`}
-                    >
-                      {solution.featured && (
+                      }`}>{solution.featured && (
                         <div className="flex items-center mb-4">
                           <Star className="w-5 h-5 text-yellow-400 mr-2" />
                           <span className="text-yellow-400 text-sm font-semibold">Featured</span>
@@ -394,9 +377,7 @@ const SolutionsPage: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Industry?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -422,10 +403,8 @@ const SolutionsPage: React.FC = () => {
       </section>
     </Layout>
   )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
-<<<<<<< HEAD
 }whileInView= {
   {
   opacity: 1, y: 0 
@@ -481,7 +460,6 @@ const SolutionsPage: React.FC = () => {
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our industry-specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/services" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > View All Services </a> </div> </motion.div> </div> </section> </Layout>) 
 };
 export default Solutions;
-=======
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Link from 'next/link';
@@ -697,9 +675,7 @@ const SolutionsPage: React.FC = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              {stats.map((stat, index) => (
+              transition={{ duration: 0.8, delay: 0.4 }}>{stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-2 text-cyan-400">
                     {stat.icon}
@@ -720,9 +696,7 @@ const SolutionsPage: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Our Solution Portfolio
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -738,9 +712,7 @@ const SolutionsPage: React.FC = () => {
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  viewport={{ once: true }}><div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-xl flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     {solution.icon}
                   </div>
                   
@@ -763,9 +735,7 @@ const SolutionsPage: React.FC = () => {
                   
                   <a
                     href={solution.href}
-                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"
-                  >
-                    <span>Learn More</span>
+                    className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-300 group-hover:translate-x-1"><span>Learn More</span>
                     <ArrowRight className="w-4 h-4" />
                   </a>
                 </motion.div>
@@ -804,9 +774,7 @@ const SolutionsPage: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Industry-Specific Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -821,9 +789,7 @@ const SolutionsPage: React.FC = () => {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h3 className="text-3xl font-bold text-white mb-8 text-center">
+                viewport={{ once: true }}><h3 className="text-3xl font-bold text-white mb-8 text-center">
                   {category.category}
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -836,9 +802,7 @@ const SolutionsPage: React.FC = () => {
                       viewport={{ once: true }}
                       className={`bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 ${
                         solution.featured ? 'border-green-500/30' : 'border-gray-700/50'
-                      }`}
-                    >
-                      {solution.featured && (
+                      }`}>{solution.featured && (
                         <div className="flex items-center mb-4">
                           <Star className="w-5 h-5 text-yellow-400 mr-2" />
                           <span className="text-yellow-400 text-sm font-semibold">Featured</span>
@@ -871,9 +835,7 @@ const SolutionsPage: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Industry?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -902,7 +864,4 @@ const SolutionsPage: React.FC = () => {
 };
 
 export default Solutions;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default Solutions;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

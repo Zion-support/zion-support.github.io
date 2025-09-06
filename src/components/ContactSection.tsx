@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
@@ -8,7 +6,6 @@ import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/components/ui/use-toast';
 import z from 'zod';
 import { Mail } from 'lucide-react';
-=======
 
 import { useState } from "react";
 import { GradientHeading } from "@/components/GradientHeading";
@@ -18,7 +15,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import z from "zod";
 import { Mail } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -206,9 +202,7 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    disabled={isSubmitting}>{isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
                   {submitted && (
                     <p className="text-green-500 text-center mt-2">Thank you! We'll be in touch.</p>
@@ -221,7 +215,6 @@ export function ContactSection() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 
 }setErrors (fieldErrors);
 toast ({;
@@ -240,15 +233,10 @@ description: err.message;
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-1" > Email </label> <Input) ";
 }</div> </div> <div> <label htmlFor="subject" className="block text-sm font-medium text-zion-slate-light mb-1" > Subject </label> <Input) ";
 }</div> <div> <label htmlFor="message" className="block text-sm font-medium text-zion-slate-light mb-1" > Message </label> <Textarea) ;
-}</div> <div> <Button > {';
+}</div> <div> <Button>{';
   isSubmitting ? 'Sending...' : 'Send Message' ;
 }</Button>) ;
 }</div> </form> </div> </div> </div> </div> </section>) ;
 }'"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
 import { ReviewStats } from '@/components/reviews/ReviewStats';
@@ -7,7 +5,6 @@ import { ReviewsList } from '@/components/reviews/ReviewsList';
 import { useReviews } from '@/hooks/useReviews';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-=======
 
 import { useState, useEffect } from "react";
 import { Star } from 'lucide-react'
@@ -16,7 +13,6 @@ import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { useReviews } from "@/hooks/useReviews";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ProfileRatingsProps {
   userId: string,
@@ -49,11 +45,9 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   }, [userId]);
   
   return (
-<<<<<<< HEAD
     <div className='space-y-6'>
       <div className='flex flex-col md:flex-row gap-6'>
         <div className='md:w-1/3'>
-=======
 
 import { useState, useEffect } from "react";
 import { Star } from 'lucide-react'
@@ -68,7 +62,6 @@ interface ProfileRatingsProps {
   averageRating?: number;
   ratingCount?: number
 }
-
 
 export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: ProfileRatingsProps) { const { reviews, isLoading, fetchUserReviews, reportReview  } = useReviews(),
   const [ ratingDistribution, setRatingDistribution ] = useState<Record<number, number>>({}),
@@ -94,25 +87,19 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
     fetchUserReviews(userId)
   }, [userId]);
 
-
   return (
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="md:w-1/3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <ReviewStats
             averageRating={averageRating}
             totalReviews={ratingCount}
             ratingDistribution={ratingDistribution}
           />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className='md:w-2/3'>
           <Tabs defaultValue='all'>
@@ -125,7 +112,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>
 
             <TabsContent value='all'>
-=======
         
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
@@ -136,8 +122,6 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>
             
             <TabsContent value="all">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         
         <div className="md:w-2/3">
           <Tabs defaultValue="all">
@@ -148,53 +132,40 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
             </TabsList>
             
             <TabsContent value="all">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <ReviewsList
                 reviews={reviews}
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <TabsContent value='positive'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating >= 4)}
-=======
             
             <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating >= 4)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <TabsContent value="positive">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating >= 4)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
             </TabsContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <TabsContent value='critical'>
               <ReviewsList
                 reviews={reviews.filter(r => r.rating < 4)}
-=======
             
             <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <TabsContent value="critical">
               <ReviewsList
                 reviews={reviews.filter((r) => r.rating < 4)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 isLoading={isLoading}
                 onReportReview={reportReview}
               />
@@ -204,29 +175,27 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }, [reviews]);
-//Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {;
+//Fetch reviews when component mounts return (<div className="space-y-6"><div className="flex flex-col md:flex-row gap-6"><div className="md:w-1/3"><ReviewStats averageRating= {;
   averageRating ;
 }totalReviews= {;
   ratingCount ;
 }ratingDistribution= {;
   ratingDistribution ";
-}/> </div> </TabsList> <TabsContent value="all" > <ReviewsList reviews= {;
+}/> </div> </TabsList> <TabsContent value="all"><ReviewsList reviews= {;
   reviews ;
 }isLoading= {;
   isLoading ;
 }onReportReview= {;
   reportReview ";
-}/> </TabsContent> <TabsContent value="positive" > <ReviewsList reviews= {;
+}/> </TabsContent> <TabsContent value="positive"><ReviewsList reviews= {;
   reviews.filter ( (r) => r.rating >= 4) ;
 }isLoading= {;
   isLoading ;
 }onReportReview= {;
   reportReview ";
-}/> </TabsContent> <TabsContent value="critical" > <ReviewsList reviews= {;
+}/> </TabsContent> <TabsContent value="critical"><ReviewsList reviews= {;
   reviews.filter ( (r) => r.rating < 4) ;
 }isLoading= {;
   isLoading ;
@@ -234,9 +203,5 @@ export function ProfileRatings({ userId, averageRating = 0, ratingCount = 0 }: P
   reportReview ;
 }/> </TabsContent> </Tabs> </div> </div> </div>) ;
 }"
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

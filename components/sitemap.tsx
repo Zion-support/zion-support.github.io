@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function SitemapPage() {
   const links = [
@@ -36,9 +34,7 @@ export default function SitemapPage() {
           {links.map(l => (
             <li
               key={l.href}
-              className='p-4 rounded-xl bg-black/40 border border-cyan-500/20'
-            >
-              <a className='text-cyan-300' href={l.href}>
+              className='p-4 rounded-xl bg-black/40 border border-cyan-500/20'><a className='text-cyan-300' href={l.href}>
                 {l.name}
               </a>
             </li>
@@ -47,11 +43,8 @@ export default function SitemapPage() {
       </div>
     </div>
   );
-=======
 export default function SitemapPage() {
-=======
 export default function SitemapPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	const links = [
 		{ name: 'Home', href: '/' },
 		{ name: 'Services', href: '/services' },
@@ -81,7 +74,3 @@ export default function SitemapPage() {
 		</div>
 	);
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

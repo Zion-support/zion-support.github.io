@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -185,9 +184,7 @@ export function QuickActions() {
           variant="outline"
           size="sm"
           onClick={() => setIsVisible(true)}
-          className="bg-background/80 backdrop-blur-sm"
-        >
-          <Settings className="w-4 h-4 mr-2" />
+          className="bg-background/80 backdrop-blur-sm"><Settings className="w-4 h-4 mr-2" />
           Quick Actions
         </Button>
       </div>
@@ -229,9 +226,7 @@ export function QuickActions() {
                       size="sm"
                       onClick={() => executeAction(action.id, action.action)}
                       disabled={isProcessing === action.id}
-                      className="w-full justify-start h-auto p-3"
-                    >
-                      <div className="flex items-start gap-3 w-full">
+                      className="w-full justify-start h-auto p-3"><div className="flex items-start gap-3 w-full">
                         <div className="mt-0.5">
                           {isProcessing === action.id ? (
                             <RefreshCw className="w-4 h-4 animate-spin" />
@@ -256,24 +251,13 @@ export function QuickActions() {
       </Card>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
 
-
-
-<<<<<<< HEAD
         ];
         
-<<<<<<< HEAD
 
         
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

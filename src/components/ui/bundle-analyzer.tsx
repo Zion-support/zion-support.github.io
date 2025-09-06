@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -67,31 +66,18 @@ export function BundleAnalyzer() {
       // Calculate bundle information
       let totalSize = 0;
       let totalLoadTime = 0;
-<<<<<<< HEAD
       const chunkData: ChunkInfo[] = [];
-=======
 
-<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
   const isAllowed = process.env.NODE_ENV !== 'production' || isAdmin;
 
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       const chunkData: ChunkInfo[] = [],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       scriptEntries.forEach(entry => {
         const size = entry.transferSize || entry.encodedBodySize || 0;
         const loadTime = entry.responseEnd - entry.requestStart;
         const cached = entry.transferSize === 0;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         totalSize += size;
         totalLoadTime += loadTime;
 
@@ -154,9 +140,7 @@ export function BundleAnalyzer() {
           variant="outline"
           size="sm"
           onClick={toggleAnalyzer}
-          className="bg-background/80 backdrop-blur-sm"
-        >
-          <Package className="w-4 h-4 mr-2" />
+          className="bg-background/80 backdrop-blur-sm"><Package className="w-4 h-4 mr-2" />
           Bundle Analyzer
         </Button>
       </div>
@@ -178,9 +162,7 @@ export function BundleAnalyzer() {
                 size="sm"
                 onClick={collectBundleInfo}
                 disabled={isCollecting}
-                className="h-6 w-6 p-0"
-              >
-                <Zap className="w-3 h-3" />
+                className="h-6 w-6 p-0"><Zap className="w-3 h-3" />
               </Button>
               <Button
                 variant="ghost"
@@ -269,12 +251,6 @@ export function BundleAnalyzer() {
       </Card>
     </div>
   );
-<<<<<<< HEAD
-=======
         
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

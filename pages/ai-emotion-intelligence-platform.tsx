@@ -280,9 +280,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6'
-              >
-                <Sparkles className='w-4 h-4 mr-2' />
+                className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 text-pink-300 text-sm font-medium mb-6'><Sparkles className='w-4 h-4 mr-2' />
     <>
       <Head>
         <title>AI Emotion Intelligence Platform - Zion Tech Group</title>
@@ -317,9 +315,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className='text-5xl md:text-7xl font-bold mb-6'
-              >
-                <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
+                className='text-5xl md:text-7xl font-bold mb-6'><span className='bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
                 transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
                 transition={{ duration: 0.8, delay: 0.4 }} className="text-5xl md:text-7xl font-bold mb-6">
@@ -411,9 +407,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
-              className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'
-            >
-              <div className='text-center'>
+              className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'><div className='text-center'>
                 <div className='text-3xl md:text-4xl font-bold text-pink-400 mb-2'>
                   27
                 </div>
@@ -475,9 +469,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -508,9 +500,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className='group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10'
-                >
-                  <div className='w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
+                  className='group p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300 transform hover:scale-105 hover:bg-white/10'><div className='w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
                   <h3 className='text-xl font-semibold text-white mb-4'>
@@ -554,9 +544,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -587,9 +575,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className='p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300'
-                >
-                  <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6'>
+                  className='p-8 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-pink-500/30 transition-all duration-300'><div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6'>
                     <useCase.icon className='w-8 h-8 text-white' />
                   </div>
                   <h3 className='text-2xl font-semibold text-white mb-4'>
@@ -634,9 +620,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className='text-center mb-16'
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              className='text-center mb-16'><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Choose Your Plan
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -670,9 +654,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     plan.popular
                       ? 'bg-gradient-to-br from-pink-500/10 to-purple-500/10 border-pink-500/50 shadow-2xl shadow-pink-500/25'
                       : 'bg-gradient-to-br from-white/5 to-white/10 border-white/10 hover:border-pink-500/30'
-                  }`}
-                >
-                  {plan.popular && (
+                  }`}>{plan.popular && (
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                       <span className='px-4 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-sm font-semibold rounded-full'>
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -708,9 +690,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     {plan.features.map((feature, featureIndex) => (
                       <li
                         key={featureIndex}
-                        className='flex items-center space-x-3'
-                      >
-                        <CheckCircle className='w-5 h-5 text-pink-400 flex-shrink-0' />
+                        className='flex items-center space-x-3'><CheckCircle className='w-5 h-5 text-pink-400 flex-shrink-0' />
                         <span className='text-gray-300'>{feature}</span>
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -740,9 +720,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       plan.popular
                         ? 'bg-gradient-to-r from-pink-500 to-purple-500 text-white hover:from-pink-600 hover:to-purple-600'
                         : 'border border-pink-500/30 text-pink-300 hover:bg-pink-500/10 hover:border-pink-500/50'
-                    }`}
-                  >
-                    {plan.cta}
+                    }`}>{plan.cta}
                   </Link>
                 </motion.div>
               ))}
@@ -762,9 +740,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Get Started?
@@ -822,9 +798,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <span className='text-gray-300 text-sm'>Call Us</span>
                   <a
                     href={`tel:${contactInfo.mobile}`}
-                    className='text-white font-semibold hover:text-pink-400 transition-colors'
-                  >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    className='text-white font-semibold hover:text-pink-400 transition-colors'><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
                   <span className="text-gray-300 text-sm">Call Us</span>
@@ -845,9 +819,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <span className='text-gray-300 text-sm'>Visit Us</span>
                   <a
                     href={contactInfo.website}
-                    className='text-white font-semibold hover:text-cyan-400 transition-colors'
-                  >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    className='text-white font-semibold hover:text-cyan-400 transition-colors'><div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
                   <span className="text-gray-300 text-sm">Call Us</span>

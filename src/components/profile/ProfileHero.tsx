@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Badge } from '@/components/ui/badge';
 import { Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -14,10 +10,8 @@ import { Badge } from "@/components/ui/badge";
 import { Star } from 'lucide-react'
 import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
-<<<<<<< HEAD
   name: string;
   title: string;
-=======
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
@@ -27,24 +21,17 @@ import { cn } from "@/lib/utils";
 interface ProfileHeroProps {
   name: string,
   title: string,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   name: string,
   title: string,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
   profileType: 'service' | 'talent';
-=======
   profileType: 'service' | 'talent'
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function ProfileHero({
   name;
@@ -58,11 +45,9 @@ export function ProfileHero({
   profileType
 }: ProfileHeroProps) {
   return (
-<<<<<<< HEAD
     <div className='w-full overflow-hidden'>
       <div className='relative'>
         <AspectRatio ratio={3 / 1} className='bg-zion-blue-light'>
-=======
   profileType: 'service' | 'talent'
 }
 
@@ -81,24 +66,17 @@ export function ProfileHero({
     <div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     <div className="w-full overflow-hidden">
       <div className="relative">
         <AspectRatio ratio={3/1} className="bg-zion-blue-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {coverImageUrl ? (
             <img
               src={coverImageUrl}
               alt={`${name} cover`}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='w-full h-full object-cover'
               loading='lazy'
-=======
               className="w-full h-full object-cover"
               loading="lazy"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             />
           ) : (
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
@@ -111,9 +89,7 @@ export function ProfileHero({
               {avatarUrl ? (
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
-<<<<<<< HEAD
                 <AvatarFallback className='bg-zion-purple/20 text-zion-cyan text-xl'>
-=======
               className="w-full h-full object-cover"
               loading="lazy"
             />
@@ -129,16 +105,11 @@ export function ProfileHero({
                 <AvatarImage src={avatarUrl} alt={name} />
               ) : (
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <AvatarFallback className="bg-zion-purple/20 text-zion-cyan text-xl">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {name.substring(0, 2).toUpperCase()}
                 </AvatarFallback>
               )}
             </Avatar>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
             <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>
               <div className='flex flex-wrap items-center gap-2 mb-1'>
@@ -152,7 +123,6 @@ export function ProfileHero({
                     profileType === 'service'
                       ? 'bg-zion-purple/10'
                       : 'bg-zion-cyan/10'
-=======
             
             <div className = "mt-4 md: mt-0 md:ml-6 md:mb-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
@@ -162,8 +132,6 @@ export function ProfileHero({
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan";
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <div className="mt-4 md: mt-0 md:ml-6 md:mb-1">
               <div className="flex flex-wrap items-center gap-2 mb-1">
@@ -173,26 +141,19 @@ export function ProfileHero({
                   className={cn(
                     "ml-2 border-zion-purple/50 text-zion-cyan";
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  )}
-                >
-                  {profileType === 'service' ? 'Service Provider' : 'Talent'}
+                  )}>{profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <h2 className='text-lg md:text-xl text-zion-slate-light mb-1'>
                 {title}
               </h2>
 
               <div className='flex flex-wrap items-center gap-3 mt-2'>
-=======
               
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
@@ -208,9 +169,7 @@ export function ProfileHero({
                 )}
                 
                 {aiScore && (
-<<<<<<< HEAD
                   <div className='px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>
-=======
               
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
               
@@ -231,10 +190,7 @@ export function ProfileHero({
                 
                 {aiScore && (
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     AI Match: {aiScore}%
                   </div>
                 )}
@@ -245,11 +201,4 @@ export function ProfileHero({
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

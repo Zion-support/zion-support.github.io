@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Header } from '@/components/Header';
 import { NextSeo } from '@/components/NextSeo';
@@ -95,9 +94,7 @@ export default function GlobalMapPage() {
                     <TooltipTrigger asChild>
                       <div
                         className={`absolute ${color} rounded-full p-1`}
-                        style={{ left: x, top: y }}
-                      >
-                        <MapPin className="w-4 h-4 text-white" />
+                        style={{ left: x, top: y }}><MapPin className="w-4 h-4 text-white" />
                       </div>
                     </TooltipTrigger>
                     <TooltipContent>
@@ -139,16 +136,9 @@ export default function GlobalMapPage() {
       </main>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
   const width = 800;
   const height = 400;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

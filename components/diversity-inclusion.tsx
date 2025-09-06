@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function DiversityInclusionPage() {
   return (
@@ -33,11 +31,8 @@ export default function DiversityInclusionPage() {
       </div>
     </div>
   );
-=======
 export default function DiversityInclusionPage() {
-=======
 export default function DiversityInclusionPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -56,9 +51,5 @@ export default function DiversityInclusionPage() {
 			</div>
 		</div>
 	);
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

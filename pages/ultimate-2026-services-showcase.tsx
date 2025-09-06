@@ -297,9 +297,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+            transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ultimate 2026
@@ -338,9 +336,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </Link>
               <Link
                 href='/contact'
-                className='inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300'
-              >
-                <Phone className='w-5 h-5 mr-2' />
+                className='inline-flex items-center px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-full hover:bg-cyan-400 hover:text-black transition-all duration-300'><Phone className='w-5 h-5 mr-2' />
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Ultimate 2026
               <br />
@@ -420,9 +416,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </span>
             <Link
               href='/contact'
-              className='bg-white text-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors'
-            >
-        <div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
+              className='bg-white text-purple-600 px-4 py-2 rounded-full text-sm font-semibold hover:bg-gray-100 transition-colors'><div className="absolute top-20 left-20 w-32 h-32 bg-cyan-500/20 rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-10 w-24 h-24 bg-pink-500/20 rounded-full blur-xl animate-pulse delay-500"></div>
       </section>
@@ -499,9 +493,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className='group relative'
-              >
-                <div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105'>
+                className='group relative'><div className='relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105'>
                   <div className='absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
                 transition={{ duration: 0.8, delay: index * 0.1 }} className="group relative">
                 <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
@@ -666,9 +658,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedCategory}
                   onChange={e => setSelectedCategory(e.target.value)}
-                  className='appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'
-                >
-                  {categories.map(category => (
+                  className='appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'>{categories.map(category => (
             <div className="flex flex-wrap items-center justify-center gap-4">
               {/* Category Filter */}
               <div className="relative">
@@ -694,9 +684,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedPriceRange}
                   onChange={e => setSelectedPriceRange(e.target.value)}
-                  className='appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'
-                >
-                  {priceRanges.map(range => (
+                  className='appearance-none bg-gray-800 border border-gray-700 rounded-lg px-4 py-2 text-white focus:outline-none focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 transition-all'>{priceRanges.map(range => (
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 pointer-events-none" />
               </div>
 
@@ -756,18 +744,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   onClick={() => setViewMode('grid')}
-                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
-                >
-                  <Grid className='w-4 h-4' />
+                  className={`p-2 rounded ${viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}><Grid className='w-4 h-4' />
                   <Grid className="w-4 h-4" />
                   <Grid className="w-4 h-4" />
 ursor/integrate-build-improve-and-re-verify-b76c
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
-                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}
-                >
-                  <List className='w-4 h-4' />
+                  className={`p-2 rounded ${viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-gray-400 hover:text-white'}`}><List className='w-4 h-4' />
                   <List className="w-4 h-4" />
                   <List className="w-4 h-4" />
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -782,9 +766,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewMode === 'grid'
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
-            }
-          >
-          <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
+            }><div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
           <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
 ursor/integrate-build-improve-and-re-verify-b76c
             {filteredServices.map((service, index) => (
@@ -799,9 +781,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'
                 }
                 className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                {viewMode === 'grid' ? (
+ursor/integrate-build-improve-and-re-verify-b76c>{viewMode === 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -811,9 +791,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {service.popular && (
                           <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-3 py-1 rounded-full text-xs font-semibold flex items-center'>
                             <Star className='w-3 h-3 mr-1' />
-                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}
-              >
-                {viewMode === 'grid' ? (
+                className={viewMode === 'grid' ? 'group relative' : 'group relative bg-gray-800 rounded-2xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300'}>{viewMode === 'grid' ? (
                   <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800 to-gray-900 p-8 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 transform hover:scale-105">
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -980,9 +958,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className='text-center py-20'
-            >
-              <div className='text-6xl mb-4'>🔍</div>
+              className='text-center py-20'><div className='text-6xl mb-4'>🔍</div>
               <h3 className='text-2xl font-bold text-white mb-2'>
                 No services found
               </h3>
@@ -1011,9 +987,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+            transition={{ duration: 0.8 }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Business with 2026 Innovations?
@@ -1030,9 +1004,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </Link>
               <Link
                 href='/pricing'
-                className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300'
-              >
-                <DollarSign className='w-5 h-5 mr-2' />
+                className='inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-600 transition-all duration-300'><DollarSign className='w-5 h-5 mr-2' />
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business with 2026 Innovations?
             </h2>

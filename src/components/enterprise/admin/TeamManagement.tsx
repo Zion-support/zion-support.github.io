@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Table,
@@ -24,8 +22,6 @@ import { Label } from '@/components/ui/label';
 import { Badge } from '@/components/ui/badge';
 import { Trash, Mail, UserPlus } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import {
@@ -153,9 +149,7 @@ export function TeamManagement() {
                 </Label>
                 <select
                   id="role"
-                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                >
-                  <option value="admin">Admin</option>
+                  className="col-span-3 flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"><option value="admin">Admin</option>
                   <option value="recruiter">Recruiter</option>
                   <option value="manager">Manager</option>
                   <option value="viewer">Viewer</option>
@@ -207,9 +201,7 @@ export function TeamManagement() {
                 <TableCell>{member.role}</TableCell>
                 <TableCell>
                   <Badge
-                    variant={member.status === "active" ? "default" : "outline"}
-                  >
-                    {member.status}
+                    variant={member.status === "active" ? "default" : "outline"}>{member.status}
                   </Badge>
                 </TableCell>
                 <TableCell>{member.lastActive}</TableCell>
@@ -219,9 +211,7 @@ export function TeamManagement() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => handleResendInvite(member.email)}
-                      >
-                        <Mail className="h-4 w-4 mr-1" />
+                        onClick={() => handleResendInvite(member.email)}><Mail className="h-4 w-4 mr-1" />
                         Resend
                       </Button>
                     ) : (
@@ -229,9 +219,7 @@ export function TeamManagement() {
                         variant="ghost"
                         size="sm"
                         className="text-destructive hover:text-destructive"
-                        onClick={() => handleRemoveMember(member.id)}
-                      >
-                        <Trash className="h-4 w-4" />
+                        onClick={() => handleRemoveMember(member.id)}><Trash className="h-4 w-4" />
                       </Button>
                     )}
                   </div>
@@ -243,7 +231,6 @@ export function TeamManagement() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
   //In a real app, this would make an API call to remove the member toast ({;
   ;
@@ -258,7 +245,7 @@ export function TeamManagement() {
 }> <TableCell> .join ("") ;
 }</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {;
   member.role ;
-}</TableCell> <TableCell> <Badge > {;
+}</TableCell> <TableCell> <Badge>{;
   member.status ;
 }</Badge> </TableCell> <TableCell> {;
   member.lastActive ";
@@ -270,15 +257,7 @@ export function TeamManagement() {
 }</div> </TableCell> </TableRow>) ) ;
 }</TableBody> </Table> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
       description: `An invitation has been sent to ${newMemberEmail}`}),
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

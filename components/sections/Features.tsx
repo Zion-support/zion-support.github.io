@@ -1,11 +1,7 @@
 import React from 'react';
 import Card from '../ui/Card';
 import { Zap } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -45,9 +41,7 @@ const Features: React.FC<FeaturesProps> = ({
           <h2 className="text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight">
             {title}
           </h2>
-<<<<<<< HEAD
           <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
-=======
 interface Feature {
   icon: React.ReactNode,
   title: string,
@@ -87,10 +81,7 @@ const Features: React.FC<FeaturesProps> = ({
             {title}
           </h2>
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {subtitle}
           </p>
         </div>
@@ -100,16 +91,10 @@ const Features: React.FC<FeaturesProps> = ({
           {features.map((feature, index) => (
             <Card
               key={index}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='text-center group bg-gray-900/50 border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1'
               style={{ animationDelay: `${index * 0.1 + 0.2}s` }}
-=======
               className="text-center group bg-gray-900/50 border border-gray-800 hover: border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-              style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="relative">
+              style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}><div className="relative">
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
                   {feature.icon}
                 </div>
@@ -118,13 +103,9 @@ const Features: React.FC<FeaturesProps> = ({
               <h3 className="text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300">
                 {feature.title}
               </h3>
-<<<<<<< HEAD
               <p className='text-gray-400 leading-relaxed'>
-=======
               className="text-center group bg-gray-900/50 border border-gray-800 hover: border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300 hover:-translate-y-1"
-              style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}
-            >
-              <div className="relative">
+              style={{ animationDelay: `${(index * 0.1) + 0.2}s` }}><div className="relative">
                 <div className={`w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg bg-gradient-to-br ${feature.color} shadow-xl`}>
                   {feature.icon}
                 </div>
@@ -134,10 +115,7 @@ const Features: React.FC<FeaturesProps> = ({
                 {feature.title}
               </h3>
               <p className="text-gray-400 leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-gray-400 leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {feature.description}
               </p>
             </Card>
@@ -145,21 +123,15 @@ const Features: React.FC<FeaturesProps> = ({
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default Features;
-=======
   )
 };
 
 export default Features;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default Features;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

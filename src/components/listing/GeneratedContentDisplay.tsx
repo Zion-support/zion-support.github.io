@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -11,14 +9,12 @@ import {
   CardHeader,
   CardTitle,;
 } from '@/components/ui/card';
-=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface GeneratedContent {
   description: string,
@@ -51,12 +47,10 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Tags</h3>
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
-<<<<<<< HEAD
               <Badge
                 key={index}
                 className='bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30'
               >
-=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -98,21 +92,13 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
           <div className="flex flex-wrap gap-2">
             {content.tags.map((tag, index) => (
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Badge key={index} className="bg-zion-purple/20 text-zion-purple hover:bg-zion-purple/30">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {tag}
               </Badge>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
           <p className="text-white">
@@ -121,12 +107,10 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </div>
         
         <div>
-<<<<<<< HEAD
           <h3 className='text-sm font-medium text-zion-slate-light mb-2'>
             Key Selling Points
           </h3>
           <ul className='list-disc pl-5 text-white space-y-1'>
-=======
         
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Suggested Price Range</h3>
@@ -138,11 +122,8 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         <div>
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <h3 className="text-sm font-medium text-zion-slate-light mb-2">Key Selling Points</h3>
           <ul className="list-disc pl-5 text-white space-y-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {content.keyPoints.map((point, index) => (
               <li key={index}>{point}</li>
             ))}
@@ -152,33 +133,20 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
       <CardFooter>
         <Button
           onClick={onApply}
-<<<<<<< HEAD
-<<<<<<< HEAD
           className='w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover:from-zion-cyan-light hover:to-zion-cyan text-white'
         >
           Apply to My Listing
           <ArrowRight className='ml-2 h-4 w-4' />
-=======
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           className="w-full bg-gradient-to-r from-zion-cyan to-zion-cyan-dark hover: from-zion-cyan-light hover:to-zion-cyan text-white"
         >
           Apply to My Listing
           <ArrowRight className="ml-2 h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </Button>
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

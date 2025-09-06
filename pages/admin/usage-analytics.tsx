@@ -209,9 +209,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <select
               value={userType}
               onChange={e => setUserType(e.target.value)}
-              className='w-full border rounded px-2 py-1 bg-transparent'
-            >
-              <option value='all'>All</option>
+              className='w-full border rounded px-2 py-1 bg-transparent'><option value='all'>All</option>
               <option value='freelancer'>Freelancer</option>
               <option value='b2b'>B2B</option>
               <option value='hiring_manager'>Hiring Manager</option>
@@ -267,9 +265,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 {pagesMostUsed.slice(0, 6).map(d => (
                   <li
                     key={d.label}
-                    className='flex justify-between gap-4 min-w-[180px]'
-                  >
-                    <span>{d.label}</span>
+                    className='flex justify-between gap-4 min-w-[180px]'><span>{d.label}</span>
                     <span className='text-gray-500'>{d.value}</span>
                   </li>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

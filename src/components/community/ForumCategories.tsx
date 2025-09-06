@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import {
   Card,
@@ -18,13 +16,11 @@ import {
 } from 'lucide-react';
 import { ForumCategoryInfo } from '@/types/community';
 
-=======
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react'
 import { ForumCategoryInfo } from "@/types/community";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -104,19 +100,9 @@ export const ForumCategories = () => {
 };
 
 export default ForumCategories;
-<<<<<<< HEAD
 "
-=======
 
-<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-
-
-<<<<<<< HEAD
-
 
 export default ForumCategories;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

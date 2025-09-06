@@ -96,9 +96,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               border: '1px solid #e5e7eb',
               borderRadius: 12,
               padding: '1.25rem',
-            }}
-          >
-        <p>Team-based access with admin controls, branded environments, and usage limits.</p>
+            }}><p>Team-based access with admin controls, branded environments, and usage limits.</p>
       </header>
 
       <section style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1rem' }}>
@@ -173,9 +171,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       textAlign: 'center',
                       padding: 8,
                       borderBottom: '1px solid #e5e7eb',
-                    }}
-                  >
-                    {t.name}
+                    }}>{t.name}
                   </th>
                 <th style={{ textAlign: 'left', padding: 8, borderBottom: '1px solid #e5e7eb' }}>Feature</th>
                 {tiers.map(t => (
@@ -200,9 +196,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         textAlign: 'center',
                         padding: 8,
                         borderBottom: '1px solid #f3f4f6',
-                      }}
-                    >
-                  <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
+                      }}><td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
                   {tiers.map(t => (
                     <td key={t.id + f.key} style={{ textAlign: 'center', padding: 8, borderBottom: '1px solid #f3f4f6' }}>
                   <td style={{ padding: 8, borderBottom: '1px solid #f3f4f6' }}>{f.label}</td>
@@ -225,9 +219,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           display: 'flex',
           gap: 16,
           alignItems: 'center',
-        }}
-      >
-      <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
+        }}><section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
 ursor/integrate-build-improve-and-re-verify-b76c
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>

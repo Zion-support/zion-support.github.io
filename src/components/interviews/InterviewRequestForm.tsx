@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -36,8 +34,6 @@ import { CalendarIcon } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { useInterviews } from '@/hooks/useInterviews';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -187,9 +183,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                         className={cn(
                           "w-full pl-3 text-left font-normal";
                           !field.value && "text-muted-foreground"
-                        )}
-                      >
-                        {field.value ? (
+                        )}>{field.value ? (
                           format(field.value, "PPP")
                         ) : (
                           <span>Pick a date</span>
@@ -338,7 +332,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>
     </Form>
   );
-<<<<<<< HEAD
 
 }setIsSubmitting (true);
 }catch (error) {;
@@ -354,15 +347,15 @@ toast ({;
 "12:00", "12:30", "13:00", "13:30", "14:00", "14:30";";
 "15:00", "15:30", "16:00", "16:30", "17:00", "17:30";";
 "18:00", "18:30", "19:00", "19:30", "20: 00" ];";
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ";
-}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start" > <Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
+}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"><FormField <FormLabel>Date</FormLabel> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) ";
+}<CalendarIcon className="ml-auto h-4 w-4 opacity-50" /> </Button> </FormControl> </PopoverTrigger> <PopoverContent className="w-auto p-0" align="start"><Calendar initialFocus className="p-3 pointer-events-auto" /> </PopoverContent> </Popover> <FormMessage /> </FormItem>) ;
 }/> <FormField <FormLabel>Time</FormLabel> <Select onValueChange= {;
   field.onChange ;
 }defaultValue= {;
   field.value ";
 }> <FormControl> <SelectTrigger> <SelectValue placeholder="Select time" /> </SelectTrigger> </FormControl> </SelectItem>) ) ;
 }</SelectContent> </Select> <FormMessage /> </FormItem>) ";
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {;
+}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4"><FormField <FormItem> <FormLabel>Duration</FormLabel> <Select onValueChange= {;
   field.onChange ;
 }defaultValue= {;
   field.value ";
@@ -386,10 +379,5 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
 }'"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -4,11 +4,7 @@ import path from 'path';
 import fs from 'fs';
 import DocsLayout from '../../../components/docs/DocsLayout';
 import CodeBlock from '../../../components/docs/CodeBlock';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export type Section = {
   id: string,
   title: string,
@@ -33,14 +29,10 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
 };
 
 export default function ApiDocsPage({ docs }: PageProps) {
-<<<<<<< HEAD
   
-      nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}
-    >
-      {docs.sections.map(section => (
+      nav={docs.sections.map(s => ({ id: s.id, title: s.title }))}>{docs.sections.map(section => (
         <section key={section.id} id={section.id} className='scroll-mt-24'>
           <h2 className='text-2xl font-semibold'>{section.title}</h2>
-=======
 export type Section = {
   id: string,
   title: string,
@@ -65,38 +57,26 @@ export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
 };
 
 export default function ApiDocsPage({ docs }: PageProps) {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   return (
     <DocsLayout title={docs.title} nav={docs.sections.map((s) => ({ id: s.id, title: s.title }))}>
       {docs.sections.map((section) => (
         <section key={section.id} id={section.id} className="scroll-mt-24">
           <h2 className="text-2xl font-semibold">{section.title}</h2>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {section.html && (
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='space-y-4 mt-4'>
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>
                   {c.content}
                 </CodeBlock>
-=======
             <div className="space-y-4 mt-4">
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="space-y-4 mt-4">
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               ))}
             </div>
           )}
@@ -104,11 +84,4 @@ export default function ApiDocsPage({ docs }: PageProps) {
       ))}
     </DocsLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

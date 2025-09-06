@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import { AlertTriangle, Home, RefreshCw, Settings } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 import { logInfo, logErrorToProduction as prodLogError } from '@/utils/productionLogger';
-
 
 interface PageErrorFallbackProps extends FallbackProps {
   pageName?: string
@@ -75,17 +73,13 @@ function PageErrorFallback({ error, resetErrorBoundary, pageName }: PageErrorFal
           <div className="flex flex-col sm: flex-row gap-3 mb-6">
             <button 
               onClick={handleRefresh}
-              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-            >
-              <RefreshCw className="w-4 h-4 mr-2" />
+              className="flex-1 bg-blue-600 hover:bg-blue-700 text-white flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"><RefreshCw className="w-4 h-4 mr-2" />
               Try Again
             </button>
             
             <Link 
               href="/"
-              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"
-            >
-              <Home className="w-4 h-4 mr-2" />
+              className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-700 flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-colors"><Home className="w-4 h-4 mr-2" />
               Go Home
             </Link>
           </div>
@@ -160,16 +154,8 @@ export default function PageErrorBoundary({
       onReset={() => {
         // Reset any application state if needed
         logInfo(`Resetting error boundary for ${pageName || 'page'}`);
-      }}
-    >
-      {children}
+      }}>{children}
     </ErrorBoundary>
   );
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

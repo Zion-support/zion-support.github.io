@@ -55,9 +55,7 @@ const Button: React.FC<ButtonProps> = ({
       className={classes}
       onClick={onClick}
       disabled={disabled}
-      style={style}
-    >
-      {content}
+      style={style}>{content}
     </button>
   );
 };

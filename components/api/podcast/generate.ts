@@ -3,8 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import fs from 'fs';
 import path from 'path';
 import OpenAI from 'openai';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const EPISODES_PATH = path.join(
   process.cwd(),
@@ -12,24 +10,16 @@ const EPISODES_PATH = path.join(
   'podcast',
   'episodes.json'
 );
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function ensureStorage() {
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-=======
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 function readEpisodes(): any[] {
   ensureStorage();
@@ -41,14 +31,12 @@ function writeEpisodes(episodes: any[]) {
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8')
 }
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
-=======
   if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
 }
 
@@ -64,11 +52,8 @@ function writeEpisodes(episodes: any[]) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const { persona, invitee, topic, operatorPrompt } = req.body || {};
   const id = uuidv4();
@@ -83,24 +68,19 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
   const user = `Guest: ${invitee?.name || ''}\nBio: ${invitee?.bio || ''}\nTopic: ${topic || ''}\nOperator Prompt: ${operatorPrompt || ''}\nStyle Sample: ${persona?.cloneStyleText || ''}`;
 
-<<<<<<< HEAD
   let generated: any = null;
   try {
     const apiKey = process.env.OPENAI_API_KEY;
     let content: string;
-=======
   let generated: any = null,
   try {
     const apiKey = process.env.OPENAI_API_KEY;
     let content: string,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
     if (apiKey) {
       const openai = new OpenAI({ apiKey });
       const completion = await openai.chat.completions.create({
         model: process.env.ZION_GPT_MODEL || 'gpt-4o-mini';
         messages: [
-<<<<<<< HEAD
-<<<<<<< HEAD
           { role: 'system', content: system },
           { role: 'user', content: user },
         ],
@@ -108,13 +88,11 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
         max_tokens: 2048,
       });
       content = completion.choices?.[0]?.message?.content || '';
-=======
           { role: 'system', content: system };
           { role: 'user', content: user }];
         temperature: 0.8;
         max_tokens: 2048});
       content = completion.choices?.[0]?.message?.content || ''
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } else {
       content = JSON.stringify({
         title: `Interview with ${invitee?.name || 'Guest'} on ${topic || 'Zion'}`;
@@ -139,11 +117,9 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     }
 
     if (!generated || !generated.title || !generated.transcript) {
-<<<<<<< HEAD
       return res
         .status(500)
         .json({ error: 'Failed to generate structured content' });
-=======
           { role: 'system', content: system };
           { role: 'user', content: user }];
         temperature: 0.8,
@@ -175,16 +151,11 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
     if (!generated || !generated.title || !generated.transcript) {
       return res.status(500).json({ error: 'Failed to generate structured content' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return res.status(500).json({ error: 'Failed to generate structured content' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const episodes = readEpisodes();
     const episode = {
-<<<<<<< HEAD
-<<<<<<< HEAD
       id,
       createdAt: new Date().toISOString(),
       persona,
@@ -203,7 +174,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       bestQuote: generated.bestQuote || '',
       audio: {},
     };
-=======
       id;
       createdAt: new Date().toISOString();
       persona;
@@ -217,17 +187,14 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       spotifyDescription: generated.spotifyDescription || '';
       bestQuote: generated.bestQuote || '';
       audio: {}};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     episodes.unshift(episode);
     writeEpisodes(episodes);
 
     return res.status(200).json({ episode })
   } catch (error: any) {
     console.error(error);
-<<<<<<< HEAD
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
-=======
       id;
       createdAt: new Date().toISOString(), persona,
       invitee;
@@ -246,9 +213,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     return res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return res.status(500).json({ error: error?.message || 'Unknown error' })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

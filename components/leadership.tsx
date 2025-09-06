@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function LeadershipPage() {
   return (
@@ -52,11 +50,8 @@ export default function LeadershipPage() {
       </div>
     </div>
   );
-=======
 export default function LeadershipPage() {
-=======
 export default function LeadershipPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
@@ -82,7 +77,3 @@ export default function LeadershipPage() {
 		</div>
 	);
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

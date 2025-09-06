@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -13,14 +11,12 @@ import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 
-=======
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Search, Users, Zap, Settings } from 'lucide-react'
 import Link from "next/link";
 import { cn } from "@/lib/utils";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface InteractiveFeaturesProps {
   className?: string;
   style?: React.CSSProperties
@@ -80,9 +76,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
-              className="cursor-pointer overflow-hidden transition-all duration-300 hover: shadow-lg"
-            >
-              <CardHeader className="flex flex-row items-start space-x-3">
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover: shadow-lg"><CardHeader className="flex flex-row items-start space-x-3">
                 {feature.icon}
                 <div>
                   <CardTitle className="text-lg text-white">{feature.title}</CardTitle>
@@ -95,9 +89,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
                 className={cn(
                   "transition-all duration-300";
                   openIndex === index ? "max-h-48 opacity-100 p-6 pt-0" : "max-h-0 opacity-0 p-0"
-                )}
-              >
-                <CardContent className="text-sm text-zion-slate-light p-0">
+                )}><CardContent className="text-sm text-zion-slate-light p-0">
                   <p>{feature.details}</p>
                   <Button asChild variant="link" className="mt-3 p-0 h-auto text-primary">
                     <Link href={feature.link} className="flex items-center gap-1">
@@ -115,11 +107,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
 }
 
 export default InteractiveFeatures;
-=======
 
-<<<<<<< HEAD
       details: "Every profile is vetted for quality and authenticity so you can hire with confidence.",
       icon: <Users className="h-8 w-8 text-purple-700" />,
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

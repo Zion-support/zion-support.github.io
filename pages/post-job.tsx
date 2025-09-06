@@ -132,9 +132,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <button
             type='submit'
             className='px-4 py-2 rounded bg-black text-white disabled:opacity-50'
-            disabled={isSubmitting}
-          >
-    <div className="max-w-2xl mx-auto">
+            disabled={isSubmitting}><div className="max-w-2xl mx-auto">
       <h1 className="text-2xl font-semibold mb-4">Post a Job</h1>
       {error && <p className="text-red-600 mb-3">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">

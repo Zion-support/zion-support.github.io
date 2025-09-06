@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useRef } from "react";
 import { ChevronLeft, ChevronRight } from 'lucide-react'
@@ -44,22 +40,16 @@ export const AppScreenshots: React.FC = () => {
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
             onClick={() => scroll("left")}
-            aria-label="Scroll left"
-          >
-            <ChevronLeft className="h-6 w-6" />
+            aria-label="Scroll left"><ChevronLeft className="h-6 w-6" />
           </Button>
           
           <div 
             ref={scrollContainerRef}
             className="flex overflow-x-auto gap-4 py-8 px-4 scrollbar-hide snap-x snap-mandatory"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {mockScreenshots.map((screenshot) => (
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>{mockScreenshots.map((screenshot) => (
               <div 
                 key={screenshot.id} 
-                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"
-              >
-                <img
+                className="flex-shrink-0 w-60 h-[500px] snap-center rounded-xl overflow-hidden border-2 border-zion-purple/30"><img
                   src={screenshot.src}
                   alt={screenshot.alt}
                   className="w-full h-full object-cover"
@@ -74,25 +64,14 @@ export const AppScreenshots: React.FC = () => {
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-zion-blue-dark/70 text-white"
             onClick={() => scroll("right")}
-            aria-label="Scroll right"
-          >
-            <ChevronRight className="h-6 w-6" />
+            aria-label="Scroll right"><ChevronRight className="h-6 w-6" />
           </Button>
         </div>
       </div>
     </section>
   )
 };
-<<<<<<< HEAD
 '"
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

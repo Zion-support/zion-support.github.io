@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -175,36 +170,24 @@ export function OnboardingWizard({ type, onComplete, onSkip, className }: Onboar
       <CardFooter className="flex flex-col space-y-2">
         <Button
           className="w-full bg-zion-purple hover:bg-zion-purple-light"
-          onClick={handleAction}
-        >
-          {steps[currentStep]?.action.text}
+          onClick={handleAction}>{steps[currentStep]?.action.text}
         </Button>
         
         {steps[currentStep]?.skipText && (
           <Button
             variant="ghost"
             className="text-zion-slate-light hover:text-white"
-            onClick={handleSkip}
-          >
-            {steps[currentStep]?.skipText}
+            onClick={handleSkip}>{steps[currentStep]?.skipText}
           </Button>
         )}
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
         url: "/profile?tab=skills"
       };
-<<<<<<< HEAD
   ];
   
   const steps = type === 'client' ? clientSteps : talentSteps;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

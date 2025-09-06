@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -67,7 +66,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -160,7 +158,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const handleDropdownToggle = (item: string) => {
     setActiveDropdown(activeDropdown === item ? null : item);
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <AnimatePresence>
@@ -174,27 +171,19 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
           />
-<<<<<<< HEAD
 
           
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {/* Sidebar */}
           <motion.div
             initial={{ x: '-100%' }}
             animate={{ x: 0 }}
-<<<<<<< HEAD
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
 
-=======
             exit={{ x: '-100%' }}
             transition={{ type: 'tween', duration: 0.3 }}
-            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <div className="p-6">
+            className="fixed top-0 left-0 h-full w-80 bg-white shadow-xl z-50 overflow-y-auto"><div className="p-6">
               {/* Header */}
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center space-x-2">
@@ -205,16 +194,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 </div>
                 <button
                   onClick={onClose}
-<<<<<<< HEAD
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-=======
-                  className="p-2 text-gray-500 hover:text-gray-700 transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <X className="w-6 h-6" />
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"><X className="w-6 h-6" />
                 </button>
               </div>
-<<<<<<< HEAD
 
               {/* Navigation */}
               <nav className="space-y-4">
@@ -222,14 +204,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <div key={title}>
                     <button
                       onClick={() => handleDropdownToggle(title)}
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors py-2"
-                    >
-                      {title}
+                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 hover:text-blue-600 transition-colors py-2">{title}
                       <motion.div
                         animate={{ rotate: openDropdowns.includes(title) ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        transition={{ duration: 0.2 }}><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
                       </motion.div>
@@ -240,17 +218,13 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: 'auto', opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          className="overflow-hidden"
-                        >
-                          <div className="ml-4 space-y-2 mt-2">
+                          className="overflow-hidden"><div className="ml-4 space-y-2 mt-2">
                             {links.map((link) => (
                               <Link
                                 key={link.name}
                                 href={link.href}
                                 className="flex items-center space-x-3 text-gray-600 hover:text-blue-600 transition-colors py-1"
-                                onClick={onClose}
-                              >
-                                <link.icon className="w-4 h-4" />
+                                onClick={onClose}><link.icon className="w-4 h-4" />
                                 <span>{link.name}</span>
                               </Link>
                             ))}
@@ -262,7 +236,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                 ))}
               </nav>
 
-=======
               {/* Navigation */}
               <nav className="space-y-4">
                 {Object.entries(navigation).map(([title, links]) => (
@@ -283,16 +256,12 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="ml-4 space-y-2 mt-2"
-                      >
-                        {links.map((link) => (
+                        className="ml-4 space-y-2 mt-2">{links.map((link) => (
                           <Link
                             key={link.name}
                             href={link.href}
                             className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                            onClick={onClose}
-                          >
-                            {link.name}
+                            onClick={onClose}>{link.name}
                           </Link>
                         ))}
                       </motion.div>
@@ -300,7 +269,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   </div>
                 ))}
               </nav>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {/* Quick Links */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
@@ -310,14 +278,11 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                       key={link.name}
                       href={link.href}
                       className="block text-gray-600 hover:text-blue-600 transition-colors py-1"
-                      onClick={onClose}
-                    >
-                      {link.name}
+                      onClick={onClose}>{link.name}
                     </Link>
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
 
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
@@ -336,12 +301,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                   <Link
                     href="/contact"
                     className="inline-flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                    onClick={onClose}
-                  >
-                    <span>Get Started</span>
+                    onClick={onClose}><span>Get Started</span>
                     <ExternalLink className="w-4 h-4" />
                   </Link>
-=======
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Info</h3>
@@ -358,7 +320,6 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     <MapPin className="w-4 h-4 mr-3 mt-1" />
                     <span>364 E Main St STE 1008, Middletown DE 19709</span>
                   </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
                 <button className="flex items-center space-x-3 w-full px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
                   <LogOut className="h-5 w-5" />
@@ -374,7 +335,4 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
 };
 
-<<<<<<< HEAD
 export default Sidebar;
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

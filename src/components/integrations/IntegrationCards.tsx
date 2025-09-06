@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 import React from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logDebug } from '@/utils/productionLogger';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
@@ -67,9 +63,7 @@ export function IntegrationCard({
         ) : (
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
-<<<<<<< HEAD
             <ArrowRight className='ml-1.5 h-3.5 w-3.5' />
-=======
 
 import React from "react";
 import { logDebug } from '@/utils/productionLogger';
@@ -137,20 +131,12 @@ export function IntegrationCard({
           <Button variant="default" className="w-full" onClick={onConnect}>
             <span>Connect</span>
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </Button>
         )}
       </CardFooter>
     </Card>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function IntegrationCards() {
   return (
@@ -168,11 +154,9 @@ export function IntegrationCards() {
         onConnect={() => logDebug('Connect Salesforce clicked')}
       />
       <IntegrationCard
-<<<<<<< HEAD
         title='Microsoft Teams'
         description='Receive updates through Microsoft Teams.'
         icon={<Users className='h-5 w-5' />}
-=======
 }
 
 export function IntegrationCards() {
@@ -194,21 +178,11 @@ export function IntegrationCards() {
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         title="Microsoft Teams"
         description="Receive updates through Microsoft Teams."
         icon={<Users className="h-5 w-5" />}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         onConnect={() => logDebug('Connect Teams clicked')}
       />
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

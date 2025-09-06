@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { JobsList } from '@/components/jobs/JobsList';
 import { Button } from '@/components/ui/button';
@@ -26,7 +24,6 @@ import { ActiveProjectsCard } from '@/components/projects/ActiveProjectsCard';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
 import { useIsMobile } from '@/hooks/use-mobile';
 
-=======
 import { useState, useEffect } from "react";
 import { JobsList } from "@/components/jobs/JobsList";
 import { Button } from "@/components/ui/button";
@@ -44,7 +41,6 @@ import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 import { useIsMobile } from "@/hooks/use-mobile";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
@@ -177,7 +173,6 @@ export default function ClientDashboard() {
       <ClientDashboardContent />
     </ProtectedRoute>
   );
-<<<<<<< HEAD
 
 }, [jobs, selectedJobId]);
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className= {;
@@ -213,13 +208,7 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }</div> </div> </div> </div> </main> </>) ;
 }export default function ClientDashboard () {;
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"
-=======
 
-<<<<<<< HEAD
     onboardingStatus.responseReceived;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

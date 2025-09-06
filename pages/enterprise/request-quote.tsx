@@ -10,9 +10,7 @@ export default function RequestQuote() {
         action='mailto:sales@zion.ai'
         method='post'
         encType='text/plain'
-        style={{ display: 'grid', gap: 12, marginTop: 12 }}
-      >
-        <input name='company' placeholder='Company name' required />
+        style={{ display: 'grid', gap: 12, marginTop: 12 }}><input name='company' placeholder='Company name' required />
         <input name='email' placeholder='Work email' type='email' required />
         <input name='team_size' placeholder='Team size (seats)' />
         <textarea name='notes' placeholder='Notes' rows={5} />

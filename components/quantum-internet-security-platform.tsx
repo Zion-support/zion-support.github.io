@@ -1,7 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Phone,
   Mail,
@@ -11,45 +9,34 @@ import {
   Shield,
   Star,;
 } from 'lucide-react';
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
-<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-internet-security-platform')
   );
-=======
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield, Star } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform'));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-internet-security-platform'));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   if (!service) return null;
 
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/quantum-internet-security-platform'
         />
-=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/quantum-internet-security-platform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -75,7 +62,6 @@ export default function QuantumInternetSecurityPage() {
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>
-<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='quantum'
@@ -98,7 +84,6 @@ export default function QuantumInternetSecurityPage() {
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{service.contactInfo.address}</span>
                 </div>
-=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/quantum-internet-security-platform" />
       </Head>
@@ -126,17 +111,11 @@ export default function QuantumInternetSecurityPage() {
                 </div>
                 <div className="flex items-center text-yellow-400"><Star className="w-4 h-4 mr-1" />{service.rating.toFixed(1)}</div>
               </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <Button href="/contact" variant="quantum" size="lg" className="w-full">Request a Security Demo<ArrowRight className="w-5 h-5 ml-2" /></Button>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
@@ -144,11 +123,4 @@ export default function QuantumInternetSecurityPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

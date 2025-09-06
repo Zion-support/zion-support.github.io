@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -70,9 +69,7 @@ export function FooterNewsletter(): React.ReactElement {
       id="footer-newsletter-form"
       aria-label="Newsletter sign-up"
       onSubmit={handleSubmit}
-      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"
-    >
-      <label htmlFor="newsletter-email" className="sr-only" htmlFor="input-
+      className="flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2"><label htmlFor="newsletter-email" className="sr-only" htmlFor="input-
         Email address for newsletter subscription
       ">
         Email address for newsletter subscription
@@ -102,9 +99,7 @@ export function FooterNewsletter(): React.ReactElement {
         type="submit"
         aria-label="Subscribe to newsletter"
         disabled={isSubmitting}
-        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple"
-      >
-        {isSubmitting ? (
+        className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white hover:from-zion-purple-light hover:to-zion-purple">{isSubmitting ? (
           <>
             <Loader2 className="h-4 w-4 mr-2 animate-spin" />
             Subscribing...
@@ -115,17 +110,7 @@ export function FooterNewsletter(): React.ReactElement {
       </Button>
     </form>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-
 
   const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

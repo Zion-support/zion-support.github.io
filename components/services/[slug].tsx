@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) 
@@ -7,7 +5,6 @@
   paths: Array.from (slugs) .map ( (slug) => ({
   params: {
   slug 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -24,7 +21,6 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025';
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025';
 type Service = typeof enhancedRealMicroSaasServices[number];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -311,9 +307,7 @@ const ServiceDetail: NextPage = () => {
     </EnhancedLayout>
   )
 };
-<<<<<<< HEAD
 export default ServiceDetail 
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout/Layout';
@@ -620,9 +614,6 @@ const ServiceDetail: NextPage = () => {
 
 export default ServiceDetail
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 export default ServiceDetail
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

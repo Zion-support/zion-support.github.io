@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -236,18 +235,14 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
     <div 
       ref={imgRef}
       className={cn('relative overflow-hidden', className)}
-      style={containerStyle}
-    >
-      <AnimatePresence>
+      style={containerStyle}><AnimatePresence>
         {/* Placeholder */}
         {(isLoading || !isInView) && !hasError && (
           <motion.div
             initial={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="absolute inset-0"
-          >
-            {generatePlaceholder()}
+            className="absolute inset-0">{generatePlaceholder()}
             
             {/* Loading progress */}
             {showLoadingProgress && isLoading && loadProgress > 0 && (
@@ -268,9 +263,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"
-          >
-            <AlertTriangle className="h-8 w-8 mb-2" />
+            className="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-400"><AlertTriangle className="h-8 w-8 mb-2" />
             <span className="text-sm">Failed to load image</span>
             {retries > 0 && (
               <span className="text-xs mt-1">Retried {retries} times</span>
@@ -341,18 +334,14 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({
         className={`grid gap-4`}
         style={{ 
           gridTemplateColumns: `repeat(${columns}, 1fr)` ;
-        }}
-      >
-        {images.map((image, index) => (
+        }}>{images.map((image, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
             className="group cursor-pointer"
-            onClick={() => onImageClick?.(index)}
-          >
-            <div className="relative">
+            onClick={() => onImageClick?.(index)}><div className="relative">
               <OptimizedImage
                 src={image.src}
                 alt={image.alt}
@@ -421,11 +410,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
 };
-=======
-
-<<<<<<< HEAD
 
           if (entry.name === src && entry.entryType === 'resource') {
             const resourceEntry = entry as PerformanceResourceTiming;
@@ -433,13 +418,7 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({
             const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart;
             
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
   );
 },
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

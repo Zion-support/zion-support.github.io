@@ -365,9 +365,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+            transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Explore Technology Categories
@@ -452,18 +450,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                >
-                  <option value='popularity'>Sort by Popularity</option>
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"><option value='popularity'>Sort by Popularity</option>
                   <option value='name'>Sort by Name</option>
                   <option value='featured'>Sort by Featured</option>
               <div className="flex items-center gap-4">
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
-                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
-                >
-                  <option value="popularity">Sort by Popularity</option>
+                  className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"><option value="popularity">Sort by Popularity</option>
                   <option value="name">Sort by Name</option>
                   <option value="featured">Sort by Featured</option>
                   <option value="popularity">Sort by Popularity</option>
@@ -491,15 +485,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='mb-12'
             className="mb-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
             </h2>
             <p className='text-white/60'>
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            className="mb-12"><h2 className="text-3xl font-bold text-white mb-4">
               Featured Services
             </h2>
             <p className="text-white/60">
@@ -521,9 +511,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className='group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                 className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+ursor/integrate-build-improve-and-re-verify-b76c><div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
                     <service.icon className="w-8 h-8 text-white" />
@@ -553,9 +541,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   >
                     Learn More
                     <ChevronRight className='w-4 h-4 ml-1' />
-                className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                className="group relative p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"><div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                 <div className="relative z-10">
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 mb-4 flex items-center justify-center`}>
                     <service.icon className="w-8 h-8 text-white" />
@@ -609,15 +595,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='mb-12'
             className="mb-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
             </h2>
             <p className='text-white/60'>
-            className="mb-12"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4">
+            className="mb-12"><h2 className="text-3xl font-bold text-white mb-4">
               Technology Categories
             </h2>
             <p className="text-white/60">
@@ -638,18 +620,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 exit={{ opacity: 0 }}
                 className='text-center py-20'
                 className="text-center py-20"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                   <Search className="w-12 h-12 text-white/40" />
                 </div>
                 <h3 className='text-2xl font-semibold text-white mb-2'>
                   No categories found
                 </h3>
                 <p className='text-white/60 mb-6'>
-                className="text-center py-20"
-              >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
+                className="text-center py-20"><div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                   <Search className="w-12 h-12 text-white/40" />
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-2">No categories found</h3>
@@ -686,18 +664,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     }
                     className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
                     onClick={() => window.location.href = `/category/${category.id}`}
-ursor/integrate-build-improve-and-re-verify-b76c
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+ursor/integrate-build-improve-and-re-verify-b76c><div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       {/* Featured Badge */}
                       {category.featured && (
                         <div className='absolute top-4 right-4'>
                           <span className='px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-yellow-500 to-orange-500 text-white'>
                     className="group relative p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl cursor-pointer"
-                    onClick={() => window.location.href = `/category/${category.id}`}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
+                    onClick={() => window.location.href = `/category/${category.id}`}><div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       {/* Featured Badge */}
                       {category.featured && (
@@ -809,9 +783,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -820,9 +792,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
               Emerging Technology Trends
             </h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -930,9 +900,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300'
                 className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
                 
@@ -953,9 +921,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p className='text-white/70 leading-relaxed'>
                   {trend.description}
                 </p>
-                className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
+                className="group p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"><div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${trend.color} p-4 mb-4 flex items-center justify-center`}>
                   <trend.icon className="w-8 h-8 text-white" />
                 </div>
                 
@@ -995,9 +961,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+            viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Explore?

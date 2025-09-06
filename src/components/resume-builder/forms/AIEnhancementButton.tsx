@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2 } from 'lucide-react'
@@ -52,9 +47,7 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
-      disabled={isEnhancing}
-    >
-      {isEnhancing ? (
+      disabled={isEnhancing}>{isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
         <Sparkles className="h-3 w-3" />
@@ -62,8 +55,6 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>
     </Button>
   );
-<<<<<<< HEAD
-=======
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
@@ -107,7 +98,6 @@ export function AIEnhancementButton({
     }
   };
 
-
   return (
     <Button
       type="button"
@@ -115,9 +105,7 @@ export function AIEnhancementButton({
       size="sm"
       className={`h-6 gap-1 text-primary hover:text-primary ${className}`}
       onClick={handleEnhance}
-      disabled={isEnhancing}
-    >
-      {isEnhancing ? (
+      disabled={isEnhancing}>{isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
         <Sparkles className="h-3 w-3" />
@@ -126,7 +114,4 @@ export function AIEnhancementButton({
     </Button>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

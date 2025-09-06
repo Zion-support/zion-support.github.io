@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  {
   /* Robots Meta */ 
 }{
@@ -84,7 +82,6 @@ const SEO: React.FC<SEOProps> = ({
   const fullImage = image.startsWith('http')
     ? image
     : `https://ziontechgroup.com${image}`;
-=======
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -105,7 +102,6 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
-=======
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 interface SEOProps {
@@ -126,17 +122,13 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions';
   description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. Leading-edge services in AI, cybersecurity, space tech, and quantum solutions.';
   keywords = 'AI, artificial intelligence, quantum computing, space technology, cybersecurity, machine learning, automation, Zion Tech Group, technology solutions, enterprise software, cloud computing, blockchain, IoT, robotics';
   image = '/images/zion-tech-group-og-image.jpg';
-<<<<<<< HEAD
   url = 'https: //ziontechgroup.com', type = 'website',
-=======
   url = 'https://ziontechgroup.com';
   type = 'website';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   publishedTime;
   modifiedTime;
   author = 'Zion Tech Group';
@@ -148,17 +140,11 @@ const SEO: React.FC<SEOProps> = ({
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
   const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <meta name='description' content={description} />
       <meta
         name='keywords'
@@ -168,14 +154,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='robots' content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name='robots' content='nofollow' />}
 
-=======
       <meta name="description" content={description} />
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
       <meta name="author" content={author} />
       <meta name="robots" content={noindex ? 'noindex' : 'index'} />
       {nofollow && <meta name="robots" content="nofollow" />}
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {/* Robots Meta */}
       {noindex && <meta name="robots" content="noindex" />}
       {nofollow && <meta name="robots" content="nofollow" />}
@@ -302,9 +286,7 @@ const SEO: React.FC<SEOProps> = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-<<<<<<< HEAD
             __html: JSON.stringify(structuredData),
-=======
       <meta name="description" content={description} />
       <meta name="keywords" content={Array.isArray(keywords) ? keywords.join() : keywords} />
       <meta name="author" content={author} />
@@ -435,29 +417,20 @@ const SEO: React.FC<SEOProps> = ({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(structuredData)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             __html: JSON.stringify(structuredData)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           }}
         />
       )}
     </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default SEO;
-=======
   )
 };
 
 export default SEO;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default SEO;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

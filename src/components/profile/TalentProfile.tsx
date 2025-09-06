@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Handshake, MessageSquare, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,8 +13,6 @@ import { ProfileRatings } from './ProfileRatings';
 import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 import { Availability } from '@/types/profile';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Handshake, MessageSquare, Star } from 'lucide-react'
@@ -131,9 +127,7 @@ export function TalentProfile({
                   <Button 
                     size="lg" 
                     className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-                    onClick={onRequestHire}
-                  >
-                    <Handshake className="mr-2 h-5 w-5" />
+                    onClick={onRequestHire}><Handshake className="mr-2 h-5 w-5" />
                     Hire Now
                   </Button>
                   
@@ -142,9 +136,7 @@ export function TalentProfile({
                       size="lg" 
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-                      onClick={onMessageTalent}
-                    >
-                      <MessageSquare className="mr-2 h-5 w-5" />
+                      onClick={onMessageTalent}><MessageSquare className="mr-2 h-5 w-5" />
                       Message
                     </Button>
                   )}
@@ -156,15 +148,7 @@ export function TalentProfile({
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
   
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

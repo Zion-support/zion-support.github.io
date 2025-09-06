@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
-=======
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
@@ -40,8 +36,7 @@ export default function IntegrationsFeature() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
@@ -73,11 +68,9 @@ export default function IntegrationsFeature() {
               <p className="text-zion-slate-light">Yes, free tier requests are limited per hour. Contact sales for higher limits.</p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/developers'>Learn More</Link>
-=======
 import React, { useEffect } from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -96,14 +89,11 @@ export default function IntegrationsFeature() {
     "url": "https://app.ziontechgroup.com/features/integrations"
   };
 
-
   const { markSlackConnected  } = useAdvancedOnboardingStatus(),
-
 
   useEffect(() => {
     markSlackConnected()
   }, [markSlackConnected]);
-
 
   return (
     <>
@@ -116,8 +106,7 @@ export default function IntegrationsFeature() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md: px-6">
@@ -152,23 +141,13 @@ export default function IntegrationsFeature() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Button>
           </div>
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

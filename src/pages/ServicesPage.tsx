@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -280,9 +279,7 @@ export default function ServicesPage() {
             <motion.div
               key={item.id} ref={index === services.length - 1 ? lastElementRef : null}
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}
-            >
-              <ServiceCard service={item} onViewDetails={() => router.push(`/services/${item.id}`)} />
+              transition={{ delay: Math.min(index * 0.03, 0.5) }} whileHover={{ scale: 1.02 }}><ServiceCard service={item} onViewDetails={() => router.push(`/services/${item.id}`)} />
             </motion.div>
           ))}
         </AnimatePresence>
@@ -305,15 +302,12 @@ export default function ServicesPage() {
         {showScrollTop && (
           <motion.button onClick={scrollToTop} className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"
             initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0 }}
-            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}
-          >
-            <ArrowUp className="h-5 w-5 text-primary-foreground" />
+            whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}><ArrowUp className="h-5 w-5 text-primary-foreground" />
           </motion.button>
         )}
       </AnimatePresence>
     </div>
   );
-<<<<<<< HEAD
 
 }animate= {;
   {;
@@ -457,19 +451,10 @@ export default function ServicesPage() {
 }> <ArrowUp className="h-5 w-5 text-primary-foreground" /> </motion.button>) ;
 }</AnimatePresence> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
-<<<<<<< HEAD
 
     allServices = [...allServices, ...newServices];
     
     let filteredServices = allServices;
     
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

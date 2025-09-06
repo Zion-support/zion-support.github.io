@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 }; ];
 ; const socialLinks = [']; { name: 'LinkedIn', href: 'https: //linkedin.com/company/zion-tech-group', icon: 'LinkedIn' },''; { name: 'Twitter', href: 'https: //twitter.com/ziontechgroup', icon: 'Twitter' },''; { name: 'GitHub', href: 'https: //github.com/zion-tech-group', icon: 'GitHub' }']; ];
 ; return ('); <footer className = "bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">";
@@ -39,8 +38,6 @@
 </Shield>; </span>"; <span className = "flex items-center">";
 </span>"; <Award className = "w-4 h-4 text-yellow-400 mr-2" />";
 </Award>; </span>; </div>; </div>; </div>; </div>; </div>; </footer>";
-=======
-<<<<<<< HEAD
 };
   ];
 ;
@@ -67,7 +64,6 @@
 </div>;
           <motion.div,";
             className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
-=======
     };
   ],
 ,
@@ -94,29 +90,24 @@
 </div>,
           <motion.div,",
             className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-16"",
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
             initial={{ opacity: 0, y: 20 }};
             whileInView={{ opacity: 1, y: 0 }};
             viewport={{ once: true }};
             transition={{ duration: 0.6, staggerChildren: 0.1 }};
-<<<<<<< HEAD
           >;
 </motion>;
               <motion.div;
                 key={stat.label}";
                 className="text-center"";
-=======
           >,
 </motion>,
               <motion.div,
                 key={stat.label}",
                 className="text-center"",
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
                 initial={{ opacity: 0, y: 20 }};
                 whileInView={{ opacity: 1, y: 0 }};
                 viewport={{ once: true }};
                 transition={{ duration: 0.6, delay: index * 0.1 }};
-<<<<<<< HEAD
               >;
 </motion>";
                 <div className="flex justify-center mb-3">";
@@ -230,7 +221,6 @@
         </div>;
       </div>;
     </footer>";
-=======
               >,
 </motion>",
                 <div className="flex justify-center mb-3">",
@@ -351,5 +341,3 @@
         </div>,
       </div>,
     </footer>",
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

@@ -38,10 +38,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       total_signups,
     total_visits,
       total_profile_completions,
-    total_job_creations,
+      total_job_creations,
       conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
-      payout_amount;
-      currency: 'USD'})
+      payout_amount,
+      currency: 'USD'
+    });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message })
   }

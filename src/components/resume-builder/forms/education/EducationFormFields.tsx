@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -209,9 +204,7 @@ export function EducationFormFields({
           <Button
             type="button"
             variant="outline"
-            onClick={onCancel}
-          >
-            {isEditing ? 'Cancel' : 'Back'}
+            onClick={onCancel}>{isEditing ? 'Cancel' : 'Back'}
           </Button>
 
           <Button type="submit" disabled={isLoading}>
@@ -222,10 +215,6 @@ export function EducationFormFields({
       </form>
     </Form>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
   end_date: z.string().optional(),
   is_current: z.boolean().default(false),
@@ -234,11 +223,4 @@ export function EducationFormFields({
 
 type EducationFormValues = z.infer<typeof educationSchema>;
 
-
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -152,9 +151,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
               <Button
                 onClick={this.handleRetry}
                 disabled={this.state.isRetrying}
-                className="w-full"
-              >
-                {this.state.isRetrying ? (
+                className="w-full">{this.state.isRetrying ? (
                   <>
                     <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
                     Retrying...
@@ -213,14 +210,8 @@ export const useApiErrorHandler = () => {
     })
   };
 
-<<<<<<< HEAD
   return { handleApiError };
 };
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return { handleApiError }
 }, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import Link from 'next/link';
@@ -58,9 +57,7 @@ export function PrimaryNav() {
         className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md"
         role="navigation"
         aria-label="Primary"
-        data-testid="header"
-      >
-        <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
+        data-testid="header"><div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap">
           <Logo />
           
           {/* Navigation - hidden on mobile and tablets, shown on desktop */}
@@ -129,15 +126,11 @@ export function PrimaryNav() {
                     onClick={(e) => {
                       e.preventDefault();
                       setLoginOpen(true)
-                    }}
-                  >
-                    {t('auth.login')}
+                    }}>{t('auth.login')}
                   </Link>
                   <Link
                     href="/signup"
-                    className="text-sm hover: text-primary whitespace-nowrap"
-                  >
-                    {t('auth.signup')}
+                    className="text-sm hover: text-primary whitespace-nowrap">{t('auth.signup')}
                   </Link>
                 </>
               )}
@@ -157,9 +150,7 @@ export function PrimaryNav() {
                 onClick={(e) => {
                   e.preventDefault();
                   setLoginOpen(true)
-                }}
-              >
-                {t('auth.login')}
+                }}>{t('auth.login')}
               </Link>
             )}
             {isLoggedIn && <UserMenu />}
@@ -170,9 +161,7 @@ export function PrimaryNav() {
             className="lg:hidden p-2 rounded focus:outline-none flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-expanded={mobileMenuOpen}
-            aria-label={t('general.toggle_mobile_menu')}
-          >
-            {mobileMenuOpen ? (
+            aria-label={t('general.toggle_mobile_menu')}>{mobileMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
               <Menu className="h-6 w-6" />
@@ -200,21 +189,18 @@ export function PrimaryNav() {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-<<<<<<< HEAD
 
 };
-return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header" > <div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap" > <Logo /> ;
+return (<> <header className="sticky top-0 z-70 w-full border-b border-primary/20 bg-card/90 backdrop-blur-md" role="navigation" aria-label="Primary" data-testid="header"><div className="container flex items-center justify-between gap-2 min-h-16 px-4 sm:px-6 max-[320px]:flex-wrap"><Logo /> ;
 }setQuery ('');
 //Track analytics event ;
-
 
 }searchSuggestions= {;
   suggestions ;
 }/> </form> <PointsBadge /> <CartDrawer /> </div> <ModeToggle /> <LanguageSelector /> </div> <Link onClick={;
-  (e) => {;
-  > {';
+  (e) => {;>{';
   t ('auth.login') ";
-}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap" > {';
+}</Link> <Link href="/signup" className="text-sm hover:text-primary whitespace-nowrap">{';
   t ('auth.signup') ;
 }</Link> </>) ;
 }{;
@@ -234,7 +220,7 @@ setLoginOpen (true) ;
 }<button) : (<Menu className="h-6 w-6" />) ";
 }</button> </div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;
   () => setMobileMenuOpen (false) ";
-}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+}aria-hidden="true" /> <div className="relative bg-card border-t border-primary/20 max-h-[calc (100vh-4rem) ] overflow-y-auto"><MobileMenu unreadCount= {;
   unreadCount ;
 }onClose= {;
   () => setMobileMenuOpen (false) ;
@@ -251,17 +237,8 @@ setLoginOpen (true) ;
   setLoginOpen ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
 
   let unreadCount = 0;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
                   
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

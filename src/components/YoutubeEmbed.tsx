@@ -1,10 +1,5 @@
 import Image from 'next/image';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
-=======
-import { Loader2 } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 interface YoutubeEmbedProps {
   videoId: string,
@@ -20,7 +15,6 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
     <div className="relative aspect-video max-w-3xl mx-auto">
       {!loaded && (
         <>
-<<<<<<< HEAD
           <Image
             src={poster}
             alt={`${title} poster`}
@@ -29,7 +23,6 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
           />
           <div className='absolute inset-0 flex items-center justify-center bg-black/30'>
             <Loader2 className='h-8 w-8 animate-spin text-white' />
-=======
 import { Loader2 } from 'lucide-react'
 import { useState } from 'react';
 interface YoutubeEmbedProps {
@@ -50,12 +43,9 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
           <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <Image src={poster} alt={`${title} poster`} fill className="object-cover rounded" />
           <div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </>
       )}
@@ -63,30 +53,17 @@ export default function YoutubeEmbed({ videoId, title, poster }: YoutubeEmbedPro
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
         src={src}
         title={title}
-<<<<<<< HEAD
-<<<<<<< HEAD
         loading='lazy'
         onLoad={() => setLoaded(true)}
         allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-=======
         loading="lazy"
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         loading="lazy"
         onLoad={() => setLoaded(true)}
         allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         allowFullScreen
       />
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

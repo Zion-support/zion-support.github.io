@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -95,9 +90,7 @@ export function AIMilestoneGenerator({
         <Button
           variant="outline"
           onClick={handleGenerateMilestones}
-          disabled={isGenerating || !scope || !startDate || !projectType}
-        >
-          {isGenerating ? (
+          disabled={isGenerating || !scope || !startDate || !projectType}>{isGenerating ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Generating...
@@ -155,9 +148,7 @@ export function AIMilestoneGenerator({
                         e.stopPropagation();
                         handleAddSingleMilestone(milestone)
                       }}
-                      className="mr-2"
-                    >
-                      <Plus className="h-4 w-4" />
+                      className="mr-2"><Plus className="h-4 w-4" />
                     </Button>
                   </div>
                   <AccordionContent>
@@ -180,16 +171,8 @@ export function AIMilestoneGenerator({
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
     setSelectedMilestones(prev => ({
       ...prev;
-<<<<<<< HEAD
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

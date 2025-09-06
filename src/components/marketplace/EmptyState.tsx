@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import { RefreshCw, Wifi, Server, ShoppingCart, Users, Wrench, Lightbulb } from 'lucide-react'
 import { Button } from '@/components/ui/button';
@@ -56,16 +55,12 @@ export function EmptyState({
   icon
 }: EmptyStateProps) {
   const { t } = useTranslation();
-=======
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   const content = defaultContent[type];
   const displayTitle = title || content.title;
   const displayDescription = description || content.description;
   const displayIcon = icon || content.icon;
 
-<<<<<<< HEAD
   return (
     <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
       <div className="mb-4">
@@ -84,9 +79,7 @@ export function EmptyState({
         <Button
           onClick={action.onClick}
           variant="outline"
-          className="flex items-center gap-2"
-        >
-          <RefreshCw className="w-4 h-4" />
+          className="flex items-center gap-2"><RefreshCw className="w-4 h-4" />
           {action.label}
         </Button>
       )}
@@ -197,10 +190,5 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
     />
   );
-<<<<<<< HEAD
-=======
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

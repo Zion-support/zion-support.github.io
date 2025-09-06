@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
 type Entry = { route: string, file: string },
 interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 type Props = { report: Report | null },
 export const getStaticProps: GetStaticProps<Props> = async () => {
@@ -20,11 +16,9 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: null }, revalidate: 21600 }
   }
 };
-<<<<<<< HEAD
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>) 
-=======
 import fs from 'fs';
 import path from 'path';
 import type { GetStaticProps } from 'next';
@@ -42,8 +36,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     return { props: { report: null }, revalidate: 21600 }
   }
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
@@ -76,9 +68,5 @@ export default function ContentMap({ report }: Props) {
       </section>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

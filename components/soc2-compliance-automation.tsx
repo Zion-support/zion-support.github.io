@@ -1,11 +1,7 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function SOC2ComplianceAutomationPage() {
 	return(<>
 			<SEO title="SOC 2 Compliance Automation" description="Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance." />
@@ -54,7 +50,6 @@ export default function SOC2ComplianceAutomationPage() {
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.vanta.com/" target="_blank" rel="noreferrer">Vanta</a>, <a className="underline hover:text-cyan-300" href="https://drata.com/" target="_blank" rel="noreferrer">Drata</a>, <a className="underline hover: text-cyan-300" href="https://securityscorecard.com/" target="_blank" rel="noreferrer">SecurityScorecard</a>.</p>
 					</div>
 
-<<<<<<< HEAD
           <div className='mt-12 flex flex-wrap items-center gap-4'>
             <Link
               href='/contact'
@@ -74,7 +69,6 @@ export default function SOC2ComplianceAutomationPage() {
       </section>
     </>
   );
-=======
 export default function SOC2ComplianceAutomationPage() {
 	return(<>
 			<SEO title="SOC 2 Compliance Automation" description="Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance." />
@@ -123,8 +117,6 @@ export default function SOC2ComplianceAutomationPage() {
 						<p className="mt-4 text-sm text-gray-400">Market references: <a className="underline hover:text-cyan-300" href="https://www.vanta.com/" target="_blank" rel="noreferrer">Vanta</a>, <a className="underline hover:text-cyan-300" href="https://drata.com/" target="_blank" rel="noreferrer">Drata</a>, <a className="underline hover: text-cyan-300" href="https://securityscorecard.com/" target="_blank" rel="noreferrer">SecurityScorecard</a>.</p>
 					</div>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 					<div className="mt-12 flex flex-wrap items-center gap-4">
 						<Link href="/contact" className="px-5 py-3 rounded-lg bg-pink-400 text-black font-semibold">Automate SOC 2</Link>
 						<a href="mailto:kleber@ziontechgroup.com" className="px-5 py-3 rounded-lg border border-white/20">Email: kleber@ziontechgroup.com</a>
@@ -134,9 +126,5 @@ export default function SOC2ComplianceAutomationPage() {
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

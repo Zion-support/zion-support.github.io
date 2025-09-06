@@ -3,19 +3,11 @@ import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function HolographicAICommunicationPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-<<<<<<< HEAD
-<<<<<<< HEAD
     address: '364 E Main St STE 1008 Middletown DE 19709',
   };
 
@@ -26,28 +18,22 @@ export default function HolographicAICommunicationPage() {
     'Gesture and voice control',
     'Cross-platform WebXR support',
     'Enterprise-grade security',
-=======
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     address: '364 E Main St STE 1008 Middletown DE 19709'
   };
 
   const features = [
     'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice controlCross-platform WebXR supportEnterprise-grade security'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
     <UltraAdvancedFuturisticBackground>
       <Head>
         <title>Holographic AI Communication Platform - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control.'
@@ -56,10 +42,8 @@ export default function HolographicAICommunicationPage() {
           rel='canonical'
           href='https://ziontechgroup.com/holographic-ai-communication-platform'
         />
-=======
         <meta name="description" content="AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control." />
         <link rel="canonical" href="https://ziontechgroup.com/holographic-ai-communication-platform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -78,7 +62,6 @@ export default function HolographicAICommunicationPage() {
                 ))}
               </ul>
             </div>
-<<<<<<< HEAD
             <div className='bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit'>
               <div className='text-3xl font-bold text-white'>
                 $1,899<span className='text-slate-400 text-base'>/month</span>
@@ -108,7 +91,6 @@ export default function HolographicAICommunicationPage() {
                   <MapPin className='w-4 h-4 text-green-400' />
                   <span className='text-xs'>{contactInfo.address}</span>
                 </div>
-=======
         <meta name="description" content="AI-powered holographic communication platform enabling photorealistic 3D meetings with gesture and voice control." />
         <link rel="canonical" href="https://ziontechgroup.com/holographic-ai-communication-platform" />
       </Head>
@@ -129,8 +111,6 @@ export default function HolographicAICommunicationPage() {
                 ))}
               </ul>
             </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <div className="bg-black/30 rounded-2xl border border-fuchsia-500/30 p-6 h-fit">
               <div className="text-3xl font-bold text-white">$1,899<span className="text-slate-400 text-base">/month</span></div>
               <div className="text-slate-400">30-day free trial • Setup: 1 week</div>
@@ -139,10 +119,6 @@ export default function HolographicAICommunicationPage() {
                 <div className="flex items-center space-x-2"><Phone className="w-4 h-4 text-cyan-400" /><span>{contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2"><Mail className="w-4 h-4 text-purple-400" /><span>{contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2"><MapPin className="w-4 h-4 text-green-400" /><span className="text-xs">{contactInfo.address}</span></div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
@@ -150,13 +126,7 @@ export default function HolographicAICommunicationPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

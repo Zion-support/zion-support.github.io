@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
@@ -18,8 +16,6 @@ import {
 } from '@/components/ui/tooltip';
 import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -139,9 +135,7 @@ export function OnChainExport() {
               <Button 
                 className="w-full" 
                 onClick={handleExportTokens} 
-                disabled={isExporting}
-              >
-                {isExporting ? "Processing..." : "Export Tokens"}
+                disabled={isExporting}>{isExporting ? "Processing..." : "Export Tokens"}
                 {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
               </Button>
             )}
@@ -159,7 +153,6 @@ export function OnChainExport() {
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
 }//Request accounts ;
 
 };';
@@ -184,18 +177,11 @@ h-5 w-5"/>) ";
 }</div>) : (<div className=" space-y-2"> <p className=" text-sm text-muted-foreground mb-3" > Connect your web3 wallet to export tokens to the blockchain. </p> Connect Wallet </Button> </div>) ;
 }</CardContent> </Card>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0];
       
 
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

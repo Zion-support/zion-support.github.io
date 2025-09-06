@@ -204,9 +204,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <button
             onClick={sendOffer}
             disabled={loading}
-            className='px-4 py-2 rounded bg-indigo-600 text-white'
-          >
-            {loading ? 'Sending…' : 'Send Offer to Confirm'}
+            className='px-4 py-2 rounded bg-indigo-600 text-white'>{loading ? 'Sending…' : 'Send Offer to Confirm'}
           <label className="block text-sm font-medium">Agreement URL (optional)</label>
           <input value={agreementUrl} onChange={(e) => setAgreementUrl(e.target.value)} placeholder="https://..." className="w-full border rounded px-3 py-2" />
         </div>

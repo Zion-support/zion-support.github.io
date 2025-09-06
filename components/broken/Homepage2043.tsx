@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   ArrowRight,
   Play,
@@ -39,40 +37,22 @@ import {
   Zap as ZapIcon,
   Brain as BrainIcon,
   Atom as AtomIcon,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
   Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 
 // Import our new revolutionary services
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
 import { revolutionary2044InnovativeServices } from '../data/revolutionary-2044-innovative-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const Homepage2043: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-  
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   useEffect(() => {
     setIsVisible(true);
     
@@ -93,12 +73,10 @@ const Homepage2043: React.FC = () => {
   }, []);
 
   // Combine all revolutionary services
-<<<<<<< HEAD
   const allRevolutionaryServices = [
     ...revolutionary2043AdvancedServices,
     ...revolutionary2044InnovativeServices,
   ];
-=======
   
   useEffect(() => {
     setIsVisible(true);
@@ -121,21 +99,13 @@ const Homepage2043: React.FC = () => {
 
   // Combine all revolutionary services
   const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const allRevolutionaryServices = [...revolutionary2043AdvancedServices, ...revolutionary2044InnovativeServices];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Get featured services for rotation
   const featuredServices = allRevolutionaryServices.slice(0, 6);
 
   const features = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
-=======
-    { 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       icon: BrainIcon,
       title: "AI Consciousness Evolution",
       description: "Next-generation AI consciousness with human-level understanding",
@@ -186,7 +156,6 @@ const Homepage2043: React.FC = () => {
   ];
 
   const stats = [
-<<<<<<< HEAD
     {
       number: '2000+',
       label: 'Revolutionary Services',
@@ -211,7 +180,6 @@ const Homepage2043: React.FC = () => {
       icon: Globe,
       color: 'from-blue-400 to-cyan-500',
     },
-=======
     { 
       icon: BrainIcon,
       title: "AI Consciousness Evolution",
@@ -263,33 +231,23 @@ const Homepage2043: React.FC = () => {
   ];
 
   const stats = [
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     { number: "2000+", label: "Revolutionary Services", icon: Star, color: "from-yellow-400 to-orange-500" },
     { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-400 to-emerald-500" },
     { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-400 to-pink-500" },
     { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-400 to-cyan-500" }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'Dr. Sarah Chen',
       role: 'Chief AI Officer',
       company: 'QuantumTech Industries',
       content:
         "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
-=======
       name: "Dr. Sarah Chen",
       role: "Chief AI Officer",
       company: "QuantumTech Industries",
       content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       rating: 5,
       avatar: "👩‍🔬"
     };
@@ -328,11 +286,9 @@ const Homepage2043: React.FC = () => {
   };
 
   const prevService = () => {
-<<<<<<< HEAD
     setCurrentServiceIndex(
       prev => (prev - 1 + featuredServices.length) % featuredServices.length
     );
-=======
       name: "Dr. Sarah Chen",
       role: "Chief AI Officer",
       company: "QuantumTech Industries",
@@ -376,27 +332,17 @@ const Homepage2043: React.FC = () => {
 
   const prevService = () => {
     setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <Layout>
       {/* Main Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <main className='relative z-10'>
-=======
-      <main className="relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {/* Hero Section */}
         <section 
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-          aria-labelledby="hero-heading"
-        >
-          {/* Enhanced Animated Background */}
+          aria-labelledby="hero-heading">{/* Enhanced Animated Background */}
           <div className="absolute inset-0 -z-10">
             {/* Floating orbs with enhanced effects */}
             <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -410,20 +356,16 @@ const Homepage2043: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
                   animate={{
-<<<<<<< HEAD
                     x: [0, 150, 0],
                     y: [0, -150, 0],
                     opacity: [0, 1, 0],
                     scale: [0, 1.5, 0],
                   }}
-=======
       <main className="relative z-10">
         {/* Hero Section */}
         <section 
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-          aria-labelledby="hero-heading"
-        >
-          {/* Enhanced Animated Background */}
+          aria-labelledby="hero-heading">{/* Enhanced Animated Background */}
           <div className="absolute inset-0 -z-10">
             {/* Floating orbs with enhanced effects */}
             <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -437,136 +379,90 @@ const Homepage2043: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full"
                   animate={{
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     x: [0, 150, 0];
                     y: [0, -150, 0];
                     opacity: [0, 1, 0];
                     scale: [0, 1.5, 0]}}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   transition={{
                     duration: 8 + i * 0.3,
                     repeat: Infinity as any,
                     delay: i * 0.2,
-<<<<<<< HEAD
-<<<<<<< HEAD
                     ease: 'easeInOut',
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
                   }}
-=======
                     ease: "easeInOut"
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`}}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     ease: "easeInOut"
                   }}
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`}}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 />
               ))}
             </div>
 
             {/* Enhanced grid pattern */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='absolute inset-0 opacity-20'>
               <div
                 className='absolute inset-0'
                 style={{
                   backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
                   backgroundSize: '50px 50px',
-                }}
-              ></div>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                }}></div>
             <div className="absolute inset-0 opacity-20">
               <div className="absolute inset-0" style={{
                 backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
                 backgroundSize: '50px 50px'
               }}></div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
 
           {/* Hero Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='text-center max-w-6xl mx-auto relative z-10'>
-=======
-          <div className="text-center max-w-6xl mx-auto relative z-10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-          <div className="text-center max-w-6xl mx-auto relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8 }}
-            >
-              {/* Enhanced Badge */}
-<<<<<<< HEAD
-<<<<<<< HEAD
+              transition={{ duration: 0.8 }}>{/* Enhanced Badge */}
               <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm'>
                 <Sparkles className='w-4 h-4 mr-2' />
-=======
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
                 <Sparkles className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6 backdrop-blur-sm">
                 <Sparkles className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Revolutionary 2043 Technology
               </div>
 
               {/* Main Heading */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h1
                 id='hero-heading'
                 className='text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight'
               >
                 The Future of
                 <span className='block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent'>
-=======
               <h1 
                 id="hero-heading"
                 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight"
               >
                 The Future of
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <h1 
                 id="hero-heading"
                 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight"
               >
                 The Future of
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   AI Consciousness
                 </span>
                 is Here
               </h1>
 
               {/* Enhanced Subtitle */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed'>
                 Experience the world's most advanced AI consciousness platforms,
                 quantum computing solutions, and autonomous systems that
@@ -575,121 +471,74 @@ const Homepage2043: React.FC = () => {
 
               {/* Enhanced CTA Buttons */}
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-12'>
-=======
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.
               </p>
 
               {/* Enhanced CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.
               </p>
 
               {/* Enhanced CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'
-=======
-                  className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
-<<<<<<< HEAD
 
-=======
                   className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-lg flex items-center gap-2 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Get Started Today
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
                 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleWatchDemo}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'
-                >
-                  <Play className='w-5 h-5' />
-=======
-                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
-                >
-                  <Play className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
-                >
-                  <Play className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                  className='px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'><Play className='w-5 h-5' />
+                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"><Play className="w-5 h-5" />
+                  className="px-8 py-4 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-lg flex items-center gap-2 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"><Play className="w-5 h-5" />
                   Watch Demo
                 </motion.button>
               </div>
 
               {/* Enhanced Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
-=======
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {stats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
                     initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     animate={{
                       opacity: isVisible ? 1 : 0,
                       y: isVisible ? 0 : 20,
                     }}
-=======
                     animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
+                    className="text-center"><div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
                       <stat.icon className="w-8 h-8 text-white" />
                     </div>
-<<<<<<< HEAD
                     <div className='text-3xl font-bold text-white mb-1'>
                       {stat.number}
                     </div>
                     <div className='text-gray-400 text-sm'>{stat.label}</div>
-=======
                     animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="text-center"
-                  >
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
+                    className="text-center"><div className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${stat.color} mb-3`}>
                       <stat.icon className="w-8 h-8 text-white" />
                     </div>
                     <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="text-3xl font-bold text-white mb-1">{stat.number}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </motion.div>
                 ))}
               </div>
@@ -698,31 +547,18 @@ const Homepage2043: React.FC = () => {
         </section>
 
         {/* Enhanced Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>
-=======
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='text-center mb-16'
-=======
-              className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className='text-center mb-16'><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Solutions
@@ -734,12 +570,8 @@ const Homepage2043: React.FC = () => {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Revolutionary Technology
                 <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Solutions
@@ -752,10 +584,7 @@ const Homepage2043: React.FC = () => {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.title}
@@ -764,18 +593,10 @@ const Homepage2043: React.FC = () => {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   whileHover={{ y: -10, scale: 1.02 }}
-                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}
-                >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    <feature.icon className='w-8 h-8 text-white' />
-=======
+                  className={`group relative p-8 rounded-2xl ${feature.gradient} border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300`}><div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}><feature.icon className='w-8 h-8 text-white' />
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
@@ -791,9 +612,7 @@ const Homepage2043: React.FC = () => {
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:gap-3 transition-all duration-300"
                   >
                     Learn More
-<<<<<<< HEAD
                     <ChevronRight className='w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300' />
-=======
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -812,10 +631,7 @@ const Homepage2043: React.FC = () => {
                   >
                     Learn More
                     <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </a>
                 </motion.div>
               ))}
@@ -824,45 +640,28 @@ const Homepage2043: React.FC = () => {
         </section>
 
         {/* Enhanced Featured Services Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80'>
           <div className='max-w-7xl mx-auto'>
-=======
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 relative bg-gradient-to-b from-black/50 to-black/80">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='text-center mb-16'
-=======
-              className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className='text-center mb-16'><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Revolutionary Services
                 </span>
               </h2>
-<<<<<<< HEAD
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Experience our most advanced AI consciousness and quantum
                 computing platforms that are setting new standards in
                 technology.
-=======
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Featured
                 <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Revolutionary Services
@@ -871,45 +670,29 @@ const Homepage2043: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience our most advanced AI consciousness and quantum computing platforms 
                 that are setting new standards in technology.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Experience our most advanced AI consciousness and quantum computing platforms 
                 that are setting new standards in technology.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </motion.div>
 
             {/* Enhanced Service Showcase */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='relative'>
               <div className='relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm'>
                 <AnimatePresence mode='wait'>
-=======
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="relative">
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-gray-900/50 to-black/50 border border-white/10 backdrop-blur-sm">
                 <AnimatePresence mode="wait">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <motion.div
                     key={currentServiceIndex}
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    className='p-12 text-center'
-=======
-                    className="p-12 text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                  >
-                    <div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>
+                    className='p-12 text-center'><div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>
                     <h3 className="text-3xl font-bold text-white mb-4">
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
@@ -925,12 +708,8 @@ const Homepage2043: React.FC = () => {
                       className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 text-white font-semibold rounded-full text-lg hover:from-cyan-700 hover:to-blue-700 transition-all duration-300"
                     >
                       Get Started
-<<<<<<< HEAD
                       <ArrowRight className='w-5 h-5 ml-2' />
-=======
-                    className="p-12 text-center"
-                  >
-                    <div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>
+                    className="p-12 text-center"><div className="text-6xl mb-6">{featuredServices[currentServiceIndex]?.icon}</div>
                     <h3 className="text-3xl font-bold text-white mb-4">
                       {featuredServices[currentServiceIndex]?.name}
                     </h3>
@@ -947,10 +726,7 @@ const Homepage2043: React.FC = () => {
                     >
                       Get Started
                       <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </a>
                   </motion.div>
                 </AnimatePresence>
@@ -958,62 +734,38 @@ const Homepage2043: React.FC = () => {
                 {/* Navigation Controls */}
                 <button
                   onClick={prevService}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'
-=======
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <ChevronLeft className="w-6 h-6" />
+                  className='absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm'><ChevronLeft className="w-6 h-6" />
                 </button>
                 
                 <button
                   onClick={nextService}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
-                >
-                  <ChevronRight className="w-6 h-6" />
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"><ChevronRight className="w-6 h-6" />
                 </button>
 
                 {/* Service Indicators */}
-<<<<<<< HEAD
                 <div className='absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2'>
-=======
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
-                >
-                  <ChevronLeft className="w-6 h-6" />
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"><ChevronLeft className="w-6 h-6" />
                 </button>
                 
                 <button
                   onClick={nextService}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"
-                >
-                  <ChevronRight className="w-6 h-6" />
+                  className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 flex items-center justify-center text-white transition-all duration-300 backdrop-blur-sm"><ChevronRight className="w-6 h-6" />
                 </button>
 
                 {/* Service Indicators */}
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   {featuredServices.map((_, index) => (
                     <button
                       key={index}
                       onClick={() => setCurrentServiceIndex(index)}
                       className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                         index === currentServiceIndex
                           ? 'bg-cyan-400 w-8'
-=======
                         index === currentServiceIndex 
                           ? 'bg-cyan-400 w-8' 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         index === currentServiceIndex 
                           ? 'bg-cyan-400 w-8' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           : 'bg-white/30 hover:bg-white/50'
                       }`}
                     />
@@ -1025,31 +777,18 @@ const Homepage2043: React.FC = () => {
         </section>
 
         {/* Enhanced Testimonials Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 relative'>
           <div className='max-w-7xl mx-auto'>
-=======
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='text-center mb-16'
-=======
-              className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className='text-center mb-16'><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 What Our
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                   Clients Say
@@ -1061,13 +800,9 @@ const Homepage2043: React.FC = () => {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='relative'>
               <AnimatePresence mode='wait'>
-=======
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 What Our
                 <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                   Clients Say
@@ -1081,25 +816,15 @@ const Homepage2043: React.FC = () => {
 
             <div className="relative">
               <AnimatePresence mode="wait">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="relative">
               <AnimatePresence mode="wait">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
                   key={currentTestimonialIndex}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -30 }}
                   transition={{ duration: 0.5 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='text-center max-w-4xl mx-auto'
-=======
-                  className="text-center max-w-4xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="text-8xl mb-6">💬</div>
+                  className='text-center max-w-4xl mx-auto'><div className="text-8xl mb-6">💬</div>
                   <blockquote className="text-2xl text-white mb-8 leading-relaxed italic">
                     "{testimonials[currentTestimonialIndex].content}"
                   </blockquote>
@@ -1115,7 +840,6 @@ const Homepage2043: React.FC = () => {
                       </div>
                     </div>
                   </div>
-<<<<<<< HEAD
 
                   <div className='flex justify-center gap-1'>
                     {[
@@ -1125,10 +849,7 @@ const Homepage2043: React.FC = () => {
                         key={i}
                         className='w-6 h-6 text-yellow-400 fill-current'
                       />
-=======
-                  className="text-center max-w-4xl mx-auto"
-                >
-                  <div className="text-8xl mb-6">💬</div>
+                  className="text-center max-w-4xl mx-auto"><div className="text-8xl mb-6">💬</div>
                   <blockquote className="text-2xl text-white mb-8 leading-relaxed italic">
                     "{testimonials[currentTestimonialIndex].content}"
                   </blockquote>
@@ -1144,48 +865,28 @@ const Homepage2043: React.FC = () => {
                       </div>
                     </div>
                   </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   
                   <div className="flex justify-center gap-1">
                     {[...Array(testimonials[currentTestimonialIndex].rating)].map((_, i) => (
                       <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     ))}
                   </div>
                 </motion.div>
               </AnimatePresence>
 
               {/* Testimonial Indicators */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='flex justify-center gap-2 mt-8'>
-=======
-              <div className="flex justify-center gap-2 mt-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              <div className="flex justify-center gap-2 mt-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentTestimonialIndex(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                       index === currentTestimonialIndex
                         ? 'bg-emerald-400 w-8'
-=======
                       index === currentTestimonialIndex 
                         ? 'bg-emerald-400 w-8' 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       index === currentTestimonialIndex 
                         ? 'bg-emerald-400 w-8' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         : 'bg-white/30 hover:bg-white/50'
                     }`}
                   />
@@ -1196,30 +897,17 @@ const Homepage2043: React.FC = () => {
         </section>
 
         {/* Enhanced CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 relative'>
           <div className='max-w-6xl mx-auto text-center'>
-=======
         <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 relative">
           <div className="max-w-6xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Experience the
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
                   Future of AI?
@@ -1231,9 +919,7 @@ const Homepage2043: React.FC = () => {
                 with our revolutionary AI consciousness and quantum computing platforms.
               </p>
 
-<<<<<<< HEAD
               <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
                 <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent">
@@ -1247,73 +933,44 @@ const Homepage2043: React.FC = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleGetStarted}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl'
-=======
-                  className="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Start Your Journey
                   <ArrowRight className="w-6 h-6" />
                 </motion.button>
-<<<<<<< HEAD
 
-=======
                   className="px-10 py-5 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-full text-xl flex items-center gap-3 hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
                   Start Your Journey
                   <ArrowRight className="w-6 h-6" />
                 </motion.button>
                 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleContact}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'
-                >
-                  <Phone className='w-6 h-6' />
-=======
-                  className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
-                >
-                  <Phone className="w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"
-                >
-                  <Phone className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+                  className='px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm'><Phone className='w-6 h-6' />
+                  className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"><Phone className="w-6 h-6" />
+                  className="px-10 py-5 bg-transparent border-2 border-cyan-500/50 text-cyan-300 font-semibold rounded-full text-xl flex items-center gap-3 hover:bg-cyan-500/10 hover:border-cyan-400 transition-all duration-300 backdrop-blur-sm"><Phone className="w-6 h-6" />
                   Contact Us
                 </motion.button>
               </div>
 
               {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'>
                 <div className='text-center'>
                   <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4'>
                     <Phone className='w-8 h-8 text-white' />
-=======
               <div className="mt-16 grid grid-cols-1 md: grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4">
                     <Phone className="w-8 h-8 text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Call Us</h3>
                   <p className="text-cyan-400">+1 302 464 0950</p>
@@ -1331,7 +988,6 @@ const Homepage2043: React.FC = () => {
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-xl font-semibold text-white mb-2'>
                     Visit Us
                   </h3>
@@ -1340,7 +996,6 @@ const Homepage2043: React.FC = () => {
                     <br />
                     Middletown DE 19709
                   </p>
-=======
               <div className="mt-16 grid grid-cols-1 md: grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4">
@@ -1364,11 +1019,8 @@ const Homepage2043: React.FC = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
                   <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <h3 className="text-xl font-semibold text-white mb-2">Visit Us</h3>
                   <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </motion.div>
@@ -1376,8 +1028,6 @@ const Homepage2043: React.FC = () => {
         </section>
       </main>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
@@ -1403,8 +1053,8 @@ top: `$ {
 }> Revolutionary 2043 Technology </div> {
   /* Main Heading */ 
 }<h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight" > The Future of <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > AI Consciousness </span> is Here </h1> Experience the world's most advanced AI consciousness platforms, quantum computing solutions;
-and autonomous systems that redefine what's possible in technology. </p> > Get Started Today <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button > <Play className="w-5 h-5" /> Watch Demo </motion.button> </div> </motion.div>) ) 
-}</div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Revolutionary Technology <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover cutting-edge AI consciousness, quantum computing, and autonomous systems that are transforming industries and reshaping the future. </p> </motion.div> <motion.div key= {
+and autonomous systems that redefine what's possible in technology. </p> > Get Started Today <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button><Play className="w-5 h-5" /> Watch Demo </motion.button> </div> </motion.div>) ) 
+}</div> </motion.div> </div> </section>><h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Revolutionary Technology <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Solutions </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover cutting-edge AI consciousness, quantum computing, and autonomous systems that are transforming industries and reshaping the future. </p> </motion.div> <motion.div key= {
   feature.title 
 }initial= {
   {
@@ -1431,9 +1081,9 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
   feature.gradient 
 }border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300` 
 }> > Learn More <ChevronRight className="w-4 h-4 ml-1 group-hover:ml-2 transition-all duration-300" /> </a> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience our most advanced AI consciousness and quantum computing platforms that are setting new standards in technology. </p> </motion.div> > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </a> </motion.div> </AnimatePresence> {
+}</div> </div> </section>><h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Services </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Experience our most advanced AI consciousness and quantum computing platforms that are setting new standards in technology. </p> </motion.div> > Get Started <ArrowRight className="w-5 h-5 ml-2" /> </a> </motion.div> </AnimatePresence> {
   /* Navigation Controls */ 
-}<button > <ChevronLeft className="w-6 h-6" /> </button> <button > <ChevronRight className="w-6 h-6" /> </button> key= {
+}<button><ChevronLeft className="w-6 h-6" /> </button> <button><ChevronRight className="w-6 h-6" /> </button> key= {
   index 
 }onClick= {
   () => setCurrentServiceIndex (index) 
@@ -1442,7 +1092,7 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
   index === currentServiceIndex ? 'bg-cyan-400 w-8' : 'bg-white/30 hover:bg-white/50' 
 }` 
 }/>) ) 
-}</div> </div> </div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > What Our <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent" > Clients Say </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover how our revolutionary AI consciousness and quantum computing platforms are transforming industries and driving innovation. </p> </motion.div> <div className="relative" > <AnimatePresence mode="wait" > <motion.div </div> </div> </div>) ) 
+}</div> </div> </div> </div> </section>><h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > What Our <span className="block bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent" > Clients Say </span> </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover how our revolutionary AI consciousness and quantum computing platforms are transforming industries and driving innovation. </p> </motion.div> <div className="relative"><AnimatePresence mode="wait"><motion.div </div> </div> </div>) ) 
 }</div> </motion.div> </AnimatePresence> key= {
   index 
 }onClick= {
@@ -1468,18 +1118,14 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
   {
   once: true 
 
-}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
+}> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center"><motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button><Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
 export default Homepage2043;
-=======
   )
 };
 
 export default Homepage2043;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default Homepage2043;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

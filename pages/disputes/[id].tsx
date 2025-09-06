@@ -70,9 +70,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <div className='flex items-center justify-between mb-4'>
             <h1 className='text-2xl font-semibold'>Case {dispute.id}</h1>
             <span
-              className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}
-            >
-              {dispute.status}
+              className={`px-2 py-1 rounded text-sm border ${dispute.status === 'Resolved' ? 'bg-green-100 text-green-800 border-green-300' : dispute.status === 'Under Review' ? 'bg-yellow-100 text-yellow-800 border-yellow-300' : 'bg-red-100 text-red-800 border-red-300'}`}>{dispute.status}
             </span>
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-4">
@@ -103,9 +101,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <button
                 key={t}
                 onClick={() => setActiveTab(t)}
-                className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}
-              >
-                {t}
+                className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500'}`}>{t}
               </button>
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center justify-between mb-4">

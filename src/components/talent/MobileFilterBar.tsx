@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Search, Sliders } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -27,9 +23,7 @@ export function MobileFilterBar({
       <Button 
         onClick={() => setIsMobileFilterOpen(true)} 
         variant="outline"
-        className="w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light"
-      >
-        <Sliders className="h-4 w-4" />
+        className="w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light"><Sliders className="h-4 w-4" />
         Filter Talents
       </Button>
       
@@ -54,11 +48,5 @@ export function MobileFilterBar({
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   setSearchTerm, 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

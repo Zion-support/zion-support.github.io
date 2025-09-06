@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import { useFormik } from 'formik';
@@ -15,7 +14,6 @@ import { AlertCircle, CheckCircle, Mail } from 'lucide-react'
 import { toast } from '@/hooks/use-toast';
 import { AuthLayout } from '@/layout';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 
 const SignupSchema = Yup.object({
   name: Yup.string().required('Name is required'),
@@ -281,9 +279,7 @@ export default function Signup() {
                   size="sm" 
                   onClick={performHealthCheck}
                   disabled={healthCheckLoading}
-                  className="ml-2 text-xs"
-                >
-                  {healthCheckLoading ? 'Checking...' : 'Retry'}
+                  className="ml-2 text-xs">{healthCheckLoading ? 'Checking...' : 'Retry'}
                 </Button>
               </AlertDescription>
             </Alert>
@@ -420,9 +416,7 @@ export default function Signup() {
               type="submit" 
               disabled={loading} 
               data-testid="signup-submit"
-              className={healthCheckError ? 'bg-yellow-600 hover: bg-yellow-700' : ''}
-            >
-              {loading ? (
+              className={healthCheckError ? 'bg-yellow-600 hover: bg-yellow-700' : ''}>{loading ? (
                 <>
                   <LoadingSpinner size="sm" className="mr-2" />
                   Creating Account...
@@ -482,7 +476,6 @@ export default function Signup() {
       </div>
     </AuthLayout>
   );
-<<<<<<< HEAD
 
 }) ;
 };
@@ -493,7 +486,6 @@ toast ({';
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.' ;
 });
 //Redirect to appropriate page after a short delay ;
-
 
 }catch (err: unknown) {';
   logErrorToProduction ('Signup error details:', {;
@@ -506,7 +498,7 @@ request: err.request ? 'Request made but no response': 'No request';
 }return undefined;
 }, [emailVerificationRequired, formik.values.email, router]);
 //Show loading state only during initial health check if (healthCheckLoading) {;
-  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4" > <div className="text-center space-y-4" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" ></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>) ;
+  return (<AuthLayout> <div className="flex min-h-screen items-center justify-center p-4"><div className="text-center space-y-4"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div> <p className="text-muted-foreground" >Initializing signup...</p> </div> </div> </AuthLayout> Join the Zion AI Partner Program and start earning rewards </p> </div>) ;
 }> {';
   healthCheckLoading ? 'Checking...': 'Retry' ;
 }</Button> </AlertDescription> </Alert>) ;
@@ -520,7 +512,7 @@ request: err.request ? 'Request made but no response': 'No request';
 }</div> <div> <label htmlFor="email" className="block text-sm font-medium" > Email address </label> <Input) ";
 }</div> <div> <label htmlFor="password" className="block text-sm font-medium" > Password </label> <Input) ";
 }</div> <div> <label htmlFor="confirm" className="block text-sm font-medium" > Confirm Password </label> <Input) ";
-}</div> <div className="flex items-center space-x-2" > <input) ;
+}</div> <div className="flex items-center space-x-2"><input) ;
 }{";
   !emailVerificationRequired ? (<Button type="submit" disabled= {;
   loading ;
@@ -534,32 +526,21 @@ request: err.request ? 'Request made but no response': 'No request';
 }</form> </div>) ;
 }</div> </div> </AuthLayout>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   const isPartnerSignup = router.query.type === 'partner';
   const signupSource = router.query.source as string || 'direct';
 
-<<<<<<< HEAD
         
-<<<<<<< HEAD
         
-<<<<<<< HEAD
         
         if (res.status === 201) {
           const data = res.data;
           
-<<<<<<< HEAD
             
-<<<<<<< HEAD
         
         const status = err.response?.status;
         // Try both 'error' and 'message' fields for compatibility
         const errorMsg = err.response?.data?.error || err.response?.data?.message || 'Signup failed. Please try again.';
         
         logInfo('Processed error message:', { data: errorMsg }),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

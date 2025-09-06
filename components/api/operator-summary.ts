@@ -1,14 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   try {
     const r = await fetch(`${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`);
     const metrics = await r.json();
@@ -29,8 +25,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e) {
     res.status(200).json({ summary: [], error: 'Failed to compute summary' })
   }
-<<<<<<< HEAD
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const r = await fetch(`${req.headers['x-forwarded-proto'] || 'http'}://${req.headers.host}/api/metrics`);
@@ -50,7 +44,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(200).json({ summary: [], error: 'Failed to compute summary' })
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

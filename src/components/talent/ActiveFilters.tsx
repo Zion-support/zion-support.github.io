@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { ClickableBadge } from '@/components/ui/clickable-badge';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react';
-=======
 
 import React from "react";
 import { ClickableBadge } from "@/components/ui/clickable-badge";
 import { Button } from "@/components/ui/button";
 import { X } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface ActiveFiltersProps {
   selectedSkills: string[],
@@ -59,9 +55,7 @@ export function ActiveFilters({
         <ClickableBadge 
           key={skill}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleSkill(skill)}
-        >
-          {skill}
+          onClick={() => toggleSkill(skill)}>{skill}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
@@ -70,9 +64,7 @@ export function ActiveFilters({
         <ClickableBadge 
           key={status}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleAvailability(status)}
-        >
-          {status === 'full-time' ? 'Full-time' :
+          onClick={() => toggleAvailability(status)}>{status === 'full-time' ? 'Full-time' :
            status === 'part-time' ? 'Part-time' :
            'Project-based'}
           <X className="h-3 w-3" />
@@ -83,9 +75,7 @@ export function ActiveFilters({
         <ClickableBadge 
           key={region}
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => toggleRegion(region)}
-        >
-          {region}
+          onClick={() => toggleRegion(region)}>{region}
           <X className="h-3 w-3" />
         </ClickableBadge>
       ))}
@@ -103,9 +93,7 @@ export function ActiveFilters({
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
         <ClickableBadge 
           className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
-          onClick={() => setExperienceRange([0, 15])}
-        >
-          {experienceRange[0]}-{experienceRange[1]} years
+          onClick={() => setExperienceRange([0, 15])}>{experienceRange[0]}-{experienceRange[1]} years
           <X className="h-3 w-3" />
         </ClickableBadge>
       )}
@@ -120,11 +108,5 @@ export function ActiveFilters({
       </Button>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -124,9 +124,7 @@ const SearchBar: React.FC = () => {
             className="w-5 h-5 text-gray-400"
             fill="none"
             stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
+            viewBox="0 0 24 24"><path
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
@@ -151,9 +149,7 @@ const SearchBar: React.FC = () => {
                   key={index}
                   href={result.url}
                   onClick={handleResultClick}
-                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"
-                >
-                  <div className="flex items-start space-x-3">
+                  className="block px-4 py-3 hover:bg-gray-50 transition-colors"><div className="flex items-start space-x-3">
                     <div className="flex-shrink-0">
                       <div className={`w-2 h-2 rounded-full mt-2 ${
                         result.type === 'service' ? 'bg-blue-500' :

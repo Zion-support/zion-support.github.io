@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -33,8 +31,6 @@ import { useOnboardingStatus } from '@/hooks/useOnboardingStatus';
 import { MyApplications } from '@/components/jobs/MyApplications';
 import { ProjectOfferBanner } from '@/components/projects/ProjectOfferBanner';
 import { UpcomingInterviewsCard } from '@/components/interviews/UpcomingInterviewsCard';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
@@ -235,14 +231,7 @@ export default function TalentDashboard() {
       <TalentDashboardContent />
     </ProtectedRoute>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
     onboardingStatus.matchReceived;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

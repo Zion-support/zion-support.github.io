@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link';
@@ -350,9 +349,7 @@ export default function TalentDirectory() {
                     variant="ghost"
                     size="sm"
                     onClick={() => setIsMobileFilterOpen(false)}
-                    className="text-zion-slate-light h-8 w-8 p-0"
-                  >
-                    <X className="h-4 w-4" />
+                    className="text-zion-slate-light h-8 w-8 p-0"><X className="h-4 w-4" />
                     <span className="sr-only">Close</span>
                   </Button>
                 </div>
@@ -382,7 +379,6 @@ export default function TalentDirectory() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
 
 }/> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
@@ -398,7 +394,7 @@ export default function TalentDirectory() {
 }<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ";
 }</ErrorBoundary> </div> <Button variant="ghost" size="sm" onClick={;
   () => setIsMobileFilterOpen (false) ";
-}className="text-zion-slate-light h-8 w-8 p-0" > <X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {;
+}className="text-zion-slate-light h-8 w-8 p-0"><X className="h-4 w-4" /> <span className="sr-only" >Close</span> </Button> </div> <FilterSidebar searchTerm= {;
   searchTerm ;
 }setSearchTerm= {;
   setSearchTerm ;
@@ -437,19 +433,10 @@ export default function TalentDirectory() {
 }/> </div> </div>) ;
 }</div> </div> </div>) ;
 }"
-=======
 
-<<<<<<< HEAD
   const isAdmin = user?.userType === 'admin';
 
-
-
-<<<<<<< HEAD
   const pageKey = `talent-directory-${routeKey}-${router.asPath}`;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

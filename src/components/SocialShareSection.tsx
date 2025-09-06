@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from './ui/button';
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react';
 import { toast } from './ui/use-toast';
 import { useTranslation } from 'react-i18next';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Button } from "./ui/button";
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
@@ -91,9 +87,7 @@ export function SocialShareSection() {
                 size="sm"
                 onClick={link.onClick}
                 aria-label={link.name}
-                title={link.name}
-              >
-                {link.icon}
+                title={link.name}>{link.icon}
                 <span className="sr-only">{link.name}</span>
                 <span aria-hidden="true">{link.name}</span>
               </Button>
@@ -103,7 +97,6 @@ export function SocialShareSection() {
       </div>
     </section>
   );
-<<<<<<< HEAD
 
   navigator.clipboard.writeText (window.location.href) .then ( () => {;
   toast ({;
@@ -115,10 +108,5 @@ export function SocialShareSection() {
 };
 }</div> </div> </div> </section>) ;
 }'"
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

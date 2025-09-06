@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 'use client';
 
@@ -31,7 +30,6 @@ import {
 } from 'lucide-react';
 
 const Header: React.FC = () => {
-=======
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap } from 'lucide-react';
 import { useRouter } from 'next/router';
@@ -80,7 +78,6 @@ const servicesDropdown = [
 ];
 
 const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -91,7 +88,6 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
       setIsScrolled(window.scrollY > 10);
     };
 
-<<<<<<< HEAD
   const servicesDropdown = [
     {
       title: 'Web Development',
@@ -128,7 +124,6 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
       description: 'Speed and efficiency improvements',
       href: '/services/performance',
       icon: Zap
-=======
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -137,11 +132,9 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
     setIsMenuOpen(!isMenuOpen);
     if (onMenuClick) {
       onMenuClick();
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
-<<<<<<< HEAD
   const solutionsDropdown = [
     {
       title: 'Enterprise Solutions',
@@ -268,7 +261,6 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
       {/* Main Navigation */}
       <nav className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-=======
   const closeMenu = () => {
     setIsMenuOpen(false);
     setIsServicesOpen(false);
@@ -285,7 +277,6 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
@@ -314,9 +305,7 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
                 className={`flex items-center space-x-1 font-medium transition-colors duration-200 ${
                   isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-                }`}
-              >
-                <span>Services</span>
+                }`}><span>Services</span>
                 <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
                   isServicesOpen ? 'rotate-180' : ''
                 }`} />
@@ -328,15 +317,11 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                  >
-                    {servicesDropdown.map((service) => (
+                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">{servicesDropdown.map((service) => (
                       <button
                         key={service.title}
                         onClick={() => handleServiceClick(service.href)}
-                        className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors"
-                      >
-                        <div className="flex items-start space-x-3">
+                        className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors"><div className="flex items-start space-x-3">
                           <service.icon className="h-5 w-5 text-blue-600 mt-0.5" />
                           <div>
                             <div className="font-medium text-gray-900">{service.title}</div>
@@ -360,15 +345,12 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
               About
             </Link>
 
-<<<<<<< HEAD
             {/* Regular Navigation Items */}
             {navigation.slice(0, 2).map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                {item.name}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors">{item.name}
               </Link>
             ))}
           </div>
@@ -389,16 +371,13 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="p-2"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              className="p-2">{isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </nav>
 
       {/* Mobile Menu */}
-=======
             <Link
               href="/contact"
               className={`font-medium transition-colors duration-200 ${
@@ -412,43 +391,32 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
           {/* Mobile menu button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
-          >
-            <Menu className="h-6 w-6" />
+            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"><Menu className="h-6 w-6" />
           </button>
         </div>
       </div>
 
       {/* Mobile menu */}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-            className="md:hidden"
-          >
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
+            className="md:hidden"><div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-50 rounded-lg mt-2">
               {navigation.map((item) => (
                 <div key={item.name}>
                   <Link
                     href={item.href}
                     className="text-gray-700 hover:text-blue-600 block px-3 py-2 text-base font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
+                    onClick={() => setIsMenuOpen(false)}>{item.name}
                   </Link>
                 ))}
                 <Link
                   href="/contact"
                   onClick={() => setIsMenuOpen(false)}
                   className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
-=======
-            className="lg:hidden bg-white border-t border-gray-200"
-          >
-            <div className="px-4 py-2 space-y-1">
+            className="lg:hidden bg-white border-t border-gray-200"><div className="px-4 py-2 space-y-1">
               <Link
                 href="/"
                 className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
@@ -460,10 +428,7 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
               <div className="px-3 py-2">
                 <button
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <span>Services</span>
+                  className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors"><span>Services</span>
                   <ChevronDown className={`h-4 w-4 transition-transform ${
                     isServicesOpen ? 'rotate-180' : ''
                   }`} />
@@ -475,20 +440,16 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
                       <button
                         key={service.title}
                         onClick={() => handleServiceClick(service.href)}
-                        className="block w-full text-left px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-                      >
-                        {service.title}
+                        className="block w-full text-left px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors">{service.title}
                       </button>
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
             </motion.div>
           )}
         </AnimatePresence>
       </nav>
-=======
               
               <Link
                 href="/about"
@@ -509,7 +470,6 @@ const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
           </motion.div>
         )}
       </AnimatePresence>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     </header>
   );

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
 import {
   Dialog;
@@ -52,9 +51,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
               <div
                 key={idx}
                 onClick={() => setSelected(idx)}
-                className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}
-              >
-                <img
+                className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2 ${idx === selected ? 'border-zion-purple' : 'border-transparent'}`}><img
                   src={img}
                   alt={`Thumbnail image ${idx + 1}`}
                   className="w-full h-full object-cover"
@@ -103,9 +100,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
       <DialogContent className="max-w-3xl p-0">
         <div
           className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
-          onClick={() => setZoomed(!zoomed)}
-        >
-          <img
+          onClick={() => setZoomed(!zoomed)}><img
             src={images[selected] || images[0] || ""}
             alt="Zoomed view"
             className={`w-full h-full object-contain transition-transform ${zoomed ? 'scale-150' : ''}`}
@@ -115,14 +110,7 @@ export function ProductGallery({ images, videoUrl, modelUrl }: ProductGalleryPro
     )}
     </Dialog>
   );
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
 
   const poster = images[0];
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

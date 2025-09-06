@@ -69,9 +69,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <select
             value={statusFilter}
             onChange={e => setStatusFilter(e.target.value as any)}
-            className='border rounded px-2 py-1 text-sm'
-          >
-            {(['Open', 'Under Review', 'Resolved', 'All'] as const).map(s => (
+            className='border rounded px-2 py-1 text-sm'>{(['Open', 'Under Review', 'Resolved', 'All'] as const).map(s => (
               <option key={s} value={s}>
                 {s}
               </option>
@@ -130,21 +128,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <td className='px-3 py-2'>{d.status}</td>
                   <td className='px-3 py-2 flex gap-2'>
                     <Link
-                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}
-                    >
-                      <a className='text-green-700 hover:underline'>Resolve</a>
+                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Admin%20Notes`}><a className='text-green-700 hover:underline'>Resolve</a>
                     </Link>
                     <Link
-                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}
-                    >
-                      <a className='text-blue-700 hover:underline'>
+                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Messages`}><a className='text-blue-700 hover:underline'>
                         Message Parties
                       </a>
                     </Link>
                     <Link
-                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}
-                    >
-                      <a className='text-gray-700 hover:underline'>
+                      href={`/disputes/${encodeURIComponent(d.id)}?tab=Attachments`}><a className='text-gray-700 hover:underline'>
                         Download Evidence
                       </a>
                     </Link>

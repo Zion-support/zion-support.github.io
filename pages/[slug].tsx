@@ -105,16 +105,12 @@ export default function ServicePage({ service }: { service: Service }) {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 href={`tel:+13024640950`}
-                className="bg-green-600 hover:bg-green-700 flex items-center gap-2"
-              >
-                <Phone className="w-4 h-4" />
+                className="bg-green-600 hover:bg-green-700 flex items-center gap-2"><Phone className="w-4 h-4" />
                 Call Us
               </Button>
               <Button 
                 href={`mailto:kleber@ziontechgroup.com`}
-                className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
-              >
-                <Mail className="w-4 h-4" />
+                className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"><Mail className="w-4 h-4" />
                 Email Us
               </Button>
             </div>

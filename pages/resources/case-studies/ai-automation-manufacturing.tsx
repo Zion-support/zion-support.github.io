@@ -39,9 +39,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <nav className='mb-8'>
               <Link
                 href='/resources'
-                className='text-cyan-400 hover:text-cyan-300 transition-colors'
-              >
-        <meta name="description" content={caseStudy.description} />
+                className='text-cyan-400 hover:text-cyan-300 transition-colors'><meta name="description" content={caseStudy.description} />
         <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />
       </Head>
       
@@ -199,17 +197,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <Link 
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
                 </Link>
                 
                 <Link 
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
-                  className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
-                >
-                  <h3 className='text-lg font-semibold text-cyan-400 mb-2'>
+                  className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"><h3 className='text-lg font-semibold text-cyan-400 mb-2'>
                     Autonomous Systems Guide
                   </h3>
                   <p className='text-white/80 text-sm'>
@@ -220,17 +214,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
                   href="/case-studies/ai-automation-manufacturing"
-                  className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
-                >
-                  <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
+                  className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"><h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
                 </Link>
                 
                 <Link 
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
-                  className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
-                >
-                  <h3 className="text-lg font-semibold text-cyan-400 mb-2">Autonomous Systems Guide</h3>
+                  className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"><h3 className="text-lg font-semibold text-cyan-400 mb-2">Autonomous Systems Guide</h3>
                   <p className="text-white/80 text-sm">Download our comprehensive guide to autonomous technology.</p>
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Autonomous Systems Guide</h3>
                   <p className="text-white/80 text-sm">Download our comprehensive guide to autonomous technology.</p>

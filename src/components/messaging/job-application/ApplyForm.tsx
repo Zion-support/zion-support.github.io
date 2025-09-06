@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -12,8 +10,6 @@ import { MessageTab } from './MessageTab';
 import { ResumeTab } from './ResumeTab';
 import { Job } from './types';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
@@ -174,9 +170,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
           type="button" 
           onClick={handleApply}
           disabled={isSubmitting}
-          className="bg-zion-purple hover:bg-zion-purple-dark text-white"
-        >
-          {isSubmitting ? (
+          className="bg-zion-purple hover:bg-zion-purple-dark text-white">{isSubmitting ? (
             <>
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
               Submitting...
@@ -188,7 +182,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       </div>
     </>
   );
-<<<<<<< HEAD
   if (!message.trim () ) {;
   toast ({;
   return;
@@ -232,7 +225,7 @@ return (<> <Tabs value= {;
   activeTab ;
 }onValueChange= {;
   setActiveTab ";
-}className="w-full" > <TabsList className="w-full mb-4 bg-zion-blue-dark/30" > <TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {;
+}className="w-full"><TabsList className="w-full mb-4 bg-zion-blue-dark/30"><TabsTrigger value="message" className="flex-1" > resume"className=" flex-1"> Resume </TabsTrigger> </TabsList> <TabsContent value=" message"> <MessageTab message= {;
   message ;
 }setMessage= {;
   setMessage ;
@@ -244,17 +237,12 @@ return (<> <Tabs value= {;
   handleResumeSelected ;
 }selectedResumeId= {;
   selectedResumeId ";
-}/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button > {'";
+}/> </TabsContent> </Tabs> <div className=" flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2 gap-2 sm:gap-0 mt-4"> <Button > Cancel </Button> <Button>{'";
   isSubmitting ? (<> <Loader2 className=" h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ('Submit Application') ;
 }</Button> </div> </>) ;
 }'"
-=======
 
-<<<<<<< HEAD
       let fullMessage = message;
       
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -6,8 +6,7 @@ import { cn } from '@/lib/utils';
 
 const InputOTP = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
-  React.ComponentPropsWithoutRef<typeof OTPInput>
-></typeof>(({ className, containerClassName, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof OTPInput>></typeof>(({ className, containerClassName, ...props }, ref) => (
   <OTPInput
     ref={ref}
     containerClassName={cn(
@@ -33,11 +32,7 @@ const InputOTPSlot = React.forwardRef<
   React.ComponentPropsWithoutRef<'div'> & { index: number }
 >(({ index, className, ...props }, ref) => {
   const inputOTPContext = React.useContext(OTPInputContext) as any;
-  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];
-
-  
-    >
-      {char}
+  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];>{char}
       {hasFakeCaret && (
         <div className='pointer-events-none absolute inset-0 flex items-center justify-center'>
           <div className='h-4 w-px animate-caret-blink bg-foreground duration-1000' />

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
-=======
 
 import React from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import {
   Table;
   TableBody;
@@ -197,9 +193,7 @@ export function RoleManagement() {
                 <TableCell>
                   <select 
                     className="w-full h-9 rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-                    defaultValue={member.role}
-                  >
-                    <option value="Admin">Admin</option>
+                    defaultValue={member.role}><option value="Admin">Admin</option>
                     <option value="Recruiter">Recruiter</option>
                     <option value="Manager">Manager</option>
                     <option value="Viewer">Viewer</option>
@@ -257,11 +251,5 @@ export function RoleManagement() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

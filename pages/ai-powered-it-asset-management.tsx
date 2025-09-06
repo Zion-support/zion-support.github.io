@@ -246,9 +246,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className='flex justify-center mb-6'>
+              transition={{ duration: 0.8 }}><div className='flex justify-center mb-6'>
                 <div className='p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full'>
                   <Monitor className='w-8 h-8 text-white' />
               <div className="flex justify-center mb-6">
@@ -274,9 +272,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
                 <Link
                   href='/services'
-                  className='inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200'
-                >
-              <div className="flex justify-center mb-6">
+                  className='inline-flex items-center px-8 py-3 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200'><div className="flex justify-center mb-6">
                 <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full">
                   <Monitor className="w-8 h-8 text-white" />
                 </div>
@@ -321,9 +317,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Revolutionary Features
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -332,9 +326,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Revolutionary Features
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -354,18 +346,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300'
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className='text-xl font-semibold text-white mb-3'>
                     {feature.title}
                   </h3>
                   <p className='text-gray-400'>{feature.description}</p>
-                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"
-                >
-                  <div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50 hover:border-indigo-500/50 transition-all duration-300"><div className={`inline-flex p-3 bg-gradient-to-r ${feature.color} rounded-lg mb-4`}>
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -394,15 +382,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Comprehensive Asset Coverage
               </h2>
               <p className='text-xl text-gray-400 max-w-2xl mx-auto'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Comprehensive Asset Coverage
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -423,17 +407,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className='flex items-center space-x-3'
-                >
-                  <CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
+                  className='flex items-center space-x-3'><CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
                   <span className='text-gray-300'>{assetType}</span>
-                  className="flex items-center space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
+                  className="flex items-center space-x-3"><CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{assetType}</span>
-                  className="flex items-center space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
+                  className="flex items-center space-x-3"><CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{assetType}</span>
 ursor/integrate-build-improve-and-re-verify-b76c
                 </motion.div>
@@ -457,9 +435,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Measurable Results
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -468,9 +444,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Measurable Results
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -490,9 +464,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='text-center'
                   className="text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="inline-flex p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
                       <benefit.icon className="w-8 h-8 text-white" />
                     </div>
@@ -505,9 +477,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <p className='text-gray-400 text-sm'>
                       {benefit.description}
                     </p>
-                  className="text-center"
-                >
-                  <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
+                  className="text-center"><div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl border border-slate-700/50">
                     <div className="inline-flex p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg mb-4">
                       <benefit.icon className="w-8 h-8 text-white" />
                     </div>
@@ -540,9 +510,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced Capabilities
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -551,9 +519,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Advanced Capabilities
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
@@ -571,17 +537,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className='flex items-center space-x-3'
-                >
-                  <CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
+                  className='flex items-center space-x-3'><CheckCircle className='w-6 h-6 text-indigo-400 flex-shrink-0' />
                   <span className='text-gray-300'>{capability}</span>
-                  className="flex items-center space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
+                  className="flex items-center space-x-3"><CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
-                  className="flex items-center space-x-3"
-                >
-                  <CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
+                  className="flex items-center space-x-3"><CheckCircle className="w-6 h-6 text-indigo-400 flex-shrink-0" />
                   <span className="text-gray-300">{capability}</span>
 ursor/integrate-build-improve-and-re-verify-b76c
                 </motion.div>
@@ -602,9 +562,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your IT Asset Management?
@@ -619,9 +577,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
                 <Link
                   href='/services'
-                  className='inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200 text-lg'
-                >
-              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
+                  className='inline-flex items-center px-8 py-4 border border-indigo-500 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500 hover:text-white transition-all duration-200 text-lg'><h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your IT Asset Management?
               </h2>
               <p className="text-xl text-gray-400 mb-8">

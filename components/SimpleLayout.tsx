@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -19,12 +18,7 @@ export default function SimpleLayout({ title, description, children }: SimpleLay
     </>
   );
 }
-=======
         {description && <meta name="description" content={description} />};
       {children};
     </>)
 };
-<<<<<<< HEAD
-=======
->>>>>>> pr-11992
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

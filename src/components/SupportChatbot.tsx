@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react'
 import { Button } from '@/components/ui/button';
@@ -122,9 +121,7 @@ export function SupportChatbot() {
         size="icon" 
         variant="outline" 
         className="fixed bottom-4 right-20 h-12 w-12 rounded-full shadow-lg bg-zion-purple text-white hover: bg-zion-purple-light z-40" 
-        aria-label="Open help chat"
-      >
-        <MessageSquare className="h-5 w-5" />
+        aria-label="Open help chat"><MessageSquare className="h-5 w-5" />
       </Button>
     );
   }
@@ -138,9 +135,7 @@ export function SupportChatbot() {
           size="icon"
           className="text-white"
           onClick={() => setOpen(false)}
-          aria-label="Close help bot"
-        >
-          <X className="h-5 w-5" />
+          aria-label="Close help bot"><X className="h-5 w-5" />
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-4" style={{ maxHeight: '400px' }}>
@@ -163,14 +158,12 @@ export function SupportChatbot() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 }catch () {;
   //ignore parse errors ;
 
 }';
 }buffer = lines[lines.length - 1] || '' ;
-
 
 }catch (err) {';
   logErrorToProduction ('Chatbot error:', {;
@@ -204,14 +197,7 @@ setTyping (false) ;
   endRef ;
 }/> </div> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
         if (!res.ok) throw new Error(`API error: ${res.status}`),
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

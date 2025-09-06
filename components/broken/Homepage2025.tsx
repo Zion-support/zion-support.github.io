@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -34,7 +31,6 @@ import { real2036InnovativeServices } from '../data/real-2036-innovative-service
 import { real2036ITServices } from '../data/real-2036-it-services';
 import { real2036AIServices } from '../data/real-2036-ai-services';
 interface Homepage2025Props { showInternalNav?: boolean }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -114,9 +110,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
-            >
-              <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
+              className="flex flex-col sm:flex-row gap-6 justify-center mb-12"><button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
                 Get Started Today
               </button>
               <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
@@ -129,9 +123,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"
-            >
-              <div className="flex items-center gap-2">
+              className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"><div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                 <span>Mobile: +1 302 464 0950</span>
               </div>
@@ -154,9 +146,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              className="text-center mb-20"><h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Services Portfolio
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -171,9 +161,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >
-                  <UltraFuturisticServiceCard2026
+                  transition={{ duration: 0.8, delay: index * 0.1 }}><UltraFuturisticServiceCard2026
                     service={{
                       id: service.id,
                       name: service.name,
@@ -197,9 +185,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <a 
+              className="text-center"><a 
                 href="/comprehensive-services-showcase-2036"
                 className="inline-block px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-xl rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25"
               >
@@ -216,9 +202,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-20"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              className="text-center mb-20"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
@@ -232,9 +216,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 className="lg:hidden border-t border-white/10"
-                id="mobile-navigation"
-              >
-                <div className="py-4 space-y-2">
+                id="mobile-navigation"><div className="py-4 space-y-2">
                   {navigationSections.map((section) => (
                     <button
                       key={section.id}
@@ -243,25 +225,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                         activeSection === section.id
                           ? 'bg-cyan-400/20 text-cyan-400'
                           : 'text-gray-300 hover:bg-white/10'
-                      }`}
-                    >
-                      <span>{section.icon}</span>
+                      }`}><span>{section.icon}</span>
                       <span>{section.label}</span>
                     </button>
                   ))}
                   <div className="pt-4 border-t border-white/10">
                     <a
                       href="tel:+13024640950"
-                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                    >
-                      <span>📱</span>
+                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"><span>📱</span>
                       <span>+1 302 464 0950</span>
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
-                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                    >
-                      <span>✉️</span>
+                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"><span>✉️</span>
                       <span>kleber@ziontechgroup.com</span>
                     </a>
                   </div>
@@ -281,9 +257,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
-          >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Future of Technology
             </span>
           </motion.h1>
@@ -301,9 +275,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-          >
-            <button
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"><button
               onClick={() => scrollToSection('services')}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
@@ -322,17 +294,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-          >
-            {featuredServices.slice(0, 3).map((service, index) => (
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">{featuredServices.slice(0, 3).map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
-                className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
+                className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"><div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                 <p className="text-gray-400 text-sm">{service.tagline}</p>
                 <div className="mt-4 text-cyan-400 font-bold">{service.price}{service.period}</div>
@@ -349,9 +317,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Micro SAAS Services
               </span>
@@ -368,9 +334,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="default"
                   theme="quantum"
@@ -388,9 +352,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Cutting-Edge AI Services
               </span>
@@ -407,9 +369,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="premium"
                   theme="neon"
@@ -427,9 +387,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
                 Advanced AI Automation
               </span>
@@ -446,9 +404,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="enterprise"
                   theme="holographic"
@@ -466,9 +422,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                 Quantum Cybersecurity
               </span>
@@ -485,9 +439,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="premium"
                   theme="cyberpunk"
@@ -505,9 +457,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Advanced IT Solutions
               </span>
@@ -524,9 +474,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="default"
                   theme="quantum"
@@ -544,9 +492,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                 Emerging Technologies
               </span>
@@ -563,9 +509,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="enterprise"
                   theme="holographic"
@@ -583,9 +527,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </span>
@@ -688,9 +630,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              className="text-center mb-20"><h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
@@ -736,9 +676,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center p-8"
-                >
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">
+                  className="text-center p-8"><div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-white">
@@ -757,8 +695,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
   )
 }
 
-<<<<<<< HEAD
-}> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" > <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📱</div> <h3 className="text-xl font-semibold text-white mb-2" >Phone</h3> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors" > +1 302 464 0950 </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >✉️</div> <h3 className="text-xl font-semibold text-white mb-2" >Email</h3> <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors" > kleber@ziontechgroup.com </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6" > <div className="text-3xl mb-4" >📍</div> <h3 className="text-xl font-semibold text-white mb-2" >Address</h3> <p className="text-gray-300 text-sm" > 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="https://ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Visit Our Website </a> <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Get Started Today </a> </div> </motion.div> </div> </section> <div> <h3 className="text-white font-bold text-lg mb-4" >ZionTech Group</h3> <p className="text-gray-400 text-sm leading-relaxed" > Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div> <h4 className="text-white font-semibold mb-4" >Services</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="#services" className="hover:text-cyan-400 transition-colors" >Micro SAAS</a></li> <li><a href="#ai" className="hover:text-cyan-400 transition-colors" >AI Services</a></li> <li><a href="#automation" className="hover:text-cyan-400 transition-colors" >AI Automation</a></li> <li><a href="#quantum" className="hover:text-cyan-400 transition-colors" >Quantum Security</a></li> <li><a href="#it" className="hover:text-cyan-400 transition-colors" >IT Solutions</a></li> <li><a href="#emerging" className="hover:text-cyan-400 transition-colors" >Emerging Tech</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Company</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >About Us</a></li> <li><a href="#contact" className="hover:text-cyan-400 transition-colors" >Contact</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Careers</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Blog</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >News</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Connect</h4> <ul className="text-gray-400 text-sm space-y-2" > <li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors" >+1 302 464 0950</a></li> <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >kleber@ziontechgroup.com</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Website</a></li> <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors" >LinkedIn</a></li> <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors" >Twitter/X</a></li> </ul> </div> </div> </section> > <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto" > We're not just another technology company - we're pioneers shaping the future of business and technology </p> </motion.div> {
+}> <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"><span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to learn how our innovative services can revolutionize your operations. </p> <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12"><div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6"><div className="text-3xl mb-4" >📱</div> <h3 className="text-xl font-semibold text-white mb-2" >Phone</h3> <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors" > +1 302 464 0950 </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6"><div className="text-3xl mb-4" >✉️</div> <h3 className="text-xl font-semibold text-white mb-2" >Email</h3> <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 transition-colors" > kleber@ziontechgroup.com </a> </div> <div className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6"><div className="text-3xl mb-4" >📍</div> <h3 className="text-xl font-semibold text-white mb-2" >Address</h3> <p className="text-gray-300 text-sm" > 364 E Main St STE 1008<br /> Middletown DE 19709 </p> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center"><a href="https://ziontechgroup.com" className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Visit Our Website </a> <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Get Started Today </a> </div> </motion.div> </div> </section> <div> <h3 className="text-white font-bold text-lg mb-4" >ZionTech Group</h3> <p className="text-gray-400 text-sm leading-relaxed" > Revolutionary technology solutions that transform businesses and industries through innovation, AI, and emerging technologies. </p> </div> <div> <h4 className="text-white font-semibold mb-4" >Services</h4> <ul className="text-gray-400 text-sm space-y-2"><li><a href="#services" className="hover:text-cyan-400 transition-colors" >Micro SAAS</a></li> <li><a href="#ai" className="hover:text-cyan-400 transition-colors" >AI Services</a></li> <li><a href="#automation" className="hover:text-cyan-400 transition-colors" >AI Automation</a></li> <li><a href="#quantum" className="hover:text-cyan-400 transition-colors" >Quantum Security</a></li> <li><a href="#it" className="hover:text-cyan-400 transition-colors" >IT Solutions</a></li> <li><a href="#emerging" className="hover:text-cyan-400 transition-colors" >Emerging Tech</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Company</h4> <ul className="text-gray-400 text-sm space-y-2"><li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >About Us</a></li> <li><a href="#contact" className="hover:text-cyan-400 transition-colors" >Contact</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Careers</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Blog</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >News</a></li> </ul> </div> <div> <h4 className="text-white font-semibold mb-4" >Connect</h4> <ul className="text-gray-400 text-sm space-y-2"><li><a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors" >+1 302 464 0950</a></li> <li><a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >kleber@ziontechgroup.com</a></li> <li><a href="https://ziontechgroup.com" className="hover:text-cyan-400 transition-colors" >Website</a></li> <li><a href="https://www.linkedin.com/company/zion-tech-group" className="hover:text-cyan-400 transition-colors" >LinkedIn</a></li> <li><a href="https://x.com/ziontechgroup" className="hover:text-cyan-400 transition-colors" >Twitter/X</a></li> </ul> </div> </div> </section>><h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Why Choose Zion Tech Group? </h2> <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto" > We're not just another technology company - we're pioneers shaping the future of business and technology </p> </motion.div> {
   title: 'Innovation First', description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.', icon: '🚀' 
 };
 {
@@ -778,7 +715,6 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) ) 
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) 
 }export default Homepage2025;
-=======
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -890,9 +826,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center mb-12"
-            >
-              <button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
+              className="flex flex-col sm:flex-row gap-6 justify-center mb-12"><button className="px-10 py-5 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold text-lg rounded-xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-cyan-500/25">
                 Get Started Today
               </button>
               <button className="px-10 py-5 border-2 border-cyan-400 text-cyan-400 font-bold text-lg rounded-xl hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105">
@@ -905,9 +839,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"
-            >
-              <div className="flex items-center gap-2">
+              className="flex flex-col sm:flex-row gap-6 justify-center text-sm text-gray-400"><div className="flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                 <span>Mobile: +1 302 464 0950</span>
               </div>
@@ -930,9 +862,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              className="text-center mb-20"><h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Services Portfolio
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -947,9 +877,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   key={service.id}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                >
-                  <UltraFuturisticServiceCard2026
+                  transition={{ duration: 0.8, delay: index * 0.1 }}><UltraFuturisticServiceCard2026
                     service={{
                       id: service.id,
                       name: service.name,
@@ -973,9 +901,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <a 
+              className="text-center"><a 
                 href="/comprehensive-services-showcase-2036"
                 className="inline-block px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold text-xl rounded-xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-2xl shadow-purple-500/25"
               >
@@ -992,9 +918,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-20"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              className="text-center mb-20"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
@@ -1008,9 +932,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
                 className="lg:hidden border-t border-white/10"
-                id="mobile-navigation"
-              >
-                <div className="py-4 space-y-2">
+                id="mobile-navigation"><div className="py-4 space-y-2">
                   {navigationSections.map((section) => (
                     <button
                       key={section.id}
@@ -1019,25 +941,19 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                         activeSection === section.id
                           ? 'bg-cyan-400/20 text-cyan-400'
                           : 'text-gray-300 hover:bg-white/10'
-                      }`}
-                    >
-                      <span>{section.icon}</span>
+                      }`}><span>{section.icon}</span>
                       <span>{section.label}</span>
                     </button>
                   ))}
                   <div className="pt-4 border-t border-white/10">
                     <a
                       href="tel:+13024640950"
-                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                    >
-                      <span>📱</span>
+                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"><span>📱</span>
                       <span>+1 302 464 0950</span>
                     </a>
                     <a
                       href="mailto:kleber@ziontechgroup.com"
-                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"
-                    >
-                      <span>✉️</span>
+                      className="flex items-center space-x-3 px-4 py-2 text-cyan-400 hover:bg-white/10 rounded-lg transition-all duration-300"><span>✉️</span>
                       <span>kleber@ziontechgroup.com</span>
                     </a>
                   </div>
@@ -1057,9 +973,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
-          >
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
               Future of Technology
             </span>
           </motion.h1>
@@ -1077,9 +991,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
-          >
-            <button
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-16"><button
               onClick={() => scrollToSection('services')}
               className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl text-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
             >
@@ -1098,17 +1010,13 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto"
-          >
-            {featuredServices.slice(0, 3).map((service, index) => (
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">{featuredServices.slice(0, 3).map((service, index) => (
               <motion.div
                 key={service.id}
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
-                className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
+                className="bg-black/40 backdrop-blur-xl border border-white/20 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:scale-105"><div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">{service.name}</h3>
                 <p className="text-gray-400 text-sm">{service.tagline}</p>
                 <div className="mt-4 text-cyan-400 font-bold">{service.price}{service.period}</div>
@@ -1125,9 +1033,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Revolutionary Micro SAAS Services
               </span>
@@ -1144,9 +1050,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="default"
                   theme="quantum"
@@ -1164,9 +1068,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
                 Cutting-Edge AI Services
               </span>
@@ -1183,9 +1085,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="premium"
                   theme="neon"
@@ -1203,9 +1103,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent">
                 Advanced AI Automation
               </span>
@@ -1222,9 +1120,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="enterprise"
                   theme="holographic"
@@ -1242,9 +1138,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
                 Quantum Cybersecurity
               </span>
@@ -1261,9 +1155,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="premium"
                   theme="cyberpunk"
@@ -1281,9 +1173,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-green-400 to-emerald-500 bg-clip-text text-transparent">
                 Advanced IT Solutions
               </span>
@@ -1300,9 +1190,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="default"
                   theme="quantum"
@@ -1320,9 +1208,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            className="text-center mb-16"><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                 Emerging Technologies
               </span>
@@ -1339,9 +1225,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <UltraFuturisticServiceCard2026 
+                viewport={{ once: true }}><UltraFuturisticServiceCard2026 
                   service={service} 
                   variant="enterprise"
                   theme="holographic"
@@ -1359,9 +1243,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            viewport={{ once: true }}><h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Ready to Transform Your Business?
               </span>
@@ -1464,9 +1346,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-center mb-20"
-            >
-              <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              className="text-center mb-20"><h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">
@@ -1512,9 +1392,7 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="text-center p-8"
-                >
-                  <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">
+                  className="text-center p-8"><div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-4xl mb-6 mx-auto">
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-white">
@@ -1534,7 +1412,4 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
 }
 
 export default Homepage2025;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default Homepage2025;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

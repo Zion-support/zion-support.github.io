@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 import { Loader2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { useJobSuggestions } from '@/hooks/useJobSuggestions';
 import { JobMatchesCard } from './JobMatchesCard';
 import { NoJobsCard } from './NoJobsCard';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useAuth } from "@/hooks/useAuth";
 import { Loader2 } from 'lucide-react'
@@ -120,7 +116,6 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }= useJobSuggestions (currentTalentId);
 const handleApply = (matchId: string, jobId: string) => {;
@@ -131,13 +126,13 @@ const handleDecline = (matchId: string) => {';
   updateJobMatchStatus (matchId, 'declined') ;
 };
 if (isLoading) {;
-  return (<div className="flex items-center justify-center p-6" > <Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>) ;
+  return (<div className="flex items-center justify-center p-6"><Loader2 className="w-6 h-6 animate-spin text-primary" /> </div>) ;
 }if (newMatches.length === 0 && viewedMatches.length === 0 && appliedMatches.length === 0) {;
   return <NoJobsCard /> ";
-}return (<div className="space-y-6" > {;
+}return (<div className="space-y-6">{;
   /* New Matches Section */ ;
 }{";
-  newMatches.length > 0 && (<div className="space-y-4" > <div className="flex items-center justify-between" > <h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length ;
+  newMatches.length > 0 && (<div className="space-y-4"><div className="flex items-center justify-between"><h3 className="text-lg font-medium" >New Job Matches</h3> <Badge className="bg-green-100 text-green-800 border-green-300" > newMatches.length ;
 }New </Badge> </div> <JobMatchesCard key= {;
   match.id ;
 }match= {;
@@ -148,7 +143,7 @@ if (isLoading) {;
   handleDecline ;
 }/>) ) ;
 }</div> </div>) ";
-}</div> <div className="grid gap-4 md:grid-cols-2" > {;
+}</div> <div className="grid gap-4 md:grid-cols-2">{;
   viewedMatches.map (match => (<JobMatchesCard key= {;
   match.id ;
 }match= {;
@@ -159,7 +154,7 @@ if (isLoading) {;
   handleDecline ;
 }/>) ) ;
 }</div> </div>) ";
-}</div> <div className="grid gap-4 md:grid-cols-2" > {;
+}</div> <div className="grid gap-4 md:grid-cols-2">{;
   appliedMatches.map (match => (<JobMatchesCard key= {;
   match.id ;
 }match= {;
@@ -174,12 +169,7 @@ if (isLoading) {;
 }</div> </div>) ;
 }</div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     updateJobMatchStatus, 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

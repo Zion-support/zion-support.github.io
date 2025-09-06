@@ -100,9 +100,7 @@ export default function OfflinePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-8'
-          >
-            {/* Connection Status */}
+            className='text-center mb-8'>{/* Connection Status */}
             <div className='mb-6'>
               <motion.div
                 animate={
@@ -118,9 +116,7 @@ export default function OfflinePage() {
                   isOnline
                     ? 'bg-green-100 dark:bg-green-900/20'
                     : 'bg-orange-100 dark:bg-orange-900/20'
-                }`}
-              >
-                <WifiOff
+                }`}><WifiOff
                   className={`w-12 h-12 ${
                     isOnline ? 'text-green-600' : 'text-orange-600'
                   }`}
@@ -129,9 +125,7 @@ export default function OfflinePage() {
 
               <Badge
                 variant={isOnline ? 'default' : 'secondary'}
-                className='text-sm px-3 py-1'
-              >
-                {isOnline ? 'Connection Restored' : 'Offline Mode'}
+                className='text-sm px-3 py-1'>{isOnline ? 'Connection Restored' : 'Offline Mode'}
               </Badge>
             </div>
 
@@ -159,9 +153,7 @@ export default function OfflinePage() {
               onClick={handleRetry}
               size='lg'
               className='flex items-center gap-2'
-              disabled={isOnline}
-            >
-              <RefreshCw className='w-5 h-5' />
+              disabled={isOnline}><RefreshCw className='w-5 h-5' />
               {retryCount > 0 ? `Retry (${retryCount})` : 'Try Again'}
             </Button>
 
@@ -169,9 +161,7 @@ export default function OfflinePage() {
               asChild
               variant='outline'
               size='lg'
-              className='flex items-center gap-2'
-            >
-              <Link href='/'>
+              className='flex items-center gap-2'><Link href='/'>
                 <Home className='w-5 h-5' />
                 Go to Homepage
               </Link>
@@ -181,9 +171,7 @@ export default function OfflinePage() {
               asChild
               variant='outline'
               size='lg'
-              className='flex items-center gap-2'
-            >
-              <Link href='/marketplace'>
+              className='flex items-center gap-2'><Link href='/marketplace'>
                 <ShoppingCart className='w-5 h-5' />
                 Go to Marketplace
               </Link>
@@ -194,9 +182,7 @@ export default function OfflinePage() {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <h2 className='text-2xl font-bold text-center mb-8'>
+            transition={{ duration: 0.6, delay: 0.3 }}><h2 className='text-2xl font-bold text-center mb-8'>
               Available Offline Features
             </h2>
 
@@ -206,24 +192,18 @@ export default function OfflinePage() {
                   key={action.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
-                >
-                  <Card
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}><Card
                     className={`h-full transition-all duration-300 hover:shadow-lg ${
                       action.available
                         ? 'hover:scale-105 cursor-pointer'
                         : 'opacity-60 cursor-not-allowed'
-                    }`}
-                  >
-                    <CardHeader className='text-center'>
+                    }`}><CardHeader className='text-center'>
                       <div
                         className={`mx-auto w-12 h-12 rounded-full flex items-center justify-center mb-3 ${
                           action.available
                             ? 'bg-blue-100 dark:bg-blue-900/20'
                             : 'bg-gray-100 dark:bg-gray-800'
-                        }`}
-                      >
-                        <action.icon
+                        }`}><action.icon
                           className={`w-6 h-6 ${
                             action.available
                               ? 'text-blue-600 dark:text-blue-400'
@@ -242,9 +222,7 @@ export default function OfflinePage() {
                           asChild
                           variant='outline'
                           size='sm'
-                          className='w-full'
-                        >
-                          <Link href={action.href}>Access</Link>
+                          className='w-full'><Link href={action.href}>Access</Link>
                         </Button>
                       ) : (
                         <Button disabled size='sm' className='w-full'>
@@ -263,9 +241,7 @@ export default function OfflinePage() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-            className='mt-16'
-          >
-            <Card className='max-w-2xl mx-auto'>
+            className='mt-16'><Card className='max-w-2xl mx-auto'>
               <CardHeader>
                 <CardTitle className='text-center'>💡 Offline Tips</CardTitle>
               </CardHeader>
@@ -305,9 +281,7 @@ export default function OfflinePage() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className='fixed bottom-6 right-6 z-50'
-            >
-              <Card className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800'>
+              className='fixed bottom-6 right-6 z-50'><Card className='bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-800'>
                 <CardContent className='p-4'>
                   <div className='flex items-center gap-3'>
                     <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse' />

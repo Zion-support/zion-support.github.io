@@ -361,9 +361,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='mb-8'
               className="mb-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
@@ -371,9 +369,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 services. From AI-powered solutions to quantum computing and
                 emerging technologies, transform your business with
                 next-generation innovation.
-              className="mb-8"
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+              className="mb-8"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
                 2026 Innovative Services
               </h1>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -391,9 +387,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8, delay: 0.2 }}
               className='flex flex-wrap justify-center gap-4 mb-12'
               className="flex flex-wrap justify-center gap-4 mb-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
                 <span className="text-blue-400 font-semibold">{allServices.length}+ Services</span>
               </div>
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3">
@@ -406,9 +400,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <span className='text-orange-400 font-semibold'>
                   Future-Proof
                 </span>
-              className="flex flex-wrap justify-center gap-4 mb-12"
-            >
-              <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
+              className="flex flex-wrap justify-center gap-4 mb-12"><div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-full px-6 py-3">
                 <span className="text-blue-400 font-semibold">{allServices.length}+ Services</span>
               </div>
               <div className="bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-sm border border-purple-500/30 rounded-full px-6 py-3">
@@ -432,9 +424,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8, delay: 0.4 }}
               className='max-w-4xl mx-auto'
               className="max-w-4xl mx-auto"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="relative mb-8">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -447,9 +437,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
               <div className='flex flex-wrap gap-4 justify-center mb-8'>
                 {categories.map(category => (
-              className="max-w-4xl mx-auto"
-            >
-              <div className="relative mb-8">
+              className="max-w-4xl mx-auto"><div className="relative mb-8">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <input
                   type="text"
@@ -472,9 +460,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       selectedCategory === category.id
                         ? 'bg-gradient-to-r from-blue-600/30 to-purple-600/30 border-blue-500/50 text-blue-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
-                    }`}
-                  >
-                    <span className='mr-2'>{category.icon}</span>
+                    }`}><span className='mr-2'>{category.icon}</span>
                     <span className="mr-2">{category.icon}</span>
                     <span className="mr-2">{category.icon}</span>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -497,9 +483,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       selectedPriceRange === range.id
                         ? 'bg-gradient-to-r from-green-600/30 to-emerald-600/30 border-green-500/50 text-green-300'
                         : 'bg-gray-900/30 border-gray-700/50 text-gray-300 hover:bg-gray-800/50'
-                    }`}
-                  >
-                    {range.name}
+                    }`}>{range.name}
                   </button>
                 ))}
               </div>
@@ -517,15 +501,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredServices.map((service) => (
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredServices.map((service) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className="group relative"
-                >
-                  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105">
+                  className="group relative"><div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105">
                     {/* Service Header */}
                     <div className={`p-6 bg-gradient-to-r ${service.color} bg-opacity-20`}>
                       <div className="flex items-center justify-between mb-4">
@@ -538,15 +518,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            >
-              {filteredServices.map((service) => (
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{filteredServices.map((service) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className="group relative"
-                >
-                  <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105">
+                  className="group relative"><div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-105">
                     {/* Service Header */}
                     <div className={`p-6 bg-gradient-to-r ${service.color} bg-opacity-20`}>
                       <div className="flex items-center justify-between mb-4">
@@ -650,9 +626,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                             .map((feature, index) => (
                               <div
                                 key={index}
-                                className='flex items-center space-x-2'
-                              >
-                                <CheckCircle className='w-3 h-3 text-green-400' />
+                                className='flex items-center space-x-2'><CheckCircle className='w-3 h-3 text-green-400' />
                                 <span className='text-gray-300 text-xs'>
                                   {feature}
                                 </span>
@@ -692,9 +666,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {/* Category Badge */}
                       <div className='mb-4'>
                         <span
-                          className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}
-                        >
-                      <div className="mb-4">
+                          className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}><div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
                       <div className="mb-4">
                         <span className={`inline-block px-3 py-1 rounded-full text-xs font-medium ${service.textColor} bg-opacity-20`}>
@@ -737,17 +709,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className='text-center py-16'
-              >
-                <div className='text-gray-400 text-xl mb-4'>
+                className='text-center py-16'><div className='text-gray-400 text-xl mb-4'>
                   No services found matching your criteria
                 </div>
-                className="text-center py-16"
-              >
-                <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
-                className="text-center py-16"
-              >
-                <div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
+                className="text-center py-16"><div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
+                className="text-center py-16"><div className="text-gray-400 text-xl mb-4">No services found matching your criteria</div>
 ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   onClick={() => {
@@ -783,9 +749,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Business?

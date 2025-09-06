@@ -194,9 +194,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
+            transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
               Site Map
@@ -263,9 +261,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='mb-16'
             className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Main Pages
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -274,9 +270,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            className="mb-16"><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Main Pages
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -296,13 +290,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group'
                 className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <Link
+ursor/integrate-build-improve-and-re-verify-b76c><Link
                   href={page.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"><div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {page.label}
                     </h3>
@@ -311,13 +301,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {page.description}
                   </p>
-                className="group"
-              >
-                <Link
+                className="group"><Link
                   href={page.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"><div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {page.label}
                     </h3>
@@ -348,9 +334,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='mb-16'
             className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Service Categories
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -359,9 +343,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            className="mb-16"><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Service Categories
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -381,13 +363,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group'
                 className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <Link
+ursor/integrate-build-improve-and-re-verify-b76c><Link
                   href={category.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"><div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {category.label}
                     </h3>
@@ -396,13 +374,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {category.description}
                   </p>
-                className="group"
-              >
-                <Link
+                className="group"><Link
                   href={category.href}
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"><div className="flex items-center justify-between mb-4">
                     <h3 className="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {category.label}
                     </h3>
@@ -433,15 +407,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='mb-16'
             className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Featured Services
             </h2>
             <p className='text-white/60 text-center max-w-2xl mx-auto'>
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            className="mb-16"><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Featured Services
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -464,26 +434,18 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group'
                 className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <Link
+ursor/integrate-build-improve-and-re-verify-b76c><Link
                   href={service.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className="flex items-center justify-between mb-3">
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"><div className="flex items-center justify-between mb-3">
                     <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate">
                       {service.label}
                     </h3>
                     <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" />
                   </div>
                   <p className='text-white/60 text-xs'>{service.category}</p>
-                className="group"
-              >
-                <Link
+                className="group"><Link
                   href={service.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className="flex items-center justify-between mb-3">
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"><div className="flex items-center justify-between mb-3">
                     <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300 truncate">
                       {service.label}
                     </h3>
@@ -514,15 +476,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='mb-16'
             className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Resources & Tools
             </h2>
             <p className='text-white/60 text-center max-w-2xl mx-auto'>
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            className="mb-16"><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Resources & Tools
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -545,13 +503,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group'
                 className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <Link
+ursor/integrate-build-improve-and-re-verify-b76c><Link
                   href={resource.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className="flex items-center justify-between mb-3">
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"><div className="flex items-center justify-between mb-3">
                     <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {resource.label}
                     </h3>
@@ -560,13 +514,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <p className='text-white/60 text-xs leading-relaxed'>
                     {resource.description}
                   </p>
-                className="group"
-              >
-                <Link
+                className="group"><Link
                   href={resource.href}
-                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"
-                >
-                  <div className="flex items-center justify-between mb-3">
+                  className="block p-4 rounded-xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105"><div className="flex items-center justify-between mb-3">
                     <h3 className="text-sm font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {resource.label}
                     </h3>
@@ -597,15 +547,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='mb-16'
             className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4 text-center">
               External Resources
             </h2>
             <p className='text-white/60 text-center max-w-2xl mx-auto'>
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            className="mb-16"><h2 className="text-3xl font-bold text-white mb-4 text-center">
               External Resources
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -628,15 +574,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group'
                 className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <a
+ursor/integrate-build-improve-and-re-verify-b76c><a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"><div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {link.label}
                     </h3>
@@ -645,15 +587,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <p className='text-white/70 text-sm leading-relaxed'>
                     {link.description}
                   </p>
-                className="group"
-              >
-                <a
+                className="group"><a
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-                >
-                  <div className="flex items-center justify-between mb-4">
+                  className="block p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"><div className="flex items-center justify-between mb-4">
                     <h3 className="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors duration-300">
                       {link.label}
                     </h3>
@@ -684,9 +622,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='mb-16'
             className="mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Contact Information
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -695,9 +631,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            className="mb-16"><h2 className="text-3xl font-bold text-white mb-4 text-center">
               Contact Information
             </h2>
             <p className="text-white/60 text-center max-w-2xl mx-auto">
@@ -717,9 +651,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl'
                 className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
                 <a
                   href={contact.action}
                   target={
@@ -731,9 +663,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       : ''
                   }
                   className='text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium'
-                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"
-              >
-                <h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
+                className="text-center p-6 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl"><h3 className="text-lg font-bold text-white mb-3">{contact.type}</h3>
                 <a
                   href={contact.action}
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
@@ -742,9 +672,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   target={contact.action.startsWith('http') ? '_blank' : '_self'}
                   rel={contact.action.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="text-cyan-400 hover:text-cyan-300 transition-colors duration-300 font-medium"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  {contact.value}
+ursor/integrate-build-improve-and-re-verify-b76c>{contact.value}
                 </a>
               </motion.div>
             ))}
@@ -764,9 +692,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
+            viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Need Help Finding Something?
@@ -828,12 +754,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
   {
   duration: 0.8 
 
-}> <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Site Map </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="#main-pages" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Explore Site <ArrowRight className="w-5 h-5 ml-2" /> </Link> <a href="/search" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Main Pages </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Core pages that provide essential information about our company and services </p> </motion.div> </h3> <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Service Categories </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Featured Services </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Our most popular and innovative technology solutions </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" /> </div> </Link> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Resources & Tools </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources, tools, and information to help you succeed </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) ) 
+}> <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Site Map </h1> </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"><a href="#main-pages" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Explore Site <ArrowRight className="w-5 h-5 ml-2" /> </Link> <a href="/search" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section>><h2 className="text-3xl font-bold text-white mb-4 text-center" > Main Pages </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Core pages that provide essential information about our company and services </p> </motion.div> </h3> <ChevronRight className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-3xl font-bold text-white mb-4 text-center" > Service Categories </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Browse our comprehensive range of technology solutions organized by category </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-3xl font-bold text-white mb-4 text-center" > Featured Services </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Our most popular and innovative technology solutions </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300 flex-shrink-0" /> </div> </Link> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-3xl font-bold text-white mb-4 text-center" > Resources & Tools </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources, tools, and information to help you succeed </p> </motion.div> </h3> <ChevronRight className="w-4 h-4 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </Link> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-3xl font-bold text-white mb-4 text-center" > External Resources </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Additional resources and tools hosted on external platforms </p> </motion.div> </h3> <ExternalLink className="w-5 h-5 text-white/60 group-hover:text-cyan-400 transition-colors duration-300" /> </div> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-3xl font-bold text-white mb-4 text-center" > Contact Information </h2> <p className="text-white/60 text-center max-w-2xl mx-auto" > Get in touch with us for consultations, support, or to start your project </p> </motion.div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
@@ -850,7 +776,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
   {
   once: true 
 
-}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>) 
+}> Need Help Finding Something? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Use our search functionality or contact us directly for assistance </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"><Link href="/search" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" > Search Site <Search className="w-5 h-5 ml-2" /> </Link> <Link href="/contact" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Contact Support <Mail className="w-5 h-5 ml-2" /> </Link> </div> </motion.div> </div> </section> <SmartFooter /> </div>) 
   )
 }
   )

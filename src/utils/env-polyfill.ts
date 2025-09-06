@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  * 
@@ -79,18 +78,11 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 
 console.log('✅ Environment polyfill loaded successfully');
 
-<<<<<<< HEAD
 export default safeEnv;
-=======
-
-<<<<<<< HEAD
 
 export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (globalThis as any).process.env : {
   NODE_ENV: 'production', NEXT_PUBLIC_APP_URL: '',
   NEXT_PUBLIC_SUPABASE_URL: '',
   NEXT_PUBLIC_SUPABASE_ANON_KEY: ''};
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default safeEnv;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

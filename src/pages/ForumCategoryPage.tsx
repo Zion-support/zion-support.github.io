@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -17,7 +15,6 @@ import { useAuth } from '@/hooks/useAuth';
 import { useCommunity } from '@/context';
 import { useToast } from '@/hooks/use-toast';
 import { useFollowedCategories } from '@/hooks/useFollowedCategories';
-=======
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -35,7 +32,6 @@ import { useAuth } from "@/hooks/useAuth";
 import { useCommunity } from "@/context";
 import { useToast } from "@/hooks/use-toast";
 import { useFollowedCategories } from "@/hooks/useFollowedCategories";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logInfo } from '@/utils/productionLogger';
 import { MessageSquare, Briefcase, Code, FileText, Megaphone, Search } from 'lucide-react'
 
@@ -161,9 +157,7 @@ function CategoryContent({
           {canCreatePost && <CreatePostButton categoryId={categoryId} />}
           <Button
             variant={isFollowed(categoryId) ? 'outline' : 'default'}
-            onClick={handleFollow}
-          >
-            {isFollowed(categoryId) ? 'Following' : 'Follow'}
+            onClick={handleFollow}>{isFollowed(categoryId) ? 'Following' : 'Follow'}
           </Button>
         </div>
       </div>
@@ -278,7 +272,6 @@ export default function ForumCategoryPage() {
       />
     </>
   );
-<<<<<<< HEAD
 
 }, [categoryId, category]);";
 This category is only accessible to administrators. </p> <Button asChild> <Link href=" /community" >Back to Community</Link> </Button> </div> </div> return (<> <SEO title= {;
@@ -305,21 +298,12 @@ This category is only accessible to administrators. </p> <Button asChild> <Link 
   user ;
 }/> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
-
 
   logInfo('CategoryContent - categoryId:', { data: categoryId }),
   logInfo('CategoryContent - categoryPosts:', { data: categoryPosts }),
   logInfo('CategoryContent - filteredPosts:', { data: filteredPosts }),
 
-<<<<<<< HEAD
   const category = categoryId ? categoriesInfo[categoryId] : null;
   const IconComponent = category ? iconMap[category.icon as keyof typeof iconMap] : null;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

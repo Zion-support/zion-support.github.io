@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Badge } from "@/components/ui/badge";
@@ -43,7 +42,6 @@ const TalentCardComponent = ({
     }
   };
 
-
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [];
 
@@ -51,9 +49,7 @@ const TalentCardComponent = ({
     <Card
       className="overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple"
       onClick={handleViewProfile}
-      tabIndex={0}
-    >
-      <div className="p-6">
+      tabIndex={0}><div className="p-6">
         <div className="flex items-start">
           {/* Avatar */}
           <div className="relative mr-4">
@@ -111,9 +107,7 @@ const TalentCardComponent = ({
               {skills.map((skill, index) => (
                 <span 
                   key={index}
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
-                  {skill}
+                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">{skill}
                 </span>
               ))}
               {(talent.skills?.length || 0) > 5 && (
@@ -166,18 +160,10 @@ const TalentCardComponent = ({
     </Card>
   )
 };
-<<<<<<< HEAD
 "
-=======
-<<<<<<< HEAD
-
 
 export const TalentCard = React.memo(TalentCardComponent),
 TalentCard.displayName = 'TalentCard';
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
 export const TalentCard = React.memo(TalentCardComponent);
 TalentCard.displayName = 'TalentCard';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

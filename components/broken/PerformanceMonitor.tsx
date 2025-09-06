@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
   
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -13,7 +10,6 @@ import {
   AlertTriangle, CheckCircle, X, Settings, RefreshCw;
   BarChart3, Gauge, HardDrive, Wifi, Cpu
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface PerformanceMetrics {
   loadTime: number,
@@ -138,8 +134,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [autoRefresh, showUI, refreshInterval, refreshMetrics]);
 
-
-
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
@@ -227,9 +221,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          className="fixed bottom-4 left-4 z-50"
-        >
-          {/* Performance Monitor Panel */}
+          className="fixed bottom-4 left-4 z-50">{/* Performance Monitor Panel */}
           <div className="bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
@@ -242,23 +234,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   onClick={refreshMetrics}
                   disabled={isLoading}
                   className="p-1 text-gray-400 hover:text-white transition-colors duration-200 disabled:opacity-50"
-                  aria-label="Refresh metrics"
-                >
-                  <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+                  aria-label="Refresh metrics"><RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
                 </button>
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
                   className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label={isExpanded ? 'Collapse' : 'Expand'}
-                >
-                  <BarChart3 className="w-4 h-4" />
+                  aria-label={isExpanded ? 'Collapse' : 'Expand'}><BarChart3 className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setIsVisible(false)}
                   className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label="Close"
-                >
-                  <X className="w-4 h-4" />
+                  aria-label="Close"><X className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -306,9 +292,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="border-t border-gray-700/50"
-                >
-                  <div className="p-4 space-y-4">
+                  className="border-t border-gray-700/50"><div className="p-4 space-y-4">
                     {/* Detailed Metrics */}
                     <div className="space-y-3">
                       <h4 className="text-sm font-semibold text-white">Detailed Metrics</h4>
@@ -386,8 +370,6 @@ const getScoreLabel = (score: number) => {
   if (score >= 50) return 'Needs Improvement';
   return 'Poor'
 };
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -519,8 +501,6 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     }
   }, [autoRefresh, showUI, refreshInterval, refreshMetrics]);
 
-
-
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
     if (score >= 70) return 'text-yellow-400';
@@ -608,9 +588,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           initial={{ opacity: 0, y: 20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 20, scale: 0.95 }}
-          className="fixed bottom-4 left-4 z-50"
-        >
-          {/* Performance Monitor Panel */}
+          className="fixed bottom-4 left-4 z-50">{/* Performance Monitor Panel */}
           <div className="bg-gray-900/95 backdrop-blur-md border border-gray-700/50 rounded-xl shadow-2xl shadow-black/50 overflow-hidden">
             {/* Header */}
             <div className="flex items-center justify-between p-4 border-b border-gray-700/50">
@@ -623,23 +601,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   onClick={refreshMetrics}
                   disabled={isLoading}
                   className="p-1 text-gray-400 hover:text-white transition-colors duration-200 disabled:opacity-50"
-                  aria-label="Refresh metrics"
-                >
-                  <RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
+                  aria-label="Refresh metrics"><RefreshCw className={`w-4 h-4 ${isLoading ? 'animate-spin' : ''}`} />
                 </button>
                 <button
                   onClick={() => setIsExpanded(!isExpanded)}
                   className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label={isExpanded ? 'Collapse' : 'Expand'}
-                >
-                  <BarChart3 className="w-4 h-4" />
+                  aria-label={isExpanded ? 'Collapse' : 'Expand'}><BarChart3 className="w-4 h-4" />
                 </button>
                 <button
                   onClick={() => setIsVisible(false)}
                   className="p-1 text-gray-400 hover:text-white transition-colors duration-200"
-                  aria-label="Close"
-                >
-                  <X className="w-4 h-4" />
+                  aria-label="Close"><X className="w-4 h-4" />
                 </button>
               </div>
             </div>
@@ -687,9 +659,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="border-t border-gray-700/50"
-                >
-                  <div className="p-4 space-y-4">
+                  className="border-t border-gray-700/50"><div className="p-4 space-y-4">
                     {/* Detailed Metrics */}
                     <div className="space-y-3">
                       <h4 className="text-sm font-semibold text-white">Detailed Metrics</h4>
@@ -769,8 +739,5 @@ const getScoreLabel = (score: number) => {
 };
 
 export default PerformanceMonitor;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 export default PerformanceMonitor;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

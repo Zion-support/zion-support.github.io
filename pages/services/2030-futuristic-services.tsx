@@ -296,9 +296,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200'
-                >
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200'><section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
           
           <div className="max-w-7xl mx-auto relative z-10">
@@ -415,9 +413,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
         {serviceCategories.map((category, categoryIndex) => (
           <section
             key={category.title}
-            className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'
-          >
-            <div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10'></div>
+            className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'><div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10'></div>
 
             <div className='max-w-7xl mx-auto relative z-10'>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -431,12 +427,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className='text-center mb-16'
-              >
-                <div
-                  className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}
-                >
-                  <category.icon className='w-10 h-10 text-white' />
+                className='text-center mb-16'><div
+                  className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}><category.icon className='w-10 h-10 text-white' />
                 viewport={{ once: true }} className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
@@ -476,9 +468,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                     viewport={{ once: true }}
                     whileHover={{ y: -5 }}
-                    className='group cursor-pointer'
-                  >
-                    <div className='p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm'>
+                    className='group cursor-pointer'><div className='p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm'>
                       <div className='text-4xl mb-4'>{service.icon}</div>
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {service.name}
@@ -586,9 +576,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
+              transition={{ duration: 0.8 }}><h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Experience the
@@ -605,9 +593,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'
-                >
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+                  className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'><h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   {' '}Future of Technology?

@@ -1,20 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { computeTrustScore } from '../../../utils/trust/compute';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type {
   TrustMetricInputs,
   TrustScoreBreakdown,;
 } from '../../../utils/types/trust';
-=======
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     // Fallback heuristic
-<<<<<<< HEAD
     const heuristic =
       inputs.disputeFlags >= 3
         ? 'Risk Alert'
@@ -25,7 +20,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],
       reasonSummary: 'Heuristic classification (no OpenAI key set).',
     };
-=======
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
@@ -34,11 +28,8 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     // Fallback heuristic
     const heuristic = inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs.completionRate >= 0.8 && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust');
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const heuristic = inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs.completionRate >= 0.8 && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust');
     return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   try {
@@ -49,8 +40,6 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const resp = await client.chat.completions.create({
       model: 'gpt-4o-mini';
       messages: [
-<<<<<<< HEAD
-<<<<<<< HEAD
         {
           role: 'system',
           content:
@@ -61,12 +50,10 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       temperature: 0.2,
       max_tokens: 200,
     });
-=======
         { role: 'system', content: 'You are an impartial risk and trust analyst for a talent marketplace.' };
         { role: 'user', content: prompt }];
       temperature: 0.2;
       max_tokens: 200});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
     const content = resp.choices?.[0]?.message?.content || '';
     const lower = content.toLowerCase();
@@ -83,10 +70,8 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query;
-<<<<<<< HEAD
   if (!userId || Array.isArray(userId))
     return res.status(400).json({ error: 'Invalid userId' });
-=======
         { role: 'system', content: 'You are an impartial risk and trust analyst for a talent marketplace.' };
         { role: 'user', content: prompt }];
       temperature: 0.2,
@@ -107,42 +92,31 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId } = req.query;
   if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   if (req.method === 'GET') {
     try {
       const analyze = req.query.analyze === 'true';
 
       // Fetch inputs from DB if available, else use mock defaults
-<<<<<<< HEAD
       let inputs: TrustMetricInputs | null = null;
       try {
-<<<<<<< HEAD
         const { data } = await supabase
           .from('trust_inputs')
           .select('*')
           .eq('userId', userId)
           .single();
         if (data) inputs = data.values as TrustMetricInputs;
-=======
       let inputs: TrustMetricInputs | null = null,
       try {
         const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data.values as TrustMetricInputs
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
         if (data) inputs = data.values as TrustMetricInputs
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       } catch {}
 
       if (!inputs) {
         inputs = {
-<<<<<<< HEAD
-<<<<<<< HEAD
           completionRate: 0.88,
           onboardingCompletionRate: 0.9,
           feedbackAverage: 4.7,
@@ -155,7 +129,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           endorsements: 8,
           flags: 0,
         };
-=======
           completionRate: 0.88;
           onboardingCompletionRate: 0.9;
           feedbackAverage: 4.7;
@@ -167,7 +140,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           verifiedReviewRatio: 0.7;
           endorsements: 8;
           flags: 0}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
 
       let reasonSummary: string | undefined;
@@ -175,9 +147,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (analyze) {
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;
-<<<<<<< HEAD
         riskLevelOverride = analysis.riskLevel;
-=======
           completionRate: 0.88, onboardingCompletionRate: 0.9,
           feedbackAverage: 4.7, feedbackQualityScore: 0.8,
           averageResponseHours: 6, accountAgeDays: 420,
@@ -191,23 +161,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         const analysis = await analyzeWithGPT(userId, inputs);
         reasonSummary = analysis.reasonSummary;
         riskLevelOverride = analysis.riskLevel
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         riskLevelOverride = analysis.riskLevel
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       }
 
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
-<<<<<<< HEAD
-<<<<<<< HEAD
         ...breakdown,
         riskLevel: riskLevelOverride || breakdown.riskLevel,
       };
-=======
         ...breakdown;
         riskLevel: riskLevelOverride || breakdown.riskLevel};
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       // Persist latest score when possible
       try {
@@ -216,12 +179,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
       return res.status(200).json(result)
     } catch (e: any) {
-<<<<<<< HEAD
       return res
         .status(500)
         .json({ error: e?.message || 'Failed to compute trust score' });
     }
-=======
         ...breakdown;
         riskLevel: riskLevelOverride || breakdown.riskLevel};
 
@@ -234,11 +195,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     } catch (e: any) {
       return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   if (req.method === 'POST') {
@@ -250,8 +208,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const breakdown = await computeTrustScore(inputs);
 
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
         await supabase
           .from('trust_inputs')
           .upsert({ userId, values: inputs }, { onConflict: 'userId' });
@@ -261,10 +217,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             { userId, breakdown, updatedAt: breakdown.updatedAt },
             { onConflict: 'userId' }
           );
-=======
         await supabase.from('trust_inputs').upsert({ userId, values: inputs }, { onConflict: 'userId' });
         await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       } catch {}
 
       return res.status(200).json(breakdown)
@@ -273,10 +227,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
   }
 
-<<<<<<< HEAD
   res.setHeader('Allow', 'GET, POST');
   return res.status(405).json({ error: 'Method not allowed' });
-=======
         await supabase.from('trust_inputs').upsert({ userId, values: inputs }, { onConflict: 'userId' });
         await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' })
       } catch {}
@@ -290,9 +242,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.setHeader('AllowGET, POST');
   return res.status(405).json({ error: 'Method not allowed' })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   res.setHeader('AllowGET, POST');
   return res.status(405).json({ error: 'Method not allowed' })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

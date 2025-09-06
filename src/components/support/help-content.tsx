@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { HelpCategory } from './types';
 import {
@@ -9,13 +7,11 @@ import {
   Calendar,
   Briefcase,;
 } from 'lucide-react';
-=======
 
 import React from "react";
 import { HelpCategory } from "./types";
 import { HelpCircle, CreditCard, Users, Calendar, Briefcase } from 'lucide-react'
 import { Star, Calendar } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const HELP_CATEGORIES: HelpCategory[] = [
   {
@@ -171,7 +167,6 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     ]
   }
 ];
-=======
 
 import React from "react";
 import { HelpCategory } from "./types";
@@ -336,4 +331,3 @@ export const HELP_CATEGORIES: HelpCategory[] = [
 
 ];
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

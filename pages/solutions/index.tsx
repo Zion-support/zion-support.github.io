@@ -473,9 +473,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {solution.useCases.map((useCase, useCaseIndex) => (
                           <li
                             key={useCaseIndex}
-                            className='text-sm text-gray-600 flex items-center'
-                          >
-                            <span className='text-purple-500 mr-2'>•</span>
+                            className='text-sm text-gray-600 flex items-center'><span className='text-purple-500 mr-2'>•</span>
         <div className="space-y-16">
           {solutions.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-white rounded-2xl shadow-xl p-8">
@@ -516,9 +514,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {solution.benefits.map((benefit, benefitIndex) => (
                           <li
                             key={benefitIndex}
-                            className='text-sm text-gray-600 flex items-center'
-                          >
-                            <span className='text-green-500 mr-2'>✓</span>
+                            className='text-sm text-gray-600 flex items-center'><span className='text-green-500 mr-2'>✓</span>
                     <div className="mb-4">
                       <h4 className="font-semibold text-gray-800 mb-2">Key Benefits:</h4>
                       <ul className="space-y-1">

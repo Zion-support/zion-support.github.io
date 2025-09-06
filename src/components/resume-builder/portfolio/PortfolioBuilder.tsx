@@ -1,32 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FilePlus, Loader2 } from 'lucide-react';
-=======
 
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FilePlus, Loader2 } from 'lucide-react'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FilePlus, Loader2 } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { ProjectCard } from './ProjectCard';
 import { ProjectForm } from './ProjectForm';
 import { PortfolioProject } from '@/types/resume';
 import { usePortfolio } from '@/hooks/usePortfolio';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export function PortfolioBuilder() {
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
@@ -71,9 +61,7 @@ export function PortfolioBuilder() {
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
-          disabled={showAddProject || !!editingProject}
-        >
-          <FilePlus className="h-4 w-4" />
+          disabled={showAddProject || !!editingProject}><FilePlus className="h-4 w-4" />
           Add Project
         </Button>
       </div>
@@ -85,10 +73,8 @@ export function PortfolioBuilder() {
             <h2 className="text-xl font-semibold mb-6">
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>
-<<<<<<< HEAD
 
             <ProjectForm
-=======
 export function PortfolioBuilder() { const { projects, fetchProjects, deleteProject, isLoading  } = usePortfolio(),
   const [ showAddProject, setShowAddProject ] = useState(false),
   const [ editingProject, setEditingProject ] = useState<PortfolioProject | null>(null),
@@ -133,9 +119,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         <Button 
           onClick={() => setShowAddProject(true)} 
           className="gap-2"
-          disabled={showAddProject || !!editingProject}
-        >
-          <FilePlus className="h-4 w-4" />
+          disabled={showAddProject || !!editingProject}><FilePlus className="h-4 w-4" />
           Add Project
         </Button>
       </div>
@@ -149,50 +133,33 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
             </h2>
             
             <ProjectForm 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <ProjectForm 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               project={editingProject || undefined}
               onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
               onCancel={() => {
                 setShowAddProject(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
                 setEditingProject(null);
-=======
-                setEditingProject(null)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                setEditingProject(null)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               }}
             />
           </CardContent>
         </Card>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {projects.map(project => (
-=======
       
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       
       {/* Projects List */}
       {projects.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <ProjectCard
               key={project.id}
               project={project}
@@ -203,12 +170,7 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
         </div>
       ) : (
         !showAddProject && (
-<<<<<<< HEAD
-<<<<<<< HEAD
           <Card className='text-center py-12'>
-=======
-          <Card className="text-center py-12">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <CardContent>
               <div className="flex flex-col items-center gap-4">
                 <div className="bg-muted/50 p-6 rounded-full">
@@ -218,11 +180,9 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <p className="text-muted-foreground max-w-md mx-auto">
                   Add your best work to showcase your skills and experience to potential employers.
                 </p>
-<<<<<<< HEAD
                 <Button
                   onClick={() => setShowAddProject(true)}
                   className='mt-2'
-=======
           <Card className="text-center py-12">
             <CardContent>
               <div className="flex flex-col items-center gap-4">
@@ -236,12 +196,9 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Button 
                   onClick={() => setShowAddProject(true)} 
                   className="mt-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Add Your First Project
                 </Button>
@@ -252,11 +209,4 @@ export function PortfolioBuilder() { const { projects, fetchProjects, deleteProj
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

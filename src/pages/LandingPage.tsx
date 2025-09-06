@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Header } from '@/components/Header';
 import { TrustedBySection } from '@/components/TrustedBySection';
 import { TestimonialCarousel } from '@/components/TestimonialCarousel';
@@ -29,7 +27,6 @@ import {
   BarChart3,
   Smartphone,;
 } from 'lucide-react';
-=======
 
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
@@ -51,7 +48,6 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 import { Zap } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -125,12 +121,9 @@ export default function LandingPage() {
               <Link 
                 key={index} 
                 href={feature.link} 
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
-              >
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"><div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-bold text-white mb-2'>
                   {feature.title}
                 </h3>
@@ -138,13 +131,10 @@ export default function LandingPage() {
                   {feature.description}
                 </p>
                 <div
-                  className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}
-                >
-                  <span>{t('general.explore')}</span>
+                  className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}><span>{t('general.explore')}</span>
                   <ArrowRight
                     className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`}
                   />
-=======
 
 import { Header } from "@/components/Header";
 import { TrustedBySection } from "@/components/TrustedBySection";
@@ -166,7 +156,6 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
 import { Zap } from 'lucide-react';
-
 
 export default function LandingPage() { const { t  } = useTranslation(),
   const { isRTL  } = useLanguage(),
@@ -207,7 +196,6 @@ export default function LandingPage() { const { t  } = useTranslation(),
     }
   ];
 
-
   return (
     <div className="min-h-screen bg-zion-blue text-white">
       <SEO 
@@ -236,42 +224,27 @@ export default function LandingPage() { const { t  } = useTranslation(),
               <Link 
                 key={index} 
                 href={feature.link} 
-                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"
-              >
-                <div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
+                className="bg-zion-blue border border-zion-blue-light hover:border-zion-purple/50 rounded-lg p-6 transition-all duration-300"><div className="bg-zion-blue-dark rounded-full w-12 h-12 flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
                 <p className="text-zion-slate-light mb-4">{feature.description}</p>
                 <div className={`flex items-center text-zion-cyan ${isRTL ? 'flex-row-reverse' : ''}`}>
                   <span>{t("general.explore")}</span>
                   <ArrowRight className={`${isRTL ? 'ml-0 mr-2 rotate-180' : 'ml-2'} h-4 w-4`} />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-      
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <CategoriesSection />
       <BenefitsSection />
       
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
-<<<<<<< HEAD
 
-=======
       
       <CategoriesSection />
       <BenefitsSection />
@@ -279,42 +252,26 @@ export default function LandingPage() { const { t  } = useTranslation(),
       {/* Add the comprehensive features guide section */}
       <FeaturesGuideSection />
       
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <HowItWorksSection />
       <FeaturedListingsSection />
       <TestimonialCarousel />
       <TrustedBySection />
       <BlogSection />
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
 
-=======
       
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       
       {/* Add social share section to encourage users to spread the word */}
       <SocialShareSection />
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <WaitlistSection />
       <FloatingCTA />
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

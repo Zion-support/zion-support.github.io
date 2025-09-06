@@ -338,9 +338,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='text-center'
             className="text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {" "}Orchestration
@@ -354,9 +352,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <a
                 href='/contact'
                 className='bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all duration-200 transform hover:scale-105'
-            className="text-center"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            className="text-center"><h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Edge Computing
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 {" "}Orchestration
@@ -406,18 +402,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Edge Computing Features</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Edge Computing Features</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Everything you need to deploy, manage, and optimize edge computing infrastructure.
             </p>
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Edge Computing Features</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-slate-900 mb-6">Powerful Edge Computing Features</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Everything you need to deploy, manage, and optimize edge computing infrastructure.
             </p>
@@ -434,9 +426,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2'
                 className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className='text-xl font-bold text-slate-900 mb-4'>
@@ -445,9 +435,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p className='text-slate-600 leading-relaxed'>
                   {feature.description}
                 </p>
-                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"
-              >
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>
+                className="bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300 transform hover:-translate-y-2"><div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-4">{feature.title}</h3>
@@ -475,9 +463,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className='text-4xl font-bold text-slate-900 mb-6'>
+              transition={{ duration: 0.6 }}><h2 className='text-4xl font-bold text-slate-900 mb-6'>
                 Why Choose Edge Computing?
               </h2>
               <p className='text-lg text-slate-600 leading-relaxed mb-8'>
@@ -505,17 +491,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className='flex items-center space-x-3'
-                  >
-                    <CheckCircle className='w-6 h-6 text-green-500 flex-shrink-0' />
+                    className='flex items-center space-x-3'><CheckCircle className='w-6 h-6 text-green-500 flex-shrink-0' />
                     <span className='text-slate-700'>{benefit}</span>
-                    className="flex items-center space-x-3"
-                  >
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    className="flex items-center space-x-3"><CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
                     <span className="text-slate-700">{benefit}</span>
-                    className="flex items-center space-x-3"
-                  >
-                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    className="flex items-center space-x-3"><CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
                     <span className="text-slate-700">{benefit}</span>
 ursor/integrate-build-improve-and-re-verify-b76c
                   </motion.div>
@@ -529,9 +509,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.6, delay: 0.2 }}
               className='bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8'
               className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Performance Metrics</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-2xl font-bold text-slate-900 mb-6">Performance Metrics</h3>
               <div className="space-y-6">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-blue-600 mb-2">80-90%</div>
@@ -546,9 +524,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     99.9%
                   </div>
                   <div className='text-slate-600'>Uptime Guarantee</div>
-              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"
-            >
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Performance Metrics</h3>
+              className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8"><h3 className="text-2xl font-bold text-slate-900 mb-6">Performance Metrics</h3>
               <div className="space-y-6">
                 <div className="text-center">
                   <div className="text-4xl font-bold text-blue-600 mb-2">80-90%</div>
@@ -586,18 +562,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how businesses across different industries are leveraging edge computing to transform their operations.
             </p>
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-slate-900 mb-6">Industry Applications</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how businesses across different industries are leveraging edge computing to transform their operations.
             </p>
@@ -612,9 +584,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300'
-              >
-                <h3 className='text-2xl font-bold text-slate-900 mb-4'>
+                className='bg-slate-50 rounded-2xl p-8 hover:bg-slate-100 transition-all duration-300'><h3 className='text-2xl font-bold text-slate-900 mb-4'>
                   {useCase.industry}
                 </h3>
                 <p className='text-slate-600 mb-4 leading-relaxed'>
@@ -655,18 +625,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Architecture</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-white mb-6">Edge Computing Architecture</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Our distributed architecture ensures optimal performance, reliability, and scalability.
             </p>
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-6">Edge Computing Architecture</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-white mb-6">Edge Computing Architecture</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Our distributed architecture ensures optimal performance, reliability, and scalability.
             </p>
@@ -681,9 +647,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.6 }}
               className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
                 <Cpu className="w-8 h-8 text-white" />
               </div>
               <h3 className='text-xl font-bold text-white mb-2'>Edge Nodes</h3>
@@ -691,9 +655,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 Distributed computing nodes deployed at strategic locations for
                 optimal performance
               </p>
-              className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
+              className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mx-auto mb-4">
                 <Cpu className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Edge Nodes</h3>
@@ -709,9 +671,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.6, delay: 0.1 }}
               className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
                 <Network className="w-8 h-8 text-white" />
               </div>
               <h3 className='text-xl font-bold text-white mb-2'>
@@ -721,9 +681,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 Intelligent workload distribution and management across the edge
                 network
               </p>
-              className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
+              className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center mx-auto mb-4">
                 <Network className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Orchestration Layer</h3>
@@ -739,9 +697,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.6, delay: 0.2 }}
               className='bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center'
               className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
                 <Database className="w-8 h-8 text-white" />
               </div>
               <h3 className='text-xl font-bold text-white mb-2'>
@@ -751,9 +707,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 Centralized control and monitoring with real-time insights and
                 analytics
               </p>
-              className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"
-            >
-              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
+              className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 text-center"><div className="w-16 h-16 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center mx-auto mb-4">
                 <Database className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Central Management</h3>
@@ -780,18 +734,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Edge Computing Plans</h2>
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold text-slate-900 mb-6">Edge Computing Plans</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Choose the plan that fits your edge computing needs. All plans include our core orchestration features.
             </p>
           </motion.div>
 
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-slate-900 mb-6">Edge Computing Plans</h2>
+            className="text-center mb-16"><h2 className="text-4xl font-bold text-slate-900 mb-6">Edge Computing Plans</h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Choose the plan that fits your edge computing needs. All plans include our core orchestration features.
             </p>
@@ -808,9 +758,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-50 rounded-2xl p-8 ${
                   plan.popular ? 'ring-2 ring-blue-500 transform scale-105' : ''
-                }`}
-              >
-                {plan.popular && (
+                }`}>{plan.popular && (
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium'>
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -887,9 +835,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className='text-4xl font-bold text-white mb-6'>
+            transition={{ duration: 0.6 }}><h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Deploy Edge Computing?
             </h2>
             <p className='text-xl text-blue-100 mb-8'>

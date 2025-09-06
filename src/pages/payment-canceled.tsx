@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useRouter } from 'next/router', // Changed from useNavigate
@@ -35,9 +30,7 @@ export default function PaymentCanceled() {
           <Button 
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
-<<<<<<< HEAD
             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-=======
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -74,28 +67,15 @@ export default function PaymentCanceled() {
             variant="outline"
             onClick={() => router.push('/dashboard')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
             Return to Dashboard
           </Button>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-        </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </div>
   );
-<<<<<<< HEAD
-=======
         </div>
       </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

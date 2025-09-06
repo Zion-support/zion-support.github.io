@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -222,11 +221,7 @@ const PerformanceDashboard: React.FC = () => {
   )
 };
 
-<<<<<<< HEAD
 export default PerformanceDashboard;
-=======
-
-<<<<<<< HEAD
 
       case 'completed': return <CheckCircle className="h-4 w-4 text-green-500" />;
       case 'in-progress': return <AlertCircle className="h-4 w-4 text-yellow-500" />;
@@ -235,7 +230,4 @@ export default PerformanceDashboard;
 
 export default PerformanceDashboard, 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default PerformanceDashboard, 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -168,9 +167,7 @@ export function ZionGPTModelManager() {
                         variant="ghost"
                         size="sm"
                         onClick={() => checkTrainingStatus(model.id)}
-                        disabled={activeJobs[model.id]}
-                      >
-                        {activeJobs[model.id] ? (
+                        disabled={activeJobs[model.id]}>{activeJobs[model.id] ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (
                           <RefreshCw className="h-4 w-4" />
@@ -181,9 +178,7 @@ export function ZionGPTModelManager() {
                       <Button
                         variant={model.active ? "outline" : "default"}
                         size="sm"
-                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}
-                      >
-                        {model.active ? (
+                        onClick={() => toggleModelActive(model.id, model.active, model.purpose)}>{model.active ? (
                           <>
                             <CheckCircle className="h-4 w-4 mr-1" /> Active
                           </>
@@ -198,9 +193,7 @@ export function ZionGPTModelManager() {
                         variant="ghost"
                         size="sm"
                         className="text-red-500"
-                        title={model.errorMessage || "Training failed"}
-                      >
-                        <AlertCircle className="h-4 w-4 mr-1" /> Error
+                        title={model.errorMessage || "Training failed"}><AlertCircle className="h-4 w-4 mr-1" /> Error
                       </Button>
                     )}
                   </TableCell>
@@ -212,10 +205,9 @@ export function ZionGPTModelManager() {
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
 
 };
-return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+return (<Card className="w-full"><CardHeader className="flex flex-row items-center justify-between"><div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
   models.map ( (model) => (<TableRow key= {;
   model.id '";
 }>) : model.trainingStatus === 'failed' ? (<Badge className="bg-red-500" >Failed</Badge>) : model.trainingStatus === 'running' ? (<Badge className="bg-blue-500" >Training</Badge>) : (<Badge className="bg-yellow-500" >Queued</Badge>) ;
@@ -224,26 +216,17 @@ return (<Card className="w-full" > <CardHeader className="flex flex-row items-ce
 }disabled= {;
   activeJobs[model.id] ";
 }>) : (<RefreshCw className="h-4 w-4" />) ";
-}<span className="ml-1" >Check</span> </Button> > {";
+}<span className="ml-1" >Check</span> </Button>>{";
   model.active ? (<> <CheckCircle className="h-4 w-4 mr-1" /> Active </>) : (<> <Play className="h-4 w-4 mr-1" /> Activate </>) ";
-}</Button>) : (<Button > <AlertCircle className="h-4 w-4 mr-1" /> Error </Button>) ;
+}</Button>) : (<Button><AlertCircle className="h-4 w-4 mr-1" /> Error </Button>) ;
 }</TableCell> </TableRow>) ) ;
 }</TableBody> </Table>) ;
 }</CardContent> </Card>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
         .order('createdAt', { ascending: false }),
       
 
-<<<<<<< HEAD
-
       
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

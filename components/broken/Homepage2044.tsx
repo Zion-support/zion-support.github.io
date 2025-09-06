@@ -1,12 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  </div>);
 //Memoize expensive computations const allRevolutionaryServices = useMemo ( () => [ ...revolutionary2044AdvancedMicroSaas;
 ...revolutionary2044ITServices;
 ...revolutionary2044AIServices ], []);
 const featuredServices = useMemo ( () => allRevolutionaryServices.slice (0, 6), [allRevolutionaryServices]);
 ], []);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleGetStarted = useCallback ( () => {
   //Add analytics tracking if (typeof window !== 'undefined' && (window as any) .gtag) {
   
 }window.location.href = '/revolutionary-2044-pricing-showcase' 
@@ -21,7 +18,6 @@ const handleServiceClick = useCallback ( (service: unknown) => {
   
 }window.location.href = service.slug 
 }, []);
-=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -46,7 +42,6 @@ import { innovativeMicroSaasSolutions2025 } from '../data/2025-innovative-micro-
 const ServiceCard = lazy(() => import('./ServiceCard'));
 const TestimonialsSection = lazy(() => import('./TestimonialsSection'));
 const LiveChatWidget = lazy(() => import('./LiveChatWidget'));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Lazy load heavy components
 const ServiceCard = lazy(() => import('./ServiceCard'));
@@ -211,9 +206,7 @@ const Homepage2044: React.FC = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center"
-          >
-            <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            className="text-center"><div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
           </motion.div>
         </div>
@@ -237,9 +230,7 @@ const Homepage2044: React.FC = () => {
         {/* Hero Section */}
         <section 
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-          aria-labelledby="hero-heading"
-        >
-          {/* Enhanced Animated Background with Performance Optimizations */}
+          aria-labelledby="hero-heading">{/* Enhanced Animated Background with Performance Optimizations */}
           <div className="absolute inset-0 -z-10">
             {/* Floating orbs with neon effects - optimized for performance */}
             <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse shadow-[0_0_100px_rgba(6,182,212,0.5)]"></div>
@@ -366,9 +357,7 @@ const Homepage2044: React.FC = () => {
               className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+              transition={{ duration: 0.8, ease: "easeOut" }}><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
                 Zion Tech Group
               </span>
             </motion.h1>
@@ -386,14 +375,10 @@ const Homepage2044: React.FC = () => {
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            >
-              <button 
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}><button 
                 className="group px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-3xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-xl relative overflow-hidden"
                 onClick={handleGetStarted}
-                aria-label="Get started with Zion Tech Group revolutionary services"
-              >
-                <span className="relative z-10 flex items-center">
+                aria-label="Get started with Zion Tech Group revolutionary services"><span className="relative z-10 flex items-center">
                   Experience the Future
                   <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
@@ -402,9 +387,7 @@ const Homepage2044: React.FC = () => {
               <button 
                 className="px-12 py-6 border-2 border-cyan-400 text-cyan-400 font-bold rounded-3xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-xl shadow-[0_0_30px_rgba(6,182,212,0.3)] backdrop-blur-sm"
                 onClick={handleWatchDemo}
-                aria-label="Explore our revolutionary services"
-              >
-                <span className="flex items-center">
+                aria-label="Explore our revolutionary services"><span className="flex items-center">
                   Explore Services
                   <Play className="w-7 h-7 ml-4" />
                 </span>
@@ -416,9 +399,7 @@ const Homepage2044: React.FC = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
-              {stats.map((stat, index) => (
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}>{stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   className="text-center group cursor-pointer"
@@ -426,9 +407,7 @@ const Homepage2044: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}><div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
                     <stat.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
@@ -449,9 +428,7 @@ const Homepage2044: React.FC = () => {
               className="max-w-6xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
-              <div className="text-center mb-12">
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}><div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-4">
                   Featured Revolutionary Services
                 </h2>
@@ -470,9 +447,7 @@ const Homepage2044: React.FC = () => {
                       selectedCategory === category.id
                         ? `bg-gradient-to-r ${category.color} text-white border-transparent shadow-lg`
                         : 'bg-gray-900/50 text-gray-300 border-gray-600 hover:border-gray-500 hover:text-white'
-                    }`}
-                  >
-                    <category.icon className="w-4 h-4" />
+                    }`}><category.icon className="w-4 h-4" />
                     {category.name}
                   </button>
                 ))}
@@ -490,9 +465,7 @@ const Homepage2044: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
+                    transition={{ duration: 0.5, delay: index * 0.1 }}><div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       
                       <div className="relative z-10">
@@ -523,9 +496,7 @@ const Homepage2044: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-5xl font-bold text-white mb-6">
                 Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -542,9 +513,7 @@ const Homepage2044: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -10 }}
-                >
-                  <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
+                  whileHover={{ y: -10 }}><div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                     <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 rounded-3xl group-hover:opacity-10 transition-opacity duration-300`}></div>
                     
                     <div className="relative z-10">
@@ -582,9 +551,7 @@ const Homepage2044: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
@@ -594,9 +561,7 @@ const Homepage2044: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <button 
                   className="group px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-3xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(168,85,247,0.4)] focus: outline-none focus:ring-4 focus:ring-purple-500/50 text-xl"
-                  onClick={handleGetStarted}
-                >
-                  <span className="flex items-center">
+                  onClick={handleGetStarted}><span className="flex items-center">
                     Start Your Journey
                     <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
@@ -604,9 +569,7 @@ const Homepage2044: React.FC = () => {
                 
                 <button 
                   className="px-12 py-6 border-2 border-purple-400 text-purple-400 font-bold rounded-3xl hover:bg-purple-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-400/50 text-xl"
-                  onClick={handleWatchDemo}
-                >
-                  <span className="flex items-center">
+                  onClick={handleWatchDemo}><span className="flex items-center">
                     Schedule Demo
                     <Play className="w-7 h-7 ml-4" />
                   </span>
@@ -620,7 +583,6 @@ const Homepage2044: React.FC = () => {
   )
 };
 
-<<<<<<< HEAD
 }/>) ) 
 }</div> </div> {
   /* Floating geometric shapes - optimized animations */ 
@@ -630,15 +592,15 @@ const Homepage2044: React.FC = () => {
 }<script 
 }) 
 
-}/> > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]" > Zion Tech Group </span> </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div > <span className="relative z-10 flex items-center" > Experience the Future <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" /> </span> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl" ></div> </button> <button > <span className="flex items-center" > Explore Services <Play className="w-7 h-7 ml-4" /> </span> </button> </motion.div> {
+}/>><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0 0 30px rgba (6, 182, 212, 0.5) ]" > Zion Tech Group </span> </motion.h1> <motion.p > Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide. </motion.p> <motion.div><span className="relative z-10 flex items-center" > Experience the Future <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" /> </span> <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div> </button> <button><span className="flex items-center" > Explore Services <Play className="w-7 h-7 ml-4" /> </span> </button> </motion.div> {
   /* Enhanced Stats Section */ 
-}<motion.div > {
+}<motion.div>{
   stats.map ( (stat, index) => (<motion.div key= {
   stat.label 
-}> <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </div> </motion.div>) ) 
+}> <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300"><stat.icon className="w-8 h-8 text-cyan-400" /> </div> </div> </motion.div>) ) 
 }</motion.div> {
   /* Featured Service Showcase */ 
-}<motion.div > <div className="text-center mb-12" > <h2 className="text-4xl font-bold text-white mb-4" > Featured Revolutionary Services </h2> <p className="text-xl text-gray-400" > Experience the future of technology with our cutting-edge solutions </p> </div> key= {
+}<motion.div><div className="text-center mb-12"><h2 className="text-4xl font-bold text-white mb-4" > Featured Revolutionary Services </h2> <p className="text-xl text-gray-400" > Experience the future of technology with our cutting-edge solutions </p> </div> key= {
   category.id 
 }onClick= {
   () => handleCategoryChange (category.id) 
@@ -677,8 +639,8 @@ const Homepage2044: React.FC = () => {
   {
   duration: 0.5, delay: index * 0.1 
 
-}> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50" > <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" ></div> <div className="relative z-10" > <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6" > <feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) ) 
+}> <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0 0 50px rgba (0, 0, 0, 0.5) ] hover:shadow-[0 0 80px rgba (6, 182, 212, 0.3) ] transition-all duration-300 group-hover:border-cyan-500/50"><div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div> <div className="relative z-10"><div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-[0 0 30px rgba (6, 182, 212, 0.3) ] mb-6"><feature.icon className="w-8 h-8 text-white" /> </div> </p> </div> </div> </motion.div>) ) 
+}</div> </div> </section>><h2 className="text-5xl font-bold text-white mb-6" > Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" >Features</span> </h2> <p className="text-xl text-gray-400 max-w-3xl mx-auto" > Discover the cutting-edge capabilities that set Zion Tech Group apart in the 2044 technology landscape </p> </motion.div> > Learn More <ArrowRight className="w-4 h-4 transition-transform duration-300" /> </a> </div> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
@@ -695,10 +657,9 @@ const Homepage2044: React.FC = () => {
   {
   once: true 
 
-}> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <button > <span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button > <span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
+}> <h2 className="text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto" > Join thousands of forward-thinking companies already leveraging our revolutionary 2044 technology solutions </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center"><button><span className="flex items-center" > Start Your Journey <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" /> </span> </button> <button><span className="flex items-center" > Schedule Demo <Play className="w-7 h-7 ml-4" /> </span> </button> </div> </div> </section> </main> </Layout> </>) 
 };
 export default Homepage2044;
-=======
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import Layout from './layout/Layout';
 import { motion } from 'framer-motion';
@@ -889,9 +850,7 @@ const Homepage2044: React.FC = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center"
-          >
-            <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            className="text-center"><div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
             <p className="text-cyan-400 text-lg">Loading Zion Tech Group...</p>
           </motion.div>
         </div>
@@ -915,9 +874,7 @@ const Homepage2044: React.FC = () => {
         {/* Hero Section */}
         <section 
           className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden"
-          aria-labelledby="hero-heading"
-        >
-          {/* Enhanced Animated Background with Performance Optimizations */}
+          aria-labelledby="hero-heading">{/* Enhanced Animated Background with Performance Optimizations */}
           <div className="absolute inset-0 -z-10">
             {/* Floating orbs with neon effects - optimized for performance */}
             <div className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse shadow-[0_0_100px_rgba(6,182,212,0.5)]"></div>
@@ -1041,9 +998,7 @@ const Homepage2044: React.FC = () => {
               className="text-7xl md:text-9xl lg:text-[12rem] font-black mb-10 leading-none"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-            >
-              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
+              transition={{ duration: 0.8, ease: "easeOut" }}><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(6,182,212,0.5)]">
                 Zion Tech Group
               </span>
             </motion.h1>
@@ -1061,14 +1016,10 @@ const Homepage2044: React.FC = () => {
               className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            >
-              <button 
+              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}><button 
                 className="group px-12 py-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-3xl hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(6,182,212,0.4)] focus:outline-none focus:ring-4 focus:ring-cyan-500/50 text-xl relative overflow-hidden"
                 onClick={handleGetStarted}
-                aria-label="Get started with Zion Tech Group revolutionary services"
-              >
-                <span className="relative z-10 flex items-center">
+                aria-label="Get started with Zion Tech Group revolutionary services"><span className="relative z-10 flex items-center">
                   Experience the Future
                   <ArrowRight className="w-7 h-7 ml-4 group-hover:translate-x-2 transition-transform duration-300" />
                 </span>
@@ -1077,9 +1028,7 @@ const Homepage2044: React.FC = () => {
               <button 
                 className="px-12 py-6 border-2 border-cyan-400 text-cyan-400 font-bold rounded-3xl hover:bg-cyan-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyan-400/50 text-xl shadow-[0_0_30px_rgba(6,182,212,0.3)] backdrop-blur-sm"
                 onClick={handleWatchDemo}
-                aria-label="Explore our revolutionary services"
-              >
-                <span className="flex items-center">
+                aria-label="Explore our revolutionary services"><span className="flex items-center">
                   Explore Services
                   <Play className="w-7 h-7 ml-4" />
                 </span>
@@ -1091,9 +1040,7 @@ const Homepage2044: React.FC = () => {
               className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto mb-20"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
-              {stats.map((stat, index) => (
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}>{stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   className="text-center group cursor-pointer"
@@ -1101,9 +1048,7 @@ const Homepage2044: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
-                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                >
-                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
+                  transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}><div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-all duration-300">
                     <stat.icon className="w-8 h-8 text-cyan-400" />
                   </div>
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">
@@ -1124,9 +1069,7 @@ const Homepage2044: React.FC = () => {
               className="max-w-6xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            >
-              <div className="text-center mb-12">
+              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}><div className="text-center mb-12">
                 <h2 className="text-4xl font-bold text-white mb-4">
                   Featured Revolutionary Services
                 </h2>
@@ -1145,9 +1088,7 @@ const Homepage2044: React.FC = () => {
                       selectedCategory === category.id
                         ? `bg-gradient-to-r ${category.color} text-white border-transparent shadow-lg`
                         : 'bg-gray-900/50 text-gray-300 border-gray-600 hover:border-gray-500 hover:text-white'
-                    }`}
-                  >
-                    <category.icon className="w-4 h-4" />
+                    }`}><category.icon className="w-4 h-4" />
                     {category.name}
                   </button>
                 ))}
@@ -1165,9 +1106,7 @@ const Homepage2044: React.FC = () => {
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                  >
-                    <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
+                    transition={{ duration: 0.5, delay: index * 0.1 }}><div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       
                       <div className="relative z-10">
@@ -1198,9 +1137,7 @@ const Homepage2044: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-5xl font-bold text-white mb-6">
                 Revolutionary <span className="bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">Features</span>
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -1217,9 +1154,7 @@ const Homepage2044: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  whileHover={{ y: -10 }}
-                >
-                  <div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
+                  whileHover={{ y: -10 }}><div className="relative p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-3xl backdrop-blur-xl shadow-[0_0_50px_rgba(0,0,0,0.5)] group-hover:shadow-[0_0_80px_rgba(6,182,212,0.3)] transition-all duration-300 group-hover:border-cyan-500/50">
                     <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-5 rounded-3xl group-hover:opacity-10 transition-opacity duration-300`}></div>
                     
                     <div className="relative z-10">
@@ -1257,9 +1192,7 @@ const Homepage2044: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto">
@@ -1269,9 +1202,7 @@ const Homepage2044: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <button 
                   className="group px-12 py-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-bold rounded-3xl hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-[0_0_50px_rgba(168,85,247,0.4)] focus: outline-none focus:ring-4 focus:ring-purple-500/50 text-xl"
-                  onClick={handleGetStarted}
-                >
-                  <span className="flex items-center">
+                  onClick={handleGetStarted}><span className="flex items-center">
                     Start Your Journey
                     <Rocket className="w-7 h-7 ml-4 group-hover:translate-x-1 transition-transform duration-300" />
                   </span>
@@ -1279,9 +1210,7 @@ const Homepage2044: React.FC = () => {
                 
                 <button 
                   className="px-12 py-6 border-2 border-purple-400 text-purple-400 font-bold rounded-3xl hover:bg-purple-400 hover:text-black transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-400/50 text-xl"
-                  onClick={handleWatchDemo}
-                >
-                  <span className="flex items-center">
+                  onClick={handleWatchDemo}><span className="flex items-center">
                     Schedule Demo
                     <Play className="w-7 h-7 ml-4" />
                   </span>
@@ -1296,7 +1225,4 @@ const Homepage2044: React.FC = () => {
 };
 
 export default Homepage2044;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default Homepage2044;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

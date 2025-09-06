@@ -125,16 +125,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 1 }}
                 className='mb-8'
                 className="mb-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
               </motion.div>
 
-                className="mb-8"
-              >
-                <div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
+                className="mb-8"><div className="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-6">
                   <Sparkles className="w-12 h-12 text-white" />
                 </div>
               </motion.div>
@@ -146,9 +142,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className='text-5xl md:text-7xl font-bold mb-8'
                 className="text-5xl md:text-7xl font-bold mb-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2029 Innovations
                 </span>
                 <br />
@@ -157,9 +151,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </span>
               </motion.h1>
 
-                className="text-5xl md:text-7xl font-bold mb-8"
-              >
-                <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                className="text-5xl md:text-7xl font-bold mb-8"><span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   2029 Innovations
                 </span>
                 <br />
@@ -198,36 +190,24 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className='flex flex-col sm:flex-row gap-6 justify-center items-center'
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <a
+ursor/integrate-build-improve-and-re-verify-b76c><a
                   href="#innovations"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
-                >
-                  <Eye className="w-5 h-5 mr-2" />
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"><Eye className="w-5 h-5 mr-2" />
                   Explore Innovations
                 </a>
                 
                 <a
                   href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
-                >
-                  <Mail className='w-5 h-5 mr-2' />
-                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-              >
-                <a
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"><Mail className='w-5 h-5 mr-2' />
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center"><a
                   href="#innovations"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
-                >
-                  <Eye className="w-5 h-5 mr-2" />
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"><Eye className="w-5 h-5 mr-2" />
                   Explore Innovations
                 </a>
                 
                 <a
                   href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
-                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"
-                >
-                  <Mail className="w-5 h-5 mr-2" />
+                  className="inline-flex items-center px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300 transform hover:scale-105 text-lg"><Mail className="w-5 h-5 mr-2" />
                   <Mail className="w-5 h-5 mr-2" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   Partner With Us
@@ -252,9 +232,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Categories</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -264,9 +242,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Categories</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -352,9 +328,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='group'
                   className="group"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
+ursor/integrate-build-improve-and-re-verify-b76c><div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
                     <div className="text-center mb-6">
                       <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <category.icon className="w-8 h-8 text-white" />
@@ -371,12 +345,8 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {category.features.map((feature, idx) => (
                         <div
                           key={idx}
-                          className='flex items-center gap-3 text-sm text-gray-300'
-                        >
-                          <div className='w-2 h-2 bg-cyan-400 rounded-full'></div>
-                  className="group"
-                >
-                  <div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
+                          className='flex items-center gap-3 text-sm text-gray-300'><div className='w-2 h-2 bg-cyan-400 rounded-full'></div>
+                  className="group"><div className={`p-8 rounded-2xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-500 h-full hover:transform hover:scale-105 backdrop-blur-sm`}>
                     <div className="text-center mb-6">
                       <div className={`inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r ${category.color} rounded-full mb-4 group-hover:scale-110 transition-transform duration-300`}>
                         <category.icon className="w-8 h-8 text-white" />
@@ -430,9 +400,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -442,9 +410,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Innovation <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Impact</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -509,9 +475,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500'
                   className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
@@ -521,9 +485,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     {item.description}
                   </p>
                   <div className='text-cyan-400 font-bold text-lg'>
-                  className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"
-                >
-                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
+                  className="text-center p-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl backdrop-blur-sm hover:border-cyan-500/50 transition-all duration-500"><div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mb-6">
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-4">
@@ -558,9 +520,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center'
               className="text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Ready to Lead the <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Future?</span>
                 </h2>
@@ -572,9 +532,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
                     href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"><Mail className="w-5 h-5 mr-2" />
                     Start Innovation Partnership
                   </a>
                   
@@ -585,9 +543,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                     <div className='flex items-center space-x-2'>
                       <Mail className='w-5 h-5 text-cyan-400' />
-              className="text-center"
-            >
-              <div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
+              className="text-center"><div className="bg-gradient-to-r from-gray-900/80 to-gray-800/80 border border-gray-700/50 rounded-2xl p-12 backdrop-blur-sm">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   Ready to Lead the <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">Future?</span>
                 </h2>
@@ -599,9 +555,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <a
                     href={`mailto:${contactInfo.email}?subject=Innovation Partnership Inquiry`}
-                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"
-                  >
-                    <Mail className="w-5 h-5 mr-2" />
+                    className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25 text-lg"><Mail className="w-5 h-5 mr-2" />
                     Start Innovation Partnership
                   </a>
                   

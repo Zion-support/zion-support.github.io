@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReferralStats as ReferralStatsType } from '@/types/referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -7,7 +5,6 @@ import { Award, Share, Star, TrendingUp } from 'lucide-react';
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean;
-=======
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
@@ -19,8 +16,6 @@ interface ReferralStatsProps {
   stats: ReferralStatsType,
   isLoading: boolean
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ReferralStats as ReferralStatsType } from "@/types/referrals";
@@ -32,17 +27,11 @@ interface ReferralStatsProps {
   stats: ReferralStatsType,
   isLoading: boolean
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Total Referrals',
-=======
-      title: "Total Referrals",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       value: stats.totalReferrals,
       icon: <Share className="h-5 w-5 text-muted-foreground" />,
       description: "People you've invited"},
@@ -65,10 +54,8 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
       {statCards.map((card, i) => (
         <Card key={i}>
-<<<<<<< HEAD
           <CardHeader className='flex flex-row items-center justify-between space-y-0 pb-2'>
             <CardTitle className='text-sm font-medium'>{card.title}</CardTitle>
-=======
       title: "Total Referrals",
       value: stats.totalReferrals,
       icon: <Share className = "h-5 w-5 text-muted-foreground" />,
@@ -96,17 +83,12 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
         <Card key={i}>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">{card.title}</CardTitle>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {card.icon}
           </CardHeader>
           <CardContent>
             {isLoading ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='h-6 w-20 bg-muted animate-pulse rounded' />
             ) : (
               <>
@@ -114,20 +96,16 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
                 <p className='text-xs text-muted-foreground'>
                   {card.description}
                 </p>
-=======
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="h-6 w-20 bg-muted animate-pulse rounded" />
             ) : (
               <>
                 <div className="text-2xl font-bold">{card.value}</div>
                 <p className="text-xs text-muted-foreground">{card.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </>
             )}
           </CardContent>
@@ -135,11 +113,4 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       ))}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

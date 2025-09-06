@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Star,
   TrendingUp,
@@ -19,43 +17,22 @@ import {
   Mail,
   MapPin,
   ExternalLink,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   Star, TrendingUp, Zap, Brain, Rocket, Shield, 
   DollarSign, Users, Clock, CheckCircle, ArrowRight;
   Phone, Mail, MapPin, ExternalLink
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { emergingTechServicesEnhanced2025 } from '../data/emerging-tech-services';
 import { nextGenAIServices } from '../data/next-gen-ai-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function InnovativeServicesShowcase() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const containerVariants = {
@@ -64,21 +41,15 @@ export default function InnovativeServicesShowcase() {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-<<<<<<< HEAD
-<<<<<<< HEAD
         delayChildren: 0.2,
       },
     },
-=======
         delayChildren: 0.2
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         delayChildren: 0.2
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const itemVariants = {
@@ -88,37 +59,27 @@ export default function InnovativeServicesShowcase() {
       y: 0,
       transition: {
         duration: 0.6,
-<<<<<<< HEAD
-<<<<<<< HEAD
         ease: 'easeOut',
       },
     },
-=======
         ease: "easeOut"
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         ease: "easeOut"
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const featuredServices = [
     {
       title: '🔐 Quantum Internet Security Platform',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
       price: '$8,999/month',
       marketData: '$150B cybersecurity market, 300% annual growth',
-=======
       description: 'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
       price: '$8,999/month';
       marketData: '$150B cybersecurity market, 300% annual growth';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       competitors: 'Traditional cybersecurity solutions',
       savings: 'Quantum-level protection vs. traditional methods',
       features: ['Quantum key distribution (QKD)Post-quantum cryptographyQuantum-resistant VPN tunnelsReal-time threat detectionZero-trust architecture'],
@@ -156,10 +117,8 @@ export default function InnovativeServicesShowcase() {
       savings: 'First comprehensive neural interface platform',
       features: ['Neural signal processingBrain activity monitoringAI-powered interpretationReal-time communicationSafety protocols'],
       link: 'https://ziontechgroup.com/neural-interface-development-platform',
-<<<<<<< HEAD
       color: 'from-purple-600 to-indigo-700',
     },
-=======
       description: 'ArrowRight-generation quantum-secured internet infrastructure with unbreakable encryption. Protect enterprise networks with quantum-resistant protocols.',
       price: '$8,999/month',
     marketData: '$150B cybersecurity market, 300% annual growth',
@@ -202,21 +161,13 @@ export default function InnovativeServicesShowcase() {
       link: 'https://ziontechgroup.com/neural-interface-development-platform',
       color: 'from-purple-600 to-indigo-700'
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       color: 'from-purple-600 to-indigo-700'
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
     <UltraAdvancedFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='min-h-screen'>
-=======
-      <div className="min-h-screen">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <Head>
           <title>Innovative Services Showcase - Zion Tech Group | Cutting-Edge Technology</title>
           <meta name="description" content="Discover our most innovative and cutting-edge services including quantum internet security, AI drug discovery, quantum trading, and neural interfaces. Contact: +1 302 464 0950" />
@@ -234,9 +185,7 @@ export default function InnovativeServicesShowcase() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              transition={{ duration: 1, ease: "easeOut" }}><h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Innovative
                 </span>
@@ -261,12 +210,10 @@ export default function InnovativeServicesShowcase() {
                   <div className="text-white font-semibold">Email</div>
                   <div className="text-gray-400">{contactInfo.email}</div>
                 </div>
-<<<<<<< HEAD
                 <div className='text-center'>
                   <MapPin className='w-8 h-8 text-pink-400 mx-auto mb-3' />
                   <div className='text-white font-semibold'>Address</div>
                   <div className='text-gray-400'>{contactInfo.address}</div>
-=======
       <div className="min-h-screen">
         <Head>
           <title>Innovative Services Showcase - Zion Tech Group | Cutting-Edge Technology</title>
@@ -285,9 +232,7 @@ export default function InnovativeServicesShowcase() {
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              transition={{ duration: 1, ease: "easeOut" }}><h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   Innovative
                 </span>
@@ -312,16 +257,10 @@ export default function InnovativeServicesShowcase() {
                   <div className="text-white font-semibold">Email</div>
                   <div className="text-gray-400">{contactInfo.email}</div>
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <div className="text-center">
                   <MapPin className="w-8 h-8 text-pink-400 mx-auto mb-3" />
                   <div className="text-white font-semibold">Address</div>
                   <div className="text-gray-400">{contactInfo.address}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </motion.div>
@@ -329,37 +268,25 @@ export default function InnovativeServicesShowcase() {
         </section>
 
         {/* Featured Innovative Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Featured
                 </span> Innovative Services
               </h2>
@@ -368,9 +295,7 @@ export default function InnovativeServicesShowcase() {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Featured
@@ -382,10 +307,7 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {featuredServices.map((service, index) => (
                 <motion.div
                   key={index}
@@ -393,14 +315,7 @@ export default function InnovativeServicesShowcase() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'
-=======
-                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="mb-6">
+                  className='bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300'><div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                     
@@ -414,16 +329,10 @@ export default function InnovativeServicesShowcase() {
                       <h4 className="text-lg font-semibold text-white mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {service.features.map((feature, idx) => (
-<<<<<<< HEAD
                           <li
                             key={idx}
-                            className='flex items-center text-gray-300'
-                          >
-                            <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
-=======
-                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300"
-                >
-                  <div className="mb-6">
+                            className='flex items-center text-gray-300'><CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 hover:border-cyan-500/40 transition-all duration-300"><div className="mb-6">
                     <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">{service.description}</p>
                     
@@ -439,51 +348,34 @@ export default function InnovativeServicesShowcase() {
                         {service.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <li key={idx} className="flex items-center text-gray-300">
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='flex flex-col sm:flex-row gap-3'>
-=======
-                    <div className="flex flex-col sm:flex-row gap-3">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       <a
                         href={service.link}
-                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2"
-                      >
-                        <span>Learn More</span>
+                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2"><span>Learn More</span>
                         <ExternalLink className="w-5 h-5" />
                       </a>
                       <a
-<<<<<<< HEAD
                         href='/contact'
                         className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-=======
                     <div className="flex flex-col sm:flex-row gap-3">
                       <a
                         href={service.link}
-                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2"
-                      >
-                        <span>Learn More</span>
+                        className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-cyan-500/25 inline-flex items-center justify-center space-x-2"><span>Learn More</span>
                         <ExternalLink className="w-5 h-5" />
                       </a>
                       <a
                         href="/contact"
                         className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         href="/contact"
                         className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-3 px-6 rounded-full text-center transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       >
                         Get Started
                       </a>
@@ -496,37 +388,25 @@ export default function InnovativeServicesShowcase() {
         </section>
 
         {/* Emerging Tech Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   Emerging
                 </span> Tech Services
               </h2>
@@ -542,9 +422,7 @@ export default function InnovativeServicesShowcase() {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticCard variant="quantum-holographic" className="p-6">
+                  viewport={{ once: true }}><UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -555,9 +433,7 @@ export default function InnovativeServicesShowcase() {
                     <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
-                    >
-                      <span>Learn More</span>
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"><span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
@@ -566,9 +442,7 @@ export default function InnovativeServicesShowcase() {
             </div>
 
             <motion.div
-<<<<<<< HEAD
               className='text-center mt-16'
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">
                   Emerging
@@ -586,9 +460,7 @@ export default function InnovativeServicesShowcase() {
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticCard variant="quantum-holographic" className="p-6">
+                  viewport={{ once: true }}><UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-300 text-sm mb-4">{service.description}</p>
@@ -599,9 +471,7 @@ export default function InnovativeServicesShowcase() {
                     <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
-                    >
-                      <span>Learn More</span>
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"><span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
                     </a>
                   </UltraFuturisticCard>
@@ -611,78 +481,45 @@ export default function InnovativeServicesShowcase() {
 
             <motion.div
               className="text-center mt-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               className="text-center mt-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.a
-<<<<<<< HEAD
-<<<<<<< HEAD
+              viewport={{ once: true }}><motion.a
                 href='/services'
                 className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2'
-=======
                 href="/services"
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 href="/services"
                 className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-emerald-500/25 inline-flex items-center space-x-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>View All Emerging Tech</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
+                whileTap={{ scale: 0.95 }}><span>View All Emerging Tech</span>
                 <ArrowRight className='w-6 h-6' />
-=======
-                <ArrowRight className="w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <ArrowRight className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </motion.a>
             </motion.div>
           </div>
         </section>
 
         {/* ArrowRight-Gen AI Services */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <motion.div
               className='text-center mb-16'
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
               className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   ArrowRight-Generation
                 </span> AI Services
               </h2>
@@ -691,9 +528,7 @@ export default function InnovativeServicesShowcase() {
               </p>
             </motion.div>
 
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent">
                   ArrowRight-Generation
@@ -705,25 +540,16 @@ export default function InnovativeServicesShowcase() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {nextGenAIServices.slice(0, 6).map((service, index) => (
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <UltraFuturisticCard
+                  viewport={{ once: true }}><UltraFuturisticCard
                     variant='quantum-holographic'
-                    className='p-6'
-                  >
-                    <div className='text-4xl mb-4'>{service.icon}</div>
+                    className='p-6'><div className='text-4xl mb-4'>{service.icon}</div>
                     <h3 className='text-xl font-bold text-white mb-3'>
                       {service.name}
                     </h3>
@@ -731,25 +557,19 @@ export default function InnovativeServicesShowcase() {
                       {service.description}
                     </p>
                     <div className='text-2xl font-bold text-cyan-400 mb-2'>
-=======
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                     <p className="text-gray-400 text-sm mb-4">{service.description}</p>
                     <div className="text-2xl font-bold text-cyan-400 mb-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {service.price}
                       <span className="text-sm text-gray-400">{service.period}</span>
                     </div>
                     <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
-                    >
-                      <span>Learn More</span>
-<<<<<<< HEAD
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"><span>Learn More</span>
                       <ArrowRight className='w-4 h-4' />
-=======
                   <UltraFuturisticCard variant="quantum-holographic" className="p-6">
                     <div className="text-4xl mb-4">{service.icon}</div>
                     <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
@@ -761,14 +581,9 @@ export default function InnovativeServicesShowcase() {
                     <div className="text-sm text-gray-400 mb-4">{service.marketSize} • {service.growthRate}</div>
                     <a
                       href={service.link}
-                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"
-                    >
-                      <span>Learn More</span>
+                      className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 inline-flex items-center space-x-2"><span>Learn More</span>
                       <ArrowRight className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </a>
                   </UltraFuturisticCard>
                 </motion.div>
@@ -776,76 +591,37 @@ export default function InnovativeServicesShowcase() {
             </div>
 
             <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='text-center mt-16'
-=======
-              className="text-center mt-16"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-              className="text-center mt-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <motion.a
-<<<<<<< HEAD
-<<<<<<< HEAD
+              viewport={{ once: true }}><motion.a
                 href='/services'
                 className='bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2'
-=======
                 href="/services"
                 className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 href="/services"
                 className="bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:shadow-2xl hover:shadow-pink-500/25 inline-flex items-center space-x-2"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <span>Discover All AI Services</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
+                whileTap={{ scale: 0.95 }}><span>Discover All AI Services</span>
                 <ArrowRight className='w-6 h-6' />
-=======
-                <ArrowRight className="w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                <ArrowRight className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </motion.a>
             </motion.div>
           </div>
         </section>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 Ready to Experience the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -854,10 +630,8 @@ export default function InnovativeServicesShowcase() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-<<<<<<< HEAD
                   href='/contact'
                   className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Experience the Future?
               </h2>
@@ -869,58 +643,43 @@ export default function InnovativeServicesShowcase() {
                 <a
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   href="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Get Started Today
                 </a>
                 <a
-<<<<<<< HEAD
-<<<<<<< HEAD
                   href='/services'
                   className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300'
-=======
                   href="/services"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   href="/services"
                   className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-bold py-4 px-8 rounded-full text-lg transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Explore All Services
                 </a>
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='mt-12 text-center'>
                 <p className='text-gray-400 mb-4'>Contact us directly:</p>
                 <div className='flex flex-col sm:flex-row gap-6 justify-center items-center'>
                   <div className='flex items-center space-x-2'>
                     <Phone className='w-5 h-5 text-cyan-400' />
                     <span className='text-white'>{contactInfo.mobile}</span>
-=======
               <div className="mt-12 text-center">
                 <p className="text-gray-400 mb-4">Contact us directly:</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                   <div className="flex items-center space-x-2">
                     <Phone className="w-5 h-5 text-cyan-400" />
                     <span className="text-white">{contactInfo.mobile}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                   <div className="flex items-center space-x-2">
                     <Mail className="w-5 h-5 text-purple-400" />
                     <span className="text-white">{contactInfo.email}</span>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center space-x-2'>
                     <MapPin className='w-5 h-5 text-pink-400' />
                     <span className='text-white'>{contactInfo.address}</span>
-=======
               <div className="mt-12 text-center">
                 <p className="text-gray-400 mb-4">Contact us directly:</p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -935,12 +694,9 @@ export default function InnovativeServicesShowcase() {
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-white">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="flex items-center space-x-2">
                     <MapPin className="w-5 h-5 text-pink-400" />
                     <span className="text-white">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </div>
@@ -950,11 +706,4 @@ export default function InnovativeServicesShowcase() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

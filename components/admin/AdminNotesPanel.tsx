@@ -1,14 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
 export type AdminNotesPanelProps = {
-<<<<<<< HEAD
-<<<<<<< HEAD
   targetType: string; // e.g., 'user' | 'listing'
   targetId: string; // unique identifier for the target
-=======
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 type Note = {
@@ -20,12 +16,10 @@ type Note = {
   createdAt: number
 };
 
-<<<<<<< HEAD
 export default function AdminNotesPanel({
   targetType,
   targetId,
 }: AdminNotesPanelProps) {
-=======
   targetType: string, // e.g., 'user' | 'listing'
   targetId: string,   // unique identifier for the target
 };
@@ -40,10 +34,7 @@ type Note = {
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [isAdmin, setIsAdmin] = useState(true);
   const [adminId, setAdminId] = useState('admin-demo');
   const [notes, setNotes] = useState<Note[]>([]);
@@ -54,18 +45,14 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
   async function fetchNotes() {
     try {
       setLoading(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
       const res = await fetch(
         `/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`,
         {
           headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         }
       );
-=======
       const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
         headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       if (!res.ok) {
         setNotes([]);
         return
@@ -73,9 +60,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       const data = await res.json();
       setNotes(data.notes || [])
     } finally {
-<<<<<<< HEAD
       setLoading(false);
-=======
       const res = await fetch(`/api/admin/notes?targetType=${encodeURIComponent(targetType)}&targetId=${encodeURIComponent(targetId)}`, {
         headers: { 'X-Admin': isAdmin ? 'true' : 'false' }}),
       if (!res.ok) {
@@ -86,23 +71,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setNotes(data.notes || [])
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (isAdmin) fetchNotes();
-=======
-    if (isAdmin) fetchNotes()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    if (isAdmin) fetchNotes()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [isAdmin, targetType, targetId]);
 
   async function addNote() {
@@ -111,8 +85,6 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
     try {
       const res = await fetch('/api/admin/notes', {
         method: 'POST',
-<<<<<<< HEAD
-<<<<<<< HEAD
         headers: {
           'Content-Type': 'application/json',
           'X-Admin': isAdmin ? 'true' : 'false',
@@ -120,10 +92,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         },
         body: JSON.stringify({ targetType, targetId, text }),
       });
-=======
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       if (!res.ok) {
         alert('Failed to add note');
         return
@@ -131,9 +101,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
       await fetchNotes()
     } finally {
-<<<<<<< HEAD
       setAdding(false);
-=======
         headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'falseX-Admin-User': adminId },
         body: JSON.stringify({ targetType, targetId, text })});
       if (!res.ok) {
@@ -144,17 +112,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       await fetchNotes()
     } finally {
       setAdding(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setAdding(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   if (!isAdmin) {
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='rounded border p-3'>
         <div className='flex items-center gap-2 text-sm'>
           <input
@@ -164,12 +127,10 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
             onChange={e => setIsAdmin(e.target.checked)}
           />
           <label htmlFor='isAdminToggle'>Admin</label>
-=======
       <div className="rounded border p-3">
         <div className="flex items-center gap-2 text-sm">
           <input id="isAdminToggle" type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
           <label htmlFor="isAdminToggle" htmlFor="input-Admin">Admin</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
         <div className="text-xs opacity-60 mt-2">Admin-only notes hidden.</div>
       </div>
@@ -201,14 +162,12 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         ) : notes.length === 0 ? (
           <div className="text-sm opacity-70">No notes yet.</div>
         ) : (
-<<<<<<< HEAD
           <ul className='space-y-2'>
             {notes.map(n => (
               <li key={n.id} className='rounded border p-2 text-sm'>
                 <div className='opacity-60 text-xs mb-1'>
                   {new Date(n.createdAt).toLocaleString()} • {n.authorId}
                 </div>
-=======
       <div className="rounded border p-3">
         <div className="flex items-center gap-2 text-sm">
           <input id="isAdminToggle" type="checkbox" checked={isAdmin} onChange={(e) => setIsAdmin(e.target.checked)} />
@@ -244,16 +203,10 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         ) : notes.length === 0 ? (
           <div className="text-sm opacity-70">No notes yet.</div>
         ) : (
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <ul className="space-y-2">
             {notes.map((n) => (
               <li key={n.id} className="rounded border p-2 text-sm">
                 <div className="opacity-60 text-xs mb-1">{new Date(n.createdAt).toLocaleString()} • {n.authorId}</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <div>{n.text}</div>
               </li>
             ))}
@@ -262,11 +215,4 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

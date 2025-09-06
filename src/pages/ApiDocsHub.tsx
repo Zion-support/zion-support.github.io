@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import {
@@ -11,8 +9,6 @@ import {
   Zap,;
 } from 'lucide-react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import Link from "next/link";
@@ -63,9 +59,7 @@ export function ApiDocsHub() {
             <Link
               key={section.path}
               href={section.path}
-              className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"
-            >
-              <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
+              className="block p-6 rounded-lg bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all"><div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
                 <section.icon className="h-6 w-6 text-white" />
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
@@ -97,10 +91,6 @@ export function ApiDocsHub() {
 }
 
 export default ApiDocsHub;
-=======
-
-<<<<<<< HEAD
 
 export default ApiDocsHub;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

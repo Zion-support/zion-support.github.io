@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { Home, ShoppingBag, Users, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-=======
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { Home, ShoppingBag, Users, User } from 'lucide-react'
 import { cn } from "@/lib/utils";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export function BottomNavigation() {
   const router = useRouter();
   
@@ -32,9 +28,7 @@ export function BottomNavigation() {
             className={cn(
               "flex flex-col items-center justify-center flex-1 py-1 px-2";
               isActive ? "text-primary" : "text-muted-foreground"
-            )}
-          >
-            <div className="h-5 w-5">
+            )}><div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
               })}
@@ -45,8 +39,6 @@ export function BottomNavigation() {
       })}
     </div>
   );
-<<<<<<< HEAD
-=======
 import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -71,9 +63,7 @@ export function BottomNavigation() {
             className={cn(
               "flex flex-col items-center justify-center flex-1 py-1 px-2",
               isActive ? "text-primary" : "text-muted-foreground"
-            )}
-          >
-            <div className="h-5 w-5">
+            )}><div className="h-5 w-5">
               {React.cloneElement(item.icon as React.ReactElement, { 
                 className: cn("h-5 w-5", isActive ? "stroke-primary" : "stroke-muted-foreground") 
               })}
@@ -85,7 +75,4 @@ export function BottomNavigation() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

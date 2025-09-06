@@ -91,9 +91,7 @@ const Footer: React.FC = () => {
                 <li key={service.name}>
                   <Link
                     href={service.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {service.name}
+                    className="text-gray-400 hover:text-white transition-colors">{service.name}
                   </Link>
                 </li>
               ))}
@@ -108,9 +106,7 @@ const Footer: React.FC = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
-                    {item.name}
+                    className="text-gray-400 hover:text-white transition-colors">{item.name}
                   </Link>
                 </li>
               ))}
@@ -128,9 +124,7 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-blue-400 transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="h-5 w-5" />
+                  aria-label={social.name}><social.icon className="h-5 w-5" />
                 </a>
               ))}
             </div>

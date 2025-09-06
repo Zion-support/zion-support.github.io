@@ -1,14 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
-=======
 
 import React from "react";
 import { cn } from "@/lib/utils";
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface SeverityIndicatorProps {
   severity: "safe" | "suspicious" | "dangerous",
@@ -51,19 +47,13 @@ export function SeverityIndicator({
       {showText && <span className="capitalize text-sm">{severity}</span>}
     </div>
   );
-<<<<<<< HEAD
 
 };
 return (</div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
       default:
         return <CheckCircle className={cn(
           size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

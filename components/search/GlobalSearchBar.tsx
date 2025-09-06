@@ -1,12 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function GlobalSearchBar() {
   const router = useRouter();
   const [query, setQuery] = useState('');
@@ -17,37 +11,23 @@ export default function GlobalSearchBar() {
   useEffect(() => {
     if (!query) {
       setSuggestions([]);
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
-=======
-      return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-      return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     controller.current?.abort();
     controller.current = new AbortController();
     const run = async () => {
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
           signal: controller.current!.signal,
         });
-=======
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         const j = await r.json();
         setSuggestions(j.suggestions || []);
         setOpen(true)
       } catch {}
     };
     const id = setTimeout(run, 150);
-<<<<<<< HEAD
     return () => clearTimeout(id);
-=======
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
         const j = await r.json();
         setSuggestions(j.suggestions || []);
@@ -56,17 +36,12 @@ export default function GlobalSearchBar() {
     };
     const id = setTimeout(run, 150);
     return () => clearTimeout(id)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return () => clearTimeout(id)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [query]);
 
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
     fetch('/api/telemetry/search', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -74,42 +49,27 @@ export default function GlobalSearchBar() {
     }).catch(() => {});
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false);
-=======
     fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`);
     setOpen(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const startVoice = () => {
     if (typeof window === 'undefined') return;
-<<<<<<< HEAD
-<<<<<<< HEAD
     const Speech: any =
       (window as any).SpeechRecognition ||
       (window as any).webkitSpeechRecognition;
-=======
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
       const transcript = e.results?.[0]?.[0]?.transcript || '';
-<<<<<<< HEAD
-<<<<<<< HEAD
       if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
-=======
-      if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     };
     rec.start()
   };
@@ -140,9 +100,7 @@ export default function GlobalSearchBar() {
                     setOpen(false);
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
-<<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'
-=======
       if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
     };
     rec.start()
@@ -175,12 +133,7 @@ export default function GlobalSearchBar() {
                     router.push(`/search?q=${encodeURIComponent(s)}`)
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  {s}
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800">{s}
                 </button>
               </li>
             ))}
@@ -188,14 +141,8 @@ export default function GlobalSearchBar() {
         </div>
       )}
     </form>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

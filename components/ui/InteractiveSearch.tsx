@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function InteractiveSearch({
   placeholder = 'Search talent, skills, or jobs...',
 }: {
   placeholder?: string;
 }) {
-=======
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [value, setValue] = useState('');
   return (
     <motion.div initial={{ opacity: 0, y: 4 }} animate={{ opacity: 1, y: 0 }} className="relative">
@@ -18,9 +14,7 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
         value={value}
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
-<<<<<<< HEAD
         className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'
-=======
 export default function InteractiveSearch({ placeholder = 'Search talent, skills, or jobs...' }: { placeholder?: string }) {
   const [value, setValue] = useState('');
   return (
@@ -30,34 +24,16 @@ export default function InteractiveSearch({ placeholder = 'Search talent, skills
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       />
       {value && (
         <button
           onClick={() => setValue('')}
-<<<<<<< HEAD
-<<<<<<< HEAD
           className='absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300'
-=======
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-          className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         >
           ✕
         </button>
       )}
     </motion.div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

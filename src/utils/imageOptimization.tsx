@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const observer = new IntersectionObserver ( ([entry]) => {;
   if (entry && entry.isIntersecting) {;
   return () => observer.disconnect () ;
@@ -11,7 +9,6 @@
 <defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
 }` ;
 };
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { cn } from '@/lib/utils';
@@ -31,7 +28,6 @@ interface OptimizedImageProps {
   fallbackSrc?: string;
   lazy?: boolean
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function OptimizedImage({
   src;
@@ -122,9 +118,7 @@ export function OptimizedImage({
     <div
       ref={imgRef}
       className={cn('relative overflow-hidden', className)}
-      style={{ width, height }}
-    >
-      {isInView && !hasError && (
+      style={{ width, height }}>{isInView && !hasError && (
         <Image
           src={getOptimizedSrc(src)}
           alt={alt}
@@ -162,9 +156,7 @@ export function OptimizedImage({
               <svg
                 className="w-8 h-8 mx-auto mb-2"
                 fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path
+                viewBox="0 0 20 20"><path
                   fillRule="evenodd"
                   d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
                   clipRule="evenodd"
@@ -217,17 +209,11 @@ export function getImageDimensions(src: string): Promise<{ width: number, height
     const img = new window.Image();
     img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight }),
     img.onerror = reject;
-<<<<<<< HEAD
     img.src = src;
   });
-=======
 
-<<<<<<< HEAD
     
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     img.src = src
   })
 } 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

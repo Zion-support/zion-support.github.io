@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
-import { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
 import { Badge } from "@/components/ui/badge";
@@ -215,9 +210,7 @@ export default function EquipmentDetail() {
             <motion.div 
               className="text-center py-20"
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
-              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
+              animate={{ opacity: 1, y: 0 }}><AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
               <h1 className="text-3xl font-bold text-white mb-4">
                 {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
               </h1>
@@ -231,9 +224,7 @@ export default function EquipmentDetail() {
                 <Button 
                   onClick={() => router.back()} 
                   variant="outline"
-                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"
-                >
-                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue"><ArrowLeft className="h-4 w-4 mr-2" />
                   Go Back
                 </Button>
                 <Button 
@@ -267,9 +258,7 @@ export default function EquipmentDetail() {
           <motion.nav 
             className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <button
+            animate={{ opacity: 1, y: 0 }}><button
               onClick={() => router.push('/equipment')}
               className="text-zion-cyan hover:text-white transition-colors"
             >
@@ -285,9 +274,7 @@ export default function EquipmentDetail() {
               className="space-y-4"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
+              transition={{ delay: 0.2 }}><AspectRatio ratio={1} className="bg-zion-blue-light rounded-lg overflow-hidden">
                 <ImageWithRetry
                   src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
                   alt={equipment.name}
@@ -305,9 +292,7 @@ export default function EquipmentDetail() {
                         selectedImageIndex === index
                           ? 'border-zion-cyan'
                           : 'border-transparent hover:border-zion-slate-light'
-                      }`}
-                    >
-                      <ImageWithRetry
+                      }`}><ImageWithRetry
                         src={image}
                         alt={`${equipment.name} view ${index + 1}`}
                         className="object-cover"
@@ -323,9 +308,7 @@ export default function EquipmentDetail() {
               className="space-y-6"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              {/* Header */}
+              transition={{ delay: 0.4 }}>{/* Header */}
               <div className="space-y-2">
                 <div className="flex items-center gap-2 mb-2">
                   <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
@@ -424,9 +407,7 @@ export default function EquipmentDetail() {
                   size="lg"
                   variant="outline"
                   className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
-                  data-testid="add-to-cart-button"
-                >
-                  <ShoppingCart className="h-4 w-4 mr-2" />
+                  data-testid="add-to-cart-button"><ShoppingCart className="h-4 w-4 mr-2" />
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
                 </Button>
               </div>
@@ -472,15 +453,13 @@ export default function EquipmentDetail() {
   );
 }
 
-<<<<<<< HEAD
-
 }finally {;
   setIsAdding (false) ;
 
 };
 const inCart = items.some (item => item.id === equipment?.id);
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button ;
+return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4"><div className="container mx-auto"><div className="text-center py-20"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
+  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4"><div className="container mx-auto"><motion.div </p> <div className="space-x-4"><Button><ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button ;
 }return (<> <NextSeo title= {;
   `$ {;
   equipment.name ;
@@ -517,21 +496,14 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</div> </span> </div>) ;
 }</div> </span> </div> </div> </div>) ) ;
 }</div> </div>) ";
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {;
+}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs">{;
   equipment.warranty ;
 }</p> </div> </div>) ";
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {;
+}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs">{;
   equipment.returnPolicy ;
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
 }'"
-=======
 
-<<<<<<< HEAD
             const stored = sessionStorage.getItem(`equipment:${id}`);
-<<<<<<< HEAD
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

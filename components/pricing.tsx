@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import {
   Check,
   Star,
@@ -23,61 +21,38 @@ import {
   Mail,
   MapPin,
   ExternalLink,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { 
   Check, Star, Users, TrendingUp, DollarSign, Clock, 
   Shield, Zap, Rocket, Brain, Atom, Globe, Target;
   ArrowRight, Phone, Mail, MapPin, ExternalLink
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 } from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 // Import all service data
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
 import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
 import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function PricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedPriceRange, setSelectedPriceRange] = useState('All');
 
   // Combine all services
   const allServices = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     ...enhancedRealMicroSaasServices,
     ...innovativeAIServices2029,
     ...quantumSpaceInnovations2029,
     ...enterpriseITInnovations2029,
     ...innovativeMicroSaas2029,
-=======
     ...enhancedRealMicroSaasServices;
     ...innovativeAIServices2029;
     ...quantumSpaceInnovations2029;
     ...enterpriseITInnovations2029;
     ...innovativeMicroSaas2029
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Get unique services by ID
@@ -86,7 +61,6 @@ export default function PricingPage() {
   );
 
   // Get all categories
-<<<<<<< HEAD
   const categories = [
     'All',
     ...Array.from(
@@ -97,7 +71,6 @@ export default function PricingPage() {
       )
     ),
   ];
-=======
     ...enhancedRealMicroSaasServices;
     ...innovativeAIServices2029;
     ...quantumSpaceInnovations2029;
@@ -114,12 +87,9 @@ export default function PricingPage() {
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const categories = ['All', ...Array.from(new Set(uniqueServices.map(s => 
     Array.isArray(s.category) ? s.category[0] : s.category
   )))];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   // Price ranges
   const priceRanges = [
@@ -127,21 +97,11 @@ export default function PricingPage() {
     { id: 'Under $1K', name: 'Under $1K/month', range: 'Under $1K' },
     { id: '$1K - $5K', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: '$5K - $20K', name: '$5K - $20K/month', range: '$5K - $20K' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: '$20K+', name: '$20K+/month', range: '$20K+' },
-=======
-    { id: '$20K+', name: '$20K+/month', range: '$20K+' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    { id: '$20K+', name: '$20K+/month', range: '$20K+' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Filter services
   const filteredServices = uniqueServices.filter(service => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     const matchesCategory =
       selectedCategory === 'All' ||
       (Array.isArray(service.category)
@@ -157,21 +117,18 @@ export default function PricingPage() {
       (selectedPriceRange === '$20K+' && price >= 20000);
 
     return matchesCategory && matchesPrice;
-=======
     const matchesCategory = selectedCategory === 'All' || 
                            (Array.isArray(service.category) ? 
                              service.category.includes(selectedCategory) : 
                              service.category === selectedCategory);
     
     const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
-=======
     const matchesCategory = selectedCategory === 'All' || 
                            (Array.isArray(service.category) ? 
                              service.category.includes(selectedCategory) : 
                              service.category === selectedCategory);
     
     const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const matchesPrice = selectedPriceRange === 'All' ||
                         (selectedPriceRange === 'Under $1K' && price < 1000) ||
                         (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||
@@ -179,18 +136,12 @@ export default function PricingPage() {
                         (selectedPriceRange === '$20K+' && price >= 20000);
     
     return matchesCategory && matchesPrice
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   });
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
   };
 
@@ -208,17 +159,14 @@ export default function PricingPage() {
     },
     {} as Record<string, typeof filteredServices>
   );
-=======
     website: 'https://ziontechgroup.com'
   };
 
   // Group services by category for better organization
-=======
     website: 'https://ziontechgroup.com'
   };
 
   // Group services by category for better organization
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category;
     if (!acc[category]) {
@@ -227,23 +175,15 @@ export default function PricingPage() {
     acc[category].push(service);
     return acc
   }, {} as Record<string, typeof filteredServices>);
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const faqs = [
     {
       question: 'Can I change my plan at any time?',
-<<<<<<< HEAD
-<<<<<<< HEAD
       answer:
         'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.',
     },
-=======
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       question: 'Is there a free trial available?',
       answer: 'Yes, all our services offer a 14-day free trial with full access to all features. No credit card required.'
@@ -275,9 +215,7 @@ export default function PricingPage() {
     ? microSaasServices 
     : microSaasServices.filter(service => service.category === selectedCategory);
 
-<<<<<<< HEAD
   const yearlyDiscount = 0.2; // 20% discount for yearly billing
-=======
       answer: 'Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'
     };
     {
@@ -312,17 +250,12 @@ export default function PricingPage() {
     : microSaasServices.filter(service => service.category === selectedCategory);
 
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const yearlyDiscount = 0.2, // 20% discount for yearly billing
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   return (
     <UltraFuturisticBackground2029>
       <Head>
         <title>Revolutionary 2029 Technology Pricing | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Explore comprehensive pricing for our revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology.'
@@ -333,48 +266,28 @@ export default function PricingPage() {
         />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='canonical' href='https://ziontechgroup.com/pricing' />
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <meta name="description" content="Explore comprehensive pricing for our revolutionary 2029 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology." />
         <meta name="keywords" content="technology pricing, AI services pricing, quantum computing pricing, space technology pricing, 2029 technology pricing" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="canonical" href="https://ziontechgroup.com/pricing" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <UltraFuturisticNavigation2029 />
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <main className='relative z-10 pt-20'>
         {/* Hero Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 text-center'>
-=======
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <main className="relative z-10 pt-20">
         {/* Hero Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='max-w-4xl mx-auto'
-=======
-            className="max-w-4xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            className='max-w-4xl mx-auto'><h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Revolutionary 2029
               </span>
@@ -390,9 +303,7 @@ export default function PricingPage() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
-              >
-                {categories.map(category => (
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20">{categories.map(category => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -400,17 +311,11 @@ export default function PricingPage() {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
-              >
-                {priceRanges.map(range => (
-<<<<<<< HEAD
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20">{priceRanges.map(range => (
                   <option key={range.id} value={range.id}>
                     {range.name}
                   </option>
-=======
-            className="max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            className="max-w-4xl mx-auto"><h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Revolutionary 2029
               </span>
@@ -426,9 +331,7 @@ export default function PricingPage() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
-              >
-                {categories.map(category => (
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20">{categories.map(category => (
                   <option key={category} value={category}>{category}</option>
                 ))}
               </select>
@@ -436,40 +339,27 @@ export default function PricingPage() {
               <select
                 value={selectedPriceRange}
                 onChange={(e) => setSelectedPriceRange(e.target.value)}
-                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20"
-              >
-                {priceRanges.map(range => (
+                className="px-4 py-3 bg-gray-900/50 border border-cyan-500/20 rounded-xl text-white focus:outline-none focus:border-cyan-400/40 focus:ring-2 focus:ring-cyan-500/20">{priceRanges.map(range => (
                   <option key={range.id} value={range.id}>{range.name}</option>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <option key={range.id} value={range.id}>{range.name}</option>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 ))}
               </select>
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='text-center text-gray-400'>
               <p>
                 Showing {filteredServices.length} services in{' '}
                 {Object.keys(servicesByCategory).length} categories
               </p>
-=======
             <div className="text-center text-gray-400">
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="text-center text-gray-400">
               <p>Showing {filteredServices.length} services in {Object.keys(servicesByCategory).length} categories</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </motion.div>
         </section>
 
         {/* Pricing Categories */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             {Object.entries(servicesByCategory).map(
@@ -480,9 +370,7 @@ export default function PricingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                   viewport={{ once: true }}
-                  className='mb-20'
-                >
-                  <div className='text-center mb-12'>
+                  className='mb-20'><div className='text-center mb-12'>
                     <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                       {category} Services
                     </h2>
@@ -491,7 +379,6 @@ export default function PricingPage() {
                       solutions
                     </p>
                   </div>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
@@ -501,9 +388,7 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-                className="mb-20"
-              >
-                <div className="text-center mb-12">
+                className="mb-20"><div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     {category} Services
                   </h2>
@@ -511,7 +396,6 @@ export default function PricingPage() {
                     {services.length} revolutionary {category.toLowerCase()} solutions
                   </p>
                 </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {services.map((service, serviceIndex) => (
@@ -521,9 +405,7 @@ export default function PricingPage() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="group cursor-pointer"
-                    >
-                      <div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
+                      className="group cursor-pointer"><div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
                         {/* Popular Badge */}
                         {service.popular && (
                           <div className="flex items-center justify-center mb-4">
@@ -606,14 +488,12 @@ export default function PricingPage() {
                             )}
                           </div>
                         </div>
-<<<<<<< HEAD
                       </motion.div>
                     ))}
                   </div>
                 </motion.div>
               )
             )}
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             {Object.entries(servicesByCategory).map(([category, services], categoryIndex) => (
@@ -623,9 +503,7 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-                className="mb-20"
-              >
-                <div className="text-center mb-12">
+                className="mb-20"><div className="text-center mb-12">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                     {category} Services
                   </h2>
@@ -642,9 +520,7 @@ export default function PricingPage() {
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-                      className="group cursor-pointer"
-                    >
-                      <div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
+                      className="group cursor-pointer"><div className={`p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 backdrop-blur-sm hover:transform hover:scale-105 ${service.popular ? 'ring-2 ring-yellow-400/50' : ''}`}>
                         {/* Popular Badge */}
                         {service.popular && (
                           <div className="flex items-center justify-center mb-4">
@@ -727,8 +603,6 @@ export default function PricingPage() {
                             )}
                           </div>
                         </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
                         {/* Market Position */}
                         {service.marketPosition && (
@@ -766,51 +640,32 @@ export default function PricingPage() {
                 </div>
               </motion.div>
             ))}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </section>
 
         {/* Contact CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
-=======
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              viewport={{ once: true }}><h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
                 Ready to Get Started with
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolutionary Technology?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
               </p>
-<<<<<<< HEAD
 
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
                 <Link href='/contact'>
                   <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
                     <Phone className='inline-block w-5 h-5 mr-2' />
-=======
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Get Started with
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Revolutionary Technology?</span>
@@ -818,60 +673,42 @@ export default function PricingPage() {
               <p className="text-xl text-gray-300 mb-8">
                 Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business.
               </p>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <Link href="/contact">
                   <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105">
                     <Phone className="inline-block w-5 h-5 mr-2" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     Schedule Consultation
                   </button>
                 </Link>
                 <a href={`mailto:${contactInfo.email}`}>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <button className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105'>
                     <Mail className='inline-block w-5 h-5 mr-2' />
-=======
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105">
                     <Mail className="inline-block w-5 h-5 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200 transform hover:scale-105">
                     <Mail className="inline-block w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     Get Quote
                   </button>
                 </a>
               </div>
 
               {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
                 <div className='flex items-center justify-center space-x-2'>
                   <Phone className='w-5 h-5 text-cyan-400' />
-=======
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Mail className="w-5 h-5 text-purple-400" />
                   <span>{contactInfo.email}</span>
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-center justify-center space-x-2'>
                   <MapPin className='w-5 h-5 text-pink-400' />
                   <span className='text-sm'>{contactInfo.address}</span>
-=======
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -884,18 +721,13 @@ export default function PricingPage() {
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5 text-pink-400" />
                   <span className="text-sm">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5 text-pink-400" />
                   <span className="text-sm">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
 
               {/* Additional Info */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20'>
                 <h3 className='text-xl font-semibold text-white mb-4'>
                   Why Choose Zion Tech Group?
@@ -903,13 +735,11 @@ export default function PricingPage() {
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-300'>
                   <div className='flex items-center space-x-2'>
                     <Check className='w-4 h-4 text-green-400' />
-=======
               <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">
                   <div className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <span>All services are operational and market-tested</span>
                   </div>
                   <div className="flex items-center space-x-2">
@@ -920,10 +750,8 @@ export default function PricingPage() {
                     <Check className="w-4 h-4 text-green-400" />
                     <span>Comprehensive support and implementation</span>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center space-x-2'>
                     <Check className='w-4 h-4 text-green-400' />
-=======
               <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3>
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300">
@@ -941,11 +769,8 @@ export default function PricingPage() {
                   </div>
                   <div className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="flex items-center space-x-2">
                     <Check className="w-4 h-4 text-green-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     <span>Cutting-edge 2029 technology</span>
                   </div>
                 </div>
@@ -958,8 +783,6 @@ export default function PricingPage() {
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 }whileInView= {
   {
@@ -973,10 +796,6 @@ export default function PricingPage() {
   {
   once: true 
 
-}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8" > <Link href="/contact" > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105" > <Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
-=======
+}> <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6" > Ready to Get Started with <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Revolutionary Technology?</span> </h2> <p className="text-xl text-gray-300 mb-8" > Contact our team to discuss pricing, implementation, and how our revolutionary 2029 services can transform your business. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"><Link href="/contact"><button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105"><Phone className="inline-block w-5 h-5 mr-2" /> Schedule Consultation </button> Get Quote </button> </a> </div> <div className="mt-12 p-6 bg-gray-900/30 rounded-2xl border border-cyan-500/20"> <h3 className="text-xl font-semibold text-white mb-4">Why Choose Zion Tech Group?</h3> <div className="grid grid-cols-1 md: grid-cols-2 gap-4 text-sm text-gray-300"> <div className="flex items-center space-x-2"> <Check className="w-4 h-4 text-green-400" /> flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Proven ROI and customer success stories</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400"/> <span>Comprehensive support and implementation</span> </div> <div className=" flex items-center space-x-2"> <Check className=" w-4 h-4 text-green-400" /> <span>Cutting-edge 2029 technology</span> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

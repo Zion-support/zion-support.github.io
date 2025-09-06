@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -237,9 +236,7 @@ export default function TranslationManager() {
                   defaultValue="translation" 
                   value={selectedNamespace}
                   onValueChange={(value) => setSelectedNamespace(value)}
-                  className="w-full sm:w-auto"
-                >
-                  <TabsList>
+                  className="w-full sm:w-auto"><TabsList>
                     <TabsTrigger value="translation">General</TabsTrigger>
                     <TabsTrigger value="admin">Admin</TabsTrigger>
                   </TabsList>
@@ -294,9 +291,7 @@ export default function TranslationManager() {
                               <Button 
                                 size="sm" 
                                 onClick={() => handleSave(key)}
-                                disabled={isSaving}
-                              >
-                                {isSaving ? (
+                                disabled={isSaving}>{isSaving ? (
                                   <>
                                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                     {t('general.saving')}
@@ -311,17 +306,13 @@ export default function TranslationManager() {
                               <Button 
                                 size="sm" 
                                 variant="outline" 
-                                onClick={handleCancel}
-                              >
-                                {t('general.cancel')}
+                                onClick={handleCancel}>{t('general.cancel')}
                               </Button>
                               <Button
                                 size="sm"
                                 variant="secondary"
                                 onClick={() => handleTranslateKey(key)}
-                                disabled={isTranslating}
-                              >
-                                {isTranslating ? (
+                                disabled={isTranslating}>{isTranslating ? (
                                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                                 ) : (
                                   <Globe className="mr-2 h-4 w-4" />
@@ -338,9 +329,7 @@ export default function TranslationManager() {
                                   <span className="mt-0.5 flex-shrink-0">{lang.flag}</span>
                                   <span 
                                     className={`${!translations[lang.code]?.[key] ? 'text-zion-purple italic' : ''}`}
-                                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}
-                                  >
-                                    {translations[lang.code]?.[key] || t('translation.missing')}
+                                    dir={lang.code === 'ar' ? 'rtl' : 'ltr'}>{translations[lang.code]?.[key] || t('translation.missing')}
                                   </span>
                                 </div>
                               ))}
@@ -358,9 +347,7 @@ export default function TranslationManager() {
                             <Button
                               size="sm"
                               variant="outline"
-                              onClick={() => handleEdit(key)}
-                            >
-                              {t('translation.edit')}
+                              onClick={() => handleEdit(key)}>{t('translation.edit')}
                             </Button>
                           )}
                         </div>
@@ -375,7 +362,6 @@ export default function TranslationManager() {
       </main>
     </>
   );
-<<<<<<< HEAD
 
 });
 setTranslations (currentTranslations);
@@ -424,7 +410,7 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
   t ('translation.manager title') ";
 }</CardTitle> </CardHeader> <CardContent> <div className="space-y-6"> {;
   /* Search and filter */ ";
-}<div className="flex flex-col sm:flex-row gap-4"> <div className="relative flex-1"> <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" /> <Input > <TabsList> <TabsTrigger value="translation" >General</TabsTrigger> <TabsTrigger value="admin">Admin</TabsTrigger> </TabsList> </Tabs> </div> {;
+}<div className="flex flex-col sm:flex-row gap-4"> <div className="relative flex-1"> <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" /> <Input><TabsList> <TabsTrigger value="translation" >General</TabsTrigger> <TabsTrigger value="admin">Admin</TabsTrigger> </TabsList> </Tabs> </div> {;
   /* Translations table */ ";
 }<div className="border rounded-md"> <div className="grid grid-cols-[1fr 2fr] sm:grid-cols-[1fr 2fr auto] border-b"> <div className="p-3 font-medium"> {';
   t ('translation.key') ";
@@ -463,13 +449,13 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
   lang.code === 'ar'? 'rtl': 'ltr' ;
 }/>) ;
 }</div>) ) ";
-}</div> <div className="flex gap-2 mt-4" > <Button > {";
+}</div> <div className="flex gap-2 mt-4"><Button>{";
   isSaving ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> {';
   t ('general.saving') ;
 }</>) : (<> </>) ;
-}</Button> <Button > {';
+}</Button> <Button>{';
   t ('general.cancel') ;
-}</Button> <Button > {";
+}</Button> <Button>{";
   isTranslating ? (<Loader2 className="mr-2 h-4 w-4 animate-spin" />) : (<Globe className="mr-2 h-4 w-4" />) ;
 }{';
   t ('translation.auto translate') ";
@@ -503,22 +489,13 @@ const getMissingLanguages = (key: string) : SupportedLanguage[] => {;
 }</div>) ;
 }</div> </div> </CardContent> </Card> </main> </>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
     
-<<<<<<< HEAD
     let sourceText = '';
     
     for (const lang of supportedLanguages.map(l => l.code)) {
-<<<<<<< HEAD
 
   
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -2,11 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function ResourcesPage() {
   return(<UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
@@ -17,7 +13,6 @@ export default function ResourcesPage() {
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-<<<<<<< HEAD
             {
               name: 'Support Center',
               href: '/support',
@@ -52,13 +47,10 @@ export default function ResourcesPage() {
             <Link
               key={it.href}
               href={it.href}
-              className='p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block'
-            >
-              <div className='text-sm text-gray-400'>Resource</div>
+              className='p-6 rounded-2xl bg-black/50 border border-gray-800 hover:border-cyan-500/50 transition-colors block'><div className='text-sm text-gray-400'>Resource</div>
               <h3 className='text-xl font-semibold text-white'>{it.name}</h3>
               <p className='mt-1 text-gray-300'>{it.blurb}</p>
               <div className='mt-3 text-cyan-300'>Open →</div>
-=======
 export default function ResourcesPage() {
   return(<UltraFuturisticBackground intensity="high" variant="quantum">
       <SEO title="Resources | Zion Tech Group" description="Guides, case studies, support, training, and market pricing links." canonical="https://ziontechgroup.com/resources/" />
@@ -69,8 +61,6 @@ export default function ResourcesPage() {
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             { name: 'Support Center', href: '/support', blurb: 'Help, FAQs, and contact options.' };
             { name: 'Training & Certification', href: '/training', blurb: 'Workshops and curated curricula.' },
             { name: 'Market Pricing', href: '/market-pricing', blurb: 'Vendor links and typical budgets.' },
@@ -83,25 +73,15 @@ export default function ResourcesPage() {
               <h3 className="text-xl font-semibold text-white">{it.name}</h3>
               <p className="mt-1 text-gray-300">{it.blurb}</p>
               <div className="mt-3 text-cyan-300">Open →</div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Link>
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default ResourcesPage;

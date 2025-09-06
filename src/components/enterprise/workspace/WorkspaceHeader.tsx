@@ -1,16 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { type Company } from './CompanyDashboard';
 import { Bell, Users, Settings } from 'lucide-react';
-=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { type Company } from "./CompanyDashboard";
 import { Bell, Users, Settings } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 interface WorkspaceHeaderProps {
   company: Company
@@ -30,12 +26,10 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
             />
           </div>
           <div>
-<<<<<<< HEAD
             <h1 className='text-3xl font-bold tracking-tight'>
               {company.name} Workspace
             </h1>
             <p className='text-muted-foreground'>
-=======
 
 import React from "react";
 import { Button } from "@/components/ui/button";
@@ -62,27 +56,20 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               {company.plan} Plan · {company.teamSize} team members
             </p>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         <div className='flex items-center gap-2'>
           <Button variant='outline' size='icon' aria-label='Notifications'>
             <Bell className='h-4 w-4' />
-=======
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
             <Bell className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </Button>
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
@@ -102,13 +89,11 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
           <div className="text-sm text-muted-foreground">Candidate Applications</div>
           <div className="text-2xl font-medium">47</div>
         </div>
-<<<<<<< HEAD
         <div className='bg-card rounded-lg p-4 border border-border'>
           <div className='text-sm text-muted-foreground'>
             Interviews Scheduled
           </div>
           <div className='text-2xl font-medium'>12</div>
-=======
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="icon" aria-label="Notifications">
@@ -135,21 +120,11 @@ export function WorkspaceHeader({ company }: WorkspaceHeaderProps) {
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Interviews Scheduled</div>
           <div className="text-2xl font-medium">12</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Interviews Scheduled</div>
           <div className="text-2xl font-medium">12</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

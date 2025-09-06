@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -28,9 +23,7 @@ export function ProjectActions({
       {isUnderDispute && disputeId ? (
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
-<<<<<<< HEAD
             <ShieldAlert className='h-4 w-4 mr-2' />
-=======
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
@@ -58,23 +51,16 @@ export function ProjectActions({
         <Button variant="outline" asChild>
           <Link href={`/dashboard/disputes/${disputeId}`}>
             <ShieldAlert className="h-4 w-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <ShieldAlert className="h-4 w-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             View Active Dispute
           </Link>
         </Button>
       ) : (
-<<<<<<< HEAD
-<<<<<<< HEAD
         <RaiseDisputeButton projectId={projectId} variant='outline' />
-=======
         <RaiseDisputeButton 
           projectId={projectId}
           variant="outline"
         />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       )}
       {isTalent && !isUnderDispute && (
         <Button onClick={onAddMilestone}>
@@ -83,8 +69,6 @@ export function ProjectActions({
       )}
     </div>
   );
-<<<<<<< HEAD
-=======
         <RaiseDisputeButton 
           projectId={projectId}
           variant="outline"
@@ -98,7 +82,4 @@ export function ProjectActions({
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -131,9 +131,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <select
                 value={role}
                 onChange={e => setRole(e.target.value)}
-                className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40'
-              >
-      <section className="space-y-6">
+                className='px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40'><section className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
           <div className="flex gap-2">
@@ -178,9 +176,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <button
               onClick={requestWireframe}
               className='px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60'
-              disabled={isLoading || !screenName}
-            >
-            <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
+              disabled={isLoading || !screenName}><button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
             <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
 ursor/integrate-build-improve-and-re-verify-b76c
               {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
@@ -210,9 +206,7 @@ function MapColumn({ title, sections }: { title: string, sections: { id: string,
         {sections.map(s => (
           <div
             key={s.id}
-            className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'
-          >
-            <div className='font-medium mb-2'>{s.title}</div>
+            className='rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40'><div className='font-medium mb-2'>{s.title}</div>
             <div className='flex flex-wrap gap-2'>
               {s.items.map(i => (
                 <span

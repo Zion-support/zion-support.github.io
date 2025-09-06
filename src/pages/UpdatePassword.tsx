@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
-=======
 
 import { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, ControllerRenderProps } from "react-hook-form";
@@ -212,9 +208,7 @@ export default function UpdatePassword() {
                     <Button
                       type="submit"
                       className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
-                      disabled={isLoading || !accessToken}
-                    >
-                      {isLoading ? "Updating..." : "Update Password"}
+                      disabled={isLoading || !accessToken}>{isLoading ? "Updating..." : "Update Password"}
                     </Button>
 
                     <div className="text-center">
@@ -248,7 +242,6 @@ export default function UpdatePassword() {
       </div>
     </>
   );
-<<<<<<< HEAD
   password: z .string () if (token) {;
   setAccessToken (token) ;
 }else {;
@@ -308,20 +301,12 @@ error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounde
 }{;
   ...field ";
 }/> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) ";
-}/> <Button </Button> <div className="text-center" > <Button > Back to login </Button> </div> </form> </Form>) ";
+}/> <Button </Button> <div className="text-center"><Button > Back to login </Button> </div> </form> </Form>) ";
 }</div> </div> </div> <div className="hidden lg: block relative w-0 flex-1"> <div className="absolute inset-0 h-full w-full object-cover bg-gradient-to-tr from-zion-blue-dark via-zion-purple to-zion-cyan opacity-80"> <div className="flex flex-col justify-center items-center h-full px-8"> <div className="max-w-md text-center"> <h3 className="text-3xl font-bold text-white mb-4">Password Recovery</h3> <p className="text-lg text-white/80"> Set a strong password to secure your account and continue your journey in the Zion marketplace. </p> </div> </div> </div> </div> </div> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
     path: ["confirmPassword"]}),
 
 type UpdatePasswordFormValues = z.infer<typeof updatePasswordSchema>;
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

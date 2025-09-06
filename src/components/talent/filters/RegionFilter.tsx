@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { RegionFilterProps } from '@/types/filters';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox";
@@ -23,9 +19,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-        <span>Region</span>
+        className="flex w-full items-center justify-between text-white font-medium"><span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
@@ -36,9 +30,7 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
       {expanded && (
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
-<<<<<<< HEAD
             <div key={region.id} className='flex items-center'>
-=======
 
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Checkbox } from "@/components/ui/checkbox";
@@ -52,15 +44,12 @@ const REGION_OPTIONS = [
   { id: "Africa", label: "Africa" }
 ];
 
-
 export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSection, isMobileFilterOpen }: RegionFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
         onClick={toggleSection}
-        className="flex w-full items-center justify-between text-white font-medium"
-      >
-        <span>Region</span>
+        className="flex w-full items-center justify-between text-white font-medium"><span>Region</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
@@ -72,41 +61,29 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
             <div key={region.id} className="flex items-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div key={region.id} className="flex items-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               <Checkbox
                 id={`region-${region.id}`}
                 checked={selectedRegions.includes(region.id)}
                 onCheckedChange={() => toggleRegion(region.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'
               />
               <label
                 htmlFor={`region-${region.id}`}
                 className='ml-2 text-sm text-zion-slate-light cursor-pointer'
               >
-=======
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
                 htmlFor={`region-${region.id}`}
-=======
                 className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
               />
               <label
                 htmlFor={`region-${region.id}`}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
                htmlFor="input-
                 {region.label}
               ">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {region.label}
               </label>
             </div>
@@ -115,23 +92,17 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
 
   toggleSection ;
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
+}className="flex w-full items-center justify-between text-white font-medium"><span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
 }</button> {;
   REGION OPTIONS.map (region => (<div key= {;
   region.id ";
-}className="flex items-center" > <Checkbox > {;
+}className="flex items-center"><Checkbox>{;
   region.label ;
 }</label> </div>) ) ;
 }</div>) ;
 }</div>) ;
 }"
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

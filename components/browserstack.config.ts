@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  projects: [ {
   name: Desktop Chrome', use: {
   browserName: chromium', channel: window.chrome' 
@@ -26,7 +24,6 @@
 
 }];
 reporter: [ 
-=======
 import { defineConfig, devices } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
@@ -34,13 +31,11 @@ default defineConfig({
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'
     },
     projects: [
-=======
 import { defineConfig, devices } from @playwright/test';
 default defineConfig({
   testDir: tests/e2e',  use: {
     baseURL: process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
   projects: [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -65,7 +60,3 @@ default defineConfig({
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
 });
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

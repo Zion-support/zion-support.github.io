@@ -214,9 +214,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='space-y-8'
             className="space-y-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
               <Sparkles className="w-4 h-4" />
               <span>2028 Future Technology</span>
             </div>
@@ -237,20 +235,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Get Started</span>
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"><span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/revolutionary-2028-pricing"
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Pricing</span>
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"><span>View Pricing</span>
                 <DollarSign className='w-5 h-5' />
-            className="space-y-8"
-          >
-            <div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
+            className="space-y-8"><div className="inline-flex items-center space-x-2 bg-purple-900/30 border border-purple-500/30 rounded-full px-6 py-3 text-purple-300 text-sm">
               <Sparkles className="w-4 h-4" />
               <span>2028 Future Technology</span>
             </div>
@@ -271,16 +263,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Get Started</span>
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"><span>Get Started</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/revolutionary-2028-pricing"
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Pricing</span>
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"><span>View Pricing</span>
                 <DollarSign className="w-5 h-5" />
                 <DollarSign className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -382,9 +370,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group relative'
                 className="group relative"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
@@ -399,15 +385,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       {category.services.slice(0, 3).map(service => (
                         <div
                           key={service.id}
-                          className='flex items-center space-x-3'
-                        >
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
+                          className='flex items-center space-x-3'><CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                           <span className='text-purple-200 text-sm'>
                             {service.name}
                           </span>
-                className="group relative"
-              >
-                <div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
+                className="group relative"><div className="relative p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
@@ -431,17 +413,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
                     <Link
                       href={`/services#${category.title.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
-                      className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'
-                    >
-                      <span>Explore More</span>
+                      className='inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group'><span>Explore More</span>
                       <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform duration-300' />
-                      className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
-                    >
-                      <span>Explore More</span>
+                      className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"><span>Explore More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"
-                    >
-                      <span>Explore More</span>
+                      className="inline-flex items-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors group"><span>Explore More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
 ursor/integrate-build-improve-and-re-verify-b76c
                     </Link>
@@ -498,9 +474,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='group relative'
                 className="group relative"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
@@ -543,9 +517,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         <div className='text-white font-medium'>
                           {service.setupTime}
                         </div>
-                className="group relative"
-              >
-                <div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
+                className="group relative"><div className="relative p-8 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-2xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
@@ -641,9 +613,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
               className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
+ursor/integrate-build-improve-and-re-verify-b76c><TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
                 Our services target markets with exponential growth potential,
@@ -651,9 +621,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </p>
               <div className='text-3xl font-bold text-green-400'>500%+</div>
               <div className='text-purple-300'>Average Annual Growth</div>
-              className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"
-            >
-              <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
+              className="text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl"><TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
                 Our services target markets with exponential growth potential,
@@ -673,9 +641,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
               className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+ursor/integrate-build-improve-and-re-verify-b76c><DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Size</h3>
               <p className="text-blue-300 mb-6">
                 Combined market size of our service categories exceeds 
@@ -683,9 +649,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </p>
               <div className='text-3xl font-bold text-blue-400'>$500B+</div>
               <div className='text-blue-300'>Total Addressable Market</div>
-              className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"
-            >
-              <DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+              className="text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl"><DollarSign className="w-16 h-16 text-blue-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Size</h3>
               <p className="text-blue-300 mb-6">
                 Combined market size of our service categories exceeds 
@@ -705,9 +669,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
               className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
+ursor/integrate-build-improve-and-re-verify-b76c><Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Edge</h3>
               <p className="text-pink-300 mb-6">
                 First-to-market solutions with proprietary technology 
@@ -715,9 +677,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </p>
               <div className='text-3xl font-bold text-pink-400'>90%</div>
               <div className='text-pink-300'>Market Share in Niche</div>
-              className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"
-            >
-              <Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
+              className="text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl"><Shield className="w-16 h-16 text-pink-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Competitive Edge</h3>
               <p className="text-pink-300 mb-6">
                 First-to-market solutions with proprietary technology 
@@ -748,9 +708,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             viewport={{ once: true }}
             className='space-y-8'
             className="space-y-8"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -761,16 +719,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Start Your Journey</span>
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"><span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/case-studies"
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Case Studies</span>
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"><span>View Case Studies</span>
                 <TrendingUp className="w-5 h-5" />
               </Link>
             </div>
@@ -786,9 +740,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <div className='flex items-center space-x-2'>
                 <CheckCircle className='w-5 h-5 text-green-400' />
-            className="space-y-8"
-          >
-            <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+            className="space-y-8"><h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Transform</span> Your Business?
             </h2>
             <p className="text-xl text-purple-200 max-w-3xl mx-auto">
@@ -799,16 +751,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"
-              >
-                <span>Start Your Journey</span>
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-purple-500/25 flex items-center space-x-2"><span>Start Your Journey</span>
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/case-studies"
-                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"
-              >
-                <span>View Case Studies</span>
+                className="px-8 py-4 border border-purple-500/30 text-purple-300 rounded-xl hover:bg-purple-900/30 transition-all duration-300 flex items-center space-x-2"><span>View Case Studies</span>
                 <TrendingUp className="w-5 h-5" />
               </Link>
             </div>

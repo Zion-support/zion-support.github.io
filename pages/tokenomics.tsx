@@ -479,9 +479,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   disabled={!isAdmin || isGenerating}
                   onClick={handleGenerate}
-                  className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'
-                >
-            <div className="rounded-lg border p-4 space-y-3">
+                  className='px-4 py-2 rounded-md bg-indigo-600 text-white disabled:opacity-50'><div className="rounded-lg border p-4 space-y-3">
               <h3 className="font-medium">Operator Prompt</h3>
               <textarea className="w-full border rounded-md px-3 py-2" rows={4} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
               <div className="flex gap-3">
@@ -537,9 +535,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <button
                     key={s}
                     onClick={() => setActiveSection(s)}
-                    className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}
-                  >
-                    {s}
+                    className={`px-3 py-1 rounded-md border ${activeSection === s ? 'bg-gray-900 text-white' : ''}`}>{s}
                   </button>
           <div className="rounded-lg border p-4">
             <div className="flex items-center justify-between mb-3">

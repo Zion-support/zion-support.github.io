@@ -1,38 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readOrgData, filterOrgData } from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' });
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   const data = readOrgData();
 
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
-<<<<<<< HEAD
-<<<<<<< HEAD
     return Array.isArray(v)
       ? v
       : v
           .split(',')
           .map(s => s.trim())
           .filter(Boolean);
-=======
     return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const filters: OrgFilters = {
@@ -47,9 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     teamOnly: req.query.teamOnly === 'true' ? true : undefined};
 
   const filtered = filterOrgData(data, filters);
-<<<<<<< HEAD
   return res.status(200).json(filtered);
-=======
     return Array.isArray(v) ? v : v.split().map((s) => s.trim()).filter(Boolean)
   };
 
@@ -63,8 +51,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered)
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return res.status(200).json(filtered)
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

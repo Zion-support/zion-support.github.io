@@ -540,17 +540,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='max-w-7xl mx-auto text-center'
             className="max-w-7xl mx-auto text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Transform your business with our comprehensive collection of
               innovative AI, quantum computing, and enterprise IT services.
-            className="max-w-7xl mx-auto text-center"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+            className="max-w-7xl mx-auto text-center"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
               Enhanced 2026 Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -585,9 +581,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 ursor/integrate-build-improve-and-re-verify-b76c
                 className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
                   billingCycle === 'yearly' ? 'bg-cyan-600' : 'bg-gray-600'
-                }`}
-              >
-                <span
+                }`}><span
                   className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
                     billingCycle === 'yearly'
                       ? 'translate-x-8'
@@ -682,13 +676,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   className='relative'
                   className="relative"
                   className="relative"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <UltraFuturisticCard
+ursor/integrate-build-improve-and-re-verify-b76c><UltraFuturisticCard
                     variant={tier.variant}
-                    className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`}
-                  >
-                    {tier.popular && (
+                    className={`h-full ${tier.popular ? 'ring-2 ring-cyan-500 ring-opacity-50' : ''}`}>{tier.popular && (
                       <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                         <div className='bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
                       <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -704,10 +694,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <div className='p-8 text-center'>
                       <div className='flex justify-center mb-4'>
                         <div
-                          className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}
-                        >
-                    
-                    <div className="p-8 text-center">
+                          className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}><div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -751,9 +738,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                               '_blank'
                             );
                           }
-                        }}
-                      >
-                        {tier.cta}
+                        }}>{tier.cta}
                       </Button>
                     
                     <div className="p-8 text-center">
@@ -794,9 +779,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                            } else {
                              window.open(`mailto:${contactInfo.email}?subject=Start Free Trial - ${tier.name}`, '_blank')
                            }
-                         }}
-                       >
-                         {tier.cta}
+                         }}>{tier.cta}
                        </Button>
 ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
@@ -822,9 +805,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-12'
               className="text-center mb-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Service Categories & Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -833,9 +814,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              className="text-center mb-12"><h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Service Categories & Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -852,18 +831,12 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticCard
+                  viewport={{ once: true }}><UltraFuturisticCard
                     variant='quantum-advanced'
-                    className='h-full'
-                  >
-                    <div className='p-6'>
+                    className='h-full'><div className='p-6'>
                       <div className='flex items-center mb-4'>
                         <div
-                          className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}
-                        >
-                          <category.icon className='w-6 h-6 text-white' />
+                          className={`p-3 rounded-full bg-gradient-to-r ${category.color} mr-4`}><category.icon className='w-6 h-6 text-white' />
                   <UltraFuturisticCard variant="quantum-advanced" className="h-full">
                     <div className="p-6">
                       <div className="flex items-center mb-4">
@@ -885,9 +858,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {category.services.map((service, idx) => (
                           <li
                             key={idx}
-                            className='flex items-center text-sm text-gray-300'
-                          >
-                            <Check className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+                            className='flex items-center text-sm text-gray-300'><Check className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
                   <UltraFuturisticCard variant="quantum-advanced" className="h-full">
                     <div className="p-6">
                       <div className="flex items-center mb-4">
@@ -960,9 +931,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-12'
               className="text-center mb-12"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Featured Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -971,9 +940,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              className="text-center mb-12"><h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 Featured Services
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -990,9 +957,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <UltraFuturisticCard variant='holographic' className='h-full'>
+                  viewport={{ once: true }}><UltraFuturisticCard variant='holographic' className='h-full'>
                     <div className='p-6'>
                       <div className='flex items-start justify-between mb-4'>
                         <div className='text-4xl'>{service.icon}</div>
@@ -1021,9 +986,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         {service.features.map((feature, idx) => (
                           <li
                             key={idx}
-                            className='flex items-center text-sm text-gray-300'
-                          >
-                            <Check className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
+                            className='flex items-center text-sm text-gray-300'><Check className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
                   <UltraFuturisticCard variant="holographic" className="h-full">
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
@@ -1117,9 +1080,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center'
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1129,17 +1090,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <Button
                   variant="primary"
                   size="lg"
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-                >
-                  <Mail className="w-5 h-5 mr-2" />
+                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}><Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </Button>
                 <Button
                   variant="secondary"
                   size="lg"
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-                >
-                  <Phone className="w-5 h-5 mr-2" />
+                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}><Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </Button>
               </div>
@@ -1147,9 +1104,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <p>
                   Contact: {contactInfo.mobile} | {contactInfo.email}
                 </p>
-              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 text-center"><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1159,17 +1114,13 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <Button
                   variant="primary"
                   size="lg"
-                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}
-                >
-                  <Mail className="w-5 h-5 mr-2" />
+                  onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank')}><Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </Button>
                 <Button
                   variant="secondary"
                   size="lg"
-                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}
-                >
-                  <Phone className="w-5 h-5 mr-2" />
+                  onClick={() => window.open(`tel:${contactInfo.mobile}`, '_blank')}><Phone className="w-5 h-5 mr-2" />
                   Call Now
                 </Button>
               </div>

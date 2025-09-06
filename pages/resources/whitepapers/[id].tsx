@@ -168,9 +168,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <nav className='mb-8'>
             <Link
               href='/resources'
-              className='text-cyan-400 hover:text-cyan-300 transition-colors'
-            >
-        <meta name="description" content={whitepaper.description} />
+              className='text-cyan-400 hover:text-cyan-300 transition-colors'><meta name="description" content={whitepaper.description} />
         <meta property="og:title" content={whitepaper.title} />
         <meta property="og:description" content={whitepaper.description} />
       </Head>
@@ -250,9 +248,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 {whitepaper.content.keyTopics.map((topic, index) => (
                   <div
                     key={index}
-                    className='bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20'
-                  >
-                    <div className='flex items-center gap-3'>
+                    className='bg-white/10 backdrop-blur-xl rounded-lg p-4 border border-white/20'><div className='flex items-center gap-3'>
                       <div className='w-2 h-2 bg-fuchsia-400 rounded-full'></div>
                       <span className='text-white/90'>{topic}</span>
           <div className="max-w-4xl mx-auto">
@@ -341,9 +337,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <Link 
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
-                      className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"
-                    >
-                      <h3 className="text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2">
+                      className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"><h3 className="text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2">
                         {relatedPaper.title}
                       </h3>
                       <p className='text-white/70 text-sm mb-3'>
@@ -360,9 +354,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <Link 
                       key={relatedPaper.id}
                       href={`/resources/whitepapers/${relatedPaper.id}`}
-                      className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"
-                    >
-                      <h3 className="text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2">
+                      className="group bg-white/10 backdrop-blur-xl rounded-xl p-6 border border-white/20 hover:border-fuchsia-400/30 transition-all duration-300"><h3 className="text-lg font-semibold text-white group-hover:text-fuchsia-400 transition-colors mb-2">
                         {relatedPaper.title}
                       </h3>
                       <p className="text-white/70 text-sm mb-3">{relatedPaper.description}</p>
@@ -399,9 +391,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   </Link>
                   <Link
                     href='/services'
-                    className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'
-                  >
-            <section className="text-center">
+                    className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'><section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Need Custom Research?</h2>
                 <p className="text-white/80 mb-6">

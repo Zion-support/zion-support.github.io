@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-=======
 import React, { useState } from "react";
 import { useForm, useFieldArray } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useRouter } from 'next/router';
 import {logErrorToProduction} from '@/utils/productionLogger';
 import {
@@ -144,7 +140,6 @@ export function TalentOnboardingForm() {
   // [Previous implementation continues...]
 
   return null;
-<<<<<<< HEAD
 
   //Step 1: Basic Info basicInfo: z.object ({;
   ) .optional () .default ([]);
@@ -175,23 +170,14 @@ return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'
-=======
-
-<<<<<<< HEAD
 
     cv: z.any().optional()})}),
 
 type TalentFormValues = z.infer<typeof talentSchema>;
 
-
-<<<<<<< HEAD
   
   const totalSteps = 4;
   
-<<<<<<< HEAD
     
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ThumbsUp, ThumbsDown } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { HELP_CATEGORIES } from './help-content';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -74,9 +70,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 size="sm"
                 className={feedbackGiven === "helpful" ? "bg-green-100 dark:bg-green-900/30" : ""}
                 onClick={() => handleFeedback("helpful")}
-                disabled={feedbackGiven !== null}
-              >
-                <ThumbsUp className="h-4 w-4 mr-2" />
+                disabled={feedbackGiven !== null}><ThumbsUp className="h-4 w-4 mr-2" />
                 Yes
               </Button>
               
@@ -85,9 +79,7 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
                 size="sm"
                 className={feedbackGiven === "not-helpful" ? "bg-red-100 dark:bg-red-900/30" : ""}
                 onClick={() => handleFeedback("not-helpful")}
-                disabled={feedbackGiven !== null}
-              >
-                <ThumbsDown className="h-4 w-4 mr-2" />
+                disabled={feedbackGiven !== null}><ThumbsDown className="h-4 w-4 mr-2" />
                 No
               </Button>
             </div>
@@ -110,7 +102,6 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 }
 
 function formatDate(date: string): string {
-<<<<<<< HEAD
   return new Date(date).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
@@ -118,18 +109,12 @@ function formatDate(date: string): string {
   });
 
 }'"
-=======
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric", });
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

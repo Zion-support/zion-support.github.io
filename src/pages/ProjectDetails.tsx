@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import React, { useState, useEffect } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { format } from "date-fns";
@@ -322,9 +317,7 @@ function ProjectDetailsContent() {
               {(isClient || isTalent) && ["offer_sent", "offer_accepted", "in_progress"].includes(project.status) && (
                 <Button 
                   variant="outline" 
-                  onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}
-                >
-                  <MessageSquare className="mr-2 h-4 w-4" /> Message
+                  onClick={() => router.push(`/messages?talentId=${project.talent_id}&clientId=${project.client_id}`)}><MessageSquare className="mr-2 h-4 w-4" /> Message
                 </Button>
               )}
             </div>
@@ -506,9 +499,7 @@ function ProjectDetailsContent() {
                           />
                           <Button
                             onClick={handleSubmitNote}
-                            disabled={!newNote.trim() || isSubmittingNote}
-                          >
-                            {isSubmittingNote ? "Posting..." : "Post Note"}
+                            disabled={!newNote.trim() || isSubmittingNote}>{isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>
                         </div>
                       )}
@@ -554,9 +545,7 @@ function ProjectDetailsContent() {
                           variant="outline"
                           size="sm"
                           className="mt-2"
-                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
-                        >
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                          onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}><MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
                       )}
                     </div>
@@ -584,9 +573,7 @@ function ProjectDetailsContent() {
                           variant="outline"
                           size="sm"
                           className="mt-2"
-                          onClick={() => router.push(`/messages?clientId=${project.client_id}`)}
-                        >
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                          onClick={() => router.push(`/messages?clientId=${project.client_id}`)}><MessageSquare className="mr-1 h-3 w-3" /> Message
                         </Button>
                       )}
                     </div>
@@ -632,9 +619,7 @@ function ProjectDetailsContent() {
                   <Button 
                     variant="outline"
                     onClick={() => router.push(`/messages?talentId=${project.talent_id}`)}
-                    className="w-full"
-                  >
-                    <MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
+                    className="w-full"><MessageSquare className="mr-2 h-4 w-4" /> Discuss Changes
                   </Button>
                 </CardFooter>
               )}
@@ -670,7 +655,6 @@ function ProjectDetailsContent() {
   );
 }
 
-<<<<<<< HEAD
 };
 setIsSubmittingNote (true);
 try {;
@@ -698,7 +682,6 @@ status: newStatus ;
   toast ({;
   ;
 
-
 };";
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;";
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;";
@@ -710,7 +693,7 @@ default: return <Badge variant="outline"> {;
 }</Badge> ;
 
 };'";
-<p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={";
+<p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10"><AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={";
   () => router.push ("/dashboard") ;
 }> Return to Dashboard </Button> </CardContent> </Card> </div>) ";
 }//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4"/> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={";
@@ -763,27 +746,18 @@ default: return <Badge variant="outline"> {;
 }</Card> </div> </div> </main> </>) ;
 }export default function ProjectDetails () {;
   return (<ProtectedRoute> <ProjectDetailsContent /> </ProtectedRoute> '"
-=======
-
-<<<<<<< HEAD
 
         .order("created_at", { ascending: false }),
       
-
-<<<<<<< HEAD
 
       
 
     if (!project) return;
     
-<<<<<<< HEAD
 
         ...project;
         status: newStatus}),
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default function ProjectDetails() {
   return (
     <ProtectedRoute>
@@ -791,4 +765,3 @@ export default function ProjectDetails() {
     </ProtectedRoute>
   );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

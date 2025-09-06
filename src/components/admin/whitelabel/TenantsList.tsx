@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -147,9 +146,7 @@ export function TenantsList() {
                         href={`https://${tenant.subdomain}.ziontechmarketplace.com`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center hover:underline"
-                      >
-                        {tenant.subdomain}
+                        className="flex items-center hover:underline">{tenant.subdomain}
                         <ExternalLink className="ml-1 h-3 w-3" />
                       </a>
                     </TableCell>
@@ -160,24 +157,18 @@ export function TenantsList() {
                             href={`https://${tenant.custom_domain}`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hover:underline flex items-center"
-                          >
-                            {tenant.custom_domain}
+                            className="hover:underline flex items-center">{tenant.custom_domain}
                             <ExternalLink className="ml-1 h-3 w-3" />
                           </a>
                           <Badge 
-                            variant={tenant.dns_verified ? "default" : "outline"} 
-                          >
-                            {tenant.dns_verified ? "Verified" : "Pending"}
+                            variant={tenant.dns_verified ? "default" : "outline"}>{tenant.dns_verified ? "Verified" : "Pending"}
                           </Badge>
                           {!tenant.dns_verified && (
                             <Button 
                               variant="ghost" 
                               size="sm" 
                               onClick={() => verifyDns(tenant)}
-                              className="ml-1 h-6 w-6 p-0"
-                            >
-                              <RefreshCcw className="h-3 w-3" />
+                              className="ml-1 h-6 w-6 p-0"><RefreshCcw className="h-3 w-3" />
                               <span className="sr-only">Verify DNS</span>
                             </Button>
                           )}
@@ -234,7 +225,6 @@ export function TenantsList() {
       )}
     </div>
   );
-<<<<<<< HEAD
 
 };
 const verifyDns = async (tenant: WhitelabelTenant) => {;
@@ -245,19 +235,19 @@ const verifyDns = async (tenant: WhitelabelTenant) => {;
 //Update local state setTenants (tenants.map (t => ;
 
 };
-return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Brand</TableHead> <TableHead>Subdomain</TableHead> <TableHead>Custom Domain</TableHead> <TableHead>Status</TableHead> <TableHead>Created At</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
+return (Refresh </Button> </div> </div>) : (<div className="rounded-md border"><Table> <TableHeader> <TableRow> <TableHead>Brand</TableHead> <TableHead>Subdomain</TableHead> <TableHead>Custom Domain</TableHead> <TableHead>Status</TableHead> <TableHead>Created At</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
   tenants.length === 0 ? (<TableRow> <TableCell colSpan= {;
   6 ";
 }className="text-center py-8 text-muted-foreground" > No tenants found. Create a new white-label instance to get started. </TableCell> </TableRow> <a href= {;
   `https://$ {;
   tenant.custom domain ;
 }` ";
-}target="blank" rel="noopener noreferrer" className="hover:underline flex items-center" > </Badge> {";
+}target="blank" rel="noopener noreferrer" className="hover:underline flex items-center"></Badge> {";
   !tenant.dns verified && (<Button variant="ghost" size="sm" onClick={;
   () => verifyDns (tenant) ";
-}className="ml-1 h-6 w-6 p-0" > <RefreshCcw className="h-3 w-3" /> <span className="sr-only" >Verify DNS</span> </Button>) ";
+}className="ml-1 h-6 w-6 p-0"><RefreshCcw className="h-3 w-3" /> <span className="sr-only" >Verify DNS</span> </Button>) ";
 }</div>) : (<span className="text-muted-foreground text-sm" >None</span>) ";
-}</TableCell> <TableCell> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" size="sm" > <MoreHorizontal className="h-4 w-4" /> <span className="sr-only" >Actions</span> </Button> </DropdownMenuTrigger> <DropdownMenuContent align="end" > <DropdownMenuItem> <Edit className="mr-2 h-4 w-4" /> Edit Tenant </DropdownMenuItem> <DropdownMenuItem> <Users className="mr-2 h-4 w-4" /> Manage Admins </DropdownMenuItem> <DropdownMenuItem onClick={;
+}</TableCell> <TableCell> <DropdownMenu> <DropdownMenuTrigger asChild> <Button variant="ghost" size="sm"><MoreHorizontal className="h-4 w-4" /> <span className="sr-only" >Actions</span> </Button> </DropdownMenuTrigger> <DropdownMenuContent align="end"><DropdownMenuItem> <Edit className="mr-2 h-4 w-4" /> Edit Tenant </DropdownMenuItem> <DropdownMenuItem> <Users className="mr-2 h-4 w-4" /> Manage Admins </DropdownMenuItem> <DropdownMenuItem onClick={;
   () => toggleTenantStatus (tenant) ;
 }> {";
   tenant.is active ? (<> <PowerOff className="mr-2 h-4 w-4" /> Disable Tenant </>) : (<> <Power className="mr-2 h-4 w-4" /> Enable Tenant </>) ;
@@ -265,23 +255,12 @@ return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" >
 }</TableBody> </Table> </div>) ;
 }</div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
         .order('created_at', { ascending: false }),
         
 
-<<<<<<< HEAD
+      
 
       
 
-<<<<<<< HEAD
-
-      
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

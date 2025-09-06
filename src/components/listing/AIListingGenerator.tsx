@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,7 +8,6 @@ import { GeneratedContentDisplay } from './GeneratedContentDisplay';
 import { LoadingContentSkeleton } from './LoadingContentSkeleton';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
-=======
 import React, { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -20,7 +17,6 @@ import { AIListingForm } from "./AIListingForm";
 import { GeneratedContentDisplay } from "./GeneratedContentDisplay";
 import { LoadingContentSkeleton } from "./LoadingContentSkeleton";
 import {logErrorToProduction} from '@/utils/productionLogger';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface GeneratedContent {
   description: string,
   tags: string[],
@@ -127,7 +123,6 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
       )}
     </div>
   );
-<<<<<<< HEAD
 
 }: AIListingGeneratorProps) {;
   const {;
@@ -179,7 +174,7 @@ toast ({;
   ;
 
 };
-return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {;
+return (<div className="space-y-6"><Card className="border border-zion-blue-light bg-zion-blue-dark"><CardHeader> <CardTitle className="flex items-center text-white"><Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {;
   handleGenerate ;
 }isLoading= {;
   isLoading ;
@@ -195,16 +190,7 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }/>) ;
 }</div>) ;
 }'"
-=======
 
-<<<<<<< HEAD
     
-<<<<<<< HEAD
 
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

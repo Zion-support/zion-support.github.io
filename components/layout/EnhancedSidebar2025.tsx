@@ -1,14 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  ] 
 }];
 ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const filteredServices = sidebarItems.flatMap (item => item.children?.filter (child => child.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || child.description?.toLowerCase () .includes (searchQuery.toLowerCase () ) ) || []);
-</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50" ></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
+</div> <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg blur-lg opacity-50"></div> </div> <div> <h2 className="text-lg font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent" > Zion Tech Group </h2> <p className="text-xs text-gray-400" >Navigation</p> </div> </div> </div> </div> </div> {
   section.badge 
 }</span>) 
 }</div>) : (<ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />) 
-}</button> <AnimatePresence> > <CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) ) 
+}</button> <AnimatePresence>><CloseIcon className="w-5 h-5" /> </button> </div> </div> </a>) ) 
 }+ {
   filteredServices.length - 5 
 }more results </div>) 
@@ -20,7 +17,7 @@
   `w-4 h-4 text-gray-400 transition-transform duration-200 $ {
   expandedCategory === item.name ? 'rotate-90' : '' 
 }` 
-}/> </button> <AnimatePresence> > {
+}/> </button> <AnimatePresence>>{
   item.children?.map ( (child) => (<Link key= {
   child.name 
 }{
@@ -29,9 +26,8 @@
 }</a>) ) 
 }</motion.div>) 
 }</AnimatePresence> </div>) ) 
-}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2" > <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link > <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg" > <div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25" > <span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>) 
+}</div> </div> <span>Quick Links</span> </h3> <div className="space-y-2"><Link><div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > Contact Us </div> <div className="text-xs text-gray-500" >Get in touch with our team</div> </a> <Link><div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > View Pricing </div> <div className="text-xs text-gray-500" >Explore our pricing plans</div> </a> <Link><div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200" > About Us </div> <div className="text-xs text-gray-500" >Learn about Zion Tech Group</div> </a> </div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg"><div className="text-lg font-bold text-blue-400" >1000+</div> <div className="text-xs text-gray-400" >Clients</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg"><div className="text-lg font-bold text-purple-400" >24/7</div> <div className="text-xs text-gray-400" >Support</div> </div> <div className="text-center p-3 bg-gray-800/50 rounded-lg"><div className="text-lg font-bold text-green-400" >99.9%</div> <div className="text-xs text-gray-400" >Uptime</div> </div> </div> </div> <Link href="/contact" className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"><span>Get Started Today</span> <ArrowRight className="w-4 h-4 ml-2 inline" /> </a> </div> </div> </motion.aside>) 
 };
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -63,7 +59,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
-=======
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -95,7 +90,6 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const sidebarItems: SidebarItem[] = [
   {
@@ -295,7 +289,6 @@ const resources = [
   { name: 'Community Forum', href: '/community', icon: <Users className="w-4 h-4" /> }
 ];
 
-
 const supportLinks = [
   { name: 'Contact Support', href: '/support', description: 'Get help from our team' },
   { name: 'Documentation', href: '/docs', description: 'Technical guides' },
@@ -327,9 +320,7 @@ const supportLinks = [
       initial={{ x: -300, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent"
-    >
-      {/* Header */}
+      className="fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-cyan-500/20 shadow-2xl shadow-cyan-500/20 z-40 overflow-y-auto scrollbar-thin scrollbar-thumb-cyan-500/50 scrollbar-track-transparent">{/* Header */}
       <div className="sticky top-0 bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 p-4">
         <div className="flex items-center space-x-3 mb-4">
           <div className="relative">
@@ -369,9 +360,7 @@ const supportLinks = [
           <div key={section.title} className="space-y-1">
             <button
               onClick={() => toggleSection(section.title)}
-              className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-lg transition-all duration-200 group"
-            >
-              <div className="flex items-center space-x-3">
+              className="w-full flex items-center justify-between p-3 text-left text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-lg transition-all duration-200 group"><div className="flex items-center space-x-3">
                 <div className="text-cyan-400 group-hover:text-cyan-300 transition-colors duration-200">
                   {section.icon}
                 </div>
@@ -396,9 +385,7 @@ const supportLinks = [
                   animate={{ opacity: 1, height: 'auto' }}
                   exit={{ opacity: 0, height: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="ml-8 space-y-1"
-                >
-                  <CloseIcon className="w-5 h-5" />
+                  className="ml-8 space-y-1"><CloseIcon className="w-5 h-5" />
                 </button>
               </div>
 
@@ -425,9 +412,7 @@ const supportLinks = [
                           key={service.name}
                           href={service.href}
                           onClick={onClose}
-                          className="block p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
-                        >
-                          <div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
+                          className="block p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"><div className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
                             {service.name}
                           </div>
                           <div className="text-xs text-gray-500">
@@ -489,9 +474,7 @@ const supportLinks = [
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"
-                  >
-                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+                    className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30"><div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                     <div className="text-xs text-gray-400">{stat.label}</div>
                   </motion.div>
                 ))}
@@ -510,9 +493,7 @@ const supportLinks = [
                     key={link.name}
                     href={link.href}
                     onClick={onClose}
-                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                  >
-                    <div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                    className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"><div className="text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
                       {link.icon}
                     </div>
                     <span className="text-gray-300 group-hover:text-white transition-colors duration-200">
@@ -534,9 +515,7 @@ const supportLinks = [
                   <div key={item.name}>
                     <button
                       onClick={() => toggleCategory(item.name)}
-                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                    >
-                      <div className="flex items-center space-x-3">
+                      className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"><div className="flex items-center space-x-3">
                         <div className={`w-8 h-8 bg-gradient-to-r ${item.isHot ? 'from-indigo-500 to-purple-600' : 'from-cyan-500 to-blue-600'} rounded-lg flex items-center justify-center`}>
                           {item.icon}
                         </div>
@@ -558,16 +537,12 @@ const supportLinks = [
                           animate={{ opacity: 1, height: 'auto' }}
                           exit={{ opacity: 0, height: 0 }}
                           transition={{ duration: 0.2 }}
-                          className="ml-8 mt-2 space-y-1"
-                        >
-                          {item.children?.map((child) => (
+                          className="ml-8 mt-2 space-y-1">{item.children?.map((child) => (
                             <Link
                               key={child.name}
                               href={child.href}
                               onClick={onClose}
-                              className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"
-                            >
-                              <span className="text-sm text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
+                              className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/30 transition-colors duration-200 group"><span className="text-sm text-gray-400 group-hover:text-cyan-400 transition-colors duration-200">
                                 {child.name}
                               </span>
                               {child.badge && (
@@ -595,9 +570,7 @@ const supportLinks = [
                 <Link
                   href="/contact"
                   onClick={onClose}
-                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                >
-                  <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
+                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"><div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
                     Contact Us
                   </div>
                   <div className="text-xs text-gray-500">Get in touch with our team</div>
@@ -605,9 +578,7 @@ const supportLinks = [
                 <Link
                   href="/pricing"
                   onClick={onClose}
-                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                >
-                  <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
+                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"><div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
                     View Pricing
                   </div>
                   <div className="text-xs text-gray-500">Explore our pricing plans</div>
@@ -615,9 +586,7 @@ const supportLinks = [
                 <Link
                   href="/about"
                   onClick={onClose}
-                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
-                >
-                  <div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
+                  className="block p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"><div className="font-medium text-gray-300 group-hover:text-white transition-colors duration-200">
                     About Us
                   </div>
                   <div className="text-xs text-gray-500">Learn about Zion Tech Group</div>
@@ -643,9 +612,7 @@ const supportLinks = [
         <div className="pt-4 border-t border-gray-800 px-3">
           <Link
             href="/contact"
-            className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
-          >
-            <span>Get Started Today</span>
+            className="block w-full text-center px-4 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"><span>Get Started Today</span>
             <ArrowRight className="w-4 h-4 ml-2 inline" />
           </Link>
         </div>
@@ -659,8 +626,4 @@ const supportLinks = [
   )
 };
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default EnhancedSidebar2025;

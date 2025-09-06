@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Check } from 'lucide-react';
-=======
 
 import { Check } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function ServiceIncludes() {
   return (
@@ -70,12 +66,10 @@ export function ServiceIncludes() {
               <Check className="h-5 w-5 text-zion-cyan" />
             </div>
             <div>
-<<<<<<< HEAD
               <h3 className='text-white font-medium'>Service Documentation</h3>
               <p className='text-zion-slate-light'>
                 Detailed report of work performed and recommendations.
               </p>
-=======
 
 import { Check } from 'lucide-react'
 
@@ -145,22 +139,12 @@ export function ServiceIncludes() {
             <div>
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

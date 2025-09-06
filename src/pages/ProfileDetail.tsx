@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '@/integrations/supabase/client';
@@ -30,7 +28,6 @@ import {
 } from 'lucide-react';
 import { HireNowCTA } from '@/components/profile/HireNowCTA';
 
-=======
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { supabase } from "@/integrations/supabase/client";
@@ -43,7 +40,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Clock, Link as LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe } from 'lucide-react'
 import { HireNowCTA } from "@/components/profile/HireNowCTA";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -233,9 +229,7 @@ export default function ProfileDetail() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-zion-cyan hover:text-white flex items-center gap-2"
-                      >
-                        <LinkIcon className="h-4 w-4" />
+                        className="text-zion-cyan hover:text-white flex items-center gap-2"><LinkIcon className="h-4 w-4" />
                         {link.title || link.url}
                       </a>
                     ))}
@@ -295,9 +289,7 @@ export default function ProfileDetail() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="GitHub"
-                    title="GitHub"
-                  >
-                    <Github className="h-4 w-4" />
+                    title="GitHub"><Github className="h-4 w-4" />
                     GitHub
                   </a>
                 )}
@@ -308,9 +300,7 @@ export default function ProfileDetail() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="Twitter"
-                    title="Twitter"
-                  >
-                    <Twitter className="h-4 w-4" />
+                    title="Twitter"><Twitter className="h-4 w-4" />
                     Twitter
                   </a>
                 )}
@@ -321,9 +311,7 @@ export default function ProfileDetail() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan"
                     aria-label="LinkedIn"
-                    title="LinkedIn"
-                  >
-                    <Linkedin className="h-4 w-4" />
+                    title="LinkedIn"><Linkedin className="h-4 w-4" />
                     LinkedIn
                   </a>
                 )}
@@ -334,7 +322,6 @@ export default function ProfileDetail() {
       </div>
     </>
   );
-<<<<<<< HEAD
 
 };
 }, [profileId]);
@@ -357,23 +344,16 @@ export default function ProfileDetail() {
 }/> Website </Link> </div>) ;
 }</div> </div> <a href= {;
   profileData.github url ";
-}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub" > <Github className="h-4 w-4" /> GitHub </Link>) ;
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="GitHub" title="GitHub"><Github className="h-4 w-4" /> GitHub </Link>) ;
 }{;
   profileData.twitter url && (<a href= {;
   profileData.twitter url ";
-}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter" > <Twitter className="h-4 w-4" /> Twitter </Link>) ;
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="Twitter" title="Twitter"><Twitter className="h-4 w-4" /> Twitter </Link>) ;
 }{;
   profileData.linkedin url && (<a href= {;
   profileData.linkedin url ";
-}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn" > <Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
+}target="blank" rel="noopener noreferrer" className="flex items-center gap-2 text-zion-slate-light hover:text-zion-cyan" aria-label="LinkedIn" title="LinkedIn"><Linkedin className="h-4 w-4" /> LinkedIn </Link>) ;
 }</div> </div> </div> </div> </div> </>) ;
 }'"
-=======
 
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

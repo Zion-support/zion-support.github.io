@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
@@ -13,13 +11,11 @@ import {
   darkModeMessages,
   lightModeMessages,;
 } from '@/utils/themeToggleMessages';
-=======
 import { Moon, Sun } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import { toast } from "@/hooks/use-toast"
 import { darkModeMessages, lightModeMessages } from "@/utils/themeToggleMessages"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
 import { useTheme } from "@/components/ThemeProvider"
@@ -46,30 +42,18 @@ export function ModeToggle() {
     return theme
   })();
 
-<<<<<<< HEAD
   const isDarkMode = resolvedTheme === 'dark';
-=======
-
-<<<<<<< HEAD
-
 
   const isDarkMode = resolvedTheme === "dark";
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const isDarkMode = resolvedTheme === "dark";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const handleToggle = () => {
     try {
       // Determine the new theme we are switching TO
-<<<<<<< HEAD
-<<<<<<< HEAD
       const newTheme = isDarkMode ? 'light' : 'dark';
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`);
-=======
       const newTheme = isDarkMode ? "light" : "dark";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
       // Apply the new theme via ThemeProvider
@@ -116,9 +100,7 @@ export function ModeToggle() {
         size="icon"
         disabled
         aria-label="Loading theme toggle"
-        className="focus-visible:ring-ring relative text-foreground"
-      >
-        <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
+        className="focus-visible:ring-ring relative text-foreground"><div className="h-5 w-5 bg-muted rounded animate-pulse" /> {/* Changed to bg-muted for theme consistency */}
         <span className="sr-only">Loading theme toggle</span>
       </Button>
     )
@@ -137,9 +119,7 @@ export function ModeToggle() {
             title={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}
             className="focus-visible:ring-ring relative group text-foreground" // Added text-foreground
             data-testid="theme-toggle"
-            data-theme={resolvedTheme}
-          >
-            {isDarkMode ? (
+            data-theme={resolvedTheme}>{isDarkMode ? (
               <Sun className="h-5 w-5 text-yellow-400 transition-all duration-300 group-hover:text-yellow-300 group-hover:rotate-12" />
             ) : (
               <Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />
@@ -169,11 +149,10 @@ export function ModeToggle() {
       </Tooltip>
     </TooltipProvider>
   );
-<<<<<<< HEAD
 
 };
 if (!isClient) {";
-  //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
+  //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground"><div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;
   /* Changed to bg-muted for theme consistency */ ";
 }<span className="sr-only" >Loading theme toggle</span> </Button>) ";
 }return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button) : (<Moon className="h-5 w-5 text-slate-600 dark:text-slate-400 transition-all duration-300 group-hover:text-slate-500 group-hover:-rotate-12" />) ;
@@ -186,13 +165,8 @@ if (!isClient) {";
 }/> </span> </Button> </TooltipTrigger> <TooltipContent>) ;
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"
-=======
       const newTheme = isDarkMode ? "light" : "dark";
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

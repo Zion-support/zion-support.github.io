@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import {
@@ -19,8 +17,6 @@ import {
   CalendarIcon,;
 } from 'lucide-react';
 import type { QuoteRequest } from '@/types/quotes';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
 import { format } from "date-fns";
@@ -88,9 +84,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
             variant="outline"
             size="sm"
             onClick={() => onViewDetails(quote)}
-            className="flex items-center gap-1"
-          >
-            <Eye className="h-4 w-4" />
+            className="flex items-center gap-1"><Eye className="h-4 w-4" />
             View Details
           </Button>
           
@@ -100,9 +94,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
                 variant="ghost"
                 size="sm"
                 onClick={() => onMarkAsResponded(quote.id)}
-                className="flex items-center gap-1"
-              >
-                <MessageSquare className="h-4 w-4" />
+                className="flex items-center gap-1"><MessageSquare className="h-4 w-4" />
                 Mark Responded
               </Button>
             )}
@@ -111,9 +103,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
               variant="ghost"
               size="sm"
               onClick={() => onToggleArchive(quote.id, !quote.is_archived)}
-              className="flex items-center gap-1"
-            >
-              {quote.is_archived ? (
+              className="flex items-center gap-1">{quote.is_archived ? (
                 <RefreshCw className="h-4 w-4" />
               ) : (
                 <ArchiveIcon className="h-4 w-4" />
@@ -125,11 +115,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     </Card>
   )
 };
-<<<<<<< HEAD
 "
-=======
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
@@ -7,8 +5,6 @@ import { useWallet as useAppWallet } from '../../../context/WalletContext.tsx'; 
 import { Wallet } from 'lucide-react';
 import { toast } from 'sonner';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -90,12 +86,9 @@ export function Web3Login() {
       className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan"
       onClick={handleWeb3Login}
       disabled={buttonDisabled}
-      title={buttonTitle || undefined} // Ensure title is not an empty string if not needed
-    >
-      {buttonContent}
+      title={buttonTitle || undefined} // Ensure title is not an empty string if not needed>{buttonContent}
     </Button>
   );
-<<<<<<< HEAD
 }return;
 }await loginWithWeb3 (), //This is from useAuth, assumed to be a separate flow ;
 }finally {;
@@ -105,21 +98,14 @@ export function Web3Login() {
 const buttonDisabled = isLoading || !isWalletSystemAvailable;
 const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured." : "";";
 >Sign in with Web3</span> </> 
-}//Ensure title is not an empty string if not needed > {;
+}//Ensure title is not an empty string if not needed>{;
   buttonContent ;
 }</Button>) ;
 }"
-=======
-
-<<<<<<< HEAD
-
 
   const buttonDisabled = isLoading || !isWalletSystemAvailable;
   const buttonTitle = !isWalletSystemAvailable
     ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured."
     : "";
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

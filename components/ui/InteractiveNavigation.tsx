@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Link from 'next/link';
@@ -28,17 +27,13 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
               href={item.href}
               className="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200 flex items-center space-x-1"
               onMouseEnter={() => setActiveItem(item.name)}
-              onMouseLeave={() => setActiveItem(null)}
-            >
-              <span>{item.name}</span>
+              onMouseLeave={() => setActiveItem(null)}><span>{item.name}</span>
               {item.submenu && (
                 <svg
                   className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
+                  viewBox="0 0 24 24"><path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
@@ -57,16 +52,12 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
                 transition={{ duration: 0.2 }}
                 className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border z-50"
                 onMouseEnter={() => setActiveItem(item.name)}
-                onMouseLeave={() => setActiveItem(null)}
-              >
-                <div className="py-2">
+                onMouseLeave={() => setActiveItem(null)}><div className="py-2">
                   {item.submenu.map((subItem) => (
                     <Link
                       key={subItem.name}
                       href={subItem.href}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                    >
-                      {subItem.name}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">{subItem.name}
                     </Link>
                   ))}
                 </div>
@@ -79,10 +70,8 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
   );
 
 };
-=======
 import React from 'react';
 import Link from 'next/link';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const InteractiveNavigation = () => {
   return (

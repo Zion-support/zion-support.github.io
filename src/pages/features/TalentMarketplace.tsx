@@ -1,28 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
 import { GradientHeading } from '@/components/GradientHeading';
 import { Button } from '@/components/ui/button';
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
 import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 export default function TalentMarketplace() {
   const schema = {
-<<<<<<< HEAD
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     name: 'Talent Marketplace',
     description:
       'Hire vetted AI and tech professionals from around the world on Zion.',
     url: 'https://app.ziontechgroup.com/features/talent-marketplace',
-=======
 import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
@@ -37,37 +31,29 @@ export default function TalentMarketplace() {
     "name": "Talent Marketplace",
     "description": "Hire vetted AI and tech professionals from around the world on Zion.",
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     "@context": "https://schema.org";
     "@type": "WebPage";
     "name": "Talent Marketplace";
     "description": "Hire vetted AI and tech professionals from around the world on Zion.";
     "url": "https://app.ziontechgroup.com/features/talent-marketplace"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
-<<<<<<< HEAD
         title='Talent Marketplace'
         description='Discover and hire top AI specialists through the Zion talent marketplace.'
         keywords='AI talent marketplace, hire developers, tech freelancers'
         canonical='https://app.ziontechgroup.com/features/talent-marketplace'
-=======
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
         canonical="https://app.ziontechgroup.com/features/talent-marketplace"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
@@ -99,11 +85,9 @@ export default function TalentMarketplace() {
               <p className="text-zion-slate-light">Yes, funds are held in escrow until you approve completed milestones.</p>
             </div>
           </div>
-<<<<<<< HEAD
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/talent'>Browse Talent</Link>
-=======
         title="Talent Marketplace"
         description="Discover and hire top AI specialists through the Zion talent marketplace."
         keywords="AI talent marketplace, hire developers, tech freelancers"
@@ -112,8 +96,7 @@ export default function TalentMarketplace() {
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}></script>
       <Header />
       <main className="bg-background text-white py-12">
         <div className="container mx-auto px-4 md:px-6">
@@ -148,23 +131,13 @@ export default function TalentMarketplace() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/talent">Browse Talent</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Button>
           </div>
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

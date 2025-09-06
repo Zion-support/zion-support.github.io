@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '../../lib/utils';
-
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -65,13 +63,8 @@ const CardContent = React.forwardRef<
 )),
 CardContent.displayName = "CardContent";
 
-<<<<<<< HEAD
 export default Card;
-=======
-<<<<<<< HEAD
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 const CardFooter = React.forwardRef<
   HTMLDivElement;
   React.HTMLAttributes<HTMLDivElement>
@@ -85,4 +78,3 @@ const CardFooter = React.forwardRef<
 CardFooter.displayName = "CardFooter";
 
 export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

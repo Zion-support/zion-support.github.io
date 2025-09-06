@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  useEffect ( () => {
   const load = async () => {
   try {
-=======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = {
@@ -38,7 +35,6 @@ export default function PodcastIndexPage() {
     load()
   }, []);
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   if (loading) return <div>Loading episodes…</div>;
 
   return (
@@ -59,13 +55,11 @@ export default function PodcastIndexPage() {
               </div>
               <div className="flex gap-3">
                 {ep.audio?.mp3Url && (
-<<<<<<< HEAD
                   <a
                     href={ep.audio.mp3Url}
                     className='px-3 py-2 bg-blue-600 text-white rounded'
                     download
                   >
-=======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 type EpisodeListItem = {
@@ -121,51 +115,30 @@ export default function PodcastIndexPage() {
               <div className="flex gap-3">
                 {ep.audio?.mp3Url && (
                   <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <a href={ep.audio.mp3Url} className="px-3 py-2 bg-blue-600 text-white rounded" download>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     MP3
                   </a>
                 )}
                 {ep.audio?.wavUrl && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <a
                     href={ep.audio.wavUrl}
                     className='px-3 py-2 bg-gray-700 text-white rounded'
-                    download
-                  >
-=======
+                    download><a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
                   <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <a href={ep.audio.wavUrl} className="px-3 py-2 bg-gray-700 text-white rounded" download>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     WAV
                   </a>
                 )}
                 {ep.audio?.mp4Url && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <a
                     href={ep.audio.mp4Url}
                     className='px-3 py-2 bg-purple-700 text-white rounded'
-                    download
-                  >
-=======
+                    download><a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
                   <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                  <a href={ep.audio.mp4Url} className="px-3 py-2 bg-purple-700 text-white rounded" download>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     MP4
                   </a>
                 )}
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='mt-3 flex gap-4'>
               <Link
                 href={`/media/podcast/${ep.id}`}
@@ -173,25 +146,14 @@ export default function PodcastIndexPage() {
               >
                 View Transcript
               </Link>
-=======
             <div className="mt-3 flex gap-4">
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="mt-3 flex gap-4">
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </li>
         ))}
       </ul>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

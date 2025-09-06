@@ -43,9 +43,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             {[1, 2, 3].map(q => (
               <div
                 key={q}
-                className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'
-              >
-                <div className='font-medium'>Report Q{q} 2025</div>
+                className='rounded-lg border border-gray-200 dark:border-gray-800 p-4'><div className='font-medium'>Report Q{q} 2025</div>
                 <div className='text-sm text-gray-600 dark:text-gray-400'>
                   Status: Draft
                 </div>

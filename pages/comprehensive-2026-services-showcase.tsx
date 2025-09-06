@@ -215,9 +215,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       intensity="extreme" 
       colorScheme="quantum-fusion"
       particleCount={500}
-      animationSpeed={2.5}
-    >
-      <Head>
+      animationSpeed={2.5}><Head>
         <title>Comprehensive 2026 Services Showcase | Zion Tech Group</title>
         <meta
           name='description'
@@ -254,9 +252,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       intensity="extreme" 
       colorScheme="quantum-fusion"
       particleCount={500}
-      animationSpeed={2.5}
-    >
-      <Head>
+      animationSpeed={2.5}><Head>
         <title>Comprehensive 2026 Services Showcase | Zion Tech Group</title>
 ursor/integrate-build-improve-and-re-verify-b76c
         <meta name="description" content="Discover our comprehensive collection of cutting-edge AI, IT infrastructure, and micro SaaS services for 2026. Transform your business with innovative technology solutions." />
@@ -287,9 +283,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
+              transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6'>
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Comprehensive 2026
@@ -458,9 +452,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         selectedCategory === category.id
                           ? 'bg-cyan-600 border-cyan-500 text-white'
                           : 'bg-gray-800/50 border-gray-600/30 text-gray-300 hover:border-cyan-500/50'
-                      }`}
-                    >
-                      <category.icon className='w-4 h-4' />
+                      }`}><category.icon className='w-4 h-4' />
                       {category.name}
                       <span className='bg-gray-700/50 px-2 py-1 rounded-lg text-xs'>
                       <category.icon className="w-4 h-4" />
@@ -483,9 +475,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  >
-                    <option value="popularity">Most Popular</option>
+                    className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"><option value="popularity">Most Popular</option>
                     <option value="price-low">Price: Low to High</option>
                     <option value="price-high">Price: High to Low</option>
                     <option value="rating">Highest Rated</option>
@@ -497,21 +487,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       onClick={() => setViewMode('grid')}
                       className={`p-2 rounded-lg transition-all duration-300 ${
                         viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <svg
+                      }`}><svg
                         className='w-5 h-5'
                         fill='currentColor'
-                        viewBox='0 0 20 20'
-                      >
-                        <path d='M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />
+                        viewBox='0 0 20 20'><path d='M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />
                 <div className="flex items-center gap-4">
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
-                  >
-                    <option value="popularity">Most Popular</option>
+                    className="bg-gray-800/50 border border-gray-600/30 rounded-xl px-4 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"><option value="popularity">Most Popular</option>
                     <option value="price-low">Price: Low to High</option>
                     <option value="price-high">Price: High to Low</option>
                     <option value="rating">Highest Rated</option>
@@ -523,9 +507,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       onClick={() => setViewMode('grid')}
                       className={`p-2 rounded-lg transition-all duration-300 ${
                         viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      }`}><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
@@ -538,27 +520,19 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         viewMode === 'list'
                           ? 'bg-cyan-600 text-white'
                           : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <svg
+                      }`}><svg
                         className='w-5 h-5'
                         fill='currentColor'
-                        viewBox='0 0 20 20'
-                      >
-                        <path
+                        viewBox='0 0 20 20'><path
                           fillRule='evenodd'
                           d='M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z'
                           clipRule='evenodd'
                         />
                         viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      }`}><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
                         viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                      }`}><svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
 ursor/integrate-build-improve-and-re-verify-b76c
                       </svg>
@@ -580,9 +554,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-            >
-              <AnimatePresence>
+              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}><AnimatePresence>
                 {filteredServices.map(service => (
         <section className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -590,9 +562,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               variants={containerVariants}
               initial="hidden"
               animate="visible"
-              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
-            >
-              <AnimatePresence>
+              className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}><AnimatePresence>
                 {filteredServices.map((service) => (
                 {filteredServices.map((service) => (
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -602,13 +572,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     layout
                     className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl rounded-3xl border border-gray-600/30 overflow-hidden transition-all duration-500 hover:scale-105 hover:border-cyan-500/50 group ${
                       viewMode === 'list' ? 'flex flex-col lg:flex-row' : ''
-                    }`}
-                  >
-                    {/* Service Header */}
+                    }`}>{/* Service Header */}
                     <div
-                      className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}
-                    >
-                      <div className='flex items-start justify-between mb-4'>
+                      className={`p-6 ${viewMode === 'list' ? 'lg:w-1/3' : ''}`}><div className='flex items-start justify-between mb-4'>
                         <div className='text-4xl'>{service.icon}</div>
                         {service.popular && (
                           <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-3 py-1 rounded-full font-semibold flex items-center gap-1'>
@@ -699,9 +665,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
 
                     {/* Service Details */}
                     <div
-                      className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}
-                    >
-                      <p className='text-gray-300 mb-4 leading-relaxed'>
+                      className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}><p className='text-gray-300 mb-4 leading-relaxed'>
                     <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                     <div className={`px-6 pb-6 ${viewMode === 'list' ? 'lg:w-2/3' : ''}`}>
@@ -881,9 +845,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Business?
@@ -896,9 +858,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href={`tel:${contactInfo.mobile}`}
-                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
-                >
-                  <Phone className='w-5 h-5' />
+                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"><Phone className='w-5 h-5' />
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -910,24 +870,16 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href={`tel:${contactInfo.mobile}`}
-                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
-                >
-                  <Phone className="w-5 h-5" />
+                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"><Phone className="w-5 h-5" />
                   <Phone className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   Call Now: {contactInfo.mobile}
                 </Link>
                 <Link
                   href={`mailto:${contactInfo.email}`}
-                  className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg'
-                >
-                  <Mail className='w-5 h-5' />
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
-                >
-                  <Mail className="w-5 h-5" />
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
-                >
-                  <Mail className="w-5 h-5" />
+                  className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg'><Mail className='w-5 h-5' />
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"><Mail className="w-5 h-5" />
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"><Mail className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   Email Us
                 </Link>
@@ -939,9 +891,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   🌐{' '}
                   <a
                     href={contactInfo.website}
-                    className='text-cyan-400 hover:text-cyan-300 transition-colors'
-                  >
-                    {contactInfo.website}
+                    className='text-cyan-400 hover:text-cyan-300 transition-colors'>{contactInfo.website}
                   </a>
                 </p>
               <div className="mt-8 text-gray-400">

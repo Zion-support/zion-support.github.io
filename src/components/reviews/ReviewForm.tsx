@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Star } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -16,8 +14,6 @@ import {
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Switch } from '@/components/ui/switch';
 import { Review } from '@/types/reviews';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { Star } from 'lucide-react'
@@ -119,9 +115,7 @@ export function ReviewForm({
                       onMouseEnter={() => setHoveredStar(star)}
                       onMouseLeave={() => setHoveredStar(0)}
                       className="focus: outline-none transition-transform hover: scale-110"
-                      aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}
-                    >
-                      <Star
+                      aria-label={`Rate ${star} star${star > 1 ? 's' : ''}`}><Star
                         className={`h-10 w-10 ${
                           star <= (hoveredStar || field.value || 0)
                             ? "fill-yellow-400 text-yellow-400"
@@ -179,14 +173,10 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      className="flex flex-wrap gap-4">{[1, 2, 3, 4, 5].map((value) => (
                         <FormItem
                           key={value}
-                          className="flex items-center space-x-2"
-                        >
-                          <FormControl>
+                          className="flex items-center space-x-2"><FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
@@ -212,14 +202,10 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      className="flex flex-wrap gap-4">{[1, 2, 3, 4, 5].map((value) => (
                         <FormItem
                           key={value}
-                          className="flex items-center space-x-2"
-                        >
-                          <FormControl>
+                          className="flex items-center space-x-2"><FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
@@ -245,14 +231,10 @@ export function ReviewForm({
                     <RadioGroup
                       onValueChange={(value) => field.onChange(parseInt(value))}
                       defaultValue={field.value?.toString()}
-                      className="flex flex-wrap gap-4"
-                    >
-                      {[1, 2, 3, 4, 5].map((value) => (
+                      className="flex flex-wrap gap-4">{[1, 2, 3, 4, 5].map((value) => (
                         <FormItem
                           key={value}
-                          className="flex items-center space-x-2"
-                        >
-                          <FormControl>
+                          className="flex items-center space-x-2"><FormControl>
                             <RadioGroupItem value={value.toString()} />
                           </FormControl>
                           <FormLabel className="cursor-pointer font-normal">
@@ -324,14 +306,11 @@ export function ReviewForm({
         <Button
           type="submit"
           className="w-full"
-          disabled={isSubmitting || !form.formState.isValid}
-        >
-          {isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
+          disabled={isSubmitting || !form.formState.isValid}>{isSubmitting ? "Submitting..." : defaultValues ? "Save Changes" : "Submit Review"}
         </Button>
       </form>
     </Form>
   );
-<<<<<<< HEAD
 
 }render= {;
   ({;
@@ -348,7 +327,7 @@ export function ReviewForm({
 }> <Star className= {;
   `h-10 w-10 $ {;
   star <= (hoveredStar || field.value || 0) /> </button>) ) ";
-}</div> </FormControl> <div className="text-center mt-1 h-5" > <FormMessage /> </div> </FormItem>) ;
+}</div> </FormControl> <div className="text-center mt-1 h-5"><FormMessage /> </div> </FormItem>) ;
 }/> {;
   /* Review Text */ ";
 }<FormField <FormItem> <FormLabel>Your Review</FormLabel> <FormControl> <Textarea placeholder="Share your experience and feedback..." className="min-h-24 resize-none" {;
@@ -363,10 +342,10 @@ export function ReviewForm({
   (value) => field.onChange (parseInt (value) ) ;
 }defaultValue= {;
   field.value?.toString () ";
-}className="flex flex-wrap gap-4" > {;
+}className="flex flex-wrap gap-4">{;
   [1, 2, 3,  4, 5].map ( (value) => (<FormItem key= {;
   value ";
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {;
+}className="flex items-center space-x-2"><FormControl> <RadioGroupItem value= {;
   value.toString () ;
 }/> </FormControl> </FormLabel> </FormItem>) ) ;
 }</RadioGroup> </FormControl> <FormMessage /> </FormItem>) ;
@@ -376,10 +355,10 @@ export function ReviewForm({
   (value) => field.onChange (parseInt (value) ) ;
 }defaultValue= {;
   field.value?.toString () ";
-}className="flex flex-wrap gap-4" > {;
+}className="flex flex-wrap gap-4">{;
   [1, 2, 3,  4, 5].map ( (value) => (<FormItem key= {;
   value ";
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {;
+}className="flex items-center space-x-2"><FormControl> <RadioGroupItem value= {;
   value.toString () ;
 }/> </FormControl> </FormLabel> </FormItem>) ) ;
 }</RadioGroup> </FormControl> <FormMessage /> </FormItem>) ;
@@ -389,10 +368,10 @@ export function ReviewForm({
   (value) => field.onChange (parseInt (value) ) ;
 }defaultValue= {;
   field.value?.toString () ";
-}className="flex flex-wrap gap-4" > {;
+}className="flex flex-wrap gap-4">{;
   [1, 2, 3,  4, 5].map ( (value) => (<FormItem key= {;
   value ";
-}className="flex items-center space-x-2" > <FormControl> <RadioGroupItem value= {;
+}className="flex items-center space-x-2"><FormControl> <RadioGroupItem value= {;
   value.toString () ;
 }/> </FormControl> </FormLabel> </FormItem>) ) ;
 }</RadioGroup> </FormControl> <FormMessage /> </FormItem>) ;
@@ -400,21 +379,15 @@ export function ReviewForm({
   /* Would Work Again */ ";
 }<FormField <FormItem> <div className="flex items-center gap-2"> <FormLabel>Would you work with {;
   revieweeName ";
-}again?</FormLabel> <FormControl> <div className="flex items-center space-x-2" > <Switch </span> </div> </FormControl> </div> <FormMessage /> </FormItem>) ;
+}again?</FormLabel> <FormControl> <div className="flex items-center space-x-2"><Switch </span> </div> </FormControl> </div> <FormMessage /> </FormItem>) ;
 }/> </div>) ;
 }{;
   /* Anonymous Review */ '";
-}<FormField <FormItem> <div className="flex items-center gap-2" > <FormControl> <Switch /> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>) ;
+}<FormField <FormItem> <div className="flex items-center gap-2"><FormControl> <Switch /> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>) ;
 }/> <Button </Button> </form> </Form>) ;
 }'"
-=======
 
-<<<<<<< HEAD
   onSubmit: (data: any) => Promise<boolean>, 
-<<<<<<< HEAD
   
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

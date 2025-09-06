@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
 import type { QuoteRequest } from '@/types/quotes';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
@@ -61,9 +57,6 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     link.setAttribute('href', url);
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
-<<<<<<< HEAD
-
-=======
 
 import { Button } from "@/components/ui/button";
 import { Download } from 'lucide-react'
@@ -121,58 +114,35 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     // Download file and clean up
     link.click();
     setTimeout(() => {
       document.body.removeChild(link);
-<<<<<<< HEAD
-<<<<<<< HEAD
       URL.revokeObjectURL(url);
     }, 100);
-=======
-      URL.revokeObjectURL(url)
-    }, 100)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-  };
-  
-<<<<<<< HEAD
-=======
       URL.revokeObjectURL(url)
     }, 100)
   };
   
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      URL.revokeObjectURL(url)
+    }, 100)
+  };
+  
   return (
     <Button 
       variant="outline" 
       onClick={handleExport}
       className="flex items-center gap-2"
-      disabled={quotes.length === 0}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    >
-      <Download size={16} />
+      disabled={quotes.length === 0}><Download size={16} />
       Export CSV
     </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 '"
-=======
   )
 
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

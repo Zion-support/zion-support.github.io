@@ -326,9 +326,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
+            transition={{ duration: 0.8 }}><h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent'>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               2025 Advanced Services Showcase
@@ -406,9 +404,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.6 }}
             className='bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10'
             className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            {/* Search Bar */}
+ursor/integrate-build-improve-and-re-verify-b76c>{/* Search Bar */}
             <div className="mb-6">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -418,9 +414,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   value={searchTerm}
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full bg-white/10 border border-white/20 rounded-xl px-12 py-4 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300'
-            className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10"
-          >
-            {/* Search Bar */}
+            className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10">{/* Search Bar */}
             <div className="mb-6">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5" />
@@ -447,9 +441,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                >
-                  {categories.map(category => (
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300">{categories.map(category => (
             <div className="flex flex-col lg:flex-row gap-6">
               {/* Category Filter */}
               <div className="flex-1">
@@ -457,9 +449,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                >
-                  {categories.map((category) => (
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300">{categories.map((category) => (
                   {categories.map((category) => (
 ursor/integrate-build-improve-and-re-verify-b76c
                     <option key={category.id} value={category.id}>
@@ -480,9 +470,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as any)}
-                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"
-                >
-                  <option value='popularity'>Popularity</option>
+                  className="w-full bg-white/10 border border-white/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-400 focus:bg-white/15 transition-all duration-300"><option value='popularity'>Popularity</option>
                   <option value='price'>Price (Low to High)</option>
                   <option value='rating'>Rating</option>
                   <option value='newest'>Newest</option>
@@ -563,18 +551,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-300 ${
                       viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                    }`}
-                  >
-                    <Grid className='w-5 h-5' />
+                    }`}><Grid className='w-5 h-5' />
               <div className="flex items-end">
                 <div className="flex bg-white/10 rounded-xl p-1">
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`p-2 rounded-lg transition-all duration-300 ${
                       viewMode === 'grid' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                    }`}
-                  >
-                    <Grid className="w-5 h-5" />
+                    }`}><Grid className="w-5 h-5" />
                     <Grid className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   </button>
@@ -584,17 +568,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       viewMode === 'list'
                         ? 'bg-cyan-500 text-white'
                         : 'text-white/70 hover:text-white'
-                    }`}
-                  >
-                    <List className='w-5 h-5' />
+                    }`}><List className='w-5 h-5' />
                       viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
+                    }`}><List className="w-5 h-5" />
                       viewMode === 'list' ? 'bg-cyan-500 text-white' : 'text-white/70 hover:text-white'
-                    }`}
-                  >
-                    <List className="w-5 h-5" />
+                    }`}><List className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   </button>
                 </div>
@@ -617,15 +595,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className='mb-8'
-          >
-            <p className='text-white/70'>
-            className="mb-8"
-          >
-            <p className="text-white/70">
-            className="mb-8"
-          >
-            <p className="text-white/70">
+            className='mb-8'><p className='text-white/70'>
+            className="mb-8"><p className="text-white/70">
+            className="mb-8"><p className="text-white/70">
 ursor/integrate-build-improve-and-re-verify-b76c
               Showing {filteredServices.length} of {allServices.length} services
             </p>
@@ -640,25 +612,19 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewMode === 'grid'
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
-            }
-          >
-            <AnimatePresence mode='wait'>
+            }><AnimatePresence mode='wait'>
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' 
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
-            }
-          >
-            <AnimatePresence mode="wait">
+            }><AnimatePresence mode="wait">
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' 
               ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               : "space-y-6"
-            }
-          >
-            <AnimatePresence mode="wait">
+            }><AnimatePresence mode="wait">
 ursor/integrate-build-improve-and-re-verify-b76c
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -672,9 +638,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
 ursor/integrate-build-improve-and-re-verify-b76c
-                  }
-                >
-                  {/* Service Header */}
+                  }>{/* Service Header */}
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -691,9 +655,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   className={viewMode === 'grid' 
                     ? "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
                     : "group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 hover:shadow-2xl"
-                  }
-                >
-                  {/* Service Header */}
+                  }>{/* Service Header */}
                   <div className="p-6">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -846,9 +808,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           {service.benefits.slice(0, 2).map((benefit, idx) => (
                             <span
                               key={idx}
-                              className='text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full'
-                            >
-                    <div className="mb-6">
+                              className='text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full'><div className="mb-6">
                       <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-xl p-4 border border-cyan-500/20">
                         <h4 className="text-cyan-400 font-semibold mb-2">ROI & Benefits</h4>
                         <p className="text-white/80 text-sm mb-3">{service.roi}</p>
@@ -878,32 +838,22 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                      >
-                        <ExternalLink className='w-4 h-4' />
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"><ExternalLink className='w-4 h-4' />
                     <div className="flex gap-3">
                       <a
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                      >
-                        <ExternalLink className="w-4 h-4" />
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"><ExternalLink className="w-4 h-4" />
                         <ExternalLink className="w-4 h-4" />
 ursor/integrate-build-improve-and-re-verify-b76c
                         Learn More
                       </a>
                       <a
                         href={`mailto:${service.contactInfo.email}?subject=Inquiry about ${service.name}`}
-                        className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2'
-                      >
-                        <ZapIcon className='w-4 h-4' />
-                        className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
-                      >
-                        <ZapIcon className="w-4 h-4" />
-                        className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"
-                      >
-                        <ZapIcon className="w-4 h-4" />
+                        className='bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2'><ZapIcon className='w-4 h-4' />
+                        className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"><ZapIcon className="w-4 h-4" />
+                        className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 border border-white/20 hover:border-white/40 flex items-center justify-center gap-2"><ZapIcon className="w-4 h-4" />
 ursor/integrate-build-improve-and-re-verify-b76c
                         Contact
                       </a>
@@ -919,23 +869,17 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className='text-center py-20'
-            >
-              <div className='text-6xl mb-4'>🔍</div>
+              className='text-center py-20'><div className='text-6xl mb-4'>🔍</div>
               <h3 className='text-2xl font-bold text-white mb-2'>
                 No services found
               </h3>
               <p className='text-white/70 mb-6'>
                 Try adjusting your search criteria or filters
               </p>
-              className="text-center py-20"
-            >
-              <div className="text-6xl mb-4">🔍</div>
+              className="text-center py-20"><div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
-              className="text-center py-20"
-            >
-              <div className="text-6xl mb-4">🔍</div>
+              className="text-center py-20"><div className="text-6xl mb-4">🔍</div>
               <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
               <p className="text-white/70 mb-6">Try adjusting your search criteria or filters</p>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -973,9 +917,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent'>
+            viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent'>
             <h2 className="text-4xl md: text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-100 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Business?

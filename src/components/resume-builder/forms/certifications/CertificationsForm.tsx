@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -77,21 +72,11 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       setError(err.message || 'An error occurred')
     }
   };
-=======
-
-<<<<<<< HEAD
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!);
     form.reset({
-<<<<<<< HEAD
-<<<<<<< HEAD
       ...cert,
-=======
-      ...cert;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date)})
   };
@@ -147,9 +132,7 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
                   } else {
                     onBack()
                   };
-                }}
-              >
-                {editingId ? 'Cancel' : 'Back'}
+                }}>{editingId ? 'Cancel' : 'Back'}
               </Button>
 
               <div className="flex gap-2">
@@ -168,21 +151,14 @@ export function CertificationsForm({ resumeId, certifications, onComplete, onBac
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 }> {;
   editingId ? 'Cancel' : 'Back' ;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 }'"
-=======
       ...cert;
       issue_date: formatDateValue(cert.issue_date),
       expiration_date: formatDateValue(cert.expiration_date)})
   };
 
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

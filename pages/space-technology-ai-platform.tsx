@@ -72,9 +72,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       animationSpeed={2.5}
       enableHolographic={true}
       enableQuantumEffects={true}
-      enableNeuralNetwork={true}
-    >
-      <div className="min-h-screen">
+      enableNeuralNetwork={true}><div className="min-h-screen">
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
           <meta
@@ -130,9 +128,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
       animationSpeed={2.5}
       enableHolographic={true}
       enableQuantumEffects={true}
-      enableNeuralNetwork={true}
-    >
-      <div className="min-h-screen">
+      enableNeuralNetwork={true}><div className="min-h-screen">
         <Head>
           <title>Space Technology AI Platform - Zion Tech Group</title>
 ursor/integrate-build-improve-and-re-verify-b76c
@@ -165,9 +161,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
                 <span className="text-blue-300 text-sm font-medium">2026 Revolutionary Innovation</span>
               </div>
@@ -189,18 +183,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
-                >
-                  <span className="text-2xl font-bold">$3,999</span>
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"><span className="text-2xl font-bold">$3,999</span>
                   <span>/month</span>
                 </motion.div>
                 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
-                >
-                  <span>7-Day Free Trial</span>
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"><span>7-Day Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
               </div>
@@ -216,9 +206,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
                 <div className='flex items-center space-x-2'>
                   <Users className='w-5 h-5 text-blue-400' />
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
+              className="text-center mb-16"><div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-full border border-blue-500/30 mb-6">
                 <Sparkles className="w-4 h-4 text-blue-400" />
                 <span className="text-blue-300 text-sm font-medium">2026 Revolutionary Innovation</span>
               </div>
@@ -240,18 +228,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
-                >
-                  <span className="text-2xl font-bold">$3,999</span>
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"><span className="text-2xl font-bold">$3,999</span>
                   <span>/month</span>
                 </motion.div>
                 
                 <motion.div
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
-                >
-                  <span>7-Day Free Trial</span>
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"><span>7-Day Free Trial</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.div>
               </div>
@@ -292,9 +276,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   Revolutionary Features
                 </span>
@@ -305,9 +287,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                   Revolutionary Features
                 </span>
@@ -329,9 +309,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='group relative'
                   className="group relative"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+ursor/integrate-build-improve-and-re-verify-b76c><div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
                       <Satellite className="w-6 h-6 text-white" />
@@ -342,9 +320,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <p className='text-gray-400'>
                       Advanced AI-powered {feature.toLowerCase()} for enhanced
                       space operations and exploration.
-                  className="group relative"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  className="group relative"><div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-6 hover:border-blue-500/40 transition-all duration-300">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mb-4">
                       <Satellite className="w-6 h-6 text-white" />
@@ -379,9 +355,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Market Leadership
                 </span>
@@ -392,9 +366,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">
                   Market Leadership
                 </span>
@@ -414,9 +386,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='space-y-6'
                 className="space-y-6"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
                 <div className="space-y-4">
                   {competitors.map((competitor, index) => (
                     <div key={index} className="flex items-center space-x-3 p-4 bg-black/20 rounded-xl border border-gray-700">
@@ -432,9 +402,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       Our Advantage: AI integration, comprehensive platform,
                       affordable pricing
                     </span>
-                className="space-y-6"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
+                className="space-y-6"><h3 className="text-2xl font-bold text-white mb-6">Competitive Analysis</h3>
                 <div className="space-y-4">
                   {competitors.map((competitor, index) => (
                     <div key={index} className="flex items-center space-x-3 p-4 bg-black/20 rounded-xl border border-gray-700">
@@ -460,9 +428,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 viewport={{ once: true }}
                 className='space-y-6'
                 className="space-y-6"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
+ursor/integrate-build-improve-and-re-verify-b76c><h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-6 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl border border-blue-500/30 text-center">
                     <div className="text-3xl font-bold text-blue-400 mb-2">$447.5B</div>
@@ -481,9 +447,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                       24
                     </div>
                     <div className='text-yellow-300 text-sm'>Months to ROI</div>
-                className="space-y-6"
-              >
-                <h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
+                className="space-y-6"><h3 className="text-2xl font-bold text-white mb-6">Market Statistics</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div className="p-6 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 rounded-xl border border-blue-500/30 text-center">
                     <div className="text-3xl font-bold text-blue-400 mb-2">$447.5B</div>
@@ -526,9 +490,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               viewport={{ once: true }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Use Cases
                 </span>
@@ -539,9 +501,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             </motion.div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   Use Cases
                 </span>
@@ -563,9 +523,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   viewport={{ once: true }}
                   className='group relative'
                   className="group relative"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+ursor/integrate-build-improve-and-re-verify-b76c><div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                       <Globe className="w-6 h-6 text-white" />
@@ -576,9 +534,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                     <p className='text-gray-400'>
                       Leverage AI-powered space technology to optimize{' '}
                       {useCase.toLowerCase()} and drive innovation.
-                  className="group relative"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                  className="group relative"><div className="absolute inset-0 bg-gradient-to-r from-cyan-600/10 to-blue-600/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
                   <div className="relative bg-black/40 backdrop-blur-xl border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300">
                     <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-4">
                       <Globe className="w-6 h-6 text-white" />
@@ -610,9 +566,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+              viewport={{ once: true }}><h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent'>
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
@@ -644,15 +598,11 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   whileTap={{ scale: 0.95 }}
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200'
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
-ursor/integrate-build-improve-and-re-verify-b76c
-                >
-                  <Phone className="w-5 h-5" />
+ursor/integrate-build-improve-and-re-verify-b76c><Phone className="w-5 h-5" />
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
 
-                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"
-                >
-                  <Phone className="w-5 h-5" />
+                  className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-200"><Phone className="w-5 h-5" />
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
 
@@ -661,15 +611,9 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'
-                >
-                  <Mail className='w-5 h-5' />
-                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
-                >
-                  <Mail className="w-5 h-5" />
-                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"
-                >
-                  <Mail className="w-5 h-5" />
+                  className='flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200'><Mail className='w-5 h-5' />
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"><Mail className="w-5 h-5" />
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-blue-500/50 text-blue-400 font-semibold rounded-xl hover:bg-blue-500/10 transition-all duration-200"><Mail className="w-5 h-5" />
 ursor/integrate-build-improve-and-re-verify-b76c
                   <span>Email Us</span>
                 </motion.a>

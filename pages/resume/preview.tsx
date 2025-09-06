@@ -1,4 +1,4 @@
- > <option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
+><option value="light" >Light</option> <option value="dark" >Dark</option> </select>) ) 
 }</select> </>) 
 }</div> </div> <PdfExportButton targetRef= {
   targetRef 
@@ -63,9 +63,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <select
             value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-          >
-            <option value='light'>Light</option>
+            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"><option value='light'>Light</option>
             <option value='dark'>Dark</option>
     return found?.data || initialData
   }, [selectedVersionId, initialData, versions]);
@@ -78,9 +76,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <select
             value={theme}
             onChange={(e) => setTheme(e.target.value as 'light' | 'dark')}
-            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-          >
-            <option value="light">Light</option>
+            className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"><option value="light">Light</option>
             <option value="dark">Dark</option>
             <option value="light">Light</option>
             <option value="dark">Dark</option>
@@ -95,9 +91,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <select
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-              >
-                <option value="current">Current</option>
+                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"><option value="current">Current</option>
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>
                     {v.label}
@@ -106,9 +100,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               <select
                 value={selectedVersionId}
                 onChange={(e) => setSelectedVersionId(e.target.value)}
-                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"
-              >
-                <option value="current">Current</option>
+                className="border border-gray-300 dark:border-gray-700 rounded px-2 py-1 bg-white dark:bg-black"><option value="current">Current</option>
                 {versions.map(v => (
                   <option value={v.id} key={v.id}>{v.label}</option>
                   <option value={v.id} key={v.id}>{v.label}</option>

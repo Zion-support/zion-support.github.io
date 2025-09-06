@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useAuth } from '@/hooks/useAuth';
@@ -26,9 +25,7 @@ export const AvatarMenu: React.FC = () => {
       <DropdownMenuTrigger asChild data-testid="avatar-menu-trigger">
         <button
           className="flex items-center gap-2 rounded-full focus: outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-          aria-label="Open user menu"
-        >
-          <Avatar className="h-8 w-8">
+          aria-label="Open user menu"><Avatar className="h-8 w-8">
             {avatarUrl ? (
               <AvatarImage src={avatarUrl} alt={user.displayName || user.name || 'User avatar'} />
             ) : (
@@ -74,16 +71,7 @@ export const AvatarMenu: React.FC = () => {
 };
 
 export default AvatarMenu;
-<<<<<<< HEAD
 "
-=======
-
-<<<<<<< HEAD
-
-
 
 export default AvatarMenu;
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

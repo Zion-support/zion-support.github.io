@@ -57,9 +57,7 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
               <select
                 value={filter}
                 onChange={(e) => setFilter(e.target.value as any)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="all">All Statuses</option>
+                className="w-full p-2 border rounded-md"><option value="all">All Statuses</option>
                 <option value="open">Open</option>
                 <option value="in_progress">In Progress</option>
                 <option value="resolved">Resolved</option>
@@ -71,9 +69,7 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
               <select
                 value={priorityFilter}
                 onChange={(e) => setPriorityFilter(e.target.value as any)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="all">All Priorities</option>
+                className="w-full p-2 border rounded-md"><option value="all">All Priorities</option>
                 <option value="urgent">Urgent</option>
                 <option value="high">High</option>
                 <option value="medium">Medium</option>

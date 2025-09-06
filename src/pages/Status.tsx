@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { useState, useEffect } from 'react';
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
@@ -12,14 +10,12 @@ import {
   CardHeader,
   CardTitle,;
 } from '@/components/ui/card';
-=======
 import { SEO } from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import { logWarn } from '@/utils/productionLogger';
 interface ServiceStatus {
   name: string,
@@ -238,15 +234,11 @@ export default function Status() {
                 <Button
                   variant="outline"
                   asChild
-                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
-                >
-                  <a 
+                  className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"><a 
                     href={statusUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2"
-                  >
-                    <ExternalLink className="h-4 w-4" />
+                    className="flex items-center gap-2"><ExternalLink className="h-4 w-4" />
                     Visit Full Status Page
                   </a>
                 </Button>
@@ -267,16 +259,12 @@ export default function Status() {
                   <Button
                     variant="outline"
                     asChild
-                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"
-                  >
-                    <Link href="/contact">Contact Support</Link>
+                    className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"><Link href="/contact">Contact Support</Link>
                   </Button>
                   <Button
                     variant="outline"
                     asChild
-                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"
-                  >
-                    <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
+                    className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"><a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer">
                       @ZionTechGroup
                     </a>
                   </Button>
@@ -288,7 +276,6 @@ export default function Status() {
       </main>
     </>
   );
-<<<<<<< HEAD
 
 };
 switch (status) {';
@@ -302,22 +289,15 @@ default: const getStatusColor = (status: ServiceStatus['status']) => {;
 case 'degraded': return 'text-yellow-500';';
 case 'outage': return 'text-red-500';';
 case 'maintenance': return 'text-blue-500';";
-default: return (<> <SEO title="API Status" description="View real-time service availability and uptime statistics." canonical="https://app.ziontechgroup.com/status" /> <main className="min-h-screen bg-zion-blue pt-24 pb-20" > <div className="container mx-auto px-4" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-white mb-4" >System Status</h1> <p className="text-zion-slate-light text-lg" > Real-time monitoring of Zion platform services </p> <CardHeader> <CardTitle className="text-white flex items-center gap-2" > <ExternalLink className="h-5 w-5" /> Live Status Dashboard </CardTitle> <CardDescription> Loading detailed status information... </CardDescription> </CardHeader> <CardContent> <iframe src= {;
+default: return (<> <SEO title="API Status" description="View real-time service availability and uptime statistics." canonical="https://app.ziontechgroup.com/status" /> <main className="min-h-screen bg-zion-blue pt-24 pb-20"><div className="container mx-auto px-4"><div className="text-center mb-8"><h1 className="text-4xl font-bold text-white mb-4" >System Status</h1> <p className="text-zion-slate-light text-lg" > Real-time monitoring of Zion platform services </p> <CardHeader> <CardTitle className="text-white flex items-center gap-2"><ExternalLink className="h-5 w-5" /> Live Status Dashboard </CardTitle> <CardDescription> Loading detailed status information... </CardDescription> </CardHeader> <CardContent> <iframe src= {;
   statusUrl ";
-}/> <div className="mt-4 text-center" > <Button > View Simplified Status </Button> </div> </CardContent> </Card> </div>) ";
-}<CardHeader> <CardTitle className="text-white" >Service Status Overview</CardTitle> <CardDescription> Current status of core platform services </CardDescription> </CardHeader> <CardContent className="space-y-4" > {;
+}/> <div className="mt-4 text-center"><Button > View Simplified Status </Button> </div> </CardContent> </Card> </div>) ";
+}<CardHeader> <CardTitle className="text-white" >Service Status Overview</CardTitle> <CardDescription> Current status of core platform services </CardDescription> </CardHeader> <CardContent className="space-y-4">{;
   FALLBACK SERVICES.map ( (service) => (</div> </div> </div>) ) ";
-}</CardContent> </Card> </div> <div className="text-center" > <p className="text-zion-slate-light mb-4" > For detailed incident history and real-time updates: </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <a > <ExternalLink className="h-4 w-4" /> Visit Full Status Page </Link> </Button> </div> </>) '";
-}<div className="mt-12 text-center" > <Card className="bg-zion-blue-dark border-zion-blue-light" > <CardHeader> <CardTitle className="text-white" >Need Help?</CardTitle> </CardHeader> <CardContent className="space-y-4" > <p className="text-zion-slate-light" > If you're experiencing issues not reflected here, please contact our support team. </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10" > <Link href="/contact" >Contact Support</Link> </Button> <Button variant="outline" asChild className="text-zion-purple border-zion-purple hover:bg-zion-purple/10" > <a href="https://twitter.com/ZionTechGroup" target="blank" rel="noopener noreferrer" > @ZionTechGroup </Link> </Button> </div> </CardContent> </Card> </div> </div> </main> </>) ;
+}</CardContent> </Card> </div> <div className="text-center"><p className="text-zion-slate-light mb-4" > For detailed incident history and real-time updates: </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"><a><ExternalLink className="h-4 w-4" /> Visit Full Status Page </Link> </Button> </div> </>) '";
+}<div className="mt-12 text-center"><Card className="bg-zion-blue-dark border-zion-blue-light"><CardHeader> <CardTitle className="text-white" >Need Help?</CardTitle> </CardHeader> <CardContent className="space-y-4"><p className="text-zion-slate-light" > If you're experiencing issues not reflected here, please contact our support team. </p> <Button variant="outline" asChild className="text-zion-cyan border-zion-cyan hover:bg-zion-cyan/10"><Link href="/contact" >Contact Support</Link> </Button> <Button variant="outline" asChild className="text-zion-purple border-zion-purple hover:bg-zion-purple/10"><a href="https://twitter.com/ZionTechGroup" target="blank" rel="noopener noreferrer" > @ZionTechGroup </Link> </Button> </div> </CardContent> </Card> </div> </div> </main> </>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
         return <CheckCircle className="h-5 w-5 text-green-500" />;
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

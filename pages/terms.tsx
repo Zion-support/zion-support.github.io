@@ -223,9 +223,7 @@ export default function Terms() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              transition={{ duration: 0.8 }}><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -414,9 +412,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 User Obligations
               </h2>
@@ -475,9 +471,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Liability & Limitations
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Intellectual Property
@@ -488,9 +482,7 @@ export default function Terms() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Additional Terms
               </h2>
               <p className="text-lg text-gray-300">
@@ -503,9 +495,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Limitation of Liability</h3>
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"><h3 className="text-xl font-bold text-white mb-4">Limitation of Liability</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.
                 </p>
@@ -518,9 +508,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Governing Law</h3>
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"><h3 className="text-xl font-bold text-white mb-4">Governing Law</h3>
                 <p className="text-gray-300 leading-relaxed">
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of our services shall be resolved in the courts of the United States.
                 </p>
@@ -530,9 +518,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Changes to Terms</h3>
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"><h3 className="text-xl font-bold text-white mb-4">Changes to Terms</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.
                 </p>
@@ -552,9 +538,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Questions About Terms?
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Limitation of Liability
@@ -630,9 +614,7 @@ export default function Terms() {
                   className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >
                   General Contact
-                </a>
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                </a>><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Questions About These Terms?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
@@ -667,9 +649,7 @@ export default function Terms() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Terms Overview
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -684,9 +664,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
+                className="group cursor-pointer"><div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
                   <div className={`w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     {section.icon}
                   </div>
@@ -706,9 +684,7 @@ export default function Terms() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Service Categories & Terms
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -723,9 +699,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
+                className="group"><div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
                   <div className="h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
                       {service.icon}
@@ -778,9 +752,7 @@ export default function Terms() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                transition={{ duration: 0.6 }}><h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Terms of Service
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -801,9 +773,7 @@ export default function Terms() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h2 className="text-4xl font-bold mb-6 text-white">
+                  transition={{ duration: 0.6 }}><h2 className="text-4xl font-bold mb-6 text-white">
                     Understanding Our Terms
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -825,9 +795,7 @@ export default function Terms() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="relative"
-                >
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+                  className="relative"><div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
                     <div className="text-center space-y-6">
                       <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
                         <FileText className="w-12 h-12 text-white" />
@@ -859,9 +827,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>
                 <p className="text-xl text-gray-300">Essential information about using our services</p>
               </motion.div>
               
@@ -872,9 +838,7 @@ export default function Terms() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"><div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
                         {section.icon}
                       </div>
@@ -901,9 +865,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>
                 <p className="text-xl text-gray-300">Activities that are not allowed when using our services</p>
               </motion.div>
               
@@ -911,9 +873,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30"
-              >
-                <div className="flex items-center gap-4 mb-6">
+                className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30"><div className="flex items-center gap-4 mb-6">
                   <AlertTriangle className="w-8 h-8 text-red-400" />
                   <h3 className="text-2xl font-bold text-white">What You Cannot Do</h3>
                 </div>
@@ -942,9 +902,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>
                 <p className="text-xl text-gray-300">Important information about service availability and warranties</p>
               </motion.div>
               
@@ -952,9 +910,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30"
-              >
-                <div className="flex items-center gap-4 mb-6">
+                className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30"><div className="flex items-center gap-4 mb-6">
                   <Shield className="w-8 h-8 text-yellow-400" />
                   <h3 className="text-2xl font-bold text-white">Service Limitations</h3>
                 </div>
@@ -984,9 +940,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-12"
-              >
-                <div>
+                className="space-y-12"><div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Terms and Conditions</h2>
                   
                   <div className="space-y-8">
@@ -1149,9 +1103,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
+              className="text-center mb-16"><h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
               <p className="text-xl text-gray-400 leading-relaxed">
                 These Terms of Service govern your use of Zion Tech Group's website and services. 
                 By using our services, you agree to these terms.
@@ -1167,9 +1119,7 @@ export default function Terms() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"
-                >
-                  <div className="flex items-center space-x-3 mb-4">
+                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"><div className="flex items-center space-x-3 mb-4">
                     {section.icon}
                     <h3 className="text-xl font-semibold">{section.title}</h3>
                   </div>
@@ -1188,9 +1138,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-12"
-            >
-              <div className="text-center mb-16">
+              className="space-y-12"><div className="text-center mb-16">
                 <h2 className="text-4xl font-bold mb-4">Detailed Terms and Conditions</h2>
                 <p className="text-xl text-gray-400">
                   Complete terms governing your use of our services.
@@ -1376,9 +1324,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
-            >
-              <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"><Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-4">Agreement Acknowledgment</h3>
               <p className="text-gray-300 mb-6">
                 By using our services, you acknowledge that you have read and understood these Terms of Service 
@@ -1405,9 +1351,7 @@ export default Terms;
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-4xl font-bold mb-6 text-white">
+                transition={{ duration: 0.6 }}><h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About These Terms?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
@@ -1417,16 +1361,12 @@ export default Terms;
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <Mail className="w-5 h-5" />
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><Mail className="w-5 h-5" />
                     Email Us
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <User className="w-5 h-5" />
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><User className="w-5 h-5" />
                     Contact Form
                   </a>
                 </div>
@@ -1621,9 +1561,7 @@ export default function Terms() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              transition={{ duration: 0.8 }}><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Key Terms & Conditions
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -1812,9 +1750,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 User Obligations
               </h2>
@@ -1873,9 +1809,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Liability & Limitations
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Intellectual Property
@@ -1886,9 +1820,7 @@ export default function Terms() {
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Additional Terms
               </h2>
               <p className="text-lg text-gray-300">
@@ -1901,9 +1833,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Limitation of Liability</h3>
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"><h3 className="text-xl font-bold text-white mb-4">Limitation of Liability</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   In no event shall Zion Tech Group, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from your use of the service.
                 </p>
@@ -1916,9 +1846,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Governing Law</h3>
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"><h3 className="text-xl font-bold text-white mb-4">Governing Law</h3>
                 <p className="text-gray-300 leading-relaxed">
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of our services shall be resolved in the courts of the United States.
                 </p>
@@ -1928,9 +1856,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"
-              >
-                <h3 className="text-xl font-bold text-white mb-4">Changes to Terms</h3>
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8"><h3 className="text-xl font-bold text-white mb-4">Changes to Terms</h3>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   We reserve the right to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days notice prior to any new terms taking effect.
                 </p>
@@ -1950,9 +1876,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+              className="text-center mb-16"><h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Questions About Terms?
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Limitation of Liability
@@ -2028,9 +1952,7 @@ export default function Terms() {
                   className="inline-flex items-center px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300"
                 >
                   General Contact
-                </a>
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                </a>><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Questions About These Terms?
               </h2>
               <p className="text-lg text-gray-300 mb-8">
@@ -2065,9 +1987,7 @@ export default function Terms() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Terms Overview
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2082,9 +2002,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group cursor-pointer"
-              >
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
+                className="group cursor-pointer"><div className="p-6 rounded-2xl bg-gradient-to-br from-gray-800/50 to-black/50 border border-white/10 hover:border-cyan-500/30 transition-all duration-300">
                   <div className={`w-16 h-16 mb-4 rounded-2xl bg-gradient-to-r ${section.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
                     {section.icon}
                   </div>
@@ -2104,9 +2022,7 @@ export default function Terms() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Service Categories & Terms
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -2121,9 +2037,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group"
-              >
-                <div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
+                className="group"><div className="bg-gradient-to-br from-gray-800/50 to-black/50 rounded-2xl border border-white/10 hover:border-cyan-500/30 transition-all duration-300 overflow-hidden">
                   <div className="h-24 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center">
                     <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center">
                       {service.icon}
@@ -2176,9 +2090,7 @@ export default function Terms() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                transition={{ duration: 0.6 }}><h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Terms of Service
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -2199,9 +2111,7 @@ export default function Terms() {
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <h2 className="text-4xl font-bold mb-6 text-white">
+                  transition={{ duration: 0.6 }}><h2 className="text-4xl font-bold mb-6 text-white">
                     Understanding Our Terms
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -2223,9 +2133,7 @@ export default function Terms() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-                  className="relative"
-                >
-                  <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
+                  className="relative"><div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
                     <div className="text-center space-y-6">
                       <div className="w-24 h-24 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
                         <FileText className="w-12 h-12 text-white" />
@@ -2257,9 +2165,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Key Terms and Conditions</h2>
                 <p className="text-xl text-gray-300">Essential information about using our services</p>
               </motion.div>
               
@@ -2270,9 +2176,7 @@ export default function Terms() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
-                  >
-                    <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
+                    className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"><div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
                         {section.icon}
                       </div>
@@ -2299,9 +2203,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Prohibited Activities</h2>
                 <p className="text-xl text-gray-300">Activities that are not allowed when using our services</p>
               </motion.div>
               
@@ -2309,9 +2211,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30"
-              >
-                <div className="flex items-center gap-4 mb-6">
+                className="bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-2xl p-8 border border-red-500/30"><div className="flex items-center gap-4 mb-6">
                   <AlertTriangle className="w-8 h-8 text-red-400" />
                   <h3 className="text-2xl font-bold text-white">What You Cannot Do</h3>
                 </div>
@@ -2340,9 +2240,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-center mb-16"
-              >
-                <h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>
+                className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 text-white">Service Limitations and Disclaimers</h2>
                 <p className="text-xl text-gray-300">Important information about service availability and warranties</p>
               </motion.div>
               
@@ -2350,9 +2248,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30"
-              >
-                <div className="flex items-center gap-4 mb-6">
+                className="bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl p-8 border border-yellow-500/30"><div className="flex items-center gap-4 mb-6">
                   <Shield className="w-8 h-8 text-yellow-400" />
                   <h3 className="text-2xl font-bold text-white">Service Limitations</h3>
                 </div>
@@ -2382,9 +2278,7 @@ export default function Terms() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="space-y-12"
-              >
-                <div>
+                className="space-y-12"><div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Terms and Conditions</h2>
                   
                   <div className="space-y-8">
@@ -2547,9 +2441,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
+              className="text-center mb-16"><h2 className="text-4xl font-bold mb-6">Terms Overview</h2>
               <p className="text-xl text-gray-400 leading-relaxed">
                 These Terms of Service govern your use of Zion Tech Group's website and services. 
                 By using our services, you agree to these terms.
@@ -2565,9 +2457,7 @@ export default function Terms() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"
-                >
-                  <div className="flex items-center space-x-3 mb-4">
+                  className="p-6 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-gray-700 rounded-xl"><div className="flex items-center space-x-3 mb-4">
                     {section.icon}
                     <h3 className="text-xl font-semibold">{section.title}</h3>
                   </div>
@@ -2586,9 +2476,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="space-y-12"
-            >
-              <div className="text-center mb-16">
+              className="space-y-12"><div className="text-center mb-16">
                 <h2 className="text-4xl font-bold mb-4">Detailed Terms and Conditions</h2>
                 <p className="text-xl text-gray-400">
                   Complete terms governing your use of our services.
@@ -2774,9 +2662,7 @@ export default function Terms() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"
-            >
-              <Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              className="p-8 bg-gradient-to-br from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-400/20 rounded-xl"><Scale className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
               <h3 className="text-2xl font-bold mb-4">Agreement Acknowledgment</h3>
               <p className="text-gray-300 mb-6">
                 By using our services, you acknowledge that you have read and understood these Terms of Service 
@@ -2803,9 +2689,7 @@ export default Terms;
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-              >
-                <h2 className="text-4xl font-bold mb-6 text-white">
+                transition={{ duration: 0.6 }}><h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About These Terms?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
@@ -2815,16 +2699,12 @@ export default Terms;
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <a
                     href="mailto:kleber@ziontechgroup.com"
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <Mail className="w-5 h-5" />
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><Mail className="w-5 h-5" />
                     Email Us
                   </a>
                   <a
                     href="/contact"
-                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-                  >
-                    <User className="w-5 h-5" />
+                    className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"><User className="w-5 h-5" />
                     Contact Form
                   </a>
                 </div>

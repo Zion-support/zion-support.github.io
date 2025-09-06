@@ -1,11 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  setIsMobile (isMobileDevice);
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
 window.addEventListener ('resize', checkDevice);
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -13,7 +10,6 @@ import {
   Wifi, WifiOff, Signal, SignalHigh, 
   Mouse, Hand
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // TouchEvent types are already defined in DOM
 
@@ -470,9 +466,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
-            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"
-          >
-            <div className="p-6">
+            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"><div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Mobile Optimizer</h2>
                 <button
@@ -566,9 +560,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       <button
         onClick={() => setShowMobilePanel(!showMobilePanel)}
         className="fixed top-4 right-4 z-50 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50"
-        aria-label="Mobile optimization panel"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        aria-label="Mobile optimization panel"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       </button>
@@ -612,12 +604,11 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     </>
   )
 };
-<<<<<<< HEAD
 children 
 }{
   /* Mobile Optimization Panel */ 
 }<AnimatePresence> {
-  showMobilePanel && (<motion.div > <div className="p-6" > <div className="flex items-center justify-between mb-6" > <h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) ) 
+  showMobilePanel && (<motion.div><div className="p-6"><div className="flex items-center justify-between mb-6"><h2 className="text-xl font-bold text-white" >Mobile Optimizer</h2> <button > × </button> </div> </div>) ) 
 }</div> </div> > Scroll to Top </button> <button > Scroll to Bottom </button> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> {
   /* Mobile Toggle Button */ 
@@ -630,7 +621,6 @@ children
 }</style> </>) 
 };
 export default MobileOptimizer;
-=======
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -1094,9 +1084,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
             initial={{ opacity: 0, x: 300 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
-            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"
-          >
-            <div className="p-6">
+            className="fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-md border-l border-cyan-500/30 z-40 overflow-y-auto"><div className="p-6">
               <div className="flex items-center justify-between mb-6">
                 <h2 className="text-xl font-bold text-white">Mobile Optimizer</h2>
                 <button
@@ -1190,9 +1178,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
       <button
         onClick={() => setShowMobilePanel(!showMobilePanel)}
         className="fixed top-4 right-4 z-50 p-3 bg-purple-600 hover:bg-purple-700 text-white rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-purple-500/50"
-        aria-label="Mobile optimization panel"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        aria-label="Mobile optimization panel"><svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
         </svg>
       </button>
@@ -1238,8 +1224,5 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
 };
 
 export default MobileOptimizer;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 export default MobileOptimizer;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

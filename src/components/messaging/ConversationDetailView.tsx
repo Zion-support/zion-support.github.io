@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
@@ -199,7 +194,6 @@ export function ConversationDetailView() {
       </div>
     </div>
   );
-<<<<<<< HEAD
 
 });
 <AvatarImage src= {;
@@ -208,9 +202,9 @@ export function ConversationDetailView() {
   activeConversation.other user.name ;
 }/> activeConversation.other user.user type === 'employer' ? 'Employer' : activeConversation.other user.user type === 'admin' ? 'Admin' : 'User' ;
 }</div> </div> </div> </div> {;
-  activeConversation.context data && activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0" > <AspectRatio ratio= {;
+  activeConversation.context data && activeConversation.context data.image url && (<div className="w-16 h-16 flex-shrink-0"><AspectRatio ratio= {;
   1/1 ";
-}className="rounded bg-zion-blue-dark/30 overflow-hidden" > <img /> </AspectRatio> </div>) ;
+}className="rounded bg-zion-blue-dark/30 overflow-hidden"><img /> </AspectRatio> </div>) ;
 }<div> {;
   activeConversation.context data.description ;
 }</div>) ;
@@ -229,14 +223,7 @@ export function ConversationDetailView() {
   messagesEndRef ;
 }/> </div> /> <Button > Send </Button> </form> </div> </div>) ;
 }'"
-=======
-
-<<<<<<< HEAD
 
   
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

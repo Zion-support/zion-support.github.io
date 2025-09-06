@@ -299,9 +299,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='text-center max-w-4xl mx-auto'
             className="text-center max-w-4xl mx-auto"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+ursor/integrate-build-improve-and-re-verify-b76c><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Get Started Today
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
@@ -319,9 +317,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <div className='flex items-center gap-2 text-green-400'>
                 <CheckCircle className='w-6 h-6' />
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
+            className="text-center max-w-4xl mx-auto"><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
               Get Started Today
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
@@ -363,18 +359,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
             </h2>
             <p className="text-xl text-gray-400">From initial consultation to full implementation</p>
           </motion.div>
 
           <div className='grid md:grid-cols-4 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Simple 4-Step Process
             </h2>
             <p className="text-xl text-gray-400">From initial consultation to full implementation</p>
@@ -394,9 +386,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   currentStep === step.step
                     ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50'
                     : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50'
-                }`}
-              >
-                <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold'>
+                }`}><div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold'>
                   {step.step}
                 </div>
                 <div className='flex justify-center mb-4'>{step.icon}</div>
@@ -440,18 +430,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Choose Your Technology Path
               </h2>
               <p className="text-xl text-gray-400">Select the area that best aligns with your business goals</p>
             </motion.div>
 
             <div className='grid lg:grid-cols-2 gap-8'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Choose Your Technology Path
               </h2>
               <p className="text-xl text-gray-400">Select the area that best aligns with your business goals</p>
@@ -470,9 +456,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   className='group cursor-pointer'
                   className="group cursor-pointer"
 ursor/integrate-build-improve-and-re-verify-b76c
-                  onClick={() => handlePathSelection(path.id)}
-                >
-                  <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
+                  onClick={() => handlePathSelection(path.id)}><div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="flex-shrink-0">{path.icon}</div>
                       <div>
@@ -492,14 +476,10 @@ ursor/integrate-build-improve-and-re-verify-b76c
                           {path.features.map(feature => (
                             <li
                               key={feature}
-                              className='flex items-center gap-2 text-gray-300'
-                            >
-                              <CheckCircle className='w-4 h-4 text-cyan-400' />
+                              className='flex items-center gap-2 text-gray-300'><CheckCircle className='w-4 h-4 text-cyan-400' />
                               <span className='text-sm'>{feature}</span>
                   className="group cursor-pointer"
-                  onClick={() => handlePathSelection(path.id)}
-                >
-                  <div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
+                  onClick={() => handlePathSelection(path.id)}><div className="p-8 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="flex-shrink-0">{path.icon}</div>
                       <div>
@@ -542,9 +522,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                               key={useCase}
                               className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm"
                               className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm"
-ursor/integrate-build-improve-and-re-verify-b76c
-                            >
-                              {useCase}
+ursor/integrate-build-improve-and-re-verify-b76c>{useCase}
                             </span>
                           ))}
                         </div>
@@ -615,9 +593,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
               transition={{ duration: 0.8 }}
               className='text-center mb-16'
               className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-            >
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Define Your Requirements
               </h2>
               <p className="text-xl text-gray-400">Help us understand your project goals and constraints</p>
@@ -641,9 +617,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                         Project Timeline
                       </label>
                       <select className='w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300'>
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Define Your Requirements
               </h2>
               <p className="text-xl text-gray-400">Help us understand your project goals and constraints</p>
@@ -761,18 +735,14 @@ ursor/integrate-build-improve-and-re-verify-b76c
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
             className="text-center mb-16"
-ursor/integrate-build-improve-and-re-verify-b76c
-          >
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+ursor/integrate-build-improve-and-re-verify-b76c><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
             </h2>
             <p className="text-xl text-gray-400">Get started immediately with these quick options</p>
           </motion.div>
 
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            className="text-center mb-16"><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Quick Start Options
             </h2>
             <p className="text-xl text-gray-400">Get started immediately with these quick options</p>
@@ -790,9 +760,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className='group cursor-pointer'
                 className="group cursor-pointer"
-ursor/integrate-build-improve-and-re-verify-b76c
-              >
-                <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
+ursor/integrate-build-improve-and-re-verify-b76c><div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {option.icon}
                   </div>
@@ -810,9 +778,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   <button
                     className={`w-full py-3 px-4 bg-gradient-to-r ${option.color} text-white rounded-xl font-semibold hover:shadow-2xl transition-all duration-300`}
                   >
-                className="group cursor-pointer"
-              >
-                <div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
+                className="group cursor-pointer"><div className="p-6 bg-gradient-to-br from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/50 hover:border-cyan-500/30 transition-all duration-300">
                   <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {option.icon}
                   </div>
@@ -851,9 +817,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
+            transition={{ duration: 0.8 }}><h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
             <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
 ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Begin Your Journey?
@@ -917,15 +881,15 @@ ursor/integrate-build-improve-and-re-verify-b76c
   currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50' 
 }` 
 }> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6" > <div> </li>) ) 
+}</div> </div> </section>><h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Choose Your Technology Path </h2> <p className="text-xl text-gray-400" >Select the area that best aligns with your business goals</p> </motion.div> </div> </div> <div className="grid md:grid-cols-2 gap-6 mb-6"><div> </li>) ) 
 }</ul> </div> <div> <span key= {
   useCase 
-}className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm" > {
+}className="px-3 py-1 bg-gray-800/50 text-gray-300 rounded-full text-sm">{
   useCase 
 }</span>) ) 
-}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" > <span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) ) 
+}</div> </div> </div> </span> </div> <div className="flex items-center gap-2 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300"><span className="font-medium" >Select Path</span> <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" /> </div> </div> </div> </motion.div>) ) 
 }</div> </div> </section>) 
-}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6" > <div className="grid md:grid-cols-2 gap-6" > <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300" > <option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6" > <button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>) 
+}> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Define Your Requirements </h2> <p className="text-xl text-gray-400" >Help us understand your project goals and constraints</p> </motion.div> </h3> <p className="text-gray-300" > Now let's gather more details about your specific needs </p> </div> <div className="space-y-6"><div className="grid md:grid-cols-2 gap-6"><div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Timeline</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"><option>Immediate (1-2 weeks) </option> <option>1-3 months</option> <option>3-6 months</option> <option>6+ months</option> </select> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Budget Range</label> <select className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:outline-none focus:border-cyan-500/50 focus:ring-2 focus:ring-cyan-500/20 transition-all duration-300"><option>Under $50K</option> <option>$50K - $100K</option> <option>$100K - $500K</option> <option>$500K+</option> </select> </div> </div> <div> <label className="block text-sm font-medium text-gray-300 mb-2" >Project Description</label> <textarea /> </div> <div className="flex justify-between pt-6"><button > Previous </button> <button > Next Step </button> </div> </div> </div> </div> </div> </section>) 
 }> <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Quick Start Options </h2> <p className="text-xl text-gray-400" >Get started immediately with these quick options</p> </motion.div> </span> </div> <button className= {
   `w-full py-3 px-4 bg-gradient-to-r $ {
   option.color 

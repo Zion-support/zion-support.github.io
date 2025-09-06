@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -11,8 +9,6 @@ import {
   Terminal,
   Webhook,;
 } from 'lucide-react';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
@@ -64,9 +60,7 @@ export function DeveloperPortal() {
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <Icon size={16} className="mr-2" />
+                onClick={() => setActiveTab(tab.id)}><Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
             )
@@ -83,8 +77,6 @@ export function DeveloperPortal() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
 import { useState } from "react";
 import { useAuth } from "@/hooks/useAuth";
@@ -100,7 +92,6 @@ interface TabDefinition {
   label: string,
   icon: LucideIcon
 }
-
 
 export function DeveloperPortal() { const { user  } = useAuth(),
   const [ activeTab, setActiveTab ] = useState<string>("documentation"),
@@ -137,9 +128,7 @@ export function DeveloperPortal() { const { user  } = useAuth(),
                     ? "text-white border-zion-purple"
                     : "text-zinc-500 border-transparent hover:text-zinc-400 hover:border-zinc-700"
                 }`}
-                onClick={() => setActiveTab(tab.id)}
-              >
-                <Icon size={16} className="mr-2" />
+                onClick={() => setActiveTab(tab.id)}><Icon size={16} className="mr-2" />
                 {tab.label}
               </button>
             )
@@ -157,10 +146,7 @@ export function DeveloperPortal() { const { user  } = useAuth(),
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export default function ProtectedDeveloperPortal() {
   return (
@@ -168,11 +154,4 @@ export default function ProtectedDeveloperPortal() {
       <DeveloperPortal />
     </ProtectedRoute>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

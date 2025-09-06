@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import { useState } from "react";
 import { Briefcase, Star, User } from 'lucide-react'
@@ -66,9 +62,7 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
                 isSelected 
                   ? "border-zion-purple bg-zion-purple/10 text-zion-purple" 
                   : "border-zion-blue-light hover:border-zion-cyan/50 text-white"
-              }`}
-            >
-              <div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
+              }`}><div className={`p-3 rounded-full ${isSelected ? "bg-zion-purple" : "bg-zion-blue"}`}>
                 <Icon className={`h-6 w-6 ${isSelected ? "text-white" : "text-zion-slate-light"}`} />
               </div>
               <div className="text-center">
@@ -83,15 +77,9 @@ export function UserTypeSelection({ onSelect, selectedType }: UserTypeSelectionP
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
           const Icon = type.icon;
           const isSelected = selectedType === type.id;
           
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

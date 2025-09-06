@@ -118,9 +118,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
                   {t.items.map(i => (
                     <li
                       key={i}
-                      className='flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400'
-                    >
-                      <Check /> <span>{i}</span>
+                      className='flex items-start gap-2 w-4 h-4 mt-0.5 text-emerald-400'><Check /> <span>{i}</span>
                     </li>
         <meta name="description" content="OpenAPI/GraphQL mock servers, contract tests in CI, and deployment gates with snapshot diffs and approvals." />
         <link rel="canonical" href="https://ziontechgroup.com/api-mock-contract-testing" />
@@ -175,7 +173,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-              <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+              <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span>{contactInfo.address}</span></div>
             </div>
             <div className="text-center">
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</a>
@@ -183,7 +181,7 @@ ursor/integrate-build-improve-and-re-verify-b76c
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mb-4">
               <div className="flex items-center justify-center gap-2 text-cyan-400 w-4 h-4"><Phone /><span>{contactInfo.mobile}</span></div>
               <div className="flex items-center justify-center gap-2 text-purple-400 w-4 h-4"><Mail /><span>{contactInfo.email}</span></div>
-              <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span >{contactInfo.address}</span></div>
+              <div className="flex items-center justify-center gap-2 text-green-400 w-4 h-4 text-xs"><MapPin /><span>{contactInfo.address}</span></div>
             </div>
             <div className="text-center">
               <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl">Book a Demo</a>

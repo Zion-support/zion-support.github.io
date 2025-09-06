@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  //Combine all services for comprehensive showcase const allServices = [ ...nextGenerationAIServices;
 ...cuttingEdgeITServices;
 ...innovativeMicroSaasV2Services;
@@ -22,7 +20,6 @@ const containerVariants = {
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -49,7 +46,6 @@ export default function EnhancedServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [sortBy, setSortBy] = useState<string>('name');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -197,9 +193,7 @@ export default function EnhancedServicesShowcase() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+              transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Enhanced Services Showcase
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -235,9 +229,7 @@ export default function EnhancedServicesShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 Featured Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -253,9 +245,7 @@ export default function EnhancedServicesShowcase() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="relative"
-                >
-                  <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
+                  className="relative"><div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="relative z-10">
                       <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
@@ -313,9 +303,7 @@ export default function EnhancedServicesShowcase() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {categories.map((category) => (
+                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
@@ -328,9 +316,7 @@ export default function EnhancedServicesShowcase() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {sortOptions.map((option) => (
+                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>
@@ -347,9 +333,7 @@ export default function EnhancedServicesShowcase() {
                         viewMode === 'grid' 
                           ? 'bg-cyan-500 text-white' 
                           : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <Grid className="w-5 h-5" />
+                      }`}><Grid className="w-5 h-5" />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
@@ -357,9 +341,7 @@ export default function EnhancedServicesShowcase() {
                         viewMode === 'list' 
                           ? 'bg-cyan-500 text-white' 
                           : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <List className="w-5 h-5" />
+                      }`}><List className="w-5 h-5" />
                     </button>
                   </div>
                 </div>
@@ -378,15 +360,11 @@ export default function EnhancedServicesShowcase() {
               className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
-              }
-            >
-              {filteredServices.map((service, index) => (
+              }>{filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
-                >
-                  {viewMode === 'grid' ? (
+                  className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}>{viewMode === 'grid' ? (
                     <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover: border-cyan-500/40 transition-colors h-full">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
@@ -537,9 +515,7 @@ export default function EnhancedServicesShowcase() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -588,12 +564,10 @@ export default function EnhancedServicesShowcase() {
     </UltraAdvancedFuturisticMatrixBackground>
   );
 }
-<<<<<<< HEAD
 }> {
   children 
 }</button>) 
 };
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -767,9 +741,7 @@ export default function EnhancedServicesShowcase() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
+              transition={{ duration: 0.8 }}><h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">
                 Enhanced Services Showcase
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -805,9 +777,7 @@ export default function EnhancedServicesShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
+              className="text-center mb-16"><h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent mb-6">
                 Featured Service Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -823,9 +793,7 @@ export default function EnhancedServicesShowcase() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   viewport={{ once: true }}
-                  className="relative"
-                >
-                  <div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
+                  className="relative"><div className={`bg-gradient-to-br ${category.color} p-8 rounded-2xl text-white relative overflow-hidden`}>
                     <div className="absolute inset-0 bg-black/20"></div>
                     <div className="relative z-10">
                       <h3 className="text-2xl font-bold mb-4">{category.title}</h3>
@@ -883,9 +851,7 @@ export default function EnhancedServicesShowcase() {
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {categories.map((category) => (
+                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{categories.map((category) => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
@@ -898,9 +864,7 @@ export default function EnhancedServicesShowcase() {
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
-                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >
-                    {sortOptions.map((option) => (
+                    className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">{sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>
@@ -917,9 +881,7 @@ export default function EnhancedServicesShowcase() {
                         viewMode === 'grid' 
                           ? 'bg-cyan-500 text-white' 
                           : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <Grid className="w-5 h-5" />
+                      }`}><Grid className="w-5 h-5" />
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
@@ -927,9 +889,7 @@ export default function EnhancedServicesShowcase() {
                         viewMode === 'list' 
                           ? 'bg-cyan-500 text-white' 
                           : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      <List className="w-5 h-5" />
+                      }`}><List className="w-5 h-5" />
                     </button>
                   </div>
                 </div>
@@ -948,15 +908,11 @@ export default function EnhancedServicesShowcase() {
               className={viewMode === 'grid' 
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
-              }
-            >
-              {filteredServices.map((service, index) => (
+              }>{filteredServices.map((service, index) => (
                 <motion.div
                   key={service.id}
                   variants={itemVariants}
-                  className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
-                >
-                  {viewMode === 'grid' ? (
+                  className={viewMode === 'grid' ? '' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}>{viewMode === 'grid' ? (
                     <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover: border-cyan-500/40 transition-colors h-full">
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-2">
@@ -1107,9 +1063,7 @@ export default function EnhancedServicesShowcase() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              viewport={{ once: true }}><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -1158,8 +1112,6 @@ export default function EnhancedServicesShowcase() {
     </UltraAdvancedFuturisticMatrixBackground>
   );
 }
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Button component (if not imported)
 const Button = ({ 
@@ -1203,9 +1155,5 @@ const Button = ({
       {children}
     </button>
   )
-<<<<<<< HEAD
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

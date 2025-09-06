@@ -1,18 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import Image from 'next/image';
 
-=======
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import Image from "next/image";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface ListingCardProps {
   id?: string;
   title: string,
@@ -47,9 +43,7 @@ export function ListingCard({
       className={cn(
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple";
         className
-      )}
-    >
-      {images && images.length > 0 && images[0] && (
+      )}>{images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
@@ -71,13 +65,11 @@ export function ListingCard({
         {tags && tags.length > 0 && (
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
-<<<<<<< HEAD
               <Badge
                 key={i}
                 variant='outline'
                 className='border-zion-slate-dark text-zion-slate-light'
               >
-=======
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
@@ -120,9 +112,7 @@ export function ListingCard({
 
         "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple",
         className
-      )}
-    >
-      {images && images.length > 0 && images[0] && (
+      )}>{images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
@@ -145,21 +135,13 @@ export function ListingCard({
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {tag}
               </Badge>
             ))}
           </div>
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
             {author.avatarUrl ? (
@@ -167,9 +149,7 @@ export function ListingCard({
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
-<<<<<<< HEAD
             <span className='text-sm text-zion-slate-light'>{author.name}</span>
-=======
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -179,20 +159,10 @@ export function ListingCard({
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
             <span className="text-sm text-zion-slate-light">{author.name}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <span className="text-sm text-zion-slate-light">{author.name}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         )}
       </div>
     </Link>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

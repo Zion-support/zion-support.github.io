@@ -1,9 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function AuthIndexPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -11,8 +7,6 @@ export default function AuthIndexPage() {
       <p className="mt-2 text-gray-600 dark: text-gray-300">Authentication UI coming soon.</p>
     </div>
   );
-<<<<<<< HEAD
-=======
 export default function AuthIndexPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -21,7 +15,4 @@ export default function AuthIndexPage() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

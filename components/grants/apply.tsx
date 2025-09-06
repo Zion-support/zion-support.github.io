@@ -2,8 +2,6 @@ import { useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const categories: GrantCategory[] = [
   'Ecosystem Tools',
@@ -12,12 +10,8 @@ const categories: GrantCategory[] = [
   'Research Grants',
 ];
 
-=======
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function ApplyGrantPage() {
   const router = useRouter();
   const [program, setProgram] = useState<'grant' | 'incubator'>('grant');
@@ -26,17 +20,11 @@ export default function ApplyGrantPage() {
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(
     'USDC'
   );
-=======
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -52,20 +40,16 @@ export default function ApplyGrantPage() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
           program,
           projectName,
           teamInfo,
           proposalSummary,
           timeline,
-=======
           program;
           projectName;
           teamInfo;
           proposalSummary;
           timeline;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           budgetAmount: Number(budgetAmount || 0),
           budgetCurrency;
           supportingLinks: supportingLinks
@@ -82,9 +66,7 @@ export default function ApplyGrantPage() {
     } catch (e: any) {
       setError(e.message)
     } finally {
-<<<<<<< HEAD
       setLoading(false);
-=======
           program;
           projectName;
           teamInfo;
@@ -107,17 +89,12 @@ export default function ApplyGrantPage() {
       setError(e.message)
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
       </h1>
@@ -128,11 +105,8 @@ export default function ApplyGrantPage() {
             <select
               className='mt-1 w-full border rounded p-2'
               value={program}
-              onChange={e => setProgram(e.target.value as any)}
-            >
-              <option value='grant'>Grant</option>
+              onChange={e => setProgram(e.target.value as any)}><option value='grant'>Grant</option>
               <option value='incubator'>Incubator</option>
-=======
       <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
       <div className="grid gap-4 max-w-3xl">
         <div className="grid md:grid-cols-2 gap-3">
@@ -140,7 +114,6 @@ export default function ApplyGrantPage() {
             <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
               <option value="grant">Grant</option>
               <option value="incubator">Incubator</option>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </select>
           </label>
           <label className="text-sm">Sector
@@ -185,7 +158,6 @@ export default function ApplyGrantPage() {
 
         {error && <div className="text-sm text-red-600">{error}</div>}
 
-<<<<<<< HEAD
         <div className='flex gap-3'>
           <button
             disabled={loading}
@@ -201,7 +173,6 @@ export default function ApplyGrantPage() {
           >
             Submit for Review
           </button>
-=======
       <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
       <div className="grid gap-4 max-w-3xl">
         <div className="grid md:grid-cols-2 gap-3">
@@ -256,21 +227,11 @@ export default function ApplyGrantPage() {
         <div className="flex gap-3">
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="flex gap-3">
           <button disabled={loading} onClick={() => save(false)} className="px-4 py-2 border rounded disabled:opacity-50">Save Draft</button>
           <button disabled={loading} onClick={() => save(true)} className="px-4 py-2 bg-blue-600 text-white rounded disabled: opacity-50">Submit for Review</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

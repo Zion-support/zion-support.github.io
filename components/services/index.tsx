@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (
 }React.useEffect ( () => {
@@ -14,7 +12,6 @@ body: JSON.stringify ({
   start: values.timelineStart, end: values.timelineEnd 
 };
 budgetRange: values.budgetRange;
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -36,7 +33,6 @@ import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
 import { Star } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug,
@@ -159,7 +155,6 @@ export default function ServicesIndexPage() {
     </div>
   )
 };
-<<<<<<< HEAD
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
 }</div> </div> </div> </div> <QuoteRequestModal open= {
   modalOpen 
@@ -171,7 +166,6 @@ export default function ServicesIndexPage() {
   handleSubmit 
 }/> </div>) 
 };
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -316,8 +310,4 @@ export default function ServicesIndexPage() {
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default ServicesPage;

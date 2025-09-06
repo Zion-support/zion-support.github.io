@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useMessaging } from '@/context/MessagingContext';
 import Link from 'next/link';
@@ -46,9 +45,7 @@ export function AppHeader() {
         className={cn(
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground";
           { "bg-red-500": mobileMenuOpen }
-        )}
-      >
-        <div className="container flex h-16 items-center px-4 sm: px-6">
+        )}><div className="container flex h-16 items-center px-4 sm: px-6">
           <Logo />
           {showTagline && (
             <span className="ml-4 hidden text-sm text-muted-foreground md:inline">
@@ -67,9 +64,7 @@ export function AppHeader() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="inline-flex items-center justify-center rounded-md p-2 text-foreground/70 hover:text-foreground hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               aria-expanded={mobileMenuOpen}
-              aria-label={t('general.toggle_mobile_menu')}
-            >
-              <span className="sr-only">{t('general.open_main_menu')}</span>
+              aria-label={t('general.toggle_mobile_menu')}><span className="sr-only">{t('general.open_main_menu')}</span>
               {mobileMenuOpen ? (
                 <X className="block h-6 w-6" aria-hidden="true" />
               ) : (
@@ -93,17 +88,13 @@ export function AppHeader() {
                   // For consistency with how sub-menus now set it:
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
                   openLoginModal(router.asPath)
-                }}
-              >
-                {t('auth.login')}
+                }}>{t('auth.login')}
               </Link>
               <Link
                 href="/signup"
                 className="ml-2 text-sm font-medium text-foreground/70 hover:text-foreground"
                 aria-label={t('auth.signup')}
-                data-testid="signup-nav-link"
-              >
-                {t('auth.signup')}
+                data-testid="signup-nav-link">{t('auth.signup')}
               </Link>
             </div>
           )}
@@ -138,19 +129,18 @@ export function AppHeader() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
   );
 
 }';
 }> {';';
   t ('auth.login') ;';
-}</Link> <Link > {';';
+}</Link> <Link>{';';
   t ('auth.signup') ;
 }</Link> </div>) ;";
 }<UserMenu /> </div>) ";";
 }</div> </header> <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={;";
   () => setMobileMenuOpen (false) ";";
-}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto" > <MobileMenu unreadCount= {;
+}aria-hidden="true" /> <div className="relative bg-background border-t border-border h-auto max-h-[calc (100vh-4rem) ] overflow-y-auto"><MobileMenu unreadCount= {;
   unreadCount ;
 }onClose= {;
   () => setMobileMenuOpen (false) ;
@@ -169,14 +159,8 @@ export function AppHeader() {
   setLoginOpen ;
 }/> </>) ;'";
 }'"'"
-=======
 
-<<<<<<< HEAD
   const showTagline = router.pathname === '/';
 
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
