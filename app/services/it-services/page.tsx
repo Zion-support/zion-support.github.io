@@ -23,7 +23,7 @@ export const metadata = {
           <ITSolutionCard
             title="Cloud Migration & Modernization"
             description="Complete cloud migration with modern architecture, cost optimization, and performance tuning"
-            features={["Multi-cloud strategy", "Container orchestration", "Serverless architecture", "Cost optimization", "Disaster recovery"]}
+            features={["Multi-cloud strategy", "Container orchestration", "Serverless architecture", "Cost optimization", "Disaster recovery", "Auto-scaling"]}
             pricing="$15,000 - $75,000"
             category="Cloud Services"
             icon="☁️"
@@ -31,7 +31,7 @@ export const metadata = {
           <ITSolutionCard
             title="DevOps & CI/CD Pipeline"
             description="Automated deployment pipelines with monitoring, testing, and quality gates"
-            features={["GitOps workflows", "Automated testing", "Blue-green deployments", "Infrastructure as code", "Monitoring integration"]}
+            features={["GitOps workflows", "Automated testing", "Blue-green deployments", "Infrastructure as code", "Monitoring integration", "Security scanning"]}
             pricing="$8,000 - $35,000"
             category="DevOps"
             icon="🔄"
@@ -39,7 +39,7 @@ export const metadata = {
           <ITSolutionCard
             title="Cybersecurity & Compliance"
             description="Comprehensive security assessment, hardening, and compliance management"
-            features={["Security audits", "Penetration testing", "Compliance frameworks", "Zero Trust architecture", "Incident response"]}
+            features={["Security audits", "Penetration testing", "Compliance frameworks", "Zero Trust architecture", "Incident response", "Threat hunting"]}
             pricing="$12,000 - $50,000"
             category="Security"
             icon="🔒"
@@ -47,7 +47,7 @@ export const metadata = {
           <ITSolutionCard
             title="Site Reliability Engineering"
             description="SRE practices with monitoring, alerting, and incident management"
-            features={["SLO/SLI definition", "Error budget management", "Chaos engineering", "On-call automation", "Performance optimization"]}
+            features={["SLO/SLI definition", "Error budget management", "Chaos engineering", "On-call automation", "Performance optimization", "Capacity planning"]}
             pricing="$10,000 - $40,000"
             category="SRE"
             icon="⚡"
@@ -55,7 +55,7 @@ export const metadata = {
           <ITSolutionCard
             title="Data Infrastructure & Analytics"
             description="Data pipeline setup with warehousing, analytics, and real-time processing"
-            features={["Data lake architecture", "ETL/ELT pipelines", "Real-time analytics", "Data governance", "ML infrastructure"]}
+            features={["Data lake architecture", "ETL/ELT pipelines", "Real-time analytics", "Data governance", "ML infrastructure", "Data quality"]}
             pricing="$18,000 - $60,000"
             category="Data Engineering"
             icon="📊"
@@ -63,10 +63,90 @@ export const metadata = {
           <ITSolutionCard
             title="Managed IT Services"
             description="24/7 IT operations management with proactive monitoring and support"
-            features={["24/7 monitoring", "Proactive maintenance", "Incident management", "Performance tuning", "Security updates"]}
+            features={["24/7 monitoring", "Proactive maintenance", "Incident management", "Performance tuning", "Security updates", "Backup management"]}
             pricing="$5,000+/month"
             category="Managed Services"
             icon="🛠️"
+          />
+          <ITSolutionCard
+            title="Network Infrastructure & SD-WAN"
+            description="Advanced network design, implementation, and management with software-defined networking"
+            features={["SD-WAN implementation", "Network security", "Load balancing", "VPN solutions", "Network monitoring", "Bandwidth optimization"]}
+            pricing="$12,000 - $45,000"
+            category="Networking"
+            icon="🌐"
+          />
+          <ITSolutionCard
+            title="Database Administration & Optimization"
+            description="Database design, optimization, and management for high-performance applications"
+            features={["Database design", "Performance tuning", "Backup & recovery", "High availability", "Security hardening", "Migration services"]}
+            pricing="$8,000 - $30,000"
+            category="Database"
+            icon="🗄️"
+          />
+          <ITSolutionCard
+            title="IT Service Management (ITSM)"
+            description="Complete IT service management implementation with ticketing, asset management, and workflows"
+            features={["Service desk setup", "Asset management", "Change management", "Incident management", "Knowledge base", "SLA management"]}
+            pricing="$10,000 - $35,000"
+            category="ITSM"
+            icon="🎫"
+          />
+          <ITSolutionCard
+            title="Disaster Recovery & Business Continuity"
+            description="Comprehensive disaster recovery planning and implementation for business continuity"
+            features={["DR planning", "Backup strategies", "Failover systems", "Recovery testing", "Business continuity", "RTO/RPO optimization"]}
+            pricing="$15,000 - $55,000"
+            category="Disaster Recovery"
+            icon="🚨"
+          />
+          <ITSolutionCard
+            title="Identity & Access Management (IAM)"
+            description="Enterprise identity management with single sign-on, multi-factor authentication, and access governance"
+            features={["SSO implementation", "MFA setup", "Access governance", "Privileged access", "Identity lifecycle", "Compliance reporting"]}
+            pricing="$12,000 - $40,000"
+            category="Identity Management"
+            icon="🔐"
+          />
+          <ITSolutionCard
+            title="IT Governance & Risk Management"
+            description="IT governance framework implementation with risk assessment and compliance management"
+            features={["Governance framework", "Risk assessment", "Compliance management", "Policy development", "Audit support", "Training programs"]}
+            pricing="$8,000 - $25,000"
+            category="Governance"
+            icon="📋"
+          />
+          <ITSolutionCard
+            title="Cloud Security & Compliance"
+            description="Comprehensive cloud security implementation with compliance frameworks and monitoring"
+            features={["Cloud security architecture", "Compliance frameworks", "Security monitoring", "Vulnerability management", "Incident response", "Audit support"]}
+            pricing="$15,000 - $50,000"
+            category="Cloud Security"
+            icon="☁️🔒"
+          />
+          <ITSolutionCard
+            title="IT Automation & Orchestration"
+            description="IT process automation with orchestration tools and workflow optimization"
+            features={["Process automation", "Orchestration tools", "Workflow optimization", "Script development", "Integration services", "Monitoring automation"]}
+            pricing="$10,000 - $35,000"
+            category="Automation"
+            icon="🤖"
+          />
+          <ITSolutionCard
+            title="IT Training & Knowledge Transfer"
+            description="Comprehensive IT training programs and knowledge transfer for technical teams"
+            features={["Technical training", "Certification prep", "Knowledge transfer", "Documentation", "Best practices", "Hands-on labs"]}
+            pricing="$5,000 - $20,000"
+            category="Training"
+            icon="🎓"
+          />
+          <ITSolutionCard
+            title="IT Cost Optimization & FinOps"
+            description="IT cost optimization and financial operations management for cloud and on-premises infrastructure"
+            features={["Cost analysis", "Resource optimization", "Budget planning", "FinOps implementation", "Cost monitoring", "ROI analysis"]}
+            pricing="$8,000 - $30,000"
+            category="Cost Optimization"
+            icon="💰"
           />
         </div>
       </section>

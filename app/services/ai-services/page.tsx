@@ -22,51 +22,147 @@ export const metadata = {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <AISolutionCard
             title="Intelligent Document Processing"
-            description="AI-powered document analysis, extraction, and intelligent routing for enterprise workflows"
-            features={["OCR & NLP processing", "Smart data extraction", "Automated routing", "Compliance checking", "Multi-format support"]}
+            description="Advanced AI-powered document analysis, extraction, and intelligent routing for enterprise workflows"
+            features={["Advanced OCR & NLP", "Smart data extraction", "Automated routing", "Compliance checking", "Multi-format support", "Real-time processing"]}
             pricing="$3,500/month"
             category="Document AI"
             icon="📄"
           />
           <AISolutionCard
             title="Conversational AI Assistant"
-            description="Custom chatbots and virtual assistants with natural language understanding and context awareness"
-            features={["Multi-language support", "Context retention", "Integration APIs", "Analytics dashboard", "Custom training"]}
+            description="Next-generation chatbots and virtual assistants with advanced natural language understanding and context awareness"
+            features={["Multi-language support", "Context retention", "Integration APIs", "Analytics dashboard", "Custom training", "Emotion recognition"]}
             pricing="$2,800/month"
             category="Conversational AI"
             icon="💬"
           />
           <AISolutionCard
             title="Predictive Analytics Engine"
-            description="Machine learning models for forecasting, risk assessment, and business intelligence"
-            features={["Time series forecasting", "Anomaly detection", "Risk modeling", "Real-time predictions", "Custom algorithms"]}
+            description="Advanced machine learning models for forecasting, risk assessment, and business intelligence"
+            features={["Time series forecasting", "Anomaly detection", "Risk modeling", "Real-time predictions", "Custom algorithms", "AutoML capabilities"]}
             pricing="$4,200/month"
             category="Predictive AI"
             icon="📊"
           />
           <AISolutionCard
             title="Computer Vision Platform"
-            description="Image and video analysis for quality control, security, and automated inspection"
-            features={["Object detection", "Quality inspection", "Facial recognition", "Video analytics", "Real-time processing"]}
+            description="Advanced image and video analysis for quality control, security, and automated inspection"
+            features={["Object detection", "Quality inspection", "Facial recognition", "Video analytics", "Real-time processing", "Edge deployment"]}
             pricing="$3,800/month"
             category="Computer Vision"
             icon="👁️"
           />
           <AISolutionCard
             title="AI-Powered Search & RAG"
-            description="Intelligent search with retrieval-augmented generation for knowledge management"
-            features={["Semantic search", "Vector databases", "Knowledge graphs", "Context-aware responses", "Multi-source integration"]}
+            description="Intelligent search with retrieval-augmented generation for knowledge management and enterprise search"
+            features={["Semantic search", "Vector databases", "Knowledge graphs", "Context-aware responses", "Multi-source integration", "Real-time indexing"]}
             pricing="$2,200/month"
             category="Search AI"
             icon="🔍"
           />
           <AISolutionCard
             title="Automated Content Generation"
-            description="AI content creation for marketing, documentation, and personalized communications"
-            features={["Multi-format content", "Brand voice training", "SEO optimization", "A/B testing", "Content scheduling"]}
+            description="AI content creation for marketing, documentation, and personalized communications with brand consistency"
+            features={["Multi-format content", "Brand voice training", "SEO optimization", "A/B testing", "Content scheduling", "Plagiarism detection"]}
             pricing="$1,900/month"
             category="Content AI"
             icon="✍️"
+          />
+          <AISolutionCard
+            title="AI Fraud Detection System"
+            description="Advanced fraud detection and prevention using machine learning for financial transactions and identity verification"
+            features={["Real-time fraud detection", "Behavioral analysis", "Risk scoring", "Identity verification", "Transaction monitoring", "Adaptive learning"]}
+            pricing="$4,500/month"
+            category="Security AI"
+            icon="🛡️"
+          />
+          <AISolutionCard
+            title="Intelligent Process Automation"
+            description="AI-powered business process automation with cognitive capabilities and decision-making intelligence"
+            features={["Process mining", "Cognitive automation", "Decision intelligence", "Exception handling", "Process optimization", "ROI tracking"]}
+            pricing="$3,200/month"
+            category="Process AI"
+            icon="⚙️"
+          />
+          <AISolutionCard
+            title="AI Customer Insights Platform"
+            description="Advanced customer analytics and insights platform with behavioral prediction and personalization"
+            features={["Customer segmentation", "Behavioral prediction", "Personalization engine", "Churn prediction", "Lifetime value analysis", "Real-time insights"]}
+            pricing="$2,600/month"
+            category="Customer AI"
+            icon="👤"
+          />
+          <AISolutionCard
+            title="AI Supply Chain Optimizer"
+            description="Intelligent supply chain optimization with demand forecasting, inventory management, and logistics optimization"
+            features={["Demand forecasting", "Inventory optimization", "Route optimization", "Supplier risk analysis", "Cost optimization", "Sustainability tracking"]}
+            pricing="$3,900/month"
+            category="Supply Chain AI"
+            icon="🚚"
+          />
+          <AISolutionCard
+            title="AI Code Assistant & Generator"
+            description="Advanced AI-powered code generation, review, and optimization for software development teams"
+            features={["Code generation", "Code review", "Bug detection", "Performance optimization", "Documentation generation", "Test case generation"]}
+            pricing="$2,400/month"
+            category="Developer AI"
+            icon="💻"
+          />
+          <AISolutionCard
+            title="AI Medical Diagnosis Assistant"
+            description="AI-powered medical diagnosis support with image analysis, symptom checking, and treatment recommendations"
+            features={["Medical image analysis", "Symptom analysis", "Treatment recommendations", "Drug interaction checking", "Clinical decision support", "HIPAA compliance"]}
+            pricing="$5,500/month"
+            category="Healthcare AI"
+            icon="🏥"
+          />
+          <AISolutionCard
+            title="AI Legal Document Analyzer"
+            description="Intelligent legal document analysis with contract review, compliance checking, and risk assessment"
+            features={["Contract analysis", "Compliance checking", "Risk assessment", "Legal research", "Document summarization", "Clause extraction"]}
+            pricing="$3,600/month"
+            category="Legal AI"
+            icon="⚖️"
+          />
+          <AISolutionCard
+            title="AI Marketing Attribution Engine"
+            description="Advanced marketing attribution and optimization using AI for multi-channel campaign analysis and ROI optimization"
+            features={["Multi-touch attribution", "Campaign optimization", "ROI analysis", "Customer journey mapping", "Budget allocation", "Performance prediction"]}
+            pricing="$2,800/month"
+            category="Marketing AI"
+            icon="📈"
+          />
+          <AISolutionCard
+            title="AI Voice & Speech Analytics"
+            description="Advanced voice and speech analysis for customer service, sentiment analysis, and voice biometrics"
+            features={["Voice biometrics", "Sentiment analysis", "Call transcription", "Quality monitoring", "Emotion detection", "Real-time analysis"]}
+            pricing="$2,200/month"
+            category="Voice AI"
+            icon="🎤"
+          />
+          <AISolutionCard
+            title="AI Recommendation Engine"
+            description="Advanced recommendation system with collaborative filtering, content-based filtering, and hybrid approaches"
+            features={["Collaborative filtering", "Content-based filtering", "Hybrid recommendations", "Real-time updates", "A/B testing", "Cold start handling"]}
+            pricing="$2,000/month"
+            category="Recommendation AI"
+            icon="🎯"
+          />
+          <AISolutionCard
+            title="AI Data Quality & Cleansing"
+            description="Intelligent data quality management with automated cleansing, validation, and enrichment capabilities"
+            features={["Data cleansing", "Quality validation", "Data enrichment", "Duplicate detection", "Format standardization", "Quality scoring"]}
+            pricing="$1,800/month"
+            category="Data AI"
+            icon="🧹"
+          />
+          <AISolutionCard
+            title="AI Translation & Localization"
+            description="Advanced AI translation and localization services with context awareness and cultural adaptation"
+            features={["Multi-language translation", "Context awareness", "Cultural adaptation", "Real-time translation", "Quality assessment", "Custom glossaries"]}
+            pricing="$2,100/month"
+            category="Translation AI"
+            icon="🌐"
           />
         </div>
       </section>

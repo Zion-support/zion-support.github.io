@@ -23,52 +23,148 @@ export default function MicroSaaSPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <MicroSaaSCard
-            title="AI Content Generator"
-            description="AI-powered content creation platform with templates, brand voice training, and multi-channel distribution"
-            features={["GPT-4 integration", "Brand voice training", "Multi-language support", "SEO optimization", "Social media scheduling"]}
+            title="AI Content Generator Pro"
+            description="Advanced AI-powered content creation with brand voice training, multi-channel distribution, and performance analytics"
+            features={["GPT-4 & Claude integration", "Brand voice training", "Multi-language support", "SEO optimization", "Social media scheduling", "Performance analytics"]}
             pricing="$2,999/month"
             category="AI Tools"
             icon="🤖"
           />
           <MicroSaaSCard
             title="Invoice Automation Pro"
-            description="Automated invoice processing with OCR, approval workflows, and accounting integration"
-            features={["OCR processing", "Smart categorization", "Approval workflows", "QuickBooks integration", "Mobile app"]}
+            description="Intelligent invoice processing with OCR, approval workflows, and seamless accounting integration"
+            features={["Advanced OCR processing", "Smart categorization", "Approval workflows", "QuickBooks/Xero integration", "Mobile app", "Fraud detection"]}
             pricing="$1,999/month"
             category="Business Automation"
             icon="📄"
           />
           <MicroSaaSCard
-            title="Social Media Scheduler"
-            description="Advanced social media management with AI content suggestions and analytics"
-            features={["Multi-platform posting", "AI content suggestions", "Analytics dashboard", "Team collaboration", "Bulk upload"]}
+            title="Social Media Command Center"
+            description="Comprehensive social media management with AI content suggestions, scheduling, and detailed analytics"
+            features={["Multi-platform posting", "AI content suggestions", "Advanced analytics", "Team collaboration", "Bulk upload", "Influencer tracking"]}
             pricing="$1,499/month"
             category="Marketing Tools"
             icon="📱"
           />
           <MicroSaaSCard
-            title="Project Time Tracker"
-            description="Time tracking and productivity analytics for remote teams and freelancers"
-            features={["Automatic time tracking", "Project categorization", "Team dashboards", "Client reporting", "Integrations"]}
+            title="Smart Time Tracker"
+            description="Intelligent time tracking with productivity analytics, project management, and automated reporting"
+            features={["AI-powered time tracking", "Project categorization", "Team dashboards", "Client reporting", "Integrations", "Productivity insights"]}
             pricing="$999/month"
             category="Productivity"
             icon="⏱️"
           />
           <MicroSaaSCard
-            title="Email Marketing Suite"
-            description="Advanced email marketing with automation, segmentation, and analytics"
-            features={["Drag-drop builder", "Automation workflows", "Advanced segmentation", "A/B testing", "Deliverability tools"]}
+            title="Email Marketing Automation Suite"
+            description="Advanced email marketing platform with AI-powered automation, segmentation, and deliverability optimization"
+            features={["Drag-drop builder", "AI automation workflows", "Advanced segmentation", "A/B testing", "Deliverability tools", "Revenue attribution"]}
             pricing="$1,299/month"
             category="Marketing Tools"
             icon="📧"
           />
           <MicroSaaSCard
-            title="Customer Support Hub"
-            description="AI-powered customer support with chatbots, ticket management, and knowledge base"
-            features={["AI chatbots", "Ticket management", "Knowledge base", "Multi-channel support", "Analytics"]}
+            title="AI Customer Support Hub"
+            description="Next-generation customer support with AI chatbots, intelligent routing, and comprehensive analytics"
+            features={["Advanced AI chatbots", "Smart ticket routing", "Knowledge base", "Multi-channel support", "Sentiment analysis", "Performance metrics"]}
             pricing="$2,499/month"
             category="Customer Service"
             icon="🎧"
+          />
+          <MicroSaaSCard
+            title="Lead Generation Engine"
+            description="Automated lead generation and qualification platform with AI-powered prospecting and CRM integration"
+            features={["AI prospecting", "Lead scoring", "Email sequences", "CRM integration", "LinkedIn automation", "Lead nurturing"]}
+            pricing="$1,799/month"
+            category="Sales Tools"
+            icon="🎯"
+          />
+          <MicroSaaSCard
+            title="Website Performance Optimizer"
+            description="AI-powered website optimization tool for speed, SEO, and conversion rate improvement"
+            features={["Speed optimization", "SEO analysis", "Conversion tracking", "A/B testing", "Core Web Vitals", "Mobile optimization"]}
+            pricing="$1,199/month"
+            category="Web Tools"
+            icon="⚡"
+          />
+          <MicroSaaSCard
+            title="HR Management Suite"
+            description="Complete HR management platform with recruitment, onboarding, performance tracking, and payroll integration"
+            features={["Recruitment automation", "Employee onboarding", "Performance reviews", "Payroll integration", "Time off management", "Compliance tracking"]}
+            pricing="$2,299/month"
+            category="HR Tools"
+            icon="👥"
+          />
+          <MicroSaaSCard
+            title="Financial Analytics Dashboard"
+            description="Comprehensive financial analytics and reporting platform for small to medium businesses"
+            features={["Real-time reporting", "Cash flow analysis", "Budget tracking", "Tax preparation", "Investment tracking", "Financial forecasting"]}
+            pricing="$1,599/month"
+            category="Finance Tools"
+            icon="💰"
+          />
+          <MicroSaaSCard
+            title="Inventory Management Pro"
+            description="Smart inventory management with AI demand forecasting, automated reordering, and multi-location support"
+            features={["AI demand forecasting", "Automated reordering", "Multi-location support", "Barcode scanning", "Supplier management", "Cost optimization"]}
+            pricing="$1,399/month"
+            category="Inventory Tools"
+            icon="📦"
+          />
+          <MicroSaaSCard
+            title="Project Management AI"
+            description="Intelligent project management with AI-powered resource allocation, risk prediction, and automated reporting"
+            features={["AI resource allocation", "Risk prediction", "Automated reporting", "Team collaboration", "Gantt charts", "Budget tracking"]}
+            pricing="$1,699/month"
+            category="Project Management"
+            icon="📊"
+          />
+          <MicroSaaSCard
+            title="E-commerce Analytics Pro"
+            description="Advanced e-commerce analytics platform with customer behavior insights, conversion optimization, and revenue forecasting"
+            features={["Customer behavior analysis", "Conversion optimization", "Revenue forecasting", "A/B testing", "Cart abandonment recovery", "Customer lifetime value"]}
+            pricing="$1,899/month"
+            category="E-commerce Tools"
+            icon="🛒"
+          />
+          <MicroSaaSCard
+            title="API Management Gateway"
+            description="Enterprise-grade API management platform with security, monitoring, and developer portal features"
+            features={["API security", "Rate limiting", "Developer portal", "Analytics & monitoring", "Documentation", "Version management"]}
+            pricing="$2,199/month"
+            category="Developer Tools"
+            icon="🔌"
+          />
+          <MicroSaaSCard
+            title="Data Visualization Studio"
+            description="Powerful data visualization and business intelligence platform with interactive dashboards and real-time analytics"
+            features={["Interactive dashboards", "Real-time analytics", "Custom visualizations", "Data connectors", "Collaborative features", "Mobile access"]}
+            pricing="$1,499/month"
+            category="Data Tools"
+            icon="📈"
+          />
+          <MicroSaaSCard
+            title="Security Monitoring Center"
+            description="Comprehensive cybersecurity monitoring platform with threat detection, compliance reporting, and incident response"
+            features={["Threat detection", "Compliance reporting", "Incident response", "Vulnerability scanning", "Security training", "24/7 monitoring"]}
+            pricing="$2,799/month"
+            category="Security Tools"
+            icon="🔒"
+          />
+          <MicroSaaSCard
+            title="Workflow Automation Engine"
+            description="No-code workflow automation platform for business process optimization and task automation"
+            features={["No-code builder", "Process optimization", "Task automation", "Integration hub", "Custom triggers", "Performance analytics"]}
+            pricing="$1,299/month"
+            category="Automation Tools"
+            icon="⚙️"
+          />
+          <MicroSaaSCard
+            title="Customer Feedback Analytics"
+            description="AI-powered customer feedback analysis platform with sentiment analysis, trend identification, and action recommendations"
+            features={["Sentiment analysis", "Trend identification", "Action recommendations", "Multi-channel collection", "Real-time alerts", "ROI tracking"]}
+            pricing="$1,399/month"
+            category="Analytics Tools"
+            icon="💬"
           />
         </div>
       </section>

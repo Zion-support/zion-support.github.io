@@ -1,7 +1,7 @@
 import React, { lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+import { SEO } from '../components/SEO';
 import { usePerformance } from '../hooks/usePerformance';
 const Home: React.FC = () => {
   usePerformance();

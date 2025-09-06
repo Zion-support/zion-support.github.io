@@ -64,13 +64,14 @@ export default function DataAnalyticsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnalyticsSolution
               title="Executive Dashboard"
-              description="C-level business intelligence dashboard"
+              description="C-level business intelligence dashboard with advanced insights"
               features={[
                 "Real-time KPIs",
                 "Interactive charts",
                 "Mobile responsive",
                 "Automated reports",
-                "Drill-down capabilities"
+                "Drill-down capabilities",
+                "Predictive insights"
               ]}
               price="$15k - $35k"
               timeline="6-10 weeks"
@@ -78,13 +79,14 @@ export default function DataAnalyticsPage() {
             />
             <AnalyticsSolution
               title="Customer Analytics Platform"
-              description="Comprehensive customer behavior analysis"
+              description="Comprehensive customer behavior analysis and insights"
               features={[
                 "Customer journey mapping",
                 "Segmentation analysis",
                 "Lifetime value prediction",
                 "Churn analysis",
-                "Personalization insights"
+                "Personalization insights",
+                "Sentiment analysis"
               ]}
               price="$20k - $50k"
               timeline="8-12 weeks"
@@ -92,13 +94,14 @@ export default function DataAnalyticsPage() {
             />
             <AnalyticsSolution
               title="Supply Chain Analytics"
-              description="End-to-end supply chain optimization"
+              description="End-to-end supply chain optimization and monitoring"
               features={[
                 "Demand forecasting",
                 "Inventory optimization",
                 "Supplier performance",
                 "Risk assessment",
-                "Cost analysis"
+                "Cost analysis",
+                "Sustainability tracking"
               ]}
               price="$25k - $60k"
               timeline="10-16 weeks"
@@ -106,13 +109,14 @@ export default function DataAnalyticsPage() {
             />
             <AnalyticsSolution
               title="Financial Analytics Suite"
-              description="Advanced financial reporting and analysis"
+              description="Advanced financial reporting and analysis platform"
               features={[
                 "P&L analysis",
                 "Cash flow forecasting",
                 "Budget variance analysis",
                 "Risk modeling",
-                "Compliance reporting"
+                "Compliance reporting",
+                "Fraud detection"
               ]}
               price="$18k - $45k"
               timeline="6-12 weeks"
@@ -120,13 +124,14 @@ export default function DataAnalyticsPage() {
             />
             <AnalyticsSolution
               title="Marketing Attribution Platform"
-              description="Multi-channel marketing performance analysis"
+              description="Multi-channel marketing performance analysis and optimization"
               features={[
                 "Attribution modeling",
                 "ROI calculation",
                 "Campaign optimization",
                 "Cross-channel analysis",
-                "Predictive insights"
+                "Predictive insights",
+                "A/B testing framework"
               ]}
               price="$22k - $55k"
               timeline="8-14 weeks"
@@ -134,17 +139,108 @@ export default function DataAnalyticsPage() {
             />
             <AnalyticsSolution
               title="Operational Analytics"
-              description="Real-time operational performance monitoring"
+              description="Real-time operational performance monitoring and optimization"
               features={[
                 "Process optimization",
                 "Performance metrics",
                 "Anomaly detection",
                 "Resource utilization",
-                "Efficiency analysis"
+                "Efficiency analysis",
+                "Predictive maintenance"
               ]}
               price="$16k - $40k"
               timeline="6-10 weeks"
               useCase="Operations, manufacturing, services"
+            />
+            <AnalyticsSolution
+              title="HR Analytics Platform"
+              description="Human resources analytics and workforce optimization"
+              features={[
+                "Employee performance analysis",
+                "Turnover prediction",
+                "Recruitment analytics",
+                "Skills gap analysis",
+                "Engagement metrics",
+                "Diversity & inclusion tracking"
+              ]}
+              price="$18k - $45k"
+              timeline="6-12 weeks"
+              useCase="HR, talent management, CHRO"
+            />
+            <AnalyticsSolution
+              title="E-commerce Analytics Suite"
+              description="Comprehensive e-commerce performance and customer insights"
+              features={[
+                "Sales performance analysis",
+                "Product recommendation engine",
+                "Cart abandonment analysis",
+                "Customer lifetime value",
+                "Inventory optimization",
+                "Price elasticity analysis"
+              ]}
+              price="$20k - $50k"
+              timeline="8-14 weeks"
+              useCase="E-commerce, retail, product management"
+            />
+            <AnalyticsSolution
+              title="Healthcare Analytics Platform"
+              description="Healthcare data analytics with compliance and patient insights"
+              features={[
+                "Patient outcome analysis",
+                "Clinical performance metrics",
+                "Resource utilization",
+                "Quality indicators",
+                "Cost analysis",
+                "HIPAA compliance"
+              ]}
+              price="$25k - $60k"
+              timeline="10-16 weeks"
+              useCase="Healthcare, hospitals, medical practices"
+            />
+            <AnalyticsSolution
+              title="Real Estate Analytics"
+              description="Property and market analysis for real estate professionals"
+              features={[
+                "Market trend analysis",
+                "Property valuation models",
+                "Investment ROI analysis",
+                "Demographic insights",
+                "Price prediction",
+                "Portfolio optimization"
+              ]}
+              price="$15k - $40k"
+              timeline="6-12 weeks"
+              useCase="Real estate, property management, investors"
+            />
+            <AnalyticsSolution
+              title="Energy & Utilities Analytics"
+              description="Energy consumption and utility optimization analytics"
+              features={[
+                "Energy consumption analysis",
+                "Demand forecasting",
+                "Cost optimization",
+                "Sustainability metrics",
+                "Grid performance",
+                "Renewable energy insights"
+              ]}
+              price="$22k - $55k"
+              timeline="8-14 weeks"
+              useCase="Energy, utilities, sustainability"
+            />
+            <AnalyticsSolution
+              title="Social Media Analytics"
+              description="Social media performance and sentiment analysis platform"
+              features={[
+                "Social media monitoring",
+                "Sentiment analysis",
+                "Influencer tracking",
+                "Engagement metrics",
+                "Brand reputation analysis",
+                "Trend identification"
+              ]}
+              price="$12k - $30k"
+              timeline="4-8 weeks"
+              useCase="Marketing, social media, brand management"
             />
           </div>
         </div>

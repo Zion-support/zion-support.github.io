@@ -23,45 +23,87 @@ export default function MobileDevelopmentPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <MobileServiceCard 
               title="Native iOS Development" 
-              description="High-performance iOS apps using Swift and SwiftUI"
-              features={["Swift/SwiftUI", "Core Data", "Push notifications", "App Store optimization"]}
+              description="High-performance iOS apps using Swift and SwiftUI with advanced features"
+              features={["Swift/SwiftUI", "Core Data", "Push notifications", "App Store optimization", "ARKit integration", "Core ML"]}
               price="Starting at $15k"
               icon="📱"
             />
             <MobileServiceCard 
               title="Native Android Development" 
-              description="Robust Android apps using Kotlin and Jetpack Compose"
-              features={["Kotlin/Java", "Room database", "Material Design", "Play Store optimization"]}
+              description="Robust Android apps using Kotlin and Jetpack Compose with modern architecture"
+              features={["Kotlin/Java", "Room database", "Material Design", "Play Store optimization", "Jetpack Compose", "MVVM architecture"]}
               price="Starting at $15k"
               icon="🤖"
             />
             <MobileServiceCard 
               title="Cross-Platform Development" 
               description="Single codebase for iOS and Android using React Native or Flutter"
-              features={["React Native", "Flutter", "Code sharing", "Faster development"]}
+              features={["React Native", "Flutter", "Code sharing", "Faster development", "Hot reload", "Native performance"]}
               price="Starting at $20k"
               icon="🔄"
             />
             <MobileServiceCard 
               title="Progressive Web Apps" 
-              description="Web apps that work like native mobile applications"
-              features={["PWA features", "Offline support", "Push notifications", "App-like experience"]}
+              description="Web apps that work like native mobile applications with offline capabilities"
+              features={["PWA features", "Offline support", "Push notifications", "App-like experience", "Service workers", "Responsive design"]}
               price="Starting at $12k"
               icon="🌐"
             />
             <MobileServiceCard 
               title="Mobile Backend Development" 
               description="Scalable backend services and APIs for mobile applications"
-              features={["RESTful APIs", "Real-time features", "Database design", "Cloud integration"]}
+              features={["RESTful APIs", "Real-time features", "Database design", "Cloud integration", "Microservices", "API security"]}
               price="Starting at $18k"
               icon="⚙️"
             />
             <MobileServiceCard 
               title="App Maintenance & Support" 
               description="Ongoing maintenance, updates, and technical support"
-              features={["Bug fixes", "Feature updates", "Performance optimization", "24/7 support"]}
+              features={["Bug fixes", "Feature updates", "Performance optimization", "24/7 support", "Security updates", "Analytics monitoring"]}
               price="Starting at $2k/mo"
               icon="🔧"
+            />
+            <MobileServiceCard 
+              title="UI/UX Design for Mobile" 
+              description="Custom mobile app design with user-centered approach and modern aesthetics"
+              features={["User research", "Wireframing", "Prototyping", "Visual design", "Usability testing", "Design systems"]}
+              price="Starting at $8k"
+              icon="🎨"
+            />
+            <MobileServiceCard 
+              title="App Store Optimization" 
+              description="Comprehensive ASO strategy to maximize app visibility and downloads"
+              features={["Keyword research", "Metadata optimization", "Screenshot design", "Review management", "A/B testing", "Performance tracking"]}
+              price="Starting at $3k"
+              icon="📈"
+            />
+            <MobileServiceCard 
+              title="Mobile Analytics & Tracking" 
+              description="Advanced analytics implementation for user behavior and app performance"
+              features={["User analytics", "Crash reporting", "Performance monitoring", "Custom events", "Funnel analysis", "Real-time dashboards"]}
+              price="Starting at $5k"
+              icon="📊"
+            />
+            <MobileServiceCard 
+              title="Mobile Security Implementation" 
+              description="Comprehensive security measures for mobile applications"
+              features={["Data encryption", "Secure authentication", "API security", "Code obfuscation", "Penetration testing", "Compliance"]}
+              price="Starting at $10k"
+              icon="🔒"
+            />
+            <MobileServiceCard 
+              title="Mobile Testing & QA" 
+              description="Comprehensive testing services for mobile applications"
+              features={["Manual testing", "Automated testing", "Device testing", "Performance testing", "Security testing", "Usability testing"]}
+              price="Starting at $6k"
+              icon="🧪"
+            />
+            <MobileServiceCard 
+              title="Mobile App Migration" 
+              description="Migration services for legacy apps to modern platforms"
+              features={["Platform migration", "Code modernization", "Data migration", "Feature parity", "Performance optimization", "User training"]}
+              price="Starting at $12k"
+              icon="🔄"
             />
           </div>
         </div>
